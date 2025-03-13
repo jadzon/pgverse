@@ -2,6 +2,11 @@
 
 link do dysku z datasetem:
 https://drive.google.com/drive/folders/1uSVTQJ8DPujRlqcafulcLjPyRdlL-6nh?usp=sharing
+link do kanbana:
+https://github.com/users/jadzon/projects/3
 
-PGVERSE – lista zadań link :
-https://www.notion.so/PGVERSE-AI-lista-zada-1a6ab319df168061b5c6ee72acbf604b
+# Stawianie commitów
+Przed jakąkolwiek pracą **upewnić się że jesteście na dobrym branchu**. Zaoszczędzi wam to zmartwień później związanych z konfliktami. 
+### Zasady do commitów
+- przy stawianiu commita, określamy nr taska do którego zmiana jest wprowadzona, np. "(#15) Dodano nową metodę do Graph do wyświetlania grafu"
+- Wiadomości w commitcie powinny **krótkie i zwięzłe**, głównie skupiając się na tym co było wprowadzone. W razie potrzeby dokładniejszego opisu po co i czemu możecie dodać komentarz w kanbanie.
