@@ -124,5 +124,6 @@ dmypy.json
 cython_debug/
 
 #dynamic dataset folder
-example_schematics/*
-!somefolder/template
+
+schematy_code/schematic_symbols/dataset/
+!schematy_code/schematic_symbols/template/

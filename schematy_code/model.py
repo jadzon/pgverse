@@ -1,4 +1,4 @@
-import cv2 as cv
+import cv2
 
 import numpy as np
 import os
@@ -54,32 +54,31 @@ class Node:
 
 def find_closed_contours(image):
     #https://stackoverflow.com/questions/22240746/recognize-open-and-closed-shapes-opencv/59748729
-    if len(image.shape) != 2:
-        gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
-    else:
-        gray = image
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+    # Preprocess: Thresholding and morphological operations
+    _, thresh = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY_INV)
+    kernel = np.ones((3, 3), np.uint8)
+    cleaned = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, kernel, iterations=1)  # Remove thin wires
+
+    # Find contours of components
+    contours, _ = cv2.findContours(cleaned, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
     
-    ret, thresh = cv.threshold(gray, 200, 255, cv.THRESH_BINARY_INV)
-    contours, hierarchy = cv.findContours(thresh, cv.RETR_CCOMP, cv.CHAIN_APPROX_SIMPLE)
-    hierarchy = hierarchy[0]
-    closed_contours = []
-    for i, c in enumerate(contours):
-        if hierarchy[i][2] < 0 and hierarchy[i][3] < 0:
-            cv.drawContours(image, contours, i, (0, 0, 255), 2)
-    else:
-        cv.drawContours(image, contours, i, (0, 255, 0), 2)
-    cv.imshow("Closed contours", image)
-    cv.waitKey(0)
-    return closed_contours
+
+    cv2.imshow("Contours", image)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
 
 def load_images_from_folder(folder):
     images = []
     for filename in os.listdir(folder):
-        img = cv.imread(os.path.join(folder,filename))
+        img = cv2.imread(os.path.join(folder,filename))
         if img is not None:
             images.append(img)
     return images
 
 for image in load_images_from_folder("example_schematics"):
     find_closed_contours(image)
+
 
