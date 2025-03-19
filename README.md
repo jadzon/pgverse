@@ -2,6 +2,8 @@
 
 link do dysku z datasetem:
 https://drive.google.com/drive/folders/1uSVTQJ8DPujRlqcafulcLjPyRdlL-6nh?usp=sharing
+link do datasetu schematów:
+https://drive.google.com/file/d/16Vz_Me9QU74nwd_DHTBohh9kCzJHsRLg/view?usp=sharing
 link do kanbana:
 https://github.com/users/jadzon/projects/3
 
