@@ -102,18 +102,15 @@ def process_single_schema(filename, schema_type, sequence_number):
         logging.info(f"Użyta skala: {scale}")
         logging.info(f"Przykładowe przeskalowane współrzędne: {scaled_blocks[0]['coords'] if scaled_blocks else 'brak bloków'}")
         
-        # Przetwórz obraz
-        logging.info(f"Rozpoczynam przetwarzanie obrazu dla {filename}")
-        processed = connection_detector.preprocess_for_lines(original_image)
-        if processed is None:
-            logging.error(f"Przetwarzanie obrazu nie powiodło się dla {filename}")
-            return None
-        logging.info(f"Zakończono przetwarzanie obrazu dla {filename}")
+        # Przygotuj obraz do wykrywania linii
+        logging.info(f"Rozpoczynam przetwarzanie obrazu dla wykrywania linii")
+        processed_image = connection_detector.preprocess_for_lines(original_image, scaled_blocks)
+        logging.info(f"Zakończono przetwarzanie obrazu dla wykrywania linii")
         
         # Wykryj połączenia na obrazie (tylko jeśli nie ma w cache)
         if connections is None:
             logging.info(f"Rozpoczynam wykrywanie połączeń dla {filename}")
-            connections = connection_detector.detect_connections(processed, scaled_blocks)
+            connections = connection_detector.detect_connections(processed_image, scaled_blocks)
             logging.info(f"Wykryto {len(connections)} połączeń w {filename}")
         
         # Zapisz obrazy debugowe
@@ -152,7 +149,7 @@ def process_single_schema(filename, schema_type, sequence_number):
             logging.info(f"Zapisano wyniki do cache dla {filename}")
         
         # Zwolnij pamięć
-        del processed
+        del processed_image
         del original_image
         
         return connections

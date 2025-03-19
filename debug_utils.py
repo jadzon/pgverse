@@ -10,6 +10,7 @@ class DebugUtils:
     PROCESSING_STEPS = [
         'original',
         'gray',
+        'masked_chars',
         'binary',
         'denoised',
         'edges',
