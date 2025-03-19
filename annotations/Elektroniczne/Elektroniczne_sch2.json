@@ -1,0 +1,437 @@
+{
+    "image_path": "Dataset\\Elektroniczne\\sch2.png",
+    "blocks": [
+        {
+            "coords": [
+                2.0,
+                156.0,
+                79.0,
+                236.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                181.0,
+                118.0,
+                299.0,
+                165.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                361.0,
+                121.0,
+                482.0,
+                166.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                269.0,
+                10.0,
+                393.0,
+                59.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                124.0,
+                193.0,
+                175.0,
+                310.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                307.0,
+                193.0,
+                352.0,
+                311.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                360.0,
+                337.0,
+                480.0,
+                381.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                179.0,
+                337.0,
+                300.0,
+                382.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                486.0,
+                190.0,
+                536.0,
+                310.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                742.0,
+                138.0,
+                789.0,
+                258.0
+            ],
+            "type": "rectangle"
+        }
+    ],
+    "image_size": {
+        "width": 800,
+        "height": 384
+    },
+    "connections": [
+        {
+            "start_block": 0,
+            "end_block": 3,
+            "start_point": [
+                77,
+                37
+            ],
+            "end_point": [
+                278,
+                37
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 9,
+            "end_block": 3,
+            "start_point": [
+                648,
+                94
+            ],
+            "end_point": [
+                657,
+                68
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 3,
+            "end_block": 8,
+            "start_point": [
+                426,
+                258
+            ],
+            "end_point": [
+                428,
+                262
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 7,
+            "end_block": 6,
+            "start_point": [
+                329,
+                349
+            ],
+            "end_point": [
+                332,
+                348
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 5,
+            "end_block": 8,
+            "start_point": [
+                413,
+                263
+            ],
+            "end_point": [
+                428,
+                263
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 6,
+            "end_block": 9,
+            "start_point": [
+                516,
+                363
+            ],
+            "end_point": [
+                763,
+                363
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 5,
+            "end_block": 2,
+            "start_point": [
+                382,
+                204
+            ],
+            "end_point": [
+                382,
+                199
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 9,
+            "end_block": 8,
+            "start_point": [
+                657,
+                209
+            ],
+            "end_point": [
+                658,
+                206
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 5,
+            "end_block": 6,
+            "start_point": [
+                374,
+                305
+            ],
+            "end_point": [
+                375,
+                311
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 2,
+            "end_block": 3,
+            "start_point": [
+                531,
+                35
+            ],
+            "end_point": [
+                535,
+                39
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 0,
+            "end_block": 7,
+            "start_point": [
+                54,
+                364
+            ],
+            "end_point": [
+                74,
+                360
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 4,
+            "end_block": 1,
+            "start_point": [
+                191,
+                196
+            ],
+            "end_point": [
+                196,
+                196
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 8,
+            "end_block": 2,
+            "start_point": [
+                435,
+                235
+            ],
+            "end_point": [
+                436,
+                241
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 1,
+            "end_block": 5,
+            "start_point": [
+                298,
+                183
+            ],
+            "end_point": [
+                302,
+                183
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 5,
+            "end_block": 0,
+            "start_point": [
+                240,
+                267
+            ],
+            "end_point": [
+                242,
+                259
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 9,
+            "end_block": 2,
+            "start_point": [
+                634,
+                91
+            ],
+            "end_point": [
+                635,
+                88
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 6,
+            "end_block": 8,
+            "start_point": [
+                435,
+                260
+            ],
+            "end_point": [
+                435,
+                264
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 4,
+            "end_block": 0,
+            "start_point": [
+                237,
+                262
+            ],
+            "end_point": [
+                237,
+                257
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 1,
+            "end_block": 2,
+            "start_point": [
+                329,
+                141
+            ],
+            "end_point": [
+                333,
+                151
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 4,
+            "end_block": 7,
+            "start_point": [
+                126,
+                362
+            ],
+            "end_point": [
+                135,
+                362
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 4,
+            "end_block": 5,
+            "start_point": [
+                237,
+                236
+            ],
+            "end_point": [
+                257,
+                237
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 1,
+            "end_block": 3,
+            "start_point": [
+                283,
+                87
+            ],
+            "end_point": [
+                287,
+                82
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 5,
+            "end_block": 7,
+            "start_point": [
+                248,
+                264
+            ],
+            "end_point": [
+                252,
+                257
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 5,
+            "end_block": 3,
+            "start_point": [
+                413,
+                266
+            ],
+            "end_point": [
+                413,
+                260
+            ],
+            "is_directed": false,
+            "direction": null
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "image_path": "Dataset\\Elektroniczne\\sch13.png",
+    "blocks": [
+        {
+            "coords": [
+                4.0,
+                44.0,
+                94.0,
+                140.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                4.0,
+                183.0,
+                102.0,
+                270.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                320.0,
+                122.0,
+                390.0,
+                186.0
+            ],
+            "type": "rectangle"
+        }
+    ],
+    "image_size": {
+        "width": 388,
+        "height": 308
+    },
+    "connections": [
+        {
+            "start_block": 0,
+            "end_block": 2,
+            "start_point": [
+                223,
+                21
+            ],
+            "end_point": [
+                271,
+                21
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 1,
+            "end_block": 2,
+            "start_point": [
+                54,
+                296
+            ],
+            "end_point": [
+                361,
+                296
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 0,
+            "end_block": 1,
+            "start_point": [
+                47,
+                157
+            ],
+            "end_point": [
+                47,
+                173
+            ],
+            "is_directed": false,
+            "direction": null
+        }
+    ]
+}

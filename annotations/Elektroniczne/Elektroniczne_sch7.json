@@ -1,0 +1,191 @@
+{
+    "image_path": "Dataset\\Elektroniczne\\sch7.png",
+    "blocks": [
+        {
+            "coords": [
+                234.0,
+                4.0,
+                315.0,
+                80.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                136.0,
+                104.0,
+                225.0,
+                153.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                4.0,
+                69.0,
+                61.0,
+                195.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                325.0,
+                92.0,
+                401.0,
+                172.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                485.0,
+                76.0,
+                532.0,
+                189.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                371.0,
+                14.0,
+                497.0,
+                58.0
+            ],
+            "type": "rectangle"
+        }
+    ],
+    "image_size": {
+        "width": 628,
+        "height": 262
+    },
+    "connections": [
+        {
+            "start_block": 2,
+            "end_block": 0,
+            "start_point": [
+                35,
+                40
+            ],
+            "end_point": [
+                299,
+                40
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 1,
+            "end_block": 0,
+            "start_point": [
+                259,
+                122
+            ],
+            "end_point": [
+                265,
+                122
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 2,
+            "end_block": 4,
+            "start_point": [
+                36,
+                228
+            ],
+            "end_point": [
+                511,
+                228
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 2,
+            "end_block": 1,
+            "start_point": [
+                102,
+                72
+            ],
+            "end_point": [
+                106,
+                72
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 0,
+            "end_block": 5,
+            "start_point": [
+                340,
+                43
+            ],
+            "end_point": [
+                356,
+                44
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 0,
+            "end_block": 3,
+            "start_point": [
+                273,
+                129
+            ],
+            "end_point": [
+                277,
+                129
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 3,
+            "end_block": 5,
+            "start_point": [
+                364,
+                101
+            ],
+            "end_point": [
+                364,
+                46
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 4,
+            "end_block": 5,
+            "start_point": [
+                510,
+                73
+            ],
+            "end_point": [
+                510,
+                53
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 1,
+            "end_block": 3,
+            "start_point": [
+                269,
+                204
+            ],
+            "end_point": [
+                271,
+                200
+            ],
+            "is_directed": false,
+            "direction": null
+        }
+    ]
+}
