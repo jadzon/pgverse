@@ -1,7 +1,36 @@
-# pgverse
+# Detektor Połączeń w Schematach
 
-link do dysku z datasetem:
-https://drive.google.com/drive/folders/1uSVTQJ8DPujRlqcafulcLjPyRdlL-6nh?usp=sharing
+Projekt służący do wykrywania połączeń między blokami w schematach blokowych.
 
-PGVERSE – lista zadań link :
-https://www.notion.so/PGVERSE-AI-lista-zada-1a6ab319df168061b5c6ee72acbf604b
+## Struktura projektu
+
+- `calibrate.py` - interfejs do ręcznego zaznaczania bloków
+- `connection_detector.py` - moduł wykrywania połączeń między blokami
+- `main.py` - główny plik programu
+- `annotations/` - katalog z adnotacjami (zaznaczonymi blokami)
+- `results/` - katalog z wynikami (wykryte połączenia)
+
+## Wymagania
+
+- Python 3.7+
+- OpenCV
+- NumPy
+- Tkinter
+
+## Instalacja
+
+1. Zainstaluj wymagane pakiety:
+```bash
+pip install -r requirements.txt
+```
+
+## Użycie
+
+1. Uruchom program:
+```bash
+python main.py
+```
+
+2. Użyj interfejsu do zaznaczania bloków
+3. Program automatycznie wykryje połączenia między zaznaczonymi blokami
+4. Wyniki zostaną zapisane w katalogu `results/`
