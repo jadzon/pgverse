@@ -7,7 +7,7 @@ def create_dataset_from_template(ref_image, output_path):
     os.mkdir(output_path)
     i = 0
     total_iterations = len(range(-150, 150, 30)) * len(range(-150, 150, 30)) * len(range(0, 180, 2))
-    with tqdm(total=total_iterations, desc="Creating dataset in" + output_path) as pbar:
+    with tqdm(total=total_iterations, desc="Creating dataset in " + output_path) as pbar:
         for offset_value_x in range(-150, 150, 30):
             for offset_value_y in range(-150, 150, 30):
                 offset_img = ImageChops.offset(ref_image, offset_value_x, offset_value_y)

@@ -1,0 +1,13 @@
+train: images/train/images
+val: images/valid/images
+test: images/test/images
+path: E:\Other\inf\zsd\pgverse\schematy_code\model
+nc: 45
+names: ['and', 'antenna', 'capacitor-polarized', 'capacitor-unpolarized', 'crossover', 'diac', 'diode', 'diode-light_emitting', 'fuse', 'gnd', 'inductor', 'integrated_circuit', 'integrated_cricuit-ne555', 'junction', 'lamp', 'microphone', 'motor', 'nand', 'nor', 'not', 'operational_amplifier', 'optocoupler', 'or', 'probe-current', 'relay', 'resistor', 'resistor-adjustable', 'resistor-photo', 'schmitt_trigger', 'socket', 'speaker', 'switch', 'terminal', 'text', 'thyristor', 'transformer', 'transistor', 'transistor-photo', 'triac', 'varistor', 'voltage-dc', 'voltage-dc_ac', 'voltage-dc_regulator', 'vss', 'xor']
+
+roboflow:
+  workspace: sarl
+  project: electronic-circuits-ifz6c
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/sarl/electronic-circuits-ifz6c/dataset/1

@@ -124,6 +124,7 @@ dmypy.json
 cython_debug/
 
 #dynamic dataset folder
-
 schematy_code/schematic_symbols/dataset/
 !schematy_code/schematic_symbols/template/
+schematy_code/model/images
+schematy_code/model/runs
