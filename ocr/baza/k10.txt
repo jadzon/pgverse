@@ -1,0 +1,175 @@
+2 1. Wprowadzenie
+
+Stanem układu nazywać będziemy najmniejszy liczebnie zbiór wiełkości, któ-
+rego znajomość w chwili początkowej to oraz znajomość wymuszeń w przedziale
+(vo, t] pozwała wyznaczyć stan i odpowiedź układu w dowolnej chwili t > to.
+Dla szerokiej klasy układów dynamicznych znajomość stanu układu w chwi-
+li początkowej żę oraz wymuszenia u(t), to > to pozwala wyznaczyć stan oraz
+odpowiedź tego układu dla t > to. Układ regulacji automatycznej powinien
+zapewnić pożądany przebieg wybranych wielkości charakteryzujących proces,
+mimo działających zakłóceń i niedokładnej znajomości parametrów tego pro-
+cesu. Osiąga się to przez zastosowanie sprzężenia zwrotnego.
+
+DEFINICJA 1
+
+Układem regulacji automatycznej nazywamy układ ze sprzężeniem zwrot--
+nym, który samoczynnie ( bez udziału człowieka)bzapewnia pożądany. prze-
+bieg wybranych wielkości charakter zwanych wielkościami
+regulowanymi. ; m
+
+W układzie regulacji automatycznej wyróżnić można obiekt regulacji i regu-
+lator (urządzenie sterujące). Obiektem regulacji (krótko — obiektem) nazywamy
+proces technologiczny lub urządzenie, w którym zachodzi proces podlegający
+regulacji. Obiektem regulacji może być na przykład: samolot, proces chemicz-
+ny, maszyna elektryczna, obrabiarka, robot. Regulatorem nazywać będziemy
+urządzenie, które wykorzystując różnice między odpowiednimi wielkościami za-
+danymi i mierzonymi, tak oddziałuje — za pomocą wielkości sterujących -- na
+obiekt, aby wielkości regulowane miały pożądany przebieg. Schemat blokowy
+jednej wielkości regulowanej y(t) przedstawio-
+na rys 1.1
+Rys. 1.1. Schemat bloko-
+wy układu regulacji auto-
+matycznej
+
+
+
+W schemacie tym obiekt jest reprezentowany przez człon o transmitancji ope-
+ratorowej To(s), a regulator — przez człon o transmitancji operatorowej Tr(s).
+Porównanie wielkości regulowanej y(t) z jej wartością zadaną yo(t) (wielkością
+zadającą lub wielkością odniesienia) dokonuje się w węźle sumacyjnym. Róż-
+nicę e(t) = yo(t) — y(t) nazywamy uchybem regulacji. Układ regulacji automa-
+tycznej pracuje dobrze (idealnie), jeżeli mimo działających na obiekt zakłóceń
+z1(t), ..., zr(t) uchyb regulacji e(t) jest możliwie mały (teoretycznie równy
+
+_w następujący sposób. Gdy temperatura wewnątrz pojemnika przekroc:
+
+1.1. Pojęcia podstawowe i istota układu regulacji automatycznej 3
+
+zeru). Podstawowym celem układu regulacji automatycznej jest więc samo-
+czynne zerowanie uchybu regulacji, wywołanego zmianą yo(t) lub działających
+na obiekt zakłóceń z1(t), ..., zr(t). Zadaniem regulatora jest. wytworzenie
+na podstawie uchybu regulacji e(t) takiego sygnału sterującego (sterowania)
+u(t), aby uchyb ten teoretycznie zmalał do zera. Na rysunku 1.2 przedsta-
+
+Termometr
+stykowy
+
+Rys. 1.2. Układ regulacji tem-
+peratury
+
+wiono schemat, ideowy prostego układu regulacji automatycznej temperatury
+t wewnątrz pojemnika. Zadaniem układu regulacji jest utrzymanie wewnątrz
+pojemnika stałej temperatury o wartości to wyższej niż temperatura otocze-
+nia ż,. W układzie tym rolę elementu pomiarowego i porównującego odgrywa
+termometr stykowy, który ma wbudowane dwie elektrody. Górna elektroda,
+ruchoma, pozwala nastawić zadaną wartość temperatury to. Układ ten działa
+_w następujący sposób. Gdy temperatura wewnątrz pojemnika przekroczy war-
+tość zadaną, wówczas zostaje otwarty obwód przekaźnika P i przekaźnik ten
+wyłącza grzejnik. Jeśli natomiast temperatura wewnątrz pojemnika obniży się
+do wartości mniejszej niż zadana to, to wówczas zostanie otwarty obwód prze-
+kaźnika. P i przekaźnik ponownie włącza grzejnik. W tym przypadku obiektem
+regulacji jest pojemnik wraz z grzejnikiem, a regulatorem — termometr stykowy
+i przekaźnik P. Wielkością regulowaną jest temperatura 4 wewnątrz pojemnika,
+sterowaniem — napięcie zasilające grzejnik U, a zakłóceniem — zmieniająca się
+temperatura otoczenia tz.
+Na rysunku 1.3 przedstawiono schemat ideowy prostego układu regulacji
+automatycznej poziomu cieczy w zbiorniku. Zadaniem tego układu jest utrzy-
+manie stałego poziomu hg cieczy w zbiorniku przy zmieniającej się w sposób
+przypadkowy wartości q2 strumienia cieczy wypływającej ze zbiornika. Układ
+ten działa następująco.
+
+Jeżeli z jakiegokolwiek powodu poziom cieczy h się obniży, to pływak P,
+opadając w dół, za pomocą dźwigni i zaworu Z zwiększa wartość q, strumienia
+cieczy dopływającej do zbiornika, co powoduje stopniowe podwyższenie pozio-
+mu cieczy h. W tym przypadku obiektem regulacji jest zbiornik, a regulatorem
+
+4
+
+4 1. Wprowadzenie
+
+Rys. 1.3. Schemat układu regulacji po-
+ziomu cieczy
+
+- zespół: pływak P, dźwignia i zawór Z. Wielkością regulowaną jest poziom
+cieczy h w zbiorniku, sterowaniem — wartość q1, strumienia cieczy dopływają-
+cej do zbiornika, a zakłóceniem - zmieniająca się wartość go strumienia cieczy
+wypływającej ze zbiornika.
+
+1.2. Klasyfikacja układów regulacji automatycznej
+
+Układy regulacji automatycznej można klasyfikować według różnych kryteriów, . ,
+takich jak: liniowość, liczba wejść i wyjść, charakter sygnałów, zadania ukła-
+du, zdolność samoczynnego dopasowywania parametrów i charakterystyk do
+zmieniających się właściwości obiektów zakłóceń itp: 
+
+Ze względu na cechę (własność) liniowości układy regulacji automatycznej
+dzielimy na:
+
+— liniowe,
+
+- nieliniowe.
+
+Układ regulacji automatycznej będziemy nazywać liniowym, jeżeli spełnia
+on następującą zasadę superpozycji.
+
+DEFINICJA 2 
+Układ spełnia zasadę superpozycji, jeżeli odpowiedź na wymuszenie
+
+U
+
+będące kombinacją liniową wymuszeń  u1, u2,...,um, równa się kombi-
+nacji liniowej
+
+
+1.2. Klasyfikacja układów regulacji automatycznej 5
+
+
+odpowiedzi yi1, y2, ...,ym, przy Czym yi jest odpowiedzią tego układu na
+
+wymuszenie ui.
+
+Układy liniowe są opisane liniowymi równaniami algebraicznymi, różnicz-
+kowymi (zwyczajnymi lub cząstkowymi), różnicowymi, całkowymi — ogólnie
+operatorami liniowymi. Łatwo wykazać, że warunkiem koniecznym, ale niedo-
+statecznym, liniowości układu jest liniowość jego charakterystyk statycznych.
+Układ o charakterystyce statycznej y = au+b, dla b  O nie spełnia zasady su-
+perpozycji. Układ regulacji automatycznej, który nie spełnia zasady superpozy-
+cji, nazywać będziemy nieliniowym. Układy nieliniowe są opisane nieliniowymi
+równaniami algebraicznymi, różniczkowymi (zwyczajnymi lub cząstkowymi),
+różnicowymi, całkowymi — ogólnie operatorami nieliniowymi. |
+
+Ze względu na liczbę wejść i wyjść (wielkości regulowanych) układy regulacji
+automatycznej dzielimy na: 
+
+— układy o jednym wejściu i jednym wyjściu,
+— układy o wielu wejściach i wielu wyjściach.
+
+Przykładem układu o jednym wejściu i jednym wyjściu (jednej wielkości
+regulowanej) jest układ regulacji automatycznej poziomu cieczy w zbiorniku,
+którego schemat ideowy pokazano na rys. 1.3.
+
+Ze względu na liczbę zmiennych niezależnych operatorów opisujących układy
+te dzielimy na:
+
+- układy jednowymiarowe,
+układy wielowymiarowe.
+
+Układy jednowymiarowe są opisywane operatorami jednej zmiennej nieza-
+leżnej, którą zwykle jest czas ciągły (układy ciągłe) lub dyskretny (układy
+dyskretne). Układy wielowymiarowe są opisywane operatorami zależnymi od
+przynajmniej dwóch zmiennych niezależnych. Przykładem układu dwuwymia-
+rowego jest linia długa, w której napięcie u(x, t) i natężenie prądu i(x, t) są
+zależne od czasu t i od odległości x od początku linii.
+
+Ze względu na charakter sygnałów układy regulacji automatycznej dzieli-
+my na: 
+
+— układy ciągłe,
+
+— układy dyskretne,
+
+— układy hybrydowe (ciągło-dyskretne).
+
+Układami ciągłymi nazywamy układy, w których sygnały mają charakter
+ciągły. Dynamiczne układy ciągłe są zwykle opisane równaniami różniczkowy-
+mi zwyczajnymi lub cząstkowymi. Układami dyskretnymi nazywamy układy,
