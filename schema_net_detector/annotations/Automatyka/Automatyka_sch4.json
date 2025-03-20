@@ -1,0 +1,140 @@
+{
+    "image_path": "Dataset\\Automatyka\\sch4.png",
+    "blocks": [
+        {
+            "coords": [
+                74.0,
+                87.0,
+                105.0,
+                123.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                157.0,
+                51.0,
+                281.0,
+                163.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                332.0,
+                91.0,
+                366.0,
+                124.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                417.0,
+                50.0,
+                620.0,
+                164.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                635.0,
+                208.0,
+                669.0,
+                244.0
+            ],
+            "type": "rectangle"
+        }
+    ],
+    "image_size": {
+        "width": 800,
+        "height": 281
+    },
+    "connections": [
+        {
+            "start_block": 4,
+            "end_block": 1,
+            "start_point": [
+                229,
+                226
+            ],
+            "end_point": [
+                246,
+                226
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 3,
+            "end_block": 4,
+            "start_point": [
+                659,
+                81
+            ],
+            "end_point": [
+                665,
+                80
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 4,
+            "end_block": 2,
+            "start_point": [
+                715,
+                110
+            ],
+            "end_point": [
+                724,
+                110
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 1,
+            "end_block": 2,
+            "start_point": [
+                282,
+                108
+            ],
+            "end_point": [
+                288,
+                107
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 0,
+            "end_block": 1,
+            "start_point": [
+                149,
+                94
+            ],
+            "end_point": [
+                155,
+                93
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 2,
+            "end_block": 3,
+            "start_point": [
+                413,
+                108
+            ],
+            "end_point": [
+                422,
+                107
+            ],
+            "is_directed": false,
+            "direction": null
+        }
+    ]
+}

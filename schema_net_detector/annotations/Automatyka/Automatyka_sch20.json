@@ -1,0 +1,177 @@
+{
+    "image_path": "Dataset\\Automatyka\\sch20.png",
+    "blocks": [
+        {
+            "coords": [
+                60.0,
+                46.0,
+                95.0,
+                82.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                136.0,
+                46.0,
+                168.0,
+                81.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                247.0,
+                11.0,
+                377.0,
+                120.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                420.0,
+                22.0,
+                530.0,
+                105.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                581.0,
+                23.0,
+                692.0,
+                106.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                507.0,
+                119.0,
+                616.0,
+                200.0
+            ],
+            "type": "rectangle"
+        }
+    ],
+    "image_size": {
+        "width": 799,
+        "height": 241
+    },
+    "connections": [
+        {
+            "start_block": 0,
+            "end_block": 5,
+            "start_point": [
+                76,
+                220
+            ],
+            "end_point": [
+                722,
+                220
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 2,
+            "end_block": 3,
+            "start_point": [
+                393,
+                65
+            ],
+            "end_point": [
+                417,
+                67
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 1,
+            "end_block": 5,
+            "start_point": [
+                152,
+                165
+            ],
+            "end_point": [
+                470,
+                165
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 0,
+            "end_block": 1,
+            "start_point": [
+                112,
+                51
+            ],
+            "end_point": [
+                120,
+                46
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 3,
+            "end_block": 4,
+            "start_point": [
+                552,
+                57
+            ],
+            "end_point": [
+                558,
+                57
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 4,
+            "end_block": 5,
+            "start_point": [
+                721,
+                203
+            ],
+            "end_point": [
+                721,
+                215
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 3,
+            "end_block": 5,
+            "start_point": [
+                527,
+                99
+            ],
+            "end_point": [
+                532,
+                100
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 1,
+            "end_block": 2,
+            "start_point": [
+                191,
+                66
+            ],
+            "end_point": [
+                241,
+                67
+            ],
+            "is_directed": false,
+            "direction": null
+        }
+    ]
+}
