@@ -1,0 +1,287 @@
+MECHANIKA
+WYKŁAD 1
+
+Mechanika - nauka badająca ruch ciał oraz poszukująca praw rządzących tym ruchem
+
+MECHANIKA
+
+Klasyczna (Galileusza)
+Relatywistyczna (Einsteina)
+
+Ciało stałe
+Ciecze
+Gazy
+
+Były stałe
+Były międzycząsteczkowe
+Były odkształcalne:
+
+wytrzymałość materiałów
+dynamika układów ciągłych
+teoria plastyczności
+teoria sprężystości
+Statyka
+Kinematyka
+Dynamika
+
+Statyka - zajmuje się równowagą ciał i bada przyczyny pozostawania ciała w bezruchu
+
+Kinematyka - zajmuje się matematycznym opisem ruchu ciała bez podania przyczyny wywołującej ten ruch
+
+Dynamika - zajmuje się prawami ruchu ciała znajdującego się pod wpływem działających sił
+
+Mechanika nie interesuje się światem rzeczywistym
+
+Obiekt rzeczywisty - obiekt istniejący lub możliwy do realizacji
+
+Model fizyczny - myślowo-opisany model rzeczywisty zapewniający odwzorowanie zjawisk zachodzących w obiekcie rzeczywistym i jednocześnie pozwalający na stosowanie opisu matematycznego o zadanym stopniu trudności
+
+Model matematyczny - opis zjawisk zachodzących w modelu fizycznym poprzez podanie ich matematycznych wzorów
+
+Pojęcie pierwotne - wielkość, której nie można zdefiniować, przyjmuje proste pojęcie. Zakłada się, że wielkość fizycznie widać, że za opisem stoi zasada jej pomiaru
+
+Dla mechaniki pojęciem pierwotnym jest siła, jaka jest każdy widzi, ma:
+
+ - kierunek
+ - zwrot
+ - wartość
+Siła jest wektorem związanym z prostą
+ - Punkt zaczepienia
+
+Aksjomaty:
+
+Siła działająca na bryłę sztywną jest wektorem związanym z prostą
+
+===Strona 2===
+
+Twierdzenie 1
+Siłę możemy dowolnie przesuwać wzdłuż jej linii działania
+
+Równoważny układ sił - alternatywny układ, którego skutki działania są identyczne jak układu wyjściowego
+
+Układ równoważący sił - taki układ, który jest równoważny układowi bez obciążenia
+
+Czy układ dwóch sił posiada układ równoważący prosty?
+
+Układ złożony z dwóch sił nierównoległych P₁, P₂ można zastąpić układem równoważnym układu z pojedynczą siłą w punkcie przecięcia linii działania sił P₁ i P₂
+
+Twierdzenie o dwóch siłach
+Dwie siły przyłożone do bryły mogą się równoważyć wtedy i tylko wtedy gdy są:
+
+- równe co do wartości
+- leżą na jednej prostej
+- mają przeciwne zwroty
+
+Twierdzenie o dwójce zerowej
+Jeżeli do dowolnego układu sił dodamy dwie siły równe leżące na jednej prostej o przeciwnych zwrotach, to układy te będą równoważne
+
+Układ sił zbieżny - linie działania wszystkich jego sił przecinają się w jednym punkcie
+
+Dowolny układ sił zbieżnych można zastąpić układem równoważnym składającym się z jednej siły. O sile tej mówimy, że jest siłą wypadkową wszystkich sił
+
+
+===Strona 3===
+
+Siła wypadkowa - pojedyncza siła równoważna dowolnemu układowi sił
+
+Układ sił równoważących się - taki układ, w którym wypadkowa jest wektorem zerowym
+
+Metoda wieloboku (dodawania sił)
+
+Warunkiem równowagi dowolnego zbieżnego układu sił jest to, by wielobok zbudowany z sił był zamknięty
+
+Przykład
+
+Siłę P można zapisać za pomocą dwóch składowych:
+Px = Pcosα
+Py = Psinα
+P = Px i - Py j
+
+Składowa wypadkowej
+Jeżeli wektor w jest wypadkową układu sił Pᵢ, to zarówno składowa x-owa jak i składowa y-owa są sumą odpowiednio x-owych oraz y-owych składowych Pᵢ
+
+Aby siły zbieżne były w równowadze suma rzutów tych sił na osie układu współrzędnych musi być równa zero
+
+Warunek równowagi
+∑ Pᵢₓ = 0
+∑ Pᵢᵧ = 0
+
+Fx S₁cosα - S₂sinβ = 0
+Fy S₂sinα + S₁cosβ - Q = 0
+
+===Strona 4===
+
+MECHANIKA
+WYKŁAD 2
+
+Liczba stopni swobody - wyznacza liczbę niezależnych współrzędnych opisujących jednoznacznie położenie obiektu
+
+Punkt na płaszczyźnie
+x = x(t)
+y = y(t)
+2 stopnie swobody
+
+Punkt w przestrzeni
+x = x(t)
+y = y(t)
+z = z(t)
+3 stopnie swobody
+
+Bryła w przestrzeni
+6 stopni swobody
+
+Więzy - ograniczenia swobody ruchu. Podajemy je w postaci równań niezależnych od siebie parametru współrzędnych układu. Fizycznie są to linie byłą krępujące swobodę ruchu
+
+O = √ ( (xa - x₀)² + (ya - y₀)² + (za - z₀)² ) - L
+
+Jeżeli układ składa się z n punktów to posiada:
+S = 3n - u stopni swobody
+Dla bryły S = 6u - w
+
+Więzy więzom nierówne
+
+===Strona 5===
+Więzy dwuścienne - więzy które uniemożliwiają ruch niezależnie od jego zwrotu
+
+Więzy jednostronne - umożliwiające ruch dla jednej wartości zwrotu (np. zapobiegającej jednej bryle od drugiej bryły). W ich opisie w miejscu znaku "=" pojawi się znak "≤"
+
+Więzy idealne - więzy w których praca siły tarcia jest równa 0, w szczególności gdy siła tarcia jest równa zeru
+
+Jeżeli na jakąś ciało działają więzy, to wytwarzają one siły, które zmuszają bryłę (ciało) do ruchu zgodnego z więzami
+
+Siły możemy podzielić na:
+
+- aktywne
+- pasywne (reakcje na oddziaływania aktywne pasywne skutek od ruchu)
+Siły wytwarzane przez więzy nazywamy reakcjami
+
+Jak spełnić warunek równowagi bryły swobodnej i bryły z więzami?
+
+Zasada uwolnienia od więzów
+Każdą bryłę unieruchomioną można umysłowo uwolnić od więzów zastępując jej działanie odpowiednimi reakcjami. Bryłę można rozpatrywać dalej jak bryłę swobodną podlegającą siłom zewnętrznym oraz reakcjom
+
+∑ Fx = 0
+∑ Fy = 0
+
+Typy więzów
+
+1.Podpory kierunkowe (więzy o jednej niewiadomej)
+A - powierzchnia niewzruszona
+B - Podparcie na ostrzu
+C - Podpora przesuwna
+
+===Strona 6===
+
+D - Sznurek
+E - Pręt dwupunktowy
+
+2.Podpora dwóch niewiadomych - nieznana składowa normalna i styczna lub wartość reakcji i jej kierunek
+A - powierzchnia z tarciem
+B - na schemacie
+Podpora o trzech niewiadomych (podparcie wspornikowe)
+belka zabetonowana w ścianie
+
+III zasada dynamiki Newtona
+Siły wzajemnego oddziaływania dwóch punktów materialnych są równe co do wartości, leżą na jednej prostej łączącej te dwa punkty i są przeciwnie skierowane
+
+Jeżeli dwa ciała powiązane są więzami, to więzy te zastępujemy układem dwóch sił równych, leżących na jednej prostej i przeciwnie skierowanych
+
+Siły wewnętrzne to siły wzajemnego oddziaływania punktów należących do przyjętego układu
+Siły zewnętrzne - siły które oddziałują na ciało należące do rozpatrywanego układu ale pochodzą od elementów niezależnych do układu
+
+===Strona 7===
+
+Usuwając więzy łączące elementy należące do układu zastępujemy je dwiema siłami
+
+Usuwając więzy łączące element z otoczeniem zastępujemy je pojedynczą siłą, a druga siła oddziaływuje bowiem na otoczenie, którego równowaga nie jest analizowana
+
+Twierdzenie o dwóch siłach
+Dwie siły równoważą się wtedy i tylko wtedy, gdy działają wzdłuż jednej prostej, mają przeciwne zwroty oraz tę samą wartość
+
+Twierdzenie o trzech siłach
+
+Te siły muszą być w równowadze
+Aby 3 wzajemnie do siebie siły działające na bryłę były w równowadze, linie działania tych sił muszą przecinać się w jednym punkcie, a same siły muszą tworzyć trójkąt zamknięty
+
+Jak jest kierunek w punkcie A?
+Siła działania reakcji Rₐ
+Z twierdzenia o 3 siłach
+
+UKŁAD PRZESTRZENNY
+Ile składowych ma wektor w przestrzeni?
+Do opisu siły w przestrzeni potrzebne trzy współrzędne
+
+Czy układ zbieżny, nie leżący na płaszczyźnie posiada wypadkową?
+Działające na bieguny płaszczyzny wyznaczone przez dwie siły można te siły zredukować przez ich wypadkową. Przeprowadzić tę operację kilkakrotnie zastępując dowolny układ zbieżny jedną siłą
+
+Warunek równowagi układu przestrzennego
+Suma rzutów na kierunek osi:
+x = 0
+y = 0
+z = 0
+
+Warunek równowagi: układ zbieżny przestrzenny wygląda podobnie jak dla układu płaskiego, rozwiązuje jedynie równowagi o sumie rzutów sił na kierunek osi z
+
+===Strona 8===
+
+MECHANIKA
+WYKŁAD 3
+
+Układ zbieżny
+P₁
+P₂
+P₃
+P = P₁ + P₂ + P₃ + P₄ + P₅
+
+Układ równoległy
+
+Jeżeli dwie siły są równoległe o zgodnym zwrocie, to ich wypadkowa jest do nich równoległa, równa ich sumie algebraicznej, a jej linia działania przechodzi przez punkt, którego odległość od punktu przyłożenia siły wyjściowej określa relacja:
+w = P₁ + P₂
+a = F₂ / (F₁ + F₂) * (a + b)
+b = F₁ / (F₁ + F₂) * (a + b)
+
+Jeżeli dwie siły są równoległe o przeciwnych zwrotach, to ich wypadkowa jest do nich równoległa, równa ich sumie wektorowej, druga po stronie większej z sił
+
+===Strona 9===
+
+Jeżeli poprzeczne siły są równoległe o przeciwnych zwrotach, to ich wypadkowa jest równa ilki sumie wartościowych. Układ taki nazywamy parą sił.
+
+Moment siły
+
+Wartość momentu siły (moduł) jest równy F * h, gdzie h to odległość punktu O od prostej działania siły F (linii działania).
+
+Gdy możliwe jest że F = 0 i h ≠ 0 a mimo to M ≠ 0
+
+Jeżeli moduł siły jest różny od zera oraz moduł wektora działania siły przechodzi przez punkt O
+M = 0
+
+Para sił to układ równy z dwóch sił równoległych, nie leżących na jednej prostej, równych przeciwnych zwrotach.
+
+Parę sił nie można zastąpić wypadkową par sił można zastąpić momentem.
+
+Moment pary sił
+
+Moment wypadkowy układu sił względem dowolnego punktu A to suma momentów poszczególnych sił tego układu.
+
+Moment pary sił nie zależy od tego względem którego punktu go obliczamy, a jego wartość jest równa F × h, gdzie h to odległość między liniami działania tych par.
+
+Wektor swobodny nie zależy od doboru punktu zaczepienia.
+
+Moment pary sił jest wektorem swobodnym.
+
+===Strona 10===
+
+Parę sił można dowolnie przesuwać w tej płaszczyźnie działania i do innych płaszczyzn równoległych nie zmieniając przy tym skutków działania
+
+Czy układ dowolny to to samo co zbieżny?
+Układ dowolny to taki układ, w którym linie działania sił przecinają się w jednym punkcie
+
+Co zrobić, aby przesunąć siłę P z punktu A do B?
+
+Siłę P przyłożoną do punktu A możemy zastąpić równą jej siłą przyłożoną do punktu B, dodając jednocześnie parę sił o momencie równym momentowi tej siły (wyjściowej) względem punktu B
+
+Dowolny układ sił można zastąpić układem zbieżnym w dowolnym punkcie A z układem momentów liczonych względem punktu A
+
+Dowolny układ sił można zastąpić układem równoważnym, złożonym z jednej siły przyłożonej w dowolnym punkcie A (nazywaną główną siłą układu) i jednej pary sił (nazywaną głównym momentem układu)
+
+Siła główna układu jest niezmienna, zmienny jest moment główny, zależy od wyboru punktu A
