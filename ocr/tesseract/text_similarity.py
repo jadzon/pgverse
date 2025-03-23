@@ -1,47 +1,76 @@
+import os
 import re
-import difflib
 
-def measure_similarity_edit_distance(ref_text, test_text):
+def read_text_file(file_path):
+    """Wczytuje zawartość pliku do łańcucha znaków (lub zwraca None w razie błędu)."""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            return f.read()
+    except Exception as e:
+        print(f"Nie udało się wczytać pliku '{file_path}': {e}")
+        return None
+
+def longest_common_subsequence_len(a, b):
     """
-    1) Usuwa wszystkie białe znaki (spacje, entery, tabulatory),
-    2) Dopasowuje ciągi za pomocą difflib.SequenceMatcher,
-    3) Oblicza koszt wstawień, usunięć i podmian,
-    4) Zwraca (w procentach) 1 - (koszt / długość_ref_clean) * 100.
+    Zwraca długość najdłuższego wspólnego podciągu znaków w ciągach a i b.
+    Podciąg nie musi być ciągły, ale musi zachowywać kolejność znaków.
+    Algorytm dynamiczny O(n*m).
+    """
+    n, m = len(a), len(b)
+    dp = [[0]*(m+1) for _ in range(n+1)]
+    
+    for i in range(n):
+        for j in range(m):
+            if a[i] == b[j]:
+                dp[i+1][j+1] = dp[i][j] + 1
+            else:
+                dp[i+1][j+1] = max(dp[i][j+1], dp[i+1][j])
+    
+    return dp[n][m]
+
+def measure_lcs_similarity_percent(ref_text, test_text):
+    """
+    1) Usuwa wszystkie białe znaki.
+    2) Liczy długość LCS pomiędzy ciągami znaków.
+    3) Zwraca wynik w procentach (względem długości tekstu referencyjnego).
     """
     
     ref_clean = re.sub(r"\s+", "", ref_text)
     test_clean = re.sub(r"\s+", "", test_text)
     
-   
-    matcher = difflib.SequenceMatcher(None, ref_clean, test_clean)
+    
+    lcs_len = longest_common_subsequence_len(ref_clean, test_clean)
     
     
-    cost = 0
-    for tag, i1, i2, j1, j2 in matcher.get_opcodes():
-        if tag == 'insert':
-            cost += (j2 - j1)
-        elif tag == 'delete':
-            cost += (i2 - i1)
-        elif tag == 'replace':
-            cost += max((i2 - i1), (j2 - j1))
-        
-    
-   
     ref_len = len(ref_clean)
     if ref_len == 0:
-       
-        return 0.0 if len(test_clean) > 0 else 100.0
+        
+        return 100.0 if len(test_clean) == 0 else 0.0
     
-    ratio = 1 - cost / ref_len
-    
-    ratio = max(ratio, 0.0)
-    return ratio * 100
+    return (lcs_len / ref_len) * 100
 
+def main():
+    # Zmień na własne ścieżki plików:
+    ref_file_path = "d:\\nauka\\baza\\k3.txt"
+    test_file_path = "d:\\nauka\\baza\\wynik3.txt"
+
+    if not os.path.isfile(ref_file_path):
+        print(f"Plik referencyjny nie istnieje: {ref_file_path}")
+        return
+    
+    if not os.path.isfile(test_file_path):
+        print(f"Plik testowy nie istnieje: {test_file_path}")
+        return
+
+    ref_text = read_text_file(ref_file_path)
+    test_text = read_text_file(test_file_path)
+    
+    if ref_text is None or test_text is None:
+        print("Błąd odczytu plików.")
+        return
+
+    similarity = measure_lcs_similarity_percent(ref_text, test_text)
+    print(f"LCS similarity: {similarity:.2f}%")
 
 if __name__ == "__main__":
-    ref  = "Ania ma psa i kota i szynszyle i chomika i parrota i wgl ma se duzo zwierzat"   
-    test = "Ania ma psa!!!!!!!!!!!!!! i kota i szynszyle i chomika i parrota i wgl ma se duzo zwierzat"  
-    
-    percent = measure_similarity_edit_distance(ref, test)
-    print(f"Zgodność: {percent:.2f}%")
-    
+    main()
