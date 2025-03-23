@@ -1,0 +1,163 @@
+{
+  "image_path": "Dataset\\Elektroniczne\\sch4.png",
+  "blocks": [
+    {
+      "coords": [
+        44.0,
+        58.0,
+        177.0,
+        108.0
+      ],
+      "type": "rectangle",
+      "text": "10 kQ",
+      "confidence": 0.971928056363286
+    },
+    {
+      "coords": [
+        230.0,
+        61.0,
+        337.0,
+        105.0
+      ],
+      "type": "rectangle",
+      "text": "5 kQ",
+      "confidence": 0.9324469922204872
+    },
+    {
+      "coords": [
+        194.0,
+        132.0,
+        257.0,
+        185.0
+      ],
+      "type": "rectangle",
+      "text": "Us",
+      "confidence": 0.9999183203846476
+    },
+    {
+      "coords": [
+        40.0,
+        185.0,
+        177.0,
+        234.0
+      ],
+      "type": "rectangle",
+      "text": "20 kQ",
+      "confidence": 0.6149301264374969
+    },
+    {
+      "coords": [
+        206.0,
+        185.0,
+        340.0,
+        236.0
+      ],
+      "type": "rectangle",
+      "text": "10 kQ",
+      "confidence": 0.9861857673441204
+    },
+    {
+      "coords": [
+        478.0,
+        170.0,
+        588.0,
+        221.0
+      ],
+      "type": "rectangle",
+      "text": "5 kQ",
+      "confidence": 0.9952012507417977
+    },
+    {
+      "coords": [
+        633.0,
+        169.0,
+        822.0,
+        226.0
+      ],
+      "type": "rectangle",
+      "text": "U =5 V",
+      "confidence": 0.30206045488322697
+    },
+    {
+      "coords": [
+        429.0,
+        234.0,
+        541.0,
+        288.0
+      ],
+      "type": "rectangle",
+      "text": "G-Us",
+      "confidence": 0.9662277791867154
+    },
+    {
+      "coords": [
+        178.0,
+        285.0,
+        289.0,
+        333.0
+      ],
+      "type": "rectangle",
+      "text": "3 kQ",
+      "confidence": 0.9939277673134654
+    },
+    {
+      "coords": [
+        630.0,
+        262.0,
+        860.0,
+        317.0
+      ],
+      "type": "rectangle",
+      "text": "J =1,2 mA",
+      "confidence": 0.8185295034530418
+    },
+    {
+      "coords": [
+        429.0,
+        307.0,
+        473.0,
+        347.0
+      ],
+      "type": "rectangle",
+      "text": "[G",
+      "confidence": 0.999935431638645
+    },
+    {
+      "coords": [
+        473.0,
+        315.0,
+        495.0,
+        333.0
+      ],
+      "type": "rectangle",
+      "text": "=",
+      "confidence": 0.8748065915518879
+    },
+    {
+      "coords": [
+        498.0,
+        307.0,
+        604.0,
+        345.0
+      ],
+      "type": "rectangle",
+      "text": "10 mS]",
+      "confidence": 0.9624920636716546
+    },
+    {
+      "coords": [
+        469.2053287209438,
+        56.086691731257645,
+        549.7946712790562,
+        118.91330826874236
+      ],
+      "type": "rectangle",
+      "text": "Rx",
+      "confidence": 0.9999842371150446
+    }
+  ],
+  "image_size": {
+    "width": 1002,
+    "height": 377
+  }
+}

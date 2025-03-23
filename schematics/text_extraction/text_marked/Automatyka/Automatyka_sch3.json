@@ -1,0 +1,119 @@
+{
+  "image_path": "Dataset\\Automatyka\\sch3.png",
+  "blocks": [
+    {
+      "coords": [
+        88.0,
+        46.0,
+        114.0,
+        78.0
+      ],
+      "type": "rectangle",
+      "text": "t)",
+      "confidence": 0.9999737004678224
+    },
+    {
+      "coords": [
+        327.0,
+        42.0,
+        393.0,
+        83.0
+      ],
+      "type": "rectangle",
+      "text": "Xi(t)",
+      "confidence": 0.9905219380636066
+    },
+    {
+      "coords": [
+        601.0,
+        43.0,
+        663.0,
+        85.0
+      ],
+      "type": "rectangle",
+      "text": "u(t)",
+      "confidence": 0.9970373593646359
+    },
+    {
+      "coords": [
+        1022.0,
+        48.0,
+        1159.0,
+        93.0
+      ],
+      "type": "rectangle",
+      "text": "x(t)=y(t)",
+      "confidence": 0.937692581004759
+    },
+    {
+      "coords": [
+        254.0,
+        86.0,
+        309.0,
+        123.0
+      ],
+      "type": "rectangle",
+      "text": "1/s",
+      "confidence": 0.9662425672789801
+    },
+    {
+      "coords": [
+        414.0,
+        88.0,
+        455.0,
+        119.0
+      ],
+      "type": "rectangle",
+      "text": "~ki",
+      "confidence": 0.5498147010803223
+    },
+    {
+      "coords": [
+        691.0,
+        87.0,
+        716.0,
+        119.0
+      ],
+      "type": "rectangle",
+      "text": "2",
+      "confidence": 1.0
+    },
+    {
+      "coords": [
+        943.0,
+        86.0,
+        999.0,
+        123.0
+      ],
+      "type": "rectangle",
+      "text": "1/s",
+      "confidence": 0.9719300050388097
+    },
+    {
+      "coords": [
+        962.0,
+        196.0,
+        999.0,
+        228.0
+      ],
+      "type": "rectangle",
+      "text": "3",
+      "confidence": 0.9999992847443906
+    },
+    {
+      "coords": [
+        737.0,
+        267.0,
+        757.0,
+        290.0
+      ],
+      "type": "rectangle",
+      "text": "K",
+      "confidence": 0.9950007848457041
+    }
+  ],
+  "image_size": {
+    "width": 1266,
+    "height": 368
+  }
+}

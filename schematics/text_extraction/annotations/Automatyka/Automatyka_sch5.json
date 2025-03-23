@@ -1,0 +1,117 @@
+{
+  "image_path": "Dataset\\Automatyka\\sch5.png",
+  "blocks": [
+    {
+      "coords": [
+        98.0,
+        66.0,
+        147.0,
+        117.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        202.0,
+        59.0,
+        264.0,
+        122.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        319.0,
+        64.0,
+        368.0,
+        117.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        425.0,
+        60.0,
+        487.0,
+        122.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        426.0,
+        137.0,
+        486.0,
+        200.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        593.0,
+        60.0,
+        655.0,
+        122.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        528.0,
+        216.0,
+        590.0,
+        277.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        426.0,
+        301.0,
+        486.0,
+        361.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        426.0,
+        379.0,
+        487.0,
+        441.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        320.0,
+        310.0,
+        370.0,
+        357.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        203.0,
+        301.0,
+        265.0,
+        363.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        201.0,
+        199.0,
+        264.0,
+        258.0
+      ],
+      "type": "rectangle"
+    }
+  ],
+  "image_size": {
+    "width": 800,
+    "height": 457
+  }
+}

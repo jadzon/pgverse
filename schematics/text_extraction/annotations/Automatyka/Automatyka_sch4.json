@@ -1,0 +1,54 @@
+{
+  "image_path": "Dataset\\Automatyka\\sch4.png",
+  "blocks": [
+    {
+      "coords": [
+        74.0,
+        87.0,
+        105.0,
+        123.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        157.0,
+        51.0,
+        281.0,
+        163.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        332.0,
+        91.0,
+        366.0,
+        124.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        417.0,
+        50.0,
+        620.0,
+        164.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        635.0,
+        208.0,
+        669.0,
+        244.0
+      ],
+      "type": "rectangle"
+    }
+  ],
+  "image_size": {
+    "width": 800,
+    "height": 281
+  }
+}

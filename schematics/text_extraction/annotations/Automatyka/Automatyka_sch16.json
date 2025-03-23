@@ -1,0 +1,72 @@
+{
+  "image_path": "Dataset\\Automatyka\\sch16.png",
+  "blocks": [
+    {
+      "coords": [
+        106.0,
+        23.0,
+        161.0,
+        78.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        214.0,
+        16.0,
+        283.0,
+        88.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        215.0,
+        141.0,
+        284.0,
+        213.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        213.0,
+        250.0,
+        283.0,
+        319.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        351.0,
+        139.0,
+        424.0,
+        212.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        509.0,
+        140.0,
+        576.0,
+        212.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        611.0,
+        147.0,
+        666.0,
+        203.0
+      ],
+      "type": "rectangle"
+    }
+  ],
+  "image_size": {
+    "width": 800,
+    "height": 348
+  }
+}

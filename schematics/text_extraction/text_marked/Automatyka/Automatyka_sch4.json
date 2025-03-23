@@ -1,0 +1,86 @@
+{
+  "image_path": "Dataset\\Automatyka\\sch4.png",
+  "blocks": [
+    {
+      "coords": [
+        619.0,
+        22.0,
+        730.0,
+        94.0
+      ],
+      "type": "rectangle",
+      "text": "d (t)",
+      "confidence": 0.9036956492452718
+    },
+    {
+      "coords": [
+        27.0,
+        107.0,
+        109.0,
+        175.0
+      ],
+      "type": "rectangle",
+      "text": "r(t)",
+      "confidence": 0.9998841881752014
+    },
+    {
+      "coords": [
+        192.0,
+        112.0,
+        276.0,
+        165.0
+      ],
+      "type": "rectangle",
+      "text": "e(t)",
+      "confidence": 0.963905644768598
+    },
+    {
+      "coords": [
+        1135.0,
+        90.0,
+        1227.0,
+        164.0
+      ],
+      "type": "rectangle",
+      "text": "y(t)",
+      "confidence": 0.8914510607719421
+    },
+    {
+      "coords": [
+        306.0,
+        150.0,
+        440.0,
+        226.0
+      ],
+      "type": "rectangle",
+      "text": "Gc(s)",
+      "confidence": 0.9779086250244677
+    },
+    {
+      "coords": [
+        815.0,
+        146.0,
+        952.0,
+        223.0
+      ],
+      "type": "rectangle",
+      "text": "Gp(s)",
+      "confidence": 0.9896328739669829
+    },
+    {
+      "coords": [
+        1224.0,
+        318.0,
+        1335.0,
+        392.0
+      ],
+      "type": "rectangle",
+      "text": "d2(t)",
+      "confidence": 0.9270655133647122
+    }
+  ],
+  "image_size": {
+    "width": 1403,
+    "height": 493
+  }
+}

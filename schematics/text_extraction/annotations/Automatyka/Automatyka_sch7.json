@@ -1,0 +1,80 @@
+{
+    "image_path": "Dataset\\Automatyka\\sch7.png",
+    "blocks": [
+        {
+            "coords": [
+                82.0,
+                84.0,
+                130.0,
+                132.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                191.0,
+                39.0,
+                378.0,
+                179.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                463.0,
+                60.0,
+                649.0,
+                159.0
+            ],
+            "type": "rectangle"
+        }
+    ],
+    "image_size": {
+        "width": 799,
+        "height": 245
+    },
+    "connections": [
+        {
+            "start_block": 0,
+            "end_block": 2,
+            "start_point": [
+                105,
+                229
+            ],
+            "end_point": [
+                693,
+                229
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 1,
+            "end_block": 2,
+            "start_point": [
+                414,
+                112
+            ],
+            "end_point": [
+                435,
+                112
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 0,
+            "end_block": 1,
+            "start_point": [
+                190,
+                113
+            ],
+            "end_point": [
+                199,
+                113
+            ],
+            "is_directed": false,
+            "direction": null
+        }
+    ]
+}

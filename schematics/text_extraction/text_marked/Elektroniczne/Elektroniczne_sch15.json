@@ -1,0 +1,42 @@
+{
+  "image_path": "Dataset\\Elektroniczne\\sch15.png",
+  "blocks": [
+    {
+      "coords": [
+        328.0,
+        130.0,
+        364.0,
+        160.0
+      ],
+      "type": "rectangle",
+      "text": "Ra",
+      "confidence": 0.9106315806668088
+    },
+    {
+      "coords": [
+        563.0,
+        366.0,
+        756.0,
+        403.0
+      ],
+      "type": "rectangle",
+      "text": "VBAT = 10 V",
+      "confidence": 0.6521386147322057
+    },
+    {
+      "coords": [
+        271.0766695551726,
+        304.0425634585406,
+        308.9233304448274,
+        379.9574365414594
+      ],
+      "type": "rectangle",
+      "text": "K",
+      "confidence": 0.8593173711655169
+    }
+  ],
+  "image_size": {
+    "width": 777,
+    "height": 578
+  }
+}

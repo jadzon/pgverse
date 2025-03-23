@@ -4,7 +4,8 @@ import os
 import easyocr
 import time
 import argparse
-import pytesseract
+import os.path
+import json
 from imutils.object_detection import non_max_suppression
 from pathlib import Path
 
@@ -346,187 +347,6 @@ def wykryj_tekst_easyocr(obraz, reader, jezyk='pl', min_confidence=0.2):
     
     return najlepsze_wyniki
 
-def wykryj_tekst_tesseract(obraz, jezyk='pol', config=''):
-    """
-    Wykrywa tekst na obrazie za pomocą Tesseract OCR z ulepszoną preobróbką.
-    
-    Args:
-        obraz: Obraz w formacie OpenCV (numpy array)
-        jezyk: Kod języka do detekcji (domyślnie polski)
-        config: Dodatkowa konfiguracja dla Tesseract
-        
-    Returns:
-        Lista wykrytych tekstów z pozycjami i prawdopodobieństwami
-    """
-    try:
-        # Predefiniowane konfiguracje dla różnych typów tekstu
-        if not config:
-            config = '--oem 1 --psm 6 -l {} --dpi 300'.format(jezyk)
-        
-        # Zastosowanie wielopoziomowego preprocessingu
-        przetworzone_wersje = wielopoziomowy_preprocessing(obraz)
-        
-        najlepsze_wyniki = []
-        najlepsza_pewnosc_suma = 0
-        
-        # Sprawdzamy różne wersje przetworzenia
-        for nazwa_przetworzenia, obraz_przetworzony in przetworzone_wersje.items():
-            # Wykrywanie tekstu z danymi o pozycji
-            try:
-                ocr_data = pytesseract.image_to_data(
-                    obraz_przetworzony, 
-                    lang=jezyk, 
-                    config=config, 
-                    output_type=pytesseract.Output.DICT
-                )
-            
-                # Przetwarzanie wyników
-                wyniki = []
-                liczba_wykrytych = len(ocr_data['text'])
-                
-                for i in range(liczba_wykrytych):
-                    # Filtrujemy puste wyniki
-                    tekst = ocr_data['text'][i].strip()
-                    if not tekst:
-                        continue
-                    
-                    # Pobieramy dane o pewności (0-100%)
-                    pewnosc = float(ocr_data['conf'][i]) / 100.0
-                    if pewnosc < 0.01:  # Filtrujemy bardzo niskie pewności
-                        continue
-                    
-                    # Pobieramy koordynaty
-                    x = ocr_data['left'][i]
-                    y = ocr_data['top'][i]
-                    w = ocr_data['width'][i]
-                    h = ocr_data['height'][i]
-                    
-                    # Tworzymy bounding box w formacie EasyOCR
-                    bbox = [
-                        [x, y],
-                        [x + w, y],
-                        [x + w, y + h],
-                        [x, y + h]
-                    ]
-                    
-                    wyniki.append((bbox, tekst, pewnosc))
-                
-                # Wybieramy przetworzenie z najlepszą sumą pewności
-                suma_pewnosci = sum(wynik[2] for wynik in wyniki)
-                if suma_pewnosci > najlepsza_pewnosc_suma:
-                    najlepsza_pewnosc_suma = suma_pewnosci
-                    najlepsze_wyniki = wyniki
-            
-            except Exception as e:
-                print(f"Błąd Tesseract dla przetworzenia {nazwa_przetworzenia}: {e}")
-                continue
-        
-        return najlepsze_wyniki
-    
-    except Exception as e:
-        print(f"Błąd podczas używania Tesseract OCR: {e}")
-        return []
-
-def polacz_wyniki_ocr(wyniki_easyocr, wyniki_tesseract, iou_threshold=0.5):
-    """
-    Łączy wyniki z różnych metod OCR, usuwając duplikaty.
-    
-    Args:
-        wyniki_easyocr: Lista wyników z EasyOCR
-        wyniki_tesseract: Lista wyników z Tesseract
-        iou_threshold: Próg IoU dla uznania dwóch bboxów za ten sam region
-        
-    Returns:
-        Lista połączonych wyników bez duplikatów
-    """
-    wszystkie_wyniki = []
-    
-    # Dodajemy najpierw wyniki z EasyOCR
-    for bbox, tekst, pewnosc in wyniki_easyocr:
-        wszystkie_wyniki.append({
-            "bbox": bbox,
-            "tekst": tekst,
-            "pewnosc": pewnosc,
-            "zrodlo": "easyocr"
-        })
-    
-    # Następnie dodajemy wyniki z Tesseract, unikając duplikatów
-    for bbox, tekst, pewnosc in wyniki_tesseract:
-        is_duplicate = False
-        for wynik in wszystkie_wyniki:
-            if oblicz_iou(bbox, wynik["bbox"]) > iou_threshold:
-                # W przypadku duplikatu, wybieramy wynik o wyższej pewności
-                if pewnosc > wynik["pewnosc"]:
-                    wynik["tekst"] = tekst
-                    wynik["pewnosc"] = pewnosc
-                    wynik["zrodlo"] = "tesseract"
-                is_duplicate = True
-                break
-        
-        if not is_duplicate:
-            wszystkie_wyniki.append({
-                "bbox": bbox,
-                "tekst": tekst,
-                "pewnosc": pewnosc,
-                "zrodlo": "tesseract"
-            })
-    
-    # Konwersja z powrotem do formatu (bbox, tekst, pewnosc)
-    wyniki_polaczone = [(wynik["bbox"], wynik["tekst"], wynik["pewnosc"]) for wynik in wszystkie_wyniki]
-    
-    return wyniki_polaczone
-
-def oblicz_iou(bbox1, bbox2):
-    """
-    Oblicza IoU (Intersection over Union) dla dwóch bounding boxów.
-    
-    Args:
-        bbox1: Pierwszy bounding box w formacie [[x1,y1], [x2,y2], [x3,y3], [x4,y4]]
-        bbox2: Drugi bounding box w tym samym formacie
-        
-    Returns:
-        Wartość IoU (0.0 - 1.0)
-    """
-    # Konwersja na format [x, y, w, h]
-    def get_rect(bbox):
-        x_coords = [p[0] for p in bbox]
-        y_coords = [p[1] for p in bbox]
-        x_min, x_max = min(x_coords), max(x_coords)
-        y_min, y_max = min(y_coords), max(y_coords)
-        return [x_min, y_min, x_max - x_min, y_max - y_min]
-    
-    rect1 = get_rect(bbox1)
-    rect2 = get_rect(bbox2)
-    
-    # Rozpakowanie koordynatów
-    x1, y1, w1, h1 = rect1
-    x2, y2, w2, h2 = rect2
-    
-    # Obliczenie współrzędnych przecięcia
-    x_left = max(x1, x2)
-    y_top = max(y1, y2)
-    x_right = min(x1 + w1, x2 + w2)
-    y_bottom = min(y1 + h1, y2 + h2)
-    
-    # Sprawdzenie, czy prostokąty się przecinają
-    if x_right < x_left or y_bottom < y_top:
-        return 0.0
-    
-    # Obliczenie pola przecięcia
-    intersection_area = (x_right - x_left) * (y_bottom - y_top)
-    
-    # Obliczenie pól obu prostokątów
-    rect1_area = w1 * h1
-    rect2_area = w2 * h2
-    
-    # Obliczenie pola sumy (suma - przecięcie)
-    union_area = rect1_area + rect2_area - intersection_area
-    
-    # Obliczenie IoU
-    iou = intersection_area / float(union_area)
-    
-    return iou
-
 def oznacz_wykryty_tekst(obraz_oryginalny, wykryte_teksty, prog_pewnosci=0.2):
     """
     Oznacza wykryty tekst na oryginalnym obrazie.
@@ -705,22 +525,116 @@ def znajdz_folder(sciezka):
     
     return None
 
+def zapisz_wyniki_json(wszystkie_wyniki, oryginalne_obrazy, folder_wyjsciowy="text_marked"):
+    """
+    Zapisuje wyniki rozpoznawania tekstu do plików JSON.
+    
+    Args:
+        wszystkie_wyniki: Słownik {nazwa_bazowa: lista_wykrytych_tekstów}
+        oryginalne_obrazy: Słownik {nazwa_bazowa: oryginalny_obraz}
+        folder_wyjsciowy: Folder do zapisania wyników
+    """
+    # Pełna ścieżka do folderu wyjściowego
+    pelna_sciezka_wyjsciowa = os.path.join(PROJEKT_DIR, folder_wyjsciowy)
+    os.makedirs(pelna_sciezka_wyjsciowa, exist_ok=True)
+    
+    # Grupowanie obrazów według folderów źródłowych
+    foldery = {}
+    
+    for nazwa in wszystkie_wyniki.keys():
+        folder_zrodlowy = nazwa.split('_')[0]
+        if folder_zrodlowy not in foldery:
+            foldery[folder_zrodlowy] = []
+            
+            # Tworzymy podfolder dla tej kategorii
+            os.makedirs(os.path.join(pelna_sciezka_wyjsciowa, folder_zrodlowy), exist_ok=True)
+            
+        foldery[folder_zrodlowy].append(nazwa)
+    
+    # Licznik zapisanych plików
+    zapisane_pliki = 0
+    
+    # Zapisujemy każdy plik JSON w odpowiednim podfolderze
+    for folder, nazwy in foldery.items():
+        for nazwa in nazwy:
+            # Pobieramy wyniki dla danego obrazu
+            wykryte_teksty = wszystkie_wyniki[nazwa]
+            
+            # Pobieramy rozmiar oryginalnego obrazu
+            oryginalny_obraz = oryginalne_obrazy[nazwa]
+            wysokosc, szerokosc = oryginalny_obraz.shape[:2]
+            
+            # Tworzymy ścieżkę do oryginalnego obrazu
+            nazwa_oryginalna = '_'.join(nazwa.split('_')[1:])  # Usuwamy prefiks folderu
+            sciezka_obrazu = f"Dataset\\{folder}\\{nazwa_oryginalna}.png"
+            
+            # Tworzymy strukturę danych JSON
+            dane_json = {
+                "image_path": sciezka_obrazu,
+                "blocks": [],
+                "image_size": {
+                    "width": szerokosc,
+                    "height": wysokosc
+                }
+            }
+            
+            # Dodajemy każdy wykryty tekst jako prostokąt
+            for bbox, tekst, pewnosc in wykryte_teksty:
+                # Konwertujemy bounding box z formatu [[x1,y1], [x2,y2], [x3,y3], [x4,y4]]
+                # na format [x_min, y_min, x_max, y_max]
+                x_coords = [p[0] for p in bbox]
+                y_coords = [p[1] for p in bbox]
+                x_min, x_max = min(x_coords), max(x_coords)
+                y_min, y_max = min(y_coords), max(y_coords)
+                
+                blok = {
+                    "coords": [
+                        float(x_min),
+                        float(y_min),
+                        float(x_max),
+                        float(y_max)
+                    ],
+                    "type": "rectangle",
+                    "text": tekst,
+                    "confidence": float(pewnosc)
+                }
+                
+                dane_json["blocks"].append(blok)
+            
+            # Zapisujemy do pliku JSON
+            sciezka_wyjsciowa = os.path.join(pelna_sciezka_wyjsciowa, folder, f"{nazwa}.json")
+            with open(sciezka_wyjsciowa, 'w', encoding='utf-8') as f:
+                json.dump(dane_json, f, indent=2, ensure_ascii=False)
+                
+            zapisane_pliki += 1
+    
+    print(f"Zapisano {zapisane_pliki} plików JSON w folderze {folder_wyjsciowy}")
+    for folder, nazwy in foldery.items():
+        print(f"  - {folder}: {len(nazwy)} plików")
+
 def main():
     parser = argparse.ArgumentParser(description='Ekstrakcja tekstu z przetworzonych obrazów')
     parser.add_argument('--typ', type=str, default='binaryzacja_ulepszona',
                         help='Typ przetworzonego obrazu do użycia (np. binaryzacja, binaryzacja_ulepszona)')
     parser.add_argument('--prog', type=float, default=0.2,
                         help='Minimalny próg pewności dla wyświetlenia wykrytego tekstu (0.0-1.0)')
-    parser.add_argument('--jezyk', type=str, default='pol',
-                        help='Język do wykrywania (pol, eng, itp.)')
-    parser.add_argument('--metoda', type=str, default='hybrid',
-                        choices=['easyocr', 'tesseract', 'hybrid'],
-                        help='Metoda OCR do użycia (easyocr, tesseract, hybrid)')
+    parser.add_argument('--jezyk', type=str, default='pl',
+                        help='Język do wykrywania (pl, en, itp.)')
     parser.add_argument('--wybor_najlepszego', action='store_true',
                         help='Czy wybrać najlepsze przetworzenie dla każdego obrazu')
     parser.add_argument('--foldery', type=str, default="Dataset/Automatyka,Dataset/Elektroniczne",
                         help='Lista folderów z obrazami, oddzielona przecinkami')
+    parser.add_argument('--zapisz_json', action='store_true', default=True,
+                        help='Czy zapisać wyniki w formacie JSON')
     args = parser.parse_args()
+    
+    # Tworzenie folderów dla wyników JSON
+    folder_json = "text_marked"
+    # Tworzymy folder główny jeśli nie istnieje
+    os.makedirs(os.path.join(PROJEKT_DIR, folder_json), exist_ok=True)
+    # Tworzymy podfoldery dla kategorii
+    os.makedirs(os.path.join(PROJEKT_DIR, folder_json, "Automatyka"), exist_ok=True)
+    os.makedirs(os.path.join(PROJEKT_DIR, folder_json, "Elektroniczne"), exist_ok=True)
     
     # Folder z przetworzonymi obrazami (ścieżka względna projektu)
     folder_przetworzone = "Dataset/Przetworzone"
@@ -800,10 +714,9 @@ def main():
         print("Nie wczytano żadnych obrazów. Kończę działanie.")
         return
     
-    # Inicjalizacja modeli OCR
-    if args.metoda in ['easyocr', 'hybrid']:
-        print("Inicjalizacja modelu EasyOCR...")
-        easyocr_reader = easyocr.Reader(['pl', 'en'])
+    # Inicjalizacja modelu EasyOCR
+    print("Inicjalizacja modelu EasyOCR...")
+    easyocr_reader = easyocr.Reader(['pl', 'en'])
     
     # Przygotowujemy słowniki na wyniki
     obrazy_z_oznaczeniami = {}
@@ -814,15 +727,8 @@ def main():
     for nazwa, oryginalny_obraz in oryginalne_obrazy.items():
         print(f"Przetwarzanie obrazu: {nazwa}...")
         
-        # Wykrywamy tekst odpowiednią metodą
-        if args.metoda == 'easyocr':
-            wykryte_teksty = wykryj_tekst_easyocr(oryginalny_obraz, easyocr_reader, args.jezyk, args.prog)
-        elif args.metoda == 'tesseract':
-            wykryte_teksty = wykryj_tekst_tesseract(oryginalny_obraz, args.jezyk)
-        else:  # hybrid
-            wykryte_easyocr = wykryj_tekst_easyocr(oryginalny_obraz, easyocr_reader, args.jezyk, args.prog)
-            wykryte_tesseract = wykryj_tekst_tesseract(oryginalny_obraz, args.jezyk)
-            wykryte_teksty = polacz_wyniki_ocr(wykryte_easyocr, wykryte_tesseract)
+        # Wykrywamy tekst za pomocą EasyOCR
+        wykryte_teksty = wykryj_tekst_easyocr(oryginalny_obraz, easyocr_reader, args.jezyk, args.prog)
         
         # Zapisujemy wyniki
         wszystkie_wyniki[nazwa] = wykryte_teksty
@@ -841,8 +747,12 @@ def main():
         # Dodajemy do słownika wyników
         obrazy_z_oznaczeniami[nazwa] = obraz_z_oznaczeniami
     
-    # Zapisujemy wyniki
+    # Zapisujemy wyniki jako obrazy z oznaczeniami
     zapisz_wyniki(obrazy_z_oznaczeniami)
+    
+    # Zapisujemy wyniki w formacie JSON jeśli opcja jest włączona
+    if args.zapisz_json:
+        zapisz_wyniki_json(wszystkie_wyniki, oryginalne_obrazy, folder_wyjsciowy="text_marked")
     
     # Czas zakończenia przetwarzania
     czas_koniec = time.time()

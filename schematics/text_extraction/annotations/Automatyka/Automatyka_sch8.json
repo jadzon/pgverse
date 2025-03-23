@@ -1,0 +1,80 @@
+{
+    "image_path": "Dataset\\Automatyka\\sch8.png",
+    "blocks": [
+        {
+            "coords": [
+                69.0,
+                60.0,
+                119.0,
+                107.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                184.0,
+                14.0,
+                371.0,
+                157.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                459.0,
+                36.0,
+                649.0,
+                134.0
+            ],
+            "type": "rectangle"
+        }
+    ],
+    "image_size": {
+        "width": 800,
+        "height": 221
+    },
+    "connections": [
+        {
+            "start_block": 0,
+            "end_block": 2,
+            "start_point": [
+                94,
+                208
+            ],
+            "end_point": [
+                693,
+                208
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 1,
+            "end_block": 2,
+            "start_point": [
+                345,
+                85
+            ],
+            "end_point": [
+                443,
+                86
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 0,
+            "end_block": 1,
+            "start_point": [
+                173,
+                91
+            ],
+            "end_point": [
+                187,
+                91
+            ],
+            "is_directed": false,
+            "direction": null
+        }
+    ]
+}

@@ -1,5 +1,7 @@
 # Katalogi danych
 Dataset/
+dataset output/
+visualization output/
 
 # Pliki środowiska Python
 __pycache__/

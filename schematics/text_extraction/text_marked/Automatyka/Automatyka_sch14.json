@@ -1,0 +1,119 @@
+{
+  "image_path": "Dataset\\Automatyka\\sch14.png",
+  "blocks": [
+    {
+      "coords": [
+        361.0,
+        33.0,
+        399.0,
+        84.0
+      ],
+      "type": "rectangle",
+      "text": "3",
+      "confidence": 0.9999789000670525
+    },
+    {
+      "coords": [
+        31.0,
+        137.0,
+        71.0,
+        179.0
+      ],
+      "type": "rectangle",
+      "text": "U",
+      "confidence": 0.3762832306898076
+    },
+    {
+      "coords": [
+        449.0,
+        125.0,
+        529.0,
+        186.0
+      ],
+      "type": "rectangle",
+      "text": "x3",
+      "confidence": 0.9141636410707173
+    },
+    {
+      "coords": [
+        340.0,
+        160.0,
+        428.0,
+        217.0
+      ],
+      "type": "rectangle",
+      "text": "1/s",
+      "confidence": 0.9844196698145885
+    },
+    {
+      "coords": [
+        703.0,
+        170.0,
+        732.0,
+        208.0
+      ],
+      "type": "rectangle",
+      "text": "4",
+      "confidence": 0.9994387222357979
+    },
+    {
+      "coords": [
+        462.0,
+        312.0,
+        538.0,
+        368.0
+      ],
+      "type": "rectangle",
+      "text": "x2",
+      "confidence": 0.9137083765971199
+    },
+    {
+      "coords": [
+        340.0,
+        364.0,
+        426.0,
+        418.0
+      ],
+      "type": "rectangle",
+      "text": "1/s",
+      "confidence": 0.9844915790399306
+    },
+    {
+      "coords": [
+        569.0,
+        363.0,
+        659.0,
+        423.0
+      ],
+      "type": "rectangle",
+      "text": "1/s",
+      "confidence": 0.9962024184341958
+    },
+    {
+      "coords": [
+        671.0,
+        413.0,
+        750.0,
+        475.0
+      ],
+      "type": "rectangle",
+      "text": "X1",
+      "confidence": 0.6755905264287263
+    },
+    {
+      "coords": [
+        378.0,
+        492.0,
+        408.0,
+        532.0
+      ],
+      "type": "rectangle",
+      "text": "2",
+      "confidence": 0.9979513657771264
+    }
+  ],
+  "image_size": {
+    "width": 1045,
+    "height": 597
+  }
+}

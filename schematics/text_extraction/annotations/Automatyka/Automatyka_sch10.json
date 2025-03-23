@@ -1,0 +1,36 @@
+{
+  "image_path": "Dataset\\Automatyka\\sch10.png",
+  "blocks": [
+    {
+      "coords": [
+        85.0,
+        81.0,
+        132.0,
+        127.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        194.0,
+        35.0,
+        375.0,
+        176.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        458.0,
+        57.0,
+        640.0,
+        153.0
+      ],
+      "type": "rectangle"
+    }
+  ],
+  "image_size": {
+    "width": 800,
+    "height": 249
+  }
+}
