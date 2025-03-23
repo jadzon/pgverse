@@ -2,6 +2,33 @@ import os
 import cv2
 import numpy as np
 
+def calculate_noise_percentage(original_image, filtered_image, threshold=20):
+    """
+    Calculates the percentage of noisy pixels in the image.
+
+    Args:
+        original_image (numpy.ndarray): The original grayscale image.
+        filtered_image (numpy.ndarray): The image after applying the bilateral filter.
+        threshold (int): The difference threshold to consider a pixel as noisy.
+
+    Returns:
+        float: The percentage of noisy pixels in the image.
+    """
+    # Calculate the absolute difference between the original and filtered image
+    noise_map = cv2.absdiff(original_image, filtered_image)
+    
+    # Count pixels where the difference exceeds the threshold
+    noisy_pixels = np.sum(noise_map > threshold)
+    
+    # Calculate the total number of pixels
+    total_pixels = original_image.size
+    
+    # Calculate the noise percentage
+    noise_percentage = (noisy_pixels / total_pixels) * 100
+    
+    return noise_percentage
+
+# Example usage in your process_image function
 def process_image(input_filename="image3.png", grayscale_output="grayscale.png", filtered_output="filtered.png", adjusted_output="adjusted.png", sharpened_output="sharpened.png", alpha=0.8, background_color=250, max_resolution=1024):
     # Sprawdzenie, czy plik istnieje
     if not os.path.isfile(input_filename):
@@ -26,27 +53,26 @@ def process_image(input_filename="image3.png", grayscale_output="grayscale.png",
             new_height = int((height / width) * max_resolution)
         image = cv2.resize(image, (new_width, new_height), interpolation=cv2.INTER_AREA)
     
-    # Zapisanie obrazu w skali szarości
-    cv2.imwrite(grayscale_output, image)
-    print(f"Obraz w skali szarości zapisano jako {grayscale_output}")
+    #W razie usuwania za mało kratek zwiekszyc d do 8 lub 9 pod spodem
+    # Apply Bilateral Filter
+    filtered_image = cv2.bilateralFilter(image, d=7, sigmaColor=75, sigmaSpace=75)
     
-    # Nałożenie filtra Gaussa dla redukcji szumu (parametry dostosowane do poziomu <2%)
-    filtered_image = cv2.GaussianBlur(image, (3, 3), 0)
+    # Calculate noise percentage
+    noise_percentage = calculate_noise_percentage(image, filtered_image)
+    print(f"Noise percentage: {noise_percentage:.2f}%")
     
-    # Zapisanie przefiltrowanego obrazu
-    cv2.imwrite(filtered_output, filtered_image)
-    print(f"Obraz po filtrze Gaussa zapisano jako {filtered_output}")
+    if noise_percentage < 2:
+        print("Noise is below 2%.")
+    else:
+        print("Noise is above 2%.")
     
+    # Continue with the rest of the processing...
     # Obliczenie średniej wartości pikseli
     mean_pixel_value = np.mean(filtered_image)
     
     # Korekcja jasności i kontrastu
     beta = 127.5 - (mean_pixel_value * alpha)
     adjusted_image = cv2.convertScaleAbs(filtered_image, alpha=alpha, beta=beta)
-    
-    # Zapisanie obrazu po korekcji jasności i kontrastu
-    cv2.imwrite(adjusted_output, adjusted_image)
-    print(f"Obraz po korekcji jasności i kontrastu zapisano jako {adjusted_output}")
     
     # Sharpening the image
     kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
