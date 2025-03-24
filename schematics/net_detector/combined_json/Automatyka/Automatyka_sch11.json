@@ -1,0 +1,140 @@
+{
+  "image_path": "Dataset\\Automatyka\\sch11.png",
+  "image_sizes": {
+    "annotations": [
+      800,
+      240
+    ],
+    "text_marked": [
+      1136,
+      342
+    ],
+    "zgodne_rozmiary": false,
+    "skala_x": 0.704225352112676,
+    "skala_y": 0.7017543859649122,
+    "wymaga_skalowania": true
+  },
+  "image_size": {
+    "width": 800,
+    "height": 240
+  },
+  "blocks": [
+    {
+      "coords": [
+        71.0,
+        62.0,
+        121.0,
+        113.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        187.0,
+        16.0,
+        380.0,
+        163.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        422.0,
+        39.0,
+        523.0,
+        139.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        563.0,
+        38.0,
+        664.0,
+        138.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        257,
+        42,
+        274,
+        61
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        11,
+        47,
+        51,
+        76
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        130,
+        49,
+        176,
+        78
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        709,
+        51,
+        754,
+        82
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        452,
+        74,
+        492,
+        101
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        593,
+        74,
+        633,
+        101
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        290,
+        115,
+        312,
+        134
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    }
+  ]
+}

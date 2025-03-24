@@ -1,55 +1,51 @@
 import cv2
 import numpy as np
-from connection_detector import ConnectionDetector
+from line_detector import LineDetector
 import json
 import os
-import hashlib
-import pickle
 import logging
+import sys
+import traceback
 from datetime import datetime
 
-# Konfiguracja loggera
+# Konfiguracja loggera z zapisem do pliku
+log_file = 'program_log.txt'
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S'
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S',
+    handlers=[
+        logging.FileHandler(log_file),
+        logging.StreamHandler()
+    ]
 )
 
-def get_cache_path(image_path, schema_type):
-    """Generuje ścieżkę do pliku cache."""
-    # Użyj nazwy pliku zamiast pełnej ścieżki
-    filename = os.path.basename(image_path)
-    hash_object = hashlib.md5(filename.encode())
-    return os.path.join('cache', schema_type, f"{hash_object.hexdigest()}.pkl")
+# Dodaj funkcję wypisywania błędów
+def log_error(message, exception=None):
+    logging.error(message)
+    print(f"BŁĄD: {message}")
+    if exception:
+        logging.error(f"Szczegóły błędu: {str(exception)}")
+        logging.error(traceback.format_exc())
 
-def process_single_schema(filename, schema_type, sequence_number):
+def process_single_schema(filename, schema_type):
     """Przetwarza pojedynczy schemat."""
-    cache_path = get_cache_path(filename, schema_type)
-    connections = None
-    
     try:
+        print(f"Przetwarzam schemat: {filename} typu: {schema_type}")
         logging.info(f"Rozpoczynam przetwarzanie schematu: {filename} typu: {schema_type}")
         
-        # Sprawdź czy wyniki są w cache
-        if os.path.exists(cache_path):
-            logging.info(f"Znaleziono plik w cache: {cache_path}")
-            with open(cache_path, 'rb') as f:
-                connections = pickle.load(f)
-                logging.info(f"Wykryto {len(connections)} połączeń w {filename}")
-        else:
-            logging.info(f"Nie znaleziono pliku w cache: {cache_path}")
+        # Inicjalizacja detektora linii
+        line_detector = LineDetector()
+        logging.info(f"Zainicjalizowano LineDetector dla {filename}")
         
-        # Inicjalizacja detektora połączeń
-        connection_detector = ConnectionDetector()
-        logging.info(f"Zainicjalizowano ConnectionDetector dla {filename}")
-        
-        # Wczytaj adnotacje
-        annotations_dir = os.path.join('annotations', schema_type)
+        # Wczytaj adnotacje z katalogu combined_json
+        annotations_dir = os.path.join('combined_json', schema_type)
         annotations_path = os.path.join(annotations_dir, filename)
+        print(f"Próba wczytania adnotacji z: {annotations_path}")
         logging.info(f"Próba wczytania adnotacji z: {annotations_path}")
         
         if not os.path.exists(annotations_path):
-            logging.error(f"Nie znaleziono pliku adnotacji: {annotations_path}")
+            log_error(f"Nie znaleziono pliku adnotacji: {annotations_path}")
             return None
             
         with open(annotations_path, 'r') as f:
@@ -58,21 +54,18 @@ def process_single_schema(filename, schema_type, sequence_number):
         
         # Wczytaj oryginalny obraz w pełnej rozdzielczości
         image_path = data['image_path']
+        print(f"Próba wczytania obrazu z: {image_path}")
         logging.info(f"Próba wczytania obrazu z: {image_path}")
         
         if not os.path.exists(image_path):
-            logging.error(f"Nie znaleziono pliku obrazu: {image_path}")
+            log_error(f"Nie znaleziono pliku obrazu: {image_path}")
             return None
             
         original_image = cv2.imread(image_path)
         if original_image is None:
-            logging.error(f"Nie udało się wczytać obrazu: {image_path}")
+            log_error(f"Nie udało się wczytać obrazu: {image_path}")
             return None
         logging.info(f"Wczytano oryginalny obraz: {image_path}")
-        
-        # Zapisz oryginalny obraz do debug_images
-        connection_detector.debug_images['original'] = original_image.copy()
-        logging.info(f"Dodano oryginalny obraz do debug_images dla {filename}")
         
         # Pobierz wymiary obrazu z adnotacji
         original_width = data.get('image_size', {}).get('width', 800)
@@ -96,149 +89,116 @@ def process_single_schema(filename, schema_type, sequence_number):
             ]
             scaled_blocks.append({'coords': scaled_coords})
             
+        print(f"Przygotowano {len(scaled_blocks)} przeskalowanych bloków")
         logging.info(f"Przygotowano {len(scaled_blocks)} przeskalowanych bloków")
-        logging.info(f"Wymiary oryginalnego obrazu: {original_image.shape}")
-        logging.info(f"Wymiary z adnotacji: {original_width}x{original_height}")
-        logging.info(f"Użyta skala: {scale}")
-        logging.info(f"Przykładowe przeskalowane współrzędne: {scaled_blocks[0]['coords'] if scaled_blocks else 'brak bloków'}")
         
-        # Przygotuj obraz do wykrywania linii
-        logging.info(f"Rozpoczynam przetwarzanie obrazu dla wykrywania linii")
-        processed_image = connection_detector.preprocess_for_lines(original_image, scaled_blocks)
-        logging.info(f"Zakończono przetwarzanie obrazu dla wykrywania linii")
+        # Przygotuj katalogi wynikowe
+        output_dir = os.path.join('results', schema_type)
+        os.makedirs(output_dir, exist_ok=True)
         
-        # Wykryj połączenia na obrazie (tylko jeśli nie ma w cache)
-        if connections is None:
-            logging.info(f"Rozpoczynam wykrywanie połączeń dla {filename}")
-            connections = connection_detector.detect_connections(processed_image, scaled_blocks)
-            logging.info(f"Wykryto {len(connections)} połączeń w {filename}")
-        
-        # Zapisz obrazy debugowe
-        debug_dir = os.path.join('results', 'debug', schema_type)
+        # Przygotuj katalog debug dla tego schematu
+        filename_base = os.path.splitext(os.path.basename(filename))[0]
+        debug_dir = os.path.join('results', 'debug', schema_type, filename_base)
         os.makedirs(debug_dir, exist_ok=True)
-        logging.info(f"Liczba dostępnych obrazów debugowych: {len(connection_detector.debug_images)}")
-        logging.info(f"Zapisywanie obrazów debugowych do: {debug_dir}")
-        logging.info(f"Lista dostępnych etapów debugowania: {list(connection_detector.debug_images.keys())}")
+        print(f"Utworzono katalog debug: {debug_dir}")
+        logging.info(f"Utworzono katalog debug: {debug_dir}")
         
-        try:
-            # Dodaj numer sekwencyjny do nazwy pliku
-            base_name = os.path.splitext(filename)[0]
-            debug_filename = f"{sequence_number:03d}_{base_name}"
-            logging.info(f"Rozpoczynam zapisywanie obrazów debugowych dla {debug_filename}")
-            connection_detector.save_debug_images(debug_dir, debug_filename)
-            logging.info(f"Pomyślnie zapisano obrazy debugowe dla {debug_filename}")
-            
-            # Zapisz finalną wersję obrazu z narysowanymi liniami
-            results_dir = os.path.join('results', schema_type)
-            os.makedirs(results_dir, exist_ok=True)
-            final_filename = f"{sequence_number:03d}_{base_name}_final.png"
-            final_path = os.path.join(results_dir, final_filename)
-            cv2.imwrite(final_path, connection_detector.debug_images['final'])
-            logging.info(f"Zapisano finalną wersję obrazu do: {final_path}")
-            
-        except Exception as e:
-            logging.error(f"Błąd podczas zapisywania obrazów dla {filename}: {str(e)}")
-            import traceback
-            logging.error(traceback.format_exc())
+        # Wykryj linie na obrazie, przekazując ścieżkę do katalogu debug
+        print(f"Rozpoczynam wykrywanie linii...")
+        connections = line_detector.detect_lines(original_image, scaled_blocks, debug_dir)
+        print(f"Wykryto {len(connections)} połączeń w {filename}")
+        logging.info(f"Wykryto {len(connections)} połączeń w {filename}")
         
-        # Zapisz wyniki do cache (tylko jeśli nie ma w cache)
-        if not os.path.exists(cache_path):
-            os.makedirs(os.path.dirname(cache_path), exist_ok=True)
-            with open(cache_path, 'wb') as f:
-                pickle.dump(connections, f)
-            logging.info(f"Zapisano wyniki do cache dla {filename}")
-        
-        # Zwolnij pamięć
-        del processed_image
-        del original_image
+        # Zapisz wynikowy obraz
+        line_detector.save_result_image(output_dir, filename_base)
+        print(f"Zapisano wynikowy obraz do: {output_dir}")
+        logging.info(f"Zapisano wynikowy obraz do: {output_dir}")
         
         return connections
         
     except Exception as e:
-        logging.error(f"Błąd podczas przetwarzania {filename}: {str(e)}")
-        import traceback
-        logging.error(traceback.format_exc())
+        log_error(f"Błąd podczas przetwarzania schematu {filename}", e)
         return None
 
 def process_schemas(schema_type):
-    """Przetwarza schematy danego typu."""
-    annotations_dir = os.path.join('annotations', schema_type)
-    files = [f for f in os.listdir(annotations_dir) if f.endswith('.json')]
-    
-    logging.info(f"Rozpoczynam przetwarzanie schematów typu: {schema_type}")
-    logging.info(f"Znaleziono {len(files)} plików do przetworzenia")
-    
-    # Sortuj pliki alfabetycznie, aby zachować spójną kolejność
-    files.sort()
-    
-    for idx, filename in enumerate(files, 1):
-        logging.info(f"Przetwarzanie pliku {idx}/{len(files)}: {filename}")
-        result = process_single_schema(filename, schema_type, idx)
-        if result is None:
-            logging.error(f"Przetwarzanie nie powiodło się dla {filename}")
+    """Przetwarza wszystkie schematy danego typu."""
+    try:
+        print(f"Rozpoczynam przetwarzanie schematów typu: {schema_type}")
+        logging.info(f"Rozpoczynam przetwarzanie schematów typu: {schema_type}")
         
-        # Wymuszamy zwolnienie pamięci
-        import gc
-        gc.collect()
+        # Katalog z adnotacjami z combined_json
+        annotations_dir = os.path.join('combined_json', schema_type)
+        print(f"Sprawdzam katalog: {annotations_dir}")
+        if not os.path.exists(annotations_dir):
+            log_error(f"Nie znaleziono katalogu z adnotacjami: {annotations_dir}")
+            return
+        
+        # Pobierz listę plików JSON z adnotacjami
+        try:
+            json_files = [f for f in os.listdir(annotations_dir) if f.endswith('.json')]
+            print(f"Znaleziono {len(json_files)} plików z adnotacjami w {annotations_dir}")
+            logging.info(f"Znaleziono {len(json_files)} plików z adnotacjami w {annotations_dir}")
+        except Exception as e:
+            log_error(f"Błąd podczas listowania plików w katalogu {annotations_dir}", e)
+            return
+        
+        # Przetwórz każdy plik z adnotacjami
+        for json_file in json_files:
+            process_single_schema(json_file, schema_type)
+        
+        print(f"Zakończono przetwarzanie schematów typu: {schema_type}")
+        logging.info(f"Zakończono przetwarzanie schematów typu: {schema_type}")
+    except Exception as e:
+        log_error(f"Błąd w process_schemas dla typu {schema_type}", e)
 
 def main():
-    # Usuń pliki cache
-    import shutil
-    import time
-    
-    if os.path.exists('cache'):
-        try:
-            logging.info("Rozpoczynam czyszczenie katalogu cache...")
-            # Najpierw usuń zawartość katalogów
-            for schema_type in ['Automatyka', 'Elektroniczne']:
-                cache_dir = os.path.join('cache', schema_type)
-                if os.path.exists(cache_dir):
-                    logging.info(f"Usuwam zawartość katalogu: {cache_dir}")
-                    for file in os.listdir(cache_dir):
-                        file_path = os.path.join(cache_dir, file)
-                        try:
-                            if os.path.isfile(file_path):
-                                os.unlink(file_path)
-                        except Exception as e:
-                            logging.error(f"Błąd podczas usuwania pliku {file_path}: {str(e)}")
+    try:
+        print("Uruchamiam program wykrywania linii...")
+        logging.info("Uruchamiam program wykrywania linii...")
+        
+        # Sprawdź czy katalogi istnieją
+        if not os.path.exists('combined_json'):
+            log_error("Nie znaleziono katalogu combined_json")
+            input("Naciśnij Enter, aby zamknąć program...")
+            return
             
-            # Następnie usuń katalogi
-            logging.info("Usuwam katalogi cache...")
-            shutil.rmtree('cache')
-            logging.info("Pomyślnie usunięto katalog cache")
-            
-        except PermissionError:
-            logging.warning("Nie można usunąć katalogu cache - odmowa dostępu. Spróbuję ponownie za 1 sekundę...")
-            time.sleep(1)  # Poczekaj 1 sekundę
-            try:
-                shutil.rmtree('cache')
-                logging.info("Usunięto katalog cache po ponownej próbie")
-            except Exception as e:
-                logging.error(f"Nie udało się usunąć katalogu cache: {str(e)}")
-                logging.info("Kontynuuję bez usuwania cache...")
-        except Exception as e:
-            logging.error(f"Wystąpił błąd podczas usuwania cache: {str(e)}")
-            logging.info("Kontynuuję bez usuwania cache...")
-    else:
-        logging.info("Katalog cache nie istnieje, nie ma potrzeby czyszczenia")
-    
-    # Utwórz katalogi na wyniki
-    os.makedirs('results/Automatyka', exist_ok=True)
-    os.makedirs('results/Elektroniczne', exist_ok=True)
-    
-    # Utwórz katalog cache
-    os.makedirs('cache/Automatyka', exist_ok=True)
-    os.makedirs('cache/Elektroniczne', exist_ok=True)
-    
-    # Utwórz katalog debug
-    os.makedirs('results/debug/Automatyka', exist_ok=True)
-    os.makedirs('results/debug/Elektroniczne', exist_ok=True)
-    
-    # Przetwórz schematy automatyki
-    process_schemas('Automatyka')
-    
-    # Przetwórz schematy elektroniczne
-    process_schemas('Elektroniczne')
+        print("Sprawdzam strukturę katalogów...")
+        # Sprawdź podfoldery
+        for schema_type in ['Automatyka', 'Elektroniczne']:
+            dir_path = os.path.join('combined_json', schema_type)
+            if not os.path.exists(dir_path):
+                log_error(f"Nie znaleziono katalogu combined_json/{schema_type}")
+                input("Naciśnij Enter, aby zamknąć program...")
+                return
+        
+        # Utwórz katalogi wyników
+        print("Tworzę katalogi wynikowe...")
+        os.makedirs(os.path.join('results', 'Automatyka'), exist_ok=True)
+        os.makedirs(os.path.join('results', 'Elektroniczne'), exist_ok=True)
+        
+        # Utwórz katalogi debug
+        print("Tworzę katalogi debug...")
+        os.makedirs(os.path.join('results', 'debug', 'Automatyka'), exist_ok=True)
+        os.makedirs(os.path.join('results', 'debug', 'Elektroniczne'), exist_ok=True)
+        print("Utworzono katalogi debug")
+        logging.info("Utworzono katalogi debug")
+        
+        # Przetwórz schematy
+        process_schemas('Automatyka')
+        process_schemas('Elektroniczne')
+        
+        print("Zakończono przetwarzanie wszystkich schematów")
+        logging.info("Zakończono przetwarzanie wszystkich schematów")
+    except Exception as e:
+        log_error("Błąd główny", e)
+    finally:
+        print(f"\nLogi zapisano do pliku: {log_file}")
+        print(f"Program zakończył działanie.")
 
 if __name__ == "__main__":
-    main() 
+    try:
+        main()
+    except Exception as e:
+        log_error("Nieprzewidziany błąd", e)
+    finally:
+        input("Naciśnij Enter, aby zamknąć program...") 
