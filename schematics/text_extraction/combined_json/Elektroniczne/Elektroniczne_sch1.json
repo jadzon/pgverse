@@ -1,0 +1,243 @@
+{
+  "image_path": "Dataset\\Elektroniczne\\sch1.png",
+  "image_sizes": {
+    "annotations": [
+      800,
+      207
+    ],
+    "text_marked": [
+      1317,
+      342
+    ],
+    "zgodne_rozmiary": false,
+    "skala_x": 0.6074411541381929,
+    "skala_y": 0.6052631578947368,
+    "wymaga_skalowania": true
+  },
+  "image_size": {
+    "width": 800,
+    "height": 207
+  },
+  "blocks": [
+    {
+      "coords": [
+        143.0,
+        97.0,
+        204.0,
+        149.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        222.0,
+        26.0,
+        310.0,
+        57.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        384.0,
+        22.0,
+        475.0,
+        58.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        317.0,
+        66.0,
+        352.0,
+        152.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        223.0,
+        158.0,
+        314.0,
+        192.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        384.0,
+        158.0,
+        476.0,
+        192.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        504.0,
+        67.0,
+        542.0,
+        152.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        559.0,
+        62.0,
+        592.0,
+        153.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        614.0,
+        24.0,
+        705.0,
+        59.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        722.0,
+        66.0,
+        760.0,
+        150.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        612.0,
+        159.0,
+        702.0,
+        191.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        132,
+        58,
+        163,
+        88
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        191,
+        52,
+        318,
+        90
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        389,
+        53,
+        467,
+        84
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        622,
+        53,
+        694,
+        85
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        12,
+        104,
+        143,
+        135
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        346,
+        90,
+        421,
+        123
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        434,
+        89,
+        508,
+        122
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        230,
+        130,
+        303,
+        161
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        392,
+        130,
+        466,
+        162
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        628,
+        130,
+        687,
+        162
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    }
+  ]
+}

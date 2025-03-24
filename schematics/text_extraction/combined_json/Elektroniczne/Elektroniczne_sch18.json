@@ -1,0 +1,153 @@
+{
+  "image_path": "Dataset\\Elektroniczne\\sch18.png",
+  "image_sizes": {
+    "annotations": [
+      707,
+      597
+    ],
+    "text_marked": [
+      707,
+      597
+    ],
+    "zgodne_rozmiary": true,
+    "skala_x": 1.0,
+    "skala_y": 1.0,
+    "wymaga_skalowania": false
+  },
+  "image_size": {
+    "width": 707,
+    "height": 597
+  },
+  "blocks": [
+    {
+      "coords": [
+        500.0,
+        231.0,
+        575.0,
+        306.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        259.0,
+        242.0,
+        323.0,
+        316.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        283.0,
+        457.0,
+        320.0,
+        520.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        176.0,
+        459.0,
+        219.0,
+        498.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        22.0,
+        459.0,
+        67.0,
+        533.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        118.0,
+        229.0,
+        193.0,
+        311.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        20.0,
+        103.0,
+        64.0,
+        180.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        59.0,
+        90.0,
+        140.0,
+        119.0
+      ],
+      "source": "text_marked",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        169.0,
+        203.0,
+        226.0,
+        222.0
+      ],
+      "source": "text_marked",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        571.0,
+        213.0,
+        701.0,
+        249.0
+      ],
+      "source": "text_marked",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        49.0,
+        428.0,
+        135.0,
+        458.0
+      ],
+      "source": "text_marked",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        144.0,
+        443.0,
+        179.0,
+        471.0
+      ],
+      "source": "text_marked",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        322.0,
+        476.0,
+        419.0,
+        507.0
+      ],
+      "source": "text_marked",
+      "type": "rectangle"
+    }
+  ]
+}
