@@ -1,1409 +1,852 @@
+import os
+import json
 import cv2
 import numpy as np
-from typing import Dict, List, Tuple, Optional
-from dataclasses import dataclass
-import os
-import logging
-import math
+import shutil
+import argparse
+from pathlib import Path
 
-@dataclass
-class Connection:
-    """Klasa reprezentująca połączenie między blokami."""
-    start_block: int  # indeks bloku początkowego
-    end_block: int    # indeks bloku końcowego
-    start_point: Tuple[int, int]  # punkt początkowy połączenia
-    end_point: Tuple[int, int]    # punkt końcowy połączenia
-    is_directed: bool  # czy połączenie jest kierunkowe
-    direction: Optional[str] = None  # kierunek strzałki (np. "up", "down", "left", "right")
-    connection_type: Optional[str] = "solid"  # typ połączenia (np. "solid", "dashed", "dotted")
+def load_json_ignore_regions(json_path, image_shape, debug=False):
+    """
+    Wczytuje regiony do ignorowania z pliku JSON.
+    
+    Args:
+        json_path: Ścieżka do pliku JSON
+        image_shape: Kształt obrazu (wysokość, szerokość)
+        debug: Czy wyświetlać informacje debugowania
+    
+    Returns:
+        Lista regionów do ignorowania (wielokąty)
+    """
+    try:
+        with open(json_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            
+        ignore_regions = []
+        
+        # Pobierz rzeczywisty rozmiar obrazu
+        actual_height, actual_width = image_shape[:2]
+        
+        # Sprawdzenie czy mamy do czynienia z wymaganym skalowaniem
+        need_scaling = False
+        
+        # Domyślne wartości skalowania
+        json_width = actual_width
+        json_height = actual_height
+        
+        # Sprawdź czy JSON zawiera informacje o rozmiarach
+        if 'image_sizes' in data:
+            # Sprawdź źródło danych (annotations lub text_marked)
+            if 'annotations' in data['image_sizes'] and len(data['image_sizes']['annotations']) == 2:
+                json_width, json_height = data['image_sizes']['annotations']
+                need_scaling = True
+                if debug:
+                    print(f"Używam rozmiarów z annotations: {json_width}x{json_height}")
+            
+            # Lub użyj image_size jeśli jest dostępne
+            elif 'image_size' in data and 'width' in data['image_size'] and 'height' in data['image_size']:
+                json_width = data['image_size']['width']
+                json_height = data['image_size']['height']
+                need_scaling = True
+                if debug:
+                    print(f"Używam rozmiarów z image_size: {json_width}x{json_height}")
+        
+        # Oblicz współczynniki skalowania
+        scale_x = actual_width / json_width
+        scale_y = actual_height / json_height
+        
+        if debug:
+            print(f"Plik: {json_path}")
+            print(f"Rzeczywisty rozmiar obrazu: {actual_width}x{actual_height}")
+            print(f"Rozmiar w JSON: {json_width}x{json_height}")
+            print(f"Współczynniki skalowania: x={scale_x}, y={scale_y}")
+        
+        # Traktuj wszystkie bloki jako obszary do ignorowania
+        if 'blocks' in data:
+            for block in data['blocks']:
+                if 'coords' in block and len(block['coords']) == 4:
+                    # Format [x1, y1, x2, y2]
+                    x1, y1, x2, y2 = block['coords']
+                    
+                    # Zastosuj skalowanie
+                    if need_scaling:
+                        x1 = int(x1 * scale_x)
+                        y1 = int(y1 * scale_y)
+                        x2 = int(x2 * scale_x)
+                        y2 = int(y2 * scale_y)
+                    
+                    # Konwersja do punktów wielokąta (prostokąt)
+                    points = np.array([
+                        [x1, y1],
+                        [x2, y1],
+                        [x2, y2],
+                        [x1, y2]
+                    ], dtype=np.int32)
+                    
+                    ignore_regions.append(points)
+        
+        return ignore_regions
+    except Exception as e:
+        print(f"Błąd podczas wczytywania pliku JSON {json_path}: {e}")
+        return []
 
-class LineDetector:
-    """Klasa odpowiedzialna za wykrywanie linii między blokami."""
+def create_mask_from_ignore_regions(image_shape, ignore_regions):
+    """
+    Tworzy maskę z regionami do ignorowania.
     
-    def __init__(self):
-        """Inicjalizuje detektor linii z parametrami."""
-        self.params = {
-            # Parametry dla przetwarzania obrazu
-            'blur_kernel_size': 5,
-            'clahe_clip_limit': 3.5,  # Zwiększona wartość dla lepszego kontrastu
-            'clahe_grid_size': (8, 8),
-            
-            # Parametry dla detekcji krawędzi (Canny)
-            'canny_threshold1': 15,  # Obniżony dla wykrywania większej liczby krawędzi
-            'canny_threshold2': 75,  # Obniżony dla wykrywania większej liczby krawędzi
-            
-            # Parametry dla transformacji Hougha
-            'hough_rho': 1,
-            'hough_theta': np.pi/180,
-            'hough_threshold': 10,  # Znacznie obniżony dla wykrywania większej liczby linii
-            'hough_min_line_length': 10,  # Obniżony dla wykrywania krótszych linii
-            'hough_max_line_gap': 30,  # Zwiększony dla lepszego łączenia segmentów
-            
-            # Parametry dla filtrowania linii
-            'min_line_length': 5,  # Obniżony dla akceptowania bardzo krótkich linii
-            'max_line_length': 5000,  # Zwiększony dla akceptowania dłuższych linii
-            'distance_threshold': 20,  # Dystans dla grupowania podobnych linii
-            'angle_threshold': 7,  # Zwiększony zakres kątów dla grupowania linii
-            
-            # Parametry dla rysowania
-            'line_thickness': 2,
-            'use_raw_lsd_lines': True,  # Używaj surowych linii LSD w wyniku końcowym
-            
-            # Dodatkowe parametry
-            'use_lsd_detector': True,  # Użyj dodatkowo detektor LSD
-            'lsd_only': True,  # Użyj tylko detektor LSD (bez Hough)
-            'lsd_weight': 2.0,  # Waga dla linii LSD (gdy używamy obu detektorów)
-            'merge_lines': True,  # Czy łączyć podobne linie
-            'extend_lines': True,  # Czy wydłużać linie do bloków
-            'extension_factor': 0.15,  # Zwiększony współczynnik wydłużania linii
-            'intersect_margin': 5,  # Margines dla wykrywania przecięć
-            'remove_duplicates': True,  # Usuwanie duplikatów linii
-            'use_multiple_thresholds': True,  # Użyj wielu progów dla detekcji Canny
-            'save_debug_images': True,  # Czy zapisywać obrazy etapów pośrednich
-            'filter_block_outlines': True,  # Czy usuwać linie tworzące obramowanie bloków
-            'block_outline_threshold': 10,  # Próg odległości dla identyfikacji linii obramowania (piksele)
-            'block_outline_length_ratio': 0.8,  # Minimalna proporcja długości linii w stosunku do boku bloku, aby uznać ją za obramowanie
-            'filter_disconnected_lines': False,  # Zmienione na False, aby przywrócić poprzednią jakość połączeń
-            'connection_threshold': 15,  # Przywrócony niższy próg
-            'min_line_length_to_filter': 30,  # Minimalna długość linii, która będzie filtrowana
-            'require_both_ends_connected': False,  # Czy wymagać, aby oba końce linii były połączone z blokami
-            'keep_long_lines': True,  # Czy zachować długie linie niezależnie od połączenia z blokami
-            'long_line_threshold': 150,  # Długość linii, powyżej której jest ona uznawana za "długą"
-        }
-        self.result_image = None
-        self.debug_images = {}  # Słownik przechowujący obrazy z poszczególnych etapów
-        self.debug_dir = None  # Katalog do zapisywania obrazów debugowania
-        self.lsd_lines = []  # Lista linii wykrytych przez LSD
-        self.filtered_lsd_lines = []  # Lista linii LSD po usunięciu obramowań bloków
-        logging.info("LineDetector zainicjalizowany z priorytetem dla LSD")
+    Args:
+        image_shape: Kształt obrazu (wysokość, szerokość)
+        ignore_regions: Lista regionów do ignorowania
     
-    def detect_lines(self, image: np.ndarray, blocks: List[Dict], debug_dir: str = None) -> List[Connection]:
-        """
-        Wykrywa linie i połączenia między blokami na obrazie.
-        
-        Args:
-            image: Oryginalny obraz kolorowy
-            blocks: Lista bloków, gdzie każdy blok to słownik z kluczem 'coords' (współrzędne [x1, y1, x2, y2])
-            debug_dir: Katalog do zapisywania obrazów debugowania
-            
-        Returns:
-            Lista wykrytych połączeń
-        """
-        try:
-            self.debug_dir = debug_dir
-            self.debug_images = {}  # Reset debug images
-            
-            logging.info(f"Rozpoczynam wykrywanie linii na obrazie o rozmiarze {image.shape}, z {len(blocks)} blokami")
-            
-            # Skopiuj oryginalny obraz do rysowania wyników
-            result_image = image.copy()
-            
-            # Zapisz oryginalny obraz
-            if self.debug_dir:
-                self._save_debug_image(image, "01_original_image")
-            
-            # 1. Wstępne przetwarzanie obrazu
-            logging.info("Krok 1: Wstępne przetwarzanie obrazu")
-            preprocessed = self._preprocess_image(image)
-            
-            # Zapisz obraz po wstępnym przetwarzaniu
-            if self.debug_dir:
-                self._save_debug_image(preprocessed, "02_preprocessed")
-            
-            # 2. Detekcja krawędzi - wielopoziomowa
-            logging.info("Krok 2: Detekcja krawędzi")
-            all_edges = []
-            
-            # Standardowa detekcja Canny
-            edges_canny = self._detect_edges(preprocessed)
-            all_edges.append(edges_canny)
-            
-            # Zapisz obraz po detekcji krawędzi (standardowej)
-            if self.debug_dir:
-                self._save_debug_image(edges_canny, "03a_edges_standard")
-            
-            # Jeśli używamy wielu progów, dodaj dodatkowe detekcje Canny z różnymi progami
-            if self.params['use_multiple_thresholds']:
-                # Niskie progi dla słabych krawędzi
-                low_edges = cv2.Canny(preprocessed, self.params['canny_threshold1'] - 5, 
-                                     self.params['canny_threshold2'] - 25)
-                all_edges.append(low_edges)
-                
-                # Zapisz obraz po detekcji krawędzi z niskimi progami
-                if self.debug_dir:
-                    self._save_debug_image(low_edges, "03b_edges_low_threshold")
-                
-                # Wysokie progi dla wyraźnych krawędzi
-                high_edges = cv2.Canny(preprocessed, self.params['canny_threshold1'] + 10, 
-                                      self.params['canny_threshold2'] + 50)
-                all_edges.append(high_edges)
-                
-                # Zapisz obraz po detekcji krawędzi z wysokimi progami
-                if self.debug_dir:
-                    self._save_debug_image(high_edges, "03c_edges_high_threshold")
-            
-            # Łączenie wszystkich detekcji krawędzi
-            combined_edges = np.zeros_like(edges_canny)
-            for edge in all_edges:
-                combined_edges = cv2.bitwise_or(combined_edges, edge)
-            
-            # Zapisz obraz po połączeniu wszystkich detekcji krawędzi
-            if self.debug_dir:
-                self._save_debug_image(combined_edges, "03d_edges_combined")
-            
-            # 3. Stwórz maskę wykluczającą obszary bloków
-            logging.info("Krok 3: Tworzenie maski bloków")
-            mask = self._create_block_mask(image.shape[:2], blocks)
-            
-            # Zapisz maskę bloków
-            if self.debug_dir:
-                self._save_debug_image(mask, "04_block_mask")
-            
-            # 4. Zastosuj maskę do obrazu krawędzi
-            logging.info("Krok 4: Nakładanie maski")
-            masked_edges = cv2.bitwise_and(combined_edges, mask)
-            
-            # Zapisz obraz po nałożeniu maski
-            if self.debug_dir:
-                self._save_debug_image(masked_edges, "05_masked_edges")
-            
-            # Dodatkowy krok: Morfologiczne przetwarzanie obrazu krawędzi
-            kernel = np.ones((3, 3), np.uint8)
-            morphed_edges = cv2.morphologyEx(masked_edges, cv2.MORPH_CLOSE, kernel, iterations=1)
-            
-            # Zapisz obraz po morfologicznym przetwarzaniu
-            if self.debug_dir:
-                self._save_debug_image(morphed_edges, "06_morphed_edges")
-            
-            # 5. Wykrywanie linii - priorytet dla LSD
-            all_lines = []
-            
-            # Wykryj linie za pomocą LSD (Line Segment Detector)
-            logging.info("Krok 5: Wykrywanie linii za pomocą LSD")
-            lsd_lines = self._detect_lsd_lines(preprocessed, mask)
-            logging.info(f"Wykryto {len(lsd_lines)} linii za pomocą LSD")
-            
-            # Zapisz linie LSD do późniejszego użycia
-            self.lsd_lines = lsd_lines.copy()
-                
-            # Zapisz obraz z liniami z detektora LSD
-            if self.debug_dir:
-                lsd_lines_image = image.copy()
-                for line in lsd_lines:
-                    x1, y1, x2, y2 = line
-                    cv2.line(lsd_lines_image, (x1, y1), (x2, y2), (0, 0, 255), 1, cv2.LINE_AA)
-                self._save_debug_image(lsd_lines_image, "07_lsd_lines")
-                self.debug_images["07_lsd_lines"] = lsd_lines_image
-            
-            # Filtruj linie LSD, aby usunąć obramowania bloków
-            filtered_lsd_lines = self._filter_block_outlines(lsd_lines, blocks)
-            logging.info(f"Po usunięciu obramowań bloków zostało {len(filtered_lsd_lines)} linii z {len(lsd_lines)} oryginalnych linii LSD")
-            
-            # Zachowaj LSD linie bez filtrowania niepołączonych linii
-            self.filtered_lsd_lines = filtered_lsd_lines.copy()
-            
-            # Opcjonalnie filtruj linie LSD jeśli włączony jest filtr dla niepołączonych linii
-            if self.params['filter_disconnected_lines']:
-                filtered_lsd_lines = self._filter_disconnected_lines(filtered_lsd_lines, blocks)
-                logging.info(f"Po usunięciu niepołączonych linii zostało {len(filtered_lsd_lines)} linii")
-                # Zaktualizuj filtered_lsd_lines tylko jeśli filtrowanie jest włączone
-                self.filtered_lsd_lines = filtered_lsd_lines.copy()
-            
-            # Zapisz obraz z przefiltrowanymi liniami LSD
-            if self.debug_dir:
-                filtered_lsd_image = image.copy()
-                for line in self.filtered_lsd_lines:
-                    x1, y1, x2, y2 = line
-                    cv2.line(filtered_lsd_image, (x1, y1), (x2, y2), (0, 255, 255), 1, cv2.LINE_AA)
-                self._save_debug_image(filtered_lsd_image, "07b_filtered_lsd_lines")
-                self.debug_images["07b_filtered_lsd_lines"] = filtered_lsd_image
-                
-                # Dodatkowy obraz pokazujący tylko linie połączone z blokami
-                connected_lines_image = image.copy()
-                for line in self.filtered_lsd_lines:
-                    x1, y1, x2, y2 = line
-                    cv2.line(connected_lines_image, (x1, y1), (x2, y2), (255, 0, 255), 1, cv2.LINE_AA)
-                self._save_debug_image(connected_lines_image, "07c_connected_lines")
-                self.debug_images["07c_connected_lines"] = connected_lines_image
-            
-            # Jeśli używamy tylko LSD, pomijamy transformację Hougha
-            if not self.params['lsd_only']:
-                # Wykryj linie za pomocą transformacji Hougha
-                logging.info("Krok 6: Wykrywanie linii (Transformacja Hougha)")
-                hough_lines = self._detect_hough_lines(morphed_edges)
-                logging.info(f"Wykryto {len(hough_lines)} linii za pomocą transformacji Hougha")
-                
-                # Zapisz obraz z liniami z transformacji Hougha
-                if self.debug_dir:
-                    hough_lines_image = image.copy()
-                    for line in hough_lines:
-                        x1, y1, x2, y2 = line
-                        cv2.line(hough_lines_image, (x1, y1), (x2, y2), (0, 255, 0), 1, cv2.LINE_AA)
-                    self._save_debug_image(hough_lines_image, "08_hough_lines")
-                
-                # Jeśli mamy priorytetyzować LSD, dodajemy linie LSD kilka razy (waga)
-                lsd_weight = int(self.params['lsd_weight'])
-                for _ in range(lsd_weight):
-                    all_lines.extend(lsd_lines)
-                
-                # Dodajemy linie Hough tylko raz
-                all_lines.extend(hough_lines)
-                logging.info(f"Łącznie wykryto {len(all_lines)} linii (z priorytetem dla LSD)")
-            else:
-                # Używamy tylko linii z LSD
-                all_lines = lsd_lines
-                logging.info(f"Używamy tylko {len(all_lines)} linii z LSD")
-            
-            # Zapisz obraz z wszystkimi liniami (po nadaniu wagi)
-            if self.debug_dir:
-                all_lines_image = image.copy()
-                for line in all_lines:
-                    x1, y1, x2, y2 = line
-                    cv2.line(all_lines_image, (x1, y1), (x2, y2), (255, 0, 255), 1, cv2.LINE_AA)
-                self._save_debug_image(all_lines_image, "09_all_lines")
-            
-            # 8. Łącz i filtruj wykryte linie
-            logging.info("Krok 8: Łączenie i filtrowanie linii")
-            filtered_lines = self._filter_lines(all_lines)
-            logging.info(f"Po filtrowaniu zostało {len(filtered_lines)} linii")
-            
-            # Zapisz obraz z odfiltrowanymi liniami
-            if self.debug_dir:
-                filtered_lines_image = image.copy()
-                for line in filtered_lines:
-                    x1, y1, x2, y2 = line
-                    cv2.line(filtered_lines_image, (x1, y1), (x2, y2), (0, 128, 255), 2, cv2.LINE_AA)
-                self._save_debug_image(filtered_lines_image, "10_filtered_lines")
-            
-            # 9. Usuń duplikaty linii (jeśli włączone)
-            if self.params['remove_duplicates']:
-                logging.info("Krok 9: Usuwanie duplikatów linii")
-                filtered_lines = self._remove_duplicate_lines(filtered_lines)
-                logging.info(f"Po usunięciu duplikatów zostało {len(filtered_lines)} linii")
-                
-                # Zapisz obraz z liniami po usunięciu duplikatów
-                if self.debug_dir:
-                    no_duplicates_image = image.copy()
-                    for line in filtered_lines:
-                        x1, y1, x2, y2 = line
-                        cv2.line(no_duplicates_image, (x1, y1), (x2, y2), (255, 128, 0), 2, cv2.LINE_AA)
-                    self._save_debug_image(no_duplicates_image, "11_no_duplicates")
-            
-            # 10. Wydłuż linie do bloków (jeśli włączone)
-            if self.params['extend_lines']:
-                logging.info("Krok 10: Wydłużanie linii do bloków")
-                extended_lines = self._extend_lines_to_blocks(filtered_lines, blocks)
-                logging.info(f"Po wydłużeniu mamy {len(extended_lines)} linii")
-                
-                # Zapisz obraz z wydłużonymi liniami
-                if self.debug_dir:
-                    extended_lines_image = image.copy()
-                    for line in extended_lines:
-                        x1, y1, x2, y2 = line
-                        cv2.line(extended_lines_image, (x1, y1), (x2, y2), (255, 0, 0), 2, cv2.LINE_AA)
-                    self._save_debug_image(extended_lines_image, "12_extended_lines")
-            else:
-                extended_lines = filtered_lines
-            
-            # 11. Znajdź połączenia między blokami na podstawie wykrytych linii
-            logging.info("Krok 11: Znajdowanie połączeń między blokami")
-            connections = self._find_connections(extended_lines, blocks)
-            logging.info(f"Znaleziono {len(connections)} połączeń między blokami")
-            
-            # Obraz z połączeniami zostanie utworzony w _draw_results
-            
-            # 12. Narysuj wyniki
-            logging.info("Krok 12: Rysowanie wyników")
-            self._draw_results(result_image, blocks, connections, self.filtered_lsd_lines)
-            
-            # Zapisz wynikowy obraz z połączeniami
-            if self.debug_dir:
-                self._save_debug_image(result_image, "13_final_result")
-            
-            # Zapisz wynikowy obraz do pola klasy
-            self.result_image = result_image
-            
-            logging.info("Zakończono wykrywanie linii")
-            return connections
-            
-        except Exception as e:
-            logging.error(f"Błąd podczas wykrywania linii: {str(e)}")
-            import traceback
-            logging.error(traceback.format_exc())
-            return []
+    Returns:
+        Maska (biała = obszary do analizy, czarna = obszary do ignorowania)
+    """
+    mask = np.ones(image_shape[:2], dtype=np.uint8) * 255
     
-    def _preprocess_image(self, image: np.ndarray) -> np.ndarray:
-        """
-        Wstępne przetwarzanie obrazu do wykrywania linii.
-        
-        Args:
-            image: Oryginalny obraz kolorowy
-            
-        Returns:
-            Przetworzony obraz w skali szarości
-        """
-        # Konwersja do skali szarości
-        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        
-        # Bilateralny filtr - zachowuje krawędzie lepiej niż Gaussian
-        bilateral = cv2.bilateralFilter(gray, 9, 75, 75)
-        
-        # Wygładzanie obrazu
-        blurred = cv2.GaussianBlur(bilateral, 
-                                  (self.params['blur_kernel_size'], self.params['blur_kernel_size']), 
-                                  0)
-        
-        # Zastosuj CLAHE (Contrast Limited Adaptive Histogram Equalization)
-        # aby poprawić kontrast i uwydatnić linie
-        clahe = cv2.createCLAHE(clipLimit=self.params['clahe_clip_limit'], 
-                               tileGridSize=self.params['clahe_grid_size'])
-        enhanced = clahe.apply(blurred)
-        
-        # Normalizacja histogramu dla poprawy kontrastu
-        normalized = cv2.normalize(enhanced, None, 0, 255, cv2.NORM_MINMAX)
-        
-        # Redukcja szumu za pomocą filtra medianowego
-        denoised = cv2.medianBlur(normalized, 3)
-        
-        return denoised
+    for region in ignore_regions:
+        cv2.fillPoly(mask, [region], 0)  # Czarne wielokąty = obszary do ignorowania
     
-    def _detect_edges(self, image: np.ndarray) -> np.ndarray:
-        """
-        Wykrywa krawędzie na obrazie za pomocą algorytmu Canny.
-        
-        Args:
-            image: Obraz w skali szarości
-            
-        Returns:
-            Obraz binarny z wykrytymi krawędziami
-        """
-        # Wykrywanie krawędzi za pomocą algorytmu Canny
-        edges = cv2.Canny(image, 
-                         self.params['canny_threshold1'], 
-                         self.params['canny_threshold2'],
-                         apertureSize=3,
-                         L2gradient=True)
-        
-        # Przetwarzanie morfologiczne do poprawy jakości krawędzi
-        kernel = np.ones((3, 3), np.uint8)
-        dilated_edges = cv2.dilate(edges, kernel, iterations=1)
-        
-        return dilated_edges
+    return mask
+
+def is_duplicate_line(line, existing_lines, distance_threshold=10, angle_threshold=0.1):
+    """
+    Sprawdza, czy linia jest duplikatem istniejących linii.
     
-    def _create_block_mask(self, image_shape: Tuple[int, int], blocks: List[Dict]) -> np.ndarray:
-        """
-        Tworzy maskę, gdzie obszary bloków są wyłączone (czarne).
-        Maska opiera się wyłącznie na danych bloków z plików JSON.
-        
-        Args:
-            image_shape: Wymiary obrazu (wysokość, szerokość)
-            blocks: Lista bloków do zamaskowania z plików JSON
-            
-        Returns:
-            Maska binarna, gdzie 0 = blok, 255 = tło
-        """
-        # Inicjuj maskę (cały obraz biały)
-        mask = np.ones(image_shape, dtype=np.uint8) * 255
-        
-        # Zaznacz obszary bloków jako czarne (0)
-        # Używamy dokładnie tych współrzędnych, które są w pliku JSON
-        for block in blocks:
-            coords = block['coords']
-            x1, y1 = int(float(coords[0])), int(float(coords[1]))
-            x2, y2 = int(float(coords[2])), int(float(coords[3]))
-            
-            # Rysuj wypełniony prostokąt na masce
-            cv2.rectangle(mask, (x1, y1), (x2, y2), 0, -1)
-        
-        return mask
+    Args:
+        line: Linia do sprawdzenia [x1, y1, x2, y2]
+        existing_lines: Lista istniejących linii
+        distance_threshold: Próg odległości między liniami
+        angle_threshold: Próg kąta między liniami
     
-    def _detect_hough_lines(self, edges: np.ndarray) -> List[np.ndarray]:
-        """
-        Wykrywa linie za pomocą probabilistycznej transformacji Hougha.
-        
-        Args:
-            edges: Obraz binarny z krawędziami
-            
-        Returns:
-            Lista wykrytych linii, gdzie każda linia to [x1, y1, x2, y2]
-        """
-        # Wykryj linie za pomocą HoughLinesP
-        lines = cv2.HoughLinesP(edges,
-                               self.params['hough_rho'],
-                               self.params['hough_theta'],
-                               self.params['hough_threshold'],
-                               minLineLength=self.params['hough_min_line_length'],
-                               maxLineGap=self.params['hough_max_line_gap'])
-        
-        if lines is None:
-            return []
-        
-        # Przekształć wynik do listy linii
-        return [line[0] for line in lines]
+    Returns:
+        True jeśli linia jest duplikatem, False w przeciwnym razie
+    """
+    x1, y1, x2, y2 = line
     
-    def _detect_lsd_lines(self, image: np.ndarray, mask: np.ndarray) -> List[np.ndarray]:
-        """
-        Wykrywa linie za pomocą Line Segment Detector (LSD).
-        
-        Args:
-            image: Obraz w skali szarości
-            mask: Maska wykluczająca obszary bloków
-            
-        Returns:
-            Lista wykrytych linii w formacie [x1, y1, x2, y2]
-        """
-        try:
-            # Zastosuj maskę do obrazu
-            masked_image = cv2.bitwise_and(image, mask)
-            
-            # Utworzenie detektora LSD
-            lsd = cv2.createLineSegmentDetector(cv2.LSD_REFINE_STD)
-            
-            # Detekcja linii
-            lines, width, prec, nfa = lsd.detect(masked_image)
-            
-            if lines is None:
-                return []
-            
-            # Konwersja do formatu [x1, y1, x2, y2]
-            result_lines = []
-            for line in lines:
-                x1, y1, x2, y2 = line[0]
-                result_lines.append([int(x1), int(y1), int(x2), int(y2)])
-            
-            return result_lines
-        except Exception as e:
-            logging.error(f"Błąd podczas wykrywania linii LSD: {str(e)}")
-            return []
+    # Oblicz wektor kierunkowy i długość linii
+    vec = np.array([x2 - x1, y2 - y1], dtype=float)
+    length = np.linalg.norm(vec)
     
-    def _filter_lines(self, lines: List[np.ndarray]) -> List[np.ndarray]:
-        """
-        Filtruje i łączy podobne linie.
-        
-        Args:
-            lines: Lista wykrytych linii
-            
-        Returns:
-            Lista odfiltrowanych i połączonych linii
-        """
-        if not lines:
-            return []
-            
-        # Filtruj linie o skrajnych długościach
-        filtered_lines = []
-        for line in lines:
-            x1, y1, x2, y2 = line
-            length = np.sqrt((x2 - x1)**2 + (y2 - y1)**2)
-            
-            if self.params['min_line_length'] <= length <= self.params['max_line_length']:
-                filtered_lines.append(line)
-        
-        # Jeśli nie jest włączone łączenie linii, zwróć tylko odfiltrowane
-        if not self.params['merge_lines']:
-            return filtered_lines
-        
-        # Grupuj podobne linie
-        merged_lines = self._merge_similar_lines(filtered_lines)
-        
-        return merged_lines
+    if length < 1e-6:  # Bardzo krótka linia, traktuj jak punkt
+        return True
     
-    def _remove_duplicate_lines(self, lines: List[np.ndarray]) -> List[np.ndarray]:
-        """
-        Usuwa duplikaty linii, które są bardzo podobne.
-        
-        Args:
-            lines: Lista linii
-            
-        Returns:
-            Lista linii bez duplikatów
-        """
-        if not lines:
-            return []
-        
-        # Dystans poniżej którego linie uznajemy za duplikaty
-        duplicate_threshold = 10
-        angle_threshold = 5  # w stopniach
-        
-        unique_lines = []
-        for line in lines:
-            x1, y1, x2, y2 = line
-            dx1, dy1 = x2 - x1, y2 - y1
-            length1 = np.sqrt(dx1*dx1 + dy1*dy1)
-            angle1 = np.arctan2(dy1, dx1) * 180 / np.pi
-            
-            # Sprawdź czy linia nie jest duplikatem istniejącej
-            is_duplicate = False
-            for unique_line in unique_lines:
-                x3, y3, x4, y4 = unique_line
-                dx2, dy2 = x4 - x3, y4 - y3
-                angle2 = np.arctan2(dy2, dx2) * 180 / np.pi
-                
-                # Sprawdź podobieństwo kątów
-                angle_diff = abs((angle1 - angle2 + 180) % 360 - 180)
-                if angle_diff > angle_threshold:
-                    continue
-                
-                # Sprawdź odległość między końcami linii
-                dist1 = np.sqrt((x1 - x3)**2 + (y1 - y3)**2)
-                dist2 = np.sqrt((x2 - x4)**2 + (y2 - y4)**2)
-                dist3 = np.sqrt((x1 - x4)**2 + (y1 - y4)**2)
-                dist4 = np.sqrt((x2 - x3)**2 + (y2 - y3)**2)
-                
-                min_dist = min(dist1 + dist2, dist3 + dist4)
-                if min_dist < duplicate_threshold:
-                    is_duplicate = True
-                    break
-            
-            if not is_duplicate:
-                unique_lines.append(line)
-        
-        return unique_lines
+    # Normalizuj wektor kierunkowy
+    vec /= length
     
-    def _merge_similar_lines(self, lines: List[np.ndarray]) -> List[np.ndarray]:
-        """
-        Łączy podobne linie w jedną.
+    for ex_line in existing_lines:
+        ex_x1, ex_y1, ex_x2, ex_y2 = ex_line
         
-        Args:
-            lines: Lista linii do połączenia
-            
-        Returns:
-            Lista połączonych linii
-        """
-        if not lines:
-            return []
+        # Oblicz wektor kierunkowy istniejącej linii
+        ex_vec = np.array([ex_x2 - ex_x1, ex_y2 - ex_y1], dtype=float)
+        ex_length = np.linalg.norm(ex_vec)
         
-        # Konwertuj linie do formatu [x1, y1, x2, y2, angle, length]
-        processed_lines = []
-        for i, line in enumerate(lines):
-            x1, y1, x2, y2 = line
-            
-            # Oblicz kąt i długość linii
-            dx, dy = x2 - x1, y2 - y1
-            length = np.sqrt(dx**2 + dy**2)
-            
-            # Normalizacja kąta do zakresu [0, 180)
-            angle = (np.arctan2(dy, dx) * 180 / np.pi) % 180
-            
-            # Dodaj linię z jej kątem i długością
-            processed_lines.append([x1, y1, x2, y2, angle, length])
-        
-        # Posortuj linie według kąta
-        processed_lines.sort(key=lambda x: x[4])
-        
-        # Grupuj linie o podobnym kącie
-        angle_threshold = self.params['angle_threshold']  # Maksymalna różnica kątów w stopniach
-        distance_threshold = self.params['distance_threshold']  # Maksymalna odległość między liniami
-        
-        merged = []
-        i = 0
-        while i < len(processed_lines):
-            current_group = [processed_lines[i]]
-            current_angle = processed_lines[i][4]
-            
-            # Znajdź wszystkie linie o podobnym kącie
-            j = i + 1
-            while j < len(processed_lines) and (processed_lines[j][4] - current_angle) % 180 < angle_threshold:
-                current_group.append(processed_lines[j])
-                j += 1
-            
-            # Jeśli znaleziono tylko jedną linię, dodaj ją do wynikowej listy
-            if len(current_group) == 1:
-                merged.append(current_group[0][:4])  # Dodaj tylko [x1, y1, x2, y2]
-                i = j
-                continue
-            
-            # Podziel linie na klastry według odległości
-            clusters = []
-            for line in current_group:
-                x1, y1, x2, y2 = line[:4]
-                
-                # Sprawdź czy linia należy do istniejącego klastra
-                added_to_cluster = False
-                for cluster in clusters:
-                    # Sprawdź odległość do każdej linii w klastrze
-                    for cl_line in cluster:
-                        cl_x1, cl_y1, cl_x2, cl_y2 = cl_line[:4]
-                        
-                        # Oblicz odległość między liniami
-                        # Odległość punktu od linii
-                        def dist_point_to_line(x, y, x1, y1, x2, y2):
-                            # Sprawdź czy punkt jest w zakresie linii
-                            if x1 == x2 and y1 == y2:  # Punkt zamiast linii
-                                return np.sqrt((x - x1)**2 + (y - y1)**2)
-                                
-                            # Długość linii
-                            line_length = np.sqrt((x2 - x1)**2 + (y2 - y1)**2)
-                            if line_length == 0:
-                                return np.sqrt((x - x1)**2 + (y - y1)**2)
-                                
-                            # Odległość punktu od prostej zawierającej linię
-                            dist = abs((y2 - y1) * x - (x2 - x1) * y + x2 * y1 - y2 * x1) / line_length
-                            
-                            # Sprawdź czy projekcja punktu jest na linii
-                            t = ((x - x1) * (x2 - x1) + (y - y1) * (y2 - y1)) / (line_length * line_length)
-                            if t < 0:
-                                return np.sqrt((x - x1)**2 + (y - y1)**2)
-                            if t > 1:
-                                return np.sqrt((x - x2)**2 + (y - y2)**2)
-                                
-                            return dist
-                        
-                        # Oblicz odległości od końców linii do drugiej linii
-                        d1 = dist_point_to_line(x1, y1, cl_x1, cl_y1, cl_x2, cl_y2)
-                        d2 = dist_point_to_line(x2, y2, cl_x1, cl_y1, cl_x2, cl_y2)
-                        d3 = dist_point_to_line(cl_x1, cl_y1, x1, y1, x2, y2)
-                        d4 = dist_point_to_line(cl_x2, cl_y2, x1, y1, x2, y2)
-                        
-                        min_dist = min(d1, d2, d3, d4)
-                        
-                        if min_dist < distance_threshold:
-                            cluster.append(line)
-                            added_to_cluster = True
-                            break
-                    
-                    if added_to_cluster:
-                        break
-                
-                # Jeśli nie należy do żadnego klastra, utwórz nowy
-                if not added_to_cluster:
-                    clusters.append([line])
-            
-            # Połącz linie w każdym klastrze
-            for cluster in clusters:
-                if len(cluster) == 1:
-                    merged.append(cluster[0][:4])  # Dodaj tylko [x1, y1, x2, y2]
-                else:
-                    # Znajdź wszystkie punkty końcowe
-                    points = []
-                    for line in cluster:
-                        points.append((line[0], line[1]))  # (x1, y1)
-                        points.append((line[2], line[3]))  # (x2, y2)
-                    
-                    # Oblicz linie przechodzące przez najbardziej odległe punkty
-                    if points:
-                        # Znajdź główną oś (PCA)
-                        points_array = np.array(points)
-                        mean = np.mean(points_array, axis=0)
-                        centered = points_array - mean
-                        
-                        # Oblicz kowariancję
-                        cov = np.cov(centered.T)
-                        eigvals, eigvecs = np.linalg.eig(cov)
-                        
-                        # Główny kierunek to wektor własny z największą wartością własną
-                        main_direction = eigvecs[:, np.argmax(eigvals)]
-                        
-                        # Znajdź projekcje punktów na główną oś
-                        projections = np.dot(centered, main_direction)
-                        
-                        # Znajdź punkty z minimalną i maksymalną projekcją
-                        min_idx = np.argmin(projections)
-                        max_idx = np.argmax(projections)
-                        
-                        # Linia łącząca te dwa punkty
-                        p1 = points_array[min_idx]
-                        p2 = points_array[max_idx]
-                        
-                        merged.append([int(p1[0]), int(p1[1]), int(p2[0]), int(p2[1])])
-            
-            i = j
-        
-        return merged
-    
-    def _extend_lines_to_blocks(self, lines: List[np.ndarray], blocks: List[Dict]) -> List[np.ndarray]:
-        """
-        Wydłuża linie tak, aby łączyły się z blokami.
-        
-        Args:
-            lines: Lista linii
-            blocks: Lista bloków
-            
-        Returns:
-            Lista wydłużonych linii
-        """
-        if not lines:
-            return []
-        
-        extended_lines = []
-        extension_factor = self.params['extension_factor']
-        
-        for line in lines:
-            x1, y1, x2, y2 = line
-            
-            # Kierunek linii
-            dx = x2 - x1
-            dy = y2 - y1
-            
-            # Długość linii
-            length = np.sqrt(dx**2 + dy**2)
-            
-            # Znormalizowany kierunek
-            if length > 0:
-                dx_norm = dx / length
-                dy_norm = dy / length
-            else:
-                continue  # Pomijamy linie o zerowej długości
-            
-            # Wydłuż linię w obu kierunkach
-            extension = length * extension_factor
-            
-            # Nowe punkty końcowe
-            new_x1 = x1 - dx_norm * extension
-            new_y1 = y1 - dy_norm * extension
-            new_x2 = x2 + dx_norm * extension
-            new_y2 = y2 + dy_norm * extension
-            
-            extended_lines.append([int(new_x1), int(new_y1), int(new_x2), int(new_y2)])
-        
-        return extended_lines
-    
-    def _find_connections(self, lines: List[np.ndarray], blocks: List[Dict]) -> List[Connection]:
-        """
-        Znajduje połączenia między blokami na podstawie wykrytych linii.
-        
-        Args:
-            lines: Lista wykrytych linii
-            blocks: Lista bloków
-            
-        Returns:
-            Lista połączeń między blokami
-        """
-        connections = []
-        
-        # Oblicz środki bloków
-        block_centers = []
-        for block in blocks:
-            coords = block['coords']
-            x1, y1 = int(float(coords[0])), int(float(coords[1]))
-            x2, y2 = int(float(coords[2])), int(float(coords[3]))
-            center_x = (x1 + x2) // 2
-            center_y = (y1 + y2) // 2
-            block_centers.append((center_x, center_y))
-        
-        # Dla każdej linii sprawdź, które bloki przecina lub łączy
-        for line in lines:
-            x1, y1, x2, y2 = line
-            connected_blocks = []
-            
-            # Sprawdź, które bloki przecina ta linia
-            for i, block in enumerate(blocks):
-                if self._line_intersects_block(line, block):
-                    connected_blocks.append(i)
-            
-            # Jeśli linia przecina dokładnie dwa bloki, mamy połączenie
-            if len(connected_blocks) == 2:
-                block1_idx, block2_idx = connected_blocks
-                
-                # Utwórz połączenie
-                connection = Connection(
-                    start_block=block1_idx,
-                    end_block=block2_idx,
-                    start_point=(x1, y1),
-                    end_point=(x2, y2),
-                    is_directed=False,
-                    connection_type="solid"  # Domyślnie linia ciągła
-                )
-                
-                # Sprawdź, czy takie połączenie już istnieje
-                is_duplicate = False
-                for existing_conn in connections:
-                    if (existing_conn.start_block == block1_idx and existing_conn.end_block == block2_idx) or \
-                       (existing_conn.start_block == block2_idx and existing_conn.end_block == block1_idx):
-                        is_duplicate = True
-                        break
-                
-                if not is_duplicate:
-                    connections.append(connection)
-        
-        # Dodatkowy krok: przejrzyj linie, które nie tworzą bezpośrednich połączeń, 
-        # ale mogą reprezentować ważne ścieżki
-        if len(connections) == 0:
-            # Jeśli nie znaleziono żadnych połączeń bezpośrednich, spróbuj znaleźć potencjalne połączenia
-            for line in lines:
-                x1, y1, x2, y2 = line
-                potential_connections = []
-                
-                # Oblicz długość linii
-                line_length = np.sqrt((x2 - x1)**2 + (y2 - y1)**2)
-                
-                # Pomiń krótkie linie, które są mniej prawdopodobne jako połączenia między blokami
-                if line_length < 20:
-                    continue
-                
-                # Sprawdź odległość od bloków
-                for i, block in enumerate(blocks):
-                    coords = block['coords']
-                    bx1, by1 = int(float(coords[0])), int(float(coords[1]))
-                    bx2, by2 = int(float(coords[2])), int(float(coords[3]))
-                    
-                    # Sprawdź czy linia jest blisko bloku (używając punktów końcowych)
-                    threshold = 15  # Próg odległości w pikselach
-                    
-                    # Sprawdź odległość punktu początkowego linii od bloku
-                    if self._point_near_block((x1, y1), (bx1, by1, bx2, by2), threshold):
-                        potential_connections.append((i, 'start'))
-                        
-                    # Sprawdź odległość punktu końcowego linii od bloku
-                    if self._point_near_block((x2, y2), (bx1, by1, bx2, by2), threshold):
-                        potential_connections.append((i, 'end'))
-                
-                # Jeśli linia jest potencjalnie połączona z dwoma różnymi blokami
-                unique_blocks = set([block for block, _ in potential_connections])
-                if len(unique_blocks) == 2:
-                    block_indices = list(unique_blocks)
-                    block1_idx, block2_idx = block_indices
-                    
-                    # Utwórz połączenie
-                    connection = Connection(
-                        start_block=block1_idx,
-                        end_block=block2_idx,
-                        start_point=(x1, y1),
-                        end_point=(x2, y2),
-                        is_directed=False,
-                        connection_type="solid"  # Domyślnie linia ciągła
-                    )
-                    
-                    # Sprawdź, czy takie połączenie już istnieje
-                    is_duplicate = False
-                    for existing_conn in connections:
-                        if (existing_conn.start_block == block1_idx and existing_conn.end_block == block2_idx) or \
-                           (existing_conn.start_block == block2_idx and existing_conn.end_block == block1_idx):
-                            is_duplicate = True
-                            break
-                    
-                    if not is_duplicate:
-                        connections.append(connection)
-        
-        return connections
-    
-    def _line_intersects_block(self, line: np.ndarray, block: Dict) -> bool:
-        """
-        Sprawdza, czy linia przecina blok.
-        Wykorzystuje dokładnie współrzędne bloków z plików JSON.
-        
-        Args:
-            line: Linia [x1, y1, x2, y2]
-            block: Słownik bloku z kluczem 'coords' z pliku JSON
-            
-        Returns:
-            True jeśli linia przecina blok, False w przeciwnym razie
-        """
-        x1, y1, x2, y2 = line
-        coords = block['coords']
-        bx1, by1 = int(float(coords[0])), int(float(coords[1]))
-        bx2, by2 = int(float(coords[2])), int(float(coords[3]))
-        
-        # Sprawdź, czy którykolwiek koniec linii jest wewnątrz bloku
-        if (bx1 <= x1 <= bx2 and by1 <= y1 <= by2) or \
-           (bx1 <= x2 <= bx2 and by1 <= y2 <= by2):
-            return True
-        
-        # Definiuj boki bloku
-        sides = [
-            ((bx1, by1), (bx2, by1)),  # Górny bok
-            ((bx2, by1), (bx2, by2)),  # Prawy bok
-            ((bx1, by2), (bx2, by2)),  # Dolny bok
-            ((bx1, by1), (bx1, by2))   # Lewy bok
-        ]
-        
-        # Sprawdź, czy linia przecina którykolwiek bok bloku
-        line_segment = ((x1, y1), (x2, y2))
-        for side in sides:
-            if self._line_segments_intersect(line_segment, side):
-                return True
-        
-        # Sprawdź, czy linia przechodzi przez blok
-        if (x1 < bx1 and x2 > bx2) or (x1 > bx2 and x2 < bx1):
-            if (y1 < by1 and y2 > by2) or (y1 > by2 and y2 < by1):
-                return True
-        
-        return False
-    
-    def _line_segments_intersect(self, line1: Tuple[Tuple[int, int], Tuple[int, int]], 
-                                line2: Tuple[Tuple[int, int], Tuple[int, int]]) -> bool:
-        """
-        Sprawdza, czy dwa odcinki linii się przecinają.
-        
-        Args:
-            line1: Pierwszy odcinek ((x1, y1), (x2, y2))
-            line2: Drugi odcinek ((x3, y3), (x4, y4))
-            
-        Returns:
-            True jeśli odcinki się przecinają, False w przeciwnym razie
-        """
-        def orientation(p, q, r):
-            val = (q[1] - p[1]) * (r[0] - q[0]) - (q[0] - p[0]) * (r[1] - q[1])
-            if val == 0:
-                return 0  # Współliniowe
-            return 1 if val > 0 else 2  # Zgodnie lub przeciwnie do ruchu wskazówek zegara
-            
-        def on_segment(p, q, r):
-            return (q[0] <= max(p[0], r[0]) and q[0] >= min(p[0], r[0]) and
-                    q[1] <= max(p[1], r[1]) and q[1] >= min(p[1], r[1]))
-        
-        p1, q1 = line1
-        p2, q2 = line2
-        
-        o1 = orientation(p1, q1, p2)
-        o2 = orientation(p1, q1, q2)
-        o3 = orientation(p2, q2, p1)
-        o4 = orientation(p2, q2, q1)
-        
-        # Ogólny przypadek przecięcia
-        if o1 != o2 and o3 != o4:
-            return True
-        
-        # Specjalne przypadki
-        if o1 == 0 and on_segment(p1, p2, q1): return True
-        if o2 == 0 and on_segment(p1, q2, q1): return True
-        if o3 == 0 and on_segment(p2, p1, q2): return True
-        if o4 == 0 and on_segment(p2, q1, q2): return True
-        
-        return False
-    
-    def _draw_results(self, image: np.ndarray, blocks: List[Dict], 
-                    connections: List[Connection], lines: List[np.ndarray]) -> None:
-        """
-        Rysuje wyniki detekcji na obrazie.
-        
-        Args:
-            image: Obraz do rysowania
-            blocks: Lista bloków
-            connections: Lista połączeń
-            lines: Lista wykrytych linii
-        """
-        # Rysuj bloki
-        for i, block in enumerate(blocks):
-            coords = block['coords']
-            x1, y1 = int(float(coords[0])), int(float(coords[1]))
-            x2, y2 = int(float(coords[2])), int(float(coords[3]))
-            
-            # Narysuj prostokąt bloku
-            cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 0), 2)
-            
-            # Dodaj numer bloku
-            cv2.putText(image, str(i), (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
-        
-        # Jeśli mamy używać przefiltrowanych linii LSD, rysujemy je bezpośrednio
-        if self.params['use_raw_lsd_lines'] and self.filtered_lsd_lines:
-            logging.info(f"Rysowanie {len(self.filtered_lsd_lines)} przefiltrowanych linii LSD (bez obramowań bloków)")
-            for line in self.filtered_lsd_lines:
-                x1, y1, x2, y2 = line
-                # Rysuj przefiltrowane linie LSD w kolorze czerwonym
-                cv2.line(image, (x1, y1), (x2, y2), (0, 0, 255), 2, cv2.LINE_AA)
-        elif self.params['use_raw_lsd_lines'] and self.lsd_lines:
-            logging.info(f"Rysowanie {len(self.lsd_lines)} surowych linii LSD")
-            for line in self.lsd_lines:
-                x1, y1, x2, y2 = line
-                # Rysuj linie LSD w kolorze czerwonym
-                cv2.line(image, (x1, y1), (x2, y2), (0, 0, 255), 2, cv2.LINE_AA)
-        elif self.debug_images.get("07b_filtered_lsd_lines") is not None:
-            # Alternatywne podejście - użyj obrazu debug z przefiltrowanymi liniami LSD
-            filtered_lsd_lines_copy = self.debug_images["07b_filtered_lsd_lines"].copy()
-            cyan_mask = cv2.inRange(filtered_lsd_lines_copy, (0, 200, 200), (100, 255, 255))
-            cyan_lines = cv2.bitwise_and(filtered_lsd_lines_copy, filtered_lsd_lines_copy, mask=cyan_mask)
-            alpha = 0.7
-            cv2.addWeighted(image, 1, cyan_lines, alpha, 0, image)
-        elif self.debug_images.get("07_lsd_lines") is not None:
-            # Alternatywne podejście - użyj obrazu debug z liniami LSD
-            lsd_lines_copy = self.debug_images["07_lsd_lines"].copy()
-            red_mask = cv2.inRange(lsd_lines_copy, (0, 0, 150), (100, 100, 255))
-            red_lines = cv2.bitwise_and(lsd_lines_copy, lsd_lines_copy, mask=red_mask)
-            alpha = 0.7
-            cv2.addWeighted(image, 1, red_lines, alpha, 0, image)
-        else:
-            # Jeśli brak linii LSD, rysuj dostarczone linie
-            for line in lines:
-                x1, y1, x2, y2 = line
-                cv2.line(image, (x1, y1), (x2, y2), (0, 0, 255), 2, cv2.LINE_AA)
-        
-        # Opcjonalnie można narysować obliczone połączenia między blokami
-        if False:  # Zmień na True, aby narysować połączenia między blokami
-            for connection in connections:
-                # Narysuj linię połączenia
-                cv2.line(image, connection.start_point, connection.end_point, (255, 0, 0), 
-                        self.params['line_thickness'], cv2.LINE_AA)
-                
-                # Jeśli połączenie jest kierunkowe, narysuj strzałkę
-                if connection.is_directed:
-                    self._draw_arrow(image, connection.start_point, connection.end_point, 
-                                   (255, 0, 0), self.params['line_thickness'])
-    
-    def _draw_arrow(self, image: np.ndarray, start_point: Tuple[int, int], 
-                  end_point: Tuple[int, int], color: Tuple[int, int, int], thickness: int) -> None:
-        """
-        Rysuje strzałkę na końcu linii.
-        
-        Args:
-            image: Obraz do rysowania
-            start_point: Punkt początkowy linii
-            end_point: Punkt końcowy linii
-            color: Kolor linii (B, G, R)
-            thickness: Grubość linii
-        """
-        # Parametry strzałki
-        arrow_size = 15
-        angle = np.pi / 6  # 30 stopni
-        
-        # Oblicz wektor kierunkowy linii
-        dx = end_point[0] - start_point[0]
-        dy = end_point[1] - start_point[1]
+        if ex_length < 1e-6:
+            continue
         
         # Normalizuj wektor
-        length = np.sqrt(dx**2 + dy**2)
-        if length < 1:
-            return
+        ex_vec /= ex_length
+        
+        # Sprawdź, czy linie mają podobny kierunek
+        cos_angle = np.abs(np.dot(vec, ex_vec))
+        if cos_angle > 1 - angle_threshold:  # Kąt bliski 0 lub 180 stopni
+            # Sprawdź, czy linie są blisko siebie
+            # Oblicz odległość między punktami końcowymi
+            d1 = np.linalg.norm(np.array([x1, y1]) - np.array([ex_x1, ex_y1]))
+            d2 = np.linalg.norm(np.array([x2, y2]) - np.array([ex_x2, ex_y2]))
+            d3 = np.linalg.norm(np.array([x1, y1]) - np.array([ex_x2, ex_y2]))
+            d4 = np.linalg.norm(np.array([x2, y2]) - np.array([ex_x1, ex_y1]))
             
-        dx /= length
-        dy /= length
-        
-        # Oblicz punkty strzałki
-        p1 = (
-            int(end_point[0] - arrow_size * (dx * np.cos(angle) + dy * np.sin(angle))),
-            int(end_point[1] - arrow_size * (dy * np.cos(angle) - dx * np.sin(angle)))
-        )
-        
-        p2 = (
-            int(end_point[0] - arrow_size * (dx * np.cos(angle) - dy * np.sin(angle))),
-            int(end_point[1] - arrow_size * (dy * np.cos(angle) + dx * np.sin(angle)))
-        )
-        
-        # Narysuj strzałkę
-        cv2.line(image, end_point, p1, color, thickness, cv2.LINE_AA)
-        cv2.line(image, end_point, p2, color, thickness, cv2.LINE_AA)
+            min_dist = min(d1, d2, d3, d4)
+            if min_dist < distance_threshold:
+                return True
     
-    def save_result_image(self, output_dir: str, filename: str) -> None:
-        """
-        Zapisuje wynikowy obraz.
-        
-        Args:
-            output_dir: Katalog docelowy
-            filename: Nazwa pliku (bez rozszerzenia)
-        """
-        # Upewnij się, że katalog istnieje
-        os.makedirs(output_dir, exist_ok=True)
-        
-        # Zapisz wynikowy obraz
-        if self.result_image is not None:
-            output_path = os.path.join(output_dir, f"{filename}_result.png")
-            cv2.imwrite(output_path, self.result_image)
-            logging.info(f"Zapisano wynikowy obraz: {output_path}")
+    return False
 
-    def _save_debug_image(self, image: np.ndarray, name: str) -> None:
-        """
-        Zapisuje obraz debugowania do określonego katalogu.
-        
-        Args:
-            image: Obraz do zapisania
-            name: Nazwa pliku (bez rozszerzenia)
-        """
-        if self.debug_dir is None:
-            return
-            
-        # Upewnij się, że katalog istnieje
-        os.makedirs(self.debug_dir, exist_ok=True)
-        
-        # Zapisz obraz
-        image_path = os.path.join(self.debug_dir, f"{name}.png")
-        
-        # Jeśli obraz jest w skali szarości, konwertuj go do BGR dla lepszej wizualizacji
-        if len(image.shape) == 2:
-            image_to_save = cv2.cvtColor(image, cv2.COLOR_GRAY2BGR)
-        else:
-            image_to_save = image.copy()
-            
-        cv2.imwrite(image_path, image_to_save)
-        logging.info(f"Zapisano obraz debugowania: {image_path}")
-
-    def _filter_block_outlines(self, lines: List[np.ndarray], blocks: List[Dict]) -> List[np.ndarray]:
-        """
-        Usuwa linie, które prawdopodobnie tworzą obramowanie bloków.
-        
-        Args:
-            lines: Lista linii w formacie [x1, y1, x2, y2]
-            blocks: Lista bloków, gdzie każdy blok to słownik z kluczem 'coords'
-            
-        Returns:
-            Lista przefiltrowanych linii bez obramowań bloków
-        """
-        if not self.params['filter_block_outlines']:
-            return lines
-            
-        filtered_lines = []
-        threshold = self.params['block_outline_threshold']
-        length_ratio = self.params['block_outline_length_ratio']
-        
-        for line in lines:
-            x1, y1, x2, y2 = line
-            is_outline = False
-            line_length = np.sqrt((x2 - x1)**2 + (y2 - y1)**2)
-            
-            for block in blocks:
-                coords = block['coords']
-                bx1, by1 = int(float(coords[0])), int(float(coords[1]))
-                bx2, by2 = int(float(coords[2])), int(float(coords[3]))
-                
-                # Oblicz wymiary bloku
-                block_width = bx2 - bx1
-                block_height = by2 - by1
-                
-                # Sprawdź, czy linia jest równoległa do któregoś boku bloku i blisko niego
-                
-                # Górny bok
-                if (abs(y1 - by1) < threshold and abs(y2 - by1) < threshold):
-                    # Sprawdź, czy linia jest wystarczająco długa w porównaniu do szerokości bloku
-                    x_overlap = min(x2, bx2) - max(x1, bx1)
-                    if x_overlap > 0 and x_overlap > length_ratio * block_width:
-                        is_outline = True
-                        break
-                    
-                # Dolny bok
-                if (abs(y1 - by2) < threshold and abs(y2 - by2) < threshold):
-                    # Sprawdź, czy linia jest wystarczająco długa w porównaniu do szerokości bloku
-                    x_overlap = min(x2, bx2) - max(x1, bx1)
-                    if x_overlap > 0 and x_overlap > length_ratio * block_width:
-                        is_outline = True
-                        break
-                    
-                # Lewy bok
-                if (abs(x1 - bx1) < threshold and abs(x2 - bx1) < threshold):
-                    # Sprawdź, czy linia jest wystarczająco długa w porównaniu do wysokości bloku
-                    y_overlap = min(y2, by2) - max(y1, by1)
-                    if y_overlap > 0 and y_overlap > length_ratio * block_height:
-                        is_outline = True
-                        break
-                    
-                # Prawy bok
-                if (abs(x1 - bx2) < threshold and abs(x2 - bx2) < threshold):
-                    # Sprawdź, czy linia jest wystarczająco długa w porównaniu do wysokości bloku
-                    y_overlap = min(y2, by2) - max(y1, by1)
-                    if y_overlap > 0 and y_overlap > length_ratio * block_height:
-                        is_outline = True
-                        break
-                        
-                # Dodatkowe sprawdzenie dla linii przekątnych, które mogą być częścią obramowania
-                if ((abs(x1 - bx1) < threshold and abs(y1 - by1) < threshold) or
-                    (abs(x1 - bx1) < threshold and abs(y1 - by2) < threshold) or
-                    (abs(x1 - bx2) < threshold and abs(y1 - by1) < threshold) or
-                    (abs(x1 - bx2) < threshold and abs(y1 - by2) < threshold) or
-                    (abs(x2 - bx1) < threshold and abs(y2 - by1) < threshold) or
-                    (abs(x2 - bx1) < threshold and abs(y2 - by2) < threshold) or
-                    (abs(x2 - bx2) < threshold and abs(y2 - by1) < threshold) or
-                    (abs(x2 - bx2) < threshold and abs(y2 - by2) < threshold)):
-                    # Sprawdź, czy linia jest częścią obramowania narożnika
-                    corner_threshold = 2 * threshold
-                    if (min(abs(x1 - bx1), abs(x1 - bx2)) < corner_threshold and 
-                        min(abs(y1 - by1), abs(y1 - by2)) < corner_threshold and
-                        min(abs(x2 - bx1), abs(x2 - bx2)) < corner_threshold and
-                        min(abs(y2 - by1), abs(y2 - by2)) < corner_threshold):
-                        is_outline = True
-                        break
-            
-            if not is_outline:
-                filtered_lines.append(line)
-        
-        return filtered_lines
-
-    def _filter_disconnected_lines(self, lines: List[np.ndarray], blocks: List[Dict]) -> List[np.ndarray]:
-        """
-        Usuwa linie, które nie są połączone z żadnym blokiem.
-        Udoskonalony algorytm, który uwzględnia długość linii i potencjalne połączenia.
-        
-        Args:
-            lines: Lista linii w formacie [x1, y1, x2, y2]
-            blocks: Lista bloków, gdzie każdy blok to słownik z kluczem 'coords'
-            
-        Returns:
-            Lista przefiltrowanych linii, które są połączone z co najmniej jednym blokiem
-        """
-        if not self.params['filter_disconnected_lines']:
-            return lines
-            
-        filtered_lines = []
-        threshold = self.params['connection_threshold']
-        min_length_to_filter = self.params['min_line_length_to_filter']
-        long_line_threshold = self.params['long_line_threshold']
-        
-        for line in lines:
-            x1, y1, x2, y2 = line
-            
-            # Oblicz długość linii
-            line_length = np.sqrt((x2 - x1)**2 + (y2 - y1)**2)
-            
-            # Zachowaj krótkie linie (są mniej prawdopodobne jako "śmieci")
-            if line_length < min_length_to_filter:
-                filtered_lines.append(line)
-                continue
-            
-            # Zachowaj bardzo długie linie (zazwyczaj są ważne nawet jeśli nie są bezpośrednio połączone)
-            if self.params['keep_long_lines'] and line_length > long_line_threshold:
-                filtered_lines.append(line)
-                continue
-                
-            # Sprawdź połączenie z blokami
-            start_connected = False
-            end_connected = False
-            directly_intersects = False
-            
-            for block in blocks:
-                coords = block['coords']
-                bx1, by1 = int(float(coords[0])), int(float(coords[1]))
-                bx2, by2 = int(float(coords[2])), int(float(coords[3]))
-                
-                # Sprawdź bezpośrednie przecięcie z blokiem
-                if self._line_intersects_block(line, block):
-                    directly_intersects = True
-                    break
-                
-                # Sprawdź odległość punktu początkowego linii od bloku
-                if self._point_near_block((x1, y1), (bx1, by1, bx2, by2), threshold):
-                    start_connected = True
-                    
-                # Sprawdź odległość punktu końcowego linii od bloku
-                if self._point_near_block((x2, y2), (bx1, by1, bx2, by2), threshold):
-                    end_connected = True
-                
-                # Jeśli oba końce są połączone lub linia bezpośrednio przecina blok, nie ma potrzeby sprawdzać dalej
-                if (start_connected and end_connected) or directly_intersects:
-                    break
-            
-            # Linia jest zachowana, jeśli bezpośrednio przecina blok
-            if directly_intersects:
-                filtered_lines.append(line)
-                continue
-                
-            # Jeśli wymagamy połączenia obu końców i warunek jest spełniony
-            if self.params['require_both_ends_connected'] and start_connected and end_connected:
-                filtered_lines.append(line)
-                continue
-                
-            # Jeśli nie wymagamy połączenia obu końców, wystarczy że jeden koniec jest połączony
-            if not self.params['require_both_ends_connected'] and (start_connected or end_connected):
-                filtered_lines.append(line)
-                continue
-                
-            # Sprawdź, czy linia jest blisko dwóch różnych bloków (potencjalnie łączy je)
-            if self._line_connects_blocks(line, blocks, threshold):
-                filtered_lines.append(line)
-                continue
-        
-        return filtered_lines
+def filter_lines(lines, min_length=15, duplicate_threshold=10, angle_threshold=0.1, 
+                prefer_orthogonal=True, orthogonal_weight=1.5):
+    """
+    Filtruje linie, aby usunąć duplikaty i preferować linie ortogonalne (pionowe/poziome).
     
-    def _line_connects_blocks(self, line: np.ndarray, blocks: List[Dict], threshold: int) -> bool:
-        """
-        Sprawdza, czy linia potencjalnie łączy dwa różne bloki.
+    Args:
+        lines: Lista linii [[x1, y1, x2, y2], ...]
+        min_length: Minimalna długość linii
+        duplicate_threshold: Próg odległości dla duplikatów
+        angle_threshold: Próg kąta dla duplikatów
+        prefer_orthogonal: Czy preferować linie ortogonalne
+        orthogonal_weight: Waga dla linii ortogonalnych
+    
+    Returns:
+        Przefiltrowana lista linii
+    """
+    if lines is None or len(lines) == 0:
+        return []
+    
+    # Wyodrębnij linie z formatu OpenCV i oblicz długości
+    line_data = []
+    for line in lines:
+        x1, y1, x2, y2 = line[0]
+        length = np.sqrt((x2 - x1)**2 + (y2 - y1)**2)
         
-        Args:
-            line: Linia w formacie [x1, y1, x2, y2]
-            blocks: Lista bloków
-            threshold: Próg odległości dla uznania połączenia
-            
-        Returns:
-            True jeśli linia potencjalnie łączy dwa różne bloki, False w przeciwnym razie
-        """
-        x1, y1, x2, y2 = line
+        # Oblicz kąt w radianach, a następnie w stopniach
+        angle_rad = np.arctan2(abs(y2 - y1), abs(x2 - x1))
+        angle_deg = np.degrees(angle_rad) % 90  # Sprowadź do zakresu 0-90
         
-        # Dla każdej pary bloków sprawdź, czy linia potencjalnie je łączy
-        connected_blocks = []
+        # Oblicz, jak blisko linia jest do pionu lub poziomu (0 = idealnie ortogonalna)
+        orthogonality = min(angle_deg, 90 - angle_deg)
         
-        for i, block in enumerate(blocks):
-            coords = block['coords']
-            bx1, by1 = int(float(coords[0])), int(float(coords[1]))
-            bx2, by2 = int(float(coords[2])), int(float(coords[3]))
-            
-            # Sprawdź, czy linia jest blisko tego bloku
-            if (self._point_near_block((x1, y1), (bx1, by1, bx2, by2), threshold) or
-                self._point_near_block((x2, y2), (bx1, by1, bx2, by2), threshold) or
-                self._line_intersects_block(line, block)):
-                connected_blocks.append(i)
-                
-                # Jeśli linia jest blisko dwóch różnych bloków, to potencjalnie je łączy
-                if len(connected_blocks) >= 2:
-                    return True
+        # Przypisz wagę linii
+        weight = length
+        if prefer_orthogonal:
+            # Zwiększ wagę dla linii bliskich pionu/poziomu
+            if orthogonality < 5:  # Prawie idealnie ortogonalna (w granicach 5 stopni)
+                weight *= orthogonal_weight
         
-        # Sprawdź, czy linia przechodzi blisko środków bloków
-        for i, block1 in enumerate(blocks):
-            coords1 = block1['coords']
-            bx1_1, by1_1 = int(float(coords1[0])), int(float(coords1[1]))
-            bx2_1, by2_1 = int(float(coords1[2])), int(float(coords1[3]))
-            center1_x = (bx1_1 + bx2_1) // 2
-            center1_y = (by1_1 + by2_1) // 2
-            
-            for j, block2 in enumerate(blocks):
-                if i == j:
-                    continue  # Pomijamy ten sam blok
-                    
-                coords2 = block2['coords']
-                bx1_2, by1_2 = int(float(coords2[0])), int(float(coords2[1]))
-                bx2_2, by2_2 = int(float(coords2[2])), int(float(coords2[3]))
-                center2_x = (bx1_2 + bx2_2) // 2
-                center2_y = (by1_2 + by2_2) // 2
-                
-                # Sprawdź, czy linia przechodzi blisko środków obu bloków
-                dist1 = self._distance_point_to_line(center1_x, center1_y, x1, y1, x2, y2)
-                dist2 = self._distance_point_to_line(center2_x, center2_y, x1, y1, x2, y2)
-                
-                if dist1 < threshold*1.5 and dist2 < threshold*1.5:
-                    return True
+        if length >= min_length:
+            line_data.append((x1, y1, x2, y2, length, weight, orthogonality))
+    
+    # Posortuj linie według wagi (długość * waga ortogonalności) malejąco
+    line_data.sort(key=lambda x: x[5], reverse=True)
+    
+    # Wybierz tylko unikalne linie
+    filtered_lines = []
+    for line in line_data:
+        x1, y1, x2, y2, _, _, _ = line
+        if not is_duplicate_line([x1, y1, x2, y2], filtered_lines, duplicate_threshold, angle_threshold):
+            filtered_lines.append([x1, y1, x2, y2])
+    
+    return filtered_lines
+
+def apply_morphology(edges, kernel_size=3, image_shape=None, edge_density=None):
+    """
+    Stosuje operacje morfologiczne, aby poprawić wykrywanie krawędzi.
+    Dostosowuje podejście dla cienkich i grubych linii.
+    
+    Args:
+        edges: Obraz krawędzi
+        kernel_size: Bazowy rozmiar jądra dla operacji morfologicznych
+        image_shape: Kształt oryginalnego obrazu
+        edge_density: Gęstość krawędzi w obrazie
+    
+    Returns:
+        Obraz krawędzi po operacjach morfologicznych
+    """
+    # Zachowaj kopię oryginalnych krawędzi
+    original_edges = edges.copy()
+    
+    if edge_density is None or image_shape is None:
+        # Użyj domyślnego podejścia, jeśli nie mamy informacji o gęstości krawędzi
+        kernel = np.ones((kernel_size, kernel_size), np.uint8)
+        closed = cv2.morphologyEx(edges, cv2.MORPH_CLOSE, kernel)
+        opened = cv2.morphologyEx(closed, cv2.MORPH_OPEN, kernel)
+        return opened
+    
+    # Dla bardzo cienkich linii, prawie nie stosuj operacji morfologicznych
+    if edge_density < 0.005:
+        # Minimalne przetwarzanie - tylko delikatne zamknięcie
+        small_kernel = np.ones((2, 2), np.uint8)
+        result = cv2.morphologyEx(edges, cv2.MORPH_CLOSE, small_kernel)
         
+        # Sprawdź, ile krawędzi zostało utraconych
+        edge_pixels_before = cv2.countNonZero(edges)
+        edge_pixels_after = cv2.countNonZero(result)
+        
+        # Jeśli utracono więcej niż 10% krawędzi, po prostu użyj oryginału
+        if edge_pixels_after < edge_pixels_before * 0.9:
+            return original_edges
+        
+        return result
+    
+    # Dla cienkich linii, używamy tylko zamknięcia
+    elif edge_density < 0.01:
+        small_kernel = np.ones((2, 2), np.uint8)
+        result = cv2.morphologyEx(edges, cv2.MORPH_CLOSE, small_kernel)
+        
+        # Sprawdź, ile krawędzi zostało utraconych
+        edge_pixels_before = cv2.countNonZero(edges)
+        edge_pixels_after = cv2.countNonZero(result)
+        
+        # Jeśli utracono więcej niż 20% krawędzi, użyj oryginału
+        if edge_pixels_after < edge_pixels_before * 0.8:
+            return original_edges
+        
+        return result
+    
+    # Dla średnich linii, użyj zamknięcia i delikatnego otwarcia tylko jeśli nie stracimy zbyt wielu krawędzi
+    elif edge_density < 0.02:
+        # Najpierw zamknięcie
+        close_kernel = np.ones((kernel_size, kernel_size), np.uint8)
+        closed = cv2.morphologyEx(edges, cv2.MORPH_CLOSE, close_kernel)
+        
+        # Sprawdź, ile krawędzi zostało utraconych po zamknięciu
+        edge_pixels_before = cv2.countNonZero(edges)
+        edge_pixels_after_close = cv2.countNonZero(closed)
+        
+        # Jeśli utracono więcej niż 30% krawędzi po samym zamknięciu, użyj oryginału
+        if edge_pixels_after_close < edge_pixels_before * 0.7:
+            return original_edges
+        
+        # Następnie delikatne otwarcie
+        open_kernel = np.ones((2, 2), np.uint8)
+        opened = cv2.morphologyEx(closed, cv2.MORPH_OPEN, open_kernel)
+        
+        # Sprawdź, ile krawędzi zostało utraconych po otwarciu
+        edge_pixels_after_open = cv2.countNonZero(opened)
+        
+        # Jeśli utracono więcej niż 30% krawędzi po otwarciu w porównaniu do zamknięcia, użyj tylko zamknięcia
+        if edge_pixels_after_open < edge_pixels_after_close * 0.7:
+            return closed
+        
+        return opened
+    
+    # Dla grubych linii, możemy zastosować standardowe operacje morfologiczne
+    else:
+        # Najpierw zamknięcie
+        close_kernel = np.ones((2, 2), np.uint8)
+        closed = cv2.morphologyEx(edges, cv2.MORPH_CLOSE, close_kernel)
+        
+        # Następnie otwarcie
+        open_kernel = np.ones((2, 2), np.uint8)
+        opened = cv2.morphologyEx(closed, cv2.MORPH_OPEN, open_kernel)
+        
+        # Sprawdź, ile krawędzi zostało utraconych
+        edge_pixels_before = cv2.countNonZero(edges)
+        edge_pixels_after = cv2.countNonZero(opened)
+        
+        # Jeśli utracono więcej niż 40% krawędzi, użyj tylko zamknięcia
+        if edge_pixels_after < edge_pixels_before * 0.6:
+            return closed
+        
+        return opened
+
+def preprocess_image(image):
+    """
+    Wstępne przetwarzanie obrazu dla lepszego wykrywania linii.
+    
+    Args:
+        image: Obraz wejściowy
+    
+    Returns:
+        Obraz po wstępnym przetworzeniu
+    """
+    # Zwiększ kontrast za pomocą CLAHE (Contrast Limited Adaptive Histogram Equalization)
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+    enhanced = clahe.apply(gray)
+    
+    # Redukcja szumu za pomocą bilateralnego filtrowania, które zachowuje krawędzie
+    blurred = cv2.bilateralFilter(enhanced, 9, 75, 75)
+    
+    return blurred
+
+def enhance_edges(edges, edge_density=None):
+    """
+    Ulepsza obraz krawędzi dla lepszego wykrywania linii.
+    
+    Args:
+        edges: Obraz krawędzi po operacji Canny
+        edge_density: Gęstość krawędzi w obrazie
+    
+    Returns:
+        Ulepszony obraz krawędzi
+    """
+    # Zachowaj kopię oryginalnego obrazu krawędzi
+    original_edges = edges.copy()
+    
+    # Określ typ obrazu na podstawie gęstości krawędzi
+    if edge_density is None:
+        edge_pixels = cv2.countNonZero(edges)
+        img_area = edges.shape[0] * edges.shape[1]
+        edge_density = edge_pixels / img_area
+    
+    # Zastosuj różne strategie ulepszania w zależności od gęstości krawędzi
+    if edge_density < 0.005:  # Bardzo cienkie linie
+        # Spróbuj pogrubić bardzo cienkie linie za pomocą dylatacji
+        kernel = np.ones((2, 2), np.uint8)
+        dilated = cv2.dilate(edges, kernel, iterations=1)
+        return dilated
+    
+    elif edge_density < 0.01:  # Cienkie linie
+        # Dla cienkich linii, delikatna dylatacja
+        kernel = np.ones((2, 2), np.uint8)
+        dilated = cv2.dilate(edges, kernel, iterations=1)
+        
+        # Następnie zastosuj operację szkieletyzacji, aby zachować strukturę linii
+        thinned = cv2.ximgproc.thinning(dilated)
+        
+        # Połącz oryginalny obraz z wycienioną wersją
+        enhanced = cv2.bitwise_or(original_edges, thinned)
+        return enhanced
+    
+    elif edge_density < 0.02:  # Średnie linie
+        # Dla średnich linii, ulepsz strukturę za pomocą zamknięcia
+        kernel = np.ones((3, 3), np.uint8)
+        closed = cv2.morphologyEx(edges, cv2.MORPH_CLOSE, kernel)
+        
+        # Usuń małe artefakty za pomocą filtracji po powierzchni
+        num_labels, labels, stats, centroids = cv2.connectedComponentsWithStats(closed, connectivity=8)
+        
+        # Stwórz nowy obraz tylko z komponentami o odpowiedniej wielkości
+        filtered = np.zeros_like(closed)
+        min_size = 10  # Minimalny rozmiar komponentu do zachowania
+        
+        # Przetwarzaj wszystkie komponenty oprócz tła (indeks 0)
+        for i in range(1, num_labels):
+            if stats[i, cv2.CC_STAT_AREA] >= min_size:
+                filtered[labels == i] = 255
+        
+        return filtered
+    
+    else:  # Grube linie
+        # Dla grubych linii, możemy najpierw wycieniować, a następnie pogrubić
+        # aby uzyskać bardziej regularną strukturę
+        thinned = cv2.ximgproc.thinning(edges)
+        kernel = np.ones((3, 3), np.uint8)
+        dilated = cv2.dilate(thinned, kernel, iterations=1)
+        return dilated
+
+def detect_multi_scale_edges(image, mask=None):
+    """
+    Wykrywa krawędzie na wielu skalach i łączy wyniki.
+    
+    Args:
+        image: Obraz wejściowy
+        mask: Maska (opcjonalnie)
+    
+    Returns:
+        Obraz krawędzi wykrytych na wielu skalach
+    """
+    if len(image.shape) == 3:
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    else:
+        gray = image
+    
+    # Zastosuj maskę, jeśli istnieje
+    if mask is not None:
+        gray = cv2.bitwise_and(gray, gray, mask=mask)
+    
+    # Oblicz średnią jasność obrazu
+    non_zero_pixels = gray[gray > 0]
+    if len(non_zero_pixels) > 0:
+        avg_brightness = np.mean(non_zero_pixels)
+    else:
+        avg_brightness = 128  # Wartość domyślna
+    
+    # Utwórz trzy różne obrazy krawędzi z różnymi parametrami
+    
+    # 1. Detekcja z niskimi progami dla słabszych krawędzi
+    low_threshold = int(max(10, avg_brightness * 0.12))
+    high_threshold = int(min(150, avg_brightness * 0.4))
+    edges1 = cv2.Canny(gray, low_threshold, high_threshold, apertureSize=3)
+    
+    # 2. Detekcja ze standardowymi progami
+    std_threshold_low = int(max(20, avg_brightness * 0.2))
+    std_threshold_high = int(min(200, avg_brightness * 0.6))
+    edges2 = cv2.Canny(gray, std_threshold_low, std_threshold_high, apertureSize=3)
+    
+    # 3. Detekcja z wysokimi progami dla silniejszych krawędzi
+    high_threshold_low = int(max(40, avg_brightness * 0.3))
+    high_threshold_high = int(min(250, avg_brightness * 0.8))
+    edges3 = cv2.Canny(gray, high_threshold_low, high_threshold_high, apertureSize=3)
+    
+    # Połącz wyniki operacją OR
+    combined_edges = cv2.bitwise_or(edges1, edges2)
+    combined_edges = cv2.bitwise_or(combined_edges, edges3)
+    
+    return combined_edges
+
+def verify_line_on_edges(line, edges, min_overlap_ratio=0.5, thickness=1):
+    """
+    Sprawdza czy linia faktycznie istnieje na obrazie krawędzi.
+    
+    Args:
+        line: Linia do zweryfikowania [x1, y1, x2, y2]
+        edges: Obraz krawędzi (binary)
+        min_overlap_ratio: Minimalny stosunek pikseli krawędzi pokrywających się z linią
+        thickness: Grubość linii do sprawdzenia
+        
+    Returns:
+        True jeśli linia pokrywa się z krawędziami, False w przeciwnym przypadku
+    """
+    # Utwórz pusty obraz (maska)
+    mask = np.zeros_like(edges)
+    
+    # Narysuj linię na masce
+    x1, y1, x2, y2 = line
+    cv2.line(mask, (x1, y1), (x2, y2), 255, thickness)
+    
+    # Oblicz długość linii
+    line_length = np.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+    
+    # Oblicz liczbę pikseli na narysowanej linii
+    line_pixels = cv2.countNonZero(mask)
+    
+    if line_pixels == 0:  # Zabezpieczenie przed dzieleniem przez zero
         return False
     
-    def _distance_point_to_line(self, px: int, py: int, x1: int, y1: int, x2: int, y2: int) -> float:
-        """
-        Oblicza odległość punktu od linii.
-        
-        Args:
-            px, py: Współrzędne punktu
-            x1, y1, x2, y2: Współrzędne linii
-            
-        Returns:
-            Odległość punktu od linii
-        """
-        # Sprawdź czy punkt jest w zakresie linii
-        if x1 == x2 and y1 == y2:  # Punkt zamiast linii
-            return np.sqrt((px - x1)**2 + (py - y1)**2)
-            
-        # Długość linii
-        line_length = np.sqrt((x2 - x1)**2 + (y2 - y1)**2)
-        if line_length == 0:
-            return np.sqrt((px - x1)**2 + (py - y1)**2)
-            
-        # Odległość punktu od prostej zawierającej linię
-        dist = abs((y2 - y1) * px - (x2 - x1) * py + x2 * y1 - y2 * x1) / line_length
-        
-        # Sprawdź czy projekcja punktu jest na linii
-        t = ((px - x1) * (x2 - x1) + (py - y1) * (y2 - y1)) / (line_length * line_length)
-        if t < 0:
-            return np.sqrt((px - x1)**2 + (py - y1)**2)
-        if t > 1:
-            return np.sqrt((px - x2)**2 + (py - y2)**2)
-            
-        return dist
+    # Znajdź część wspólną maski i obrazu krawędzi
+    overlap = cv2.bitwise_and(edges, mask)
+    overlap_pixels = cv2.countNonZero(overlap)
+    
+    # Oblicz stosunek pokrycia
+    overlap_ratio = overlap_pixels / line_pixels
+    
+    # Dostosuj minimalny stosunek pokrycia w zależności od długości linii
+    # Dla krótszych linii wymagamy większego pokrycia
+    adjusted_min_ratio = min_overlap_ratio
+    if line_length < 20:
+        adjusted_min_ratio = min_overlap_ratio * 1.3  # Zwiększony próg dla krótkich linii
+    elif line_length > 50:
+        adjusted_min_ratio = min_overlap_ratio * 0.8
+    
+    return overlap_ratio >= adjusted_min_ratio
 
-    def _point_near_block(self, point: Tuple[int, int], block_coords: Tuple[int, int, int, int], threshold: int) -> bool:
-        """
-        Sprawdza, czy punkt jest blisko bloku (w odległości threshold pikseli).
+def detect_lines(image_path, json_path, category, debug=False):
+    """
+    Wykrywa linie na obrazie z pominięciem obszarów do ignorowania.
+    Nowe podejście: najpierw wykrywamy krawędzie, potem nakładamy maskę.
+    
+    Args:
+        image_path: Ścieżka do obrazu
+        json_path: Ścieżka do pliku JSON z obszarami do ignorowania
+        category: Kategoria obrazu (np. Automatyka, Elektroniczne)
+        debug: Czy zapisywać pliki debugowania
+    
+    Returns:
+        Oryginalny obraz, obraz z wykrytymi liniami
+    """
+    try:
+        # Wczytaj obraz
+        image = cv2.imread(str(image_path))
+        if image is None:
+            print(f"Nie można wczytać obrazu: {image_path}")
+            return None, None
         
-        Args:
-            point: Współrzędne punktu (x, y)
-            block_coords: Współrzędne bloku (x1, y1, x2, y2)
-            threshold: Maksymalna odległość uznawana za "blisko"
+        # Wczytaj obszary do ignorowania
+        ignore_regions = load_json_ignore_regions(json_path, image.shape, debug)
+        
+        # Utwórz maskę
+        mask = create_mask_from_ignore_regions(image.shape, ignore_regions)
+        
+        # Przygotuj obraz do wykrywania linii - użyj ulepszonego preprocesingu
+        preprocessed = preprocess_image(image)
+        
+        # Pobierz numer schematu z nazwy pliku i utwórz foldery dla debugowania
+        schema_name = Path(image_path).stem
+        schema_number = ''.join(filter(str.isdigit, schema_name))
+        schema_number_int = int(schema_number) if schema_number else 0
+        
+        # Utwórz folder dla kategorii w debug
+        debug_base_dir = Path("results/debug")
+        debug_dir = debug_base_dir / category
+        schema_dir = None
+        
+        if debug:
+            debug_dir.mkdir(parents=True, exist_ok=True)
+            # Utwórz folder dla schematu
+            schema_dir = debug_dir / f"sch{schema_number_int:03d}"
+            schema_dir.mkdir(exist_ok=True)
             
-        Returns:
-            True jeśli punkt jest blisko bloku, False w przeciwnym razie
-        """
-        x, y = point
-        bx1, by1, bx2, by2 = block_coords
-        
-        # Sprawdź, czy punkt jest wewnątrz bloku
-        if bx1 <= x <= bx2 and by1 <= y <= by2:
-            return True
+            # Zapisz obraz oryginalny z narysowanymi regionami do ignorowania
+            debug_image = image.copy()
+            for region in ignore_regions:
+                cv2.polylines(debug_image, [region], True, (0, 0, 255), 2)
+            cv2.imwrite(str(schema_dir / "01_regions.jpg"), debug_image)
             
-        # Sprawdź odległość do najbliższego boku bloku
-        dx = max(0, max(bx1 - x, x - bx2))
-        dy = max(0, max(by1 - y, y - by2))
+            # Zapisz maskę
+            cv2.imwrite(str(schema_dir / "02_mask.jpg"), mask)
+            cv2.imwrite(str(schema_dir / "03_preprocessed.jpg"), preprocessed)
         
-        # Oblicz odległość euklidesową
-        distance = np.sqrt(dx*dx + dy*dy)
+        # NOWE PODEJŚCIE: Najpierw wykryj krawędzie na całym obrazie
+        edges = detect_multi_scale_edges(preprocessed, None)
         
-        return distance <= threshold
+        if debug:
+            cv2.imwrite(str(schema_dir / "04a_edges_full.jpg"), edges)
+        
+        # Teraz nałóż maskę na wykryte krawędzie (usuń krawędzie w obszarach ignorowanych)
+        edges_masked = cv2.bitwise_and(edges, edges, mask=mask)
+        
+        # Policz gęstość krawędzi po maskowaniu
+        edge_pixels_initial = cv2.countNonZero(edges_masked)
+        img_area = image.shape[0] * image.shape[1]
+        edge_density = edge_pixels_initial / img_area
+        
+        # Zapisujemy krawędzie po nałożeniu maski
+        if debug:
+            cv2.imwrite(str(schema_dir / "04b_edges_masked.jpg"), edges_masked)
+        
+        # Zastosuj operacje morfologiczne do poprawy krawędzi
+        edges_morphed = apply_morphology(
+            edges_masked, 
+            kernel_size=3, 
+            image_shape=image.shape, 
+            edge_density=edge_density
+        )
+        
+        # Policz liczbę pikseli krawędzi po operacjach morfologicznych
+        edge_pixels = cv2.countNonZero(edges_morphed)
+        edge_density_after = edge_pixels / img_area
+        
+        if debug:
+            cv2.imwrite(str(schema_dir / "04c_edges_morphed.jpg"), edges_morphed)
+        
+        # Usuń krawędzie wokół ignorowanych obszarów
+        # Utwórz poszerzoną maskę dla obszarów do ignorowania
+        dilated_inverse_mask = np.ones_like(mask)
+        
+        # Dla każdego regionu do ignorowania, narysuj wypełniony wielokąt z marginesem
+        for region in ignore_regions:
+            # Utwórz tymczasową maskę
+            temp_mask = np.zeros_like(mask)
+            cv2.fillPoly(temp_mask, [region], 255)
+            
+            # Rozszerz obszar ignorowany
+            kernel = np.ones((5, 5), np.uint8)
+            dilated_temp_mask = cv2.dilate(temp_mask, kernel, iterations=1)
+            
+            # Odejmij od głównej maski
+            dilated_inverse_mask = cv2.bitwise_and(dilated_inverse_mask, cv2.bitwise_not(dilated_temp_mask))
+        
+        # Zastosuj rozszerzoną maskę do krawędzi
+        edges_cleaned = cv2.bitwise_and(edges_morphed, edges_morphed, mask=dilated_inverse_mask)
+        
+        if debug:
+            cv2.imwrite(str(schema_dir / "04d_edges_cleaned.jpg"), edges_cleaned)
+            # Zapisz również rozszerzoną maskę dla wizualizacji
+            cv2.imwrite(str(schema_dir / "04e_dilated_mask.jpg"), dilated_inverse_mask)
+        
+        # Parametry HoughLinesP dostosowane do wykrywania linii
+        img_size_factor = np.sqrt(img_area) / 500  # Współczynnik skalowania w zależności od wielkości obrazu
+        
+        # Dostosuj parametry HoughLinesP w zależności od gęstości krawędzi i wielkości obrazu
+        if edge_density < 0.005:  # Bardzo cienkie linie
+            hough_threshold = max(7, int(9 * img_size_factor))
+            min_line_length = max(7, int(9 * img_size_factor))
+            max_line_gap = max(10, int(15 * img_size_factor))
+        elif edge_density < 0.01:  # Cienkie linie
+            hough_threshold = max(10, int(12 * img_size_factor))
+            min_line_length = max(10, int(12 * img_size_factor))
+            max_line_gap = max(8, int(12 * img_size_factor))
+        elif edge_density < 0.02:  # Średnie linie
+            hough_threshold = max(12, int(15 * img_size_factor))
+            min_line_length = max(12, int(15 * img_size_factor))
+            max_line_gap = max(6, int(10 * img_size_factor))
+        else:  # Grube linie
+            hough_threshold = max(15, int(18 * img_size_factor))
+            min_line_length = max(15, int(18 * img_size_factor))
+            max_line_gap = max(5, int(8 * img_size_factor))
+        
+        # Wykryj linie na wyczyszczonych krawędziach
+        lines = cv2.HoughLinesP(
+            edges_cleaned,
+            rho=1, 
+            theta=np.pi/180, 
+            threshold=hough_threshold,
+            minLineLength=min_line_length,
+            maxLineGap=max_line_gap
+        )
+        
+        # Jeśli nie wykryto żadnych linii, zwróć pusty wynik
+        if lines is None or len(lines) == 0:
+            print(f"Nie wykryto żadnych linii na obrazie {image_path}")
+            return image, image.copy()  # Zwróć oryginał jako wynik
+        else:
+            print(f"Łącznie wykryto {len(lines)} linii przed filtrowaniem")
+        
+        # Przefiltruj linie, aby usunąć duplikaty i preferować ortogonalne
+        filtered_lines = []
+        if lines is not None:
+            # Parametry filtrowania dopasowane do gęstości krawędzi
+            if edge_density < 0.005:  # Bardzo cienkie linie
+                duplicate_threshold = 3  # Najniższy próg dla bardzo cienkich linii
+                angle_threshold = 0.12  # Zwiększony próg kąta dla lepszego łączenia
+            elif edge_density < 0.01:  # Cienkie linie
+                duplicate_threshold = 4  # Niższy próg
+                angle_threshold = 0.1
+            elif edge_density < 0.02:  # Średnie linie
+                duplicate_threshold = 6  # Nieco wyższy próg
+                angle_threshold = 0.08
+            else:  # Grube linie
+                duplicate_threshold = 8  # Standardowy próg dla grubszych linii
+                angle_threshold = 0.06  # Niższy próg kąta dla większej precyzji
+            
+            # Skoryguj próg filtrowania w zależności od wielkości obrazu
+            duplicate_threshold = max(3, int(duplicate_threshold * img_size_factor))
+            
+            # Filtrowanie linii
+            filtered_lines = filter_lines(
+                lines=lines, 
+                min_length=min_line_length,
+                duplicate_threshold=duplicate_threshold,
+                angle_threshold=angle_threshold,
+                prefer_orthogonal=True, 
+                orthogonal_weight=1.8  # Jeszcze większa waga dla linii ortogonalnych
+            )
+        
+        # Narysuj wykryte linie na kopii oryginalnego obrazu
+        result_image = image.copy()
+        line_count = 0
+        total_line_length = 0
+        
+        # Rysowanie przefiltrowanych linii
+        if filtered_lines:
+            line_count = len(filtered_lines)
+            for line in filtered_lines:
+                x1, y1, x2, y2 = line
+                # Oblicz długość linii
+                length = np.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+                total_line_length += length
+                cv2.line(result_image, (x1, y1), (x2, y2), (0, 0, 255), 2)
+        
+        # Utwórz obraz porównujący krawędzie i wykryte linie
+        if debug and schema_dir:
+            # Utwórz czysty obraz dla porównania (czarny)
+            comparison_image = np.zeros((image.shape[0], image.shape[1] * 2, 3), dtype=np.uint8)
+            
+            # Przekonwertuj edges_cleaned na obraz kolorowy (BGR)
+            edges_color = cv2.cvtColor(edges_cleaned, cv2.COLOR_GRAY2BGR)
+            
+            # Umieść obrazy obok siebie
+            comparison_image[0:image.shape[0], 0:image.shape[1]] = edges_color
+            comparison_image[0:image.shape[0], image.shape[1]:] = result_image
+            
+            # Dodaj tekst z informacjami o liczbie pikseli krawędzi i wykrytych linii
+            cv2.putText(comparison_image, f"Pikseli krawędzi: {edge_pixels} (przed: {edge_pixels_initial})", (10, 30), 
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
+            cv2.putText(comparison_image, f"Gęstość krawędzi: {edge_density_after:.4f} (przed: {edge_density:.4f})", (10, 60), 
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
+            cv2.putText(comparison_image, f"Wykrytych linii (przed filtrem): {len(lines)}", (10, 90), 
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
+            cv2.putText(comparison_image, f"Wykrytych linii (po filtrze): {line_count}", (10, 120), 
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
+            cv2.putText(comparison_image, f"Całkowita długość linii: {int(total_line_length)}", (10, 150), 
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
+            cv2.putText(comparison_image, f"Parametry Hough: {hough_threshold}, {min_line_length}, {max_line_gap}", (10, 180), 
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
+            cv2.putText(comparison_image, f"Typ linii: {'bardzo cienkie' if edge_density < 0.005 else 'cienkie' if edge_density < 0.01 else 'średnie' if edge_density < 0.02 else 'grube'}", (10, 210), 
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
+            
+            # Zapisz obraz porównujący
+            cv2.imwrite(str(schema_dir / "05b_comparison.jpg"), comparison_image)
+            
+            # Zapisz obraz wynikowy
+            cv2.imwrite(str(schema_dir / "06_result.jpg"), result_image)
+            
+            line_type = 'bardzo cienkie' if edge_density < 0.005 else 'cienkie' if edge_density < 0.01 else 'średnie' if edge_density < 0.02 else 'grube'
+            print(f"Wykryto {line_count} linii na obrazie {image_path} (pikseli krawędzi: {edge_pixels}/{edge_pixels_initial}, gęstość: {edge_density:.4f}, typ linii: {line_type})")
+        else:
+            print(f"Wykryto {line_count} linii na obrazie {image_path}")
+            
+        return image, result_image
+    
+    except Exception as e:
+        print(f"Błąd podczas przetwarzania obrazu {image_path}: {e}")
+        import traceback
+        traceback.print_exc()
+        return None, None
+
+def process_dataset(dataset_dirs, json_dirs, output_dir="results", debug=False):
+    """
+    Przetwarza wszystkie obrazy z podanych katalogów.
+    
+    Args:
+        dataset_dirs: Lista katalogów z obrazami
+        json_dirs: Lista katalogów z plikami JSON
+        output_dir: Katalog wyjściowy
+        debug: Czy włączyć tryb debugowania
+    """
+    # Utwórz katalog wyjściowy, jeśli nie istnieje
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Jeśli debug włączony, wyczyść folder debug
+    if debug:
+        debug_dir = Path(output_dir) / "debug"
+        if debug_dir.exists():
+            print(f"Czyszczę folder debugowania: {debug_dir}")
+            try:
+                # Zamiast usuwać cały folder, usuń tylko jego zawartość
+                for item in os.listdir(debug_dir):
+                    item_path = debug_dir / item
+                    if os.path.isdir(item_path):
+                        shutil.rmtree(item_path)
+                    else:
+                        os.remove(item_path)
+                print("Folder debug został wyczyszczony")
+            except Exception as e:
+                print(f"Błąd podczas czyszczenia folderu debug: {e}")
+        
+        os.makedirs(debug_dir, exist_ok=True)
+    
+    for dataset_dir, json_dir in zip(dataset_dirs, json_dirs):
+        # Pobierz wszystkie pliki obrazów i posortuj je według numeru schematu
+        image_paths = list(Path(dataset_dir).glob("*.jpg")) + list(Path(dataset_dir).glob("*.png"))
+        
+        # Sortowanie obrazów według numeru schematu
+        def extract_schema_number(path):
+            # Pobierz numer schematu z nazwy pliku
+            schema_name = Path(path).stem
+            schema_number = ''.join(filter(str.isdigit, schema_name))
+            # Jeśli nie ma numeru, zwróć 0
+            return int(schema_number) if schema_number else 0
+        
+        # Sortuj obrazy według numerów schematów
+        image_paths.sort(key=extract_schema_number)
+        
+        category = Path(dataset_dir).name  # Użyj .name zamiast split dla kompatybilności ze ścieżkami Windows
+        
+        # Utwórz katalog dla kategorii
+        category_dir = Path(output_dir) / category
+        os.makedirs(category_dir, exist_ok=True)
+        
+        print(f"Przetwarzanie kategorii: {category}")
+        print(f"Znaleziono {len(image_paths)} obrazów w {dataset_dir}")
+        
+        for image_path in image_paths:
+            # Tworzymy nazwę pliku JSON - musimy dodać prefiks kategorii
+            json_filename = f"{category}_{image_path.stem}.json"
+            json_path = Path(json_dir) / json_filename
+            
+            if not json_path.exists():
+                print(f"Brak odpowiadającego pliku JSON dla {image_path} (szukano: {json_path})")
+                continue
+            
+            print(f"Przetwarzanie: {image_path}")
+            # Wykryj linie
+            original, result = detect_lines(image_path, json_path, category, debug)
+            
+            if original is not None and result is not None:
+                # Utwórz ścieżki wyjściowe
+                output_path = category_dir / f"{image_path.stem}_lines.jpg"
+                
+                # Zapisz obraz wynikowy
+                cv2.imwrite(str(output_path), result)
+                print(f"Zapisano wynik dla {image_path} do {output_path}")
+
+def main():
+    # Parsowanie argumentów wiersza poleceń
+    parser = argparse.ArgumentParser(description='Detektor linii na schematach')
+    parser.add_argument('--debug', action='store_true', 
+                        help='Włącz tryb debugowania (zapisywanie dodatkowych obrazów)')
+    args = parser.parse_args()
+    
+    # Ścieżki do folderów z obrazami
+    dataset_dirs = [
+        "Dataset/Automatyka",
+        "Dataset/Elektroniczne"
+    ]
+    
+    # Ścieżki do folderów z plikami JSON
+    json_dirs = [
+        "combined_json/Automatyka",
+        "combined_json/Elektroniczne"
+    ]
+    
+    # Włącz lub wyłącz debugowanie (zapisywanie dodatkowych obrazów)
+    debug_mode = args.debug
+    if debug_mode:
+        print("Tryb debugowania włączony - obrazy pośrednie będą zapisywane w folderze results/debug")
+    
+    # Przetwórz obrazy
+    process_dataset(dataset_dirs, json_dirs, debug=debug_mode)
+
+if __name__ == "__main__":
+    main()
