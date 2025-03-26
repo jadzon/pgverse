@@ -7,15 +7,20 @@ from collections import defaultdict
 import os
 
 nltk.download('punkt', quiet=True)
-nltk.download('stopwords', quiet=True)
-from nltk.corpus import stopwords
 
-# Pobierz polskie stop wordy z NLTK
-try:
-    polish_stop_words = stopwords.words('polish')
-except:
-    print("Nie udało się pobrać polskich stop wordów. Używam pustej listy.")
-    polish_stop_words = []
+def load_polish_stopwords(filepath):
+    try:
+        with open(filepath, 'r', encoding='utf-8') as file:
+            stopwords = [line.strip() for line in file if line.strip()]
+        print(f"Wczytano {len(stopwords)} polskich stopwordów.")
+        return stopwords
+    except Exception as e:
+        print(f"Błąd podczas wczytywania polskich stopwordów: {e}")
+        return []
+
+# Ścieżka do pliku z polskimi stopwordami
+stopwords_filepath = 'polish_stopwords.txt'
+polish_stop_words = load_polish_stopwords(stopwords_filepath)
 
 def simple_sentence_tokenize(text):
     text = re.sub(r'\n+', ' ', text)
