@@ -231,7 +231,7 @@ def create_yaml_file(train_dir, test_dir, class_dict, output_path):
     yaml_content = f"""# YOLOv8 Dataset Configuration
 path: {output_path.parent}  # Ścieżka do głównego folderu
 train: {train_dir.name}  # Ścieżka do folderu treningowego
-test: {test_dir.name}  # Ścieżka do folderu testowego
+val: {test_dir.name}  # Ścieżka do folderu testowego
 
 # Classes
 nc: {len(class_dict)}  # Liczba klas
