@@ -128,3 +128,5 @@ schematy_code/schematic_symbols/dataset/
 !schematy_code/schematic_symbols/template/
 schematy_code/model/images/
 schematy_code/model/runs/
+#dataset
+schematics/block_detector/dataset

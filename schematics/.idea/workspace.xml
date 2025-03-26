@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b60333ab-f18c-4c58-abd7-6c543928c909" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/block_detector/dataset/ds_augment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/block_detector/dataset_creator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/block_detector/dataset_inv_colors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/block_detector/example_schematics/auto.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/block_detector/example_schematics/circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/block_detector/example_schematics/image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/block_detector/example_schematics/rectangle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/block_detector/example_schematics/schemat2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/block_detector/model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/block_detector/schematic_symbols/template/capacitor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/block_detector/schematic_symbols/template/current_source.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/block_detector/schematic_symbols/template/diode.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/block_detector/schematic_symbols/template/ground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/block_detector/schematic_symbols/template/inductor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/block_detector/schematic_symbols/template/resistor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/block_detector/schematic_symbols/template/voltage_source.png" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2upXkmhCKrbdxj24Ftpn1j885W8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Schematics",
+    "last_opened_file_path": "C:/Users/kuba/Documents/PROGRAMMING/studia/pgverse/pgverse/pgverse",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.220" />
+        <option value="bundled-python-sdk-0fc6c617c4bd-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.220" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b60333ab-f18c-4c58-abd7-6c543928c909" name="Changes" comment="" />
+      <created>1742946634575</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742946634575</updated>
+      <workItem from="1742946636441" duration="19000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
