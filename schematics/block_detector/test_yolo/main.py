@@ -17,13 +17,13 @@ if __name__=="__main__":
     results = model.train(
         data = f"{dataset_path}/data.yaml",
         epochs = 50,
-        imgsz = 120,
+        imgsz = 512,
         batch = 16,
         name = "single_components",
         device = 1
     )
-    model.export(format = "onnx")
-
+    path = model.export(format = "onnx")
+    print(f"Model exported to: {path}")
     metrics = model.val(data=f"{dataset_path}/data.yaml")
     print(metrics.box.map50)
     print(metrics.box.map)

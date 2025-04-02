@@ -129,4 +129,4 @@ schematics/block_detector/dataset
 
 schematics/block_detector/test_yolo/runs
 
-*.pt
+*.zip
