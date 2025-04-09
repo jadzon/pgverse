@@ -1,0 +1,164 @@
+# Segmentacja tekstu - utworzono 27 segmentów
+
+## Segment 1 (25 tokenów)
+
+l— tarcza, źródło światła, i — przysłona, zestaw fotoelementów, zestaw sygnałów wyjściowych dla przedstawionego położenia tarczy cieni z występującymi na przemian segmentami przezroczystymi i zaczernionymi.
+
+================================================================================
+
+## Segment 2 (171 tokenów)
+
+Pierścień najbliższy środka tarczy podzielony jest na dwie części, zawiera więc jeden segment zaczerniony i jeden przezroczysty. Następny pierścień podzielony jest na cztery części i zawiera dwa segmenty zaczernione, rozdzielone dwoma segmentami przezroczystymi. Trzeci pierścień podzielony jest na osiem części, czwarty na szesnaście itd., każdy następny pierścień zawiera dwukrotnie więcej segmentów niż poprzedni. Liczba pierścieni określa liczbę segmentów na zewnętrznym pierścieniu, a zatem dokładność pomiaru. Jak łatwo obliczyć, na zewnętrznym pierścieniu jest 2" segmentów (n— liczba pierścieni). Z tarczą współpracuje zespół fotoełementów, wykrywających, czy nad nimi znajduje się segment zaczerniony czy przezroczysty. Pojawieniu się segmentu zaczernionego odpowiada sygnał, któremu przypisujemy wartość 0, a pojawieniu się segmentu przezroczystego — sygnał, któremu przypisujemy wartość I w dwójkowym systemie liczenia. Każdemu położeniu tarczy kodowej odpowiada więc kombinacja zer i jedynek, czyli liczba dwójkowa, która stanowi miarę położenia kątowego tarczy. Wykonywane są tarcze kodowe z odczytem fotoelektrycznym, takie jak opisana powyżej, oraz z odczytem stykowym. Liczba pierścieni n waha się od kilku (tarcze z odczytem stykowym) do dziesięciu, a nawet kilkunastu (tarcze z odczytem fotoelektrycznym).
+
+================================================================================
+
+## Segment 3 (11 tokenów)
+
+Wykonywane były również listwy kodowe, obecnie jednak nie są już spotykane.
+
+================================================================================
+
+## Segment 4 (178 tokenów)
+
+Pomiary sił i odkształceń Siłę można mierzyć po uprzednim jej skompensowaniu siłą o wartości znanej lub łatwej do zmierzenia. Jako siły kompensujące wykorzystywane są siły sprężysto- ści lub siły wytwarzane przez układy elektromagnetyczne, albo pneumatyczne. Równoważenie pneumatyczne lub elektromagnetyczne jest stosowane przy pomiarach niewielkich sił, występujących jako wielkości pośrednie w różnego rodzaju aparatach, jak np. w przetwornikach, w których wykorzystuje się równoważnię elektromechaniczną lub pneumatyczną. żyną i indukcyjnościowym czujnikiem do pomiaru jej odkształceń I sprężyny, indukcyjnościowy czujnik przesunięć Jeżeli siła mierzona działa na element sprężysty, wywołuje to jego odkształcenie elementu sprężystego może wywoływać zmiany jego właściwości elektrycznych lub, jeżeli jest wystarczająco duże, może być mierzone jako przesunięcie jednego z jego punktów. Do tej ostatniej grupy należą powszechnie znane dynamometry sprężynowe (rys. 4.19), w których wydłużenie sprężyny, ugięcie membrany lub itp. jest odczytywane bezpośrednio na podziałce, albo mierzone jedną z metod opisanych w p. Dokładność dynamometrów sprężynowych jest uwarunkowana liniowością i stabilnością charakterystyk sprężyn; przy dobrych sprężynach niedokładność nie powinna przekraczać 1%. Zakres pomiaru siły wynosi do kN. Bezpośrednie przetwarzanie sił na sygnał elektryczny umożliwiają czujniki magnetosprężyste i piezoelektryczne.
+
+================================================================================
+
+## Segment 5 (180 tokenów)
+
+W czujnikach magnctosprężystych wykorzystywane jest zjawisko zmian przenikalności magnetycznej ferromagnetyków przy ich deformacji w granicach odkształceń sprężystych. Zjawisko to jest ściśle związane ze zjawiskiem magnetostrykcji. Czujniki magnetosprężyste wykonywane są z permalojów o różnej zawartości niklu, ze stali transformatorowej (tylko czujniki pracujące na ściskanie), czystego niklu, stali miękkiej i in. W tab. 4.zestawiono wartości współczynnika czułości magnetosprężystej, określającego względne zmiany przenikalności magnetycznej przy naprężeniu jednostkowym, dla kilku materiałów magnetosprężystych. Czujniki magnetosprężyste mogą być Współczynnik czułości magnetosprężystej budowane jako cewki o zmiennej indukcyjności własnej (dławikowe — rys. 4.20a) lub jako transformatory o zmiennej indukcyjności wzajemnej (transformatorowe —— rys. 4.20b). Interesujące rozwiązanie czujnika transformatorowego stanowi tzw. pressduktor (rys. 4.21). Jest to czujnik transformatorowy, w którym uzwojenia pierwotne i wtórne są umieszczone w rdzeniu pod kątem prostym względem siebie, a pod kątem względem siły mierzonej F. Przy braku siły F napięcie indukowane w uzwojeniu wtórnym jest równe zeru, ponieważ wektor indukcji magnetycznej jest w tych warunkach równoległy do płaszczyzny cewki uzwojenia wtórnego. Przyłożenie siły F powoduje, że przenikalność magnetyczna w kierunku zgodnym z kierunkiem działania siły staje się inna niż przenikalność w kierunku prostopadłym.
+
+================================================================================
+
+## Segment 6 (79 tokenów)
+
+W związku z tym, mimo że we Il — uzwojenie zasilające, uzwojenie wyjściowe przenikalność w kierunku prostopa- dłym. W związku z tym, mimo że wektor natężenia pola magnetycznego pozostaje równoległy do płaszczyzny cewki uzwojenia wtórnego, wektor indukcji magnetycznej odchyla się od tego kierunku i w cewce indukuje się siła elektromagnetyczna, tym większa im większą wartość ma siła F. Ze względów konstrukcyjnych uzwojenie wtórne nie przekracza kilkudziesięciu zwojów i w związku z tym indukowane siły elektromagnetyczne są niewielkie, rzędu miliwoltów.
+
+================================================================================
+
+## Segment 7 (165 tokenów)
+
+Czujniki magnetosprężyste dławikowe pracują z reguły w układach mostków prądu przemiennego. Stosowane są one do pomiaru sił w zakresie ok. N oraz do pomiaru ciśnień w zakresie ok. 5*10^Pa. Pressduktory mające czułość mniejszą niż czujniki dławikowe są stosowane do pomiaru większych sił. W czujnikach piezoelektrycznych jest wykorzystywane zjawisko powstawania na powierzchni niektórych dielektryków ładunku elektrycznego pod wpływem odkształceń mechanicznych. Właściwość tę mają niektóre kryształy, jak np. kwarc. Zjawisko odwrotne, zmiany wymiarów zewnętrznych dielektryka pod wpływem pola elektrycznego, nazywa się zjawiskiem elektrostrykcji. Znalazło ono szerokie zastosowanie w radiotechnice, m. in. w filtrach rezonansowych. Ponieważ ładunek powstający na powierzchni czujnika piezoelektrycznego ma charakter elektrostatyczny, jest on rozładowywany przez rezystancję własną dielektryka oraz przez rezystancję wejściową wzmacniacza dołączonego do czujnika. Czujniki piezo- elektryczne znalazły więc zastosowanie przede wszystkim w pomiarach dynamicznych zmiennych wartości sił i ciśnień. Zakres mierzonych sił wynosi kilka tysięcy niutonów, a częstotliwości maksymalne — kilkanaście kiloherców. Do pomiaru odkształceń mechanicznych, a w związku z tym również do pomiaru sił, powszechnie stosowanymi elementami są tensometry rezystancyjne.
+
+================================================================================
+
+## Segment 8 (179 tokenów)
+
+W tensometrze rezystancyjnym (rys. 4.22) rezystancja zależy od odkształcenia mechanicznego. Drut poddany działaniu siły F odkształca się zwiększając swoją długość O A/ i zmniejszając swój przekrój o AS. Jeżeli rezystancja drutu o rezystywności g wynosi (4.13) to pod działaniem siły F, na skutek zwiększania długości I i zmniejszenia przekroju S, zwiększy się ona o AR. Powodem zmiany rezystancji może być, oprócz zmiany wymiarów, zmiana rezystywności materiału odkształcanego. Zjawisko to, zwane piezorezystancją, jest pomijalnie małe dla metali, ma natomiast decydujące znaczenie dla zmian rezystancji tensometrów półprzewodnikowych. Tensometry półprzewodnikowe, wykonywane są z krzemu lub germanu, mają czułość prawie sto razy większą niż metaliczne. a) zasada działania; b) budowa nywane są z krzemu lub germanu, klej, 2— podkład. —drut rezystancyjny, doprowadzenie Budowę typowego, najczęściej używanego, tensometru metalicznego przedstawiono na rys. 4.22b. Na podkładzie z cienkiego papieru, celuloidu lub bakelitu jest naklejony wężykowo cienki (o średnicy 0,f-0,mm) drut, do którego końców są przyspawane grubsze doprowadzenia. Tak wykonany tensometr jest naklejany na podlegający odkształceniom przedmiot w taki sposób, aby prostoliniowy odcinek drutu, zwany bazą, był ułożony równolegle do kierunku działania sił lub naprężeń mierzonych.
+
+================================================================================
+
+## Segment 9 (176 tokenów)
+
+Prawidłowo przyklejony tensometr podlega takim samym odkształceniom jak podłoże, do którego jest przyklejony. Typowe tensometry metaliczne mają bazę długości i-mm, rezystancję — kilkadziesiąt do kilkuset omów, prąd dopuszczalny — rzędu kilku miliamperów, odkształcenia dopuszczalne — kilka promili. Czułość odkształceniowa, określana jako stosunek względnej zmiany rezystancji do względnej zmiany długości, ma dla tensometrów metalicznych wartość ok. 2. Oznacza to, że przy maksymalnych dopuszczalnych odkształceniach zmiany rezystancji tensometru są rzędu części procenta. W praktyce, przy małych na- prężeniach, zmiany rezystancji są znacznie mniejsze. Przy tak małych zmianach użytecznych szczególna uwaga musi być zwrócona na niezamierzone zmiany rezystancji tensometru, powodowane głównie zmianami temperatury. Rezystancja tensometru przy zmianach temperatury zmienia się na skutek zmian rezystywności (por. rozdz. 8.5), odkształceń dodatkowych spowodowanych niejednakowymi współczynnikami rozszerzalności cieplnej tensometru i obiektu oraz zmian, w funkcji czasu, właściwości kleju. Powodem niedokładności tensometrów może być również czułość tensometru na odkształcenia poprzeczne, prostopadłe do kierunku odkształceń badanych. Oprócz tensometrów drutowych, takich jak np. przedstawiony na rys. 4.22b tensometr wężykowy, wykonywane są również tensometry foliowe i tensometry cienkowarstwowe o różnych kształtach, przystosowanych do pomiaru różnego typu odkształceń.
+
+================================================================================
+
+## Segment 10 (174 tokenów)
+
+Przykłady tensometrów foliowych pokazano na rys. Tensometry półprzewodnikowe są dwóch rodzajów: monokrystaliczne, wykonywane z cienkich (o grubościach ok. 0,h0,mm) pasków wycinanych z monokryształów krzemu lub germanu, oraz cienkowarstwowe, otrzymywane przez naparowywanie bizmutu, germanu lub itp. na elastycznym podłożu neutralnym. Tensometry rezystancyjne pracują z reguły w układach mostków niezrównoważonych prądu przemiennego, zwanych mostkami tensometrycznymi. Dla kompensacji wpływów wahań temperatury w układ mostka jest włączany tensometr kompensacyjny umieszczany w taki sposób, że naprężenia badane nie powodują jego odkształceń. Warunkiem dokładnej kompensacji jest równość rezystancji początkowych, temperaturowych współczynników rezystancji oraz temperatury obu tensometrów. W układzie z rys. 4.zastosowano dwa tensometry robocze i dwa tensometry kompensacyjne, naklejone prostopadle do kierunku działania siły powodującej odkształcenie badane. Na zupełnie odmiennej zasadzie pracują tensometry strunowe: wykorzystuje się w nich zależność drgań własnych struny od jej naprężenia. Zmiany tego naprężenia wywoływane są mierzoną siłą zewnętrzną. Pomiar polega więc na pobudzaniu struny do drgań i mierzeniu ich częstotliwości. Struny są wykonywane z materiał ratury na elemencie obciążanym: a) sposób nakle jania; b) schemat połączenia tensometrów drgań i mierzeniu ich częstotliwości. . Rtensometry robocze.
+
+================================================================================
+
+## Segment 11 (156 tokenów)
+
+R3, R_ tensometry kompensacyjne Zeszyty Problemowe — Maszyny Elektryczne Nr 84/Sławomir Szymaniec Politechnika Opolska, Opole EKSPLOATACJA I DIAGNOSTYKA SILNIKÓW INDUKCYJNYCH TRÓJFAZOWYCH KLATKOWYCH W PRZEMYŚLE OPERATION AND DIAGNOSTICS OF THREE-PHASE SQUIRREL-CAGE INDUCTION MOTORS IN THE INDUSTRY Abstract: Electric induction motors with squirre1-cage rotors are most widely used in the industry as electric machines driving other devices. This results from many reasons, among others, from their affordable price and fairly high reliability. The most popular are kV motors, i.e. high-voltage motors that that drive the most important machine units. The article presents principles of operation of these motors in the industry and discusses methods of operation: — _ operation until failure occurrence, — _ planned and preventive operation, — _ operation dependent on a machine condition. The paper demonstrates conditions of appropriate motor operation in the industry. It also discusses the concept of "motor life” in industrial drives and types of their damages as well as damage statistics.
+
+================================================================================
+
+## Segment 12 (170 tokenów)
+
+1. Wstęp W przemyśle jako napędy przemysłowe najczęściej stosowane są silniki elektryczne indukcyjne z wirnikiem klatkowym. Wynika to z kilku przyczyn: między innymi z racji korzystnej ceny i stosunkowo dużej niezawodności. Szczególne miejsce zajmują silniki na napięcie kV — silniki wysokonapięciowe (WN), które stanowią w większości napęd w najważniejszych zespołach maszynowych — przykład rys. 1. Rys. l. Napęd wentylatora spalin w jednej z krajowych elektrociepłowni, silnik indukcyjny z wirnikiem klatkowym WN o mocy kW Ogólne zasady prawidłowej eksploatacji silników indukcyjnych trójfazowych klatkowych w szczególności silników WN podaje literatura, np. [4,5,12]. Pozycje praktycznie najbardziej przydatne to wskazania producentów silników zawarte w tzw. Dokumentacji Techniczno-Ruchowej. Należy również pamiętać o stosownych normach oraz przepisach eksploatacji maszyn elektrycznych podawanych przez odpowiednie instytuty, organizacje techniczne bądź właścicieli i użytkowników urządzeń. Obserwując od wielu lat eksploatację silników elektrycznych w licznych krajowych zakładach przemysłowych autor widzi ogromną przydatność tych zasad oraz konieczność ciągłego ich uzupełniania i wzbogacania. Współcześnie w okresie stale rosnących wymagań dotyczących wydajności oraz redukcji kosztów produkcji w przemyśle, koniecznością staje się właściwa diagnostyka maszyn.
+
+================================================================================
+
+## Segment 13 (177 tokenów)
+
+Często uszkodzenia niewielkich elementów napędowych skutkują znacznymi stratami wynikającymi z nieprzewidzianego zatrzymania procesu produkcyjnego oraz nieplanowych prac remontowych. Diagnostyka maszyn oraz monitorowanie parametrów ich pracy pozwala uniknąć skutków awarii, właściwie zaplanować okresy przeglądów i remontów maszyn, oraz znacznie wydłużyć czas eksploatacji maszyn. 2. Eksploatacja maszyn w przemyśle Maszyny przemysłowe tworzą coraz to bardziej złożone zespoły, towarzyszy temu coraz intensywniejsza eksploatacja maszyn, często godziny na dobę, czyli w ruchu ciągłym. Podstawowym zadaniem stawianym inżynierom jest ciągły wzrost wydajności maszyn. Wzrostowi wydajności powinno towarzyszyć zwiększenie starań o zapewnienie pełnej sprawności urządzeń. Trzeba to pogodzić ze stale malejącą li- Zeszyty Problemowe — Maszyny Elektryczne Nr 84/czebnością personelu odpowiedzialnego za utrzymanie ruchu i serwis maszyn. W ujęciu ogólnym silniki indukcyjne trójfazowe klatkowe, podstawowe maszyny napędu przemysłowego, podobnie jak i inne maszyny można eksploatować na sposoby [2, 3]: 1. eksploatacja do wystąpienia awarii; 2. eksploatacja planowo-zapobiegawcza; 3. eksploatacja zależna od stanu maszyny. Takie ujęcie zagadnienia eksploatacji silników określa jednocześnie metody ich remontów. Wyróżnia się w związku z tym: 1. remont poawaryjny; 2. remont zapobiegawczy uwarunkowany okresem eksploatacji; 3. remont uwarunkowany stanem technicznym.
+
+================================================================================
+
+## Segment 14 (176 tokenów)
+
+Eksploatację silników typu "do wystąpienia awarii” prowadzi się najczęściej w zakładach, w których procesy technologiczne obsługują napędy z dużą liczbą silników małej i średniej mocy, a każdy ważny proces technologiczny jest dodatkowo zabezpieczony silnikami zapasowymi. Silniki przy takim rodzaju eksploatacji pracują najczęściej do awarii. Straty w produkcji są wtedy stosunkowo niewielkie, bo silniki zapasowe zastępują te uszkodzone. Jeżeli duże silniki nie mające rezerwy pracują aż do awarii to straty mogą być bardzo znaczne, wielokrotnie przewyższające koszt nowego silnika i zakładowi może grozić długotrwały postój. Eksploatację silników typu "planowo-zapobiegawczą” prowadzi się najczęściej w zakładach, w których nie wszystkie ważne napędy mają swoich dublerów lub tam gdzie nieplanowane zatrzymanie produkcji może powodować bardzo duże straty ekonomiczne i społeczne. Produkcję w takich zakładach zatrzymuje się w ściśle określonych terminach i prowadzi następnie remont zapobiegawczy. Jest to na przykład raz w roku. Wskaźnik awaryjności wielu maszyn nie zmniejsza się w wyniku wymiany określonych części np. łożysk, uszczelnień, itd. Bardzo często po takim remoncie, jak pokazuje praktyka przemysłowa, przynajmniej przez jakiś czas awaryjność maszyn wzrasta (dzięki niefortunnej ingerencji serwisanta w maszyny).
+
+================================================================================
+
+## Segment 15 (170 tokenów)
+
+Pogorszenie się stanu technicznego danego silnika czy maszyny jest sprawą bardzo indywidualną i nie da się ściśle na sztywno określić dla wszystkich maszyn (jednakowo) czasookresu bezawaryjnej ich eksploatacji. Okresy międzyremontowe są często określane statystycznie jako takie, podczas których oczekuje się, że nie więcej jak np. 2% maszyn nowych lub w pełni wyremontowanych ulegnie awarii. W eksploatacji planowo-zapobiegawczej bardzo często oddaje się do remontu silniki, które tego remontu nie wymagają. Remont zapobiegawczy silników przy eksploatacji planowo-zapobiegawczej jest bardzo często technicznie i ekonomicznie nieuzasadniony. W metodzie eksploatacji silników zależnej od ich stanu technicznego każdy silnik traktowany jest w sposób indywidualny [2, 3]. Czas remontów nie jest z góry sztywno zaplanowany, tylko uwarunkowany stanem technicznym danej maszyny. Remont silnika przeprowadzamy tylko wtedy, gdy jest on konieczny. Wcześniej systematycznie wykonuje się pomiary diagnostyczne silników, określa się ich stan techniczny, indywidualnie dla każdego silnika [2, 3, 10]. Dzięki pomiarom diagnostycznym można stwierdzić początek pojawienia się uszkodzenia, a następnie obserwować jego rozwój, określać trend zmian. Przykładowo mogą to być łożyska silnika — rys. 2. Rys. 2.
+
+================================================================================
+
+## Segment 16 (174 tokenów)
+
+Wynik pomiaru drgań węzła łożyskowego przykładowego silnika w napędzie przemysłowym, idea diagnostyki drganiowej stanu technicznego łożyska tocznego w silniku Ocenę aktywności drganiowej silnika można wykonać w oparciu o stosowne, obowiązujące normy (rys. 3), czyli w oparciu o pomiar prędkości drgań w zakresie od Hz lub korzystniej w ocenie autora w oparciu o kryterium autora (zmodyfikowana metoda detekcji obwiedni, bazująca na pomiarze przyspieszenia drgań w zakresie co najmniej do kHz w kierunku największego obciążenia łożyska) . Wyniki pomiarów przyspieszenia drgań w metodzie detekcji obwiedni można ekstrapolować w celu przewidzenia terminu koniecznego zatrzymania silnika, w tym przypadku ze względu na uszkodzenie łożyska — rys. i 5. Zeszyty Problemowe — Maszyny Elektryczne Nr 64/Rys. 3. Norma ISO 3945, wytyczne eksploatacyjne odniesione do wartości skutecznej pręd- Rys. 4. Przebieg w czasie zmian LpgAak, LBPFo i Cy dla łożyska FAG NU w silniku o mocy kW Pomiary diagnostyczne przykładowego silnika rozpoczęto przy pierwszym uruchomieniu po wymianie łożysk w silniku. Pomiary prowadzono systematycznie co tygodnie, gdy stan silnika zaczął się pogarszać, zwiększono częstotliwość pomiarów (co tygodnie, a następnie co tydzień).
+
+================================================================================
+
+## Segment 17 (121 tokenów)
+
+Pomiary wykonywano dla bardzo zbliżonych do siebie warunków pracy silnika, przy takim samym lub niewiele różniącym się obciążeniu. Przedstawione na rysunkach i wielkości są zdefiniowane przez autora następująco : gdzie: Lpeak — poziom wartości szczytowej przyspieszenia drgań łożyska, LBPFO — poziom składowej BPFO (uszkodzenie bieżni zewnętrznej — (2)), w widmie obwiedni przyśpieszenia drgań , CA — współczynnik szczytu przyspieszenia drgań, AtPEAK — Wartość szczytowa przyspieszenia drgań dla chwili t, AoPEAK — wartość szczytowa przyspieszenia drgań dla chwili t=(początek obserwacji), AtBPFO — Wartość skuteczna składowej w widmie detekcji obwiedni dla danej chwili t, związana z uszkodzeniem bieżni zewnętrznej BPFO — , AoBPFO — Wartość skuteczna składowej w widmie detekcji obwiedni dla danej chwili t=0, związana z uszkodzeniem bieżni zewnętrznej BPFO — (2).
+
+================================================================================
+
+## Segment 18 (168 tokenów)
+
+Podobnie można zdefiniować 4, i 4, dla innych uszkodzeń (3), (4), (5) otrzymamy wtedy możliwość wyznaczania Lęrr, LBSF, LBPFT , APEAK — wartość szczytowa przyspieszenia drgań, ARMS — Wartość skuteczna przyspieszenia drgań. Rys. 5. Widmo detekcji obwiedni łożyska FAG NU 326, silnik o mocy kW Analizując wyniki pomiarów obok określenia terminu koniecznego zatrzymania ze względu na stan techniczny łożyska (rys. 4), można określić zakres remontu, przewidzieć i zapla- Zeszyty Problemowe — Maszyny Elektryczne Nr 84/nować z wyprzedzeniem czasowym stronę techniczną oraz ekonomiczną remontu. Na rysunku przedstawiono fragmenty bieżni zewnętrznej i wewnętrznej uszkodzonego łożyska przykładowego silnika. Uszkodzenie łożyska wykryto i decyzję o zatrzymaniu silnika podjęto w oparciu o zmodyfikowaną metodą detekcji obwiedni . Rys. 6. Fragmenty bieżni zewnętrznej i wewnętrznej uszkodzonego łożyska Prowadzony równolegle pomiar prędkości drgań węzła łożyskowego w oparciu o normę ISO nie dawał podstawy do takiej diagnozy łożyska i podjęcia radykalnych działań eksploatacyjno-remontowych. Eksploatacja silników zależna od ich stanu technicznego jest strategią prowadzenia eksploatacji maszyn technicznie i ekonomicznie najkorzystniejszą, coraz częściej stosowaną w krajowych zakładach przemysłowych.
+
+================================================================================
+
+## Segment 19 (176 tokenów)
+
+W gospodarce krajów zachodnich jest strategią dominującą. Strategia ta obok korzyści ekonomicznych typu: wydłużenie okresów międzyremontowych, zwiększenie niezawodności maszyn, zwiększenie wydajności, eliminacji niepotrzebnych wymian podzespołów, skrócenie czasu napraw, zmniejszenie kosztów magazynowych, wymusza stały postęp techniczny zwłaszcza w obszarze podnoszenia poziomu wiedzy przez kadrę techniczną. Nieuchronne są przy tym koszty na organizację i utrzymanie na dobrym poziomie służb diagnostycznych . Korzyści ekonomiczne z prowadzenia diagnostyki technicznej w danym zakładzie, jak dowodzi praktyka przemysłowa [3, 12], wyraźnie przewyższają koszty jej stosowania. W tabeli przedstawiono zestawienie strat finansowych w poszczególnych rodzajach przemysłu w USA, strat spowodowanych przestojem w produkcji w wyniku nieoczekiwanej awarii maszyn. Nie wykonywano diagnostyki, diagnostyka była nietrafna lub niewystarczająca . Usunięcie przyczyn awarii, czyli naprawa maszyn, średnio trwały dni . szczególnych rodzajach przemysłu w USA, spowodowanych przestojem w produkcji w wyniku nieoczekiwanej awarii maszyn Autorowi nie są znane podobne statystyki i zestawienia dla przemysłu krajowego. Rozmiar strat w poszczególnych gałęziach przemysłu USA jednoznacznie przemawia za koniecznością stosowania diagnostyki, kompleksowej diagnostyki obejmującej wszystkie ważne maszyny produkcyjne. Przemawia to za stosowaniem eksploatacji maszyn zależnej od stanu maszyn. 3.
+
+================================================================================
+
+## Segment 20 (132 tokenów)
+
+"Czas życia” silników Z wieloletnich obserwacji autora w zakresie eksploatacji silników indukcyjnych trójfazowych klatkowych WN wynika, że czas eksploatacji danego silnika w przemyśle zwany niekiedy jego "czasem życia” wynosi najczęściej kilkanaście — kilkadziesiąt lat. Zdarzają się coraz częściej przypadki, gdy silnik eksploatowany jest kilkadziesiąt lat. W sporadycznych przypadkach "czas życia” to kilka lat, jeszcze rzadziej mniej niż rok. Okres eksploatacji silników wyraźnie wydłuża się w zakładach przemysłowych, w których służby techniczne charakteryzują się dużą "kulturą techniczną” i stosują na co dzień diagnostykę silników. 4. Rodzaje uszkodzeń i ich statystyka Długoletnie obserwacje w zakresie oceny przyczyn awarii silników indukcyjnych klatkowych WN w przemyśle krajowym oraz śledzenie literatury technicznej krajowej i światowej poświęconej temu tematowi upoważniają autora do stwierdzenia, że awaryjność silników w ostat- Zeszyty Problemowe — Maszyny Elektryczne Nr 64/nich latach wyraźnie spada.
+
+================================================================================
+
+## Segment 21 (175 tokenów)
+
+Wynika to przede wszystkim z poprawy jakości eksploatacji, obsługi oraz diagnostyki silników, zastosowania coraz lepszych materiałów do ich produkcji, w tym w szczególności dobrych materiałów izolacyjnych, zastosowania coraz lepszych sprzęgieł, łożysk, smarów. Zmienia się statystyka przyczyn uszkodzeń silników WN. Zmniejsza się liczba uszkodzeń obwodu elektrycznego i magnetycznego silników, a relatywnie powiększa się liczba uszkodzeń typu mechanicznego — w szczególności łożysk. Występują również coraz częściej uszkodzenia typu luz w układzie, np. wał-pakiet wirnika, łożyskatarcza łożyskowa, oraz uszkodzenia konstrukcji wsporczej i fundamentu pod napędem. Z ekonomicznego punktu widzenia dla użytkowników silników WN najkosztowniejsze są uszkodzenia ich izolacji uzwojeń oraz poważne uszkodzenia fundamentów i konstrukcji wsporczych. Remont silnika, mający na celu gruntowną poprawę stanu jego izolacji, to najczęŚciej przezwojenie, co jest bardzo kosztowne (najczęściej kilkadziesiąt procent wartości silnika). Konieczność przezwajania silnika lub remontu kapitalnego fundamentu i konstrukcji wsporczej eliminuje dany napęd z cyklu produkcyjnego zakładu na okres kilku do kilkunastu tygodni, co dodatkowo komplikuje sytuację i wyraźnie zwiększa koszty awarii. Statystyka awaryjności maszyn elektrycznych, w tym napędów z silnikami indukcyjnymi klatkowymi WN, w literaturze przedmiotowej występuje bardzo rzadko.
+
+================================================================================
+
+## Segment 22 (23 tokenów)
+
+W technicznym piśmiennictwie polskim na szczególną uwagę zasługują prace dr hab. inż. Bronisława Draka, prof.PŚl oraz mgr inż. Macieja Bernatta i dr inż.
+
+================================================================================
+
+## Segment 23 (174 tokenów)
+
+Jakuba Bernatta , w których omawiane są przyczyny awarii silników klatkowych WN w zakładach przemysłowych w kraju. Wymienieni autorzy podają również statystykę awaryjności tych silników. W książce poświęconej izolacji maszyn elektrycznych, która ukazała się w roku w USA jej autorzy podają uogólnioną statystykę przyczyn awarii maszyn elektrycznych prowadzoną przez EPRI dla maszyn. Statystykę tą przedstawiono w tabeli 2. Statystykę przedstawioną w tabeli autor odbiera jako uogólnioną aktualną statystykę uszkodzeń maszyn elektrycznych świata zachodniego. trycznych Przedstawiając własne statystyki awaryjności silników indukcyjnych klatkowych WN , autor posłuży się przykładem jednej z krajowych elektrowni, w której w latach zainstalowanych było silników WN, wyprodukowanych w latach i tych. Statystykę uszkodzeń tych silników w rozbiciu na awarie pochodzenia mechanicznego i elektrycznego przedstawia tabela 3. We wspomnianej elektrowni kultura techniczna załogi jest na wysokim poziomie, a diagnostykę techniczną autor ocenia na poziomie średnim. Z przedstawionego zestawienia widać wyraźnie, że ogólna liczba awarii silników WN w miarę upływu czasu maleje, a liczba awarii elektrycznych jest zdecydowanie mniejsza od liczby awarii mechanicznych. Autor uważa, że w większości krajowych zakładów przemysłowych jest podobnie.
+
+================================================================================
+
+## Segment 24 (27 tokenów)
+
+Analizując szczegółowo przyczyny awarii i nieoczekiwanych, nieplanowanych postojów napędów z silnikami indukcyjnymi klatkowymi WN, w oparciu o własne doświadczenia i obserwacje, autor ustalił następującą listę przyczyn: 1.
+
+================================================================================
+
+## Segment 25 (178 tokenów)
+
+stan łożysk, 2. izolacja uzwojeń silników, 3. niewywaga, nieosiowość i luzy związane z ruchem wirnika, 4. niesymetria szczeliny pomiędzy stojanem a wirnikiem, 5. uzwojenie klatkowe wirnika, 6. stan fundamentów, konstrukcji wsporczych i mocowania. Listę podano w kolejności, od przyczyn najczęŚciej występujących, do tych które występują najrzadziej. W ostatnich latach stan fundamentów, konstrukcji wsporczych i mocowania relatywnie stają się przyczyną wyraźnie wzrastającą. Zeszyty Problemowe — Maszyny Elektryczne Nr 84/w przykładowej krajowej elektrowni 5. Uwagi końcowe Eksploatacja silników w napędach przemysłowych zależna od ich stanu technicznego jest eksploatacją maszyn technicznie i ekonomicznie najkorzystniejszą, godną polecenia, coraz częściej stosowaną w krajowych zakładach przemysłowych. W gospodarce krajów zachodnich jest strategią dominującą. Strategia ta obok korzyści ekonomicznych typu: wydłużenie okresów międzyremontowych, zwiększenie niezawodności maszyn, zwiększenie wydajności, eliminacji niepotrzebnych wymian podzespołów, skrócenie czasu napraw, zmniejszenie kosztów magazynowych, wymusza stały postęp techniczny zwłaszcza w obszarze podnoszenia poziomu wiedzy przez kadrę techniczną. Rachunek ekonomiczny jednoznacznie przemawia za koniecznością stosowania diagnostyki w przemyśle, kompleksowej diagnostyki, obejmującej wszystkie ważne maszyny produkcyjne. 6. Literatura Bernatt J., Bernatt M.: Ekspertyzy i oceny przyczyn uszkodzeń silników elektrycznych dużej mocy — cz.
+
+================================================================================
+
+## Segment 26 (11 tokenów)
+
+2. Wyd. BOBRME, Katowice 2004, Maszyny Elektryczne, nr 68, 2004, ss.
+
+================================================================================
+
+## Segment 27 (180 tokenów)
+
+Briiel % Kjaer: Machine Condition Monitoring using Vibration Analysis. Application notes BO Briel % Kjer Condition Monitoring Systems Division: Compass. Application notes BP Dąbrowski M.: Konstrukcja maszyn elektrycznych. WNT, Warszawa, 1965, DOLMEL: Instrukcja obsługi łożysk ślizgowych WX024001, WEMA, Warszawa, Drak B.: Analiza przyczyn awarii silników potrzeb własnych elektrowni blokowych. Wyd. BOBRME, Katowice 1995, Maszyny Elektryczne, nr 50, 1995, ss. Glinka T.: Diagnostyka stanu izolacji uzwojeń stojana silników indukcyjnych wysokiego napięcia. Wyd. BOBRME, Katowice 1992, Maszyny Elektryczne, nr 45, 1992, ss. SKF. Katalog Stone G.C., Boulter E.A., Culbert I., Dhirani H.: Electrical insulation for rotating machines. IEEE PRESS series on Power Engineering, USA, Szymaniec S.: Diagnostyka stanu izolacji uzwojeń i stanu łożysk silników indukcyjnych klatkowych w warunkach przemysłowej eksploatacji. Studia i Monografie z.193. Oficyna Wydawnicza Politechniki Opolskiej, Opole Tavner P.J., Penman J.: Condition Monitoring of Electrical Machines. Research Studies Press Ltd, Letchworth, Hertfordshire, Wiśniewski W.: Diagnostyka techniczna wytwórczych urządzeń energetycznych w elektrowniach. PWN, Warszawa, Autor Dr hab. inż. Sławomir Szymaniec, prof. PO, e-mail: s.szymaniec(Q)po.opole.pl Politechnika Opolska, Wydział Elektrotechniki, Automatyki i Informatyki, Instytut Układów Elektromechanicznych i Elektroniki Przemysłowej. ul. Luboszycka 7, Opole
+
+================================================================================
+
