@@ -159,15 +159,29 @@ if __name__ == "__main__":
     def embedding_function(text_list):
         return model.encode(text_list, show_progress_bar=True)
 
-    # Wczytujemy dane z pliku processed_input.txt
-    input_file = "processed_input.txt"
+    # Wczytujemy dane z pliku w folderze input
+    input_dir = "input"
     output_file = "segmented_output.txt"
     
     try:
+        # Sprawdzamy czy folder input istnieje
+        if not os.path.exists(input_dir):
+            print(f"Folder {input_dir} nie istnieje. Utwórz folder input.")
+            exit(1)
+            
+        # Pobieramy listę plików z folderu input
+        input_files = os.listdir(input_dir)
+        if not input_files:
+            print(f"Brak plików w folderze {input_dir}.")
+            exit(1)
+            
+        # Używamy pierwszego znalezionego pliku
+        input_file = os.path.join(input_dir, input_files[0])
+        
         with open(input_file, "r", encoding="utf-8") as f:
             document = f.read()
-    except FileNotFoundError:
-        print(f"Plik {input_file} nie istnieje. Upewnij się, że plik znajduje się w katalogu projektu.")
+    except Exception as e:
+        print(f"Błąd podczas wczytywania pliku: {e}")
         exit(1)
     
     print(f"Wczytano tekst z pliku {input_file} ({len(document)} znaków)")
@@ -183,13 +197,10 @@ if __name__ == "__main__":
     print("Segmentacja tekstu w toku...")
     chunks = cluster_chunker.split_text(document)
 
-    # Zapisujemy wyniki do pliku
+    # Zapisujemy wyniki do pliku - tylko chunki oddzielone akapitami
     with open(output_file, "w", encoding="utf-8") as f:
-        f.write(f"# Segmentacja tekstu - utworzono {len(chunks)} segmentów\n\n")
-        for i, chunk in enumerate(chunks, 1):
-            tokens = default_length_function(chunk)
-            f.write(f"## Segment {i} ({tokens} tokenów)\n\n")
+        for chunk in chunks:
             f.write(chunk)
-            f.write("\n\n" + "="*80 + "\n\n")
+            f.write("\n\n")  # Oddzielamy chunki tylko akapitem
     
     print(f"Utworzono {len(chunks)} segmentów. Wyniki zapisano do pliku {output_file}")
