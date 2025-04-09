@@ -1,87 +1,74 @@
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+import spacy
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
+import os
 
-def load_llama_model():
-    """
-    Ładuje model LLaMA 7B (lub inny dostępny) z Hugging Face.
-    Upewnij się, że masz dostęp do GPU lub zmodyfikuj device_map na 'cpu'.
-    """
-    model_name = "meta-llama/Llama-2-7b-chat-hf"  # Możesz zmienić na inny dostępny model
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModelForCausalLM.from_pretrained(
-        model_name, torch_dtype=torch.float16, device_map="auto"
-    )
-    return model, tokenizer
+# Załaduj model spaCy do dzielenia na zdania
+nlp = spacy.load("pl_core_news_md")
 
-def generate_response(prompt, model, tokenizer, max_tokens=512):
-    """
-    Generuje odpowiedź modelu LLaMA na podstawie przekazanego prompta.
-    """
-    inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
-    output = model.generate(**inputs, max_new_tokens=max_tokens)
-    return tokenizer.decode(output[0], skip_special_tokens=True)
+# Załaduj model do embeddingów zdań
+embedder = SentenceTransformer("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
 
-def extract_info_direct(text, model, tokenizer):
-    """
-    Podejście Bezpośrednie: LLaMA analizuje tekst i wypisuje kluczowe informacje w jednym kroku.
-    """
-    prompt = f"""
-Przeanalizuj poniższy tekst dotyczący zagadnień inżynierskich i wypisz kluczowe informacje, zwracając szczególną uwagę na:
-- Główne tematy i zagadnienia,
-- Kluczowe dane liczbowe, parametry techniczne oraz specyfikacje,
-- Opisy metod, algorytmów, systemów lub rozwiązań,
-- Praktyczne zastosowania oraz przykłady implementacji,
-- Wnioski i rekomendacje.
+def split_into_sentences(text):
+    doc = nlp(text)
+    return [sent.text.strip() for sent in doc.sents if len(sent.text.strip()) > 0]
 
-Tekst: \"\"\"{text}\"\"\"
-"""
-    return generate_response(prompt, model, tokenizer)
-
-def extract_info_questions(text, model, tokenizer):
+def extract_focus_sentences(text, focus_instruction, similarity_threshold=0.5):
     """
-    Podejście Rozbite na Pytania: LLaMA odpowiada na zestaw konkretnych pytań, co ułatwia uporządkowanie ekstrakcji.
-    """
-    prompt = f"""
-Dla poniższego tekstu dotyczącego zagadnień inżynierskich odpowiedz na następujące pytania:
-1. Jakie są główne tematy i zagadnienia poruszane w tekście?
-2. Jakie kluczowe dane liczbowe, parametry techniczne lub specyfikacje zostały przedstawione?
-3. Jakie metody, algorytmy lub systemy są opisane i jakie mają zastosowanie?
-4. Jakie praktyczne przykłady implementacji lub zastosowań zostały wymienione?
-5. Jakie wnioski lub rekomendacje można wyciągnąć z tekstu?
-
-Tekst: \"\"\"{text}\"\"\"
-"""
-    return generate_response(prompt, model, tokenizer)
-
-def compare_extraction_methods(text):
-    """
-    Funkcja porównuje obie metody ekstrakcji kluczowych informacji:
-    1. Podejście Bezpośrednie
-    2. Podejście Rozbite na Pytania
-    """
-    model, tokenizer = load_llama_model()
+    Funkcja zwraca zdania z tekstu, które mają cosine similarity z
+    embeddingiem instrukcji wyższą lub równą similarity_threshold.
     
-    print("Uruchamiam metodę bezpośrednią...\n")
-    direct_result = extract_info_direct(text, model, tokenizer)
-    print("--- Podejście Bezpośrednie ---")
-    print(direct_result)
-    print("\n" + "="*60 + "\n")
+    Jeśli żadne zdanie nie spełni warunku, zwraca zdanie z najwyższym podobieństwem.
+    """
+    sentences = split_into_sentences(text)
     
-    print("Uruchamiam podejście rozbite na pytania...\n")
-    questions_result = extract_info_questions(text, model, tokenizer)
-    print("--- Podejście Rozbite na Pytania ---")
-    print(questions_result)
-    
-    print("\n--- Porównanie Metod ---")
-    print("Sprawdź, która metoda lepiej odpowiada Twoim oczekiwaniom pod względem przejrzystości i kompletności informacji.")
+    if not sentences:
+        return []
 
-if __name__ == '__main__':
-    # Przykładowy tekst dotyczący zagadnień inżynierskich
-    sample_text = """
-W dziedzinie automatyki przemysłowej systemy sterowania oparte na mikrokontrolerach oraz algorytmach PID są powszechnie stosowane.
-Nowoczesne urządzenia elektroniczne często wykorzystują procesory ARM, które umożliwiają wysoką wydajność przy niskim poborze mocy.
-Przykładem może być zastosowanie czujników temperatury i ciśnienia w systemach HVAC, gdzie dane z czujników są przetwarzane w czasie rzeczywistym, a wyniki służą do regulacji systemu.
-W robotyce zaawansowane algorytmy sterowania umożliwiają precyzyjne ruchy manipulatorów, co jest kluczowe w zastosowaniach takich jak montaż czy spawanie.
-Integracja systemów IoT z tradycyjnymi systemami sterowania otwiera nowe możliwości optymalizacji procesów przemysłowych.
-"""
-    compare_extraction_methods(sample_text)
+    # Tworzymy embeddingi: najpierw dla zdań, potem dla instrukcji
+    sentence_embeddings = embedder.encode(sentences)
+    instruction_embedding = embedder.encode([focus_instruction])
+    
+    # Obliczamy podobieństwo każdego zdania do instrukcji
+    similarities = cosine_similarity(sentence_embeddings, instruction_embedding).flatten()
+    
+    # Wybieramy zdania przekraczające ustalony próg
+    selected_sentences = [sent for sent, sim in zip(sentences, similarities) if sim >= similarity_threshold]
+    
+    # Jeśli żadne zdanie nie przekracza progu, zwracamy zdanie z najwyższym podobieństwem
+    if not selected_sentences:
+        max_index = np.argmax(similarities)
+        selected_sentences = [sentences[max_index]]
+    
+    return selected_sentences
+
+if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input", default="input/processed_input.txt", help="Plik z tekstem źródłowym")
+    parser.add_argument("--focus", default="Powody awarii silników", help="Instrukcja do ekstrakcji")
+    parser.add_argument("--threshold", type=float, default=0.70, help="Próg podobieństwa (od 0 do 1)")
+    parser.add_argument("--output", default="output_ex.txt", help="Nazwa pliku wyjściowego")
+    args = parser.parse_args()
+
+    # Wczytaj tekst z pliku wejściowego
+    with open(args.input, "r", encoding="utf-8") as f:
+        tekst = f.read()
+
+    # Wywołaj funkcję ekstrakcji
+    wynik = extract_focus_sentences(tekst, args.focus, similarity_threshold=args.threshold)
+
+    # Ustal ścieżkę do folderu "output" i pliku wyjściowego
+    output_dir = os.path.join(os.path.dirname(__file__), "output")
+    os.makedirs(output_dir, exist_ok=True)  # Utwórz folder, jeśli nie istnieje
+    output_path = os.path.join(output_dir, args.output)
+
+    # Zapisz wyniki do pliku w folderze "output"
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(f"📌 Zdania spełniające próg podobieństwa ({args.threshold}) dla instrukcji: '{args.focus}'\n\n")
+        for zdanie in wynik:
+            f.write(f"• {zdanie}\n")
+    
+    print(f"\nWyniki zapisano do pliku: {output_path}")
+    print(f"Znaleziono {len(wynik)} zdań spełniających kryterium podobieństwa.")
