@@ -93,3 +93,4 @@ class SchematicGraph:
             connections = ", ".join(f"{nid} (w: {w})" for nid, w in neighbors)
             result += f"  {node_id} -> {connections}\n"
         return result
+
