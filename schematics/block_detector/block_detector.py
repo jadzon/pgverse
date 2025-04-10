@@ -42,7 +42,7 @@ class BlockDetector:
             x1, y1, x2, y2 = box.xyxy[0].tolist()
             print(f"  {class_name} ({confidence:.2f}) at [{int(x1)}, {int(y1)}, {int(x2)}, {int(y2)}]")
 
-        return results
+        return results[0].boxes
 
     def process_circuit_diagrams(self,model_path, images_dir, output_dir="detections", conf_threshold=0.25):
         os.makedirs(output_dir, exist_ok=True)
