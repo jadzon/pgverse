@@ -8,6 +8,7 @@ from multiprocessing import freeze_support
 
 class BlockDetector:
     def __init__(self, model_path):
+        freeze_support()
         self.model = YOLO(model_path)
 
     def detect_electrical_symbols(self, image_path, conf_threshold=0.25):
