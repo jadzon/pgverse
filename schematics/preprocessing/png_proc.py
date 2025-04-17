@@ -1,7 +1,9 @@
 import os
 import cv2
 import numpy as np
+from pathlib import Path
 
+PROJECT_DIR = "." 
      
 def calculate_noise_percentage(original_image, filtered_image, threshold=20):
     """
@@ -81,7 +83,151 @@ def process_images_from_folder(input_folder, output_folder, alpha=0.8, backgroun
         cv2.imwrite(output_file, sharpened_image)
         print(f"Processed image saved as: {output_file}")
 
+def preprocessing_general(input_folder, output_folder="preprocessed_for_text_detection", debug=False):
+    """
+    Performs image processing for text detection on all images in a folder.
+    
+    Args:
+        input_folder: Path to the input folder with images
+        output_folder: Path to the output folder - default "preprocessed_for_text_detection"
+        debug: Whether to save debug files - default False
         
+    Returns:
+        Number of processed images
+    """
+    # Function for processing a single image
+    def process_image(image):
+        # Make sure the image is grayscale
+        if len(image.shape) == 3:
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        else:
+            gray = image.copy()
+        
+        # CLAHE for contrast enhancement
+        clahe = cv2.createCLAHE(clipLimit=2.5, tileGridSize=(8, 8))
+        equalized_gray = clahe.apply(gray)
+        
+        # Noise reduction
+        denoised_gray = cv2.fastNlMeansDenoising(equalized_gray, None, h=10, templateWindowSize=7, searchWindowSize=21)
+        
+        # Adaptive binarization
+        binary = cv2.adaptiveThreshold(
+            denoised_gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 11, 2
+        )
+        
+        # Enhanced binarization with morphological operations
+        kernel = np.ones((2, 2), np.uint8)
+        enhanced_binary = cv2.morphologyEx(binary, cv2.MORPH_CLOSE, kernel)
+        
+        # Sobel gradient - useful for text edge detection
+        sobelx = cv2.Sobel(denoised_gray, cv2.CV_64F, 1, 0, ksize=3)
+        sobely = cv2.Sobel(denoised_gray, cv2.CV_64F, 0, 1, ksize=3)
+        sobel_combined = cv2.magnitude(sobelx, sobely)
+        sobel_edges = np.uint8(255 * sobel_combined / np.max(sobel_combined))
+        
+        return {
+            "original": image,
+            "gray": gray,
+            "equalized_gray": equalized_gray,
+            "denoised_gray": denoised_gray,
+            "binary": binary,
+            "enhanced_binary": enhanced_binary,
+            "edges": sobel_edges
+        }
+    
+    # Save debug images
+    def save_debug(results, debug_folder, image_name):
+        # Create subfolder for this image
+        image_debug_folder = os.path.join(debug_folder, image_name)
+        os.makedirs(image_debug_folder, exist_ok=True)
+        
+        # Save images in processing order
+        cv2.imwrite(os.path.join(image_debug_folder, "01_original.png"), results["original"])
+        cv2.imwrite(os.path.join(image_debug_folder, "02_gray.png"), results["gray"])
+        cv2.imwrite(os.path.join(image_debug_folder, "03_equalized_gray.png"), results["equalized_gray"])
+        cv2.imwrite(os.path.join(image_debug_folder, "04_denoised_gray.png"), results["denoised_gray"])
+        cv2.imwrite(os.path.join(image_debug_folder, "05_binary.png"), results["binary"])
+        cv2.imwrite(os.path.join(image_debug_folder, "06_enhanced_binary.png"), results["enhanced_binary"])
+        cv2.imwrite(os.path.join(image_debug_folder, "07_edges.png"), results["edges"])
+    
+    # Paths to folders
+    full_input_path = os.path.join(PROJECT_DIR, input_folder)
+    full_output_path = os.path.join(PROJECT_DIR, output_folder)
+    
+    # Create output folder
+    os.makedirs(full_output_path, exist_ok=True)
+    
+    # Create debug folder if needed
+    debug_folder = None
+    if debug:
+        debug_folder = os.path.join(full_output_path, "debug")
+        os.makedirs(debug_folder, exist_ok=True)
+    
+    # Load all images from folder and subfolders
+    images = []
+    folder_path = Path(full_input_path)
+    
+    print(f"Loading images from folder: {input_folder}")
+    
+    # Recursive folder search
+    for path in folder_path.rglob('*'):
+        if path.is_file() and path.suffix.lower() in ['.jpg', '.jpeg', '.png']:
+            try:
+                img = cv2.imread(str(path))
+                if img is not None:
+                    # Relative path to input folder
+                    relative_path = path.relative_to(folder_path)
+                    images.append((str(relative_path), img))
+                else:
+                    print(f"Failed to load image: {path}")
+            except Exception as e:
+                print(f"Error while loading file {path}: {str(e)}")
+    
+    print(f"Loaded {len(images)} images")
+    
+    if not images:
+        print("No images found. Exiting.")
+        return 0
+    
+    # Image processing
+    counter = 0
+    output_folder_path = Path(full_output_path)
+    
+    for relative_path, img in images:
+        print(f"Processing image: {relative_path}")
+        
+        # Generate unique name for debug folder for this image
+        path_obj = Path(relative_path)
+        file_name = path_obj.stem
+        subfolder_name = str(path_obj.parent).replace('\\', '_').replace('/', '_')
+        if subfolder_name and subfolder_name != '.':
+            debug_name = f"{subfolder_name}_{file_name}"
+        else:
+            debug_name = file_name
+        
+        # Process image - use common logic
+        results = process_image(img)
+        
+        # Save debug images if needed
+        if debug:
+            save_debug(results, debug_folder, debug_name)
+        
+        # Create appropriate folder structure for final results
+        target_folder = output_folder_path / path_obj.parent
+        target_folder.mkdir(parents=True, exist_ok=True)
+        
+        # Save only final result (enhanced binary) to output folder
+        save_path = target_folder / f"{file_name}_processed.png"
+        cv2.imwrite(str(save_path), results["enhanced_binary"])
+        counter += 1
+    
+    print(f"Saved {counter} processed images in folder: {output_folder}")
+    
+    if debug:
+        print(f"Debug images have been saved in folder: {output_folder}/debug")
+    
+    return counter
+   
 
 
 # if __name__ == "__main__":
@@ -96,3 +242,21 @@ def process_images_from_folder(input_folder, output_folder, alpha=0.8, backgroun
 #     process_images_from_folder(input_folder1, output_folder1)
 #     print("Processing images from folder: Elektroniczne...")
 #     process_images_from_folder(input_folder2, output_folder2)
+
+#for preprocessing_general
+# def main():
+#     # Example of using the function
+#     input_folder = "Dataset"
+#     output_folder = "preprocessed_for_xxx"
+#     debug = True
+    
+#     # Process the entire folder
+#     preprocessing_general(
+#         input_folder=input_folder,
+#         output_folder=output_folder,
+#         debug=debug
+#     )
+
+# if __name__ == "__main__":
+#     main() 
+
