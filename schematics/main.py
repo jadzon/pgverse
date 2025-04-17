@@ -23,7 +23,7 @@ class SchematicAnalyzer:
         net_detector = NetDetector(image, boxes, build_nodes= not nodes_exist)
 
         # Cut out blocks from the image
-        net_detector.cut_out_blocks()
+        net_detector.find_connections()
 def main():
     
     SchematicAnalyzer(model_path="block_detector/models/handwritten.pt").analyze(image_path="img/test.png")
