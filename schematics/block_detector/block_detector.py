@@ -35,15 +35,19 @@ class BlockDetector:
         # Print detection details
         boxes = results[0].boxes
         print(f"Found {len(boxes)} electrical components:")
-
+        for i,name in enumerate(self.model.names):
+            print(f"  {i}: {self.model.names[i]}")
+        nodes_exist = False
         for box in boxes:
             class_id = int(box.cls)
+            if class_id == 12: # Class_id 12 is for nodes
+                nodesExist = True
             class_name = self.model.names[class_id]
             confidence = float(box.conf)
             x1, y1, x2, y2 = box.xyxy[0].tolist()
             print(f"  {class_name} ({confidence:.2f}) at [{int(x1)}, {int(y1)}, {int(x2)}, {int(y2)}]")
 
-        return results[0].boxes
+        return boxes,nodes_exist
 
     def process_circuit_diagrams(self,model_path, images_dir, output_dir="detections", conf_threshold=0.25):
         os.makedirs(output_dir, exist_ok=True)

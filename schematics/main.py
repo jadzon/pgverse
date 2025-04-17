@@ -17,10 +17,10 @@ class SchematicAnalyzer:
         block_detector = BlockDetector(model_path=self.model_path)
 
         # Detect blocks in the image
-        boxes = block_detector.detect_electrical_symbols(image_path=image_path, conf_threshold=0.25)
+        boxes,nodes_exist = block_detector.detect_electrical_symbols(image_path=image_path, conf_threshold=0.25)
 
         # Initialize the net detector with the detected blocks
-        net_detector = NetDetector(image, boxes)
+        net_detector = NetDetector(image, boxes, build_nodes= not nodes_exist)
 
         # Cut out blocks from the image
         net_detector.cut_out_blocks()

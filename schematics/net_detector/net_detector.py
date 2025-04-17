@@ -4,10 +4,11 @@ import os
 
 
 class NetDetector():
-    def __init__(self,image:cv2.typing.MatLike,blocks):
+    def __init__(self,image:cv2.typing.MatLike,blocks,build_nodes=True):
         self.image = image.copy()
         self.blocks = blocks
         self.results = {}
+        self.build_nodes = build_nodes
     def cut_out_blocks(self):
         """
         Cuts out YOLO results from the image based on the coordinates provided in self.blocks.
@@ -61,18 +62,24 @@ class NetDetector():
                 if self.skeletonized_image[y1-5,x] == 255:
                     print("Found white pixel at: ", x, y1, "Block:", i)
                     starting_points.append((x,y1))
-
+                    cv2.circle(self.cut_out_image, (x,y1-5), 5, (255, 0, 0), -1)
                 if self.skeletonized_image[y2+5,x] == 255:
                     print("Found white pixel at: ", x, y2, "Block:", i)
                     starting_points.append((x,y2))
+                    cv2.circle(self.cut_out_image, (x,y2+5), 5, (255, 0, 0), -1)
             for y in range(y1,y2):
                 if self.skeletonized_image[y,x1-5] == 255:
                     print("Found white pixel at: ", x1, y, "Block:", i)
                     starting_points.append((x1,y))
+                    cv2.circle(self.cut_out_image, (x1-5,y), 5, (255, 0, 0), -1)
                 if self.skeletonized_image[y,x2+5] == 255:
                     print("Found white pixel at: ", x2, y, "Block:", i)
                     starting_points.append((x2,y))
-            #merge starting_points if points are close enough to each other
+                    cv2.circle(self.cut_out_image, (x2+5,y), 5, (255, 0, 0), -1)
+            # Remove duplicates in range of 5 pixels
+            starting_points = list(set(starting_points))
+            # Merge starting points if they are close enough to each other
+            starting_points = [(x,y) for x,y in starting_points if x1-5 < x < x2+5 and y1-5 < y < y2+5]
             print("Starting points: ", starting_points)
 
             # Find connections by following pixels until we reach another block
@@ -90,6 +97,9 @@ class NetDetector():
         print("Connections: ", self.connections)
         #show image
         cv2.imshow("Connections", self.skeletonized_image)
+        cv2.waitKey(0)
+        #show image
+        cv2.imshow("Connections", self.cut_out_image)
         cv2.waitKey(0)
         
 
