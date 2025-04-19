@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import os
 
-
+OFFSET = 5  # Offset for the bounding box expansion
 
 class NetDetector():
     def __init__(self,image:cv2.typing.MatLike,blocks,build_nodes=True):
@@ -29,12 +29,15 @@ class NetDetector():
         # Create a visited matrix to track explored pixels
         self.visited = np.zeros_like(self.skeletonized_image)
         
-        # Iterate over the starting points and find connections
-        for key, block_starting_point in self.blocks_starting_points.items():
-            print(f"Block {key} starting point: ", block_starting_point)
+        # Important: Create a copy of keys to avoid dictionary size change during iteration
+        blocks_to_process = list(self.blocks_starting_points.keys())
+        
+        # First pass: process all initial blocks
+        for key in blocks_to_process:
+            print(f"Block {key} starting point: ", self.blocks_starting_points[key])
             self.connections[key] = []  # Initialize connections list for this block
             
-            for starting_point in block_starting_point:
+            for starting_point in self.blocks_starting_points[key]:
                 # Get the coordinates of the starting point
                 x, y = starting_point
                 
@@ -47,81 +50,95 @@ class NetDetector():
                     self.connections[key].append((end_block, path))
                     print(f"Found connection: Block {key} -> Block {end_block}")
         
+        # Second pass: process any newly created nodes
+        new_nodes = [k for k in self.blocks_starting_points.keys() if k not in blocks_to_process]
+        while new_nodes:
+            current_nodes = new_nodes
+            new_nodes = []
+            
+            for node_id in current_nodes:
+                if node_id not in self.connections:
+                    self.connections[node_id] = []
+                    
+                for starting_point in self.blocks_starting_points[node_id]:
+                    x, y = starting_point
+                    path = []
+                    end_block = self.dfs_follow_connection(x, y, node_id, path)
+                    
+                    if end_block is not None and end_block != node_id:
+                        self.connections[node_id].append((end_block, path))
+                        print(f"Found connection: Node {node_id} -> Block/Node {end_block}")
+                        
+                        # Check if this created new nodes that need processing
+                        latest_nodes = [k for k in self.blocks_starting_points.keys() 
+                                       if k not in blocks_to_process and k not in current_nodes and k not in new_nodes]
+                        new_nodes.extend(latest_nodes)
+        
         # Print all connections
         print("All connections found:")
         for block_id, connections in self.connections.items():
             for connected_block, path in connections:
                 print(f"  Block {block_id} -> Block {connected_block}, path length: {len(path)}")
         
+        cv2.imshow("Connections", self.cut_out_image)
+        cv2.waitKey(0)
         return self.connections
 
-    def dfs_follow_connection(self, x, y, source_block_id, path):
-        """
-        DFS algorithm to follow connections from a starting point to another block.
-        
-        Args:
-            x, y: Starting pixel coordinates
-            source_block_id: ID of the block where this search started
-            path: List to store the path taken
-            
-        Returns:
-            The ID of the block that was reached, or None if no block was reached
-        """
-        # Check if we've hit any block except the source
-        target_block = self.check_if_block_hit(source_block_id, x, y)
-        if target_block is not None:
-            return target_block
-        
-        # Mark current pixel as visited
-        self.visited[y, x] = 1
-        path.append((x, y))
-        
-        # Draw the path for visualization
-        vis_img = self.cut_out_image.copy()
-        cv2.circle(vis_img, (x, y), 1, (0, 0, 255), -1)
-        
-        # Get neighboring pixels (8 directions)
-        directions = [
-            (0, -1),  # Up
-            (1, -1),  # Up-Right
-            (1, 0),   # Right
-            (1, 1),   # Down-Right
-            (0, 1),   # Down
-            (-1, 1),  # Down-Left
-            (-1, 0),  # Left
-            (-1, -1)  # Up-Left
-        ]
-        
-        # Count white neighboring pixels to check for intersection
-        white_neighbors = 0
-        for dx, dy in directions:
-            nx, ny = x + dx, y + dy
-            # Check bounds
-            if 0 <= nx < self.skeletonized_image.shape[1] and 0 <= ny < self.skeletonized_image.shape[0]:
-                if self.skeletonized_image[ny, nx] == 255:
-                    white_neighbors += 1
-        
-        # If this is an intersection (more than 2 white neighbors) and build_nodes is True
-        if white_neighbors > 2 and self.build_nodes and not self.is_near_existing_node(x, y):
-            # Create a new node
-            node_id = self.create_node(x, y)
-            return node_id
-        
-        # Explore each direction
-        for dx, dy in directions:
-            nx, ny = x + dx, y + dy
-            
-            # Check bounds
-            if 0 <= nx < self.skeletonized_image.shape[1] and 0 <= ny < self.skeletonized_image.shape[0]:
-                # If the pixel is white and not visited
-                if self.skeletonized_image[ny, nx] == 255 and self.visited[ny, nx] == 0:
-                    # Recursively follow this path
-                    result = self.dfs_follow_connection(nx, ny, source_block_id, path)
-                    if result is not None:
-                        return result
-        
-        # If we've reached a dead end and didn't find a block
-        return None
+    def dfs_follow_connection(self, start_x, start_y, source_id, path):
+        stack = [(start_x, start_y, None)]  # (x, y, previous_direction)
+        local_visited = set()  # Track visited pixels for this specific path
+
+        while stack:
+            x, y, prev_dir = stack.pop()
+
+            # Skip if already visited in this DFS instance
+            if (x, y) in local_visited:
+                continue
+            local_visited.add((x, y))
+
+            # Check if we hit another block/node (excluding the source)
+            found_block = self.check_if_block_hit(source_id, x, y)
+            if found_block is not None and found_block != source_id:
+                return found_block
+
+            path.append((x, y))  # Add to global path
+
+            # Visualization (optional)
+            cv2.circle(self.cut_out_image, (x, y), 1, (0, 0, 255), -1)
+            if len(path) % 10 == 0:
+                cv2.imshow("DFS", self.cut_out_image)
+                cv2.waitKey(1)
+
+            # Get valid neighbors (prioritize straight directions)
+            neighbors = []
+            straight_dirs = [(0, -1), (0, 1), (-1, 0), (1, 0)]  # Up, Down, Left, Right
+            diag_dirs = [(-1, -1), (1, -1), (-1, 1), (1, 1)]
+
+            # Prioritize continuing in the same direction if available
+            if prev_dir:
+                dx, dy = prev_dir
+                straight_dirs = [prev_dir] + [d for d in straight_dirs if d != prev_dir]
+
+            # Check all directions
+            for dx, dy in straight_dirs + diag_dirs:
+                nx, ny = x + dx, y + dy
+                if (0 <= nx < self.skeletonized_image.shape[1] and 
+                    0 <= ny < self.skeletonized_image.shape[0]):
+                    pixel_value = self.skeletonized_image[ny, nx]
+                    # Only add if pixel is part of the skeleton and not visited locally
+                    if pixel_value == 255 and (nx, ny) not in local_visited:
+                        neighbors.append((nx, ny, (dx, dy)))
+
+            # Handle intersections (node creation)
+            if len(neighbors) > 2 and self.build_nodes:
+                if not self.is_near_existing_node(x, y):
+                    node_id = self.create_node(x, y)
+                    return node_id
+
+            # Push neighbors to stack (LIFO for depth-first)
+            stack.extend(reversed(neighbors))
+
+        return None  # Dead end
 
     def is_near_existing_node(self, x, y, distance=10):
         """Check if the current position is near an existing node"""
@@ -160,23 +177,19 @@ class NetDetector():
         cv2.putText(self.cut_out_image, f"N{node_id}", (x+5, y+5), 
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1)
         cv2.imshow("Nodes", self.cut_out_image)
-        cv2.waitKey(1)
+        cv2.waitKey(0)
         
         print(f"Created new node {node_id} at ({x}, {y})")
         return node_id
 
-    def check_if_block_hit(self, skip_id, x, y, distance=5):
-        """
-        Checks if the pixel is near any block's starting point except the one with id skip_id.
-        """
-        for block_id, starting_points in self.blocks_starting_points.items():
+    def check_if_block_hit(self, skip_id, x, y, distance=15):
+        for block_id, block in enumerate(self.blocks):
             if block_id == skip_id:
                 continue
-                
-            for sx, sy in starting_points:
-                if abs(x - sx) < distance and abs(y - sy) < distance:
-                    return block_id
-                    
+            x1, y1, x2, y2 = map(int, block.xyxy[0].tolist())
+            # Check if (x, y) is near the expanded block area
+            if (x1 - distance <= x <= x2 + distance) and (y1 - distance <= y <= y2 + distance):
+                return block_id
         return None
 
     def visualize_connections(self):
@@ -213,50 +226,34 @@ class NetDetector():
         cv2.waitKey(0)
         cv2.imwrite("circuit_connections.png", vis_img)
 
-    def check_if_block_hit(self,skip_id,x, y):
-        """
-        Checks if the pixel is inside any starting point except the one with id skip_id.
-        """
-        for key, block_starting_point in self.blocks_starting_points.items():
-            if key == skip_id:
+    def check_if_block_hit(self, skip_id, x, y, distance=10):
+        for block_id, block in enumerate(self.blocks):
+            if block_id == skip_id:
                 continue
-            for starting_point in block_starting_point:
-                # Get the coordinates of the starting point
-                x1, y1 = starting_point
-                # Check if the pixel is inside the block
-                if x1 - 2 < x < x1 + 2 and y1 - 2 < y < y1 + 2:
-                    return key
+            x1, y1, x2, y2 = map(int, block.xyxy[0].tolist())
+            # Check if (x, y) is near the block's expanded bounding box
+            expanded_x1 = x1 - distance
+            expanded_y1 = y1 - distance
+            expanded_x2 = x2 + distance
+            expanded_y2 = y2 + distance
+            if (expanded_x1 <= x <= expanded_x2 and 
+                expanded_y1 <= y <= expanded_y2):
+                return block_id
         return None
-    def follow_pixel(self, x, y):
-        """
-        Follows the pixel until we reach another block or a black pixel (0).
-        """
-        connection = []
-        while self.skeletonized_image[y, x] == 255:
-            # Check the surrounding pixels (up, down, left, right)
-            if self.skeletonized_image[y - 1, x] == 255:
-                y -= 1
-            elif self.skeletonized_image[y + 1, x] == 255:
-                y += 1
-            elif self.skeletonized_image[y, x - 1] == 255:
-                x -= 1
-            elif self.skeletonized_image[y, x + 1] == 255:
-                x += 1
-            else:
-                break
-        return connection
-    def cut_out_blocks(self):
-        """
-        Cuts out YOLO results from the image based on the coordinates provided in self.blocks.
-        """
-        self.cut_out_image = self.image.copy()
-        for i, block in enumerate(self.blocks):
-            # Get the coordinates of the block
-            x1, y1, x2, y2 = block.xyxy[0].tolist()
 
-            # Cut out the block from the image
-            cv2.rectangle(self.cut_out_image, (int(x1), int(y1)), (int(x2), int(y2)), (255, 255, 255), -1)
-        cv2.imshow("Cut Out Block", self.cut_out_image)
+    def cut_out_blocks(self):
+        self.cut_out_image = self.image.copy()
+        for block in self.blocks:
+            x1, y1, x2, y2 = map(int, block.xyxy[0].tolist())
+            # Leave a 3-pixel border around blocks to preserve connections
+            cv2.rectangle(
+                self.cut_out_image,
+                (x1 + OFFSET, y1 + OFFSET),
+                (x2 - OFFSET, y2 - OFFSET),
+                (255, 255, 255),  # Fill interior with white
+                -1
+            )
+        cv2.imshow("Cut Out Blocks", self.cut_out_image)
         cv2.waitKey(0)
         
     def skeletonize(self):
@@ -269,54 +266,54 @@ class NetDetector():
         # Apply Gaussian blur to reduce noise
         blurred = cv2.GaussianBlur(gray, (3, 3), 0)
         # Apply binary thresholding
-        _, binary = cv2.threshold(blurred,120, 255, cv2.THRESH_BINARY_INV)
+        _, binary = cv2.threshold(blurred,125, 255, cv2.THRESH_BINARY_INV)
         # Apply Zhang-Suen thinning algorithm
-        cv2.ximgproc.thinning(binary)
+        skeleton = cv2.ximgproc.thinning(binary)
         #show image
-        cv2.imshow("Skeleton", binary)
+        cv2.imshow("Skeleton", skeleton)
         cv2.waitKey(0)
-        self.skeletonized_image = binary
+        self.skeletonized_image = skeleton
     def find_starting_points(self):
-        """
-        Finds starting points for each block for connections based on the skeletonized image.
-        Starting points are found by finding white pixels around blocks
-        """
         starting_points = {}
         for i, block in enumerate(self.blocks):
-            # Get the coordinates of the block
-            x1, y1, x2, y2 = block.xyxy[0].tolist()
+            x1, y1, x2, y2 = map(int, block.xyxy[0].tolist())
             starting_points[i] = []
-            x1 = int(x1)
-            y1 = int(y1)
-            x2 = int(x2)
-            y2 = int(y2)
-            # Find white pixels around the block
-            for x in range(x1,x2):
-                if self.skeletonized_image[y1-5,x] == 255:
-                    print("Found white pixel at: ", x, y1, "Block:", i)
-                    starting_points[i].append((x,y1))
-                    cv2.circle(self.cut_out_image, (x,y1-5), 5, (255, 0, 0), -1)
-                if self.skeletonized_image[y2+5,x] == 255:
-                    print("Found white pixel at: ", x, y2, "Block:", i)
-                    starting_points[i].append((x,y2))
-                    cv2.circle(self.cut_out_image, (x,y2+5), 5, (255, 0, 0), -1)
-            for y in range(y1,y2):
-                if self.skeletonized_image[y,x1-5] == 255:
-                    print("Found white pixel at: ", x1, y, "Block:", i)
-                    starting_points[i].append((x1,y))
-                    cv2.circle(self.cut_out_image, (x1-5,y), 5, (255, 0, 0), -1)
-                if self.skeletonized_image[y,x2+5] == 255:
-                    print("Found white pixel at: ", x2, y, "Block:", i)
-                    starting_points[i].append((x2,y))
-                    cv2.circle(self.cut_out_image, (x2+5,y), 5, (255, 0, 0), -1)
-            # Remove duplicates in range of 5 pixels
+            
+            # Check all 4 edges of the block
+            edges = [
+                (x1, x2, y1, "top"),    # Top edge (y = y1)
+                (x1, x2, y2, "bottom"),  # Bottom edge (y = y2)
+                (y1, y2, x1, "left"),    # Left edge (x = x1)
+                (y1, y2, x2, "right")    # Right edge (x = x2)
+            ]
+            
+            for start, end, const, edge_type in edges:
+                for pos in range(start, end + 1):
+                    # Get coordinates based on edge type
+                    if edge_type in ["top", "bottom"]:
+                        x, y = pos, const
+                    else:
+                        x, y = const, pos
+                    
+                    # Validate bounds
+                    if (0 <= x < self.skeletonized_image.shape[1] and 
+                        0 <= y < self.skeletonized_image.shape[0]):
+                        # Check if pixel is part of the skeleton
+                        if self.skeletonized_image[y, x] == 255:
+                            starting_points[i].append((x, y))
+                            # Visualize starting point
+                            cv2.circle(self.cut_out_image, (x, y), 3, (0, 0, 255), -1)
+            
+            # Remove duplicates
             starting_points[i] = list(set(starting_points[i]))
-            # Merge starting points if they are close enough to each other
-            starting_points[i]= [(x,y) for x,y in starting_points[i] if x1-5 < x < x2+5 and y1-5 < y < y2+5]
+        
+        cv2.imshow("Starting Points", self.cut_out_image)
+        cv2.waitKey(0)
         return starting_points
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
