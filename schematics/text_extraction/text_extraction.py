@@ -527,16 +527,22 @@ def znajdz_folder(sciezka):
 
 def zapisz_wyniki_json(wszystkie_wyniki, oryginalne_obrazy, folder_wyjsciowy="text_marked"):
     """
-    Zapisuje wyniki rozpoznawania tekstu do plików JSON.
+    Zapisuje wyniki rozpoznawania tekstu do plików JSON i zwraca słownik wyników.
     
     Args:
         wszystkie_wyniki: Słownik {nazwa_bazowa: lista_wykrytych_tekstów}
         oryginalne_obrazy: Słownik {nazwa_bazowa: oryginalny_obraz}
         folder_wyjsciowy: Folder do zapisania wyników
+        
+    Returns:
+        Słownik {nazwa_bazowa: słownik_z_wynikami}
     """
     # Pełna ścieżka do folderu wyjściowego
     pelna_sciezka_wyjsciowa = os.path.join(PROJEKT_DIR, folder_wyjsciowy)
     os.makedirs(pelna_sciezka_wyjsciowa, exist_ok=True)
+    
+    # Słownik do przechowywania wyników
+    slowniki_wynikowe = {}
     
     # Grupowanie obrazów według folderów źródłowych
     foldery = {}
@@ -605,12 +611,18 @@ def zapisz_wyniki_json(wszystkie_wyniki, oryginalne_obrazy, folder_wyjsciowy="te
             sciezka_wyjsciowa = os.path.join(pelna_sciezka_wyjsciowa, folder, f"{nazwa}.json")
             with open(sciezka_wyjsciowa, 'w', encoding='utf-8') as f:
                 json.dump(dane_json, f, indent=2, ensure_ascii=False)
+            
+            # Dodajemy dane do słownika wynikowego
+            slowniki_wynikowe[nazwa] = dane_json
                 
             zapisane_pliki += 1
     
     print(f"Zapisano {zapisane_pliki} plików JSON w folderze {folder_wyjsciowy}")
     for folder, nazwy in foldery.items():
         print(f"  - {folder}: {len(nazwy)} plików")
+        
+    # Zwracamy słownik wynikowy, który może być wykorzystany przez inne skrypty
+    return slowniki_wynikowe
 
 def main():
     parser = argparse.ArgumentParser(description='Ekstrakcja tekstu z przetworzonych obrazów')
@@ -750,9 +762,12 @@ def main():
     # Zapisujemy wyniki jako obrazy z oznaczeniami
     zapisz_wyniki(obrazy_z_oznaczeniami)
     
-    # Zapisujemy wyniki w formacie JSON jeśli opcja jest włączona
-    if args.zapisz_json:
-        zapisz_wyniki_json(wszystkie_wyniki, oryginalne_obrazy, folder_wyjsciowy="text_marked")
+    # Słownik na wyniki z JSON
+    slowniki_wynikowe = {}
+    
+    # Zapisujemy wyniki w formacie JSON domyślnie
+    slowniki_wynikowe = zapisz_wyniki_json(wszystkie_wyniki, oryginalne_obrazy, folder_wyjsciowy="text_marked")
+    print(f"Utworzono {len(slowniki_wynikowe)} słowników z wynikami detekcji tekstu")
     
     # Czas zakończenia przetwarzania
     czas_koniec = time.time()
@@ -766,6 +781,9 @@ def main():
     # Wyświetlamy ogólne podsumowanie
     liczba_wykrytych_tekstow = sum(len(wyniki) for wyniki in wszystkie_wyniki.values())
     print(f"Wykryto łącznie {liczba_wykrytych_tekstow} fragmentów tekstu na {len(wszystkie_wyniki)} obrazach.")
+    
+    # Zwracamy słownik wynikowy, który może być wykorzystany przez inne skrypty
+    return slowniki_wynikowe
 
 if __name__ == "__main__":
     main()
