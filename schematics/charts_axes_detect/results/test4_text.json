@@ -1,0 +1,240 @@
+{
+  "image_path": "c:\\Users\\sazar\\OneDrive\\Pulpit\\pgverse\\schematics\\charts_axes_detect\\preprocessed_charts\\test4.JPG",
+  "blocks": [
+    {
+      "coords": [
+        0.0,
+        590.0,
+        28.0,
+        620.0
+      ],
+      "type": "rectangle",
+      "text": "2 2",
+      "confidence": 0.999999046325911
+    },
+    {
+      "coords": [
+        636.0,
+        796.0,
+        662.0,
+        820.0
+      ],
+      "type": "rectangle",
+      "text": "6 6",
+      "confidence": 0.9999952316341023
+    },
+    {
+      "coords": [
+        529.0,
+        797.0,
+        549.0,
+        819.0
+      ],
+      "type": "rectangle",
+      "text": "5",
+      "confidence": 0.9999396810091099
+    },
+    {
+      "coords": [
+        1182.0,
+        794.0,
+        1218.0,
+        824.0
+      ],
+      "type": "rectangle",
+      "text": "11 11",
+      "confidence": 0.9998571251731785
+    },
+    {
+      "coords": [
+        1072.0,
+        794.0,
+        1108.0,
+        824.0
+      ],
+      "type": "rectangle",
+      "text": "10 10",
+      "confidence": 0.999641264874734
+    },
+    {
+      "coords": [
+        302.0,
+        794.0,
+        334.0,
+        824.0
+      ],
+      "type": "rectangle",
+      "text": "\"3",
+      "confidence": 0.9988675117492676
+    },
+    {
+      "coords": [
+        420.0,
+        798.0,
+        437.0,
+        818.0
+      ],
+      "type": "rectangle",
+      "text": "4",
+      "confidence": 0.9987878203392029
+    },
+    {
+      "coords": [
+        0.0,
+        504.0,
+        28.0,
+        534.0
+      ],
+      "type": "rectangle",
+      "text": "'3",
+      "confidence": 0.9987038373947144
+    },
+    {
+      "coords": [
+        585.0,
+        15.0,
+        691.0,
+        59.0
+      ],
+      "type": "rectangle",
+      "text": "TEST4 TEST4",
+      "confidence": 0.998604416847229
+    },
+    {
+      "coords": [
+        194.0,
+        794.0,
+        228.0,
+        822.0
+      ],
+      "type": "rectangle",
+      "text": "2 2",
+      "confidence": 0.9978477954864502
+    },
+    {
+      "coords": [
+        3.0,
+        679.0,
+        23.0,
+        703.0
+      ],
+      "type": "rectangle",
+      "text": "1 1",
+      "confidence": 0.9976344108581543
+    },
+    {
+      "coords": [
+        89.0,
+        798.0,
+        106.0,
+        819.0
+      ],
+      "type": "rectangle",
+      "text": "1",
+      "confidence": 0.9973737001419067
+    },
+    {
+      "coords": [
+        8.0,
+        427.0,
+        20.0,
+        443.0
+      ],
+      "type": "rectangle",
+      "text": "4",
+      "confidence": 0.9969524145126343
+    },
+    {
+      "coords": [
+        856.0,
+        796.0,
+        884.0,
+        824.0
+      ],
+      "type": "rectangle",
+      "text": "8 8",
+      "confidence": 0.9955976605415344
+    },
+    {
+      "coords": [
+        0.0,
+        76.0,
+        28.0,
+        106.0
+      ],
+      "type": "rectangle",
+      "text": "\"8",
+      "confidence": 0.9935919642448425
+    },
+    {
+      "coords": [
+        0.0,
+        248.0,
+        26.0,
+        276.0
+      ],
+      "type": "rectangle",
+      "text": "\"6",
+      "confidence": 0.9921454787254333
+    },
+    {
+      "coords": [
+        971.0,
+        798.0,
+        988.0,
+        819.0
+      ],
+      "type": "rectangle",
+      "text": "9",
+      "confidence": 0.9723725914955139
+    },
+    {
+      "coords": [
+        753.0,
+        799.0,
+        765.0,
+        815.0
+      ],
+      "type": "rectangle",
+      "text": "7",
+      "confidence": 0.9677626490592957
+    },
+    {
+      "coords": [
+        0.0,
+        334.0,
+        28.0,
+        364.0
+      ],
+      "type": "rectangle",
+      "text": "\"5",
+      "confidence": 0.85300213098526
+    },
+    {
+      "coords": [
+        5.0,
+        766.0,
+        21.0,
+        787.0
+      ],
+      "type": "rectangle",
+      "text": "0",
+      "confidence": 0.7462207674980164
+    },
+    {
+      "coords": [
+        0.0,
+        162.0,
+        28.0,
+        192.0
+      ],
+      "type": "rectangle",
+      "text": "'7",
+      "confidence": 0.688048779964447
+    }
+  ],
+  "image_size": {
+    "width": 1272,
+    "height": 844
+  }
+}
