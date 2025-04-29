@@ -1,0 +1,207 @@
+{
+  "image_path": "c:\\Users\\sazar\\OneDrive\\Pulpit\\pgverse\\schematics\\charts_axes_detect\\preprocessed_charts\\test5.JPG",
+  "blocks": [
+    {
+      "coords": [
+        6.0,
+        80.0,
+        56.0,
+        110.0
+      ],
+      "type": "rectangle",
+      "text": "250",
+      "confidence": 0.9999878178937133
+    },
+    {
+      "coords": [
+        6.0,
+        218.0,
+        56.0,
+        248.0
+      ],
+      "type": "rectangle",
+      "text": "200",
+      "confidence": 0.9999757046326001
+    },
+    {
+      "coords": [
+        8.0,
+        492.0,
+        56.0,
+        522.0
+      ],
+      "type": "rectangle",
+      "text": "100 100",
+      "confidence": 0.999963178440079
+    },
+    {
+      "coords": [
+        1188.0,
+        798.0,
+        1224.0,
+        828.0
+      ],
+      "type": "rectangle",
+      "text": "11",
+      "confidence": 0.9998556922405994
+    },
+    {
+      "coords": [
+        1080.0,
+        798.0,
+        1116.0,
+        828.0
+      ],
+      "type": "rectangle",
+      "text": "10 10",
+      "confidence": 0.9997600242790694
+    },
+    {
+      "coords": [
+        20.0,
+        630.0,
+        56.0,
+        660.0
+      ],
+      "type": "rectangle",
+      "text": "50 50",
+      "confidence": 0.9995327077285373
+    },
+    {
+      "coords": [
+        8.0,
+        354.0,
+        56.0,
+        384.0
+      ],
+      "type": "rectangle",
+      "text": "150 150",
+      "confidence": 0.9992153644561768
+    },
+    {
+      "coords": [
+        548.0,
+        802.0,
+        565.0,
+        822.0
+      ],
+      "type": "rectangle",
+      "text": "5",
+      "confidence": 0.9988394379615784
+    },
+    {
+      "coords": [
+        331.0,
+        802.0,
+        349.0,
+        822.0
+      ],
+      "type": "rectangle",
+      "text": "3",
+      "confidence": 0.9983676075935364
+    },
+    {
+      "coords": [
+        586.0,
+        16.0,
+        694.0,
+        64.0
+      ],
+      "type": "rectangle",
+      "text": "TEST5 TESTS",
+      "confidence": 0.9980365633964539
+    },
+    {
+      "coords": [
+        224.0,
+        802.0,
+        241.0,
+        822.0
+      ],
+      "type": "rectangle",
+      "text": "2",
+      "confidence": 0.9977970123291016
+    },
+    {
+      "coords": [
+        116.0,
+        802.0,
+        133.0,
+        822.0
+      ],
+      "type": "rectangle",
+      "text": "1",
+      "confidence": 0.9971855282783508
+    },
+    {
+      "coords": [
+        764.0,
+        802.0,
+        781.0,
+        822.0
+      ],
+      "type": "rectangle",
+      "text": "7",
+      "confidence": 0.9960381984710693
+    },
+    {
+      "coords": [
+        868.0,
+        800.0,
+        892.0,
+        824.0
+      ],
+      "type": "rectangle",
+      "text": "\"8",
+      "confidence": 0.9924015998840332
+    },
+    {
+      "coords": [
+        655.0,
+        802.0,
+        673.0,
+        822.0
+      ],
+      "type": "rectangle",
+      "text": "6",
+      "confidence": 0.990047037601471
+    },
+    {
+      "coords": [
+        980.0,
+        802.0,
+        997.0,
+        824.0
+      ],
+      "type": "rectangle",
+      "text": "9",
+      "confidence": 0.9879946112632751
+    },
+    {
+      "coords": [
+        35.0,
+        769.0,
+        51.0,
+        790.0
+      ],
+      "type": "rectangle",
+      "text": "0",
+      "confidence": 0.755246639251709
+    },
+    {
+      "coords": [
+        436.0,
+        799.0,
+        460.0,
+        824.0
+      ],
+      "type": "rectangle",
+      "text": "4",
+      "confidence": 0.6902465224266052
+    }
+  ],
+  "image_size": {
+    "width": 1280,
+    "height": 846
+  }
+}
