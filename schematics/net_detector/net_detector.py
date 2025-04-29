@@ -5,9 +5,10 @@ import os
 OFFSET = 5  # Offset for the bounding box expansion
 
 class NetDetector():
-    def __init__(self,image:cv2.typing.MatLike,blocks,build_nodes=True):
+    def __init__(self,image:cv2.typing.MatLike,blocks,text_blocks,build_nodes=True):
         self.image = image.copy()
         self.blocks = blocks
+        self.text_blocks = text_blocks
         self.results = {}
         self.build_nodes = build_nodes
     def find_connections(self):
@@ -20,6 +21,7 @@ class NetDetector():
         self.node_counter = len(self.blocks)  # Start node IDs after block IDs
 
         self.cut_out_blocks()
+        self.cut_out_text()
         self.skeletonize()
         self.blocks_starting_points = self.find_starting_points()
         
@@ -242,10 +244,25 @@ class NetDetector():
         return None
 
     def cut_out_blocks(self):
-        self.cut_out_image = self.image.copy()
+        self.no_block_img = self.image.copy()
         for block in self.blocks:
             x1, y1, x2, y2 = map(int, block.xyxy[0].tolist())
-            # Leave a 3-pixel border around blocks to preserve connections
+            print(x1, y1, x2, y2)   
+            cv2.rectangle(
+                self.no_block_img,
+                (x1 + OFFSET, y1 + OFFSET),
+                (x2 - OFFSET, y2 - OFFSET),
+                (255, 255, 255),  # Fill interior with white
+                -1
+            )
+        cv2.imshow("Cut Out Blocks", self.no_block_img)
+        cv2.waitKey(0)
+    def cut_out_text(self):
+        self.cut_out_image = self.no_block_img.copy()
+        print(self.text_blocks)
+        for block in self.text_blocks:
+            x1, y1, x2, y2 = map(int,block["coords"])
+            print(x1, y1, x2, y2)
             cv2.rectangle(
                 self.cut_out_image,
                 (x1 + OFFSET, y1 + OFFSET),
@@ -253,9 +270,8 @@ class NetDetector():
                 (255, 255, 255),  # Fill interior with white
                 -1
             )
-        cv2.imshow("Cut Out Blocks", self.cut_out_image)
+        cv2.imshow("Cut Out Text", self.cut_out_image)
         cv2.waitKey(0)
-        
     def skeletonize(self):
         """
         Converts the image to grayscale, applies Gaussian blur, and then performs Zhang.
@@ -266,7 +282,7 @@ class NetDetector():
         # Apply Gaussian blur to reduce noise
         blurred = cv2.GaussianBlur(gray, (3, 3), 0)
         # Apply binary thresholding
-        _, binary = cv2.threshold(blurred,125, 255, cv2.THRESH_BINARY_INV)
+        _, binary = cv2.threshold(blurred,130, 255, cv2.THRESH_BINARY_INV)
         # Apply Zhang-Suen thinning algorithm
         skeleton = cv2.ximgproc.thinning(binary)
         #show image

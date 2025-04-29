@@ -83,6 +83,45 @@ def process_images_from_folder(input_folder, output_folder, alpha=0.8, backgroun
         cv2.imwrite(output_file, sharpened_image)
         print(f"Processed image saved as: {output_file}")
 
+def process_image(image):
+    # Make sure the image is grayscale
+    if len(image.shape) == 3:
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    else:
+        gray = image.copy()
+    
+    # CLAHE for contrast enhancement
+    clahe = cv2.createCLAHE(clipLimit=2.5, tileGridSize=(8, 8))
+    equalized_gray = clahe.apply(gray)
+    
+    # Noise reduction
+    denoised_gray = cv2.fastNlMeansDenoising(equalized_gray, None, h=10, templateWindowSize=7, searchWindowSize=21)
+    
+    # Adaptive binarization
+    binary = cv2.adaptiveThreshold(
+        denoised_gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 11, 2
+    )
+    
+    # Enhanced binarization with morphological operations
+    kernel = np.ones((2, 2), np.uint8)
+    enhanced_binary = cv2.morphologyEx(binary, cv2.MORPH_CLOSE, kernel)
+    
+    # Sobel gradient - useful for text edge detection
+    sobelx = cv2.Sobel(denoised_gray, cv2.CV_64F, 1, 0, ksize=3)
+    sobely = cv2.Sobel(denoised_gray, cv2.CV_64F, 0, 1, ksize=3)
+    sobel_combined = cv2.magnitude(sobelx, sobely)
+    sobel_edges = np.uint8(255 * sobel_combined / np.max(sobel_combined))
+    
+    return {
+        "original": image,
+        "gray": gray,
+        "equalized_gray": equalized_gray,
+        "denoised_gray": denoised_gray,
+        "binary": binary,
+        "enhanced_binary": enhanced_binary,
+        "edges": sobel_edges
+    }
+
 def preprocessing_general(input_folder, output_folder="preprocessed_for_text_detection", debug=False):
     """
     Performs image processing for text detection on all images in a folder.
@@ -96,44 +135,7 @@ def preprocessing_general(input_folder, output_folder="preprocessed_for_text_det
         Number of processed images
     """
     # Function for processing a single image
-    def process_image(image):
-        # Make sure the image is grayscale
-        if len(image.shape) == 3:
-            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        else:
-            gray = image.copy()
-        
-        # CLAHE for contrast enhancement
-        clahe = cv2.createCLAHE(clipLimit=2.5, tileGridSize=(8, 8))
-        equalized_gray = clahe.apply(gray)
-        
-        # Noise reduction
-        denoised_gray = cv2.fastNlMeansDenoising(equalized_gray, None, h=10, templateWindowSize=7, searchWindowSize=21)
-        
-        # Adaptive binarization
-        binary = cv2.adaptiveThreshold(
-            denoised_gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 11, 2
-        )
-        
-        # Enhanced binarization with morphological operations
-        kernel = np.ones((2, 2), np.uint8)
-        enhanced_binary = cv2.morphologyEx(binary, cv2.MORPH_CLOSE, kernel)
-        
-        # Sobel gradient - useful for text edge detection
-        sobelx = cv2.Sobel(denoised_gray, cv2.CV_64F, 1, 0, ksize=3)
-        sobely = cv2.Sobel(denoised_gray, cv2.CV_64F, 0, 1, ksize=3)
-        sobel_combined = cv2.magnitude(sobelx, sobely)
-        sobel_edges = np.uint8(255 * sobel_combined / np.max(sobel_combined))
-        
-        return {
-            "original": image,
-            "gray": gray,
-            "equalized_gray": equalized_gray,
-            "denoised_gray": denoised_gray,
-            "binary": binary,
-            "enhanced_binary": enhanced_binary,
-            "edges": sobel_edges
-        }
+
     
     # Save debug images
     def save_debug(results, debug_folder, image_name):
@@ -228,7 +230,21 @@ def preprocessing_general(input_folder, output_folder="preprocessed_for_text_det
     
     return counter
    
-
+def cut_out_blocks(image,coords):
+    cut_out_image = image.copy()
+    for block in coords:
+        x1, y1, x2, y2 = map(int, block.xyxy[0].tolist())
+        # Leave a 3-pixel border around blocks to preserve connections
+        cv2.rectangle(
+            cut_out_image,
+            (x1 + 5, y1 + 5),
+            (x2 - 5, y2 - 5),
+            (255, 255, 255),  # Fill interior with white
+            -1
+        )
+    cv2.imshow("Cut Out Blocks", cut_out_image)
+    cv2.waitKey(0)
+    return cut_out_image
 
 # if __name__ == "__main__":
 #     # Define input folders
