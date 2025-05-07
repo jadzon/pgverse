@@ -31,13 +31,16 @@ class NetDetector():
         # Create a visited matrix to track explored pixels
         self.visited = np.zeros_like(self.skeletonized_image)
         
+        # Create a temporary dictionary to store all paths
+        temp_connections = {}
+        
         # Important: Create a copy of keys to avoid dictionary size change during iteration
         blocks_to_process = list(self.blocks_starting_points.keys())
         
         # First pass: process all initial blocks
         for key in blocks_to_process:
             print(f"Block {key} starting point: ", self.blocks_starting_points[key])
-            self.connections[key] = []  # Initialize connections list for this block
+            temp_connections[key] = {}  # Initialize connections dict for this block
             
             for starting_point in self.blocks_starting_points[key]:
                 # Get the coordinates of the starting point
@@ -49,8 +52,9 @@ class NetDetector():
                 
                 if end_block is not None:
                     # We found a connection to another block
-                    self.connections[key].append((end_block, path))
-                    print(f"Found connection: Block {key} -> Block {end_block}")
+                    if end_block not in temp_connections[key] or len(path) < len(temp_connections[key][end_block]):
+                        temp_connections[key][end_block] = path
+                        print(f"Found connection: Block {key} -> Block {end_block}, path length: {len(path)}")
         
         # Second pass: process any newly created nodes
         new_nodes = [k for k in self.blocks_starting_points.keys() if k not in blocks_to_process]
@@ -59,8 +63,8 @@ class NetDetector():
             new_nodes = []
             
             for node_id in current_nodes:
-                if node_id not in self.connections:
-                    self.connections[node_id] = []
+                if node_id not in temp_connections:
+                    temp_connections[node_id] = {}
                     
                 for starting_point in self.blocks_starting_points[node_id]:
                     x, y = starting_point
@@ -68,20 +72,25 @@ class NetDetector():
                     end_block = self.dfs_follow_connection(x, y, node_id, path)
                     
                     if end_block is not None and end_block != node_id:
-                        self.connections[node_id].append((end_block, path))
-                        print(f"Found connection: Node {node_id} -> Block/Node {end_block}")
+                        if end_block not in temp_connections[node_id] or len(path) < len(temp_connections[node_id][end_block]):
+                            temp_connections[node_id][end_block] = path
+                            print(f"Found connection: Node {node_id} -> Block/Node {end_block}, path length: {len(path)}")
                         
                         # Check if this created new nodes that need processing
                         latest_nodes = [k for k in self.blocks_starting_points.keys() 
-                                       if k not in blocks_to_process and k not in current_nodes and k not in new_nodes]
+                                      if k not in blocks_to_process and k not in current_nodes and k not in new_nodes]
                         new_nodes.extend(latest_nodes)
         
+        # Convert the temporary dictionary to the final connections format
+        for source_id, connections in temp_connections.items():
+            self.connections[source_id] = [(dest_id, path) for dest_id, path in connections.items()]
+        
         # Print all connections
-        print("All connections found:")
+        print("\nFinal connections (only shortest paths):")
         for block_id, connections in self.connections.items():
             for connected_block, path in connections:
                 print(f"  Block {block_id} -> Block {connected_block}, path length: {len(path)}")
-        
+        print(self.connections)
         cv2.imshow("Connections", self.cut_out_image)
         cv2.waitKey(0)
         return self.connections
@@ -326,10 +335,9 @@ class NetDetector():
         cv2.imshow("Starting Points", self.cut_out_image)
         cv2.waitKey(0)
         return starting_points
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
