@@ -5,16 +5,25 @@ from pathlib import Path # Added Path import
 import json # Added json import for saving results
 import numpy as np # Added numpy import for array operations
 
-# Add the project root directory to the Python path
-# This allows importing modules from other directories like text_extraction
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-if project_root not in sys.path:
-    sys.path.append(project_root)
+# -- Path setup for direct script execution --
+# current_script_dir is /path/to/pgverse/charts_axes_detect
+current_script_dir = os.path.dirname(os.path.abspath(__file__))
+# project_root_dir is /path/to/pgverse
+project_root_dir = os.path.abspath(os.path.join(current_script_dir, '..'))
 
-# Now we can import the TextExtractor and the new preprocessing function
-from text_extraction.text_extraction_noPreprocess import TextExtractor
-from charts_axes_detect.chart_preprocessing import preprocess_for_small_text # Import the new function
-from charts_axes_detect.small_text_ocr import detect_text_combined # Import the combined OCR function
+# Add project_root_dir to sys.path to find 'schematics'
+if project_root_dir not in sys.path:
+    sys.path.insert(0, project_root_dir)
+
+# Add current_script_dir to sys.path to find 'chart_preprocessing' and 'small_text_ocr' directly
+if current_script_dir not in sys.path:
+    sys.path.insert(1, current_script_dir) # Insert it after project_root_dir
+
+# Now we can import the TextExtractor using an absolute path from the project root ('pgverse')
+# and other modules (chart_preprocessing, small_text_ocr) directly as their directory is also in sys.path.
+from schematics.text_extraction.text_extraction_noPreprocess import TextExtractor
+from chart_preprocessing import preprocess_for_small_text # Import the new function
+from small_text_ocr import detect_text_combined # Import the combined OCR function
 
 # Helper function to draw bounding boxes (similar to TextExtractor._annotate_detected_text)
 def annotate_image(image, detected_texts):
