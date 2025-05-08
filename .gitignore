@@ -131,3 +131,7 @@ schematics/block_detector/test_yolo/runs
 schematics/*.png
 *.zip
 *.idea
+*.png
+*.jpg
+*.jpeg
+*.json
