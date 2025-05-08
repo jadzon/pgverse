@@ -1,19 +1,19 @@
 import easyocr
 import cv2
-import numpy as np # Added numpy import
-from paddleocr import PaddleOCR # Added PaddleOCR import
+import numpy as np
+from paddleocr import PaddleOCR
 import os
 
 # Initialize the reader globally once (can improve performance if called multiple times)
 # Consider adding other languages if needed, e.g., ['en', 'pl']
 print("Initializing EasyOCR reader for small text detection (language: 'en')...")
-easy_reader = easyocr.Reader(['en'], gpu=True) # Changed to True to enable GPU support
+easy_reader = easyocr.Reader(['en'], gpu=True)
 print("EasyOCR reader initialized.")
 
 # --- Initialize PaddleOCR Reader ---
 # Specify language ('en' for English). Set use_gpu=True if CUDA available.
 print("Initializing PaddleOCR reader (language: 'en')...")
-paddle_reader = PaddleOCR(use_angle_cls=True, lang='en', use_gpu=True, show_log=False) # Changed to True to enable GPU support
+paddle_reader = PaddleOCR(use_angle_cls=True, lang='en', use_gpu=True, show_log=False)
 print("PaddleOCR reader initialized.")
 
 def run_easyocr(image, difficult_mode=False):
@@ -517,17 +517,68 @@ def detect_text_combined(image_path, min_confidence=0.1, enable_merging=True, io
     else:
         return final_results
 
-# Example usage block (can be uncommented for testing)
-# if __name__ == '__main__':
-#     # Provide a path to a preprocessed chart image
-#     test_image_path = 'preprocessed_charts/your_preprocessed_chart.png' # Adjust path
-#     detections = detect_text_combined(test_image_path, min_confidence=0.1)
-#
-#     if detections:
-#         print(f"Detected {len(detections)} text blocks (combined, duplicates possible):")
-#         for (bbox, text, confidence) in detections:
-#             # Note: Bbox format might differ slightly between engines in raw output,
-#             # but here they should both be lists of [x,y] points
-#             print(f"  Text: '{text}', Confidence: {confidence:.2f}, Bbox: {bbox}")
-#     else:
-#         print("No text detected or error occurred.") 
+if __name__ == "__main__":
+    # Test funkcji na przykładowym obrazie
+    import sys
+    import os
+    import json
+    
+    if len(sys.argv) > 1:
+        image_path = sys.argv[1]
+        if not os.path.exists(image_path):
+            print(f"Błąd: Plik {image_path} nie istnieje")
+            sys.exit(1)
+        
+        # Uruchom detekcję tekstu
+        results = detect_text_combined(
+            image_path, 
+            min_confidence=0.1, 
+            enable_merging=True, 
+            iou_merge_threshold=0.4
+        )
+        
+        # Wypisz wyniki
+        if results:
+            print(f"\nWykryto {len(results)} bloków tekstowych:")
+            for i, (bbox, text, confidence) in enumerate(results):
+                print(f"{i+1}. '{text}' (pewność: {confidence:.2f})")
+            
+            # Zapisz wyniki do pliku JSON
+            base_name = os.path.splitext(image_path)[0]
+            json_path = f"{base_name}_text.json"
+            
+            # Przygotuj dane do zapisu
+            json_data = {
+                "image": image_path,
+                "blocks": []
+            }
+            
+            for bbox, text, confidence in results:
+                # Konwersja bbox na prosty format
+                x_coords = [p[0] for p in bbox]
+                y_coords = [p[1] for p in bbox]
+                x_min, y_min = min(x_coords), min(y_coords)
+                x_max, y_max = max(x_coords), max(y_coords)
+                
+                block = {
+                    "text": text,
+                    "confidence": float(confidence),
+                    "bbox": {
+                        "x_min": float(x_min),
+                        "y_min": float(y_min),
+                        "x_max": float(x_max),
+                        "y_max": float(y_max)
+                    }
+                }
+                json_data["blocks"].append(block)
+            
+            # Zapisz do pliku JSON
+            with open(json_path, 'w', encoding='utf-8') as f:
+                json.dump(json_data, f, indent=2, ensure_ascii=False)
+                
+            print(f"Zapisano wyniki do pliku: {json_path}")
+        else:
+            print("Nie wykryto żadnego tekstu na obrazie.")
+    else:
+        print("Użycie: python small_text_ocr.py <ścieżka_do_obrazu>")
+        sys.exit(1) 
