@@ -9,11 +9,25 @@ from transformers import (
     Trainer,
     TrainingArguments
 )
+import argparse
 
 # -------------------------
 # 1) Ustawienia
 # -------------------------
-DATA_DIR   = "SMHD-forms"                              # katalog z datasetem
+#DATA_DIR   = "SMHD-forms"                              # katalog z datasetem
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--data_dir",  default="SMHD-forms", help="katalog z obrazami+txt")
+parser.add_argument("--start",     type=int, default=0,         help="offset pierwszej pary")
+parser.add_argument("--count",     type=int, default=20,        help="ile par wczytać")
+parser.add_argument("--checkpoint", type=str, default=None, help="ścieżka do folderu z checkpointem")
+args = parser.parse_args()
+
+DATA_DIR = args.data_dir
+START    = args.start
+COUNT    = args.count
+RESUME_CHECKPOINT = args.checkpoint
+
 MODEL_NAME = "microsoft/trocr-large-handwritten"       # bazowy model
 OUTPUT_DIR = "trocr_smhdf_nauczony"                   # gdzie zapisać fine-tuned
 DEVICE     = "cuda" if torch.cuda.is_available() else "cpu"
@@ -57,16 +71,20 @@ def segment_lines(img: np.ndarray, min_height: int = 10):
     return lines
 
 # -------------------------
-# 4) Zbierz pary (page.jpg, page.txt)
+# 4) Zbierz pary (page.jpg, page.txt) i wybierz blok (start; start+count)
 # -------------------------
-pairs = []
+all_pairs = []
 for root, _, files in os.walk(DATA_DIR):
     for fn in sorted(files):
         if fn.lower().endswith((".jpg", ".jpeg", ".png")):
             img_path = os.path.join(root, fn)
             txt_path = os.path.splitext(img_path)[0] + ".txt"
             if os.path.exists(txt_path):
-                pairs.append((img_path, txt_path))
+                all_pairs.append((img_path, txt_path))
+
+# wyciągnij tylko blok
+pairs = all_pairs[START : START + COUNT]
+print(f"Łącznie w katalogu: {len(all_pairs)} par, bierzemy od {START} do {START+COUNT} → {len(pairs)} par")
 
 # -------------------------
 # 5) Przygotuj (line_img, line_txt)
@@ -85,7 +103,7 @@ for img_path, txt_path in pairs:
     for i in range(n):
         examples.append((lines_img[i], lines_txt[i]))
 
-print(f"🔎 Przygotowano {len(examples)} przykładów do treningu.")
+print(f"Przygotowano {len(examples)} przykładów do treningu.")
 
 # -------------------------
 # 6) PyTorch Dataset
@@ -152,6 +170,7 @@ trainer = Trainer(
 # -------------------------
 if __name__ == "__main__":
     print("Start fine-tuningu...")
-    trainer.train()
+    resume_arg = RESUME_CHECKPOINT if RESUME_CHECKPOINT is not None else True
+    trainer.train(resume_from_checkpoint=resume_arg)
     trainer.save_model(OUTPUT_DIR)
     print(f"Gotowe! Model zapisany w: {OUTPUT_DIR}")
