@@ -1,18 +1,20 @@
 import re
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
-from sentence_transformers import SentenceTransformer
+import cohere
 import os
 
-class TextChunker:
-    def __init__(self, model_name='paraphrase-multilingual-MiniLM-L12-v2'):
+class CohereTextChunker:
+    def __init__(self, api_key, model_name='embed-multilingual-v3.0'):
         """
-        Inicjalizuje chunker tekstu z określonym modelem do embeddingów.
+        Inicjalizuje chunker tekstu z określonym modelem Cohere do embeddingów.
         
         Args:
-            model_name (str): Nazwa modelu SentenceTransformer do użycia
+            api_key (str): Klucz API dla Cohere
+            model_name (str): Nazwa modelu Cohere do użycia (domyślnie: embed-multilingual-v3.0)
         """
-        self.model = SentenceTransformer(model_name)
+        self.client = cohere.Client(api_key)
+        self.model = model_name
     
     def chunk_from_file(self, file_path, max_tokens=500):
         """
@@ -84,8 +86,8 @@ class TextChunker:
             if n == 0:
                 continue
             
-            # Oblicz embeddingi dla fragmentów
-            embeddings = self.model.encode(base_fragments, show_progress_bar=False)
+            # Oblicz embeddingi dla fragmentów używając Cohere
+            embeddings = self._get_embeddings(base_fragments)
             
             # Oblicz macierz podobieństwa
             sim_matrix = cosine_similarity(embeddings)
@@ -95,6 +97,31 @@ class TextChunker:
             all_chunks.extend(chunks)
         
         return all_chunks
+    
+    def _get_embeddings(self, texts):
+        """
+        Generuje embeddingi dla listy tekstów używając Cohere API.
+        
+        Args:
+            texts (list): Lista tekstów do wygenerowania embeddingów
+            
+        Returns:
+            np.ndarray: Macierz embeddingów, gdzie każdy wiersz to embedding tekstu
+        """
+        # Generowanie embeddingów w pakietach po 96 tekstów (limit Cohere)
+        batch_size = 96
+        all_embeddings = []
+        
+        for i in range(0, len(texts), batch_size):
+            batch_texts = texts[i:i+batch_size]
+            response = self.client.embed(
+                texts=batch_texts,
+                model=self.model,
+                input_type="search_document"
+            )
+            all_embeddings.extend(response.embeddings)
+        
+        return np.array(all_embeddings)
 
     def _simple_recursive_split(self, text, target_tokens):
         """

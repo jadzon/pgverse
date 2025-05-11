@@ -1,46 +1,56 @@
-import torch
-from PIL import Image
-from transformers import CLIPProcessor, CLIPModel
 import numpy as np
 import warnings
 import cohere
+import base64
+
 
 # Suppress symlink warnings
 warnings.filterwarnings("ignore", message=".*cache-system uses symlinks.*")
 
 class ImageEmbedder:
-    def __init__(self, model_name: str = "openai/clip-vit-base-patch32"):
+    def __init__(self, api_key: str, model_name: str = "embed-multilingual-v3.0"):
         """
-        Initializes CLIP model for calculating image embeddings.
+        Initializes Cohere client for calculating image embeddings.
         
         Args:
-            model_name: Model name to load (default: CLIP from OpenAI)
+            api_key: Cohere API key
+            model_name: Model name to use (default: embed-multilingual-v3.0)
         """
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        self.model = CLIPModel.from_pretrained(model_name).to(self.device)
-        self.processor = CLIPProcessor.from_pretrained(model_name)
+        self.client = cohere.Client(api_key)
+        self.model = model_name
         
     def get_image_embedding(self, image_path: str) -> np.ndarray:
         """
-        Calculates embedding for a single image.
+        Calculates embedding for a single image using Cohere's API.
         
         Args:
             image_path: Path to image file
             
         Returns:
-            Normalized embedding vector as numpy array
+            Embedding vector as numpy array
         """
-        image = Image.open(image_path).convert('RGB')
-        inputs = self.processor(images=image, return_tensors="pt").to(self.device)
-        
-        with torch.no_grad():
-            image_features = self.model.get_image_features(**inputs)
+        # Read the image and convert to base64
+        with open(image_path, 'rb') as image_file:
+            image_bytes = image_file.read()
             
-        # Normalize embedding vector
-        image_embedding = image_features.cpu().numpy()[0]
-        image_embedding = image_embedding / np.linalg.norm(image_embedding)
+        # Convert image to base64 string
+        base64_image = base64.b64encode(image_bytes).decode('utf-8')
         
-        return image_embedding
+        # Get embedding from Cohere
+        response = self.client.embed(
+            texts=[""],  # Empty text
+            model=self.model,
+            input_type="image",
+            image=base64_image
+        )
+        
+        # Extract the embedding
+        embedding = np.array(response.embeddings[0])
+        
+        # Normalize the embedding vector (as was done in the original implementation)
+        embedding = embedding / np.linalg.norm(embedding)
+        
+        return embedding
 
 class TextEmbedder:
     def __init__(self, api_key: str, model_name: str = "embed-multilingual-v3.0"):
