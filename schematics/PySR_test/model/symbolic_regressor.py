@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from pysr import PySRRegressor
-from sympy import latex
+from sympy import latex,nsimplify
 
 class SymbolicRegressor:
     def __init__(self, niterations=50, maxsize=20):
@@ -11,10 +11,17 @@ class SymbolicRegressor:
             unary_operators=["sin", "cos", "exp", "log", "square", "abs", "tanh", "cube"],
             extra_sympy_mappings={"cube": lambda x: x**3},
             model_selection="best",
-            loss="loss(x, y) = (x - y)^2",
+            constraints={"abs": 0},
+            elementwise_loss="loss(x, y) = (x - y)^2",
             maxsize=maxsize,
-            verbosity=1,
-            random_state=42
+            verbosity=0,
+            #complexity_penalty=1e-4,
+            should_simplify=True,
+            random_state=42,
+            deterministic=True,
+            parallelism="serial",
+            temp_equation_file=False,
+            output_directory=None
         )
         self.fitted = False
         self.X = None
@@ -30,17 +37,22 @@ class SymbolicRegressor:
             raise ValueError("Dane wejściowe X i y nie zostały ustawione.")
         self.model.fit(self.X, self.y)
         self.fitted = True
-        self.latex_formula = latex(self.model.sympy())
+        formula = nsimplify(self.model.sympy(), tolerance=1e-8, rational=True)
+        self.latex_formula = latex(formula)
 
     def predict(self, X):
         if not self.fitted:
             raise ValueError("Model nie został dopasowany. Wywołaj najpierw metodę `fit()`.")
         return self.model.predict(X)
 
-    def get_formula(self):
+    def get_formula(self, simplify_result=True):
         if not self.fitted:
             raise ValueError("Model nie został dopasowany.")
-        return self.model.get_best(), self.latex_formula
+        formula = self.model.sympy()
+        if simplify_result:
+            
+            formula = nsimplify(formula, tolerance=1e-8, rational=True)
+        return formula, latex(formula)
 
     def plot(self):
         if not self.fitted:
