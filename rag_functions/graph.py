@@ -1,5 +1,7 @@
 from neo4j import GraphDatabase
 
+from neo4j import GraphDatabase
+
 class GraphBuilder:
     """
     Builds a semantic knowledge graph in Neo4j by creating SIMILAR_TO relationships
@@ -17,16 +19,27 @@ class GraphBuilder:
         Create SIMILAR_TO relationships with weight and last_used timestamp
         between all pairs of TextChunk and ImageNode.
         """
+        # Using pure Cypher implementation of cosine similarity instead of GDS
         query = '''
         MATCH (a),(b)
-        WHERE id(a) <> id(b)
-          AND exists(a.embedding) AND exists(b.embedding)
+        WHERE elementId(a) <> elementId(b)
+        AND a.embedding IS NOT NULL AND b.embedding IS NOT NULL
         WITH a, b,
-             gds.alpha.similarity.cosine(a.embedding, b.embedding) AS sim
+        reduce(dot = 0.0, i IN range(0, size(a.embedding)-1) |
+            dot + a.embedding[i] * b.embedding[i]
+        ) /
+        (
+            sqrt(reduce(norm_a = 0.0, i IN range(0, size(a.embedding)-1) |
+            norm_a + a.embedding[i] * a.embedding[i]
+            )) *
+            sqrt(reduce(norm_b = 0.0, i IN range(0, size(b.embedding)-1) |
+            norm_b + b.embedding[i] * b.embedding[i]
+            ))
+        ) AS sim
         WHERE sim >= $threshold
         MERGE (a)-[r:SIMILAR_TO]->(b)
-          ON CREATE SET r.weight = sim, r.last_used = timestamp()
-          ON MATCH SET  r.weight = sim
+        ON CREATE SET r.weight = sim, r.last_used = timestamp()
+        ON MATCH SET  r.weight = sim
         '''
         with self.driver.session() as session:
             session.run(query, threshold=self.threshold)
