@@ -61,32 +61,48 @@ class HybridRetriever:
         # 1. vector-based retrieval
         vec_query = '''
         MATCH (n)
-        WHERE exists(n.embedding)
-        WITH n, gds.alpha.similarity.cosine(n.embedding, $q) AS score
+        WHERE n.embedding IS NOT NULL
+        WITH n,
+        reduce(dot = 0.0, i IN range(0, size(n.embedding)-1) |
+            dot + n.embedding[i] * $q[i]
+        ) /
+        (
+            sqrt(reduce(norm_n = 0.0, i IN range(0, size(n.embedding)-1) |
+            norm_n + n.embedding[i] * n.embedding[i]
+            )) *
+            sqrt(reduce(norm_q = 0.0, i IN range(0, size($q)-1) |
+            norm_q + $q[i] * $q[i]
+            ))
+        ) AS score
         WHERE score > 0
-        RETURN n, score
+        RETURN elementId(n) AS node_id, n, score
         ORDER BY score DESC
         LIMIT $k
         '''
+
         with self.driver.session() as session:
             base = session.run(vec_query, q=query_embedding, k=top_k).data()
+        
         results = []
         for record in base:
             node = record['n']
             score = record['score']
+            node_id = record['node_id']  # Get the ID from the query result
             results.append({
-                'id': node.id,
-                'data': dict(node),
-                'score': score
+            'id': node_id,  # Use the ID returned from the query
+            'data': node,   # The node is already a dictionary
+            'score': score
             })
+            
         # 2. graph expansion
         graph_query = '''
         MATCH (n)-[r:SIMILAR_TO]->(nbr)
-        WHERE id(n) = $node_id
-        RETURN nbr, r.weight AS score
+        WHERE elementId(n) = $node_id
+        RETURN elementId(nbr) AS nbr_id, nbr, r.weight AS score
         ORDER BY score DESC
         LIMIT $m
         '''
+        
         for item in list(results):
             nbrs = self.driver.session().run(
                 graph_query,
@@ -95,12 +111,14 @@ class HybridRetriever:
             ).data()
             for rec in nbrs:
                 nbr = rec['nbr']
+                nbr_id = rec['nbr_id']  # Get the ID from the query result
                 weight = rec['score']
                 results.append({
-                    'id': nbr.id,
-                    'data': dict(nbr),
+                    'id': nbr_id,       # Use the ID returned from the query
+                    'data': nbr,        # The node is already a dictionary
                     'score': weight
                 })
+
         # 3. rerank and dedupe
         # average scores if duplicates
         merged = {}
