@@ -1,0 +1,61 @@
+📌 Streszczenie tekstu na podstawie instrukcji: 'Przedstaw kluczowe informacje z tekstu.'
+
+18. Rys. 4. Tarcza kodowa: a) schemat budowy; b) wycinek tarczy l- tarcza, 2 - źródło światła, i - przysłona. 4 - zestaw fotoelementów, 5- zedaw sygnałów wyjściowych.
+
+Pierścień najbliższy środka tarczy podzielony jest na dwie części. Następny pierŚcie Śród zawieraję dwukrotnie wi’cej segmentów niż poprzedni.
+
+Pomiary sił i odkształceń można mierzyć po uprzednim jej skompensowaniu. Siły sprężysto- ści lub siły wytwarzane przez układy elektromagnetyczne, albo pneumatyczne.
+
+Dokładność dynamometrów sprężynowych nie powinna przekraczać 1%. Zakres pomiaru siły wynosi do 200 kN. Bezpośrednie przetwarzanie sił na sygnał elektryczny.
+
+Jest to czujnik transformatorowy, w którym uzwojenia pierwotne i wtórne są umieszczone. Przyłożenie siły F powoduje, że przenikalność magnetyczna w kierunku zgodnym z kierunksiem działania siłY.
+
+Czujniki magnetosprężyste dławikowe pracują z reguły w układach mostków prądu przemiennego. Stosowane są one do pomiaru sił w zakresie ok. 4-109 N oraz do pomaru ciśnień w. 5*10^7 Pa.
+
+Drut poddany działaniu siły F odkształca się zwiększając swoją długość O A/ i zmniejszajt swój przekrój o AS. Zjawisko to, zwane piezo- rezystancją, jest pomijalnie małe dla metali.
+
+Wykonany tensometr jest naklejany na podlegający odkształceniom przedmiot. Zgodnie z instrukcją: Przedstaw kluczowe informacje z tekstu.
+
+ Typowe tensometry metaliczne mają bazę długości 1 -i-20 mm, rezystancję — kilkadziesiąt do kilkuset omów, prąd dopusz- czalny. Przykłady tensometrów fo- liowych pokazano na rys. 4.22b.
+
+Tensometry półprzewodnikowe są dwóch rodzajów: monokrystaliczne, wykonywane z cienkich (o grubo- ściach ok. 0,1 -h0,2 mm) pasków wyci- nanych.
+
+Tensometry rezystancyjne pracują z reguły w układach mostków niezrównowa- żonych prądu przemiennego. Kształty tensometrów foliowych bizmutu, germanu lub tp. na elastycz- nym podłożu neutralnym.
+
+Electric induction motors with squirrel-cage rotors are most widely used in the industry. Maszyny Elektryczne Nr 84/2009 127 Sławomir Szymaniec Politechnika Opolska, Opole.
+
+The most popular are 6 kV motors, i.e. high-voltage motors that drive the most im- portant machine units. This results from many reasons, among others, from their affordable price and fairly high reliability.
+
+Rys. l. 1. Napęd wentylatora spalin w jednej z krajowych elektrociepłowni. Zgodnie z instrukcją: Przedstaw kluczowe informacje z tekstu. Należy również pamiętać o sto- sownych normach oraz przepisach.
+
+Maszyny przemysłowe tworzą coraz to bardziej złożone zespoły. Towarzyszy temu coraz inten- sywniejsza eksploatacja maszyn. Przedstaw kluczowe informacje z tekstu.
+
+Wzrost wydajności maszyn powinno towarzyszyć zwiększenie starań. Trzeba to pogodzić ze stale malejącą li-
+
+Eks- ploatację silników typu “planowo-zapobiegaw- czą” prowadzi się najczęściej w zakładach. Wskaźnik awaryjności wielu maszyn nie zmniejsza si�’ w wyniku wymiany określonych cz’Ści.
+
+Remont zapobiegawczy silników jest bardzo często technicznie i ekonomicznie nie- uzasadniony. 2% maszyn nowych lub w pełni wyremontowanych ulegnie awarii.
+
+Pomiar pręd- kości drgań w zakresie od 10-1000 Hz. Pomiary prowadzo- no systematycznie co 4 tygodnie, gdy stan sil- nika zaczął się pogarszać.
+
+Pomiary wykonywano dla bardzo zbliżonych do siebie warunków pracy silnika. Przedstawione na rysunkach 4 i 5 wielkości są zdefiniowane przez autora następująco.
+
+Rys. 5. Widmo detekcji obwiedni łożyska FAG NU 326, silnik o mocy 800 kW. Rys. 6. Fragmenty bieżni zewnętrznej i wew- nėtrznnej uszkodzonego Łosy.
+
+Eksploatacja silni- ków zależna od ich stanu technicznego. Strategia ta obok korzyści ekonomicznych typu: wydłużenie okresów międzyremontowych. Przedstaw kluczowe informacje z tekstu.
+
+Nieuchronne są przy tym koszty na or- ganizację i utrzymanie na dobrym poziomie służb diagnostycznych. Zgodnie z instrukcją: Przedstaw kluczowe informacje z tekstu.
+
+“Czas życia” to kilka lat, jeszcze rzadziej mniej niż 1 rok. Przemawia to za stosowa- niem eksploatacji maszyn zależnej od stanu ma- szyn.
+
+Wynika to przede wszystkim z poprawy jakości eksploatacji. Zmienia się statys- tyka przyczyn uszkodzeń silników WN. Przedstaw kluczowe informacje z tekstu.
+
+Statystyka awaryjności maszyn elektrycznych występuje bardzo rzadko. Zgodnie z instrukcją: Przedstaw kluczowe informacje z tekstu.
+
+W technicznym piśmiennictwie polskim na szczególną uwagę zasługuję prace dr hab. inż. Bronisława Draka, prof. in ż.PŚl [6] oraz mgr. Macieja Bernatta i dr inž. Jakuba Bernatta [1]. omawiane są przyczyny awarii silni- ków klatkowych WN.
+
+Ogólna licz- ba awarii silników WN w miarę upływu czasu maleje. Zgodnie z instrukcją: Przedstaw kluczowe informacje z tekstu. Autor uważa, że w większości krajo- wych zakładów przemysłowych.
+
+Eksploatacja silników w napędach przemysło- wych zależna od ich stanu technicznego. W gospodarce krajów zachod- nich jest strategią dominującą.
+
+Drak B.: Analiza przyczyn awarii silników po- trzeb własnych elektrowni blokowych. Zgodnie z instrukcją: Przedstaw kluczowe informacje z tekstu. WNT, Warszawa, 1965, 1997 [5]
