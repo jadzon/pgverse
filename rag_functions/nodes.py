@@ -54,7 +54,7 @@ def main():
     weight = SOURCE_TRUST_LEVELS.get(source_type, SOURCE_TRUST_LEVELS["unknown"])
 
     with driver.session() as session:
-        session.execute_write(save_embeddings, doc_id, chunk_files, embeddings, weight)
+        session.write_transaction(save_embeddings, doc_id, chunk_files, embeddings)
 
     print(f"Loaded and saved embeddings for document {doc_id} ({len(chunk_files)} chunks) with source '{source_type}' (trust level: {weight}).")
 
