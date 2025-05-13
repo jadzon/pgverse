@@ -4,7 +4,7 @@ import cohere
 
 # --- KONFIGURACJA ---
 cohere_api_key = "xSywHzTHlEcq51tOI8rpxwWwtDdQnio5H7pPnuxs"
-input_folder = "pgverse/data/output/chunks"
+input_folder = "data/output/chunks"
 embedding_folder = "embeddings"
 
 os.makedirs(embedding_folder, exist_ok=True)
