@@ -38,7 +38,7 @@ def main():
         embeddings.append(emb)
 
     with driver.session() as session:
-        session.write_transaction(save_embeddings, doc_id, chunk_files, embeddings)
+        session.execute_write(save_embeddings, doc_id, chunk_files, embeddings)
 
     print(f"Wczytano i zapisano embeddingi dla dokumentu {doc_id} ({len(chunk_files)} chunków).")
 
