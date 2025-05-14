@@ -27,4 +27,12 @@ if __name__ == "__main__":
     # 2) Uruchomienie OCR na wynikach detekcji
     run_script("wyodrebniony_tekst.py")
 
+
+
+     # 4) Rozpoznawanie wzorów LaTeX i zapis JSON/TeX
+    run_script("ocr_wzory_latex.py")
+
+
+    run_script("ocr_ekstrakcja_z_tabel_img2_paddle.py")
+
     print("Wszystkie skrypty wykonane pomyślnie.")
