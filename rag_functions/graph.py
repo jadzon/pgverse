@@ -5,7 +5,7 @@ class GraphBuilder:
     Builds a semantic knowledge graph in Neo4j by creating specialized relationships
     between different types of nodes (text and image) based on cosine similarity.
     """
-    def __init__(self, uri, user, password, similarity_threshold=0.7):
+    def __init__(self, uri, user, password, similarity_threshold=0.75):
         self.driver = GraphDatabase.driver(uri, auth=(user, password))
         self.threshold = similarity_threshold
 
@@ -325,7 +325,7 @@ class ImageRetriever:
                 norm_q + $q[i] * $q[i]
                 ))
             ) AS score
-            WHERE score > 0.5  // Zwiększony próg minimalny
+            WHERE score > 0.66  // Zwiększony próg minimalny
             RETURN elementId(n) AS node_id, n, score
             ORDER BY score DESC
             LIMIT $k

@@ -426,7 +426,7 @@ def process_images_folder(base_folder, api_key, neo4j_uri, neo4j_user, neo4j_pas
         neo4j_user: Nazwa użytkownika Neo4j
         neo4j_password: Hasło Neo4j
     """
-    images_folder = os.path.join(base_folder, 'images')
+    images_folder = os.path.normpath(os.path.join(base_folder, 'images'))
     
     # Sprawdź czy folder istnieje
     if not os.path.exists(images_folder):
@@ -505,9 +505,9 @@ if __name__ == "__main__":
     
     # Path to data file
     if args.file:
-        file_path = args.file
+        file_path = os.path.normpath(args.file)
     else:
-        file_path = os.path.join(os.path.dirname(__file__), "..", "data", "input1", "data1.txt")
+        file_path = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "data", "input1", "data1.txt"))
     
     # Wyświetl informacje o wybranym modelu
     print(f"Używany model LLM: {args.model}")
@@ -523,7 +523,8 @@ if __name__ == "__main__":
     save_chunks_to_neo4j(file_path, COHERE_API_KEY, NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD)
     
     # Przetwarzaj obrazy z podfolderu 'images'
-    process_images_folder(os.path.dirname(file_path), COHERE_API_KEY, NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD)
+    images_base_folder = os.path.normpath(os.path.dirname(file_path))
+    process_images_folder(images_base_folder, COHERE_API_KEY, NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD)
     
     
     build_knowledge_graph(NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD, similarity_threshold=0.75)
