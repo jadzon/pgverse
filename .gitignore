@@ -135,3 +135,7 @@ schematics/*.png
 *.jpg
 *.jpeg
 *.json
+!charts/charts_examples/*
+charts/outputs/*
+charts/results/*
+charts/data_analyzer/outputs/*

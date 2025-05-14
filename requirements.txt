@@ -24,5 +24,13 @@ pandas>=1.4.0  # Data analysis
 
 # System utilities
 psutil>=5.9.0  # For monitoring system resources
-
 imutils>=0.1.0  # Image utilities
+
+# OCR libraries
+paddleocr>=2.0.0  # Optional OCR library
+paddlepaddle>=2.0.0  # PaddlePaddle deep learning framework
+
+# Symbolic regression
+pysr>=0.11.0  # Python Symbolic Regression
+sympy>=1.8.0  # Symbolic mathematics (required by PySR)
+
