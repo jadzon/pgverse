@@ -16,7 +16,7 @@ except ImportError:
 
 from rag_functions.embedding_chunker import CohereTextChunker
 from rag_functions.embeddings import TextEmbedder
-from rag_functions.graph import GraphBuilder, HybridRetriever, GraphPruner
+from rag_functions.graph import GraphBuilder, HybridTextRetriever, GraphPruner
 
 def save_chunks_to_neo4j(file_path, api_key, neo4j_uri, neo4j_user, neo4j_password, max_tokens=500):
     """
@@ -155,7 +155,7 @@ def rag_query_bielik(query, neo4j_uri, neo4j_user, neo4j_password, model_name="s
         driver = GraphDatabase.driver(neo4j_uri, auth=(neo4j_user, neo4j_password))
         
         # Znajdź chunki za pomocą hybrydowego wyszukiwania
-        hybrid = HybridRetriever(neo4j_uri, neo4j_user, neo4j_password)
+        hybrid = HybridTextRetriever(neo4j_uri, neo4j_user, neo4j_password)
         # Musimy użyć embeddera dla zapytania
         embedder = TextEmbedder(COHERE_API_KEY)  # Użyj globalnej zmiennej
         query_emb = embedder.get_text_embedding(query).tolist()

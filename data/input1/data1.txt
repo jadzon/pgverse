@@ -219,3 +219,31 @@ Instytut Układów Elektromechanicznych
 i Elektroniki Przemysłowej.
 
 ul. Luboszycka 7, Opole
+
+Chmury to zjawiska atmosferyczne powstające wskutek kondensacji pary wodnej w chłodniejszych warstwach troposfery. Ich kształt, wysokość i struktura zależą od warunków termodynamicznych, wilgotności powietrza oraz ruchów pionowych mas powietrza. Oto kilka kluczowych informacji:
+
+Proces powstawania
+Gdy wilgotne powietrze unosi się (np. na skutek ogrzewania powierzchni ziemi lub wymuszonej orograficznie wspinaczki nad wzniesieniami), w wyniku adiabatycznego ochłodzenia jego temperatura spada do punktu rosy. Para wodna zaczyna przechodzić w postać ciekłą (kropelki wody) lub stałą (kryształki lodu), tworząc widoczne skupiska – chmury.
+
+Podział ze względu na wysokość
+
+Niskie (do ~2 km): np. stratus, stratocumulus – często tworzą rozległe, jednolite warstwy przynoszące mżawkę lub ciągły lekki deszcz.
+
+Średnie (2–6 km): np. altostratus, altocumulus – warstwowe lub ławicowe, mogą zwiastować zbliżający się front atmosferyczny.
+
+Wysokie (powyżej ~6 km): np. cirrus, cirrostratus – cienkie, zbudowane z kryształków lodu, często poprzedzają zmianę pogody lub fronty ciepłe.
+
+Rozciągające się pionowo: cumulonimbus – potężne, pionowe kominy chmur burzowych, odpowiedzialne za gwałtowne opady, wyładowania atmosferyczne i lokalne zjawiska ekstremalne.
+
+Znaczenie dla pogody i klimatu
+
+Odbijanie promieniowania słonecznego (efekt albedo): jasne, gęste chmury redukują ilość energii docierającej do powierzchni Ziemi.
+
+Izolacja termiczna: pokrywa chmur nocą ogranicza ucieczkę ciepła, podwyższając temperatury minimalne.
+
+Rozwój konwekcji: cumulusy i cumulonimbusy odgrywają kluczową rolę w transporcie ciepła i wilgoci w pionie, napędzając obiegi atmosferyczne.
+
+Estetyka i obserwacje
+Chmury od wieków fascynowały ludzi — od artystów malujących pejzaże po meteorologów badających ich dynamikę. Kształty cumulusów przypominają bańki waty, ławice altocumulusów układają się w symetryczne fale, a „niebo makreli” (altocumulus w formie luźnych ławic) tworzy niezwykłe wzory.
+
+Chmury to nie tylko element krajobrazu, ale także ważny składnik systemu klimatycznego i cyklu hydrologicznego, wpływający na pogodę lokalną i globalną.
