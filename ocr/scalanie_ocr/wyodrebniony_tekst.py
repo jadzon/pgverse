@@ -23,24 +23,6 @@ SUFFIX_RE = re.compile(r"_page0*(\d+)_result\.png$", re.I)
 
 pytesseract.pytesseract.tesseract_cmd = TESS_CMD
 
-
-def run_detection():
-    """
-    Uruchamia skrypt detekcji, który powinien wygenerować:
-      results/kX_przetwarzanie/.../*_result.png
-'detekcja_elementow.py' musi  lezec w tym samym folderze co ten plik.
-    """
-    this = Path(__file__).resolve()
-    det_script = this.parent / "detekcja_elementow.py"
-    if not det_script.exists():
-        print(f" Nie znaleziono skryptu : {det_script}")
-        sys.exit(1)
-    print(f" Uruchamiam : {det_script.name} …")
-    # to samo środowisko Python
-    subprocess.check_call([sys.executable, str(det_script)])
-    print("1 czesc zakończona.\n")
-
-
 def ocr_page(img_path: Path) -> str:
 
     txt = pytesseract.image_to_string(Image.open(img_path), config=TESS_CFG)
@@ -76,20 +58,45 @@ def ocr_all(root: Path):
         print(f"Folder nie istnieje: {root}")
         sys.exit(1)
 
-    books = sorted(root.glob("k*_przetwarzanie"))
+    books = sorted([d for d in root.iterdir() if d.is_dir()])
     if not books:
-        print(f"  Nie znaleziono katalogów k*_przetwarzanie w {root}")
+        print(f"  Nie znaleziono żadnych katalogów z książkami w {root}")
         return
 
     for b in books:
-        ocr_book(b)
+        det_text = b / "detekcje" / "tekst"
+        if not det_text.exists():
+            print(f"  Brak detekcji w {det_text}, pomijam.")
+            continue
 
+        # przygotuj output
+        out_text = b / "rezultaty" / "tekst"
+        out_text.mkdir(parents=True, exist_ok=True)
+
+        # pobierz i posortuj pliki png
+        pngs = sorted(det_text.glob("*_result.png"),
+                      key=lambda p: int(SUFFIX_RE.search(p.name).group(1)))
+        lines = []
+        for idx, png in enumerate(pngs, 1):
+            txt = ocr_page(png)
+            print(f"[{b.name}] strona {idx}: {txt[:60]!r}")
+            if txt:
+                lines.append(txt)
+            # opcjonalnie: zapis pojedynczy
+            (out_text / f"{b.name}_page{idx}.txt")\
+                 .write_text(txt, encoding="utf-8")
+
+        # scalony plik
+        if lines:
+            merged = "\n\n".join(lines)
+            (b / "rezultaty" / f"{b.name}.txt")\
+                .write_text(merged, encoding="utf-8")
+            print(f"  Zapisano OCR: {b/'rezultaty'/f'{b.name}.txt'}\n")
+        else:
+            print("  Nic do zapisania\n")
 
 if __name__ == "__main__":
-    # 1
-    run_detection()
-
-    # 2) oCR w katalogu wyników 'results'
-    root_dir = Path(sys.argv[1] if len(sys.argv) >= 2 else "results")
+   
+    root_dir = Path(sys.argv[1] if len(sys.argv) >= 2 else "ksiazki")
     print(" OCR \n")
     ocr_all(root_dir)

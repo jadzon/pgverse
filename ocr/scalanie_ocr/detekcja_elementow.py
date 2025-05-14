@@ -170,6 +170,8 @@ def process_image(image: Image.Image,
     wzory_dir   = os.path.join(results_dir, "wzory")
     tables_dir  = os.path.join(results_dir, "tabele")
     figures_dir = os.path.join(results_dir, "figury")
+    tekst_dir = os.path.join(results_dir, "tekst")
+    os.makedirs(tekst_dir, exist_ok=True)
     os.makedirs(wzory_dir, exist_ok=True)
     os.makedirs(tables_dir, exist_ok=True)
     os.makedirs(figures_dir, exist_ok=True)
@@ -248,13 +250,14 @@ def process_image(image: Image.Image,
             ax.add_patch(rect)
             ax.text(x1, y1, label, color="red", fontsize=12,
                     bbox=dict(facecolor="yellow", alpha=0.5))
-
+    
+    ax.axis('off')
     result_name = f"{output_prefix}_page{page_idx}_result.png"
-    result_path = os.path.join(results_dir, result_name)
-    plt.title(f"Wynik dla {output_prefix} (strona {page_idx})")
+    result_path = os.path.join(tekst_dir, result_name)
+    
     plt.savefig(result_path)
     plt.close(fig)
-    print(f"Zapisano wynikowy obraz: {result_name}")
+    print(f"Zapisano wynikowy obraz w katalogu 'tekst': {result_name}")
 
 
 
@@ -275,7 +278,7 @@ def main():
         return
 
     # 2. Utworzenie katalogu wyników
-    results_dir = "results"
+    results_dir = "ksiazki"
     os.makedirs(results_dir, exist_ok=True)
 
     for selected_file in selected_files:
@@ -286,15 +289,25 @@ def main():
         pages = convert_from_path(selected_file, dpi=300)
 
 
-        book_dir = os.path.join(results_dir, f"{output_prefix}_przetwarzanie")
+        book_dir = os.path.join(results_dir, output_prefix)
         os.makedirs(book_dir, exist_ok=True)
 
+        # dodatkowy, pusty folder dla kolejnych etapów
+        detekcje_dir = os.path.join(book_dir, "detekcje")
+        os.makedirs(detekcje_dir, exist_ok=True)
+
+        rezultaty_dir = os.path.join(book_dir, "rezultaty")
+        os.makedirs(rezultaty_dir, exist_ok=True)
+
+        for d in (detekcje_dir, rezultaty_dir):
+            for sub in ("figury","tabele","wzory","tekst"):
+                os.makedirs(os.path.join(d, sub), exist_ok=True)
 
         with ThreadPoolExecutor(max_workers=2) as exe:
             futures = {exe.submit(process_image,
                                   page,
                                   output_prefix,
-                                  book_dir,  # ← tu zamiast results_dir
+                                  detekcje_dir,
                                   idx): idx
                        for idx, page in enumerate(pages, start=1)}
 
