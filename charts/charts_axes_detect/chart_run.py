@@ -4,16 +4,16 @@ import os
 import sys
 from pathlib import Path
 
-from chart_preprocessing import preprocess_for_small_text
-from small_text_ocr import detect_text_combined
-from run_text_extraction import run_chart_text_extraction, format_results_to_json, annotate_image
-from axes_detection import process_results_for_axes, process_image_for_axes
-from axes_interpretation import process_axes_interpretation
+from .chart_preprocessing import preprocess_for_small_text
+from .small_text_ocr import detect_text_combined
+from .run_text_extraction import run_chart_text_extraction, format_results_to_json, annotate_image
+from .axes_detection import process_results_for_axes, process_image_for_axes
+from .axes_interpretation import process_axes_interpretation
 
 # Konfiguracja - ustawienia domyślne
 CONFIG = {
     # Katalogi
-    "input_directory": "charts_examples",
+    "input_directory": "../charts_examples",
     "output_directory": "results",
     "preprocessed_directory": "preprocessed_charts",
     
@@ -151,10 +151,7 @@ def process_single_file(file_path, output_dir, config):
     else:
         print(f"  Nie wykryto żadnego tekstu w {file_path}")
     
-    return {
-        'text': json_data,
-        'axes': axes_data
-    }
+    return interpretation,axes_data
 
 def main():
     """Główna funkcja programu"""

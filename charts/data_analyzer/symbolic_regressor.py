@@ -57,6 +57,7 @@ class SymbolicRegressor:
     def plot(self):
         if not self.fitted:
             raise ValueError("Model nie został dopasowany.")
+        
         y_pred = self.predict(self.X)
 
         plt.scatter(self.X, self.y, label="Punkty rzeczywiste", alpha=0.5)

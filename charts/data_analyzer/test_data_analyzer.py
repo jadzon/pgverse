@@ -1,5 +1,6 @@
 import numpy as np
-from model.symbolic_regressor import SymbolicRegressor
+from charts.data_analyzer.symbolic_regressor import SymbolicRegressor
+
 
 if __name__ == "__main__":
     #0 – Przykład: sin(x) + x^2
