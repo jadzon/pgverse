@@ -2,6 +2,9 @@
 
 W folderze `scalanie_ocr` znajdują się rozwiązania dotyczące połączenia wyników detekcji poszczególnych elementów pliku wejściowego.
 # 
+## Pobierz model
+
+[Kliknij tutaj, aby pobrać model_final.pth](https://drive.google.com/drive/folders/19IaPp07gUZoRvYSguwfnpdY-5etiFplt)
 
 Połączono detekcję elementów graficznych, tabel i wzorów wraz z OCR tekstu.   
 W tym samym katalogu, obok `detekcja_elementow.py`, uruchom: python wyodrebniony_tekst.py
