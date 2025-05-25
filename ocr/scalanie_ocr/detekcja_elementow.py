@@ -15,7 +15,7 @@ import cv2
 import numpy as np
 from pdf2image import convert_from_path
 from pix2text import Pix2Text
-from PIL import Image
+from PIL import Image,ImageDraw, ImageFont
 import onnxruntime as ort
 import json
 import time
@@ -216,31 +216,63 @@ def process_image(image: Image.Image,
 
     # 8. Zapis cropów z oryginału i wklejanie białego tła
     count_table = count_fig = count_formula = 0
+    crop_filenames = {}  # (bbox,label) -> fn
+    count_table = count_fig = count_formula = 0
+
     for bbox, label in final_detections:
         x1, y1, x2, y2 = map(int, bbox)
         w, h = x2 - x1, y2 - y1
-        # zapis z orig
         crop = orig.crop((x1, y1, x2, y2))
+
         if label == "table":
             count_table += 1
             fn = f"{output_prefix}_page{page_idx}_table{count_table}.png"
             crop.save(os.path.join(tables_dir, fn))
+
         elif label == "figure":
             count_fig += 1
             fn = f"{output_prefix}_page{page_idx}_figure{count_fig}.png"
             crop.save(os.path.join(figures_dir, fn))
-        else:
-            count_formula += 1
-            fn = f"{output_prefix}_page{page_idx}_formula_{count_formula}.png"
-            crop.save(os.path.join(wzory_dir, fn))
-        print(f"Zapisano {label}: {fn}")
-        # wklej białe tło
-        white = Image.new("RGB", (w, h), (255, 255, 255))
-        image.paste(white, (x1, y1))
 
-    # 9. Rysowanie i zapis wynikowego obrazu
+        else:  # formula
+            count_formula += 1
+            fn = f"{output_prefix}_page{page_idx}_formula{count_formula}.png"
+            crop.save(os.path.join(wzory_dir, fn))
+
+        print(f"Zapisano {label}: {fn}")
+        crop_filenames[(x1, y1, x2, y2, label)] = fn  # ← zapamiętaj nazwę
+
+        # biały prostokąt z podpisem na środku
+        white = Image.new("RGB", (w, h), "white")
+        draw = ImageDraw.Draw(white)
+
+
+        try:
+            font = ImageFont.truetype("arial.ttf", 60)  # jeśli Arial jest w systemie
+        except OSError:
+            # fallback – pewna czcionka wbudowana, też 32 px
+            font = ImageFont.load_default(size=60)
+        # ----------------------------------------------
+
+        # relatywny path względem katalogu książki:
+        if label == "figure":
+            rel_path = f"figury/{fn}"
+        elif label == "table":
+            rel_path = f"tabele/{fn}"
+        else:  # formula
+            rel_path = f"wzory/{fn}"
+
+        # wyśrodkuj napis
+        bbox_txt = draw.textbbox((0, 0), rel_path, font=font)  # (x0,y0,x1,y1)
+        tw, th = bbox_txt[2] - bbox_txt[0], bbox_txt[3] - bbox_txt[1]
+        draw.text(((w - tw) / 2, (h - th) / 2), rel_path,
+                  fill="black", font=font)
+
+        image.paste(white, (x1, y1))
+    # 9. Podglądowy rysunek
     fig, ax = plt.subplots(1, figsize=(12, 12))
     ax.imshow(image)
+
     for bbox, label in final_detections:
         x1, y1, x2, y2 = map(int, bbox)
         w, h = x2 - x1, y2 - y1
@@ -248,16 +280,21 @@ def process_image(image: Image.Image,
             rect = patches.Rectangle((x1, y1), w, h,
                                      linewidth=2, edgecolor="red", facecolor="none")
             ax.add_patch(rect)
-            ax.text(x1, y1, label, color="red", fontsize=12,
-                    bbox=dict(facecolor="yellow", alpha=0.5))
-    
+
+            # dobierz właściwą nazwę pliku dla tego bboxa
+            text_to_show = crop_filenames.get((x1, y1, x2, y2, label), label)
+
+           # cx, cy = x1 + w / 2, y1 + h / 2
+            #ax.text(cx, cy, text_to_show,
+             #       ha="center", va="center",
+              #      color="black", fontsize=10,
+               #     bbox=dict(facecolor="white", alpha=0.5))
+
     ax.axis('off')
     result_name = f"{output_prefix}_page{page_idx}_result.png"
-    result_path = os.path.join(tekst_dir, result_name)
-    
-    plt.savefig(result_path)
+    plt.savefig(os.path.join(tekst_dir, result_name), bbox_inches="tight")
     plt.close(fig)
-    print(f"Zapisano wynikowy obraz w katalogu 'tekst': {result_name}")
+    print("Zapisano wynikowy obraz w katalogu 'tekst':", result_name)
 
 
 
@@ -267,7 +304,7 @@ def main():
 
     # 1. Przygotuj listę k1.pdf...k10.pdf
     selected_files = []
-    for i in range(1, 11):
+    for i in range(1,12):
         fn = f"k{i}.pdf"
         if os.path.isfile(fn):
             selected_files.append(fn)

@@ -23,11 +23,19 @@ SUFFIX_RE = re.compile(r"_page0*(\d+)_result\.png$", re.I)
 
 pytesseract.pytesseract.tesseract_cmd = TESS_CMD
 
+
 def ocr_page(img_path: Path) -> str:
-
     txt = pytesseract.image_to_string(Image.open(img_path), config=TESS_CFG)
-    return txt.strip()
 
+    # naprawa klamerek, gdy OCR ich nie przeczytał
+    fixed_lines = []
+    for line in txt.splitlines():
+        line_strip = line.strip().lower()
+        if line_strip.startswith(("figury/", "tabele/", "wzory/")):
+            line = "{{" + line.strip() + "}}"
+        fixed_lines.append(line)
+
+    return "\n".join(fixed_lines).strip()
 
 def ocr_book(book_dir: Path):
    #Robi OCR wszystkich *_result.png w katalogu i zapisuje kx.txt.
@@ -96,7 +104,7 @@ def ocr_all(root: Path):
             print("  Nic do zapisania\n")
 
 if __name__ == "__main__":
-   
+
     root_dir = Path(sys.argv[1] if len(sys.argv) >= 2 else "ksiazki")
     print(" OCR \n")
     ocr_all(root_dir)
