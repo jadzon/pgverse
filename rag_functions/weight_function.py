@@ -24,7 +24,6 @@ class HybridWeightFunction:
         self.embedding_weight = embedding_weight
         self.source_weight = source_weight
         
-        # Domyślne poziomy zaufania dla różnych typów źródeł
         self.source_trust_levels = source_trust_levels or {
             "wikipedia": 0.85,
             "książka": 0.9,
@@ -33,7 +32,7 @@ class HybridWeightFunction:
             "forum": 0.3,
             "social_media": 0.2,
             "news": 0.6,
-            "unknown": 0.4  # Domyślny poziom dla nieznanego źródła
+            "unknown": 0.4
         }
     
     def get_source_trust(self, source_type: str) -> float:

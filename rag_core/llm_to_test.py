@@ -7,16 +7,10 @@ import threading
 import time
 import argparse
 import torch
-
-# Import additional libraries for Bielik model
-try:
-    from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, TextStreamer
-except ImportError:
-    print("Transformers library not found. Install it using: pip install transformers")
-
+from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, TextStreamer
 from rag_functions.embedding_chunker import CohereTextChunker
 from rag_functions.embeddings import TextEmbedder
-from rag_functions.graph import GraphBuilder, HybridTextRetriever, GraphPruner
+from rag_functions.graph import Neo4jConnector, TextGraphBuilder, HybridTextRetriever, ImageRetriever, GraphPruner
 
 def save_chunks_to_neo4j(file_path, api_key, neo4j_uri, neo4j_user, neo4j_password, max_tokens=500):
     """
@@ -34,8 +28,9 @@ def save_chunks_to_neo4j(file_path, api_key, neo4j_uri, neo4j_user, neo4j_passwo
     chunker = CohereTextChunker(api_key)
     embedder = TextEmbedder(api_key)
     
-    # Connect to Neo4j
-    driver = GraphDatabase.driver(neo4j_uri, auth=(neo4j_user, neo4j_password))
+    # Connect to Neo4j using new graph system
+    connector = Neo4jConnector(neo4j_uri, neo4j_user, neo4j_password)
+    text_graph = TextGraphBuilder(connector, similarity_threshold=0.7)
     
     # Read and chunk the text
     print(f"Chunking text from {file_path}...")
@@ -44,40 +39,30 @@ def save_chunks_to_neo4j(file_path, api_key, neo4j_uri, neo4j_user, neo4j_passwo
     
     # Create and save embeddings for each chunk
     print("Generating embeddings and saving to Neo4j...")
-    with driver.session() as session:
-        # Create constraint for TextChunk nodes if it doesn't exist
-        session.run("CREATE CONSTRAINT TextChunk_id IF NOT EXISTS FOR (n:TextChunk) REQUIRE n.id IS UNIQUE")
-        for i, chunk in enumerate(chunks):
-            # Generate embedding
-            embedding = embedder.get_text_embedding(chunk).tolist()
-            
-            # Create a unique ID for the chunk
-            chunk_id = f"chunk_{os.path.basename(file_path)}_{i}"
-            
-            # Save to Neo4j
-            session.run("""
-                MERGE (c:TextChunk {id: $id})
-                SET c.text = $text,
-                    c.embedding = $embedding,
-                    c.source = $source,
-                    c.timestamp = timestamp()
-                """,
-                id=chunk_id,
-                text=chunk,
-                embedding=embedding,
-                source=file_path
-            )
-            
-            if (i+1) % 10 == 0:
-                print(f"Saved {i+1}/{len(chunks)} chunks")
+    with connector.get_driver().session() as session:
+        # Create constraint for Chunk nodes if it doesn't exist
+        session.run("CREATE CONSTRAINT Chunk_id IF NOT EXISTS FOR (n:Chunk) REQUIRE n.id IS UNIQUE")
+        
+    for i, chunk in enumerate(chunks):
+        # Generate embedding
+        embedding = embedder.get_text_embedding(chunk).tolist()
+        
+        # Create a unique ID for the chunk
+        chunk_id = f"chunk_{os.path.basename(file_path)}_{i}"
+        
+        # Save to Neo4j using TextGraphBuilder (nowy format Chunk)
+        text_graph.insert_node(chunk_id, 'text', chunk, embedding, file_path)
+        
+        if (i+1) % 10 == 0:
+            print(f"Saved {i+1}/{len(chunks)} chunks")
     
     # Build relationships between chunks
     print("Creating relationships between similar chunks...")
-    graph_builder = GraphBuilder(neo4j_uri, neo4j_user, neo4j_password, similarity_threshold=0.7)
-    graph_builder.create_relationships()
-    graph_builder.close()
+    text_graph.create_text_relations()
     
-    driver.close()
+    # Close connections
+    text_graph.close()
+    connector.close()
     print("Processing complete!")
 
 def rag_query_cohere(query, api_key, neo4j_uri, neo4j_user, neo4j_password, top_k=3):
@@ -86,22 +71,19 @@ def rag_query_cohere(query, api_key, neo4j_uri, neo4j_user, neo4j_password, top_
     i generuje odpowiedź za pomocą Cohere Chat.
     """
     co = cohere.Client(api_key)
-    # 1. Embed zapytanie używając TextEmbedder, żeby mieć tę samą liczbę wymiarów
+    # 1. Embed zapytanie używając TextEmbedder
     embedder = TextEmbedder(api_key)
     query_emb = embedder.get_text_embedding(query).tolist()
 
-    # 2. Pobierz top_k najbardziej podobnych chunków z Neo4j
-    driver = GraphDatabase.driver(neo4j_uri, auth=(neo4j_user, neo4j_password))
-    with driver.session() as session:
-        result = session.run("""
-            MATCH (c:TextChunk)
-            WITH c, vector.similarity.cosine(c.embedding, $query_emb) AS score
-            RETURN c.text AS text, score
-            ORDER BY score DESC
-            LIMIT $top_k
-        """, query_emb=query_emb, top_k=top_k)
-        contexts = [record["text"] for record in result]
-    driver.close()
+    # 2. Pobierz top_k najbardziej podobnych chunków z Neo4j używając HybridTextRetriever
+    connector = Neo4jConnector(neo4j_uri, neo4j_user, neo4j_password)
+    retriever = HybridTextRetriever(connector)
+    results = retriever.search_by_text(query_emb, top_k=top_k, use_relations=True)
+    retriever.close()
+    connector.close()
+    
+    # Pobierz teksty z wyników
+    contexts = [result['data']['text'] for result in results]
 
     # 3. Zbuduj prompt i wywołaj LLM - z ograniczonym kontekstem
     limited_context = []
@@ -152,16 +134,15 @@ def rag_query_bielik(query, neo4j_uri, neo4j_user, neo4j_password, model_name="s
         
         # 2. Pobierz podobne chunki z Neo4j
         # Ponieważ Bielik nie ma własnych embedingów, używamy Cohere API
-        driver = GraphDatabase.driver(neo4j_uri, auth=(neo4j_user, neo4j_password))
-        
-        # Znajdź chunki za pomocą hybrydowego wyszukiwania
-        hybrid = HybridTextRetriever(neo4j_uri, neo4j_user, neo4j_password)
-        # Musimy użyć embeddera dla zapytania
         embedder = TextEmbedder(COHERE_API_KEY)  # Użyj globalnej zmiennej
         query_emb = embedder.get_text_embedding(query).tolist()
         
-        results = hybrid.retrieve(query_emb, top_k=top_k)
-        hybrid.close()
+        # Użyj HybridTextRetriever
+        connector = Neo4jConnector(neo4j_uri, neo4j_user, neo4j_password)
+        retriever = HybridTextRetriever(connector)
+        results = retriever.search_by_text(query_emb, top_k=top_k, use_relations=True)
+        retriever.close()
+        connector.close()
         
         # Pobierz teksty z wyników
         contexts = [result['data'].get('text', '') for result in results if 'text' in result['data']]
@@ -216,7 +197,8 @@ def run_graph_maintenance(neo4j_uri, neo4j_user, neo4j_password, interval_hours=
     """
     Uruchamia okresową konserwację grafu w tle.
     """
-    pruner = GraphPruner(neo4j_uri, neo4j_user, neo4j_password)
+    connector = Neo4jConnector(neo4j_uri, neo4j_user, neo4j_password)
+    pruner = GraphPruner(connector)
     
     def maintenance_job():
         while True:
