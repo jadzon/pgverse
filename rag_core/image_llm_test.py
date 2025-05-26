@@ -13,7 +13,7 @@ from rag_functions.embedding_chunker import CohereTextChunker
 from rag_functions.embeddings import TextEmbedder, ImageEmbedder, CLIPEmbedder
 from rag_functions.graph import (
     Neo4jConnector, TextGraphBuilder, HybridTextRetriever, 
-    ImageRetriever, GraphPruner
+    ImageRetriever, GraphPruner, LearningPatternTracker
 )
 from rag_functions.cleaner import full_database_cleanup
 
@@ -107,11 +107,12 @@ def save_chunks_to_neo4j(file_path, api_key, neo4j_uri, neo4j_user, neo4j_passwo
         
         print(f"Podsumowanie: zapisano {saved_count}/{len(chunks)} chunków, błędów: {failed_count}")
     finally:
+        graph_builder.close()
         connector.close()
 
-def rag_query_cohere(query, api_key, neo4j_uri, neo4j_user, neo4j_password, top_k=3):
+def rag_query_cohere_with_learning(query, api_key, neo4j_uri, neo4j_user, neo4j_password, top_k=3):
     """
-    Wykonuje retrieval z Neo4j na podstawie embeddingu zapytania,
+    Wykonuje retrieval z Neo4j na podstawie embeddingu zapytania z funkcjami uczenia się,
     wyszukuje pasujące obrazy i generuje odpowiedź za pomocą Cohere Chat.
     """
     co = cohere.Client(api_key)
@@ -119,14 +120,26 @@ def rag_query_cohere(query, api_key, neo4j_uri, neo4j_user, neo4j_password, top_
     embedder = CLIPEmbedder()
     query_emb = embedder.get_text_embedding(query).tolist()
 
-    # 2. Pobierz top_k najbardziej podobnych chunków tekstowych z Neo4j
+    # 2. Połącz z bazą i stwórz obiekty do uczenia się
     connector = Neo4jConnector(neo4j_uri, neo4j_user, neo4j_password)
+    graph_builder = TextGraphBuilder(connector, similarity_threshold=0.75)
     text_retriever = HybridTextRetriever(connector)
+    pattern_tracker = LearningPatternTracker(connector)
+    
+    # Przypisz graph_builder do retriever dla uczenia się
+    text_retriever.graph_builder = graph_builder
     
     try:
-        # Use HybridTextRetriever for text search
-        text_results = text_retriever.search_by_text(query_emb, top_k=top_k, score_threshold=0.25)
+        # Wyszukaj z uczeniem się
+        text_results = text_retriever.search_by_text_with_learning(query_emb, query, top_k, 0.25)
         contexts = [result['data']['text'] for result in text_results if 'text' in result['data']]
+        
+        # Zapisz sesję zapytania dla śledzenia wzorców
+        retrieved_node_ids = [result['data']['id'] for result in text_results if 'id' in result['data']]
+        pattern_tracker.record_query_session(query, retrieved_node_ids)
+        
+        # Dostosuj próg adaptacyjnie
+        graph_builder.adaptive_threshold_adjustment()
         
         # 2a. Wyszukaj obrazy podobne do zapytania
         image_retriever = ImageRetriever(connector)
@@ -149,7 +162,18 @@ def rag_query_cohere(query, api_key, neo4j_uri, neo4j_user, neo4j_password, top_
                     # Znajdź obrazy połączone z tekstem, który pasuje do zapytania
                     related_img_result = session.run("""
                     MATCH (t:Chunk {type: 'text'})-[:TEXT_ILLUSTRATED_BY]->(img:Chunk {type: 'image'})
-                    WITH t, img, vector.similarity.cosine(t.embedding, $query_emb) AS score
+                    WITH t, img, 
+                    reduce(dot = 0.0, i IN range(0, size(t.embedding)-1) |
+                        dot + t.embedding[i] * $query_emb[i]
+                    ) /
+                    (
+                        sqrt(reduce(norm_t = 0.0, i IN range(0, size(t.embedding)-1) |
+                            norm_t + t.embedding[i] * t.embedding[i]
+                        )) *
+                        sqrt(reduce(norm_q = 0.0, i IN range(0, size($query_emb)-1) |
+                            norm_q + $query_emb[i] * $query_emb[i]
+                        ))
+                    ) AS score
                     WHERE score > 0.4
                     RETURN img.path AS path, score
                     ORDER BY score DESC
@@ -221,15 +245,24 @@ def rag_query_cohere(query, api_key, neo4j_uri, neo4j_user, neo4j_password, top_
         else:
             full_response += "\n\nNie znaleziono pasujących obrazów."
         
+        # Wyświetl statystyki uczenia się
+        learning_stats = graph_builder.analyze_learning_patterns()
+        print(f"\n[UCZENIE SIĘ] Wzorce lokalnie: {learning_stats['usage_patterns_count']}")
+        print(f"[UCZENIE SIĘ] Próg podobieństwa: {learning_stats['current_threshold']:.3f}")
+        if learning_stats['node_statistics']['total_nodes'] > 0:
+            print(f"[UCZENIE SIĘ] Popularne węzły: {learning_stats['node_statistics']['popular_nodes']}")
+        
         return full_response, contexts, relevant_images
-    
+        
     finally:
         text_retriever.close()
+        pattern_tracker.close()
+        graph_builder.close()
         connector.close()
 
-def rag_query_bielik(query, neo4j_uri, neo4j_user, neo4j_password, model_name="speakleash/Bielik-11B-v2.3-Instruct", top_k=3):
+def rag_query_bielik_with_learning(query, neo4j_uri, neo4j_user, neo4j_password, model_name="speakleash/Bielik-11B-v2.3-Instruct", top_k=3):
     """
-    Wykonuje retrieval z Neo4j, wyszukuje pasujące obrazy 
+    Wykonuje retrieval z Neo4j z funkcjami uczenia się, wyszukuje pasujące obrazy 
     i generuje odpowiedź za pomocą modelu Bielik.
     """
     try:
@@ -247,20 +280,32 @@ def rag_query_bielik(query, neo4j_uri, neo4j_user, neo4j_password, model_name="s
         streamer = TextStreamer(tokenizer)
         print("Model załadowany")
         
-        # 2. Pobierz podobne chunki z Neo4j
+        # 2. Połącz z bazą i stwórz obiekty do uczenia się
         connector = Neo4jConnector(neo4j_uri, neo4j_user, neo4j_password)
-        
-        # Znajdź chunki za pomocą hybrydowego wyszukiwania
+        graph_builder = TextGraphBuilder(connector, similarity_threshold=0.75)
         hybrid = HybridTextRetriever(connector)
+        pattern_tracker = LearningPatternTracker(connector)
+        
+        # Przypisz graph_builder do retriever dla uczenia się
+        hybrid.graph_builder = graph_builder
+        
         # Musimy użyć embeddera dla zapytania
-        embedder = TextEmbedder(COHERE_API_KEY)  # Użyj globalnej zmiennej
+        embedder = CLIPEmbedder()
         query_emb = embedder.get_text_embedding(query).tolist()
         
         try:
-            results = hybrid.retrieve(query_emb, top_k=top_k)
+            # Wyszukaj z uczeniem się
+            results = hybrid.search_by_text_with_learning(query_emb, query, top_k, 0.0)
             
             # Pobierz teksty z wyników
             contexts = [result['data'].get('text', '') for result in results if 'text' in result['data']]
+            
+            # Zapisz sesję zapytania dla śledzenia wzorców
+            retrieved_node_ids = [result['data']['id'] for result in results if 'id' in result['data']]
+            pattern_tracker.record_query_session(query, retrieved_node_ids)
+            
+            # Dostosuj próg adaptacyjnie
+            graph_builder.adaptive_threshold_adjustment()
             
             # 2a. Wyszukaj obrazy podobne do zapytania
             image_retriever = ImageRetriever(connector)
@@ -328,10 +373,19 @@ def rag_query_bielik(query, neo4j_uri, neo4j_user, neo4j_password, model_name="s
                     image_details += f"{i}. {img['path']} (podobieństwo: {img['score']:.4f})\n"
                 generated_text += "\n" + image_details
             
+            # Wyświetl statystyki uczenia się
+            learning_stats = graph_builder.analyze_learning_patterns()
+            print(f"\n[UCZENIE SIĘ] Wzorce lokalnie: {learning_stats['usage_patterns_count']}")
+            print(f"[UCZENIE SIĘ] Próg podobieństwa: {learning_stats['current_threshold']:.3f}")
+            if learning_stats['node_statistics']['total_nodes'] > 0:
+                print(f"[UCZENIE SIĘ] Popularne węzły: {learning_stats['node_statistics']['popular_nodes']}")
+            
             return generated_text, contexts, relevant_images
         
         finally:
             hybrid.close()
+            pattern_tracker.close()
+            graph_builder.close()
             connector.close()
     
     except Exception as e:
@@ -339,18 +393,28 @@ def rag_query_bielik(query, neo4j_uri, neo4j_user, neo4j_password, model_name="s
         print("Upewnij się, że zainstalowano biblioteki: transformers, torch, bitsandbytes")
         return f"Błąd modelu: {str(e)}", [], []
 
-def run_graph_maintenance(neo4j_uri, neo4j_user, neo4j_password, interval_hours=24):
+def run_graph_maintenance_with_learning(neo4j_uri, neo4j_user, neo4j_password, interval_hours=24):
     """
-    Uruchamia okresową konserwację grafu w tle.
+    Uruchamia okresową konserwację grafu w tle z funkcjami uczenia się.
     """
     connector = Neo4jConnector(neo4j_uri, neo4j_user, neo4j_password)
     pruner = GraphPruner(connector)
     
     def maintenance_job():
         while True:
-            print("Uruchamianie konserwacji grafu...")
+            print("Uruchamianie konserwacji grafu z uczeniem się...")
             try:
+                # Uruchom konserwację z uczeniem się
                 pruner.run_maintenance()
+                
+                # Pobierz i wyświetl statystyki uczenia się
+                stats = pruner.get_learning_statistics()
+                print(f"Statystyki uczenia się po konserwacji:")
+                print(f"- Węzły tekstowe: {stats['node_statistics']['total_nodes']}")
+                print(f"- Relacje: {stats['relation_statistics']['total_relations']}")
+                print(f"- Silne relacje: {stats['relation_statistics']['strong_relations']}")
+                print(f"- Nauczone relacje: {stats['relation_statistics']['learned_relations']}")
+                
                 print("Konserwacja grafu zakończona.")
             except Exception as e:
                 print(f"Błąd podczas konserwacji grafu: {e}")
@@ -406,27 +470,30 @@ def process_images_folder(base_folder, api_key, neo4j_uri, neo4j_user, neo4j_pas
     
     print("Zakończono przetwarzanie wszystkich obrazów.")
 
-def build_knowledge_graph(neo4j_uri, neo4j_user, neo4j_password, similarity_threshold=0.85):
+def build_knowledge_graph_with_learning(neo4j_uri, neo4j_user, neo4j_password, similarity_threshold=0.75):
     """
-    Buduje graf wiedzy tworząc relacje między węzłami na podstawie podobieństwa.
+    Buduje graf wiedzy z funkcjami uczenia się, tworząc relacje między węzłami na podstawie podobieństwa.
     
     Args:
         neo4j_uri: URI do bazy danych Neo4j
         neo4j_user: Nazwa użytkownika Neo4j
         neo4j_password: Hasło Neo4j
-        similarity_threshold: Próg podobieństwa (zwiększony z 0.75 na 0.85)
+        similarity_threshold: Próg podobieństwa
     """
-    print("\nBudowanie grafu wiedzy i relacji semantycznych...")
+    print("\nBudowanie grafu wiedzy z funkcjami uczenia się...")
     print(f"Używany próg podobieństwa: {similarity_threshold}")
     
     connector = Neo4jConnector(neo4j_uri, neo4j_user, neo4j_password)
     graph_builder = TextGraphBuilder(connector, similarity_threshold)
     
     try:
-        # Tworzenie relacji między tekstami
+        # Tworzenie relacji między tekstami z funkcjami uczenia się
         graph_builder.create_text_relations()
         print("Utworzono relacje między węzłami:")
         print(" - SIMILAR_TO: połączenia między podobnymi fragmentami tekstu")
+        
+        # Utwórz klastry semantyczne
+        clusters = graph_builder.create_semantic_clusters()
         
         # Dodatkowo można dodać relacje między obrazami i tekstem
         with connector.get_driver().session() as session:
@@ -449,7 +516,7 @@ def build_knowledge_graph(neo4j_uri, neo4j_user, neo4j_password, similarity_thre
             ) AS sim
             WHERE sim >= $threshold
             MERGE (a)-[r:IMAGE_SIMILAR]->(b)
-            ON CREATE SET r.weight = sim, r.last_used = timestamp()
+            ON CREATE SET r.weight = sim, r.last_used = timestamp(), r.reinforcement_count = 0
             ON MATCH SET r.weight = sim, r.last_used = timestamp()
             """, threshold=similarity_threshold)
             
@@ -472,16 +539,23 @@ def build_knowledge_graph(neo4j_uri, neo4j_user, neo4j_password, similarity_thre
             ) AS sim
             WHERE sim >= $threshold
             MERGE (img)-[r:IMAGE_ILLUSTRATES]->(txt)
-            ON CREATE SET r.weight = sim, r.last_used = timestamp()
+            ON CREATE SET r.weight = sim, r.last_used = timestamp(), r.reinforcement_count = 0
             ON MATCH SET r.weight = sim, r.last_used = timestamp()
             MERGE (txt)-[r2:TEXT_ILLUSTRATED_BY]->(img)
-            ON CREATE SET r2.weight = sim, r2.last_used = timestamp()
-            ON MATCH SET r2.weight = sim, r.last_used = timestamp()
+            ON CREATE SET r2.weight = sim, r2.last_used = timestamp(), r2.reinforcement_count = 0
+            ON MATCH SET r2.weight = sim, r2.last_used = timestamp()
             """, threshold=similarity_threshold * 0.8)  # Niższy próg dla relacji obraz-tekst
         
         print(" - IMAGE_SIMILAR: połączenia między podobnymi obrazami")
         print(" - IMAGE_ILLUSTRATES: połączenia od obrazów do powiązanego tekstu")
         print(" - TEXT_ILLUSTRATED_BY: połączenia od tekstu do powiązanych obrazów")
+        
+        # Wyświetl początkowe statystyki uczenia się
+        learning_stats = graph_builder.analyze_learning_patterns()
+        print(f"\n[GRAF WIEDZY] Statystyki początkowe:")
+        print(f"- Węzły tekstowe: {learning_stats['node_statistics']['total_nodes']}")
+        print(f"- Relacje: {learning_stats['relation_statistics']['total_relations']}")
+        print(f"- Silne relacje: {learning_stats['relation_statistics']['strong_relations']}")
         
     except Exception as e:
         print(f"Błąd podczas budowania grafu wiedzy: {e}")
@@ -491,7 +565,7 @@ def build_knowledge_graph(neo4j_uri, neo4j_user, neo4j_password, similarity_thre
 
 if __name__ == "__main__":
     # Parsowanie argumentów wiersza poleceń
-    parser = argparse.ArgumentParser(description="RAG System z Neo4j i wyborem modelu LLM")
+    parser = argparse.ArgumentParser(description="RAG System z Neo4j i uczeniem się grafu")
     parser.add_argument('--model', type=str, choices=['cohere', 'bielik'], default='cohere',
                       help='Model LLM do użycia (cohere lub bielik)')
     parser.add_argument('--file', type=str, default=None,
@@ -520,11 +594,12 @@ if __name__ == "__main__":
     
     # Wyświetl informacje o wybranym modelu
     print(f"Używany model LLM: {args.model}")
+    print("System z samouczącym się grafem (bez rekomendacji i feedbacku)")
     if args.model == 'bielik':
         print("Uwaga: Model Bielik wymaga dodatkowych bibliotek: transformers, torch, bitsandbytes")
     
-    # Uruchom konserwację grafu w tle (co 24 godziny)
-    maintenance_thread = run_graph_maintenance(NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD)
+    # Uruchom konserwację grafu w tle z funkcjami uczenia się (co 24 godziny)
+    maintenance_thread = run_graph_maintenance_with_learning(NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD)
     
     # Process the file
     save_chunks_to_neo4j(file_path, COHERE_API_KEY, NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD)
@@ -533,20 +608,29 @@ if __name__ == "__main__":
     images_base_folder = os.path.normpath(os.path.dirname(file_path))
     process_images_folder(images_base_folder, COHERE_API_KEY, NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD)
     
-    build_knowledge_graph(NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD, similarity_threshold=0.75)
+    # Buduj graf wiedzy z funkcjami uczenia się
+    build_knowledge_graph_with_learning(NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD, similarity_threshold=0.75)
     
-    # Interaktywny tryb zapytań
+    # Interaktywny tryb zapytań z uczeniem się
+    print("\n" + "=" * 60)
+    print("TRYB INTERAKTYWNY Z SAMOUCZĄCYM SIĘ GRAFEM")
+    print("=" * 60)
+    
+    query_count = 0
     while True:
-        query = input("\nZadaj pytanie dotyczące zapisanych treści (lub 'q' aby wyjść): ")
+        query = input(f"\n[Zapytanie #{query_count + 1}] Zadaj pytanie (lub 'q' aby wyjść): ")
         if query.lower() == 'q':
             break
         
-        # Wykonaj RAG w zależności od wybranego modelu
+        query_count += 1
+        print(f"\nPrzetwarzanie zapytania #{query_count} z uczeniem się...")
+        
+        # Wykonaj RAG z funkcjami uczenia się w zależności od wybranego modelu
         if args.model == 'cohere':
-            response_text, sources, images = rag_query_cohere(query, COHERE_API_KEY, NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD)
+            response_text, sources, images = rag_query_cohere_with_learning(query, COHERE_API_KEY, NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD)
             print("\nOdpowiedź Cohere:\n", response_text)
         else:  # bielik
-            response_text, sources, images = rag_query_bielik(query, NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD)
+            response_text, sources, images = rag_query_bielik_with_learning(query, NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD)
             print("\nOdpowiedź Bielik:\n", response_text)
             
         # Wyświetl źródła kontekstu
@@ -559,3 +643,7 @@ if __name__ == "__main__":
             print("\nZnalezione powiązane obrazy:")
             for idx, img in enumerate(images, 1):
                 print(f"{idx}. {img['path']} (podobieństwo: {img['score']:.4f})")
+        
+        print(f"\n[PODSUMOWANIE] Zapytanie #{query_count} przetworzone. Graf uczy się z każdym zapytaniem!")
+    
+    print(f"\nZakończono sesję. Przetworzono {query_count} zapytań z funkcjami uczenia się.")
