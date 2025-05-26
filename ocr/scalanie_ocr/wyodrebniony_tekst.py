@@ -27,15 +27,36 @@ pytesseract.pytesseract.tesseract_cmd = TESS_CMD
 def ocr_page(img_path: Path) -> str:
     txt = pytesseract.image_to_string(Image.open(img_path), config=TESS_CFG)
 
-    # naprawa klamerek, gdy OCR ich nie przeczytał
     fixed_lines = []
     for line in txt.splitlines():
-        line_strip = line.strip().lower()
-        if line_strip.startswith(("figury/", "tabele/", "wzory/")):
-            line = "{{" + line.strip() + "}}"
+        raw = line.strip().lower()
+
+        if any(folder in raw for folder in ("figury", "tabele", "wzory")):
+            # 1. usuń śmieci - tylko a-z, 0-9, / _ . dozwolone
+            cleaned = re.sub(r"[^a-z0-9_./]", "", raw)
+
+            # 2. poprawy błędów OCR:
+            cleaned = cleaned.replace(".page", "_page")        # np. k1.page1 → k1_page1
+            cleaned = re.sub(r"\._", "_", cleaned)             # np. _._figure → _figure
+            cleaned = re.sub(r"\.(?=figure|table|formula)", "_", cleaned)  # .figure → _figure
+            cleaned = re.sub(r"\.(png.*)$", r".png", cleaned)  # .png1 → .png
+
+            # 3. literówki typu figurea / figurei → figure1
+            cleaned = re.sub(r"(figure|table|formula)[a-z]{1,2}\.png", r"\1_1.png", cleaned)
+
+            # 4. jeśli wygląda OK
+            if cleaned.endswith(".png") and "/" in cleaned:
+                line = f"<image/{cleaned}>"
+            else:
+                line = cleaned
+
         fixed_lines.append(line)
 
     return "\n".join(fixed_lines).strip()
+
+
+
+
 
 def ocr_book(book_dir: Path):
    #Robi OCR wszystkich *_result.png w katalogu i zapisuje kx.txt.

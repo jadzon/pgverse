@@ -248,11 +248,11 @@ def process_image(image: Image.Image,
 
 
         try:
-            font = ImageFont.truetype("arial.ttf", 60)  # jeśli Arial jest w systemie
+            font = ImageFont.truetype("arial.ttf", 55)  # jeśli Arial jest w systemie
         except OSError:
             # fallback – pewna czcionka wbudowana, też 32 px
-            font = ImageFont.load_default(size=60)
-        # ----------------------------------------------
+            font = ImageFont.load_default(size=55)
+
 
         # relatywny path względem katalogu książki:
         if label == "figure":
@@ -262,13 +262,27 @@ def process_image(image: Image.Image,
         else:  # formula
             rel_path = f"wzory/{fn}"
 
-        # wyśrodkuj napis
-        bbox_txt = draw.textbbox((0, 0), rel_path, font=font)  # (x0,y0,x1,y1)
+        # --- DOPASUJ ROZMIAR PROSTOKĄTA DO TEKSTU ---
+        dummy_img = Image.new("RGB", (1, 1))
+        dummy_draw = ImageDraw.Draw(dummy_img)
+        bbox_txt = dummy_draw.textbbox((0, 0), rel_path, font=font)
         tw, th = bbox_txt[2] - bbox_txt[0], bbox_txt[3] - bbox_txt[1]
-        draw.text(((w - tw) / 2, (h - th) / 2), rel_path,
-                  fill="black", font=font)
 
-        image.paste(white, (x1, y1))
+        # powiększ prostokąt
+        pad = 20
+        W = max(w, tw + 2 * pad)
+        H = max(h, th + 2 * pad)
+
+        # nowy biały prostokąt
+        white = Image.new("RGB", (W, H), "white")
+        draw = ImageDraw.Draw(white)
+        draw.text(((W - tw) / 2, (H - th) / 2), rel_path, fill="black", font=font)
+
+        # wyśrodkuj względem bboxa i wklej
+        paste_x = x1 - (W - w) // 2
+        paste_y = y1 - (H - h) // 2
+        image.paste(white, (paste_x, paste_y))
+
     # 9. Podglądowy rysunek
     fig, ax = plt.subplots(1, figsize=(12, 12))
     ax.imshow(image)
@@ -277,18 +291,11 @@ def process_image(image: Image.Image,
         x1, y1, x2, y2 = map(int, bbox)
         w, h = x2 - x1, y2 - y1
         if label != "formula":
-            rect = patches.Rectangle((x1, y1), w, h,
-                                     linewidth=2, edgecolor="red", facecolor="none")
-            ax.add_patch(rect)
 
-            # dobierz właściwą nazwę pliku dla tego bboxa
+            
             text_to_show = crop_filenames.get((x1, y1, x2, y2, label), label)
 
-           # cx, cy = x1 + w / 2, y1 + h / 2
-            #ax.text(cx, cy, text_to_show,
-             #       ha="center", va="center",
-              #      color="black", fontsize=10,
-               #     bbox=dict(facecolor="white", alpha=0.5))
+
 
     ax.axis('off')
     result_name = f"{output_prefix}_page{page_idx}_result.png"
@@ -304,7 +311,7 @@ def main():
 
     # 1. Przygotuj listę k1.pdf...k10.pdf
     selected_files = []
-    for i in range(1,12):
+    for i in range(1,3):
         fn = f"k{i}.pdf"
         if os.path.isfile(fn):
             selected_files.append(fn)
