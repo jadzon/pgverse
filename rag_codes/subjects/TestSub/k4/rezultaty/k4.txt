@@ -1,0 +1,526 @@
+„Zeszyt Probemowe - Maszyny Elektryczne Nr 842009 127
+
+Slawomir Szymaniec
+Politechnika Opolska, Opole
+
+EKSPLOATACJA I DIAGNOSTYKA SILNIKÓW INDUKCYJNYCH
+TRÓJFAZOWYCH KLATKOWYCH W PRZEMYŚLE
+
+OPERATION AND DIAGNOSTICS OF THREE-PHASE SQUIRREL-CAGE
+INDUCTION MOTORS IN THE INDUSTRY
+
+„Abstract: Electric induction motors with squire-cage roors are most widely used in the industry a electric
+„machines driving oder devices. This resuls from many reason, among other, from their affordabie price and
+fily high relibiliy. The most popular are 6 kV motors, ie, kigh-votage motors hat that drive the mos im-
+pont machine units The article presents principles of operatiom of these motors in he industry and discusses
+
+methods of operation:
+operation until failure occurrence,
++ planned and preventive operation,
+
+- operiion dependent. on a machine condiion.
+
+"The paper demonsraes conditions of appropriate moor operation in tb industry. I also discusses the concept
+„o'*motr life” i industrial drives and types of their damages as well as damage staistcs.
+
+1. Wstęp
+W przemyśle jako napędy przemysłowe najczę-
+ściej stosowane są silniki elektryczne indukcyj-
+ne z wimikiem klatkowym. Wynika to z kilku
+przyczyn: między innymi z racji korzystnej ce-
+ny i stosunkowo dużej niezawodności. Szcze-
+gólne miejsce zajmują silniki na napięcie 6 kV
+— silniki wysokonapięciowe (WN), które stano-
+wią w większości napęd w najważniejszych ze-
+społach maszynowych - przykład rys. 1
+
+<image/figury/k4_page1_figure1.png>
+
+Ogólne zasady prawidłowej eksploatacji silni-
+ków” indukcyjnych trójfazowych klatkowych
+w szczególności silników WN podaje literatura,
+mp. [4,5,8=12]. Pozycje praktycznie najbar-
+dziej przydatne to wskazania producentów sil-
+ników zawarte w tzw. Dokumentacji Technicz-
+no-Ruchowej. Należy również pamiętać o sto-
+sownych normach oraz przepisach eksploatacji
+
+maszyn: elektrycznych podawanych przez od-
+powiednie instytuty, organizacje techniczne
+bądź właścicieli i użytkowników urządzeń. Ob-
+serwując od. wielu lat eksploatację silników
+elektrycznych w licznych krajowych zakładach
+przemysłowych autor widzi ogromną przydat-
+ność tych zasad oraz konieczność ciągłego
+ich uzupełniania i wzbogacania. Współcześnie
+w okresie stale rosnących wymagań dotyczą-
+cych wydajności oraz redukcji kosztów produk-
+<ji w przemyśle, koniecznością staje się wła-
+ściwa diagnostyka maszyn. Często uszkodzenia
+niewielkich elementów napędowych skutkują
+„znacznymi stratami wynikającymi 2 nieprzewi-
+dzianego zatrzymania procesu produkcyjnego
+oraz_nieplanowych prac remontowych. Diag-
+mostyka maszyn oraz monitorowanie paramet-
+rów ich pracy pozwala uniknąć skutków awarii,
+właściwie zaplanować okresy przeglądów i re-
+montów maszyn, oraz znacznie wydłużyć czas
+eksploatacji maszyn.
+
+2. Eksploatacja maszyn w przemyśle
+Maszyny przemysłowe tworzą coraz 1 bardziej
+złożone zespoły, towarzyszy temu coraz inien-
+sywniejsza ckspłoatacja maszyn często 24 go-
+dziny na dobę, czyli w ruchu ciągłym. Podsta-
+wowym zadaniem stawianym inżynierom jest
+<iągły wzrost wydajności maszyn. Wzrosiowi
+wydajności powinno towarzyszyć zwiększenie
+starań o zapewnienie pełnej sprawności urzą-
+dze. Trzeba to pogodzić ze stale malejącą li-
+
+128 Zeszyty Problemowe
+
+<zebnością personelu odpowiedzialnego za
+urzynanie ruchu i serwis maszyn. W ujęciu
+ogólnym silniki indukcyjne ójfazowe klat-
+kowe, podstawowe maszyny napędu przemy-
+słowogo, podobnie jak i inne maszyny można
+sksploatować na 3 sposoby [2, 3]
+1. eksploatacja do wystąpienia awari;
+2 oksplostacja planowo-zapobiegawcza;
+3. eksploatacja zależna od stanu maszyny.
+TTakie ujęcie zagadnienia eksploatacji silników
+określa. jednocześnie metody ich remontów
+Wyróżnia się w związku ztym:
+1. remont poawaryjny;
+2. remoni zapobiegawczy uwarunkowany okre-
+sem eksploatacji
+3. remont uwarunkowany stanem technicznym.
+Fksploaację silników typu „do. wystąpienia
+awari” prowadzi się najczęściej w zakładach,
+w których procesy technologiczne obsługują na-
+pędy 2 dużą liczbą silników malej i średniej
+„mocy, a każdy ważny proces technologiczny
+jest dodatkowo zabczpieczony silnikami zapa-
+sowymi. Silniki przy takim rodzaju eksploatacji
+pracują najczęściej do awarii Straty w produk-
+cji są wtedy stosunkowo niewielkie, bo silniki
+zapasowe zasępują te uszkodzone, jeżeli duże
+silniki nie mające rezerwy pracują aż do awarii
+10 straty mogą być bardzo znaczne, wielokrot-
+nie przewyższające koszt nowego silnika i za-
+kladowi może grozić długotrwały postój. Eks-
+płotację silników typu „planowo-zapobiegaw
+prowadzi się. najczęściej w zakładach,
+w których nie wszystkie ważne napędy mają
+swoich dublerów lub tam gdzie nieplanowane
+zatrzymanie produkcji może powodować bar-
+dzo duże straty ekonomiczne i społeczne. Pro-
+dukcję w takich zakładach zatrzymuje. się
+w ściśle określonych terminach i prowadzi nas-
+iępnie remont zapobiegawczy. Jet to na przyk-
+ład raz w roku. Wskaźnik awaryjności wielu
+„maszyn nie zmniejsza się w wyniku wymiany
+określonych części np. łożysk, uszczelnień, i
+Bardzo często po takim remoncie, jak pokazuje
+praktyka przemysłowa, przynajmniej przez ja-
+kiś. czas awaryjność maszyn wzrasta (dzięki
+niefortumej ingerencji serwisanta w maszyny)
+Pogorszenie się tam technicznego danego sl-
+nika czy maszyny jest sprawą bardzo indywidu-
+alną i nie da się ściśle na sztywno określić dla
+wszystkich maszyn. Gednakowo) czasookresu
+bezawaryjnej ich eksploatacji. Okresy między
+remontowe_są często określane statystycznie
+jako takie, podczas których oczekuje się, że nie
+więcej jak np. 2% maszyn nowych lub w pełni
+
+Maszyny Elek
+
+Nr42009
+
+wyremontowanych ulegnie awarii. W_eksplo-
+stacji planowo-zapobiegawczej bardzo często
+oddaje się do remontu silniki, które tego remontu
+nie wymagają. Remont zapobiegawczy silników
+przy eksploatacji planowo-zapobiegawczej jest
+bardzo często technicznie i ekonomicznie nie-
+uzasadniony
+
+W metodzie eksploatacji silników zależnej od
+ich stanu technicznego każdy silnik traktowany
+jest w sposób indywidualny [2, 3]. Czas remon-
+tów nie jest góry sztywno zaplanowany, tylko
+uwarunkowany stanem technicznym danej ma-
+szyny. Remont silnika przeprowadzamy tylko
+wiedy, gdy jest on konieczny. Wcześniej sys-
+pomiary diagnos-
+eh stan techniczny,
+indywidualnie dla każdego” silnika. [2, 3, 10].
+Dzięki _ pomiarom diagnostycznym "można
+stwierdzić początek pojawienia się uszkodze-
+ia, a następnie obserwować jego rozwój, ok-
+reślać trend zmian. Przykładowo mogą to być
+łożyska silnika — rys. 2.
+
+<image/figury/k4_page2_figure1.png>
+
+Ocenę aktywności drganiowej silnika można
+wykonać w oparciu o stosowne, obowiązujące
+normy (rys. 3), czyli w oparciu o pomiar pręd-
+kości drgań w zakresie od 10-100 Hz lub ko-
+rzystniej w ocenie autora w oparciu o kryterium
+autori (zmodyfikowana metoda detekcji ob-
+wiedni, bazująca na pomiarze przyspieszenia
+drgań w zakresie co najmniej do 20 kHz w kie-
+runku największego obciążenia łożyska) [10].
+Wyniki pomiarów przyspieszenia drgań w me-
+todzie detekcji obwiedni można ekstrapolować
+w celu przewidzenia terminu koniecznego za-
+Arzymania silnika, w tym przypadku ze względu
+na uszkodzenie łożyska — rys. 4 i 5.
+
+„Zeszyt Probemowe - Maszyny Elektryczne Nr 842009 129
+
+<image/figury/k4_page3_figure2.png>
+
+<image/figury/ka_page3_figure3.png>
+
+Rys. 4. Przebieg w czasie zmian Lys: Lurro
+i Cadla łożyska FAG NU 326 w silniku o mocy
+500 RW
+
+Pomiary diagnostyczne przykładowego silnika
+rozpoczęto przy. pierwszym uruchomieniu. po
+wymianie łożysk w silniku. Pomiary prowadzo-
+mo systematycznie co 4 tygodnie, gdy stan sil-
+nika zaczął się pogarszać, zwiększono częstot-
+liwość pomiarów (eo 2 tygodnie, a następnie co
+1 tydzień). Pomiary wykonywano dla bardzo
+zbliżonych do siebie warunków pracy silnika,
+przy takim samym lub niewiele różniącym się
+obciążeniu. Przedstawione na rysunkach 4 i 5
+wielkości są zdefiniowane. przez autora nasię-
+pująco [10]
+
+<image/wzory/k4_page3_formula5.png>
+
+<image/wzory/k4_page3_formula6.png>
+
+<image/wzory/k4_page3_formula2.png>
+<image/wzory/k4_page3_formula1.png>
+<image/wzory/k4_page3_formula3.png>
+
+<image/wzory/k4_page3_formula4.png>
+
+gdzie: Leeux — poziom wartości. szczytowej
+przyspieszenia drgań łożyska, Lepro — poziom
+składowej BPFO” (uszkodzenie bieżni zew-
+nętrznej — (2)), w widmie obwiedni przyśpie-
+szenia drgań [10], C, — współczynnik szczytu
+przyspieszenia drgań, A rac — wartość szczy-
+towa przyspieszenia drgań dla chwili , Aerox
+wartość szczytowa. przyspieszenia drgań dla
+chwili r- (początek obserwacji, A.grro— war-
+tość skuteczna składowej w. widmie detekcji
+obwiedni dla danej chwili ,, związana z uszko-
+dzeniem bieżni zewnętrznej BPFO — [10],
+Agro — wartość skuteczna składowej w wid-
+mie detekcji obwiedni dla danej chwili
+związana z uszkodzeniem bieżni zewnętrznej
+BPFO — (2). Podobnie można zdefiniować 4,
+i 4, dla innych uszkodzeń (3), (4), (5) otrzy-
+mamy wiedy możliwość. wyznaczania. Le,
+Last, Lae [10], Arzax — wartość szczytowa
+przyspieszenia drgań, Ann - wartość skuteczna
+przyspieszenia drgań.
+
+<image/figury/ka_page3_figure1.png>
+
+130 Zeszyty Problemowe
+
+nować z. wyprzedzeniem czasowym stronę
+techniczną oraz ekonomiczną remontu. Na ry-
+sunku 6 przedstawiono fragmenty bieżni zew-
+nętrznej i wewnętrznej uszkodzonego łożyska
+przykładowego silnika. Uszkodzenie łożyska
+wykryto i decyzję o zatrzymaniu silnika podjęto
+w” oparciu o zmodyfikowaną metodą detekcji
+obwiedni [10]
+
+<image/figury/ka_page4_figure1.png>
+
+Prowadzony równolegle pomiar _ prędkości
+drgań węzła łożyskowego w oparciu 0 normę
+ISO 3945 nie dawał podstawy do takiej diagno-
+zy łożyska i podjęcia radykalnych działań eks-
+ploatacyjno-remontowych. Eksploatacja silni-
+ków zależna od ich stanu technicznego jest s
+
+tegią prowadzenia eksploatacji maszyn tech-
+micznie i ekonomicznie najkorzystniejszą, coraz
+częściej stosowaną w krajowych zakładach
+przemysłowych. W gospodarce krajów zachod-
+nich jest strategią dominującą. Strategia ta obok
+korzyści ekonomicznych typu: _ wydłużenie
+okresów międzyremontowych, _ zwiększenie
+niezawodności maszyn, zwiększenie wydajnoś-
+ci, eliminacji niepotrzebnych wymian pod
+zespołów, skrócenie czasu napraw, zmniejsze-
+nie kosztów. magazynowych, wymusza stały
+postęp techniczny zwłaszcza w obszarze pod-
+noszenia poziomu wiedzy przez kadrę tech-
+niczną, Nieuchronne są przy tym koszty na or-
+ganizację i utrzymanie na dobrym poziomie
+służb diagnostycznych [10]. Korzyści ekono-
+miczne z prowadzenia diagnostyki technicznej
+w danym zakładzie, jak dowodzi. praktyka
+przemysłowa [1--3,6*12], wyraźnie przewyż-
+szają koszty jej stosowania. W tabeli 1 przed
+stawiono zestawienie strat finansowych w po-
+szczególnych rodzajach przemysłu w. USA,
+strat spowodowanych przestojem w produkcji
+w wyniku nieoczekiwanej awarii maszyn. Nie
+wykonywano diagnostyki, diagnostyka. była
+mietrafna lub niewystarczająca [8]. Usunięcie
+
+Maszyny Elek
+
+Nr42009
+
+przyczyn awari, czyli naprawa maszyn, średnio
+wały 3-4 dni [8].
+
+Tabela 1. Zestawienie strat finansowych w po-
+szczególnych rodzajach przemysłu w USA, spo-
+wodowanych przestojem w produkcji w wyniku
+nieoczekiwanej awarii maszyn [8]
+
+<image/tabele/k4_page4_table1.png>
+
+Autorowi nie są znane podobne statystyki i zes-
+tawienia dla przemysłu krajowego. Rozmiar
+strat w. poszczególnych gałęziach przemysłu
+USA jednoznacznie, przemawia za konieczno-
+ścią” stosowania diagnostyki, kompleksowej
+diagnostyki obejmującej wszystkie ważne ma-
+szyny produkcyjne. Przemawia to za stosowa-
+niem eksploatacji maszyn zależnej od stanu ma-
+szyn.
+
+3. „Czas życia” silników
+
+Z wieloletnich obserwacji autora w zakresie
+sksploatacji silników indukcyjnych _trójfazo-
+wych klatkowych WN wynika, że czas eksplo-
+lacji danego silnika w przemyśle zwany nie-
+kiedy jego „czasem życia” wynosi najczęściej
+kilkanaście - kilkadziesiąt lat. Zdarzają się co-
+raz częściej przypadki, gdy silnik cksploatowa-
+my_jest kilkadziesiąt lat. W_ sporadycznych
+przypadkach „czas życia” to kilka lat, jeszcze
+rzadziej mniej niż | rok. Okres eksploatacji sil-
+ników wyraźnie wydłuża się w zakładach
+przemysłowych, w których służby techniczne
+Charakteryzują się dużą „kulturą techniczną”
+i stosują na co dzień diagnostykę silników.
+
+4. Rodzaje uszkodzeń i ich statystyka
+Długoletnie obserwacje w zakresie oceny przy-
+czyn awarii silników indukcyjnych klatkowych
+WN w przemyśle krajowym oraz śledzenie lite-
+matury technicznej krajowej i światowej poświę-
+sonej temu tematowi upoważniają autora do
+stwierdzenia, że awaryjność silników w ostat-
+
+„Zeszyt Probemowe - Maszyny Elektryczne Nr 842009 131
+
+nich ltach wyraźnie spada. Wynika to przede
+wszystkim z poprawy jakości eksploatacji, ob-
+sługi oraz diagnostyki silników, zastosowania
+coraz lepszych materiałów do_ich produkej
+w tym w szczególności dobrych materiałów
+izolacyjnych, "zastosowania "coraz lepszych
+sprzęgieł, łożysk, smarów. Zmienia się statys-
+tyka” przyczyn uszkodzeń _ silników WN.
+„Zmmiejsza się liczba uszkodzeń obwodu ciek-
+*rycznego i magnetycznego silników, a rea-
+tywnie. powiększa się liczba uszkodzeń typu
+mechanicznego - w szczególności łożysk. Wys
+tępują również oraz częścij uszkodzenia typu
+luz w układzie, np wał-pakiet wirnika, łożyska-
+tarza łożyskowa, orz uszkodzenia konstrukcji
+wsporczej i fundamentu pod napędem. Z cko-
+nomicznego punktu widzenia dla użytkowa
+ków silników WN najkosztowniejsze są uszko-
+dzenia ich” izolacji uzwojeń orsz._ poważne
+uszkodzenia fundamentów i konstrukcji wspor-
+czych. Remont silnika, mający na celu grun-
+towną poprawę stanu jego izolacji, o najczę:
+ścij przzwojenie, co jest bardzo kosztowne
+(najczęściej kilkadziesiąt procent wartości sil--
+nika). Konieczność. przezwajania silnika lub
+remontu kapitatnego fundamentu i konstokcj
+ssporczej eliminuje dany napęd cyklu produk
+cyjnego zakładu na okres kilku do, kilkunastu
+tygodni, co dodatkowo. komplikuje. sytuację
+i wyraźnie zwiększa koszty awarii. Statystyka
+awaryjności maszyn elektrycznych, w tym na-
+pędów z silnikami indukcyjnymi katkowymi
+NWN, w itraturze. przedmiotowej. występuje
+bardzo rzadko
+W technicznym piśmiennictwie. polskim. na
+szczególną uwagę zasługują prace dr hab.inż
+Sronisawa Draka, pro.PŚL [6] oraz mge inż.
+Macieja Bematta i dr inż Jakuba Bemar [1
+w których omawiano są przyczyny awarii si
+ków klatkowych WN w zakładach przemysło-
+wych. w” kraju. Wymienieni, autorzy podają
+również statystykę awaryjności tych silników
+W książce [0] poświęconej izolacji maszyn
+elektrycznych, która ukazała się w 2004 roku
+w USA jej autorzy podają uogónioną satystykę
+przyczyn awarii maszyn elektrycznych prowa:
+zoną przez EPRI-da 7500 maszyn. Statystykę
+tą przedstawiono w tabeli . Statytykę przed.
+stawioną w tabeli 2 autor odbie jako uogól-
+nioną, aktualną statystykę uszkodzeń maszyn
+srycznych świat zachodniego
+
+<image/tabele/k4_page5_table1.png>
+
+Przedstawiając własne. statystyki. awaryjności
+silników indukcyjnych. klatkowych WN. [10].
+autor_ posłuży się przykładem jednej z krajo-
+wych elektrowni, w której w latach 1994-2003
+zaiastalowanych było 70 silników WN, wypro-
+dukowanych w latach 60- i 70-1ych. Statystykę
+uszkodzeń tych silników w rozbiciu na awarie
+pochodzenia mechanicznego i elektrycznego
+przedstawia tabela 3. We wspomnianej clek-
+trowni kultura techniczna załogi jest na wyso-
+kim poziomie, a diagnostykę techniczną autor
+ocenia na poziomie średnim. Z przedstawione-
+go zestawienia widać wyraźnie, że ogólna licz-
+ba awari silników WN w miarę upływu czasu
+maleje, a liczba awarii elektrycznych jest zde-
+cydowanie mniejsza od liczby awarii mecha-
+nicznych. Autor uważa, że w większości krajo-
+wych zakładów przemysłowych jest podobnie.
+Analizując szczegółowo przyczyny awarii
+i nieoczekiwanych, nieplanowanych postojów
+napędów z silnikami indukcyjnymi klatkowy-
+mi WN, w oparciu o własne doświadczenia i ob-
+serwacje, autor_usalił następującą listę przy-
+czyn:
+1. stan łożysk,
+2. izolacja uzwojeń silników,
+3. niewywaga,_ nieosiowoś
+
+z ruchem wirnika,
+4. niesymetria szczeliny pomiędzy stojanem
+a wimikiem,
+uzwojenie klatkowe wirnika,
+stan fundamentów, konstrukcji wsporczych
+Listę podano w kolejności, od przyczyn najczę-
+ściej występujących, do tych które występują
+najrzadziej. W ostatnich latach stan fundamen-
+tów, konstrukcji wsporczych i mocowania rela-
+tywnie stają się przyczyną wyraźnie wzrastają-
+ea.
+
+i luzy związane
+
+132 Zeszyty Problemowe
+
+<image/tabele/k4_page6_table1.png>
+
+5. Uwagi końcowe
+Eksploatacja silników w napędach przemysło-
+wych zależna od ich stanu technicznego jest
+sksploatacją maszyn technicznie i ekonomicz-
+mie najkorzystniejszą, godną polecenia, coraz
+częściej stosowaną w krajowych zakładach
+„przemysłowych. W gospodarce krajów zachod-
+nich jest strategią dominującą. Strategia ta obok
+korzyści ekonomicznych typu: _ wydłużenie
+okresów _ międzyremontowych, _ zwiększenie
+niezawodności maszyn, zwiększenie wydajnoś-
+climinacji niepotrzebnych wymian podzes-
+połów, skrócenie czasu napraw, zmniejszenie
+kosztów magazynowych, wymusza stały postęp
+techniczny zwłaszcza w obszarze podnoszenia
+poziomu wiedzy przez kadrę techniczną. Ra-
+chunek ekonomiczny jednoznacznie przemawia
+za - koniecznością stosowania _ diagnostyki
+w przemyśle, kompleksowej diagnostyki, obej-
+mującej wszystkie ważne maszyny produkcyj-
+
+6. Literatura
+
+1]. Bernat J,, Bernat M. Elsperhzy i oceny
+„przyczyn uszkodzeń silników elektrycznych dużej
+
+Maszyny Elek
+
+Nr42009
+
+mocy — cz. 2. Wyd BOBRME, Katowice 2004, Ma-
+szyny Elektryczne, nr 68, 2004, s. 41-46
+
+12]. Briel 6: Kier: Machine Conditon Monitoring
+using Vibration Analysis. Application notes BO 0247-
+1
+
+[5] Briel 4 Kjer Condition Monitoring Systems
+Disision: Compass. Appliction notes BP 1053-13
+18] Dąbrowski M.: Konstrukcja maszyn elek
+„nych, WNT, Warszawa, 1965, 1997
+
+15] DOLNIEL:Jnstrukcja obsługi łożysk. ślizgo-
+wych WX4- 024001, WEMA, Warszawa, 1977
+
+[6] | Drak B.: Analża przyczyn awarii silników po-
+Urzeb własnych - elektrowni blokowych, _ Wyd.
+BOBRME, Katowice. 1995, Maszyny Elektryczne,
+mr50, 1995, ss 121-126
+
+[7]. Glinka T: Diągnowyka stan izolacji uzwojeń
+stojana silników indukcyjnych wysokiego napięcia.
+Wyd. BOBRME, Katowice 1992, Maszyny Elek
+*wyczne, r 45, 1992, ss 17-21
+
+[8]. SKF. Katalog 2004
+
+[9] Stone GC. Boulter E.A., Cuber 1, Dhiani
+H-_ Electical_insuation_for_rotaing_ machines.
+IEEE PRESS series om Power Engineering, USA,
+2008
+
+[10] Szymanice S.: Diagnostyka stanu. izolacji
+woje i stanu łożosk silników indukcyjnych Mat.
+kowych w warunkach przemysłowej eksploatacji
+Studia i Monografie z.193. Oficyna. Wydawnicza
+Politechniki Opolskiej, Opole 2006
+
+[I] Tavner P.., Penman J. Condition Monitoring
+sf Electrical Machines. Research Studies Press Lid,
+Letchworth, Hertfordshire, 1987
+
+[12] Wiśniewski. W.: Diagnostyka techniczna wy-
+twórczych urządzeń energetycznych w elektrow
+niach. PWN, Warszawa, 1991
+
+Autor
+
+Dr hab iż. Sławomir Szymaniec prof. PO,
+e-mail: sszymani
+
+Politechnika Opolk
+Wydział Elektrotechniki, Automatyki
+i Informatyki,
+
+Instytut Układów Elektromechanicznych
+i Elektroniki Przemysłowej
+
+ul Luboszycka 7, 45-951 Opole

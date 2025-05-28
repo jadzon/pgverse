@@ -1,0 +1,39 @@
+2.4, Wpływ sprzężenia zwrotnego na właściwości wzmacniaczy 35
+
+Kolejnym układem ze sprzężeniem zwrotnym jest układ ze sprzężeniem napięciowym
+szeregowym — rysunek 2.8.
+
+<image/figury/k2_page28_figure2.png>
+
+Rys. 2.8. Układ ze sprzężeniem napięciowym szeregowym
+
+Obwód wejściowy tego układu jest identyczny jak dla układu ze sprzężeniem prądo-
+wym szeregowym, więc wszystkie parametry robocze związane z wejściem są opisane
+tymi samymi zależnościami
+
+<image/wzory/k2_page29_formula1.png>
+
+<image/wzory/k2_page29_formula2.png>
+
+<image/wzory/k2_page28_formula3.png>
+Ze względu na równoległe połączenie torów G i B od strony wyjścia skorzystamy z za-
+leżności na impedancję wyjściową jak dla układu ze sprzężeniem napięciowo-równo-
+ległym
+
+<image/wzory/k2_page29_formula4.png>
+
+Sprzężenie napięciowe szeregowe powoduje więc redukcję wzmocnień skutecznych,
+wzmocnienia napięciowego i impedancji wyjściowej. Wzmocnienie prądowe nie ulega
+zmianie, a impedancja wejściowa się zwiększa.
+
+Ostatnim analizowanym układem jest układ ze sprzężeniem prądowym równoległym
+— rysunek 2.9.
+
+Porównując ostatnie dwa schematy (rysunek 2.8 i 2.9), zauważamy, że są to układy
+dwoiste, więc sprzężenie prądowe równoległe napięciowe powoduje redukcję wzmoc-
+nień skutecznych, wzmocnienia prądowego i impedancji wejściowej. Wzmocnienie na-
+pięciowe nie ulega zmianie, a impedancja wyjściowa się zwiększa.
+
+<image/figury/k2_page29_figure1.png>
+
+Rys. 2.9. Układ ze sprzężeniem prądowym równoległym

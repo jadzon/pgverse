@@ -1,0 +1,46 @@
+akłady zasilania tranzystorów bipolarnych 41
+
+że na niestałość punktu pracy będzie miała wpływ temperatura lub
+lukcyjny, lub oba czynniki jednocześnie, sprawdźmy, w jakim stopniu
+1 układ polaryzacji wpłynie na jego stabilizację.
+
+© w wyznaczonym równaniu na prąd kolektora wartości maksymalne
+alne (2) Up, Iczo i P, otrzymujemy
+
+<image/wzory/k2_page40_formula2.png>
+
+<image/wzory/k2_page40_formula3.png>
+
+>age40_formula1.png >owyższe równania stronami, otrzymujemy wyrażenie na niestałość prą-
+*Alę
+
+<image/wzory/k2_page40_formula4.png>
+
+„Alego i AB to założone zmiany parametrów.
+
+„że mimo zmian parametrów tranzystora ich wpływ na zmiany punktu
+
+y od wartości rezystorów Rę i R. Przyrosty AUpz, Alcpg i AB mogą
+wartość dodatnią lub ujemną, więc przy wzroście temperatury pracy
+kolektora będzie wzrastał, a przy spadku malał.
+
+„yrażenie można zapisać jako
+
+<image/wzory/k2_page40_formula5.png>
+
+iy i Sj to tzw. współczynniki wrażliwości prądu kolektora na zmiany
+0 AUpy, Alęgo i AB. Gdyby te współczynniki mogły przyjąć wartość
+
+zerową, to mielibyśmy idealną stabilizację prądu kolektora mimo dowolnych zmian
+
+parametrów tranzystora. Wpływ wartości rezystancji bazy Rz na wartość współ-
+
+czynników wrażliwości przedstawiono na rysunku 3.8.
+
+Z wykresów wynika, że nie można jednoznacznie określić, jaką rezystancję Ry na-
+
+leży przyjąć bez przeprowadzenia analizy ilościowej.
+
+<image/figury/k2_page40__figure1.png>
+
+Rys. 3.8. Wpływ Az na współczynniki wrażliwości

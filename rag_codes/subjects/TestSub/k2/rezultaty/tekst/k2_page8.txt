@@ -1,0 +1,45 @@
+1. Podstawowe własności analogowych układów elektronicznych
+
+niezbędne są dane o wartości części urojonej danego parametru. Dla tego zakresu
+częstotliwości konieczne jest korzystanie z macierzy y (rysunek 1.5b).
+
+Do analizy układów zbudowanych na tranzystorach polowych macierz h jest nie-
+przydatna. Nawet dla zakresu małych częstotliwości niemierzalne są parametry
+i hą,, gdyż prąd bramki jest praktycznie zerowy. Dla tych tranzystorów dla zakresu
+małych i dużych częstotliwości wykorzystuje się macierz y.
+
+Dla częstotliwości jeszcze większych, bliskich I GHz i więcej (b.w.cz.), żaden para-
+metr macierzowy klasycznych macierzy czwórnika nie może być wyznaczony dro-
+gą pomiaru z wystarczającą dokładnością. Dla tego zakresu wykorzystuje się tylko.
+tzw. macierz rozproszenia s [1], [2].
+
+Zalecane do stosowania typy macierzy w zależności od typu stosowanego tranzystora
+(bipolarny lub polowy) i częstotliwości (m.cz., wcz., b.w.cz.) zestawiono w tabeli 1.1.
+
+<image/figury/k2_page8_igure1.png>
+
+9] (l8)) oznacza, że dla małych częstotliwości wystarczy uwzględnić tylko części
+rzeczywiste admitancji y = g + jb
+
+Wartości parametrów macierzowych h lub y są wyznaczane w stanie zwarcia lub
+rozwarcia odpowiednich zacisków czwórnika. Rzeczywisty układ elektroniczny
+jest zawsze sterowany ze źródła sygnału (generatora) o określonej impedancji we-
+wnętrznej i obciążony określoną impedancją obciążenia. To powoduje, że do oceny
+własności fizycznych układu elektronicznego (np. wzmacniacza) traktowanego jako
+czwórnik liniowy stosuje się parametry robocze wyznaczane dla konkretnych war-
+tości parametrów zastosowanego źródła sygnału i obciążenia.
+
+Parametry robocze czwórnika stanowią podstawowe wielkości charakteryzujące czwór-
+nik w stanie pracy, a nie w stanie jałowym, kiedy na wejściu lub wyjściu czwómika
+prąd jest zerowy (rozwarcie) lub zerowe napięcie (zwarcie).
+
+Po zdefiniowania parametrów roboczych posłużymy się rysunkiem 1.6.
+
+<image/figury/k2_page8_figure2.png>
+
+Rys. 1.6. Układy czwórników do wyznaczania parametrów roboczych
+
+Zdefiniowana graficznie na rysunku 1.6a impedancja wejściowa może być wyzna-
+czona z zależności
+
+<image/wzory/k2_page8_formula1.png>

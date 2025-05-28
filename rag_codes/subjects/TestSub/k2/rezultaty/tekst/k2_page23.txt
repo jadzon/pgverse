@@ -1,0 +1,44 @@
+2.2. Elementarna teoria sprzężenia zwrotnego 29
+
+smitancja toru sprzężenia zwrotnego nie zależy od rezystancji generatora i ob-
+
+nia, co sprowadza się do spełnienia założenia, że tor sprzężenia zwrotnego nie
+obciąża toru wzmacniającego.
+
+Do wyprowadzenia równania elementarnej teorii sprzężenia zwrotnego skorzystajmy
+
+z uproszczonego schematu układu z rysunku 2.1 przedstawionego na rysunku 2.2.
+
+- tr
+
+<image/figury/k2_page23_figure1.png>
+
+Rys. 2.2. Uproszczony uktat
+
+Transmitancję toru wzmacniającego oznaczymy literą G, a transmitancję toru sprężenia
+zwrotnego literą . Wiążą one prądy lub napięcia (na rysunku oznaczone przez A)
+
+<image/wzory/k2_page23_formula1.png>
+
+Sygnał zwrotny A, sumuje się z sygnałem wejściowym Ay, tworząc sygnał wejściowy
+toru G
+<image/wzory/k2_page23_formula2.png>
+
+<image/wzory/k2_page23_formula3.png>
+
+Wypadkowa transmitancja układu ze sprzężeniem zwrotnym zależy więc od transmi-
+
+tancji torów G i .
+
+Wyprowadzoną zależność można uprościć, wprowadzając pojęcie stosunku zwrotnego
+<image/wzory/k2_page23_formula4.png>
+
+wówczas
+
+<image/wzory/k2_page23_formula5.png>
+a wprowadzając pojęcie różnicy zwrotnej
+
+<image/wzory/k2_page23_formula6.png>
+otrzymujemy
+
+(2.7)

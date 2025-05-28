@@ -1,0 +1,54 @@
+156 MARIE: WPROWADZENIE DO BUDOWY PROSTEGO KOMTERA
+
+We wszystkich komputerach znajduje się procesor. Może on być podzielony na dwie części.
+Pierwszą z nich jet ścieżka danych, czyli sieć jednostek przechowujących dane (rejestrów) oraz
+„jednostek logiczno-arytmetycznych (do wykonywania różnych operacji na danych), połączonych
+ze sobą magistralami (zdolnymi do przenoszenia danych z miejsca na miejsce), których pracą sie-
+rują zegary. Drugim składnikiem procesor jes jednostka sterująca — moduł odpowiedzialny za
+ustalanie kolejności wykonywanych operacji i gwarantujący, że dane znajdą się we właściwym
+miejscu o właściwym czasie. Łącznie oba te składniki wykonują zadania powierzone procesorowi:
+wczytywanie instrukcji, rozkodowywanie ieh i wykonywanie ich we wskazanej kolejności. Działanie
+komputera zależy bezpośrednio od sposobu zaprojektowania ścieżki danych i jednostki sterującej
+Dlatego poniżej zostaną one szczegółowo omówione.
+
+Rejestry
+
+"Rejestry są wykorzystywane w systemach komputerowych w charakterze miejsc, w których prze-
+chowywane są różnego rodzaju dane takie jak adresy, liczniki rozkazów lub dane niezbędne do
+wykonania określonego programu. Mówiąc prościej, rejesrr jest fizycznym urządzeniem, które
+przechowuje dane binarne. Aby dostęp do nich był możliwie szybki, rejestry umiejscowione są,
+w procesorze, W rozdziale 3 dowiedziałeś się, że do zbudowania rejestrów można użyć przerzutni
+ków D. Jeden przerzutnik D odpowiada rejestrowi przechowującemu | bt, Zatem do przechowy-
+wania wartości wielobilowych niezbędny jest zespół przerzutników D. Na przykład aby zbudować
+rejestr szesnastobitowy, musielibyśmy połączyć ze sobą 16 przerzutników D. Na rysunka licznika
+binarnego, który zamieściłyśmy w rozdziale 3., można było zauważyć, że wspomniane przerzutniki
+muszą być zsynchronizowane tak, aby działały jednocześnie. Z, każdym impulsem zegara dane
+wchodzą do rejestru i nie mogą być zmienione, dopóki nie nastąpi kolejny impuls (są tam więc
+przechowywane).
+
+Przetwarzanie danych na. komputerze jest zazwyczaj wykonywane na słowach binamych
+o określonej wielkości, które są przechowywane w rejestrach. Dlatego większość komputerów ma
+rejestry o określonej pojemności. Popularne rozmiary rejestrów to 16, 32 i 64 bity. Liczba reje-
+sirów w komputerze różni się w zależności od architektury, ale zazwyczaj jest potęgą liczby dwa,
+a najpopularniejsze z nich to 16 i 32. Rejestry zawierają dane, adresy lub informacje sterujące.
+Niektóre z nich są wyspecjalizowane, a więc mogą zawierać tylko dane, tylko adresy lub tylko in-
+formacje sterujące. Inne są bardziej ogólne i mogą przechowywać w różnych momentach zarówno
+dane, adresy, jak i informacje sterujące.
+
+Dane są w rejestrach zapisywane, z nich odczytywane i przenoszone z rejestru do rejestru. Do
+rejestrów nie odwołujemy się tak samo, jak do pamici (przypominamy, że każde słowo w pamięci
+„ma swój niepowtarzalny adres, liczony od zera). To sama jednostka sterująca odwołuje się do nich
+inimi manipuluje.
+
+We współczesnych systemach komputerowych istnieje wiele rodzajów wyspecjalizowanych
+rojestrów: rejestry do przechowywania informacji, rejestry do zmieniania wartości, rejestry do po-
+równywania wartości oraz rejestry do liczenia. Są też rejestry zwane „brudnopisami” które prze-
+chowują tymczasowe wartości, rejestry indeksowe do kontrolowania pętli, rejestry do zarządzania
+stosami informacji dla procesów, rejestry stanu do przechowywania informacji ostanie lub trybie
+pracy (i występowaniu takich zdarzeń, jak przepełnienie, przeniesienie czy osiągnięcie warunków
+zerowych) oraz rejestry ogólnego przeznaczenia, czyli rejestry dostępne dla programisty. W większości
+komputerów znajdują się zespoły rejestrów, przy czym każdy z tych zespołów jest zespołem wy-
+specjalizowanym. Na przykład w architekturze Pentium istnieje zespół rejestrów danych i zespół
+rejestrów adresowych. Niektóre architektury mają bardzo duże zespoły rejestrów, które mogą być
+w nowoczesny sposób wykorzystywane do przyspieszenia procesu wykonywania operacji. (Temat
+ten omówimy po przedstawieniu zaawansowanych architektur w rozdziale 9.

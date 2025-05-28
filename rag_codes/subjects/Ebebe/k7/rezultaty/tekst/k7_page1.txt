@@ -1,0 +1,28 @@
+3.2. Sterowanie obrotami silników komutatorowych DC 43
+
+<image/figury/k7_page1_figure1.png>
+
+Rys. 3.8. Najprostsze regulatory obrotów do silników komutatorowych
+
+gulacji napięcie/obroty jest liniowa dla silników z magnesem trwałym i zbliżona do
+parabolicznej dla silników szeregowych. Stabilność obrotów nie jest duża ze wzglę-
+du na silną zależność obrotów silnika komutatorowego od obciążenia. Stabilizacja
+obrotów wymaga zastosowania układu z czujnikiem obrotów i zamkniętą pętlą re-
+gulacji (patrz rozdział 9).
+
+Najprostszą metodą regulacji obrotów jest potencjometr włączony szeregowo z sil-
+nikiem lub regulowany zasilacz (rysunek 3.8). Niestety występują tu bardzo duże
+straty mocy w elemencie regulacyjnym — przy niskich prędkościach obrotowych
+moc wydzielana w potencjometrze (stabilizatorze) jest większa niż moc pobierana
+przez silnik. Jeszcze w latach 60 ubiegłego wieku była to dość popularna metoda
+regulacji — na przykład w tramwajach tzw. „korba” motorniczego była przełączni-
+kiem wielopozycyjnym, przełączającym baterię rezystorów szeregowych.
+
+Znacznie lepszym rozwiązaniem jest zasilanie silnika impulsami prostokątny-
+mi o zmiennym współczynniku wypełnienia (modulacja PWM). Starty mocy
+w tranzystorze kluczującym są niewielkie ze względu na jego pracę w stanach
+zatkanie/nasycenie. Dla silników niskonapięciowych małej mocy można stosować
+
+<image/figury/k7_page1_figure2.png>
+
+Rys. 3.9. Przebiegi na wyjściu generatora PWM przy wypełnieniu (/T=50% (a) i /T=90% (b)

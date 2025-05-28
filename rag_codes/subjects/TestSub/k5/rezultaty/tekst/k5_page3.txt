@@ -1,0 +1,51 @@
+Awe 157
+
+ALU
+
+„Jednosika arytmetyczno-logiczna (ALU) wykonuje operacje logiczne (takie jak na przykład po-
+równanie) i arytmetyczne (na przykład dodawanie i mnożenie) wymagane podczas wykonywania
+programu. Przykład prostej jednostki ALU widzieliśmy już w rozdziale 3. Ogólnie mówiąc, jed-
+mosika ALU ma dwa wejścia danych i jedno wyjście. Operacje wykonywane w ALU mają często
+wpływ na bity w rejestrze stanu (zadaniem tych bitów jest informowanie o wystąpieniu określonych
+sytuacji, takich jak na przykład przepełnienie). Jednostka ALU „wie” które operacje wykonywać,
+ponieważ jes kontrolowana przez sygnały płynące z jednostki sterującej
+
+Jednostka sterująca
+
+„Jednostka sterująca jest „policjantem” czy też „kierującym ruchem” procesora. Monitoruje ona
+wykonywanie wszystkich instrukcji oraz transfer wszystkich informacji. Wydobywa instrukcje
+z pamięci, rozkodowuje je i dba o to, aby znalazły się w odpowiednim czasie we właściwym miej.
+seu. Informuje te jednostkę ALU, których rejestrów ma ona użyć, obsługuje przerwania oraz —
+w celu wykonania pożądanej operacji — włącza odpowiedni zestaw obwodów elektrycznych w ALU.
+„Aby odnaleźć następną instrukcję, jaką należy wykonać, jednostka sterująca wykorzystuje rejestr
+licznika rozkazów, natomiast aby „wiedzieć” na bieżąco o przepełnieniach, przesunięciach, „zapo-
+życzeniach”, itp. — używa rejestru stanu. Więcej szczegółowych informacji o jednostce sterującej
+prezentujemy w podrozdziale 4.7
+
+4.1.2. Magistrala
+
+|Procesor komunikuje się z innymi podsystemami poprzez tzw. szynę (zwaną też magistralą). Ma-
+gitrla jest zespołem przewodów działających jako wspólna ścieżka danych łącząca różnorodne
+podzystemy. Składa sę z wiełu lini, c pozwala na równoległy przepływ biłów. Szyny są niedrogim,
+ale też wszechstronnym sposobem na latwe włączenie nowych urządzeń do systemu i połączenie
+ich ze sobą, W danej chwili czasu szyna może być wykorzystywana tylko przez jedno urządzenie,
+niezależnie od tego, czy jest o reje jednostka ALU, pamięć czy cokolwiek innego. Pomimo to
+*współużytkowanie szyny często siaje się „wąskim gardle" w komunikacji. Na prędkość szyny
+wpływa zarówno jej szerokość, jak i liczba urządzeń, przez które jest współużytkowana. Dość często
+urządzenia to podzielone są na dwie kategorie: urządzenia master i urządzenia słave, przy czym
+urządzenie master o take, które inicjuje działanie, natomiast urządzenie słave odpowiada na 2ą-
+dania urządzenia master.
+
+„Magistrala może być dwupunktowa, co oznacza, ż łczy ona dwa konkretne podzespoły (ak,
+jak to zostało przedstawione na rysunku 4.1a), lub też może być wspólną ścieżką danych, która
+daczy kilka urządzeń, zmuszając je do je wspóużytkowania (nazywamy ją magistralą welopunk-
+ową, patrz rysunek 4,1b).
+
+ÓW związku ze wspomnianym współażytkowaniem niezwykle ważny jst protokół magistrali
+(zestaw reguł użytkowania). Rysunek 4.2 pokazuje typową magistralę, składającą się z linii d-
+nych nii sdresowych, lini sterujących ini zasłania. Często lnie magistrali odpowiedzialne za
+przenoszenie danych nazywane są szyną danych, Lini te zawierają faktyczne informacje, kóre
+muszą zosać przeniesione z jednego miejsca do innego. Linie sterujące wskazują, które Z urzą
+dzeń ma pozwolenie na użycie szyny i w jakim celu (np. zapis lub odczyt danych z pamięci bądź
+z urządzenia wejścia wyjścia) Linie stejące przesyłają leż komunikaty powientzające odbieranie
+żądań dostępu do magistrali, żądań obsługi przerwań i impulsów synchronizacyjnych zegara). Linie.

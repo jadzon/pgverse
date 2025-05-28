@@ -1,0 +1,51 @@
+32
+
+2. Sprzężenie zwrotne
+
+"Wzmocnienie napięciowe skuteczne bez sprzężenia zwrotnego wyznaczymy przy bra-
+ku sygnału sprzężenia zwrotnego (U; = 0), zastępując rzeczywisty generator pewnym
+hipotetycznym o wydajności Egy,
+
+<image/wzory/k2_page26_formula1.png>
+
+gdzie Eg, to taka wydajność hipotetycznego generatora, która przy braku sygnału
+
+sprzężenia zwrotnego (U; = 0) spowoduje na zaciskach wejściowych toru G to samo
+
+napięcie U, i prąd /,, jak przy sprzężeniu zwrotnym.
+
+Zgodnie ze schematem wydajność hipotetycznego generatora
+<image/wzory/k2_page26_formula2.png>
+
+Transmitancja toru sprzężenia zwrotnego
+
+<image/wzory/k2__page26_formula3.png>
+Aby uzyskać związek między wzmocnieniem napięciowym skutecznym układu bez
+i ze sprzężeniem zwrotnym, skorzystajmy ze związku między Eg i Ecy, Dokonując
+
+przekształceń jak przy wyprowadzaniu wzoru elementarnej teorii sprzężenia zwrotne-
+go, otrzymujemy
+
+<image/wzory/k2_page26_formula4.png>
+
+lub w skrócie
+<image/wzory/k2_page26_formula5.png>
+
+Sprzężenie zwrotne prądowe szeregowe redukuje wzmocnienie napięciowe skuteczne
+© wartość różnicy zwrotnej.
+
+Analogicznie można wyznaczyć wyrażenie na wzmocnienie prądowe skuteczne (oczy-
+wiście zmieniając typ generatora z napięciowego na prądowy)
+
+<image/wzory/k2_page26_formula6.png>
+
+Otrzymujemy wniosek analogiczny jak dla wzmocnienia napięciowego skutecznego,
+czyli sprzężenie zwrotne prądowe szeregowe w tym samym stopniu redukuje wzmoc-
+nienie napięciowe skuteczne i prądowe skuteczne.
+
+Dla obwodów wejściowych układu z rysunku 2.6 odpowiednio ze źródłami napięcia
+generatora hipotetycznego Ez, i rzeczywistego Eg otrzymujemy prądy
+
+<image/wzory/k2_page26_formula7.png>
+
+<image/wzory/k2_page26_formula8.png>

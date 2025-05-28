@@ -1,0 +1,27 @@
+24. Wpływ sprzężenia zwrotnego na właściwości wzmacniaczy 31
+
+LĄ.
+
+2.4.1.
+
+<image/figury/k2_page25_figure2.png>
+
+wypiyw SPrzZĘZGIia ZWIUUICYU Ma WIASLIWUDULI
+wzmacniaczy
+
+Wpływ sprzężenia zwrotnego na parametry robocze
+
+Do analizy wpływu sprzężenia zwrotnego prądowego szeregowego na parametry
+robocze układu przyjmijmy schemat blokowy takiego układu przedstawiony na ry-
+sunku 2.6 [6]. Wprowadzone graficzne definicje impedancji wejściowych i wyj-
+ściowych odnoszą się albo do samego toru wzmacniającego, albo całego układu ze
+sprzężeniem zwrotnym. Zgodnie z wcześniejszą umową odróżnia je indeks f.
+Wyrażenie na wzmocnienie napięciowe skuteczne wzmacniacza z sprzężeniem zwrotnym
+uzyskamy z wzoru otrzymanego z elementarnej teorii sprzężenia. Precyzując rodzaj wzmoc-
+nienia i transmitancji toru sprzężenia zwrotnego, otrzymujemy
+
+<image/wzory/k2_page25_formula1.png>
+
+<image/figury/k2_page25_figure1.png>
+
+Rys. 2.6. Uklad ze sprzężeniem prądowym szeregowym

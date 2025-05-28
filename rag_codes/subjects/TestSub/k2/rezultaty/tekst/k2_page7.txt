@@ -1,0 +1,40 @@
+1.2. Parametry robocze 1
+
+1.2.
+
+<image/figury/k2__page7_figure2.png>
+
+Wzmacniacze wielkiej częstotliwości (w.cz.), pośredniej częstotliwości (p.cz.) oraz
+małej częstotliwości (m.cz.) mogą być traktowane jako układy liniowe, natomiast
+pozostałe elementy odbiornika (mieszacz, heterodyna, demodulator) należą do gru-
+py układów nieliniowych. Mimo coraz powszechniejszego stosowania układów cy-
+frowych w urządzeniach elektronicznych stopnie początkowe i końcowe urządzeń
+odbiorczych długo pozostaną układami analogowymi.
+
+W dalszej części książki w pierwszej kolejności zostaną przeanalizowane własno-
+ści szerokiej gamy wzmacniaczy zaliczanych do grupy liniowych analogowych
+układów elektronicznych.
+
+Parametry robocze
+
+Każdy liniowy analogowy układ elektroniczny zbudowany na tranzystorach i wie-
+lu elementach pasywnych (rezystory, kondensatory, cewki indukcyjne itp.) zawsze
+można potraktować jako czwórnik liniowy. W analizie czwórników liniowych po-
+wszechnie wykorzystywane są parametry macierzowe czwórnika. Zależnie od po-
+trzeb stosowane są różne macierze. Do analizy liniowych analogowych układów
+elektronicznych zbudowanych na tranzystorach najczęściej wykorzystuje się sche-
+maty elektryczne tranzystorów jako czwórników opisanych macierzami h, y bądź s.
+Macierz h (rysunek 1.5a) wykorzystuje się do analizy układów zbudowanych na
+tranzystorach bipolarnych w zakresie małych częstotliwości (m.cz.), rzędu do kil-
+kuset kiloherców.
+
+<image/figury/k2_page7_figure1.png>
+
+Zastosowanie macierzy h dla tranzystorów bipolarnych wynika z prostej inter-
+pretacji fizycznej parametrów macierzowych tranzystora (wzmocnienie prądowe
+— hy,, rezystancja wejściowa — hy i wyjściowa — 1», oddziaływanie wyjścia na
+wejście — 3). Zastosowanie tej macierzy dla zakresu małych częstotliwości wynika
+z tego, że wartości tych parametrów są zwykle mierzone dla małych częstotliwości
+(najczęściej | kHz) i z tego powodu są mierzone tylko wartości części rzeczywi-
+stej parametrów. To ograniczenie wyklucza możliwość zastosowania tej macierzy
+do analizy układów dla wyższych częstotliwości (w.cz.), rzędu megaherców, gd:

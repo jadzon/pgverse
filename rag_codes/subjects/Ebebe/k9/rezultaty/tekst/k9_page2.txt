@@ -1,0 +1,41 @@
+Równoważenie pneumatyczne lub
+clektromagnetyczne jest stosowane
+przy pomiarach niewielkich sił, wy-
+stępujących jako wielkości pośrednie
+w różnego rodzaju aparatach, jak ni
+<image/figury/k9_page2_figure1.png>
+rzystuje się równoważnię elektrome-
+chaniczną lub pneumatyczną.
+
+Jeżeli siła mierzona działa na element
+
+sprężysty, wywołuje to jego odkształ-
+Rys. _419.. Schemat dynamometru 2 płaską sprę- cenie i powstanie siły sprężystości, ró-
+„m indekcynokciowym czujnikiem do pola noważącej siłę mierzoną. Odkształ.
+1 sprężyny. 2 -indnkyjnociowy czajnik przzaięć cenie elementu sprężystego może wy-
+
+woływać zmiany jego właściwości
+
+elektrycznych lub, jeżeli jest wystar-
+czająco duże, może być mierzone jako przesunięcie jednego z jego punktów. Do
+tej ostatniej grupy należą powszechnie znane dynamometry sprężynowe (rys. 4.19),
+w których wydłużenie sprężyny, ugięcie membrany lub tp. jest odczytywane
+bezpośrednio na podziałce, albo mierzone jedną z metod opisanych w p. 4.2.
+Dokładność dynamometrów sprężynowych jest uwarunkowana  liniowością
+i stabilnością charakterystyk sprężyn; przy dobrych sprężynach niedokładność
+nie powinna przekraczać 1%. Zakres pomiaru siły wynosi do 200 kN.
+
+Bezpośrednie przetwarzanie sił na sygnał elektryczny umożliwiają czujniki
+magnetosprężyste i piezoelektryczne. W czujnikach magnetosprężystych wyko-
+rzystywane jest zjawisko zmian przenikalności magnetycznej ferromagnetyków
+przy ich deformacji w granicach odkształceń sprężystych. Zjawisko to jest ściśle
+związane ze zjawiskiem magnetostrykcji. Czujniki magnetosprężyste wykonywa-
+ne są z permalojów o różnej zawartości niklu, ze stali transformatorowej (tylko
+czujniki pracujące na ściskanie), czystego niklu, stali miękkiej i in. W tab. 4.1
+zestawiono wartości współczynnika czułości magnetosprężystej, określającego
+względne zmiany przenikalności magnetycznej przy naprężeniu jednostkowym,
+dla kilku materiałów magnetosprężystych. Czujniki magnetosprężyste mogą być
+
+Tabela 4.1
+
+<image/tabele/k9_page2_table1.png>

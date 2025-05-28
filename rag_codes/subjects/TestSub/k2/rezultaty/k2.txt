@@ -1,0 +1,1545 @@
+<image/tabele/k2_page1_table1.png>
+
+<image/tabele/k2_page2_table1.png>
+
+<image/tabele/k2_page8_table1.png>
+
+1. Podstawowe własności analogowych układów elektronicznych
+
+1.1.
+
+Uwagi ogólne
+
+Termin układ elektroniczny oznacza zespół odpowiednio połączonych elementów
+pasywnych, aktywnych i źródeł zasilających o określonych zaciskach wejściowych
+i wyjściowych, mających zdolność do wytwarzania lub przetwarzania sygnałów
+elektrycznych. Do układów wytwarzających sygnały elektryczne zalicza się wszel-
+kie generatory przebiegów elektrycznych. Do układów przetwarzających sygnały
+należy cała gama pozostałych układów wykonujących operacje matematyczne na
+sygnałach.
+
+Cały zbiór aktualnie stosowanych układów elektronicznych UE można zaliczyć do
+jednej z dwóch grup układów (rysunek 1.1): analogowych układów elektronicznych
+AUE i cyfrowych układów elektronicznych CUE. Analogowe układy elektroniczne
+można z kolei podzielić na liniowe układy elektroniczne LUE i nieliniowe układy
+elektroniczne NUE.
+
+<image/figury/k2_page4_figure1.png>
+
+Analogowe układy elektroniczne stanowią część szerokiej klasy układów wytwa-
+rzających i przetwarzających sygnały, których zmiany wartości w czasie zachodzą
+w sposób ciągły (nieskończona liczba stanów), natomiast cyfrowe układy elektro-
+niczne to takie, w których zmiany sygnału zachodzą w sposób dyskretny (skończo-
+na liczba stanów). Najprostszym przykładem sygnału analogowego jest przebieg
+sinusoidalny (nieskończona liczba wartości chwilowych), a cyfrowego przebieg sy-
+gnału przetwarzanego np. w technice TTL (tylko tzw. poziom niski i wysoki).
+
+Podstawową cechą układów liniowych jest spełnianie przez nie zasady superpozycji
+i proporcjonalności. Dla ogólnej postaci układu elektronicznego w formie czwór-
+nika oznacza to, że sygnał na wyjściu stanowi liniową kombinację sygnałów wej-
+ściowych. Inaczej mówiąc, po doprowadzeniu do wejścia układu zbioru sygnałów
+o różnych częstotliwościach i poziomach, na wyjściu otrzymuje się sygnały o tych
+samych częstotliwościach, każdy o poziomie proporcjonalnym do odpowiednie-
+go sygnału wejściowego, np. wzmocniony o wartość wzmocnienia G (ang. Gain)
+i ewentualnie przesunięty w fazie. Jeśli
+
+<image/wzory/k2_page4_formula1.png>
+to
+
+<image/wzory/k2__page4_formula2.png>
+
+1.1. Uwagi ogólne 9
+
+W przypadku układów nieliniowych zasada superpozycji nie obowiązuje i na wyj-
+Ściu układu mogą się pojawić składowe o częstotliwościach różnych od składowych
+na wejściu, a kształt przebiegu wyjściowego może znacznie odbiegać od kształtu
+przebiegu wejściowego.
+
+Wymieniona powyżej własność liniowych układów elektronicznych w odniesie-
+niu do rzeczywistych układów elektronicznych zaliczanych do grupy układów
+liniowych jest spełniona jedynie w sposób przybliżony. Wiąże się to z wykorzy-
+stywaniem w układzie, poza pasywnymi elementami liniowymi RLC, także diod
+i tranzystorów, których charakterystyki przejściowe są nieliniowe. Wystarczy, że
+w układzie zastosuje się jeden element nieliniowy i cały układ staje się układem
+nieliniowym, zasadniczo komplikując jego analizę. Analizę takiego układu moż-
+na znacznie uprościć, zakładając tzw. pracę małosygnałową. To założenie wymu-
+sza w praktyce sterowanie elementu nieliniowego (niekoniecznie całego układu)
+odpowiednio małymi poziomami sygnału. Dzięki temu wykorzystywany odcinek
+charakterystyki nieliniowej elementu aktywnego, np. tranzystora, można uważać za
+liniowy wokół tzw. punktu pracy Q (rysunek 1.2).
+
+<image/figury/k2_page5_figure1.png>
+
+Zwiększenie poziomu sygnału wejściowego u,,(1) spowoduje przejście w obszar nie-
+liniowości charakterystyki i zmianę kształtu sygnału wyjściowego. Zmiana kształtu
+sygnału, wywołana nieliniowością charakterystyk rzeczywistych elementów aktyw-
+nych, stanowi źródło powstawania tzw. zniekształceń nieliniowych objawiających
+się powstawaniem na wyjściu układu harmonicznych sygnału wejściowego.
+Harmoniczną danego sygnału wejściowego jest sygnał wyjściowy o częstotliwości
+n-krotnie większej (n = 2, 3, 4, ...) od wejściowego.
+
+Do oceny względnego poziomu harmonicznych stosuje się współczynnik zawarto-
+Ści harmonicznych. Określa on stosunek poziomu (napięcia lub prądu) powstałych
+w układzie harmonicznych do poziomu składowej podstawowej. Jego wielkość
+zależy od stopnia nieliniowości charakterystyki elementu aktywnego, wybranego
+punktu pracy © i amplitudy sygnału wejściowego.
+
+W idealizowanym wzmacniaczu harmoniczne nic występują, a zmianom poziomu
+sygnału wejściowego odpowiadają proporcjonalne zmiany poziomu sygnału wyj
+Ściowego. Ten związek jest przedstawiany za pomocą charakterystyki przejściowej
+wzmacniacza (rysunek 1.3a linia przerywana).
+
+10
+
+1. Podstawowe własności analogowych układów elektronicznych
+
+<image/figury/k2_page6_figure1.png>
+
+Na rysunkach przedstawiających charakterystykę przejściową układu stosuje się
+zwykle opis osi wyrażony w jednostkach względnych, np. dBuV. Taka jednostka
+określa względny poziom napięcia sygnału wyrażony w dB w stosunku do ] AV.
+Elementy układu elektronicznego, zarówno pasywne, jak i aktywne, są źródłem
+szumów objawiających się powstawaniem na wyjściu układu, poza wzmocnionym
+sygnałem użytecznym, pewnego chaotycznego przebiegu elektrycznego.
+
+Dla małych poziomów sygnału wejściowego, rzędu mikrowoltów i mniej, poziom
+szumów własnych układu na wyjściu przewyższa poziom wzmocnionego sygna-
+łu wejściowego. Charakterystyka przejściowa w tym zakresie (rysunek 13a linia
+ciągła) odbiega od układu idealizowanego i jest to kres dolny zakresu liniowego.
+To zjawisko powoduje ograniczenie czułości układu.
+
+Dla średnich poziomów sygnału wejściowego przebieg charakterystyki pokrywa się
+z przebiegiem idealizowanym.
+
+Dla większych poziomów sygnału wejściowego (rzędu dziesiątek i więcej miliwol-
+tów) powstające harmoniczne powodują zmniejszenie poziomu składowej podsta-
+wowej na wyjściu. Składowa podstawowa to składowa o częstotliwości równej czę.
+stotliwości sygnału wejściowego. Charakterystyka przejściowa w tym zakresie znów
+odbiega od układu idealizowanego. Dla poziomu sygnału wejściowego, przy którym
+poziom sygnału wyjściowego rzeczywistego wzmacniacza odbiega o | dB od pozio-
+mu wyjściowego idealizowanego wzmacniacza, wyznacza się tzw. punkt jednodecy-
+belowej kompresji IdBCP. Jest to kres górny zakresu liniowego wzmacniacza.
+
+Zakres liniowy układów wzmacniających (rysunek 1.3a) jest definiowany jako
+przedział od najmniejszej wartości sygnału wejściowego (czułości układu) do naj.
+większej, powyżej której zmiany poziomu sygnału wyjściowego nie nadążają za
+zmianami poziomu sygnału wejściowego. Aby uniknąć niejednoznaczności zwią-
+zanej z nazewnictwem, przez pojęcie tak zdefiniowanego zakresu liniowego należy
+rozumieć zakres liniowego wzmocnienia.
+
+Inną interpretację zakresu liniowego przedstawiono na rysunku 1.3b. W tym przypad-
+ku wzmocnienie G wyrażone w decybelach jest różnicą poziomów sygnałów z. rysun-
+ku 1.3a wyrażonych w dBHV i dla zakresu liniowego przyjmuje wartość stałą.
+
+Przykłady analogowych liniowych i nieliniowych układów elektronicznych mo:
+znaleźć w najpowszechniej stosowanym urządzeniu, jakim jest odbiornik radiofo-
+niczny. Jego schemat blokowy przedstawiono na rysunku 1.4.
+
+1.2. Parametry robocze 1
+
+1.2.
+
+<image/figury/k2__page7_figure2.png>
+
+Wzmacniacze wielkiej częstotliwości (w.cz.), pośredniej częstotliwości (p.cz.) oraz
+małej częstotliwości (m.cz.) mogą być traktowane jako układy liniowe, natomiast
+pozostałe elementy odbiornika (mieszacz, heterodyna, demodulator) należą do gru-
+py układów nieliniowych. Mimo coraz powszechniejszego stosowania układów cy-
+frowych w urządzeniach elektronicznych stopnie początkowe i końcowe urządzeń
+odbiorczych długo pozostaną układami analogowymi.
+
+W dalszej części książki w pierwszej kolejności zostaną przeanalizowane własno-
+ści szerokiej gamy wzmacniaczy zaliczanych do grupy liniowych analogowych
+układów elektronicznych.
+
+Parametry robocze
+
+Każdy liniowy analogowy układ elektroniczny zbudowany na tranzystorach i wie-
+lu elementach pasywnych (rezystory, kondensatory, cewki indukcyjne itp.) zawsze
+można potraktować jako czwórnik liniowy. W analizie czwórników liniowych po-
+wszechnie wykorzystywane są parametry macierzowe czwórnika. Zależnie od po-
+trzeb stosowane są różne macierze. Do analizy liniowych analogowych układów
+elektronicznych zbudowanych na tranzystorach najczęściej wykorzystuje się sche-
+maty elektryczne tranzystorów jako czwórników opisanych macierzami h, y bądź s.
+Macierz h (rysunek 1.5a) wykorzystuje się do analizy układów zbudowanych na
+tranzystorach bipolarnych w zakresie małych częstotliwości (m.cz.), rzędu do kil-
+kuset kiloherców.
+
+<image/figury/k2_page7_figure1.png>
+
+Zastosowanie macierzy h dla tranzystorów bipolarnych wynika z prostej inter-
+pretacji fizycznej parametrów macierzowych tranzystora (wzmocnienie prądowe
+— hy,, rezystancja wejściowa — hy i wyjściowa — 1», oddziaływanie wyjścia na
+wejście — 3). Zastosowanie tej macierzy dla zakresu małych częstotliwości wynika
+z tego, że wartości tych parametrów są zwykle mierzone dla małych częstotliwości
+(najczęściej | kHz) i z tego powodu są mierzone tylko wartości części rzeczywi-
+stej parametrów. To ograniczenie wyklucza możliwość zastosowania tej macierzy
+do analizy układów dla wyższych częstotliwości (w.cz.), rzędu megaherców, gd:
+
+1. Podstawowe własności analogowych układów elektronicznych
+
+niezbędne są dane o wartości części urojonej danego parametru. Dla tego zakresu
+częstotliwości konieczne jest korzystanie z macierzy y (rysunek 1.5b).
+
+Do analizy układów zbudowanych na tranzystorach polowych macierz h jest nie-
+przydatna. Nawet dla zakresu małych częstotliwości niemierzalne są parametry
+i hą,, gdyż prąd bramki jest praktycznie zerowy. Dla tych tranzystorów dla zakresu
+małych i dużych częstotliwości wykorzystuje się macierz y.
+
+Dla częstotliwości jeszcze większych, bliskich I GHz i więcej (b.w.cz.), żaden para-
+metr macierzowy klasycznych macierzy czwórnika nie może być wyznaczony dro-
+gą pomiaru z wystarczającą dokładnością. Dla tego zakresu wykorzystuje się tylko.
+tzw. macierz rozproszenia s [1], [2].
+
+Zalecane do stosowania typy macierzy w zależności od typu stosowanego tranzystora
+(bipolarny lub polowy) i częstotliwości (m.cz., wcz., b.w.cz.) zestawiono w tabeli 1.1.
+
+<image/figury/k2_page8_igure1.png>
+
+9] (l8)) oznacza, że dla małych częstotliwości wystarczy uwzględnić tylko części
+rzeczywiste admitancji y = g + jb
+
+Wartości parametrów macierzowych h lub y są wyznaczane w stanie zwarcia lub
+rozwarcia odpowiednich zacisków czwórnika. Rzeczywisty układ elektroniczny
+jest zawsze sterowany ze źródła sygnału (generatora) o określonej impedancji we-
+wnętrznej i obciążony określoną impedancją obciążenia. To powoduje, że do oceny
+własności fizycznych układu elektronicznego (np. wzmacniacza) traktowanego jako
+czwórnik liniowy stosuje się parametry robocze wyznaczane dla konkretnych war-
+tości parametrów zastosowanego źródła sygnału i obciążenia.
+
+Parametry robocze czwórnika stanowią podstawowe wielkości charakteryzujące czwór-
+nik w stanie pracy, a nie w stanie jałowym, kiedy na wejściu lub wyjściu czwómika
+prąd jest zerowy (rozwarcie) lub zerowe napięcie (zwarcie).
+
+Po zdefiniowania parametrów roboczych posłużymy się rysunkiem 1.6.
+
+<image/figury/k2_page8_figure2.png>
+
+Rys. 1.6. Układy czwórników do wyznaczania parametrów roboczych
+
+Zdefiniowana graficznie na rysunku 1.6a impedancja wejściowa może być wyzna-
+czona z zależności
+
+<image/wzory/k2_page8_formula1.png>
+
+1.2. Parametry robocze 13
+
+Fizyczną interpretacją tego parametru jest impedancja, którą będzie obciążony gene-
+rator, więc dla generatora o dowolnej rezystancji wewnętrznej ma tę samą wartość.
+Dla małych częstotliwości impedancję wejściową można utożsamiać z rezystancją
+wejściową (pomijalna wartość części urojonej impedancji). Nie można jej jednak
+utożsamiać z rezystancją wejściową czwórnika h,, gdyż ten parametr jest wyzna-
+czany w warunkach zwarcia na wyjściu (Z, = 0).
+
+Można stąd wyciągnąć wniosek, że parametr roboczy wzmacniacza związany na-
+zwą z odpowiednim parametrem macierzowym czwórnika liniowego może mieć
+wartość do niego zbliżoną, ale nigdy równą.
+
+Impedancja wyjściowa:
+
+<image/wzory/k2_page9_formula1.png>
+
+Od strony wyjścia wzmacniacz jest źródłem sygnału dla obciążenia i impedancja
+wyjściowa wzmacniacza jest właśnie impedancją wewnętrzną tego źródła sygnału.
+Warunek Eg = 0 wynika z procedury praktycznego wyznaczania wartości rezystan-
+cji wyjściowej, zgodnie z którą wyzerowuje się poziom sygnału sterującego na wej-
+Ściu (rysunek 1.7), a do wyjścia podłącza się źródło o takim napięciu, jakie było na
+wyjściu, kiedy sygnał sterujący na wejściu był włączony. Dla określonego napięcia
+U,„, prąd płynący w obwodzie wyjściowym jest oczywiście zależny od impedancji
+wyjściowej wzmacniacza.
+
+<image/figury/k2_page9_figure1.png>
+
+Rys. 1.7. Wyznaczanie impedancji wyjściowej
+
+Wzmocnienie napięciowe (rysunek 1.6a) definiuje się jako
+
+<image/wzory/k2_page9_formula2.png>
+
+Dla różnych wydajności generatora Eg i różnych impedancji Z; napięcie wejścio-
+we i wyjściowe będą miały różną wartość, ale ich stosunek G, zawsze przyjmuje
+tę samą wartość. Wartość G, określa więc potencjalne możliwości wzmacniające
+układu dla danej impedancji obciążenia
+
+Wzmocnienie prądowe definiuje się jako
+
+<image/wzory/k2_page8_formula3.png>
+
+Interpretacja tego parametru jest analogiczna jak poprzedniego. Oczywiście tego
+parametru roboczego nie można utożsamiać z parametrem macierzowym h;, jako
+zwarciowym.
+
+1. Podstawowe własności analogowych układów elektronicznych
+
+Z analizy rysunku 1.6a wynika wniosek, że między wymienionymi wzmocnieniami
+występuje związek
+
+<image/wzory/k2_page10_formula1.png>
+lub inaczej
+<image/wzory/k2_page10_formula2.png>
+
+Wzmocnienie napięciowe skuteczne (efektywne)
+
+<image/wzory/k2_page10_formula3.png>
+W odróżnieniu od wzmocnienia napięciowego, wzmocnienie napięciowe skuteczne
+jest odniesione do wydajności źródła napięciowego generatora.
+
+Łatwo zauważyć, że między wzmocnieniem napięciowym skutecznym a wzmocnie-
+niem napięciowym występuje związek
+
+<image/wzory/k2_page10_formula4.png>
+
+Dla różnych rezystancji generatora wartość G,, będzie różna, ale zawsze mniejsza
+od G,, gdyż w praktyce nie istnieją idealne źródła napięciowe (o Zg = 0).
+
+Przez analogię do wzmocnienia napięciowego skutecznego wzmocnienie prądowe
+skuteczne (efektywne) należy odnieść do wydajności generatora, ale jako Źródła
+prądowego. W tym wypadku korzystamy z rysunku 1.6b, otrzymując
+
+<image/wzory/k2_page10_formula.png>
+i podobnie
+<image/wzory/k2_page10_formula6.png>
+
+Wartość G,, jest zawsze mniejsza od G,, gdyż nie istnieją idealne źródła prądowe.
+Między wzmocnieniami skutecznymi występuje także związek
+
+<image/wzory/k2_page10_formula7.png>
+lub
+<image/wzory/k2_page10_formula8.png>
+
+Do oceny własności wzmacniacza pod względem mocy stosuje się następujące pa-
+rametry: wzmocnienie mocy, wzmocnienie mocy skuteczne i wzmocnienie mocy
+dysponowane.
+
+Wzmocnienie mocy jest stosunkiem mocy czynnej wydzielonej w obciążeniu do
+mocy czynnej wydzielonej na wejściu czwórnika
+
+<image/wzory/k2_page10_formula9.png>
+
+1.3, Charakterystyki częstotliwościowe i czasowe 15
+
+1.3.
+
+Wzmocnienie mocy skuteczne jest odniesione do tzw. mocy dysponowanej generatora
+
+<image/wzory/k2_page11_formula1.png>
+
+gdzie moc dysponowana generatora
+<image/wzory/k2_page11_formula2.png>
+
+jest maksymalną mocą, jaką generator może wydzielić na obciążeniu (na wejściu
+czwórnika). Jest to możliwe, gdy generator będzie pracował w stanie dopasowania
+na wejściu czwómnika, czyli jego rezystancja wewnętrzna będzie równa rezystancji
+wejściowej czwórnika.
+
+Wzmocnienie mocy dysponowane jest stosunkiem tzw. mocy dysponowanej na
+wyjściu do mocy dysponowanej generatora
+
+<image/wzory/k2_page11_formula3.png>
+
+gdzie moc dysponowana na wyjściu
+<image/wzory/k2_page11_formula4.png>
+
+jest maksymalną mocą, jaką czwórnik może wydzielić w obciążeniu. Jest to możli-
+we, gdy z kolei czwómnik będzie pracował także w stanie dopasowania na wyjściu,
+czyli gdy rezystancja obciążenia będzie równa jego rezystancja wyjściowej.
+Między wzmocnieniami mocy a napięciowymi i prądowymi istnieją zależności
+
+<image/wzory/k2_page11_formula5.png>
+
+<image/wzory/k2_page11_formula6.png>
+
+Wzmocnienie mocy dysponowane jest maksymalnym wzmocnieniem mocy i wy-
+maga spełnienia warunku obustronnego dopasowania energetycznego. Obustronne
+dopasowanie może niekiedy doprowadzić do utraty stabilności wzmacniacza, tzn.
+że wzmacniacz obustronnie dopasowany może przejść w stan generacji
+
+Charakterystyki częstotliwościowe i czasowe
+
+'W układach liniowych złożonych z elementów skupionych i niezmiennych w czasie
+doprowadzeniu do wejścia zmiennego w czasie przebiegu x(1), zwanego wymusze-
+niem, towarzyszy przebieg wyjściowy y(f), zwany odpowiedzią (rysunek 1.8a).
+
+Stosując przekształcenie Laplace'a dla przebiegu w dziedzinie czasu, otrzymujemy
+wymuszenie X(s) i odpowiedź Y(s) będącą funkcją pulsacji zespolonej s = G + jo
+(rysunek 1.8b). Operatorowa zależność pomiędzy odpowiedzią Y(s) a wymuszeniem
+
+1. Podstawowe własności analogowych układów elektronicznych
+
+<image/figury/k2_page12_figure1.png>
+
+<image/wzory/k2_page12_formula1.png>
+
+W przypadku wejściowych sygnałów sinusoidalnych dla stanu ustalonego układ
+można opisać transmitancją częstotliwościową K(jw), otrzymaną z funkcji K(s)
+przez podstawienie s = jo
+
+<image/wzory/k2_page12_formula2.png>
+Wykres tej transmitancji można przedstawić na płaszczyźnie zmiennej zespolonej
+w postaci tzw. hodografu. Taki wykres nie jest zbyt przydatny w analizie układów
+liniowych, gdyż nie przedstawia w prostej postaci podstawowych informacji o para-
+metrach częstotliwościowych analizowanego układu. Wygodniej jest przedstawiać
+powyższą transmitancję w postaci wykładnicze jako
+
+<image/wzory/k2_page12_formula3.png>
+gdzie
+<image/wzory/k2_page12_formula4.png>
+
+jest tzw. charakterystyką amplitudową (charakterystyką modułu), która podaje
+wprost informację o wzmocnieniu napięciowym bądź prądowym układu w funkcji
+częstotliwości.
+
+<image/wzory/k2_page12_formula5.png>
+jest tzw. charakterystyką fazową (charakterystyką argumentu) i podaje wprost in-
+
+formację o przesunięciu fazy wprowadzanym przez uklad w funkcji częstotliwości.
+Te dwie charakterystyki jednoznacznie opisują własności układu w dziedzinie
+częstotliwości
+
+Idealnym układem liniowym niewprowadzającym zniekształceń jest układ, które-
+go charakterystyka amplitudowa (wzmocnienie) jest wielkością stałą, niezależną od
+częstotliwości (rysunek 1.9a)
+
+<image/wzory/k2_page12_formula6.png>
+natomiast charakterystyka fazowa jest liniową funkcją częstotliwości
+
+<image/wzory/k2_page12_formula7.png>
+co oznacza, że sygnał wejściowy jest proporcjonalny do sygnału wejściowego
+i opóźniony o czas opóźnienia z niezależny od częstotliwości sygnału wejściowego
+(rysunek 1.9b)
+
+1.3. Charakterystyki częstotliwościowe i czasowe. (U
+
+<image/figury/k2_page13_figure2.png>
+
+Rys. 1.9. Charakterystyka częstotliwościowa idealnego układu liniowego
+
+Charakterystyki częstotliwościowe układów rzeczywistych zawsze odbiegają od
+charakterystyk idealnych. Ta rozbieżność jest określana mianem tzw. zniekształ-
+ceń liniowych, objawiających się zmianami wzmocnienia oraz nieliniowym prze-
+biegiem charakterystyki fazowej w funkcji częstotliwości. W każdym układzie
+elektronicznym występują elementy pasywne LC jako celowo zastosowane lub
+niepożądne (pojemności montażowe, indukcyjności doprowadzeń itp.). Te ele-
+menty wraz z rezystancjami tworzą ogniwa filtrujące dolno- i ewentualnie gór-
+noprzepustowe. Ponieważ są to elementy liniowe, więc wprowadzane przez nie
+zniekształcenia zaliczamy do klasy zniekształceń liniowych. Dla przypomnienia:
+drugą klasę zniekształceń w układach elektronicznych stanowią zniekształcenia
+nieliniowe, których źródłem jest nieliniowość charakterystyk przejściowych ele-
+mentów aktywnych.
+
+W analizie liniowych układów wzmacniających charakterystykami przybliżający-
+mi idealne charakterystyki częstotliwościowe są tzw. charakterystyki maksymalnie
+płaskie modułu oraz maksymalnie liniowej fazy [2].
+
+Każdy rzeczywisty wzmacniacz ma oczywiście możliwość wzmacniania sygna-
+łów tylko do skończonej częstotliwości, więc każdy jest filtrem co najmniej dol-
+noprzepustowym. Celem przybliżenia problematyki charakterystyk częstotliwo-
+wych powszechnie stosowanych układów dolnoprzepustowych rozpatrzymy
+transmitancję filtru dolnoprzepustowego o pewnym wzmocnieniu K; opisaną za-
+leżnością
+
+<image/wzory/k2_page13_formula1.png>
+
+gdzie Kq jest wzmocnieniem dla składowej stalej, o jest pułsacją bieżącą, a ©, jest
+górną pulsacją graniczną, dla której wzmocnienie maleje o 11/2.
+
+Wyznaczona graficznie z tej zależności charakterystyka amplitudowa wzmacniacza
+2 rem dolnoprzepustowym będzie miała postać jak na rysunku 1-10.
+BiblistEki
+
+zd 67456
+
+1. Podstawowe własności analogowych układów elektronicznych
+
+<image/figury/k2_page14_figure2.png>
+
+Mys: Lotu: lal aniGI Jatyna al
+
+Taka postać graficzna charakterystyki nie jest stosowana w analizie układów wzmac-
+niających, gdyż jej przebieg nie jest monotoniczny. W związku z tym powszechnie
+stosuje się tzw. charakterystyki Bodego, w których skala częstotliwości jest logaryt-
+miczna, amplitudowa zaś wyrażona w mierze decybelowej
+
+<image/wzory/k2_page14_formula1.png>
+W tym przypadku charakterystyka amplitudowa Bodego przyjmuje postać
+
+<image/wzory/k2_page14_formula2.png>
+
+a jej wykres (rysunek 1.11) powyżej częstotliwości granicznej będzie się zbliżać
+asymptotycznie do prostej o nachyleniu 20 dB na dekadę (dziesięciokrotne zmniejsze-
+nie wzmocnienia przy dziesięciokrotnym wzroście częstotliwości). Niekiedy zamiast
+pojęcia dekady (stosunek częstotliwości równy 10), stosuje się pojęcie oktawy (stosu-
+nek częstotliwości równy 2). Wówczas dla liniowego spadku wzmocnienia dwukrot-
+ny wzrost częstotliwości powoduje dwukrotne zmniejszenie wzmocnienia (6 dB).
+
+<image/figury/k2_page14_figure1.png>
+
+Rys. 1.11. Charakterystyki Bodego
+
+Formalny zapis charakterystyki fazowej Bodego pozostanie bez zmian
+
+<image/wzory/k2_page14_formula3.png>
+
+lecz jej wykres będzie przedstawiony w innej skali.
+
+1.3, Charakterystyki częstotliwościowe i czasowe 19
+
+Przebieg pełnej charakterystyki częstotliwościowej filtru dolnoprzepustowego w po-
+staci unormowanych charakterystyk Bodego przedstawiono na rysunku 1.11.
+Podstawową zaletą charakterystyk Bodego jest to, że mogą być w prosty sposób
+aproksymowane za pomocą asymptotycznych odcinków prostoliniowych (rysunek
+1.12). Największy błąd aproksymacji nie przekracza 3 dB dla charakterystyki am-
+plitudowej i 6* dla charakterystyki fazowej.
+
+<image/figury/k2_page15_figure2.png>
+
+Rys. 1.12. Aproksymowane charakterystyki Bodego
+
+Wszystkie rzeczywiste wzmacniacze zawsze mają ograniczone pasmo pracy w za-
+kresie górnych częstotliwości. Niektóre z nich mają ograniczone pasmo także w za-
+kresie dolnych częstotliwości, wykazując własności pasmowoprzepustowe — wy-
+kres górny rysunku 1.13.
+
+<image/figury/k2_page15_figure1.png>
+
+Rys. 1.13. Wyznaczanie wypadkowej charakterystyki amplitudowej
+
+Korzystając z charakterystyk Bodego, można w prosty sposób przedstawić przebieg
+wypadkowej charakterystyki częstotliwościowej wzmacniacza wielostopniowego,
+z których każdy zawiera strukturę ogniw filtrów dolno- i górnoprzepustowych. Dla
+przypadku struktury wzmacniacza z dwoma ogniwami filtrów dolno- i górnoprzepu-
+
+20
+
+1. Podstawowe własności analogowych układów elektronicznych
+
+stowych o transmitancjach odpowiednio K, i K; otrzymamy przebieg wypadkowej
+tyki amplitudowej K,, jak na rysunku 1.13. Podobnie można wyznaczyć
+
+Wartość wypadkowych częstotliwości granicznych zależy od relacji między często-
+tliwościami granicznymi, odpowiednio fqj a [2 Oraz fyj a fy
+
+Jeżeli są odpowiednio odległe (o co najmniej dwie oktawy), to 3 dB dolne i górne
+częstotliwości graniczne określone są praktycznie przez częstotliwość większą dla
+dolnych częstotliwości i mniejszą dla górnych częstotliwości. Są to tzw. bieguny
+dominujące wypadkowej transmitancji
+
+Jeśli [,, i fp Oraz f i fg są sobie równe (przypadek tzw. biegunów wielokrotnych
+wypadkowej transmitancji), to 3 dB często
+wyznaczyć z zależności
+
+<image/wzory/k2_page16_formula1.png>
+
+<image/wzory/k2_page16_formula2.png>
+
+gdzie n jest liczbą biegunów transmitancji (i
+
+zba ogniw filtrujących).
+
+Z zależności tych wynika, że w przypadku biegunów wielokrotnych pasmo układu
+
+B, określone jako różnica pomiędzy fq, if,» ulega zawężeniu.
+
+Jeśli nie zachodzi przypadek bieguna dominującego i biegunów wielokrotnych
+
+(lu if Oraz fy i fa nie są sobie równe i nie są dostatecznie odległe), to 3 dB czę-
+graniczne można wyznaczyć z przybliżonych ogólnych zależno:
+
+<image/wzory/k2_page16_formula3.png>
+
+<image/wzory/k2_page16_formula4.png>
+
+Jest oczywiste, że w praktyce może zajść inny przypadek dla zakresu dolnych czę-
+stotliwości, a inny dla zakresu górnych częstotliwoś
+
+Do oceny właściwości wzmacniaczy przebiegów impulsowych stosuje się charak-
+terystyki czasowe, które są odpowiedzią układu puls wzorcowy. Najczęściej
+jako impuls wzorcowy stosuje się skok jednostkowy.
+
+Przedstawienie pełnej odpowiedzi czasowej na jednym wykresie jest niewygodne,
+gdyż część początkowa odpowiedzi czasowej, zwana czołem odpowiedzi (impulsu),
+
+kształtuje się stosunkowo krótko w stosunku do pozostałej części odpowiedzi, zwa-
+nej grzbietem odpowiedzi (impulsu). Z tego powodu charakierystykę czasową h(n)
+zwykle przedstawia się oddzielnie dla obu zakresów — rysunek 1.14.
+
+Dla określenia jakości wzmacniających układów impulsowych definiuje się kilka przy-
+dainych w praktyce parametrów, pozwalających ocenić poziom zniekształceń odpo-
+wiedzi czasowej wprowadzonej przez układ. Zniekształcenia te oceniane są w zakresie
+
+1.3, Charakterystyki częstotliwościowe i czasowe 21
+
+<image/figury/k2_page17_figure1.png>
+
+czoła poprzez czas narastania 7, amplitudę pierwszej oscylacji /, (jeżeli występuje)
+oraz czas opóźnienia f,, natomiast w zakresie grzbietu za pomocą tzw. zwisu z(7).
+
+Przy kaskadowym połączeniu pojedynczych wzmacniaczy całkowity czas narasta-
+nia czoła odpowiedzi na skok jednostkowy jest w przybliżeniu równy
+<image/wzory/k2_page17_formula1.png>
+
+Całkowity zwis w układzie wielostopniowym jest równy sumie zwisów wprowa-
+dzonych w poszczególnych stopniach
+
+<image/wzory/k2_page17_formula2.png>
+przy czym zależność ta jest słuszna, jeżeli ich wartości nie przekraczają 10%.
+
+Amplituda pierwszej oscylacji w przypadku małych wartości oscylacji w poszcze-
+gólnych stopniach (mniejszych od 2%) jest tego samego rzędu co pojedynczego
+stopnia, natomiast dla większych (np. 5...10%)
+
+<image/wzory/k2_page17_formula3.png>
+
+Między charakterystykami częstotliwościowymi a czasowymi istnieje jednoznaczny
+ogólny związek, gdyż
+
+<image/wzory/k2_page17_formula4.png>
+
+gdzie L-! — odwrotne przekształcenie Laplace'a.
+
+22
+
+1. Podstawowe własności analogowych układów elektronicznych
+
+1.4.
+
+Niestety, między konkretnymi parametrami w dziedzinie częstotliwości i czasu nie
+ma jednoznacznego związku, gdyż ich wartości odnoszą się jedynie do pewnych
+charakterystycznych punktów, a nie całego ich przebiegu. Można jednak doszuki-
+wać się przybliżonych związków.
+
+Czoło odpowiedzi czasowej jest związane z szybką zmianą wartości sygnału, więc
+określone jest przez przebieg charakterystyki częstotliwościowej w zakresie gór-
+nych częstotliwości. Między częstotliwością graniczną górną a czasem narastania
+istnieje przybliżony związek. Ich iloczyn jest wartością w przybliżeniu stałą
+
+<image/wzory/k2_page18_formula1.png>
+
+Wzmacniacz o większej częstotliwości granicznej górnej charakteryzuje się więc
+mniejszym czasem narastania.
+
+Oscylacje występują m.in. w układzie, którego charakterystyka amplitudowa nie jest
+monotoniczna w zakresie górnych częstotliwości (tzw. podbicie) — rysunek 1.15.
+
+<image/figury/k2_page18_figure2.png>
+
+Grzbiet odpowied: any jest z wolną zmianą wartości sygnału, więc uwarun-
+kowany jest przebiegiem charakterystyki częstotliwościowej w zakresie dolnych
+częstotliwości przenoszonego pasma. Wzmacniacz o mniejszej częstotliwości gra-
+nicznej dolnej charakteryzuje się mniejszym zwisem, a o zerowej — zerowym.
+
+Szumy w układach elektronicznych
+
+Procesowi przesyłania sygnałów przez układ elektroniczny towarzyszy występowa-
+nie niezamierzonych fluktuacji napięć i prądów w poszczególnych jego elementach.
+Fluktuacje te, zwane szumami, ograniczają zdolność układów do przetwarzania sła-
+bych sygnałów. Nawet jeśli sygnał wejściowy układu (np. wzmacniacza) jest ideal-
+nym, monochromatycznym sygnałem sinusoidalnym, sygnał wyjściowy zostaje na-
+cechowany szumami — rysunek 1.16. Dla ustalonych warunków pracy wzmacniacza
+poziom szumów nie zależy od poziomu sygnału i dla małych poziomów sygnału
+pogarsza się tzw. stosunek sygnał szum SIN.
+
+<image/figury/k2.wzory/k2_page18_formula2.png>
+
+1.4. Szumy w układach elektronicznych 23
+
+Ze względu na przypadkowy charakter fluktuacji poziom szumów opisuje się przez.
+podanie ich średniej energii lub średniokwadratowych wartości napięcia albo prądu
+szumów. Spośród wielu znanych rodzajów szumów w analizie układów liniowych
+uwzględnia się zwykle trzy podstawowe: cieplne, śrutowe i 1/f.
+
+Szumy cieplne (termiczne, Johnsona) powstają w każdym przewodniku stratnym
+wskutek przypadkowych zderzeń nośników ładunków z drgającą siecią atomów.
+Intensywność zderzeń zależy od temperatury sieci, a każde zderzenie wytwarza
+krótkie impulsy napięcia o bardzo szerokim widmie. Powoduje to powstanie napię-
+cia fluktuacyjnego o wartości średniokwadratowej w przedziale częstotliwości B,
+określonego wzorem Nyquista
+
+<image/figury/k2_page19_figure1.png>
+
+Każdy element rzeczywisty o rezystancji R można pod względem szumowym trak-
+tnuiaf iabn frhdin naniacinue emmóui nnłarznna szaraanam 7 rmrucranria her.
+
+!
+
+<image/wzory/k2_page19_formula1.png>
+
+Moc źródła szumów cieplnych
+
+<image/wzory/k2_page19_formula2.png>
+i dla jednostkowego pasma oraz temperatury 290 K wynosi 4 - 1072! W.
+Gęstość widmowa mocy szumów cieplnych
+
+<image/wzory/k2_page19_formula3.png>
+
+jest niezależna od częstotliwości — rysunek 1.18 i dlatego, przez analogię do światła
+słonecznego zawierającego wszystkie składowe widma, szumy cieplne zaliczamy
+do tzw. szumów białych.
+
+24
+
+1. Podstawowe własności analogowych układów elektronicznych
+
+<image/figury/k2_page20_figure2.png>
+
+Szum śrutowy jest charakterystyczny dla przyrządów półprzewodnikowych, gdyż
+
+powstaje przy przechodzeniu nośników ładunku przez barierę potencjału złącza p-n.
+Kwadrat wartości skutecznej fluktuacji prądu szumów śrutowych
+
+<image/wzory/k2_page20_formula1.png>
+
+gdzie
+
+q — ładunek elektronu 1,6 - 10719 C;
+
+1, — składowa stała prądu płynącego przez daną powierzchnię.
+Szum śrutowy jest również traktowany jako szum biały.
+Szumy 1/f (zwane również strukturalnymi lub małoczęstotliwościowymi) są re-
+zultatem kilku różnych mechanizmów fizycznych, w których dominuje generacja
+i rekombinacja nośników w defektach struktury krystalicznej półprzewodnika. Ich
+gęstość widmowa
+
+<image/wzory/k2_page20_formula2.png>
+
+gdzie A jest stałą materiałową, zależną od rodzaju materiału, technologii, wielkości
+prądu itp. i jest odwrotnie proporcjonalna do częstotliwości, czyli te szumy domi-
+nują w zakresie małych częstotliwości.
+
+Szumy o nierównomiernej gęstości widmowej w funkcji częstotliwości zaliczane są
+do tzw. szumów kolorowych.
+
+Najczęściej stosowanym wskaźnikiem określającym własności szumowe układu
+elektronicznego jest tzw. współczynnik szumów NF (ang. Noise Factor)
+
+<image/wzory/k2_page20_formula3.png>
+
+Jest to stosunek całkowitej mocy szumów na wyjściu układu P,,., do mocy szumów
+na wyjściu P,,o pochodzących od źródła sygnału.
+
+Odnosząc to do schematu na rysunku 1.19: przez pojęcie mocy szumów na wyjściu
+P,zo pochodzących od źródła sygnału należy rozumieć moc szumów pochodzących
+od rezystancji R;.
+
+<image/figury/k2_page20_figure1.png>
+
+Rys. 1.19. Generator jako źródło sygnału i szumów cieplnych
+
+1.4. Szumy w układach elektronicznych 25
+
+i 5 a
+si
+
+<image/wzory/k2_page21_formula1.png>
+
+Współczynnik szumów rzeczywistego układu pracującego w temperaturze wyższej
+od O K jest zawsze większy od jedności (0 dB).
+
+Wprowadzając do wcześniej określonej definicji moc sygnału P, i dokonując pro-
+stych przekształceń, otrzymujemy
+
+<image/fiwzory/k2_page21_formula2.png>
+
+oraz uwzeledniaiac wzmocnienie układu. otrzymujemy powszechnie stosowana de-
+
+<image/mwzory/k2_page21_formula3.png>
+
+Współczynnik szumów określa więc, o ile pogarsza się stosunek mocy sygnału do
+szumów po przejściu sygnału przez układ.
+
+W układach wielostopniowych połączonych kaskadowo, w których poszczególne
+stopnie charakteryzowane są za pomocą współczynników szumów NF, i dyspono-
+wanych wzmocnień mocy G,a;, a ponadto wszystkie stopnie mają identyczne pasmo
+przenoszenia, wypadkowy współczynnik szumów jest określony zależnością
+
+<image/wzory/k2_page21_formula4.png>
+
+Własności szumowe układu kaskadowego zależą więc przede wszystkim od
+parametrów szumowych stopnia pierwszego, jeżeli tylko ma on dostatecznie duże
+wzmocnienie, gdyż współczynnik szumów stopnia następnego jest redukowany
+o wzmocnienie stopni poprzednich.
+
+Przydatnym parametrem w procesie optymalizacji własności szumowych układów
+wielostopniowych jest tzw. miara szumów poszczególnych stopni
+
+<image/wzory/k2_page21_formula5.png>
+
+Znajomość ich wartości pozwala optymalnie pod względem szumowym połączyć
+poszczególne stopnie. W celu uzyskania minimum wartości wypadkowego współ-
+
+28
+
+2. Sprzężenie zwrome
+
+2.1.
+
+2.2.
+
+Uwagi ogólne
+
+Sprzężeniem zwrotnym określa się zjawisko polegające na przenoszeniu części sygna-
+łu wyjściowego na wejście, co w odniesieniu do wzmacniacza ze sprzężeniem zwrot-
+nym zilustrowano na rysunku 2.1 [5].
+
+<image/figury/k2_page22_figure1.png>
+
+Rys. 2.1. Schemat blokowy wzmacniacza ze sprzężeniem zwrotnym
+
+Przy takim połączeniu toru wzmacniającego i toru sprzężenia zwrotnego pobiera się
+część sygnału z wyjścia i po ewentualnym przetworzeniu, jako tzw. sygnał zwrotny,
+doprowadza się do wejścia, dodając do sygnału ze źródła, Jeżeli polaryzacje (fazy)
+obu sygnałów na wejściach sumatora są przeciwne, mamy do czynienia z ujemnym,
+natomiast przy zgodności faz z dodatnim sprzężeniem zwrotnym.
+
+O ile w układach generacyjnych wykorzystywane jest przede wszystkim dodatnie
+sprzężenie zwrotne, o tyle w liniowych układach elektronicznych stosowane jest
+przede wszystkim ujemne sprzężenie zwrotne pozwalające wpływać na własności
+układu, a w szczególności:
+
+— zmieniać wartość rezystancji wejściowej i wyjściowej;
+
+— kształtować charakterystyki częstotliwościowe;
+
+— zmniejszyć poziom zniekształceń nieliniowych;
+
+— zmniejszyć wrażliwość układu na zmiany jego parametrów i warunków pracy.
+Wymienione zalety opłaca się redukcją wzmocnienia oraz możliwością niestabilnej
+pracy układu. Niestabilność układu objawia się pojawieniem na wyjściu układu nie-
+oczekiwanego przebiegu elektrycznego, tzn. niezamierzoną zmianą funkcji układu ze
+wzmacniającej na generującą.
+
+Poznanie wszystkich skutków działania sprzężenia zwrotnego jest możliwe przy a-
+stosowaniu tzw. ogólnej teorii sprzężenia zwrotnego. Jest to teoria bardzo złożona, ale
+w większości przypadków do poznania własności układu ze sprzężeniem zwrotnym
+wystarczające jest zastosowanie jej ujęcia elementarnego.
+
+Elementarna teoria sprzężenia zwrotnego
+Elementamą teorię sprzężenia zwrotnego stosuje się, jeśli są spełnione następujące za-
+łożenia [3], [5]:
+
+- występuje jednokierunkowa transmisja przez tor wzmacniający i tor sprzężenia
+zwrotnego;
+
+2.2. Elementarna teoria sprzężenia zwrotnego 29
+
+smitancja toru sprzężenia zwrotnego nie zależy od rezystancji generatora i ob-
+
+nia, co sprowadza się do spełnienia założenia, że tor sprzężenia zwrotnego nie
+obciąża toru wzmacniającego.
+
+Do wyprowadzenia równania elementarnej teorii sprzężenia zwrotnego skorzystajmy
+
+z uproszczonego schematu układu z rysunku 2.1 przedstawionego na rysunku 2.2.
+
+- tr
+
+<image/figury/k2_page23_figure1.png>
+
+Rys. 2.2. Uproszczony uktat
+
+Transmitancję toru wzmacniającego oznaczymy literą G, a transmitancję toru sprężenia
+zwrotnego literą . Wiążą one prądy lub napięcia (na rysunku oznaczone przez A)
+
+<image/wzory/k2_page23_formula1.png>
+
+Sygnał zwrotny A, sumuje się z sygnałem wejściowym Ay, tworząc sygnał wejściowy
+toru G
+<image/wzory/k2_page23_formula2.png>
+
+<image/wzory/k2_page23_formula3.png>
+
+Wypadkowa transmitancja układu ze sprzężeniem zwrotnym zależy więc od transmi-
+
+tancji torów G i .
+
+Wyprowadzoną zależność można uprościć, wprowadzając pojęcie stosunku zwrotnego
+<image/wzory/k2_page23_formula4.png>
+
+wówczas
+
+<image/wzory/k2_page23_formula5.png>
+a wprowadzając pojęcie różnicy zwrotnej
+
+<image/wzory/k2_page23_formula6.png>
+otrzymujemy
+
+(2.7)
+
+30
+
+2. Sprzężenie zwrotne
+
+2.3.
+
+Ta zależność pozwala klasyfikować sprzężenie na podstawie wartości różnicy
+zwrotnej.
+
+Jeśli waność różnicy zwrotnej jest liczbą większą od jedności, to wzmocnienie ulega re-
+dukcji, czyli jest o sprzężenie ujemne. Jeśli wartość różnicy zwrotnej jest liczbą mniej-
+szą od jedności, to wzmocnienie ulega zwiększeniu, czyli jest to sprzężenie dodatnie.
+Szczególnym przypadkiem sprzężenia dodatniego jest F = 0 (T= I). W tym przypadku
+układ ze sprzężeniem zwrotnym staje się układem niestabilnym, tzn. że nawet przy bra-
+ku sygnału wejściowego istnieje sygnał wyjściowy (generacja).
+
+Podstawowe układy sprzężenia zwrotnego
+
+Wyprowadzając podstawowe równanie dla układu ze sprzężeniem zwrotnym, nie spre-
+cyzowano sposobu połaczenia bloków G i B. które zwykle sa czwórnikami. Od strony
+
+<image/figury/k2_page24_figure2.png>
+
+<image/figury/k2_page24_figure1.png>
+
+24. Wpływ sprzężenia zwrotnego na właściwości wzmacniaczy 31
+
+LĄ.
+
+2.4.1.
+
+<image/figury/k2_page25_figure2.png>
+
+wypiyw SPrzZĘZGIia ZWIUUICYU Ma WIASLIWUDULI
+wzmacniaczy
+
+Wpływ sprzężenia zwrotnego na parametry robocze
+
+Do analizy wpływu sprzężenia zwrotnego prądowego szeregowego na parametry
+robocze układu przyjmijmy schemat blokowy takiego układu przedstawiony na ry-
+sunku 2.6 [6]. Wprowadzone graficzne definicje impedancji wejściowych i wyj-
+ściowych odnoszą się albo do samego toru wzmacniającego, albo całego układu ze
+sprzężeniem zwrotnym. Zgodnie z wcześniejszą umową odróżnia je indeks f.
+Wyrażenie na wzmocnienie napięciowe skuteczne wzmacniacza z sprzężeniem zwrotnym
+uzyskamy z wzoru otrzymanego z elementarnej teorii sprzężenia. Precyzując rodzaj wzmoc-
+nienia i transmitancji toru sprzężenia zwrotnego, otrzymujemy
+
+<image/wzory/k2_page25_formula1.png>
+
+<image/figury/k2_page25_figure1.png>
+
+Rys. 2.6. Uklad ze sprzężeniem prądowym szeregowym
+
+32
+
+2. Sprzężenie zwrotne
+
+"Wzmocnienie napięciowe skuteczne bez sprzężenia zwrotnego wyznaczymy przy bra-
+ku sygnału sprzężenia zwrotnego (U; = 0), zastępując rzeczywisty generator pewnym
+hipotetycznym o wydajności Egy,
+
+<image/wzory/k2_page26_formula1.png>
+
+gdzie Eg, to taka wydajność hipotetycznego generatora, która przy braku sygnału
+
+sprzężenia zwrotnego (U; = 0) spowoduje na zaciskach wejściowych toru G to samo
+
+napięcie U, i prąd /,, jak przy sprzężeniu zwrotnym.
+
+Zgodnie ze schematem wydajność hipotetycznego generatora
+<image/wzory/k2_page26_formula2.png>
+
+Transmitancja toru sprzężenia zwrotnego
+
+<image/wzory/k2__page26_formula3.png>
+Aby uzyskać związek między wzmocnieniem napięciowym skutecznym układu bez
+i ze sprzężeniem zwrotnym, skorzystajmy ze związku między Eg i Ecy, Dokonując
+
+przekształceń jak przy wyprowadzaniu wzoru elementarnej teorii sprzężenia zwrotne-
+go, otrzymujemy
+
+<image/wzory/k2_page26_formula4.png>
+
+lub w skrócie
+<image/wzory/k2_page26_formula5.png>
+
+Sprzężenie zwrotne prądowe szeregowe redukuje wzmocnienie napięciowe skuteczne
+© wartość różnicy zwrotnej.
+
+Analogicznie można wyznaczyć wyrażenie na wzmocnienie prądowe skuteczne (oczy-
+wiście zmieniając typ generatora z napięciowego na prądowy)
+
+<image/wzory/k2_page26_formula6.png>
+
+Otrzymujemy wniosek analogiczny jak dla wzmocnienia napięciowego skutecznego,
+czyli sprzężenie zwrotne prądowe szeregowe w tym samym stopniu redukuje wzmoc-
+nienie napięciowe skuteczne i prądowe skuteczne.
+
+Dla obwodów wejściowych układu z rysunku 2.6 odpowiednio ze źródłami napięcia
+generatora hipotetycznego Ez, i rzeczywistego Eg otrzymujemy prądy
+
+<image/wzory/k2_page26_formula7.png>
+
+<image/wzory/k2_page26_formula8.png>
+
+<image/tabele/k2_page27_table1.png>
+
+Korzystając z definicji hipotetycznego generatora, zauważamy, że te prądy są sobie
+równe, więc dzieląc podane równania stronami, otrzymujemy
+
+<image/wzory/k2_page27_formula1.png>
+
+skąd wnioskujemy, że suma rezystancji obwodu wejściowego, a przez to zy, ule-
+ga zwiększeniu, gdyż wartość różnicy zwrotnej przy sprzężeniu ujemnym jest zawsze
+większa od jedności.
+
+Zestawiając zbiorczo powyższe wyniki (2.13), (2.14), (2.17), otrzymujemy
+
+<image/wzory/k2_page27_formula2.png>
+
+Jeśli przyjmiemy, że sterujemy wzmacniaczem z idealnego źródła napięciowego
+(Zg = 0), to korzystając z teorii czwórnika, zauważamy, że nie ma różnicy między
+wzmocnieniem napięciowym skutecznym a wzmocnieniem napięciowym (G,s= Gs)
+i z powyższej zbiorczej zależności (2.18) otrzymujemy
+
+<image/wzory/k2_page27_formula3.png>
+skąd wynikają zależności na następne parametry robocze
+
+-G,B,
+
+= (2.20)
+
+(2.21)
+<image/wzory/k2_page27_formula4.png>
+Sprzężenie prądowe szeregowe powoduje wzrost impedancji wejściowej i w takim sa-
+mym stosunku zmniejszenie wzmocnienie napięciowego.
+Podstawiając z kolei Zę = » (sterowanie wzmacniacza z idealnego źródła prądowego),
+otrzymujemy
+<image/wzory/k2_page27_formula5.png>
+
+Sprzężenie prądowe szeregowe nie wprowadza zmiany wzmocnienia prądowego.
+Impedancję wyjściową wyznacza się zgodnie z procedurą omówioną w poprzednim
+rozdziale. Dla układu bez sprzężenia i ze sprzężeniem zwrotnym otrzymujemy odpo-
+wiednio
+
+<image/wzory/k2_page27_formula6.png>
+
+<image/wzory/k2_page27_formula7.png>
+
+Po wprowadzeniu sprzężenia zwrotnego napięcie U, ulega zmniejszeniu. Jeśli jednak
+do analizy przyjmiemy zwiększone napięcie Uży = U> (1 — G,„ B,). to powyższe prądy
+będą sobie równe i po podzieleniu równań stronami otrzymujemy wzór Blackmana
+
+<image/wzory/k2_page27_formula8.png>
+
+Sprzężenie prądowe szeregowe powoduje więc wzrost impedancji wyjściowej.
+Przystępując do analizy układu ze sprzężeniem napięciowym równoległym (rysunek
+2.7), porównajmy go ze sprzężeniem prądowym szeregowym (rysunek 2.7b).
+
+2. Sprzężenie zwrotne
+
+»
+
+<image/figury/k2_page28_figure1.png>
+
+Rys. 2.7. Dwoistość układów ze sprzężeniem zwrotnym
+
+Czwómniki w tych układach są połączone przeciwnie. Takie dwa układy nazywamy
+dwoistymi [6]. Z własności układów dwoistych wynika bardzo przydatny wniosek:
+jeśli znane są zależności na parametry robocze jednego z układów, to aby uzyskać
+zależności na parametry drugiego, wystarczy w znanych zależnościach zamienić
+prądy na napięcia i odwrotnie oraz impedancje na admitancje i odwrotnie. Ze zna-
+nego wzoru na impedancję wejściową układu ze sprzężeniem prądowym szerego-
+wym otrzymujemy wprost wzór na admitancję wejściową układu ze sprzężeniem
+napięciowym równoległym
+
+<image/wzory/k2_page28_formula1.png>
+
+Postępując podobnie przy wyznaczaniu impedancji wyjściowej, otrzymujemy
+
+<image/wzory/k2_page28_formula2.png>
+
+W odróżnieniu od układu ze sprzężeniem prądowym szeregowym układ ze sprzężeniem na-
+pięciowym równoległym powoduje zmniejszenie impedancji wejściowej i wyjściowej.
+Stosując te same przekształcenia dla wzmocnień skutecznych, stwierdzamy, że obydwa
+rodzaje wzmocnień w obu rodzajach sprzężeń ulegają redukcji o różnicę zwrotną.
+
+Postępując analogicznie dla wzmocnienia napięciowego i prądowego, otrzymujemy
+<image/wzory/k2_page28_formula3.png>
+
+<image/wzory/k2_page28_formula4.png>
+Odwrotnie niż dla układu ze sprzężeniem prądowym, gdzie niezmienne było wzmoc-
+nienie prądowe, w układzie ze sprzężeniem napięciowym równoległym niezmienne
+jest wzmocnienie napięciowe.
+
+2.4, Wpływ sprzężenia zwrotnego na właściwości wzmacniaczy 35
+
+Kolejnym układem ze sprzężeniem zwrotnym jest układ ze sprzężeniem napięciowym
+szeregowym — rysunek 2.8.
+
+<image/figury/k2_page28_figure2.png>
+
+Rys. 2.8. Układ ze sprzężeniem napięciowym szeregowym
+
+Obwód wejściowy tego układu jest identyczny jak dla układu ze sprzężeniem prądo-
+wym szeregowym, więc wszystkie parametry robocze związane z wejściem są opisane
+tymi samymi zależnościami
+
+<image/wzory/k2_page29_formula1.png>
+
+<image/wzory/k2_page29_formula2.png>
+
+<image/wzory/k2_page28_formula3.png>
+Ze względu na równoległe połączenie torów G i B od strony wyjścia skorzystamy z za-
+leżności na impedancję wyjściową jak dla układu ze sprzężeniem napięciowo-równo-
+ległym
+
+<image/wzory/k2_page29_formula4.png>
+
+Sprzężenie napięciowe szeregowe powoduje więc redukcję wzmocnień skutecznych,
+wzmocnienia napięciowego i impedancji wyjściowej. Wzmocnienie prądowe nie ulega
+zmianie, a impedancja wejściowa się zwiększa.
+
+Ostatnim analizowanym układem jest układ ze sprzężeniem prądowym równoległym
+— rysunek 2.9.
+
+Porównując ostatnie dwa schematy (rysunek 2.8 i 2.9), zauważamy, że są to układy
+dwoiste, więc sprzężenie prądowe równoległe napięciowe powoduje redukcję wzmoc-
+nień skutecznych, wzmocnienia prądowego i impedancji wejściowej. Wzmocnienie na-
+pięciowe nie ulega zmianie, a impedancja wyjściowa się zwiększa.
+
+<image/figury/k2_page29_figure1.png>
+
+Rys. 2.9. Układ ze sprzężeniem prądowym równoległym
+
+36 2. Sprzężenie zwrome
+
+Wyniki przeprowadzonych rozważań zestawiono zbiorczo w tabeli 2.1, gdzie symbo-
+lami 1, 4, = oznaczono odpowiednio: wzrost, zmniejszenie i niezmienność wartości
+danego parametru.
+
+<image/tabele/k2_page30_table1.png>
+
+Podsumowując otrzymane wyniki analizy cech wszystkich układów ze sprzężeniem
+
+zwrotnym, można wyciągnąć następujące wnioski:
+
+— wzmocnienia skuteczne ulegają redukcji bez względu na typ sprzężenia;
+
+— impedancja wejściowa ulega zwiększeniu dla sprzężeń szeregowych (szeregowe
+połączenie czwórników G i B na wejściu), a zmniejszeniu dla równoległych (po-
+łączenie równoległe);
+
+— impedancja wyjściowa ulega zwiększeniu dla sprzężeń prądowych (szeregowe
+
+<image/figury/k2_page30_figure2.png>
+
+Rys. 2.10. Uklad ze sprzężeniem rzeczywistym
+
+2.4. Wpływ sprzężenia zwrotnego na właściwości wzmacniaczy 37
+
+Korzystając z teorii sprzężenia zwrotnego, otrzymujemy
+
+(2.34)
+
+gdzie
+
+<image/wzory/k2_page31_formula1.png>
+
+<image/wzory/k2_page31_formula2.png>
+Wzmocnienie analizowanego układu ze sprzężeniem zwrotnym maleje o różnicę
+zwrotną, natomiast częstotliwość graniczna góra wzrasta o różnicę zwrotną.
+
+Mnożąc dwa powyższe równania stronami, otrzymujemy
+<image/wzory/k2_page31_formula3.png>
+Wskutek zastosowania ujemnego sprzężenia zwrotnego następuje tzw. wymiana wzmoe-
+nienia i pasma, przy czym pole wzmocnienia pozostaje bez zmian — rysunek 2.11.
+
+<image/figury/k2_page31_figure1.png>
+
+Rys. 2.11. lustracja wymiany wzmocnienia na pasmo
+
+Pełna wymiana wzmocnienia na pasmo występuje tylko dla wzmacniacza opisanego
+funkcją jednobiegunową ze sprzężeniem o charakterze rzeczywistym.
+
+Dla dwustopniowego wzmacniacza objętego pętlą nawet rzeczywistego sprzęże-
+nia zwrotnego funkcja wzmocnienia układu ze sprzężeniem zwrotnym nie jest już
+funkcją jednobiegunową. Z tego powodu nie zachodzi pełna wymiana wzmocnienia
+na pasmo i może wystąpić podbicie charakterystyki częstotliwościowej w zakresie
+górnych częstotliwości. Podobny efekt można uzyskać, jeśli zastosuje się tor sprzę-
+żenia zwrotnego o charakterystyce częstotliwościowej zależnej od częstotliwoś
+Jeśli dla jakiegoś zakresu częstotliwości zmieni się wartość transmitancji toru B, to
+dla tego zakresu zmieni się wartość stosunku zwrotnego, zmieniając wzmocnienie
+wzmacniacza.
+
+38
+
+2. Sprzężenie zwrotne
+
+2.4.3.
+
+2.4.4.
+
+W wyniku zastosowania ujemnego sprzężenia zwrotnego oprócz wymiany wzmoc-
+nienia i pasma uzyskuje się możliwość kształtowania charakterystyki częstotliwo-
+ściowej.
+
+Wpływ sprzężenia zwrotnego na zniekształcenia nieliniowe
+
+Jeśli wzmacniacz będzie wysterowany sygnałem o zbyt dużym poziomie, to sygnał
+wyjściowy ulegnie zniekształceniu. Przy sterowaniu sygnałem sinusoidalnym na wyj-
+Ściu układu będą wytworzone harmoniczne sygnału wejściowego.
+
+Załóżmy, że przy braku sprzężenia zwrotnego wytworzy się na wyjściu wzmac-
+niacza druga harmoniczna o poziomie Uży, Jeśli do układu zostanie wprowadzone
+sprzężenie zwrotne, to na wyjściu także pojawi się harmoniczna, ale o poziomie
+Uzyę.
+
+We wzmacniaczu ze sprzężeniem zwrotnym harmoniczna powstaje w wyniku równo-
+czesnego działania dwóch zjawisk;
+
+— wytworzenia harmonicznej przez element aktywny toru wzmacniającego;
+
+— wzmacniania sygnału zwrotnego harmoniczne.
+
+Powyższe zjawiska można powiązać równaniem
+
+<image/wzory/k2_page32_formula1.png>
+skąd po przekształceniu
+
+<image/wzory/k2_page32_formula2.png>
+
+Sprzężenie zwrotne redukuje więc poziom harmonicznej o wartość różnicy zwrotnej
+Powyższe rozważania można przeprowadzić także dla harmonicznych wyższego rzędu
+i uogólnić na współczynnik zniekształceń nieliniowych, pod warunkiem że jego war-
+tość jest nie większa niż 20% [6].
+
+Wpływ sprzężenia zwrotnego na wrażliwość
+
+Zmiany spowodowane starzeniem elementów, wymianą elementów, zmianą napięcia
+zasilania układu, zmianą temperatury pracy układu itp. powodują niestałość transmi-
+tancji wzmacniacza. Zmiana wzmocnienia lub innego parametru roboczego układu
+zachodząca pod wpływem zamierzonej lub niezamierzonej zmiany (np. napięcia zasi-
+lania układu) odniesiona do tej zmiany jest nazywana wrażliwością danego parametru
+na tę zmianę.
+
+<image/figury/k2_page32_figure1.png>
+
+<image/wzory/k2_page32_formula3.png>
+
+Tak więc wrażliwość jest równa 1/ | I — GB|, czyli równa odwrotności wartości różni-
+cy zwrotnej, Jeśli przykładowo wrażliwość wynosi 0,1 (F = (1 — GB ) = 10), to znaczy,
+
+2.4. Wpływ sprzężenia zwrotnego na właściwości wzmacniaczy 39
+
+że procentowa zmiana wzmocnienia układu ze sprzężeniem zwrotnym będzie jedną
+dziesiątą procentowej wartości zmiany wzmocnienia układu bez sprzężenia zwrotnego.
+Podobnie można przeanalizować wrażliwość innego parametru roboczego wzmacnia-
+cza na dowolne inne zmiany.
+
+Wpływ sprzężenia zwrotnego na stabilność
+
+Każdy układ aktywny jest stabilny, jeśli jego odpowiedź na dowolne krótkotrwałe za-
+kłócenie zanika do zera w funkcji czasu [1].
+
+Problem stabilności w układzie z ujemnym sprzężeniem zwrotnym pojawia się, gdy
+wskutek przesunięć fazowych w torze wzmacniającym i w torze sprzężenia zwrot-
+nego dla pewnych częstotliwości sprzężenie ujemne przekształca się w dodatnie [6].
+Jeśli sprzężenie zwrotne jest czysto dodatnie i dostateczne silne, to wzmocnienie
+może wzrosnąć do nieskończoności i wówczas układ staje się niestabilny, generując
+drgania własne. Niebezpieczeństwo niestabilności występuje szczególnie w ukła-
+dach wielostopniowych ze sprzężeniem zwrotnym. Spośród wielu metod oceny sta-
+bilności w układach analogowych często stosuje się metodę polegającą na badaniu
+przebiegu stosunku zwrotnego układu. Tę metodę zaproponował Bode i jest znana
+pod nazwą kryterium stabilności Bodego.
+
+Rozpatrzmy dolnoprzepustowy wzmacniacz złożony z n jednakowych stopni o pulsa-
+cjach granicznych ©, objętych pętlą rzeczywistego sprzężenia zwrotnego.
+Asymptotyczną logarytmiczną charakterystykę częstotliwościową stosunku zwrotnego
+T = G$ takiego układu pokazano na rysunku 2.
+
+<image/figury/k2_page33_figure1.png>
+
+Rys. 2.12. Przebieg stosunku zwrotnego układu wielostopniowego
+
+Zgodnie z kryterium stabilności Bodego układ ze sprzężeniem zwrotnym jest stabilny,
+jeśli dla częstotliwości, dla której argument stosunku zwrotnego osiąga wartość —n,
+moduł stosunku zwrotnego jest mniejszy od jedności (0 dB).
+
+Z rysunku 2.12 wynika, że
+
+funkcją jednobiegunową) objęty
+
+wsze stabilny (arg 7 < m). Aby
+wzmocnienie pętli (GB) dla wszystkich.
+ści, czyli sprzężenie nie może być zbył :
+
+2. Sprzężenie zwrotne
+
+topniowy (każdy opisany
+
+ja zwrotnego jest za-
+
+stabilny, to wypadkowe
+
+i być mniejsze od jedno-
+adku Tomar = 8.
+
+42
+
+3, Układy zasilania tranzystorów
+
+3.1.
+
+<image/figury/k2_page35_figure1.png>
+
+Wybór punktu pracy
+
+Jednym z zastosowań tranzystora bipolarnego lub polowego w układach elektro-
+nicznych jest wykorzystanie go do wykonania wzmacniacza. Tranzystor we wzmac-
+niaczu pozwala uzyskać na jego wyjściu zwiększoną w stosunku do sygnału wej
+ściowego wartość napięcia lub prądu, lub obydwu jednocześnie, czyli zwiększo-
+ną moc. Jest to możliwe jedynie wtedy, kiedy wzmacniacz będzie podłączony do
+źródła zasilania prądu stałego (DC), gdyż wówczas złącza tranzystora mogą być
+odpowiednio spolaryzowane. Dla wzmacniacza małosygnałowego na tranzystorze
+bipolarnym złącze baza-emiter powinno być spolaryzowane w kierunku przewodze-
+nia, a złącze baza-kolektor w kierunku zaporowym.
+
+Po podłączeniu źródła zasilania do układu tranzystorowego między elektrodami tran-
+zystora ustalą się odpowiednie napięcia (Upz, Up, Ucg), popłyną odpowiednie prądy
+stałe tranzystora (/g, 10, I ) i ustali się punkt pracy tranzystora. Punkt pracy Q (rysu-
+nek 3.1) jest jednoznacznie określony najczęściej za pomocą dwóch wielkości: prądu
+kolektora Ig oraz napięcia kolektor-emiter Ucz. W niektórych zastosowaniach tranzy-
+stora punkt pracy określa się za pomocą prądu emitera i napięcia kolektor-baza.
+
+Przy sterowaniu tranzystora sygnałem zmiennym chwilowy punkt pracy będzie się
+przemieszczał względem statycznego punktu pracy Q.
+
+Doboru punktu pracy dokonuje projektant wzmacniacza na podstawie oczekiwa-
+nych własności wzmacniacza (wzmocnienie, rezystancja wejściowa i wyjściowa,
+zniekształcenia, szumy i inne), które przede wszystkim zależą od własności tranzy-
+stora, a te zależą od przyjętego punktu pracy.
+
+Dla różnych wzmacniaczy różnie dobiera się punkt pracy i np. dla wzmacniaczy
+małosygnałowych punkt pracy dobiera się w obszarze ograniczonym liniami od A
+do E — rysunek 3.
+
+Rys. 3.2. Ograniczenia w doborze punktu pracy tranzystora
+
+Poniżej linii A występuje tzw. obszar odcięcia tranzystora. W miarę zbliżania się do
+teo0 ohczam i sterowania tranzvstora svonalem zmiennym. nowstana zniekcztałca-
+
+<image/wzory/k2_page35_formula1.png>
+
+Mys. 5.5. ilustracja znieksztatcen nieliniowych
+
+3.1. Wybór punktu pracy 43
+
+W lewo od linii B występuje obszar nasycenia. W tym obszarze także zachodzą
+zniekształcenia nieliniowe, wynikające z nieliniowości charakterystyki wyjściowej
+tranzystora. Powyżej linii C (lcg > Icn,,) występuje zagęszczenie charakterystyk,
+co oznacza, że jednakowym przyrostom prądu bazy odpowiadają coraz mniejsze
+przyrosty prądu kolektora. To także skutkuje zniekształceniami nieliniowymi. Poza
+sbszar przekroczenia dopuszczalnej dla tranzystora mocy strat w postaci
+o ciepła Pen. Co może niekiedy doprowadzić do uszkodzenia tranzy-
+iczenie linią E jest związane z niebezpieczeństwem przebicia złącza ze
+orzekroczenie dopuszczalnego dla tranzystora napięcia U cgnax
+dopuszczalnego obszaru pracy pozwala tak umieścić punkt pracy
+aby uniknąć zniekształceń lub możliwości uszkodzenia tranzystora.
+kreślenie wartości 109 oraz Ucpg powinno być poprzedzone analizą
+omiędzy parametrami zmiennoprądowymi AC tranzystora (a przez to
+roboczymi wzmacniacza) a składowymi stałymi na elektrodach tranzy-
+Te związki przedstawiono przykładowo na rysunku 3.4 dla parametrów
+częstotliwości granicznej /,. i współczynnika szumów NF tranzystora.
+
+<image/wzory/k2_page36_formula2.png>
+
+'age36_formula1.png
+
+<image/figury/k2_page36_figure1.png>
+
+do pewnego umownego punktu pracy parametry macierzowe tranzysto-
+$żnym zmianom. Przykładowo, optymalizując wzmacniacz pod kątem
+ancji wejściowej, należy dobierać stosunkowo małą wartość /cy i dużą
+Tranzystor będzie się wówczas charakteryzował dużą rezystancją
+więc wzmacniacz także. Optymalizując wzmacniacz pod kątem innego
+należy dobierać inny punkt pracy. Z tego powodu niezmiernie trudno
+znaczną procedurę wyboru punktu pracy tranzystora poza wynikającą
+z wcześniej omówionych ograniczeń dla napięcia Ucgy
+
+<image/wzory/k2_page36_formula3.png>
+gdzi
+
+Uctnin — Wartość minimalna wynikająca z obszaru nasycenia;
+
+Ucz — wartość maksymalna wynikająca z obszaru przebicia;
+Uęem — przewidywana wartość amplitudy napięcia zmiennego sygnału wyj:
+
+3. Układy zasilania tranzystorów
+
+3.2.
+
+Dla prądu Icg zwykle przyjmuje się
+<image/wzory/k2_page37_formula1.png>
+
+gdzie:
+
+1,„ — przewidywana wartość amplitudy prądu zmiennego sygnału wyjściowego;
+
+k, — współczynnik zapasu (0,7 + 0.9).
+
+Liniowe układy zasilania tranzystorów bipolarnych
+
+Przed układem zasilania tranzystora stawia się dwa wymagania:
+a) ustalić punkt pracy w polu charakterystyk wyjściowych;
+
+b) stabilizować jego położenie.
+
+Najpopularniejszym układem zasilania tranzystora bipolarnego przewidzianego do
+pracy jako element wzmacniacza małosygnałowego jest układ potencjometryczny
+ze sprzężeniem emiterowym — rysunek 3.5a.
+
+Rezystory R, i R tworzą dzielnik napięcia Ee ustalający napięcie na bazie tran-
+zystora. Wartości tych rezystorów muszą być tak dobrane, aby mógł popłynąć
+prąd kolektora. Jego wartość zależy od różnicy napięć między bazą a emiterem
+Ugę i powinna ona wynosić około 0,7 V dla tranzystorów krzemowych. Dokładna
+jej wartość zależy od napięcia na emiterze tranzystora. Napięcie na emiterze jest
+iloczynem prądu emitera (praktycznie równemu prądowi kolektora) i wartości re-
+zystancji Rp. Aby uzyskać założoną wartość 1vg tranzystora, należy więc odpo-
+wiednio dobrać wartości rezystancji rezystorów R,, Rą i Rz, co jest problemem
+dość złożonym.
+
+Rezystor R;, poza tym że wpływa na punkt pracy, realizuje dodatkowo ujemne
+sprzężenie zwrotne tzw. sprzężenie emiterowe. Polega to na tym, że jeśli z ja-
+kiegoś niezamierzonego powodu (np. zmniejszenia wartości EC) zmniejszy
+wartość /gp, to na rezystorze Rę powstanie mniejszy spadek napięcia, więc wzro-
+Śnie napięcie Up (przy stałej wartości napięcia na bazie), powodując wzrost /cg.
+Efekt zadziałania sprzężenia będzie przeciwny, gdyby nastąpił niezamierzony
+wzrost wartości Ic. Rezystor Rz pełni więc funkcję elementu stabilizującego
+punkt pracy tranzystora.
+
+Aby ułatwić analizę, układ z rysunku 3.5a przekształcimy do układu dwubateryjne-
+go ze sprzężeniem emiterowym — rysunek 3.5b (również praktycznie stosowany).
+Podłączenie zasilania jest przedstawione w sposób uproszczony, gdyż powszechnie
+przyjęto unikać rozprowadzania na schematach obydwu biegunów źródła zasilania,
+stosując pojęcie tzw. masy (pozioma, pogrubiona kreska). Wszystkie elementy pod-
+łączone do masy są podłączone do tego samego potencjału źródła zasilania.
+
+Układ z rysunku 3.5b jest równoważny układowi z rysunku 3.5a, jeśli spełnione są
+warunki
+
+<image/wzory/k2_page37_formula2.png>
+
+<image/wzory/k2_page37_formula3.png>
+
+<image/figury/k2_page38_figure1.png>
+
+ce
+e 35. Podstawowe układy zasilania tranzystora Rys. 3.6. Prosta obciążenia tranzystora
+
+Pod umownym symbolem równoległych kresek należy rozumieć równoległe połą-
+czenie elementów.
+
+Przy analizie takiego i innego układu zasilania tranzystora wygodnie jest korzystać
+z tzw. statycznej prostej obciążenia — rysunek 3.6.
+
+Prostą tą wyznacza się następująco: w pierwszym skrajnym przypadku zakładamy,
+że prąd kolektora 7: = 0 i wówczas całe napięcie zasilania Ex. odkłada się mię-
+dzy kolektorem a emiterem; w drugim skrajnym przypadku, gdy założymy napię-
+cie Ucę = 0, płynie maksymalny prąd kolektora 75 = Ec/(RC+ R). Łącząc te dwa
+punkty, otrzymujemy statyczną prostą obciążenia, która jednoznacznie wiąże ze
+sobą napięcie Ucz: i prąd I. Oczywiście punkt pracy zawsze znajduje się na prostej
+obciążenia. Danemu napięciu Ucgg odpowiada tylko jeden prąd /cg.
+
+Dokładna analiza układu z rysunku 3.5b, a przez to i układu z rysunku 3.5a pozwala
+ocenić wpływ zastosowanych elementów układu na jego własności [5].
+
+Zgodnie z drugim prawem Kirchhoffa otrzymujemy
+<image/wzory/k2_page38_formula1.png>
+
+<image/wzory/k2_page38_formula2.png>
+Korzystając ze związków między prądami tranzystora
+
+<image/wzory/k2_page38_formula3.png>
+
+<image/wzory/k2_page38_formula4.png>
+
+oraz związku między współczynnikami wzmocnienia tranzystora a. i B
+
+<image/wzory/k2_page38_formula5.png>
+
+otrzymujemy wyrażenie na prąd kolektora
+
+<image/wzory/k2_page38_formula6.png>
+
+oraz napięcie kolektor-emiter
+
+<image/wzory/k2_page38_formula7.png>
+
+46
+
+3. Układy zasilania tranzystorów
+
+Aby punkt pracy nie zmieniał się w sposób niezamierzony, należy zapewnić stałość
+elementów układu i parametrów tranzystora: Upę, lępy i B. Niestety wartość tych
+parametrów tranzystora w czasie pracy układu ulega zmianie pod wpływem tempe-
+ratury, a mianowicie:
+
+a) prąd Zępo dla tranzystorów germanowych jest z natury duży, ale wolno rośnie ze
+wzrostem temperatury pracy tranzystora — rysunek 3.7a (podwaja się przy wzro-
+ście temperatury o ok. 7 K). Z kolei dla tranzystorów krzemowych jest z natury
+mały, ale szybciej rośnie ze wzrostem temperatury (podwaja się przy wzroście
+temperatury o ok. 10 K);
+
+<image/figury/k2_page39_figure2.png>
+
+Drugim istotnym czynnikiem wpływającym na stałość punktu pracy tranzystora jest
+rozrzut produkcyjny tranzystorów. Ten czynnik należy uwzględniać, jeśli wcześniej
+nie zmierzono parametrów tranzystora, przy wymianie tranzystora lub przy produk-
+cji seryjnej układów. Wartości parametrów przykładowego tranzystora, jakie należy
+wówczas uwzględniać, przedstawiono w tabeli 3.1.
+
+<image/tabele/k2_page39_table1.png>
+
+wartość napięcia wymuszającego dany punkt pracy
+** wartość przy zadanym punkcie pracy
+
+Dla większości tranzystorów z grupy BCI08B do uzyskania założonego punktu
+pracy wystarczy zapewnić Upy = 0,62 V. Dla pewnych egzemplarzy tych tranzysto-
+rów wymagana jest inna wartość. Dla zadanego punktu pracy pozostałe parametry
+mogą także przyjmować różne wartości.
+
+akłady zasilania tranzystorów bipolarnych 41
+
+że na niestałość punktu pracy będzie miała wpływ temperatura lub
+lukcyjny, lub oba czynniki jednocześnie, sprawdźmy, w jakim stopniu
+1 układ polaryzacji wpłynie na jego stabilizację.
+
+© w wyznaczonym równaniu na prąd kolektora wartości maksymalne
+alne (2) Up, Iczo i P, otrzymujemy
+
+<image/wzory/k2_page40_formula2.png>
+
+<image/wzory/k2_page40_formula3.png>
+
+>age40_formula1.png >owyższe równania stronami, otrzymujemy wyrażenie na niestałość prą-
+*Alę
+
+<image/wzory/k2_page40_formula4.png>
+
+„Alego i AB to założone zmiany parametrów.
+
+„że mimo zmian parametrów tranzystora ich wpływ na zmiany punktu
+
+y od wartości rezystorów Rę i R. Przyrosty AUpz, Alcpg i AB mogą
+wartość dodatnią lub ujemną, więc przy wzroście temperatury pracy
+kolektora będzie wzrastał, a przy spadku malał.
+
+„yrażenie można zapisać jako
+
+<image/wzory/k2_page40_formula5.png>
+
+iy i Sj to tzw. współczynniki wrażliwości prądu kolektora na zmiany
+0 AUpy, Alęgo i AB. Gdyby te współczynniki mogły przyjąć wartość
+
+zerową, to mielibyśmy idealną stabilizację prądu kolektora mimo dowolnych zmian
+
+parametrów tranzystora. Wpływ wartości rezystancji bazy Rz na wartość współ-
+
+czynników wrażliwości przedstawiono na rysunku 3.8.
+
+Z wykresów wynika, że nie można jednoznacznie określić, jaką rezystancję Ry na-
+
+leży przyjąć bez przeprowadzenia analizy ilościowej.
+
+<image/figury/k2_page40__figure1.png>
+
+Rys. 3.8. Wpływ Az na współczynniki wrażliwości

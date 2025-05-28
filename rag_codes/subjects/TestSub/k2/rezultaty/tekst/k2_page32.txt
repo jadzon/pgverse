@@ -1,0 +1,57 @@
+38
+
+2. Sprzężenie zwrotne
+
+2.4.3.
+
+2.4.4.
+
+W wyniku zastosowania ujemnego sprzężenia zwrotnego oprócz wymiany wzmoc-
+nienia i pasma uzyskuje się możliwość kształtowania charakterystyki częstotliwo-
+ściowej.
+
+Wpływ sprzężenia zwrotnego na zniekształcenia nieliniowe
+
+Jeśli wzmacniacz będzie wysterowany sygnałem o zbyt dużym poziomie, to sygnał
+wyjściowy ulegnie zniekształceniu. Przy sterowaniu sygnałem sinusoidalnym na wyj-
+Ściu układu będą wytworzone harmoniczne sygnału wejściowego.
+
+Załóżmy, że przy braku sprzężenia zwrotnego wytworzy się na wyjściu wzmac-
+niacza druga harmoniczna o poziomie Uży, Jeśli do układu zostanie wprowadzone
+sprzężenie zwrotne, to na wyjściu także pojawi się harmoniczna, ale o poziomie
+Uzyę.
+
+We wzmacniaczu ze sprzężeniem zwrotnym harmoniczna powstaje w wyniku równo-
+czesnego działania dwóch zjawisk;
+
+— wytworzenia harmonicznej przez element aktywny toru wzmacniającego;
+
+— wzmacniania sygnału zwrotnego harmoniczne.
+
+Powyższe zjawiska można powiązać równaniem
+
+<image/wzory/k2_page32_formula1.png>
+skąd po przekształceniu
+
+<image/wzory/k2_page32_formula2.png>
+
+Sprzężenie zwrotne redukuje więc poziom harmonicznej o wartość różnicy zwrotnej
+Powyższe rozważania można przeprowadzić także dla harmonicznych wyższego rzędu
+i uogólnić na współczynnik zniekształceń nieliniowych, pod warunkiem że jego war-
+tość jest nie większa niż 20% [6].
+
+Wpływ sprzężenia zwrotnego na wrażliwość
+
+Zmiany spowodowane starzeniem elementów, wymianą elementów, zmianą napięcia
+zasilania układu, zmianą temperatury pracy układu itp. powodują niestałość transmi-
+tancji wzmacniacza. Zmiana wzmocnienia lub innego parametru roboczego układu
+zachodząca pod wpływem zamierzonej lub niezamierzonej zmiany (np. napięcia zasi-
+lania układu) odniesiona do tej zmiany jest nazywana wrażliwością danego parametru
+na tę zmianę.
+
+<image/figury/k2_page32_figure1.png>
+
+<image/wzory/k2_page32_formula3.png>
+
+Tak więc wrażliwość jest równa 1/ | I — GB|, czyli równa odwrotności wartości różni-
+cy zwrotnej, Jeśli przykładowo wrażliwość wynosi 0,1 (F = (1 — GB ) = 10), to znaczy,

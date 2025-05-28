@@ -1,0 +1,16 @@
+{
+  // Ustawienia debugowania dla masm-tasm
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug MASM/TASM (stdin < data.txt)",
+      "type": "masm-tasm",
+      "request": "launch",
+      "program": "${workspaceFolder}\\piaty.exe",
+      "args": ["<", "data.txt"],
+      "cwd": "${workspaceFolder}",
+      "stopOnEntry": false,
+      "console": "integratedTerminal"
+    }
+  ]
+}

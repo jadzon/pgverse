@@ -1,0 +1,35 @@
+2. Sprzężenie zwrotne
+
+»
+
+<image/figury/k2_page28_figure1.png>
+
+Rys. 2.7. Dwoistość układów ze sprzężeniem zwrotnym
+
+Czwómniki w tych układach są połączone przeciwnie. Takie dwa układy nazywamy
+dwoistymi [6]. Z własności układów dwoistych wynika bardzo przydatny wniosek:
+jeśli znane są zależności na parametry robocze jednego z układów, to aby uzyskać
+zależności na parametry drugiego, wystarczy w znanych zależnościach zamienić
+prądy na napięcia i odwrotnie oraz impedancje na admitancje i odwrotnie. Ze zna-
+nego wzoru na impedancję wejściową układu ze sprzężeniem prądowym szerego-
+wym otrzymujemy wprost wzór na admitancję wejściową układu ze sprzężeniem
+napięciowym równoległym
+
+<image/wzory/k2_page28_formula1.png>
+
+Postępując podobnie przy wyznaczaniu impedancji wyjściowej, otrzymujemy
+
+<image/wzory/k2_page28_formula2.png>
+
+W odróżnieniu od układu ze sprzężeniem prądowym szeregowym układ ze sprzężeniem na-
+pięciowym równoległym powoduje zmniejszenie impedancji wejściowej i wyjściowej.
+Stosując te same przekształcenia dla wzmocnień skutecznych, stwierdzamy, że obydwa
+rodzaje wzmocnień w obu rodzajach sprzężeń ulegają redukcji o różnicę zwrotną.
+
+Postępując analogicznie dla wzmocnienia napięciowego i prądowego, otrzymujemy
+<image/wzory/k2_page28_formula3.png>
+
+<image/wzory/k2_page28_formula4.png>
+Odwrotnie niż dla układu ze sprzężeniem prądowym, gdzie niezmienne było wzmoc-
+nienie prądowe, w układzie ze sprzężeniem napięciowym równoległym niezmienne
+jest wzmocnienie napięciowe.

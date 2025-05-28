@@ -1,0 +1,84 @@
+„ych w pierwszym rzędzie
+
+dsnicje kilka” odmian. pamięci stalych, z kt
+
+należy wymienić. pamięć programowalną PKOM (ang. prograiable zeud
+a w procesie
+
+wadę may) Informacja z ej pamięci może być tyko rz zas
+programowania, który. pol na pzepa
+Fota Size: w strukturze półprzewodnikowe. Pamięć EEROM (ng
+Pe ogranae read wn metry progrumowaław i śiealna, umo:
+Śr wietokrate zapisywanie informacji a pomocy spesalnych. rogima.
+Lotów, Inomiację moż ine pamięć promieni
+naley udobne wiośiwości ma pamięć EAPROM (ane ceticdly
+Sczbieprogramnabł red guy memory, którą można kasować metodami
+Sekttycznymi a ,
+WW wpóiczewnych urządzeniach cyfrowych stosowane pamięci dużej
+pojemności” wykonywane w. technice ramzystorów. MOS (2 izolowaną
+Komi Dotyczy to np kladów mikroprwezorowych, kalkulatorowych, ge
+uewjnych. Kozrbźaa się paięci słaczne I dymanie, W) pamięciach
+
+statycznych -- komórki. pamięciowe są prostymi przerzutnikami, natomiast
+w pamięciach dynamicznych jest wykorzystywane zjawisko. przechowywania
+Ludunków na pojemnościach własnych (rozproszonych). Napięcie na pojemności
+
+utrzymuje się dzięki wysokiemu” poziomowi impedancji tranzystora MOS.
+Pamięci dynamiczne. wymagają ciągłego. „odźwieżania” ich zawartości, gdyż
+tadunck maleje na skutek dużej lecz skończonej rezystancji, W” pamięciach
+może być przechowywana dostatecznie dlugo, lecz
+wyłączenie napięcia wymazuje informację, Przykladem pmmięci statycznej RAM
+jet uklsd MCY 7102 o pojemności 1024 słów jednobiiowych. Uklad ten jst
+Zanilany napięciem + 5 Vi pobiera prac ok, 30 mA. Średni czas dostępu wynosi
+
+300 ns Pamięci MCY 7102 można łączyć w bloki o zwielokrotnionej pojemności.
+jsze opracowanie
+
+ardziej zezegółowy ons pamięci MOS wykracza poza m
+
+st zwarty w książce [2.3]
+
+Dynamiczny rozwój scalonych ukkudów cyfrowych umożliwił realizację bardzo
+
+Bożych ystomów | miniaturyzcję sprzętu W ach siełemdzioąych
+Opracowane echnologi wytwarzana układów cyfowych o wielke skal
+iMac (SD, dzięki Którym powatały między innymi mikroprocesory oraz
+
+rowe kieszonkowe kalkalatory wyposażone w pamięci KOM. Wprowae
+dzanie mikroprocesorów umożliwi. budowę tanich 4 prostych komputerów
+Ogólnie dosępnych o organizacji stosowa do potrzeb konkretnego użyt
+
+kownik.
+W Iieraturze często używa się pojęć: system mikroprocesorowy lub sysien
+
+mikrokomputerowy wyrażenia dego samego boku funkcjonalnego, kóry
+
+Sy da tla przetwarzania danych Sytem en składa się z 3 pode
+stawowych bloków:
+
+ikroprocsora monoliycz
+
+0 CDU ta centri procesor ul
+
+go nazywanego jednostką centre i czs
+
+258
+
+pamięc zawierającej programy id
+Sadów umożliwiających współpracę mikroprocesora  urządzeimi
+wkdiwyjcia Gnterjsy.
+ej będe w rzeczywistości bardzo zlożonymi blokami są
+ar w oi salon ma jedym polo Kenny
+szyny ciowe srs genercji składają się z tych zanych bloków
+makcjowalnych 2 tym,że jodneikaeetralna nazywani ja moczzocih
+Uproszczony seem blokowy maszyny cyfrowej. pokazano a tn. 2145,
+
+<image/figury/k6_page2_figure1.png>
+
+eh i sterowanii
+
+gokompulera. Prac
+
+Pojawienie się
+
+" 250

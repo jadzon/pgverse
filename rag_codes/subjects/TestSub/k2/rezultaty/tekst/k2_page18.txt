@@ -1,0 +1,43 @@
+22
+
+1. Podstawowe własności analogowych układów elektronicznych
+
+1.4.
+
+Niestety, między konkretnymi parametrami w dziedzinie częstotliwości i czasu nie
+ma jednoznacznego związku, gdyż ich wartości odnoszą się jedynie do pewnych
+charakterystycznych punktów, a nie całego ich przebiegu. Można jednak doszuki-
+wać się przybliżonych związków.
+
+Czoło odpowiedzi czasowej jest związane z szybką zmianą wartości sygnału, więc
+określone jest przez przebieg charakterystyki częstotliwościowej w zakresie gór-
+nych częstotliwości. Między częstotliwością graniczną górną a czasem narastania
+istnieje przybliżony związek. Ich iloczyn jest wartością w przybliżeniu stałą
+
+<image/wzory/k2_page18_formula1.png>
+
+Wzmacniacz o większej częstotliwości granicznej górnej charakteryzuje się więc
+mniejszym czasem narastania.
+
+Oscylacje występują m.in. w układzie, którego charakterystyka amplitudowa nie jest
+monotoniczna w zakresie górnych częstotliwości (tzw. podbicie) — rysunek 1.15.
+
+<image/figury/k2_page18_figure2.png>
+
+Grzbiet odpowied: any jest z wolną zmianą wartości sygnału, więc uwarun-
+kowany jest przebiegiem charakterystyki częstotliwościowej w zakresie dolnych
+częstotliwości przenoszonego pasma. Wzmacniacz o mniejszej częstotliwości gra-
+nicznej dolnej charakteryzuje się mniejszym zwisem, a o zerowej — zerowym.
+
+Szumy w układach elektronicznych
+
+Procesowi przesyłania sygnałów przez układ elektroniczny towarzyszy występowa-
+nie niezamierzonych fluktuacji napięć i prądów w poszczególnych jego elementach.
+Fluktuacje te, zwane szumami, ograniczają zdolność układów do przetwarzania sła-
+bych sygnałów. Nawet jeśli sygnał wejściowy układu (np. wzmacniacza) jest ideal-
+nym, monochromatycznym sygnałem sinusoidalnym, sygnał wyjściowy zostaje na-
+cechowany szumami — rysunek 1.16. Dla ustalonych warunków pracy wzmacniacza
+poziom szumów nie zależy od poziomu sygnału i dla małych poziomów sygnału
+pogarsza się tzw. stosunek sygnał szum SIN.
+
+<image/figury/k2.wzory/k2_page18_formula2.png>

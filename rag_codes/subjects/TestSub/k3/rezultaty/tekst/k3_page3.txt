@@ -1,0 +1,69 @@
+11
+
+166
+
+<image/figury/k8_page3_figure2.png>
+
+"Tey siregowo połączona 2 sobą dekady poprzedniego przykładu wyposażono w
+uklad konbiacyjny sygnalizując ziczerie 500 impulsów. Sta (0101 00000000)acn
+wstal się po 140na Zakładają, mas on być stabilny prze 158 dla prawidlowego
+zadziałania ukladu sygnaliującego, otrzymujemy minimalny okes przebieg sicza
+ego równy 160 ns co odpowiada maksyma częstoliwoci około 65 Mile. M.
+
+„Przy łączeniu kaskadowym sygn przeniesieni można wytworzyć już w moracacie
+osiągnięcia pzez dany licznik stanu końcowego,czylo jeden impuls ziczany wcześcij
+w porównaniu z calkiem przeznaczonym do lączenia szeregowego. Wyprzedzcia to
+mnie sfektywny czas propagacji szeregowego przeniesienia, zwiększając w ten
+sposób szykość ziczania calej kaskady.
+
+Najeybcej licza leni łączony równoległe, w którym opódnienie sygnału prze-
+ie nie umauje ię.
+
+5.7.2. Liczniki synchroniczne
+
+Stsując metody syntezy synhronicznych ukladów sskwezeyjaych można zapro.
+jokować na dowolnych pacrztnikach (aktowanych sbozon lub MŚ) cznik o dowo.
+nej pojemności, pracujący w dowolnym kodzie akejtujący dowolną liczbą sygnałów
+*tamjących W szczególności erowazie I równalegl wpisywanie skanu początkowego
+był omówione w paragrafie poświęconym rejestrem Pozostaje nam zaznajomienie się
+s wybraraacie sygnału przeniesieni, cbwodami wiącanyi wejsciem: zezwalają
+cm CB ora metodami ukladowegoprzyapiemania zliczania na przykładzie typowego
+znika MST seri 7.
+
+© PRZYKŁAD 5.10
+
+'Rompatrmy delaię BD syachronicznieziczającą w przód dodatnie sbocza im-
+pulsów, prodakowaną pod namerem 74160. Licznik ten ma następujące wejde i woj.
+kia
+
+© (Count) - wejście zliczające,
+
+Da + D. (Data) -— ojca równolegie da synchronicznego wpisywazi
+stanu początkowego,
+
+1. (Loud) - wojócestrujące wpisywaniem stanu początkowego,
+
+R (zet) - synchroniczne wajściezeujące,
+
+CE? (Ozunt Enable Paralij) - wejście zezwalające na ziczaie,
+SET (Count. Enable Tickie) — wojśi zezwalające na wytworzenie przeniesienia,
++0 — wyjście równoległe repeztające sta licznika,
+RO (ple Carry) — wyjście przeniesienia.
+Wprowadzenie dwóch wejść zezwalających CEP i CET ułatwia ączanie tych lc
+ników. Wewnątz cznik obliczany Jest jednak jeden sygnał zezwalający na slicznie
+CB = L-CEP-CET
+
+Daiłanie ea opinaa jast tablic» zys 8.56.
+
+<image/tabele/k3_page3_table1.png>
+
+Spróbuje odtworzyć proces projdztowania tego ezaika. Wygodnie jes przy tym.
+
+wyodrębnić dwa etapy:
+
+1) synteza czai box uwzęędnieia 1ygnałów sterujących,
+
+2) modyfikacja uzyskanych funkcji wsbudzeń, dla uwzgjędnienia sygnałów sterują
+EW
+
+W ramach otapu pierwszego, w wyniku standsrdowaj syntazy aa przerzułaikach

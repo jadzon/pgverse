@@ -1,0 +1,40 @@
+1.1. Uwagi ogólne 9
+
+W przypadku układów nieliniowych zasada superpozycji nie obowiązuje i na wyj-
+Ściu układu mogą się pojawić składowe o częstotliwościach różnych od składowych
+na wejściu, a kształt przebiegu wyjściowego może znacznie odbiegać od kształtu
+przebiegu wejściowego.
+
+Wymieniona powyżej własność liniowych układów elektronicznych w odniesie-
+niu do rzeczywistych układów elektronicznych zaliczanych do grupy układów
+liniowych jest spełniona jedynie w sposób przybliżony. Wiąże się to z wykorzy-
+stywaniem w układzie, poza pasywnymi elementami liniowymi RLC, także diod
+i tranzystorów, których charakterystyki przejściowe są nieliniowe. Wystarczy, że
+w układzie zastosuje się jeden element nieliniowy i cały układ staje się układem
+nieliniowym, zasadniczo komplikując jego analizę. Analizę takiego układu moż-
+na znacznie uprościć, zakładając tzw. pracę małosygnałową. To założenie wymu-
+sza w praktyce sterowanie elementu nieliniowego (niekoniecznie całego układu)
+odpowiednio małymi poziomami sygnału. Dzięki temu wykorzystywany odcinek
+charakterystyki nieliniowej elementu aktywnego, np. tranzystora, można uważać za
+liniowy wokół tzw. punktu pracy Q (rysunek 1.2).
+
+<image/figury/k2_page5_figure1.png>
+
+Zwiększenie poziomu sygnału wejściowego u,,(1) spowoduje przejście w obszar nie-
+liniowości charakterystyki i zmianę kształtu sygnału wyjściowego. Zmiana kształtu
+sygnału, wywołana nieliniowością charakterystyk rzeczywistych elementów aktyw-
+nych, stanowi źródło powstawania tzw. zniekształceń nieliniowych objawiających
+się powstawaniem na wyjściu układu harmonicznych sygnału wejściowego.
+Harmoniczną danego sygnału wejściowego jest sygnał wyjściowy o częstotliwości
+n-krotnie większej (n = 2, 3, 4, ...) od wejściowego.
+
+Do oceny względnego poziomu harmonicznych stosuje się współczynnik zawarto-
+Ści harmonicznych. Określa on stosunek poziomu (napięcia lub prądu) powstałych
+w układzie harmonicznych do poziomu składowej podstawowej. Jego wielkość
+zależy od stopnia nieliniowości charakterystyki elementu aktywnego, wybranego
+punktu pracy © i amplitudy sygnału wejściowego.
+
+W idealizowanym wzmacniaczu harmoniczne nic występują, a zmianom poziomu
+sygnału wejściowego odpowiadają proporcjonalne zmiany poziomu sygnału wyj
+Ściowego. Ten związek jest przedstawiany za pomocą charakterystyki przejściowej
+wzmacniacza (rysunek 1.3a linia przerywana).

@@ -1,0 +1,34 @@
+Asembler zadanie 5
+
+W treœci zadania 5 wystêpuje zdanie;
+"Zdefiniuj tablicê (np.) 64 liczbow¹ we =[ x0, x1,... , x63] (liczby typu WORD – dw) i wype³nij j¹ przypadkowymi liczbami naturalnymi < 7Fh (Hex)........"
+Do wczytywania danych (liczb 16 bitowych <= 65535) przygotowa³em dla Pañstwa podprogram o nazwie "WczyLiczbe10", który wraz ze jego 
+aplikacj¹ zosta³ zamieszczony w pliku "piaty.asm" (podprogram "WyswLiczbe10" nale¿y zrealizowaæ samodzielnie).
+Za³¹czony program "piaty.exe" jest kompletny, s³u¿y do ilustracji dzia³ania algorytmów "WczyLiczbe10" i "WyswLiczbe10". 
+Zadaniem programu jest wyœwietlanie 7 maksymalnie piêciocyfrowych liczb w systemie dziesiêtnym podawanych albo liczba po liczbie albo 
+w ca³oœci z zastosowaniem techniki "przekierowania danych wejœciowych" z pliku tekstowego.
+W za³¹czniku poda³em plik "dane.txt" zawieraj¹cy 10 liczb dziesiêtnych - ka¿da liczba w nowej linii - czyli zakoñczona enterem.
+Po wydaniu w DosBoxie komendy:
+
+piaty.exe < dane.txt
+
+zostanie wyœwietlonych 7 liczb w systemie dziesiêtnym, ka¿da w nowej linii.
+W podprogramie "WczyLiczbe10" do wczytywania znaków z klawiatury zastosowano funkcjê 07H przerwania 21H - znaki wczytywane nie s¹ wyœwieltane. 
+Znaki te bêd¹ wyœwietlane jeœli zastosujemy znan¹ funkcjê 01H przerwania 21H.
+
+
+Info: Przekierowywanie danych wejœciowych
+
+Operator "<" stosujemy w przypadku, gdy chcemy przes³aæ do programu dane z wejœcia innego ni¿ standardowe (tj. klawiatury), zazwyczaj z pliku. 
+Przyk³adowo "<" mo¿emy u¿yæ do posortowania zawartoœci pliku tekstowego, co ilustruje poni¿sza komenda:
+
+sort < nieposortowany_plik.txt
+
+Operator < otwiera plik o okreœlonej nazwie, dostêpny tylko do odczytu. 
+
+
+
+
+
+
+

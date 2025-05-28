@@ -1,0 +1,66 @@
+160
+
+161
+
+<image/tabele/k3_page1_table1.png>
+
+W urzędzalch cyfrowych rjaty po zazwyczaj Ankeje
+>. pomeaizych układów pamięłowych, ryk o ie pojemotci,
+
+przetwoników ora seeęowej a róooagą | odwrsie,
+—ukadów opóśniających,
+10 Poza ia
+3 radka wode
+
+gy any
+
+Sym mija omówimy powa uklad wyjąc objęci zejatr SIO sprzę
+
+niem rerożzym, Ukady takie, zażywaow gli rea zącym, charakte
+zaj ię jednym Ib kika zana cyklami adw, ia prozaika tee
+ray rr wyznacza duość er, za kb stanów w cykl ucza
+sia poząlkowęs | rodzaju pręta zyrośago, wymaz pojemność reje
+ste Na ya 60 podany je ogóly zera eco © dogr 4
+
+<image/figury/k8_page1_figure3.png>
+
+5.6.2.
+
+iczniki pierścieniowe
+
+Schemat znika piercieniowego powstaje rejestru O długości N przy sprzężeniu
+m SI= Qu.
+
+Schemat graf iznika porcieniowego' długośc N = 4 poazany js a zys. 6.61.
+nt wyka z grafu, Hank pirkieiowy (Jing Cosnie) sożcny 2 N proersutaików
+(ma pojemność P — N 1 sicza Impuly zegarowo w kodzie „ 2 M7, jeżeli krąży w
+im tłko jedna jedynka lub jedno zero. W tym cia trzeba, przed rozpoczęciem.
+pry, ustawić wlóciwy stan początkowy Hczaika lub zasżecować badziej złożone,
+samokorygjąco sprzężenie rwrtne o postaci
+
+<image/wzory/k3_page1_formula1.png>
+
+re powodują, ż startują od dowolnego stanu początkowego, licznik osiąga cyk
+roboczy po nie więcej niż: impulsach zgarowych (patrz zadane 25.10).
+
+<image/figury/k8_page1_figure1.png>
+
+JR 551. Sebemat | graf lenka piteeniowego o doga = 4
+
+5.6.3. Liczniki psoudopierścieniowe
+
+Schemat 1 graf lczika poeudoiertieniowego (Johnsona, Mochiuta) pokazany
+js ma cya 5.2.
+
+<image/figury/ka_page1figure2.png>
+
+Ryn. 552. Sehemat i graf Haka Joaocna o doga N 4
+
+pragnie zwrotne o postaci
+SI= Typa
+
+apewnia cykl o pojemności  - 2N. Cykle roboczym jet cykl zawierający zero,
+
+gdyż jest o atwo dekodowalny na kod „l 3 * » aktywnym zerem (pal zadanie
+
+Z51).

@@ -1,0 +1,43 @@
+Awe 163
+
+specyficznych rozkazów wejścia-wyjścia, co oznacza, że można je stosować tylko w przypadku tych
+procesorów, które je obsługują Bardzo istotną rolę w operacjach wejścia-wyjcia odgrywają przerwa-
+nia. Są one wydajnym sposobem informowania procesora o dostępności operacji wejścia-wyjścia
+
+4.1.5. Organizacja pamięci i adresowanie
+
+W rozdziale 3. przedstawiłyśmy przykład raczej niewielkiej pamięci. Nie omówiłyśmy jednak
+jeszcze szczegółowo tego, jak pamięć jest rozplanowana i jak się do niej odwołujemy. Bardzo
+ważne jest, abyś rozumiał te dwie kwesiie, zanim będziemy kontynuować bieżący temat.
+
+Możemy wyobrazić sobie pamięć jako macierz bitów. Szerokość każdego wiersza, implemen-
+towanego w posaci rejestru jest zazwyczaj taka sama, jak długość słowa maszynowego komputera.
+Każdy rejestr (nazywany częściej komórką pamięci) ma niepowtarzalny adres. Adresy pamięci za-
+zwyczaj zaczynają się od zera i rosną. Rysunek 4.4 przedstawia tę zasadę.
+
+<image/figury/k5_page9_figure1.png>
+
+„Prawie zawsze adres jest przedstawiony w postaci liczby całkowiiej bez znaku. Przypomnijmy
+sobie z rozdziału 2, że 4 bity to półbaji, a $ bitów to bajt. Normalnie pamięć jest adresowana baj.
+owo, co oznacza, że każdy indywidualny bajt ma swój niepowiarzalny adres. Niektóre komputery
+mogą mieć rozmiar słowa większy niż pojedynczy bajt — na. przykład komputer może operować
+32-bitowymi słowami (co oznacza, że w danej chwili czasu określona instrukcja może modyfiko-
+wać 32 bity na raz), ale ciągle używać architektury adresowanej bitowo. W sytuacji, kiedy słowo
+składa się z kilku bajtów, baj o najniższym adresie decyduje o adresie całego słowa Jes też możliwe,
+żeby komputer był adresowany słowowo, co oznacza, że każde słowo (niekoniecznie każdy bajt)
+„ma swój własny adres. Tym niemniej większość komputerów adresowana jes bajtowo (nawet jeśli
+mają 32-bitowe lub większe słowa). Adres pamięci jest zazwyczaj przechowywany w postaci po-
+jedynczego słowa maszynowego.
+
+Jeśli powyższy wywód o komputerach używających adresowania bajtowego i słów o różnej
+długości nieco Cię zmylł, przydatna może okazać się poniższa analogia. Pamięć podobna jest do
+ulicy pełnej bloków mieszkalnych. Kady budynek (słowo) ma wiele mieszkań (bajtów), Zarazem
+każde mieszkanie ma swój własny adres. Wszystkie mieszkania ponumerowane (adresowane) są
+w kolejności od O do ogólnej liczby mieszkań w kompleksie. Budynki stanowią grupę mieszkań,
+W komputerach taką samą rolę pełnią słowa. Słowa są podstawową jednostką używaną w różno-
+rodnych rozkazach. Na przykład możesz odczytać lub zapisać słowo w pamięci — nawet na kom-
+puterze adresowanym bajtowo.
+
+Jeśli architektura komputera jes adresowana bajtowo, a słowo w rozkazie jest większe niż jeden
+baj, należy przeprowadzić wyrównanie. Na przykład jeśli chcemy odczytać 32-bitowe słowo na
+komputerze adresowanym bajtowo, należy upewnić się, że: (|) słowo to zosało zapisane na naturalnej

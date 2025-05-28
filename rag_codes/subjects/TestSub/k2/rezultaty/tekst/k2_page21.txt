@@ -1,0 +1,41 @@
+1.4. Szumy w układach elektronicznych 25
+
+i 5 a
+si
+
+<image/wzory/k2_page21_formula1.png>
+
+Współczynnik szumów rzeczywistego układu pracującego w temperaturze wyższej
+od O K jest zawsze większy od jedności (0 dB).
+
+Wprowadzając do wcześniej określonej definicji moc sygnału P, i dokonując pro-
+stych przekształceń, otrzymujemy
+
+<image/fiwzory/k2_page21_formula2.png>
+
+oraz uwzeledniaiac wzmocnienie układu. otrzymujemy powszechnie stosowana de-
+
+<image/mwzory/k2_page21_formula3.png>
+
+Współczynnik szumów określa więc, o ile pogarsza się stosunek mocy sygnału do
+szumów po przejściu sygnału przez układ.
+
+W układach wielostopniowych połączonych kaskadowo, w których poszczególne
+stopnie charakteryzowane są za pomocą współczynników szumów NF, i dyspono-
+wanych wzmocnień mocy G,a;, a ponadto wszystkie stopnie mają identyczne pasmo
+przenoszenia, wypadkowy współczynnik szumów jest określony zależnością
+
+<image/wzory/k2_page21_formula4.png>
+
+Własności szumowe układu kaskadowego zależą więc przede wszystkim od
+parametrów szumowych stopnia pierwszego, jeżeli tylko ma on dostatecznie duże
+wzmocnienie, gdyż współczynnik szumów stopnia następnego jest redukowany
+o wzmocnienie stopni poprzednich.
+
+Przydatnym parametrem w procesie optymalizacji własności szumowych układów
+wielostopniowych jest tzw. miara szumów poszczególnych stopni
+
+<image/wzory/k2_page21_formula5.png>
+
+Znajomość ich wartości pozwala optymalnie pod względem szumowym połączyć
+poszczególne stopnie. W celu uzyskania minimum wartości wypadkowego współ-

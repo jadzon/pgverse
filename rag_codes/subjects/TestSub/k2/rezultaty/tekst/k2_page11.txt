@@ -1,0 +1,47 @@
+1.3, Charakterystyki częstotliwościowe i czasowe 15
+
+1.3.
+
+Wzmocnienie mocy skuteczne jest odniesione do tzw. mocy dysponowanej generatora
+
+<image/wzory/k2_page11_formula1.png>
+
+gdzie moc dysponowana generatora
+<image/wzory/k2_page11_formula2.png>
+
+jest maksymalną mocą, jaką generator może wydzielić na obciążeniu (na wejściu
+czwórnika). Jest to możliwe, gdy generator będzie pracował w stanie dopasowania
+na wejściu czwómnika, czyli jego rezystancja wewnętrzna będzie równa rezystancji
+wejściowej czwórnika.
+
+Wzmocnienie mocy dysponowane jest stosunkiem tzw. mocy dysponowanej na
+wyjściu do mocy dysponowanej generatora
+
+<image/wzory/k2_page11_formula3.png>
+
+gdzie moc dysponowana na wyjściu
+<image/wzory/k2_page11_formula4.png>
+
+jest maksymalną mocą, jaką czwórnik może wydzielić w obciążeniu. Jest to możli-
+we, gdy z kolei czwómnik będzie pracował także w stanie dopasowania na wyjściu,
+czyli gdy rezystancja obciążenia będzie równa jego rezystancja wyjściowej.
+Między wzmocnieniami mocy a napięciowymi i prądowymi istnieją zależności
+
+<image/wzory/k2_page11_formula5.png>
+
+<image/wzory/k2_page11_formula6.png>
+
+Wzmocnienie mocy dysponowane jest maksymalnym wzmocnieniem mocy i wy-
+maga spełnienia warunku obustronnego dopasowania energetycznego. Obustronne
+dopasowanie może niekiedy doprowadzić do utraty stabilności wzmacniacza, tzn.
+że wzmacniacz obustronnie dopasowany może przejść w stan generacji
+
+Charakterystyki częstotliwościowe i czasowe
+
+'W układach liniowych złożonych z elementów skupionych i niezmiennych w czasie
+doprowadzeniu do wejścia zmiennego w czasie przebiegu x(1), zwanego wymusze-
+niem, towarzyszy przebieg wyjściowy y(f), zwany odpowiedzią (rysunek 1.8a).
+
+Stosując przekształcenie Laplace'a dla przebiegu w dziedzinie czasu, otrzymujemy
+wymuszenie X(s) i odpowiedź Y(s) będącą funkcją pulsacji zespolonej s = G + jo
+(rysunek 1.8b). Operatorowa zależność pomiędzy odpowiedzią Y(s) a wymuszeniem

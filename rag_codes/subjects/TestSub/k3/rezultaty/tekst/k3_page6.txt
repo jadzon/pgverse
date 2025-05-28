@@ -1,0 +1,58 @@
+m.
+
+Licznik, taki jk w powyższym przykładzie, a niewielkimi wsprawnieniami produ-
+kowaay jst pod numerem 7400. Usprównini polegają na tym (patrz rys 5.60), że
+lizak można zerowa, podając jedynki na weżścia R i R lub ustawiać w stan 9, po-
+dając jedym na wje Sy iS,. Ponadto Qp e nie są połączone ec wyprowadzone
+czobno, c daje możliwość niezależnego koczystania z znika dws- pęcostanowego.
+Dokada s keznicem dwustanowym (dwójką kzącą, ang, trigger lp lp) na początku,
+liczy w kodzie BCD (ys 5.606). Dekada + dwójką liczącą na kodcu (ye 5.06) czy
+w kodzie dwupiątkowym (buinery code), w kteym najbardziej znaczący b znenia
+się o pięć stanów. Dokad taa, pracują jako dzielnik czsttliwści 1:10 daje na.
+vwyjci przebieg prostokątny o wypełnieniu 05.
+
+<image/figury/ka_page6_figure1.png>
+
+stosując opusaną metodę zamiany euea synchronicznego na synchroniczny,
+„można łatwo sprawić, że asynchroniczny licznik biarty o pojemności 21 składa
+sią z 1 połączonych szeregowo dwójek czących, kóre można uzyslać » dowolnych
+„praerztaików, lącząc je jak na ry. 56.
+
+<image/figury/k8_page6_figure2.png>
+
+yn... ące pezetuukow wana mijam
+
+5.14. Skracanie cyklu w licznikach MSI
+
+(Często, np. w dienikach częskodliwośi, zachodzi potrzeba zbudowania licznika
+o pojemośi zemośliwej do uzyskania prze łączenie szeregowa scalonych liczników
+esiętnych i binarnych lab ic dostępnych fragmentów. Można wtedy zaprojektować
+laki Henk na przerzuwaikach w woj zpnchronicoej | ewentualnie przekształcić go
+* proszą wersję ayncroniczną (patre zad. 7.5.13). Przekztałoenie take jst czsto
+Imożiwe z wzgędu na t, że kod znika pracującego fako diaik częsitiwości jest
+dowolny i można go dobać tylko pod łążem uprozezeia budowy licznika. Spożród
+mych możliwych metod na uwagę zasluguje metoda skracania cyklu w licznikach
+ealoych. Polega ona na wymuszenis przeskoku pomjającego nadmiarową liczbę
+stanów. Omówimy to oobno dla Hczaików aeyachronicznych I syachronicznych.
+Skracanie cyklu w swyachronicznych licznikach MSI
+
+Scalone liczniki aeyncbronicne wyposażone są w wejca zerujące, oteż skracanie
+kia odbywa nię popra zerowanie ieanika po przjkciu zalanej zby stanów.
+
+© PRZYKŁAD 5.12
+
+IDreponującdokadą 7400 sbudować licznik modulo 6.
+
+„Przyjmijmy, że dekada połączona jst jak a ry. .40b I pracuj w kodzie ROD.
+W celi skróceia cyku do 6 stanów maeży ę wyzerować po zlczalu 6 impulsów,
+taa cawlą osiągnięcia stanu (0110); = (6). W tym alu wystarczy polączyć Q1 2
+| oraa Qa s R, jak na rys. B2a.
+
+<image/wzory/k3_page6_formula1.png>
+
+R 56 Leni mod zbadany dekady 740: (1) shea, () wykr czowe
+
+Obecność dwóch wejć erujących w dekadzie 7400 pozwala » analogiczny sposób
+skracać cyki tego czila do takiej Hezby stanów, która w zapiste binarnym ma nie
+więcej niż dwie jedyni Jednakie, dzięki itnieniu dwóch wejść stawiających stan 0,
+można stwo uzyskać równieź cyki 7-stasowy, lącząc Qi z Ś I Qa 2 5. U

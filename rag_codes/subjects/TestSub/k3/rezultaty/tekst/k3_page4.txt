@@ -1,0 +1,43 @@
+166
+
+167
+
+„JK, otrzymajemy nasiępująca funkcje tarowań prerztzikai:
+
+H=Qh Q00102
+Kd Ki G
+
+<image/figury/k8_page4_figure1.png>
+
+Zumodyficowanefankcje J, 1 X sleżą od cztrych zmiennych, zgodnie» rozze-
+szoną tablicą dzałena iaika (tys 857), na podstawia któej funkcje o można
+sapisać w posaci
+
+<image/wzory/k3_page4_formula1.png>
+
+Ponadto funkcję X, można również napisać w postaci (różniące ię od podanej tylko
+ma pozycjach zieskełonych):
+
+<image/wzory/k3_page4_formula2.png>
+
+Sygnał przen powinie pojawia sę przy stri 9 obecności sygnału CET,
+
+RO = CET-03-4
+
+W tym mozecie dysponujemy już wazstkimi funkcjami opiającymi Henk
+przystępują do jg poety komisy), pamiętajmy, że bram tawemyjne dia
+laj wybijodnietwesynych lato sygnał pranie oaety wybaczać
++8 pomocy bra une
+
+<image/wzory/ka_page4__formula3.png>
+
+a zamiast przezutików JK użyć przerautników JE, ralienjc funkcjo wzbudzeń za
+„pomocą bramek AND-ORINVERT
+
+<image/wzory/k3_page4_formula4.png>
+
+Wieszie, aby licznik zbudowany 2 przerzutników Master. Slve sizal narastające
+bocza impulsów, na wejściu zizającym rależy umieścić iowertor
+
+Zeby sa agata ika pon e a ab, a wrz
+czasowe na rys 5.581

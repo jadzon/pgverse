@@ -1,0 +1,54 @@
+44
+
+3. Silniki komutatorowe DC
+
+3.2.2.
+
+układy kluczy tranzystorowych opisane w rozdziale 2.2. Mostek H (rozdział 2.3)
+umożliwia dodatkowo zmianę kierunku obrotów (tylko dla silników z magnesem
+trwałym) oraz hamowanie dynamiczne.
+
+Zasadę regulacji PWM zilustrowano na rysunku 3.9. Średnia wartość napięcia „wi-
+dziana” przez silnik wynosi Us = Uz - UT czyli Us = Uz - W. Współczynnik wy-
+pełnienia W = UT jest liczbą ułamkową, często wyrażaną w procentach. Ważny jest
+dobór odpowiedniej częstotliwości fali prostokątnej (f = 1/T). W silniku komuta-
+torowym działają dwa czynniki „uśredniające” przebieg prostokątny: bezwładność
+mechaniczna napędu oraz indukcyjność uzwojeń silnika. Dla niskich częstotliwości
+(£ = 5...50 Hz) czas narastania prądu w indukcyjności nie odgrywa istotnej roli,
+przebieg prądu w uzwojeniu ma kształt prawie prostokątny. W tej sytuacji uśred-
+nianie prędkości zależy od momentu bezwładności wirnika i napędzanych elemen-
+tów. Jeżeli bezwładność układu napędowego jest niewielka, to silnik będzie szar-
+pać lub w najlepszym wypadku pracować bardzo głośno, szczególnie przy małym
+współczynniku wypełnienia tzn. niskiej prędkości obrotowej. Poza tym przy małych
+prędkościach obrotowych mamy do czynienia właściwie z cyklicznym rozruchem
+silnika, a więc impulsy prądowe będą duże. W miarę wzrostu częstotliwości f po-
+prawia się uśrednianie „mechaniczne”, ale coraz większą rolę odgrywa indukcyj
+ność własna silnika. Na rysunku 3.9 przedstawiono przebieg prądu w uzwojeniach
+silnika dla zakresu średnich częstotliwości (kilkaset Hz). Przy jeszcze wyższych
+częstotliwościach może się okazać, że czas trwania impulsu napięciowego jest krót-
+szy od czasu narastania prądu. Inaczej mówiąc — prąd silnika zostanie ograniczony
+przez impedancję uzwojenia dla częstotliwości f (Z = R + ZmfL). Spowoduje to
+zmniejszenie momentu obrotowego silnika. Maksymalna częstotliwość graniczna
+zależy od indukcyjności własnej uzwojeń i musi być ustalona indywidualnie dla
+wybranego silnika. Poza tym zbyt wysoka częstotliwość powoduje dodatkowe śtra-
+ty wywołane prądami wirowymi w rdzeniu oraz zwiększoną emisję zakłóceń elek-
+tomagnetycznych w.cz. Dla większości małych silników komutatorowych opty-
+malne częstotliwości fali prostokątnej PWM zawierają się w granicach od 100 Hz
+do kilku kHz. Można przyjąć praktyczną zasadę: dla maksymalnej przewidywanej
+prędkości obrotowej silnika powinno przypadać przynajmniej 2 do 5 impulsów na
+obrót. Przykład: silnik 12000 obr/min tzn. 200 obr/s. Przyjmujemy częstotliwość f
+z zakresu 400 do 1000 Hz.
+
+Z drugiej strony, w silnikach większej mocy może być podczas pracy słyszalny
+gwizd o częstotliwości f (dla dociekliwych: sprawdzić w encyklopedii hasło „ma-
+gnetostrykcja”), co sugerowałoby zastosowanie częstotliwości powyżej pasma aku-
+stycznego — np. 25 kHz. Dla wielu typów silników jest to możliwe, dlatego dobrze
+jest przeprowadzić próby z różnymi częstotliwościami pracy układu. Wspomniane
+wcześniej silniki bez rdzenia żelaznego szczególnie dobrze nadają się do pracy
+z wysokimi częstotliwościami PWM ze względu na małe indukcyjności własne
+i brak strat w rdzeniu
+
+Układy praktyczne
+
+Bardzo prosty układ regulatora PWM przedstawiono na rysunku 3.10. Generator
+o regulowanym współczynniku wypełnienia jest zrealizowany na bramkach UA

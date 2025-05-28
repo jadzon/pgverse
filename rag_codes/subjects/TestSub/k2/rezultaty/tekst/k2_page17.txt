@@ -1,0 +1,29 @@
+1.3, Charakterystyki częstotliwościowe i czasowe 21
+
+<image/figury/k2_page17_figure1.png>
+
+czoła poprzez czas narastania 7, amplitudę pierwszej oscylacji /, (jeżeli występuje)
+oraz czas opóźnienia f,, natomiast w zakresie grzbietu za pomocą tzw. zwisu z(7).
+
+Przy kaskadowym połączeniu pojedynczych wzmacniaczy całkowity czas narasta-
+nia czoła odpowiedzi na skok jednostkowy jest w przybliżeniu równy
+<image/wzory/k2_page17_formula1.png>
+
+Całkowity zwis w układzie wielostopniowym jest równy sumie zwisów wprowa-
+dzonych w poszczególnych stopniach
+
+<image/wzory/k2_page17_formula2.png>
+przy czym zależność ta jest słuszna, jeżeli ich wartości nie przekraczają 10%.
+
+Amplituda pierwszej oscylacji w przypadku małych wartości oscylacji w poszcze-
+gólnych stopniach (mniejszych od 2%) jest tego samego rzędu co pojedynczego
+stopnia, natomiast dla większych (np. 5...10%)
+
+<image/wzory/k2_page17_formula3.png>
+
+Między charakterystykami częstotliwościowymi a czasowymi istnieje jednoznaczny
+ogólny związek, gdyż
+
+<image/wzory/k2_page17_formula4.png>
+
+gdzie L-! — odwrotne przekształcenie Laplace'a.

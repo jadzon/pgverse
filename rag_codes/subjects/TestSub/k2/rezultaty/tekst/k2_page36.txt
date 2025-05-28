@@ -1,0 +1,41 @@
+3.1. Wybór punktu pracy 43
+
+W lewo od linii B występuje obszar nasycenia. W tym obszarze także zachodzą
+zniekształcenia nieliniowe, wynikające z nieliniowości charakterystyki wyjściowej
+tranzystora. Powyżej linii C (lcg > Icn,,) występuje zagęszczenie charakterystyk,
+co oznacza, że jednakowym przyrostom prądu bazy odpowiadają coraz mniejsze
+przyrosty prądu kolektora. To także skutkuje zniekształceniami nieliniowymi. Poza
+sbszar przekroczenia dopuszczalnej dla tranzystora mocy strat w postaci
+o ciepła Pen. Co może niekiedy doprowadzić do uszkodzenia tranzy-
+iczenie linią E jest związane z niebezpieczeństwem przebicia złącza ze
+orzekroczenie dopuszczalnego dla tranzystora napięcia U cgnax
+dopuszczalnego obszaru pracy pozwala tak umieścić punkt pracy
+aby uniknąć zniekształceń lub możliwości uszkodzenia tranzystora.
+kreślenie wartości 109 oraz Ucpg powinno być poprzedzone analizą
+omiędzy parametrami zmiennoprądowymi AC tranzystora (a przez to
+roboczymi wzmacniacza) a składowymi stałymi na elektrodach tranzy-
+Te związki przedstawiono przykładowo na rysunku 3.4 dla parametrów
+częstotliwości granicznej /,. i współczynnika szumów NF tranzystora.
+
+<image/wzory/k2_page36_formula2.png>
+
+'age36_formula1.png
+
+<image/figury/k2_page36_figure1.png>
+
+do pewnego umownego punktu pracy parametry macierzowe tranzysto-
+$żnym zmianom. Przykładowo, optymalizując wzmacniacz pod kątem
+ancji wejściowej, należy dobierać stosunkowo małą wartość /cy i dużą
+Tranzystor będzie się wówczas charakteryzował dużą rezystancją
+więc wzmacniacz także. Optymalizując wzmacniacz pod kątem innego
+należy dobierać inny punkt pracy. Z tego powodu niezmiernie trudno
+znaczną procedurę wyboru punktu pracy tranzystora poza wynikającą
+z wcześniej omówionych ograniczeń dla napięcia Ucgy
+
+<image/wzory/k2_page36_formula3.png>
+gdzi
+
+Uctnin — Wartość minimalna wynikająca z obszaru nasycenia;
+
+Ucz — wartość maksymalna wynikająca z obszaru przebicia;
+Uęem — przewidywana wartość amplitudy napięcia zmiennego sygnału wyj:

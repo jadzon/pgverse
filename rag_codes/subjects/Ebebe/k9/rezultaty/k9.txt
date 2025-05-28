@@ -1,0 +1,231 @@
+w
+
+figury/k9_page1_figure2.pn
+figury/k9_page1_figureoypad9pna
+
+Rys. 4.18. Tarcza kodowa: a) schemat budowy; b) wycinek tarczy
+
+cieni z występującymi na przemian segmentami przezroczystymi i zaczerniony-
+mi. Pierścień najbliższy środka tarczy podzielony jest na dwie części, zawiera więc
+jeden segment zaczerniony i jeden przezroczysty. Następny pierścień podzielony
+jest na cztery części i zawiera dwa segmenty zaczernione, rozdzielone dwoma
+segmentami przezroczystymi. Trzeci pierścień podzielony jest na osiem części,
+czwarty na szesnaście itd., każdy następny pierścień zawiera dwukrotnie więcej
+segmentów niż poprzedni. Liczba pierścieni określa liczbę segmentów na zewnę-
+trznym pierścieniu, a zatem dokładność pomiaru. Jak łatwo obliczyć, na zewnę-
+trznym pierścieniu jest 2" segmentów (n - _ liczba pierścieni). Z tarczą współpracuje
+zespół fotoełementów, wykrywających, czy nad nimi znajduje się segment zaczer-
+niony czy przezroczysty. Pojawieniu się segmentu zaczernionego odpowiada
+sygnał, któremu przypisujemy wartość 0, a pojawieniu się segmentu przezroczys-
+tego — sygnał, któremu przypisujemy wartość | w dwójkowym systemie liczenia.
+Każdemu położeniu tarczy kodowej odpowiada więc kombinacja zer i jedynek,
+czyli liczba dwójkowa, która stanowi miarę położenia kątowego tarczy. Wyko-
+nywane są tarcze kodowe z odczytem fotoelektrycznym, takie jak opisana powy-
+żej, oraz z odczytem stykowym. Liczba pierścieni n waha się od kilku (tarcze
+z odczytem stykowym) do dziesięciu, a nawet kilkunastu (tarcze z odczytem
+fotoelektrycznym). Wykonywane były również listwy kodowe, obecnie jednak
+nie są już spotykane.
+
+4.5. Pomiary sił i odkształceń
+
+łatwej do zmierzenia. Jako siły kompensujące wykorzystywane są siły sprężysto-
+
+Siłę można mierzyć po uprzednim jej skompensowaniu siłą o wartości znanej lub |
+ści lub siły wytwarzane przez układy elektromagnetyczne, albo pneumatyczne
+
+63
+
+Równoważenie pneumatyczne lub
+clektromagnetyczne jest stosowane
+przy pomiarach niewielkich sił, wy-
+stępujących jako wielkości pośrednie
+w różnego rodzaju aparatach, jak ni
+<image/figury/k9_page2_figure1.png>
+rzystuje się równoważnię elektrome-
+chaniczną lub pneumatyczną.
+
+Jeżeli siła mierzona działa na element
+
+sprężysty, wywołuje to jego odkształ-
+Rys. _419.. Schemat dynamometru 2 płaską sprę- cenie i powstanie siły sprężystości, ró-
+„m indekcynokciowym czujnikiem do pola noważącej siłę mierzoną. Odkształ.
+1 sprężyny. 2 -indnkyjnociowy czajnik przzaięć cenie elementu sprężystego może wy-
+
+woływać zmiany jego właściwości
+
+elektrycznych lub, jeżeli jest wystar-
+czająco duże, może być mierzone jako przesunięcie jednego z jego punktów. Do
+tej ostatniej grupy należą powszechnie znane dynamometry sprężynowe (rys. 4.19),
+w których wydłużenie sprężyny, ugięcie membrany lub tp. jest odczytywane
+bezpośrednio na podziałce, albo mierzone jedną z metod opisanych w p. 4.2.
+Dokładność dynamometrów sprężynowych jest uwarunkowana  liniowością
+i stabilnością charakterystyk sprężyn; przy dobrych sprężynach niedokładność
+nie powinna przekraczać 1%. Zakres pomiaru siły wynosi do 200 kN.
+
+Bezpośrednie przetwarzanie sił na sygnał elektryczny umożliwiają czujniki
+magnetosprężyste i piezoelektryczne. W czujnikach magnetosprężystych wyko-
+rzystywane jest zjawisko zmian przenikalności magnetycznej ferromagnetyków
+przy ich deformacji w granicach odkształceń sprężystych. Zjawisko to jest ściśle
+związane ze zjawiskiem magnetostrykcji. Czujniki magnetosprężyste wykonywa-
+ne są z permalojów o różnej zawartości niklu, ze stali transformatorowej (tylko
+czujniki pracujące na ściskanie), czystego niklu, stali miękkiej i in. W tab. 4.1
+zestawiono wartości współczynnika czułości magnetosprężystej, określającego
+względne zmiany przenikalności magnetycznej przy naprężeniu jednostkowym,
+dla kilku materiałów magnetosprężystych. Czujniki magnetosprężyste mogą być
+
+Tabela 4.1
+
+<image/tabele/k9_page2_table1.png>
+
+budowane jako cewki o zmiennej in-
+dukcyjności własnej  (dławikowe
+rys. 4.20a) lub jako transformatory
+© zmiennej indukcyjności wzajemnej
+
+<image/figury/k9_page3_figure1.png>
+Interesujące rozwiązanie czujnika
+transformatorowego stanowi tzw.
+pressduktor (rys. 4.21). Jest to czujnik
+transformatorowy, w którym uzwo-
+jenia pierwotne i wtórne są umiesz-
+czone w rdzeniu pod kątem prostym
+względem siebie, a pod kątem 45
+względem siły mierzonej F. Przy bra-
+ku siły F napięcie indukowane w
+uzwojeniu wtórnym jest równe ze-
+” Ą ru, ponieważ wektor indukcji magne-
+figury/k9_page3_figure2.pnqtycznejjestwtychwarunkachrw
+noległy do płaszczyzny cewki uzwoje-
+nia wtórnego. Przyłożenie siły F po-
+woduje, że przenikalność magnetycz-
+na w kierunku zgodnym z kierun-
+Rys. 421. Schemat budowy pressduktora kiem działania siły staje się inna niż
+poje wyiiowe przenikalność w kierunku prostopa-
+dłym. W związku z tym, mimo że we-
+ktor natężenia pola magnetycznego pozostaje równoległy do płaszczyzny cewki
+uzwojenia wtórnego, wektor indukcji magnetycznej odchyla się od tego kierunku
+i w cewce indukuje się siła elektromagnetyczna, tym większa im większą wartość
+ma siła F. Ze względów konstrukcyjnych uzwojenie wtórne nie przekracza
+kilkudziesięciu zwojów i w związku z tym indukowane siły elektromagnetyczne
+
+są niewielkie, rzędu miliwoltów.
+
+Czujniki magnetosprężyste dławikowe pracują z reguły w układach mostków
+prądu przemiennego. Stosowane są one do pomiaru sił w zakresie ok. 4-10* N
+oraz do pomiaru ciśnień w zakresie ok. 5-107 Pa. Pressduktory mające czułość
+mniejszą niż czujniki dławikowe są stosowane do pomiaru większych sił.
+
+W czujnikach piezoelektrycznych jest wykorzystywane zjawisko powstawania na
+powierzchni niektórych dielektryków ładunku elektrycznego pod wpływem od-
+kształceń mechanicznych. Właściwość tę mają niektóre kryształy, jak np. kwarc.
+Zjawisko odwrotne, zmiany wymiarów zewnętrznych dielektryka pod wpływem
+pola elektrycznego, nazywa się zjawiskiem elektrostrykcji. Znalazło ono szerokie
+zastosowanie w radiotechnice, m. in. w filtrach rezonansowych. Ponieważ ładunek
+powstający na powierzchni czujnika piezoelektrycznego ma charakter elektro-
+statyczny, jest on rozładowywany przez rezystancję własną dielektryka oraz przez
+rezystancję wejściową wzmacniacza dołączonego do czujnika. Czujniki piezo-
+
+65
+
+elektryczne znalazły więc zastosowanie przede wszystkim w pomiarach dynami-
+cznych zmiennych wartości sił i ciśnień. Zakres mierzonych sił wynosi kilka ty-
+ilkanaście kiloherców.
+
+sięcy niutonów, a częstotliwości maksymalne —
+
+Do pomiaru odkształceń mechanicznych, a w związku z tym również do pomiaru
+sił, powszechnie stosowanymi elementami są tensometry rezystancyjne. W tenso-
+metrze rezystancyjnym (rys. 4.22) rezystancja zależy od odkształcenia mechani-
+cznego. Drut poddany działaniu siły F odkształca się zwiększając swoją długość
+0 AJi zmniejszając swój przekrój o AS.
+Jeżeli rezystancja drutu o rezystyw-
+
+ści g wynosi
+
+<image/wzory/k9_page4_formula1.png>
+
+pod działaniem siły F, na skutek
+iększania długości I i zmniejszenia
+s 8 ekroju $, zwiększy się ona o AR.
+<image/figury/k9_page4_figure2.png>
+fig 5, oprócz zmiany wymiarów, zmia-
+rezystywności materiału odkształ-
+iego. Zjawisko to, zwane piezo-
+ystancją, jest pomijalnie małe dla
+tali, ma natomiast decydujące zna-
+nie dla zmian rezystancji tenso-
+„trów półprzewodnikowych. Ten-
+sometry półprzewodnikowe, wyko-
+nywane są z krzemu lub germanu,
+mają czułość prawie sto razy większą
+niż metaliczne.
+
+Budowę typowego, najczęściej używanego, tensometru metalicznego przedsta-
+wiono na rys. 4.22b. Na podkładzie z cienkiego papieru, celuloidu lub bakelitu
+jest naklejony wężykowo cienki (o średnicy 0,02--0,05 mm) drut, do którego koń-
+ców są przyspawane grubsze doprowadzenia. Tak wykonany tensometr jest
+naklejany na podlegający odkształceniom przedmiot w taki sposób, aby prosto-
+liniowy odcinek drutu, zwany bazą, był ułożony równolegle do kierunku działa-
+nia sił lub naprężeń mierzonych.
+
+Prawidłowo przyklejony tensometr podlega takim samym odkształceniom jak
+podłoże, do którego jest przyklejony. Typowe tensometry metaliczne mają bazę
+długości I -i-20 mm, rezystancję — kilkadziesiąt do kilkuset omów, prąd dopusz-
+czalny — rzędu kilku miliamperów, odkształcenia dopuszczalne — kilka promili
+Czułość odksztalceniowa, określana jako stosunek względnej zmiany rezystancji
+do względnej zmiany długości, ma dla tensometrów metalicznych wartość ok. 2.
+Oznacza to, że przy maksymalnych dopuszczalnych odkształceniach zmiany
+rezystancji tensometru są rzędu części procenta. W praktyce, przy małych na-
+
+66
+
+prężeniach, zmiany rezystancji są znacznie mniejsze. Przy tak małych zmianach
+użytecznych szczególna uwaga musi być zwrócona na niezamierzone zmiany
+rezystancji tensometru, powodowane głównie zmianami temperatury. Rezystancja
+tensometru przy zmianach temperatury zmienia się na skutek zmian rezystywno-
+ści (por. rozdz. 8.5), odkształceń dodatkowych spowodowanych niejednakowy-
+mi współczynnikami rozszerzalności cieplnej tensometru i obiektu oraz zmian,
+w funkcji czasu, właściwości kleju. Powodem niedokładności tensometrów może
+być również czułość tensometru na odkształcenia poprzeczne, prostopadłe do
+kierunku odkształceń badanych. Oprócz tensometrów drutowych, takich jak np.
+przedstawiony na rys. 4.225 tensometr wężykowy, wykonywane są również ten-
+sometry foliowe i tensometry cienkowarstwowe o różnych kształtach, przystoso-
+wanych do pomiaru różnego typu od-
+kształceń. Przykłady tensometrów fo-
+liowych pokazano na rys. 4.23
+
+Tensometry półprzewodnikowe są
+dwóch rodzajów: monokrystaliczne,
+wykonywane z cienkich (o grubo-
+ściach ok. 0,1 -h0,2 mm) pasków wyci-
+nanych z monokryształów krzemu
+lub germanu, oraz cienkowarstwowe,
+otrzymywane przez naparowywanie
+
+<image/figury/k9_page5_figure2.png>
+
+Rys 423. Kształty tensometrów foliowych bizmutu, germanu lub tp. na clastycz-
+sym podłożu neutralnym
+Temtometry rezystancyjne pracują z reguły w układach mostków niczrównowa-
+żonych prądu przemiennego, zwanych mostkami tensometrycznymi. Dla kom-
+pensacji wpływów wahań temperatury w układ mostka jest włączany tensometr
+kompensacyjny umieszczany w taki sposób, że naprężenia badane nie powodują
+jego odkształceń. Warunkiem dokładnej kompensacji jest równość rezystancji
+początkowych, temperaturowych współczynników rezystancji oraz temperatury
+obu tensometrów. W ukladzie z rys. 4.24
+zastosowano dwa tensometry robo-
+cze i dwa tensometry kompensacyjne,
+naklejone prostopadle do kierunku
+działania siły powodującej odkształ-
+cenie badane.
+Na zupełnie odmiennej zasadzie pra-
+5 - cują tensometry strunowe: wykorzys-
+<image/figury/k9_page5_figure1.png>
+nych struny od jej naprężenia. Zmia-
+ny tego naprężenia wywoływane są
+mierzoną siłą zewnętrzną. Pomiar
+polega więc na pobudzaniu struny do
+drgań i mierzeniu ich częstotliwości.
+Struny są wykonywane z materiału
+
+67

@@ -1,0 +1,36 @@
+Na rysunku 3.3 przedstawiono zmianę wartości napięcia na. zaciskach
+akumulatora w funkcji czasu trwania wyładowania. Wartość napięcia maleje
+stopniowo. Przedstawione wykresy obrazują wpływ temperatury elektrolitu
+na napięcie wyładowania, im wyższa jest temperatura clektrlitu, tym większa
+jest wartość napięcia końcowego. Napięcie końcowe zależy również od war-
+tości prądu wyładowania. Wielkością charakteryzującą akumulator, oprócz
+„pojemności, jest dwudziestogodziany prąd wyładowania, który wyznacza się
+dzieląc znamionową pojemność akumulatora przez 20 godzin
+
+<image/wzory/k8_page1_formula1.png>
+
+Jest to wartość prądu wyładowania, przy której akumulator będzie do-
+siarczać energii elektrycznej przez 20h. Przedstawione na rys. 3.3 charak-
+terystyki dotyczą wyładowania takim właśnie prądem.
+
+Maksymalna wartość napięcia ładowania zawiera się w granicach
+242.75 V/ogniwo i zależy od wartości prądu ładowania oraz temperatury
+elektrolitu. Na rysunku 3.4 przedstawiono charakterystykę ładowania ogniwa
+ołowiowego.
+
+<image/figury/k8_page1_figure1.png>
+
+„Akumator można ludować wyłącznie prądem stałym, przy czym jego
+zacisk "dodatni laczy się 2 zaciskiem dodatnim żródła napięcia, a zacisk
+ujemny z zaciskiem ujemnym żródła. W sieciach prądu przemiennego należy
+Stosować prostowniki przetwarzające prąd przemienny na sały. Zaleca się
+przeprowadzać ładowanie, gdy temperatura elektrolitu zawiera się w prze-
+Sziale”5--40'C. Podczas” ladowania akumulatora" temperatura elektrolitu
+wzrasta, nie może jednak przekroczyć 50'C. W razie osiągnięcia takiej warto-
+ści temperatury, należy zmniejszyć prąd ładowania albo zastosować wymu-
+szone chłodzenie ciektroitu, albo też przerwać proce ładowania.
+
+Ogniwa nowego, kwasowego akumulatora ołowiowego, będącego w stanie
+suchym, należy napełnić elektrolitem. Krajowe akumulatory samochodowe,
+
+4

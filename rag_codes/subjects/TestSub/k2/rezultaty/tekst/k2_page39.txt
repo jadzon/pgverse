@@ -1,0 +1,32 @@
+46
+
+3. Układy zasilania tranzystorów
+
+Aby punkt pracy nie zmieniał się w sposób niezamierzony, należy zapewnić stałość
+elementów układu i parametrów tranzystora: Upę, lępy i B. Niestety wartość tych
+parametrów tranzystora w czasie pracy układu ulega zmianie pod wpływem tempe-
+ratury, a mianowicie:
+
+a) prąd Zępo dla tranzystorów germanowych jest z natury duży, ale wolno rośnie ze
+wzrostem temperatury pracy tranzystora — rysunek 3.7a (podwaja się przy wzro-
+ście temperatury o ok. 7 K). Z kolei dla tranzystorów krzemowych jest z natury
+mały, ale szybciej rośnie ze wzrostem temperatury (podwaja się przy wzroście
+temperatury o ok. 10 K);
+
+<image/figury/k2_page39_figure2.png>
+
+Drugim istotnym czynnikiem wpływającym na stałość punktu pracy tranzystora jest
+rozrzut produkcyjny tranzystorów. Ten czynnik należy uwzględniać, jeśli wcześniej
+nie zmierzono parametrów tranzystora, przy wymianie tranzystora lub przy produk-
+cji seryjnej układów. Wartości parametrów przykładowego tranzystora, jakie należy
+wówczas uwzględniać, przedstawiono w tabeli 3.1.
+
+<image/tabele/k2_page39_table1.png>
+
+wartość napięcia wymuszającego dany punkt pracy
+** wartość przy zadanym punkcie pracy
+
+Dla większości tranzystorów z grupy BCI08B do uzyskania założonego punktu
+pracy wystarczy zapewnić Upy = 0,62 V. Dla pewnych egzemplarzy tych tranzysto-
+rów wymagana jest inna wartość. Dla zadanego punktu pracy pozostałe parametry
+mogą także przyjmować różne wartości.

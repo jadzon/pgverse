@@ -1,0 +1,35 @@
+4
+
+MARIE: wprowadzenie
+do budowy prostego komputera
+
+„Jeżeli do uzyskania wyniku masisz posłużyć ię jakimi instrumentem, budując go, nie pozwól sobie
+(nato, aby byl on zbyt skomplikowany”
+
+Leonardo da Vinci
+
+4.1. Wstęp
+
+W dzisiejszych czasach zaprojektowanie komputera to zadanie dla dobrze wyszkolonego inform
+Niemożliwością jest, aby w książce takiej jak ta (ani w podstawowym kursie o architekturze kom-
+putera) przedstawić wszystko, co jest niezbędne do zbudowania współczesnego komputera. Tym
+niemniej w niniejszym rozdziale przyjrzymy się bardzo prostemu komputerowi, jakim jest MARIE
+(ang. A Machine Architecture that is Really Intuitive and Easy), co w języku polskim oznacza na-
+prawdę prostą i intuicyjną architekturę komputera. Następnie krótko omówimy komputery Intel
+i MIPS — dwie popularne architektury, będące odzwierciedlenie filozofi projektowania CISC
+oraz RISC. Celem niniejszego rozdziału jest wyjaśnienie, jak naprawdę działa komputer. Dlatego
+też starałyśmy się, zgodnie z zacytowaną radą Leonarda da Vinci, przedstawić budowę komputera
+w możliwie najmniej skomplikowany sposób.
+
+4.1.1. Podstawy budowy i organizacji procesora
+
+Z rozdziału 2. („Reprezentacja danych w systemach komputerowych") wiemy już, że komputer
+„musi operować ma danych zapisanych w systemie binamym. Z rozdziału 3. z kolei dowiedzieliśmy
+się, że pamięć wykorzystywana jest do przechowywania zarówno danych, jak i poleceń programów
+(również zapisanych w systemie binamym). Programy muszą być w jakiś sposób wykonywane,
+a dane przetwarzane Jest o zadanie procesora (ang. central procesing unit, CPU), który jest od-
+powiedzialny za wczytywanie poleceń programu, rozkodowanie każdego z nich oraz wykonanie
+działań we wskazanej kolejności. Aby zrozumieć, jak pracują komputery, należy najpierw zazna-
+jomi się z ich różnorodnymi podsystemami i interakcjami pomiędzy nimi. Zanim przedstawimy
+prostą architekturę komputera, przyjrzymy się najpierw mikroarchitkturze występującej na po-
+ziomie sterowania współczesnych komputerów.

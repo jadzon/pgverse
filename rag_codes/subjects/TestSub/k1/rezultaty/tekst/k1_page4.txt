@@ -1,0 +1,95 @@
+130 Zeszyty Problemowe
+
+nować z. wyprzedzeniem czasowym stronę
+techniczną oraz ekonomiczną remontu. Na ry-
+sunku 6 przedstawiono fragmenty bieżni zew-
+nętrznej i wewnętrznej uszkodzonego łożyska
+przykładowego silnika. Uszkodzenie łożyska
+wykryto i decyzję o zatrzymaniu silnika podjęto
+w” oparciu o zmodyfikowaną metodą detekcji
+obwiedni [10]
+
+<image/figury/k1_page4_figure1.png>
+
+Prowadzony równolegle pomiar _ prędkości
+drgań węzła łożyskowego w oparciu 0 normę
+ISO 3945 nie dawał podstawy do takiej diagno-
+zy łożyska i podjęcia radykalnych działań eks-
+ploatacyjno-remontowych. Eksploatacja silni-
+ków zależna od ich stanu technicznego jest s
+
+tegią prowadzenia eksploatacji maszyn tech-
+micznie i ekonomicznie najkorzystniejszą, coraz
+częściej stosowaną w krajowych zakładach
+przemysłowych. W gospodarce krajów zachod-
+nich jest strategią dominującą. Strategia ta obok
+korzyści ekonomicznych typu: _ wydłużenie
+okresów międzyremontowych, _ zwiększenie
+niezawodności maszyn, zwiększenie wydajnoś-
+ci, eliminacji niepotrzebnych wymian pod
+zespołów, skrócenie czasu napraw, zmniejsze-
+nie kosztów. magazynowych, wymusza stały
+postęp techniczny zwłaszcza w obszarze pod-
+noszenia poziomu wiedzy przez kadrę tech-
+niczną, Nieuchronne są przy tym koszty na or-
+ganizację i utrzymanie na dobrym poziomie
+służb diagnostycznych [10]. Korzyści ekono-
+miczne z prowadzenia diagnostyki technicznej
+w danym zakładzie, jak dowodzi. praktyka
+przemysłowa [1--3,6*12], wyraźnie przewyż-
+szają koszty jej stosowania. W tabeli 1 przed
+stawiono zestawienie strat finansowych w po-
+szczególnych rodzajach przemysłu w. USA,
+strat spowodowanych przestojem w produkcji
+w wyniku nieoczekiwanej awarii maszyn. Nie
+wykonywano diagnostyki, diagnostyka. była
+mietrafna lub niewystarczająca [8]. Usunięcie
+
+Maszyny Elek
+
+Nr42009
+
+przyczyn awari, czyli naprawa maszyn, średnio
+wały 3-4 dni [8].
+
+Tabela 1. Zestawienie strat finansowych w po-
+szczególnych rodzajach przemysłu w USA, spo-
+wodowanych przestojem w produkcji w wyniku
+nieoczekiwanej awarii maszyn [8]
+
+<image/tabele/k1_page4_table1.png>
+
+Autorowi nie są znane podobne statystyki i zes-
+tawienia dla przemysłu krajowego. Rozmiar
+strat w. poszczególnych gałęziach przemysłu
+USA jednoznacznie, przemawia za konieczno-
+ścią” stosowania diagnostyki, kompleksowej
+diagnostyki obejmującej wszystkie ważne ma-
+szyny produkcyjne. Przemawia to za stosowa-
+niem eksploatacji maszyn zależnej od stanu ma-
+szyn.
+
+3. „Czas życia” silników
+
+Z wieloletnich obserwacji autora w zakresie
+sksploatacji silników indukcyjnych _trójfazo-
+wych klatkowych WN wynika, że czas eksplo-
+lacji danego silnika w przemyśle zwany nie-
+kiedy jego „czasem życia” wynosi najczęściej
+kilkanaście - kilkadziesiąt lat. Zdarzają się co-
+raz częściej przypadki, gdy silnik cksploatowa-
+my_jest kilkadziesiąt lat. W_ sporadycznych
+przypadkach „czas życia” to kilka lat, jeszcze
+rzadziej mniej niż | rok. Okres eksploatacji sil-
+ników wyraźnie wydłuża się w zakładach
+przemysłowych, w których służby techniczne
+Charakteryzują się dużą „kulturą techniczną”
+i stosują na co dzień diagnostykę silników.
+
+4. Rodzaje uszkodzeń i ich statystyka
+Długoletnie obserwacje w zakresie oceny przy-
+czyn awarii silników indukcyjnych klatkowych
+WN w przemyśle krajowym oraz śledzenie lite-
+matury technicznej krajowej i światowej poświę-
+sonej temu tematowi upoważniają autora do
+stwierdzenia, że awaryjność silników w ostat-

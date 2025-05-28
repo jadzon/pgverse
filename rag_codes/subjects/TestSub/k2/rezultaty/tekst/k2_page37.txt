@@ -1,0 +1,56 @@
+3. Układy zasilania tranzystorów
+
+3.2.
+
+Dla prądu Icg zwykle przyjmuje się
+<image/wzory/k2_page37_formula1.png>
+
+gdzie:
+
+1,„ — przewidywana wartość amplitudy prądu zmiennego sygnału wyjściowego;
+
+k, — współczynnik zapasu (0,7 + 0.9).
+
+Liniowe układy zasilania tranzystorów bipolarnych
+
+Przed układem zasilania tranzystora stawia się dwa wymagania:
+a) ustalić punkt pracy w polu charakterystyk wyjściowych;
+
+b) stabilizować jego położenie.
+
+Najpopularniejszym układem zasilania tranzystora bipolarnego przewidzianego do
+pracy jako element wzmacniacza małosygnałowego jest układ potencjometryczny
+ze sprzężeniem emiterowym — rysunek 3.5a.
+
+Rezystory R, i R tworzą dzielnik napięcia Ee ustalający napięcie na bazie tran-
+zystora. Wartości tych rezystorów muszą być tak dobrane, aby mógł popłynąć
+prąd kolektora. Jego wartość zależy od różnicy napięć między bazą a emiterem
+Ugę i powinna ona wynosić około 0,7 V dla tranzystorów krzemowych. Dokładna
+jej wartość zależy od napięcia na emiterze tranzystora. Napięcie na emiterze jest
+iloczynem prądu emitera (praktycznie równemu prądowi kolektora) i wartości re-
+zystancji Rp. Aby uzyskać założoną wartość 1vg tranzystora, należy więc odpo-
+wiednio dobrać wartości rezystancji rezystorów R,, Rą i Rz, co jest problemem
+dość złożonym.
+
+Rezystor R;, poza tym że wpływa na punkt pracy, realizuje dodatkowo ujemne
+sprzężenie zwrotne tzw. sprzężenie emiterowe. Polega to na tym, że jeśli z ja-
+kiegoś niezamierzonego powodu (np. zmniejszenia wartości EC) zmniejszy
+wartość /gp, to na rezystorze Rę powstanie mniejszy spadek napięcia, więc wzro-
+Śnie napięcie Up (przy stałej wartości napięcia na bazie), powodując wzrost /cg.
+Efekt zadziałania sprzężenia będzie przeciwny, gdyby nastąpił niezamierzony
+wzrost wartości Ic. Rezystor Rz pełni więc funkcję elementu stabilizującego
+punkt pracy tranzystora.
+
+Aby ułatwić analizę, układ z rysunku 3.5a przekształcimy do układu dwubateryjne-
+go ze sprzężeniem emiterowym — rysunek 3.5b (również praktycznie stosowany).
+Podłączenie zasilania jest przedstawione w sposób uproszczony, gdyż powszechnie
+przyjęto unikać rozprowadzania na schematach obydwu biegunów źródła zasilania,
+stosując pojęcie tzw. masy (pozioma, pogrubiona kreska). Wszystkie elementy pod-
+łączone do masy są podłączone do tego samego potencjału źródła zasilania.
+
+Układ z rysunku 3.5b jest równoważny układowi z rysunku 3.5a, jeśli spełnione są
+warunki
+
+<image/wzory/k2_page37_formula2.png>
+
+<image/wzory/k2_page37_formula3.png>

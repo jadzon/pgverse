@@ -1,0 +1,73 @@
+„Zeszyt Probemowe - Maszyny Elektryczne Nr 842009 129
+
+<image/wzory/k1_page3_formula2.png>
+<image/wzory/ki_page3_formula1.png>
+
+<image/wzory/k1_page3_formula3.png>
+
+<image/figury/k1_page3_figure2.png>
+<image/wzory/k1_page3_formula4.png>
+
+gdzie: Leeux — poziom wartości. szczytowej
+
+przyspieszenia drgań łożyska, Lepro — poziom
+
+składowej BPFO” (uszkodzenie bieżni zew-
+
+nętrznej — (2)), w widmie obwiedni przyśpie-
+
+szenia drgań [10], C, — współczynnik szczytu
+
+przyspieszenia drgań, Aprax — wartość szczy-
+
+towa przyspieszenia drgań dla chwili , Aerox
+
+wartość szczytowa. przyspieszenia drgań dla
+
+chwili r-0 (początek obserwacji, A.grro— war-
+
+tość skuteczna składowej w. widmie detekcji
+
+obwiedni dla danej chwili ,, związana z uszko-
+
+dzeniem bieżni zewnętrznej BPFO — [10],
+
+Agro — wartość skuteczna składowej w wid-
+
+<image/figury/k1_page3_figure_1.png>
+
+związana z uszkodzeniem bieżni zewnętrznej
+
+BPFO — (2). Podobnie można zdefiniować 4,
+
+i 4, dla innych uszkodzeń (3), (4), (5) otrzy-
+
+mamy wiedy możliwość. wyznaczania. Le,
+
+Last, Lae [10], Arzax — wartość szczytowa
+
+- przyspieszenia drgań, Ann - wartość skuteczna
+przyspieszenia drgań.
+
+Rys. 4. Przebieg w czasie zmian Lys: Lurro
+i Cadla łożyska FAG NU 326 w silniku o mocy
+500 RW
+
+Pomiary diagnostyczne przykładowego silnika
+rozpoczęto przy. pierwszym uruchomieniu. po
+wymianie łożysk w silniku. Pomiary prowadzo-
+mo systematycznie co 4 tygodnie, gdy stan sil-
+nika zaczął się pogarszać, zwiększono częstot-
+liwość pomiarów (eo 2 tygodnie, a następnie co
+1 tydzień). Pomiary wykonywano dla bardzo
+zbliżonych do siebie warunków pracy silnika,
+przy takim samym lub niewiele różniącym się
+obciążeniu. Przedstawione na rysunkach 4 i 5
+wielkości są zdefiniowane. przez autora nasię-
+pująco [10]
+
+<image/figury/k1_page3_figure1.png>
+
+<image/wzory/k1_page3_formula5.png>
+
+<image/wzory/k1_page3_formula6.png>

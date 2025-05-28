@@ -1,0 +1,79 @@
+„Zeszyt Probemowe - Maszyny Elektryczne Nr 842009 127
+
+Slawomir Szymaniec
+Politechnika Opolska, Opole
+
+EKSPLOATACJA I DIAGNOSTYKA SILNIKÓW INDUKCYJNYCH
+TRÓJFAZOWYCH KLATKOWYCH W PRZEMYŚLE
+
+OPERATION AND DIAGNOSTICS OF THREE-PHASE SQUIRREL-CAGE
+INDUCTION MOTORS IN THE INDUSTRY
+
+„Abstract: Electric induction motors with squire-cage roors are most widely used in the industry a electric
+„machines driving oder devices. This resuls from many reason, among other, from their affordabie price and
+fily high relibiliy. The most popular are 6 kV motors, ie, kigh-votage motors hat that drive the mos im-
+pont machine units The article presents principles of operatiom of these motors in he industry and discusses
+
+methods of operation:
+operation until failure occurrence,
++ planned and preventive operation,
+
+- operiion dependent. on a machine condiion.
+
+"The paper demonsraes conditions of appropriate moor operation in tb industry. I also discusses the concept
+„o'*motr life” i industrial drives and types of their damages as well as damage staistcs.
+
+1. Wstęp
+W przemyśle jako napędy przemysłowe najczę-
+ściej stosowane są silniki elektryczne indukcyj-
+ne z wimikiem klatkowym. Wynika to z kilku
+przyczyn: między innymi z racji korzystnej ce-
+ny i stosunkowo dużej niezawodności. Szcze-
+gólne miejsce zajmują silniki na napięcie 6 kV
+— silniki wysokonapięciowe (WN), które stano-
+wią w większości napęd w najważniejszych ze-
+społach maszynowych - przykład rys. 1
+
+<image/figury/k4_page1_figure1.png>
+
+Ogólne zasady prawidłowej eksploatacji silni-
+ków” indukcyjnych trójfazowych klatkowych
+w szczególności silników WN podaje literatura,
+mp. [4,5,8=12]. Pozycje praktycznie najbar-
+dziej przydatne to wskazania producentów sil-
+ników zawarte w tzw. Dokumentacji Technicz-
+no-Ruchowej. Należy również pamiętać o sto-
+sownych normach oraz przepisach eksploatacji
+
+maszyn: elektrycznych podawanych przez od-
+powiednie instytuty, organizacje techniczne
+bądź właścicieli i użytkowników urządzeń. Ob-
+serwując od. wielu lat eksploatację silników
+elektrycznych w licznych krajowych zakładach
+przemysłowych autor widzi ogromną przydat-
+ność tych zasad oraz konieczność ciągłego
+ich uzupełniania i wzbogacania. Współcześnie
+w okresie stale rosnących wymagań dotyczą-
+cych wydajności oraz redukcji kosztów produk-
+<ji w przemyśle, koniecznością staje się wła-
+ściwa diagnostyka maszyn. Często uszkodzenia
+niewielkich elementów napędowych skutkują
+„znacznymi stratami wynikającymi 2 nieprzewi-
+dzianego zatrzymania procesu produkcyjnego
+oraz_nieplanowych prac remontowych. Diag-
+mostyka maszyn oraz monitorowanie paramet-
+rów ich pracy pozwala uniknąć skutków awarii,
+właściwie zaplanować okresy przeglądów i re-
+montów maszyn, oraz znacznie wydłużyć czas
+eksploatacji maszyn.
+
+2. Eksploatacja maszyn w przemyśle
+Maszyny przemysłowe tworzą coraz 1 bardziej
+złożone zespoły, towarzyszy temu coraz inien-
+sywniejsza ckspłoatacja maszyn często 24 go-
+dziny na dobę, czyli w ruchu ciągłym. Podsta-
+wowym zadaniem stawianym inżynierom jest
+<iągły wzrost wydajności maszyn. Wzrosiowi
+wydajności powinno towarzyszyć zwiększenie
+starań o zapewnienie pełnej sprawności urzą-
+dze. Trzeba to pogodzić ze stale malejącą li-

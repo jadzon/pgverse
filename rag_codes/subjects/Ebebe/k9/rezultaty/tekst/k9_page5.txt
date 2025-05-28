@@ -1,0 +1,50 @@
+prężeniach, zmiany rezystancji są znacznie mniejsze. Przy tak małych zmianach
+użytecznych szczególna uwaga musi być zwrócona na niezamierzone zmiany
+rezystancji tensometru, powodowane głównie zmianami temperatury. Rezystancja
+tensometru przy zmianach temperatury zmienia się na skutek zmian rezystywno-
+ści (por. rozdz. 8.5), odkształceń dodatkowych spowodowanych niejednakowy-
+mi współczynnikami rozszerzalności cieplnej tensometru i obiektu oraz zmian,
+w funkcji czasu, właściwości kleju. Powodem niedokładności tensometrów może
+być również czułość tensometru na odkształcenia poprzeczne, prostopadłe do
+kierunku odkształceń badanych. Oprócz tensometrów drutowych, takich jak np.
+przedstawiony na rys. 4.225 tensometr wężykowy, wykonywane są również ten-
+sometry foliowe i tensometry cienkowarstwowe o różnych kształtach, przystoso-
+wanych do pomiaru różnego typu od-
+kształceń. Przykłady tensometrów fo-
+liowych pokazano na rys. 4.23
+
+Tensometry półprzewodnikowe są
+dwóch rodzajów: monokrystaliczne,
+wykonywane z cienkich (o grubo-
+ściach ok. 0,1 -h0,2 mm) pasków wyci-
+nanych z monokryształów krzemu
+lub germanu, oraz cienkowarstwowe,
+otrzymywane przez naparowywanie
+
+<image/figury/k9_page5_figure2.png>
+
+Rys 423. Kształty tensometrów foliowych bizmutu, germanu lub tp. na clastycz-
+sym podłożu neutralnym
+Temtometry rezystancyjne pracują z reguły w układach mostków niczrównowa-
+żonych prądu przemiennego, zwanych mostkami tensometrycznymi. Dla kom-
+pensacji wpływów wahań temperatury w układ mostka jest włączany tensometr
+kompensacyjny umieszczany w taki sposób, że naprężenia badane nie powodują
+jego odkształceń. Warunkiem dokładnej kompensacji jest równość rezystancji
+początkowych, temperaturowych współczynników rezystancji oraz temperatury
+obu tensometrów. W ukladzie z rys. 4.24
+zastosowano dwa tensometry robo-
+cze i dwa tensometry kompensacyjne,
+naklejone prostopadle do kierunku
+działania siły powodującej odkształ-
+cenie badane.
+Na zupełnie odmiennej zasadzie pra-
+5 - cują tensometry strunowe: wykorzys-
+<image/figury/k9_page5_figure1.png>
+nych struny od jej naprężenia. Zmia-
+ny tego naprężenia wywoływane są
+mierzoną siłą zewnętrzną. Pomiar
+polega więc na pobudzaniu struny do
+drgań i mierzeniu ich częstotliwości.
+Struny są wykonywane z materiału
+
+67

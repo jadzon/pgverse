@@ -1,0 +1,34 @@
+1.4. Szumy w układach elektronicznych 23
+
+Ze względu na przypadkowy charakter fluktuacji poziom szumów opisuje się przez.
+podanie ich średniej energii lub średniokwadratowych wartości napięcia albo prądu
+szumów. Spośród wielu znanych rodzajów szumów w analizie układów liniowych
+uwzględnia się zwykle trzy podstawowe: cieplne, śrutowe i 1/f.
+
+Szumy cieplne (termiczne, Johnsona) powstają w każdym przewodniku stratnym
+wskutek przypadkowych zderzeń nośników ładunków z drgającą siecią atomów.
+Intensywność zderzeń zależy od temperatury sieci, a każde zderzenie wytwarza
+krótkie impulsy napięcia o bardzo szerokim widmie. Powoduje to powstanie napię-
+cia fluktuacyjnego o wartości średniokwadratowej w przedziale częstotliwości B,
+określonego wzorem Nyquista
+
+<image/figury/k2_page19_figure1.png>
+
+Każdy element rzeczywisty o rezystancji R można pod względem szumowym trak-
+tnuiaf iabn frhdin naniacinue emmóui nnłarznna szaraanam 7 rmrucranria her.
+
+!
+
+<image/wzory/k2_page19_formula1.png>
+
+Moc źródła szumów cieplnych
+
+<image/wzory/k2_page19_formula2.png>
+i dla jednostkowego pasma oraz temperatury 290 K wynosi 4 - 1072! W.
+Gęstość widmowa mocy szumów cieplnych
+
+<image/wzory/k2_page19_formula3.png>
+
+jest niezależna od częstotliwości — rysunek 1.18 i dlatego, przez analogię do światła
+słonecznego zawierającego wszystkie składowe widma, szumy cieplne zaliczamy
+do tzw. szumów białych.

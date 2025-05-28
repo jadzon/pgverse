@@ -1,0 +1,43 @@
+1. Podstawowe własności analogowych układów elektronicznych
+
+1.1.
+
+Uwagi ogólne
+
+Termin układ elektroniczny oznacza zespół odpowiednio połączonych elementów
+pasywnych, aktywnych i źródeł zasilających o określonych zaciskach wejściowych
+i wyjściowych, mających zdolność do wytwarzania lub przetwarzania sygnałów
+elektrycznych. Do układów wytwarzających sygnały elektryczne zalicza się wszel-
+kie generatory przebiegów elektrycznych. Do układów przetwarzających sygnały
+należy cała gama pozostałych układów wykonujących operacje matematyczne na
+sygnałach.
+
+Cały zbiór aktualnie stosowanych układów elektronicznych UE można zaliczyć do
+jednej z dwóch grup układów (rysunek 1.1): analogowych układów elektronicznych
+AUE i cyfrowych układów elektronicznych CUE. Analogowe układy elektroniczne
+można z kolei podzielić na liniowe układy elektroniczne LUE i nieliniowe układy
+elektroniczne NUE.
+
+<image/figury/k2_page4_figure1.png>
+
+Analogowe układy elektroniczne stanowią część szerokiej klasy układów wytwa-
+rzających i przetwarzających sygnały, których zmiany wartości w czasie zachodzą
+w sposób ciągły (nieskończona liczba stanów), natomiast cyfrowe układy elektro-
+niczne to takie, w których zmiany sygnału zachodzą w sposób dyskretny (skończo-
+na liczba stanów). Najprostszym przykładem sygnału analogowego jest przebieg
+sinusoidalny (nieskończona liczba wartości chwilowych), a cyfrowego przebieg sy-
+gnału przetwarzanego np. w technice TTL (tylko tzw. poziom niski i wysoki).
+
+Podstawową cechą układów liniowych jest spełnianie przez nie zasady superpozycji
+i proporcjonalności. Dla ogólnej postaci układu elektronicznego w formie czwór-
+nika oznacza to, że sygnał na wyjściu stanowi liniową kombinację sygnałów wej-
+ściowych. Inaczej mówiąc, po doprowadzeniu do wejścia układu zbioru sygnałów
+o różnych częstotliwościach i poziomach, na wyjściu otrzymuje się sygnały o tych
+samych częstotliwościach, każdy o poziomie proporcjonalnym do odpowiednie-
+go sygnału wejściowego, np. wzmocniony o wartość wzmocnienia G (ang. Gain)
+i ewentualnie przesunięty w fazie. Jeśli
+
+<image/wzory/k2_page4_formula1.png>
+to
+
+<image/wzory/k2__page4_formula2.png>

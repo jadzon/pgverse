@@ -1,0 +1,70 @@
+<image/figury/k6_page1_figure1.png>
+
+<image/wzory/k6_page1_formula1.png>
+
+zer ijedynek) a więc slanów jest zbędnych. Licznik powinien liczyć od do9(1a
+impulsów, a kolejny jedenasty impuls ma spowodować przejście 2 9 na 0
+W zapisie binarnym cyfra 10 wyrażona jest jako 010. Stan 1010 można two
+zidentyfikować 7a pomoc iloczynu o dwóch wejściach. Jeżeli Y, oraz Y; mają
+wartość logiczną. równą I, o ich iloczyn również wynosi /.. Napięcie od
+powiadające wartości łogicznej równej I jest podane m cement różniczkujący
+(oznaczony kółkiem). który generuje impuls przy przejściu sygnalu z £ na 0,
+impuls ten wyzorowaje wszystkie przerzutniki. Na wyjściu licznika pojawia się
+stan zero i zliczanie może odbywać się od początku. Inne przykłady bardziej
+rozbudowanych liczników można znależć w. pracy [2.16]. W. omawianych
+ukludach cyfrowych widać korzyści wynikające ze stosowania uproszczonych
+oznaczeń poszczególnych elementów logicznych, Przedstawienie calego ukladu
+2 zaznaczeniem tramzystorów, diod. i innych elementów skomplikowaloby
+zysunek ta, że staly się o nieczytelny.
+
+Obecni liczniki wykonuje się w woni salonej i 1ak np. układ xezlony UCY
+2740 jst licznikiem dvójkowym o pojemności 16 bitów (modulo 16 Lieznik ten
+jest jednocześnie dzielnikiem częstoiwości przez 16, Inny ukłnd UCY 7490 jest
+licznikiem dziesiętnym (dekada licząca) zbudowanym 2 czterech przerzutników
+„raz układów kombinacyjnych.
+
+2.116. Pamięci półprzewośi
+
+Pamięci stanowią duż grupę ukkułów elektronicznych stosowanych do prze
+showywania informacji cyftowej. Podstawowym elementem pamięci jet pre
+rzutnik bstabilny np. RS, który umożliwia zapamiętanie jednego bitu informacji
+
+256
+
+gw Kady taki przerzutników nazywany js częst komórką pamięci
+St sadę pracy przerzutnika podano w p. 22 20.5.
+
+Pamięci, w których, istnieje możliwość odczytu i zapisu. informacji są
+ywame pamięciami RWM (ang. read wie memory). Pamięci 1e są naj
+„ie nazywane, pamięciami z dosiępem swobodnym. RAM (amg. random
+s memory). Pozwalają one na dostęp da każdej komórki w dowolnej
+SŚęii'niezależnie od miejsca (udresu) w pamięci. Wybór żądanych komórek
+Śgą zrealizowany za pomocą spocjalnego ukladu (dekodera, który dolącza
+brane komórki do wejścia (przy zapisie) lub wyśścia (przy odczycie). Pa-
+(ęd sa budowane z dwoma dekoderami X. umożliwiającymi dostęp
+o kazdej. komórki, ub_2 jednym dekoderem zapewniającym dostęp do
+lk komórek jednocześnie, Na rysunku 2.144 przedstawiono schemat blo-
+kowy pamięci z izw. wybieraniem koincydencyjnym, tzn. aby wybrać żądaną
+komórkę należy podać jednocześnie sygnał określający. wiersz i. kolumnę
+(współrzędne X'Y) danej komórki. Częsta wprowadzana lub wyprowadzana
+letormacja jest najpierw przechowywana w dodaikowym rejestrze, który od-
+ela: komórki. pamięciowe od zewnętrznych szyn_informacyjnych. Sygnal
+czyt zezwala na: wyprowadzenie informacji (wówczas sygnaly. wejściowe.
+ją zablokowane) lub zapis (wyjicia sq zablokowane). Istotną wadą pamięci
+RAM 2 przerzutników RS jest kasowanie zapisinej informacji w przypadku
+wyłączenia zasilania
+
+<image/figury/k6_page1_figure2.png>
+
+Spy poci wybrane
+
+Oprócz pamięci z zapisem, szeroko rozpowszechnione sq pamięci stale,
+2 których inforinacja może być tylko adezytywana. Pamięci le są określ
+skrótem ROM (ang. read onfy memory). Informacja jest wpisywana na stałe
+w procesie produkcji i może być wielokrotnie odczylywama, Zawartość pamięci
+nie jest Lracona po wyłączeniu napięcia zasilającego. W pamięci ROM przecho-
+wuje się np. sale wartości ieżbowe (liczba x, e) tablice funkcji trygonometrycz
+nych, wykladniczych, logarymieznych, przejcia między koślami dwójkowo.
+=dziesiętnymi tp.
+
+257
