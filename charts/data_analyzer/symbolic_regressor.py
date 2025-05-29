@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pysr import PySRRegressor
 from sympy import latex, simplify,Float
-
+from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 
 def round_constants(expr, n_digits=4):
         return expr.xreplace({
@@ -61,6 +61,24 @@ class SymbolicRegressor:
             formula = round_constants(formula, n_digits=n_digits)
         return formula, latex(formula)
     
+    def score(self, X=None, y=None):
+        if not self.fitted:
+            raise ValueError("Model nie został dopasowany.")
+
+        # Użycie danych treningowych domyślnie
+        if X is None or y is None:
+            if self.X is None or self.y is None:
+                raise ValueError("Dane nie są dostępne.")
+            X = self.X
+            y = self.y
+
+        y_pred = self.predict(X)
+
+        return {
+            "MSE": mean_squared_error(y, y_pred),
+            "MAE": mean_absolute_error(y, y_pred),
+            "R2": r2_score(y, y_pred)
+        }
     
     def plot(self):
         if not self.fitted:

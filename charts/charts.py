@@ -29,6 +29,10 @@ class ChartAnalyzer:
         formula, latex_formula = self.data_analyzer.get_formula()
         print("Najlepszy wzór:", formula)
         self.data_analyzer.plot()    # Perform symbolic regression on the extracted data points
+        metrics = self.data_analyzer.score()
+        print("Metryki dopasowania:")
+        for name, value in metrics.items():
+            print(f"{name}: {value:.4f}")
 
 
 def main():
