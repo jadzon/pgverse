@@ -9,3 +9,7 @@ W folderach znajdują się pliki `README.md`, z którymi należy się zapoznać 
 
 ## Uwagi
 Przestrzeganie powyższych zasad pozwoli zachować spójność i czytelność całego projektu.
+
+
+#Instrukcja
+Folder scalanie_ocr posiada wszystkie pliki potrzebne do przetwarzania książek oraz odpowiednie readme, w której się znajduje instrukcja korzystania.
