@@ -216,7 +216,7 @@ dzeniem bieżni zewnętrznej BPFO — [10],
 
 Agro — wartość skuteczna składowej w wid-
 
-<image/figury/k1_page3_figure_1.png>
+<image/figury/k1_page3_figure1.png>
 
 związana z uszkodzeniem bieżni zewnętrznej
 

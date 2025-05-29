@@ -37,9 +37,9 @@ class TextGraphBuilder:
     def close(self):
         self.driver.close()
 
-    def insert_node(self, node_id: str, data_type: str, text: str, embedding: list = None, path: str = None):
+    def insert_node(self, node_id: str, data_type: str, text: str, embedding: list = None, path: str = None, source: str = "unknown"):
         """
-        Inserts or updates a Chunk node with given properties, including optional embedding.
+        Inserts or updates a Chunk node with given properties, including optional embedding and source type.
         """
         query = '''
         MERGE (n:Chunk {id: $id})
@@ -47,12 +47,13 @@ class TextGraphBuilder:
             n.text = $text,
             n.embedding = $embedding,
             n.path = $path,
+            n.source = $source,
             n.usage_count = COALESCE(n.usage_count, 0),
             n.created_at = COALESCE(n.created_at, timestamp()),
             n.last_accessed = timestamp()
         '''
         with self.driver.session() as session:
-            session.run(query, id=node_id, type=data_type, text=text, embedding=embedding, path=path)
+            session.run(query, id=node_id, type=data_type, text=text, embedding=embedding, path=path, source=source)
 
     def create_text_relations(self):
         """
@@ -392,7 +393,7 @@ class HybridTextRetriever:
     def search_by_text(self, query_embedding: list, top_k: int = 5, score_threshold: float = 0.0, use_relations: bool = True):
         """
         Wyszukuje najbardziej podobne chunki na podstawie embeddingu zapytania.
-        Enhanced with learning tracking.
+        Enhanced with learning tracking and source information.
         """
         # Najpierw spróbuj nowy format (Chunk)
         chunk_query = '''
@@ -411,7 +412,7 @@ class HybridTextRetriever:
             ))
         ) AS score
         WHERE score > $threshold
-        RETURN n.id as id, n.text as text, n.path as source, score, 'Chunk' as node_type
+        RETURN n.id as id, n.text as text, n.path as path, n.source as source, score, 'Chunk' as node_type
         ORDER BY score DESC
         LIMIT $top_k
         '''
@@ -433,7 +434,8 @@ class HybridTextRetriever:
             ))
         ) AS score
         WHERE score > $threshold
-        RETURN n.id as id, n.text as text, n.source as source, score, 'TextChunk' as node_type
+        RETURN n.id as id, n.text as text, n.source as path, 
+               COALESCE(n.source_type, 'unknown') as source, score, 'TextChunk' as node_type
         ORDER BY score DESC
         LIMIT $top_k
         '''
@@ -445,13 +447,13 @@ class HybridTextRetriever:
             chunk_records = list(chunk_result)
             
             if chunk_records:
-                results = [{'data': {'id': record['id'], 'text': record['text'], 'source': record['source']}, 
-                           'score': record['score'], 'node_type': record['node_type']} for record in chunk_records]
+                results = [{'data': {'id': record['id'], 'text': record['text'], 'path': record['path'], 'source': record['source'] or 'unknown'}, 
+                           'score': record['score'], 'node_type': record['node_type'], 'source_type': record['source'] or 'unknown'} for record in chunk_records]
             else:
                 # Jeśli brak wyników w nowym formacie, spróbuj stary
                 textchunk_result = session.run(textchunk_query, query_emb=query_embedding, threshold=score_threshold, top_k=top_k)
-                results = [{'data': {'id': record['id'], 'text': record['text'], 'source': record['source']}, 
-                           'score': record['score'], 'node_type': record['node_type']} for record in textchunk_result]
+                results = [{'data': {'id': record['id'], 'text': record['text'], 'path': record['path'], 'source': record['source']}, 
+                           'score': record['score'], 'node_type': record['node_type'], 'source_type': record['source']} for record in textchunk_result]
         
         # Jeśli włączone są relacje, rozszerz wyniki
         if use_relations and results:
@@ -478,6 +480,7 @@ class HybridTextRetriever:
     def get_recommendation_based_on_history(self, recently_accessed_ids: list, top_k: int = 5):
         """
         Rekomenduje podobne węzły na podstawie historii dostępu.
+        Enhanced with source information.
         """
         if not recently_accessed_ids:
             return []
@@ -488,7 +491,8 @@ class HybridTextRetriever:
           AND NOT recommended.id IN $accessed_ids
           AND r.weight > 0.3
           AND recommended.type = 'text'
-        RETURN recommended.id as id, recommended.text as text, recommended.path as source,
+        RETURN recommended.id as id, recommended.text as text, recommended.path as path,
+               recommended.source as source,
                avg(r.weight) as avg_similarity, count(r) as connection_count,
                max(r.reinforcement_count) as max_reinforcements
         ORDER BY avg_similarity DESC, connection_count DESC, max_reinforcements DESC
@@ -497,8 +501,9 @@ class HybridTextRetriever:
         
         with self.driver.session() as session:
             result = session.run(query, accessed_ids=recently_accessed_ids, top_k=top_k)
-            return [{'data': {'id': record['id'], 'text': record['text'], 'source': record['source']}, 
+            return [{'data': {'id': record['id'], 'text': record['text'], 'path': record['path'], 'source': record['source'] or 'unknown'}, 
                     'score': record['avg_similarity'], 
+                    'source_type': record['source'] or 'unknown',
                     'connections': record['connection_count'],
                     'reinforcements': record['max_reinforcements']} 
                     for record in result]
@@ -506,7 +511,7 @@ class HybridTextRetriever:
     def _expand_with_relations(self, initial_results: list, top_k: int):
         """
         Rozszerza wyniki o powiązane węzły poprzez relacje SIMILAR_TO.
-        Enhanced to prefer learned relationships.
+        Enhanced to prefer learned relationships and include source information.
         """
         expanded_results = initial_results.copy()
         processed_ids = {result['data']['id'] for result in initial_results}
@@ -520,7 +525,8 @@ class HybridTextRetriever:
                 relation_query = '''
                 MATCH (n:Chunk {id: $node_id})-[r:SIMILAR_TO]-(related:Chunk)
                 WHERE related.type = 'text' AND related.id <> $node_id
-                RETURN related.id as id, related.text as text, related.path as source, 
+                RETURN related.id as id, related.text as text, related.path as path, 
+                       related.source as source,
                        r.weight as relation_score, 'Chunk' as node_type,
                        COALESCE(r.reinforcement_count, 0) as reinforcements
                 ORDER BY r.weight DESC, reinforcements DESC
@@ -530,7 +536,8 @@ class HybridTextRetriever:
                 relation_query = '''
                 MATCH (n:TextChunk {id: $node_id})-[r:SIMILAR_TO]-(related:TextChunk)
                 WHERE related.id <> $node_id
-                RETURN related.id as id, related.text as text, related.source as source, 
+                RETURN related.id as id, related.text as text, related.source as path,
+                       COALESCE(related.source_type, 'unknown') as source,
                        r.weight as relation_score, 'TextChunk' as node_type,
                        COALESCE(r.reinforcement_count, 0) as reinforcements
                 ORDER BY r.weight DESC, reinforcements DESC
@@ -551,10 +558,12 @@ class HybridTextRetriever:
                             'data': {
                                 'id': related_id,
                                 'text': related_record['text'],
-                                'source': related_record['source']
+                                'path': related_record['path'],
+                                'source': related_record['source'] or 'unknown'
                             },
                             'score': adjusted_score,
                             'node_type': related_record['node_type'],
+                            'source_type': related_record['source'] or 'unknown',
                             'relation': 'SIMILAR_TO',
                             'reinforcements': related_record['reinforcements']
                         })
@@ -564,27 +573,10 @@ class HybridTextRetriever:
         expanded_results.sort(key=lambda x: x['score'], reverse=True)
         return expanded_results[:top_k]
 
-    def retrieve(self, query_embedding: list, top_k: int = 5, score_threshold: float = 0.0):
-        """
-        Metoda kompatybilna z starą implementacją.
-        """
-        return self.search_by_text(query_embedding, top_k, score_threshold, use_relations=False)
-
-
-class ImageRetriever:
-    """
-    Retriever dla obrazów używający podobieństwa kosinusowego z grafem Neo4j.
-    """
-    def __init__(self, connector: Neo4jConnector):
-        self.driver = connector.get_driver()
-
-    def close(self):
-        """Zamyka połączenie z bazą danych."""
-        self.driver.close()
-
     def search_by_image(self, query_embedding: list, top_k: int = 5, score_threshold: float = 0.66):
         """
         Wyszukuje najbardziej podobne obrazy na podstawie embeddingu zapytania.
+        Enhanced with source information.
         
         Args:
             query_embedding: Embedding zapytania jako lista floatów
@@ -610,15 +602,16 @@ class ImageRetriever:
             ))
         ) AS score
         WHERE score > $threshold
-        RETURN n.id as id, n.text as description, n.path as image_path, score
+        RETURN n.id as id, n.text as description, n.path as image_path, 
+               n.source as source, score
         ORDER BY score DESC
         LIMIT $top_k
         '''
         
         with self.driver.session() as session:
             result = session.run(query, query_emb=query_embedding, threshold=score_threshold, top_k=top_k)
-            return [{'data': {'id': record['id'], 'description': record['description'], 'path': record['image_path']}, 
-                    'score': record['score']} for record in result]
+            return [{'data': {'id': record['id'], 'description': record['description'], 'path': record['image_path'], 'source': record['source'] or 'unknown'}, 
+                    'score': record['score'], 'source_type': record['source'] or 'unknown'} for record in result]
 
 
 class GraphPruner:

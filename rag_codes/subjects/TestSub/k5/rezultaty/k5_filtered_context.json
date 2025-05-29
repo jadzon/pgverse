@@ -1,0 +1,22 @@
+[
+  {
+    "pgverse\\rag_codes\\subjects\\TestSub\\k5\\rezultaty\\figury\\k5_page4_figure2.png": [
+      "ÓW związku ze wspomnianym współażytkowaniem niezwykle ważny jst protokół magistrali (zestaw reguł użytkowania). Rysunek 4.2 pokazuje typową magistralę, składającą się z linii d- nych nii sdresowych, lini sterujących ini zasłania. Często lnie magistrali odpowiedzialne za przenoszenie danych nazywane są szyną danych, Lini te zawierają faktyczne informacje, kóre muszą zosać przeniesione z jednego miejsca do innego. Linie sterujące wskazują, które Z urzą dzeń ma pozwolenie na użycie szyny i w jakim celu (np. zapis lub odczyt danych z pamięci bądź z urządzenia wejścia wyjścia) Linie stejące przesyłają leż komunikaty powientzające odbieranie żądań dostępu do magistrali, żądań obsługi przerwań i impulsów synchronizacyjnych zegara). Linie. 158 MARIE: WPROWADZENIE DO BUDOWY PROSTEGO KOMCTERA"
+    ]
+  },
+  {
+    "pgverse\\rag_codes\\subjects\\TestSub\\k5\\rezultaty\\figury\\k6_page4_figure1.png": [
+      "RYSUNEK 41a) szyny dwupunktowe; b) szyna wielopunktowa"
+    ]
+  },
+  {
+    "pgverse\\rag_codes\\subjects\\TestSub\\k5\\rezultaty\\wzory\\k5_page5_formula1.png": [
+      "Magi strale wejścia-wyjścia są zazwyczaj dłuższe niż poprzednie i łączą wiele typów urządzeń o różnej przepustowości, Budowa tych szyn jest kompatybilna z różnymi architekturami komputerów. Ma- .gistrala systemowa (rysunek 4.3) jet właściwie wbudowana w płytę główną komputera. Łączy „ona procesor, urządzenia wejścia-wyjścia oraz pamięć (tak więc wszystkie te urządzenia współ- dzielą jedną szynę). Wiele komputerów ma pewną hierarchię magistra, stąd też występowanie dwóch magistal (na przykład szyny procesor-pamięć i szyny wejścia-wyjścia) ub ih większej liczby wewnątrz jednego systemu nie jest niczym nadzwyczajnym. Systemy o dużej wydajności często używają wszystkich trzech rodzajów magistal."
+    ]
+  },
+  {
+    "pgverse\\rag_codes\\subjects\\TestSub\\k5\\rezultaty\\figury\\k5_page9_figure1.png": [
+      "Są one wydajnym sposobem informowania procesora o dostępności operacji wejścia-wyjścia 4.1.5. Organizacja pamięci i adresowanie W rozdziale 3. przedstawiłyśmy przykład raczej niewielkiej pamięci. Nie omówiłyśmy jednak jeszcze szczegółowo tego, jak pamięć jest rozplanowana i jak się do niej odwołujemy. Bardzo ważne jest, abyś rozumiał te dwie kwesiie, zanim będziemy kontynuować bieżący temat. Możemy wyobrazić sobie pamięć jako macierz bitów. Szerokość każdego wiersza, implemen- towanego w posaci rejestru jest zazwyczaj taka sama, jak długość słowa maszynowego komputera. Każdy rejestr (nazywany częściej komórką pamięci) ma niepowtarzalny adres. Adresy pamięci za- zwyczaj zaczynają się od zera i rosną. Rysunek 4.4 przedstawia tę zasadę."
+    ]
+  }
+]

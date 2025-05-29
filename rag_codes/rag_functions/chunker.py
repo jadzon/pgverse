@@ -1,7 +1,7 @@
 import re
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
-from embeddings import CLIPEmbedder
+from .embeddings import CLIPEmbedder
 import os
 
 class TextChunker:
@@ -17,7 +17,7 @@ class TextChunker:
         else:
             self.embedding_model = embedding_model
     
-    def chunk_from_file(self, file_path, max_tokens=500):
+    def chunk_from_file(self, file_path, max_tokens=150):
         """
         Dzieli dokument z pliku na semantyczne chunki.
         
@@ -39,7 +39,7 @@ class TextChunker:
         # Użyj metody chunk_text do przetworzenia tekstu
         return self.chunk_text(text, max_tokens)
     
-    def chunk_text(self, text, max_tokens=500):
+    def chunk_text(self, text, max_tokens=150):
         """
         Dzieli podany tekst na semantyczne chunki.
         

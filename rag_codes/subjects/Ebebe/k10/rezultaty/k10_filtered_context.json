@@ -1,0 +1,17 @@
+[
+  {
+    "pgverse\\rag_codes\\subjects\\Ebebe\\k10\\rezultaty\\figury\\k10_page1_figure3.png": [
+      "Uklad regulacji automatycznej powinien zapewnić pożądany przebieg wybranych wielkości charakteryzujących proces, mimo działających zakłóceń i niedokładnej znajomości parametrów Lego pro- ctsu. Osiąga się to przez zastosowanie sprzężenia zwrolnego. DEFINICJA 1 Układem regulacji automatycznej nazywamy układ ze sprzężeniem zwrot. nym, który samoczynnie (bez udziału człowieka) zapewnia pożądany prze- bieg wybranych wielkości charakteryzujących proces, zwanych wielkościami repalowanymi. W układzie ręguacji automatycznaj wyróżnić można obiek regulacji i regu- lator (urządzenie sierujące). Obiektem rryulaji (krótko — obiektem) nazywamy proces technologiczny lub urządzenie, w którym zachodzi proces podlegający regulacji. Obiektem regulacji może być na przykład: samolot, proces chemicz- ny, maszyna clektryczna, obrabiarka, robot. Zeguletorem nazywać będziemy rządzenie, które wykorzystają różnice między odpowiednimi wielkościami za- danymi i mierzonymi, tak oddziałuje — za pomocą wiekości sterujących — na obiekt, aby wielkości regulowane miały pożądany przebieg, Schemat blokowy „kład ręguacji nutomatycznej jednej wielkości regulowanej () przedstawio. no ma ryś. I ©"
+    ]
+  },
+  {
+    "pgverse\\rag_codes\\subjects\\Ebebe\\k10\\rezultaty\\figury\\k10_page1_figure2.png": [
+      "W schemacie tym obiekt jst reprezentowany przez człon o tranemitancji opo- ratorowej Ty(s), « regulator — przez człon o transmitancji operatorowej 7, (s) Porównanie wielkości regulowanej y(t) z jej wartością zadaną (t) (wielkością zadającą lub wielkością odniesienia) dokonuje się w węźle sumacyjnym. Róż. nicę e(t) = o(t) —y(t) naszywamy uchybem regulacji. Układ regulacji autorma- tycanej pracuje dobrze (idealnie), jeżłi mimo działających na obickt zakłóceń 20) +, z,(0) uchyb regulacji e(t) jest możliwie mały (teoretycznie równy 11 Pojęcia podstawowe istota układu rogi automatycznej 3 zeru). Podstawowym celem ukladu regulacji automatycznej jest więc samo- czynne zerowanie uchybu regulacji, wywołanego zmianą o(t) lub działających na obiekt zakłóceń z,(/), -.., z;(0). Zadaniem regulatora jest wytworzenie ma podstawie uchybu regulacji e(t) takiego sygnału sterującego (sterowania) (0), aby uchyb tem tworetycznie zmalał do zera. Na rysunku 1.2 przedsta."
+    ]
+  },
+  {
+    "pgverse\\rag_codes\\subjects\\Ebebe\\k10\\rezultaty\\figury\\k10_page2_figure1.png": [
+      "4 Na rysunku 1.3 przedztawiono schemat ideowy prostego układu regulacji amtomatycznej poziom cieczy w zbiorniku, Zadaniem tego układu jest utrzy- manie stalego poziomu hę cieczy w zbiorniku przy zmieniającej się w sposób przypadkowy wartości gz strumienia cieczy wypływającej 20 zbiornika. Układ ten działa następująco. Jeżeli z jakiegokolwiek powodu poziom cieczy h się obniży, Lo pływak P, opadając w dól, 2a pomocą dźwigni i zaworu Z zwiększa wartość gy strumienia. cieczy dopływającej do zbiornika, co powoduje stopniowe podwyższenie pozio- „mu cieczy h. W tym przypadku obiektem regulacji jest zbiornik, a regulatorem a 1 Wprowadzenie ye. 1.3. Schemat ukladu regulacji po-"
+    ]
+  }
+]
