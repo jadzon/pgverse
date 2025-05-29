@@ -9,6 +9,7 @@ W folderze `scalanie_ocr` znajdują się rozwiązania dotyczące połączenia wy
 Połączono detekcję elementów graficznych, tabel i wzorów wraz z OCR tekstu.   
 Ten projekt zawiera narzędzia do ekstrakcji tekstu, tabel i wzorów z plików PDF/obrazów za pomocą OCR i modeli detekcji. 
 Dzięki konteneryzacji w Dockerze można uruchomić cały pipeline OCR w spójnym środowisku na dowolnej maszynie (lokalnie lub w chmurze).
+Książki muszą być w folderze projektowym.
 
  utworzone zostana  podfoldery:
 
