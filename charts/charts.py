@@ -29,11 +29,11 @@ class ChartAnalyzer:
         formula, latex_formula = self.data_analyzer.get_formula()
         print("Najlepszy wzór:", formula)
         self.data_analyzer.plot()    # Perform symbolic regression on the extracted data points
-    def show_all(self):
-        # Display the original chart image
-        cv2.imshow("Chart", self.chart)
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
+        metrics = self.data_analyzer.score()
+        print("Metryki dopasowania:")
+        for name, value in metrics.items():
+            print(f"{name}: {value:.4f}")
+
 
 def main():
     chart_path = "charts_examples/test1.JPG"  # Replace with your chart image path

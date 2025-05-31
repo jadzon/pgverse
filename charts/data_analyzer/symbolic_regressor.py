@@ -1,14 +1,20 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from pysr import PySRRegressor
-from sympy import latex,nsimplify
+from sympy import latex, simplify,Float
+from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 
+def round_constants(expr, n_digits=4):
+        return expr.xreplace({
+            x: Float(round(x, n_digits))
+            for x in expr.atoms(Float)
+        })
 class SymbolicRegressor:
     def __init__(self, niterations=50, maxsize=20):
         self.model = PySRRegressor(
             niterations=niterations,
             binary_operators=["+", "-", "*", "/"],
-            unary_operators=["sin", "cos", "exp", "log", "square", "abs", "tanh", "cube"],
+            unary_operators=["sin", "cos", "exp", "log", "square", "abs", "tanh", "cube" , "sqrt","log2"],
             extra_sympy_mappings={"cube": lambda x: x**3},
             model_selection="best",
             constraints={"abs": 0},
@@ -31,13 +37,14 @@ class SymbolicRegressor:
     def set_data(self, X, y):
         self.X = X
         self.y = y
-
+    
     def fit(self):
         if self.X is None or self.y is None:
             raise ValueError("Dane wejściowe X i y nie zostały ustawione.")
         self.model.fit(self.X, self.y)
         self.fitted = True
-        formula = nsimplify(self.model.sympy(), tolerance=1e-8, rational=True)
+        formula = simplify(self.model.sympy())
+        formula = round_constants(formula, n_digits=4)
         self.latex_formula = latex(formula)
 
     def predict(self, X):
@@ -45,15 +52,34 @@ class SymbolicRegressor:
             raise ValueError("Model nie został dopasowany. Wywołaj najpierw metodę `fit()`.")
         return self.model.predict(X)
 
-    def get_formula(self, simplify_result=True):
+    def get_formula(self, simplify_result=True, n_digits=4):
         if not self.fitted:
             raise ValueError("Model nie został dopasowany.")
         formula = self.model.sympy()
         if simplify_result:
-            
-            formula = nsimplify(formula, tolerance=1e-8, rational=True)
+            formula = simplify(formula)
+            formula = round_constants(formula, n_digits=n_digits)
         return formula, latex(formula)
+    
+    def score(self, X=None, y=None):
+        if not self.fitted:
+            raise ValueError("Model nie został dopasowany.")
 
+        # Użycie danych treningowych domyślnie
+        if X is None or y is None:
+            if self.X is None or self.y is None:
+                raise ValueError("Dane nie są dostępne.")
+            X = self.X
+            y = self.y
+
+        y_pred = self.predict(X)
+
+        return {
+            "MSE": mean_squared_error(y, y_pred),
+            "MAE": mean_absolute_error(y, y_pred),
+            "R2": r2_score(y, y_pred)
+        }
+    
     def plot(self):
         if not self.fitted:
             raise ValueError("Model nie został dopasowany.")
