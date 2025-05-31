@@ -129,6 +129,7 @@ schematics/block_detector/dataset
 
 schematics/block_detector/test_yolo/runs
 schematics/*.png
+schematics/main_results/*
 *.zip
 *.idea
 *.png

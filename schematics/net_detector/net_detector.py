@@ -233,6 +233,7 @@ class NetDetector():
                     pt2 = path[i]
                     cv2.line(vis_img, pt1, pt2, colors[color_idx], 2)
         
+        
         cv2.imshow("Circuit Connections", vis_img)
         cv2.waitKey(0)
         cv2.imwrite("circuit_connections.png", vis_img)

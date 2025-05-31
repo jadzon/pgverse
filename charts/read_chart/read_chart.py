@@ -78,15 +78,21 @@ class ChartReader:
             if x_pixel - current_x_pixel < self.axis_x["step"]:
                 continue
             current_x_pixel = x_pixel
-            
             # Check if x_pixel_adjusted is within the image bounds   
             x_pixel_adjusted = x_pixel - self.axis_x["positions"][0] +self.offset_x1
-            x_data = (x_min_value+(x_pixel_adjusted / self.axis_x["pixels_per_unit"]))/self.axis_x["scale_factor"] 
-            
-            # Note: Need to offset y_pixel by the y1 value to align with axis positions
+            if self.axis_x["is_logarithmic"]:
+                # For logarithmic axis, map pixel to value using logarithmic scale
+                x_data = x_min_value + (np.log10(x_pixel) - np.log10(self.axis_x["positions"][0])) * self.axis_x["scale_factor"]
+            else:
+                x_data = (x_min_value+(x_pixel_adjusted / self.axis_x["pixels_per_unit"]))/self.axis_x["scale_factor"] 
             y_max_pixel = self.cut_out_image.shape[0]
             y_pixel_adjusted = self.offset_y1 + y_max_pixel - self.axis_y["positions"][0] - y_pixel 
-            y_data = (y_min_value +  (y_pixel_adjusted / self.axis_y["pixels_per_unit"]))/self.axis_y["scale_factor"]
+            if self.axis_y["is_logarithmic"]:
+                # For logarithmic axis, map pixel to value using logarithmic scale
+                y_data = y_min_value + (np.log10(y_pixel) - np.log10(self.axis_y["positions"][0])) * self.axis_y["scale_factor"]
+            else:
+                # Note: Need to offset y_pixel by the y1 value to align with axis positions
+                y_data = (y_min_value +  (y_pixel_adjusted / self.axis_y["pixels_per_unit"]))/self.axis_y["scale_factor"]
             
             # Add rounded values to data points
             data_points.append((round(x_data, 2), round(y_data, 2)))
@@ -98,38 +104,6 @@ class ChartReader:
         self._visualize_data_points(pixel_points, data_points, self.axis_x, self.axis_y)
         return data_points
 
-    def _map_pixel_to_value(self, pixel, axis_positions, axis_values):
-        """
-        Maps a pixel coordinate to a value using axis interpretation data.
-        Handles both uniform and non-uniform scales through interpolation.
-        
-        Args:
-            pixel: Pixel position to map
-            axis_positions: List of pixel positions for reference values
-            axis_values: List of values corresponding to axis_positions
-            
-        Returns:
-            Mapped value
-        """
-        # Handle pixel outside range (extrapolation)
-        if pixel <= axis_positions[0]:
-            return axis_values[0]
-        if pixel >= axis_positions[-1]:
-            return axis_values[-1]
-        
-        # Find the two closest reference points for interpolation
-        for i in range(len(axis_positions) - 1):
-            if axis_positions[i] <= pixel <= axis_positions[i + 1]:
-                # Linear interpolation between the two closest points
-                pos1, pos2 = axis_positions[i], axis_positions[i + 1]
-                val1, val2 = axis_values[i], axis_values[i + 1]
-                
-                # Calculate interpolated value
-                ratio = (pixel - pos1) / (pos2 - pos1) if pos2 != pos1 else 0
-                return val1 + ratio * (val2 - val1)
-        
-        # Fallback (shouldn't reach here if pixel is in range)
-        return None
 
     def _visualize_data_points(self, pixel_points, data_points, x_axis, y_axis):
         """
@@ -170,32 +144,3 @@ class ChartReader:
         # Show visualization
         cv2.imshow("Extracted Data Points", visualization)
         cv2.waitKey(0)
-
-    def _extract_points_basic_scaling(self):
-        """
-        Legacy method for extracting points using basic scaling when no axes interpretation data is provided.
-        """
-        # Find all non-zero pixels (white pixels in the skeleton representing the line)
-        points = np.where(self.skeletonized_image > 0)
-        pixel_points = list(zip(points[1], points[0]))  # (x, y) format
-        pixel_points.sort(key=lambda p: p[0])
-        
-        data_points = []
-        
-        # Calculate scaling factors
-        x_scale = (self.axis_x["range"]["max"] - self.axis_x["range"]["min"]) / self.cut_out_image.shape[1]
-        y_scale = (self.axis_y["range"]["max"] - self.axis_y["range"]["min"]) / self.cut_out_image.shape[0]
-        
-        # Process points
-        current_x_pixel = -float('inf')
-        for x_pixel, y_pixel in pixel_points:
-            if x_pixel - current_x_pixel < self.axis_x["step"]:
-                continue
-            current_x_pixel = x_pixel
-            
-            x_data = self.axis_x["range"]["min"] + (x_pixel * x_scale)
-            y_data = self.axis_y["range"]["max"] - (y_pixel * y_scale)
-            
-            data_points.append((round(x_data, 2), round(y_data, 2)))
-        
-        return data_points

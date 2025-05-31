@@ -105,7 +105,10 @@ class SchematicAnalyzer:
             
             # Sort texts by distance (closest first)
             closest_texts.sort(key=lambda x: x[1])
-            
+            if len(closest_texts) > 1:
+                closest_text = closest_texts[:1]
+            else:
+                closest_text = ""
             class_name = self.block_detector.model.names[int(block.cls)]
             associated_results[i] = {
                 'block': class_name,
@@ -115,7 +118,7 @@ class SchematicAnalyzer:
                     'x2': block_x2,
                     'y2': block_y2
                 },
-                'texts': closest_texts[:1][0]  # Take the closest text only
+                'texts': closest_text  # Take the closest text only
             }
             
             # # Debug output
@@ -255,7 +258,7 @@ def main():
         results_folder="main_results",
         preprocess_enabled=False,
     )
-    analyzer.analyze(image_path="img/test copy.png")
+    analyzer.analyze(image_path="img/test6.png")
 
 
 if __name__ == "__main__":

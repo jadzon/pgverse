@@ -166,7 +166,8 @@ def detect_axis_step(elements, axis_type='horizontal'):
             'values': text_values
         }
     
-    # Oblicz różnice między kolejnymi wartościami
+    # Oblicz różnice między kolejnymi wartościami sprawdzając
+    
     value_differences = [values[i+1] - values[i] for i in range(len(values)-1)]
     position_differences = [positions[i+1] - positions[i] for i in range(len(positions)-1)]
     
@@ -181,7 +182,52 @@ def detect_axis_step(elements, axis_type='horizontal'):
     # Sprawdź, czy kroki są w miarę równomierne
     is_uniform = bool(value_step_std / abs(avg_value_step) < 0.3) if avg_value_step != 0 else False
     is_pixel_uniform = bool(position_step_std / abs(avg_position_step) < 0.3) if avg_position_step != 0 else False
+    # Sprawdź, czy oś jest logarytmiczna
+    is_logarithmic = False
+    logarithm_base = 10.0  # Domyślna podstawa logarytmu
     
+    if len(values) >= 3 and all(v > 0 for v in values):  # Logarytm działa tylko dla wartości dodatnich
+        # Sprawdź czy stosunek sąsiednich wartości jest względnie stały
+        value_ratios = [values[i+1] / values[i] for i in range(len(values)-1)]
+        
+        # Oblicz odchylenie standardowe stosunków
+        value_ratio_std = float(np.std(value_ratios))
+        value_ratio_mean = float(np.mean(value_ratios))
+        
+        # Sprawdź czy stosunki są w miarę równomierne, a kroki pikseli też
+        if (value_ratio_std / value_ratio_mean < 0.5) and is_pixel_uniform:
+            # Prawdopodobnie oś logarytmiczna
+            is_logarithmic = True
+            
+            # Oblicz podstawę logarytmu
+            # Dla typowych podstaw (10, 2, e) sprawdź która najlepiej pasuje
+            log_bases = [2.0, np.e, 10.0]
+            best_base = 10.0
+            min_error = float('inf')
+            
+            for base in log_bases:
+                # Przekształć wartości na logarytmy o danej podstawie
+                log_values = [np.log(v) / np.log(base) for v in values]
+                
+                # Sprawdź liniowość między pozycjami a logarytmami wartości
+                # Oblicz regresję liniową
+                slope, intercept = np.polyfit(positions, log_values, 1)
+                
+                # Oblicz błąd predykcji
+                predicted = [slope * p + intercept for p in positions]
+                error = np.sum([(predicted[i] - log_values[i])**2 for i in range(len(log_values))])
+                
+                if error < min_error:
+                    min_error = error
+                    best_base = base
+            
+            logarithm_base = float(best_base)
+            
+            # Dla osi logarytmicznej, piksele na jednostkę wartości to piksele na jednostkę logarytmu
+            log_values = [np.log(v) / np.log(logarithm_base) for v in values]
+            log_diffs = [log_values[i+1] - log_values[i] for i in range(len(log_values)-1)]
+            avg_log_step = float(np.mean(log_diffs))
+            pixels_per_log_unit = float(avg_position_step / avg_log_step) if avg_log_step != 0 else 0
     # Dla osi pionowej, kierunek wartości jest zwykle odwrócony (większe wartości na górze)
     # czyli większa wartość = mniejsza współrzędna Y
     if axis_type == 'vertical' and avg_value_step * avg_position_step > 0:
@@ -195,14 +241,17 @@ def detect_axis_step(elements, axis_type='horizontal'):
     scale_factor = 1.0
     
     # Jeśli wartości są duże, normalizujemy do zakresu 0-100
-    if max_value > 1000:
+    if max_value > 1000 and not is_logarithmic:
         scale_factor = 100.0 / max_value
         normalized_values = [v * scale_factor for v in values]
         normalized_differences = [normalized_values[i+1] - normalized_values[i] for i in range(len(normalized_values)-1)]
         normalized_step = np.mean(normalized_differences)
         pixels_per_unit = abs(avg_position_step / normalized_step) if normalized_step != 0 else 0
-    else:
+    elif not is_logarithmic:
         pixels_per_unit = abs(avg_position_step / avg_value_step) if avg_value_step != 0 else 0
+    else:
+        # Dla osi logarytmicznej, już obliczono pixels_per_log_unit
+        pixels_per_unit = pixels_per_log_unit
     
     # Przygotuj wynik
     result = {
@@ -216,7 +265,8 @@ def detect_axis_step(elements, axis_type='horizontal'):
         'scale_factor': float(scale_factor),             # Współczynnik skalowania (1.0 dla normalnych wartości)
         'is_uniform': is_uniform,                        # Czy kroki wartości są równomierne
         'is_pixel_uniform': is_pixel_uniform,            # Czy kroki pikseli są równomierne
-        'direction': direction
+        'direction': direction,
+        'is_logarithmic': is_logarithmic
     }
     
     return result
