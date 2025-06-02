@@ -16,7 +16,7 @@ if current_script_dir not in sys.path:
     sys.path.insert(1, current_script_dir)
 
 from chart_preprocessing import preprocess_for_small_text
-from small_text_ocr import detect_text_combined
+from small_text_ocr import detect_text_combined, detect_exponent_notation, clean_duplicated_text
 
 def annotate_image(image, detected_texts):
     annotated_image = image.copy()
@@ -50,7 +50,12 @@ def format_results_to_json(image_path, detected_texts, image_shape):
             "height": height
         }
     }
-    for bbox, text, confidence in detected_texts:
+    
+    # Zastosuj funkcje czyszczenia tekstu przed zapisaniem do JSON
+    cleaned_texts = clean_duplicated_text(detected_texts)
+    cleaned_texts = detect_exponent_notation(cleaned_texts)
+    
+    for bbox, text, confidence in cleaned_texts:
         x_coords = [p[0] for p in bbox]
         y_coords = [p[1] for p in bbox]
         x_min, x_max = min(x_coords), max(x_coords)

@@ -3,6 +3,7 @@ import cv2
 import numpy as np
 import json
 from collections import defaultdict
+from small_text_ocr import detect_exponent_notation, clean_duplicated_text
 
 def extend_boxes(text_blocks, extension_factor=1.5, min_extension=10):
     """
@@ -244,31 +245,47 @@ def visualize_axes(image, axes_data, output_path):
         image: Obraz (np.array) z CV2
         axes_data: Dane o osiach z funkcji detect_axis_groups
         output_path: Ścieżka do zapisania wizualizacji
-    
+        
     Returns:
         None, zapisuje obraz do pliku
     """
     visualization = image.copy()
-    
     # Jeśli obraz jest w skali szarości, konwertuj do BGR
     if len(visualization.shape) == 2:
         visualization = cv2.cvtColor(visualization, cv2.COLOR_GRAY2BGR)
     
-    # Kolory dla różnych osi
-    horizontal_color = (0, 255, 0)  # Zielony dla osi X
-    vertical_color = (255, 0, 0)    # Niebieski dla osi Y
+    # Kolory dla różnych osi (format BGR - Blue, Green, Red) - używamy kontrastowe kolory
+    horizontal_color = (0, 255, 0)   # Zielony dla osi X (poziome)
+    vertical_color = (255, 0, 0)     # Niebieski dla osi Y (pionowe)
+    
+    print(f"DEBUG: Rozpoczynam wizualizację osi")
+    print(f"DEBUG: Liczba osi poziomych: {len(axes_data['horizontal'])}")
+    print(f"DEBUG: Liczba osi pionowych: {len(axes_data['vertical'])}")
     
     # Rysuj osie poziome (X)
     for i, axis in enumerate(axes_data['horizontal']):
+        print(f"DEBUG: Rysowanie osi poziomej {i+1} z {len(axis)} elementami")
         # Znajdź ogólne granice dla całej osi
         all_x = []
         all_y = []
         
         # Rysuj poszczególne bloki tekstu
         for _, ext_box, orig_box, text, _ in axis:
-            # Rysuj oryginalny box
+            # Rysuj oryginalny box z grubszą linią
             points = np.array(orig_box, np.int32).reshape((-1, 1, 2))
-            cv2.polylines(visualization, [points], True, horizontal_color, 2)
+            cv2.polylines(visualization, [points], True, horizontal_color, 4)
+            
+            # Dodaj tekst na środku każdego bloku
+            x_coords = [p[0] for p in orig_box]
+            y_coords = [p[1] for p in orig_box]
+            center_x = int(sum(x_coords) / len(x_coords))
+            center_y = int(sum(y_coords) / len(y_coords))
+            
+            # Rysuj tekst z tłem dla lepszej widoczności
+            cv2.putText(visualization, text, (center_x - 15, center_y + 5), 
+                       cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 3)  # Czarne tło
+            cv2.putText(visualization, text, (center_x - 15, center_y + 5), 
+                       cv2.FONT_HERSHEY_SIMPLEX, 0.5, horizontal_color, 1)  # Zielony tekst
             
             # Zbieraj współrzędne do obliczenia granic całej osi
             for p in orig_box:
@@ -279,26 +296,41 @@ def visualize_axes(image, axes_data, output_path):
         x_min, y_min = min(all_x), min(all_y)
         x_max, y_max = max(all_x), max(all_y)
         
-        # Rysuj prostokąt obejmujący całą oś
-        cv2.rectangle(visualization, (int(x_min), int(y_min)), (int(x_max), int(y_max)), 
-                      horizontal_color, 3, cv2.LINE_AA)
+        # Rysuj prostokąt obejmujący całą oś z grubszą linią
+        cv2.rectangle(visualization, (int(x_min-5), int(y_min-5)), (int(x_max+5), int(y_max+5)), 
+                      horizontal_color, 5, cv2.LINE_AA)
         
-        # Dodaj etykietę osi
-        label = f"Oś X{i+1} ({len(axis)})"
-        cv2.putText(visualization, label, (int(x_min), int(y_min - 10)), 
-                   cv2.FONT_HERSHEY_SIMPLEX, 0.6, horizontal_color, 2)
-    
+        # Dodaj etykietę osi z większym rozmiarem czcionki
+        label = f"Oś X{i+1} ({len(axis)} elem.)"
+        cv2.putText(visualization, label, (int(x_min), int(y_min - 15)), 
+                   cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 0), 3)  # Czarne tło
+        cv2.putText(visualization, label, (int(x_min), int(y_min - 15)), 
+                   cv2.FONT_HERSHEY_SIMPLEX, 0.8, horizontal_color, 2)  # Zielony tekst
+
     # Rysuj osie pionowe (Y)
     for i, axis in enumerate(axes_data['vertical']):
+        print(f"DEBUG: Rysowanie osi pionowej {i+1} z {len(axis)} elementami")
         # Znajdź ogólne granice dla całej osi
         all_x = []
         all_y = []
         
         # Rysuj poszczególne bloki tekstu
         for _, ext_box, orig_box, text, _ in axis:
-            # Rysuj oryginalny box
+            # Rysuj oryginalny box z grubszą linią
             points = np.array(orig_box, np.int32).reshape((-1, 1, 2))
-            cv2.polylines(visualization, [points], True, vertical_color, 2)
+            cv2.polylines(visualization, [points], True, vertical_color, 4)
+            
+            # Dodaj tekst na środku każdego bloku
+            x_coords = [p[0] for p in orig_box]
+            y_coords = [p[1] for p in orig_box]
+            center_x = int(sum(x_coords) / len(x_coords))
+            center_y = int(sum(y_coords) / len(y_coords))
+            
+            # Rysuj tekst z tłem dla lepszej widoczności
+            cv2.putText(visualization, text, (center_x + 10, center_y), 
+                       cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 3)  # Białe tło
+            cv2.putText(visualization, text, (center_x + 10, center_y), 
+                       cv2.FONT_HERSHEY_SIMPLEX, 0.5, vertical_color, 1)  # Niebieski tekst
             
             # Zbieraj współrzędne do obliczenia granic całej osi
             for p in orig_box:
@@ -309,17 +341,20 @@ def visualize_axes(image, axes_data, output_path):
         x_min, y_min = min(all_x), min(all_y)
         x_max, y_max = max(all_x), max(all_y)
         
-        # Rysuj prostokąt obejmujący całą oś
-        cv2.rectangle(visualization, (int(x_min), int(y_min)), (int(x_max), int(y_max)), 
-                      vertical_color, 3, cv2.LINE_AA)
+        # Rysuj prostokąt obejmujący całą oś z grubszą linią
+        cv2.rectangle(visualization, (int(x_min-5), int(y_min-5)), (int(x_max+5), int(y_max+5)), 
+                      vertical_color, 5, cv2.LINE_AA)
         
-        # Dodaj etykietę osi
-        label = f"Oś Y{i+1} ({len(axis)})"
-        cv2.putText(visualization, label, (int(x_min - 10), int(y_min)), 
-                   cv2.FONT_HERSHEY_SIMPLEX, 0.6, vertical_color, 2)
+        # Dodaj etykietę osi z większym rozmiarem czcionki
+        label = f"Oś Y{i+1} ({len(axis)} elem.)"
+        cv2.putText(visualization, label, (int(x_min - 20), int(y_min)), 
+                   cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 255), 3)  # Białe tło
+        cv2.putText(visualization, label, (int(x_min - 20), int(y_min)), 
+                   cv2.FONT_HERSHEY_SIMPLEX, 0.8, vertical_color, 2)  # Niebieski tekst
     
     # Zapisz wizualizację
     cv2.imwrite(output_path, visualization)
+    print(f"DEBUG: Wizualizacja zapisana do: {output_path}")
 
 def format_axes_to_json(axes_data):
     """
@@ -354,15 +389,18 @@ def format_axes_to_json(axes_data):
             for p in orig_box:
                 all_x.append(p[0])
                 all_y.append(p[1])
-            
-            # Formatuj informacje o pojedynczym elemencie
+              # Formatuj informacje o pojedynczym elemencie
             x_coords = [p[0] for p in orig_box]
             y_coords = [p[1] for p in orig_box]
             x_min, y_min = min(x_coords), min(y_coords)
             x_max, y_max = max(x_coords), max(y_coords)
             
+            # Zastosuj funkcje czyszczenia tekstu
+            cleaned_text = clean_duplicated_text([(orig_box, text, confidence)])[0][1]
+            cleaned_text = detect_exponent_notation([(orig_box, cleaned_text, confidence)])[0][1]
+            
             element = {
-                "text": text,
+                "text": cleaned_text,
                 "confidence": float(confidence),
                 "bbox": {
                     "x_min": float(x_min),
@@ -372,7 +410,7 @@ def format_axes_to_json(axes_data):
                 }
             }
             axis_data["elements"].append(element)
-            all_texts.append(text)
+            all_texts.append(cleaned_text)
         
         # Oblicz granice całej osi
         x_min, y_min = min(all_x), min(all_y)
@@ -406,15 +444,18 @@ def format_axes_to_json(axes_data):
             for p in orig_box:
                 all_x.append(p[0])
                 all_y.append(p[1])
-            
-            # Formatuj informacje o pojedynczym elemencie
+              # Formatuj informacje o pojedynczym elemencie
             x_coords = [p[0] for p in orig_box]
             y_coords = [p[1] for p in orig_box]
             x_min, y_min = min(x_coords), min(y_coords)
             x_max, y_max = max(x_coords), max(y_coords)
             
+            # Zastosuj funkcje czyszczenia tekstu
+            cleaned_text = clean_duplicated_text([(orig_box, text, confidence)])[0][1]
+            cleaned_text = detect_exponent_notation([(orig_box, cleaned_text, confidence)])[0][1]
+            
             element = {
-                "text": text,
+                "text": cleaned_text,
                 "confidence": float(confidence),
                 "bbox": {
                     "x_min": float(x_min),
@@ -424,7 +465,7 @@ def format_axes_to_json(axes_data):
                 }
             }
             axis_data["elements"].append(element)
-            all_texts.append(text)
+            all_texts.append(cleaned_text)
         
         # Oblicz granice całej osi
         x_min, y_min = min(all_x), min(all_y)
@@ -459,8 +500,7 @@ def process_image_for_axes(image_path, text_blocks, output_dir,
         
     Returns:
         Dict zawierający dane o osiach
-    """
-    # Upewnij się, że katalog wyjściowy istnieje
+    """    # Upewnij się, że katalog wyjściowy istnieje
     os.makedirs(output_dir, exist_ok=True)
     
     # Wczytaj obraz
@@ -468,8 +508,7 @@ def process_image_for_axes(image_path, text_blocks, output_dir,
     if image is None:
         print(f"Błąd: Nie można wczytać obrazu {image_path}")
         return None
-    
-    # Rozszerz bounding boxy
+      # KROK 1: Rozszerz bounding boxy
     extended_boxes = extend_boxes(text_blocks, extension_factor, min_extension)
     
     # Wykryj grupy osi

@@ -47,12 +47,19 @@ def extract_numeric_value(text):
         
     Returns:
         float: wartość liczbowa lub None jeśli nie można przekonwertować
-    """
-    # Najpierw oczyść tekst z powtórzeń
+    """    # Najpierw oczyść tekst z powtórzeń
     text = clean_text_value(text)
     
     # Usuń zbędne znaki i spacje
     text = text.strip()
+      # Obsługa notacji potęgowej (np. "10^1", "10^2", "2^8", "2^9" itp.)
+    power_notation_pattern = r'(\d+)\^(\d+)'
+    power_match = re.search(power_notation_pattern, text)
+    
+    if power_match:
+        base = int(power_match.group(1))
+        exponent = int(power_match.group(2))
+        return float(base ** exponent)
     
     # Obsługa notacji naukowej (np. "1,2E+09" lub "1.2E+09")
     scientific_notation_pattern = r'(-?\d+[,.]\d*)[Ee]([+-]?\d+)'
