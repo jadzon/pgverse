@@ -288,10 +288,110 @@ def merge_boxes(box1, box2):
     # Create a new box in the format [[x1,y1],[x2,y2],[x3,y3],[x4,y4]]
     return [[x_min, y_min], [x_max, y_min], [x_max, y_max], [x_min, y_max]]
 
+def detect_exponent_notation(detections):
+    """
+    Wykrywa i formatuje bloki zawierające notację potęgową (np. 102 → 10²).
+    OCR często scala podstawę i wykładnik w jeden blok, więc analizujemy zawartość.
+    Obsługuje podstawy: 2, 10, e oraz wykładniki: 0-9
+    
+    Args:
+        detections: Lista detekcji w formacie [(bbox, text, confidence), ...]
+        
+    Returns:
+        Lista detekcji z poprawnie sformatowaną notacją potęgową
+    """
+    result = []
+    conversions_made = 0
+    
+    for bbox, text, confidence in detections:
+        original_text = text.strip()
+        converted_text = original_text
+          # Wzorce notacji potęgowej do wykrycia (format ^ zamiast Unicode superscript)
+        power_patterns = [
+            # Podstawa 10 z wykładnikami 0-9
+            ('102', '10^2'), ('103', '10^3'), ('104', '10^4'), ('105', '10^5'),
+            ('106', '10^6'), ('107', '10^7'), ('108', '10^8'), ('109', '10^9'),
+            ('101', '10^1'), ('100', '10^0'),
+            
+            # Podstawa 2 z wykładnikami
+            ('21', '2^1'), ('22', '2^2'), ('23', '2^3'), ('24', '2^4'),
+            ('25', '2^5'), ('26', '2^6'), ('27', '2^7'), ('28', '2^8'),
+            ('29', '2^9'), ('20', '2^0'),
+            
+            # Podstawa e z wykładnikami  
+            ('e1', 'e^1'), ('e2', 'e^2'), ('e3', 'e^3'), ('e4', 'e^4'),
+            ('e5', 'e^5'), ('e6', 'e^6'), ('e7', 'e^7'), ('e8', 'e^8'),
+            ('e9', 'e^9'), ('e0', 'e^0'),
+            
+            # Warianty z wielką literą E
+            ('E1', 'E^1'), ('E2', 'E^2'), ('E3', 'E^3'), ('E4', 'E^4'),
+            ('E5', 'E^5'), ('E6', 'E^6'), ('E7', 'E^7'), ('E8', 'E^8'),
+            ('E9', 'E^9'), ('E0', 'E^0'),
+        ]
+        
+        # Sprawdź wszystkie wzorce
+        for pattern, replacement in power_patterns:
+            if original_text == pattern:
+                converted_text = replacement
+                conversions_made += 1
+                print(f"  Konwersja notacji potęgowej: '{pattern}' → '{replacement}'")
+                break
+        
+        # Dodaj do wyniku (z oryginalnym lub przekonwertowanym tekstem)
+        result.append((bbox, converted_text, confidence))
+    
+    if conversions_made > 0:
+        print(f"  Przekonwertowano {conversions_made} notacji potęgowych")
+    
+    return result
+
+def clean_duplicated_text(detections):
+    """
+    Usuwa duplikaty w tekście (np. "10² 10²" → "10²", "850.00 850.00" → "850.00").
+    Zachowuje bezpieczeństwo dla notacji potęgowej - nie naruszy przypadków jak "2²" vs "22".
+    
+    Args:
+        detections: Lista detekcji w formacie [(bbox, text, confidence), ...]
+        
+    Returns:
+        Lista detekcji z oczyszczonymi tekstami
+    """
+    result = []
+    cleaned_count = 0
+    
+    for bbox, text, confidence in detections:
+        original_text = text.strip()
+        cleaned_text = original_text
+        
+        # Sprawdź czy tekst zawiera spację (potencjalny duplikat)
+        if ' ' in original_text:
+            parts = original_text.split(' ')
+            
+            # Sprawdź czy wszystkie części są identyczne
+            if len(set(parts)) == 1:  # Wszystkie części są takie same
+                cleaned_text = parts[0]
+                cleaned_count += 1
+                print(f"  Usunięto duplikat: '{original_text}' → '{cleaned_text}'")
+            else:
+                # Sprawdź czy to duplikat z dwóch identycznych części
+                if len(parts) == 2 and parts[0] == parts[1]:
+                    cleaned_text = parts[0]
+                    cleaned_count += 1
+                    print(f"  Usunięto duplikat: '{original_text}' → '{cleaned_text}'")
+                # W innych przypadkach (np. "2² 10" - różne części) zostawiamy bez zmian
+        
+        result.append((bbox, cleaned_text, confidence))
+    
+    if cleaned_count > 0:
+        print(f"  Oczyszczono {cleaned_count} duplikatów w tekście")
+    
+    return result
+
 def merge_close_detections(detections, min_iou_threshold=0.3):
     """
     Merge text detections that have significant overlap (IoU >= threshold) 
     or where one box is contained within the other.
+    Najpierw wykrywa notacje potęgowe, potem standardowe łączenie.
     
     Args:
         detections: List of (bbox, text, confidence) tuples
@@ -302,6 +402,15 @@ def merge_close_detections(detections, min_iou_threshold=0.3):
     """
     if len(detections) <= 1:
         return detections
+    
+    print(f"  Rozpoczynam łączenie bloków: {len(detections)} detekcji")
+      # KROK 1: Wykryj i połącz notacje potęgowe
+    detections = detect_exponent_notation(detections)
+    
+    # KROK 1.5: Usuń duplikaty w tekście (po konwersji notacji potęgowej)
+    detections = clean_duplicated_text(detections)
+    
+    # KROK 2: Standardowe łączenie nakładających się bloków
     
     # Make a copy to avoid modifying the original list
     result = detections.copy()
@@ -343,7 +452,7 @@ def merge_close_detections(detections, min_iou_threshold=0.3):
                         merged_text = text2
                     else:
                         merged_text = text1 + " " + text2
-                    
+                        
                     merged_conf = max(conf1, conf2)
                     
                     result[i] = (merged_box, merged_text, merged_conf)
@@ -581,4 +690,4 @@ if __name__ == "__main__":
             print("Nie wykryto żadnego tekstu na obrazie.")
     else:
         print("Użycie: python small_text_ocr.py <ścieżka_do_obrazu>")
-        sys.exit(1) 
+        sys.exit(1)

@@ -2,18 +2,20 @@
 
 import os
 import sys
+import cv2
+import json
 from pathlib import Path
 
-from .chart_preprocessing import preprocess_for_small_text
-from .small_text_ocr import detect_text_combined
-from .run_text_extraction import run_chart_text_extraction, format_results_to_json, annotate_image
-from .axes_detection import process_results_for_axes, process_image_for_axes
-from .axes_interpretation import process_axes_interpretation
+from chart_preprocessing import preprocess_for_small_text
+from small_text_ocr import detect_text_combined
+from run_text_extraction import run_chart_text_extraction, format_results_to_json, annotate_image
+from axes_detection import process_results_for_axes, process_image_for_axes
+from axes_interpretation import process_axes_interpretation
 
 # Konfiguracja - ustawienia domyślne
 CONFIG = {
     # Katalogi
-    "input_directory": "../charts_examples",
+    "input_directory": "charts_examples",
     "output_directory": "results",
     "preprocessed_directory": "preprocessed_charts",
     
@@ -21,20 +23,19 @@ CONFIG = {
     "min_confidence": 0.1,
     "enable_merging": True,
     "iou_threshold": 0.4,
-    "save_intermediate": False,
+    "save_intermediate": False,  # Wyłączamy zapisywanie etapów pośrednich - tylko końcowy + osie
     
     # Ustawienia wykrywania osi
     "detect_axes": True,
-    "extension_factor": 5.0,
+    "extension_factor": 30.0,
     "min_extension": 75,
     "overlap_threshold": 0.01,
     "alignment_tolerance": 0.5,
     
     # Ustawienia interpretacji osi
     "interpret_axes": True,
-    
-    # Tryb pracy
-    "single_file": None,  # None - przetwarzaj cały katalog, ścieżka - przetwarzaj jeden plik
+      # Tryb pracy
+    "single_file": "charts_examples/test7.JPG",  # None - przetwarzaj cały katalog, ścieżka - przetwarzaj jeden plik
 }
 
 def process_single_file(file_path, output_dir, config):
