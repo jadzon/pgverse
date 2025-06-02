@@ -11,9 +11,7 @@ class SchematicAnalyzer:
     def __init__(self, model_path, text_detection_enabled=True, preprocess_enabled=True, results_folder="main_results"):
         self.text_detection_enabled = text_detection_enabled
         self.preprocess_enabled = preprocess_enabled
-        self.block_detector = BlockDetector(model_path=model_path)
-
-        self.model_path = model_path
+        self.block_detector = BlockDetector()
         self.results_folder = results_folder
         
         # Tworzenie struktury folderów na wyniki
@@ -40,23 +38,25 @@ class SchematicAnalyzer:
         
         # Wykrywanie bloków
         boxes, nodes_exist = self._detect_blocks(processed_image_path)
-        
-        # Wykrywanie połączeń
-        connections = self._detect_connections(image, boxes, text_results, nodes_exist)
+        if len(boxes) != 0:
+            
+            connections = self._detect_connections(image, boxes, text_results, nodes_exist)
 
-        results = self.associate_text_with_blocks(text_results["blocks"], boxes)
-        results = self.create_structure(connections, results)
-        print(results)
-
-        print(f"Wszystkie wyniki zostały zapisane w folderze {self.results_folder}")
-        return {
+            results = self.associate_text_with_circut_blocks(text_results["blocks"], boxes)
+            results = self.create_structure_for_circuit(connections, results)
+            print(results)
+            return {
             "processed_image": processed_image_path,
             "text_results": text_results,
             "boxes": boxes,
             "connections": connections
-        }        
+        }     
+        else:
+            boxes = self._detect_diagram(processed_image_path)
+        print(f"Wszystkie wyniki zostały zapisane w folderze {self.results_folder}")
+           
         
-    def associate_text_with_blocks(self, text_results, block_results, distance_threshold=200):
+    def associate_text_with_circut_blocks(self, text_results, block_results, distance_threshold=200):
         """
         Associate detected text with the detected blocks based on proximity.
         
@@ -109,7 +109,7 @@ class SchematicAnalyzer:
                 closest_text = closest_texts[:1]
             else:
                 closest_text = ""
-            class_name = self.block_detector.model.names[int(block.cls)]
+            class_name = self.block_detector.circuit_model.names[int(block.cls)]
             associated_results[i] = {
                 'block': class_name,
                 'coordinates': {
@@ -129,7 +129,7 @@ class SchematicAnalyzer:
 
         return associated_results
 
-    def create_structure(self, connections, blocks):
+    def create_structure_for_circuit(self, connections, blocks):
         """
         Modyfikuje dictionary bloków aby dodać do nich połączenia.
         """
@@ -185,7 +185,13 @@ class SchematicAnalyzer:
             save_annotated=True,
             save_json=True
         )
-    
+    def _detect_diagram(self, image_path):
+        """Wykrywa diagram blokowy na obrazie i zapisuje wyniki"""
+        boxes = self.block_detector.detect_block_diagrams(
+            image_path=image_path,
+            conf_threshold=0.25
+        )
+        return boxes
     def _detect_blocks(self, image_path):
         """Wykrywa bloki na obrazie i zapisuje wyniki"""
        
@@ -193,7 +199,6 @@ class SchematicAnalyzer:
             image_path=image_path,
             conf_threshold=0.25
         )
-        
         # Przeniesienie wykrytych bloków do odpowiedniego folderu
         name = os.path.splitext(os.path.basename(image_path))[0]
         detected_file = f"detected_{os.path.basename(image_path)}"
@@ -258,7 +263,7 @@ def main():
         results_folder="main_results",
         preprocess_enabled=False,
     )
-    analyzer.analyze(image_path="img/test6.png")
+    analyzer.analyze(image_path="img/test7.jpg")
 
 
 if __name__ == "__main__":

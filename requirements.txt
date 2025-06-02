@@ -1,6 +1,6 @@
 # Core dependencies
 numpy>=1.20.0
-opencv-contrib-python>=4.7.0
+
 matplotlib>=3.5.0
 
 # Deep learning frameworks
@@ -9,6 +9,7 @@ torchvision>=0.13.0
 
 # YOLO implementation
 ultralytics>=8.0.0
+yolov5 # For YOLOv5 specific features
 
 # Text extraction dependencies
 easyocr>=1.7.0
@@ -33,4 +34,6 @@ paddlepaddle>=2.0.0  # PaddlePaddle deep learning framework
 # Symbolic regression
 pysr>=0.11.0  # Python Symbolic Regression
 sympy>=1.8.0  # Symbolic mathematics (required by PySR)
-
+#MUSI BYĆ OSTATNIE
+# Computer vision
+opencv-contrib-python>=4.7.0
