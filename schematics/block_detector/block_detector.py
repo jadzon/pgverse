@@ -44,7 +44,7 @@ class BlockDetector:
             class_id = int(box.cls)
             if class_id == 12: # Class_id 12 is for nodes
                 nodes_exist = True
-            class_name = self.model.names[class_id]
+            class_name = self.circuit_model.names[class_id]
             confidence = float(box.conf)
             x1, y1, x2, y2 = box.xyxy[0].tolist()
             print(f"  {class_name} ({confidence:.2f}) at [{int(x1)}, {int(y1)}, {int(x2)}, {int(y2)}]")

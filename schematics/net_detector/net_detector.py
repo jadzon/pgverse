@@ -52,9 +52,10 @@ class NetDetector():
                 
                 if end_block is not None:
                     # We found a connection to another block
-                    if end_block not in temp_connections[key] or len(path) < len(temp_connections[key][end_block]):
-                        temp_connections[key][end_block] = path
-                        print(f"Found connection: Block {key} -> Block {end_block}, path length: {len(path)}")
+                    #CHANGE: Add all paths, not just the shortest
+                    if end_block not in temp_connections[key] or len(path) < len(temp_connections[key][end_block][1]):
+                        temp_connections[key][end_block] = (starting_point, path)
+                        print(f"Found connection: Block {key} (from {starting_point}) -> Block {end_block}, path length: {len(path)}")
         
         # Second pass: process any newly created nodes
         new_nodes = [k for k in self.blocks_starting_points.keys() if k not in blocks_to_process]
@@ -72,9 +73,9 @@ class NetDetector():
                     end_block = self.dfs_follow_connection(x, y, node_id, path)
                     
                     if end_block is not None and end_block != node_id:
-                        if end_block not in temp_connections[node_id] or len(path) < len(temp_connections[node_id][end_block]):
-                            temp_connections[node_id][end_block] = path
-                            print(f"Found connection: Node {node_id} -> Block/Node {end_block}, path length: {len(path)}")
+                        if end_block not in temp_connections[node_id] or len(path) < len(temp_connections[node_id][end_block][1]):
+                            temp_connections[node_id][end_block] = (starting_point, path)
+                            print(f"Found connection: Node {node_id} (from {starting_point}) -> Block/Node {end_block}, path length: {len(path)}")
                         
                         # Check if this created new nodes that need processing
                         latest_nodes = [k for k in self.blocks_starting_points.keys() 
@@ -83,13 +84,13 @@ class NetDetector():
         
         # Convert the temporary dictionary to the final connections format
         for source_id, connections in temp_connections.items():
-            self.connections[source_id] = [(dest_id, path) for dest_id, path in connections.items()]
+            self.connections[source_id] = [(dest_id, start_point, path) for dest_id, (start_point, path) in connections.items()]
         
         # Print all connections
         print("\nFinal connections (only shortest paths):")
         for block_id, connections in self.connections.items():
-            for connected_block, path in connections:
-                print(f"  Block {block_id} -> Block {connected_block}, path length: {len(path)}")
+            for connected_block, start_point, path in connections:
+                print(f"  Block {block_id} (from {start_point}) -> Block {connected_block}, path length: {len(path)}")
         print(self.connections)
         cv2.imshow("Connections", self.cut_out_image)
         cv2.waitKey(0)
@@ -195,7 +196,7 @@ class NetDetector():
 
     def check_if_block_hit(self, skip_id, x, y, distance=15):
         for block_id, block in enumerate(self.blocks):
-            if block_id == skip_id:
+            if block_id == skip_id or block.cls == 12:  # Skip nodes
                 continue
             x1, y1, x2, y2 = map(int, block.xyxy[0].tolist())
             # Check if (x, y) is near the expanded block area
@@ -226,13 +227,15 @@ class NetDetector():
         colors = [(255, 0, 0), (0, 0, 255), (255, 255, 0), (255, 0, 255), (0, 255, 255)]
         for block_id, connections in self.connections.items():
             color_idx = block_id % len(colors)
-            for connected_block, path in connections:
+            for connected_block, start_point, path in connections:
+                # Draw the starting point with a special marker
+                cv2.circle(vis_img, start_point, 4, (0, 165, 255), -1)  # Orange circle for starting points
+                
                 # Draw the path
                 for i in range(1, len(path)):
                     pt1 = path[i-1]
                     pt2 = path[i]
                     cv2.line(vis_img, pt1, pt2, colors[color_idx], 2)
-        
         
         cv2.imshow("Circuit Connections", vis_img)
         cv2.waitKey(0)
@@ -240,7 +243,7 @@ class NetDetector():
 
     def check_if_block_hit(self, skip_id, x, y, distance=10):
         for block_id, block in enumerate(self.blocks):
-            if block_id == skip_id:
+            if block_id == skip_id or block.cls == 12:  # Skip nodes
                 continue
             x1, y1, x2, y2 = map(int, block.xyxy[0].tolist())
             # Check if (x, y) is near the block's expanded bounding box
@@ -256,6 +259,8 @@ class NetDetector():
     def cut_out_blocks(self):
         self.no_block_img = self.image.copy()
         for block in self.blocks:
+            if block.cls == 12 :  # Skip nodes
+                continue
             x1, y1, x2, y2 = map(int, block.xyxy[0].tolist())
             print(x1, y1, x2, y2)   
             cv2.rectangle(
@@ -302,6 +307,8 @@ class NetDetector():
     def find_starting_points(self):
         starting_points = {}
         for i, block in enumerate(self.blocks):
+            if block.cls == 12 :  # Skip nodes
+                continue
             x1, y1, x2, y2 = map(int, block.xyxy[0].tolist())
             starting_points[i] = []
             
