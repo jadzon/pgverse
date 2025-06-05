@@ -13,7 +13,9 @@ pytesseract.pytesseract.tesseract_cmd = TESS_CMD
 
 
 def ocr_page(img_path: Path, prefix: str) -> str:
-    txt = pytesseract.image_to_string(Image.open(img_path), config=TESS_CFG)
+    pil_img = Image.open(img_path)
+    big_img = pil_img.resize((pil_img.width * 4, pil_img.height * 4), Image.LANCZOS)
+    txt = pytesseract.image_to_string(big_img, config=TESS_CFG) 
 
     fixed_lines = []
     for line in txt.splitlines():

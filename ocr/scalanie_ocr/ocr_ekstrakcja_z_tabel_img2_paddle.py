@@ -4,6 +4,9 @@ Przetwarza wszystkie obrazy tabel w strukturze:
   ksiazki/<book>/detekcje/tabele/*.png
 i zapisuje CSV do:
   ksiazki/<book>/rezultaty/tabele/*.csv
+
+Dodatkowo – przed samym OCR powiększamy każdą tabelę (np. 2× lub 3×),
+aby uzyskać lepszą jakość rozpoznawania tekstu.
 """
 
 import os
@@ -14,13 +17,15 @@ from pathlib import Path
 from paddleocr import PaddleOCR
 from img2table.document import Image as Img2TableImage
 from img2table.ocr import TesseractOCR
+from PIL import Image as PILImage  # do ewentualnego zapisu tymczasowego
+import tempfile
 
 # Główne katalogi i próg
 BOOKS_DIR = Path("ksiazki")
 SCORE_THRESHOLD = 0.9
 
 # Inicjalizacja OCR
-ocr_paddle = PaddleOCR(lang="pl", use_angle_cls=True)
+ocr_paddle = PaddleOCR(lang="pl", use_angle_cls=True, use_gpu=False)
 ocr_tess = TesseractOCR(lang="pol")
 
 
@@ -31,10 +36,23 @@ def paddle_score_above_threshold(result, threshold=SCORE_THRESHOLD) -> float:
     return (good / total) if total else 0.0
 
 
-def preprocess_for_paddle(path: Path) -> np.ndarray:
+def preprocess_for_paddle_upscaled(path: Path, scale: int = 2) -> np.ndarray:
+    """
+    Wczytuje obraz z path jako grayscale, powiększa go (scale x),
+    a następnie aplikuje blur + threshold i zwraca RGB ready for PaddleOCR.
+    """
+    # 1) Wczytaj w skali szarości
     img = cv2.imread(str(path), cv2.IMREAD_GRAYSCALE)
-    img = cv2.GaussianBlur(img, (3, 3), 0)
-    _, bin_img = cv2.threshold(img, 180, 255, cv2.THRESH_BINARY)
+    if img is None:
+        raise FileNotFoundError(f"Nie udało się wczytać obrazu: {path}")
+    # 2) Powiększ obraz (INTER_CUBIC dla lepszego efektu)
+    h, w = img.shape
+    img_up = cv2.resize(img, (w * scale, h * scale),
+                        interpolation=cv2.INTER_CUBIC)
+    # 3) Blur + threshold (jak wcześniej)
+    blur = cv2.GaussianBlur(img_up, (3, 3), 0)
+    _, bin_img = cv2.threshold(blur, 180, 255, cv2.THRESH_BINARY)
+    # 4) Konwersja do RGB
     return cv2.cvtColor(bin_img, cv2.COLOR_GRAY2RGB)
 
 
@@ -56,7 +74,7 @@ def paddle_grid_group(result, y_thresh=20, x_thresh=30) -> list:
     if current:
         rows.append(current)
     max_cols = max(len(r) for r in rows)
-    return [ [c['text'] for c in r] + [""]*(max_cols-len(r)) for r in rows ]
+    return [[c['text'] for c in r] + [""] * (max_cols - len(r)) for r in rows]
 
 
 if __name__ == "__main__":
@@ -74,28 +92,70 @@ if __name__ == "__main__":
         # Przetwarzanie każdego pliku obrazka
         for img_path in sorted(input_dir.glob("*.*")):
             fname = img_path.stem
-            print(f"Przetwarzanie tabel: {book_dir.name}/{fname}")
+            print(f"\nPrzetwarzanie tabel: {book_dir.name}/{fname}")
 
-            # OCR Paddle do oceny
-            image_np = preprocess_for_paddle(img_path)
-            result_paddle = ocr_paddle.ocr(image_np, cls=False)[0]
+            # 1) Powiększenie obrazu tabeli
+            try:
+                SCALE = 2
+                upscaled_np = preprocess_for_paddle_upscaled(img_path, scale=SCALE)
+            except Exception as e:
+                print(f"  Błąd podczas powiększania {img_path.name}: {e}")
+                continue
+
+            # 2) OCR Paddle na powiększonym obrazie
+            #    Uwaga: paddle.ocr(...) może zwrócić [] lub None
+            raw = ocr_paddle.ocr(upscaled_np, cls=False)
+            if not raw or raw[0] is None:
+                print("  Brak wyników OCR Paddle → fallback")
+                # TUTAJ: jeśli chcesz, możesz przejść od razu do fallbacku (gridowania)
+                grid = paddle_grid_group([])  # np. pusty wynik
+                out_csv = output_dir / f"{fname}_paddle.csv"
+                with open(out_csv, "w", newline="", encoding="utf-8") as f:
+                    writer = csv.writer(f, delimiter=";")
+                    writer.writerows(grid)
+                print(f"   Zapisano: {out_csv}")
+                continue
+
+            # Jeśli jest coś w raw, to bierzemy pierwszy element
+            result_paddle = raw[0]
+
+            # 3) Obliczamy score tylko wtedy, gdy result_paddle to lista par (box, (text, score))
             score = paddle_score_above_threshold(result_paddle)
 
             if score >= SCORE_THRESHOLD:
-                print(f" img2table (score={score:.2f})")
-                doc = Img2TableImage(str(img_path), detect_rotation=True)
+                print(f"  img2table (score={score:.2f})")
+                # … dalej oryginalny kod dla sukcesu PaddleOCR …
+
+                # Aby Img2TableImage działał na powiększonym obrazie,
+                # musimy zapisać go tymczasowo na dysku:
+                with tempfile.NamedTemporaryFile(
+                    suffix=f"_{fname}_upscaled.png", delete=False
+                ) as tmpf:
+                    tmp_path = Path(tmpf.name)
+                    up_img_pil = PILImage.fromarray(upscaled_np)
+                    up_img_pil.save(str(tmp_path))
+                    up_img_pil.close()
+
+                doc = Img2TableImage(str(tmp_path), detect_rotation=True)
                 tables = doc.extract_tables(ocr=ocr_tess)
+
+                try:
+                    os.remove(str(tmp_path))
+                except OSError:
+                    pass
+
                 if not tables:
-                    print(" Brak tabel.")
+                    print("  Brak tabel (pomimo dobrego score).")
                     continue
+
                 for idx, table in enumerate(tables, start=1):
                     df = table.df.copy()
-                    # Uzupełnienie pustych komórek za pomocą Paddle
-                    ocr_boxes = []
-                    for box, (text, _) in result_paddle:
-                        x_c = sum(p[0] for p in box) / 4
-                        y_c = sum(p[1] for p in box) / 4
-                        ocr_boxes.append({'x': x_c, 'y': y_c, 'text': text})
+                    ocr_boxes = [
+                        {'x': sum(p[0] for p in box) / 4,
+                         'y': sum(p[1] for p in box) / 4,
+                         'text': text}
+                        for box, (text, _) in result_paddle
+                    ]
                     if isinstance(table.content, list):
                         for r_idx, row in enumerate(table.content):
                             if not isinstance(row, list):
@@ -107,14 +167,20 @@ if __name__ == "__main__":
                                 texts = [t['text'] for t in ocr_boxes
                                          if x1 <= t['x'] <= x2 and y1 <= t['y'] <= y2]
                                 df.iat[r_idx, c_idx] = " ".join(texts)
+
                     out_csv = output_dir / f"{fname}_img2table_{idx}.csv"
                     df.to_csv(str(out_csv), index=False, header=False, sep=";")
-                    print(f" Zapisano: {out_csv}")
+                    print(f"   Zapisano: {out_csv}")
+
             else:
-                print(f" Słaby  (score={score:.2f}) — Paddle fallback")
+                # -----------------------------------
+                # 4) Jeśli PaddleOCR słaby → fallback
+                # -----------------------------------
+                print(f"  Słaby (score={score:.2f}) — Paddle fallback")
+                # Skoro result_paddle jest poprawną listą, możemy zrobić grid
                 grid = paddle_grid_group(result_paddle)
                 out_csv = output_dir / f"{fname}_paddle.csv"
                 with open(out_csv, "w", newline="", encoding="utf-8") as f:
                     writer = csv.writer(f, delimiter=";")
                     writer.writerows(grid)
-                print(f" Zapisano: {out_csv}")
+                print(f"   Zapisano: {out_csv}")

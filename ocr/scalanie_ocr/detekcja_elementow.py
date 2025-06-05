@@ -1,4 +1,7 @@
 import os
+import gc
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import os, gc, torch
 import tkinter as tk
 from tkinter import filedialog
 from PIL import Image, ImageOps
@@ -20,6 +23,7 @@ import onnxruntime as ort
 import json
 import time
 import numpy as np
+from tempfile import TemporaryDirectory
 # Funkcja obejścia problemu importu flash_attn w modelach Hugging
 def fixed_get_imports(filename: str | os.PathLike) -> list[str]:
     imports = original_get_imports(filename)
@@ -108,6 +112,29 @@ def detect_with_detectron(image: Image.Image) -> list:
             x1, y1, x2, y2 = map(int, block.block.coordinates)
             detections.append(((x1, y1, x2, y2), "figure"))
     return detections
+
+def _process_image_from_path(
+    img_path: str,
+    output_prefix: str,
+    detekcje_dir: str,
+    page_idx: int
+):
+    """
+    Wczytaj JPEG ze ścieżki, przekonwertuj na RGB, przekaż do process_image,
+    a potem sprzątnij GPU i RAM.
+    """
+    # 1) Wczytaj plik JPEG jako PIL Image w trybie RGB
+    image = Image.open(img_path).convert("RGB")
+
+    # 2) Przekaż do istniejącej funkcji detekcji
+    process_image(image, output_prefix, detekcje_dir, page_idx)
+
+    # 3) Zwolnij obiekt Pillow z RAM-u
+    image.close()
+
+    # 4) Zwolnij nieużywane bufory w GPU i pamięć w CPU
+    torch.cuda.empty_cache()  # zwolnij nieużywane bufory w VRAM-ie
+    gc.collect()              # wymuś zbiórkę śmieci w RAM-ie
 
 def merge_detections(hugging_dets: list, detectron_dets: list) -> list:
     """
@@ -311,7 +338,7 @@ def main():
 
     # 1. Przygotuj listę k1.pdf...k10.pdf
     selected_files = []
-    for i in range(1,3):
+    for i in range(1,11):
         fn = f"k{i}.pdf"
         if os.path.isfile(fn):
             selected_files.append(fn)
@@ -330,38 +357,51 @@ def main():
         output_prefix = os.path.splitext(basename)[0]
         print(f"\n===== Przetwarzam: {basename} =====")
 
-        pages = convert_from_path(selected_file, dpi=300)
+        with TemporaryDirectory() as tmp_dir:
+            # Rasteryzacja strumieniowa do tmp_dir
+            page_paths = convert_from_path(
+                selected_file,
+                dpi=200,                # 200–250 DPI wystarczy do OCR
+                fmt="jpeg",             # format JPEG zamiast domyślnego PPM
+                thread_count=4,         # równoległe wątki Poppler
+                output_folder=tmp_dir,
+                paths_only=True         # zwrot ścieżek do plików, nie PIL
+            )
 
+            # Przygotowanie katalogów pod jeden plik
+            book_dir = os.path.join(results_dir, output_prefix)
+            os.makedirs(book_dir, exist_ok=True)
 
-        book_dir = os.path.join(results_dir, output_prefix)
-        os.makedirs(book_dir, exist_ok=True)
+            detekcje_dir = os.path.join(book_dir, "detekcje")
+            os.makedirs(detekcje_dir, exist_ok=True)
 
-        # dodatkowy, pusty folder dla kolejnych etapów
-        detekcje_dir = os.path.join(book_dir, "detekcje")
-        os.makedirs(detekcje_dir, exist_ok=True)
+            rezultaty_dir = os.path.join(book_dir, "rezultaty")
+            os.makedirs(rezultaty_dir, exist_ok=True)
 
-        rezultaty_dir = os.path.join(book_dir, "rezultaty")
-        os.makedirs(rezultaty_dir, exist_ok=True)
+            for d in (detekcje_dir, rezultaty_dir):
+                for sub in ("figury", "tabele", "wzory", "tekst"):
+                    os.makedirs(os.path.join(d, sub), exist_ok=True)
 
-        for d in (detekcje_dir, rezultaty_dir):
-            for sub in ("figury","tabele","wzory","tekst"):
-                os.makedirs(os.path.join(d, sub), exist_ok=True)
+            # Równoległe przetwarzanie każdej strony z tmp_dir
+            with ThreadPoolExecutor(max_workers=2) as exe:
+                futures = {
+                    exe.submit(
+                        _process_image_from_path,
+                        img_path,
+                        output_prefix,
+                        detekcje_dir,
+                        idx
+                    ): idx
+                    for idx, img_path in enumerate(page_paths, start=1)
+                }
 
-        with ThreadPoolExecutor(max_workers=2) as exe:
-            futures = {exe.submit(process_image,
-                                  page,
-                                  output_prefix,
-                                  detekcje_dir,
-                                  idx): idx
-                       for idx, page in enumerate(pages, start=1)}
-
-            for fut in as_completed(futures):
-                page_idx = futures[fut]
-                try:
-                    fut.result()
-                    print(f"  Strona {page_idx} przetworzona")
-                except Exception as e:
-                    print(f"  Błąd przy przetwarzaniu strony {page_idx}:", e)
+                for fut in as_completed(futures):
+                    page_idx = futures[fut]
+                    try:
+                        fut.result()
+                        print(f"  Strona {page_idx} przetworzona")
+                    except Exception as e:
+                        print(f"  Błąd przy przetwarzaniu strony {page_idx}:", e)
 
 
 if __name__ == "__main__":
