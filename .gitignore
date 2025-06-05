@@ -140,3 +140,4 @@ schematics/main_results/*
 charts/outputs/*
 charts/results/*
 charts/data_analyzer/outputs/*
+schematics/block_detector/models/electronic-components/*
