@@ -1,0 +1,85 @@
+47
+
+e Podział według typów sygnałów występujących w regulatorze: e Podział według liczby sterowanych parametrów:
+
+- regulatory jednoparametrowe,
+- regulatory wieloparametrowe.
+
+— regulatory cyfrowe;
+— regulatory analogowe
+Można tu dokonać podziału według rodzaju sygnału analogowego
+
+e Podział według właściwości dynamicznych:
+nastawiającego obiekt:
+
+- regulatory typu P (proporcjonalne),
+
+- regulatory typu I (całkujące),
+
+- regulatory typu PD (proporcjonalno-różniczkujące),
+
+- regulatory typu PI (proporcjonalno-całkujące),
+
+— regulatory typu PID (proporcjonalno-całkująco-różniczkujące).
+
++ regulatory o wyjściu ciągłym:
+- regulatory o wyjściu całkowicie ciągłym
+Część wzmacniająca regulatora działa w sposób ciągły
+w czasie.
+- regulatory o wyjściu krokowym (regulatory krokowe)
+i regulatory o wyjściu trójpołożeniowym (regulatory trój-
+położeniowe)
+Część wzmacniająca regulatora działa w sposób nieciągły,
+natomiast ciągłość sygnału sterującego uzyskuje się przez
+właściwości całkujące elementu wykonawczego.
++ regulatory o wyjściu nieciągłym:
+- regulatory impulsowe
+Istnieje tu narzucony rytm działania w czasie.
+- regulatory dwupołożeniowe
+Rytm pracy powstaje w zależności między innymi od właś-
+ciwości obiektu regulacji.
+
+5.2.2 Uchyb ustalony
+
+Obliczanie uchybu ustalonego dla obiektu o transmitancji G(s) odbywa
+się na podstawie twierdzenia o wartości końcowej (dla funkcji wymiernej
+<F(sl maiacei bierunv leżace wvłacznie w lewei nółnłaszczyźnie (s 1]
+
+<image/wzory/k2_page24_formula2.png>
+
+przy czym (dia układu ze sztywnym, ujemnym sprzężeniem zwrotnym jak
+na rysunku 5.1) zachodzą zależności:
+
+- regulatory analogowo-cyfrowe.
+
+e Podział według charakteru zmian wielkości zadanej:
+
+<image/wzory/k2_page24_formula1.png>
+- regulatory stałowartościowe
+
+Realizują zadanie regulacji dookoła stałego punktu pracy.
+- regulatory programowe
+
+Regulacja przebiega w czasie według ustalonego programu zmian
+wartości parametrów regulatora.
+
+r =rdokasssia LbAmasala
+
+<image/wzory/k2_page24_formula3.png>
+
+Uchyb ustalony można również określić z przebiegu czasowego e(t),
+jak pokazano na rysunku 5.2.
+
+- regulatory nadążne
+Realizują zadanie śledzenia sygnału zadanego przez sygnał wyj-
+ściowy z obiektu.
+
+- regulatory ekstremalne
+Nastawy parametrów regulatora dobierane są na podstawie opty-
+malizacji zadanego wskaźnika jakości.
+
+5.2.3 Czas narastania
+
+Czasem narastania tęgę nazywa się czas wymagany, by przy wymusze-
+niu skokiem jednostkowym odpowiedź y(t) obiektu wzrosła od 10% do %%
+wartości końcowej (00), jak pokazano na rysunku 5.2.

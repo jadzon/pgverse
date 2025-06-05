@@ -1,0 +1,23 @@
+Zadanie 2.7
+Przedstawić model układu pokazanego na rysunku 2.37, w postaci transmitancji
+operatorowej.
+
+<image/figury/k1_page99_figure3.png>
+
+Rys. 2.37. Model układu mechanicznego
+
+Zadanie 2.8
+Wyznaczyć równanie ruchu i transmitancję operatorową G(s) dla układu dwóch
+zbiorników z cieczą, pokazanego na rysunku 2.38.
+
+<image/figury/k1_page99_figure1.png>
+
+Zadanie 2.9
+Zapisać model obwodu pokazanego na rysunku 2.39 za pomocą równań stanu
+i równania wyjścia oraz za pomocą transmitancji operatorowej.
+
+<image/figury/k1_page99_figure2.png>
+
+Rys. 2.39. Obwód elektryczny jako przykład obiektu
+
+101

@@ -1,0 +1,40 @@
+Jeżeli chociaż jedna z funkcji /;(1) lub fą(1) jest ograniczona w każdym przedziale
+[0, 7], T20, to splot /,(1) * f>(1):
+— istnieje i jest ciągły dla każdego £ 2 0,
+— dąży do zera dla £—0,.
+
+Splot ma właściwości iloczynu i jest: przemienny, łączny, rozdzielny względem do-
+dawania.
+Twierdzenie o transformacie splotu
+
+Twierdzenie to zwane jest czasem twierdzeniem Borela.
+
+<image/wzory/k1_page16_formula1.png>
+gdzie: F;(s)=.Zfi(); F>(s) = Z fl).
+Przykład 1.9
+iczm |
+Obliczmy GE EH
+Otóż
+
+<image/wzory/k1_page16_formula2.png>
+
+dlat>0
+
+<image/wzory/k1_page16_formula3.png>
+
+TWIERDZENIA OKREŚLAJĄCE ZALEŻNOŚCI GRANICZNE
+
+MIĘDZY ORYGINAŁAMI A TRANSFORMATAMI
+
+Twierdzenia te mogą być przydatne do obliczania wartości granicznych transformat
+i oryginałów. Podamy teraz zależności wiążące wartości graniczne funkcji /(t) dla £ + 0
+1 £ > +eo z wartościami granicznymi s/(s) dla s + +so i s 0.
+
+Twierdzenie 1.1
+
+Jeżeli funkcje f(1) i f(1)") są oryginałami oraz istnieje transformata .£ [f(1)] = F(s)
+i granica lim J/ (1) =0, to
+
+t +
+
+<image/wzory/k1_page16_formula4.png>

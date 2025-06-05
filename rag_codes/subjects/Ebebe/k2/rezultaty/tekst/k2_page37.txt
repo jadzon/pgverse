@@ -1,0 +1,70 @@
+e linearyzację nieliniowości statycznej
+
+Gdy w obiekcie regulacji występuje człon nieliniowy, proste sterowanie
+wartością wyjściową przy spełnieniu wymogów jakościowych może
+być znacznie utrudnione. Wpływ nieliniowości może zostać zmniej-
+szony przez objęcie jej dodatkowym sprzężeniem zwrotnym i dopro-
+wadzenie odpowiedniego sygnału do dodatkowego regulatora.
+
+Jako przykład może posłużyć wymiennik ciepła para-woda, w którym
+członem nieliniowym jest zawór sterujący przepływem pary,
+wielkością wyjściową jest temperatura wody, natomiast wielkością
+pomocniczą — przepływ.
+
+kompensację dynamiki obiektu regulacji
+
+Gdy w obiekcie regulacji występuje opóźnienie transportowe lub duża
+inercja, dodatkowa wielkość sterująca musi być obrana tak, aby w sta-
+nach dynamicznych (co osiąga się przez jej różniczkowanie, czyli syg-
+nał prędkości) reagowała na zmianę wartości wymuszenia szybciej niż
+wielkość wyjściowa.
+
+poprawianie eliminacji zakłóceń
+
+Gdy na obiekt regulacji działają zakłócenia, które muszą być kompen-
+sowane przez regulator, należy doprowadzić do niego dodatkową
+informację o ich wartości. Może to pociągać za sobą konieczność znale-
+zienia (gdy wartość zakłócenia nie może być zmierzona bezpośrednio)
+zmiennej reagującej na nie szybciej niż zmienna wyjściowa (szczególnie
+w przypadku obiektu o niedoskonałościach dynamicznych).
+
+7.2.3 Analiza układu regulacji kaskadowej
+
+Po rozdzieleniu obiektu regulacji (jak pokazano na rysunku 7.2) na dwie
+części G;(s), Gz(s) oraz zastosowaniu dwóch reguiatorów schemat układu
+można przekształcić, zakładając że Gpa2(s) jest regulatorem liniowym,
+do postaci pokazanej na rysunku 7.3.
+
+Gdy G; ma nieliniową charakterystykę statyczną, wypadkowa charakte-
+rystyka statyczna wewnętrznej pętli regulacji wykazuje bardziej liniowy
+przebieg od charakterystyki G;.
+
+zz
+
+<image/figury/k2_page37_figure2.png>
+
+Rys. 7.2: Schemat kaskadowego układu regulacji
+
+<image/figury/k2_page37_figure1.png>
+
+Zakładając ponownie, że G; jest częścią liniową (G;(s)) obiektu, można
+powiedzieć, że regulator nadrzędny G4,; steruje obiektem o transmitancji
+
+<image/wzory/k2_page37_formula1.png>
+
+Dla częstotliwości, przy których |GR.2(7w)G;(Jw)| > 1, transmitancja wid-
+mowa obiektu zastępczego określona jest jako
+
+<image/wzory/k2_page37_formula2.png>
+
+co odpowiada kompensacji dynamiki obiektu C; (s).
+
+Jeżeli, jak w niniejszym ćwiczeniu, wzmocnienie regulatora nadrzędnego
+zostanie ustalone jako a, przy czym kp oznacza wzmocnienie regulatora
+podrzędnego typu P, możliwa jest zmiana wzmocnienia regulatora podrzęd-
+nego kp w pętli wewnętrznej bez zmiany wzmocnienia w pętli zewnętrznej
+
+<image/wzory/k2_page37_formula3.png>
+
+gdzie Gp, (3) = AG, (s), co zapewnia dodatkowo możliwość kompensacji
+dynamiki obiektu G;(s) połączonej z kontrolą zapasu stabilności

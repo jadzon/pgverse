@@ -1,0 +1,27 @@
+Rozdział ten w całości poświęcony jest metodzie operatorowej opartej na przekształ-
+ceniu Laplace'a z uwzględnieniem powiązań z przekształceniem Fouriera.
+Przekształcenie Laplace'a określone jest zależnością
+
+<image/wzory/k1_page5_formula1.png>
+
+która funkcji f() zmiennej rzeczywistej £ przyporządkowuje transformatę F(s), będą-
+cą funkcją zmiennej zespolonej s = u + jv; zmienna s odgrywa w całkowaniu rolę pa-
+rametru. Całkę po prawej stronie wzoru (1.1) będziemy nazywać całką Laplace”a
+funkcji f(1).
+Oryginałem nazywamy funkcję zespoloną /(£) = u(f) + jv(t) zmiennej rzeczywi-
+stej £, spełniającą następujące warunki:
+- f/(0=0 dla t<0;
+- /f(1) jest w przedziale (—, +0) funkcją przedziałami ciągłą wraz z pochodnymi do
+rzędu n-tego;
+— (0) jest funkcją rzędu wykładniczego, jeśli istnieją stałe M > 0 i m > 0 takie, że dla
+wszystkich wartości £ zachodzi nierówność
+
+<image/wzory/k1_page5_formula2.png>
+
+Liczbę my 20 taką, że dla każdego € > 0 nierówność (1.2) jest spełniona dla
+m = mg + €, a nie jest spełniona dla m = mę — €, nazywamy wykładnikiem wzrastania
+funkcji /(1).
+
+Na rysunku 1.1 przedstawiono wykres funkcji typu wykładniczego.
+
+<image/figury/k1_page5_figure2.png>

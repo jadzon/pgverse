@@ -1,0 +1,26 @@
+Przykład 3.13
+
+Przyjmując następujące dane: K = 2 i T = 4, napisać m-plik, który pozwoli wykre-
+ślić charakterystyki częstotliwościowe: amplitudowo-fazową, logarytmiczną modułu
+i logarytmiczną fazy dla układu przedstawionego na rysunku 3.15.
+
+<image/figury/k1_page130_figure1.png>
+
+Rozwiązanie
+
+W rozwiazaniu wykorzystano nlik charaktervstvki m” nrzedstawionv naniżei
+
+<image/figury/k1_page130_figure2.png>
+
+Przykład 3.14 (do samodzielnego rozwiązania)
+
+Wykreślić charakterystyki częstotliwościowe elementu oscylacyjnego dla różnych
+wartości współczynnika tłumienia ©
+
+<image/wzory/k1_page130_formula1.png>
+Jeżeli:
+C=0 — występują oscylacje niegasnące,
+0<Q<1 — występują oscylacje gasnące,
+C>1 — brak oscylacji.
+
+132

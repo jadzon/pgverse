@@ -1,0 +1,36 @@
+4.2. Różne postacie modelu układu mechanicznego
+
+Uwzględniając siły działające na ciało o masie m i korzystając z zasady d'Alem-
+berta, równanie ruchu zapisać można następująco
+
+<image/wzory/k1_page136_formula1.png>
+dzie:
+* * — współczynnik sprężystości sprężyny,
+c — współczynnik tłumienia wiskotycznego.
+
+Do rozwiązania ogólnego (niezależnego od rodzaju wymuszeń) równania różnicz-
+kowego (4.1) korzystnie jest dokonać transformacji Laplace'a przy zerowych wa-
+runkach początkowych. Zamieniamy wtedy równanie różniczkowe na równanie alge-
+braiczne zmiennej s, które przyjmuje postać
+
+<image/wzory/k1_page136_formula2.png>
+
+stąd po przekształceniu
+
+<image/wzory/k1_page136_formula3.png>
+
+gdzie X,(s) i Xo(s) są transformatami Laplace'a sygnałów x;(/) i xg(t).
+
+Niech siła działająca na ciało o masie m wynosi F(s) = ms*Xq(s), co można inaczej
+zapisać w postaci
+
+vzory/k1_page136_formula4.png
+tak więc, jeśli F(s) jest wymuszeniem działającym na ciało o masie m, a Xq(S) jest wiel-
+
+kością wyjściową, to — będzie transmitancją tego ciała. Schemat blokowy przedsta-
+wia rysunek 4.2. ms
+
+<image/figury/k1_page136_figure1.png>
+Rys. 4.2. Schemat blokowy ciała sztywnego
+
+138

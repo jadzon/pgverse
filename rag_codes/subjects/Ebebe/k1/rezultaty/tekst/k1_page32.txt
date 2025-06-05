@@ -1,0 +1,28 @@
+Znając wartości współczynników 4 i C z pierwszego równania, obliczamy współ-
+C7mnil p.
+
+<image/figury/k1_page32_figure3.png>
+.png
+
+<image/wzory/k1_page32_formula1.png>
+
+podstawiamy kolejno wartości miejsc zerowych mianownika transformaty F(s): s, = 0,
+S$ = 2, S$; = —1, otrzymując odpowiednio trzy równania:
+
+<image/wzory/k1_page32_formula2.png>
+
+Po obliczeniach otrzymujemy wartości współczynników:
+
+<image/wzory/k1_page32_formula3.png>
+
+Tak więc wartości współczynników obliczone zarówno pierwszą, jak i drugą me-
+todą są identyczne.
+Transformata F(s) po rozkładzie na ułamki proste ma zatem postać
+
+<image/wzory/k1_page32_formula4.png>
+
+Ponieważ /(1) = £"'[F(s)], oryginał /(1) otrzymujemy w postaci
+
+<image/wzory/k1_page32_formula5.png>
+
+34

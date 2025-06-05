@@ -1,0 +1,34 @@
+Wyznaczamy zatem wartość transformaty napięcia U>(s)
+
+<image/wzory/k1_page66_formula1.png>
+
+Napięciu u;(£) = Et odpowiada transformata
+
+vzory/k1_page66_formula2.png
+
+czyli
+
+<image/wzory/k1_page66_formula3.png>
+
+Rozkładamy U>(s) na ułamki proste
+
+<image/wzory/k1_page66_formula4.png>
+Wyliczamy współczynniki 4 i B:
+tarzan: nanmoRR fnrmi:laR nnn
+
+<image/wzory/k1_page66_formula6.png>
+
+A+BT=0 =% A=-BT,
+B=ET,
+
+A==ET*.
+
+Podstawiając wyliczone współczynniki do U>(s), otrzymujemy
+
+<image/wzory/k1_page66_formula7.png>
+
+a po przekształceniach
+
+<image/wzory/k1_page66_formula8.png>
+
+68

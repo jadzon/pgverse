@@ -1,0 +1,73 @@
+2 Charakterystyki czasowe układów
+liniowych
+
+2.1 Cel ćwiczenia
+
+Ćwiczenie ma na celu zapoznanie się z charakterystykami czasowymi
+podstawowych elementów automatyki; obejmuje ono wymuszenia:
+impuls Diraca, skok jednostkowy i skok prędkości (sygnał typu rampa)
+oraz analizę wpływu wartości poszczególnych parametrów badanych
+elementów na kształt charakterystyk.
+
+2.2 Podstawowe wiadomości
+
+2.2.1 Liniowy układ automatyki
+
+Układ automatyki nazywa się układem liniowym, jeżeli spełnia zasadę
+superpozycji, czyli jeżeli odpowiedź układu na kombinację liniową
+wymuszeń jest równa kombinacji liniowej odpowiedzi na każde z wymu-
+szeń osobno
+
+Układy liniowe opisane są liniowymi równaniami: różniczkowymi,
+całkowymi i algebraicznymi, czyli zawierają jedynie elementy liniowe
+(o liniowych charakterystykach statycznych).
+
+Jednym ze sposobów opisu układu dynamicznego, oprócz różniczkowego
+równania wejścia-wyjścia (n z m)
+
+<image/wzory/k2_page6_formula4.png>
+<image/wzory/k2_page6_formula5.png>
+
+jest opis transmitancją operatorową w dziedzinie zmiennej zespolonej (s |
+Założywszy w poprzednim równaniu zerowe warunki początkowe oraz sto-
+sując transformatę Laplace'a
+
+<image/wzory/k2_page6_formula7.png>
+<image/wzory/k2_page6_formula8.png>
+
+<image/wzory/k2_page6_formula1.png>
+<image/wzory/k2_page6_formula2.png>
+
+otrzymuje się wymierną funkcję zmiennej zespolonej |s |, nazywaną transmi-
+tancją operatorową
+
+<image/wzory/k2_page6_formula3.png>
+
+2.2.2 Charakterystyka czasowa
+
+Charakterystyką czasową układu liniowego jest jego odpowiedź na okreś-
+lone wymuszenie przy założeniu zerowych warunków początkowych.
+Sygnałem wejściowym może być impuls Diraca 6(t), skok jednostkowy 1(£)
+(funkcja Heaviside'a) lub sygnał narastający liniowo (rampa)
+
+Należy zaznaczyć, że zarówno impuls Diraca, jak i skok jednostkowy są
+sygnałami niemożliwymi do generacji z uwagi na skończoną szybkość zmian
+wartości sygnałów (na przykład skończoną prędkość przestawiania zaworu
+przez siłownik) lub niebezpieczeństwo wywołania dynamicznego wejścia
+obiektu rzeczywistego w zakres nieliniowości.
+
+Odpowiedź v(t) układu danego transmitancją G(s) na dowolne wymusze-
+nie u(t) (o transformacie U(s) = 4 (u(t))) wyznacza się, korzystając
+
+Z odwrntnoi trancfewmaty I anlaro'a
+
+<image/wzory/k2_page6_formula6.png>
+
+2.2.3 Charakterystyka skokowa
+
+Charakterystyką skokową (odpowiedzią skokową) h(t) układu liniowego
+jest jego odpowiedź na wymuszenie skokiem jednostkowym u(*) = L(t)
+(rysunek 2.1) przy zerowych warunkach początkowych. Jest ona bardzo
+ważnym elementem teorii sterowania, ponieważ opisuje właściwości dyna-
+miki układu w zależności jedynie od jego parametrów i pojedynczej wartości
+opisującej skok (amplitudy).

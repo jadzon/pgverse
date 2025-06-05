@@ -1,0 +1,48 @@
+- odpowiedzi skokowe w układzie z korekcją dynamiczną (PID)
+wraz z omówieniem wpływu zmienianych parametrów (polecenie
+9.3.4) na wymienione wyżej wskaźniki jakości regulacji;
+
+- porównanie jakości regulacji dla zadanej wartości T,,a oraz H
+w układach z korekcją PD i PID (polecenia 9.3.3, 9.3.4).
+
+10 Regulacja trójpołożeniowa
+
+10.1 Cel ćwiczenia
+
+Ćwiczenie ma na celu zapoznanie się z zagadnieniem regulacji trójstawnej
+na przykładzie układu regulacji temperatury i serwomechanizmu przekaź-
+nikowego. Przedstawia ono problem dynamicznej korekcji działania regula-
+tora będącego trójpołożeniowym przekaźnikiem z histerezą i strefą martwą
+oraz uzupełnia wiadomości dotyczące podstawowych cech regulatora niby-
+-ciągłego.
+
+10.2 Podstawowe wiadomości
+
+10.2.1 Pojęcie regulacji trójpołożeniowej
+
+W odróżnieniu od przypadku regulacji dwustawnej regulatory posiadają
+czasem dwa punkty nastawcze umożliwiające nastawienie dwóch różnych
+wartości zadanych; są to regulatory trójpołożeniowe z wyróżnionymi trzema
+stanami pracy, odpowiednio:
+
++1 - grzanie,
+0 -stygnięcie,
+-1 - chłodzenie
+lub
+
+m - grzanie mocą większą od nominalnej,
+1 - grzanie mocą nominalną,
+
+0 -stygnięcie.
+
+Głównym elementem regulatora trójpołożeniowego jest element
+trójstawny (często budowany z odpowiedniego połączenia przekaźników
+dwupołożeniowych), o charakterystyce statycznej pokazanej na rysunku 10.1.
+
+Rzeczywisty przekaźnik charakteryzuje się występowaniem strefy histe-
+rezy o szerokości Ff, strefy nieczułości B oraz występowaniem dwóch stanów
+- załączenia ( +1, —1 ) i wyłączenia (0).
+
+Najczęstszym zadaniem regulacji trójstawnej jest regulacja temperatury,
+na przykład w zadaniu stabilizacji jej na stałym poziomie, lub zadanie regu-
+lacji za pomocą siłownika stopnia otwarcia zaworu.

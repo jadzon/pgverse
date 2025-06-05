@@ -1,0 +1,26 @@
+Zamieniając miejscami węzły sumacyjne 2 i 3, otrzymujemy rysunek 2.10d.
+
+<image/figury/k1_page58_figure2.png>
+
+Rys. 2.10d. Przekształcony schemat blokowy układu
+
+stosujcpodstawowewzoryalgebryschematwblokowychotrzymujemy
+
+<image/wzory/k1_page58_formula1.png>
+
+G, (s) = MB. (połączenie ze sprzężeniem zwrotnym),
+1|-H;(s)
+
+G(s) = G,(s)G, (s) = RSW (połączenie szeregowe).
+— 111
+
+Zarówno pierwszy, jak i drugi sposób rozwiązania dają ten sam wynik.
+
+Przykład 2.19
+
+Przekształcić schemat blokowy układu pokazanego na rysunku 2.11a do prostszej
+postaci i wyznaczyć jego transmitancję zastępczą.
+
+<image/figury/k1_page58_figure1.png>
+
+po kolejnych przekształceniach (b, c, d)

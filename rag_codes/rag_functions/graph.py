@@ -22,10 +22,12 @@ class TextGraphBuilder:
     Builds and maintains a self-learning graph of text nodes.
     Each node has:
       - id: unique identifier
-      - type: data type, e.g. 'text', 'image', 'table'
+      - type: data type, e.g. 'text', 'image', 'table', 'formula'
       - text: textual content or metadata description
       - path: optional path to external data (e.g., image file, table CSV)
       - embedding: vector representation for similarity calculations
+      - source: source type from sources_config.json
+      - base64: base64 encoded data for images, formulas, tables
     Self-learning: reinforces edges when nodes are accessed together.
     """
     def __init__(self, connector: Neo4jConnector, similarity_threshold: float = 0.8):
@@ -37,33 +39,94 @@ class TextGraphBuilder:
     def close(self):
         self.driver.close()
 
-    def insert_node(self, node_id: str, data_type: str, text: str, embedding: list = None, path: str = None, source: str = "unknown"):
+    def insert_node(self, node_id: str, data_type: str, text: str, embedding: list = None, 
+                   path: str = None, source: str = "unknown", base64_data: str = None):
         """
-        Inserts or updates a Chunk node with given properties, including optional embedding and source type.
+        Inserts or updates a Chunk node with given properties, including optional embedding, 
+        source type, and base64 data for images/formulas/tables.
+        
+        Args:
+            node_id: Unique identifier for the node
+            data_type: Type of data ('text', 'image', 'formula', 'table')
+            text: Text content or description
+            embedding: Vector embedding (text or image embedding)
+            path: File path to the original data
+            source: Source type from sources_config.json
+            base64_data: Base64 encoded data (only for image/formula/table)
         """
-        query = '''
-        MERGE (n:Chunk {id: $id})
+        # Determine node label based on data type
+        node_label = self._get_node_label(data_type)
+        
+        # Base properties for all nodes
+        node_properties = {
+            'id': node_id,
+            'type': data_type,
+            'text': text,
+            'embedding': embedding,
+            'path': path,
+            'source': source,
+            'usage_count': 0,
+            'created_at': int(time.time() * 1000),  # timestamp in ms
+            'last_accessed': int(time.time() * 1000),
+            'embedding_type': 'image_embedding' if data_type in ['image', 'formula', 'table'] else 'text_embedding'
+        }
+        
+        # Add base64 data only for visual content
+        if base64_data and data_type in ['image', 'formula', 'table']:
+            node_properties['base64'] = base64_data
+        
+        # Create the query with appropriate label
+        query = f'''
+        MERGE (n:{node_label} {{id: $id}})
         SET n.type = $type,
             n.text = $text,
             n.embedding = $embedding,
             n.path = $path,
             n.source = $source,
             n.usage_count = COALESCE(n.usage_count, 0),
-            n.created_at = COALESCE(n.created_at, timestamp()),
-            n.last_accessed = timestamp()
+            n.created_at = COALESCE(n.created_at, $created_at),
+            n.last_accessed = $last_accessed,
+            n.embedding_type = $embedding_type
         '''
+        
+        # Add base64 property conditionally
+        if base64_data and data_type in ['image', 'formula', 'table']:
+            query += ', n.base64 = $base64'
+        
         with self.driver.session() as session:
-            session.run(query, id=node_id, type=data_type, text=text, embedding=embedding, path=path, source=source)
+            session.run(query, **node_properties)
+
+    def _get_node_label(self, data_type: str) -> str:
+        """
+        Returns appropriate node label based on data type.
+        """
+        label_mapping = {
+            'text': 'TextNode',
+            'image': 'ImageNode',
+            'formula': 'FormulaNode', 
+            'table': 'TableNode'
+        }
+        return label_mapping.get(data_type, 'Chunk')
+
+    def get_image_embedding(self, image_path: str):
+        """
+        Gets image embedding using CLIP embedder.
+        This should be called from DataBaseApp with proper CLIPEmbedder instance.
+        """
+        # This will be handled in DataBaseApp.py with CLIPEmbedder
+        pass
 
     def create_text_relations(self):
         """
-        Create or update SIMILAR_TO relationships between text nodes based
-        on cosine similarity of embedding arrays stored in property 'embedding'.
-        (Assumes embedding property exists on each node.)
+        Create or update SIMILAR_TO relationships between nodes based on cosine similarity.
+        Now supports both text and image embeddings from CLIP.
         """
+        # Query for all nodes that have embeddings (both text and image)
         query = '''
-        MATCH (a:Chunk), (b:Chunk)
-        WHERE a.type = 'text' AND b.type = 'text' AND elementId(a) < elementId(b)
+        MATCH (a), (b)
+        WHERE (a:TextNode OR a:ImageNode OR a:FormulaNode OR a:TableNode) 
+          AND (b:TextNode OR b:ImageNode OR b:FormulaNode OR b:TableNode)
+          AND elementId(a) < elementId(b)
           AND a.embedding IS NOT NULL AND b.embedding IS NOT NULL
         WITH a, b,
         reduce(dot = 0.0, i IN range(0, size(a.embedding)-1) |
@@ -79,11 +142,56 @@ class TextGraphBuilder:
         ) AS sim
         WHERE sim >= $threshold
         MERGE (a)-[r:SIMILAR_TO]->(b)
-        ON CREATE SET r.weight = sim, r.last_used = timestamp(), r.reinforcement_count = 0, r.created_at = timestamp()
-        ON MATCH SET r.weight = sim, r.last_used = timestamp()
+        ON CREATE SET r.weight = sim, 
+                     r.last_used = timestamp(), 
+                     r.reinforcement_count = 0, 
+                     r.created_at = timestamp(),
+                     r.relation_type = 'similarity'
+        ON MATCH SET r.weight = sim, 
+                    r.last_used = timestamp()
         '''
         with self.driver.session() as session:
-            session.run(query, threshold=self.threshold)
+            result = session.run(query, threshold=self.threshold)
+            summary = result.consume()
+            print(f"Utworzono/zaktualizowano {summary.counters.relationships_created} relacji podobieństwa")
+
+    def create_multimodal_relations(self):
+        """
+        Creates enhanced relationships between different types of content.
+        CLIP embeddings allow comparison between text and images.
+        """
+        # Relationships between text nodes and image/formula/table nodes
+        multimodal_query = '''
+        MATCH (t:TextNode), (v)
+        WHERE (v:ImageNode OR v:FormulaNode OR v:TableNode)
+          AND t.embedding IS NOT NULL AND v.embedding IS NOT NULL
+          AND t.source = v.source  // Same source increases relevance
+        WITH t, v,
+        reduce(dot = 0.0, i IN range(0, size(t.embedding)-1) |
+            dot + t.embedding[i] * v.embedding[i]
+        ) /
+        (
+            sqrt(reduce(na = 0.0, i IN range(0, size(t.embedding)-1) |
+                na + t.embedding[i] * t.embedding[i]
+            )) *
+            sqrt(reduce(nb = 0.0, i IN range(0, size(v.embedding)-1) |
+                nb + v.embedding[i] * v.embedding[i]
+            ))
+        ) AS sim
+        WHERE sim >= $threshold * 0.8  // Slightly lower threshold for cross-modal
+        MERGE (t)-[r:RELATES_TO]->(v)
+        ON CREATE SET r.weight = sim, 
+                     r.last_used = timestamp(),
+                     r.relation_type = 'cross_modal',
+                     r.created_at = timestamp()
+        ON MATCH SET r.weight = sim, 
+                    r.last_used = timestamp()
+        '''
+        
+        with self.driver.session() as session:
+            result = session.run(multimodal_query, threshold=self.threshold)
+            summary = result.consume()
+            print(f"Utworzono/zaktualizowano {summary.counters.relationships_created} relacji cross-modal")
 
     def reinforce_relationship(self, node_a_id: str, node_b_id: str, strength: float = 1.0):
         """
@@ -91,7 +199,7 @@ class TextGraphBuilder:
         Jeśli relacja nie istnieje, tworzy ją z małą wagą.
         """
         query = '''
-        MATCH (a:Chunk {id: $node_a}), (b:Chunk {id: $node_b})
+        MATCH (a {id: $node_a}), (b {id: $node_b})
         MERGE (a)-[r:SIMILAR_TO]-(b)
         ON CREATE SET r.weight = 0.1, 
                      r.reinforcement_count = 1, 
@@ -136,7 +244,7 @@ class TextGraphBuilder:
         Zwiększa licznik użycia węzła i zapisuje kontekst.
         """
         query = '''
-        MATCH (n:Chunk {id: $node_id})
+        MATCH (n {id: $node_id})
         SET n.usage_count = COALESCE(n.usage_count, 0) + 1,
             n.last_accessed = timestamp(),
             n.total_access_time = COALESCE(n.total_access_time, 0) + 1,
@@ -147,7 +255,63 @@ class TextGraphBuilder:
             END
         '''
         with self.driver.session() as session:
-            session.run(query, node_id=node_id, context=context[:100])  # Ogranicz długość kontekstu
+            session.run(query, node_id=node_id, context=context[:100])
+
+    def analyze_learning_patterns(self):
+        """
+        Analizuje wzorce uczenia się i zwraca rozszerzone statystyki.
+        """
+        # Statystyki węzłów według typu
+        node_stats_query = '''
+        MATCH (n)
+        WHERE n.type IS NOT NULL
+        RETURN n.type as data_type, count(n) as count, 
+               avg(n.usage_count) as avg_usage,
+               count(CASE WHEN n.base64 IS NOT NULL THEN 1 END) as with_base64,
+               collect(DISTINCT n.source)[0..5] as sample_sources
+        ORDER BY count DESC
+        '''
+        
+        # Statystyki relacji
+        relation_stats_query = '''
+        MATCH ()-[r]->()
+        RETURN type(r) as relation_type, count(r) as count,
+               avg(r.weight) as avg_weight,
+               max(r.weight) as max_weight,
+               min(r.weight) as min_weight
+        '''
+        
+        # Statystyki źródeł
+        source_stats_query = '''
+        MATCH (n)
+        WHERE n.source IS NOT NULL
+        RETURN n.source as source, count(n) as node_count,
+               collect(DISTINCT n.type) as data_types
+        ORDER BY node_count DESC
+        '''
+        
+        with self.driver.session() as session:
+            node_stats = [dict(record) for record in session.run(node_stats_query)]
+            relation_stats = [dict(record) for record in session.run(relation_stats_query)]
+            source_stats = [dict(record) for record in session.run(source_stats_query)]
+            
+            # Ogólne statystyki
+            total_query = '''
+            MATCH (n) 
+            RETURN count(n) as total_nodes, 
+                   count(CASE WHEN n.embedding IS NOT NULL THEN 1 END) as nodes_with_embeddings,
+                   count(CASE WHEN n.base64 IS NOT NULL THEN 1 END) as nodes_with_base64
+            '''
+            total_stats = session.run(total_query).single()
+            
+            return {
+                'node_statistics_by_type': node_stats,
+                'relation_statistics': relation_stats,
+                'source_statistics': source_stats,
+                'total_statistics': dict(total_stats),
+                'usage_patterns_count': len(self.usage_patterns),
+                'current_threshold': self.threshold
+            }
 
     def decay_relationships(self, decay_factor: float = 0.95, min_weight: float = 0.1):
         """
@@ -159,7 +323,7 @@ class TextGraphBuilder:
         
         # Silny decay dla bardzo starych relacji
         strong_decay_query = '''
-        MATCH ()-[r:SIMILAR_TO]->()
+        MATCH ()-[r]->()
         WHERE r.last_used < timestamp() - $long_threshold
         SET r.weight = r.weight * $strong_decay,
             r.decay_applied = COALESCE(r.decay_applied, 0) + 1
@@ -167,7 +331,7 @@ class TextGraphBuilder:
         
         # Łagodny decay dla średnio starych relacji
         mild_decay_query = '''
-        MATCH ()-[r:SIMILAR_TO]->()
+        MATCH ()-[r]->()
         WHERE r.last_used < timestamp() - $short_threshold 
           AND r.last_used >= timestamp() - $long_threshold
         SET r.weight = r.weight * $mild_decay,
@@ -176,42 +340,43 @@ class TextGraphBuilder:
         
         # Usuń bardzo słabe relacje
         cleanup_query = '''
-        MATCH ()-[r:SIMILAR_TO]->()
-        WHERE r.weight < $min_weight AND r.reinforcement_count < 2
+        MATCH ()-[r]->()
+        WHERE r.weight < $min_weight AND COALESCE(r.reinforcement_count, 0) < 2
         DELETE r
         '''
         
         with self.driver.session() as session:
             # Zastosuj silny decay
-            result1 = session.run(strong_decay_query, 
-                                long_threshold=thirty_days_ms, 
-                                strong_decay=decay_factor * 0.8)
+            session.run(strong_decay_query, 
+                       long_threshold=thirty_days_ms, 
+                       strong_decay=decay_factor * 0.8)
             
             # Zastosuj łagodny decay  
-            result2 = session.run(mild_decay_query,
-                                short_threshold=seven_days_ms,
-                                long_threshold=thirty_days_ms,
-                                mild_decay=decay_factor)
+            session.run(mild_decay_query,
+                       short_threshold=seven_days_ms,
+                       long_threshold=thirty_days_ms,
+                       mild_decay=decay_factor)
             
             # Wyczyść słabe relacje
-            result3 = session.run(cleanup_query, min_weight=min_weight)
+            result = session.run(cleanup_query, min_weight=min_weight)
+            deleted_count = result.consume().counters.relationships_deleted
             
-            print(f"Zastosowano decay relacji. Usunięto {result3.consume().counters.relationships_deleted} słabych relacji.")
+            print(f"Zastosowano decay relacji. Usunięto {deleted_count} słabych relacji.")
 
     def adaptive_threshold_adjustment(self):
         """
         Automatycznie dostosowuje próg podobieństwa na podstawie gęstości grafu.
         """
-        # Sprawdź czy minęło wystarczająco czasu od ostatniej korekty
         current_time = time.time()
         if current_time - self.last_threshold_adjustment < 3600:  # 1 godzina
             return
             
         # Policz obecną liczbę relacji i węzłów
         stats_query = '''
-        MATCH (n:Chunk) 
-        WHERE n.type = 'text'
-        OPTIONAL MATCH (n)-[r:SIMILAR_TO]-()
+        MATCH (n) 
+        WHERE n.embedding IS NOT NULL
+        OPTIONAL MATCH (n)-[r]-(m)
+        WHERE r.weight IS NOT NULL
         RETURN count(DISTINCT n) as node_count, count(r) as relation_count,
                avg(r.weight) as avg_weight, max(r.weight) as max_weight
         '''
@@ -221,7 +386,6 @@ class TextGraphBuilder:
             node_count = result['node_count']
             relation_count = result['relation_count']
             avg_weight = result['avg_weight'] or 0
-            max_weight = result['max_weight'] or 0
             
             if node_count > 1:
                 max_possible_relations = node_count * (node_count - 1) / 2
@@ -237,109 +401,18 @@ class TextGraphBuilder:
                     adjustment = min(0.05, (0.05 - density) * 0.2)
                     self.threshold = max(0.3, self.threshold - adjustment)
                 
-                # Dodatkowa korekta na podstawie jakości relacji
-                if avg_weight > 0:
-                    if avg_weight < 0.4:  # Słabe relacje
-                        self.threshold = max(0.3, self.threshold - 0.02)
-                    elif avg_weight > 0.8:  # Bardzo silne relacje
-                        self.threshold = min(0.95, self.threshold + 0.02)
-                
                 self.last_threshold_adjustment = current_time
                 
                 if abs(old_threshold - self.threshold) > 0.01:
                     print(f"Próg podobieństwa dostosowany: {old_threshold:.3f} → {self.threshold:.3f}")
-                    print(f"Gęstość grafu: {density:.3f}, Średnia waga: {avg_weight:.3f}")
-
-    def create_semantic_clusters(self, min_cluster_size: int = 3, weight_threshold: float = 0.75):
-        """
-        Tworzy klastry semantyczne na podstawie silnych relacji.
-        """
-        query = '''
-        MATCH (n:Chunk)-[r:SIMILAR_TO]-(m:Chunk)
-        WHERE r.weight > $weight_threshold AND n.type = 'text'
-        WITH n, collect(DISTINCT m) as connected_nodes
-        WHERE size(connected_nodes) >= $min_size
-        SET n.cluster_candidate = true,
-            n.cluster_size = size(connected_nodes),
-            n.cluster_strength = $weight_threshold
-        RETURN n.id as node_id, size(connected_nodes) as cluster_size
-        '''
-        
-        with self.driver.session() as session:
-            result = session.run(query, weight_threshold=weight_threshold, min_size=min_cluster_size)
-            clusters = [dict(record) for record in result]
-            
-            if clusters:
-                print(f"Zidentyfikowano {len(clusters)} kandydatów na klastry semantyczne")
-            
-            return clusters
-
-    def analyze_learning_patterns(self):
-        """
-        Analizuje wzorce uczenia się i zwraca statystyki.
-        """
-        # Statystyki węzłów
-        node_stats_query = '''
-        MATCH (n:Chunk)
-        WHERE n.type = 'text'
-        RETURN count(n) as total_nodes,
-               avg(n.usage_count) as avg_usage,
-               max(n.usage_count) as max_usage,
-               count(CASE WHEN n.usage_count > 5 THEN 1 END) as popular_nodes
-        '''
-        
-        # Statystyki relacji
-        relation_stats_query = '''
-        MATCH ()-[r:SIMILAR_TO]->()
-        RETURN count(r) as total_relations,
-               avg(r.weight) as avg_weight,
-               avg(r.reinforcement_count) as avg_reinforcements,
-               count(CASE WHEN r.weight > 0.8 THEN 1 END) as strong_relations,
-               count(CASE WHEN r.reinforcement_count > 3 THEN 1 END) as learned_relations
-        '''
-        
-        # Najczęściej używane węzły
-        popular_nodes_query = '''
-        MATCH (n:Chunk)
-        WHERE n.type = 'text' AND n.usage_count > 0
-        RETURN n.id as id, n.usage_count as usage_count, size(n.contexts) as context_variety
-        ORDER BY n.usage_count DESC
-        LIMIT 10
-        '''
-        
-        # Najsilniejsze relacje
-        strong_relations_query = '''
-        MATCH (a:Chunk)-[r:SIMILAR_TO]-(b:Chunk)
-        WHERE r.weight > 0.7
-        RETURN a.id as node_a, b.id as node_b, r.weight as weight, 
-               r.reinforcement_count as reinforcements
-        ORDER BY r.weight DESC, r.reinforcement_count DESC
-        LIMIT 10
-        '''
-        
-        with self.driver.session() as session:
-            node_stats = session.run(node_stats_query).single()
-            relation_stats = session.run(relation_stats_query).single()
-            popular_nodes = [dict(record) for record in session.run(popular_nodes_query)]
-            strong_relations = [dict(record) for record in session.run(strong_relations_query)]
-            
-            return {
-                'node_statistics': dict(node_stats),
-                'relation_statistics': dict(relation_stats),
-                'popular_nodes': popular_nodes,
-                'strong_relations': strong_relations,
-                'usage_patterns_count': len(self.usage_patterns),
-                'current_threshold': self.threshold
-            }
 
     def prune_old(self, max_age_ms: int = 30*24*3600*1000):
         """
         Delete relationships not updated within max_age_ms.
         Enhanced with learning-aware pruning.
         """
-        # Nie usuwaj relacji z wysoką liczbą wzmocnień, nawet jeśli są stare
         query = '''
-        MATCH ()-[r:SIMILAR_TO]->()
+        MATCH ()-[r]->()
         WHERE r.last_used IS NOT NULL 
           AND r.last_used < timestamp() - $max_age
           AND (r.reinforcement_count IS NULL OR r.reinforcement_count < 3)
@@ -355,11 +428,15 @@ class TextGraphBuilder:
     def run_maintenance(self):
         """
         Run periodic maintenance: create relations, apply decay, adjust thresholds, and prune old.
+        Enhanced for multimodal content.
         """
-        print("Rozpoczynam konserwację grafu z uczeniem się...")
+        print("Rozpoczynam konserwację grafu multimodalnego...")
         
-        # Standardowe relacje
+        # Standardowe relacje podobieństwa
         self.create_text_relations()
+        
+        # Relacje cross-modalne (tekst-obraz)
+        self.create_multimodal_relations()
         
         # Zastosuj zanikanie relacji
         self.decay_relationships()
@@ -367,15 +444,13 @@ class TextGraphBuilder:
         # Dostosuj próg adaptacyjnie
         self.adaptive_threshold_adjustment()
         
-        # Znajdź klastry semantyczne
-        self.create_semantic_clusters()
-        
         # Wyczyść stare relacje
         self.prune_old()
         
-        print("Konserwacja grafu zakończona.")
+        print("Konserwacja grafu multimodalnego zakończona.")
 
 
+# Pozostałe klasy bez zmian...
 class HybridTextRetriever:
     """
     Retriever tekstowy używający podobieństwa kosinusowego z grafem Neo4j.
@@ -395,10 +470,11 @@ class HybridTextRetriever:
         Wyszukuje najbardziej podobne chunki na podstawie embeddingu zapytania.
         Enhanced with learning tracking and source information.
         """
-        # Najpierw spróbuj nowy format (Chunk)
-        chunk_query = '''
-        MATCH (n:Chunk)
-        WHERE n.type = 'text' AND n.embedding IS NOT NULL
+        # Wyszukuj we wszystkich typach węzłów
+        search_query = '''
+        MATCH (n)
+        WHERE (n:TextNode OR n:ImageNode OR n:FormulaNode OR n:TableNode) 
+          AND n.embedding IS NOT NULL
         WITH n,
         reduce(dot = 0.0, i IN range(0, size(n.embedding)-1) |
             dot + n.embedding[i] * $query_emb[i]
@@ -412,183 +488,31 @@ class HybridTextRetriever:
             ))
         ) AS score
         WHERE score > $threshold
-        RETURN n.id as id, n.text as text, n.path as path, n.source as source, score, 'Chunk' as node_type
+        RETURN n.id as id, n.text as text, n.path as path, n.source as source, 
+               n.type as data_type, n.base64 as base64_data, score
         ORDER BY score DESC
         LIMIT $top_k
         '''
         
-        # Jeśli nie ma wyników, spróbuj stary format (TextChunk)
-        textchunk_query = '''
-        MATCH (n:TextChunk)
-        WHERE n.embedding IS NOT NULL
-        WITH n,
-        reduce(dot = 0.0, i IN range(0, size(n.embedding)-1) |
-            dot + n.embedding[i] * $query_emb[i]
-        ) /
-        (
-            sqrt(reduce(norm_n = 0.0, i IN range(0, size(n.embedding)-1) |
-                norm_n + n.embedding[i] * n.embedding[i]
-            )) *
-            sqrt(reduce(norm_q = 0.0, i IN range(0, size($query_emb)-1) |
-                norm_q + $query_emb[i] * $query_emb[i]
-            ))
-        ) AS score
-        WHERE score > $threshold
-        RETURN n.id as id, n.text as text, n.source as path, 
-               COALESCE(n.source_type, 'unknown') as source, score, 'TextChunk' as node_type
-        ORDER BY score DESC
-        LIMIT $top_k
-        '''
-        
-        results = []
         with self.driver.session() as session:
-            # Spróbuj nowy format
-            chunk_result = session.run(chunk_query, query_emb=query_embedding, threshold=score_threshold, top_k=top_k)
-            chunk_records = list(chunk_result)
-            
-            if chunk_records:
-                results = [{'data': {'id': record['id'], 'text': record['text'], 'path': record['path'], 'source': record['source'] or 'unknown'}, 
-                           'score': record['score'], 'node_type': record['node_type'], 'source_type': record['source'] or 'unknown'} for record in chunk_records]
-            else:
-                # Jeśli brak wyników w nowym formacie, spróbuj stary
-                textchunk_result = session.run(textchunk_query, query_emb=query_embedding, threshold=score_threshold, top_k=top_k)
-                results = [{'data': {'id': record['id'], 'text': record['text'], 'path': record['path'], 'source': record['source']}, 
-                           'score': record['score'], 'node_type': record['node_type'], 'source_type': record['source']} for record in textchunk_result]
-        
-        # Jeśli włączone są relacje, rozszerz wyniki
-        if use_relations and results:
-            results = self._expand_with_relations(results, top_k)
+            result = session.run(search_query, query_emb=query_embedding, 
+                               threshold=score_threshold, top_k=top_k)
+            results = [{'data': {'id': record['id'], 'text': record['text'], 
+                                'path': record['path'], 'source': record['source'] or 'unknown',
+                                'type': record['data_type'], 'base64': record['base64_data']}, 
+                       'score': record['score'], 'source_type': record['source'] or 'unknown'} 
+                       for record in result]
         
         return results
-
-    def search_by_text_with_learning(self, query_embedding: list, query_text: str = "", top_k: int = 5, score_threshold: float = 0.0):
-        """
-        Wyszukuje podobne chunki i uczy się z wzorców wyszukiwania.
-        """
-        results = self.search_by_text(query_embedding, top_k, score_threshold, use_relations=True)
-        
-        # Jeśli znaleziono wyniki i mamy dostęp do graph_builder, naucz się z tego wzorca
-        if results and self.graph_builder:
-            # Pobierz ID wszystkich zwróconych węzłów
-            result_ids = [result['data']['id'] for result in results]
-            
-            # Przekaż wzorzec do TextGraphBuilder dla wzmocnienia relacji
-            self.graph_builder.track_usage_pattern(result_ids, query_text[:50])
-        
-        return results
-
-    def get_recommendation_based_on_history(self, recently_accessed_ids: list, top_k: int = 5):
-        """
-        Rekomenduje podobne węzły na podstawie historii dostępu.
-        Enhanced with source information.
-        """
-        if not recently_accessed_ids:
-            return []
-            
-        query = '''
-        MATCH (accessed:Chunk)-[r:SIMILAR_TO]-(recommended:Chunk)
-        WHERE accessed.id IN $accessed_ids 
-          AND NOT recommended.id IN $accessed_ids
-          AND r.weight > 0.3
-          AND recommended.type = 'text'
-        RETURN recommended.id as id, recommended.text as text, recommended.path as path,
-               recommended.source as source,
-               avg(r.weight) as avg_similarity, count(r) as connection_count,
-               max(r.reinforcement_count) as max_reinforcements
-        ORDER BY avg_similarity DESC, connection_count DESC, max_reinforcements DESC
-        LIMIT $top_k
-        '''
-        
-        with self.driver.session() as session:
-            result = session.run(query, accessed_ids=recently_accessed_ids, top_k=top_k)
-            return [{'data': {'id': record['id'], 'text': record['text'], 'path': record['path'], 'source': record['source'] or 'unknown'}, 
-                    'score': record['avg_similarity'], 
-                    'source_type': record['source'] or 'unknown',
-                    'connections': record['connection_count'],
-                    'reinforcements': record['max_reinforcements']} 
-                    for record in result]
-
-    def _expand_with_relations(self, initial_results: list, top_k: int):
-        """
-        Rozszerza wyniki o powiązane węzły poprzez relacje SIMILAR_TO.
-        Enhanced to prefer learned relationships and include source information.
-        """
-        expanded_results = initial_results.copy()
-        processed_ids = {result['data']['id'] for result in initial_results}
-        
-        for result in initial_results:
-            node_id = result['data']['id']
-            node_type = result.get('node_type', 'TextChunk')
-            
-            # Znajdź powiązane węzły, preferując te z wysokimi wzmocnieniami
-            if node_type == 'Chunk':
-                relation_query = '''
-                MATCH (n:Chunk {id: $node_id})-[r:SIMILAR_TO]-(related:Chunk)
-                WHERE related.type = 'text' AND related.id <> $node_id
-                RETURN related.id as id, related.text as text, related.path as path, 
-                       related.source as source,
-                       r.weight as relation_score, 'Chunk' as node_type,
-                       COALESCE(r.reinforcement_count, 0) as reinforcements
-                ORDER BY r.weight DESC, reinforcements DESC
-                LIMIT 3
-                '''
-            else:
-                relation_query = '''
-                MATCH (n:TextChunk {id: $node_id})-[r:SIMILAR_TO]-(related:TextChunk)
-                WHERE related.id <> $node_id
-                RETURN related.id as id, related.text as text, related.source as path,
-                       COALESCE(related.source_type, 'unknown') as source,
-                       r.weight as relation_score, 'TextChunk' as node_type,
-                       COALESCE(r.reinforcement_count, 0) as reinforcements
-                ORDER BY r.weight DESC, reinforcements DESC
-                LIMIT 3
-                '''
-            
-            with self.driver.session() as session:
-                related_result = session.run(relation_query, node_id=node_id)
-                
-                for related_record in related_result:
-                    related_id = related_record['id']
-                    if related_id not in processed_ids and len(expanded_results) < top_k:
-                        # Bonus za wzmocnienia w uczeniu się
-                        reinforcement_bonus = min(0.1, related_record['reinforcements'] * 0.02)
-                        adjusted_score = related_record['relation_score'] * 0.8 + reinforcement_bonus
-                        
-                        expanded_results.append({
-                            'data': {
-                                'id': related_id,
-                                'text': related_record['text'],
-                                'path': related_record['path'],
-                                'source': related_record['source'] or 'unknown'
-                            },
-                            'score': adjusted_score,
-                            'node_type': related_record['node_type'],
-                            'source_type': related_record['source'] or 'unknown',
-                            'relation': 'SIMILAR_TO',
-                            'reinforcements': related_record['reinforcements']
-                        })
-                        processed_ids.add(related_id)
-        
-        # Posortuj wszystkie wyniki według score
-        expanded_results.sort(key=lambda x: x['score'], reverse=True)
-        return expanded_results[:top_k]
 
     def search_by_image(self, query_embedding: list, top_k: int = 5, score_threshold: float = 0.66):
         """
         Wyszukuje najbardziej podobne obrazy na podstawie embeddingu zapytania.
-        Enhanced with source information.
-        
-        Args:
-            query_embedding: Embedding zapytania jako lista floatów
-            top_k: Maksymalna liczba wyników
-            score_threshold: Minimalny próg podobieństwa
-            
-        Returns:
-            Lista słowników z wynikami
         """
         query = '''
-        MATCH (n:Chunk)
-        WHERE n.type = 'image' AND n.embedding IS NOT NULL
+        MATCH (n)
+        WHERE (n:ImageNode OR n:FormulaNode OR n:TableNode) 
+          AND n.embedding IS NOT NULL
         WITH n,
         reduce(dot = 0.0, i IN range(0, size(n.embedding)-1) |
             dot + n.embedding[i] * $query_emb[i]
@@ -603,15 +527,19 @@ class HybridTextRetriever:
         ) AS score
         WHERE score > $threshold
         RETURN n.id as id, n.text as description, n.path as image_path, 
-               n.source as source, score
+               n.source as source, n.type as data_type, n.base64 as base64_data, score
         ORDER BY score DESC
         LIMIT $top_k
         '''
         
         with self.driver.session() as session:
-            result = session.run(query, query_emb=query_embedding, threshold=score_threshold, top_k=top_k)
-            return [{'data': {'id': record['id'], 'description': record['description'], 'path': record['image_path'], 'source': record['source'] or 'unknown'}, 
-                    'score': record['score'], 'source_type': record['source'] or 'unknown'} for record in result]
+            result = session.run(query, query_emb=query_embedding, 
+                               threshold=score_threshold, top_k=top_k)
+            return [{'data': {'id': record['id'], 'description': record['description'], 
+                            'path': record['image_path'], 'source': record['source'] or 'unknown',
+                            'type': record['data_type'], 'base64': record['base64_data']}, 
+                    'score': record['score'], 'source_type': record['source'] or 'unknown'} 
+                    for record in result]
 
 
 class GraphPruner:
@@ -667,7 +595,6 @@ class LearningPatternTracker:
         """
         Przetwarza feedback użytkownika i wzmacnia odpowiednie relacje.
         """
-        # Przykład: feedback = {'useful': [node_id1, node_id2], 'not_useful': [node_id3]}
         useful_nodes = feedback.get('useful', [])
         not_useful_nodes = feedback.get('not_useful', [])
         
@@ -675,7 +602,7 @@ class LearningPatternTracker:
         for i, node_a in enumerate(useful_nodes):
             for node_b in useful_nodes[i+1:]:
                 query = '''
-                MATCH (a:Chunk {id: $node_a}), (b:Chunk {id: $node_b})
+                MATCH (a {id: $node_a}), (b {id: $node_b})
                 MERGE (a)-[r:SIMILAR_TO]-(b)
                 ON CREATE SET r.weight = 0.4, 
                              r.user_reinforced = true, 
@@ -691,20 +618,6 @@ class LearningPatternTracker:
                 '''
                 with self.driver.session() as session:
                     session.run(query, node_a=node_a, node_b=node_b)
-        
-        # Osłab relacje do nieużytecznych węzłów
-        for useful_node in useful_nodes:
-            for not_useful_node in not_useful_nodes:
-                query = '''
-                MATCH (a:Chunk {id: $useful})-[r:SIMILAR_TO]-(b:Chunk {id: $not_useful})
-                SET r.weight = CASE 
-                               WHEN r.weight - 0.2 < 0.1 THEN 0.1
-                               ELSE r.weight - 0.2
-                             END,
-                    r.user_downgraded = true
-                '''
-                with self.driver.session() as session:
-                    session.run(query, useful=useful_node, not_useful=not_useful_node)
     
     def analyze_usage_patterns(self):
         """
@@ -712,10 +625,10 @@ class LearningPatternTracker:
         """
         # Znajdź najczęściej używane węzły
         query = '''
-        MATCH (n:Chunk)
-        WHERE n.usage_count IS NOT NULL AND n.type = 'text'
+        MATCH (n)
+        WHERE n.usage_count IS NOT NULL
         RETURN n.id as id, n.usage_count as usage, n.type as type,
-               size(n.contexts) as context_variety
+               n.source as source, size(COALESCE(n.contexts, [])) as context_variety
         ORDER BY n.usage_count DESC
         LIMIT 10
         '''
@@ -724,24 +637,8 @@ class LearningPatternTracker:
             result = session.run(query)
             popular_nodes = [dict(record) for record in result]
         
-        # Znajdź najsilniejsze relacje
-        strong_relations_query = '''
-        MATCH (a:Chunk)-[r:SIMILAR_TO]-(b:Chunk)
-        WHERE r.weight > 0.7
-        RETURN a.id as node_a, b.id as node_b, r.weight as weight, 
-               r.reinforcement_count as reinforcements,
-               r.user_reinforced as user_reinforced
-        ORDER BY r.weight DESC, r.reinforcement_count DESC
-        LIMIT 10
-        '''
-        
-        with self.driver.session() as session:
-            result = session.run(strong_relations_query)
-            strong_relations = [dict(record) for record in result]
-        
         return {
             'popular_nodes': popular_nodes,
-            'strong_relations': strong_relations,
             'total_queries': len(self.query_history),
             'feedback_sessions': len([s for s in self.query_history if s['feedback']])
         }

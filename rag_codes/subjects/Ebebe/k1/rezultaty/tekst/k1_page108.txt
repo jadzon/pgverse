@@ -1,0 +1,6 @@
+Zadanie 2.37
+
+Przeprowadzić minimalizację funkcji trzech zmiennych, określonej za pomocą ta-
+beli 2.11, wykorzystując metodę tablic Karnaugha.
+
+<image/tabele/k1_page108_table1.png>

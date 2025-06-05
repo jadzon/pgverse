@@ -1,0 +1,36 @@
+Wykres charakterystyki logarytmicznej fazy dla elementu całkującego rzeczywi-
+stego przedstawia rysunek 2.18b.
+
+Przykład 2.24
+Wyznaczyć charakterystyki logarytmiczne modułu i fazy dla elementu różniczku-
+
+jącego rzeczywistego opisanego transmitancją G(s)= : 25 (metodą graficzną).
+S+
+
+ 
+
+Rozwiązanie
+
+Do wyznaczenia charakterystyk potrzebna jest znajomość przebiegu charaktery-
+styk logarytmicznych modułu i fazy dwóch członów elementarnych.
+
+1) Człon elementarny o transmitancji G(s) = 75.
+Transmitancja widmowa: G(jo) = 7jo = Twe,
+
+<image/uwzory/k1_page74_formula1.png>
+
+faza: p(w) =90".
+
+Dla T=2: L(w) = 20log2 + 20logo (rys. 2.19).
+
+<image/figury/k1_page7/4_figure1.png>
+
+ 
+
+10
+pulsacja (rad/s]
+
+Rys. 2.19. Charakterystyki logarytmiczne modułu (a) i fazy (b) dla elementu o transmitancji G(s) = 75
+(-—-— charakterystyki składowe, === charakterystyka wypadkowa)
+
+76

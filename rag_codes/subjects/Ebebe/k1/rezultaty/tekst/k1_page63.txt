@@ -1,0 +1,32 @@
+Rozwiązanie
+Odpowiedź impulsową wyznaczamy przy wymuszeniu
+
+vzory/k1_page63_formula1.png
+
+Transformata Laplace'a wymuszenia
+
+zory/k1_page63_formula2.png
+Wyznaczając transformatę sygnału wyjściowego Y(s) na podstawie transmitancji
+G(s), otrzymujemy
+
+<image/wzory/k1_page63_formula3.png>
+
+Rozkładając Y(s) na ułamki proste, otrzymujemy
+
+<image/wzory/k1_page63_formula4.png>
+Wyliczamy współczynniki 4 i B:
+
+mam :/171 wa ra zma zal f) £Arm: laC | a a Van]
+
+<image/wzory/k1_page63_formula6.png>
+A=K,
+
+B=-KT.
+
+Podstawiając wyliczone współczynniki do Y(s), otrzymujemy
+<image/wzory/k1_page63_formula7.png>
+Oryginał y(f) znajdujemy jako odwrotną transformatę Laplace'a Y(s)
+
+<image/wzory/k1_page63_formula8.png>
+
+65

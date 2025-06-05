@@ -1,0 +1,63 @@
+e CZŁON INERCYJNY PIERWSZEGO RZĘDI
+
+Transmitancja i równanie opisujące obiekt mają postać
+
+<image/wzory/k2_page8_formula2.png>
+
+gdzie k jest współczynnikiem wzmocnienia, a 1 [s| - stałą czasową
+
+odpowiedziskokowiimpulsowopisujwzory
+
+<image/wzory/k2_page8_formula3.png>
+
+e CZŁON INERCYJNY DRUGIEGO RZĘDU
+
+[ransmitancja i równanie opisujące obiekt mają postać (Ty £ 12)
+
+<image/wzory/k2_page8_formula5.png>
+
+gdzie k jest współczynnikiem wzmocnienia, a 74, 73 js] są stałymi
+czasowymi. Postać transmitancji jest słuszna przy założeniu,
+że dwa szeregowo połączone obiekty inercyjne pierwszego rzędu
+o stałych czasowych 74 oraz T> wzajemnie siebie nie obciążają.
+
+Odpowiedzi skokowa i impulsowa wynoszą odpowiednio:
+
+<image/wzory/k2_page8_formula8.png>
+
+e CZŁON INERCYJNY N-TEGO RZĘDU
+
+Transmitancja i równanie opisujące obiekt mają postać:
+
+<image/wzory/k2_page8_formula9.png>
+
+o m W EE EE PE A A A ARKO RERKORD
+
+<image/wzory/k2_page8_formula1.png>
+
+gdzie k jest współczynnikiem wzmocnienia, a 7 |s| — stałą czasową
+
+odpowiedziskokowiimpulsowopisujwzory
+
+<image/wzory/k2_page8_formula4.png>
+
+Podobnie jak w przypadku obiektu dwuinercyjnego postać transmitan-
+cji jest słuszna przy założeniu, że szeregowo połączone obiekty
+inercyjne pierwszego rzędu o stałej czasowej T' wzajemnie siebie nie
+obciążają
+
+CZŁON OŚCYLACYJNY(0<6£< 1)
+
+Transmitancja i równanie opisujące obiekt mają postać:
+
+<image/wzory/k2_page8_formula7.png>
+
+LDL
+
+<image/wzory/k2_page8_formula6.png>
+
+gdzie k jest współczynnikiem wzmocnienia, $ - współczynnikiem tłu-
+mienia (rozważany jest zakres () < € < 1),w, | 24] — pulsacją saturalną
+obiektu (pulsacją drgań własnych, nietłumionych), a 7, |s) — stałą cza-
+
+sową, powiązaną z pulsacją naturalną zależnością liczbową w, = —

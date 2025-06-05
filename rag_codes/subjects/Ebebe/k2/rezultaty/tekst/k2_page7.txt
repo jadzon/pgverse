@@ -1,0 +1,63 @@
+Dla znanej transmitancji G(s) obiektu odpowiedź skokowa h(t) wyzna-
+czana jest jako
+
+<image/wzory/k2_page7_formula1.png>
+
+<image/figury/k2_page7_figure3.png>
+
+Charakterystyka skokowa umożliwia proste wyznaczenie współczynnika
+wzmocnienia obiektu statycznego, równego stosunkowi wartości ustalonej
+odpowiedzi skokowej do wartości sygnału wejściowego.
+
+Obiektem astatycznym nazywa się obiekt z biegunami w początku płasz-
+czyzny zmiennej zespolonej (s |, czyli bez charakterystyki statycznej.
+
+2.2.4 Charakterystyka impulsowa
+
+Charakterystyką impulsową (odpowiedzią impulsową) g(£) układu linio-
+wego jest jego odpowiedź na wymuszenie impulsem Diraca u(t) = ó(t)
+(rysunek 2.2) przy zerowych warunkach początkowych. Podobnie jak
+charakterystyka skokowa opisuje ona również właściwości dynamiki układu
+w zależności od jego parametrów.
+
+Dla znanej transmitancji G(s) obiektu liniowego odpowiedź impulsowa
+g(t) wyznaczana jest za pomocą odwrotnej transformaty Laplace'a
+
+<image/wzory/k2_page7_formula2.png>
+
+a w przypadku gdy transmitancja ma stopień licznika m mniejszy od stopnia
+mianownika n, powiązana jest z odpowiedzią skokową zaleźnością
+
+<image/wzory/k2_page7_formula4.png>
+
+Charakterystyka impulsowa umożliwia w prosty sposób określenie,
+czy obiekt jest astatyczny — w tym przypadku wartość g(t) w stanie usta-
+lonym jest niezerowa
+
+| m 0 WE z R W WO A | O 00 WNN
+
+<image/figury/k2_page7_figure2.png>
+
+2.2.5 Odpowiedź na sygnał narastający liniowo
+
+Charakterystyka czasowa, będąca odpowiedzią układu liniowego na
+sygnał narastający liniowo u(t) = at (rampę), określa odpowiedź układu na
+skok prędkości sygnału wejściowego. Sygnał ten nie jest używany do okreś-
+lania charakterystyk czasowych z wyjątkiem sytuacji, w których wymuszenie
+sygnałem skokowym spowodowałoby wejście obiektu w stan nieliniowości
+(przykładowo — wystąpienie w obiekcie elementów różniczkujących — patrz
+punkt 2.2.6).
+
+2.2.6 Charakterystyki czasowe liniowych członów dynamicznych
+
+e CZŁON PROPORCJONALNY
+
+Transmitancja i równanie opisujące obiekt mają postać:
+
+<image/wzory/k2_page7_formula3.png>
+
+gdzie k jest współczynnikiem wzmocnienia.
+
+odpowiedziskokowiimpulsowopisujwzory
+
+<image/wzory/k2_page7_formula5.png>

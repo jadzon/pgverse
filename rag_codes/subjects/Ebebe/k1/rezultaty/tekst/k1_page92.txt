@@ -1,0 +1,28 @@
+Rozwiązanie
+Na podstawie tabeli zapisujemy równanie funkcji y w kanonicznej postaci alterna-
+tywnej
+
+<image/wzory/k1_page92_formula1.png>
+lub krócej
+<image/wzory/k1_page92_formula2.png>
+
+Minimalizacji dokonujemy metodą Karnaugha, wpisując do tablicy trzech zmien-
+nych jedynki, zgodnie z przepisem funkcji y, a w pozostałe miejsca wpisując zera
+(tab. 2.6).
+
+<image/tabele/k1_page92_table1.png>
+
+Właściwą minimalizację przeprowadzamy, sklejając jedynki tak, aby uzyskać
+możliwie najprostszą postać końcową funkcji y.
+Otrzymujemy wtedy
+
+Nzory/k1_page92_formula3.png
+
+Sprawdzenia dokonujemy, stosując reguły rozdzielności i sklejania do pierwotnej
+postaci funkcji y:
+
+<image/wzory/k1_page92_formula4.png>
+
+Otrzymujemy ten sam wynik, co potwierdza poprawność rozwiązania.
+
+UA

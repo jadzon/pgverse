@@ -1,0 +1,35 @@
+Ad b) Wyznaczamy uchyb zakłóceniowy przy założeniu, że W(s) =0:
+<image/wzory/k1_page89_formula1.png>
+<image/wzory/k1_page89_formula2.png>
+
+Podstawiając, otrzymujemy
+
+<image/wzory/k1_page89_formula3.png>
+
+Transformata sygnału z(f) wynosi Z(s)= z zy. Aby obliczyć wartość uchybu, ko-
+rzystamy z twierdzenia granicznego o wartości końcowej funkcji
+
+<image/wzory/k1_page89_formula4.png>
+
+roasiawiając oapowieanie wyrazenia (rys. 2.29), otrzymujemy
+
+<image/wzory/k1_page89_formula5.png>
+
+Po przekształceniach:
+
+<image/wzory/k1_page89_formula6.png>
+
+Badany układ jest zatem układem astatycznym względem zakłócenia z(f).
+Przykład 2.31
+
+Wyznaczyć wartość uchybu statycznego zakłóceniowego e,,, dla układu pokaza-
+nego na rysunku 2.30:
+a) bez regulatora,
+b) z regulatorem P o transmitancji Gz(s) = Kp,
+c) z regulatorem PI o transmitancji Ga(s) = Kp| 1+ E ;
+,S
+1
+
+Zakładamy, że zakłócenie jest typu skokowego z(/) = 1(1)zę.
+
+91

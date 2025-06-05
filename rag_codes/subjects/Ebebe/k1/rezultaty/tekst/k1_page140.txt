@@ -1,0 +1,24 @@
+czyli w stanie ustalonym
+
+izory/k1_page140_formula1.png
+
+Oznacza to, że w stanach ustalonych xq(/) = x,„ nie ma błędu pomiędzy wartością
+wejściową i wyjściową. Z drugiej strony funkcja komplementamma dana jest wzorem
+(ms? + cs + k)Xą(s) = 0, tak więc (zgodnie ze wzorem (4.5.2) z tomu pierwszego)
+
+<image/wzory/k1_page140_formula2.png>
+
+czyli ma charakter oscylacyjny. Stąd też Xo(f) obejmować może także drgania początko-
+we tłumione, zatem odpowiedź układu na wymuszenie skokowe będzie taka, jak poka-
+zano na rysunku 4.7,
+
+jury/k1_page140_ifigury/k1_page140_figure3
+
+Wartość, o jaką xo(/) przewyższy x;(f) przy pierwszym drganiu, zwana jest pierw-
+szym przeregulowaniem. W układzie stabilnym, czyli takim, gdzie stany przejściowe
+zanikają, będzie to również przeregulowanie maksymalne.
+
+W przypadku wymuszenia jednostajnego x,(1) = Bz, również w stanie ustalo-
+nym xq(f) = Br. Nie ma więc błędu w stanie ustalonym. Jednakże z powodu początko-
+wych stanów przejściowych, odpowiedź układu będzie taka, jak przedstawiono na ry-
+sunku 4.8.

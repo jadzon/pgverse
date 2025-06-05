@@ -1,0 +1,77 @@
+hs
+
+e przekształcenie Tustina, metodą trapezów lub przekształcenie biliniowe
+
+<image/wzory/k2_page55_formula2.png>
+
+e przekształcenie impulsowo-inwariantne
+
+<image/wzory/k2_page55_formula1.png>
+
+e przekształcenie skokowo-inwariantne
+
+ 
+
+<image/rwzory/k2_page55_formula3.png>
+
+| « dopasowanie biegunów i zer.
+
+Każda z tych metod dla pewnego określonego przedziału okresu próbko-
+Ivania Tp odznacza się dobrym przybliżaniem obiektu ciągłego - na przykład
+przekształcenie 6 nadaje się dla bardzo małych wartości p. W niniejszym
+ćwiczeniu zostanie pokazana przewaga (w określaniu stabilności układu
+pamkniętego) przekształcenia skokowo-inwariantnego nad przekształceniem
+f i przekształceniem Tustina.
+
+Mając daną transmitancję G(z) = wi , jak pokazano na rysunku 11.5,
+kład dyskretny będzie się nazywać stabilnym, jeżeli wszystkie bieguny jego
+transmitancji leżą wewnątrz okręgu jednostkowego na płaszczyźnie zmien-
+nej zespolonej (z |. Analogicznie układ będzie niestabilny, jeżeli jeden lub
+więcej biegunów leży poza okręgiem jednostkowym, a będzie znajdował się
+na granicy stabilności, jeżeli posiada pojedynczy biegun na okręgu
+jednostkowym
+
+Oprócz parametrów układu na stabilność ma wpływ przede wszystkim
+
+kres próbkowania Tp (podobnie jak i na oscylacyjność przebiegów
+| adkiowyńi
+
+<image/figury/k2_page55_figure1.png>
+
+Analizę stabilności umożliwia między innymi przekształcenie Mobiusa,
+za pomocą którego po podstawieniu z = ;** możliwe jest analizowanie
+
+ 
+
+109
+
+stabilności układu dyskretnego za pomocą twierdzeń obowiązujących dla
+układów ciągłych. Przekształcenie to odwzorowuje wnętrze okręgu na pła-
+szczyźnie zmiennej zespolonej (z) w lewą półpłaszczyznę zmiennej zespo-
+lonej (s). Należy podkreślić, że uzyskane w ten sposób równanie charak-
+terystyczne układu ciągłego nie jest równoznaczne z wykonaniem przekształ-
+cenia G(z) — G(s)
+
+11.2.5  Transmitancje dyskretne liniowych członów dynamicznych
+
+e CZŁON PROPORCJONALNY
+
+Transmitancje dyskretne wyznaczone odpowiednio: przekształceniem
+skokowo-inwariantnym, metodą Tustina i przekształceniem 6 okreś-
+
+<image/wzory/k2_page55_formula4.png>
+
+e CZŁON INERCYJNY PIERWSZEGO RZĘDU
+
+Transmitancje dyskretne wyznaczone odpowiednio: przekształceniem
+skokowo-inwariantnym, metodą Tustina i przekształceniem 6 okreś-
+lone są wzorami:
+
+<image/wzory/k2_page55_formula5.png>
+
+e CZŁON INERCYJNY DRUGIEGO RZĘDU
+Transmitancje dyskretne wyznaczone odpowiednio: przekształceniem
+skokowo-inwariantnym, metodą Tustina i przekształceniem 6 okreś-
+lone są wzorami ( 7; Ź 12):
+
+<image/wzory/k2_page55_formula6.png>

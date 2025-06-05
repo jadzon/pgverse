@@ -1,0 +1,31 @@
+Załóżmy jak poprzednio, że:
+
+<image/wzory/k1_page161_formula1.png>
+
+oraz, że zarówno sygnał wejściowy, jak i moment obciążenia są sygnałami prostokąt-
+nymi o odpowiednich parametrach:
+
+U,=10V, M,;ę = 0,2 N-m.
+
+<image/figury/k1_page161_figure1.png>
+
+Przed uruchomieniem symulacji należy podane parametry wprowadzić do prze-
+strzeni roboczej MATLAB-a, wpisując:
+
+<image/wzory/k1_page161_formula2.png>
+
+Po uruchomieniu symulacji na wykresach, pokazanych na rysunku 6.8, otrzy-
+
+mujemy przebiegi: napięcia zasilającego wirnik (U,), prądu płynącego przez wirnik
+
+(i„), momentu obciążenia silnika (M „,,.) oraz prędkości kątowej wirnika (w„) w funkcji
+czasu.
+
+Symulację działania silnika przeprowadzono także, wykorzystując jego model za-
+
+pisany w postaci równań stanu i wyjścia. Zakładając, że moment obciążenia My, = 0,
+oraz warunki początkowe
+
+<image/wzory/k1_page161_formula3.png>
+
+163

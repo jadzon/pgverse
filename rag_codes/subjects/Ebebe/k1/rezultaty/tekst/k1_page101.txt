@@ -1,0 +1,26 @@
+Zadanie 2.13
+
+Zapisać równania ruchu dla dwóch zbiorników z gazem (rys. 2.42), przekształcić
+je do równań stanu i wyjścia oraz wyznaczyć transmitancję operatorową G(s).
+
+<image/figury/k1_page101_figure3.png>
+
+Rys. 2.42. Układ dwóch zbiorników z gazem
+
+Zadanie 2.14
+
+Sprawdź, czy transmitancja zastępcza dla schematu blokowego pokazanego na ry-
+sunku 2.43 wynosi G(s). Wskaż ewentualne błędy.
+
+<image/figury/k1_page101_figure1.png>
+
+Zadanie 2.15
+
+Dokonać redukcji schematu blokowego i wyznaczyć transmitancję zastępczą ukła-
+du przedstawionego na rysunku 2.44.
+
+<image/figury/k1_page101_figure2.png>
+
+Rys. 2.44. Schemat blokowy układu
+
+103

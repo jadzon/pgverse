@@ -1,0 +1,13 @@
+Wyznaczamy funkcję X(s)
+
+<image/wzory/k1_page26_formula1.png>
+
+Rozkładając na ułamki proste, otrzymujemy
+
+<image/wzory/k1_page26_formula2.png>
+
+Po wyznaczeniu stałych 4, B i C (A = 2, B = —1, C= 0) wyznaczamy transformatę
+odwrotną Laplace'a.
+
+W tabeli 1.1 (na wklejce po s. 16) zamieszczono transformaty Laplace'a najczę-
+ściej stosowanych funkcji.

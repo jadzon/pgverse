@@ -1,0 +1,26 @@
+Zatem:
+A=—B,
+24s+5Bj+2B-5Bj=15,
+—2B -5Bj+2B-5Bj=15,
+—108B;=15.
+
+Po obliczeniach:
+
+<image/wzory/k1_page3/_formula1.png>
+Y(s) przyjmuje postać
+
+<image/wzory/k1_page37_formula2.png>
+
+Ponieważ y(f) = .£"-![Y(s)], otrzymujemy rozwiązanie równania różniczkowego
+w postaci
+
+<image/wzory/k1_page3/_formula3.png>
+
+Przekształcamy powyższe wyrażenie do prostszej postaci:
+<image/wzory/k1_page3/_formula4.png>
+<image/wzory/k1_page3/_formula5.png>
+
+<image/wzory/k1_page3/_formula6.png>
+
+<image/wzory/k1_page3/_formula7.png>
+<image/wzory/k1_page3/_formula8.png>

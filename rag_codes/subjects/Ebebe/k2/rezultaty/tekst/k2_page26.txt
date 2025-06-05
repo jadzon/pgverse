@@ -1,0 +1,78 @@
+50
+
+the squared error), określone jako:
+
+<image/wzory/k2_page26_formula1.png>
+
+5.2.8 Regulator typu P
+
+Transmitancja regulatora i jego odpowiedź skokowa na wymuszenie
+e(t) = e: 1L(t) określone są wzorami:
+
+<image/wzory/k2_page26_formula3.png>
+
+Regulator typu P jest członem proporcjonalnym, nieposiadającym inercji,
+którego zastosowanie zmniejsza uchyb ustalony wraz ze wzrostem wzmoc-
+nienia kp (uchyb ustalony jest odwrotnie proporcjonalny do współczynnika
+wzmocnienia), jednak nie zapewnia sprowadzenia uchybu do zera w przy-
+padku wystąpienia zakłóceń.
+
+5.2.9 Regulator typu I
+
+Transmitancja regulatora i jego odpowiedź skokowa na wymuszenie
+e(t) = e-1(t) określone są wzorami:
+
+<image/wzory/k2_page26_formula4.png>
+
+Regulator typu I jest członem całkującym, którego właściwości pozwalają
+sprowadzić uchyb regulacji do zera, powodując przy tym (w stosunku do
+regulatora typu P) wydłużenie czasu regulacji - sygnał wyjściowy zmieni się
+do wartości odpowiadającej sygnałowi sterującemu u(t) z regulatora typu
+P po upływie czasu równego stałej czasowej całkowania 7, (sj (poprzez za-
+chowanie „historii” wartości uchybu — całkowanie).
+
+dy > alb Piw świat
+
+ 
+
+51
+
+Ze względu na właściwości całkujące sygnał sterujący u(t), czyli sygnał
+wyjściowy regulatora, będzie zmieniał się tak długo, aż uchyb przyjmie
+wartość równą zeru. Jak wiadomo z analizy stabilności układów astaty-
+cznych - obecność członu całkującego pogarsza stabilność układu.
+
+5.2.10 Regulator typu PI
+
+Transmitancja regulatora i jego odpowiedź skokowa na wymuszenie
+e(t) = e - 1(t) określone są wzorami:
+
+<image/wzory/k2_page26_formula2.png>
+
+Regulator typu PI łączy właściwości dwóch poprzednich, zapewniając
+sprowadzenie uchybu do zera i skrócenie (w stosunku do regulatora typu
+I) czasu regulacji, który jednak ze względu na właściwości całkujące będzie
+dłuższy od czasu regulacji w układzie z regulatorem typu P. Stała czasowa
+elementu całkującego regulatora PI nazywana jest stałą zdwojenia, ponieważ
+przy skokowej zmianie uchybu po upływie czasu 7, sygnał sterujący osiąga
+dwukrotnie większą wartość niż w regulatorze typu P.
+
+Na podstawie logarytmicznej charakterystyki modułu można wyciągnąć
+wniosek, że warunkiem uzyskania zerowego uchybu ustalonego jest,
+aby moduł transmitancji regulatora przy częstotliwości bliskiej zeru dążył
+do nieskończoności.
+
+5.2.11 Regulator typu PD (idealny)
+
+Transmitancja regulatora i jego odpowiedź skokowa na wymuszenie
+e(t) z e: 1(t) określone są wzorami:
+
+<image/wzory/k2_page26_formula5.png>
+
+Regulator typu PD z uwagi na brak członu całkującego nie zapewnia spro-
+wadzenia uchybu do zera. Stałą wyprzedzenia 7; (s| nazywa się czas, jaki
+musi upłynąć, aby po wystąpieniu uchybu narastającego liniowo sygnał e(£)
+zrównał się z sygnałem wyjściowym u(£) z regulatora.
+
+Z uwagi na dodanie zera do układu otwartego (pierwiastka licznika trans-
+mitancji), przy niezmienionym rzędzie układu (stopniu mianownika),

@@ -1,0 +1,22 @@
+Przykład 3.5 (do samodzielnego rozwiązania)
+Zapisać model układu opisanego równaniem różniczkowym
+
+<image/wzory/k1_page122_formula1.png>
+
+za pomocą równań stanu i wyjścia.
+
+Przykład 3.6
+
+Plik „el_opozn.m” zawiera procedury wykorzystujące aproksymację opóźnienia
+metodą Padego (rys. 3.8) do wyznaczenia odpowiedzi skokowej dla transmitancji
+
+<image/wzory/k1_page122_formula2.png>
+
+jeżeli: k=5;T=10s; T=2s.
+Rozwiązanie
+Plik „el_opozn.m” przedstawiony jest poniżej.
+
+ory/k1_page122_formula3.png
+<image/figury/k1_page122_figure1.png>
+
+124

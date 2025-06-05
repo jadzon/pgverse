@@ -1,0 +1,15 @@
+<image/tabele/k1_page96_table1.png>
+
+Minimalizacji funkcji Z,, Z i Y dokonujemy za pomocą tablic Kamaugha (tab. 2.10).
+
+<image/tabele/k1_page96_table2.png>
+
+Schemat logiczny układu z zastosowaniem bramek NOR przedstawia rysunek 2.34.
+
+<image/wzory/k1_page96_formula1.png>
+
+<image/figury/k1_page96_figure1.png>
+
+Rys. 2.34. Schemat logiczny z bramek NOR
+
+98

@@ -1,0 +1,23 @@
+<image/figury/k1_page115_figure1.png>
+
+Przyjmując określone parametry symulacji, otrzymujemy rozwiązanie w postaci
+graficznej, przedstawione na rysunku 3.4.
+
+Wwvkres rozwiazania równania różniczkowana
+
+<image/figury/k1_page115_figure2.png>
+
+Rys. 3.4. Przebieg rozwiązania uzyskany podczas symulacji
+
+W tym wypadku zadanie możemy rozwiązać także w znacznie prostszy sposób,
+wykorzystując tylko równanie (3.1) i odpowiadający mu schemat blokowy przedsta-
+wiony na rysunku 3.5.
+
+<image/figury/k1_page115_figure3.png>
+
+Rys. 3.5. Schemat blokowy równania zbudowany w Simulinku
+
+Przyjmując określone parametry symulacji, otrzymujemy rozwiązanie w formie
+graficznej, jak poprzednio.
+
+117

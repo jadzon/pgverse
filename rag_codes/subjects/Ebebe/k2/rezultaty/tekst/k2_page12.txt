@@ -1,0 +1,33 @@
+22
+
+2.3 Przebieg ćwiczenia
+2.3.1 Wpływ wartości parametrów na odpowiedź czasową
+Określić wpływ podanych niżej parametrów przy wymuszeniu:
+a) skokiem jednostkowym u(t) = 1(t),
+b) impulsem Diraca u(t) = ół(t),
+c) sygnałem narastającym liniowo u(t) = t
+na odpowiedź czasową obiektów:
+ż proporcjonalnego (zmienne k),
+e inercyjnego pierwszego rzędu (zmienne k oraz 7),
+e inercyjnego drugiego rzędu (zmienne k oraz 7),
+e inercyjnego n-tego rzędu (zmienne k, 7' oraz n), fig u ry/k2_page 1 2_fig ure 1 png
+e oscylacyjnego (przy k = 1, zmienne w, oraz 6),
+e całkującego idealnego (zmienne k),
+e całkującego z inercją (zmienne k oraz 7'),
+e różniczkującego rzeczywistego (zmienne k oraz 7),
+
+wybierając dla każdego z nich trzy wartości.
+
+2.3.2 Aproksymacja obiektów wyższych rzędów
+
+W przypadku obiektów: inercyjnego drugiego rzędu oraz inercyjnego
+n-tego rzędu dokonać na podstawie uzyskanych odpowiedzi skokowych
+aproksymacji za pomocą obiektu inercyjnego pierwszego rzędu z opóźnie-
+niem transportowym; zapisać transmitancje zastępcze.
+
+2.3.3 Analityczne wyznaczanie odpowiedzi czasowej
+
+Dla obiektu o zadanych parametrach wyprowadzić, korzystając
+z odwrotnego przekształcenia Laplace'a, wzór na odpowiedź skokowź
+(u(t) = U - I(t)), impulsową (u(t) = 5(t)) lub na wymuszenie sygnałen
+narastającym liniowo (u(t) = at).

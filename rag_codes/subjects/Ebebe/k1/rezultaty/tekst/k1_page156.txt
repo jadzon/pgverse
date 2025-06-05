@@ -1,0 +1,26 @@
+6.4. Model matematyczny silnika
+zapisany w postaci schematu blokowego
+
+Stosując przekształcenie Laplace'a do równań (6.5), otrzymujemy:
+
+<image/wzory/k1_page156_formula1.png>
+
+Przekształcając uzyskane równania, przy założeniu zerowych warunków począt-
+kowych, otrzymujemy:
+
+<image/wzory/k1_page156_formula2.png>
+
+Na podstawie powyższych równań można narysować schemat blokowy silnika,
+przedstawiony na rysunku 6.3.
+
+<image/figury/k1_page156_figure1.png>
+
+6.5. Model matematyczny silnika
+zapisany w postaci transmitancji operatorowej
+Przyjmując jako wielkość wyjściową prędkość kątową wirnika (w,), a jako wiel-
+kość wejściową napięcie zasilające wirnik (U,) oraz rozpatrując silnik bez obciążenia
+
+(MQ, = 0), możemy wyznaczyć transmitancję tego układu, dokonując kolejnych mody-
+fikacji schematu blokowego pokazanego na rysunku 6.4.
+
+158

@@ -1,0 +1,58 @@
+%6
+
+334 Sprawozdanie
+Sprawozdanie powinno zawierać:
+
+charakterystyki częstotliwościowe wraz Z opisem wpływu na ich
+kształt poszczególnych parametrów obiektu (polecenie 3.3.1);
+
+- wyprowadzenie postaci odpowiedzi czasowej określonego obiektu na
+zadane wymuszenie (polecenie 3.3.2);
+
+— wyprowadzenie wzorów opisujących wykresy Bodego wraz z ich przy*
+blizonym szkicem (polecenie 3.3.3).
+
+4 Stabilność układów liniowych
+
+4.1 Cel ćwiczenia
+
+Ćwiczenie ma na celu zapoznanie się z zagadnieniem określania stabil-
+ności układów liniowych ze sztywnym sprzężeniem zwrotnym na podstawie
+następujących charakterystyk układu otwartego: amplitudowo-fazowej,
+wykresów Bodego oraz wykresu Nicholsa.
+
+4.2 Podstawowe wiadomości
+
+4.2.1 Stabilność, kryteria stabilności
+Ostabilności układu liniowego najprościej można orzec, znając jego trans-
+
+po”o=naa
+
+<image/wzory/k2_page19_formula1.png>
+
+lub znając położenie pierwiastków równania charakterystycznego M(s) = 0,
+czyli biegunów transmitancji.
+
+Układ liniowy jest stabilny wtedy i tylko wtedy, gdy wszystkie bieguny
+jego transmitancji leżą w lewej półpłaszczyźnie zmiennej zespolonej (s ).
+
+Układ liniowy jest na granicy stabilności, jeżeli jeden jego biegun leży na
+osi urojonej, a reszta biegunów — w lewej półpłaszczyźnie zmiennej zespolo-
+nej (s).
+
+Układ liniowy jest stabilny asymptotycznie wtedy i tylko wtedy, gdy wszy-
+stkie bieguny jego transmitancji leżą w lewej półpłaszczyźnie zmiennej ze-
+spolonej (s |) (mają ujemną część rzeczywistą). W tym przypadku składowa
+przejściowa odpowiedzi y(t) zanika do zera przy t — oc.
+
+Układ liniowy jest niestabilny, jeżeli co najmniej jeden jego biegun leży
+w prawej półpłaszczyźnie zmiennej zespolonej (s) lub więcej niż jeden
+biegun znajduje się na osi urojonej. W tym przypadku składowa przejściowa
+odpowiedzi y(t) rośnie do nieskończoności przy t — oo.
+
+Jeżeli postać transmitancji nie jest znaną, o stabilności układu można orzec
+na podstawie charakterystyk częstotliwościowych. Innym sposobem,
+niezależnym od ich znajomości czy postaci transmitancji, jest określenie
+stabilności w sensie BIBO (bounded-input bounded-output), czyli spełnienie
+warunku, że przy dowolnym, ale ograniczonym sygnale wymuszającym
+odpowiedź układu będzie również ograniczona.

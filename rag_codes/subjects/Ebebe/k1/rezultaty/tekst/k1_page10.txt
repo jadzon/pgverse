@@ -1,0 +1,27 @@
+Przykład 1.4
+Wyznaczyć transformatę impulsu prostokątnego pokazanego na rysunku 1.4.
+
+<image/figury/k1_page10_figure1.png>
+
+Daną funkcję można zapisać następująco
+
+<image/wzory/k1_page10_formula1.png>
+Można ją również zapisać za pomocą funkcji jednostkowej
+
+<image/wzory/k1_page10_formula2.png>
+<image/wzory/k1_page10_formula3.png>
+
+Mamy zatem
+<image/wzory/k1_page10_formula4.png>
+
+Transformata funkcji okresowej
+
+Jeżeli f(1) jest funkcją okresową o okresie 7 > O, to jej transformata F(s) wyraża się
+wzorem
+
+<image/wzory/k1_page10_formula5.png>
+czyli
+
+<image/wzory/k1_page10_formula6.png>
+
+gdzie Fr(s) — transformata funkcji okresowej f(r) za okres 7.

@@ -1,0 +1,81 @@
+114
+
+— wykresy linii pierwiastkowych (dla każdej z metod dyskretyzacji) przy:
+a) zmiennej szybkości próbkowania fp, stałych: k oraz T,
+b) zmiennej stałej czasowej 7, stałych: fp oraz k,
+
+określając wpływ zmienianych parametrów na stabilność układu zdys-
+kretyzowanego;
+
+- przebiegi czasowe wraz z opisem wpływu na dynamikę obiektu
+dyskretnego poszczególnych jego parametrów (polecenie 11.3.3)
+przy stałym okresie próbkowania 7p = ls;
+
+- analityczne wyznaczenie za pomocą określonego przekształcenia
+postaci transmitancji dyskretnej określonego obiektu przy zadanym
+okresie próbkowania (polecenie 11.3.4).
+
+12 Bibliografia
+
+10.
+
+11.
+
+12.
+
+13.
+
+14.
+
+15.
+
+Amborski K., Marusak A., Teoria sterowania w ćwiczeniach, Warszawa,
+Państwowe Wydawnictwo Naukowe 1978.
+
+. Laboratorium podstaw automatyki, red. M. Bielecki, Poznań, Wydawnic-
+
+two Politechriki Poznańskiej 1987.
+
+- Brzózka J., Regulatory cyfrowe w automatyce, Warszawa, Mikom 2002.
+„ Poradnik inżyniera — automatyka, red. W. Findeisen, wyd. 2, Warszawa,
+
+Wydawnictwa Naukowo-Techniczne 1973.
+
+„ Findeisen W., Technika regulacji automatycznej, wyd. 3, Warszawa, Państ-
+
+wowe Wydawnictwo Naukowe 1978.
+
+„ Goodwin G.C., Feuer A., Sampling in Digital Signal Processing and Con-
+
+trol, Boston, Birkhiuser 199%.
+
+„ Kaczmarek T., Napęd elektryczny robotów, wyd. 2, Poznań, Wydawnic-
+
+two Politechniki Poznańskiej 1998.
+
+. Kaczorek T., Teoria sterowania i systemów, wyd. 2, Warszawa, Państwowe
+
+Wydawnictwo Naukowe 1996.
+
+. Kostro ]., Elementy, urządzenia i układy automatyki, wyd. 5, Warszawa,
+
+Wydawnictwa Szkolne i Pedagogiczne 1998.
+
+Krajewski $., Musielak R., Ćwiczenia laboratoryjne z podstaw automatyki,
+Poznań, Wydawnictwo Politechniki Poznańskiej 199%.
+
+Markowski A., Kostro ]., Lewandowski A., Automatyka w pytaniach
+i odpowiedziach, wyd. 2, Warszawa, Wydawnictwa Naukowo-Techniczne
+1985.
+
+Paraskevopoulos P.N., Modern Control Engineering, Nowy Jork, Marcel
+Dekker, Inc. 2002.
+
+Pułaczewski ]., Szacka K., Manitius A., Zasady automatyki, Warszawa,
+Wydawnictwa Naukowo-Techniczne 1974.
+
+Shinners $.M., Madern Control System Theory and Design, wyd. 3, Nowy
+Jork, John Wiley śx Sons, Inc. 1992.
+
+Skoczowski $., Dwusławna regulacja temperatury, Warszawa, Wydawnic-
+twa Naukowo-Techniczne 1977.

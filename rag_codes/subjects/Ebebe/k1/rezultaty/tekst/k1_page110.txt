@@ -1,0 +1,44 @@
+3.2. Rozwiązywanie równań różniczkowych
+z niezerowymi warunkami początkowymi
+
+MATLAB zawiera funkcje rozwiązujące w sposób graficzny równania różniczko-
+we zwyczajne za pomocą metod rzędu 2. i 3. — funkcja ode23 oraz rzędu 4. i 5. — funk-
+cja ode45.
+
+Funkcje te rozwiązują zagadnienie początkowe dla układów postaci:
+
+<image/wzory/k1_page110_formula1.png>
+
+Składnia funkcji:
+
+[T, X] = ode23 ('F(t, x)', tO, tk, x0, tol, tr)
+[T, X] = 0de45 (F(t, x)', tO, tk, xO, tol, tr)
+
+Kolejne parametry wejściowe oznaczają:
+F(t, x) — nazwa zdefiniowana przez użytkownika funkcji zwracająca jej wartość;
+t0, tk — granice przedziału czasu, w którym poszukiwane jest rozwiązanie;
+x0 — określa warunek początkowy — wektor kolumnowy zawierający wartość
+rozwiązania układu w chwili początkowej;
+tol — opcjonalny parametr określający wymaganą dokładność; domyślnie: 0.001;
+tr — opcjonalny parametr, który jeśli ma wartość różną od zera, to powoduje
+wypisanie kolejnych kroków działania metody na ekranie.
+
+W wyniku zastosowania funkcji ode23 lub ode24 otrzymamy macierz X zawiera-
+jącą umieszczone wierszowo wartości rozwiązań równania różniczkowego w kolej-
+nych chwilach czasu, określonych za pomocą wektora kolumnowego T.
+
+Przykład 3.1
+! „| dx „dx z
+Rozwiązać równanie: — * 3— +2x=0, dla warunku początkowego x(0) = 0
+i :(0)=2. de di
+Rozwiązanie
+Do rozwiązania problemu wykorzystano dwa pliki: „funkcjal.m*” i „rozw1.m”.
+
+W pliku „funkcjal.m” zdefiniowano rozwiązywane równanie różniczkowe w po-
+staci równań stanu.
+
+Wprowadzając zmienne:
+
+zory/k1_page110_formula2.png
+
+112

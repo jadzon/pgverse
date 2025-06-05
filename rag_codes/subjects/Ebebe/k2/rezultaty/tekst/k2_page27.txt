@@ -1,0 +1,75 @@
+regulator typu PD poprawia stabilność układu zamkniętego (poprzez
+przewidzenie” wartości uchybu — różniczkowanie).
+
+Na podstawie logarytmicznej charakterystyki modułu można stwierdzić,
+że regulator typu PD zwiększa moduł transmitancji w zakresie wielkich częs-
+totliwości, co powoduje niepożądany efekt wzmacniania zakłóceń o dużej
+częstotliwości.
+
+5.2.12 Regulator typu PD (rzeczywisty)
+
+Transmitancja regulatora i jego odpowiedź skokowa na wymuszenie
+e(t) =e-1(t) określone są wzorami:
+
+<image/wzory/k2_page27_formula2.png>
+
+Z uwagi na niewystępowanie idealnego różniczkowania w przyrodzie
+w celu fizycznej realizacji regulatora PD wprowadza się różniczkowanie
+z inercją, przez co na podstawie logarytmicznej charakterystyki
+modułu dla wielkich częstotliwości, nie dąży on do nieskończoności,
+zmniejszając tym samym skutki wystąpienia zakłóceń o wielkiej częstotli-
+wości. Stała N przyjmuje wartości od 5 do 30, przy czym najczęściej w regu-
+latorach przemysłowych ma ona wartość N = 10.
+
+5.2.13 Regulator typu PID (idealny)
+
+Transmitancja regulatora i jego odpowiedź skokowa na wymuszenie
+e(t) = e - L(t) określone są wzorami:
+
+<image/wzory/k2_page27_formula3.png>
+
+Regulator typu PID stanowi najbardziej uniwersalny typ regulatora,
+który przy odpowiednio dużym dozwolonym zakresie zmian parametrów
+umożliwia sterowanie różnymi typami obiektów.
+
+Pozwala on połączyć zalety regulatorów PI oraz PD, umożliwiając uzy-
+skanie krótkiego czasu narastania i regulacji, małego przeregulowania
+i zerowego uchybu ustalonego...
+
+ 
+
+53
+
+5.2.14 Regulator typu PID (rzeczywisty)
+
+Transmitancja regulatora i jego odpowiedź skokowa na wymuszenie
+e(t) = e: 1(t) określone są wzorami:
+
+<image/wzory/k2_page27_formula1.png>
+
+Podobnie jak w przypadku regulatora PD człon różniczkujący został za-
+stąpiony członem różniczkującym z inercją, co skutkuje ograniczeniem war-
+tości modułu dla częstotliwości dążącej do nieskończoności, przy zachowa-
+niu właściwości regulatora typu PID z idealnym różniczkowaniem.
+
+5.2.15 Dobór nastaw regulatorów według metody Zieglera-Nicholsa
+
+Regulator PID z idealnym różniczkowaniem ma trzy parametry: kp, 7,
+oraz Ty, dzięki czemu, z uwagi na możliwość spełnienia wielu wymagań,
+jest najczęściej stosowanym regulatorem.
+
+Wartości tych parametrów mogą być dobierane metodą prób i błędów,
+co stanowi w przypadku rzeczywistego procesu technologicznego kosztowne
+rozwiązanie, lub według ustalonych zasad, takich jak metoda Zieglera-
+-Nicholsa, występująca w dwóch postaciach.
+
+e Metoda oparta na odpowiedzi skokowej
+
+Układ, dla którego należy dobrać wartości parametrów, pobudza się
+skokiem jednostkowym i rejestruje przebieg odpowiedzi skokowej,
+określając wartość czasu opóźnienia tg oraz czasu narastania tyg.
+Aby osiągnąć współczynnik tłumienia równy £ = 0.2, co odpowiada
+przeregulowaniu zx = 25%, parametry regulatorów dobiera się według
+wartości podanych w tabeli 5.1.
+
+<image/tabele/k2_page27_table1.png>

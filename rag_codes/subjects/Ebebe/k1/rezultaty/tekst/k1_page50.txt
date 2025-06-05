@@ -1,0 +1,31 @@
+Po przekształceniu otrzymujemy równania stanu, zapisane w postaci macierzowej
+
+<image/wzory/k1_page50_formula1.png>
+
+Czasami do opisu układu możemy użyć zmiennej stanu oraz jej pochodnej. Przyj-
+mijmy jako zmienną stanu napięcie na kondensatorze uc. Wtedy równanie różniczko-
+we opisujące układ będzie równaniem drugiego rzędu.
+
+<image/wzory/k1_page50_formula2.png>
+Wprowadzając zmienne:
+<image/wzory/k1_page50_formula3.png>
+
+otrzymujemy układ równań:
+
+<image/wzory/k1_page50_formula4.png>
+
+Po przekształceniu otrzymujemy równania stanu w postaci macierzowej
+
+<image/wzory/k1_page50_formula5.png>
+
+Tak więc wybór zmiennych stanu decyduje o postaci macierzy stanu i macierzy
+wymuszeń.
+
+Przykład 2.15
+
+Zapisać model obiektu opisanego transmitancją G(s) w postaci równań stanu
+i wyjścia
+
+<image/wzory/k1_page50_formula6.png>
+
+52

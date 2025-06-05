@@ -1,0 +1,28 @@
+Rozwiązanie
+Plik „polacz3.m” przedstawiony jest poniżej.
+
+<image/tabele/k1_page126_table1.png>
+
+Stąd transmitancja zastępcza G, ma postać
+
+<image/wzory/k1_page126_formula1.png>
+
+Przykład 3.10 (do samodzielnego rozwiązania)
+Dane są dwie transmitancje:
+
+<image/wzory/k1_page126_formula2.png>
+
+Dokonać ich połączenia w każdej z wymienionych na stronie 125 konfiguracji.
+
+3.6. Charakterystyki czasowe i częstotliwościowe
+elementów automatyki
+
+Charakterystykę czasową impulsową dla układu ciągłego można wyznaczyć, wy-
+korzystując jedno z poniższych wywołań funkcji impulse (w zależności od sposobu opi-
+su układu):
+
+— impulse (A, B, C, D, iu)
+— impulse (L, M)
+— [Y, X, t] = impulse (L, M)
+
+128

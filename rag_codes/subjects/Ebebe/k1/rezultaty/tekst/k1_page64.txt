@@ -1,0 +1,20 @@
+Damiawać 1/5 — I Ala  NSMM sssian naónónnomim
+
+<image/wzory/k1_page64_formula1.png>
+
+Wykres tej odpowiedzi przedstawiono na rysunku 2.15.
+
+<image/figury/k1_page64_figure1.png>
+
+Rys. 2.15. Charakterystyka impulsowa elementu całkującego rzeczywistego dla K =2i7T=5s
+
+Przykład 2.22
+
+Wyznaczyć napięcie wyjściowe u(£) obwodu CR, pokazanego na rysunku 2.16,
+przy założeniu, że napięcie wejściowe u;(£) = Et, gdzie E = const, oraz u; (0) = x>(0) = 0.
+
+<image/figury/k1_page64_figure2.png>
+
+Rys. 2.16. Obwód elektryczny CR jako przykład obiektu
+
+66

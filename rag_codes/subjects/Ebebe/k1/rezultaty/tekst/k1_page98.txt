@@ -1,0 +1,23 @@
+Zadanie 2.5
+Rozwiązać równania różniczkowe:
+
+<image/figury/k1_page98_figure2.png>
+
+«a.
+
+Zadanie 2.6
+
+Wyznaczyć równanie ruchu trzpienia membranowego siłownika pneumatycznego
+(rys. 2.36), uwzględniając masę układu ruchomego i tarcie. Wymuszeniem jest ciśnie-
+nie p działające na membranę, wielkością wyjściową jest przemieszczenie trzpienia y.
+
+nia membrany
+inik sztywności sprężyny
+
+figury/k1_page98_figure1.pnqmitarciaiepkiego
+
+du ruchomego
+
+Rys. 2.36. Membranowy siłownik pneumatyczny
+
+100

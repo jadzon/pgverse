@@ -1,0 +1,35 @@
+to wielkość wyjściowa będzie równa
+
+<image/wzory/k1_page138_formula1.png>
+
+a transmitancja układu przyjmie postać
+
+<image/wzory/k1_page138_formula2.png>
+
+Jest to transmitancja układu dynamicznego ze sprzężeniem zwrotnym, to znaczy
+transmitancja zamkniętego układu sterowania.
+
+4.3. Odpowiedzi układu na typowe wymuszenia
+
+Odpowiedź układu xg(/), czyli wielkość wyjściowa dla danego wymuszenia har-
+monicznego x;(f) = A;cos(w/) jest rozwiązaniem równania (4.1) i równa jest
+
+<image/wzory/k1_page138_formula3.png>
+
+Po podstawieniu wielkości x;() i xg(t) do wzoru (4.2) na transmitancję G,(s)
+i przekształceniach otrzymujemy
+
+<image/wzory/k1_page138_formula4.png>
+
+Rozwiązanie powyższej równości, obowiązujące dla każdej chwili , po prze-
+kształceniach przyjmuje postać
+
+<image/wzory/k1_page138_formula5.png>
+
+Z równania tego wyznaczyć można amplitudę drgań ustalonych. W początkowej
+fazie drgań pojawiają się także drgania przejściowe, opisywane za pomocą określonych
+funkcji. Mimo że są to drgania tłumione, które zanikają z czasem, stanowią one poważ-
+ny problem w układach sterowania, zwłaszcza gdy wymagane jest precyzyjne pozycjo-
+nowanie w bardzo krótkim czasie.
+
+140

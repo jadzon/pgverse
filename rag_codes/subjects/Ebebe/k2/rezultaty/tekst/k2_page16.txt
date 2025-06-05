@@ -1,0 +1,69 @@
+30
+
+e CZŁON RÓŻNICZKUJĄCY IDEALNY
+Transmitancja widmowa i jej składowe określone są wzorami:
+
+<image/wzory/k2_page16_formula1.png>
+
+natomiast wykresy Bodego mają postać:
+
+<image/wzory/k2_page16_formula2.png>
+
+e CZŁON RÓŻNICZKUJĄCY RZECZYWISTY
+
+Transmitancja widmowa i jej składowe określone są wzorami:
+
+<image/wzory/k2_page16_formula3.png>
+
+natomiast wykresy Bodego mają postać:
+
+<image/wzory/k2_page16_formula4.png>
+
+e CZŁON OPÓŹNIAJĄCY (Z OPÓŹNIENIEM TRANSPORTOWY M)
+
+Transmitancja widmowa i jej składowe określone są wzorami:
+
+<image/wzory/k2_page16_formula5.png>
+
+natomiast wykresy Bodego mają postać:
+
+<image/wzory/k2_page16_formula6.png>
+
+31
+
+3.3 Przebieg ćwiczenia
+
+3.3.1 Wpływ wartości parametrów na charakterystyki częstotliwościowe
+
+Określić wpływ podanych niżej parametrów na charakterystyki częstotli-
+wościowe obiektów:
+
+e proporcjonalnego (zmienne k),
+e inercyjnego pierwszego rzędu (zmienne k oraz 7),
+
+e inercyjnego drugiego rzędu (zmienne k oraz 77),
+
+inercyjnego n-tego rzędu (zmienne k, T' oraz n),
+
+oscylacyjnego (przy k = 1, zmienne w, oraz €),
+
+całkującego idealnego (zmienne k),
+
+całkującego z inercją (zmienne k oraz 7),
+
+różniczkującego rzeczywistego (zmienne k oraz 7),
+
+inercyjnego pierwszego rzędu z opóźnieniem transportowym (zmienne
+k, T oraz 16),
+
+wybierając dla każdego z nich trzy wartości.
+
+3.3.2 Analityczne wyznaczanie odpowiedzi czasowej
+
+Dla obiektu o zadanej transmitancji wyprowadzić wzór opisujący odpo-
+wiedź na zadane wymuszenie harmoniczne.
+3.3.3 Analityczne wyznaczanie wykresów Bodego
+
+dlaobiektuozadanejtransmitancjiwyprowadziwzoryopisujce
+wykresy Bodego oraz  naszkicować ich wersję asymptotyczną
+(przybliżoną).

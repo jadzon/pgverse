@@ -1,0 +1,42 @@
+Jeżeli funkcja F(s) jest transformatą oryginału /(t) o wykładniku wzrastania my, to
+w każdym punkcie ciągłości funkcji /(4) zachodzi wzór
+
+<image/wzory/k1_page18_formula1.png>
+
+gdzie Re s = 0. > my.
+
+Wzór (1.21) nazywamy wzorem Mellina-Fouriera.
+
+Ze wzoru (1.21) wynika, że jeżeli dwa oryginały f,(t) i f(t) mają tę samą transfor-
+matę, to oryginały /,(1) i f(1) mogą być różne tylko w swoich punktach nieciągłości,
+natomiast poza tymi punktami są identyczne [1].
+
+Jeżeli funkcja F(s) spełnia warunki:
+
+— jest funkcją analityczną w półpłaszczyźnie Re s > © > mg,
+- lim F(s)=0,
+
+Res—+%0
+
+a+ j
+— całka F(s)e''ds jest bezwzględnie zbieżna,
+0 joe
+
+to funkcja F(s) jest transformatą, a jej oryginał ma postać
+
+<image/wzory/k1_page18_formula2.png>
+
+W praktyce szczególnie często sposobem wyznaczania oryginału /(£) z obrazu F(s),
+czyli wykonania odwrotnego przekształcenia Laplace'a, jest rozwinięcie funkcji F(s)
+w szereg.
+
+Wymienione dalej sposoby ułatwią wyznaczenie oryginału w przypadkach, gdy trans-
+formata F(s) jest:
+
+— funkcją analityczną w otoczeniu punktu s = =,
+— funkcją wymierną, to znaczy F(s) = L(s)/M(s) (1.23)
+
+gdzie Z(s) i M(s) są wielomianami, a stopień wielomianu Z(s) jest mniejszy od stopnia
+wielomianu M(5).
+
+20

@@ -1,0 +1,13 @@
+Plik „symul.m” przedstawiony jest poniżej.
+
+<image/figury/k1_page132_figure1.png>
+
+Po wykonaniu programu otrzymujemy wykres przedstawiony na rysunku 3.17.
+
+sterowanie i odpowiedź układu
+
+<image/figury/k1_page132_figure2.png>
+
+Rys. 3.17. Sterowanie i odpowiedź czasowa układu
+
+134

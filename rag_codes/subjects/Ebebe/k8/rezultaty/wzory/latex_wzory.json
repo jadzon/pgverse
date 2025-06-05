@@ -1,6 +1,0 @@
-{
-  "k8_page1_formula1.png": "$$\n\\left[ I_{2 0}=\\frac{Q} {2 0} \\right] \\tag{3.5}\n$$",
-  "k8_page3_formula1.png": "$$\n\\boxed{\\eta_{\\mathrm{c l}}=\\frac{Q_{\\mathrm{b u l}}} {Q_{\\mathrm{b u l}}}}\n$$",
-  "k8_page3_formula2.png": "$$\n\\overline{{\\eta_{\\mathrm{c a}}=\\frac{W_{\\mathrm{w e l}}} {W_{\\mathrm{t a d}}}=\\frac{Q_{\\mathrm{w e l}}} {Q_{\\mathrm{t a d}}} \\cdot\\frac{U_{\\mathrm{w e l}}} {U_{\\mathrm{t a d}}}=\\eta_{\\mathrm{c l}} \\frac{U_{\\mathrm{w e l}}} {U_{\\mathrm{t a d}}}}} \\tag{3.7}\n$$",
-  "k8_page5_formula1.png": "$$\nF=\\frac{Q q} {4 \\pi\\varepsilon_{\\mathrm{o}} \\varepsilon_{\\mathrm{r}} r^{2}} \\tag{4.1}\n$$"
-}

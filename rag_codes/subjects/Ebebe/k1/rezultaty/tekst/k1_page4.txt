@@ -1,0 +1,35 @@
+1. Przekształcenie Laplace a
+
+1.1. Wprowadzenie
+
+Niniejszy rozdział jest poświęcony rachunkowi operatorowemu oraz zastosowa-
+niu tego rachunku, głównie w automatyce. Czym jest rachunek operatorowy, do czego
+służy, jaki jest zakres jego zastosowań? Na postawione pytania można odpowiedzieć
+następująco:
+
+Rachunek operatorowy jest metodą rozwiązywania niektórych równań i ukła-
+dów równań różniczkowych i pokrewnych, polegającą na całkowitej lub częściowej
+„algebraizacji” rozwiązywanego równania lub układu równań.
+
+Istota algebraizacji polega na tym, że rozwiązując za pomocą rachunku operatoro-
+wego dane równanie, np. równanie różniczkowe zwyczajne, wyznaczamy najpierw tzw.
+równanie operatorowe będące równaniem algebraicznym. W zasadzie rachunek ope-
+ratorowy jest metodą rozwiązywania równań liniowych. Jego zastosowania w zakresie
+równań nieliniowych są jednak dotąd znikome i ograniczają się do niewielkiej liczby
+szczególnych przypadków. Dzięki swej prostocie i efektywności, a także ze względu na
+inne zalety w porównaniu ze znanymi metodami, stał się ogólną metodą badania dyna-
+miki układów liniowych, niezależnie od ich charakteru fizycznego. Rachunek operato-
+rowy okazał się szczególnie dogodny w zakresie teorii obwodów elektrycznych i teorii
+automatycznej regulacji — w tych dziedzinach znalazł najpełniejsze i najbardziej wszech-
+stronne zastosowanie.
+
+Metody operatorowe można podzielić na trzy zasadnicze grupy:
+
+1) metody oparte na pojęciu operatora różniczkowania i operatora całkowania (przede
+wszystkim metoda operatorów Heaviside'a),
+
+2) metody oparte na przekształceniach całkowych (przede wszystkim metoda prze-
+kształcenia Laplace'a),
+
+3) metody oparte na pewnych pojęciach algebry wyższej i analizy funkcjonalnej (przede
+wszystkim metoda operatorów Mikusińskiego).

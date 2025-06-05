@@ -1,0 +1,59 @@
+|.
+
+Dla danego silnika o parametrach k, oraz T jedynym stopniem swobody
+pozostaje wzmocnienie regulatora kp. Z poprzednich ćwiczeń wiadomo,
+że korzystne właściwości układu osiągane są dla małych wartości 7,
+oraz 0.5 S<<£ 1.
+
+Powyższa wada może zostać wyeliminowana przez dołączenie sprzęże-
+nia tachometrycznego (człon różniczkujący stanowić może przykładowo
+reprezentację prądnicy tachometrycznej wytwarzającej napięcie zależne od
+prędkości kątowej).
+
+W takiej konfiguracji transmitancja układu otwartego określona jest wzo-
+rem
+
+<image/wzory/k2_page33_formula2.png>
+
+a transmitancja układu zamkniętego dana jest jako
+
+|
+|
+|
+| czyli jest członem oscylacyjnym o parametrach:
+<image/wzory/k2_page33_formula1.png>
+
+<image/wzory/k2_page33_formula3.png>
+
+| gdzie
+
+<image/_wzory/k2_page33_formula4.png>
+
+Przez dołączenie sprzężenia tachometrycznego, przy zwiększaniu wzmoc-
+nienia regulatora typu P, zmniejsza się stałą czasową 7, układu zamknię-
+tego przy zachowaniu zwiększonego (w stosunku do układu bez sprzężenia)
+współczynnika tłumienia €.
+
+65
+
+6.2.4 Charakterystyki częstotliwościowe serwomechanizmu liniowego
+
+Na zamieszczonej na rysunku 6.3 asymptotycznej logarytmicznej charak-
+terystyce modułu widać, że zastosowanie sprzężenia tachometrycznego
+powoduje zmniejszenie pasma przenoszenia (pasma, w którym moduł
+ma wartość większą od jedności), co wpływa na zdolność eliminacji zakłó-
+ceń o wielkiej częstotliwości
+
+<image/figury/k2_page33_figure2.png>
+
+Rys. 6.3: Charakterystyka częstotliwościowa układu otwartego serwomechanizmu
+liniowego: 1* - bez sprzężenia, 2? — ze sprzężeniem tachometrycznym
+
+6.2.5  Serwomotor prądu stałego sterowany prądowo
+
+Serwomotory sterowane prądowo są często spotykane, najczęściej w ukła-
+dach leonarda (prądnica prądu stałego zasilająca serwomotor prądu stałego
+przy stałym prądzie wzbudzenia). Serwomotor bez uwzględnienia nielinio-
+wości można przedstawić jak na rysunku 64.
+
+<image/figury/k2_page33_figure1.png>

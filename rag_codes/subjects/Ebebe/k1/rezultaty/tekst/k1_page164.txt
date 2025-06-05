@@ -1,0 +1,22 @@
+oraz, że warunki początkowe:
+
+:'ory/k1_page164_formula1.png
+
+Przed uruchomieniem symulacji należy wprowadzić wymienione parametry do
+przestrzeni roboczej MATLAB-a, wpisując:
+
+<image/wzory/k1_page164_formula2.png>
+
+Po uruchomieniu symulacji na wykresach, pokazanych na rysunku 6.11, otrzymu-
+jemy przebiegi napięcia zasilającego wirnik (U.) oraz prędkości kątowej wirnika (w0,)
+w funkcji czasu.
+
+<image/tabele/k1_page164_table2.png>
+
+Rys. 6.11. Przebiegi uzyskane podczas symulacji: a) napięcie zasilające wirnik (U.);
+b) prędkość kątowa wirnika (©,)
+
+Przebiegi te można również uzyskać wykorzystując funkcję płot, wpisując w MAT-
+LAB-ie:
+
+<image/tabele/k1_page164_table1.png>

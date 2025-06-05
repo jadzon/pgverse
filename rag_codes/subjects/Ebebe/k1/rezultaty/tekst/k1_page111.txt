@@ -1,0 +1,21 @@
+po przekształceniach otrzymujemy
+
+<image/wzory/k1_page111_formula1.png>
+czyli
+
+<image/wzory/k1_page111_formula2.png>
+
+<image/figury/k1_page111_figure1.png>
+
+W pliku „rozw1.m” zdefiniowano parametry wejściowe równania różniczkowego
+za pomocą funkcji input, wykorzystano funkcję ode do obliczenia rozwiązania, które
+następnie wykreślono za pomocą funkcji płot.
+
+<image/wzory/k1_page111_formula3.png>
+
+<image/wzory/k1_page111_formula4.png>
+
+  
+ 
+
+113

@@ -1,0 +1,28 @@
+2.2. Modelowanie układów automatyki
+Przykład 2.9
+Rozpatrując ciało o masie m w układzie odniesienia XY, przedstawione na rysun-
+
+ku 2.1, wyznaczyć jego równania ruchu. Wektor siły F, działa w kierunku osi x, a jego
+wartość opisuje nieliniowe równanie
+
+<image/wzory/k1_page39_formula1.png>
+
+Zakładamy, że siła tarcia wiskotycznego jest opisana liniowym równaniem zależ-
+nym od prędkości
+
+ory/k1_page39_formula2.png
+
+gdzie B, — współczynnik tarcia wiskotycznego.
+
+<image/figury/k1_page39_figure1.png>
+
+Rozwiązanie
+Suma sił działających w kierunku osi X wynosi
+
+<image/wzory/k1_page39_formula3.png>
+
+Stąd różniczkowe równanie ruchu w kierunku osi X ma postać
+
+<image/wzory/k1_page39_formula4.png>
+
+41

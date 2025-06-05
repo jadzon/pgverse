@@ -1,0 +1,24 @@
+Podstawiając równanie (5.13) do równania (5.9), otrzymujemy
+
+<image/wzory/k1_page149_formula1.png>
+
+Z kolei podstawiając (5.14) do (5.10), otrzymujemy
+
+<image/wzory/k1_page149_formula2.png>
+
+Stąd
+<image/wzory/k1_page149_formula3.png>
+Po przekształceniach otrzymamy transmitancję operatorową serwomechanizmu G(s)
+<image/figuwzory/k1_page149_formula4.png>
+
+Schemat blokowy serwomechanizmu przedstawiono na rysunku 5.10.
+
+<image/figury/k1_page149_figure1.png>
+
+5.7. Odpowiedź zmodyfikowanego serwomechanizmu
+na wymuszenie skokowe
+
+Odpowiedź na wymuszenie skokowe x; (£) = x,,, zgodnie z twierdzeniem o wartości
+końcowej, możemy zapisać w postaci
+
+<image/wzory/k1_page149_formula5.png>

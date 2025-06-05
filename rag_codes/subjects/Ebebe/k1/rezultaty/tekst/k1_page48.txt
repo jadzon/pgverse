@@ -1,0 +1,16 @@
+Z bilansów objętościowych natężeń przepływu wynika, że:
+<image/wzory/k1_page48_formula1.png>
+
+Podstawiając za q; i q, otrzymujemy:
+
+<image/wzory/k1_page48_formula2.png>
+
+Porządkujemy równania:
+
+<image/wzory/k1_page48_formula3.png>
+
+4, AR,  |4Rz AR, |*
+
+Dokonując zamiany zmiennych:
+
+gury/k1_page48_figure2.png

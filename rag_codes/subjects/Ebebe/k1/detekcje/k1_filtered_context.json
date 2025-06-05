@@ -1,0 +1,2807 @@
+[
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/tabele/k1_page2_table1.png": [
+      "Tworzenie i redukcja schematów blokowych .......---s:asnassnasnaasnaaezaenzeazea 57 2.4. Wyznaczanie charakterystyk czasowych ......-.:asusseaesnaesnae na enaeezaaszzeazneznea 64 2.5. Wyznaczanie charakterystyk częstotliwościowych ........-.222:-212:12::::212122 69 2.6. Stabilność układów uutomatyki. sss ow siowococowiwokiżoKEGGiGoSowOdWACaÓ WAWA 79 2.7. Dokładność statyczna układu regulacji .............-.----u-ssssaosaenonaonoenznzanaananna 89 2.0. UKISCY [EZORCZAIRCO noni Z OGG OGG RGG OKA 93 2.9. Zadania do samodzielnego rozwiązania ...........------ssussneeaeaezeezaezaezzewzeezne 99 3. Wykorzystanie pakietu MATLAB/Simulink do rozwiązywania zadań ..... 111 3.1. Wprowadzenie do MATLABA usssssszcwoozwciwówiiwwiWG oz Gi is GWO Gia G WAG OSÓŚOŚCA iGO 111 3.2. Rozwiązywanie równań różniczkowych z niezerowymi warunkami początkowymi .....-----e-asss-ssnesezaenzaeazeazaazeezzenze 112 3.3. Rozkład transformaty F(s) na ułamki proste ...........-..-2:---:---ss--ss-ss:ssnsus120> 119 3.4. POMSCIO MOGLI dYDAMICZNYCH osi cok GaGa oÓW AAAA BOBAS ZAÓ AEP AE BORA 121 3.5. Konfiguracje połączeń elementów automatyki ........----2:--s-ss-ssssssssszsszssxs 125 3.6. Charakterystyki czasowe i częstotliwościowe elementów automatyki ...... 128 3.7. Symulacja układów dynamicznych ssssssossswwczwssoswoooówocowcodnocdAEÓwsOG Ga SZOSSAO GA 133 3.8. Badanie stabilności układów automatyki ..........-----ss--ssaaseaeoaaezaoezaeozaszaanzca 135"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page5_formula1.png": [
+      "która funkcji f() zmiennej rzeczywistej £ przyporządkowuje transformatę F(s), będą- cą funkcją zmiennej zespolonej s = u + jv; zmienna s odgrywa w całkowaniu rolę pa- rametru. Całkę po prawej stronie wzoru (1.1) będziemy nazywać całką Laplace”a funkcji f(1). Oryginałem nazywamy funkcję zespoloną /(£) = u(f) + jv(t) zmiennej rzeczywi- stej £, spełniającą następujące warunki: - f/(0=0 dla t<0; - /f(1) jest w przedziale (—, +0) funkcją przedziałami ciągłą wraz z pochodnymi do rzędu n-tego; — (0) jest funkcją rzędu wykładniczego, jeśli istnieją stałe M > 0 i m > 0 takie, że dla wszystkich wartości £ zachodzi nierówność"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page5_formula2.png": [
+      "która funkcji f() zmiennej rzeczywistej £ przyporządkowuje transformatę F(s), będą- cą funkcją zmiennej zespolonej s = u + jv; zmienna s odgrywa w całkowaniu rolę pa- rametru. Całkę po prawej stronie wzoru (1.1) będziemy nazywać całką Laplace”a funkcji f(1). Oryginałem nazywamy funkcję zespoloną /(£) = u(f) + jv(t) zmiennej rzeczywi- stej £, spełniającą następujące warunki: - f/(0=0 dla t<0; - /f(1) jest w przedziale (—, +0) funkcją przedziałami ciągłą wraz z pochodnymi do rzędu n-tego; — (0) jest funkcją rzędu wykładniczego, jeśli istnieją stałe M > 0 i m > 0 takie, że dla wszystkich wartości £ zachodzi nierówność"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page5_figure2.png": [
+      "Liczbę my 20 taką, że dla każdego € > 0 nierówność (1.2) jest spełniona dla m = mg + €, a nie jest spełniona dla m = mę — €, nazywamy wykładnikiem wzrastania funkcji /(1). Na rysunku 1.1 przedstawiono wykres funkcji typu wykładniczego."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page6_formula1.png": [
+      "1.2. Przykłady obliczania transformat Przykład 1.1 Obliczyć transformatę funkcji jednostkowej. Funkcję oznaczoną 1(:) lub n(1) okre- śloną wzorem"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page6_formula2.png": [
+      "1.2. Przykłady obliczania transformat Przykład 1.1 Obliczyć transformatę funkcji jednostkowej. Funkcję oznaczoną 1(:) lub n(1) okre- śloną wzorem"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page6_figure1.png": [
+      "Rys. 1.2. Funkcja jednostkowa Na nadetawie wzarn (1 1) mamv"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page6_formula3.png": [
+      "Zatem Zhiv]|= L. Przykład 1.2 4-92 a. a . a . .. ma. m"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page8_formula1.png": [
+      "10"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page8_figure1.png": [
+      "gdzie a;, a» są dowolnymi liczbami. Ta właściwość jest ogólna dla każdego liniowego przekształcenia całkowego. PRZEKSZTAŁCENIA LINIOWE W tej części przedstawiono operacje liniowe przekształcenia argumentu w orygina- le ara7 w transformacie"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page8_formula2.png": [
+      "Odpowiadające funkcjom obrazy krzywych zostaną w określonym stosunku ści- śnięte lub rozciągnięte. Przykład 1.3 Znając transformatę funkcji sinz, obliczyć transformatę sina."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page8_formula3.png": [
+      "%|sin Qt ] = s? +02 Pierwsze twierdzenie o przesunięciu"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page9_formula1.png": [
+      "%|sin Qt ] = s? +02 Pierwsze twierdzenie o przesunięciu"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page9_figure1.png": [
+      "dla a > O. Należy zwrócić uwagę na przyjętą wcześniej regułę, że dla £ ujemnych przyjmuje- my f/(/) równe zeru. W tym przypadku jest to bardzo ważna reguła. Dla £ < a mamy £- a ujemne, stąd f(t — a) = 0. Na rysunku 1.3 przedstawiono przykłady wymienionych funkcji."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page9_formula2.png": [
+      "dla a > 0. Jest to reguła odwrotna do twierdzenia pierwszego, obraz funkcji /(£) jest przesu- nięty w lewo. Twierdzenie to ma duże znaczenie przy rozwiązywaniu równań różnico- wych, w których obok /(t) występują także /(t+a), f(t+2a), ... Twierdzenie o tłumieniu"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page9_formula3.png": [
+      "dla a > 0. Jest to reguła odwrotna do twierdzenia pierwszego, obraz funkcji /(£) jest przesu- nięty w lewo. Twierdzenie to ma duże znaczenie przy rozwiązywaniu równań różnico- wych, w których obok /(t) występują także /(t+a), f(t+2a), ... Twierdzenie o tłumieniu"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page10_figure1.png": [
+      "gdzie ©« — dowolna liczba zespolona. Tłumienie funkcji /(/) zachodzi oczywiście tylko wtedy, gdy a jest dodatnią liczbą rzeczywistą. 12 Przykład 1.4 Wyznaczyć transformatę impulsu prostokątnego pokazanego na rysunku 1.4."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page10_formula1.png": [
+      "Daną funkcję można zapisać następująco"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page10_formula2.png": [
+      "Można ją również zapisać za pomocą funkcji jednostkowej"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page10_formula3.png": [
+      "Mamy zatem"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page10_formula4.png": [
+      "Mamy zatem"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page10_formula5.png": [
+      "Transformata funkcji okresowej Jeżeli f(1) jest funkcją okresową o okresie 7 > O, to jej transformata F(s) wyraża się wzorem"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page10_formula6.png": [
+      "gdzie Fr(s) — transformata funkcji okresowej f(r) za okres 7. Przykład 1.5 Obliczyć transformatę ciągu impulsów z rysunku 1.5."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page11_figure1.png": [
+      "Z przykładu 1.4 wiemy, że F7(s) = z es], więc na podstawie wzoru (1.11) otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page11_formula1.png": [
+      "Z przykładu 1.4 wiemy, że F7(s) = z es], więc na podstawie wzoru (1.11) otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page11_formula2.png": [
+      "RÓŻNICZKOWANIE Jest jedną z najważniejszych właściwości przekształcenia Laplace'a, umożliwiają- cą algebraizację równań różniczkowych — właściwością dotyczącą transformat pochod- nych funkcji. Twierdzenie o różniczkowaniu oryginału Jeżeli dla /”(f) jako oryginału istnieje obraz, to również istnieje obraz dla /(1). Od- wrotne twierdzenie nie jest prawdziwe. Na przykład mamy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page11_formula3.png": [
+      "nie jest funkcją transformowalną, gdyż nie jest całkowalna w otoczeniu punktu £ = 0. 14 W twierdzeniu o różniczkowaniu oryginału zakładamy, że dla £ > O istnieje najwyż- sza występująca pochodna i ma ona swój obraz (transformatę). Wynika stąd, że wszyst- kie niższe pochodne mają również swoje obrazy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page12_formula1.png": [
+      "nie jest funkcją transformowalną, gdyż nie jest całkowalna w otoczeniu punktu £ = 0. 14 W twierdzeniu o różniczkowaniu oryginału zakładamy, że dla £ > O istnieje najwyż- sza występująca pochodna i ma ona swój obraz (transformatę). Wynika stąd, że wszyst- kie niższe pochodne mają również swoje obrazy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page12_formula2.png": [
+      "1700,) Uwaga. Wartości początkowe zostały oznaczone nie przez /(0), f (90), \"— lecz przez /(0.), f (040.), ... CO Oznacza, że nie chodzi tu o wartości w punkcie 0, lecz o wartości graniczne funkcji, gdy £ dąży do zera z prawej strony. Inaczej można po- wiedzieć, że są to wartości, od których funkcje zaczynają się zmieniać w sposób ciągły w prawo. Przykład 1.6 Znaleźć transformatę wyrażenia"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page12_formula3.png": [
+      "Oznaczając transformatę funkcji x(/) przez X(s), otrzymujemy na podstawie (1.12): <1_page12_formula4.png %-*6-3"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page12_formula7.png": [
+      "Twierdzenie o różniczkowaniu obrazu (transformaty) Obraz (transformata) jest zawsze funkcją analityczną, ma więc wszystkie pochod- ne. Można je otrzymać przez różniczkowanie funkcji pod znakiem całki."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page13_formula1.png": [
+      "Przykład 1.7 Wyznaczyć transformatę funkcji /(1) = tsinot. Transformata funkcji sinoł jest znana i wynosi m3 1—3z „Zatem na podstawie twier- dzenia (1.13) możemy zapisać S +0"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page13_formula2.png": [
+      "Przykład 1.7 Wyznaczyć transformatę funkcji /(1) = tsinot. Transformata funkcji sinoł jest znana i wynosi m3 1—3z „Zatem na podstawie twier- dzenia (1.13) możemy zapisać S +0"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page13_formula3.png": [
+      "Mamy zatem"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page13_formula4.png": [
+      "Zakładamy tutaj, że istnieje obraz funkcji /(1), a 6 jest to zmienna pomocnicza ozna- czająca czas. Wtedy również istnieje obraz całki z tej funkcji. 16 Tabela 1.1 Transformaty Laplace'a najczęściej stosowanych funkcji"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page14_figure1.png": [
+      "LIdVEIE/K I_PdUE I4_LldVt€ I.VTIU"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page14_figure2.png": [
+      ":'ory/k1_page14_formula1.png Twierdzenie o całkowaniu obrazu Operacji różniczkowania obrazu odpowiada pomnożenie oryginału przez £, zaś ope- racji całkowania — podzielenie przez £, gdy jako początkowy ustalony punkt całkowania s 00 przyjmujemy s = ©, Zastępując [ przez J otrzymujemy s"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page15_formula1.png": [
+      ":'ory/k1_page14_formula1.png Twierdzenie o całkowaniu obrazu Operacji różniczkowania obrazu odpowiada pomnożenie oryginału przez £, zaś ope- racji całkowania — podzielenie przez £, gdy jako początkowy ustalony punkt całkowania s 00 przyjmujemy s = ©, Zastępując [ przez J otrzymujemy s"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page15_formula2.png": [
+      "na podstawie tabeli transformat Laplace'a (tab. 1.1 na wklejce), wiemy, że transformata %(lsin t]= s? + p natomiast na podstawie wzoru (1.13) mamy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page15_formula3.png": [
+      "na podstawie tabeli transformat Laplace'a (tab. 1.1 na wklejce), wiemy, że transformata %(lsin t]= s? + p natomiast na podstawie wzoru (1.13) mamy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page15_formula4.png": [
+      "MNOŻENIE I SPLOT Załóżmy, że funkcje /,(1) i f(1) są całkowalne w każdym przedziale [0, 7], 7 > 0. Splotem funkcji /,(1) i fą(1) w przedziale [0, +0)! nazywamy funkcję o(f) określoną dla t 2 0 następująco"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page15_formula5.png": [
+      "MNOŻENIE I SPLOT Załóżmy, że funkcje /,(1) i f(1) są całkowalne w każdym przedziale [0, 7], 7 > 0. Splotem funkcji /,(1) i fą(1) w przedziale [0, +0)! nazywamy funkcję o(f) określoną dla t 2 0 następująco"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page16_formula1.png": [
+      "gdzie: F;(s)=.Zfi(); F>(s) = Z fl). Przykład 1.9 iczm | Obliczmy GE EH Otóż"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page16_formula2.png": [
+      "gdzie: F;(s)=.Zfi(); F>(s) = Z fl). Przykład 1.9 iczm | Obliczmy GE EH Otóż"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page16_formula3.png": [
+      "dlat>0"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page16_formula4.png": [
+      "Twierdzenie 1.2 Jeżeli funkcje f(1) i f(1) \"są oryginałami oraz istnieje transformata £ [f(1)] = F(s) i granica lim /(f), to 10"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page18_formula1.png": [
+      "gdzie Re s = 0. > my. Wzór (1.21) nazywamy wzorem Mellina-Fouriera. Ze wzoru (1.21) wynika, że jeżeli dwa oryginały f,(t) i f(t) mają tę samą transfor- matę, to oryginały /,(1) i f(1) mogą być różne tylko w swoich punktach nieciągłości, natomiast poza tymi punktami są identyczne [1]. Jeżeli funkcja F(s) spełnia warunki: — jest funkcją analityczną w półpłaszczyźnie Re s > © > mg, - lim F(s)=0, Res—+%0 a+ j — całka F(s)e''ds jest bezwzględnie zbieżna, 0 joe to funkcja F(s) jest transformatą, a jej oryginał ma postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page18_formula2.png": [
+      "gdzie Re s = 0. > my. Wzór (1.21) nazywamy wzorem Mellina-Fouriera. Ze wzoru (1.21) wynika, że jeżeli dwa oryginały f,(t) i f(t) mają tę samą transfor- matę, to oryginały /,(1) i f(1) mogą być różne tylko w swoich punktach nieciągłości, natomiast poza tymi punktami są identyczne [1]. Jeżeli funkcja F(s) spełnia warunki: — jest funkcją analityczną w półpłaszczyźnie Re s > © > mg, - lim F(s)=0, Res—+%0 a+ j — całka F(s)e''ds jest bezwzględnie zbieżna, 0 joe to funkcja F(s) jest transformatą, a jej oryginał ma postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page19_formula1.png": [
+      "wtedy funkcja F(s) jest transformatą oryginału postaci"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page19_formula2.png": [
+      "wtedy funkcja F(s) jest transformatą oryginału postaci"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page19_formula4.png": [
+      "Przykład 1.13 , : s? +6 Obliczyć oryginał transformaty F(s) = s(s -N(s + 2)(s —3) Funkcja F(s) ma bieguny jednokrotne w punktach sy = 0, s, = 1, S+= —2, Sz= 3. Zatem na podstawie wzoru (1.26) funkcja F(s) jest transformatą oryginału"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page19_formula5.png": [
+      "Przykład 1.13 , : s? +6 Obliczyć oryginał transformaty F(s) = s(s -N(s + 2)(s —3) Funkcja F(s) ma bieguny jednokrotne w punktach sy = 0, s, = 1, S+= —2, Sz= 3. Zatem na podstawie wzoru (1.26) funkcja F(s) jest transformatą oryginału"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page19_formula6.png": [
+      "Przykład 1.14 Wyznaczyć oryginał następującej transformaty F(s)= (s-1)7(s-2)* Funkcja F(s) ma w punkcie s = 1 biegun podwójny, a w punkcie s = 2 biegun potrój- ny. Zatem na podstawie wzoru (1.27) funkcja F(s) jest transformatą oryginału"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page20_formula1.png": [
+      "Przykład 1.14 Wyznaczyć oryginał następującej transformaty F(s)= (s-1)7(s-2)* Funkcja F(s) ma w punkcie s = 1 biegun podwójny, a w punkcie s = 2 biegun potrój- ny. Zatem na podstawie wzoru (1.27) funkcja F(s) jest transformatą oryginału"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page20_formula2.png": [
+      "Metoda rozkładu na ułamki proste Jeżeli transformata F(s) = L(s)/M(s) jest funkcją wymierną, gdzie:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page20_formula3.png": [
+      "przy czym I < n oraz wszystkie współczynniki ag, ..., „_y, ..., by, ..., b, są liczbami rze- czywistymi, to jedną z metod wyznaczania funkcji /(1) jest metoda oparta na znanym z algebry rozkładzie funkcji wymiernej (1.23) na ułamki proste i wykonaniu .£\"\" prze- kształcenia każdego z tych ułamków z osobna. Po rozłożeniu mianownika M(s) na czynniki stopnia pierwszego otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page20_formula4.png": [
+      "przy czym I < n oraz wszystkie współczynniki ag, ..., „_y, ..., by, ..., b, są liczbami rze- czywistymi, to jedną z metod wyznaczania funkcji /(1) jest metoda oparta na znanym z algebry rozkładzie funkcji wymiernej (1.23) na ułamki proste i wykonaniu .£\"\" prze- kształcenia każdego z tych ułamków z osobna. Po rozłożeniu mianownika M(s) na czynniki stopnia pierwszego otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page20_formula5.png": [
+      "gdzie S;, 57, ..., Sk Są pierwiastkami, ogólnie biorąc, zespolonymi o krotnościach rów- nych odpowiednio Qt, O, ..., Oty (jest ich K różnych), przy czym"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page20_formula6.png": [
+      "Rozkład (1.30) będziemy nazywać rozkładem zespolonym. Jeśli M4 oznacza liczbę różnych pierwiastków rzeczywistych wielomianu M(s), to"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page21_formula1.png": [
+      "przy czym współczynniki C;, są, ogólnie biorąc, zespolone. Można je wyliczyć w znany sposób, sprowadzając prawą stronę wzoru (1.33) do wspólnego mianowni- ka M(s) i przyrównując tożsamościowo liczniki. Uwzględniając wzór (1.25), mamy dla £2 0"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page21_formula2.png": [
+      "przy czym współczynniki C;, są, ogólnie biorąc, zespolone. Można je wyliczyć w znany sposób, sprowadzając prawą stronę wzoru (1.33) do wspólnego mianowni- ka M(s) i przyrównując tożsamościowo liczniki. Uwzględniając wzór (1.25), mamy dla £2 0"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page21_formula3.png": [
+      "Współczynniki C;, można również obliczyć bezpośrednio ze wzoru"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page21_formula4.png": [
+      "gdzie: k= 1, 2,....., Oy; i= 1, 2,......, £. W praktyce inżynierskiej najczęściej spotykamy się z przypadkiem, kiedy wszystkie pierwiastki s; mianownika M(s) są pojedyncze. Ponieważ wszystkie współczynniki 0t, dla tego przypadku są równe jedności, to możemy zapisać ©, = 1; i = 1, 2,..., K=n, zatem wszystkie sumy względem wskaźnika k (wzór (1.33)) oraz (wzór (1.35)) redukują się do pojedynczych wyrazów dla k = 1. Oznaczając C/, = C,, otrzymujemy rozkład na ułamki proste w postaci 23"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page22_formula2.png": [
+      "Ponieważ t > 0, po wykonaniu Z”! przekształcenia równości (1.37) dla przypadku pojedynczych pierwiastków s, otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page22_formula3.png": [
+      "Współczynniki możemy obliczać, sprowadzając prawą stronę wzoru (1.37) do wspól- nego mianownika lub ze wzoru ogólnego (1.36), który przybiera postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page22_formula4.png": [
+      "Przykład 1.15 Dana jest transformata F(s) = z » wyznaczyć oryginał, stosując metodę (s +1)(s — 1) rozkładu na ułamki proste. Na podstawie wzoru (1.33) możemy napisać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page22_formula5.png": [
+      "Przykład 1.15 Dana jest transformata F(s) = z » wyznaczyć oryginał, stosując metodę (s +1)(s — 1) rozkładu na ułamki proste. Na podstawie wzoru (1.33) możemy napisać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page22_formula6.png": [
+      "Rozwiązując powyższe równanie, otrzymujemy: 4; = —1/8, A, = 1/8, Av = —1/4, A; = 1/2. Na podstawie przykładu 1.2, oryginał /(1) możemy zapisać w postaci"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page22_formula7.png": [
+      "Rozwiązując powyższe równanie, otrzymujemy: 4; = —1/8, A, = 1/8, Av = —1/4, A; = 1/2. Na podstawie przykładu 1.2, oryginał /(1) możemy zapisać w postaci"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page23_formula1.png": [
+      "gdzie: ay, ..., a, są stałymi, a funkcja f(1) jest oryginałem. Wyznaczymy teraz rozwiązanie równania (1.41) spełniające warunki początkowe:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page23_formula2.png": [
+      "gdzie: ay, ..., a, są stałymi, a funkcja f(1) jest oryginałem. Wyznaczymy teraz rozwiązanie równania (1.41) spełniające warunki początkowe:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page23_formula3.png": [
+      "otrzymamy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page23_formula4.png": [
+      "3) ł"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page23_formula5.png": [
+      "3) ł"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page23_formula6.png": [
+      "Stosując przekształcenie Laplace'a do prawej i lewej strony równania (1.41), uwzględniając oznaczenia (1.43) oraz liniowość przekształcenia Laplace'a, otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page23_formula7.png": [
+      "Stosując przekształcenie Laplace'a do prawej i lewej strony równania (1.41), uwzględniając oznaczenia (1.43) oraz liniowość przekształcenia Laplace'a, otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page24_formula1.png": [
+      "Równanie (1.41) nazywamy równaniem „oryginalnym”, a równanie (1.44) rów- naniem „operatorowym” odpowiadającym warunkom (1.41) i warunkom początko- wym (1.42). Z równania (1.44) wyznaczamy funkcję niewiadomą X(s)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page24_formula2.png": [
+      "Niech sy, ..., s, będą biegunami (lub punktami osobliwymi) prawej strony równania (1.45); stosując do prawej i lewej strony przekształcenie odwrotne (1.21), otrzymamy: figu"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page24_formula3.png": [
+      "lub"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page24_formula4.png": [
+      "lub"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page25_figure1.png": [
+      "Przykład 1.16 Rozwiązać równanie"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page25_formula1.png": [
+      "gdzie: ory/k1_page25_formula2.png z następującymi warunkami początkowymi: x(0) = I, x'(0) = 1. Równanie po podstawieniu odpowiednich wartości przyjmuje postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page25_formula3.png": [
+      "gdzie: ory/k1_page25_formula2.png z następującymi warunkami początkowymi: x(0) = I, x'(0) = 1. Równanie po podstawieniu odpowiednich wartości przyjmuje postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page25_formula4.png": [
+      "27 Wyznaczamy funkcję X(s)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page26_formula1.png": [
+      "27 Wyznaczamy funkcję X(s)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page26_formula2.png": [
+      "Po wyznaczeniu stałych 4, B i C (A = 2, B = —1, C= 0) wyznaczamy transformatę odwrotną Laplace'a. W tabeli 1.1 (na wklejce po s. 16) zamieszczono transformaty Laplace'a najczę- ściej stosowanych funkcji. 2. Przykłady zadań z rozwiązaniami 2.1. Wykorzystanie przekształcenia Laplace'a Przykład 2.1 Wyznaczyć transformatę Laplace'a funkcji vzory/k1_page27_formula1.png Rozwiązanie , . : e\" +e 7” Wykorzystując wzór Eulera cos(£) = oraz znajomość transformaty funk- cji wykładniczej .£ (eu |- z: możemy wyznaczyć F(s)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page27_formula2.png": [
+      "Po wyznaczeniu stałych 4, B i C (A = 2, B = —1, C= 0) wyznaczamy transformatę odwrotną Laplace'a. W tabeli 1.1 (na wklejce po s. 16) zamieszczono transformaty Laplace'a najczę- ściej stosowanych funkcji. 2. Przykłady zadań z rozwiązaniami 2.1. Wykorzystanie przekształcenia Laplace'a Przykład 2.1 Wyznaczyć transformatę Laplace'a funkcji vzory/k1_page27_formula1.png Rozwiązanie , . : e\" +e 7” Wykorzystując wzór Eulera cos(£) = oraz znajomość transformaty funk- cji wykładniczej .£ (eu |- z: możemy wyznaczyć F(s)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page28_formula1.png": [
+      "Wyznaczyć jej oryginał, stosując twierdzenie o splocie. 29 Rozwiązanie Transformatę H(s) możemy rozłożyć na iloczyn transformat"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page28_formula2.png": [
+      "Znajdujemy oryginały transformat H;(s) i H>(S):"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page28_formula3.png": [
+      "Znajdujemy oryginały transformat H;(s) i H>(S):"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page28_formula4.png": [
+      "Z twierdzenia o splocie funkcji wyliczamy h(t)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page28_formula5.png": [
+      "Z twierdzenia o splocie funkcji wyliczamy h(t)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page28_formula6.png": [
+      "1(T) ma stałą wartość = 1, więc:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page28_formula7.png": [
+      "Przykład 2.3 Znaleźć oryginał funkcji dla transformaty"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page29_formula1.png": [
+      "Przykład 2.3 Znaleźć oryginał funkcji dla transformaty"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page29_formula2.png": [
+      "Wyliczamy współczynniki 4 i B:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page29_formula3.png": [
+      "Wyliczamy współczynniki 4 i B:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page29_formula4.png": [
+      "Otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page29_formula5.png": [
+      "Otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page29_formula6.png": [
+      "Przykład 2.4 Znaleźć oryginał funkcji dla transformaty"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page29_formula7.png": [
+      "Przykład 2.4 Znaleźć oryginał funkcji dla transformaty"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page30_formula1.png": [
+      "wykorzystujcwzory"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page30_formula2.png": [
+      "wykorzystujcwzory"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page30_formula3.png": [
+      "oraz przekształcając F(s), otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page30_formula4.png": [
+      "Oryginał /(t) wyliczamy jako odwrotną transformatę Laplace'a F(s):"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page30_formula5.png": [
+      "Oryginał /(t) wyliczamy jako odwrotną transformatę Laplace'a F(s):"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page30_formula6.png": [
+      "Przykład 2.5 Znaleźć oryginał funkcji dla transformaty"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page30_formula7.png": [
+      "Przykład 2.5 Znaleźć oryginał funkcji dla transformaty"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page30_formula8.png": [
+      "Rozkładając transformatę F(s) na ułamki proste, otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page30_formula9.png": [
+      "Rozkładając transformatę F(s) na ułamki proste, otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page31_formula1.png": [
+      "Wartości współczynników 4, B i C wyznaczymy dwiema metodami. Metoda I Przekształcamy równanie:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page31_formula2.png": [
+      "Wartości współczynników 4, B i C wyznaczymy dwiema metodami. Metoda I Przekształcamy równanie:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page31_formula3.png": [
+      "Z równania trzeciego obliczamy współczynnik 4: 1=—24, l A=-——. 2 Z pierwszego równania wyznaczamy współczynnik B, podstawiamy do drugiego. Uwzględniając już obliczoną wartość A, otrzymujemy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page31_formula4.png": [
+      "Obliczamy współczynnik C rzory/k1_page31_formula5.png 33 Znając wartości współczynników 4 i C z pierwszego równania, obliczamy współ- C7mnil p."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page32_figure3.png": [
+      "Obliczamy współczynnik C rzory/k1_page31_formula5.png 33 Znając wartości współczynników 4 i C z pierwszego równania, obliczamy współ- C7mnil p."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page32_formula1.png": [
+      "podstawiamy kolejno wartości miejsc zerowych mianownika transformaty F(s): s, = 0, S$ = 2, S$; = —1, otrzymując odpowiednio trzy równania:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page32_formula2.png": [
+      "podstawiamy kolejno wartości miejsc zerowych mianownika transformaty F(s): s, = 0, S$ = 2, S$; = —1, otrzymując odpowiednio trzy równania:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page32_formula3.png": [
+      "Po obliczeniach otrzymujemy wartości współczynników:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page32_formula4.png": [
+      "Ponieważ /(1) = £\"'[F(s)], oryginał /(1) otrzymujemy w postaci"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page32_formula5.png": [
+      "Ponieważ /(1) = £\"'[F(s)], oryginał /(1) otrzymujemy w postaci"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page33_formula1.png": [
+      "z warunkiem początkowym y(0) = 0. Rozwiązanie Stosujemy transformatę Laplace'a do obu stron równania: | y(t)]= sY (s) — y(0) = sY(s), Z(y(0]=Y(s), Z46-1(0]= >. stąd sY(s)+2Y(s)= 6. czyli z"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page33_formula2.png": [
+      "z warunkiem początkowym y(0) = 0. Rozwiązanie Stosujemy transformatę Laplace'a do obu stron równania: | y(t)]= sY (s) — y(0) = sY(s), Z(y(0]=Y(s), Z46-1(0]= >. stąd sY(s)+2Y(s)= 6. czyli z"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page33_formula3.png": [
+      "Następnie rozkładamy Y(s) na ułamki proste"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page33_formula4.png": [
+      "Współczynniki 4 i B wyliczamy, podstawiając kolejno do równania wartości miejsc zerowych:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page33_formula5.png": [
+      "Po obliczeniach Y(s) przyjmuje postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page33_formula6.png": [
+      "Ponieważ y(t) = £\"-'[Y(s)], otrzymujemy rozwiązanie równania różniczkowego w nostaci"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page33_formula7.png": [
+      "Ponieważ y(t) = £\"-'[Y(s)], otrzymujemy rozwiązanie równania różniczkowego w nostaci"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page34_formula1.png": [
+      "z warunkami początkowymi y(0) = y(0)=0. Rozwiązanie Stosujemy transformatę Laplace'a do obu stron równania: wzorv/k1 0aae34 formula2.ong"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page34_formula3.png": [
+      "Nzory/k1_page34_formula4.png stąd"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page34_formula5.png": [
+      "Nzory/k1_page34_formula4.png stąd"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page34_formula6.png": [
+      "czyli"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page34_formula7.png": [
+      "czyli: wzoryv/k1pade34formula8.pna"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page34_formula9.png": [
+      "czyli: wzoryv/k1pade34formula8.pna"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page34_formula10.png": [
+      "Po obliczeniach:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page35_formula2.png": [
+      "a Y(s) przyjmuje zatem postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page35_formula3.png": [
+      "otrzymujemy rozwiązanie równania różniczkowego w postaci"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page35_formula4.png": [
+      "Przykład 2.8 Rozwiązać równanie różniczkowe"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page35_formula5.png": [
+      "z warunkami początkowymi y(0)=0, y(0)=15. Rozwiązanie Metoda I Stosujemy transformatę Laplace'a do obu stron równania: uzoru/k1 nanao3dR formula png 1a"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page35_formula8.png": [
+      "37 czyli 15 Y(s)= o m, s*' +4s+29 Wyliczamy pierwiastki mianownika: A=16-116=—100, JA =105, Z =-2+5), 5, ="
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page36_formula1.png": [
+      "37 czyli 15 Y(s)= o m, s*' +4s+29 Wyliczamy pierwiastki mianownika: A=16-116=—100, JA =105, Z =-2+5), 5, ="
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page36_formula2.png": [
+      "Wtedy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page36_formula3.png": [
+      "Następnie rozkładamy Y(s) na ułamki proste, wyliczając współczynniki A i B"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page36_formula4.png": [
+      "stąd: wzorv/k1 naaea3A formuila5 nna wzoarv/k1 naae36 formula6.bpna"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page36_formula7.png": [
+      "stąd: wzorv/k1 naaea3A formuila5 nna wzoarv/k1 naae36 formula6.bpna"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page36_formula8.png": [
+      "38 Zatem: A=—B, 24s+5Bj+2B-5Bj=15, —2B -5Bj+2B-5Bj=15, —108B;=15. Po obliczeniach:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page37_formula2.png": [
+      "Ponieważ y(f) = .£\"-![Y(s)], otrzymujemy rozwiązanie równania różniczkowego w postaci"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page38_formula1.png": [
+      "czyli o e?) -e%8=2jsinq. W zadaniu ran"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page38_formula3.png": [
+      "czyli o e?) -e%8=2jsinq. W zadaniu ran"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page38_formula4.png": [
+      "Zadanie to można również rozwiązać inaczej. Metoda II Stosując transformatę Laplace'a do obu stron równania różniczkowego, otrzymamy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page38_formula6.png": [
+      "Wykorzystując wzór"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page38_formula7.png": [
+      "i przekształcając Y(s), otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page38_formula8.png": [
+      "Ponieważ y(t) = .£-'[Y(s)], otrzymujemy rozwiązanie równania różniczkowego w mnctarci"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page38_formula9.png": [
+      "Ponieważ y(t) = .£-'[Y(s)], otrzymujemy rozwiązanie równania różniczkowego w mnctarci"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page39_formula1.png": [
+      "Zakładamy, że siła tarcia wiskotycznego jest opisana liniowym równaniem zależ- nym od prędkości ory/k1_page39_formula2.png gdzie B, — współczynnik tarcia wiskotycznego."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page39_figure1.png": [
+      "Zakładamy, że siła tarcia wiskotycznego jest opisana liniowym równaniem zależ- nym od prędkości ory/k1_page39_formula2.png gdzie B, — współczynnik tarcia wiskotycznego."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page39_formula3.png": [
+      "Stąd różniczkowe równanie ruchu w kierunku osi X ma postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page39_formula4.png": [
+      "Stąd różniczkowe równanie ruchu w kierunku osi X ma postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page40_formula1.png": [
+      "Pamiętając, że v= . po podstawieniu otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page40_formula2.png": [
+      "Ostatecznie, jeżeli podstawimy F, (t,x) = cos \"| lg z +28 otrzymamy dwa równania w postaci: d"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page40_formula4.png": [
+      "dzie: j F, =mg — siła ciężkości, Fy — siła reakcji podłoża równoważąca siłę ciężkości BL. Stąd równanie różniczkowe ma postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page40_formula5.png": [
+      "dzie: j F, =mg — siła ciężkości, Fy — siła reakcji podłoża równoważąca siłę ciężkości BL. Stąd równanie różniczkowe ma postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page41_figure1.png": [
+      "Przykład 2.10 Wyznaczyć transmitancję oraz równania stanu dla układu mechanicznego składa- jącego się z masy, sprężyny, tłumika oraz bezmasowego wózka, przedstawionego na rysunku 2.2. Przemieszczenie u(/) wózka jest wielkością wejściową, natomiast prze- mieszczenie masy y(ż) jest wielkością wyjściową. 42"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page41_formula1.png": [
+      "lub inaczej"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page41_formula2.png": [
+      "Równanie to jest matematycznym modelem układu mechanicznego. Dokonując transformaty Laplace'a poszczególnych składników, otrzymujemy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page41_formula3.png": [
+      "Równanie to jest matematycznym modelem układu mechanicznego. Dokonując transformaty Laplace'a poszczególnych składników, otrzymujemy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page41_formula4.png": [
+      "[ky] = kY (5),"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page41_formula5.png": [
+      "[ky] = kY (5),"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page42_formula1.png": [
+      "Ź(ku] =kU(S). 43 Jeżeli przyjmiemy, że warunki początkowe były równe zero, transformatę Lapla- ce'a równania możemy zapisać jako"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page42_formula2.png": [
+      "Następnie zapiszemy model tego układu w przestrzeni stanu. W tym celu skorzy- stamy z zapisu równania w postaci"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page42_formula3.png": [
+      "Następnie zapiszemy model tego układu w przestrzeni stanu. W tym celu skorzy- stamy z zapisu równania w postaci"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page42_formula4.png": [
+      "Podstawiamy współczynniki:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page42_formula5.png": [
+      "OTAa7"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page43_formula1.png": [
+      "OTAa7"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page43_formula2.png": [
+      "Otrzymujemy układ równań:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page43_formula3.png": [
+      "Ostatecznie rozwiązanie zapisujemy macierzowo i otrzymujemy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page43_figure1.png": [
+      "Rozwiązanie Układ składa się z jednego elementu całkującego i dwóch inercyjnych pierwszego rzędu. Wyjście z każdego z tych elementów można zapisać w postaci zmiennych stanu. Zdefiniujmy wyjście z obiektu jako sygnał x,, wyjście z regulatora jako x» oraz wyjście z czujnika jako x;. 45 Na podstawie tych definicji możemy napisać:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page44_formula1.png": [
+      "X2(5) .; U(s)-X;(5) s X;(s)_ 1 X,(5) s+1 rav Nzory/k1_page44_formula2.png Po przekształceniu możemy napisać: wzorv/k1 baae44 formula3.ona wzorv/k1 pade44 formula4.pna wzorv/k1 0aae44 formula5.ong Nzory/k1_page44_formula6.png Po zastosowaniu odwrotnej transformacji Laplace'a dla powyższych czterech"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page44_figure1.png": [
+      "X2(5) .; U(s)-X;(5) s X;(s)_ 1 X,(5) s+1 rav Nzory/k1_page44_formula2.png Po przekształceniu możemy napisać: wzorv/k1 baae44 formula3.ona wzorv/k1 pade44 formula4.pna wzorv/k1 0aae44 formula5.ong Nzory/k1_page44_formula6.png Po zastosowaniu odwrotnej transformacji Laplace'a dla powyższych czterech"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page44_formula7.png": [
+      "Układ równań w przestrzeni stanu możemy zapisać zatem w postaci:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page45_formula1.png": [
+      "Rozwiązanie Biorąc pod uwagę szeregowe połączenie członów jak na rysunku 2.4, napiszemy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page45_formula2.png": [
+      "Rozwiązanie Biorąc pod uwagę szeregowe połączenie członów jak na rysunku 2.4, napiszemy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page45_formula3.png": [
+      "Rozwiązanie Biorąc pod uwagę szeregowe połączenie członów jak na rysunku 2.4, napiszemy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page45_formula4.png": [
+      "Stosując odwrotną transformację Laplace'a, otrzymamy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page45_figure1.png": [
+      "Stosując odwrotną transformację Laplace'a, otrzymamy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page45_formula5.png": [
+      "Stosując odwrotną transformację Laplace'a, otrzymamy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page45_formula6.png": [
+      "47 oraz"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page46_formula2.png": [
+      "Dla równoległego połączenia elementów jak na rysunku 2.5 możemy napisać:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page46_formula3.png": [
+      "Dla równoległego połączenia elementów jak na rysunku 2.5 możemy napisać:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page46_figure1.png": [
+      "Rys. 2.5. Schemat blokowy układu Stosując odwrotną transformację Laplace'a, otrzymujemy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page46_formula4.png": [
+      "Wprowadzamy następujące oznaczenia:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page46_formula5.png": [
+      "Wprowadzamy następujące oznaczenia:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page47_figure1.png": [
+      "Rys. 2.6. Układ dwóch zbiorników z cieczą: A;, A — powierzchnie przekroju zbiorników; h,, hą — wysokość cieczy w zbiornikach; R;, R> — opory hydrauliczne zaworów Rozwiązanie Natężenie przepływu cieczy przez zawory zapisujemy jako:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page48_formula1.png": [
+      "Podstawiając za q; i q, otrzymujemy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page48_formula2.png": [
+      "Podstawiając za q; i q, otrzymujemy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page48_formula3.png": [
+      "4, AR, |4Rz AR, |* Dokonując zamiany zmiennych: gury/k1_page48_figure2.png otrzymujemy równania stanu"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page49_formula1.png": [
+      "4, AR, |4Rz AR, |* Dokonując zamiany zmiennych: gury/k1_page48_figure2.png otrzymujemy równania stanu"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page49_figure1.png": [
+      "a ym m Zapisać model układu przedstawionego na rysunku 2.7 w postaci równań stanu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page49_formula2.png": [
+      "Rozwiązanie Załóżmy, że zmiennymi stanu w powyższym przykładzie są: napięcie na konden- satorze uc oraz prąd płynący przez cewkę i,. W związku z tym, wykorzystując prawa Kirchhoffa oraz Ohma, możemy napisać następujące równania różniczkowe, opisujące działanie układu:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page50_formula1.png": [
+      "Czasami do opisu układu możemy użyć zmiennej stanu oraz jej pochodnej. Przyj- mijmy jako zmienną stanu napięcie na kondensatorze uc. Wtedy równanie różniczko- we opisujące układ będzie równaniem drugiego rzędu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page50_formula2.png": [
+      "Wprowadzając zmienne:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page50_formula3.png": [
+      "otrzymujemy układ równań:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page50_formula4.png": [
+      "otrzymujemy układ równań:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page50_formula5.png": [
+      "Tak więc wybór zmiennych stanu decyduje o postaci macierzy stanu i macierzy wymuszeń. Przykład 2.15 Zapisać model obiektu opisanego transmitancją G(s) w postaci równań stanu i wyjścia"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page50_formula6.png": [
+      "Tak więc wybór zmiennych stanu decyduje o postaci macierzy stanu i macierzy wymuszeń. Przykład 2.15 Zapisać model obiektu opisanego transmitancją G(s) w postaci równań stanu i wyjścia"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page51_formula1.png": [
+      "dzie: * KG) — transformata wyjścia, H,(s) — transformata wejścia. Przekształcamy równanie"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page51_formula2.png": [
+      "dzie: * KG) — transformata wyjścia, H,(s) — transformata wejścia. Przekształcamy równanie"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page51_formula3.png": [
+      "Dokonujemy zamiany zmiennych: vzory/k1_page51_formula4.png iry/k1_page51_figure2.png Zapisujemy je w postaci macierzowej:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page52_formula1.png": [
+      "Aby sprawdzić poprawność rozwiązania, wyznaczymy G(s) na podstawie wyli czonych macierzy A. Bi C. noshuoniac sie wzorem:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page52_formula2.png": [
+      "Aby sprawdzić poprawność rozwiązania, wyznaczymy G(s) na podstawie wyli czonych macierzy A. Bi C. noshuoniac sie wzorem:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page52_formula3.png": [
+      "l l G=l 0 Ek .|E]-t | 37 | |s+z) 0 s |LT 0 T hb | — T S+= , z T"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page52_formula4.png": [
+      "l l G=l 0 Ek .|E]-t | 37 | |s+z) 0 s |LT 0 T hb | — T S+= , z T"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page52_formula5.png": [
+      "l l G=l 0 Ek .|E]-t | 37 | |s+z) 0 s |LT 0 T hb | — T S+= , z T"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page52_figure1.png": [
+      "Jak widać otrzymaliśmy pierwotną transmitancję G(s). Przykład 2.16 Wyznaczyć różne postacie modeli matematycznych (równanie różniczkowe, trans- mitancja, równania stanu) dla obwodu elektrycznego LR; pokazanego na rysunku 2.8"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page53_formula1.png": [
+      "Rys. 2.8. Obwód elektryczny LR jako przykład obiektu 54 Wykorzystując drugie prawo Kirchhoffa, można zapisać równanie"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page53_formula3.png": [
+      "czcpowyszewzoryotrzymujemyrwnanierniczkowebdcejednzpo g07000003-* . . . . m"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page53_figure1.png": [
+      "czcpowyszewzoryotrzymujemyrwnanierniczkowebdcejednzpo g07000003-* . . . . m"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page53_formula4.png": [
+      "Znając funkcję napięcia wejściowego u;(f) oraz warunki początkowe, można wy- znaczyć napięcie wyjściowe u»(/). Dokonując przekształcenia Laplace'a otrzymanego równania różniczkowego przy założeniu zerowych warunków początkowych, otrzymujemy inną postać modelu ma- tematycznego rozważanego obwodu, a mianowicie transmitancję operatorową: wzory/k1naaa5kaformiila5nna"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page53_formula6.png": [
+      "Znając funkcję napięcia wejściowego u;(f) oraz warunki początkowe, można wy- znaczyć napięcie wyjściowe u»(/). Dokonując przekształcenia Laplace'a otrzymanego równania różniczkowego przy założeniu zerowych warunków początkowych, otrzymujemy inną postać modelu ma- tematycznego rozważanego obwodu, a mianowicie transmitancję operatorową: wzory/k1naaa5kaformiila5nna"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page53_formula7.png": [
+      "55 Dla zobrazowania wpływu niezerowych warunków początkowych na postaci rozwiązania dokonamy przekształcenia Laplace'a równania różniczkowego z ich uwzględnieniem: wzoarv/k1 naaa54 farmiila1 nna"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page54_formula2.png": [
+      "55 Dla zobrazowania wpływu niezerowych warunków początkowych na postaci rozwiązania dokonamy przekształcenia Laplace'a równania różniczkowego z ich uwzględnieniem: wzoarv/k1 naaa54 farmiila1 nna"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page54_formula3.png": [
+      "Jak widać, takie przekształcenie pozwoliło na wyróżnienie części odpowiedzi za- leżnej tylko od sygnału wejściowego (tzw. odpowiedź wymuszona) oraz części zależ- nej wyłącznie od stanu początkowego (tzw. odpowiedź swobodna). Powyższy wzór pokazuje, że transmitancja operatorowa G(s) opisuje jedynie zachowanie układu w za- leżności od sygnału wejściowego u;(£) bez uwzględnienia warunków, w jakich układ pozostawał przed podaniem sygnału wejściowego. Kolejną postacią modelu matematycznego, którą można zastosować do opisu roz- ważanego obwodu LR są równania stanu i wyjścia. W celu wyznaczenia tych równań przyjmujemy zmienną stanu: x = w, (będącą jednocześnie wyjściem układu, y = u») oraz wejście: u = u. Po podstawieniu ich do równania różniczkowego otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page54_formula4.png": [
+      "czyli"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page54_formula5.png": [
+      "oraz y = Xx. Powyższe równania można zapisać w postaci macierzowej:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page54_formula6.png": [
+      "oraz y = Xx. Powyższe równania można zapisać w postaci macierzowej:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page55_figure1.png": [
+      "Zatem znajomość macierzy 4, B, C, D jest wystarczająca do wyznaczenia odpo- wiedzi układu z uwzględnieniem stanu początkowego. 56 2.3. Tworzenie i redukcja schematów blokowych Przykład 2.17 Uprościć schemat blokowy układu pokazanego na rysunku 2.9a oraz wyznaczyć jego transmitancję zastępczą."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page55_formula1.png": [
+      "Ten sam wynik możemy uzyskać, analizując przepływy sygnałów w układzie. W związku z tym, że sygnał X(s) jest sumą sygnałów G;(s)R(S) i R(s), otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page55_formula2.png": [
+      "Sygnał wyjściowy C(s) jest sumą sygnałów G>(s)X(s) i R(s)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page55_formula3.png": [
+      "Sygnał wyjściowy C(s) jest sumą sygnałów G>(s)X(s) i R(s)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page56_formula1.png": [
+      "57 Przekształcając to równanie, otrzymujemy ten sam wynik co poprzednio, czyli:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page56_formula2.png": [
+      "Przykład 2.18 Przekształcić schemat blokowy układu pokazanego na rysunku 2.10 do prostszej postaci i wyznaczyć jego transmitancję zastępczą. a"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page56_figure1.png": [
+      "Rozwiązanie Sposób I Przesuwamy węzeł sumacyjny 2 za blok o transmitancji H;(s), otrzymując rysu- nek 2.10a."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page56_figure2.png": [
+      "Rys. 2.10a. Przekształcony schemat blokowy układu 58 Zamieniając miejscami węzły sumacyjne 2 i 3, otrzymujemy rysunek 2.10b."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page58_figure2.png": [
+      "Rys. 2.10c. Przekształcony schemat blokowy układu 59 Zamieniając miejscami węzły sumacyjne 2 i 3, otrzymujemy rysunek 2.10d."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page58_formula1.png": [
+      "G, (s) = MB. (połączenie ze sprzężeniem zwrotnym), 1|-H;(s) G(s) = G,(s)G, (s) = RSW (połączenie szeregowe). — 111 Zarówno pierwszy, jak i drugi sposób rozwiązania dają ten sam wynik. Przykład 2.19 Przekształcić schemat blokowy układu pokazanego na rysunku 2.11a do prostszej postaci i wyznaczyć jego transmitancję zastępczą."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page58_figure1.png": [
+      "G, (s) = MB. (połączenie ze sprzężeniem zwrotnym), 1|-H;(s) G(s) = G,(s)G, (s) = RSW (połączenie szeregowe). — 111 Zarówno pierwszy, jak i drugi sposób rozwiązania dają ten sam wynik. Przykład 2.19 Przekształcić schemat blokowy układu pokazanego na rysunku 2.11a do prostszej postaci i wyznaczyć jego transmitancję zastępczą."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page59_formula1.png": [
+      "po kolejnych przekształceniach (b, c, d) Rozwiązanie Analizując schemat układu, można go przerysować do postaci pokazanej na rysun- ku 2.11b. Następnie węzeł zaczepowy 3 przesuwamy za blok o transmitancji G,(s) oraz zamieniamy węzły 3 i 4 miejscami, otrzymując w ten sposób schemat pokazany na rysunku 2.11c. stosujcpodstawowewzoryalgebryschematwblokowychnapodstawieschema tu z rysunku 2.11d, wyznaczamy transmitancję zastępczą układu:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page59_formula2.png": [
+      "Przykład 2.20 Narysować schemat blokowy oraz wyznaczyć transmitancję zastępczą układu przedstawionego na rysunku 2.12. +"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page59_figure1.png": [
+      "Rys. 2.12. Schemat układu z słownikiem hydraulicznym; a, b — długości ramion dźwigni, A — po- wierzchnia tłoka siłownika, d — długość rurki strumieniowej, Q, / - wymiary okienka, v — prędkość przepływu oleju w okienku, p, — ciśnienie zasilające 61 Sygnałem wejściowym jest przesunięcie dźwigni u, natomiast sygnałem wyjścio- wym jest przesunięcie y końca tłoczyska siłownika. Rozwiązanie Wykorzystując zasadę superpozycji, działanie dźwigni można przedstawić jako złożenie przesunięć składowych (rys. 2.13)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page60_figure1.png": [
+      "Rys. 2.12. Schemat układu z słownikiem hydraulicznym; a, b — długości ramion dźwigni, A — po- wierzchnia tłoka siłownika, d — długość rurki strumieniowej, Q, / - wymiary okienka, v — prędkość przepływu oleju w okienku, p, — ciśnienie zasilające 61 Sygnałem wejściowym jest przesunięcie dźwigni u, natomiast sygnałem wyjścio- wym jest przesunięcie y końca tłoczyska siłownika. Rozwiązanie Wykorzystując zasadę superpozycji, działanie dźwigni można przedstawić jako złożenie przesunięć składowych (rys. 2.13)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page60_formula2.png": [
+      "Przesunięcie wypadkowe dźwigni można zapisać jako vzory/k1_page60_formula1.png Dla małych kątów wychyleń dźwigni"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page60_formula3.png": [
+      "oraz"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page60_formula4.png": [
+      "stąd"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page60_formula5.png": [
+      "62 Zmiana objętości oleju pod tłokiem siłownika wynosi izory/k1_page61_formula1.png Natężenie przepływu Q oleju przez rurkę strumieniową i przewody zasilające można zapisać jako Q=oqiv. porwnujcwzoryotrzymujemy vzory/k1_page61_formula2.png Oznaczając 7, = =. otrzymujemy v rzory/k1_page61_formula3.png Stosując przekształcenie Laplace'a"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page61_formula4.png": [
+      "62 Zmiana objętości oleju pod tłokiem siłownika wynosi izory/k1_page61_formula1.png Natężenie przepływu Q oleju przez rurkę strumieniową i przewody zasilające można zapisać jako Q=oqiv. porwnujcwzoryotrzymujemy vzory/k1_page61_formula2.png Oznaczając 7, = =. otrzymujemy v rzory/k1_page61_formula3.png Stosując przekształcenie Laplace'a"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page61_formula5.png": [
+      "Z równania równowagi przesunięć dla rurki strumieniowej wynika, że"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page61_formula6.png": [
+      "Z równania równowagi przesunięć dla rurki strumieniowej wynika, że"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page61_formula7.png": [
+      "a 63 Na podstawie wyznaczonych transmitancji rysujemy schemat blokowy układu, pokazany na rysunku 2.14."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page62_figure1.png": [
+      "a 63 Na podstawie wyznaczonych transmitancji rysujemy schemat blokowy układu, pokazany na rysunku 2.14."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page62_formula1.png": [
+      "Po przekształceniach, otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page62_formula2.png": [
+      "Po przekształceniach, otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page62_formula3.png": [
+      "Stosując następujące oznaczenia: T = GT sad oraz k= - otrzymujemy a"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page62_formula4.png": [
+      "64 Rozwiązanie Odpowiedź impulsową wyznaczamy przy wymuszeniu vzory/k1_page63_formula1.png Transformata Laplace'a wymuszenia zory/k1_page63_formula2.png Wyznaczając transformatę sygnału wyjściowego Y(s) na podstawie transmitancji G(s), otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page63_formula3.png": [
+      "64 Rozwiązanie Odpowiedź impulsową wyznaczamy przy wymuszeniu vzory/k1_page63_formula1.png Transformata Laplace'a wymuszenia zory/k1_page63_formula2.png Wyznaczając transformatę sygnału wyjściowego Y(s) na podstawie transmitancji G(s), otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page63_formula4.png": [
+      "Wyliczamy współczynniki 4 i B: mam :/171 wa ra zma zal f) £Arm: laC | a a Van]"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page63_formula6.png": [
+      "A=K, B=-KT. Podstawiając wyliczone współczynniki do Y(s), otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page63_formula7.png": [
+      "A=K, B=-KT. Podstawiając wyliczone współczynniki do Y(s), otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page63_formula8.png": [
+      "65 Damiawać 1/5 — I Ala NSMM sssian naónónnomim"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page64_formula1.png": [
+      "65 Damiawać 1/5 — I Ala NSMM sssian naónónnomim"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page64_figure1.png": [
+      "Rys. 2.15. Charakterystyka impulsowa elementu całkującego rzeczywistego dla K =2i7T=5s Przykład 2.22 Wyznaczyć napięcie wyjściowe u(£) obwodu CR, pokazanego na rysunku 2.16, przy założeniu, że napięcie wejściowe u;(£) = Et, gdzie E = const, oraz u; (0) = x>(0) = 0."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page64_figure2.png": [
+      "Rys. 2.16. Obwód elektryczny CR jako przykład obiektu 66 Rozwiązanie Wykorzystując drugie prawo Kirchhoffa, można zapisać u; (t) =u,(t) + u>(t), stąd"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page65_formula1.png": [
+      "Rys. 2.16. Obwód elektryczny CR jako przykład obiektu 66 Rozwiązanie Wykorzystując drugie prawo Kirchhoffa, można zapisać u; (t) =u,(t) + u>(t), stąd"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page65_formula2.png": [
+      "Ten sam prąd płynie również przez rezystor R Nzory/k1_page65_formula3.png czcpowyszewzoryotrzymujemyrwnanierniczkowebdcemodelem obwodu CR"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page65_formula4.png": [
+      "Ten sam prąd płynie również przez rezystor R Nzory/k1_page65_formula3.png czcpowyszewzoryotrzymujemyrwnanierniczkowebdcemodelem obwodu CR"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page65_formula5.png": [
+      "Podstawiając T = RC oraz dokonując transformaty Laplace'a powyższego równa- nia, otrzymujemy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page65_formula6.png": [
+      "Podstawiając T = RC oraz dokonując transformaty Laplace'a powyższego równa- nia, otrzymujemy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page65_formula7.png": [
+      "67 Wyznaczamy zatem wartość transformaty napięcia U>(s)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page66_formula1.png": [
+      "Napięciu u;(£) = Et odpowiada transformata vzory/k1_page66_formula2.png czyli"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page66_formula3.png": [
+      "Napięciu u;(£) = Et odpowiada transformata vzory/k1_page66_formula2.png czyli"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page66_formula4.png": [
+      "Rozkładamy U>(s) na ułamki proste"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page66_formula6.png": [
+      "A+BT=0 =% A=-BT, B=ET, A==ET*. Podstawiając wyliczone współczynniki do U>(s), otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page66_formula7.png": [
+      "A+BT=0 =% A=-BT, B=ET, A==ET*. Podstawiając wyliczone współczynniki do U>(s), otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page66_formula8.png": [
+      "a po przekształceniach"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page67_formula1.png": [
+      "2.5. Wyznaczanie charakterystyk częstotliwościowych Przykład 2.23 Wyznaczyć charakterystyki częstotliwościowe (amplitudowo-fazową oraz loga- rytmiczne: modułu i fazy) elementu całkującego rzeczywistego. Rozwiązanie Elementem całkującym rzeczywistym nazywamy układ, którego równanie dyna- miki ma postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page68_formula1.png": [
+      "69 Po przekształceniach"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page68_formula2.png": [
+      "Część rzeczywista transmitancji widmowej wynosi"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page68_formula3.png": [
+      "Charakterystykę amplitudowo-fazową można narysować na podstawie danych z tabeli 2.1"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/tabele/k1_page68_table1.png": [
+      "e HD: EILEEN [LELIELLTT LELELEL KEEKEEEE: KEEKEKEEKI ok | JL LL LI TT TT] 0 7 © 6 4 3 2 A Rys. 2.17. Charakterystyka amplitudowo-fazowa elementu całkującego rzeczywistego 70 Dla K=2i T=4 wykres charakterystyki amplitudowo-fazowej dla elementu cał- kującego rzeczywistego przedstawia rysunek 2.17. Charakterystyka logarytmiczna modułu (amplitudowo-częstotliwościowa) Obliczamy moduł M(w):"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page69_formula1.png": [
+      "e HD: EILEEN [LELIELLTT LELELEL KEEKEEEE: KEEKEKEEKI ok | JL LL LI TT TT] 0 7 © 6 4 3 2 A Rys. 2.17. Charakterystyka amplitudowo-fazowa elementu całkującego rzeczywistego 70 Dla K=2i T=4 wykres charakterystyki amplitudowo-fazowej dla elementu cał- kującego rzeczywistego przedstawia rysunek 2.17. Charakterystyka logarytmiczna modułu (amplitudowo-częstotliwościowa) Obliczamy moduł M(w):"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page69_formula2.png": [
+      "e HD: EILEEN [LELIELLTT LELELEL KEEKEEEE: KEEKEKEEKI ok | JL LL LI TT TT] 0 7 © 6 4 3 2 A Rys. 2.17. Charakterystyka amplitudowo-fazowa elementu całkującego rzeczywistego 70 Dla K=2i T=4 wykres charakterystyki amplitudowo-fazowej dla elementu cał- kującego rzeczywistego przedstawia rysunek 2.17. Charakterystyka logarytmiczna modułu (amplitudowo-częstotliwościowa) Obliczamy moduł M(w):"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page69_formula3.png": [
+      "Moduł wygodniej jest przedstawić w decybelach — wyliczamy Z(w)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page69_formula4.png": [
+      "Moduł wygodniej jest przedstawić w decybelach — wyliczamy Z(w)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page69_formula5.png": [
+      "Charakterystykę logarytmiczną modułu, przy odpowiednich założeniach, można aproksymować odcinkami linii prostych. Cały zakres pulsacji dzielimy na dwa przedziały dla:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page69_formula6.png": [
+      "Charakterystykę logarytmiczną modułu, przy odpowiednich założeniach, można aproksymować odcinkami linii prostych. Cały zakres pulsacji dzielimy na dwa przedziały dla:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page69_formula7.png": [
+      "— pulsacja sprzęgająca, inaczej pulsacja załamania przybliżonej charakterystyki amplitudowo-częstotliwościowej l dzie 06. =— gdzie W; T 71 Ponieważ oś odciętych ma podziałkę logarytmiczną, powyższym równaniom od- powiadają odcinki linii prostych (funkcja stałowartościowa lub funkcja liniowa). Obliczamy nachylenie wykresu dla dwóch wartości: w = w, i w=10w,, różniących się od siebie o dekadę. I Nachylenie charakterystyki dla pierwszego przedziału pulsacji (dla w << T ) wy- nosi:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page71_formula1.png": [
+      "72 zataorm"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page71_formula4.png": [
+      "log — log 0? =0, K log— =0, Tw?"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page71_formula5.png": [
+      "vzory/k1_page71_formula6.png Przecięcie osi odciętych w= 2 =0,7 rad/s. | 73 | Wykres charakterystyki logarytmicznej modułu dla elementu całkującego rzeczy- wistego przedstawia rysunek 2.18a."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page77_figure1.png": [
+      "- | T — stała czasowa, K, — wzmocnienie regulatora całkującego."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page77_formula2.png": [
+      "Rys. 2.22. Układ regulacji z regulatorem całkującym Znaleźć obszar stabilności układu regulacji na płaszczyźnie parametrów 7, K,. Rozwiązanie Transmitancja układu zamkniętego:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page77_formula3.png": [
+      "lub ogólnie"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page77_formula4.png": [
+      "lub ogólnie"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page77_formula5.png": [
+      "79 Ma ono następujące współczynniki:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page80_formula1.png": [
+      "Po przekształceniach"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page80_formula2.png": [
+      "Po przekształceniach"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page80_formula3.png": [
+      "Równanie charakterystyczne układu ma postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page80_formula4.png": [
+      "Po przekształceniach"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page80_formula5.png": [
+      "Sprawdzamy warunki Hurwitza. — Z pierwszego warunku wynika, że:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page80_formula6.png": [
+      "Sprawdzamy warunki Hurwitza. — Z pierwszego warunku wynika, że:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page80_formula7.png": [
+      "82 Sprawdzamy podwyznaczniki:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page81_formula2.png": [
+      "Podwyznaczniki:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page81_formula3.png": [
+      "Podwyznaczniki:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page81_formula4.png": [
+      "W związku z tym warunki stabilności asymptotycznej układu liniowego IV rzędu można określić w postaci:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page81_formula5.png": [
+      "83 vzory/k1_page82_formula1.pnq"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page82_formula2.png": [
+      "83 vzory/k1_page82_formula1.pnq"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page82_figure1.png": [
+      "Przykład 2.28 Zbadać stabilność układu pokazanego na rysunku 2.25, stosując kryterium Nyquista."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page82_formula3.png": [
+      "podstawiajczagsihsodpowiedniewzoryotrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page82_formula4.png": [
+      "podstawiajczagsihsodpowiedniewzoryotrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page82_formula5.png": [
+      "Z pierwszego warunku Hurwitza wynika, że:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page82_formula6.png": [
+      "Z pierwszego warunku Hurwitza wynika, że:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page83_formula1.png": [
+      "oraz sprawdzamy podwyznaczniki: /zory/k1_page83_formula2.png"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page83_formula3.png": [
+      "oraz sprawdzamy podwyznaczniki: /zory/k1_page83_formula2.png"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page83_formula4.png": [
+      "Oba warunki są spełnione, zatem układ otwarty jest stabilny. Aby po zamknięciu pętli sprzężenia zwrotnego układ też był stabilny, to zgodnie z kryterium Nyquista charakterystyka amplitudowo-fazowa układu owatrtego nie może obejmować punktu (1, 0). Transmitancja widmowa układu otwartego ma postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page83_formula5.png": [
+      "Po przekształceniach wydzielamy część rzeczywistą i urojoną H(jw)G( jw)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page83_formula6.png": [
+      "85"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page84_formula1.png": [
+      "85"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page84_formula2.png": [
+      "Wyznaczamy pulasacje, dla których charakterystyka przecina osie rzędnych i od- ciętych, przyrównując P(w) i O(w) do zera:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page84_formula3.png": [
+      "Wyznaczamy pulasacje, dla których charakterystyka przecina osie rzędnych i od- ciętych, przyrównując P(w) i O(w) do zera:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page84_formula4.png": [
+      "w=0 lub w?*=1l, W=l. Charakterystykę amplitudowo-fazową układu otwartego, pokazaną na rysun- ku 2.26, wyznaczamy na podstawie danych z tabeli 2.3."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/tabele/k1_page84_table1.png": [
+      "w=0 lub w?*=1l, W=l. Charakterystykę amplitudowo-fazową układu otwartego, pokazaną na rysun- ku 2.26, wyznaczamy na podstawie danych z tabeli 2.3."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page85_figure1.png": [
+      "Rys. 2.26. Wykres charakterystyki amplitudowo-fazowej układu otwartego Z wykresu widać, że charakterystyka amplitudowo-fazowa układu otwartego nie obejmuje punktu (-1,j0), a zatem układ po zamknięciu pętli sprzężenia zwrotnego jest stabilny. Przykład 2.29 Zbadać stabilność układu pokazanego na rysunku 2.27, stosując kryterium Mi- chajłowa."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page85_figure2.png": [
+      "Rys. 2.26. Wykres charakterystyki amplitudowo-fazowej układu otwartego Z wykresu widać, że charakterystyka amplitudowo-fazowa układu otwartego nie obejmuje punktu (-1,j0), a zatem układ po zamknięciu pętli sprzężenia zwrotnego jest stabilny. Przykład 2.29 Zbadać stabilność układu pokazanego na rysunku 2.27, stosując kryterium Mi- chajłowa."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page85_formula1.png": [
+      "87 Podstawiając za G(s) odpowiednie wyrażenie (rys. 2.27), otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page86_formula1.png": [
+      "87 Podstawiając za G(s) odpowiednie wyrażenie (rys. 2.27), otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page86_formula2.png": [
+      "Podstawiając s = jw, otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page86_formula3.png": [
+      "Podstawiając s = jw, otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page86_formula4.png": [
+      "Zatem: wzory/k1_paqe86_formula5.pnq"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page86_formula6.png": [
+      "Zatem: wzory/k1_paqe86_formula5.pnq"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page86_formula7.png": [
+      "Przyrównując P(w) i Q(w) do zera, znajdujemy pulsacje, dla których wykres Mi- chajłowa przecina osie rzędnych i odciętych:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/tabele/k1_page87_table1.png": [
+      "88 Na podstawie danych z tabeli 2.4 wyznaczamy wykres Michajłowa, pokazany na rysunku 2.28."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page88_formula1.png": [
+      "vj) uciiyv Statycziiy ZAK1OCEMIOWY €,., dla z(i) = zgl(1). 89 figury/k1_pagefigury/k1_page88_figure. Rozwiązanie Ad a) Wyznaczamy uchyb nadążania przy założeniu, że Z(s) = 0:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page88_formula2.png": [
+      "Stąd otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page88_formula3.png": [
+      "Transformata sygnału w(f) wynosi W(s)= 1%. Aby obliczyć wartość uchybu, S korzystamy z twierdzenia granicznego o wartości końcowej funkcji"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page88_formula4.png": [
+      "Transformata sygnału w(f) wynosi W(s)= 1%. Aby obliczyć wartość uchybu, S korzystamy z twierdzenia granicznego o wartości końcowej funkcji"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page88_formula5.png": [
+      "Podstawiając odpowiednie wyrażenia (rys. 2.29), otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page88_formula6.png": [
+      "Po przekształceniach:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page88_formula7.png": [
+      "Badany układ jest zatem układem astatycznym względem wymuszenia wf). 90 Ad b) Wyznaczamy uchyb zakłóceniowy przy założeniu, że W(s) =0:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page89_formula1.png": [
+      "Badany układ jest zatem układem astatycznym względem wymuszenia wf). 90 Ad b) Wyznaczamy uchyb zakłóceniowy przy założeniu, że W(s) =0:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page89_formula2.png": [
+      "Podstawiając, otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page89_formula3.png": [
+      "Transformata sygnału z(f) wynosi Z(s)= z zy. Aby obliczyć wartość uchybu, ko- rzystamy z twierdzenia granicznego o wartości końcowej funkcji"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page89_formula4.png": [
+      "Transformata sygnału z(f) wynosi Z(s)= z zy. Aby obliczyć wartość uchybu, ko- rzystamy z twierdzenia granicznego o wartości końcowej funkcji"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page89_formula5.png": [
+      "Po przekształceniach:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page89_formula6.png": [
+      "Po przekształceniach:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page90_figure1.png": [
+      "Wyznaczamy uchyb zakłóceniowy przy założeniu, że W(s) = 0:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page90_formula1.png": [
+      "Wyznaczamy uchyb zakłóceniowy przy założeniu, że W(s) = 0:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page90_formula2.png": [
+      "Ad a) Dla układu bez regulatora"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page90_formula3.png": [
+      "po przekształceniach otrzymujemy /zory/k1_page90_formula4.png Ad b) Dla układu z regulatorem P"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page90_formula5.png": [
+      "po przekształceniach otrzymujemy /zory/k1_page90_formula4.png Ad b) Dla układu z regulatorem P"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page91_formula1.png": [
+      "Ad c) Dla układu z regulatorem PI"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page91_formula2.png": [
+      "Ad c) Dla układu z regulatorem PI"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page91_formula3.png": [
+      "po przekształceniach otrzymujemy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page91_formula4.png": [
+      "2.8. Układy przełączające Przykład 2.32 Przeprowadzić minimalizację funkcji trzech zmiennych, określonej za pomocą poniższej tabeli stanów (tab. 2.5), wykorzystując metodę tablic Karnaugha."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/tabele/k1_page91_table1.png": [
+      "2.8. Układy przełączające Przykład 2.32 Przeprowadzić minimalizację funkcji trzech zmiennych, określonej za pomocą poniższej tabeli stanów (tab. 2.5), wykorzystując metodę tablic Karnaugha."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page92_formula1.png": [
+      "lub krócej"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page92_formula2.png": [
+      "lub krócej"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/tabele/k1_page92_table1.png": [
+      "Minimalizacji dokonujemy metodą Karnaugha, wpisując do tablicy trzech zmien- nych jedynki, zgodnie z przepisem funkcji y, a w pozostałe miejsca wpisując zera (tab. 2.6)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page92_formula4.png": [
+      "Otrzymujemy ten sam wynik, co potwierdza poprawność rozwiązania. UA Przykład 2.33 Zaprojektować układ o trzech wejściach x;, x» i x;, w którym sygnał wyjściowy y =1, gdy na wejściu pojawi się liczba w naturalnym kodzie binarnym podzielna przez trzy lub nieparzysta. Wyznaczyć postać minimalną funkcji y = f(x, x», x3) oraz przed- stawić schemat logiczny tego układu z zastosowaniem bramek NAND i NOR. Rozwiązanie Działanie układu opisuje tabela stanów (tab. 2.7)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/tabele/k1_page93_table1.png": [
+      "Na podstawie tabeli (tab. 2.7) można napisać równanie funkcji y w kanonicznej postaci alternatywnej"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page93_formula1.png": [
+      "lub w kanonicznej postaci koniunkcyjnej"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page93_formula2.png": [
+      "Minimalizacji funkcji y dokonujemy za pomocą tablic Karnaugha (tab. 2.8). Tabela 2.8 Tablice Karnaugha"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/tabele/k1_page93_table3.png": [
+      "Minimalizacji funkcji y dokonujemy za pomocą tablic Karnaugha (tab. 2.8). Tabela 2.8 Tablice Karnaugha"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page94_formula1.png": [
+      "DIoSUJĄC prawa TOZQZIEiNOSC!I I pocnfaniania, przeKsztaicając y = (X; + Xx3)(2X + X), otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page94_formula2.png": [
+      "DIoSUJĄC prawa TOZQZIEiNOSC!I I pocnfaniania, przeKsztaicając y = (X; + Xx3)(2X + X), otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page94_formula3.png": [
+      "Stąd wniosek, że postać koniunkcyjna jest równoważna postaci alternatywnej. Schemat logiczny układu z zastosowaniem bramek NAND przedstawia rysu- nek 2 31"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page94_figure1.png": [
+      "Rys. 2.31. Schemat logiczny z bramek NAND Schemat logiczny układu z zastosowaniem bramek NOR przedstawia rysu- nek 2.32."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page94_formula4.png": [
+      "Rys. 2.31. Schemat logiczny z bramek NAND Schemat logiczny układu z zastosowaniem bramek NOR przedstawia rysu- nek 2.32."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page94_figure2.png": [
+      "Rys. 2.32. Schemat logiczny z bramek NOR 96 Przykład 2.34 Zaprojektować układ sterowania dopływem wody do dwóch zbiorników (rys. 2.33). Poziom wody w zbiornikach kontrolowany jest czujnikami a, b, c (a = 0, gdy poziom wody jest poniżej czujnika a, natomiast a = 1, gdy poziom wody jest powyżej czujnika a, podobnie dla pozostałych czujników). Dopływem wody sterują zawory elektromagnetyczne Z, i Z. Program pracy układu: — zawór Z; powinien być otwarty (Z, = 1) stale, gdy zbiornik jest niepełny (a = 0); — zawór Z» powinien być otwarty (Z» = 1), gdy poziom wody w zbiorniku nie osiąg- nął poziomu czujnika c; po jego przekroczeniu zawór zamyka się i otwiera się dopiero wtedy, gdy poziom wody w drugim zbiorniku osiągnął poziom czujnika a; — zawór Z» powinien być zamknięty, gdy zbiornik napełni się (b = 1)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page95_figure1.png": [
+      "Rys. 2.32. Schemat logiczny z bramek NOR 96 Przykład 2.34 Zaprojektować układ sterowania dopływem wody do dwóch zbiorników (rys. 2.33). Poziom wody w zbiornikach kontrolowany jest czujnikami a, b, c (a = 0, gdy poziom wody jest poniżej czujnika a, natomiast a = 1, gdy poziom wody jest powyżej czujnika a, podobnie dla pozostałych czujników). Dopływem wody sterują zawory elektromagnetyczne Z, i Z. Program pracy układu: — zawór Z; powinien być otwarty (Z, = 1) stale, gdy zbiornik jest niepełny (a = 0); — zawór Z» powinien być otwarty (Z» = 1), gdy poziom wody w zbiorniku nie osiąg- nął poziomu czujnika c; po jego przekroczeniu zawór zamyka się i otwiera się dopiero wtedy, gdy poziom wody w drugim zbiorniku osiągnął poziom czujnika a; — zawór Z» powinien być zamknięty, gdy zbiornik napełni się (b = 1)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page95_formula1.png": [
+      "97"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/tabele/k1_page96_table1.png": [
+      "Minimalizacji funkcji Z,, Z i Y dokonujemy za pomocą tablic Kamaugha (tab. 2.10)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/tabele/k1_page96_table2.png": [
+      "Minimalizacji funkcji Z,, Z i Y dokonujemy za pomocą tablic Kamaugha (tab. 2.10)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page96_formula1.png": [
+      "Schemat logiczny układu z zastosowaniem bramek NOR przedstawia rysunek 2.34."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page96_figure1.png": [
+      "Rys. 2.34. Schemat logiczny z bramek NOR 98 2.9. Zadania do samodzielnego rozwiązania Zadanie 2.1 Znaleźć transformatę F(s) sygnału pokazanego na rysunku 2.35."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page98_figure2.png": [
+      "99 Zadanie 2.5 Rozwiązać równania różniczkowe:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page99_figure3.png": [
+      "Rys. 2.37. Model układu mechanicznego Zadanie 2.8 Wyznaczyć równanie ruchu i transmitancję operatorową G(s) dla układu dwóch zbiorników z cieczą, pokazanego na rysunku 2.38."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page99_figure1.png": [
+      "Zadanie 2.9 Zapisać model obwodu pokazanego na rysunku 2.39 za pomocą równań stanu i równania wyjścia oraz za pomocą transmitancji operatorowej."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page99_figure2.png": [
+      "Rys. 2.39. Obwód elektryczny jako przykład obiektu 101 Zadanie 2.10 Przedstawić modele układów pokazanych na rysunkach 2.40a i b w postaci rów- nań stanu i równania wyjść."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page100_figure2.png": [
+      "Rys. 2.39. Obwód elektryczny jako przykład obiektu 101 Zadanie 2.10 Przedstawić modele układów pokazanych na rysunkach 2.40a i b w postaci rów- nań stanu i równania wyjść."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page100_formula1.png": [
+      "Rys. 2.40. Modele układów z zadania 2.10 Zadanie 2.11 Napisać równanie stanu i równanie wyjścia elementu opisanego równaniem"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page100_figure1.png": [
+      "Rys. 2.41. Schemat blokowy układu 102 Zadanie 2.13 Zapisać równania ruchu dla dwóch zbiorników z gazem (rys. 2.42), przekształcić je do równań stanu i wyjścia oraz wyznaczyć transmitancję operatorową G(s)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page101_figure3.png": [
+      "Rys. 2.42. Układ dwóch zbiorników z gazem Zadanie 2.14 Sprawdź, czy transmitancja zastępcza dla schematu blokowego pokazanego na ry- sunku 2.43 wynosi G(s). Wskaż ewentualne błędy."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page101_figure1.png": [
+      "Rys. 2.42. Układ dwóch zbiorników z gazem Zadanie 2.14 Sprawdź, czy transmitancja zastępcza dla schematu blokowego pokazanego na ry- sunku 2.43 wynosi G(s). Wskaż ewentualne błędy."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page101_figure2.png": [
+      "Rys. 2.44. Schemat blokowy układu 103 Zadanie 2.16 Wyznaczyć transmitancję zastępczą dla układu przedstawionego na rysunku 2.45."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page102_figure2.png": [
+      "Rys. 2.44. Schemat blokowy układu 103 Zadanie 2.16 Wyznaczyć transmitancję zastępczą dla układu przedstawionego na rysunku 2.45."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page102_figure1.png": [
+      "Rys. 2.45. Schemat blokowy układu Zadanie 2.17 Wyznaczyć transmitancję zastępczą dla układu przedstawionego na rysunku 2.46."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page102_figure3.png": [
+      ":ynnik tłumienia i dźwigni Rys. 2.47. Schemat układu mechanicznego Zadanie 2.19 Układ jest opisany równaniem g(y)y=u hy, gdzie h — stała. Przeprowadzić linearyzację tego równania w punkcie ug oraz wyznaczyć równanie charakterystyki sta- tycznej układu. Zadanie 2.20 Dokonać linearyzacji równania j? + (1+cos2x)y+ y= sin? x w punkcie xg = 7/4. Zadanie 2.21 Dla układu opisanego równaniem, w którym u oznacza wejście, a x — wyjście"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page103_formula1.png": [
+      ":ynnik tłumienia i dźwigni Rys. 2.47. Schemat układu mechanicznego Zadanie 2.19 Układ jest opisany równaniem g(y)y=u hy, gdzie h — stała. Przeprowadzić linearyzację tego równania w punkcie ug oraz wyznaczyć równanie charakterystyki sta- tycznej układu. Zadanie 2.20 Dokonać linearyzacji równania j? + (1+cos2x)y+ y= sin? x w punkcie xg = 7/4. Zadanie 2.21 Dla układu opisanego równaniem, w którym u oznacza wejście, a x — wyjście"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page103_figure1.png": [
+      "Zadanie 2.23 Dla układu opisanego transmitancją Nzory/k1_page103_formula2.png należy wyznaczyć i narysować: a) charakterystykę impulsową, b) charakterystykę amplitudowo-fazową. 105 Zadanie 2.24 Dla układu opisanego transmitancją"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page104_formula1.png": [
+      "Zadanie 2.23 Dla układu opisanego transmitancją Nzory/k1_page103_formula2.png należy wyznaczyć i narysować: a) charakterystykę impulsową, b) charakterystykę amplitudowo-fazową. 105 Zadanie 2.24 Dla układu opisanego transmitancją"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page105_figure1.png": [
+      "należy wyznaczyć i narysować charakterystykę amplitudowo-fazową oraz charaktery- styki logarytmiczne modułu i fazy. Zadanie 2.25 Wyznaczyć i narysować charakterystyki logarytmiczne modułu i fazy dla układów o transmitancjach: /k1_page104_table1.png Zadanie 2.26 Narysować charakterystyki logarytmiczne modułu i fazy układów opisanych po- niższymi transmitancjami (wykorzystując metodę „graficzną ”): k1_page104_figure1.png Zadanie 2.27 Dany jest układ o strukturze podanej na rysunku 2.49. Przyjmując, że k = 5 i T= 5 s, należy wyznaczyć i narysować: a) odpowiedź skokową układu, b) charakterystykę amplitudowo-fazową układu, c) charakterystyki logarytmiczne modułu i fazy układu. 106"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page105_figure2.png": [
+      "Rys. 2.50. Schemat blokowy układu Przyjmując, że k= 3 i T=6, należy wyznaczyć i narysować: a) odpowiedź skokową układu, b) charakterystykę amplitudowo-fazową układu, c) charakterystyki logarytmiczne modułu i fazy układu. Zadanie 2.29 Wyznaczyć zakres wartości wzmocnienia k, odpowiadający stabilnej pracy układu pokazanego na rysunku 2.51, przy założeniu, że 7 > 0."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page105_figure3.png": [
+      "Rys. 2.50. Schemat blokowy układu Przyjmując, że k= 3 i T=6, należy wyznaczyć i narysować: a) odpowiedź skokową układu, b) charakterystykę amplitudowo-fazową układu, c) charakterystyki logarytmiczne modułu i fazy układu. Zadanie 2.29 Wyznaczyć zakres wartości wzmocnienia k, odpowiadający stabilnej pracy układu pokazanego na rysunku 2.51, przy założeniu, że 7 > 0."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page106_formula1.png": [
+      "Zadanie 2.31 Na podstawie kryterium Hurwitza podać warunki stabilności asymptotycznej układu liniowego trzeciego rzędu. Zadanie 2.32 Dla 7, = 1 s, 7> = 0,5 s, 7, = 0,3 s wyznaczyć wartość współczynnika wzmocnie- nia k, dla którego układ (rys. 2.52) jest stabilny, posługując się kryterium Hurwitza. Posługując się kryterium Michajłowa, sprawdzić stabilność układu dla k = 6.5."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page106_figure2.png": [
+      "Zadanie 2.31 Na podstawie kryterium Hurwitza podać warunki stabilności asymptotycznej układu liniowego trzeciego rzędu. Zadanie 2.32 Dla 7, = 1 s, 7> = 0,5 s, 7, = 0,3 s wyznaczyć wartość współczynnika wzmocnie- nia k, dla którego układ (rys. 2.52) jest stabilny, posługując się kryterium Hurwitza. Posługując się kryterium Michajłowa, sprawdzić stabilność układu dla k = 6.5."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page106_figure1.png": [
+      "Rys. 2.52. Schemat blokowy układu Zadanie 2.33 Wyznaczyć obszary wartości współczynników k i 7, odpowiadające stabilnej pra- cy układu pokazanego na rysunku 2.53."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page107_figure2.png": [
+      "Zadanie 2.35 Wyznaczyć wartość uchybu statycznego zakłóceniowego e,., przy W(s) = O oraz uchybu statycznego nadążania e,., przy Z(s) = 0 dla układu pokazanego na rysun- ku 2.55 dla zakłócenia z(£) = 1(t) oraz wartości zadanej w(t) = 1(/)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page107_figure1.png": [
+      "Zadanie 2.35 Wyznaczyć wartość uchybu statycznego zakłóceniowego e,., przy W(s) = O oraz uchybu statycznego nadążania e,., przy Z(s) = 0 dla układu pokazanego na rysun- ku 2.55 dla zakłócenia z(£) = 1(t) oraz wartości zadanej w(t) = 1(/)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/tabele/k1_page108_table1.png": [
+      "3. Wykorzystanie pakietu MATLAB/Simulink do rozwiązywania zadań 3.1. Wprowadzenie do MATLAB-a MATLAB to otwarte i interakcyjne środowisko obliczeniowe, integrujące ana- lizę numeryczną, działania na macierzach i przetwarzanie sygnałów z grafiką, co bar- dzo ułatwia jego wykorzystanie. Podstawową strukturę danych stanowi macierz (rzeczywista lub zespolona), której rozmiarów nie potrzeba uprzednio deklarować (w przeciwieństwie do innych języków programowania). MATLAB nie wymaga rów- nież deklaracji zmiennych, które są dostępne przez nazwę. Jest to język programo- wania bardzo wysokiego poziomu, który ma ponad tysiąc standardowych funkcji (tzw. m-plików) umożliwiających konkretne zastosowania. W przypadku braku okre- ślonej gotowej już funkcji, użytkownik może sam ją napisać, a następnie wstawić do biblioteki MATLAB-a. Na tym, między innymi, polega otwartość tego systemu. Poszerzeniem możliwości MATLAB-a są tzw."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page110_formula1.png": [
+      "Składnia funkcji: [T, X] = ode23 ('F(t, x)', tO, tk, x0, tol, tr) [T, X] = 0de45 (F(t, x)', tO, tk, xO, tol, tr) Kolejne parametry wejściowe oznaczają: F(t, x) — nazwa zdefiniowana przez użytkownika funkcji zwracająca jej wartość; t0, tk — granice przedziału czasu, w którym poszukiwane jest rozwiązanie; x0 — określa warunek początkowy — wektor kolumnowy zawierający wartość rozwiązania układu w chwili początkowej; tol — opcjonalny parametr określający wymaganą dokładność; domyślnie: 0.001; tr — opcjonalny parametr, który jeśli ma wartość różną od zera, to powoduje wypisanie kolejnych kroków działania metody na ekranie."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page111_formula1.png": [
+      "W wyniku zastosowania funkcji ode23 lub ode24 otrzymamy macierz X zawiera- jącą umieszczone wierszowo wartości rozwiązań równania różniczkowego w kolej- nych chwilach czasu, określonych za pomocą wektora kolumnowego T. Przykład 3.1 ! „| dx „dx z Rozwiązać równanie: — * 3— +2x=0, dla warunku początkowego x(0) = 0 i :(0)=2. de di Rozwiązanie Do rozwiązania problemu wykorzystano dwa pliki: „funkcjal.m*” i „rozw1.m”. W pliku „funkcjal.m” zdefiniowano rozwiązywane równanie różniczkowe w po- staci równań stanu. Wprowadzając zmienne: zory/k1_page110_formula2.png 112 po przekształceniach otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page111_formula2.png": [
+      "czyli"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page111_figure1.png": [
+      "W pliku „rozw1.m” zdefiniowano parametry wejściowe równania różniczkowego za pomocą funkcji input, wykorzystano funkcję ode do obliczenia rozwiązania, które następnie wykreślono za pomocą funkcji płot."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page112_figure2.png": [
+      "Wspomniane równanie różniczkowe można również rozwiązać, wykorzystując przybornik Simulink. Na podstawie układu równań:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page112_formula1.png": [
+      "Wspomniane równanie różniczkowe można również rozwiązać, wykorzystując przybornik Simulink. Na podstawie układu równań:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page112_figure1.png": [
+      "tworzymy model równania różniczkowego w postaci schematu blokowego pokazanego na rysunku 3.2."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page113_formula1.png": [
+      "dla warunku początkowego y(0) = y(0)=0. Dokonać archiwizacji otrzymanych wyników. Rozwiązanie Szukając rozwiązania równania w Simulinku, możemy zapisać je w postaci rów- nań stanu i równania wyjścia. W tym celu dokonujemy najpierw transformacji Lapla- ce'a wspomnianego równania:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page113_formula2.png": [
+      "dla warunku początkowego y(0) = y(0)=0. Dokonać archiwizacji otrzymanych wyników. Rozwiązanie Szukając rozwiązania równania w Simulinku, możemy zapisać je w postaci rów- nań stanu i równania wyjścia. W tym celu dokonujemy najpierw transformacji Lapla- ce'a wspomnianego równania:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page113_formula3.png": [
+      "wyliczając transmitancję G(s) otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page113_formula4.png": [
+      "wyliczając transmitancję G(s) otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page113_formula5.png": [
+      "Na podstawie transmitancji wyliczamy Y(s)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page113_formula6.png": [
+      "otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page113_formula8.png": [
+      "115 Wprowadzamy zmienne stanu: vzory/k1_page114_formula1.png oraz zapisujemy równania stanu:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page114_formula2.png": [
+      "115 Wprowadzamy zmienne stanu: vzory/k1_page114_formula1.png oraz zapisujemy równania stanu:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page114_formula3.png": [
+      "Stosując odwrotne przekształcenie Laplace'a, otrzymujemy: Nzory/k1_page114_formula4.png"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page114_formula5.png": [
+      "Stosując odwrotne przekształcenie Laplace'a, otrzymujemy: Nzory/k1_page114_formula4.png"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page114_formula6.png": [
+      "y obliczamy z (3.3)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page114_formula7.png": [
+      "y obliczamy z (3.3)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page114_formula8.png": [
+      "Na podstawie równań (3.5) i (3.6) tworzymy w Simulinku model rozwiązywanego równania różniczkowego w postaci schematu blokowego pokazanego na rysunku 3.3. 116"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page115_figure1.png": [
+      "Na podstawie równań (3.5) i (3.6) tworzymy w Simulinku model rozwiązywanego równania różniczkowego w postaci schematu blokowego pokazanego na rysunku 3.3. 116"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page115_figure2.png": [
+      "Przyjmując określone parametry symulacji, otrzymujemy rozwiązanie w postaci graficznej, przedstawione na rysunku 3.4. Wwvkres rozwiazania równania różniczkowana"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page115_figure3.png": [
+      "Rys. 3.5. Schemat blokowy równania zbudowany w Simulinku Przyjmując określone parametry symulacji, otrzymujemy rozwiązanie w formie graficznej, jak poprzednio. 117 W Simulinku możliwe jest też przeprowadzenie symulacji i zachowanie wybra- nych zmiennych w przestrzeni roboczej Matlaba oraz zapisanie ich na dysku, celem dalszej obróbki. Modyfikując schemat z rysunku 3.5, otrzymujemy schemat przedsta- wiony na rysunku 3.6."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page116_figure1.png": [
+      "Rys. 3.5. Schemat blokowy równania zbudowany w Simulinku Przyjmując określone parametry symulacji, otrzymujemy rozwiązanie w formie graficznej, jak poprzednio. 117 W Simulinku możliwe jest też przeprowadzenie symulacji i zachowanie wybra- nych zmiennych w przestrzeni roboczej Matlaba oraz zapisanie ich na dysku, celem dalszej obróbki. Modyfikując schemat z rysunku 3.5, otrzymujemy schemat przedsta- wiony na rysunku 3.6."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page116_figure2.png": [
+      "118 Przykład 3.3 (do samodzielnego rozwiązania) Rozwiązać równanie różniczkowe, wykorzystując funkcję ode23"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page117_formula5.png": [
+      "Przykład 3.4 Stosując przekształcenie Laplace'a dla podanego wcześniej równania różniczko- wego postaci: X+3x+2x=0, dla x(0)=0, x(0)=2, otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page118_figure1.png": [
+      "119 Zastosowanie funkcji residue do rozkładu transformaty X(s) na ułamki proste przedstawia plik „ulamki.m”."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/tabele/k1_page118_table1.png": [
+      "120 Plik ten zawiera też funkcje umożliwiające narysowanie postaci czasowej dla każ- dego ułamka prostego oraz wykres postaci czasowej transformaty X(s) (rys. 3.7) będą- cy rozwiązaniem równania różniczkowego. Wykres postaci czasowej transformaty X,(S)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page119_figure1.png": [
+      "120 Plik ten zawiera też funkcje umożliwiające narysowanie postaci czasowej dla każ- dego ułamka prostego oraz wykres postaci czasowej transformaty X(s) (rys. 3.7) będą- cy rozwiązaniem równania różniczkowego. Wykres postaci czasowej transformaty X,(S)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page119_figure2.png": [
+      "3.4. Postacie modeli dynamicznych Wykorzystuje się trzy postacie liniowych modeli dynamicznych: l) równania stanu; do ich pełnego określenia wystarcza podanie macierzy 4, B, C i D, np.:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page119_formula1.png": [
+      "3.4. Postacie modeli dynamicznych Wykorzystuje się trzy postacie liniowych modeli dynamicznych: l) równania stanu; do ich pełnego określenia wystarcza podanie macierzy 4, B, C i D, np.:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page120_formula1.png": [
+      "2) macierze transmitancji (tylko dla układów SIMO — jedno wejście, wiele wyjść); transmitancje podaje się w postaci pary wektorów zawierających współczynniki 121 licznika i mianownika, przy czym umieszcza się je tam wg malejących potęg ope- ratora s, np. wektory: L = [1 2], M=[1 3 2] odpowiadają transmitancji"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page120_formula2.png": [
+      "gdzie: Zj, ....Z„ — zera transmitancji, Py ---+ p, — bieguny transmitancji m < n, Kp — wzmocnienie. Aby określić macierz transmitancji przez podanie zer, biegunów i wzmocnienia, należy podać: — wektor kolumnowy biegunów transmitancji (pierwiastki wielomianu tworzącego mianownik); — macierz zawierającą w kolejnych kolumnach zera transmitancji (pierwiastki wie- lomianu tworzącego licznik) odpowiadające kolejnym wyjściom układu; —_ wektor kolumnowy zawierający wzmocnienia odpowiadające kolejnym wyjściom układu, np.: | wzory/k1_page120_formula3.pr Zmiana postaci modelu Do zmiany modelu służą: — funkcje ss2£f oraz tf2ss"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page120_formula4.png": [
+      "gdzie: Zj, ....Z„ — zera transmitancji, Py ---+ p, — bieguny transmitancji m < n, Kp — wzmocnienie. Aby określić macierz transmitancji przez podanie zer, biegunów i wzmocnienia, należy podać: — wektor kolumnowy biegunów transmitancji (pierwiastki wielomianu tworzącego mianownik); — macierz zawierającą w kolejnych kolumnach zera transmitancji (pierwiastki wie- lomianu tworzącego licznik) odpowiadające kolejnym wyjściom układu; —_ wektor kolumnowy zawierający wzmocnienia odpowiadające kolejnym wyjściom układu, np.: | wzory/k1_page120_formula3.pr Zmiana postaci modelu Do zmiany modelu służą: — funkcje ss2£f oraz tf2ss"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page121_formula1.png": [
+      "funkcja ss24f zamienia równania stanu na odpowiadającą im transmitancję liczoną względem wejścia o numerze iu; wektor L zawiera współczynniki licznika trans- 122 mitancji; wektor M zawiera współczynniki mianownika transmitancji; funkcja tf2ss wykonuje operacje odwrotne; — funkcje ss2zp oraz zp2ss"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page121_formula2.png": [
+      "funkcja t/2zp znajduje zera, bieguny i wzmocnienia dla transmitancji lub macierzy transmitancji układu SIMO; funkcja zp2t/ wykonuje przekształcenie odwrotne. Inne funkcje wspomagające konstrukcję modeli Funkcje wspomagające konstrukcję modeli to: — rmodel — generuje ciągły losowy model liniowy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page121_formula3.png": [
+      "funkcja t/2zp znajduje zera, bieguny i wzmocnienia dla transmitancji lub macierzy transmitancji układu SIMO; funkcja zp2t/ wykonuje przekształcenie odwrotne. Inne funkcje wspomagające konstrukcję modeli Funkcje wspomagające konstrukcję modeli to: — rmodel — generuje ciągły losowy model liniowy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page121_formula4.png": [
+      "— ord2 — generuje model układu oscylacyjnego rzędu drugiego o transmitancji po- staci"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page121_formula5.png": [
+      "gdzie: w, — częstotliwość rezonansowa, Ę — współczynnik tłumienia;"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page121_formula6.png": [
+      "Przybliżenie rzędu wyższego niż 5. należy generować w postaci równań stanu. 123 Przykład 3.5 (do samodzielnego rozwiązania) Zapisać model układu opisanego równaniem różniczkowym"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page122_formula1.png": [
+      "Przybliżenie rzędu wyższego niż 5. należy generować w postaci równań stanu. 123 Przykład 3.5 (do samodzielnego rozwiązania) Zapisać model układu opisanego równaniem różniczkowym"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page122_formula2.png": [
+      "jeżeli: k=5;T=10s; T=2s. Rozwiązanie Plik „el_opozn.m” przedstawiony jest poniżej. ory/k1_page122_formula3.png"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page122_figure1.png": [
+      "jeżeli: k=5;T=10s; T=2s. Rozwiązanie Plik „el_opozn.m” przedstawiony jest poniżej. ory/k1_page122_formula3.png"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page123_figure1.png": [
+      "124 Odpowiedź skokowa aproksymacji Pade dla tau = 10s"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page124_figure4.png": [
+      "Rys. 3.8. Aproksymacja opóźnienia metodą Padego 3.5. Konfiguracje połączeń elementów automatyki Poniżej przedstawiono funkcje umożliwiające uzyskanie wypadkowych modeli dla układów ze sprzężeniem zwrotnym oraz połączonych szeregowo lub równolegle: — cloop — układ z jednostkowym sprzężeniem zwrotnym [L, M] = cłoop (LI, M1, znak) — feedback — układ ze sprzężeniem zwrotnym z kompensatorem w obwodzie sprzę- żenia [L, M] = feedback (Ll, MI, L2, M2, znak) — series — szeregowe połączenie dwóch układów [L, M] = series (Ll, MI, L2, M2) — parallel — równoległe połączenie dwóch układów [L, M] = parallel (Ll, Ml, L2, M2) Znak sprzężenia — parametr znak powinien mieć wartość 1 dla sprzężenia dodat- niego i wartość —1 dla ujemnego. 125 Przykład 3.7 inku 3.9, gdzie: /k1_page124_formula1.png"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page124_figure1.png": [
+      "\"j.m awk mW YY mA W Wykorzystując program MATLAB, wyznaczyć transmitancję zastępczą G, tego układu. Rozwiązanie Plik „polaczl.m” przedstawiony jest poniżej."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page124_formula2.png": [
+      "Przykład 3.8 _ s © i ku 3.10, gdzie: f"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page124_figure3.png": [
+      "Przykład 3.8 _ s © i ku 3.10, gdzie: f"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page125_figure2.png": [
+      "Rys. 3.10. Układ zamknięty 126 Wykorzystując program MATLAB, wyznaczyć transmitancję zastępczą G,(s) tego układu. Razrwiazsania"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page125_formula1.png": [
+      "Przykład 3.9 Danv iest układ. którezo schemat iest przedstawiony na rysunku 3.11, gdzie: <1_page125_formula2.png"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page125_figure1.png": [
+      "Przykład 3.9 Danv iest układ. którezo schemat iest przedstawiony na rysunku 3.11, gdzie: <1_page125_formula2.png"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/tabele/k1_page126_table1.png": [
+      "Rys. 3.11. Układ ze sprzężeniem zwrotnym Wykorzystując program MATLAB, wyznaczyć transmitancję zastępczą G.(s) tego układu. 127 Rozwiązanie Plik „polacz3.m” przedstawiony jest poniżej."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page126_formula1.png": [
+      "Przykład 3.10 (do samodzielnego rozwiązania) Dane są dwie transmitancje:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page126_formula2.png": [
+      "Przykład 3.10 (do samodzielnego rozwiązania) Dane są dwie transmitancje:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page127_figure1.png": [
+      "Założono: x(0) = 0,1 m, (0) = 0,05 ="
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page128_formula1.png": [
+      "Rys. 3.12. Układ tłumik-masa-sprężyna 129 Rozwiązanie Model matematyczny członu ma następującą postać:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page128_formula2.png": [
+      "Po podstawieniu danych otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page128_formula3.png": [
+      "gdzie X(s)= 1 s Stąd"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page128_formula4.png": [
+      "gdzie X(s)= 1 s Stąd"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page128_formula5.png": [
+      "Wykorzystując powyższe równanie, wyznaczamy odpowiedź skokową układu (rys. 3.13) dla założonych warunków początkowych, postępując według algorytmu po- danego poniżej."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page128_figure1.png": [
+      "Wykorzystując powyższe równanie, wyznaczamy odpowiedź skokową układu (rys. 3.13) dla założonych warunków początkowych, postępując według algorytmu po- danego poniżej."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page129_figure2.png": [
+      "130"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page129_figure1.png": [
+      "Rys. 3.14. Układ regulacji: a) z różnymi regulatorami; b) charakterystyki skokowe 131 Przykład 3.13 Przyjmując następujące dane: K = 2 i T = 4, napisać m-plik, który pozwoli wykre- ślić charakterystyki częstotliwościowe: amplitudowo-fazową, logarytmiczną modułu i logarytmiczną fazy dla układu przedstawionego na rysunku 3.15."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page130_figure1.png": [
+      "Rys. 3.14. Układ regulacji: a) z różnymi regulatorami; b) charakterystyki skokowe 131 Przykład 3.13 Przyjmując następujące dane: K = 2 i T = 4, napisać m-plik, który pozwoli wykre- ślić charakterystyki częstotliwościowe: amplitudowo-fazową, logarytmiczną modułu i logarytmiczną fazy dla układu przedstawionego na rysunku 3.15."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page130_figure2.png": [
+      "Przykład 3.14 (do samodzielnego rozwiązania) Wykreślić charakterystyki częstotliwościowe elementu oscylacyjnego dla różnych wartości współczynnika tłumienia ©"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page130_formula1.png": [
+      "Jeżeli: C=0 — występują oscylacje niegasnące, 0<Q<1 — występują oscylacje gasnące, C>1 — brak oscylacji. 132 3.7. Symulacja układów dynamicznych Symulację liniowego modelu układu dynamicznego, opisanego transmitancją lub równaniem stanu, można zrealizować za pomocą funkcji /sim, wykorzystując jedno z poniższych wywołań tej funkcji: y/k1_page131_formula1.png lub y/k1_page131_formula2.png gdzie Y i X — wektory wyjść i stanów. Parametry wywołania funkcji /sim: t — wektor czasu u — zapisane wierszowo wektory sterowań x0 — warunki początkowe. Przykład 3.15 Napisać funkcję symulującą działanie układu regulacji przedstawionego na rysun- ku 3.16, przy prostokątnej zmianie sygnału wartości zadanej w."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page131_figure1.png": [
+      "Jeżeli: C=0 — występują oscylacje niegasnące, 0<Q<1 — występują oscylacje gasnące, C>1 — brak oscylacji. 132 3.7. Symulacja układów dynamicznych Symulację liniowego modelu układu dynamicznego, opisanego transmitancją lub równaniem stanu, można zrealizować za pomocą funkcji /sim, wykorzystując jedno z poniższych wywołań tej funkcji: y/k1_page131_formula1.png lub y/k1_page131_formula2.png gdzie Y i X — wektory wyjść i stanów. Parametry wywołania funkcji /sim: t — wektor czasu u — zapisane wierszowo wektory sterowań x0 — warunki początkowe. Przykład 3.15 Napisać funkcję symulującą działanie układu regulacji przedstawionego na rysun- ku 3.16, przy prostokątnej zmianie sygnału wartości zadanej w."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page131_formula3.png": [
+      "Należy przyjąć, że: K,=4,k,=1,T=2. Rozwiązanie Obliczamy transmitancję układu zamkniętego"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page132_figure1.png": [
+      "Po wykonaniu programu otrzymujemy wykres przedstawiony na rysunku 3.17. sterowanie i odpowiedź układu"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page132_figure2.png": [
+      "Rys. 3.17. Sterowanie i odpowiedź czasowa układu 134 3.8. Badanie stabilności układów automatyki Układ otwarty w dziedzinie częstotliwości projektujemy tak, by zapewniona była jego stabilność po zamknięciu sprzężenia zwrotnego. Omawiana metoda opiera się na wykorzystaniu kryterium stabilności Nyquista ukła- dów stabilnych, według którego po zamknięciu sprzężenia układ pozostanie stabilny, jeśli charakterystyka Nyquista mija „z dołu” punkt —1+y0 płaszczyzny zespolonej (rys. 3.18)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page133_figure1.png": [
+      "Zwykle od układów regulacji wymagamy by „trzymały się w odpowiedniej odległości od punktu —1+;0”. Definiuje się więc zapas stabilności wyrażony np. przez margines amplitudy (wzmocnienia) i fazy: — margines amplitudy: AM =1-M(w_,) oznacza, ile razy trzeba zwiększyć wzmocnienie, by układ znalazł się na granicy stabilności; —_ margines fazy: AQ=q+ (w) ozrtacza, o ile stopni trzeba zwiększyć (w kierunku ujemnych wartości) przesunięcie fazy, by układ znalazł się na granicy stabilności. Rozważając charakterystyki częstotliwościowe (logarytmiczne modułu i fazy), kryterium stabilności można sformułować następująco: Zamknięty układ regulacji jest stabilny wtedy, gdy logarytmiczna charakte- rystyka modułu układu otwartego ma wartość ujemną przy pulsacji odpowiadają- cej fazie —180 stopni. Przykład 3.16 Wykorzystując funkcję margin, wyznaczyć zapas modułu i fazy elementu o trans- mitancji"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page133_formula1.png": [
+      "135 Rysunek 3.19 przedstawia rozwiązanie."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page134_figure1.png": [
+      "Składnia funkcji margin: [Gm Pm Wcg Wcp] = margin (A, B, C, D) [Gm Pm Weg Wcp] = margin (L, M) margin (L, M) Funkcja oblicza margines wzmocnienia (Gm) i fazy (Pm) dla układu opisanego równaniami stanu lub transmitancją oraz odpowiadające im częstotliwości graniczne. Poprawnie zaprojektowany układ regulacji powinien posiadać określony zapas modułu (6+12 dB) i fazy (30++60 deg), co gwarantuje jego stabilną pracę. Innym sposobem badania stabilności jest sprawdzenie położenia części rzeczy- wistych biegunów transmitancji elementu, którego stabilność badamy."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page135_figure1.png": [
+      "Rys. 4.1. Układ dynamiczny Układ składa się z ciała o masie m podłączonego za pomocą sprężyny i wiskotycz- nego tłumika do platformy sterowanej sygnałem wejściowym. Na platformę, jako wej- ście, oddziałuje określone wymuszenie x; (/). 137 4.2. Różne postacie modelu układu mechanicznego Uwzględniając siły działające na ciało o masie m i korzystając z zasady d'Alem- berta, równanie ruchu zapisać można następująco"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page136_formula1.png": [
+      "dzie: * * — współczynnik sprężystości sprężyny, c — współczynnik tłumienia wiskotycznego. Do rozwiązania ogólnego (niezależnego od rodzaju wymuszeń) równania różnicz- kowego (4.1) korzystnie jest dokonać transformacji Laplace'a przy zerowych wa- runkach początkowych. Zamieniamy wtedy równanie różniczkowe na równanie alge- braiczne zmiennej s, które przyjmuje postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page136_formula2.png": [
+      "dzie: * * — współczynnik sprężystości sprężyny, c — współczynnik tłumienia wiskotycznego. Do rozwiązania ogólnego (niezależnego od rodzaju wymuszeń) równania różnicz- kowego (4.1) korzystnie jest dokonać transformacji Laplace'a przy zerowych wa- runkach początkowych. Zamieniamy wtedy równanie różniczkowe na równanie alge- braiczne zmiennej s, które przyjmuje postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page136_formula3.png": [
+      "gdzie X,(s) i Xo(s) są transformatami Laplace'a sygnałów x;(/) i xg(t). Niech siła działająca na ciało o masie m wynosi F(s) = ms*Xq(s), co można inaczej zapisać w postaci vzory/k1_page136_formula4.png tak więc, jeśli F(s) jest wymuszeniem działającym na ciało o masie m, a Xq(S) jest wiel- kością wyjściową, to — będzie transmitancją tego ciała. Schemat blokowy przedsta- wia rysunek 4.2. ms"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page136_figure1.png": [
+      "Rys. 4.2. Schemat blokowy ciała sztywnego 138 Dla sprężyny i tłumika siła F(s) = (cs + KJ[X1(5) — Xq(s)], co przedstawiono na rysunku 4.3."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page137_figure3.png": [
+      "Rys. 4.2. Schemat blokowy ciała sztywnego 138 Dla sprężyny i tłumika siła F(s) = (cs + KJ[X1(5) — Xq(s)], co przedstawiono na rysunku 4.3."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page137_figure1.png": [
+      "Ponieważ wymuszenie działające na sprężynę/tłumik wynosi X, 1(5) — Xo(S), a wiel- kością wyjściową jest F(s), więc transmitancja dana jest wzorem cs + k. Układy te moż- na połączyć, uzyskując schemat blokowy, co pokazano na rysunku 4.4."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page137_figure2.png": [
+      "Rys. 4.4. Pierwotny schemat blokowy układu Po przekształceniu schematu blokowego z rysunku 4.4 otrzymano schemat jak na rysunku 4.5."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page137_formula1.png": [
+      "Rysunek 4.5 przedstawia tradycyjny układ z pojedynczą pętlą sprzężenia zwrotne- go. Zasadniczo układ sprężyna-tłumik zachowuje się jak urządzenie wrażliwe na błąd i generuje siłę przeciwdziałającą, proporcjonalną do wielkości błędu. Ponieważ"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page138_formula1.png": [
+      "139 to wielkość wyjściowa będzie równa"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page138_formula2.png": [
+      "a transmitancja układu przyjmie postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page138_formula3.png": [
+      "Po podstawieniu wielkości x;() i xg(t) do wzoru (4.2) na transmitancję G,(s) i przekształceniach otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page138_formula4.png": [
+      "Po podstawieniu wielkości x;() i xg(t) do wzoru (4.2) na transmitancję G,(s) i przekształceniach otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page138_formula5.png": [
+      "Z równania tego wyznaczyć można amplitudę drgań ustalonych. W początkowej fazie drgań pojawiają się także drgania przejściowe, opisywane za pomocą określonych funkcji. Mimo że są to drgania tłumione, które zanikają z czasem, stanowią one poważ- ny problem w układach sterowania, zwłaszcza gdy wymagane jest precyzyjne pozycjo- nowanie w bardzo krótkim czasie. 140 Przy badaniach dynamiki układów sterowania uwzględnić można odpowiedzi sys- temu na cały szereg wymuszeń, przykładowo na wymuszenia impulsowe, skokowe i jednostajne, przedstawione na rysunku 4.6."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page139_figure1.png": [
+      "Gdy wymuszenie x;(£) działające na układ zmieni się skokowo, tak że x,(/) = x,,, to zgodnie z twierdzeniem o wartości końcowej (dla £ — ©):"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page139_formula1.png": [
+      "Gdy wymuszenie x;(£) działające na układ zmieni się skokowo, tak że x,(/) = x,,, to zgodnie z twierdzeniem o wartości końcowej (dla £ — ©):"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page139_formula2.png": [
+      "141 czyli w stanie ustalonym izory/k1_page140_formula1.png Oznacza to, że w stanach ustalonych xq(/) = x,„ nie ma błędu pomiędzy wartością wejściową i wyjściową. Z drugiej strony funkcja komplementamma dana jest wzorem (ms? + cs + k)Xą(s) = 0, tak więc (zgodnie ze wzorem (4.5.2) z tomu pierwszego)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page140_formula2.png": [
+      "141 czyli w stanie ustalonym izory/k1_page140_formula1.png Oznacza to, że w stanach ustalonych xq(/) = x,„ nie ma błędu pomiędzy wartością wejściową i wyjściową. Z drugiej strony funkcja komplementamma dana jest wzorem (ms? + cs + k)Xą(s) = 0, tak więc (zgodnie ze wzorem (4.5.2) z tomu pierwszego)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page142_figure1.png": [
+      "Zazwyczaj zwane są one serwomechanizmami lub serwami. Spotyka się serwomechanizmy: — elektryczne, — hydrauliczne, — pneumatyczne, — elektrohydrauliczne. 5.2. Prosty serwomechanizm hydrauliczny Hydrauliczne układy zdalnego pozycjonowania (RPC) stosowane są bardzo sze- roko. Zazwyczaj wykorzystują one zawory regulacyjne zasilające urządzenia wyko- nawcze, takie jak silniki hydrauliczne. W zastosowaniach tych spotkać można kilka rodzajów zaworów, najczęściej stosowany jest zawór z tłoczkiem przesuwnym, przed- stawiony schematycznie na rysunku 5.1. Pozycję wyjściową tłoczka przesuwnego można nastawiać bezpośrednio za pomo- cą odpowiednich mechanizmów lub pośrednio — elektrycznie. Gdy tłoczek znajduje się w położeniu środkowym, jak pokazano na rysunku, obydwa otwory przelotowe są za- mknięte i kanały A i B zostają odcięte. Gdy tłoczek przesunie się w prawo, kanał B jest przyłączany do linii zasilającej układ w ciecz pod wysokim ciśnieniem; gdy zaś tłoczek przesunie się w lewo, kanał A zostaje podłączony do linii zasilającej układ w ciecz pod wysokim ciśnieniem. 143"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page142_figure2.png": [
+      "5.3. Otwarty układ sterowania hydraulicznego Na rysunku 5.2 przedstawiono układ sterowania hydraulicznego w obwodzie otwartym. Sygnał wejściowy nastawia położenie zaworu, który z kolei kieruje ciecz znajdującą się pod ciśnieniem poprzez otwór przelotowy do jednej końcówki siłowni- ka. Tłok połączony jest z elementem regulowanym tak, by jego położenie przyjąć moż- na za wartość wyjściową."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page143_formula1.png": [
+      "Rys. 5.2. Otwarty układ sterowania hydraulicznego 144 Jeżeli pole powierzchni tłoka jest równe A, a współczynnik otwarcia otworu prze- lotowego wynosi b, to na podstawie równania przepływu można napisać w dużym przybliżeniu"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page143_formula2.png": [
+      "gdzie QO(f) — oznacza objętościowe natężenie przepływu cieczy. Po zastosowaniu przekształcenia Laplace'a"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page143_formula3.png": [
+      "Oznacza to, że układ całkuje wartość wejściową. Jeżeli na wejściu zadziała wymu- szenie skokowe opisane jak niżej:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page143_formula4.png": [
+      "wtedy też (gdy £ ż 0) wartość wyjściowa wyniesie"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page143_formula5.png": [
+      "wtedy też (gdy £ ż 0) wartość wyjściowa wyniesie"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page143_figure1.png": [
+      "Wartość wyjściowa rośnie więc z upływem czasu, co przedstawia rysunek 5.3."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page144_figure1.png": [
+      "Rys. 5.4. Zamknięty układ sterowania hydraulicznego Gdy wielkość wyjściowa osiągnie żądaną wartość, zawór z tłoczkiem przesuwnym wprawiony zostaje w ruch i zamykany jest otwór przelotowy. Dla przemieszczenia tłoczka zaworu y z rysunku 5.5 wynika, że"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page144_formula1.png": [
+      "Rys. 5.4. Zamknięty układ sterowania hydraulicznego Gdy wielkość wyjściowa osiągnie żądaną wartość, zawór z tłoczkiem przesuwnym wprawiony zostaje w ruch i zamykany jest otwór przelotowy. Dla przemieszczenia tłoczka zaworu y z rysunku 5.5 wynika, że"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page144_formula2.png": [
+      "a po zastosowaniu przekształcenia Lapla fig u ry/k 1 _page 1 44_fig u!"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page144_formula3.png": [
+      "a po zastosowaniu przekształcenia Lapla fig u ry/k 1 _page 1 44_fig u!"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page144_formula4.png": [
+      "Na podstawie równania przepływu 1"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page145_formula1.png": [
+      "Porównując równania (5.4) i (5.5) po przekształceniach, otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page145_formula2.png": [
+      "Na podstawie równania (5.6) można narysować model układu w postaci schematu blokowego, jak przedstawiono na rysunku 5.6."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page145_figure1.png": [
+      "Przekształcając dalej równanie (5.6), możemy wyznaczyć transmitancję operato- rową serwomechanizmu G(s)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page145_formula3.png": [
+      "Przekształcając dalej równanie (5.6), możemy wyznaczyć transmitancję operato- rową serwomechanizmu G(s)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page145_figure2.png": [
+      "Przekształcając dalej równanie (5.6), możemy wyznaczyć transmitancję operato- rową serwomechanizmu G(s)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page145_formula4.png": [
+      "Stałą 7 nazywamy stałą czasową układu, a stałą k — wzmocnieniem układu. Należy zauważyć, że przy rozpatrywaniu idealnych układów sterowania hydrau- licznego pomija się wiele czynników, takich jak tarcie, luzy w połączeniach, nielinio- 147 wości w zaworach z tłoczkiem przesuwnym, straty ciśnienia, ściśliwość cieczy i podat- ności części metalowych. W rzeczywistych układach trzeba uwzględnić niektóre z tych czynników, jeżeli mogą mieć one znaczny wpływ na odpowiedź układu. 5.5. Odpowiedź serwomechanizmu na wymuszenie skokowe Z wymuszeniem skokowym mamy do czynienia, gdy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page145_formula5.png": [
+      "Stałą 7 nazywamy stałą czasową układu, a stałą k — wzmocnieniem układu. Należy zauważyć, że przy rozpatrywaniu idealnych układów sterowania hydrau- licznego pomija się wiele czynników, takich jak tarcie, luzy w połączeniach, nielinio- 147 wości w zaworach z tłoczkiem przesuwnym, straty ciśnienia, ściśliwość cieczy i podat- ności części metalowych. W rzeczywistych układach trzeba uwzględnić niektóre z tych czynników, jeżeli mogą mieć one znaczny wpływ na odpowiedź układu. 5.5. Odpowiedź serwomechanizmu na wymuszenie skokowe Z wymuszeniem skokowym mamy do czynienia, gdy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page146_formula1.png": [
+      "Z równania (5.7) wyznaczamy transformatę sygnału wyjściowego Xo(s)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page146_formula2.png": [
+      "Z równania (5.7) wyznaczamy transformatę sygnału wyjściowego Xo(s)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page146_formula3.png": [
+      "Rozkładając powyższe wyrażenie na ułamki proste, otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page146_formula4.png": [
+      "Oznacza to, że xg(£) rośnie wykładniczo z czasem, aż do osiągnięcia wartości xy k, co pokazuje rysunek 5.7. Po upływie czasu 7 (stałej czasowej układu sterowania)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page146_formula5.png": [
+      "Oznacza to, że xg(£) rośnie wykładniczo z czasem, aż do osiągnięcia wartości xy k, co pokazuje rysunek 5.7. Po upływie czasu 7 (stałej czasowej układu sterowania)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page147_figure2.png": [
+      "5.6. Zmodyfikowany układ serwomechanizmu W przypadku gdy sygnały wejściowe są zmienne, układ udoskonalamy — rozbudo- wując go o elementy sprężysto-tłumiące, np. jak na rysunku 5.8."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page147_figure1.png": [
+      "Rys. 5.8. Schemat kinetyczny serwomechanizmu zmodyfikowanego Rozpatrując dźwignię, do której przyłożony jest sygnał wejściowy x,(4) (rys. 5.9), otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page148_formula1.png": [
+      "Na podstawie równania przepływu draulicznym można napisać Nzory/k1_page148_formula2.png age148_figu a po zastosowaniu przekształcenia Lapla"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page148_formula3.png": [
+      "Na podstawie równania przepływu draulicznym można napisać Nzory/k1_page148_formula2.png age148_figu a po zastosowaniu przekształcenia Lapla"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page148_formula4.png": [
+      "Równanie sił działających na układ sprężynę i tłumik) ma postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page148_formula5.png": [
+      "czyli"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page148_formula6.png": [
+      "Dla dźwigni jednostronnej możemy zapisać równanie rzory/k1_page148_formula7.png które po przekształceniu Laplace'a przyjmie postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page148_formula8.png": [
+      "Dla dźwigni jednostronnej możemy zapisać równanie rzory/k1_page148_formula7.png które po przekształceniu Laplace'a przyjmie postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page148_formula9.png": [
+      "150 Podstawiając równanie (5.13) do równania (5.9), otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page149_formula1.png": [
+      "Z kolei podstawiając (5.14) do (5.10), otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page149_formula2.png": [
+      "Stąd"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page149_formula3.png": [
+      "Stąd"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page149_figure1.png": [
+      "5.7. Odpowiedź zmodyfikowanego serwomechanizmu na wymuszenie skokowe Odpowiedź na wymuszenie skokowe x; (£) = x,,, zgodnie z twierdzeniem o wartości końcowej, możemy zapisać w postaci"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page149_formula5.png": [
+      "5.7. Odpowiedź zmodyfikowanego serwomechanizmu na wymuszenie skokowe Odpowiedź na wymuszenie skokowe x; (£) = x,,, zgodnie z twierdzeniem o wartości końcowej, możemy zapisać w postaci"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page150_figure1.png": [
+      "Wykres odpowiedzi skokowej zmodyfikowanego serwomechanizmu przedstawio- no na rysunku 5.11."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page152_figure2.png": [
+      "6.2. Model matematyczny silnika zapisany w postaci równań różniczkowych Tworząc model silnika, należy zatem zwrócić uwagę na znalezienie zależności po- między napięciem zasilającym silnik (U,) a prędkością kątową silnika (w,). Schemat zastępczy silnika prądu stałego, sprowadzonego do obwodu wirnika, pokazano na ry- sunku 6.2. Rozważając osobno elektryczne i mechaniczne parametry obwodu wirnika, można napisać dwa równania modelujące jego działanie."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page152_figure1.png": [
+      "Rys. 6.2. Schemat zastępczy obwodu wirnika silnika prądu stałego Opis w tekście 154 6.2.1. Parametry elektryczne Wielkości elektryczne występujące na schemacie (rys. 6.2) charakteryzują odpo- wiednio: U, — napięcie zasilające wirnik, i, — prąd płynący w uzwojeniach wirnika, R„ — rezystancja zastępcza uzwojeń wirnika, L„ — indukcyjność zastępcza uzwojeń wirnika, — siła elektromotoryczna indukcji, w, — prędkość kątowa wimika. mw Na podstawie schematu zastępczego oraz drugiego prawa Kirchhoffa można napi- sać równanie elektryczne silnika"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page153_formula1.png": [
+      "Napięcie na rezystancji uzwojeń wirnika jest proporcjonalne do prądu przez niego płynącego vzory/k1_page153_formula2.png Napięcie odniesione do indukcyjności wirnika jest proporcjonalne do zmian prądu przez niego płynącego (straty w obwodzie magnetycznym zostały tutaj pominięte) Nzory/k1_page153_formula3.png Gdy wirnik wykonuje ruch obrotowy, w jego uzwojeniach indukowana jest siła elektromotoryczna indukcji (SEM), której wartość jest proporcjonalna do prędkości kątowej wirnika zory/k1_page153_formula4.png gdzie k, — stała elektryczna, zależna m.in. od strumienia magnetycznego stojana oraz liczby zwojów w uzwojeniach wirnika. Podstawiając kolejne składowe napięcia U, do równania (6.1), otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page153_formula5.png": [
+      "Napięcie na rezystancji uzwojeń wirnika jest proporcjonalne do prądu przez niego płynącego vzory/k1_page153_formula2.png Napięcie odniesione do indukcyjności wirnika jest proporcjonalne do zmian prądu przez niego płynącego (straty w obwodzie magnetycznym zostały tutaj pominięte) Nzory/k1_page153_formula3.png Gdy wirnik wykonuje ruch obrotowy, w jego uzwojeniach indukowana jest siła elektromotoryczna indukcji (SEM), której wartość jest proporcjonalna do prędkości kątowej wirnika zory/k1_page153_formula4.png gdzie k, — stała elektryczna, zależna m.in. od strumienia magnetycznego stojana oraz liczby zwojów w uzwojeniach wirnika. Podstawiając kolejne składowe napięcia U, do równania (6.1), otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page154_formula1.png": [
+      "155 6.2.2. Parametry mechaniczne Wielkości mechaniczne występujące na schemacie (rys. 6.2) charakteryzują odpo- wiednio: M, — moment obrotowy wirnika, w, — prędkość kątową wirnika, B — współczynnik tarcia lepkiego zredukowany do wału wimika, J — moment bezwładności zredukowany do wału wirnika, i„ — prąd płynący w uzwojeniach wirnika, M,, — stały moment obciążenia silnika. Moment obrotowy wirnika wykorzystywany do pokonania momentów przeciwsta- wiających się jego ruchowi można zapisać jako"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page154_formula5.png": [
+      "Przekształcając równania (6.2) i (6.4), otrzymujemy układ równań różniczkowych będący modelem silnika:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page155_formula1.png": [
+      "156 6.3. Model matematyczny silnika zapisany w postaci równań stanu i wyjścia Przyjmując jako zmienne stanu prąd płynący w uzwojeniach wirnika (i) oraz prędkość kątową wirnika (w,), możemy zapisać model silnika w postaci równań stanu i wyjścia. Dokonujemy zamiany zmiennych:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page156_formula1.png": [
+      "157 6.4. Model matematyczny silnika zapisany w postaci schematu blokowego Stosując przekształcenie Laplace'a do równań (6.5), otrzymujemy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page156_formula2.png": [
+      "Na podstawie powyższych równań można narysować schemat blokowy silnika, przedstawiony na rysunku 6.3."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page156_figure1.png": [
+      "6.5. Model matematyczny silnika zapisany w postaci transmitancji operatorowej Przyjmując jako wielkość wyjściową prędkość kątową wirnika (w,), a jako wiel- kość wejściową napięcie zasilające wirnik (U,) oraz rozpatrując silnik bez obciążenia (MQ, = 0), możemy wyznaczyć transmitancję tego układu, dokonując kolejnych mody- fikacji schematu blokowego pokazanego na rysunku 6.4. 158"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page157_figure1.png": [
+      "6.5. Model matematyczny silnika zapisany w postaci transmitancji operatorowej Przyjmując jako wielkość wyjściową prędkość kątową wirnika (w,), a jako wiel- kość wejściową napięcie zasilające wirnik (U,) oraz rozpatrując silnik bez obciążenia (MQ, = 0), możemy wyznaczyć transmitancję tego układu, dokonując kolejnych mody- fikacji schematu blokowego pokazanego na rysunku 6.4. 158"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page157_formula1.png": [
+      "Mnożąc licznik i mianownik przez (sŁ,, + R.,)(sJ + B), otrzymujemy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page157_formula3.png": [
+      "Zazwyczaj współczynnik tarcia B jest niewielki, w efekcie czego przyjmujemy, że R„J >> BL, oraz k,k„ >> R„B. Transmitancję silnika G(s) zapisujemy wtedy w postaci uproszczonej"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page158_formula1.png": [
+      "159 ze + da A | oraz K = a. otrzymujemy kk R,, k, Podstawiając: 7, = e"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page158_formula2.png": [
+      "Przyjmując zatem prędkość kątową (w,) jako wielkość wyjściową, uzyskano trans- mitancję silnika w postaci członu drugiego rzędu. Mechaniczna stała czasowa jw jest zazwyczaj co najmniej o rząd wielkości większa od elektrycznej stałej czasowej Pa W takim przypadku stałą 7, można pominąć, a silnik staje się członem inercyjnym pierwszego rzędu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page158_formula3.png": [
+      "W tym przypadku silnik jest członem całkującym rzeczywistym (tzn. szerego- wym połączeniem członu całkującego i inercyjnego pierwszego rzędu). 6.6. Wyznaczenie odpowiedzi skokowej silnika w MATLAB-ie/Simulinku Odpowiedź skokową silnika wyznaczono na podstawie dwóch metod. W pierw- szej metodzie posłużono się transmitancją operatorową silnika (6.8)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page158_formula4.png": [
+      "Dalej przedstawiono źródło programu napisanego w MATLAB -ie, w którym za- modelowano transmitancję G(s) i wyznaczono odpowiedź skokową silnika za pomocą funkcji step. 160"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page159_figure2.png": [
+      "W drugiej metodzie na podstawie schematu blokowego silnika, pokazanego na rysunku 6.3, zbudowano odpowiadający mu schemat w Simulinku, przedstawiony na rysunku 6.5, zakładając, że M,,,. = 0. Sygnałem wejściowym jest sygnał skoku jed- nostkowego."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page159_figure1.png": [
+      "Aby móc przeprowadzić numeryczną symulację działania silnika, należy zdefinio- wać jego parametry (współczynniki i stałe). Załóżmy, że: R„=20Q, J=0,1 kg-m*/s?, L,=0,1H, B = 0,5 N-m:s/rad, _k,=0,1 V:s/rad, k, = 0,1 N-m/A. 161 Przed uruchomieniem symulacji należy parametry te wprowadzić do przestrzeni roboczej MATLAB-a, wpisując:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page160_formula1.png": [
+      "Aby móc przeprowadzić numeryczną symulację działania silnika, należy zdefinio- wać jego parametry (współczynniki i stałe). Załóżmy, że: R„=20Q, J=0,1 kg-m*/s?, L,=0,1H, B = 0,5 N-m:s/rad, _k,=0,1 V:s/rad, k, = 0,1 N-m/A. 161 Przed uruchomieniem symulacji należy parametry te wprowadzić do przestrzeni roboczej MATLAB-a, wpisując:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/tabele/k1_page160_table1.png": [
+      "W efekcie wykonania programu w MATLAB-ie i uruchomienia symulacji w Simu- linku otrzymano przebiegi pokazane na rysunku 6.6."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page161_formula1.png": [
+      "oraz, że zarówno sygnał wejściowy, jak i moment obciążenia są sygnałami prostokąt- nymi o odpowiednich parametrach: U,=10V, M,;ę = 0,2 N-m."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page161_figure1.png": [
+      "Przed uruchomieniem symulacji należy podane parametry wprowadzić do prze- strzeni roboczej MATLAB-a, wpisując:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page161_formula2.png": [
+      "Przed uruchomieniem symulacji należy podane parametry wprowadzić do prze- strzeni roboczej MATLAB-a, wpisując:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page161_formula3.png": [
+      "163 oraz przyjmując oznaczenia:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page162_formula1.png": [
+      "163 oraz przyjmując oznaczenia:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page162_formula2.png": [
+      "na podstawie równań (6.7) otrzymujemy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/tabele/k1_page162_table1.png": [
+      "Rys. 6.8. Przebiegi uzyskane podczas symulacji: a) napięcie zasilające wirnik (U,); b) prąd płynący przez wirnik (i„); c) moment obciążenia silnika (M,,,); d) prędkość kątowa wimika (©,) Schemat blokowy układu pokazano na rysunku 6.9. Blok „Model silnika w postaci równań stanu i wyjścia”, w którym zapisano parametry modelu układu, przedstawiono na rysunku 6.10. 164"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/figury/k1_page163_figure1.png": [
+      "Rys. 6.9. Schemat blokowy silnika zbudowany w Simulinku"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/tabele/k1_page163_table1.png": [
+      "Rys. 6.10. Parametry modelu silnika Aby móc przeprowadzić numeryczną symulację działania silnika, należy zdefinio- wać jego parametry (współczynniki i stałe). Załóżmy jak poprzednio, że: Nzory/k1_page163_formula1.png 165 oraz, że warunki początkowe: :'ory/k1_page164_formula1.png Przed uruchomieniem symulacji należy wprowadzić wymienione parametry do przestrzeni roboczej MATLAB-a, wpisując:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/wzory/k1_page164_formula2.png": [
+      "Rys. 6.10. Parametry modelu silnika Aby móc przeprowadzić numeryczną symulację działania silnika, należy zdefinio- wać jego parametry (współczynniki i stałe). Załóżmy jak poprzednio, że: Nzory/k1_page163_formula1.png 165 oraz, że warunki początkowe: :'ory/k1_page164_formula1.png Przed uruchomieniem symulacji należy wprowadzić wymienione parametry do przestrzeni roboczej MATLAB-a, wpisując:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/tabele/k1_page164_table2.png": [
+      "Rys. 6.11. Przebiegi uzyskane podczas symulacji: a) napięcie zasilające wirnik (U.); b) prędkość kątowa wirnika (©,) Przebiegi te można również uzyskać wykorzystując funkcję płot, wpisując w MAT- LAB-ie:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/Ebebe/k1/detekcje/tabele/k1_page164_table1.png": [
+      "Rys. 6.11. Przebiegi uzyskane podczas symulacji: a) napięcie zasilające wirnik (U.); b) prędkość kątowa wirnika (©,) Przebiegi te można również uzyskać wykorzystując funkcję płot, wpisując w MAT- LAB-ie:"
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+po przekształceniach otrzymujemy
+<image/wzory/k1_page91_formula1.png>
+Ad c) Dla układu z regulatorem PI
+<image/wzory/k1_page91_formula2.png>
+
+po przekształceniach otrzymujemy:
+
+<image/wzory/k1_page91_formula3.png>
+<image/wzory/k1_page91_formula4.png>
+
+2.8. Układy przełączające
+
+Przykład 2.32
+Przeprowadzić minimalizację funkcji trzech zmiennych, określonej za pomocą
+poniższej tabeli stanów (tab. 2.5), wykorzystując metodę tablic Karnaugha.
+
+<image/tabele/k1_page91_table1.png>
+
+93

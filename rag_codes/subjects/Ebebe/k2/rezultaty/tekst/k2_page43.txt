@@ -1,0 +1,65 @@
+54
+
+9.2.2 Obiekty cieplne
+
+Regulacja temperatury obiektu cieplnego należy do typowych procesów
+wolnozmiennych, dodatkowo charakteryzujących się silnymi właściwościami
+uśredniającymi.
+
+Z uwagi na fakt, że sygnał sterujący u(£) może przyjmować dwa stany,
+skutkuje to reagowaniem obiektu na wartość średnią sygnału sterującego
+
+<image/wzory/k2_page43_formula1.png>
+
+Ponieważ w każdym okresie impulsowania przebieg 1:(t) jest funkcją nie-
+ciągłą, jak pokazano na rysunku 9.2, traktowanie go w przybliżeniu jako
+przebiegu ciągłego jest możliwe jedynie, gdy okres impulsowania to. + tud
+jest dużo mniejszy od stałej czasowej obiektu regulacji.
+
+<image/figury/k2_page43_figure2.png>
+
+Rys. 9.2: Przykładowy sygnał sterujący u(t) i jego wartość średnia G(t)
+
+Z uwagi na złożoność dynamiki obiektu cieplnego najprostszą jego
+aproksymacją jest zamodelowanie jako obiektu inercyjnego pierwszego rzędu
+
+Z a kkoa? usa! asza
+
+<image/wzory/k2_page43_formula2.png>
+
+przy czym najczęściej czas opóźnienia 7% i stała czasowa 7 są funkcjami
+sygnału sterującego. O ile różnica wartości opóźnienia 7, dla stanu wyłą-
+czenia i załączenia mocy grzejnej jest często pomijalnie mała, o tyle z uwagi
+na przykład na izolację cieplną stała czasowa stygnięcia 7_ jest większa od
+stałej czasowej grzania /,, wtedy
+
+<image/wzory/k2_page43_formula3.png>
+
+OOO AWA AE
+
+85
+
+<image/figury/k2_page43_figure1.png>
+
+Powyżej zastosowano uproszczenie polegające na pominięciu dodatkowej
+zależności wartości stałej czasowej ' od aktualnego punktu pracy, czyli od
+temperatury.
+
+9.2.3 Regulacja dwustawna bez korekcji
+
+W najprostszym układzie zamkniętym pokazanym na rysunku 94
+do regulatora dwustawnego (przekaźnika) doprowadzana jest wartość
+różnicy pomiędzy wartością zadaną a wartością regulowaną. W przypadku
+obiektu cieplnego i przekaźnika bez histerezy, jeżeli temperatura obiektu jest
+wyższa od temperatury zadanej, następuje wyłączenie mocy grzejnej,
+a w odwrotnym przypadku - załączenie
+
+<image/figury/k2_page43_figure3.png>
+
+Rys. 9.4: Schemat blokowy układu regulacji dwustawnej bez korekcji
+
+Proces regulacji polega więc na okresowym załączaniu i wyłączaniu ele-
+mentu wykonawczego (najczęściej przekaźnika), przy czym częstotliwość
+łączeń zależna jest od wartości zadanej, właściwości dynamicznych obiektu
+regulacji i charakterystyki statycznej regulatora, jak pokazano na rysunku
+9.5.

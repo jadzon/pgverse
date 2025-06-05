@@ -1,0 +1,35 @@
+5. Przykład analizy układu hydraulicznego
+
+5.1. Wstęp
+
+W wielu wypadkach istnieje potrzeba zastosowania układu, który będzie prze-
+mieszczał zdalnie pewne urządzenie do jego określonego położenia w sposób kontrolo-
+wany i odpowiadający potrzebom. Wymuszeniem dla tego przemieszczenia może być
+działanie ręczne — przekręcanie gałki lub przemieszczenie dźwigni, a także ruch lub
+sygnał z innego urządzenia. Niektóre układy charakteryzują się niewielką mocą na wejściu
+w porównaniu z mocą rozwijaną na wyjściu: zasadniczo są to wzmacniacze mocy stero-
+wane uchybem. Zazwyczaj zwane są one serwomechanizmami lub serwami.
+
+Spotyka się serwomechanizmy:
+— elektryczne,
+— hydrauliczne,
+— pneumatyczne,
+—  elektrohydrauliczne.
+
+5.2. Prosty serwomechanizm hydrauliczny
+
+Hydrauliczne układy zdalnego pozycjonowania (RPC) stosowane są bardzo sze-
+roko. Zazwyczaj wykorzystują one zawory regulacyjne zasilające urządzenia wyko-
+nawcze, takie jak silniki hydrauliczne. W zastosowaniach tych spotkać można kilka
+rodzajów zaworów, najczęściej stosowany jest zawór z tłoczkiem przesuwnym, przed-
+stawiony schematycznie na rysunku 5.1.
+
+Pozycję wyjściową tłoczka przesuwnego można nastawiać bezpośrednio za pomo-
+cą odpowiednich mechanizmów lub pośrednio — elektrycznie. Gdy tłoczek znajduje się
+w położeniu środkowym, jak pokazano na rysunku, obydwa otwory przelotowe są za-
+mknięte i kanały A i B zostają odcięte. Gdy tłoczek przesunie się w prawo, kanał B jest
+przyłączany do linii zasilającej układ w ciecz pod wysokim ciśnieniem; gdy zaś tłoczek
+przesunie się w lewo, kanał A zostaje podłączony do linii zasilającej układ w ciecz pod
+wysokim ciśnieniem.
+
+143

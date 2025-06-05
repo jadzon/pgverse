@@ -1,0 +1,24 @@
+<image/figury/k1_page105_figure1.png>
+
+Zadanie 2.28
+Dany jest układ o strukturze podanej na rysunku 2.50.
+
+<image/figury/k1_page105_figure2.png>
+
+Rys. 2.50. Schemat blokowy układu
+Przyjmując, że k= 3 i T=6, należy wyznaczyć i narysować:
+a) odpowiedź skokową układu,
+
+b) charakterystykę amplitudowo-fazową układu,
+c) charakterystyki logarytmiczne modułu i fazy układu.
+
+Zadanie 2.29
+
+Wyznaczyć zakres wartości wzmocnienia k, odpowiadający stabilnej pracy układu
+pokazanego na rysunku 2.51, przy założeniu, że 7 > 0.
+
+<image/figury/k1_page105_figure3.png>
+
+Rys. 2.51. Schemat blokowy układu
+
+107

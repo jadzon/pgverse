@@ -1,0 +1,61 @@
+90
+
+Ze względu na analogie z regulatorami ciągłymi typu PD i PID oraz w zwią-
+zku z powyższym uzyskany regulator o formowalnej charakterystyce
+nazywa się regulatorem niby-ciągłym.
+
+9.3 Przebieg ćwiczenia
+
+9.3.1  Rozpatrywany układ regulacji
+
+Przedmiotem badania jest układ sterowania temperaturą w łaźni wodnej.
+W celu uproszczenia analizy jednostkami uchybu, sygnału zadanego i syg-
+nału wyjściowego są stopnie Celsjusza, w których jest również wyskalowana
+histereza przekaźnika dwupołożeniowego. Zakłada się, że maksymalną
+wartością temperatury (czyli wzmocnieniem obiektu regulacji) jest 1007”C,
+przy załączonym na stałe przekaźniku.
+
+<image/figury/k2_page46_figure1.png>
+
+9.3.2 Układ bez korekcji
+
+Dla zadanych parametrów obiektu regulacji określić wpływ szerokości
+strefy histerezy i wartości temperatury zadanej na oscylacje wielkości regu-
+lowanej.
+
+mą
+
+91
+
+9.3.3 Układ z korekcją (PD)
+Zbadać wpływ ra jakość regulacji i charakter przebiegów przejściowych:
+e wzmocnienia k,
+e stałej czasowej 7y,
+e szerokości strefy histerezy /,
+e temperatury zadanej 72,4,
+wybierając dla każdego z parametrów po trzy wartości.
+Następnie dla zadanych wartości T;44 Oraz FH tak dobrać parametry sprzę-
+żenia zwrotnego, aby uzyskać dobrą jakość regulacji.
+9.3.4 Układ z korekcją (PID)
+Zbadać wpływ na jakość regulacji i charakter przebiegów przejściowych:
+e wzmocnienia k,
+e stałych czasowych 14 i 74,
+e szerokości strefy histerezy H,
+
+e temperatury zadanej 7,4,
+
+wybierając dla każdego z parametrów po trzy wartości.
+Następnie dla zadanych wartości 7;,j oraz H tak dobrać parametry sprzę-
+żenia zwrotnego, aby uzyskać dobrą jakość regulacji.
+
+9.3.5 Sprawozdanie
+
+Sprawozdanie powinno zawierać:
+
+- odpowiedzi skokowe dla różnych szerokości stref histerezy i wartości
+zadanej temperatury (polecenie 9.3.2); określić amplitudę, częstotliwość
+oraz wartość średnią oscylacji;
+
+- odpowiedzi skokowe w układzie z korekcją dynamiczną (PD)
+wraz z omówieniem wpływu zmienianych parametrów (polecenie
+9.3.3) na wymienione wyżej wskaźniki jakości regulacji;

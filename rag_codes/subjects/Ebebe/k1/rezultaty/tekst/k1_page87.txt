@@ -1,0 +1,28 @@
+Na podstawie danych z tabeli 2.4 wyznaczamy wykres Michajłowa, pokazany na
+rysunku 2.28.
+
+<image/tabele/k1_page87_table1.png>
+
+ 
+
+Rys. 2.28. Przebieg wykresu Michajłowa N( jw) dla pulsacji zmieniającej się od 0 do +so
+
+Z rysunku widać, że wykres Michajłowa przechodzi kolejno przez trzy ćwiartki
+układu współrzędnych, zatem układ jest stabilny. Potwierdza to także naprzemienne
+występowanie w tabeli 2.4 pulsacji charakterystycznych części urojonej O(u) i rzeczy-
+wistej P(w) wyrażenia N( jw).
+
+2.7. Dokładność statyczna układu regulacji
+
+Przykład 2.30
+
+Dla układu automatycznej regulacji, pokazanego na rysunku 2.29, wyznaczyć:
+a) uchvb statvcznv nadażania e. .. dla
+
+<image/wzory/k1_page8/_formula1.png>
+
+vj) uciiyv Statycziiy ZAK1OCEMIOWY €,., dla
+
+z(i) = zgl(1).
+
+89

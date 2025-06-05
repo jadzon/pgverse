@@ -1,0 +1,81 @@
+e Metoda oparta na wzmocnieniu granicznym
+
+Regulator nastawia się na działanie P, następnie zwiększa się wartość
+jego wzmocnienia przy pracy w pętli sztywnego, ujemnego sprzęże-
+nia zwrotnego do momentu wystąpienia oscylacji o stałej amplitudzie.
+Wartość tego wzmocnienia nazywa się wzmocnieniem granicznym kp,
+natomiast okres wzbudzonych oscylacji oznacza się jako 7. Po zakoń-
+czeniu eksperymentu parametry regulatorów dobiera się według
+wartości podanych w tabeli 5.2.
+
+Tabela 5.2 Dobór nastaw regulatora PID na podstawie cyklu granicznego
+<image/tabele/k2_page28_table1.png>
+
+5.3 Przebieg ćwiczenia
+
+5.3.1 Wpływ wartości parametrów regulatora na jakość regulacji
+
+Dla zadanego obiektu dobrać empirycznie parametry każdego z regula-
+torów, tak aby zapewnić, jeżeli będzie to możliwe, jak najkrótszy czas regu-
+lacji i brak przeregulowania. Następnie sprawdzić wpływ podanych niżej
+parametrów regulatorów na jakość regulacji:
+
+e dla regulatora typu P (zmienne Kp),
+
+e dla regulatora typu PI (zmienne kp, T;),
+
+e dla regulatora typu PD idealnego (zmienne kp, 73),
+
+e dla regulatora typu PD rzeczywistego (zmienne kp, Ty, N),
+
+e dla regulatora typu PID idealnego (zmienne kp, 74, 74),
+
+e dla regulatora typu PID rzeczywistego (zmienne kp, 7,, Ty, N),
+
+wybierając dla każdego z nich trzy wartości. Dla każdego z przypadków
+przeanalizować wpływ zmian parametru na wskaźniki jakości regulacji:
+uchyb ustalony, przeregulowanie, czas narastania oraz wartość końcową
+wskaźnika ISE.
+
+    
+
+CHOW, 2 ai BRA WJ AD RÓ)
+
+«ve "a'"
+
+KMB Tr
+
+AM
+
+w cróatważ”
+
+55
+
+5.3.2 Metoda Zieglera-Nicholsa oparta na odpowiedzi skokowej
+
+Dla obiektu z podpunktu 53.1 należy na podstawie zarejestrowanej
+odpowiedzi skokowej dobrać wartości parametrów regulatorów: P, PI
+oraz PID z idealnym różniczkowaniem. Porównać odpowiedzi skokowe
+układu zamkniętego oraz wykonać analizę wskaźników jakości.
+
+5.3.3 Metoda Zieglera-Nicholsa oparta na wzmocnieniu granicznym
+(eksperyment)
+
+Dla obiektu z podpunktu 5.3.1 należy przeprowadzić eksperyment wyz-
+naczania wzmocnienia granicznego. Następnie na podstawie zarejestrowanej
+odpowiedzi skokowej dobrać wartości parametrów regulatorów: P, PI
+oraz PID z idealnym różniczkowaniem. Porównać odpowiedzi skokowe
+układu zamkniętego oraz wykonać analizę wskaźników jakości.
+
+5.34 Metoda Zieglera-Nicholsa oparta na wzmocnieniu granicznym
+(obliczenia)
+
+Dla obiektu z podpunktu 5.3.1 z pominiętym opóźnieniem transportowym
+(Ty = 0) wyznaczyć na podstawie tablicy Routha graniczną wartość
+wzmocnienia regulatora typu P, które w układzie zamkniętym spowoduje
+powstanie oscylacji o stałej amplitudzie. Następnie rozwiązać z uwagi na w
+równanie charakterystyczne powyższego układu zamkniętego M(jw) = 0,
+wyznaczając w ten sposób okres oscylacji T' = 3*. Na podstawie uzyskanej
+wartości kp oraz T dobrać wartości parametrów regulatorów: P, PI,
+PID z idealnym różniczkowaniem. Porównać odpowiedzi skokowe układu
+zamkniętego oraz wykonać analizę wskaźników jakości.

@@ -1,0 +1,30 @@
+Sygnałem wejściowym jest przesunięcie dźwigni u, natomiast sygnałem wyjścio-
+wym jest przesunięcie y końca tłoczyska siłownika.
+
+Rozwiązanie
+
+Wykorzystując zasadę superpozycji, działanie dźwigni można przedstawić jako
+złożenie przesunięć składowych (rys. 2.13).
+
+<image/figury/k1_page60_figure1.png>
+
+Przesunięcie wypadkowe dźwigni można zapisać jako
+
+vzory/k1_page60_formula1.png
+
+Dla małych kątów wychyleń dźwigni
+
+<image/wzory/k1_page60_formula2.png>
+
+oraz
+
+<image/wzory/k1_page60_formula3.png>
+
+stąd
+<image/wzory/k1_page60_formula4.png>
+
+Stosując przekształcenie Laplace'a, otrzymujemy
+
+<image/wzory/k1_page60_formula5.png>
+
+62

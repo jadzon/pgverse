@@ -1,0 +1,38 @@
+licznika i mianownika, przy czym umieszcza się je tam wg malejących potęg ope-
+ratora s, np. wektory: L = [1 2], M=[1 3 2] odpowiadają transmitancji
+
+<image/wzory/k1_page120_formula1.png>
+
+wykorzystując instrukcję printsys (L,M, 's), możemy zobaczyć postać transmitan-
+cji na ekranie;
+
+3) macierze transmitancji (SIMO) w postaci iloczynu zer, biegunów i wzmocnienia
+
+<image/wzory/k1_page120_formula2.png>
+
+gdzie:
+Zj, ....Z„ — zera transmitancji,
+Py ---+ p, — bieguny transmitancji m < n,
+Kp — wzmocnienie.
+Aby określić macierz transmitancji przez podanie zer, biegunów i wzmocnienia,
+należy podać:
+— wektor kolumnowy biegunów transmitancji (pierwiastki wielomianu tworzącego
+mianownik);
+— macierz zawierającą w kolejnych kolumnach zera transmitancji (pierwiastki wie-
+lomianu tworzącego licznik) odpowiadające kolejnym wyjściom układu;
+
+—_ wektor kolumnowy zawierający wzmocnienia odpowiadające kolejnym wyjściom
+układu, np.: |
+
+wzory/k1_page120_formula3.pr
+
+Zmiana postaci modelu
+Do zmiany modelu służą:
+— funkcje ss2£f oraz tf2ss
+
+<image/wzory/k1_page120_formula4.png>
+
+funkcja ss24f zamienia równania stanu na odpowiadającą im transmitancję liczoną
+względem wejścia o numerze iu; wektor L zawiera współczynniki licznika trans-
+
+122
