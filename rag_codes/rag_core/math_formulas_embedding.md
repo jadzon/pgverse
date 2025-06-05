@@ -89,6 +89,9 @@ GNN rozpoznaje, że:
     Dodaje strukturalne rozumienie matematyki
 
     Zachowuje spostrzeżenia o ludzkich preferencjach
+<h3>PIPELINE ROZWIĄZANIA KOŃCOWEGO</h3>
+![pipeline wzorow](https://github.com/user-attachments/assets/f9fd36be-395a-4c6f-bdef-0d66df598ab3)
+
 
 <h3>References</h3>
 
