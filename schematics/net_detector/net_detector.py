@@ -52,10 +52,18 @@ class NetDetector():
                 
                 if end_block is not None:
                     # We found a connection to another block
-                    #CHANGE: Add all paths, not just the shortest
-                    if end_block not in temp_connections[key] or len(path) < len(temp_connections[key][end_block][1]):
-                        temp_connections[key][end_block] = (starting_point, path)
-                        print(f"Found connection: Block {key} (from {starting_point}) -> Block {end_block}, path length: {len(path)}")
+                    if end_block not in temp_connections[key]:
+                        # Initialize the connection structure
+                        temp_connections[key][end_block] = {
+                            "starting_points": [starting_point],
+                            "paths": [path]
+                        }
+                    else:
+                        # Add this path to existing connection
+                        temp_connections[key][end_block]["starting_points"].append(starting_point)
+                        temp_connections[key][end_block]["paths"].append(path)
+                    
+                    print(f"Found connection: Block {key} (from {starting_point}) -> Block {end_block}, path length: {len(path)}")
         
         # Second pass: process any newly created nodes
         new_nodes = [k for k in self.blocks_starting_points.keys() if k not in blocks_to_process]
@@ -73,9 +81,18 @@ class NetDetector():
                     end_block = self.dfs_follow_connection(x, y, node_id, path)
                     
                     if end_block is not None and end_block != node_id:
-                        if end_block not in temp_connections[node_id] or len(path) < len(temp_connections[node_id][end_block][1]):
-                            temp_connections[node_id][end_block] = (starting_point, path)
-                            print(f"Found connection: Node {node_id} (from {starting_point}) -> Block/Node {end_block}, path length: {len(path)}")
+                        if end_block not in temp_connections[node_id]:
+                            # Initialize the connection structure
+                            temp_connections[node_id][end_block] = {
+                                "starting_points": [starting_point],
+                                "paths": [path]
+                            }
+                        else:
+                            # Add this path to existing connection
+                            temp_connections[node_id][end_block]["starting_points"].append(starting_point)
+                            temp_connections[node_id][end_block]["paths"].append(path)
+                        
+                        print(f"Found connection: Node {node_id} (from {starting_point}) -> Block/Node {end_block}, path length: {len(path)}")
                         
                         # Check if this created new nodes that need processing
                         latest_nodes = [k for k in self.blocks_starting_points.keys() 
@@ -84,14 +101,20 @@ class NetDetector():
         
         # Convert the temporary dictionary to the final connections format
         for source_id, connections in temp_connections.items():
-            self.connections[source_id] = [(dest_id, start_point, path) for dest_id, (start_point, path) in connections.items()]
+            self.connections[source_id] = []
+            for dest_id, connection_data in connections.items():
+                # For each destination, include all paths with their corresponding starting points
+                for i in range(len(connection_data["paths"])):
+                    start_point = connection_data["starting_points"][i]
+                    path = connection_data["paths"][i]
+                    self.connections[source_id].append((dest_id, start_point, path))
         
         # Print all connections
-        print("\nFinal connections (only shortest paths):")
+        print("\nFinal connections (all paths):")
         for block_id, connections in self.connections.items():
             for connected_block, start_point, path in connections:
                 print(f"  Block {block_id} (from {start_point}) -> Block {connected_block}, path length: {len(path)}")
-        print(self.connections)
+        
         cv2.imshow("Connections", self.cut_out_image)
         cv2.waitKey(0)
         return self.connections
@@ -172,7 +195,7 @@ class NetDetector():
         self.blocks_starting_points[node_id] = []
         
         # Define starting points around the node
-        radius = 3
+        radius = 1
         for dx in range(-radius, radius + 1):
             for dy in range(-radius, radius + 1):
                 nx, ny = x + dx, y + dy
@@ -343,7 +366,38 @@ class NetDetector():
         cv2.imshow("Starting Points", self.cut_out_image)
         cv2.waitKey(0)
         return starting_points
+    def remove_intermiediate_point_in_path(self, path):
+        """
+        Remove intermediate points in the path that are not necessary.
+        """
+        if len(path) < 3:
+            return path
+        
+        simplified_path = [path[0]]
+        change_along_x = path[1][0] != path[0][0]
 
+        for i in range(1, len(path) - 1):
+            current = path[i]
+            prev_point = path[i + 1]
+            
+            # Check if the current point is an intermediate point
+            if change_along_x:
+                if current[0] == simplified_path[-1][0]:    
+                    # If the x-coordinate is the same as the last point, skip this point
+                    continue
+                else:
+                    change_along_x = False
+                    simplified_path.append(prev_point)
+            else:
+                if current[1] == simplified_path[-1][1]:    
+                    # If the y-coordinate is the same as the last point, skip this point
+                    continue
+                else:
+                    change_along_x = True
+                    simplified_path.append(prev_point)
+            simplified_path.append(current)
+        simplified_path.append(path[-1])
+        return simplified_path
 
 
 

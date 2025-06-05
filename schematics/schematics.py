@@ -43,13 +43,23 @@ class SchematicAnalyzer:
             connections = self._detect_connections(image, boxes, text_results, nodes_exist)
 
             results = self.associate_text_with_circut_blocks(text_results["blocks"], boxes)
-            circuitikz_structure = self.create_structure_for_circuit(connections, results)
+            circuitikz_code = self.create_structure_for_circuit(connections, results,image_height=image.shape[0])
     
-            return circuitikz_structure
+            return circuitikz_code
                 
 
         else:
             boxes = self._detect_diagram(processed_image_path)
+            if len(boxes) == 0:
+                print("Nie wykryto żadnych bloków ani diagramu blokowego.")
+                return None
+            tikz_code = self.generate_tikz_schematic(boxes, text_results["blocks"], image_height=image.shape[0])
+            output_folder = os.path.join(self.results_folder, "tikz")
+            os.makedirs(output_folder, exist_ok=True)
+            latex_path = os.path.join(output_folder, "schematic.tex")
+            with open(latex_path, 'w') as f:
+                f.write(tikz_code)
+            print(f"TikZ schematic file generated in {output_folder}")
         print(f"Wszystkie wyniki zostały zapisane w folderze {self.results_folder}")
            
         
@@ -157,20 +167,28 @@ class SchematicAnalyzer:
 
         # Enhanced component mapping
         component_mapping = {
-            "resistor": "resistor",
-            "capacitor": "C",
-            "inductor": "L",
-            "diode": "D",
+            "ac_source": "sV",          # Sinusoidal voltage source
+            "bjt": "npn",               # Default to NPN transistor
             "battery": "battery",
-            "voltage_source": "V",
+            "capacitor": "C",
             "current_source": "I",
-            "transistor": "transistor",
-            "op_amp": "op amp",
+            "dc_source": "V",           # DC voltage source
+            "dep_current_source": "american controlled current source",
+            "dep_dc_source": "american controlled voltage source",
+            "diode": "D",
             "ground": "ground",
-            "node": "",  # Will be handled differently
+            "inductor": "L",
+            "mosfet": "nmos",           # Default to NMOS
+            "node": "",                 # Will be handled differently
+            "opamp": "op amp",
+            "resistor": "resistor",
+            "resistor_box": "resistor",
+            "voltage_source": "V",
+            "zener_diode": "zDo",       # Zener diode
+            "object": "generic",        # Generic component
             # Add more as needed
         }
-
+        
         # Process components
         for block_id, block_data in blocks.items():
             comp_type = block_data["block"].lower()
@@ -317,13 +335,33 @@ class SchematicAnalyzer:
 
     def _generate_circuitikz_code(self, circuitikz_data):
         """Generate LaTeX code with proper coordinate conversion"""
-        scale = 0.1  # Scaling factor
         image_height = circuitikz_data.get("image_height", 1000)  # Default if not provided
+        
+        # Calculate dynamic scale based on image size
+        # Target width for the output diagram in cm
+        target_width_cm = 15.0
+        
+        # Find the maximum x-coordinate in the circuit to determine the actual width
+        max_x = 0
+        for comp in circuitikz_data["components"]:
+            if "start_point1" in comp:
+                max_x = max(max_x, comp["start_point1"][0])
+            if "start_point2" in comp:
+                max_x = max(max_x, comp["start_point2"][0])
+            max_x = max(max_x, comp["position"][0])
+        
+        for conn in circuitikz_data["connections"]:
+            for point in conn.get("path", []):
+                max_x = max(max_x, point[0])
+        
+        # Calculate scale factor (make sure we don't divide by zero)
+        scale = target_width_cm / max_x if max_x > 0 else 0.01
 
         latex = [
             "\\documentclass{standalone}",
             "\\usepackage[siunitx, RPvoltages]{circuitikz}",
             "\\begin{document}",
+            f"% Dynamic scale factor: {scale:.5f} (target width: {target_width_cm}cm)",
             "\\begin{circuitikz}"
         ]
 
@@ -333,25 +371,24 @@ class SchematicAnalyzer:
             x2, y2 = comp["start_point2"] if "start_point2" in comp else comp["position"]
             # Flip y-coordinate using image height
             y1_flipped = image_height - y1 if image_height else y1
-            x1_scaled = x1 * scale
-            y1_scaled = y1_flipped * scale
+            x1_scaled = round(x1 * scale,1)
+            y1_scaled = round(y1_flipped * scale,1)
             y2_flipped = image_height - y2 if image_height else y2
-            x2_scaled = x2 * scale
-            y2_scaled = y2_flipped * scale
-
+            x2_scaled = round(x2 * scale,1)
+            y2_scaled = round(y2_flipped * scale,1)
 
             # Handle rotation
             rotate = f"rotate={comp['rotation']}" if comp.get("rotation", 0) != 0 else ""
 
             if comp["type"] == "ground":
-                latex.append(f"  \\draw ({x1_scaled:.2f},{y1_scaled:.2f}) to[{comp['type']}] ({x2_scaled:..2f},{y2_scaled}) {{}};")
+                latex.append(f"  \\draw ({x1_scaled:.1f},{y1_scaled:.1f}) to[{comp['type']}] ({x2_scaled:.1f},{y2_scaled:.1f}) {{}};")
             elif comp["type"] == "generic":
-                latex.append(f"  \\node[draw, minimum width={comp['width']*scale:.2f}cm, "
-                             f"minimum height={comp['height']*scale:.2f}cm, {rotate}] "
-                             f"at ({x1_scaled:.2f},{y1_scaled:.2f}) ({x2_scaled},{y2_scaled}) {{{comp['label']}}};")
+                latex.append(f"  \\node[draw, minimum width={comp['width']*scale:.1f}cm, "
+                             f"minimum height={comp['height']*scale:.1f}cm] "
+                             f"at ({x1_scaled:.1f},{y1_scaled:.1f}) ({x2_scaled:.1f},{y2_scaled:.1f}) {{{comp['label']}}};")
             else:
-                latex.append(f"  \\draw ({x1_scaled:.2f},{y1_scaled:.2f}) node[{comp['type']}, {rotate}] "
-                             f"({x2_scaled},{y2_scaled}) {{{comp['label']}}};")
+                latex.append(f"  \\draw ({x1_scaled:.1f},{y1_scaled:.1f}) to[{comp['type']}, l = {{{comp['label']}}}] "
+                             f"({x2_scaled:.1f},{y2_scaled:.1f});")
 
         # Draw connections using actual paths
         for conn in circuitikz_data["connections"]:
@@ -362,9 +399,9 @@ class SchematicAnalyzer:
                     # Flip y-coordinate
                     py_flipped = image_height - py if image_height else py
                     if i == 0:
-                        path_str = f"({px*scale:.2f},{py_flipped*scale:.2f})"
+                        path_str = f"({px*scale:.1f},{py_flipped*scale:.1f})"
                     else:
-                        path_str += f" -- ({px*scale:.2f},{py_flipped*scale:.2f})"
+                        path_str += f" -- ({px*scale:.1f},{py_flipped*scale:.1f})"
                 latex.append(f"  \\draw {path_str};")
             else:  # Fallback to straight line
                 latex.append(f"  \\draw ({conn['from']}) -- ({conn['to']});")
@@ -471,7 +508,216 @@ class SchematicAnalyzer:
             # Przywrócenie oryginalnych funkcji
             cv2.imshow = original_imshow
             cv2.waitKey = original_waitKey
+    def generate_tikz_schematic(self, boxes, text_results, image_height=None):
+        """
+        Generate TikZ code for a general schematic diagram based on detected elements and text.
+        """
+        # Calculate dynamic scale based on image size
+        target_width_cm = 15.0
 
+        # Find the maximum x-coordinate to determine the actual width
+        max_x = 0
+        max_y = 0
+        for box in boxes:
+            x1, y1, x2, y2 = map(int, box.xyxy[0].tolist())
+            max_x = max(max_x, x2)
+            max_y = max(max_y, y2)
+
+        # Calculate scale factor
+        scale = target_width_cm / max_x if max_x > 0 else 0.01
+
+        # Start LaTeX document
+        latex = [
+            "\\documentclass{standalone}",
+            "\\usepackage{tikz}",
+            "\\usetikzlibrary{shapes.geometric, shapes.symbols, arrows, positioning, calc}",
+            "\\begin{document}",
+            f"% Dynamic scale factor: {scale:.5f} (target width: {target_width_cm}cm)",
+            "\\begin{tikzpicture}[",
+            "    block/.style={rectangle, draw, minimum width=2cm, minimum height=1cm, text centered},",
+            "    arrow/.style={->, >=stealth, thick},",
+            "    terminator/.style={draw, ellipse, minimum width=2cm, minimum height=1cm, text centered},",
+            "    line/.style={draw},",
+            "    decision/.style={diamond, draw, aspect=2, text centered},",
+            "    data/.style={trapezium, trapezium left angle=70, trapezium right angle=110, draw, minimum width=2cm, minimum height=1cm, text centered},",
+            "    text/.style={font=\\normalsize}",
+            "]"
+        ]
+
+        # Map YOLO class IDs to TikZ styles
+        style_mapping = {
+            0: "arrow",
+            1: "terminator",
+            2: "arrow",
+            3: "decision",
+            4: "text",
+            5: "data"
+        }
+
+        # Process all non-arrow elements first
+        node_boxes = {}  # Store objects with their coordinates for arrow connection
+        arrow_boxes = {} # Store arrows for later processing
+        
+        for i, box in enumerate(boxes):
+            class_id = int(box.cls)
+            style = style_mapping.get(class_id, "block")
+            x1, y1, x2, y2 = map(int, box.xyxy[0].tolist())
+            
+            # Flip y-coordinate using image height
+            y1_flipped = image_height - y1 if image_height else y1
+            y2_flipped = image_height - y2 if image_height else y2
+            
+            # Calculate center point
+            center_x = (x1 + x2) / 2
+            center_y = (y1_flipped + y2_flipped) / 2
+            
+            # Scale coordinates
+            center_x_scaled = round(center_x * scale, 1)
+            center_y_scaled = round(center_y * scale, 1)
+            
+            # Handle different element types
+            if class_id == 4:  # Text element
+                # For detected text blocks, extract text directly from text_results
+                text_content = ""
+                for text in text_results:
+                    txt_x1, txt_y1, txt_x2, txt_y2 = map(int, text["coords"])
+                    # Check if text coordinates overlap with this box
+                    if (abs(txt_x1 - x1) < 10 and abs(txt_y1 - y1) < 10 and
+                        abs(txt_x2 - x2) < 10 and abs(txt_y2 - y2) < 10):
+                        text_content = text["text"]
+                        break
+                
+                # If no direct match found, use the text itself
+                if not text_content:
+                    for text in text_results:
+                        if (x1 <= int(text["coords"][0]) <= x2 and 
+                            y1 <= int(text["coords"][1]) <= y2):
+                            text_content = text["text"]
+                            break
+                
+                # Add text node directly to the diagram
+                latex.append(f"  \\node[text] at ({center_x_scaled},{center_y_scaled}) {{{text_content}}};")
+                
+            elif style == "arrow":
+                # Store arrow data for later processing
+                width = x2 - x1
+                height = y2 - y1
+                
+                arrow_boxes[i] = {
+                    'x1': x1, 'y1': y1, 'x2': x2, 'y2': y2,
+                    'y1_flipped': y1_flipped, 'y2_flipped': y2_flipped,
+                    'width': width, 'height': height,
+                    'is_horizontal': width > height
+                }
+            else:
+                # Process regular blocks
+                width = x2 - x1
+                height = y2 - y1
+                width_scaled = round(width * scale, 1)
+                height_scaled = round(height * scale, 1)
+                
+                # Add block without embedded text - we'll add text separately
+                latex.append(f"  \\node[{style}, minimum width={width_scaled}cm, minimum height={height_scaled}cm] at ({center_x_scaled},{center_y_scaled}) (box{i}) {{}};")
+                
+                # Store node info for arrow connections
+                node_boxes[i] = {
+                    'x1': x1, 'y1': y1, 'x2': x2, 'y2': y2,
+                    'center_x': center_x, 'center_y': center_y,
+                    'center_x_scaled': center_x_scaled, 'center_y_scaled': center_y_scaled,
+                    'y1_flipped': y1_flipped, 'y2_flipped': y2_flipped
+                }
+
+        # Now add all text from text_results that isn't associated with blocks
+        for text in text_results:
+            txt_x1, txt_y1, txt_x2, txt_y2 = map(int, text["coords"])
+            txt_center_x = (txt_x1 + txt_x2) / 2
+            txt_center_y = image_height - (txt_y1 + txt_y2) / 2 if image_height else (txt_y1 + txt_y2) / 2
+            
+            # Scale coordinates
+            txt_center_x_scaled = round(txt_center_x * scale, 1)
+            txt_center_y_scaled = round(txt_center_y * scale, 1)
+            
+            # Check if this text is already inside a block
+            is_inside_block = False
+            for node_id, node in node_boxes.items():
+                if (node['x1'] <= txt_x1 <= node['x2'] and 
+                    node['y1'] <= txt_y1 <= node['y2'] and
+                    node['x1'] <= txt_x2 <= node['x2'] and
+                    node['y1'] <= txt_y2 <= node['y2']):
+                    # Add text to the block
+                    latex.append(f"  \\node at ({node['center_x_scaled']},{node['center_y_scaled']}) {{{text['text']}}};")
+                    is_inside_block = True
+                    break
+            
+            # If text isn't inside any block, add it as a standalone text
+            if not is_inside_block:
+                latex.append(f"  \\node[text] at ({txt_center_x_scaled},{txt_center_y_scaled}) {{{text['text']}}};")
+
+        # Build a connection graph and draw arrows (keep existing code)
+        block_connections = {}
+        
+        # Check each arrow to find which blocks it connects
+        for arrow_id, arrow in arrow_boxes.items():
+            # Keep existing arrow processing code
+            x1, y1 = arrow['x1'], arrow['y1']
+            x2, y2 = arrow['x2'], arrow['y2']
+            is_horizontal = arrow['is_horizontal']
+            
+            # Find blocks at the start and end of this arrow
+            start_block = None
+            end_block = None
+            
+            for node_id, node in node_boxes.items():
+                # Check if arrow start point intersects with this block
+                if (node['x1'] <= x1 <= node['x2'] and node['y1'] <= y1 <= node['y2']):
+                    start_block = node_id
+                    
+                # Check if arrow end point intersects with this block
+                if (node['x1'] <= x2 <= node['x2'] and node['y1'] <= y2 <= node['y2']):
+                    end_block = node_id
+            
+            # If we couldn't find exact intersections, try to find the closest blocks
+            if start_block is None or end_block is None:
+                for node_id, node in node_boxes.items():
+                    # For horizontal arrows
+                    if is_horizontal:
+                        # Start block (left side)
+                        if start_block is None and x1 <= node['x2'] and abs(y1 - (node['y1'] + node['y2'])/2) < node['y2'] - node['y1']:
+                            start_block = node_id
+                        
+                        # End block (right side)
+                        if end_block is None and x2 >= node['x1'] and abs(y2 - (node['y1'] + node['y2'])/2) < node['y2'] - node['y1']:
+                            end_block = node_id
+                    
+                    # For vertical arrows
+                    else:
+                        # Start block (top)
+                        if start_block is None and y1 <= node['y2'] and abs(x1 - (node['x1'] + node['x2'])/2) < node['x2'] - node['x1']:
+                            start_block = node_id
+                        
+                        # End block (bottom)
+                        if end_block is None and y2 >= node['y1'] and abs(x2 - (node['x1'] + node['x2'])/2) < node['x2'] - node['x1']:
+                            end_block = node_id
+            
+            # Store the connection if we found both blocks
+            if start_block is not None and end_block is not None and start_block != end_block:
+                if start_block not in block_connections:
+                    block_connections[start_block] = []
+                
+                # Add connection if it doesn't already exist
+                if end_block not in block_connections[start_block]:
+                    block_connections[start_block].append(end_block)
+        
+        # Draw arrows between connected blocks
+        for source_block, destinations in block_connections.items():
+            for dest_block in destinations:
+                latex.append(f"  \\draw[arrow] (box{source_block}) -- (box{dest_block});")
+
+        # Close the TikZ picture and document
+        latex.append("\\end{tikzpicture}")
+        latex.append("\\end{document}")
+
+        return "\n".join(latex)
 
 def main():
     # Inicjalizacja i uruchomienie analizy schematu
@@ -480,7 +726,7 @@ def main():
         results_folder="main_results",
         preprocess_enabled=False,
     )
-    analyzer.analyze(image_path="img/test2.png")
+    analyzer.analyze(image_path="img/test7.jpg")
 
 
 if __name__ == "__main__":
