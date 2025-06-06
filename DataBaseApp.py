@@ -750,24 +750,28 @@ class SubjectSelectorApp:
             except Exception as e:
                 log_graph_message(f"✗ Błąd rozłączania: {e}")
         
-        # Funkcje operacji na grafie
-        def create_text_relations():
+        # Funkcje operacji na grafie (teraz w wątkach)
+        def create_relations():
             if not graph_builder:
                 log_graph_message("✗ Brak połączenia z grafem")
                 return
-            try:
-                log_graph_message("🔄 Tworzenie relacji między węzłami tekstowymi...")
-                graph_builder.create_text_relations()
-                log_graph_message("✓ Relacje tekstowe utworzone pomyślnie")
-            except Exception as e:
-                log_graph_message(f"✗ Błąd tworzenia relacji: {e}")
-        
+
+            def worker():
+                try:
+                    log_graph_message("🔄 Tworzenie relacji podobieństwa w grafie…")
+                    graph_builder.create_relations()
+                    log_graph_message("✓ Relacje podobieństwa utworzone pomyślnie")
+                except Exception as e:
+                    log_graph_message(f"✗ Błąd tworzenia relacji: {e}")
+
+            threading.Thread(target=worker, daemon=True).start()
+
         def show_statistics():
             if not graph_builder:
                 log_graph_message("✗ Brak połączenia z grafem")
                 return
             try:
-                log_graph_message("🔄 Pobieranie statystyk grafu...")
+                log_graph_message("🔄 Pobieranie statystyk grafu…")
                 stats = graph_builder.analyze_learning_patterns()
                 log_graph_message("=== STATYSTYKI GRAFU ===")
                 log_graph_message(f"Węzły tekstowe: {stats['node_statistics'].get('total_nodes', 0)}")
@@ -858,17 +862,20 @@ class SubjectSelectorApp:
                 log_graph_message("✅ Operacja czyszczenia bazy została anulowana")
 
         def run_maintenance():
-            """Uruchamia konserwację grafu"""
             if not graph_builder:
                 log_graph_message("✗ Brak połączenia z grafem")
                 return
-            try:
-                log_graph_message("🔄 Uruchamianie konserwacji grafu...")
-                graph_builder.run_maintenance()
-                log_graph_message("✓ Konserwacja grafu zakończona pomyślnie")
-            except Exception as e:
-                log_graph_message(f"✗ Błąd konserwacji grafu: {e}")
-        
+
+            def worker():
+                try:
+                    log_graph_message("🔄 Uruchamianie pełnej konserwacji grafu…")
+                    graph_builder.run_maintenance()
+                    log_graph_message("✓ Konserwacja grafu zakończona pomyślnie")
+                except Exception as e:
+                    log_graph_message(f"✗ Błąd konserwacji grafu: {e}")
+
+            threading.Thread(target=worker, daemon=True).start()
+
         # Przyciski
         tk.Button(connection_frame, text="Testuj połączenie", 
                  command=test_connection).grid(row=0, column=4, padx=5, pady=5)
@@ -907,8 +914,8 @@ class SubjectSelectorApp:
         btn1.pack(side=tk.LEFT, padx=2, pady=2)
         operation_buttons.append(btn1)
         
-        btn2 = tk.Button(graph_buttons_frame, text="Utwórz relacje tekstowe", 
-                        command=create_text_relations, state=tk.DISABLED)
+        btn2 = tk.Button(graph_buttons_frame, text="Utwórz relacje w grafie", 
+                        command=create_relations, state=tk.DISABLED)
         btn2.pack(side=tk.LEFT, padx=2, pady=2)
         operation_buttons.append(btn2)
         
@@ -1035,7 +1042,7 @@ class SubjectSelectorApp:
             return None
 
     def load_data_to_neo4j(self, selected_subjects, log_function, neo4j_connector):
-        """Ładuje dane do Neo4j z embeddingami obrazowymi i base64 - z ulepszonym loggingiem"""
+        """Ładuje dane do Neo4j z embeddingami obrazowymi i base64 - BEZ TWORZENIA RELACJI"""
         if not neo4j_connector:
             log_function("✗ Brak połączenia z Neo4j")
             return
@@ -1372,30 +1379,21 @@ class SubjectSelectorApp:
             log_function(f"🎯 RAZEM węzłów: {total_nodes_added}")
             log_function(f"⚠️ Błędy: {total_errors}")
             
+            # NOWE: Informacja o braku tworzenia relacji
+            log_function(f"\n📋 UWAGA: Węzły zostały dodane BEZ relacji.")
+            log_function(f"🔗 Aby utworzyć relacje podobieństwa między węzłami:")
+            log_function(f"   1. Użyj przycisku 'Utwórz relacje tekstowe'")
+            log_function(f"   2. Lub użyj przycisku 'Konserwacja grafu' (pełna konserwacja)")
+            
             if total_nodes_added > 0:
-                log_function("\n🔄 Tworzenie relacji między węzłami...")
-                try:
-                    log_function("🔄 Tworzenie relacji podobieństwa...")
-                    # Utwórz standardowe relacje podobieństwa
-                    graph_builder.create_text_relations()
-                    log_function("✅ Relacje podobieństwa utworzone")
-                    
-                    log_function("🔄 Tworzenie relacji cross-modalnych (tekst-obraz)...")
-                    # Utwórz relacje cross-modalne (tekst-obraz)
-                    graph_builder.create_multimodal_relations()
-                    log_function("✅ Relacje cross-modalne utworzone")
-                    
-                except Exception as e:
-                    log_function(f"✗ Błąd tworzenia relacji: {e}")
-                
-                log_function("\n🎉 ŁADOWANIE MULTIMODALNE ZAKOŃCZONE POMYŚLNIE!")
+                log_function("\n🎉 ŁADOWANIE WĘZŁÓW ZAKOŃCZONE POMYŚLNIE!")
                 log_function(f"📈 Graf zawiera teraz:")
                 log_function(f"  • {total_text_chunks} węzłów tekstowych z chunków")
                 log_function(f"  • {total_image_nodes} węzłów obrazów z kontekstem")
                 log_function(f"  • {total_formula_nodes} węzłów wzorów z kontekstem")
                 log_function(f"  • {total_table_nodes} węzłów tabel z kontekstem")
-                log_function(f"  • Relacje podobieństwa i cross-modalne")
                 log_function(f"  • {total_base64_found} węzłów z danymi base64")
+                log_function(f"  • BRAK relacji - dodaj je osobno!")
             else:
                 log_function("⚠️ Nie dodano żadnych danych - sprawdź logi błędów")
                 
@@ -1521,6 +1519,7 @@ class SubjectSelectorApp:
             for stored_path, base64_data in base64_dict.items():
                 if stored_path.endswith(filename):
                     print(f"  ✅ ZNALEZIONO po nazwie pliku: {filename}")
+                   
                     return base64_data
             
             # Fallback 2: Sprawdź z forward slashes

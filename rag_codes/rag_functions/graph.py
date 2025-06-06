@@ -108,52 +108,46 @@ class TextGraphBuilder:
         }
         return label_mapping.get(data_type, 'Chunk')
 
-    def get_image_embedding(self, image_path: str):
+    def create_relations(self):
         """
-        Gets image embedding using CLIP embedder.
-        This should be called from DataBaseApp with proper CLIPEmbedder instance.
+        Create or update SIMILAR_TO relationships between nodes of the same type based on cosine similarity.
+        TextNode -> TextNode, ImageNode -> ImageNode, etc.
         """
-        # This will be handled in DataBaseApp.py with CLIPEmbedder
-        pass
-
-    def create_text_relations(self):
-        """
-        Create or update SIMILAR_TO relationships between nodes based on cosine similarity.
-        Now supports both text and image embeddings from CLIP.
-        """
-        # Query for all nodes that have embeddings (both text and image)
-        query = '''
-        MATCH (a), (b)
-        WHERE (a:TextNode OR a:ImageNode OR a:FormulaNode OR a:TableNode) 
-          AND (b:TextNode OR b:ImageNode OR b:FormulaNode OR b:TableNode)
-          AND elementId(a) < elementId(b)
-          AND a.embedding IS NOT NULL AND b.embedding IS NOT NULL
-        WITH a, b,
-        reduce(dot = 0.0, i IN range(0, size(a.embedding)-1) |
-            dot + a.embedding[i] * b.embedding[i]
-        ) /
-        (
-            sqrt(reduce(na = 0.0, i IN range(0, size(a.embedding)-1) |
-                na + a.embedding[i] * a.embedding[i]
-            )) *
-            sqrt(reduce(nb = 0.0, i IN range(0, size(b.embedding)-1) |
-                nb + b.embedding[i] * b.embedding[i]
-            ))
-        ) AS sim
-        WHERE sim >= $threshold
-        MERGE (a)-[r:SIMILAR_TO]->(b)
-        ON CREATE SET r.weight = sim, 
-                     r.last_used = timestamp(), 
-                     r.reinforcement_count = 0, 
-                     r.created_at = timestamp(),
-                     r.relation_type = 'similarity'
-        ON MATCH SET r.weight = sim, 
-                    r.last_used = timestamp()
-        '''
-        with self.driver.session() as session:
-            result = session.run(query, threshold=self.threshold)
-            summary = result.consume()
-            print(f"Utworzono/zaktualizowano {summary.counters.relationships_created} relacji podobieństwa")
+        # Separate queries for each node type
+        node_types = ['TextNode', 'ImageNode', 'FormulaNode', 'TableNode']
+        
+        for node_type in node_types:
+            query = f'''
+            MATCH (a:{node_type}), (b:{node_type})
+            WHERE elementId(a) < elementId(b)
+              AND a.embedding IS NOT NULL AND b.embedding IS NOT NULL
+            WITH a, b,
+            reduce(dot = 0.0, i IN range(0, size(a.embedding)-1) |
+                dot + a.embedding[i] * b.embedding[i]
+            ) /
+            (
+                sqrt(reduce(na = 0.0, i IN range(0, size(a.embedding)-1) |
+                    na + a.embedding[i] * a.embedding[i]
+                )) *
+                sqrt(reduce(nb = 0.0, i IN range(0, size(b.embedding)-1) |
+                    nb + b.embedding[i] * b.embedding[i]
+                ))
+            ) AS sim
+            WHERE sim >= $threshold
+            MERGE (a)-[r:SIMILAR_TO]->(b)
+            ON CREATE SET r.weight = sim, 
+                         r.last_used = timestamp(), 
+                         r.reinforcement_count = 0, 
+                         r.created_at = timestamp(),
+                         r.relation_type = 'similarity'
+            ON MATCH SET r.weight = sim, 
+                        r.last_used = timestamp()
+            '''
+            
+            with self.driver.session() as session:
+                result = session.run(query, threshold=self.threshold)
+                summary = result.consume()
+                print(f"Utworzono/zaktualizowano {summary.counters.relationships_created} relacji podobieństwa dla {node_type}")
 
     def create_multimodal_relations(self):
         """
@@ -428,15 +422,11 @@ class TextGraphBuilder:
     def run_maintenance(self):
         """
         Run periodic maintenance: create relations, apply decay, adjust thresholds, and prune old.
-        Enhanced for multimodal content.
         """
-        print("Rozpoczynam konserwację grafu multimodalnego...")
+        print("Rozpoczynam konserwację grafu...")
         
-        # Standardowe relacje podobieństwa
+        # Relacje podobieństwa w ramach tego samego typu węzłów
         self.create_text_relations()
-        
-        # Relacje cross-modalne (tekst-obraz)
-        self.create_multimodal_relations()
         
         # Zastosuj zanikanie relacji
         self.decay_relationships()
@@ -447,7 +437,7 @@ class TextGraphBuilder:
         # Wyczyść stare relacje
         self.prune_old()
         
-        print("Konserwacja grafu multimodalnego zakończona.")
+        print("Konserwacja grafu zakończona.")
 
 
 # Pozostałe klasy bez zmian...
@@ -547,7 +537,7 @@ class GraphPruner:
     Klasa do konserwacji grafu - usuwa stare relacje.
     Enhanced with learning-aware maintenance.
     """
-    def __init__(self, connector: Neo4jConnector, similarity_threshold: float = 0.7):
+    def __init__(self, connector: Neo4jConnector, similarity_threshold: float = 0.8):
         self.connector = connector
         self.text_graph = TextGraphBuilder(connector, similarity_threshold)
     
