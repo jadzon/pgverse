@@ -28,7 +28,9 @@ class ChartAnalyzer:
 
         formula, latex_formula = self.data_analyzer.get_formula()
         print("Najlepszy wzór:", formula)
-        self.data_analyzer.plot()    # Perform symbolic regression on the extracted data points
+        x_base= axes["horizontal_axes"][0]["logarithm_base"]
+        y_base= axes["vertical_axes"][0]["logarithm_base"]
+        self.data_analyzer.plot(x_base,y_base)    # Perform symbolic regression on the extracted data points
         metrics = self.data_analyzer.score()
         print("Metryki dopasowania:")
         for name, value in metrics.items():
@@ -36,7 +38,7 @@ class ChartAnalyzer:
 
 
 def main():
-    chart_path = "charts_examples/test1.JPG"  # Replace with your chart image path
+    chart_path = "charts_examples/test7.JPG"  # Replace with your chart image path
     analyzer = ChartAnalyzer(chart_path)
     result = analyzer.analyze()
 

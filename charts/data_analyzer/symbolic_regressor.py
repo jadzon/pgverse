@@ -80,20 +80,27 @@ class SymbolicRegressor:
             "R2": r2_score(y, y_pred)
         }
     
-    def plot(self):
+    def plot(self,x_base = None,y_base= None):
         if not self.fitted:
             raise ValueError("Model nie został dopasowany.")
         
         y_pred = self.predict(self.X)
+        fig, ax = plt.subplots()
+        if x_base:
+            ax.set_xscale('log', base = 2)
+        if y_base:
+            ax.set_yscale('log',base = 2)
+        
+        ax.scatter(self.X, self.y, label="Punkty rzeczywiste", alpha=0.5)
+        
+        ax.plot(self.X, y_pred, color="red", label="Odwzorowana funkcja")
 
-        plt.scatter(self.X, self.y, label="Punkty rzeczywiste", alpha=0.5)
-        plt.plot(self.X, y_pred, color="red", label="Odwzorowana funkcja")
-        plt.legend()
-        plt.xlabel('x')
-        plt.ylabel('y')
-        plt.title('Odwzorowanie wzoru z rozszerzonymi operatorami')
+        ax.legend()
+        ax.set_xlabel('x')
+        ax.set_ylabel('y')
+        ax.set_title('Odwzorowanie wzoru z rozszerzonymi operatorami')
 
-        plt.text(
+        ax.text(
             0.5, 0.9,
             f"${self.latex_formula}$",
             transform=plt.gca().transAxes,

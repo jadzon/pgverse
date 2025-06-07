@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # dane testowe
-
+MARGIN = 10
 class ChartReader:
     def __init__(self,chart_img:cv2.Mat,axis_x,axis_y,bbox_x=None,bbox_y=None):
         self.chart_img = chart_img
@@ -18,7 +18,7 @@ class ChartReader:
         self.cut_out_image = self.chart_img.copy()
         # Define the region of interest (ROI) using the axis coordinates
         self.offset_x1, self.offset_x2 = int(self.bbox_x["x_min"]), int(self.bbox_x["x_max"])
-        self.offset_y1, self.offset_y2 =  int(self.bbox_y["y_min"]),int(self.bbox_x["y_min"])
+        self.offset_y1, self.offset_y2 =  int(self.bbox_y["y_min"]),int(self.bbox_x["y_min"] - MARGIN)
         # Ensure the coordinates are within the image bounds   
         # Cut out the chart from the image
         self.cut_out_image = self.cut_out_image[self.offset_y1:self.offset_y2, self.offset_x1:self.offset_x2]
@@ -68,38 +68,41 @@ class ChartReader:
         
         # Convert pixel coordinates to actual data values
         data_points = []
-        x_min_value = self.axis_x["range"]["min"]
+        x_min_value = self.axis_x["values"][0]
 
-        y_min_value = self.axis_y["range"]["min"]
+        y_min_value = self.axis_y["values"][-1]
+        print(f"Y_min:{y_min_value}")
         # Process points, applying the step size
         current_x_pixel = -float('inf')
         for x_pixel, y_pixel in pixel_points:
             # Apply step size (in pixel space)
-            if x_pixel - current_x_pixel < self.axis_x["step"]:
-                continue
+            # if x_pixel - current_x_pixel < self.axis_x["step"]:
+            #     continue
             current_x_pixel = x_pixel
             # Check if x_pixel_adjusted is within the image bounds   
             x_pixel_adjusted = x_pixel - self.axis_x["positions"][0] +self.offset_x1
             if self.axis_x["is_logarithmic"]:
-                # For logarithmic axis, map pixel to value using logarithmic scale
-                x_data = x_min_value + (np.log10(x_pixel) - np.log10(self.axis_x["positions"][0])) * self.axis_x["scale_factor"]
+                
+                x_data = x_min_value*((2)*(1+x_pixel_adjusted / self.axis_x["pixel_step"]))* self.axis_x["scale_factor"]
             else:
                 x_data = (x_min_value+(x_pixel_adjusted / self.axis_x["pixels_per_unit"]))/self.axis_x["scale_factor"] 
             y_max_pixel = self.cut_out_image.shape[0]
             y_pixel_adjusted = self.offset_y1 + y_max_pixel - self.axis_y["positions"][0] - y_pixel 
             if self.axis_y["is_logarithmic"]:
                 # For logarithmic axis, map pixel to value using logarithmic scale
-                y_data = y_min_value + (np.log10(y_pixel) - np.log10(self.axis_y["positions"][0])) * self.axis_y["scale_factor"]
+                y_data = y_min_value*((2)*(1+y_pixel_adjusted / self.axis_y["pixel_step"]))* self.axis_y["scale_factor"]
             else:
                 # Note: Need to offset y_pixel by the y1 value to align with axis positions
                 y_data = (y_min_value +  (y_pixel_adjusted / self.axis_y["pixels_per_unit"]))/self.axis_y["scale_factor"]
-            
+            if y_data == -float('inf') or x_data == -float('inf') or y_data == float('inf') or x_data == float('inf'):
+                continue
             # Add rounded values to data points
             data_points.append((round(x_data, 2), round(y_data, 2)))
         
         # Display the extracted points
         print(f"Extracted {len(data_points)} data points")
-        
+        print(f"Max X: {max(data_points, key=lambda p: p[0])[0]}, Min X: {min(data_points, key=lambda p: p[0])[0]}")
+        print(f"Max Y: {max(data_points, key=lambda p: p[1])[1]}, Min Y: {min(data_points, key=lambda p: p[1])[1]}")
         # Visualize the results
         self._visualize_data_points(pixel_points, data_points, self.axis_x, self.axis_y)
         return data_points

@@ -6,11 +6,11 @@ import cv2
 import json
 from pathlib import Path
 
-from chart_preprocessing import preprocess_for_small_text
-from small_text_ocr import detect_text_combined
-from run_text_extraction import run_chart_text_extraction, format_results_to_json, annotate_image
-from axes_detection import process_results_for_axes, process_image_for_axes
-from axes_interpretation import process_axes_interpretation
+from .chart_preprocessing import preprocess_for_small_text
+from .small_text_ocr import detect_text_combined
+from .run_text_extraction import run_chart_text_extraction, format_results_to_json, annotate_image
+from .axes_detection import process_results_for_axes, process_image_for_axes
+from .axes_interpretation import process_axes_interpretation
 
 # Konfiguracja - ustawienia domyślne
 CONFIG = {
