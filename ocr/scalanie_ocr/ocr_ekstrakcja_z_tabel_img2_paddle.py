@@ -57,12 +57,17 @@ def preprocess_for_paddle_upscaled(path: Path, scale: int = 2) -> np.ndarray:
 
 
 def paddle_grid_group(result, y_thresh=20, x_thresh=30) -> list:
+    # Jeśli nie ma wykrytych boxów, zwracamy pusty grid
+    if not result:
+        return []
+
     cells = []
     for box, (text, _) in result:
         x_c = sum(p[0] for p in box) / 4
         y_c = sum(p[1] for p in box) / 4
         cells.append({'x': x_c, 'y': y_c, 'text': text})
     cells.sort(key=lambda c: (c['y'], c['x']))
+
     rows, current, last_y = [], [], None
     for cell in cells:
         if last_y is None or abs(cell['y'] - last_y) <= y_thresh:
@@ -73,8 +78,16 @@ def paddle_grid_group(result, y_thresh=20, x_thresh=30) -> list:
         last_y = cell['y']
     if current:
         rows.append(current)
+
+    # teraz rows nie jest puste, możemy liczyć max_cols
     max_cols = max(len(r) for r in rows)
-    return [[c['text'] for c in r] + [""] * (max_cols - len(r)) for r in rows]
+
+    # budujemy finalny grid z dopełnieniem pustymi komórkami
+    grid = []
+    for row in rows:
+        texts = [c['text'] for c in row]
+        grid.append(texts + [""] * (max_cols - len(texts)))
+    return grid
 
 
 if __name__ == "__main__":
@@ -103,12 +116,10 @@ if __name__ == "__main__":
                 continue
 
             # 2) OCR Paddle na powiększonym obrazie
-            #    Uwaga: paddle.ocr(...) może zwrócić [] lub None
             raw = ocr_paddle.ocr(upscaled_np, cls=False)
             if not raw or raw[0] is None:
                 print("  Brak wyników OCR Paddle → fallback")
-                # TUTAJ: jeśli chcesz, możesz przejść od razu do fallbacku (gridowania)
-                grid = paddle_grid_group([])  # np. pusty wynik
+                grid = paddle_grid_group([])
                 out_csv = output_dir / f"{fname}_paddle.csv"
                 with open(out_csv, "w", newline="", encoding="utf-8") as f:
                     writer = csv.writer(f, delimiter=";")
@@ -119,18 +130,12 @@ if __name__ == "__main__":
             # Jeśli jest coś w raw, to bierzemy pierwszy element
             result_paddle = raw[0]
 
-            # 3) Obliczamy score tylko wtedy, gdy result_paddle to lista par (box, (text, score))
+            # 3) Obliczamy score
             score = paddle_score_above_threshold(result_paddle)
 
             if score >= SCORE_THRESHOLD:
                 print(f"  img2table (score={score:.2f})")
-                # … dalej oryginalny kod dla sukcesu PaddleOCR …
-
-                # Aby Img2TableImage działał na powiększonym obrazie,
-                # musimy zapisać go tymczasowo na dysku:
-                with tempfile.NamedTemporaryFile(
-                    suffix=f"_{fname}_upscaled.png", delete=False
-                ) as tmpf:
+                with tempfile.NamedTemporaryFile(suffix=f"_{fname}_upscaled.png", delete=False) as tmpf:
                     tmp_path = Path(tmpf.name)
                     up_img_pil = PILImage.fromarray(upscaled_np)
                     up_img_pil.save(str(tmp_path))
@@ -138,7 +143,6 @@ if __name__ == "__main__":
 
                 doc = Img2TableImage(str(tmp_path), detect_rotation=True)
                 tables = doc.extract_tables(ocr=ocr_tess)
-
                 try:
                     os.remove(str(tmp_path))
                 except OSError:
@@ -173,11 +177,7 @@ if __name__ == "__main__":
                     print(f"   Zapisano: {out_csv}")
 
             else:
-                # -----------------------------------
-                # 4) Jeśli PaddleOCR słaby → fallback
-                # -----------------------------------
                 print(f"  Słaby (score={score:.2f}) — Paddle fallback")
-                # Skoro result_paddle jest poprawną listą, możemy zrobić grid
                 grid = paddle_grid_group(result_paddle)
                 out_csv = output_dir / f"{fname}_paddle.csv"
                 with open(out_csv, "w", newline="", encoding="utf-8") as f:
