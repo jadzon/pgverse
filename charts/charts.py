@@ -31,12 +31,18 @@ class ChartAnalyzer:
 
         formula, latex_formula = self.data_analyzer.get_formula()
         print("Najlepszy wzór:", formula)
-        self.data_analyzer.plot()    # Perform symbolic regression on the extracted data points
+        x_base= axes["horizontal_axes"][0]["logarithm_base"]
+        y_base= axes["vertical_axes"][0]["logarithm_base"]
+        self.data_analyzer.plot(x_base,y_base)    # Perform symbolic regression on the extracted data points
+        metrics = self.data_analyzer.score()
+        print("Metryki dopasowania:")
+        for name, value in metrics.items():
+            print(f"{name}: {value:.4f}")
 
 
 def main():
     chart_path = "charts_examples/1.JPG"  # Replace with your chart image path
-    csv_path = "dane/1.csv"  # Replace with your CSV data path
+    csv_path = "dane/1.csv"  # Replace with your CSV file path
     analyzer = ChartAnalyzer(chart_path)
     result = analyzer.analyze()
     comparison_metrics = analyzer.compare_with_csv(csv_path)

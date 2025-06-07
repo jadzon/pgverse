@@ -101,36 +101,35 @@ class SymbolicRegressor:
         print("Porównanie z danymi z CSV:")
         for name, value in metrics.items():
             print(f"{name}: {value:.4f}")
-        
         return metrics
 
         
 
-    def plot(self, save_path=None):
-            if not self.fitted:
-                raise ValueError("Model nie został dopasowany.")
+    def plot(self, save_path=None, x_base=None, y_base=None):
+        if not self.fitted:
+            raise ValueError("Model nie został dopasowany.")
             
-            y_pred = self.predict(self.X)
+        y_pred = self.predict(self.X)
+        fig, ax = plt.subplots()
+        if x_base:
+            ax.set_xscale('log', base = x_base)
+        if y_base:
+            ax.set_yscale('log',base = y_base)
+        
+        ax.scatter(self.X, self.y, label="Punkty rzeczywiste", alpha=0.5)
+        
+        ax.plot(self.X, y_pred, color="red", label="Odwzorowana funkcja")
 
-            plt.figure()
-            plt.scatter(self.X, self.y, label="Punkty rzeczywiste", alpha=0.5)
-            plt.plot(self.X, y_pred, color="red", label="Odwzorowana funkcja")
-            plt.legend()
-            plt.xlabel('x')
-            plt.ylabel('y')
-            plt.title('Odwzorowanie wzoru z rozszerzonymi operatorami')
+        ax.legend()
+        ax.set_xlabel('x')
+        ax.set_ylabel('y')
+        ax.set_title('Odwzorowanie wzoru z rozszerzonymi operatorami')
 
-            plt.text(
-                0.5, 0.9,
-                f"${self.latex_formula}$",
-                transform=plt.gca().transAxes,
-                fontsize=12, color="black",
-                ha="center", bbox=dict(facecolor='white', alpha=0.8)
-            )
-
-            if save_path:
-                plt.tight_layout()
-                plt.savefig(save_path, dpi=150)
-                plt.close()
-            else:
-                plt.show()
+        ax.text(
+            0.5, 0.9,
+            f"${self.latex_formula}$",
+            transform=plt.gca().transAxes,
+            fontsize=12, color="black",
+            ha="center", bbox=dict(facecolor='white', alpha=0.8)
+        )
+        plt.show()
