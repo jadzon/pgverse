@@ -82,15 +82,15 @@ class ChartReader:
             # Check if x_pixel_adjusted is within the image bounds   
             x_pixel_adjusted = x_pixel - self.axis_x["positions"][0] +self.offset_x1
             if self.axis_x["is_logarithmic"]:
-                
-                x_data = x_min_value*((2)*(1+x_pixel_adjusted / self.axis_x["pixel_step"]))* self.axis_x["scale_factor"]
+
+                x_data = x_min_value*((self.axis_x["logarithm_base"])*(1+x_pixel_adjusted / self.axis_x["pixel_step"]))* self.axis_x["scale_factor"]
             else:
                 x_data = (x_min_value+(x_pixel_adjusted / self.axis_x["pixels_per_unit"]))/self.axis_x["scale_factor"] 
             y_max_pixel = self.cut_out_image.shape[0]
             y_pixel_adjusted = self.offset_y1 + y_max_pixel - self.axis_y["positions"][0] - y_pixel 
             if self.axis_y["is_logarithmic"]:
                 # For logarithmic axis, map pixel to value using logarithmic scale
-                y_data = y_min_value*((2)*(1+y_pixel_adjusted / self.axis_y["pixel_step"]))* self.axis_y["scale_factor"]
+                y_data = y_min_value*((self.axis_y["logarithm_base"])*(1+y_pixel_adjusted / self.axis_y["pixel_step"]))* self.axis_y["scale_factor"]
             else:
                 # Note: Need to offset y_pixel by the y1 value to align with axis positions
                 y_data = (y_min_value +  (y_pixel_adjusted / self.axis_y["pixels_per_unit"]))/self.axis_y["scale_factor"]

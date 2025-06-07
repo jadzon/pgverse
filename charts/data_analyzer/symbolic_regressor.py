@@ -87,9 +87,9 @@ class SymbolicRegressor:
         y_pred = self.predict(self.X)
         fig, ax = plt.subplots()
         if x_base:
-            ax.set_xscale('log', base = 2)
+            ax.set_xscale('log', base = x_base)
         if y_base:
-            ax.set_yscale('log',base = 2)
+            ax.set_yscale('log',base = y_base)
         
         ax.scatter(self.X, self.y, label="Punkty rzeczywiste", alpha=0.5)
         
