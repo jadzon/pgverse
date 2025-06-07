@@ -8,6 +8,9 @@ class ChartAnalyzer:
         self.chart_path = chart_path
         self.chart = cv2.imread(chart_path)
         self.data_analyzer = SymbolicRegressor()
+        
+    def compare_with_csv(self, csv_path):
+        return self.data_analyzer.compare_with_csv(csv_path)
 
     def analyze(self):
         # Read the chart image  
@@ -29,17 +32,14 @@ class ChartAnalyzer:
         formula, latex_formula = self.data_analyzer.get_formula()
         print("Najlepszy wzór:", formula)
         self.data_analyzer.plot()    # Perform symbolic regression on the extracted data points
-        metrics = self.data_analyzer.score()
-        print("Metryki dopasowania:")
-        for name, value in metrics.items():
-            print(f"{name}: {value:.4f}")
 
 
 def main():
-    chart_path = "charts_examples/test1.JPG"  # Replace with your chart image path
+    chart_path = "charts_examples/1.JPG"  # Replace with your chart image path
+    csv_path = "dane/1.csv"  # Replace with your CSV data path
     analyzer = ChartAnalyzer(chart_path)
     result = analyzer.analyze()
-
+    comparison_metrics = analyzer.compare_with_csv(csv_path)
 
 if __name__ == "__main__":
     main()

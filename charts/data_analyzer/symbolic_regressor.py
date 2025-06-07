@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from pysr import PySRRegressor
 from sympy import latex, simplify,Float
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
-
+import pandas as pd
 def round_constants(expr, n_digits=4):
         return expr.xreplace({
             x: Float(round(x, n_digits))
@@ -79,25 +79,58 @@ class SymbolicRegressor:
             "MAE": mean_absolute_error(y, y_pred),
             "R2": r2_score(y, y_pred)
         }
-    
-    def plot(self):
+    def compare_with_csv(self, csv_path):
         if not self.fitted:
-            raise ValueError("Model nie został dopasowany.")
+            raise ValueError("Model must be trained before comparison.")
+
+        df = pd.read_csv(csv_path)
+        if "x" not in df.columns or "y" not in df.columns:
+            raise ValueError("CSV must contain 'x' and 'y' columns.")
+
+        x_csv = df["x"].values.reshape(-1, 1)
+        y_csv = df["y"].values
+
+        y_pred = self.predict(x_csv)
+
+        metrics = {
+            "MSE": mean_squared_error(y_csv, y_pred),
+            "MAE": mean_absolute_error(y_csv, y_pred),
+            "R2": r2_score(y_csv, y_pred)
+        }
+
+        print("Porównanie z danymi z CSV:")
+        for name, value in metrics.items():
+            print(f"{name}: {value:.4f}")
         
-        y_pred = self.predict(self.X)
+        return metrics
 
-        plt.scatter(self.X, self.y, label="Punkty rzeczywiste", alpha=0.5)
-        plt.plot(self.X, y_pred, color="red", label="Odwzorowana funkcja")
-        plt.legend()
-        plt.xlabel('x')
-        plt.ylabel('y')
-        plt.title('Odwzorowanie wzoru z rozszerzonymi operatorami')
+        
 
-        plt.text(
-            0.5, 0.9,
-            f"${self.latex_formula}$",
-            transform=plt.gca().transAxes,
-            fontsize=12, color="black",
-            ha="center", bbox=dict(facecolor='white', alpha=0.8)
-        )
-        plt.show()
+    def plot(self, save_path=None):
+            if not self.fitted:
+                raise ValueError("Model nie został dopasowany.")
+            
+            y_pred = self.predict(self.X)
+
+            plt.figure()
+            plt.scatter(self.X, self.y, label="Punkty rzeczywiste", alpha=0.5)
+            plt.plot(self.X, y_pred, color="red", label="Odwzorowana funkcja")
+            plt.legend()
+            plt.xlabel('x')
+            plt.ylabel('y')
+            plt.title('Odwzorowanie wzoru z rozszerzonymi operatorami')
+
+            plt.text(
+                0.5, 0.9,
+                f"${self.latex_formula}$",
+                transform=plt.gca().transAxes,
+                fontsize=12, color="black",
+                ha="center", bbox=dict(facecolor='white', alpha=0.8)
+            )
+
+            if save_path:
+                plt.tight_layout()
+                plt.savefig(save_path, dpi=150)
+                plt.close()
+            else:
+                plt.show()
