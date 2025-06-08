@@ -17,7 +17,7 @@ class Neo4jConnector:
         self.driver.close()
 
 
-class TextGraphBuilder:
+class GraphBuilder:
     """
     Builds and maintains a self-learning graph of text nodes.
     Each node has:
@@ -30,7 +30,7 @@ class TextGraphBuilder:
       - base64: base64 encoded data for images, formulas, tables
     Self-learning: reinforces edges when nodes are accessed together.
     """
-    def __init__(self, connector: Neo4jConnector, similarity_threshold: float = 0.8):
+    def __init__(self, connector: Neo4jConnector, similarity_threshold: float = 0.95):
         self.driver = connector.get_driver()
         self.threshold = similarity_threshold
         self.usage_patterns = defaultdict(int)
@@ -111,16 +111,361 @@ class TextGraphBuilder:
     def create_relations(self):
         """
         Create or update SIMILAR_TO relationships between nodes of the same type based on cosine similarity.
-        TextNode -> TextNode, ImageNode -> ImageNode, etc.
+        BEZ LIMITÓW - przetwarza wszystkie węzły
         """
-        # Separate queries for each node type
         node_types = ['TextNode', 'ImageNode', 'FormulaNode', 'TableNode']
         
         for node_type in node_types:
-            query = f'''
-            MATCH (a:{node_type}), (b:{node_type})
-            WHERE elementId(a) < elementId(b)
-              AND a.embedding IS NOT NULL AND b.embedding IS NOT NULL
+            print(f"🔄 Przetwarzanie typu węzła: {node_type}")
+            
+            # Najpierw policz ile węzłów tego typu mamy
+            count_query = f'''
+            MATCH (n:{node_type})
+            WHERE n.embedding IS NOT NULL
+            RETURN count(n) as node_count
+            '''
+            
+            with self.driver.session() as session:
+                result = session.run(count_query)
+                node_count = result.single()['node_count']
+                print(f"  📊 Znaleziono {node_count} węzłów typu {node_type} z embeddingami")
+                
+                if node_count == 0:
+                    print(f"  ⚠️ Brak węzłów {node_type} - pomijam")
+                    continue
+                
+                # INFORMACJA bez limitowania
+                if node_count > 1000:
+                    estimated_time = (node_count * node_count / 2) / 5000
+                    print(f"  ⏰ Szacowany czas: {estimated_time:.1f} minut")
+                    print(f"  🚀 Rozpoczynam przetwarzanie {node_count} węzłów...")
+            
+                # ZAWSZE używaj prostego podejścia dla wszystkich rozmiarów
+                print(f"  🔄 Tworzenie relacji podobieństwa...")
+                start_time = time.time()
+                
+                simple_query = f'''
+                MATCH (a:{node_type}), (b:{node_type})
+                WHERE elementId(a) < elementId(b)
+                  AND a.embedding IS NOT NULL AND b.embedding IS NOT NULL
+                WITH a, b,
+                reduce(dot = 0.0, i IN range(0, size(a.embedding)-1) |
+                    dot + a.embedding[i] * b.embedding[i]
+                ) /
+                (
+                    sqrt(reduce(na = 0.0, i IN range(0, size(a.embedding)-1) |
+                        na + a.embedding[i] * a.embedding[i]
+                    )) *
+                    sqrt(reduce(nb = 0.0, i IN range(0, size(b.embedding)-1) |
+                        nb + b.embedding[i] * b.embedding[i]
+                    ))
+                ) AS sim
+                WHERE sim >= $threshold
+                MERGE (a)-[r:SIMILAR_TO]->(b)
+                ON CREATE SET r.weight = sim, 
+                             r.last_used = timestamp(), 
+                             r.reinforcement_count = 0, 
+                             r.created_at = timestamp(),
+                             r.relation_type = 'similarity'
+                ON MATCH SET r.weight = sim, 
+                            r.last_used = timestamp()
+                '''
+                
+                try:
+                    result = session.run(simple_query, threshold=self.threshold)
+                    summary = result.consume()
+                    end_time = time.time()
+                    
+                    relations_created = summary.counters.relationships_created
+                    duration = end_time - start_time
+                    
+                    print(f"  ✅ ZAKOŃCZONO {node_type}: Utworzono {relations_created} relacji w {duration:.1f}s")
+                    
+                except Exception as e:
+                    print(f"  ❌ Błąd dla {node_type}: {e}")
+                    import traceback
+                    print(f"  🔍 Szczegóły błędu: {traceback.format_exc()}")
+        
+        print()
+
+    def create_relations_with_progress_callback(self, progress_callback=None):
+        """
+        Wersja z callbackiem do GUI - ZOPTYMALIZOWANA dla dużej liczby węzłów
+        """
+        node_types = ['TextNode', 'ImageNode', 'FormulaNode', 'TableNode']
+        total_types = len(node_types)
+        
+        for type_idx, node_type in enumerate(node_types):
+            if progress_callback:
+                progress_callback(f"🔄 Przetwarzanie {node_type} ({type_idx+1}/{total_types})")
+        
+            # Policz węzły
+            count_query = f'MATCH (n:{node_type}) WHERE n.embedding IS NOT NULL RETURN count(n) as cnt'
+            with self.driver.session() as session:
+                node_count = session.run(count_query).single()['cnt']
+                
+                if progress_callback:
+                    progress_callback(f"  📊 {node_type}: {node_count} węzłów")
+                
+                if node_count == 0:
+                    if progress_callback:
+                        progress_callback(f"  ⚠️ Brak węzłów {node_type} - pomijam")
+                    continue
+                
+                # NOWE: Inteligentny wybór strategii na podstawie liczby węzłów
+                if node_count <= 200:
+                    # Małe zestawy - standardowe podejście
+                    if progress_callback:
+                        progress_callback(f"  🚀 Mały zestaw - standardowe przetwarzanie...")
+                    self._create_relations_standard(node_type, session, progress_callback)
+                
+                elif node_count <= 1000:
+                    # Średnie zestawy - przetwarzanie partiami
+                    if progress_callback:
+                        progress_callback(f"  ⚡ Średni zestaw - przetwarzanie partiami...")
+                    self._create_relations_batched(node_type, session, progress_callback, batch_size=50)
+                
+                else:
+                    # Duże zestawy - zaawansowane przetwarzanie z optymalizacjami
+                    if progress_callback:
+                        progress_callback(f"  🔥 Duży zestaw ({node_count}) - zaawansowane przetwarzanie...")
+                        estimated_time = (node_count * node_count / 2) / 2000  # Lepsze oszacowanie
+                        progress_callback(f"  ⏰ Szacowany czas: {estimated_time:.1f} minut")
+                    
+                    self._create_relations_optimized(node_type, session, progress_callback)
+
+        if progress_callback:
+            progress_callback("🎉 Wszystkie typy węzłów przetworzone!")
+
+    def _create_relations_standard(self, node_type, session, progress_callback):
+        """Standardowe tworzenie relacji dla małych zestawów"""
+        start_time = time.time()
+        
+        query = f'''
+        MATCH (a:{node_type}), (b:{node_type})
+        WHERE elementId(a) < elementId(b)
+          AND a.embedding IS NOT NULL AND b.embedding IS NOT NULL
+          AND NOT (a)-[:SIMILAR_TO]-(b)
+        WITH a, b,
+        reduce(dot = 0.0, i IN range(0, size(a.embedding)-1) |
+            dot + a.embedding[i] * b.embedding[i]
+        ) /
+        (
+            sqrt(reduce(na = 0.0, i IN range(0, size(a.embedding)-1) |
+                na + a.embedding[i] * a.embedding[i]
+            )) *
+            sqrt(reduce(nb = 0.0, i IN range(0, size(b.embedding)-1) |
+                nb + b.embedding[i] * b.embedding[i]
+            ))
+        ) AS sim
+        WHERE sim >= $threshold
+        CREATE (a)-[r:SIMILAR_TO]->(b)
+        SET r.weight = sim, 
+            r.last_used = timestamp(), 
+            r.created_at = timestamp(),
+            r.reinforcement_count = 0,
+            r.relation_type = 'similarity'
+        '''
+        
+        try:
+            result = session.run(query, threshold=self.threshold)
+            summary = result.consume()
+            end_time = time.time()
+            
+            relations_created = summary.counters.relationships_created
+            duration = end_time - start_time
+            
+            if progress_callback:
+                progress_callback(f"  ✅ {node_type}: {relations_created} relacji w {duration:.1f}s")
+                
+        except Exception as e:
+            if progress_callback:
+                progress_callback(f"  ❌ Błąd standardowy dla {node_type}: {e}")
+
+    def _create_relations_batched(self, node_type, session, progress_callback, batch_size=50):
+        """Przetwarzanie partiami dla średnich zestawów"""
+        start_time = time.time()
+        total_relations = 0
+        
+        # Pobierz węzły partiami
+        offset = 0
+        batch_num = 0
+        
+        while True:
+            batch_num += 1
+            
+            # Pobierz partię węzłów
+            batch_query = f'''
+            MATCH (n:{node_type})
+            WHERE n.embedding IS NOT NULL
+            RETURN n.id as id, n.embedding as embedding
+            SKIP $offset LIMIT $batch_size
+            '''
+            
+            batch_result = session.run(batch_query, offset=offset, batch_size=batch_size)
+            batch_nodes = [dict(record) for record in batch_result]
+            
+            if not batch_nodes:
+                break
+            
+            if progress_callback:
+                progress_callback(f"    📦 Partia {batch_num}: {len(batch_nodes)} węzłów (offset {offset})")
+            
+            # Dla każdego węzła w partii, porównaj z WSZYSTKIMI następnymi węzłami
+            for i, node_a in enumerate(batch_nodes):
+                # Porównaj z pozostałymi węzłami w tej partii
+                for j in range(i + 1, len(batch_nodes)):
+                    node_b = batch_nodes[j]
+                    relations_count = self._create_single_relation_if_similar(
+                        node_a, node_b, session
+                    )
+                    if relations_count is not None:
+                        total_relations += relations_count
+                
+                # Porównaj z wszystkimi węzłami POZA tą partią (tylko te z wyższym offset)
+                compare_query = f'''
+                MATCH (a:{node_type} {{id: $node_a_id}}), (b:{node_type})
+                WHERE elementId(a) < elementId(b)
+                  AND b.embedding IS NOT NULL
+                  AND NOT b.id IN $current_batch_ids
+                  AND NOT (a)-[:SIMILAR_TO]-(b)
+                WITH a, b,
+                reduce(dot = 0.0, i IN range(0, size(a.embedding)-1) |
+                    dot + a.embedding[i] * b.embedding[i]
+                ) /
+                (
+                    sqrt(reduce(na = 0.0, i IN range(0, size(a.embedding)-1) |
+                        na + a.embedding[i] * a.embedding[i]
+                    )) *
+                    sqrt(reduce(nb = 0.0, i IN range(0, size(b.embedding)-1) |
+                        nb + b.embedding[i] * b.embedding[i]
+                    ))
+                ) AS sim
+                WHERE sim >= $threshold
+                CREATE (a)-[r:SIMILAR_TO]->(b)
+                SET r.weight = sim, 
+                    r.last_used = timestamp(), 
+                    r.created_at = timestamp(),
+                    r.reinforcement_count = 0,
+                    r.relation_type = 'similarity'
+                RETURN count(r) as relations_created
+                '''
+                
+                current_batch_ids = [node['id'] for node in batch_nodes]
+                try:
+                    comp_result = session.run(compare_query, 
+                                            node_a_id=node_a['id'], 
+                                            threshold=self.threshold,
+                                            current_batch_ids=current_batch_ids)
+                    comp_record = comp_result.single()
+                    relations_count = comp_record['relations_created'] if comp_record else 0
+                    if relations_count is not None:
+                        total_relations += relations_count
+                except Exception as e:
+                    if progress_callback:
+                        progress_callback(f"    ⚠️ Błąd porównywania węzła {node_a['id']}: {e}")
+            
+            offset += batch_size
+            
+            if progress_callback and batch_num % 5 == 0:
+                progress_callback(f"    🔗 Po {batch_num} partiach: {total_relations} relacji")
+        
+        end_time = time.time()
+        duration = end_time - start_time
+        
+        if progress_callback:
+            progress_callback(f"  ✅ {node_type}: {total_relations} relacji w {duration:.1f}s (partie)")
+
+    def _create_single_relation_if_similar(self, node_a, node_b, session):
+        """Tworzy relację między dwoma węzłami jeśli są podobne i relacja jeszcze nie istnieje"""
+        try:
+            # Sprawdź czy węzły mają embeddingi
+            if not node_a.get('embedding') or not node_b.get('embedding'):
+                return 0
+                
+            # Sprawdź czy relacja już istnieje
+            check_query = '''
+            MATCH (a {id: $id_a}), (b {id: $id_b})
+            RETURN EXISTS((a)-[:SIMILAR_TO]-(b)) as relation_exists
+            '''
+            
+            check_result = session.run(check_query, id_a=node_a['id'], id_b=node_b['id'])
+            if check_result.single()['relation_exists']:
+                return 0  # Relacja już istnieje, nie twórz duplikatu
+                
+            # Oblicz podobieństwo lokalnie (szybciej niż w Cypher)
+            emb_a = node_a['embedding']
+            emb_b = node_b['embedding']
+            
+            # Sprawdź czy embeddingi mają odpowiednią długość
+            if len(emb_a) == 0 or len(emb_b) == 0:
+                return 0
+            
+            # Cosine similarity
+            dot_product = sum(a * b for a, b in zip(emb_a, emb_b))
+            norm_a = sum(a * a for a in emb_a) ** 0.5
+            norm_b = sum(b * b for b in emb_b) ** 0.5
+            
+            if norm_a > 0 and norm_b > 0:
+                similarity = dot_product / (norm_a * norm_b)
+                
+                if similarity >= self.threshold:
+                    # Utwórz relację używając CREATE (nie MERGE)
+                    relation_query = '''
+                    MATCH (a {id: $id_a}), (b {id: $id_b})
+                    CREATE (a)-[r:SIMILAR_TO]->(b)
+                    SET r.weight = $similarity, 
+                        r.last_used = timestamp(), 
+                        r.created_at = timestamp(),
+                        r.reinforcement_count = 0,
+                        r.relation_type = 'similarity'
+                    RETURN count(r) as created
+                    '''
+                    
+                    try:
+                        result = session.run(relation_query, 
+                                           id_a=node_a['id'], 
+                                           id_b=node_b['id'], 
+                                           similarity=similarity)
+                        record = result.single()
+                        return record['created'] if record else 0
+                    except Exception:
+                        return 0
+        
+        except Exception:
+            return 0
+        
+        return 0
+
+    def _create_relations_optimized(self, node_type, session, progress_callback):
+        """Zoptymalizowane tworzenie relacji dla dużych zestawów"""
+        start_time = time.time()
+        
+        if progress_callback:
+            progress_callback(f"  🔧 Optymalizacja 1: Tworzenie indeksów...")
+        
+        # Utwórz indeksy dla wydajności
+        try:
+            session.run(f"CREATE INDEX {node_type}_embedding_idx IF NOT EXISTS FOR (n:{node_type}) ON (n.embedding)")
+            session.run(f"CREATE INDEX {node_type}_id_idx IF NOT EXISTS FOR (n:{node_type}) ON (n.id)")
+        except Exception:
+            pass
+        
+        if progress_callback:
+            progress_callback(f"  ⚡ Optymalizacja 2: Przetwarzanie z threshold {self.threshold}...")
+        
+        # ZMIANA: Usuń hardcoded threshold - użyj tylko self.threshold
+        # high_threshold = max(self.threshold, 0.95)  # ← USUŃ TO
+        used_threshold = self.threshold  # ← UŻYWAJ TEGO ZAWSZE
+
+        optimized_query = f'''
+        CALL {{
+            MATCH (a:{node_type})
+            WHERE a.embedding IS NOT NULL
+            WITH a LIMIT 100
+            MATCH (b:{node_type})
+            WHERE b.embedding IS NOT NULL AND elementId(a) < elementId(b)
+              AND NOT (a)-[:SIMILAR_TO]-(b)
             WITH a, b,
             reduce(dot = 0.0, i IN range(0, size(a.embedding)-1) |
                 dot + a.embedding[i] * b.embedding[i]
@@ -134,59 +479,89 @@ class TextGraphBuilder:
                 ))
             ) AS sim
             WHERE sim >= $threshold
-            MERGE (a)-[r:SIMILAR_TO]->(b)
-            ON CREATE SET r.weight = sim, 
-                         r.last_used = timestamp(), 
-                         r.reinforcement_count = 0, 
-                         r.created_at = timestamp(),
-                         r.relation_type = 'similarity'
-            ON MATCH SET r.weight = sim, 
-                        r.last_used = timestamp()
-            '''
-            
-            with self.driver.session() as session:
-                result = session.run(query, threshold=self.threshold)
-                summary = result.consume()
-                print(f"Utworzono/zaktualizowano {summary.counters.relationships_created} relacji podobieństwa dla {node_type}")
-
-    def create_multimodal_relations(self):
-        """
-        Creates enhanced relationships between different types of content.
-        CLIP embeddings allow comparison between text and images.
-        """
-        # Relationships between text nodes and image/formula/table nodes
-        multimodal_query = '''
-        MATCH (t:TextNode), (v)
-        WHERE (v:ImageNode OR v:FormulaNode OR v:TableNode)
-          AND t.embedding IS NOT NULL AND v.embedding IS NOT NULL
-          AND t.source = v.source  // Same source increases relevance
-        WITH t, v,
-        reduce(dot = 0.0, i IN range(0, size(t.embedding)-1) |
-            dot + t.embedding[i] * v.embedding[i]
-        ) /
-        (
-            sqrt(reduce(na = 0.0, i IN range(0, size(t.embedding)-1) |
-                na + t.embedding[i] * t.embedding[i]
-            )) *
-            sqrt(reduce(nb = 0.0, i IN range(0, size(v.embedding)-1) |
-                nb + v.embedding[i] * v.embedding[i]
-            ))
-        ) AS sim
-        WHERE sim >= $threshold * 0.8  // Slightly lower threshold for cross-modal
-        MERGE (t)-[r:RELATES_TO]->(v)
-        ON CREATE SET r.weight = sim, 
-                     r.last_used = timestamp(),
-                     r.relation_type = 'cross_modal',
-                     r.created_at = timestamp()
-        ON MATCH SET r.weight = sim, 
-                    r.last_used = timestamp()
+            CREATE (a)-[r:SIMILAR_TO]->(b)
+            SET r.weight = sim, 
+                r.last_used = timestamp(), 
+                r.created_at = timestamp(),
+                r.reinforcement_count = 0,
+                r.relation_type = 'similarity'
+            RETURN count(r) as batch_relations
+        }} IN TRANSACTIONS OF 50 ROWS
         '''
         
-        with self.driver.session() as session:
-            result = session.run(multimodal_query, threshold=self.threshold)
-            summary = result.consume()
-            print(f"Utworzono/zaktualizowano {summary.counters.relationships_created} relacji cross-modal")
-
+        total_relations = 0
+        
+        try:
+            # Przetwarzaj w mniejszych grupach
+            for offset in range(0, 1000, 100):  # Maksymalnie 1000 węzłów w grupach po 100
+                if progress_callback:
+                    progress_callback(f"    🔄 Grupa węzłów {offset}-{offset+100}...")
+                
+                batch_query = optimized_query.replace("LIMIT 100", f"SKIP {offset} LIMIT 100")
+                # ZMIANA: Używaj used_threshold (czyli self.threshold)
+                result = session.run(batch_query, threshold=used_threshold)
+                
+                # Policz wyniki z każdej transakcji
+                for record in result:
+                    total_relations += record['batch_relations']
+                
+                if progress_callback and offset % 300 == 0:
+                    progress_callback(f"      📊 Dotychczas: {total_relations} relacji...")
+            
+            end_time = time.time()
+            duration = end_time - start_time
+            
+            if progress_callback:
+                progress_callback(f"  ✅ {node_type}: {total_relations} relacji w {duration:.1f}s (optymalizowane)")
+                # ZMIANA: Pokaż używany threshold z ustawień
+                progress_callback(f"  📋 Użyto threshold: {used_threshold} (z ustawień aplikacji)")
+                
+        except Exception as e:
+            if progress_callback:
+                progress_callback(f"  ❌ Błąd optymalizowany dla {node_type}: {e}")
+                progress_callback(f"  🔄 Próba fallback z ograniczeniem...")
+            
+            try:
+                fallback_query = f'''
+                MATCH (a:{node_type}), (b:{node_type})
+                WHERE elementId(a) < elementId(b)
+                  AND a.embedding IS NOT NULL AND b.embedding IS NOT NULL
+                  AND NOT (a)-[:SIMILAR_TO]-(b)
+                WITH a, b LIMIT 125000
+                WITH a, b,
+                reduce(dot = 0.0, i IN range(0, size(a.embedding)-1) |
+                    dot + a.embedding[i] * b.embedding[i]
+                ) /
+                (
+                    sqrt(reduce(na = 0.0, i IN range(0, size(a.embedding)-1) |
+                        na + a.embedding[i] * a.embedding[i]
+                    )) *
+                    sqrt(reduce(nb = 0.0, i IN range(0, size(b.embedding)-1) |
+                        nb + b.embedding[i] * b.embedding[i]
+                    ))
+                ) AS sim
+                WHERE sim >= $threshold
+                CREATE (a)-[r:SIMILAR_TO]->(b)
+                SET r.weight = sim, 
+                    r.last_used = timestamp(), 
+                    r.created_at = timestamp(),
+                    r.reinforcement_count = 0,
+                    r.relation_type = 'similarity'
+                '''
+                
+                # ZMIANA: Używaj self.threshold również w fallback
+                result = session.run(fallback_query, threshold=self.threshold)
+                summary = result.consume()
+                relations_created = summary.counters.relationships_created
+                
+                if progress_callback:
+                    progress_callback(f"  ✅ Fallback {node_type}: {relations_created} relacji (ograniczony zestaw)")
+                    progress_callback(f"  📋 Fallback threshold: {self.threshold}")
+                    
+            except Exception as e2:
+                if progress_callback:
+                    progress_callback(f"  💥 Krytyczny błąd {node_type}: {e2}")
+    
     def reinforce_relationship(self, node_a_id: str, node_b_id: str, strength: float = 1.0):
         """
         Wzmacnia relację między dwoma węzłami na podstawie ich współwystępowania.
@@ -254,57 +629,98 @@ class TextGraphBuilder:
     def analyze_learning_patterns(self):
         """
         Analizuje wzorce uczenia się i zwraca rozszerzone statystyki.
+        POPRAWIONA WERSJA - zawsze zwraca słownik
         """
-        # Statystyki węzłów według typu
-        node_stats_query = '''
-        MATCH (n)
-        WHERE n.type IS NOT NULL
-        RETURN n.type as data_type, count(n) as count, 
-               avg(n.usage_count) as avg_usage,
-               count(CASE WHEN n.base64 IS NOT NULL THEN 1 END) as with_base64,
-               collect(DISTINCT n.source)[0..5] as sample_sources
-        ORDER BY count DESC
-        '''
-        
-        # Statystyki relacji
-        relation_stats_query = '''
-        MATCH ()-[r]->()
-        RETURN type(r) as relation_type, count(r) as count,
-               avg(r.weight) as avg_weight,
-               max(r.weight) as max_weight,
-               min(r.weight) as min_weight
-        '''
-        
-        # Statystyki źródeł
-        source_stats_query = '''
-        MATCH (n)
-        WHERE n.source IS NOT NULL
-        RETURN n.source as source, count(n) as node_count,
-               collect(DISTINCT n.type) as data_types
-        ORDER BY node_count DESC
-        '''
-        
-        with self.driver.session() as session:
-            node_stats = [dict(record) for record in session.run(node_stats_query)]
-            relation_stats = [dict(record) for record in session.run(relation_stats_query)]
-            source_stats = [dict(record) for record in session.run(source_stats_query)]
-            
-            # Ogólne statystyki
-            total_query = '''
-            MATCH (n) 
-            RETURN count(n) as total_nodes, 
-                   count(CASE WHEN n.embedding IS NOT NULL THEN 1 END) as nodes_with_embeddings,
-                   count(CASE WHEN n.base64 IS NOT NULL THEN 1 END) as nodes_with_base64
+        try:
+            # Statystyki węzłów według typu
+            node_stats_query = '''
+            MATCH (n)
+            WHERE n.type IS NOT NULL
+            RETURN n.type as data_type, count(n) as count, 
+                   avg(n.usage_count) as avg_usage,
+                   count(CASE WHEN n.base64 IS NOT NULL THEN 1 END) as with_base64,
+                   collect(DISTINCT n.source)[0..5] as sample_sources
+            ORDER BY count DESC
             '''
-            total_stats = session.run(total_query).single()
             
+            # Statystyki relacji
+            relation_stats_query = '''
+            MATCH ()-[r]->()
+            RETURN type(r) as relation_type, count(r) as count,
+                   avg(r.weight) as avg_weight,
+                   max(r.weight) as max_weight,
+                   min(r.weight) as min_weight
+            '''
+            
+            # Statystyki źródeł
+            source_stats_query = '''
+            MATCH (n)
+            WHERE n.source IS NOT NULL
+            RETURN n.source as source, count(n) as node_count,
+                   collect(DISTINCT n.type) as data_types
+            ORDER BY node_count DESC
+            '''
+            
+            with self.driver.session() as session:
+                # POPRAWKA 1: Bezpieczne wykonywanie zapytań z obsługą błędów
+                try:
+                    node_stats = [dict(record) for record in session.run(node_stats_query)]
+                except Exception as e:
+                    print(f"DEBUG: Błąd node_stats_query: {e}")
+                    node_stats = []
+                
+                try:
+                    relation_stats = [dict(record) for record in session.run(relation_stats_query)]
+                except Exception as e:
+                    print(f"DEBUG: Błąd relation_stats_query: {e}")
+                    relation_stats = []
+                
+                try:
+                    source_stats = [dict(record) for record in session.run(source_stats_query)]
+                except Exception as e:
+                    print(f"DEBUG: Błąd source_stats_query: {e}")
+                    source_stats = []
+                
+                # Ogólne statystyki
+                try:
+                    total_query = '''
+                    MATCH (n) 
+                    RETURN count(n) as total_nodes, 
+                           count(CASE WHEN n.embedding IS NOT NULL THEN 1 END) as nodes_with_embeddings,
+                           count(CASE WHEN n.base64 IS NOT NULL THEN 1 END) as nodes_with_base64
+                    '''
+                    total_stats = session.run(total_query).single()
+                    total_stats_dict = dict(total_stats) if total_stats else {}
+                except Exception as e:
+                    print(f"DEBUG: Błąd total_query: {e}")
+                    total_stats_dict = {'total_nodes': 0, 'nodes_with_embeddings': 0, 'nodes_with_base64': 0}
+                
+                # POPRAWKA 2: ZAWSZE zwróć słownik, nigdy listę
+                result_dict = {
+                    'node_statistics_by_type': node_stats,
+                    'relation_statistics': relation_stats,
+                    'source_statistics': source_stats,
+                    'total_statistics': total_stats_dict,
+                    'usage_patterns_count': len(self.usage_patterns) if hasattr(self, 'usage_patterns') else 0,
+                    'current_threshold': self.threshold
+                }
+                
+                return result_dict
+                
+        except Exception as e:
+            print(f"DEBUG: Krytyczny błąd w analyze_learning_patterns: {e}")
+            import traceback
+            print(f"DEBUG: Traceback: {traceback.format_exc()}")
+            
+            # AWARYJNY słownik - NIGDY nie zwracaj listy
             return {
-                'node_statistics_by_type': node_stats,
-                'relation_statistics': relation_stats,
-                'source_statistics': source_stats,
-                'total_statistics': dict(total_stats),
-                'usage_patterns_count': len(self.usage_patterns),
-                'current_threshold': self.threshold
+                'error': str(e),
+                'node_statistics_by_type': [],
+                'relation_statistics': [],
+                'source_statistics': [],
+                'total_statistics': {'total_nodes': 0, 'nodes_with_embeddings': 0, 'nodes_with_base64': 0},
+                'usage_patterns_count': 0,
+                'current_threshold': getattr(self, 'threshold', 0.85)
             }
 
     def decay_relationships(self, decay_factor: float = 0.95, min_weight: float = 0.1):
@@ -425,9 +841,6 @@ class TextGraphBuilder:
         """
         print("Rozpoczynam konserwację grafu...")
         
-        # Relacje podobieństwa w ramach tego samego typu węzłów
-        self.create_text_relations()
-        
         # Zastosuj zanikanie relacji
         self.decay_relationships()
         
@@ -438,121 +851,6 @@ class TextGraphBuilder:
         self.prune_old()
         
         print("Konserwacja grafu zakończona.")
-
-
-# Pozostałe klasy bez zmian...
-class HybridTextRetriever:
-    """
-    Retriever tekstowy używający podobieństwa kosinusowego z grafem Neo4j.
-    Obsługuje zarówno węzły Chunk jak i TextChunk dla kompatybilności.
-    Enhanced with learning capabilities.
-    """
-    def __init__(self, connector: Neo4jConnector):
-        self.driver = connector.get_driver()
-        self.graph_builder = None  # Will be set externally for learning
-
-    def close(self):
-        """Zamyka połączenie z bazą danych."""
-        self.driver.close()
-
-    def search_by_text(self, query_embedding: list, top_k: int = 5, score_threshold: float = 0.0, use_relations: bool = True):
-        """
-        Wyszukuje najbardziej podobne chunki na podstawie embeddingu zapytania.
-        Enhanced with learning tracking and source information.
-        """
-        # Wyszukuj we wszystkich typach węzłów
-        search_query = '''
-        MATCH (n)
-        WHERE (n:TextNode OR n:ImageNode OR n:FormulaNode OR n:TableNode) 
-          AND n.embedding IS NOT NULL
-        WITH n,
-        reduce(dot = 0.0, i IN range(0, size(n.embedding)-1) |
-            dot + n.embedding[i] * $query_emb[i]
-        ) /
-        (
-            sqrt(reduce(norm_n = 0.0, i IN range(0, size(n.embedding)-1) |
-                norm_n + n.embedding[i] * n.embedding[i]
-            )) *
-            sqrt(reduce(norm_q = 0.0, i IN range(0, size($query_emb)-1) |
-                norm_q + $query_emb[i] * $query_emb[i]
-            ))
-        ) AS score
-        WHERE score > $threshold
-        RETURN n.id as id, n.text as text, n.path as path, n.source as source, 
-               n.type as data_type, n.base64 as base64_data, score
-        ORDER BY score DESC
-        LIMIT $top_k
-        '''
-        
-        with self.driver.session() as session:
-            result = session.run(search_query, query_emb=query_embedding, 
-                               threshold=score_threshold, top_k=top_k)
-            results = [{'data': {'id': record['id'], 'text': record['text'], 
-                                'path': record['path'], 'source': record['source'] or 'unknown',
-                                'type': record['data_type'], 'base64': record['base64_data']}, 
-                       'score': record['score'], 'source_type': record['source'] or 'unknown'} 
-                       for record in result]
-        
-        return results
-
-    def search_by_image(self, query_embedding: list, top_k: int = 5, score_threshold: float = 0.66):
-        """
-        Wyszukuje najbardziej podobne obrazy na podstawie embeddingu zapytania.
-        """
-        query = '''
-        MATCH (n)
-        WHERE (n:ImageNode OR n:FormulaNode OR n:TableNode) 
-          AND n.embedding IS NOT NULL
-        WITH n,
-        reduce(dot = 0.0, i IN range(0, size(n.embedding)-1) |
-            dot + n.embedding[i] * $query_emb[i]
-        ) /
-        (
-            sqrt(reduce(norm_n = 0.0, i IN range(0, size(n.embedding)-1) |
-                norm_n + n.embedding[i] * n.embedding[i]
-            )) *
-            sqrt(reduce(norm_q = 0.0, i IN range(0, size($query_emb)-1) |
-                norm_q + $query_emb[i] * $query_emb[i]
-            ))
-        ) AS score
-        WHERE score > $threshold
-        RETURN n.id as id, n.text as description, n.path as image_path, 
-               n.source as source, n.type as data_type, n.base64 as base64_data, score
-        ORDER BY score DESC
-        LIMIT $top_k
-        '''
-        
-        with self.driver.session() as session:
-            result = session.run(query, query_emb=query_embedding, 
-                               threshold=score_threshold, top_k=top_k)
-            return [{'data': {'id': record['id'], 'description': record['description'], 
-                            'path': record['image_path'], 'source': record['source'] or 'unknown',
-                            'type': record['data_type'], 'base64': record['base64_data']}, 
-                    'score': record['score'], 'source_type': record['source'] or 'unknown'} 
-                    for record in result]
-
-
-class GraphPruner:
-    """
-    Klasa do konserwacji grafu - usuwa stare relacje.
-    Enhanced with learning-aware maintenance.
-    """
-    def __init__(self, connector: Neo4jConnector, similarity_threshold: float = 0.8):
-        self.connector = connector
-        self.text_graph = TextGraphBuilder(connector, similarity_threshold)
-    
-    def run_maintenance(self):
-        """Uruchamia konserwację grafu z funkcjami uczenia się."""
-        self.text_graph.run_maintenance()
-    
-    def get_learning_statistics(self):
-        """Pobiera statystyki uczenia się grafu."""
-        return self.text_graph.analyze_learning_patterns()
-    
-    def close(self):
-        """Zamyka połączenie z bazą danych."""
-        self.text_graph.close()
-
 
 class LearningPatternTracker:
     """

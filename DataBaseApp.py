@@ -5,14 +5,15 @@ import json
 import threading
 import hashlib
 import torch
+import time
 
-# Importy RAG functions
-from rag_codes.rag_functions.metadata_caption import ImageTextProcessor, ImageContextFilter
+RELATION_SIMILARITY_THRESHOLD = 0.85 
+MAX_TOKENS = 150
+
+from rag_codes.rag_functions.metadata_context import ImageTextProcessor
 from rag_codes.rag_functions.embeddings import CLIPEmbedder
-from rag_codes.rag_functions.chunker import TextChunker
 from rag_codes.rag_functions.graph import (
-    TextGraphBuilder, Neo4jConnector, HybridTextRetriever, 
-    GraphPruner, LearningPatternTracker
+    GraphBuilder, Neo4jConnector
 )
 
 class SubjectSelectorApp:
@@ -431,7 +432,6 @@ class SubjectSelectorApp:
         try:
             self.log_message(log_text, "Inicjalizacja procesorów...")
             processor = ImageTextProcessor()
-            filter_processor = ImageContextFilter()
             self.log_message(log_text, "✓ Procesory zainicjalizowane pomyślnie")
         except Exception as e:
             self.log_message(log_text, f"✗ Błąd inicjalizacji procesorów: {e}")
@@ -570,12 +570,10 @@ class SubjectSelectorApp:
             self.log_message(log_text, "  • TXT z chunkami tekstowymi (*_chunks.txt)")
             self.log_message(log_text, "  • TXT z obrazami base64 (*_base64.txt)")
             
-            result = messagebox.askyesno("Zarządzanie grafem Neo4j", 
-                "Przetwarzanie zakończone pomyślnie!\n\n"
-                "Czy chcesz otworzyć okno zarządzania grafem Neo4j\n"
-                "do tworzenia relacji między chunkami tekstu?")
-            if result:
-                self.open_graph_management_window(selected_subjects)
+            # ZMIANA: Usuń zapytanie o graf Neo4j, zostaw tylko informację
+            self.log_message(log_text, "\n💡 Przetwarzanie plików zakończone!")
+            self.log_message(log_text, "🔗 Aby zarządzać grafem Neo4j, użyj przycisku:")
+            self.log_message(log_text, "   'Zarządzanie bazą danych' w głównym oknie")
         else:
             self.log_message(log_text, f"⚠ ZAKOŃCZONO Z {error_count} BŁĘDAMI")
         
@@ -713,7 +711,9 @@ class SubjectSelectorApp:
                 neo4j_connector = Neo4jConnector(uri_var.get(), user_var.get(), password_var.get())
                 
                 log_graph_message("🔄 Inicjalizacja komponentów grafu...")
-                graph_builder = TextGraphBuilder(neo4j_connector, similarity_threshold=0.8)
+                # ZMIANA: Użyj stałej SIMILARITY_THRESHOLD
+                graph_builder = GraphBuilder(neo4j_connector, similarity_threshold=RELATION_SIMILARITY_THRESHOLD)
+                log_graph_message(f"📊 Threshold podobieństwa ustawiony na: {RELATION_SIMILARITY_THRESHOLD}")
                 
                 log_graph_message("✓ Pomyślnie połączono z Neo4j")
                 
@@ -751,18 +751,39 @@ class SubjectSelectorApp:
                 log_graph_message(f"✗ Błąd rozłączania: {e}")
         
         # Funkcje operacji na grafie (teraz w wątkach)
-        def create_relations():
+        def graph_relations():
             if not graph_builder:
                 log_graph_message("✗ Brak połączenia z grafem")
                 return
 
             def worker():
                 try:
-                    log_graph_message("🔄 Tworzenie relacji podobieństwa w grafie…")
-                    graph_builder.create_relations()
+                    log_graph_message("🔄 Rozpoczynam tworzenie relacji podobieństwa...")
+                    
+                    # Sprawdź liczbę węzłów (tylko informacyjnie)
+                    with neo4j_connector.get_driver().session() as session:
+                        count_result = session.run("MATCH (n) WHERE n.embedding IS NOT NULL RETURN count(n) as total")
+                        total_nodes = count_result.single()["total"]
+                        log_graph_message(f"📊 Węzłów z embeddingami: {total_nodes}")
+                        
+                        if total_nodes > 2000:
+                            log_graph_message("⏰ To może potrwać kilka minut dla dużej liczby węzłów")
+                            estimated_time = (total_nodes * total_nodes / 2) / 10000
+                            log_graph_message(f"🕐 Przybliżony czas: {estimated_time:.1f} minut")
+                        
+                        log_graph_message("🚀 Rozpoczynam przetwarzanie wszystkich węzłów...")
+                    
+                    # Użyj wersji z callbackiem - BEZ LIMITÓW
+                    def progress_callback(message):
+                        log_graph_message(message)
+                    
+                    graph_builder.create_relations_with_progress_callback(progress_callback)
                     log_graph_message("✓ Relacje podobieństwa utworzone pomyślnie")
+                    
                 except Exception as e:
                     log_graph_message(f"✗ Błąd tworzenia relacji: {e}")
+                    import traceback
+                    log_graph_message(f"Traceback: {traceback.format_exc()}")
 
             threading.Thread(target=worker, daemon=True).start()
 
@@ -770,22 +791,256 @@ class SubjectSelectorApp:
             if not graph_builder:
                 log_graph_message("✗ Brak połączenia z grafem")
                 return
-            try:
-                log_graph_message("🔄 Pobieranie statystyk grafu…")
-                stats = graph_builder.analyze_learning_patterns()
-                log_graph_message("=== STATYSTYKI GRAFU ===")
-                log_graph_message(f"Węzły tekstowe: {stats['node_statistics'].get('total_nodes', 0)}")
-                log_graph_message(f"Wszystkich relacji: {stats['relation_statistics'].get('total_relations', 0)}")
-            except Exception as e:
-                log_graph_message(f"✗ Błąd pobierania statystyk: {e}")
+
+            def worker():
+                try:
+                    log_graph_message("🔄 Pobieranie statystyk grafu...")
+                    
+                    # Pobierz statystyki z analyze_learning_patterns
+                    try:
+                        stats = graph_builder.analyze_learning_patterns()
+                        
+                        if stats and isinstance(stats, dict):
+                            log_graph_message("=" * 80)
+                            log_graph_message("📊 SZCZEGÓŁOWE STATYSTYKI GRAFU")
+                            log_graph_message("=" * 80)
+                            
+                            # === STATYSTYKI OGÓLNE ===
+                            if 'total_statistics' in stats:
+                                total_stats = stats['total_statistics']
+                                log_graph_message("\n🎯 STATYSTYKI OGÓLNE:")
+                                log_graph_message(f"📊 Węzłów razem: {total_stats.get('total_nodes', 0):,}")
+                                log_graph_message(f"🧮 Węzłów z embeddingami: {total_stats.get('nodes_with_embeddings', 0):,}")
+                                log_graph_message(f"📋 Węzłów z base64: {total_stats.get('nodes_with_base64', 0):,}")
+                                
+                                # Procentowy rozkład
+                                total_nodes = total_stats.get('total_nodes', 0)
+                                if total_nodes > 0:
+                                    emb_percent = (total_stats.get('nodes_with_embeddings', 0) / total_nodes) * 100
+                                    b64_percent = (total_stats.get('nodes_with_base64', 0) / total_nodes) * 100
+                                    log_graph_message(f"📈 Pokrycie embeddingami: {emb_percent:.1f}%")
+                                    log_graph_message(f"📈 Pokrycie base64: {b64_percent:.1f}%")
+                            
+                            # === STATYSTYKI WĘZŁÓW WEDŁUG TYPU ===
+                            if 'node_statistics_by_type' in stats:
+                                node_stats = stats['node_statistics_by_type']
+                                log_graph_message("\n📋 ROZKŁAD TYPÓW WĘZŁÓW:")
+                                
+                                total_by_type = sum(stat['count'] for stat in node_stats)
+                                for stat in sorted(node_stats, key=lambda x: x['count'], reverse=True):
+                                    data_type = stat['data_type']
+                                    count = stat['count']
+                                    with_base64 = stat.get('with_base64', 0)
+                                    sample_sources = stat.get('sample_sources', [])
+                                    
+                                    # Ikona dla typu
+                                    type_icon = {
+                                        'text': '📝', 'image': '🖼️', 
+                                        'formula': '🧮', 'table': '📊'
+                                    }.get(data_type, '📄')
+                                    
+                                    percentage = (count / total_by_type * 100) if total_by_type > 0 else 0
+                                    base64_percentage = (with_base64 / count * 100) if count > 0 else 0
+                                    
+                                    log_graph_message(f"  {type_icon} {data_type.upper()}:")
+                                    log_graph_message(f"    • Węzłów: {count:,} ({percentage:.1f}%)")
+                                    log_graph_message(f"    • Z base64: {with_base64:,} ({base64_percentage:.1f}%)")
+                                    if sample_sources:
+                                        log_graph_message(f"    • Źródła: {', '.join(sample_sources)}")
+                            
+                            # === STATYSTYKI RELACJI ===
+                            if 'relation_statistics' in stats:
+                                rel_stats = stats['relation_statistics']
+                                log_graph_message("\n🔗 STATYSTYKI RELACJI:")
+                                
+                                if rel_stats:
+                                    total_relations = sum(stat['count'] for stat in rel_stats)
+                                    log_graph_message(f"🎯 Relacji razem: {total_relations:,}")
+                                    
+                                    for stat in sorted(rel_stats, key=lambda x: x['count'], reverse=True):
+                                        rel_type = stat['relation_type']
+                                        count = stat['count']
+                                        avg_weight = stat.get('avg_weight', 0)
+                                        min_weight = stat.get('min_weight', 0)
+                                        max_weight = stat.get('max_weight', 0)
+                                        
+                                        log_graph_message(f"  🔗 {rel_type}:")
+                                        log_graph_message(f"    • Liczba: {count:,}")
+                                        log_graph_message(f"    • Średnia waga: {avg_weight:.3f}")
+                                        log_graph_message(f"    • Zakres wag: {min_weight:.3f} - {max_weight:.3f}")
+                                        
+                                        # Ocena jakości relacji
+                                        if avg_weight > 0.95:
+                                            quality = "🟢 Bardzo wysokiej jakości"
+                                        elif avg_weight > 0.90:
+                                            quality = "🟡 Wysokiej jakości"
+                                        elif avg_weight > 0.85:
+                                            quality = "🟠 Średniej jakości"
+                                        else:
+                                            quality = "🔴 Niskiej jakości"
+                                        
+                                        log_graph_message(f"    • Jakość: {quality}")
+                                else:
+                                    log_graph_message("  📭 Brak relacji w grafie")
+                            
+                            # === STATYSTYKI ŹRÓDEŁ ===
+                            if 'source_statistics' in stats:
+                                source_stats = stats['source_statistics']
+                                log_graph_message("\n📚 ROZKŁAD ŹRÓDEŁ:")
+                                
+                                total_by_source = sum(stat['node_count'] for stat in source_stats)
+                                for stat in sorted(source_stats, key=lambda x: x['node_count'], reverse=True):
+                                    source = stat['source']
+                                    node_count = stat['node_count']
+                                    data_types = stat.get('data_types', [])
+                                    
+                                    percentage = (node_count / total_by_source * 100) if total_by_source > 0 else 0
+                                    
+                                    # Ikona dla źródła
+                                    source_icon = {
+                                        'książka': '📖', 'blog': '💬', 'wikipedia': '🌐',
+                                        'artykuł_naukowy': '📄', 'forum': '💭', 'news': '📰'
+                                    }.get(source, '📋')
+                                    
+                                    log_graph_message(f"  {source_icon} {source.upper()}:")
+                                    log_graph_message(f"    • Węzłów: {node_count:,} ({percentage:.1f}%)")
+                                    log_graph_message(f"    • Typy danych: {', '.join(data_types)}")
+                            
+                            # === KONFIGURACJA I WZORCE ===
+                            log_graph_message("\n⚙️ KONFIGURACJA GRAFU:")
+                            if 'current_threshold' in stats:
+                                threshold = stats['current_threshold']
+                                log_graph_message(f"🎚️ Próg podobieństwa: {threshold}")
+                            
+                            if 'usage_patterns_count' in stats:
+                                patterns_count = stats['usage_patterns_count']
+                                log_graph_message(f"📈 Wzorców użycia: {patterns_count}")
+                            
+
+                            # === OCENA ZDROWIA GRAFU ===
+                            log_graph_message("\n🏥 OCENA ZDROWIA GRAFU:")
+                            
+                            # Sprawdź gęstość grafu
+                            if 'total_statistics' in stats and 'relation_statistics' in stats and rel_stats:
+                                total_nodes = stats['total_statistics'].get('total_nodes', 0)
+                                total_relations = sum(stat['count'] for stat in rel_stats)
+                                
+                                if total_nodes > 1:
+                                    max_possible_relations = total_nodes * (total_nodes - 1) / 2
+                                    density = total_relations / max_possible_relations
+                                    
+                                    log_graph_message(f"📊 Gęstość grafu: {density:.4f}")
+                                    
+                                    if density > 0.1:
+                                        log_graph_message("  🔥 Graf bardzo gęsty - może działać wolno")
+                                    elif density > 0.01:
+                                        log_graph_message("  ⚡ Graf gęsty - dobra łączność")
+                                    elif density > 0.001:
+                                        log_graph_message("  ✅ Graf optymalny - zrównoważona gęstość")
+                                    else:
+                                        log_graph_message("  📉 Graf rzadki - rozważ obniżenie progu")
+                            
+                            # Sprawdź jakość embeddingów
+                            if 'total_statistics' in stats:
+                                total_stats = stats['total_statistics']
+                                total_nodes = total_stats.get('total_nodes', 0)
+                                nodes_with_emb = total_stats.get('nodes_with_embeddings', 0)
+                                
+                                if total_nodes > 0:
+                                    emb_coverage = nodes_with_emb / total_nodes
+                                    if emb_coverage == 1.0:
+                                        log_graph_message("  ✅ Wszystkie węzły mają embeddingi")
+                                    elif emb_coverage > 0.9:
+                                        log_graph_message("  🟡 Dobne pokrycie embeddingami")
+                                    else:
+                                        log_graph_message("  🔴 Słabe pokrycie embeddingami - sprawdź dane")
+                            
+                            log_graph_message("\n✅ Statystyki zaawansowane zakończone pomyślnie")
+                            
+                        else:
+                            log_graph_message("⚠️ Nie udało się pobrać statystyk z analyze_learning_patterns")
+                            raise ValueError("Nieprawidłowe dane statystyk")
+                            
+
+                    except Exception as e:
+                        log_graph_message(f"⚠️ Błąd w statystykach zaawansowanych: {e}")
+                        log_graph_message("🔄 Przechodzę do podstawowych statystyk...")
+                    
+                    # ZAWSZE wykonaj podstawowe statystyki z Neo4j jako backup
+                    log_graph_message("\n" + "=" * 80)
+                    log_graph_message("📊 PODSTAWOWE STATYSTYKI (BEZPOŚREDNIO Z BAZY)")
+                    log_graph_message("=" * 80)
+                    
+                    try:
+                        with neo4j_connector.get_driver().session() as session:
+                            # Podstawowe liczby
+                            basic_result = session.run("MATCH (n) RETURN count(n) as total_nodes").single()
+                            total_nodes = basic_result['total_nodes']
+                            
+                            emb_result = session.run("MATCH (n) WHERE n.embedding IS NOT NULL RETURN count(n) as nodes_with_embeddings").single()
+                            nodes_with_embeddings = emb_result['nodes_with_embeddings']
+                            
+                            b64_result = session.run("MATCH (n) WHERE n.base64 IS NOT NULL RETURN count(n) as nodes_with_base64").single()
+                            nodes_with_base64 = b64_result['nodes_with_base64']
+                            
+                            rel_result = session.run("MATCH ()-[r]->() RETURN count(r) as total_relations").single()
+                            total_relations = rel_result['total_relations']
+                            
+                            log_graph_message(f"📊 Węzłów razem: {total_nodes:,}")
+                            log_graph_message(f"🧮 Węzłów z embeddingami: {nodes_with_embeddings:,}")
+                            log_graph_message(f"📋 Węzłów z base64: {nodes_with_base64:,}")
+                            log_graph_message(f"🔗 Relacji razem: {total_relations:,}")
+                            
+                            # Typy węzłów
+                            if total_nodes > 0:
+                                log_graph_message("\n📋 Rozkład typów węzłów:")
+                                type_result = session.run("""
+                                    MATCH (n) WHERE n.type IS NOT NULL
+                                    RETURN n.type as type, count(n) as count
+                                    ORDER BY count DESC
+                                """)
+                                
+                                for record in type_result:
+                                    log_graph_message(f"  • {record['type']}: {record['count']:,}")
+                            
+                            # Typy relacji
+                            if total_relations > 0:
+                                log_graph_message("\n🔗 Rozkład typów relacji:")
+                                rel_type_result = session.run("""
+                                    MATCH ()-[r]->()
+                                    RETURN type(r) as rel_type, count(r) as count,
+                                           avg(r.weight) as avg_weight
+                                    ORDER BY count DESC
+                                """)
+                                for record in rel_type_result:
+                                    avg_w = record['avg_weight']
+                                    avg_str = f", średnia waga: {avg_w:.3f}" if avg_w else ""
+                                    log_graph_message(f"  • {record['rel_type']}: {record['count']:,}{avg_str}")
+                        
+                        log_graph_message("\n✅ Wszystkie statystyki zakończone pomyślnie")
+                        
+                    except Exception as e:
+                        log_graph_message(f"✗ Błąd podstawowych statystyk: {e}")
+                
+                except Exception as e:
+                    log_graph_message(f"✗ Krytyczny błąd pobierania statystyk: {e}")
+                    import traceback
+                    log_graph_message(f"Traceback: {traceback.format_exc()}")
+
+            # Uruchom w osobnym wątku
+            threading.Thread(target=worker, daemon=True).start()
         
         def clear_all_chunks():
             if not neo4j_connector:
                 log_graph_message("✗ Brak połączenia z grafem")
                 return
             
-            if messagebox.askyesno("Potwierdzenie", 
-                "Czy na pewno chcesz usunąć WSZYSTKIE CHUNKI z grafu?\nTa operacja jest nieodwracalna!"):
+            # POPRAWKA: Użyj graph_window jako parent
+            result = messagebox.askyesno("Potwierdzenie", 
+                "Czy na pewno chcesz usunąć WSZYSTKIE CHUNKI z grafu?\nTa operacja jest nieodwracalna!",
+                parent=graph_window)
+            
+            if result:
                 try:
                     log_graph_message("🔄 Usuwanie wszystkich chunków...")
                     with neo4j_connector.get_driver().session() as session:
@@ -801,22 +1056,25 @@ class SubjectSelectorApp:
                 log_graph_message("✗ Brak połączenia z grafem")
                 return
             
-            # Podwójne potwierdzenie dla tej krytycznej operacji
-            if messagebox.askyesno("⚠️ UWAGA - NIEBEZPIECZNA OPERACJA", 
+            # POPRAWKA: Użyj graph_window jako parent dla pierwszego potwierdzenia
+            first_confirm = messagebox.askyesno("⚠️ UWAGA - NIEBEZPIECZNA OPERACJA", 
                 "Czy na pewno chcesz usunąć CAŁĄ BAZĘ DANYCH?\n\n"
                 "Ta operacja:\n"
                 "• Usunie WSZYSTKIE węzły (Chunk, TextNode, itp.)\n"
                 "• Usunie WSZYSTKIE relacje\n"
                 "• Wyczyści całą bazę Neo4j\n"
                 "• Jest NIEODWRACALNA!\n\n"
-                "Czy jesteś absolutnie pewien?"):
-                
-                # Drugie potwierdzenie
+                "Czy jesteś absolutnie pewien?",
+                parent=graph_window)
+            
+            if first_confirm:
+                # POPRAWKA: Użyj graph_window jako parent dla drugiego potwierdzenia
                 confirm = messagebox.askquestion("🚨 OSTATNIE POTWIERDZENIE", 
                     "To jest ostatnia szansa na anulowanie!\n\n"
                     "Kliknij 'yes' aby BEZPOWROTNIE USUNĄĆ całą bazę danych\n"
                     "Kliknij 'no' aby anulować operację",
-                    icon='warning')
+                    icon='warning',
+                    parent=graph_window)
                 
                 if confirm == 'yes':
                     try:
@@ -867,15 +1125,329 @@ class SubjectSelectorApp:
                 return
 
             def worker():
+                # POPRAWKA: Przenieś nonlocal na początek funkcji
+                nonlocal neo4j_connector, graph_builder
+                
                 try:
-                    log_graph_message("🔄 Uruchamianie pełnej konserwacji grafu…")
-                    graph_builder.run_maintenance()
-                    log_graph_message("✓ Konserwacja grafu zakończona pomyślnie")
+                    log_graph_message("🔄 Uruchamianie pełnej konserwacji grafu z obsługą błędów połączenia...")
+                    
+                    # NOWE: Konfiguracja robustnej konserwacji
+                    max_retries = 3
+                    retry_delay = 5  # sekund
+                    
+                    for attempt in range(max_retries):
+                        try:
+                            log_graph_message(f"🔄 Próba {attempt + 1}/{max_retries} konserwacji...")
+                            
+                            # Sprawdź połączenie przed rozpoczęciem
+                            with neo4j_connector.get_driver().session() as test_session:
+                                test_session.run("RETURN 1")
+                                log_graph_message("✅ Połączenie aktywne - rozpoczynam konserwację...")
+                            
+                            # Uruchom konserwację z callbackiem
+                            def maintenance_callback(message):
+                                log_graph_message(f"  {message}")
+                            
+                            # POPRAWIONE: Użyj metody z callbackiem jeśli istnieje
+                            if hasattr(graph_builder, 'run_maintenance_with_callback'):
+                                graph_builder.run_maintenance_with_callback(maintenance_callback)
+                            else:
+                            
+                                graph_builder.run_maintenance()
+                            
+                            log_graph_message("✅ Konserwacja grafu zakończona pomyślnie")
+                            return  # Sukces - wyjdź z pętli
+                            
+                        except Exception as e:
+                            error_msg = str(e)
+                            log_graph_message(f"❌ Błąd w próbie {attempt + 1}: {error_msg}")
+                            
+                            # Sprawdź czy to błąd połączenia
+                            if any(keyword in error_msg.lower() for keyword in 
+                                   ['connection', 'defunct', 'sessionexpired', 'no data', 'timeout']):
+                                
+                                log_graph_message(f"🔍 Wykryto błąd połączenia - spróbuję ponowić...")
+                                
+                                if attempt < max_retries - 1:  # Nie ostatnia próba
+                                    log_graph_message(f"⏳ Czekam {retry_delay} sekund przed ponowną próbą...")
+                                    time.sleep(retry_delay)
+                                    
+                                    # Spróbuj ponownie nawiązać połączenie
+                                    try:
+                                        log_graph_message("🔄 Próba ponownego nawiązania połączenia...")
+                                        # Zamknij stare połączenie
+                                        if neo4j_connector:
+                                            neo4j_connector.close()
+                                        
+                                        # Utwórz nowe połączenie
+                                        time.sleep(2)
+                                        new_connector = Neo4jConnector(uri_var.get(), user_var.get(), password_var.get())
+                                        
+                                        # Test nowego połączenia
+                                        with new_connector.get_driver().session() as session:
+                                            session.run("RETURN 1")
+                                        
+                                        # Zaktualizuj referencje
+                                        neo4j_connector = new_connector
+                                        graph_builder = GraphBuilder(neo4j_connector, similarity_threshold=RELATION_SIMILARITY_THRESHOLD)
+                                        
+                                        log_graph_message("✅ Połączenie ponownie nawiązane")
+                                        
+                                    except Exception as reconnect_error:
+                                        log_graph_message(f"❌ Błąd ponownego połączenia: {reconnect_error}")
+                                        continue
+                                else:
+                                    log_graph_message("💥 Maksymalna liczba prób wyczerpana")
+                                    raise
+                            else:
+                                # Inny błąd - nie próbuj ponownie
+                                log_graph_message(f"💥 Nieodwracalny błąd: {error_msg}")
+                                raise
+                    
+                    log_graph_message("❌ Wszystkie próby konserwacji nie powiodły się")
+                    
                 except Exception as e:
-                    log_graph_message(f"✗ Błąd konserwacji grafu: {e}")
+                    log_graph_message(f"✗ Krytyczny błąd konserwacji grafu: {e}")
+                    import traceback
+                    log_graph_message(f"Traceback: {traceback.format_exc()}")
+                    
+                    # DODATKOWE: Porada dla użytkownika
+                    log_graph_message("\n💡 PORADA ROZWIĄZANIA:")
+                    log_graph_message("1. Sprawdź stabilność połączenia internetowego")
+                    log_graph_message("2. Spróbuj ponownie za kilka minut")
+                    log_graph_message("3. Rozważ wykonanie konserwacji w mniejszych częściach:")
+                    log_graph_message("   - Użyj 'Utwórz relacje w grafie' zamiast pełnej konserwacji")
+                    log_graph_message("   - Lub podziel dane na mniejsze grupy")
 
             threading.Thread(target=worker, daemon=True).start()
 
+        def clear_all_relations():
+            """Usuwa WSZYSTKIE relacje z grafu"""
+            if not neo4j_connector:
+                log_graph_message("✗ Brak połączenia z grafem")
+                return
+            
+            # POPRAWKA: Użyj graph_window jako parent
+            confirm = messagebox.askyesno("Potwierdzenie usunięcia relacji", 
+                "Czy na pewno chcesz usunąć WSZYSTKIE RELACJE z grafu?\n\n"
+                "Ta operacja:\n"
+                "• Usunie WSZYSTKIE relacje SIMILAR_TO\n"
+                "• Usunie WSZYSTKIE relacje RELATES_TO\n"
+                "• Usunie WSZYSTKIE inne relacje\n"
+                "• Pozostawi węzły nienaruszone\n"
+                "• Jest NIEODWRACALNA!\n\n"
+                "Węzły pozostaną, ale będą całkowicie niepowiązane.",
+                parent=graph_window)
+            
+            if confirm:
+                def worker():
+                    try:
+                        log_graph_message("🔄 Rozpoczynam usuwanie WSZYSTKICH relacji...")
+                        
+                        with neo4j_connector.get_driver().session() as session:
+                            # Najpierw policz relacje
+                            count_result = session.run("MATCH ()-[r]->() RETURN count(r) as total_relations")
+                            total_relations = count_result.single()["total_relations"]
+                            
+                            log_graph_message(f"📊 Znaleziono {total_relations} relacji do usunięcia...")
+                            
+                            if total_relations == 0:
+                                log_graph_message("✅ Brak relacji do usunięcia - graf już oczyszczony")
+                                return
+                            
+                            # Usuń wszystkie relacje (w partiach dla bezpieczeństwa)
+                            log_graph_message("🔥 Usuwanie relacji w partiach...")
+                            
+                            deleted_total = 0
+                            batch_size = 10000
+                            
+                            while True:
+                                # Usuń partię relacji
+                                delete_result = session.run(f"""
+                                    MATCH ()-[r]->()
+                                    WITH r LIMIT {batch_size}
+                                    DELETE r
+                                    RETURN count(r) as deleted
+                                """)
+                                
+                                deleted_batch = delete_result.single()["deleted"]
+                                deleted_total += deleted_batch
+                                
+                                if deleted_batch == 0:
+                                    break
+                                
+                                log_graph_message(f"  🗑️ Usunięto partię: {deleted_batch} relacji (łącznie: {deleted_total})")
+                                
+                                # Krótka przerwa dla bazy danych
+                                time.sleep(0.1)
+                            
+                            # Weryfikacja
+                            verify_result = session.run("MATCH ()-[r]->() RETURN count(r) as remaining")
+                            remaining = verify_result.single()["remaining"]
+                            
+                            if remaining == 0:
+                                log_graph_message("✅ WSZYSTKIE RELACJE ZOSTAŁY USUNIĘTE")
+                                log_graph_message(f"📊 Usunięto łącznie: {deleted_total} relacji")
+                                log_graph_message("🎯 Graf zawiera teraz tylko węzły bez połączeń")
+                                log_graph_message("💡 Możesz teraz utworzyć relacje od nowa")
+                            else:
+                                log_graph_message(f"⚠️ OSTRZEŻENIE: Pozostało {remaining} relacji")
+                                log_graph_message("🔄 Spróbuj ponownie lub użyj 'Wyczyść całą bazę'")
+                        
+                    except Exception as e:
+                        log_graph_message(f"💥 BŁĄD podczas usuwania relacji: {e}")
+                        import traceback
+                        log_graph_message(f"Traceback: {traceback.format_exc()}")
+
+                threading.Thread(target=worker, daemon=True).start()
+            else:
+                log_graph_message("✅ Operacja usuwania relacji została anulowana")
+
+        def check_graph_status():
+            """Sprawdza status grafu - węzły i relacje - W OSOBNYM WĄTKU"""
+            if not neo4j_connector:
+                log_graph_message("✗ Brak połączenia z grafem")
+                return
+
+            def worker():
+                try:
+                    log_graph_message("🔄 Sprawdzanie statusu grafu...")
+                    
+                    with neo4j_connector.get_driver().session() as session:
+                        # POPRAWKA: Oddzielne zapytania dla każdej statystyki
+                        log_graph_message("📊 Pobieranie statystyk węzłów...")
+                        
+                        # 1. Podstawowe liczenie węzłów
+                        basic_nodes_result = session.run("MATCH (n) RETURN count(n) as total_nodes").single()
+                        total_nodes = basic_nodes_result['total_nodes']
+                        
+                        # 2. Węzły z embeddingami (POPRAWIONE ZAPYTANIE)
+                        embeddings_result = session.run("""
+                            MATCH (n) 
+                            WHERE n.embedding IS NOT NULL 
+                            RETURN count(n) as nodes_with_embeddings
+                        """).single()
+                        nodes_with_embeddings = embeddings_result['nodes_with_embeddings']
+                        
+                        # 3. Węzły z base64 (POPRAWIONE ZAPYTANIE)
+                        base64_result = session.run("""
+                            MATCH (n) 
+                            WHERE n.base64 IS NOT NULL 
+                            RETURN count(n) as nodes_with_base64
+                        """).single()
+                        nodes_with_base64 = base64_result['nodes_with_base64']
+                        
+                        # 4. Relacje
+                        log_graph_message("📊 Pobieranie statystyk relacji...")
+                        relations_result = session.run("MATCH ()-[r]->() RETURN count(r) as total_relations").single()
+                        total_relations = relations_result['total_relations']
+                        
+                        log_graph_message("=== STATUS GRAFU ===")
+                        log_graph_message(f"📊 Węzłów razem: {total_nodes}")
+                        log_graph_message(f"🧮 Węzłów z embeddingami: {nodes_with_embeddings}")
+                        log_graph_message(f"📋 Węzłów z base64: {nodes_with_base64}")
+                        log_graph_message(f"🔗 Relacji razem: {total_relations}")
+                        
+                        # 5. Sprawdź typy węzłów (TYLKO jeśli są węzły)
+                        if total_nodes > 0:
+                            log_graph_message("\n📋 Analizowanie typów węzłów...")
+                            type_result = session.run("""
+                                MATCH (n) WHERE n.type IS NOT NULL
+                                RETURN n.type as type, count(n) as count
+                                ORDER BY count DESC
+                            """)
+                            
+                            log_graph_message("\n📋 Rozkład typów węzłów:")
+                            type_found = False
+                            for record in type_result:
+                                log_graph_message(f"  {record['type']}: {record['count']}")
+                                type_found = True
+                            
+                            if not type_found:
+                                log_graph_message("  (brak węzłów z określonym typem)")
+                        
+                        # 6. Sprawdź typy relacji (TYLKO jeśli są relacje)
+                        if total_relations > 0:
+                            log_graph_message("\n🔗 Analizowanie typów relacji...")
+                            rel_result = session.run("""
+                                MATCH ()-[r]->()
+                                RETURN type(r) as rel_type, count(r) as count
+                                ORDER BY count DESC
+                            """)
+                            log_graph_message("\n🔗 Rozkład typów relacji:")
+                            for record in rel_result:
+                                log_graph_message(f"  {record['rel_type']}: {record['count']}")
+                        else:
+                            log_graph_message("\n🔗 Brak relacji w grafie")
+                        
+                        # 7. DODATKOWE SPRAWDZENIE - czy nie ma błędnych danych
+                        log_graph_message("\n🔍 Weryfikacja poprawności danych...")
+                        
+                        # Sprawdź czy embeddingi mają sensowną długość
+                        embedding_check = session.run("""
+                            MATCH (n) WHERE n.embedding IS NOT NULL
+                            RETURN min(size(n.embedding)) as min_emb_size, 
+                                   max(size(n.embedding)) as max_emb_size,
+                                   avg(size(n.embedding)) as avg_emb_size
+                            LIMIT 1
+                        """).single()
+                        
+                        if embedding_check and embedding_check['min_emb_size'] is not None:
+                            log_graph_message(f"  📏 Rozmiar embeddingów:")
+                            log_graph_message(f"    - Minimalny: {embedding_check['min_emb_size']}")
+                            log_graph_message(f"    - Maksymalny: {embedding_check['max_emb_size']}")
+                            log_graph_message(f"    - Średni: {embedding_check['avg_emb_size']:.1f}")
+                            
+                            # Sprawdź czy rozmiary są sensowne (powinny być ~512 dla CLIP)
+                            if embedding_check['max_emb_size'] > 1000:
+                                log_graph_message("  ⚠️ UWAGA: Niektóre embeddingi są podejrzanie duże!")
+                            elif embedding_check['min_emb_size'] < 100:
+                                log_graph_message("  ⚠️ UWAGA: Niektóre embeddingi są podejrzanie małe!")
+                            else:
+                                log_graph_message("  ✅ Rozmiary embeddingów wyglądają normalnie")
+                        
+                        # Sprawdź czy base64 ma sensowną długość
+                        if nodes_with_base64 > 0:
+                            base64_check = session.run("""
+                                MATCH (n) WHERE n.base64 IS NOT NULL
+                                RETURN min(size(n.base64)) as min_b64_size, 
+                                       max(size(n.base64)) as max_b64_size,
+                                       avg(size(n.base64)) as avg_b64_size
+                                LIMIT 1
+                            """).single()
+                            
+                            if base64_check and base64_check['min_b64_size'] is not None:
+                                log_graph_message(f"  📋 Rozmiar danych base64:")
+                                log_graph_message(f"    - Minimalny: {base64_check['min_b64_size']} znaków")
+                                log_graph_message(f"    - Maksymalny: {base64_check['max_b64_size']} znaków")
+                                log_graph_message(f"    - Średni: {base64_check['avg_b64_size']:.0f} znaków")
+                        
+                        # KOŃCOWA SANITY CHECK
+                        log_graph_message("\n🎯 Podsumowanie zdrowia grafu:")
+                        if total_nodes == 0:
+                            log_graph_message("  📊 Graf jest pusty - gotowy do załadowania danych")
+                        elif nodes_with_embeddings == 0:
+                            log_graph_message("  ⚠️ Węzły bez embeddingów - nie można tworzyć relacji!")
+                        elif total_relations == 0:
+                            log_graph_message("  🔗 Węzły bez relacji - można utworzyć relacje podobieństwa")
+                        else:
+                            density = (total_relations * 2) / (total_nodes * (total_nodes - 1)) if total_nodes > 1 else 0
+                            log_graph_message(f"  📈 Graf aktywny - gęstość relacji: {density:.4f}")
+                            if density > 0.1:
+                                log_graph_message("  🔥 Graf bardzo gęsty - może działać wolno")
+                            elif density < 0.001:
+                                log_graph_message("  📉 Graf rzadki - warto sprawdzić threshold podobieństwa")
+                            else:
+                                log_graph_message("  ✅ Graf ma zrównoważoną gęstość")
+                        
+                        log_graph_message("\n✅ Sprawdzanie statusu zakończone pomyślnie")
+                        
+                except Exception as e:
+                    log_graph_message(f"✗ Błąd sprawdzania statusu: {e}")
+                    import traceback
+                    log_graph_message(f"Traceback: {traceback.format_exc()}")
+
+            threading.Thread(target=worker, daemon=True).start()
         # Przyciski
         tk.Button(connection_frame, text="Testuj połączenie", 
                  command=test_connection).grid(row=0, column=4, padx=5, pady=5)
@@ -913,52 +1485,54 @@ class SubjectSelectorApp:
                         state=tk.DISABLED, bg="darkgreen", fg="white", font=("Arial", 10, "bold"))
         btn1.pack(side=tk.LEFT, padx=2, pady=2)
         operation_buttons.append(btn1)
-        
         btn2 = tk.Button(graph_buttons_frame, text="Utwórz relacje w grafie", 
-                        command=create_relations, state=tk.DISABLED)
+                        command=graph_relations, state=tk.DISABLED)
         btn2.pack(side=tk.LEFT, padx=2, pady=2)
         operation_buttons.append(btn2)
+        
+        # NOWY PRZYCISK - Status grafu
+        btn_status = tk.Button(graph_buttons_frame, text="Status grafu", 
+                              command=check_graph_status, state=tk.DISABLED,
+                              bg="blue", fg="white", font=("Arial", 10, "bold"))
+        btn_status.pack(side=tk.LEFT, padx=2, pady=2)
+        operation_buttons.append(btn_status)
         
         btn3 = tk.Button(graph_buttons_frame, text="Pokaż statystyki", 
                         command=show_statistics, state=tk.DISABLED)
         btn3.pack(side=tk.LEFT, padx=2, pady=2)
         operation_buttons.append(btn3)
         
-        btn4 = tk.Button(graph_buttons_frame, text="Konserwacja grafu", 
+        # Drugi rząd przycisków
+        graph_buttons_frame2 = tk.Frame(operations_frame)
+        graph_buttons_frame2.pack(fill=tk.X, pady=5)
+        
+        btn4 = tk.Button(graph_buttons_frame2, text="Konserwacja grafu", 
                         command=run_maintenance, state=tk.DISABLED,
                         bg="orange", fg="white", font=("Arial", 10, "bold"))
         btn4.pack(side=tk.LEFT, padx=2, pady=2)
         operation_buttons.append(btn4)
         
-        # Drugi rząd przycisków - operacje usuwania
-        danger_buttons_frame = tk.Frame(operations_frame)
-        danger_buttons_frame.pack(fill=tk.X, pady=5)
+        # PRZYCISK - Usuń wszystkie relacje
+        btn_clear_relations = tk.Button(graph_buttons_frame2, text="🗑️ USUŃ WSZYSTKIE RELACJE", 
+                                       command=clear_all_relations, state=tk.DISABLED, 
+                                       bg="red", fg="white", font=("Arial", 10, "bold"))
+        btn_clear_relations.pack(side=tk.LEFT, padx=2, pady=2)
+        operation_buttons.append(btn_clear_relations)  # DODAJ DO LISTY!
         
-        btn5 = tk.Button(danger_buttons_frame, text="USUŃ WSZYSTKIE CHUNKI", 
-                        command=clear_all_chunks, state=tk.DISABLED, 
-                        bg="darkred", fg="white", font=("Arial", 10, "bold"))
-        btn5.pack(side=tk.LEFT, padx=2, pady=2)
-        operation_buttons.append(btn5)
+        # PRZYCISK - Usuń wszystkie chunki
+        btn_clear_chunks = tk.Button(graph_buttons_frame2, text="🗑️ USUŃ CHUNKI", 
+                                    command=clear_all_chunks, state=tk.DISABLED, 
+                                    bg="darkred", fg="white", font=("Arial", 10, "bold"))
+        btn_clear_chunks.pack(side=tk.LEFT, padx=2, pady=2)
+        operation_buttons.append(btn_clear_chunks)  # DODAJ DO LISTY!
         
-        # NOWY PRZYCISK - Wyczyść całą bazę
-        btn6 = tk.Button(danger_buttons_frame, text="🚨 WYCZYŚĆ CAŁĄ BAZĘ 🚨", 
-                        command=clear_entire_database, state=tk.DISABLED, 
-                        bg="purple", fg="white", font=("Arial", 10, "bold"))
-        btn6.pack(side=tk.LEFT, padx=2, pady=2)
-        operation_buttons.append(btn6)
+        # PRZYCISK - Wyczyść całą bazę danych
+        btn_clear_all = tk.Button(graph_buttons_frame2, text="💥 WYCZYŚĆ CAŁĄ BAZĘ", 
+                                 command=clear_entire_database, state=tk.DISABLED, 
+                                 bg="darkred", fg="yellow", font=("Arial", 10, "bold"))
+        btn_clear_all.pack(side=tk.LEFT, padx=2, pady=2)
+        operation_buttons.append(btn_clear_all)  # DODAJ DO LISTY!
         
-        # Zamknięcie
-        def close_graph_window():
-            disconnect_from_neo4j()
-            graph_window.destroy()
-        
-        tk.Button(graph_window, text="Zamknij", command=close_graph_window,
-                 bg="gray", fg="white", font=("Arial", 12, "bold"),
-                 width=15, height=2).pack(pady=10)
-        
-        graph_window.protocol("WM_DELETE_WINDOW", close_graph_window)
-        
-        # Informacja startowa
         log_graph_message("=== ZARZĄDZANIE GRAFEM NEO4J ===")
         log_graph_message("1. Testuj połączenie")
         log_graph_message("2. Połącz z Neo4j")
@@ -1026,6 +1600,7 @@ class SubjectSelectorApp:
             # POPRAWKA 4: Ostatnia próba - szukaj pliku rekursywnie w folderze rezultaty
             try:
                 filename = Path(path_obj).name
+
                 # Znajdź wszystkie foldery rezultaty
                 for rezultaty_folder in self.base_path.rglob("rezultaty"):
                     for found_file in rezultaty_folder.rglob(filename):
@@ -1050,14 +1625,15 @@ class SubjectSelectorApp:
         try:
             log_function("🔄 Inicjalizacja komponentów...")
             
-            # Inicjalizacja procesorów i embeddingów
-            embedder = CLIPEmbedder()
-            processor = ImageTextProcessor()
+            # ZMIANA: Użyj singletona zamiast tworzenia nowej instancji
+            embedder = CLIPEmbedder.get_instance()
+            log_function("✅ Embedder (singleton) gotowy do użycia")
             
             cuda_available = torch.cuda.is_available()
             log_function(f"🖥️ CUDA dostępne: {cuda_available}")
             
-            graph_builder = TextGraphBuilder(neo4j_connector, similarity_threshold=0.8)
+            graph_builder = GraphBuilder(neo4j_connector, similarity_threshold=RELATION_SIMILARITY_THRESHOLD)
+
             log_function("✅ Komponenty zainicjalizowane pomyślnie")
             
             # Statystyki
@@ -1541,9 +2117,14 @@ class SubjectSelectorApp:
         """
         Wyciąga część ścieżki zaczynającą się od folderu po 'pgverse'
         Np. pgverse/rag_codes/subjects/... -> rag_codes/subjects/...
+
+        POPRAWIONE: Obsługuje różne separatory i poprawia błędy w ścieżkach
         """
         try:
             if 'pgverse' in path:
+                # Zamień wszystkie separatory na '/'
+                path = path.replace('\\', '/')
+                
                 parts = path.split('/')
                 pgverse_index = -1
                 for i, part in enumerate(parts):
@@ -1552,6 +2133,7 @@ class SubjectSelectorApp:
                         break
             
                 if pgverse_index >= 0 and pgverse_index < len(parts) - 1:
+                    # Zwróć część ścieżki od pgverse do końca
                     return '/'.join(parts[pgverse_index + 1:])
         
             return path

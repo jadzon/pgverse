@@ -8,17 +8,31 @@ from pathlib import Path
 
 class CLIPEmbedder:
     """
-    Klasa do tworzenia embeddingów tekstu i obrazów przy użyciu modelu CLIP z Hugging Face
+    Singleton - klasa do tworzenia embeddingów tekstu i obrazów przy użyciu modelu CLIP z Hugging Face
+    Używa wzorca Singleton aby zapewnić tylko jedną instancję modelu w całej aplikacji
     """
+    _instance = None
+    _initialized = False
+    
+    def __new__(cls, model_name="openai/clip-vit-base-patch32"):
+        """Singleton - zawsze zwraca tę samą instancję"""
+        if cls._instance is None:
+            cls._instance = super(CLIPEmbedder, cls).__new__(cls)
+        return cls._instance
+    
     def __init__(self, model_name="openai/clip-vit-base-patch32"):
         """
-        Inicjalizuje embedder CLIP - WYMUSZA PRACĘ NA CPU
+        Inicjalizuje embedder CLIP - TYLKO RAZ dzięki Singleton
         
         Args:
             model_name: Nazwa modelu CLIP z Hugging Face
         """
-        
-        print(f"Ładowanie modelu CLIP: {model_name}")
+        # Inicjalizuj tylko raz
+        if self._initialized:
+            print("✅ CLIPEmbedder już zainicjalizowany - używam istniejącej instancji")
+            return
+            
+        print(f"🔄 Pierwsza inicjalizacja CLIPEmbedder z modelem: {model_name}")
         
         # WYMUSZENIE CPU - całkowite wyłączenie CUDA
         self.device = "cpu"  # Zawsze CPU, ignoruj CUDA
@@ -62,7 +76,29 @@ class CLIPEmbedder:
         # Dodaj ścieżkę bazową do naprawiania ścieżek
         self.base_path = Path(__file__).parent.parent.parent.resolve()
         
-        print("✅ CLIPEmbedder zainicjalizowany w trybie CPU ONLY")
+        # Oznacz jako zainicjalizowany
+        CLIPEmbedder._initialized = True
+        print("✅ CLIPEmbedder zainicjalizowany w trybie CPU ONLY (SINGLETON)")
+    
+    @classmethod
+    def get_instance(cls, model_name="openai/clip-vit-base-patch32"):
+        """
+        Metoda klasowa do pobierania instancji Singleton
+        
+        Args:
+            model_name: Nazwa modelu (używana tylko przy pierwszej inicjalizacji)
+            
+        Returns:
+            CLIPEmbedder: Singleton instancja
+        """
+        if cls._instance is None:
+            cls._instance = cls(model_name)
+        return cls._instance
+    
+    @classmethod
+    def is_initialized(cls):
+        """Sprawdza czy Singleton został już zainicjalizowany"""
+        return cls._initialized
     
     def fix_image_path(self, image_path):
         """
@@ -204,6 +240,10 @@ class CLIPEmbedder:
             # Wyczyść cache PyTorch
             if torch.cuda.is_available():
                 torch.cuda.empty_cache()
+            
+            # Reset singleton
+            CLIPEmbedder._instance = None
+            CLIPEmbedder._initialized = False
             
             print("✅ CLIPEmbedder zamknięty i zasoby zwolnione")
         except Exception as e:

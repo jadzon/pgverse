@@ -10,10 +10,11 @@ class TextChunker:
         Inicjalizuje chunker tekstu z modelem CLIP do embeddingów.
         
         Args:
-            embedding_model: Instancja CLIPEmbedder (jeśli None, zostanie utworzona nowa)
+            embedding_model: Instancja CLIPEmbedder (opcjonalna - użyje singletona)
         """
+        # ZMIANA: Zawsze użyj singletona
         if embedding_model is None:
-            self.embedding_model = CLIPEmbedder()
+            self.embedding_model = CLIPEmbedder.get_instance()
         else:
             self.embedding_model = embedding_model
     
