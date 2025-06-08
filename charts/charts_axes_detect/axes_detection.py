@@ -237,9 +237,80 @@ def _find_connected_components(node, connections, visited, group):
         if neighbor not in visited:
             _find_connected_components(neighbor, connections, visited, group)
 
+def select_best_axis_for_visualization(axes_list):
+    """
+    Wybiera najlepszą oś do wizualizacji na podstawie jakości elementów.
+    
+    Args:
+        axes_list: Lista osi
+        
+    Returns:
+        Najlepsza oś lub None jeśli lista jest pusta
+    """
+    if not axes_list:
+        return None
+    
+    def axis_quality_score(axis):
+        """Oblicza jakość osi na podstawie zawartości tekstowej"""
+        score = 0
+        valid_elements = 0
+        
+        for _, _, _, text, confidence in axis:
+            # Sprawdź czy element zawiera tekst liczbowy lub potęgowy
+            text_clean = text.strip()
+            
+            # Bonus za confidence
+            score += confidence * 10
+            
+            # Bonus za tekst liczbowy
+            if any(char.isdigit() for char in text_clean):
+                score += 100
+                valid_elements += 1
+                
+                # Dodatkowy bonus za notację potęgową lub naukową
+                if ('^' in text_clean or 'E+' in text_clean or 'E-' in text_clean or 
+                    '10^' in text_clean or '2^' in text_clean):
+                    score += 200
+                
+                # Bonus za długość tekstu liczbowego (więcej cyfr = lepiej)
+                digit_count = sum(1 for char in text_clean if char.isdigit())
+                score += digit_count * 5
+            
+            # Kara za bardzo krótki tekst lub pojedyncze znaki
+            if len(text_clean) <= 1:
+                score -= 50
+            
+            # Kara za tekst nie-liczbowy (ale nie całkowita dyskwalifikacja)
+            elif not any(char.isdigit() for char in text_clean):
+                score -= 20
+        
+        # Bonus za liczbę prawidłowych elementów
+        score += valid_elements * 50
+        
+        # Kara za zbyt mało elementów (prawdopodobnie błędna oś)
+        if len(axis) < 3:
+            score -= 200
+        
+        # Bonus za odpowiednią liczbę elementów (typowe dla osi)
+        elif 3 <= len(axis) <= 20:
+            score += 100
+        
+        return score
+    
+    # Znajdź oś z najwyższym wynikiem jakości
+    best_axis = max(axes_list, key=axis_quality_score)
+    
+    # Dodatkowe sprawdzenie - jeśli najlepsza oś ma bardzo niski wynik, zwróć None
+    best_score = axis_quality_score(best_axis)
+    if best_score < 0:
+        return None
+    
+    return best_axis
+
 def visualize_axes(image, axes_data, output_path):
     """
     Tworzy wizualizację wykrytych osi na obrazie.
+    Pokazuje tylko jedną najlepszą oś X i jedną najlepszą oś Y.
     
     Args:
         image: Obraz (np.array) z CV2
@@ -262,8 +333,19 @@ def visualize_axes(image, axes_data, output_path):
     print(f"DEBUG: Liczba osi poziomych: {len(axes_data['horizontal'])}")
     print(f"DEBUG: Liczba osi pionowych: {len(axes_data['vertical'])}")
     
-    # Rysuj osie poziome (X)
-    for i, axis in enumerate(axes_data['horizontal']):
+    # Wybierz najlepsze osie
+    best_horizontal = select_best_axis_for_visualization(axes_data['horizontal'])
+    best_vertical = select_best_axis_for_visualization(axes_data['vertical'])
+    
+    # Lista najlepszych osi do rysowania
+    best_horizontal_axes = [best_horizontal] if best_horizontal else []
+    best_vertical_axes = [best_vertical] if best_vertical else []
+    
+    print(f"DEBUG: Liczba najlepszych osi poziomych: {len(best_horizontal_axes)}")
+    print(f"DEBUG: Liczba najlepszych osi pionowych: {len(best_vertical_axes)}")
+    
+    # Rysuj najlepszą oś poziomą (X)
+    for i, axis in enumerate(best_horizontal_axes):
         print(f"DEBUG: Rysowanie osi poziomej {i+1} z {len(axis)} elementami")
         # Znajdź ogólne granice dla całej osi
         all_x = []
@@ -307,8 +389,8 @@ def visualize_axes(image, axes_data, output_path):
         cv2.putText(visualization, label, (int(x_min), int(y_min - 15)), 
                    cv2.FONT_HERSHEY_SIMPLEX, 0.8, horizontal_color, 2)  # Zielony tekst
 
-    # Rysuj osie pionowe (Y)
-    for i, axis in enumerate(axes_data['vertical']):
+    # Rysuj najlepszą oś pionową (Y)
+    for i, axis in enumerate(best_vertical_axes):
         print(f"DEBUG: Rysowanie osi pionowej {i+1} z {len(axis)} elementami")
         # Znajdź ogólne granice dla całej osi
         all_x = []

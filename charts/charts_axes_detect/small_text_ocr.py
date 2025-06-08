@@ -293,6 +293,7 @@ def detect_exponent_notation(detections):
     Wykrywa i formatuje bloki zawierające notację potęgową (np. 102 → 10²).
     OCR często scala podstawę i wykładnik w jeden blok, więc analizujemy zawartość.
     Obsługuje podstawy: 2, 10, e oraz wykładniki: 0-9
+    Dodano kontekstową walidację aby uniknąć fałszywe konwersje.
     
     Args:
         detections: Lista detekcji w formacie [(bbox, text, confidence), ...]
@@ -303,39 +304,56 @@ def detect_exponent_notation(detections):
     result = []
     conversions_made = 0
     
+    # Zbierz wszystkie teksty dla analizy kontekstu
+    all_texts = [text.strip() for _, text, _ in detections]
+    
     for bbox, text, confidence in detections:
         original_text = text.strip()
         converted_text = original_text
-          # Wzorce notacji potęgowej do wykrycia (format ^ zamiast Unicode superscript)
-        power_patterns = [
-            # Podstawa 10 z wykładnikami 0-9
+        
+        # Wzorce notacji potęgowej - podzielone na bezpieczne i ryzykowne
+        safe_patterns = [
+            # Podstawa 10 z wykładnikami (bezpieczne - rzadko występują w normalnych danych)
             ('102', '10^2'), ('103', '10^3'), ('104', '10^4'), ('105', '10^5'),
             ('106', '10^6'), ('107', '10^7'), ('108', '10^8'), ('109', '10^9'),
-            ('101', '10^1'), ('100', '10^0'),
+            ('101', '10^1'),  # Usunięto ('100', '10^0') - 100 to normalna liczba!
             
-            # Podstawa 2 z wykładnikami
-            ('21', '2^1'), ('22', '2^2'), ('23', '2^3'), ('24', '2^4'),
-            ('25', '2^5'), ('26', '2^6'), ('27', '2^7'), ('28', '2^8'),
-            ('29', '2^9'), ('20', '2^0'),
-            
-            # Podstawa e z wykładnikami  
+            # Podstawa e z wykładnikami (bardzo bezpieczne)
             ('e1', 'e^1'), ('e2', 'e^2'), ('e3', 'e^3'), ('e4', 'e^4'),
             ('e5', 'e^5'), ('e6', 'e^6'), ('e7', 'e^7'), ('e8', 'e^8'),
             ('e9', 'e^9'), ('e0', 'e^0'),
             
-            # Warianty z wielką literą E
+            # Warianty z wielką literą E (bardzo bezpieczne)
             ('E1', 'E^1'), ('E2', 'E^2'), ('E3', 'E^3'), ('E4', 'E^4'),
             ('E5', 'E^5'), ('E6', 'E^6'), ('E7', 'E^7'), ('E8', 'E^8'),
             ('E9', 'E^9'), ('E0', 'E^0'),
         ]
         
-        # Sprawdź wszystkie wzorce
-        for pattern, replacement in power_patterns:
+        # Podstawa 2 - ryzykowne konwersje (mogą być normalnymi liczbami)
+        risky_patterns = [
+            ('21', '2^1'), ('22', '2^2'), ('23', '2^3'), ('24', '2^4'),
+            ('25', '2^5'), ('26', '2^6'), ('27', '2^7'), ('28', '2^8'),
+            ('29', '2^9'), ('20', '2^0'),
+        ]
+        
+        # Najpierw sprawdź bezpieczne wzorce
+        for pattern, replacement in safe_patterns:
             if original_text == pattern:
                 converted_text = replacement
                 conversions_made += 1
-                print(f"  Konwersja notacji potęgowej: '{pattern}' → '{replacement}'")
+                print(f"  Konwersja notacji potęgowej (bezpieczna): '{pattern}' → '{replacement}'")
                 break
+        else:
+            # Jeśli nie znaleziono bezpiecznego wzorca, sprawdź ryzykowne z walidacją
+            for pattern, replacement in risky_patterns:
+                if original_text == pattern:
+                    if _validate_power_conversion(pattern, replacement, all_texts):
+                        converted_text = replacement
+                        conversions_made += 1
+                        print(f"  Konwersja notacji potęgowej (walidowana): '{pattern}' → '{replacement}'")
+                    else:
+                        print(f"  Pominięto konwersję (prawdopodobnie normalna liczba): '{pattern}'")
+                    break
         
         # Dodaj do wyniku (z oryginalnym lub przekonwertowanym tekstem)
         result.append((bbox, converted_text, confidence))
@@ -344,6 +362,75 @@ def detect_exponent_notation(detections):
         print(f"  Przekonwertowano {conversions_made} notacji potęgowych")
     
     return result
+
+def _validate_power_conversion(pattern, replacement, all_texts):
+    """
+    Waliduje czy konwersja na notację potęgową jest uzasadniona kontekstem.
+    
+    Args:
+        pattern: Oryginalny tekst (np. "25")
+        replacement: Proponowana zamiana (np. "2^5")
+        all_texts: Lista wszystkich tekstów w detekcjach dla analizy kontekstu
+        
+    Returns:
+        bool: True jeśli konwersja jest uzasadniona
+    """
+    # Wyodrębnij podstawę i wykładnik
+    base_str, exp_str = replacement.split('^')
+    base = int(base_str)
+    exp = int(exp_str)
+    
+    # Oblicz wartości potęg o tej samej podstawie
+    if base == 2:
+        # Charakterystyczne wartości dla potęg 2
+        power_values = [2**i for i in range(0, 10)]  # 1, 2, 4, 8, 16, 32, 64, 128, 256, 512
+    else:
+        return True  # Dla innych podstaw kontekst mniej ważny
+    
+    # Sprawdź czy w kontekście występują inne potęgi tej samej podstawy
+    context_has_powers = False
+    for text in all_texts:
+        try:
+            num = int(text.strip())
+            if num in power_values and num != int(pattern):
+                context_has_powers = True
+                print(f"    Znaleziono potęgę {base} w kontekście: {num}")
+                break
+        except ValueError:
+            continue
+    
+    # Sprawdź czy to prawdopodobnie data lub normalna liczba (25-29 to często dni miesiąca)
+    pattern_num = int(pattern)
+    is_likely_date = 20 <= pattern_num <= 31
+    
+    # Specjalny przypadek: sekwencja liczb w zakresie 26-29 może być błędnie rozpoznanymi potęgami
+    # Sprawdź czy wszystkie liczby w kontekście to sekwencja 26,27,28,29 (lub podobna)
+    context_numbers = []
+    for text in all_texts:
+        try:
+            num = int(text.strip())
+            context_numbers.append(num)
+        except ValueError:
+            continue
+    
+    context_numbers.sort()
+    is_sequential_26_29 = (len(context_numbers) >= 3 and 
+                          all(26 <= num <= 29 for num in context_numbers) and
+                          max(context_numbers) - min(context_numbers) <= 3)
+    
+    # Decyzja o konwersji
+    if context_has_powers and not is_likely_date:
+        print(f"    Konwersja zatwierdzona: kontekst sugeruje potęgi {base}")
+        return True
+    elif is_sequential_26_29:
+        print(f"    Konwersja zatwierdzona: sekwencja {context_numbers} prawdopodobnie błędnie rozpoznane potęgi")
+        return True
+    elif is_likely_date:
+        print(f"    Konwersja odrzucona: {pattern} prawdopodobnie data/normalna liczba")
+        return False
+    else:
+        print(f"    Konwersja odrzucona: brak kontekstu potęg {base}")
+        return False
 
 def clean_duplicated_text(detections):
     """

@@ -35,7 +35,7 @@ CONFIG = {
     # Ustawienia interpretacji osi
     "interpret_axes": True,
       # Tryb pracy
-    "single_file": "charts_examples/test7.JPG",  # None - przetwarzaj cały katalog, ścieżka - przetwarzaj jeden plik
+    "single_file": None,  # None - przetwarzaj cały katalog, ścieżka - przetwarzaj jeden plik
 }
 
 def process_single_file(file_path, output_dir, config):

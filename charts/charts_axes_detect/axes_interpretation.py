@@ -38,6 +38,156 @@ def clean_text_value(text):
     
     return text
 
+def is_likely_axis_label(text, bbox=None):
+    """
+    Sprawdza czy tekst prawdopodobnie jest etykietą osi a nie wartością.
+    Filtruje obrócone litery, jednostki, znaki graficzne itp.
+    
+    Args:
+        text: Tekst do sprawdzenia
+        bbox: Słownik z bbox (opcjonalnie) dla sprawdzenia proporcji
+        
+    Returns:
+        bool: True jeśli prawdopodobnie etykieta osi, False jeśli wartość
+    """
+    if not text:
+        return True  # Pusty tekst to prawdopodobnie śmieć
+    
+    text_clean = text.strip()
+    
+    # 1. Pojedyncze znaki - prawdopodobnie obrócone litery
+    if len(text_clean) == 1:
+        # WYJĄTEK: Cyfry 0-9 mogą być wartościami osi, więc NIE filtruj
+        if text_clean.isdigit():
+            return False  # Pojedyncze cyfry to prawdopodobnie wartości, nie etykiety
+        
+        # Sprawdź czy to typowe obrócone znaki (ale nie cyfry)
+        rotated_chars = {'>', '<', '|', '-', '+', '=', 'y', 'x', 'v', '^'}
+        if text_clean in rotated_chars:
+            return True
+        
+        # Specjalny przypadek: "7" może być obróconym "y" - sprawdź kontekst
+        if text_clean == '7':
+            # Jeśli to wygląda jak obrócone "y", filtruj
+            return True
+    
+    # 2. Operatory porównania i znaki matematyczne
+    comparison_operators = {'>', '<', '>=', '<=', '≥', '≤', '=', '!=', '≠'}
+    if text_clean in comparison_operators:
+        return True
+    
+    # 3. Teksty z operatorami na początku lub końcu
+    # WYJĄTEK: nie filtruj jeśli to operator z liczbą (np. "> 2.0")
+    if re.match(r'^[><≥≤=]\s*\d', text_clean) or re.match(r'\d\s*[><≥≤=-]$', text_clean):
+        # Sprawdź czy to kompletny operator z liczbą - w takim przypadku nie filtruj
+        if re.search(r'[>≥<≤=]\s*\d+(?:[.,]\d+)?$|^\d+(?:[.,]\d+)?\s*[>≥<≤=]', text_clean):
+            return False  # To kompletny operator z liczbą - nie filtruj
+        return True
+    
+    # 4. Jednostki miary i etykiety osi (ale NIE liczby)
+    unit_patterns = [
+        r'\b(ms|sec|min|hr|kg|g|mg|hz|khz|mhz|ghz|%|percent|time|frequency|value|axis)\b',
+        r'\b(volt|amp|watt|meter|inch|foot|yard|mile|celsius|fahrenheit|kelvin)\b',
+        r'\b(x|y|z|axis|label|title)\b'
+    ]
+    
+    for pattern in unit_patterns:
+        if re.search(pattern, text_clean.lower()):
+            return True
+    
+    # 4b. Pojedyncze słowa, ale TYLKO jeśli zawierają litery (nie same cyfry)
+    if re.match(r'^[a-zA-Z]+$', text_clean):  # Tylko litery, bez cyfr
+        return True
+    
+    # 5. Sprawdź proporcje bbox - wysokie i wąskie to prawdopodobnie obrócony tekst
+    if bbox:
+        width = bbox.get('x_max', 0) - bbox.get('x_min', 0)
+        height = bbox.get('y_max', 0) - bbox.get('y_min', 0)
+        
+        if width > 0 and height > 0:
+            aspect_ratio = height / width
+            # Jeśli wysokość > 3x szerokość, prawdopodobnie obrócony tekst
+            if aspect_ratio > 3.0:
+                return True
+    
+    # 6. Tekst zawierający głównie litery - prawdopodobnie etykieta
+    # Ale NIE jeśli to mieszanka cyfr i pojedynczych liter (mogą to być obrócone cyfry)
+    if re.search(r'[a-zA-Z]', text_clean):
+        # Wyjątek dla notacji naukowej (np. "1.2E+09")
+        if re.search(r'\d[eE][+-]?\d', text_clean):
+            return False  # To notacja naukowa - NIE filtruj
+        # Wyjątek dla notacji potęgowej (np. "10^2")
+        if re.search(r'\d+\^\d+', text_clean):
+            return False  # To notacja potęgowa - NIE filtruj
+        # Jeśli więcej liter niż cyfr, prawdopodobnie etykieta
+        letters = len(re.findall(r'[a-zA-Z]', text_clean))
+        digits = len(re.findall(r'\d', text_clean))
+        if letters > digits:
+            return True
+    
+    # 7. Znaki specjalne i symbole (ale nie cudzysłowy przy cyfrach)
+    # Wyjątek: cudzysłowy z cyframi mogą być błędami OCR przy rozpoznawaniu liczb
+    if re.search(r'^[\'\"]\d+$|^\d+[\'\"]+$', text_clean):
+        return False  # To prawdopodobnie błąd OCR - cyfra z cudzysłowem
+    
+    special_chars = {'$', '€', '£', '¥', '@', '#', '&', '*', '~', '`', '\'', '"'}
+    if any(char in text_clean for char in special_chars):
+        return True
+    
+    # 8. Ostatnia sprawdzenie - czy to czysto numeryczne wartości
+    # Jeśli tekst zawiera głównie cyfry, przecinki, kropki i znaki +/-, prawdopodobnie to wartość
+    if re.match(r'^[\d\.,\-\+\s]+$', text_clean):
+        return False  # To liczba - NIE filtruj
+    
+    # Sprawdź czy tekst zawiera operatory matematyczne z liczbami - te powinny być przetwarzane
+    if re.search(r'[>≥<≤=]\s*\d+', text_clean):
+        return False
+    
+    # Jeśli nic nie pasuje, prawdopodobnie to wartość osi
+    return False
+
+def clean_ocr_artifacts(text):
+    """
+    Inteligentnie usuwa artefakty OCR z tekstu liczbowego.
+    
+    Args:
+        text: Tekst do oczyszczenia
+        
+    Returns:
+        str: Oczyszczony tekst
+    """
+    if not text:
+        return text
+    
+    original_text = text.strip()
+    
+    # 1. Usuń cudzysłowy z początku i końca cyfr
+    text = re.sub(r'^[\'\"]+(\d+(?:[.,]\d+)?)[\'\"]*$', r'\1', text)
+    text = re.sub(r'^(\d+(?:[.,]\d+)?)[\'\"]+$', r'\1', text)
+    
+    # 2. Usuń izolowane litery i znaki w liczbach (prawdopodobne błędy OCR)
+    text = re.sub(r'^(\d+(?:[.,]\d+)?)\s*[A-Za-z]+\s*$', r'\1', text)  # "123 ABC" → "123"
+    text = re.sub(r'^[A-Za-z]+\s*(\d+(?:[.,]\d+)?)$', r'\1', text)     # "ABC 123" → "123"
+    
+    # 3. Usuń trailing znaki operatorów i symboli
+    text = re.sub(r'^([\d.,+-]+)\s*[-+*/=<>≥≤]+\s*$', r'\1', text)
+    
+    # 4. Czyszczenie wzorców "cyfra spacja cyfra/litera"
+    # Heurystyka: jeśli mamy "X Y" gdzie Y to pojedynczy znak, prawdopodobnie Y to artefakt
+    pattern_match = re.match(r'^(\d+(?:[.,]\d+)?)\s+([A-Za-z0-9])$', text)
+    if pattern_match:
+        main_part = pattern_match.group(1)
+        artifact = pattern_match.group(2)
+        
+        # Specjalne przypadki dla typowych błędów OCR
+        if main_part == '7' and artifact == '0':
+            # "7  0" → prawdopodobnie obrócone "y" + "0", zostaw samo "0"
+            text = artifact
+        elif len(main_part) > 1 or (len(main_part) == 1 and artifact.upper() in 'OIL'):
+            text = main_part  # Usuń artefakt, zostaw główną część
+    
+    return text
+
 def extract_numeric_value(text):
     """
     Ekstrahuje wartość liczbową z tekstu.
@@ -47,11 +197,39 @@ def extract_numeric_value(text):
         
     Returns:
         float: wartość liczbowa lub None jeśli nie można przekonwertować
-    """    # Najpierw oczyść tekst z powtórzeń
+    """
+    # Najpierw oczyść tekst z powtórzeń
     text = clean_text_value(text)
     
     # Usuń zbędne znaki i spacje
     text = text.strip()
+    
+    # Inteligentnie oczyść artefakty OCR
+    original_text = text
+    text = clean_ocr_artifacts(text)
+    if text != original_text:
+        print(f"    OCR czyszczenie: '{original_text}' → '{text}'")
+    
+    # Dodatkowa filtracja - sprawdź czy to nie jest etykieta osi
+    # ALE tylko dla oczywistych przypadków, nie dla liczb
+    if is_likely_axis_label(text) and not re.match(r'^[\d\.,\-\+\s]+$', text):
+        return None
+    
+    # Obsługa tekstów ze znakami porównania (np. "> 2.0", "< 5", "≥ 10")
+    # Poprawiony wzorzec, który lepiej wyodrębnia liczby z operatorów
+    comparison_pattern = r'[>≥<≤=]+\s*(-?\d+(?:[.,]\d+)?)|(-?\d+(?:[.,]\d+)?)\s*[>≥<≤=]+'
+    comparison_match = re.search(comparison_pattern, text)
+    
+    if comparison_match:
+        # Wyciągnij liczbę z którejkolwiek grupy (przed lub po operatorze)
+        number_str = comparison_match.group(1) or comparison_match.group(2)
+        if number_str:
+            number_str = number_str.replace(',', '.')
+            try:
+                return float(number_str)
+            except ValueError:
+                pass
+    
       # Obsługa notacji potęgowej (np. "10^1", "10^2", "2^8", "2^9" itp.)
     power_notation_pattern = r'(\d+)\^(\d+)'
     power_match = re.search(power_notation_pattern, text)
@@ -61,8 +239,8 @@ def extract_numeric_value(text):
         exponent = int(power_match.group(2))
         return float(base ** exponent)
     
-    # Obsługa notacji naukowej (np. "1,2E+09" lub "1.2E+09")
-    scientific_notation_pattern = r'(-?\d+[,.]\d*)[Ee]([+-]?\d+)'
+    # Obsługa notacji naukowej (np. "1,2E+09", "1.2E+09" lub "1E+09")
+    scientific_notation_pattern = r'(-?\d+(?:[,.]\d*)?)[Ee]([+-]?\d+)'
     scientific_match = re.search(scientific_notation_pattern, text)
     
     if scientific_match:
@@ -131,6 +309,38 @@ def convert_numpy_types(obj):
     else:
         return obj
 
+def contextual_text_cleanup(text_values):
+    """
+    Analizuje wszystkie wartości tekstowe osi razem i czyści błędy OCR w kontekście.
+    
+    Args:
+        text_values: Lista tekstów z osi
+        
+    Returns:
+        Lista oczyszczonych tekstów
+    """
+    if not text_values:
+        return text_values
+    
+    cleaned_values = []
+    
+    for text in text_values:
+        cleaned = clean_ocr_artifacts(text)
+        
+        # Dodatkowa analiza kontekstowa
+        # Jeśli mamy wiele podobnych wzorców błędów, rozpoznaj je
+        
+        # Wzorzec 1: "cyfra spacja 0" może być błędnie rozpoznanym "0"
+        if re.match(r'^\d\s+0$', cleaned) and text != cleaned:
+            # Sprawdź czy w kontekście są inne pojedyncze cyfry
+            other_singles = [t for t in text_values if re.match(r'^\d$', clean_ocr_artifacts(t))]
+            if len(other_singles) > 1:  # Jeśli są inne pojedyncze cyfry, prawdopodobnie to też powinna być jedna
+                cleaned = re.sub(r'^\d\s+(\d)$', r'\1', text)
+        
+        cleaned_values.append(cleaned)
+    
+    return cleaned_values
+
 def detect_axis_step(elements, axis_type='horizontal'):
     """
     Wykrywa kroki (interwały) między wartościami na osi.
@@ -145,16 +355,34 @@ def detect_axis_step(elements, axis_type='horizontal'):
     # Sortuj elementy według pozycji
     sorted_elements = sort_axis_elements(elements, axis_type)
     
+    # Najpierw zbierz wszystkie teksty do analizy kontekstowej
+    all_texts = [elem['text'] for elem in sorted_elements if not is_likely_axis_label(elem['text'], elem['bbox'])]
+    
+    # Przeprowadź kontekstowe czyszczenie
+    cleaned_texts = contextual_text_cleanup(all_texts)
+    
     # Wyodrębnij wartości liczbowe
     values = []
     positions = []
     text_values = []
     
+    text_index = 0
     for elem in sorted_elements:
-        value = extract_numeric_value(elem['text'])
+        # Sprawdź czy to prawdopodobnie etykieta osi (a nie wartość)
+        if is_likely_axis_label(elem['text'], elem['bbox']):
+            print(f"  Pomijam prawdopodobną etykietę osi: '{elem['text']}'")
+            continue
+        
+
+        
+        # Użyj oczyszczonego tekstu
+        cleaned_text = cleaned_texts[text_index] if text_index < len(cleaned_texts) else elem['text']
+        text_index += 1
+        
+        value = extract_numeric_value(cleaned_text)
         if value is not None:
             values.append(value)
-            text_values.append(elem['text'])
+            text_values.append(cleaned_text)
             
             if axis_type == 'horizontal':
                 # Dla osi poziomej bierzemy środek elementu w osi X
@@ -187,27 +415,27 @@ def detect_axis_step(elements, axis_type='horizontal'):
     position_step_std = float(np.std(position_differences))
     
     # Sprawdź, czy kroki są w miarę równomierne
-    # Calculate median difference to be more robust against outliers
+    # Oblicz medianę różnic dla większej odporności na wartości odstające
     median_value_step = float(np.median(value_differences))
     median_position_step = float(np.median(position_differences))
     print(f"Median value step: {median_value_step}, Median position step: {median_position_step}")
-    # Check for anomalies that might be OCR errors
+    # Sprawdź anomalie które mogą być błędami OCR
     if len(value_differences) >= 3:
-        # Find differences that are dramatically different from the median
+        # Znajdź różnice dramatycznie odbiegające od mediany
         potential_errors = [i for i, diff in enumerate(value_differences) 
                            if abs(diff - median_value_step) > 2 * abs(median_value_step)]
         
         if potential_errors and len(potential_errors) <= len(value_differences) // 3:
-            print(f"Potential OCR errors detected at indices: {potential_errors}")
-            # Calculate std without the outliers
+            print(f"Wykryto potencjalne błędy OCR na indeksach: {potential_errors}")
+            # Oblicz odchylenie standardowe bez wartości odstających
             clean_diffs = [diff for i, diff in enumerate(value_differences) 
                           if i not in potential_errors]
             if clean_diffs:
                 value_step_std = float(np.std(clean_diffs))
                 avg_value_step = float(np.mean(clean_diffs))
-                print(f"Corrected: Avg step: {avg_value_step}, Std: {value_step_std}")
+                print(f"Skorygowano: Średni krok: {avg_value_step}, Odchylenie: {value_step_std}")
 
-    # More robust uniformity check
+    # Bardziej odporna kontrola równomierności
     is_uniform = ((value_step_std < 0.01) or 
                   (value_step_std / abs(avg_value_step) < 0.3)) if avg_value_step != 0 else False
     is_pixel_uniform = ((position_step_std < 0.01) or 
@@ -253,8 +481,9 @@ def detect_axis_step(elements, axis_type='horizontal'):
             pixels_per_log_unit = float(avg_position_step / avg_log_step) if avg_log_step != 0 else 0
     # Dla osi pionowej, kierunek wartości jest zwykle odwrócony (większe wartości na górze)
     # czyli większa wartość = mniejsza współrzędna Y
-    if axis_type == 'vertical' and avg_value_step * avg_position_step > 0:
-        direction = 'reversed'  # Wartości rosną w dół
+    # Jeśli wartości maleją gdy pozycje rosną (iloczyn negatywny), to oś jest odwrócona
+    if axis_type == 'vertical' and avg_value_step * avg_position_step < 0:
+        direction = 'reversed'  # Wartości rosną w dół (odwrócone)
     else:
         direction = 'normal'    # Wartości rosną standardowo
     
@@ -279,12 +508,62 @@ def detect_axis_step(elements, axis_type='horizontal'):
         # Dla osi logarytmicznej, już obliczono pixels_per_log_unit
         pixels_per_unit = abs(pixels_per_log_unit)
 
+    # Usuń duplikaty - te same wartości na zbliżonych pozycjach (błędy OCR)
+    def remove_duplicates(vals, texts, poss, pixel_threshold=50):
+        """Usuwa duplikaty wartości znajdujące się na zbliżonych pozycjach
+        
+        Args:
+            vals: Lista wartości
+            texts: Lista tekstów
+            poss: Lista pozycji
+            pixel_threshold: Próg odległości w pikselach (domyślnie 50)
+        """
+        if len(vals) <= 1:
+            return vals, texts, poss
+            
+        clean_vals = []
+        clean_texts = []
+        clean_poss = []
+        
+        for i, (val, text, pos) in enumerate(zip(vals, texts, poss)):
+            # Sprawdź czy ta wartość już istnieje na zbliżonej pozycji
+            is_duplicate = False
+            for j, (existing_val, existing_text, existing_pos) in enumerate(zip(clean_vals, clean_texts, clean_poss)):
+                if (val == existing_val and 
+                    abs(pos - existing_pos) < pixel_threshold):
+                    print(f"  🗑️ Usuwam duplikat: {text} na pozycji {pos} (już mamy {existing_text} na {existing_pos})")
+                    is_duplicate = True
+                    break
+            
+            if not is_duplicate:
+                clean_vals.append(val)
+                clean_texts.append(text)
+                clean_poss.append(pos)
+        
+        return clean_vals, clean_texts, clean_poss
+    
+    # Zastosuj usuwanie duplikatów przed automatycznym odwracaniem
+    values, text_values, positions = remove_duplicates(values, text_values, positions)
+    
+    # Automatycznie odwróć wartości osi Y jeśli kierunek jest odwrócony
+    final_values = values.copy()
+    final_text_values = text_values.copy()
+    final_positions = positions.copy()
+    
+    if direction == 'reversed' and axis_type == 'vertical':
+        # Odwróć kolejność wartości dla osi Y aby były zgodne z matematyczną konwencją (rosnąco od dołu)
+        final_values = list(reversed(values))
+        final_text_values = list(reversed(text_values))
+        final_positions = list(reversed(positions))
+        print(f"🔄 Automatycznie odwrócono kolejność osi Y: {text_values} → {final_text_values}")
+        direction = 'normal'  # Po odwróceniu kierunek staje się normalny
+
     # Przygotuj wynik
     result = {
         'status': 'success',
-        'values': [float(v) for v in values],  # Konwertuj wszystkie wartości na float Pythona
-        'text_values': text_values,
-        'positions': [float(p) for p in positions],  # Konwertuj wszystkie pozycje na float Pythona
+        'values': [float(v) for v in final_values],  # Konwertuj wszystkie wartości na float Pythona
+        'text_values': final_text_values,
+        'positions': [float(p) for p in final_positions],  # Konwertuj wszystkie pozycje na float Pythona
         'step': float(abs(avg_value_step)),              # Krok wartości (np. 1.0, 5.0)
         'pixel_step': float(abs(avg_position_step)),     # Krok w pikselach między kolejnymi wartościami
         'pixels_per_unit': float(pixels_per_unit),       # Piksele na jednostkę wartości
@@ -298,22 +577,67 @@ def detect_axis_step(elements, axis_type='horizontal'):
     
     return result
 
+def select_best_axis(axes):
+    """
+    Wybiera najlepszą oś spośród dostępnych na podstawie kryteriów jakości.
+    
+    Args:
+        axes: Lista interpretacji osi
+        
+    Returns:
+        Najlepsza interpretacja osi lub None jeśli żadna nie jest dostępna
+    """
+    if not axes:
+        return None
+    
+    # Filtruj tylko pomyślne interpretacje
+    successful_axes = [axis for axis in axes if axis.get('status') == 'success']
+    
+    if not successful_axes:
+        # Jeśli żadna nie jest pomyślna, zwróć pierwszą (może zawierać informacje o błędzie)
+        return axes[0]
+    
+    # Kryteria wyboru najlepszej osi (w kolejności ważności):
+    # 1. Najwięcej wartości tekstowych
+    # 2. Najmniejszy krok (bardziej szczegółowa)
+    # 3. Jednolite kroki
+    
+    def axis_score(axis):
+        score = 0
+        
+        # Liczba wartości (najwięcej punktów)
+        if 'text_values' in axis:
+            score += len(axis['text_values']) * 100
+        
+        # Jednolite kroki (bonus)
+        if axis.get('is_uniform', False):
+            score += 50
+        
+        # Mniejszy krok = bardziej szczegółowa oś (odwracamy, żeby mniejszy krok = wyższy wynik)
+        if 'step' in axis and axis['step'] > 0:
+            score += 1.0 / (axis['step'] + 0.001)
+        
+        return score
+    
+    # Znajdź oś z najwyższym wynikiem
+    best_axis = max(successful_axes, key=axis_score)
+    return best_axis
+
 def interpret_axes(axes_data):
     """
     Interpretuje dane osi, wykrywając kroki i zakres wartości.
+    Wybiera tylko jedną najlepszą oś X i jedną najlepszą oś Y.
     
     Args:
         axes_data: Dane osi w formacie JSON z funkcji format_axes_to_json
         
     Returns:
-        Dict z interpretacją osi
+        Dict z interpretacją osi (maksymalnie jedna oś X i jedna oś Y)
     """
-    result = {
-        'horizontal_axes': [],
-        'vertical_axes': []
-    }
+    horizontal_interpretations = []
+    vertical_interpretations = []
     
-    # Przetwórz osie poziome (X)
+    # Przetwórz wszystkie osie poziome (X)
     for axis in axes_data.get('horizontal_axes', []):
         axis_id = axis['id']
         elements = axis['elements']
@@ -323,18 +647,27 @@ def interpret_axes(axes_data):
         
         # Dodaj zakres wartości
         if 'values' in interpretation and len(interpretation['values']) > 0:
-            interpretation['range'] = {
-                'min': float(min(interpretation['values'])),
-                'max': float(max(interpretation['values']))
-            }
+            try:
+                # Filtruj wartości - tylko te które są liczbami
+                numeric_values = [v for v in interpretation['values'] if isinstance(v, (int, float))]
+                if numeric_values:
+                    interpretation['range'] = {
+                        'min': float(min(numeric_values)),
+                        'max': float(max(numeric_values))
+                    }
+                else:
+                    interpretation['range'] = {'min': 0.0, 'max': 1.0}
+            except (ValueError, TypeError) as e:
+                print(f"Błąd przy obliczaniu zakresu dla osi poziomej {axis_id}: {e}")
+                interpretation['range'] = {'min': 0.0, 'max': 1.0}
             
         # Dodaj oczyszczone wartości tekstowe
         if 'text_values' in interpretation:
             interpretation['cleaned_values'] = [clean_text_value(val) for val in interpretation['text_values']]
         
-        result['horizontal_axes'].append(interpretation)
+        horizontal_interpretations.append(interpretation)
     
-    # Przetwórz osie pionowe (Y)
+    # Przetwórz wszystkie osie pionowe (Y)
     for axis in axes_data.get('vertical_axes', []):
         axis_id = axis['id']
         elements = axis['elements']
@@ -344,16 +677,41 @@ def interpret_axes(axes_data):
         
         # Dodaj zakres wartości
         if 'values' in interpretation and len(interpretation['values']) > 0:
-            interpretation['range'] = {
-                'min': float(min(interpretation['values'])),
-                'max': float(max(interpretation['values']))
-            }
+            try:
+                # Filtruj wartości - tylko te które są liczbami
+                numeric_values = [v for v in interpretation['values'] if isinstance(v, (int, float))]
+                if numeric_values:
+                    interpretation['range'] = {
+                        'min': float(min(numeric_values)),
+                        'max': float(max(numeric_values))
+                    }
+                else:
+                    interpretation['range'] = {'min': 0.0, 'max': 1.0}
+            except (ValueError, TypeError) as e:
+                print(f"Błąd przy obliczaniu zakresu dla osi pionowej {axis_id}: {e}")
+                interpretation['range'] = {'min': 0.0, 'max': 1.0}
             
         # Dodaj oczyszczone wartości tekstowe
         if 'text_values' in interpretation:
             interpretation['cleaned_values'] = [clean_text_value(val) for val in interpretation['text_values']]
         
-        result['vertical_axes'].append(interpretation)
+        vertical_interpretations.append(interpretation)
+    
+    # Wybierz najlepsze osie
+    result = {
+        'horizontal_axes': [],
+        'vertical_axes': []
+    }
+    
+    # Wybierz najlepszą oś poziomą
+    best_horizontal = select_best_axis(horizontal_interpretations)
+    if best_horizontal:
+        result['horizontal_axes'].append(best_horizontal)
+    
+    # Wybierz najlepszą oś pionową
+    best_vertical = select_best_axis(vertical_interpretations)
+    if best_vertical:
+        result['vertical_axes'].append(best_vertical)
     
     # Konwertuj wszystkie typy NumPy na standardowe typy Pythona
     return convert_numpy_types(result)
