@@ -1,0 +1,52 @@
+WAŻNE INFORMACJE 
+
+	klucze do neo4j i cohere to moje PRYWATNE klucze do testowania
+	
+	kod powinien zużyć około 4-5 GB VRAM (zadziała na laptopowym RTX 2060)
+
+JAK URUCHOMIĆ? !!!WYMAGANA CUDA!!!
+
+	#1 INSTALACJE 
+
+		pip install torch transformers bitsandbytes accelerate cohere neo4j pandas bert-score matplotlib huggingface-hub
+
+	#2 HUGGINGFACE
+
+		Załóż konto na huggingface
+
+		Wejdź w link: https://huggingface.co/speakleash/Bielik-1.5B-v3.0-Instruct
+
+		Zaakceptuj warunki używania modelu
+
+		Stwórz token huggingface
+
+		w terminalu_>    huggingface-cli login
+		
+	#3 KOMPILACJA
+		
+		pobieramy cały folder window_app z github RAG
+		
+		kompilujemy main_window.py 
+		
+		w terminalu powinny pojawiać się informacje o instalacji modelu itd.
+		
+	#4 DZIAŁANIE PROGRAMU
+	
+		przycisk bielik odpala okno chatu z czystym bielikiem
+		
+		przycisk RAG uruchamia aplikację RAG
+		
+		w aplikacji RAG po wygenerowaniu odpowiedzi w oknie po naciśnięciu odpowiedzi lewym przyciskiem myszy pojawi się okno z podanymi kontekstami
+		
+		po zadaniu kilku pytań można kliknąć przycisk Metryki RAG, który pokaże w nowym oknie wykresy z pomierzonymi metrykami
+		
+CZEGO JESZCZE NIE MA: 
+ - relacje grafowe
+ - retrieval multimodalny
+	
+	
+
+	
+
+
+

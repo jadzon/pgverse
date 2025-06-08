@@ -1,18 +1,19 @@
 import tkinter as tk
+from tkinter.scrolledtext import ScrolledText
+import os
 from tkinter import END
 import torch
+import json
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 import enviromental_variables as ev
+from rag_utils import process_query  # Zakładam, że masz ten moduł z funkcją process_query
 
 # Stałe konfiguracyjne
 MODEL_NAME = ev.MODEL_NAME
 MAX_TOKENS = ev.MAX_TOKENS
-
+JSON_PATH = os.path.join(os.path.dirname(__file__), ev.JSON_PATH)
 
 def load_model():
-    """
-    Ładuje model i tokenizer z konfiguracją 8-bitową.
-    """
     # Sprawdzenie dostępności GPU dla 8-bitowej kwantyzacji
     if not torch.cuda.is_available():
         raise RuntimeError("Brak dostępnego GPU CUDA – 8-bitowa kwantyzacja wymaga CUDA.")
@@ -38,12 +39,11 @@ def load_model():
     return tokenizer, model
 
 
-class ChatApplication(tk.Tk):
+class RagApplication(tk.Tk):
     def __init__(self):
         super().__init__()
         # Inicjalizacja modelu
         self.tokenizer, self.model = load_model()
-
         # Ustawienia UI
         self.title("Bielik Chat")
         self.geometry("800x500")
@@ -51,6 +51,12 @@ class ChatApplication(tk.Tk):
         self.font_size = 12
 
         self.create_widgets()
+
+        self.cohere_api_key =  ev.COHERE_API_KEY
+        self.neo4j_uri = ev.NEO4J_URI
+        self.neo4j_username = ev.NEO4J_USERNAME
+        self.neo4j_password = ev.NEO4J_PASSWORD
+
         print("Model załadowany. Możesz pisać swoje prompty.")
 
     def create_widgets(self):
@@ -106,23 +112,37 @@ class ChatApplication(tk.Tk):
         self.user_input.delete(0, END)
         self._scroll_to_bottom()
 
-        # Generowanie odpowiedzi
-        inputs = self.tokenizer(prompt, return_tensors='pt').to(self.model.device)
-        with torch.no_grad():
-            out = self.model.generate(
-                **inputs,
-                max_new_tokens=MAX_TOKENS,
-                temperature=0.7,
-                top_p=0.95,
-                do_sample=True,
-                pad_token_id=self.tokenizer.eos_token_id
-            )
-        full_resp = self.tokenizer.decode(out[0], skip_special_tokens=True)
-        answer = full_resp[len(prompt):].strip()
-        self._add_message(answer)
+        answer = process_query(prompt, 
+                               self.cohere_api_key, 
+                               self.neo4j_uri, 
+                               self.neo4j_username, 
+                               self.neo4j_password, 
+                               self.tokenizer, 
+                               self.model)
+        # Pobierz metryki referencji z załadowanych danych JSON
+
+        try:
+            with open(JSON_PATH, 'r', encoding='utf-8') as f:
+                bert_scores = json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError):
+            bert_scores = []
+
+        references = []
+        for entry in bert_scores:
+            if entry.get('query') == prompt:
+                for score in entry.get('scores', []):
+                    references.append({
+                        'reference': score.get('reference', ''),
+                        'precision': score.get('precision', 0.0),
+                        'recall': score.get('recall', 0.0),
+                        'f1': score.get('f1', 0.0)
+                    })
+                break
+
+        self._add_message(answer, references)
         self._scroll_to_bottom()
 
-    def _add_message(self, content):
+    def _add_message(self, content, references=None):
         lbl = tk.Label(
             self.chat_frame,
             text=content,
@@ -133,6 +153,21 @@ class ChatApplication(tk.Tk):
             justify='left'
         )
         lbl.pack(fill=tk.X, pady=2, padx=5)
+        if references:
+            lbl.references = references
+            lbl.bind('<Button-1>', lambda e: self.show_references(e.widget.references))
+
+    def show_references(self, references):
+        win = tk.Toplevel(self)
+        win.title("Referencje i metryki")
+        txt = ScrolledText(win, wrap=tk.WORD, font=("Arial", self.font_size))
+        txt.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
+        for idx, ref in enumerate(references, 1):
+            txt.insert(END, f"{idx}. {ref.get('reference')}\n")
+            txt.insert(END, f"   Preision: {ref.get('precision'):.3f}, Recall: {ref.get('recall'):.3f}, F1: {ref.get('f1'):.3f}\n\n")
+        txt.configure(state='disabled')
+        btn_close = tk.Button(win, text='Zamknij', command=win.destroy, bg='#003366', fg='white')
+        btn_close.pack(pady=5)
 
     def _on_frame_configure(self, event):
         self.chat_container.configure(scrollregion=self.chat_container.bbox('all'))
@@ -147,6 +182,6 @@ class ChatApplication(tk.Tk):
 
 
 if __name__ == '__main__':
-    app = ChatApplication()
+    app = RagApplication()
     app.mainloop()
 
