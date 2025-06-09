@@ -502,7 +502,7 @@ class SchematicAnalyzer:
         try:
             # Wykrywanie połączeń
             net_detector.find_connections()
-            net_detector.visualize_connections()
+            #net_detector.visualize_connections()
             return net_detector.connections if hasattr(net_detector, "connections") else None
         finally:
             # Przywrócenie oryginalnych funkcji
@@ -726,7 +726,7 @@ def main():
         results_folder="main_results",
         preprocess_enabled=False,
     )
-    analyzer.analyze(image_path="img/test7.jpg")
+    analyzer.analyze(image_path="img/test4.png")
 
 
 if __name__ == "__main__":
