@@ -1,20 +1,22 @@
-from neo4j import GraphDatabase
+from neo4j import GraphDatabase, Config
 import time
 from collections import defaultdict
 
 
 class Neo4jConnector:
     """
-    Manages Neo4j driver connection.
+    Manages Neo4j driver connection with server version check disabled.
     """
-    def __init__(self, uri: str, user: str, password: str):
+    def __init__(self, uri: str, user: str, password: str, config: Config):
         self.driver = GraphDatabase.driver(uri, auth=(user, password))
+        self.config = config
 
     def get_driver(self):
         return self.driver
 
     def close(self):
-        self.driver.close()
+        if self.driver:
+            self.driver.close()
 
 
 class GraphBuilder:

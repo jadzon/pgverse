@@ -7,7 +7,7 @@ import hashlib
 import torch
 import time
 
-RELATION_SIMILARITY_THRESHOLD = 0.85 
+RELATION_SIMILARITY_THRESHOLD = 0.955 
 MAX_TOKENS = 150
 
 from rag_codes.rag_functions.metadata_context import ImageTextProcessor
@@ -1139,10 +1139,22 @@ class SubjectSelectorApp:
                         try:
                             log_graph_message(f"🔄 Próba {attempt + 1}/{max_retries} konserwacji...")
                             
-                            # Sprawdź połączenie przed rozpoczęciem
-                            with neo4j_connector.get_driver().session() as test_session:
-                                test_session.run("RETURN 1")
-                                log_graph_message("✅ Połączenie aktywne - rozpoczynam konserwację...")
+                            # POPRAWKA: Sprawdź czy sterownik nie jest zamknięty przed użyciem
+                            if neo4j_connector is None:
+                                log_graph_message("❌ Brak aktywnego połączenia - próbuję ponownie połączyć...")
+                                raise Exception("No active connection")
+                            
+                            # Sprawdź połączenie przed rozpoczęciem - z obsługą błędu zamkniętego sterownika
+                            try:
+                                with neo4j_connector.get_driver().session() as test_session:
+                                    test_session.run("RETURN 1")
+                                    log_graph_message("✅ Połączenie aktywne - rozpoczynam konserwację...")
+                            except Exception as conn_error:
+                                if "closed" in str(conn_error).lower() or "defunct" in str(conn_error).lower():
+                                    log_graph_message("🔍 Wykryto zamknięte połączenie - próbuję ponownie nawiązać...")
+                                    raise Exception("Connection closed")
+                                else:
+                                    raise conn_error
                             
                             # Uruchom konserwację z callbackiem
                             def maintenance_callback(message):
@@ -1150,11 +1162,11 @@ class SubjectSelectorApp:
                             
                             # POPRAWIONE: Użyj metody z callbackiem jeśli istnieje
                             if hasattr(graph_builder, 'run_maintenance_with_callback'):
-                                graph_builder.run_maintenance_with_callback(maintenance_callback)
+                                graph_builder.run_maintenance_with_progress_callback(maintenance_callback)
                             else:
-                            
                                 graph_builder.run_maintenance()
                             
+
                             log_graph_message("✅ Konserwacja grafu zakończona pomyślnie")
                             return  # Sukces - wyjdź z pętli
                             
@@ -1164,7 +1176,7 @@ class SubjectSelectorApp:
                             
                             # Sprawdź czy to błąd połączenia
                             if any(keyword in error_msg.lower() for keyword in 
-                                   ['connection', 'defunct', 'sessionexpired', 'no data', 'timeout']):
+                                   ['connection', 'defunct', 'sessionexpired', 'no data', 'timeout', 'closed']):
                                 
                                 log_graph_message(f"🔍 Wykryto błąd połączenia - spróbuję ponowić...")
                                 
@@ -1172,15 +1184,26 @@ class SubjectSelectorApp:
                                     log_graph_message(f"⏳ Czekam {retry_delay} sekund przed ponowną próbą...")
                                     time.sleep(retry_delay)
                                     
-                                    # Spróbuj ponownie nawiązać połączenie
+                                    # POPRAWKA: Lepsze odtworzenie połączenia
                                     try:
                                         log_graph_message("🔄 Próba ponownego nawiązania połączenia...")
-                                        # Zamknij stare połączenie
+                                        
+                                        # Zamknij stare połączenie bezpiecznie
                                         if neo4j_connector:
-                                            neo4j_connector.close()
+                                            try:
+                                                neo4j_connector.close()
+                                            except Exception:
+                                                pass  # Ignoruj błędy zamykania
+                                        
+                                        # Wyczyść referencje
+                                        neo4j_connector = None
+                                        graph_builder = None
+                                        
+                                        # Czekaj chwilę
+                                        time.sleep(2)
                                         
                                         # Utwórz nowe połączenie
-                                        time.sleep(2)
+                                        log_graph_message("🔌 Tworzenie nowego połączenia...")
                                         new_connector = Neo4jConnector(uri_var.get(), user_var.get(), password_var.get())
                                         
                                         # Test nowego połączenia
@@ -1196,9 +1219,6 @@ class SubjectSelectorApp:
                                     except Exception as reconnect_error:
                                         log_graph_message(f"❌ Błąd ponownego połączenia: {reconnect_error}")
                                         continue
-                                else:
-                                    log_graph_message("💥 Maksymalna liczba prób wyczerpana")
-                                    raise
                             else:
                                 # Inny błąd - nie próbuj ponownie
                                 log_graph_message(f"💥 Nieodwracalny błąd: {error_msg}")
@@ -1513,6 +1533,7 @@ class SubjectSelectorApp:
         operation_buttons.append(btn4)
         
         # PRZYCISK - Usuń wszystkie relacje
+
         btn_clear_relations = tk.Button(graph_buttons_frame2, text="🗑️ USUŃ WSZYSTKIE RELACJE", 
                                        command=clear_all_relations, state=tk.DISABLED, 
                                        bg="red", fg="white", font=("Arial", 10, "bold"))
