@@ -60,39 +60,35 @@ class ChartAnalyzer:
         formula = str(formula).replace("x0", "x")
         with open(output_path, 'w') as f:
             f.write(f"""
-                    \\documentclass{{article}}
-                    \\usepackage[margin=0.25in]{{geometry}}
-                    \\usepackage{{pgfplots}}
-                    \\pgfplotsset{{width=10cm,compat=1.9}}
-
-                    \\begin{{document}}
-                    \\begin{{tikzpicture}}
-                    \\begin{{axis}}[
-                        axis lines = left,
-                        xlabel = \\(x\\),
-                        ylabel = \\(f(x)\\),
-                    ]
-                    % Fitted formula from symbolic regression
-                    \\addplot [
-                        domain={domain_min}:{domain_max}, 
-                        samples={samples}, 
-                        color=red,
-                    ]
-                    {{{formula}}};
-                    \\addlegendentry{{\\({latex_formula}\\)}}
-
-                    % Original data points
-                    \\addplot[only marks, mark=o, mark size=1.5pt, color=blue] 
-                        table {{
-                        % Here you could add your actual data points if needed
-                    }};
-                    \\addlegendentry{{Data points}}
-
-                    \\end{{axis}}
-
-                    \\end{{tikzpicture}}
-                    \\end{{document}}
-                    """)
+\\documentclass{{article}}
+\\usepackage[margin=0.25in]{{geometry}}
+\\usepackage{{pgfplots}}
+\\pgfplotsset{{width=10cm,compat=1.9}}
+\\begin{{document}}
+\\begin{{tikzpicture}}
+\\begin{{axis}}[
+    axis lines = left,
+    xlabel = \\(x\\),
+    ylabel = \\(f(x)\\),
+]
+% Fitted formula from symbolic regression
+\\addplot [
+    domain={domain_min}:{domain_max}, 
+    samples={samples}, 
+    color=red,
+]
+{{{formula}}};
+\\addlegendentry{{\\({latex_formula}\\)}}
+% Original data points
+\\addplot[only marks, mark=o, mark size=1.5pt, color=blue] 
+    table {{
+    % Here you could add your actual data points if needed
+}};
+\\addlegendentry{{Data points}}
+\\end{{axis}}
+\\end{{tikzpicture}}
+\\end{{document}}
+""")
         print(f"LaTeX file exported to {output_path}")
 
 def main():
