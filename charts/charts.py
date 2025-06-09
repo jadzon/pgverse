@@ -3,6 +3,7 @@ from read_chart.read_chart import ChartReader
 from charts_axes_detect.chart_run import process_single_file,CONFIG
 from data_analyzer.symbolic_regressor import SymbolicRegressor
 import numpy as np
+import os
 class ChartAnalyzer:
     def __init__(self, chart_path):
         self.chart_path = chart_path
@@ -38,7 +39,61 @@ class ChartAnalyzer:
         print("Metryki dopasowania:")
         for name, value in metrics.items():
             print(f"{name}: {value:.4f}")
+        export_path = "results/latex/overleaf_export.tex"
+        self.export_to_overleaf(export_path,(axes["horizontal_axes"][0]["values"][0], axes["horizontal_axes"][0]["values"][-1]), len(x_values))
+    def export_to_overleaf(self, output_path, domain=(-10, 10), samples=100):
+        """
+        Exports the symbolic regression results to an Overleaf-compatible LaTeX file.
+        
+        Args:
+            output_path: Path to save the LaTeX file
+            domain: Tuple of (min, max) x values for plotting
+            samples: Number of points to sample within the domain
+        """
+        formula, latex_formula = self.data_analyzer.get_formula()
+        print(formula)
+        domain_min, domain_max = domain
+        #Check if path exists, if not create it
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        #replace ** with ^ in the formula for pf compatibility
+        formula = str(formula).replace("**", "^")
+        formula = str(formula).replace("x0", "x")
+        with open(output_path, 'w') as f:
+            f.write(f"""
+                    \\documentclass{{article}}
+                    \\usepackage[margin=0.25in]{{geometry}}
+                    \\usepackage{{pgfplots}}
+                    \\pgfplotsset{{width=10cm,compat=1.9}}
 
+                    \\begin{{document}}
+                    \\begin{{tikzpicture}}
+                    \\begin{{axis}}[
+                        axis lines = left,
+                        xlabel = \\(x\\),
+                        ylabel = \\(f(x)\\),
+                    ]
+                    % Fitted formula from symbolic regression
+                    \\addplot [
+                        domain={domain_min}:{domain_max}, 
+                        samples={samples}, 
+                        color=red,
+                    ]
+                    {{{formula}}};
+                    \\addlegendentry{{\\({latex_formula}\\)}}
+
+                    % Original data points
+                    \\addplot[only marks, mark=o, mark size=1.5pt, color=blue] 
+                        table {{
+                        % Here you could add your actual data points if needed
+                    }};
+                    \\addlegendentry{{Data points}}
+
+                    \\end{{axis}}
+
+                    \\end{{tikzpicture}}
+                    \\end{{document}}
+                    """)
+        print(f"LaTeX file exported to {output_path}")
 
 def main():
     chart_path = "charts_examples/1.JPG"  # Replace with your chart image path
