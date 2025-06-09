@@ -32,17 +32,24 @@ class LaTeXToGraph:
     def parse_latex_to_ast(self, latex_formula: str):
         """Konwertuje LaTeX do AST używając SymPy"""
         try:
-            latex_formula = latex_formula.strip()
-            if not latex_formula:
-                raise ValueError("Pusty wzór LaTeX")
-                
-            expr = parse_latex(latex_formula)
+            # Usuń tagi i nadmiarowe spacje
+            cleaned_formula = re.sub(r'\\tag\{.*?\}', '', latex_formula).strip()
+            # Zastąp \left| i \right| standardowymi znakami
+            cleaned_formula = re.sub(r'\\left\|(.*?)\\right\|', r'Abs(\1)', cleaned_formula)
+            
+            # Jeśli \leq nadal jest wewnątrz | |, spróbuj uprościć
+            if '|' in cleaned_formula and r'\leq' in cleaned_formula.split('|')[1]:
+                # Prostsze czyszczenie jako fallback
+                cleaned_formula = latex_formula.replace(r'\left|', '').replace(r'\right|', '')
+
+            expr = parse_latex(cleaned_formula)
             return expr
         except Exception as e:
             logger.warning(f"Błąd parsowania LaTeX '{latex_formula}': {e}, próba fallback")
+            # Logika fallback pozostaje na swoim miejscu jako ostateczność
             try:
                 cleaned = latex_formula.replace('\\', '').replace('{', '').replace('}', '')
-                cleaned = cleaned.replace('frac', '/').replace('sqrt', 'sqrt')
+                cleaned = cleaned.replace('frac', '/').replace('leq', '<=')
                 return sympify(cleaned)
             except Exception as e2:
                 logger.error(f"Fallback również nieudany: {e2}")

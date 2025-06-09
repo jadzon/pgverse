@@ -1,15 +1,14 @@
-from neo4j import GraphDatabase, Config
+from neo4j import GraphDatabase
 import time
 from collections import defaultdict
-
+import re
 
 class Neo4jConnector:
     """
     Manages Neo4j driver connection with server version check disabled.
     """
-    def __init__(self, uri: str, user: str, password: str, config: Config):
+    def __init__(self, uri: str, user: str, password: str):
         self.driver = GraphDatabase.driver(uri, auth=(user, password))
-        self.config = config
 
     def get_driver(self):
         return self.driver
@@ -861,6 +860,9 @@ class LearningPatternTracker:
     def __init__(self, connector: Neo4jConnector):
         self.driver = connector.get_driver()
         self.query_history = []
+        self.co_occurrence_patterns = defaultdict(int)
+        self.temporal_patterns = defaultdict(list)
+        self.semantic_clusters = {}
     
     def close(self):
         self.driver.close()
@@ -877,38 +879,254 @@ class LearningPatternTracker:
         }
         self.query_history.append(session_data)
         
+        # AUTOMATYCZNE UCZENIE BEZ FEEDBACKU
+        self._learn_from_retrieval_patterns(query, retrieved_nodes)
+        self._update_temporal_patterns(retrieved_nodes)
+        self._strengthen_co_occurrence_relations(retrieved_nodes)
+        
         # Jeśli użytkownik wskazał przydatne wyniki, wzmocnij te relacje
         if user_feedback:
             self._process_user_feedback(retrieved_nodes, user_feedback)
     
-    def _process_user_feedback(self, retrieved_nodes: list, feedback: dict):
+    def _learn_from_retrieval_patterns(self, query: str, retrieved_nodes: list):
         """
-        Przetwarza feedback użytkownika i wzmacnia odpowiednie relacje.
+        Uczy się z wzorców pobierania - które węzły pojawiają się razem w wynikach.
         """
-        useful_nodes = feedback.get('useful', [])
-        not_useful_nodes = feedback.get('not_useful', [])
+        if len(retrieved_nodes) < 2:
+            return
+            
+        # Wzorce współwystępowania
+        for i, node_a in enumerate(retrieved_nodes):
+            for node_b in retrieved_nodes[i+1:]:
+                pattern_key = tuple(sorted([node_a, node_b]))
+                self.co_occurrence_patterns[pattern_key] += 1
+                
+                # Po każdych 3 współwystąpieniach wzmocnij relację
+                if self.co_occurrence_patterns[pattern_key] % 3 == 0:
+                    self._auto_strengthen_relation(node_a, node_b, 0.2)
         
-        # Wzmocnij relacje między użytecznymi węzłami
-        for i, node_a in enumerate(useful_nodes):
-            for node_b in useful_nodes[i+1:]:
-                query = '''
-                MATCH (a {id: $node_a}), (b {id: $node_b})
-                MERGE (a)-[r:SIMILAR_TO]-(b)
-                ON CREATE SET r.weight = 0.4, 
-                             r.user_reinforced = true, 
-                             r.last_used = timestamp(),
-                             r.reinforcement_count = 1
-                ON MATCH SET r.weight = CASE 
-                               WHEN r.weight + 0.3 > 1.0 THEN 1.0
-                               ELSE r.weight + 0.3
-                             END,
-                             r.user_reinforced = true, 
-                             r.last_used = timestamp(),
-                             r.reinforcement_count = COALESCE(r.reinforcement_count, 0) + 1
-                '''
-                with self.driver.session() as session:
-                    session.run(query, node_a=node_a, node_b=node_b)
+        # Uczenie się z kontekstu zapytania
+        self._learn_query_context_patterns(query, retrieved_nodes)
     
+    def _update_temporal_patterns(self, retrieved_nodes: list):
+        """
+        Śledzi wzorce czasowe - które węzły są używane w podobnych okresach.
+        """
+        current_hour = int(time.time() // 3600)  # Grupa po godzinach
+        
+        for node_id in retrieved_nodes:
+            self.temporal_patterns[node_id].append(current_hour)
+            
+            # Zachowaj tylko ostatnie 50 czasów dostępu
+            if len(self.temporal_patterns[node_id]) > 50:
+                self.temporal_patterns[node_id] = self.temporal_patterns[node_id][-50:]
+    
+    def _strengthen_co_occurrence_relations(self, retrieved_nodes: list):
+        """
+        Wzmacnia relacje między węzłami które często pojawiają się razem.
+        """
+        if len(retrieved_nodes) < 2:
+            return
+            
+        # Znajdź pary węzłów z najwyższym współczynnikiem współwystępowania
+        node_pairs = []
+        for i, node_a in enumerate(retrieved_nodes):
+            for node_b in retrieved_nodes[i+1:]:
+                pattern_key = tuple(sorted([node_a, node_b]))
+                co_occurrence_count = self.co_occurrence_patterns.get(pattern_key, 0)
+                
+                if co_occurrence_count >= 2:  # Jeśli pojawiły się razem co najmniej 2 razy
+                    strength = min(0.3, co_occurrence_count * 0.1)
+                    node_pairs.append((node_a, node_b, strength))
+        
+        # Wzmocnij relacje w bazie
+        for node_a, node_b, strength in node_pairs:
+            self._auto_strengthen_relation(node_a, node_b, strength)
+    
+    def _learn_query_context_patterns(self, query: str, retrieved_nodes: list):
+        """
+        Uczy się z kontekstu zapytania - które słowa kluczowe prowadzą do których węzłów.
+        """
+        # Wyodrębnij słowa kluczowe z zapytania
+        keywords = self._extract_keywords(query)
+        
+        # Dla każdego węzła zapisz powiązane słowa kluczowe
+        for node_id in retrieved_nodes:
+            query_update = '''
+            MATCH (n {id: $node_id})
+            SET n.query_keywords = CASE 
+                WHEN n.query_keywords IS NULL THEN $keywords
+                ELSE [kw IN (n.query_keywords + $keywords) WHERE kw IN n.query_keywords OR kw IN $keywords]
+            END,
+            n.query_count = COALESCE(n.query_count, 0) + 1,
+            n.last_query_time = timestamp()
+            '''
+            
+            with self.driver.session() as session:
+                session.run(query_update, node_id=node_id, keywords=keywords)
+    
+    def _extract_keywords(self, query: str) -> list:
+        """
+        Wyodrębnia słowa kluczowe z zapytania (prosty algorytm).
+        """
+        
+        
+        # Usuń znaki interpunkcyjne i konwertuj na małe litery
+        clean_query = re.sub(r'[^\w\s]', ' ', query.lower())
+        words = clean_query.split()
+        
+        # Odfiltruj stop words (podstawowe)
+        stop_words = {'i', 'a', 'the', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 
+                     'jak', 'co', 'jest', 'w', 'na', 'do', 'z', 'ze', 'o', 'od', 'dla'}
+        
+        keywords = [word for word in words if len(word) > 2 and word not in stop_words]
+        return keywords[:5]  # Maksymalnie 5 słów kluczowych
+    
+    def _auto_strengthen_relation(self, node_a: str, node_b: str, strength: float):
+        """
+        Automatycznie wzmacnia relację między węzłami.
+        """
+        query = '''
+        MATCH (a {id: $node_a}), (b {id: $node_b})
+        MERGE (a)-[r:SIMILAR_TO]-(b)
+        ON CREATE SET r.weight = $strength, 
+                     r.auto_reinforced = true, 
+                     r.last_used = timestamp(),
+                     r.auto_reinforcement_count = 1,
+                     r.learning_source = 'co_occurrence'
+        ON MATCH SET r.weight = CASE 
+                       WHEN r.weight + $strength > 1.0 THEN 1.0
+                       ELSE r.weight + $strength
+                     END,
+                     r.auto_reinforced = true, 
+                     r.last_used = timestamp(),
+                     r.auto_reinforcement_count = COALESCE(r.auto_reinforcement_count, 0) + 1
+        '''
+        
+        with self.driver.session() as session:
+            session.run(query, node_a=node_a, node_b=node_b, strength=strength)
+    
+    def discover_semantic_clusters(self):
+        """
+        Automatycznie odkrywa klastry semantyczne na podstawie wzorców użycia.
+        """
+        # Znajdź węzły które często występują razem
+        cluster_query = '''
+        MATCH (a)-[r:SIMILAR_TO]-(b)
+        WHERE r.auto_reinforcement_count >= 3 OR r.reinforcement_count >= 2
+        RETURN a.id as node_a, b.id as node_b, 
+               r.weight as weight, 
+               COALESCE(r.auto_reinforcement_count, 0) + COALESCE(r.reinforcement_count, 0) as total_strength
+        ORDER BY total_strength DESC
+        '''
+        
+        with self.driver.session() as session:
+            result = session.run(cluster_query)
+            strong_connections = [dict(record) for record in result]
+        
+        # Grupuj węzły w klastry
+        clusters = {}
+        cluster_id = 0
+        
+        for connection in strong_connections:
+            node_a, node_b = connection['node_a'], connection['node_b']
+            
+            # Sprawdź czy węzły już należą do klastrów
+            cluster_a = self._find_node_cluster(node_a, clusters)
+            cluster_b = self._find_node_cluster(node_b, clusters)
+            
+            if cluster_a is None and cluster_b is None:
+                # Utwórz nowy klaster
+                clusters[cluster_id] = {node_a, node_b}
+                cluster_id += 1
+            elif cluster_a is not None and cluster_b is None:
+                # Dodaj node_b do klastra node_a
+                clusters[cluster_a].add(node_b)
+            elif cluster_a is None and cluster_b is not None:
+                # Dodaj node_a do klastra node_b
+                clusters[cluster_b].add(node_a)
+            elif cluster_a != cluster_b:
+                # Połącz klastry
+                clusters[cluster_a].update(clusters[cluster_b])
+                del clusters[cluster_b]
+        
+        self.semantic_clusters = clusters
+        return clusters
+    
+    def _find_node_cluster(self, node_id: str, clusters: dict):
+        """
+        Znajduje klaster do którego należy węzeł.
+        """
+        for cluster_id, nodes in clusters.items():
+            if node_id in nodes:
+                return cluster_id
+        return None
+    
+    def auto_optimize_graph(self):
+        """
+        Automatyczna optymalizacja grafu na podstawie nauczonych wzorców.
+        """
+        optimizations_applied = []
+        
+        # 1. Wzmocnij relacje w descobranych klastrach
+        clusters = self.discover_semantic_clusters()
+        for cluster_id, nodes in clusters.items():
+            if len(nodes) >= 3:
+                # Wzmocnij wszystkie relacje w klastrze
+                node_list = list(nodes)
+                for i, node_a in enumerate(node_list):
+                    for node_b in node_list[i+1:]:
+                        self._auto_strengthen_relation(node_a, node_b, 0.15)
+                
+                optimizations_applied.append(f"Cluster {cluster_id}: wzmocniono {len(nodes)} węzłów")
+        
+        # 2. Identyfikuj i wzmocnij węzły hub (często używane z wieloma innymi)
+        hub_query = '''
+        MATCH (n)
+        WHERE n.query_count >= 5
+        OPTIONAL MATCH (n)-[r:SIMILAR_TO]-(connected)
+        WITH n, count(connected) as connection_count, n.query_count as usage
+        WHERE connection_count >= 3
+        RETURN n.id as hub_id, connection_count, usage
+        ORDER BY usage DESC, connection_count DESC
+        LIMIT 10
+        '''
+        
+        with self.driver.session() as session:
+            hubs = [dict(record) for record in session.run(hub_query)]
+            
+            for hub in hubs:
+                # Oznacz jako węzeł centralny
+                hub_update = '''
+                MATCH (n {id: $hub_id})
+                SET n.is_hub = true,
+                    n.hub_score = $score,
+                    n.hub_discovered_at = timestamp()
+                '''
+                
+                score = hub['usage'] * 0.1 + hub['connection_count'] * 0.05
+                session.run(hub_update, hub_id=hub['hub_id'], score=score)
+                
+                optimizations_applied.append(f"Hub: {hub['hub_id']} (score: {score:.2f})")
+        
+        # 3. Usuń słabe, nierelevantne relacje
+        weak_relations_query = '''
+        MATCH ()-[r:SIMILAR_TO]-()
+        WHERE r.weight < 0.2 
+          AND COALESCE(r.auto_reinforcement_count, 0) = 0
+          AND COALESCE(r.reinforcement_count, 0) = 0
+          AND r.last_used < timestamp() - (7 * 24 * 3600 * 1000)
+        DELETE r
+        '''
+        
+        with self.driver.session() as session:
+            result = session.run(weak_relations_query)
+            deleted_count = result.consume().counters.relationships_deleted
+            if deleted_count > 0:
+                optimizations_applied.append(f"Usunięto {deleted_count} słabych relacji")
+        
+        return optimizations_applied
+
     def analyze_usage_patterns(self):
         """
         Analizuje wzorce użycia i identyfikuje trendy.
@@ -918,7 +1136,9 @@ class LearningPatternTracker:
         MATCH (n)
         WHERE n.usage_count IS NOT NULL
         RETURN n.id as id, n.usage_count as usage, n.type as type,
-               n.source as source, size(COALESCE(n.contexts, [])) as context_variety
+               n.source as source, size(COALESCE(n.contexts, [])) as context_variety,
+               COALESCE(n.query_count, 0) as query_count,
+               COALESCE(n.is_hub, false) as is_hub
         ORDER BY n.usage_count DESC
         LIMIT 10
         '''
@@ -927,8 +1147,20 @@ class LearningPatternTracker:
             result = session.run(query)
             popular_nodes = [dict(record) for record in result]
         
+        # Dodaj statystyki automatycznego uczenia
+        auto_learning_stats = {
+            'co_occurrence_patterns': len(self.co_occurrence_patterns),
+            'tracked_temporal_patterns': len(self.temporal_patterns),
+            'discovered_clusters': len(self.semantic_clusters),
+            'strongest_co_occurrences': sorted(
+                [(k, v) for k, v in self.co_occurrence_patterns.items()], 
+                key=lambda x: x[1], reverse=True
+            )[:5]
+        }
+        
         return {
             'popular_nodes': popular_nodes,
             'total_queries': len(self.query_history),
-            'feedback_sessions': len([s for s in self.query_history if s['feedback']])
+            'feedback_sessions': len([s for s in self.query_history if s['feedback']]),
+            'auto_learning_stats': auto_learning_stats
         }
