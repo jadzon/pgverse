@@ -3,9 +3,22 @@ from net_detector.net_detector import NetDetector
 #from text_extraction.text_extraction import TextExtractor
 from text_extraction.text_extraction_noPreprocess import TextExtractor
 import cv2
+import numpy as np
 import os
-from preprocessing.png_proc import process_image
+from collections import Counter, deque
 import json
+
+class NumpyEncoder(json.JSONEncoder):
+    def default(self, o):
+        if isinstance(o, np.ndarray):
+            return o.tolist()
+        elif isinstance(o, np.integer):
+            return int(o)
+        elif isinstance(o, np.floating):
+            return float(o)
+        elif isinstance(o, tuple) and hasattr(o, '_fields'):  # for namedtuple
+            return dict(zip(o._fields, o))
+        return super(NumpyEncoder, self).default(o)
 
 class SchematicAnalyzer:
     def __init__(self, model_path, text_detection_enabled=True, preprocess_enabled=True, results_folder="main_results"):
@@ -160,11 +173,17 @@ class SchematicAnalyzer:
                 "connections": connection_data["block_connections"][block_id],
                 "coordinates": blocks[block_id]["coordinates"],
                 "texts": blocks[block_id]["texts"],
-                "connection_points": connection_data["connection_points"][block_id],
+                "connection_points": connection_data["connection_points"][block_id][0],
             }
                 # Properly iterate through contours data and find connection points for this block
 
-
+        # Save circuit to JSON
+        output_folder = os.path.join(self.results_folder, "circuitikz")
+        os.makedirs(output_folder, exist_ok=True)
+        json_path = os.path.join(output_folder, "circuit_raw.json")
+        with open(json_path, 'w') as f:
+            json.dump(circuit, f, indent=2, cls=NumpyEncoder)
+        print(f"Circuit data saved to {json_path}")
         # Store paths separately
         circuit["paths"] = []
         for contour_id, contour_data in connection_data["contours"].items():
@@ -226,33 +245,31 @@ class SchematicAnalyzer:
                     label = block_data["texts"][0]["text"]
                 elif isinstance(block_data["texts"][0], str):
                     label = block_data["texts"][0]
-            
-            # Calculate orientation/rotation based on connection points
 
+            # Calculate orientation/rotation based on connection points
+            component = {
+                "id": block_id,
+                "type": circuitikz_type,
+                "position": (center_x, center_y),
+                "label": label or "",
+                "width": x2 - x1,
+                "height": y2 - y1
+            }
             if "connection_points" in block_data and len(block_data["connection_points"]) >= 2:
                 points = block_data["connection_points"]
                 print(f"Block {block_id} has connection points: {points}")
-                component = {
-                    "id": block_id,
-                    "type": circuitikz_type,
-                    "position": (center_x, center_y),
-                    "start_point1": points[0],
-                    "start_point2": points[1],
-                    "label": label or None,
-                    "width": x2 - x1,
-                    "height": y2 - y1
-                }
-            else:
-                # If no connection points, just use component center
-                component = {
-                    "id": block_id,
-                    "type": circuitikz_type,
-                    "position": (center_x, center_y),
-                    "label": label or None,
-                    "width": x2 - x1,
-                    "height": y2 - y1
-                }
+                if circuitikz_type in ["npn","nmos"]:
+                    # For npn and nmos, first point is base
+                    component["start_point1"] = points[0]  # Base
+                    component["start_point2"] = points[1]  # Emitter/Source
+                    component["start_point3"] = points[2]  # Collector/Drain
+                else:
+                    component["start_point1"] = points[0]
+                    component["start_point2"] = points[1]
+                    component["start_point3"] = points[2] if len(points) > 2 else None
+
             
+            print(f"Component {block_id} connection points: {component.get('start_point1', 'N/A')} to {component.get('start_point2', 'N/A')}")
             circuitikz_data["components"].append(component)
         
         # Populate circuitikz_data with connections (paths)
@@ -266,10 +283,6 @@ class SchematicAnalyzer:
         # Export to files
         output_folder = os.path.join(self.results_folder, "circuitikz")
         os.makedirs(output_folder, exist_ok=True)
-
-        #json_path = os.path.join(output_folder, "circuit.json")
-        #with open(json_path, 'w') as f:
-            #json.dump(circuitikz_data, f, indent=2)
 
         latex_path = os.path.join(output_folder, "circuit.tex")
         with open(latex_path, 'w') as f:
@@ -302,7 +315,7 @@ class SchematicAnalyzer:
         scale = target_width_cm / max_x if max_x > 0 else 0.01
 
         latex = [
-            "\\documentclass{standalone}",
+            "\\documentclass{article}",
             "\\usepackage[siunitx, RPvoltages]{circuitikz}",
             "\\begin{document}",
             f"% Dynamic scale factor: {scale:.5f} (target width: {target_width_cm}cm)",
@@ -310,9 +323,10 @@ class SchematicAnalyzer:
         ]
         
         # Draw components with orientation
-        for comp in circuitikz_data["components"]:
-            x1, y1 = comp["start_point1"] if "start_point1" in comp else comp["position"]
-            x2, y2 = comp["start_point2"] if "start_point2" in comp else comp["position"]
+        for i,comp in enumerate(circuitikz_data["components"]):
+            print()
+            x1, y1 = comp["start_point1"]
+            x2, y2 = comp["start_point2"]
             # Flip y-coordinate using image height
             y1_flipped = image_height - y1 if image_height else y1
             x1_scaled = round(x1 * scale,1)
@@ -320,12 +334,24 @@ class SchematicAnalyzer:
             y2_flipped = image_height - y2 if image_height else y2
             x2_scaled = round(x2 * scale,1)
             y2_scaled = round(y2_flipped * scale,1)
+                
 
             #TODO: Handle tripoles (npn,pnp)
             rotate = ""
             print(f"Drawing component {comp['id']} of type {comp['type']} at ({x1_scaled:.1f},{y1_scaled:.1f}) to ({x2_scaled:.1f},{y2_scaled:.1f}) with rotation {rotate}")
             if comp["type"] == "ground":
                 latex.append(f"  \\draw ({x1_scaled:.1f},{y1_scaled:.1f}) to[{comp['type']}] ({x2_scaled:.1f},{y2_scaled:.1f}) {{}};")
+            elif comp["type"] in ["npn", "nmos"]:
+                x3,y3 = comp["start_point3"]
+
+                y3_flipped = image_height - y3 if image_height else y3
+                x3_scaled = round(x3 * scale, 1)
+                y3_scaled = round(y3_flipped * scale, 1)
+                latex.append(f" \\draw ({x3_scaled:.1f},{y3_scaled:.1f}) node[{comp['type']}, anchor=B](Q{i}){{{comp["label"]}}}; ")
+                latex.append(f"\\draw (Q{i}.B) -- ({x3_scaled:.1f},{y3_scaled:.1f});")
+                latex.append(f"\\draw (Q{i}.E) -- ({x2_scaled:.1f},{y2_scaled:.1f});")
+                latex.append(f"\\draw (Q{i}.C) -- ({x1_scaled:.1f},{y1_scaled:.1f});")
+                
             elif comp["type"] == "generic":
                 latex.append(f"  \\node[draw, minimum width={comp['width']*scale:.1f}cm, "
                              f"minimum height={comp['height']*scale:.1f}cm] "
@@ -337,6 +363,7 @@ class SchematicAnalyzer:
         for conn in circuitikz_data["connections"]:
             if conn["path"]:
                 # Sort path points to ensure they form a continuous line
+                
                 path_points = conn["path"]
                 print(f"Processing connection {conn['id']} with {len(path_points)} path points")
                 if len(path_points) >= 2:
@@ -357,6 +384,7 @@ class SchematicAnalyzer:
                     
                     # Add the path with appropriate styling
                     latex.append(f"  \\draw[color=black] {path_str};")
+                    
             else:
                 print(f"Connection {conn['id']} has no path points, using straight line.")
                 # Fallback to straight line if no path points
@@ -507,6 +535,7 @@ class SchematicAnalyzer:
             "\\documentclass{standalone}",
             "\\usepackage{tikz}",
             "\\usetikzlibrary{shapes.geometric, shapes.symbols, arrows, positioning, calc}",
+            "\\usetikzlibrary {backgrounds}"
             "\\begin{document}",
             f"% Dynamic scale factor: {scale:.5f} (target width: {target_width_cm}cm)",
             "\\begin{tikzpicture}[",
@@ -537,6 +566,7 @@ class SchematicAnalyzer:
         for i, box in enumerate(boxes):
             class_id = int(box.cls)
             style = style_mapping.get(class_id, "block")
+            if style == "text": continue
             x1, y1, x2, y2 = map(int, box.xyxy[0].tolist())
             
             # Flip y-coordinate using image height
@@ -551,30 +581,7 @@ class SchematicAnalyzer:
             center_x_scaled = round(center_x * scale, 1)
             center_y_scaled = round(center_y * scale, 1)
             
-            # Handle different element types
-            if class_id == 4:  # Text element
-                # For detected text blocks, extract text directly from text_results
-                text_content = ""
-                for text in text_results:
-                    txt_x1, txt_y1, txt_x2, txt_y2 = map(int, text["coords"])
-                    # Check if text coordinates overlap with this box
-                    if (abs(txt_x1 - x1) < 10 and abs(txt_y1 - y1) < 10 and
-                        abs(txt_x2 - x2) < 10 and abs(txt_y2 - y2) < 10):
-                        text_content = text["text"]
-                        break
-                
-                # If no direct match found, use the text itself
-                if not text_content:
-                    for text in text_results:
-                        if (x1 <= int(text["coords"][0]) <= x2 and 
-                            y1 <= int(text["coords"][1]) <= y2):
-                            text_content = text["text"]
-                            break
-                
-                # Add text node directly to the diagram
-                latex.append(f"  \\node[text] at ({center_x_scaled},{center_y_scaled}) {{{text_content}}};")
-                
-            elif style == "arrow":
+            if style == "arrow":
                 # Store arrow data for later processing
                 width = x2 - x1
                 height = y2 - y1
@@ -613,21 +620,7 @@ class SchematicAnalyzer:
             txt_center_x_scaled = round(txt_center_x * scale, 1)
             txt_center_y_scaled = round(txt_center_y * scale, 1)
             
-            # Check if this text is already inside a block
-            is_inside_block = False
-            for node_id, node in node_boxes.items():
-                if (node['x1'] <= txt_x1 <= node['x2'] and 
-                    node['y1'] <= txt_y1 <= node['y2'] and
-                    node['x1'] <= txt_x2 <= node['x2'] and
-                    node['y1'] <= txt_y2 <= node['y2']):
-                    # Add text to the block
-                    latex.append(f"  \\node at ({node['center_x_scaled']},{node['center_y_scaled']}) {{{text['text']}}};")
-                    is_inside_block = True
-                    break
-            
-            # If text isn't inside any block, add it as a standalone text
-            if not is_inside_block:
-                latex.append(f"  \\node[text] at ({txt_center_x_scaled},{txt_center_y_scaled}) {{{text['text']}}};")
+            latex.append(f"  \\node[text] at ({txt_center_x_scaled},{txt_center_y_scaled}) {{{text['text']}}};")
 
         # Build a connection graph and draw arrows (keep existing code)
         block_connections = {}
@@ -644,6 +637,7 @@ class SchematicAnalyzer:
             end_block = None
             
             for node_id, node in node_boxes.items():
+
                 # Check if arrow start point intersects with this block
                 if (node['x1'] <= x1 <= node['x2'] and node['y1'] <= y1 <= node['y2']):
                     start_block = node_id
@@ -670,7 +664,6 @@ class SchematicAnalyzer:
                         # Start block (top)
                         if start_block is None and y1 <= node['y2'] and abs(x1 - (node['x1'] + node['x2'])/2) < node['x2'] - node['x1']:
                             start_block = node_id
-                        
                         # End block (bottom)
                         if end_block is None and y2 >= node['y1'] and abs(x2 - (node['x1'] + node['x2'])/2) < node['x2'] - node['x1']:
                             end_block = node_id
@@ -687,8 +680,10 @@ class SchematicAnalyzer:
         # Draw arrows between connected blocks
         for source_block, destinations in block_connections.items():
             for dest_block in destinations:
-                latex.append(f"  \\draw[arrow] (box{source_block}) -- (box{dest_block});")
-
+                latex.append(f"\\begin{{scope}}[on background layer]"  
+                             f"\\draw[arrow] (box{source_block}) -- (box{dest_block});"
+                             f"\\end{{scope}}")
+                            
         # Close the TikZ picture and document
         latex.append("\\end{tikzpicture}")
         latex.append("\\end{document}")
@@ -702,7 +697,7 @@ def main():
         results_folder="main_results",
         preprocess_enabled=False,
     )
-    analyzer.analyze(image_path="img/test2.png")
+    analyzer.analyze(image_path="img/test7.jpg")
 
 
 if __name__ == "__main__":
