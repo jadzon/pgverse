@@ -1,0 +1,147 @@
+Wyjście
+ Uys. 2.1 13. Przykłady liczników: ¡1) równoległy dwójkowy; b) dwójkowo-dziesiętny
+ zer i jedynek), a więc 6 stanów jest zbędnych. Licznik powinien liczyć od 0 cl o 9 (10 
+impulsów), a kolejny jedenasty impuls ma spowodować przejście z 9 na 0. 
+W zapisie binarnym cyfra 10 wyrażona jest jako 1010. Stan 1010 można łatwo 
+zidentyfikować za pomocą iloczynu o dwóch wejściach. Jeżeli Y4 oraz Y2 mają 
+wartość logiczną równą 1, to ich iloczyn również wynosi /. Napięcie od
+ powiadające wartości logicznej równej / jest podane na element różniczkujący 
+(oznaczony kółkiem), który generuje impuls przy przejściu sygnału z / na 0. 
+impuls ten wyżero w uje wszystkie przerzutniki. Na wyjściu licznika pojawia się 
+stan zero i zliczanie może odbywać się od początku. Inne przykłady bardziej 
+rozbudowanych liczników można znaleźć w pracy [2.16 ]. W omawianych 
+układach cyfrowych widać korzyści wynikające ze stosowania uproszczonych 
+oznaczeń poszczególnych elementów logicznych. Przedstawienie całego układu 
+z 
+zaznaczeniem tranzystorów, diod i innych elementów skomplikowałoby 
+rysunek tak, że stałby się 011 nieczytelny.
+ Obecnie liczniki wykonuje się w wersji .scalonej i tak np. układ scalony UCY 
+7493 jest licznikiem dwójkowym o pojemności 16 bitów (modulo 16). Licznik ten 
+jest jednocześnie dzielnikiem częstotliwości przez 16. Inny układ UCY 7490 jest 
+licznikiem dziesiętnym (dekada licząca) zbudowanym z czterech przerzutników 
+oraz układów kombinacyjnych.
+ 2.11.6. Pamięci półprzewodnikowe
+ Pamięci stanowią dużą grupę układów elektronicznych stosowanych do przechowywania informacji cyfrowej. Podstawowym elementem pamięci jest prze- 
+rzutnik bistabilny np. RS, który umożliwia zapamiętanie jednego bitu informacji cyfrowej.
+
+Pamięci, w których istnieje możliwość odczytu i zapisu informacji są nazywane pamięciami RWM (ang. read write memory). Pamięci te są najczęściej nazywane pamięciami z dostępem swobodnym RAM (ang. random access memory). Pozwalają one na dostęp do każdej komórki w dowolnej chwili i niezależnie od miejsca (adresu) w pamięci. Wybór żądanych komórek jest realizowany za pomocą specjalnego układu (dekodera), który dołącza żądaną komórkę do wejścia (przy zapisie) lub wyjścia (przy odczycie).
+
+Pamięci są budowane z dwoma dekoderami X, Y umożliwiającymi dostęp do każdej komórki lub z jednym dekoderem zapewniającym dostęp do wielu komórek jednocześnie. Na rysunku 2.144 przedstawiono schemat blokowy pamięci z tzw. wybieraniem koincydencyjnym, tzn. aby wybrać żądaną komórkę należy podać jednocześnie sygnał określający wiersz i kolumnę (współrzędne X, Y) danej komórki.
+
+Często wprowadzana lub wyprowadzana informacja jest najpierw przechowywana w dodatkowym rejestrze, który oddziela komórki pamięciowe od zewnętrznych szyn informacyjnych. Sygnał odczyt zezwala na wyprowadzenie informacji (wówczas sygnały wejściowe są zablokowane) lub zapis (wyjścia są zablokowane).
+
+Istotną wadą pamięci RAM z przerzutników RS jest kasowanie zapisanej informacji w przypadku wyłączenia zasilania.
+
+Rys. 2.144 
+schemat blokowy pamięci z wybieraniem
+każdej komórki
+
+
+Oprócz pamięci z zapisem, szeroko rozpowszechnione są pamięci stałe,
+z których informacja może być tylko odczytywana. Pamięci te są określane skrótem ROM (ang. read only memory). Informacja jest wpisywana na stałe w procesie produkcji i może być wielokrotnie odczytywana. Zawartość pamięci nie jest tracona po wyłączeniu napięcia zasilającego.
+
+W pamięci ROM przechowuje się np. stałe wartości liczbowe (liczba x, e), tablice funkcji trygonometrycznych, wykładniczych, logarytmicznych, przejścia między kodami dwójkowo-dziesiętnymi itp.
+
+257
+
+17 Elektrotechnika i elektronika dla nieelektryków
+
+Istnieje kilka odmian pamięci stałych, z których w pierwszym rzędzie należy wymienić pamięć programowalną PROM (ang. programmable read only memory). Informacja z tej pamięci może być tylko raz zapisana w procesie programowania, który polega na przepaleniu napięciem zewnętrznym odpowiednich ścieżek w strukturze półprzewodnikowej.
+
+Pamięć EPROM (ang. erasable programmable read only memory) programowalna i ścieralna, umożliwia wielokrotne zapisywanie informacji za pomocą specjalnych programatorów. Informację można wymazywać naświetlając pamięć promieniami ultrafioletowymi. Podobne właściwości ma pamięć EEPROM (ang. electrically alterable programmable read only memory), którą można kasować metodami elektrycznymi.
+
+We współczesnych urządzeniach cyfrowych są stosowane pamięci o dużej pojemności — wykonywane w technice tranzystorów MOS (z izolowaną bramką). Dotyczy to np. układów mikroprocesorowych, kalkulatorowych, gier telewizyjnych.
+
+Rozróżnia się pamięci statyczne i dynamiczne. W pamięciach statycznych — komórki pamięciowe są prostymi przerzutnikami, natomiast w pamięciach dynamicznych jest wykorzystywane zjawisko przechowywania ładunków na pojemnościach własnych (rozproszonych). Napięcie na pojemności utrzymuje się dzięki wysokiemu poziomowi impedancji tranzystora MOS.
+
+Pamięci dynamiczne wymagają ciągłego "odświeżania" ich zawartości, gdyż ładunek maleje na skutek dużej, lecz skończonej rezystancji. W pamięciach statycznych informacja może być przechowywana dostatecznie długo, lecz wyłączenie napięcia wymazuje informację.
+
+Przykładem pamięci statycznej RAM jest układ MCY 7102 o pojemności 1024 słów jednobitowych. Układ ten jest zasilany napięciem +5 V i pobiera prąd około 30 mA. Średni czas dostępu wynosi 500 ns. Pamięci MCY 7102 można łączyć w bloki o zwielokrotnionej pojemności. Bardziej szczegółowy opis pamięci MOS wykracza poza niniejsze opracowanie i jest zawarty w książce [2.3].
+
+2.11.7. Systemy mikroprocesorowe
+Dynamiczny rozwój scalonych układów cyfrowych umożliwił realizację bardzo złożonych systemów i miniaturyzację sprzętu. W latach siedemdziesiątych opracowano nowe technologie wytwarzania układów cyfrowych o wielkiej skali integracji (LSI), dzięki którym powstały między innymi mikroprocesory oraz miniaturowe, kieszonkowe kalkulatory wyposażone w pamięci ROM.
+
+Wprowadzenie mikroprocesorów umożliwiło budowę tanich i prostych komputerów ogólnie dostępnych o organizacji dostosowanej do potrzeb konkretnego użytkownika.
+
+W literaturze często używa się pojęć: system mikroprocesorowy lub system mikrokomputerowy do wyrażenia tego samego bloku funkcjonalnego, który służy do obliczeń lub przetwarzania danych. System ten składa się z 3 podstawowych bloków:
+
+-mikroprocesora monolitycznego nazywanego jednostką centralną i często oznaczanego CPU (ang. central processor unit)
+
+
+258
+
+— pamięci zawierającej programy i dane;
+-układów umożliwiających współpracę mikroprocesora z urządzeniami wejścia-wyjścia (interfejsy).
+Wymienione elementy, będące w rzeczywistości bardzo złożonymi blokami, są wykonywane w postaci scalonej na jednym podłożu krzemowym.
+
+Maszyny cyfrowe starszej generacji składają się z tych samych bloków funkcjonalnych, z tym, że jednostka centralna nazywana jest procesorem. Uproszczony schemat blokowy maszyny cyfrowej pokazano na rys. 2.145.
+
+
+Rys. 2.145
+Bloki funkcjonalne maszyny cyfrowej
+
+Procesor koordynuje całą działalność maszyny cyfrowej. Jego rola polega przede wszystkim na pobieraniu, dekodowaniu i wykonywaniu rozkazów umieszczonych w pamięci. Operacje arytmetyczne i logiczne są wykonywane przez arytmometr.
+
+Pamięci służą do przechowywania rozkazów (wykonywanych przez procesor) oraz danych, których rozkazy te dotyczą. W przypadku systemów mikroprocesorowych często do przekazywania rozkazów i danych przeznacza się różne pamięci. W pamięci ROM (tylko odczyt) znajdują się programy i dane, a w pamięci RAM (odczyt i zapis) umieszcza się dane, które są zmieniane w procesie obliczeniowym.
+
+Łączność w systemie mikroprocesorowym odbywa się za pośrednictwem układu połączeń nazywanego szynami lub magistralami. W większości przypadków wyróżnia się 3 szyny:adresową,danych i sterowania .Szyna adresowa umożliwia przesyłanie z mikroprocesora sygnału określającego adres wybranej komórki pamięci lub układu wejście-wyjście.
+Szyna danych  są przesyłane zarówno dane, jak i rozkazy umieszczone w pamięci ROM i RAM. Może to być odczytywanie lub zapis do pamięci.
+O tym decyduje informacja podawana na szynach sterowania – np. zapis lub odczyt.
+Na rysunku 2.146 pokazano blokowy schemat mikrokomputera. Praca jednostki centralnej jest synchronizowana generatorem kwarcowym o dużej stabilności — nazywanym generatorem zegarowym lub zegarem. Pojawienie się sygnału z zegara inicjuje przejście procesora z jednego stanu do drugiego.
+
+259
+
+Rys. 2.146. Schemat blokowy mikrokomputera
+
+Pierwsze proste mikroprocesory były wykonywane w technice P-MOS (1971 r.). Były to mikroprocesory pierwszej generacji 4-bitowe.
+
+Współcześnie wykonywane mikroprocesory trzeciej generacji z tranzystorami komplementarnymi CMOS odznaczają się:
+
+bardzo dużą skalą integracji (ok. milion tranzystorów w jednym układzie);
+dużą długością słowa (16, 32 bity);
+dużą pojemnością przestrzeni adresowej umożliwiającej adresowanie pamięci o dużej pojemności (np. dla zaadresowania 64 KB potrzeba 16 bitów);
+dużą listą instrukcji sięgającą paruset rozkazów;
+możliwością różnych sterowań: przerwanie, zatrzymanie itp.;
+możliwością bezpośredniego dostępu do pamięci RAM.
+Najbardziej rozpowszechnionym na świecie mikroprocesorem jest, wyprodukowany w firmie INTEL w 1974 r., 8-bitowy mikroprocesor 8080 wykonany w technice N-MOS. Jest to uniwersalna jednostka centralna złożona z jednostki arytmetyczno-logicznej (JAL), rejestrów roboczych i układu sterowania.
+
+Dane oraz instrukcje są przesyłane do lub z pamięci za pomocą 8-bitowej szyny danych, natomiast adresy są przesyłane oddzielną szyną adresową 16-bitową.
+
+Głównym blokiem jednostki arytmetyczno-logicznej jest sumator wykonujący dodawanie lub odejmowanie dwóch liczb 8-bitowych, operacje logiczne (I, LUB, RÓŻNICA SYMETRYCZNA), dodawanie i odejmowanie jedynki.
+
+Oprócz wspomnianych bloków mikroprocesora występują również układy umożliwiające przerwanie programu, np. w celu wprowadzenia podprogramu. Stan licznika rozkazów, który zlicza wykonywane rozkazy w przypadku przerwania programu, zostaje przechowywany w pamięci RAM.
+
+Niżej przedstawiono — w uproszczeniu — cykl pracy mikroprocesora:
+Przyjmijmy, że został wpisany program i dane do pamięci. Na początku cyklu mikroprocesor przesyła szyną adresową adres do pamięci i jednocześnie szyną sterowania — sygnał rodzaju polecenia (odczyt).
+
+Następuje wykonanie tego polecenia i informacja zawarta w wybranych komórkach pamięci jest przesyłana po szynach danych do rejestru instrukcji (nazywanego również rejestrem rozkazów) znajdującego się wewnątrz mikroprocesora.
+
+Po wykonaniu pierw-
+260
+
+szego rozkazu, licznik rozkazów zwiększa stan z 0 na 1, przygotowując się do wykonania następnej instrukcji, natomiast informacja przechowywana w rejestrze instrukcji jest dekodowana. Część tej informacji będąca ciągiem zerojedynkowym dotyczy wykonywanej operacji, a druga część stanowi adres np. dwóch cyfr, które znajdują się we wskazanych komórkach pamięci.
+
+Dane te są pobierane z pamięci i przekazywane po szynach danych do akumulatora (rodzaj rejestru) lub bezpośrednio do jednostki arytmetyczno-logicznej.
+
+Po wykonaniu operacji, np. dodawania, wynik jest umieszczony w akumulatorze lub może być przesłany do pamięci; natomiast licznik rozkazów wywołuje z pamięci następną instrukcję. Cykl pracy dla omawianego mikroprocesora wynosi 2 µs.
+
+Zadany program obliczeń jest przetwarzany na program w języku wewnętrznym (inaczej maszynowym), który steruje wykonywaniem elementarnych działań. Przygotowanie programu w języku maszynowym byłoby bardzo uciążliwe i dlatego opracowuje się języki wyższego rzędu, np. język C.
+
+Stosuje się więc dodatkowe urządzenia (translatory) przetwarzające informacje w języku wyższego rzędu na język wewnętrzny.
+
+Obecnie są prowadzone intensywne prace nad rozwojem mikroprocesorów jednoukładowych, w których na jednym podłożu buduje się jednostkę arytmetyczno-logiczną, pamięci i układy sterowania.
+Układy te — wykonane jako jeden układ scalony — są nazywane mikrokomputerami jednoukładowymi lub mikrosterownikami.
+
+Mikrokomputery jednoukładowe są projektowane do konkretnych zastosowań i wykazują znacznie większą niezawodność niż układy konstruowane z oddzielnych bloków funkcjonalnych.
+
+Mikroprocesory znalazły wiele zastosowań w różnych urządzeniach. Należą do nich m.in.:
+
+-przyrządy pomiarowe;
+-układy sterowania obiektów przemysłowych;
+-komputery;
+-telekomunikacja;
+-sprzęt powszechnego użytku (kuchenki mikrofalowe, telewizory, pralki itp.);
+-pojazdy samochodowe.
+Na rysunku 2.147 przedstawiono schemat blokowy przyrządu pomiarowego wykonanego z zastosowaniem mikroprocesora.
+261
+

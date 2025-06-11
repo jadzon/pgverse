@@ -1,0 +1,239 @@
+=== Strona 1 ===
+5. Jednowymiarowe zmienne losowe
+
+W rozdziale tym zdefiniujemy jedno z podstawowych pojęć rachunku prawdopodo-
+bieństwa, a mianowicie pojęcie zmiennej losowej. Wyrażając się ogólnie, ze zmienną logo-
+wą mamy do czynienia wówczas, gdy istnieje funkcja x(ω) przyporządkownjąca wartości
+liczbowe losowym zdarzeniom elementarnym ω. Przyporządkowania te mogą być bardzo
+różnorodne. W przypadkach mających jakiekolwiek znaczenie praktyczne, analityczna
+postać tych funkcji nie jest znana, Na razie poprzestaniemy na określeniu zmiennych loso-
+wych jako spełniających pewne ogólne warunki funkcji w dziedzinie losowych zdarzeń
+elementarnych, których przeciwdziedziną są zbiory liczbowe. Mogą to być np. parametry
+liczbowe charakteryzujące zdarzenia losowe. Zanienne losowe oznaczać będziemy dużymi
+podkreśtonymi literami, np. X, zachowując oznaczenie x(ω₀) głównie dla Sytuacji, gdy
+losowe zdarzenie elementarne jest ustalone i przyjmuje wyróżnioną postać, OZNACZONĄ
+przez ω₀.
+
+Zajmiemy się teraz prawdopodobieństwem przyjęcia przez zmienną losową X wartości
+ mniejszej od dowolnie wybranej liczby rzeczywistej x. Prawdopodobieństwo P(X < x) 
+ zależy od wartości x. Jest to funkcja argumentu x, którą nazywamy dystrybuantą zmiennej losowej
+  X i oznaczymy przez Fₓ(x).
+
+(5.1)
+
+Dystrybuanta jest funkcją określoną w dziedzinie liczb rzeczywistych w przedziale od −∞ do +∞.
+
+Z definicji dystrybuanty wynika, że dystrybuanta jest fenkcją niemalejącą. Przyjmując
+dowolne x1 Oraz x2, takie, że x1 < x2 mamy
+
+(5.2)
+Ponieważ P(x₁ ≤ X < x₂) ≥ 0, zatem
+
+(5.3)
+
+Prawdopodebieństwo, że zmienna losowa przyjmie wartość mniejszą niż −∞ jest rów-
+ne zeru, gdyż jest to prawdopodobieństwo zdarzenia niemożliwego. Wynika stąd, że
+ (5.4)
+
+Zdarzenie polegające na tym, że zmienna losowa X przyjmie wartość mniejszą niż +∞, jest
+zdarzeniem pewnym, a zatem jego prawdopodobieństwo wynosi 1. Oznacza to, że
+
+(5.5)
+Funkcja dystrybuanty zdefiniowana wzorem (5.1) jest funkcją lewostronnie ciągłą, tj.
+
+ (5.6)
+
+
+=== Strona 2 ===
+38
+
+Probabilistyka stosowana
+
+gdzie  (5.7)
+
+
+Z przekształceń (5,2) wynika w szczególności, że
+(5.8)
+Niech x₂ = x₁ + ε, wówczas
+(5.9)
+Przechodząc do granicy gdy ε → 0, otrzymujemy
+
+(5.9)
+gdzie 
+(5.10)
+
+
+Z powyższego wynika, że jeżeli dystrybuanta Fₓ(x) jest nieciągła dla argumentu x = x₁, 
+to jej uskok w tym punkcie wynosi P(X = x₁).
+Pochodną dystrybuanty będziemy nazywać gęstością prawdopodobieństwa 
+zmiennej losowej i oznaczamy ją przez p(x).
+
+
+ (5.11)
+Dła wyróżnionych argumentów dystrybuanta może nie być różniczkowalna. Wiąże się z
+tym podział zmiennych losowych na zmienne losowe ciągłe i zmienne losowe dyskretne.
+
+
+
+Definicja 5.1, Zmienna losowa Jest typu ciągłego, jeżeli jej dystrybuanta F(x) jest funkcją
+ciągią I przeliczalna jest liczba argumentów, dla których nie jest ona różniczkowalna.
+
+Gęstość prawdopodobieństwa zmiennej losowej ciągłej opisuje wzór (5.11). Z wyka-
+zanej poprzednio monotoniczności funkcji dystrybuanty wynika, że gęstość prawdopodo-
+bieństwa p(x) nie może przyjmować wartości ujemnych,
+
+POZZO (5.12)
+
+Jest to jedna z dwu najważniejszych właściwości gęstościprawdopodobieństwa zmiennych 
+losowych ciągłych. Całkując obydwie strony równości (5.11) w przedziale od −∞ do z, otrzymujemy
+(5.13)
+Wykorzystując (5.4), mamy(5.14)
+
+Zmierzając z górną granicą do plus nieskończoności uzyskujemy tzw. warunek normaliza-
+cyjny, jaki spełnić musi gęstość prawdopodobieństwa dowolnej zmiennej losowej ciągłej.
+Warunek normalizacyjny zmiennej losowej ciągłej ma postać
+
+
+=== Strona 3 ===
+5. Jednowymiarowe zmienne losowe 39
+
+(5.15)
+
+Bezpośrednio z (5.8) oraz (5.14) wynika, że
+
+ (5.16)
+
+
+
+Prawdopodobieństwo przyjęcia przez zmienną losową X wartości z przedziału ⟨x₁, x₂⟩ wy-
+
+raża się jako całka z gęstości prawdopodobicństwa p(x) tej zmiennej losowej w tym prze-
+dziale. Ze związku
+
+(5.17)
+mamy
+(5.18)
+Z (5.16) wynika również bezpośrednio, że dla zmiennej losowej ciągłej
+ (5.19)
+
+Przykład 5.1. Zajmiemy się przypadkową różnicą fazy między dwoma źródłami napięcia sinusoidalnego, 
+jeżeli źródła włączane są przypadkowo i niezależnie od siebie. Określimy gęstość prawdopodobieństwa
+ oraz dystrybuantę powyższej różnicy faz.
+
+Ze względu na założoną niezależność włączania źródeł, nie istnieją fizyczne podstawy wyróżniania
+ jakiejkolwiek wartości lub zbioru wartości różnicy faz. Dlatego przyjmujemy, że zmienna losowa Y
+ reprezentująca różnicę faz ma stałą gęstość prawdopodobieństwa w przedziale ⟨0, 2π⟩. 
+ Oznaczmy tę stałą wartość przez C. Możemy ją wyznaczyć na podstawie warunku normalizacyjnego (5.15). 
+ W rozważanym przypadku
+
+
+(5.20)
+
+czyli
+
+(5.21)
+
+Oznacza to, że gęstość prawdopodobieństwa naszej zmiennej osowej cłąglej można zapisać następu-
+jąco: 
+
+(5.22)
+
+Zmienna losowa, której gęstość prawdapodobieństwa jast stała w wyróżnionym przedziale, bywa nazy-
+wana zmienną losową o rozkładzie równomiernym.
+Wyznaczymy taraz dystrybuanię przypadkowej różnicy faz a rozkładzie równomiemym (5.22). Na
+podstawie załeżności (5.14) otrzymujemy: 
+
+
+=== Strona 4 ===
+
+
+40 Probabilistyka stosowana
+
+ (5.23) 
+
+
+
+
+
+Wykresy gęstości prawdopodobleństwa i dystrybuanty naszej zmiennej losowej ciągłej pokazane są na 
+
+rys. 5.1.
+
+
+
+
+
+
+Rys. 5.1. Gęstość prawdopodobieńsiwa i dystrybuanta przypadkowej różnicy faz
+
+Przykład 5.2. Jest dana gęstość prawdopodobieństwa
+
+(5.24)
+
+Wyznaczymy stałą C i określimy dystrybuantę F(x).
+Na padstawie warunku normalizacyjnego (5.15) otrzymujemy
+
+
+(5.25)
+
+Stąd
+(5.26)
+
+a zatem
+(5.27)
+
+
+Rozkład opisany powyższym wzorem nosi nazwą rozkładu Cauchy'ego.
+Możamy teraz obliczyć dystrybuantę : 
+
+
+(5.28)
+
+
+Wykresy gęstości I dystrybuanty rozkładu Gauchy'ego pokazane są na rys. 5.2,
+Zgodnie z wcześniejszymi rozważaniami, w obydwu przykładach dwu zmiennych losowych cią-
+
+głych dystrybuanta jesi funkcją niemalejącą oraz osiąga zero w minus nieskończoności, jeden nato-
+miast w plus nieskończoności. 
+
+
+=== Strona 5 ===
+5, Jednowymiarowe zmienne losowe  41
+
+
+
+
+
+-Rys. 5.2. Gęstość prawdopadobieństwa i dystrybuanta zmiennej losowej ciągłej
+o rozkładzie Cauchy'ego
+
+Obok zmiennych losowych typu ciągłego mogą być również zmienne losowe typu
+dyskretnego (lub inaczej: skokowego lub ziarnistego). Omawianie tego rodzaju zmiennych
+rozpoczniemy od dwu przykładów szczegółowych.
+
+Przykład 5.3. Z rzutami zwykią kostką do gry można związać sześć zdarzeń elementarnych odpo-
+wiadających sześciu ściankom, a dalej każdej ze ścianek możemy przypisać liczbę równą liczbie oczek
+na tej ściance. W ten sposób możemy utworzyć zmienną losową, która przyjmuje nasiępujące sześć
+wartości:
+
+(5.29)
+
+Prawiopodobieństwa wszystkich wartości są jednakowe i wynoszą 1/6. Możemy ten fakt zapisać na-
+stępująco:
+
+(5.30)
+
+Na zbiorze sześciu zdarzeń elementarnych, odpowiadających rzutom kostką 
+(zauważmy, że ich suma jest zdarzeniem pewnym), można określić różne inne zmienne losowe. 
+W szczególności każdej ściance można przyporządkować liczbę równą liczbie oczek pomnożonej 
+np. przez trzy. Otrzymujemy wówczas zmienną losową dyskretną o następujących wartościach i 
+prawdopodobieństwach:
+
+
+ (5.31)
+
+
+Niech teraz A₁ oznacza zdarzenie losowe polegające na wyrzuceniu parzystej liczby oczek, A₂ 
+zaś niech oznacza zdarzenie polegające na wyrzuceniu nieparzystej liczby oczek. Jak wiemy
+
+
