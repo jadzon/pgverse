@@ -96,7 +96,7 @@ class LaTeXToGraph:
 class MathFormulaGNN(nn.Module):
     """Graph Neural Network dla wzorów matematycznych"""
     
-    def __init__(self, vocab_size: int, embedding_dim: int = 512, hidden_dim: int = 1024):
+    def __init__(self, vocab_size: int, embedding_dim: int = 1024, hidden_dim: int = 1024):
         super().__init__()
         self.embedding = nn.Embedding(vocab_size, embedding_dim, padding_idx=0)
         self.conv1 = GCNConv(embedding_dim, hidden_dim)

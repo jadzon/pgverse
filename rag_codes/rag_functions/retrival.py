@@ -5,7 +5,7 @@ import re
 from collections import defaultdict
 from .graph import Neo4jConnector, LearningPatternTracker
 from .embeddings import CLIPEmbedder
-from source_calculate import HybridWeightFunction
+from .source_calculate import HybridWeightFunction
 
 class TextRetriever:
     """

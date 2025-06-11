@@ -31,6 +31,9 @@ class SubjectSelectorApp:
         self.subject_checkboxes = {}
         self.temp_sources_configs = {}
         
+        # NOWE: Zmienna kontrolująca use_vision
+        self.use_vision = tk.BooleanVar(value=False)  # Domyślnie False
+        
         # Dostępne typy źródeł
         self.source_types = [
             "wikipedia", "książka", "artykuł_naukowy", "blog",
@@ -67,9 +70,43 @@ class SubjectSelectorApp:
                              font=("Arial", 9), fg="blue")
         info_label.pack(pady=5)
         
+        # NOWE: Frame dla kontroli Vision
+        vision_control_frame = tk.Frame(self.root, bg="lightyellow", relief=tk.RAISED, bd=2)
+        vision_control_frame.pack(fill=tk.X, padx=20, pady=5)
+        
+        # Tytuł sekcji Vision
+        vision_title = tk.Label(vision_control_frame, 
+                               text="🔍 Kontrola Vision (przetwarzanie obrazów)", 
+                               font=("Arial", 11, "bold"), bg="lightyellow")
+        vision_title.pack(pady=5)
+        
+        # Checkbox dla use_vision
+        vision_checkbox_frame = tk.Frame(vision_control_frame, bg="lightyellow")
+        vision_checkbox_frame.pack(pady=5)
+        
+        self.vision_checkbox = tk.Checkbutton(vision_checkbox_frame, 
+                                             text="Użyj Vision API do analizy obrazów", 
+                                             variable=self.use_vision,
+                                             command=self.on_vision_toggle,
+                                             font=("Arial", 10),
+                                             bg="lightyellow")
+        self.vision_checkbox.pack(side=tk.LEFT)
+        
+        # Status Vision
+        self.vision_status_label = tk.Label(vision_checkbox_frame, 
+                                           text="❌ Vision wyłączone - tylko metadane obrazów", 
+                                           font=("Arial", 9), fg="red", bg="lightyellow")
+        self.vision_status_label.pack(side=tk.LEFT, padx=(10, 0))
+        
+        # Informacja o Vision
+        vision_info = tk.Label(vision_control_frame, 
+                              text="Włącz dla pełnej analizy obrazów z AI (wolniej, ale dokładniej)", 
+                              font=("Arial", 8), fg="darkblue", bg="lightyellow")
+        vision_info.pack(pady=(0, 5))
+        
         # Frame z scrollbarem dla listy przedmiotów
         main_frame = tk.Frame(self.root)
-        main_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=(10, 5))  # Zmniejszony pady bottom
+        main_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=(10, 5))
         
         # Scrollbar
         scrollbar = tk.Scrollbar(main_frame)
@@ -96,7 +133,7 @@ class SubjectSelectorApp:
         
         # Przyciski kontrolne (Zaznacz/Odznacz wszystko)
         button_frame = tk.Frame(self.root)
-        button_frame.pack(pady=5)  # Zmniejszony padding
+        button_frame.pack(pady=5)
         
         tk.Button(button_frame, text="Zaznacz wszystko", 
                  command=self.select_all).pack(side=tk.LEFT, padx=5)
@@ -105,7 +142,7 @@ class SubjectSelectorApp:
         
         # Frame dla przycisków głównych - ZAMKNIJ i DALEJ
         main_buttons_frame = tk.Frame(self.root)
-        main_buttons_frame.pack(pady=10, side=tk.BOTTOM)  # Dodane side=tk.BOTTOM
+        main_buttons_frame.pack(pady=10, side=tk.BOTTOM)
         
         # Przycisk ZAMKNIJ - zamyka program
         tk.Button(main_buttons_frame, 
@@ -126,8 +163,27 @@ class SubjectSelectorApp:
                  font=("Arial", 12, "bold"),
                  width=12,
                  height=2).pack(side=tk.LEFT, padx=20)
+        
+        tk.Button(main_buttons_frame,
+                 text="Zarządzanie bazą danych",
+                 command=lambda: self.open_graph_management_window(list(self.subject_vars.keys())),
+                 bg="blue",
+                 fg="white",
+                 font=("Arial", 12, "bold"),
+                 width=20,
+                 height=2).pack(side=tk.LEFT, padx=20)  
+          
+        # Przycisk tworzenia plików TXT (chunks + base64)
+        tk.Button(main_buttons_frame,
+                 text="UTWÓRZ PLIKI TXT",
+                 command=self.create_txt_files_only,
+                 bg="orange",
+                 fg="white",
+                 font=("Arial", 12, "bold"),
+                 width=15,
+                 height=2).pack(side=tk.LEFT, padx=20)
 
-        # NOWY: Przycisk Zarządzanie bazą danych
+        # Przycisk Zarządzanie bazą danych
         tk.Button(main_buttons_frame,
                  text="Zarządzanie bazą danych",
                  command=lambda: self.open_graph_management_window(list(self.subject_vars.keys())),
@@ -136,7 +192,15 @@ class SubjectSelectorApp:
                  font=("Arial", 12, "bold"),
                  width=20,
                  height=2).pack(side=tk.LEFT, padx=20)
+        
 
+    def on_vision_toggle(self):
+        """Obsługuje zmianę stanu Vision"""
+        if self.use_vision.get():
+            self.vision_status_label.config(text="✅ Vision włączone - pełna analiza obrazów", fg="green")
+        else:
+            self.vision_status_label.config(text="❌ Vision wyłączone - tylko metadane obrazów", fg="red")
+    
     def load_subjects(self):
         """Wczytuje listę przedmiotów i tworzy checkboxy + przyciski Źródła"""
         if not self.subjects_path.exists():
@@ -354,12 +418,264 @@ class SubjectSelectorApp:
                              width=15, height=2)
         close_btn.pack(side=tk.LEFT, padx=10)
 
+
+    def create_txt_files_only(self):
+        """Tworzy tylko pliki TXT (chunks + base64) bez JSON"""
+        selected_subjects = [subject for subject, var in self.subject_vars.items() if var.get()]
+        
+        if not selected_subjects:
+            messagebox.showwarning("Brak wyboru", 
+                                  "Nie wybrano żadnego przedmiotu!\n"
+                                  "Zaznacz przynajmniej jeden przedmiot przed kontynuowaniem.")
+            return
+
+        # Sprawdzenie źródeł (placeholder - zawsze True)
+        incomplete_subjects = [s for s in selected_subjects if not self.check_sources_complete(s)]
+        
+        if incomplete_subjects:
+            messagebox.showerror("Błąd - nieprzypisane źródła", 
+                f"Następujące przedmioty mają nieprzypisane źródła:\n\n" + 
+                "\n".join(f"• {subject}" for subject in incomplete_subjects))
+            return
+
+        # Zapisywanie konfiguracji tymczasowych
+        saved_count = 0
+        failed_subjects = []
+        
+        for subject_name in selected_subjects:
+            subject_path = self.subjects_path / subject_name
+            
+            if subject_name in self.temp_sources_configs:
+                if self.save_sources_config(subject_path, self.temp_sources_configs[subject_name]):
+                    saved_count += 1
+                else:
+                    failed_subjects.append(subject_name)
+        
+        if failed_subjects:
+            messagebox.showerror("Błąd zapisywania", 
+                f"Nie udało się zapisać konfiguracji dla przedmiotów:\n\n" + 
+                "\n".join(f"• {subject}" for subject in failed_subjects))
+            return
+
+        # Otwórz okno przetwarzania TXT
+        self.open_txt_processing_window(selected_subjects)
+
+    def open_txt_processing_window(self, selected_subjects):
+        """Otwiera okno przetwarzania TYLKO plików TXT"""
+        processing_window = tk.Toplevel(self.root)
+        processing_window.title("Tworzenie plików TXT (chunks + base64)")
+        processing_window.geometry("900x700")
+        processing_window.grab_set()
+        
+        # Tytuł
+        tk.Label(processing_window, text="Tworzenie plików TXT: chunks + base64", 
+                font=("Arial", 14, "bold")).pack(pady=10)
+        
+        # Info o przedmiatch
+        tk.Label(processing_window, 
+                text=f"Wybrane przedmioty ({len(selected_subjects)}): " + ", ".join(selected_subjects), 
+                font=("Arial", 10), wraplength=800).pack(pady=5)
+        
+        # Info o plikach
+        tk.Label(processing_window, 
+                text="📄 Tworzę tylko pliki: *_chunks.txt i *_base64.txt (bez JSON)", 
+                font=("Arial", 10), fg="blue", wraplength=800).pack(pady=5)
+        
+        # Main frame
+        main_frame = tk.Frame(processing_window)
+        main_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=10)
+        
+        # Log area
+        log_frame = tk.Frame(main_frame)
+        log_frame.pack(fill=tk.BOTH, expand=True)
+        
+        tk.Label(log_frame, text="Log przetwarzania:", font=("Arial", 12, "bold")).pack(anchor="w")
+        
+        text_frame = tk.Frame(log_frame)
+        text_frame.pack(fill=tk.BOTH, expand=True, pady=5)
+        
+        scrollbar = tk.Scrollbar(text_frame)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        
+        log_text = tk.Text(text_frame, yscrollcommand=scrollbar.set, 
+                          font=("Consolas", 9), wrap=tk.WORD)
+        log_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        scrollbar.config(command=log_text.yview)
+        
+        # Progress bar
+        progress_frame = tk.Frame(main_frame)
+        progress_frame.pack(fill=tk.X, pady=10)
+        
+        tk.Label(progress_frame, text="Postęp:", font=("Arial", 10, "bold")).pack(anchor="w")
+        progress_bar = ttk.Progressbar(progress_frame, mode='determinate')
+        progress_bar.pack(fill=tk.X, pady=2)
+        
+        progress_label = tk.Label(progress_frame, text="Gotowy do rozpoczęcia", font=("Arial", 9))
+        progress_label.pack(anchor="w")
+        
+        # Buttons
+        button_frame = tk.Frame(main_frame)
+        button_frame.pack(pady=10)
+        
+        start_btn = tk.Button(button_frame, text="ROZPOCZNIJ TWORZENIE TXT", 
+                             command=lambda: self.start_txt_processing(selected_subjects, log_text, 
+                                                                      progress_bar, progress_label, 
+                                                                      start_btn, close_btn),
+                             bg="orange", fg="white", font=("Arial", 12, "bold"),
+                             width=25, height=2)
+        start_btn.pack(side=tk.LEFT, padx=10)
+        
+        close_btn = tk.Button(button_frame, text="ZAMKNIJ", 
+                             command=processing_window.destroy,
+                             bg="red", fg="white", font=("Arial", 12, "bold"),
+                             width=15, height=2)
+        close_btn.pack(side=tk.LEFT, padx=10)
+
+    def start_txt_processing(self, selected_subjects, log_text, progress_bar, progress_label, start_btn, close_btn):
+        """Rozpoczyna tworzenie plików TXT w osobnym wątku"""
+        start_btn.config(state=tk.DISABLED)
+        
+        def process_in_thread():
+            self.process_txt_files_only(selected_subjects, log_text, progress_bar, progress_label)
+            start_btn.config(state=tk.NORMAL, text="ZAKOŃCZONO", bg="gray")
+        
+        processing_thread = threading.Thread(target=process_in_thread)
+        processing_thread.daemon = True
+        processing_thread.start()
+
+    def process_txt_files_only(self, selected_subjects, log_text, progress_bar, progress_label):
+        """Przetwarza pliki tworząc TYLKO chunks.txt i base64.txt (bez JSON)"""
+        self.log_message(log_text, "=== ROZPOCZĘCIE TWORZENIA PLIKÓW TXT ===")
+        
+        # Inicjalizacja procesorów
+        try:
+            self.log_message(log_text, "Inicjalizacja procesorów...")
+            processor = ImageTextProcessor()
+            self.log_message(log_text, "✓ Procesory zainicjalizowane pomyślnie")
+        except Exception as e:
+            self.log_message(log_text, f"✗ Błąd inicjalizacji procesorów: {e}")
+            return
+        
+        # Liczenie folderów do przetworzenia
+        total_ocr_folders = 0
+        subject_ocr_folders = {}
+        
+        for subject_name in selected_subjects:
+            subject_path = self.subjects_path / subject_name
+            ocr_folders = [item for item in subject_path.iterdir() 
+                          if item.is_dir() and item.name != "__pycache__"]
+            subject_ocr_folders[subject_name] = ocr_folders
+            total_ocr_folders += len(ocr_folders)
+        
+        self.log_message(log_text, f"Znaleziono {total_ocr_folders} folderów OCR do przetworzenia")
+        
+        if total_ocr_folders == 0:
+            self.log_message(log_text, "Brak folderów OCR do przetworzenia!")
+            return
+        
+        processed_count = 0
+        success_count = 0
+        error_count = 0
+        chunks_created = 0
+        base64_created = 0
+        
+        # Przetwarzanie
+        for subject_name in selected_subjects:
+            self.log_message(log_text, f"\n--- PRZETWARZANIE PRZEDMIOTU: {subject_name} ---")
+            
+            ocr_folders = subject_ocr_folders[subject_name]
+            
+            for ocr_folder in ocr_folders:
+                processed_count += 1
+                self.update_progress(progress_bar, progress_label, processed_count, total_ocr_folders, 
+                                   f"{subject_name}/{ocr_folder.name}")
+                
+                self.log_message(log_text, f"\nPrzetwarzanie folderu OCR: {subject_name}/{ocr_folder.name}")
+                
+                # Definiuj ścieżkę do folderu detekcje
+                detekcje_path = ocr_folder / "detekcje"
+                
+                # Sprawdź czy folder detekcje istnieje
+                if not detekcje_path.exists():
+                    self.log_message(log_text, f"  ⚠ Brak folderu 'detekcje' w {ocr_folder.name}")
+                    continue
+                
+                # Przetwarzanie tylko pliku txt o nazwie podfolderu
+                expected_txt_file = detekcje_path / f"{ocr_folder.name}.txt"
+                if not expected_txt_file.exists():
+                    self.log_message(log_text, f"  ⚠ Brak pliku {ocr_folder.name}.txt w {ocr_folder.name}/detekcje")
+                    continue
+                
+                txt_files = [expected_txt_file]  # Lista z jednym plikiem
+                
+                # Przetwarzanie plików txt
+                for txt_file in txt_files:
+                    try:
+                        self.log_message(log_text, f"  📄 Przetwarzanie pliku: {txt_file.name}")
+                        
+                        # KROK 1: Przetwórz plik i pobierz texts
+                        texts = processor.process_file(str(txt_file))
+                        self.log_message(log_text, f"    📋 Znaleziono {len(texts)} elementów do przetworzenia")
+                        
+                        # KROK 2: Utwórz plik TXT z samymi chunkami
+                        chunks_output_file = detekcje_path / f"{txt_file.stem}_chunks.txt"
+                        chunks_result = processor.create_output_txt_chunks_only(texts, str(chunks_output_file))
+                        
+                        if chunks_result:
+                            self.log_message(log_text, f"    ✓ Zapisano chunks TXT: {chunks_output_file.name}")
+                            chunks_created += 1
+                        else:
+                            self.log_message(log_text, f"    ✗ Błąd zapisywania chunks TXT: {chunks_output_file.name}")
+                        
+                        # KROK 3: Utwórz plik TXT z base64
+                        base64_output_file = detekcje_path / f"{txt_file.stem}_base64.txt"
+                        base64_result = processor.create_output_txt_with_base64(texts, str(base64_output_file))
+                        
+                        if base64_result:
+                            self.log_message(log_text, f"    ✓ Zapisano base64 TXT: {base64_output_file.name}")
+                            base64_created += 1
+                        else:
+                            self.log_message(log_text, f"    ✗ Błąd zapisywania base64 TXT: {base64_output_file.name}")
+                        
+                        # Zlicz sukces jeśli przynajmniej jeden plik został utworzony
+                        if chunks_result or base64_result:
+                            success_count += 1
+                        else:
+                            error_count += 1
+                        
+                    except Exception as e:
+                        self.log_message(log_text, f"    ✗ Błąd przetwarzania {txt_file.name}: {e}")
+                        error_count += 1
+        
+        # Podsumowanie
+        self.log_message(log_text, f"\n=== PODSUMOWANIE TWORZENIA PLIKÓW TXT ===")
+        self.log_message(log_text, f"Przetworzono przedmiotów: {len(selected_subjects)}")
+        self.log_message(log_text, f"Przetworzono folderów OCR: {processed_count}")
+        self.log_message(log_text, f"Utworzono plików *_chunks.txt: {chunks_created}")
+        self.log_message(log_text, f"Utworzono plików *_base64.txt: {base64_created}")
+        self.log_message(log_text, f"Pomyślnie przetworzone foldery: {success_count}")
+        self.log_message(log_text, f"Błędy: {error_count}")
+        
+        if error_count == 0:
+            self.log_message(log_text, "🎉 WSZYSTKIE PLIKI TXT UTWORZONE POMYŚLNIE!")
+            self.log_message(log_text, "📋 Utworzono dla każdego pliku:")
+            self.log_message(log_text, f"  • {chunks_created} plików chunks (*_chunks.txt)")
+            self.log_message(log_text, f"  • {base64_created} plików base64 (*_base64.txt)")
+            self.log_message(log_text, "\n💡 Pliki TXT gotowe do użycia!")
+            self.log_message(log_text, "🔗 Możesz teraz użyć przycisku 'DALEJ' aby utworzyć JSON")
+            self.log_message(log_text, "   lub przejść bezpośrednio do zarządzania bazą danych")
+        else:
+            self.log_message(log_text, f"⚠ ZAKOŃCZONO Z {error_count} BŁĘDAMI")
+        
+        self.update_progress(progress_bar, progress_label, total_ocr_folders, total_ocr_folders, "Zakończono")
+
     def start_processing(self, selected_subjects, log_text, progress_bar, progress_label, start_btn, close_btn):
         """Rozpoczyna przetwarzanie w osobnym wątku"""
         start_btn.config(state=tk.DISABLED)
         
         def process_in_thread():
-            self.process_all_subjects(selected_subjects, log_text, progress_bar, progress_label)
+            # ZMIANA: Przekaż aktualną wartość use_vision
+            self.process_all_subjects(selected_subjects, log_text, progress_bar, progress_label, self.use_vision.get())
             start_btn.config(state=tk.NORMAL, text="ZAKOŃCZONO", bg="gray")
         
         processing_thread = threading.Thread(target=process_in_thread)
@@ -424,9 +740,10 @@ class SubjectSelectorApp:
             print(f"DEBUG convert_to_relative_path error for {absolute_path}: {e}")
             return str(absolute_path)
 
-    def process_all_subjects(self, selected_subjects, log_text, progress_bar, progress_label):
+    def process_all_subjects(self, selected_subjects, log_text, progress_bar, progress_label, use_vision):
         """Przetwarza wszystkie wybrane przedmioty"""
         self.log_message(log_text, "=== ROZPOCZĘCIE PRZETWARZANIA PRZEDMIOTÓW ===")
+        self.log_message(log_text, f"🔍 Tryb Vision: {'WŁĄCZONY' if use_vision else 'WYŁĄCZONY'}")
         
         # Inicjalizacja procesorów
         try:
@@ -497,8 +814,10 @@ class SubjectSelectorApp:
                         self.log_message(log_text, f"    📋 Znaleziono {len(texts)} elementów do przetworzenia")
                         
                         # KROK 2: Utwórz JSON z kontekstem obrazów (już przefiltrowany!)
-                        json_data = processor.get_images_with_context_json(texts)
-                        
+                        if (use_vision):
+                            json_data = processor.get_images_with_context_json(texts, use_vision=True)
+                        else:
+                            json_data = processor.get_images_with_context_json(texts, use_vision=False)
                         # NOWE: Normalizuj ścieżki w JSON przed zapisem
                         if json_data:
                             normalized_json_data = []
@@ -513,6 +832,7 @@ class SubjectSelectorApp:
                         
                         if not json_data:
                             self.log_message(log_text, f"    ⚠ Brak istniejących obrazów w pliku {txt_file.name}")
+                            json_result = False
                         else:
                             self.log_message(log_text, f"    ✓ Znaleziono {len(json_data)} istniejących obrazów")
                             
@@ -547,7 +867,7 @@ class SubjectSelectorApp:
                             self.log_message(log_text, f"    ✗ Błąd zapisywania base64 TXT: {base64_output_file.name}")
                         
                         # Zlicz sukces jeśli przynajmniej jeden plik został utworzony
-                        if (json_data and json_result) or chunks_result or base64_result:
+                        if json_result or chunks_result or base64_result:
                             success_count += 1
                         else:
                             error_count += 1
@@ -558,6 +878,7 @@ class SubjectSelectorApp:
         
         # Podsumowanie
         self.log_message(log_text, f"\n=== PODSUMOWANIE PRZETWARZANIA ===")
+        self.log_message(log_text, f"🔍 Tryb Vision: {'WŁĄCZONY' if use_vision else 'WYŁĄCZONY'}")
         self.log_message(log_text, f"Przetworzono przedmiotów: {len(selected_subjects)}")
         self.log_message(log_text, f"Przetworzono folderów OCR: {processed_count}")
         self.log_message(log_text, f"Pomyślnie przetworzone pliki: {success_count}")
@@ -1141,7 +1462,7 @@ class SubjectSelectorApp:
                             
                             # POPRAWKA: Sprawdź czy sterownik nie jest zamknięty przed użyciem
                             if neo4j_connector is None:
-                                log_graph_message("❌ Brak aktywnego połączenia - próbuję ponownie połączyć...")
+                                log_graph_message("❌ Brak aktywnego połączenia - próbuję ponownie nawiązać...")
                                 raise Exception("No active connection")
                             
                             # Sprawdź połączenie przed rozpoczęciem - z obsługą błędu zamkniętego sterownika
@@ -1532,6 +1853,18 @@ class SubjectSelectorApp:
         btn4.pack(side=tk.LEFT, padx=2, pady=2)
         operation_buttons.append(btn4)
         
+        # NOWY PRZYCISK - Załaduj chunki z context
+        btn_load_context = tk.Button(graph_buttons_frame2, text="ZAŁADUJ CHUNKI Z KONTEKSTU", 
+                                 command=lambda: self.load_chunks_from_context_json(
+                                     [subject for subject, var in subject_vars.items() if var.get()],
+                                     log_graph_message, 
+                                     neo4j_connector
+                                 ),
+                                 state=tk.DISABLED, bg="purple", fg="white", 
+                                 font=("Arial", 10, "bold"))
+        btn_load_context.pack(side=tk.LEFT, padx=2, pady=2)
+        operation_buttons.append(btn_load_context)
+        
         # PRZYCISK - Usuń wszystkie relacje
 
         btn_clear_relations = tk.Button(graph_buttons_frame2, text="🗑️ USUŃ WSZYSTKIE RELACJE", 
@@ -1637,7 +1970,7 @@ class SubjectSelectorApp:
             print(f"DEBUG normalize_image_path error for {image_path}: {e}")
             return None
 
-    def load_data_to_neo4j(self, selected_subjects, log_function, neo4j_connector):
+    def load_data_to_neo4j(self, selected_subjects, log_function, neo4j_connector, use_vision = False):
         """Ładuje dane do Neo4j z embeddingami obrazowymi i base64 - BEZ TWORZENIA RELACJI"""
         if not neo4j_connector:
             log_function("✗ Brak połączenia z Neo4j")
@@ -2231,7 +2564,7 @@ class SubjectSelectorApp:
                                   "'Wybór przedmiotów do załadowania' przed\n"
                                   "kliknięciem przycisku 'ZAŁADUJ DANE DO BAZY'.")
             return
-            
+        
         log_function(f"🎯 Rozpoczynam ładowanie wybranych przedmiotów: {', '.join(selected_subjects_for_loading)}")
         log_function("🔄 Uruchamiam ładowanie w osobnym wątku...")
         
@@ -2250,6 +2583,386 @@ class SubjectSelectorApp:
         loading_thread.start()
         
         log_function("✅ Wątek ładowania uruchomiony - sprawdzaj logi poniżej...")
+
+    def load_chunks_from_context_json(self, selected_subjects_for_loading, log_function, neo4j_connector):
+        """Ładuje chunki z plików context.json - uruchamia w osobnym wątku"""
+        if not selected_subjects_for_loading:
+            log_function("⚠️ Nie wybrano żadnego przedmiotu do załadowania!")
+            log_function("📋 Zaznacz przynajmniej jeden przedmiot w sekcji 'Wybór przedmiotów do załadowania'")
+            messagebox.showwarning("Brak wyboru przedmiotów", 
+                                  "Nie wybrano żadnego przedmiotu do załadowania!\n\n"
+                                  "Zaznacz przynajmniej jeden przedmiot w sekcji\n"
+                                  "'Wybór przedmiotów do załadowania' przed\n"
+                                  "kliknięciem przycisku 'ZAŁADUJ CHUNKI Z KONTEKSTU'.")
+            return
+        
+        log_function(f"🎯 Rozpoczynam ładowanie chunków z kontekstu: {', '.join(selected_subjects_for_loading)}")
+        log_function("🔄 Uruchamiam ładowanie w osobnym wątku...")
+        
+        # Uruchom ładowanie w osobnym wątku
+        def load_context_in_thread():
+            try:
+                self.load_context_data_to_neo4j(selected_subjects_for_loading, log_function, neo4j_connector)
+                log_function("🎉 ŁADOWANIE CHUNKÓW Z KONTEKSTU ZAKOŃCZONE")
+            except Exception as e:
+                log_function(f"💥 BŁĄD KRYTYCZNY podczas ładowania chunków: {e}")
+                import traceback
+                log_function(f"Traceback: {traceback.format_exc()}")
+        
+        loading_thread = threading.Thread(target=load_context_in_thread)
+        loading_thread.daemon = True
+        loading_thread.start()
+        
+        log_function("✅ Wątek ładowania chunków uruchomiony...")
+
+    def load_context_data_to_neo4j(self, selected_subjects, log_function, neo4j_connector):
+        """Ładuje dane z plików context.json z embeddingami TYLKO TEKSTOWYMI + base64"""
+        if not neo4j_connector:
+            log_function("✗ Brak połączenia z Neo4j")
+            return
+            
+        try:
+            log_function("🔄 Inicjalizacja komponentów...")
+            
+            # ZMIANA: Użyj singletona embeddera
+            embedder = CLIPEmbedder.get_instance()
+            log_function("✅ Embedder (singleton) gotowy do użycia")
+            
+            cuda_available = torch.cuda.is_available()
+            log_function(f"🖥️ CUDA dostępne: {cuda_available}")
+            
+            graph_builder = GraphBuilder(neo4j_connector, similarity_threshold=RELATION_SIMILARITY_THRESHOLD)
+            log_function("✅ Komponenty zainicjalizowane pomyślnie")
+            
+            # Statystyki
+            total_nodes_added = 0
+            total_text_chunks = 0
+            total_image_nodes = 0
+            total_formula_nodes = 0
+            total_table_nodes = 0
+            total_errors = 0
+            total_context_found = 0
+            total_base64_found = 0  # DODANE
+            
+            log_function("\n=== ŁADOWANIE CHUNKÓW Z KONTEKSTU DO NEO4J ===")
+            log_function(f"📋 Przedmioty do przetworzenia: {len(selected_subjects)}")
+            log_function("📝 TRYB: Tylko embeddingi tekstowe (kontekst) + base64")
+            
+            # Policz wszystkie foldery OCR
+            total_ocr_folders = 0
+            all_subject_folders = {}
+            
+            for subject_name in selected_subjects:
+                log_function(f"🔍 Skanowanie przedmiotu: {subject_name}...")
+                subject_path = self.subjects_path / subject_name
+                
+                subfolders = [item for item in subject_path.iterdir() 
+                            if item.is_dir() and item.name != "__pycache__"]
+                all_subject_folders[subject_name] = subfolders
+                total_ocr_folders += len(subfolders)
+                log_function(f"  📁 Znaleziono {len(subfolders)} folderów OCR: {[f.name for f in subfolders]}")
+            
+            log_function(f"\n📊 RAZEM do przetworzenia: {total_ocr_folders} folderów OCR")
+            current_folder_idx = 0
+            
+            for subject_name in selected_subjects:
+                log_function(f"\n{'='*60}")
+                log_function(f"🎯 PRZETWARZANIE PRZEDMIOTU: {subject_name}")
+                log_function(f"{'='*60}")
+                
+                subject_path = self.subjects_path / subject_name
+                
+                # Wczytaj konfigurację źródeł
+                sources_config = {}
+                sources_config_path = subject_path / "sources_config.json"
+                if sources_config_path.exists():
+                    try:
+                        with open(sources_config_path, 'r', encoding='utf-8') as f:
+                            sources_config = json.load(f)
+                        log_function(f"✅ Wczytano konfigurację źródeł: {len(sources_config)} folderów")
+                    except Exception as e:
+                        log_function(f"⚠️ Błąd wczytywania konfiguracji źródeł: {e}")
+                else:
+                    log_function(f"⚠️ Brak pliku sources_config.json w {subject_name}")
+                
+                # Znajdź podfoldery
+                subfolders = all_subject_folders[subject_name]
+                log_function(f"📂 Foldery OCR w {subject_name}: {[f.name for f in subfolders]}")
+                
+                for subfolder in subfolders:
+                    current_folder_idx += 1
+                    subfolder_name = subfolder.name
+                    source_type = sources_config.get(subfolder_name, "unknown")
+                    
+                    log_function(f"\n{'─'*50}")
+                    log_function(f"📁 [{current_folder_idx}/{total_ocr_folders}] Przetwarzanie: {subject_name}/{subfolder_name}")
+                    log_function(f"🏷️ Typ źródła: {source_type}")
+                    log_function(f"{'─'*50}")
+                    
+                    detekcje_path = subfolder / "detekcje"
+                    if not detekcje_path.exists():
+                        log_function(f"  ⚠️ POMIJAM - Brak folderu 'detekcje' w {subfolder_name}")
+                        continue
+                    
+                    log_function(f"✅ Folder detekcje istnieje: {detekcje_path}")
+                    
+                    # === KROK 1: WCZYTAJ CHUNKI TEKSTOWE Z PLIKU CHUNKS ===
+                    chunks_file = detekcje_path / f"{subfolder_name}_chunks.txt"
+                    text_chunks_loaded = 0
+                    
+                    log_function(f"\n📝 KROK 1: Ładowanie chunków tekstowych...")
+                    log_function(f"🔍 Szukam pliku: {chunks_file}")
+                    
+                    if chunks_file.exists():
+                        try:
+                            log_function(f"✅ Znaleziono plik chunków: {chunks_file.name}")
+                            
+                            with open(chunks_file, 'r', encoding='utf-8') as f:
+                                chunks_content = f.read().strip()
+                            
+                            # Podziel na chunki według enterów
+                            text_chunks = [chunk.strip() for chunk in chunks_content.split('\n') if chunk.strip()]
+                            
+                            log_function(f"📊 Znaleziono {len(text_chunks)} chunków tekstowych")
+                            
+                            # Dodaj każdy chunk jako węzeł tekstowy z embeddingiem TEKSTOWYM
+                            for chunk_idx, chunk_text in enumerate(text_chunks):
+                                try:
+                                    if chunk_idx % 10 == 0:  # Log co 10 chunków
+                                        log_function(f"  📝 Przetwarzanie chunku {chunk_idx+1}/{len(text_chunks)}...")
+                                    
+                                    # ZMIANA: Pobierz embedding TEKSTU (nie obrazu)
+                                    text_embedding = embedder.get_text_embedding(chunk_text)
+                                    
+                                    if text_embedding is not None:
+                                        # Utwórz UNIKALNY ID dla chunku tekstowego
+                                        chunk_content = f"{subject_name}_{subfolder_name}_chunk_{chunk_idx}_{chunk_text[:50]}"
+                                        chunk_id = hashlib.md5(chunk_content.encode('utf-8')).hexdigest()
+                                        unique_node_id = f"txt_{chunk_id}"
+                                        
+                                        # Sprawdź duplikaty
+                                        with neo4j_connector.get_driver().session() as session:
+                                            result = session.run(
+                                                "MATCH (n {id: $node_id}) RETURN count(n) as count",
+                                                node_id=unique_node_id
+                                            )
+                                            existing_count = result.single()["count"]
+                                            
+                                            if existing_count == 0:
+                                                # Konwertuj ścieżkę na względną od pgverse
+                                                relative_path = self.convert_to_relative_path(str(chunks_file))
+                                                
+                                                # Dodaj węzeł tekstowy z embeddingiem tekstowym
+                                                graph_builder.insert_node(
+                                                    node_id=unique_node_id,
+                                                    data_type="text",
+                                                    text=chunk_text,
+                                                    embedding=text_embedding.tolist(),
+                                                    path=relative_path,
+                                                    source=source_type,
+                                                    base64_data=None
+                                                )
+                                                
+                                                total_text_chunks += 1
+                                                text_chunks_loaded += 1
+                                                total_nodes_added += 1
+                                                
+                                                if text_chunks_loaded % 20 == 0:
+                                                    log_function(f"    ✅ Dodano {text_chunks_loaded} chunków tekstowych...")
+                                            else:
+                                                if chunk_idx % 20 == 0:  # Log duplikatów co 20
+                                                    log_function(f"    ⚠️ Chunk {chunk_idx} już istnieje w bazie (pomijam)")
+                                            
+                                    else:
+                                        log_function(f"    ⚠️ Nie udało się pobrać embeddingu dla chunku {chunk_idx}")
+                                        total_errors += 1
+                                        
+                                except Exception as e:
+                                    log_function(f"    ✗ Błąd przetwarzania chunku {chunk_idx}: {e}")
+                                    total_errors += 1
+                            
+                            log_function(f"✅ KROK 1 ZAKOŃCZONY: Dodano {text_chunks_loaded} nowych węzłów tekstowych")
+                            
+                        except Exception as e:
+                            log_function(f"✗ Błąd wczytywania chunków z {chunks_file.name}: {e}")
+                            total_errors += 1
+                    else:
+                        log_function(f"⚠️ Brak pliku chunków: {chunks_file.name}")
+                    
+                    # === KROK 2: WCZYTAJ DANE BASE64 (DODANE) ===
+                    log_function(f"\n📋 KROK 2: Ładowanie danych base64...")
+                    base64_dict = self.load_base64_data_from_file(subfolder_name, detekcje_path)
+                    log_function(f"✅ Wczytano {len(base64_dict)} zapisów base64")
+                    
+                    # === KROK 3: WCZYTAJ KONTEKST OBRAZÓW Z JSON (ZMIENIONE NUMEROWANIE) ===
+                    log_function(f"\n🖼️ KROK 3: Ładowanie kontekstu obrazów z pliku context.json...")
+                    context_dict = {}
+                    
+                    # ZMIANA: Szukaj pliku folderOCR_context.json zamiast folderOCR_filtered_context.json
+                    context_json_file = detekcje_path / f"{subfolder_name}_context.json"
+                    log_function(f"🔍 Szukam pliku: {context_json_file}")
+                    
+                    if context_json_file.exists():
+                        try:
+                            log_function(f"  📄 Wczytywanie: {context_json_file.name}")
+                            
+                            with open(context_json_file, 'r', encoding='utf-8') as f:
+                                images_data = json.load(f)
+                            
+                            # Zbuduj słownik kontekstu: ścieżka_obrazu -> lista_tekstów_kontekstu
+                            for item in images_data:
+                                for image_path, context_texts in item.items():
+                                    normalized_path = self.normalize_path_separators(image_path)
+                                    # Połącz wszystkie teksty kontekstu w jeden string
+                                    combined_context = " ".join(context_texts) if context_texts else ""
+                                    context_dict[normalized_path] = combined_context
+                            
+                            log_function(f"  ✅ Wczytano kontekst dla {len(context_dict)} obrazów z {context_json_file.name}")
+                            
+                        except Exception as e:
+                            log_function(f"  ✗ Błąd wczytywania JSON {context_json_file.name}: {e}")
+                            total_errors += 1
+                    else:
+                        log_function(f"⚠️ Brak pliku kontekstu: {context_json_file.name}")
+                    
+                    # Policz wszystkie konteksty znalezione dla tego podfolderu
+                    total_context_found += len(context_dict)
+                    log_function(f"✅ KROK 3 ZAKOŃCZONY: Łącznie {len(context_dict)} obrazów z kontekstem")
+                    
+                    # === KROK 4: DODAJ WĘZŁY OBRAZÓW/WZORÓW/TABEL Z EMBEDDINGIEM TEKSTOWYM + BASE64 (ZMIENIONE) ===
+                    if context_dict:
+                        log_function(f"\n🎨 KROK 4: Przetwarzanie {len(context_dict)} obrazów z embeddingami tekstowymi + base64...")
+                        
+                        image_idx = 0
+                        for image_path, context_text in context_dict.items():
+                            image_idx += 1
+                            try:
+                                log_function(f"  🖼️ [{image_idx}/{len(context_dict)}] Przetwarzanie: {Path(image_path).name}")
+                                
+                                # Określ typ danych na podstawie ścieżki
+                                data_type = self.determine_data_type_from_path(image_path)
+                                log_function(f"    🏷️ Typ danych: {data_type}")
+                                
+                                # DODANE: Znajdź odpowiednie base64 na podstawie ścieżki
+                                actual_image_path = self.find_actual_image_path(image_path, detekcje_path)
+                                base64_data = None
+                                
+                                if actual_image_path:
+                                    base64_data = self.find_matching_base64(actual_image_path, base64_dict)
+                                    if base64_data:
+                                        total_base64_found += 1
+                                        log_function(f"    📋 Znaleziono dane base64")
+                                    else:
+                                        log_function(f"    ⚠️ Brak danych base64")
+                                else:
+                                    log_function(f"    ⚠️ Nie znaleziono fizycznego pliku obrazu")
+                                
+                                # KLUCZOWA ZMIANA: Użyj kontekstu do embeddingu TEKSTOWEGO
+                                if context_text:
+                                    log_function(f"    🔄 Generowanie embeddingu tekstowego z kontekstu...")
+                                    # ZMIANA: Embedding TEKSTU zamiast obrazu
+                                    context_embedding = embedder.get_text_embedding(context_text)
+                                    
+                                    if context_embedding is not None:
+                                        log_function(f"    ✅ Embedding tekstowy wygenerowany pomyślnie")
+                                        
+                                        # Utwórz UNIKALNY ID dla węzła
+                                        image_content = f"{subject_name}_{subfolder_name}_{Path(image_path).name}_{data_type}_context"
+                                        image_id = hashlib.md5(image_content.encode('utf-8')).hexdigest()
+                                        unique_image_node_id = f"{self.get_node_prefix(data_type)}_{image_id}"
+                                        
+                                        # Sprawdź duplikaty
+                                        with neo4j_connector.get_driver().session() as session:
+                                            result = session.run(
+                                                "MATCH (n {id: $node_id}) RETURN count(n) as count",
+                                                node_id=unique_image_node_id
+                                            )
+                                            existing_count = result.single()["count"]
+                                            
+                                            if existing_count == 0:
+                                                # Konwertuj ścieżkę na względną od pgverse
+                                                relative_image_path = self.convert_to_relative_path(image_path)
+                                                
+                                                log_function(f"    💾 Zapisywanie węzła do bazy...")
+                                                # ZMIANA: Dodaj węzeł z embeddingiem tekstowym + base64
+                                                graph_builder.insert_node(
+                                                    node_id=unique_image_node_id,
+                                                    data_type=data_type,
+                                                    text=context_text,  # Tekst kontekstu
+                                                    embedding=context_embedding.tolist(),  # Embedding tekstu
+                                                    path=relative_image_path,
+                                                    source=source_type,
+                                                    base64_data=base64_data  # DODANE: base64
+                                                )
+                                                
+                                                if data_type == 'image':
+                                                    total_image_nodes += 1
+                                                elif data_type == 'formula':
+                                                    total_formula_nodes += 1
+                                                elif data_type == 'table':
+                                                    total_table_nodes += 1
+                                                    
+                                                total_nodes_added += 1
+                                                log_function(f"    ✅ Dodano węzeł {data_type} z embeddingiem tekstowym + base64: {Path(image_path).name}")
+                                            else:
+                                                log_function(f"    ⚠️ Węzeł {data_type} już istnieje w bazie (pomijam)")
+                                    else:
+                                        log_function(f"    ⚠️ Nie udało się pobrać embeddingu tekstowego")
+                                        total_errors += 1
+                                else:
+                                    log_function(f"    ⚠️ Brak kontekstu tekstowego - pomijam")
+                                    total_errors += 1
+                                        
+                            except Exception as e:
+                                log_function(f"    ✗ Błąd przetwarzania {image_path}: {e}")
+                                total_errors += 1
+                    else:
+                        log_function(f"⚠️ KROK 4 POMINIĘTY: Brak danych kontekstu obrazów")
+                    
+                    # Podsumowanie folderu OCR
+                    log_function(f"\n📊 PODSUMOWANIE FOLDERU {subfolder_name}:")
+                    log_function(f"  📝 Chunki tekstowe: {text_chunks_loaded}")
+                    log_function(f"  🖼️ Obrazy z kontekstem: {len(context_dict) if context_dict else 0}")
+                    log_function(f"  📋 Base64 znalezione: {len(base64_dict)}")  # DODANE
+                    log_function(f"  🧮 Typ embeddingów: TYLKO TEKSTOWE")
+            
+            # === PODSUMOWANIE KOŃCOWE ===
+            log_function(f"\n{'='*80}")
+            log_function(f"🎉 PODSUMOWANIE ŁADOWANIA CHUNKÓW Z KONTEKSTU")
+            log_function(f"{'='*80}")
+            log_function(f"📝 Kontekst znaleziony dla: {total_context_found} obrazów")
+            log_function(f"📋 Dane base64 znalezione: {total_base64_found}")  # DODANE
+            log_function(f"🧮 Typ embeddingów: TYLKO TEKSTOWE (nie obrazowe)")
+            log_function(f"")
+            log_function(f"=== WĘZŁY DODANE DO BAZY ===")
+            log_function(f"🖼️ Węzłów obrazów (z kontekstem): {total_image_nodes}")
+            log_function(f"🧮 Węzłów wzorów (z kontekstem): {total_formula_nodes}")
+            log_function(f"📊 Węzłów tabel (z kontekstem): {total_table_nodes}")
+            log_function(f"📝 Węzłów tekstowych: {total_text_chunks}")
+            log_function(f"🎯 RAZEM węzłów: {total_nodes_added}")
+            log_function(f"⚠️ Błędy: {total_errors}")
+            
+            log_function(f"\n📋 UWAGA: Węzły zostały dodane BEZ relacji.")
+            log_function(f"🔗 Aby utworzyć relacje podobieństwa między węzłami:")
+            log_function(f"   1. Użyj przycisku 'Utwórz relacje w grafie'")
+            log_function(f"   2. Lub użyj przycisku 'Konserwacja grafu' (pełna konserwacja)")
+            
+            if total_nodes_added > 0:
+                log_function("\n🎉 ŁADOWANIE CHUNKÓW Z KONTEKSTU ZAKOŃCZONE POMYŚLNIE!")
+                log_function(f"📈 Graf zawiera teraz:")
+                log_function(f"  • {total_text_chunks} węzłów tekstowych (embedding tekstu)")
+                log_function(f"  • {total_image_nodes} węzłów obrazów (embedding kontekstu)")
+                log_function(f"  • {total_formula_nodes} węzłów wzorów (embedding kontekstu)")
+                log_function(f"  • {total_table_nodes} węzłów tabel (embedding kontekstu)")
+                log_function(f"  • {total_base64_found} węzłów z danymi base64")  # DODANE
+                log_function(f"  • BRAK relacji - dodaj je osobno!")
+            else:
+                log_function("⚠️ Nie dodano żadnych danych - sprawdź logi błędów")
+                
+        except Exception as e:
+            log_function(f"✗ Krytyczny błąd ładowania chunków z kontekstu: {e}")
+            import traceback
+            log_function(f"Traceback: {traceback.format_exc()}")
 
     def run(self):
         """Uruchamia aplikację"""

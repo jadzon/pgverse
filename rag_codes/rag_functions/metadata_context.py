@@ -197,7 +197,71 @@ class ImageTextProcessor:
                     return relative_path
         return None
     
-    def get_images_with_context_json(self, texts):
+    def get_images_with_context_json(self, texts, use_vision):
+            
+        if use_vision:
+            return self._get_images_with_context_vision_json(texts)
+        else:
+            return self._get_images_with_context_embedding_json(texts)
+    
+    def _get_images_with_context_vision_json(self, texts):
+        """
+        NOWA implementacja dla vision system.
+        Ekstraktuje ścieżki obrazów z texts jako listę stringów.
+        
+        Args:
+            texts (list): Tablica z wynikami process_file/process_text
+            
+        Returns:
+            list: Lista stringów ze ścieżkami do obrazów
+        """
+        print("Ekstraktuję ścieżki obrazów dla vision system...")
+        
+        image_paths = []
+        
+        for i, element in enumerate(texts):
+            element_type = self.get_element_type(element)
+            
+            # Sprawdź czy to element obrazu (image, formula, table)
+            if element_type in ['image', 'formula', 'table']:
+                print(f"Znaleziono element typu '{element_type}': {element}")
+                
+                # Użyj uniwersalnej metody do pobierania ścieżki
+                image_path = self._get_element_path(element, element_type)
+                
+                if image_path:
+                    # Sprawdź czy obraz istnieje przed dodaniem do listy
+                    absolute_path = self._resolve_image_path(image_path)
+                    if os.path.exists(absolute_path):
+                        image_paths.append(image_path)
+                        print(f"Dodano ścieżkę: {image_path}")
+                    else:
+                        print(f"Pomijam nieistniejący obraz: {image_path} (szukano w: {absolute_path})")
+                else:
+                    print(f"Nie udało się wyciągnąć ścieżki z elementu: {element}")
+        
+        print(f"Wyekstraktowano {len(image_paths)} ścieżek obrazów:")
+        for path in image_paths:
+            print(f"  - {path}")
+        
+        # Eksportuj listę ścieżek do JSON
+        exported_data = []
+        # exported_data = self._export_vision_paths_to_json()
+        return exported_data
+
+    def _export_vision_paths_to_json(self):
+        """
+        Eksportuje listę ścieżek obrazów do pliku folderOCR_context.json.
+        
+        Args:
+            image_paths (list): Lista ścieżek do obrazów
+        """
+        # exported_data = VisionContext.get_json_data()
+
+        # return exported_data
+    
+
+    def _get_images_with_context_embedding_json(self, texts):
         """
         Zwraca JSON z obrazkami i ich najlepszym chunkiem na podstawie podobieństwa embeddingowego.
         NOWE: Używa embeddingów do wyboru najlepszego chunku dla każdego obrazu.
@@ -209,6 +273,8 @@ class ImageTextProcessor:
         Returns:
             list: Lista słowników w formacie [{"path": ["najlepszy chunk"]}]
         """
+
+
         result = []
         
         # Najpierw znajdź wszystkie chunki tekstowe
