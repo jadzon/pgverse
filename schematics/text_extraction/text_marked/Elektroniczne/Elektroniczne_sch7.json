@@ -1,0 +1,97 @@
+{
+  "image_path": "Dataset\\Elektroniczne\\sch7.png",
+  "blocks": [
+    {
+      "coords": [
+        77.0,
+        48.0,
+        164.0,
+        100.0
+      ],
+      "type": "rectangle",
+      "text": "is(t)",
+      "confidence": 0.9998768483502534
+    },
+    {
+      "coords": [
+        415.0,
+        55.0,
+        456.0,
+        95.0
+      ],
+      "type": "rectangle",
+      "text": "L",
+      "confidence": 0.9981013020910758
+    },
+    {
+      "coords": [
+        244.0,
+        90.0,
+        317.0,
+        145.0
+      ],
+      "type": "rectangle",
+      "text": "j(t)",
+      "confidence": 0.9884833693504333
+    },
+    {
+      "coords": [
+        139.0,
+        158.0,
+        172.0,
+        195.0
+      ],
+      "type": "rectangle",
+      "text": "C",
+      "confidence": 0.9278709662316977
+    },
+    {
+      "coords": [
+        230.0,
+        160.0,
+        361.0,
+        217.0
+      ],
+      "type": "rectangle",
+      "text": "R-is(t)",
+      "confidence": 0.7725034871342061
+    },
+    {
+      "coords": [
+        521.0,
+        185.0,
+        614.0,
+        236.0
+      ],
+      "type": "rectangle",
+      "text": "Uo(t)",
+      "confidence": 0.9949529920548704
+    },
+    {
+      "coords": [
+        48.22262654409181,
+        105.09343125161422,
+        125.77737345590819,
+        165.90656874838578
+      ],
+      "type": "rectangle",
+      "text": "Rc",
+      "confidence": 0.999381171772919
+    },
+    {
+      "coords": [
+        429.20082777162276,
+        105.08996776509676,
+        503.79917222837724,
+        166.91003223490324
+      ],
+      "type": "rectangle",
+      "text": "Ro",
+      "confidence": 0.9999195847600872
+    }
+  ],
+  "image_size": {
+    "width": 628,
+    "height": 262
+  }
+}

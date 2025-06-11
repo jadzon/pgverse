@@ -1,0 +1,149 @@
+{
+  "image_path": "Dataset\\Elektroniczne\\sch5.png",
+  "image_sizes": {
+    "annotations": [
+      800,
+      284
+    ],
+    "text_marked": [
+      903,
+      321
+    ],
+    "zgodne_rozmiary": false,
+    "skala_x": 0.8859357696566998,
+    "skala_y": 0.8847352024922118,
+    "wymaga_skalowania": true
+  },
+  "image_size": {
+    "width": 800,
+    "height": 284
+  },
+  "blocks": [
+    {
+      "coords": [
+        16.0,
+        101.0,
+        111.0,
+        194.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        214.0,
+        78.0,
+        272.0,
+        215.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        305.0,
+        9.0,
+        448.0,
+        65.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        545.0,
+        7.0,
+        689.0,
+        65.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        435.0,
+        97.0,
+        532.0,
+        189.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        707.0,
+        98.0,
+        796.0,
+        193.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        286,
+        116,
+        357,
+        180
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        653,
+        118,
+        698,
+        168
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        108,
+        164,
+        141,
+        209
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        517,
+        153,
+        651,
+        224
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        344,
+        51,
+        431,
+        123
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        574,
+        51,
+        661,
+        123
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    }
+  ]
+}

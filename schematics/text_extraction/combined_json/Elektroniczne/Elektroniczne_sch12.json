@@ -1,0 +1,108 @@
+{
+  "image_path": "Dataset\\Elektroniczne\\sch12.png",
+  "image_sizes": {
+    "annotations": [
+      800,
+      392
+    ],
+    "text_marked": [
+      912,
+      447
+    ],
+    "zgodne_rozmiary": false,
+    "skala_x": 0.8771929824561403,
+    "skala_y": 0.8769574944071589,
+    "wymaga_skalowania": true
+  },
+  "image_size": {
+    "width": 800,
+    "height": 392
+  },
+  "blocks": [
+    {
+      "coords": [
+        226.0,
+        59.0,
+        337.0,
+        109.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        524.0,
+        59.0,
+        598.0,
+        114.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        38.0,
+        184.0,
+        114.0,
+        272.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        235,
+        28,
+        259,
+        55
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        288,
+        28,
+        364,
+        65
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        691,
+        36,
+        738,
+        63
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        13,
+        163,
+        52,
+        195
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        536,
+        160,
+        601,
+        195
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    }
+  ]
+}

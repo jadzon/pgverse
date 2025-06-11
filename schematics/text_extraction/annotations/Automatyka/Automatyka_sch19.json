@@ -1,0 +1,36 @@
+{
+  "image_path": "Dataset\\Automatyka\\sch19.png",
+  "blocks": [
+    {
+      "coords": [
+        89.0,
+        94.0,
+        142.0,
+        159.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        197.0,
+        28.0,
+        397.0,
+        226.0
+      ],
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        537.0,
+        64.0,
+        688.0,
+        191.0
+      ],
+      "type": "rectangle"
+    }
+  ],
+  "image_size": {
+    "width": 800,
+    "height": 285
+  }
+}

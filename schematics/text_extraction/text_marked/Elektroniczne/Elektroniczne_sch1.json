@@ -1,0 +1,119 @@
+{
+  "image_path": "Dataset\\Elektroniczne\\sch1.png",
+  "blocks": [
+    {
+      "coords": [
+        218.0,
+        97.0,
+        269.0,
+        146.0
+      ],
+      "type": "rectangle",
+      "text": "Iz",
+      "confidence": 0.9910735477572374
+    },
+    {
+      "coords": [
+        315.0,
+        87.0,
+        524.0,
+        149.0
+      ],
+      "type": "rectangle",
+      "text": "Rz =8 @",
+      "confidence": 0.4745301845168367
+    },
+    {
+      "coords": [
+        642.0,
+        89.0,
+        769.0,
+        140.0
+      ],
+      "type": "rectangle",
+      "text": "24 Q",
+      "confidence": 0.7537274981910357
+    },
+    {
+      "coords": [
+        1024.0,
+        89.0,
+        1144.0,
+        141.0
+      ],
+      "type": "rectangle",
+      "text": "15 Q",
+      "confidence": 0.9778013825416565
+    },
+    {
+      "coords": [
+        21.0,
+        172.0,
+        237.0,
+        224.0
+      ],
+      "type": "rectangle",
+      "text": "E=24 V",
+      "confidence": 0.9812892892415895
+    },
+    {
+      "coords": [
+        570.0,
+        150.0,
+        694.0,
+        204.0
+      ],
+      "type": "rectangle",
+      "text": "[75 Q",
+      "confidence": 0.9480051043364759
+    },
+    {
+      "coords": [
+        715.0,
+        148.0,
+        837.0,
+        203.0
+      ],
+      "type": "rectangle",
+      "text": "60 Q",
+      "confidence": 0.8990046111122355
+    },
+    {
+      "coords": [
+        380.0,
+        216.0,
+        500.0,
+        266.0
+      ],
+      "type": "rectangle",
+      "text": "12 Q",
+      "confidence": 0.6197908095843646
+    },
+    {
+      "coords": [
+        646.0,
+        216.0,
+        768.0,
+        268.0
+      ],
+      "type": "rectangle",
+      "text": "16 Q",
+      "confidence": 0.9606473445892334
+    },
+    {
+      "coords": [
+        1034.0,
+        216.0,
+        1132.0,
+        269.0
+      ],
+      "type": "rectangle",
+      "text": "3 Q",
+      "confidence": 0.9618659615516663
+    }
+  ],
+  "image_size": {
+    "width": 1317,
+    "height": 342
+  }
+}

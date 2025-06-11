@@ -1,0 +1,75 @@
+{
+  "image_path": "main_results\\preprocessed\\test copy_processed.png",
+  "blocks": [
+    {
+      "coords": [
+        58.0,
+        89.0,
+        142.0,
+        121.0
+      ],
+      "type": "rectangle",
+      "text": "Ry=1k",
+      "confidence": 0.4314171634096867
+    },
+    {
+      "coords": [
+        116.0,
+        200.0,
+        228.0,
+        224.0
+      ],
+      "type": "rectangle",
+      "text": "'Vi = 20mV",
+      "confidence": 0.4193779270490417
+    },
+    {
+      "coords": [
+        571.0,
+        212.0,
+        702.0,
+        251.0
+      ],
+      "type": "rectangle",
+      "text": "V2 = 16 V",
+      "confidence": 0.5531354909940546
+    },
+    {
+      "coords": [
+        51.0,
+        430.0,
+        135.0,
+        456.0
+      ],
+      "type": "rectangle",
+      "text": "Rz=ak",
+      "confidence": 0.7579423144936185
+    },
+    {
+      "coords": [
+        146.0,
+        444.0,
+        179.0,
+        471.0
+      ],
+      "type": "rectangle",
+      "text": "Cz",
+      "confidence": 0.9400048778330498
+    },
+    {
+      "coords": [
+        323.0,
+        475.0,
+        423.0,
+        511.0
+      ],
+      "type": "rectangle",
+      "text": "Rx-3k",
+      "confidence": 0.9060232078182207
+    }
+  ],
+  "image_size": {
+    "width": 707,
+    "height": 597
+  }
+}

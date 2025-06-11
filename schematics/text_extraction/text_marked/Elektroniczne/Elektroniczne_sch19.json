@@ -1,0 +1,64 @@
+{
+  "image_path": "Dataset\\Elektroniczne\\sch19.png",
+  "blocks": [
+    {
+      "coords": [
+        593.0,
+        5.0,
+        673.0,
+        71.0
+      ],
+      "type": "rectangle",
+      "text": "RI",
+      "confidence": 0.9626524274983798
+    },
+    {
+      "coords": [
+        747.0,
+        241.0,
+        817.0,
+        310.0
+      ],
+      "type": "rectangle",
+      "text": "T1",
+      "confidence": 0.7982076612435612
+    },
+    {
+      "coords": [
+        187.0,
+        393.0,
+        289.0,
+        480.0
+      ],
+      "type": "rectangle",
+      "text": "Eg",
+      "confidence": 0.9997015290667055
+    },
+    {
+      "coords": [
+        387.0,
+        393.0,
+        469.0,
+        462.0
+      ],
+      "type": "rectangle",
+      "text": "U1",
+      "confidence": 0.7808103525478584
+    },
+    {
+      "coords": [
+        168.11013331203839,
+        160.0446652881101,
+        299.8898666879616,
+        277.9553347118899
+      ],
+      "type": "rectangle",
+      "text": "Rg",
+      "confidence": 0.995845588409396
+    }
+  ],
+  "image_size": {
+    "width": 915,
+    "height": 585
+  }
+}

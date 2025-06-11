@@ -1,0 +1,80 @@
+{
+    "image_path": "Dataset\\Automatyka\\sch19.png",
+    "blocks": [
+        {
+            "coords": [
+                89.0,
+                94.0,
+                142.0,
+                159.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                197.0,
+                28.0,
+                397.0,
+                226.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                537.0,
+                64.0,
+                688.0,
+                191.0
+            ],
+            "type": "rectangle"
+        }
+    ],
+    "image_size": {
+        "width": 800,
+        "height": 285
+    },
+    "connections": [
+        {
+            "start_block": 0,
+            "end_block": 2,
+            "start_point": [
+                480,
+                130
+            ],
+            "end_point": [
+                490,
+                130
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 0,
+            "end_block": 1,
+            "start_point": [
+                196,
+                131
+            ],
+            "end_point": [
+                203,
+                130
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 1,
+            "end_block": 2,
+            "start_point": [
+                445,
+                99
+            ],
+            "end_point": [
+                454,
+                99
+            ],
+            "is_directed": false,
+            "direction": null
+        }
+    ]
+}

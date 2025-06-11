@@ -1,0 +1,385 @@
+{
+    "image_path": "Dataset\\Automatyka\\sch5.png",
+    "blocks": [
+        {
+            "coords": [
+                98.0,
+                66.0,
+                147.0,
+                117.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                202.0,
+                59.0,
+                264.0,
+                122.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                319.0,
+                64.0,
+                368.0,
+                117.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                425.0,
+                60.0,
+                487.0,
+                122.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                426.0,
+                137.0,
+                486.0,
+                200.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                593.0,
+                60.0,
+                655.0,
+                122.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                528.0,
+                216.0,
+                590.0,
+                277.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                426.0,
+                301.0,
+                486.0,
+                361.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                426.0,
+                379.0,
+                487.0,
+                441.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                320.0,
+                310.0,
+                370.0,
+                357.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                203.0,
+                301.0,
+                265.0,
+                363.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                201.0,
+                199.0,
+                264.0,
+                258.0
+            ],
+            "type": "rectangle"
+        }
+    ],
+    "image_size": {
+        "width": 800,
+        "height": 457
+    },
+    "connections": [
+        {
+            "start_block": 5,
+            "end_block": 6,
+            "start_point": [
+                558,
+                150
+            ],
+            "end_point": [
+                560,
+                201
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 11,
+            "end_block": 6,
+            "start_point": [
+                283,
+                230
+            ],
+            "end_point": [
+                509,
+                230
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 0,
+            "end_block": 1,
+            "start_point": [
+                176,
+                94
+            ],
+            "end_point": [
+                184,
+                93
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 7,
+            "end_block": 8,
+            "start_point": [
+                530,
+                358
+            ],
+            "end_point": [
+                530,
+                414
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 9,
+            "end_block": 7,
+            "start_point": [
+                389,
+                336
+            ],
+            "end_point": [
+                403,
+                336
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 1,
+            "end_block": 2,
+            "start_point": [
+                284,
+                92
+            ],
+            "end_point": [
+                303,
+                90
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 2,
+            "end_block": 3,
+            "start_point": [
+                396,
+                94
+            ],
+            "end_point": [
+                407,
+                91
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 10,
+            "end_block": 0,
+            "start_point": [
+                164,
+                300
+            ],
+            "end_point": [
+                164,
+                145
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 7,
+            "end_block": 6,
+            "start_point": [
+                507,
+                290
+            ],
+            "end_point": [
+                510,
+                290
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 4,
+            "end_block": 3,
+            "start_point": [
+                531,
+                134
+            ],
+            "end_point": [
+                532,
+                105
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 3,
+            "end_block": 5,
+            "start_point": [
+                535,
+                94
+            ],
+            "end_point": [
+                545,
+                94
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 9,
+            "end_block": 8,
+            "start_point": [
+                345,
+                414
+            ],
+            "end_point": [
+                388,
+                415
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 0,
+            "end_block": 11,
+            "start_point": [
+                122,
+                196
+            ],
+            "end_point": [
+                122,
+                215
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 9,
+            "end_block": 6,
+            "start_point": [
+                384,
+                248
+            ],
+            "end_point": [
+                534,
+                253
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 10,
+            "end_block": 9,
+            "start_point": [
+                278,
+                336
+            ],
+            "end_point": [
+                294,
+                332
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 4,
+            "end_block": 6,
+            "start_point": [
+                425,
+                248
+            ],
+            "end_point": [
+                534,
+                249
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 2,
+            "end_block": 4,
+            "start_point": [
+                369,
+                173
+            ],
+            "end_point": [
+                373,
+                173
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 10,
+            "end_block": 11,
+            "start_point": [
+                166,
+                296
+            ],
+            "end_point": [
+                166,
+                268
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 7,
+            "end_block": 4,
+            "start_point": [
+                469,
+                251
+            ],
+            "end_point": [
+                475,
+                249
+            ],
+            "is_directed": false,
+            "direction": null
+        }
+    ]
+}

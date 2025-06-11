@@ -1,0 +1,117 @@
+{
+    "image_path": "Dataset\\Elektroniczne\\sch15.png",
+    "blocks": [
+        {
+            "coords": [
+                284.0,
+                105.0,
+                325.0,
+                190.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                507.0,
+                278.0,
+                601.0,
+                367.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                230.0,
+                264.0,
+                342.0,
+                381.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                0.0,
+                289.0,
+                53.0,
+                366.0
+            ],
+            "type": "rectangle"
+        }
+    ],
+    "image_size": {
+        "width": 777,
+        "height": 578
+    },
+    "connections": [
+        {
+            "start_block": 3,
+            "end_block": 0,
+            "start_point": [
+                11,
+                232
+            ],
+            "end_point": [
+                311,
+                232
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 3,
+            "end_block": 2,
+            "start_point": [
+                157,
+                379
+            ],
+            "end_point": [
+                201,
+                379
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 0,
+            "end_block": 1,
+            "start_point": [
+                305,
+                72
+            ],
+            "end_point": [
+                562,
+                72
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 2,
+            "end_block": 1,
+            "start_point": [
+                309,
+                521
+            ],
+            "end_point": [
+                563,
+                521
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 0,
+            "end_block": 2,
+            "start_point": [
+                315,
+                237
+            ],
+            "end_point": [
+                315,
+                240
+            ],
+            "is_directed": false,
+            "direction": null
+        }
+    ]
+}

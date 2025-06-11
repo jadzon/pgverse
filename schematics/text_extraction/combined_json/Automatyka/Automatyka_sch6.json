@@ -1,0 +1,275 @@
+{
+  "image_path": "Dataset\\Automatyka\\sch6.png",
+  "image_sizes": {
+    "annotations": [
+      800,
+      457
+    ],
+    "text_marked": [
+      1207,
+      691
+    ],
+    "zgodne_rozmiary": false,
+    "skala_x": 0.6628003314001657,
+    "skala_y": 0.6613603473227206,
+    "wymaga_skalowania": true
+  },
+  "image_size": {
+    "width": 800,
+    "height": 457
+  },
+  "blocks": [
+    {
+      "coords": [
+        97.0,
+        295.0,
+        149.0,
+        345.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        208.0,
+        289.0,
+        272.0,
+        353.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        209.0,
+        205.0,
+        272.0,
+        270.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        209.0,
+        116.0,
+        272.0,
+        186.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        330.0,
+        126.0,
+        381.0,
+        176.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        441.0,
+        119.0,
+        504.0,
+        183.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        441.0,
+        34.0,
+        504.0,
+        96.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        440.0,
+        202.0,
+        505.0,
+        267.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        618.0,
+        288.0,
+        680.0,
+        354.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        441.0,
+        289.0,
+        505.0,
+        352.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        441.0,
+        372.0,
+        505.0,
+        434.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        332.0,
+        295.0,
+        382.0,
+        346.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        510,
+        111,
+        567,
+        143
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        233,
+        142,
+        247,
+        162
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        451,
+        140,
+        491,
+        166
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        243,
+        232,
+        253,
+        247
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        464,
+        222,
+        492,
+        246
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        25,
+        280,
+        72,
+        312
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        512,
+        287,
+        565,
+        316
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        718,
+        281,
+        766,
+        314
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        233,
+        312,
+        247,
+        331
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        450,
+        309,
+        491,
+        337
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        640,
+        311,
+        657,
+        333
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        463,
+        392,
+        482,
+        415
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    }
+  ]
+}

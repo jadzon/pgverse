@@ -1,0 +1,31 @@
+{
+  "image_path": "Dataset\\Elektroniczne\\sch13.png",
+  "blocks": [
+    {
+      "coords": [
+        305.0,
+        37.0,
+        353.0,
+        90.0
+      ],
+      "type": "rectangle",
+      "text": "id",
+      "confidence": 0.9979367770840248
+    },
+    {
+      "coords": [
+        287.0,
+        142.0,
+        318.0,
+        175.0
+      ],
+      "type": "rectangle",
+      "text": "D",
+      "confidence": 0.9994949740190897
+    }
+  ],
+  "image_size": {
+    "width": 388,
+    "height": 308
+  }
+}

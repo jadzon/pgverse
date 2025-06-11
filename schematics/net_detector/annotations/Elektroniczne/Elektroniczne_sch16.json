@@ -1,0 +1,177 @@
+{
+    "image_path": "Dataset\\Elektroniczne\\sch16.png",
+    "blocks": [
+        {
+            "coords": [
+                570.0,
+                189.0,
+                667.0,
+                268.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                427.0,
+                193.0,
+                472.0,
+                255.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                443.0,
+                58.0,
+                487.0,
+                149.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                298.0,
+                202.0,
+                388.0,
+                239.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                174.0,
+                279.0,
+                258.0,
+                351.0
+            ],
+            "type": "rectangle"
+        },
+        {
+            "coords": [
+                171.0,
+                396.0,
+                257.0,
+                463.0
+            ],
+            "type": "rectangle"
+        }
+    ],
+    "image_size": {
+        "width": 752,
+        "height": 545
+    },
+    "connections": [
+        {
+            "start_block": 5,
+            "end_block": 1,
+            "start_point": [
+                462,
+                481
+            ],
+            "end_point": [
+                462,
+                470
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 0,
+            "end_block": 2,
+            "start_point": [
+                623,
+                75
+            ],
+            "end_point": [
+                623,
+                20
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 5,
+            "end_block": 0,
+            "start_point": [
+                216,
+                518
+            ],
+            "end_point": [
+                624,
+                518
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 4,
+            "end_block": 3,
+            "start_point": [
+                247,
+                226
+            ],
+            "end_point": [
+                275,
+                225
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 1,
+            "end_block": 0,
+            "start_point": [
+                491,
+                520
+            ],
+            "end_point": [
+                593,
+                520
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 3,
+            "end_block": 1,
+            "start_point": [
+                395,
+                239
+            ],
+            "end_point": [
+                401,
+                237
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 4,
+            "end_block": 5,
+            "start_point": [
+                217,
+                370
+            ],
+            "end_point": [
+                220,
+                375
+            ],
+            "is_directed": false,
+            "direction": null
+        },
+        {
+            "start_block": 2,
+            "end_block": 1,
+            "start_point": [
+                457,
+                140
+            ],
+            "end_point": [
+                458,
+                213
+            ],
+            "is_directed": false,
+            "direction": null
+        }
+    ]
+}

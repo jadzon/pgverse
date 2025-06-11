@@ -1,0 +1,130 @@
+{
+  "image_path": "Dataset\\Automatyka\\sch19.png",
+  "image_sizes": {
+    "annotations": [
+      800,
+      285
+    ],
+    "text_marked": [
+      1296,
+      462
+    ],
+    "zgodne_rozmiary": false,
+    "skala_x": 0.6172839506172839,
+    "skala_y": 0.6168831168831169,
+    "wymaga_skalowania": true
+  },
+  "image_size": {
+    "width": 800,
+    "height": 285
+  },
+  "blocks": [
+    {
+      "coords": [
+        89.0,
+        94.0,
+        142.0,
+        159.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        197.0,
+        28.0,
+        397.0,
+        226.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        537.0,
+        64.0,
+        688.0,
+        191.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        262,
+        52,
+        314,
+        86
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        16,
+        78,
+        65,
+        119
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        133,
+        77,
+        192,
+        122
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        427,
+        79,
+        480,
+        121
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        696,
+        79,
+        752,
+        122
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        572,
+        107,
+        655,
+        152
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    },
+    {
+      "coords": [
+        309,
+        170,
+        338,
+        197
+      ],
+      "source": "text_marked",
+      "type": "rectangle",
+      "coords_scaled": true
+    }
+  ]
+}

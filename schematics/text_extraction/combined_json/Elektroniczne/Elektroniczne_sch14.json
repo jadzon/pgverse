@@ -1,0 +1,133 @@
+{
+  "image_path": "Dataset\\Elektroniczne\\sch14.png",
+  "image_sizes": {
+    "annotations": [
+      413,
+      373
+    ],
+    "text_marked": [
+      413,
+      373
+    ],
+    "zgodne_rozmiary": true,
+    "skala_x": 1.0,
+    "skala_y": 1.0,
+    "wymaga_skalowania": false
+  },
+  "image_size": {
+    "width": 413,
+    "height": 373
+  },
+  "blocks": [
+    {
+      "coords": [
+        353.0,
+        156.0,
+        402.0,
+        204.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        232.0,
+        32.0,
+        317.0,
+        71.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        114.0,
+        145.0,
+        171.0,
+        211.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        13.0,
+        210.0,
+        60.0,
+        259.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        9.0,
+        272.0,
+        61.0,
+        317.0
+      ],
+      "source": "annotations",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        88.0,
+        122.0,
+        135.0,
+        155.0
+      ],
+      "source": "text_marked",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        58.0,
+        218.0,
+        112.0,
+        261.0
+      ],
+      "source": "text_marked",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        232.04165424286197,
+        -5.904748240735811,
+        294.95834575713803,
+        46.90474824073581
+      ],
+      "source": "text_marked",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        285.1492874992733,
+        120.09343125161422,
+        370.8507125007267,
+        180.90656874838578
+      ],
+      "source": "text_marked",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        189.0664712784511,
+        158.0840783210496,
+        261.9335287215489,
+        213.9159216789504
+      ],
+      "source": "text_marked",
+      "type": "rectangle"
+    },
+    {
+      "coords": [
+        54.108253797121755,
+        277.0807837648784,
+        141.89174620287824,
+        333.9192162351216
+      ],
+      "source": "text_marked",
+      "type": "rectangle"
+    }
+  ]
+}

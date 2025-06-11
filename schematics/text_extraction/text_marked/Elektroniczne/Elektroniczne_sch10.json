@@ -1,0 +1,86 @@
+{
+  "image_path": "Dataset\\Elektroniczne\\sch10.png",
+  "blocks": [
+    {
+      "coords": [
+        170.0,
+        68.0,
+        203.0,
+        106.0
+      ],
+      "type": "rectangle",
+      "text": "R",
+      "confidence": 0.9992431642656499
+    },
+    {
+      "coords": [
+        407.0,
+        60.0,
+        440.0,
+        96.0
+      ],
+      "type": "rectangle",
+      "text": "R",
+      "confidence": 0.9983123514729506
+    },
+    {
+      "coords": [
+        140.0,
+        142.0,
+        168.0,
+        176.0
+      ],
+      "type": "rectangle",
+      "text": "E",
+      "confidence": 0.9992475733448067
+    },
+    {
+      "coords": [
+        326.0,
+        141.0,
+        368.0,
+        179.0
+      ],
+      "type": "rectangle",
+      "text": "R",
+      "confidence": 0.9998240548284798
+    },
+    {
+      "coords": [
+        422.0,
+        138.0,
+        521.0,
+        181.0
+      ],
+      "type": "rectangle",
+      "text": "Ro=R",
+      "confidence": 0.9868034720420837
+    },
+    {
+      "coords": [
+        407.0,
+        222.0,
+        440.0,
+        258.0
+      ],
+      "type": "rectangle",
+      "text": "R",
+      "confidence": 0.9995711309682207
+    },
+    {
+      "coords": [
+        221.0,
+        314.0,
+        350.0,
+        365.0
+      ],
+      "type": "rectangle",
+      "text": "Uo/2R",
+      "confidence": 0.9729820793988981
+    }
+  ],
+  "image_size": {
+    "width": 561,
+    "height": 392
+  }
+}

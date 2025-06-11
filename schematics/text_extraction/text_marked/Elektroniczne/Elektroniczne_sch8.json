@@ -1,0 +1,53 @@
+{
+  "image_path": "Dataset\\Elektroniczne\\sch8.png",
+  "blocks": [
+    {
+      "coords": [
+        433.0,
+        129.0,
+        499.0,
+        190.0
+      ],
+      "type": "rectangle",
+      "text": "Rz",
+      "confidence": 0.9593693012052188
+    },
+    {
+      "coords": [
+        107.0,
+        233.0,
+        326.0,
+        297.0
+      ],
+      "type": "rectangle",
+      "text": "El(t) Cc",
+      "confidence": 0.5118079835276257
+    },
+    {
+      "coords": [
+        445.0,
+        235.0,
+        513.0,
+        295.0
+      ],
+      "type": "rectangle",
+      "text": "C2",
+      "confidence": 0.9868051880433671
+    },
+    {
+      "coords": [
+        294.4731227022364,
+        74.09343454694911,
+        376.5268772977636,
+        141.9065654530509
+      ],
+      "type": "rectangle",
+      "text": "Rc",
+      "confidence": 0.9994539048205773
+    }
+  ],
+  "image_size": {
+    "width": 595,
+    "height": 341
+  }
+}

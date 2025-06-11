@@ -1,0 +1,97 @@
+{
+  "image_path": "Dataset\\Automatyka\\sch7.png",
+  "blocks": [
+    {
+      "coords": [
+        441.0,
+        105.0,
+        462.0,
+        130.0
+      ],
+      "type": "rectangle",
+      "text": "B",
+      "confidence": 0.9962591412802482
+    },
+    {
+      "coords": [
+        40.0,
+        108.0,
+        126.0,
+        157.0
+      ],
+      "type": "rectangle",
+      "text": "R(s)",
+      "confidence": 0.9996023178100586
+    },
+    {
+      "coords": [
+        225.0,
+        112.0,
+        310.0,
+        162.0
+      ],
+      "type": "rectangle",
+      "text": "E(s)",
+      "confidence": 0.9191728628542732
+    },
+    {
+      "coords": [
+        1130.0,
+        113.0,
+        1222.0,
+        166.0
+      ],
+      "type": "rectangle",
+      "text": "Y(s)",
+      "confidence": 0.9936471581459045
+    },
+    {
+      "coords": [
+        387.0,
+        183.0,
+        419.0,
+        207.0
+      ],
+      "type": "rectangle",
+      "text": "~a",
+      "confidence": 0.80593356056376
+    },
+    {
+      "coords": [
+        513.0,
+        185.0,
+        533.0,
+        206.0
+      ],
+      "type": "rectangle",
+      "text": "a",
+      "confidence": 0.9673639431834005
+    },
+    {
+      "coords": [
+        869.0,
+        152.0,
+        976.0,
+        202.0
+      ],
+      "type": "rectangle",
+      "text": "Gp(s)",
+      "confidence": 0.9994631309959251
+    },
+    {
+      "coords": [
+        478.0,
+        218.0,
+        503.0,
+        247.0
+      ],
+      "type": "rectangle",
+      "text": "B",
+      "confidence": 0.9986532695450911
+    }
+  ],
+  "image_size": {
+    "width": 1307,
+    "height": 401
+  }
+}

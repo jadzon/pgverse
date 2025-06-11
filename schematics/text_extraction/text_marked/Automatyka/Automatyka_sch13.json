@@ -1,0 +1,64 @@
+{
+  "image_path": "Dataset\\Automatyka\\sch13.png",
+  "blocks": [
+    {
+      "coords": [
+        6.0,
+        85.0,
+        84.0,
+        128.0
+      ],
+      "type": "rectangle",
+      "text": "R(s)",
+      "confidence": 0.9964346289634705
+    },
+    {
+      "coords": [
+        206.0,
+        85.0,
+        281.0,
+        128.0
+      ],
+      "type": "rectangle",
+      "text": "E(s)",
+      "confidence": 0.9946163296699524
+    },
+    {
+      "coords": [
+        999.0,
+        85.0,
+        1080.0,
+        134.0
+      ],
+      "type": "rectangle",
+      "text": "Y(s)",
+      "confidence": 0.9990735650062561
+    },
+    {
+      "coords": [
+        385.0,
+        118.0,
+        451.0,
+        160.0
+      ],
+      "type": "rectangle",
+      "text": "f(e)",
+      "confidence": 0.9990473985671997
+    },
+    {
+      "coords": [
+        768.0,
+        118.0,
+        865.0,
+        166.0
+      ],
+      "type": "rectangle",
+      "text": "Gp(s)",
+      "confidence": 0.9998203899174992
+    }
+  ],
+  "image_size": {
+    "width": 1133,
+    "height": 348
+  }
+}

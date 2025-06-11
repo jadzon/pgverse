@@ -1,0 +1,130 @@
+{
+  "image_path": "Dataset\\Automatyka\\sch5.png",
+  "blocks": [
+    {
+      "coords": [
+        45.0,
+        81.0,
+        111.0,
+        125.0
+      ],
+      "type": "rectangle",
+      "text": "u(t)",
+      "confidence": 0.8875588400751759
+    },
+    {
+      "coords": [
+        799.0,
+        83.0,
+        879.0,
+        127.0
+      ],
+      "type": "rectangle",
+      "text": "X1(t)",
+      "confidence": 0.5535715553544444
+    },
+    {
+      "coords": [
+        1060.0,
+        81.0,
+        1130.0,
+        130.0
+      ],
+      "type": "rectangle",
+      "text": "y(t)",
+      "confidence": 0.9988171458244324
+    },
+    {
+      "coords": [
+        351.0,
+        128.0,
+        370.0,
+        154.0
+      ],
+      "type": "rectangle",
+      "text": "4",
+      "confidence": 0.9999678137508141
+    },
+    {
+      "coords": [
+        667.0,
+        123.0,
+        727.0,
+        161.0
+      ],
+      "type": "rectangle",
+      "text": "1/s",
+      "confidence": 0.9860853696530854
+    },
+    {
+      "coords": [
+        944.0,
+        124.0,
+        971.0,
+        158.0
+      ],
+      "type": "rectangle",
+      "text": "3",
+      "confidence": 0.7251625807815117
+    },
+    {
+      "coords": [
+        690.0,
+        246.0,
+        714.0,
+        279.0
+      ],
+      "type": "rectangle",
+      "text": "2",
+      "confidence": 1.0
+    },
+    {
+      "coords": [
+        799.0,
+        461.0,
+        880.0,
+        505.0
+      ],
+      "type": "rectangle",
+      "text": "X2(t)",
+      "confidence": 0.8221149589841894
+    },
+    {
+      "coords": [
+        351.0,
+        499.0,
+        370.0,
+        526.0
+      ],
+      "type": "rectangle",
+      "text": "4",
+      "confidence": 0.9999959468882622
+    },
+    {
+      "coords": [
+        667.0,
+        494.0,
+        727.0,
+        532.0
+      ],
+      "type": "rectangle",
+      "text": "1/s",
+      "confidence": 0.9794407604041658
+    },
+    {
+      "coords": [
+        687.0,
+        615.0,
+        728.0,
+        651.0
+      ],
+      "type": "rectangle",
+      "text": "~5",
+      "confidence": 0.5575257090810213
+    }
+  ],
+  "image_size": {
+    "width": 1228,
+    "height": 702
+  }
+}

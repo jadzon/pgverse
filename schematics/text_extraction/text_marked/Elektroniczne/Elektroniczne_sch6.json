@@ -1,0 +1,75 @@
+{
+  "image_path": "Dataset\\Elektroniczne\\sch6.png",
+  "blocks": [
+    {
+      "coords": [
+        138.0,
+        57.0,
+        177.0,
+        93.0
+      ],
+      "type": "rectangle",
+      "text": "R",
+      "confidence": 0.9998854431537474
+    },
+    {
+      "coords": [
+        216.0,
+        55.0,
+        279.0,
+        83.0
+      ],
+      "type": "rectangle",
+      "text": "t =0",
+      "confidence": 0.7952851421574818
+    },
+    {
+      "coords": [
+        418.0,
+        66.0,
+        463.0,
+        105.0
+      ],
+      "type": "rectangle",
+      "text": "R",
+      "confidence": 0.9999492174873836
+    },
+    {
+      "coords": [
+        510.0,
+        48.0,
+        577.0,
+        97.0
+      ],
+      "type": "rectangle",
+      "text": "i(t)",
+      "confidence": 0.993438184261322
+    },
+    {
+      "coords": [
+        80.0,
+        92.0,
+        110.0,
+        127.0
+      ],
+      "type": "rectangle",
+      "text": "E",
+      "confidence": 0.9998232204370403
+    },
+    {
+      "coords": [
+        386.0,
+        118.0,
+        424.0,
+        157.0
+      ],
+      "type": "rectangle",
+      "text": "C",
+      "confidence": 0.9442074014583888
+    }
+  ],
+  "image_size": {
+    "width": 672,
+    "height": 192
+  }
+}

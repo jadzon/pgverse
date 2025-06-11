@@ -1,0 +1,64 @@
+{
+  "image_path": "Dataset\\Elektroniczne\\sch12.png",
+  "blocks": [
+    {
+      "coords": [
+        268.0,
+        32.0,
+        296.0,
+        63.0
+      ],
+      "type": "rectangle",
+      "text": "R",
+      "confidence": 0.9999903440708557
+    },
+    {
+      "coords": [
+        329.0,
+        33.0,
+        415.0,
+        75.0
+      ],
+      "type": "rectangle",
+      "text": "0,5k",
+      "confidence": 0.8351308107376099
+    },
+    {
+      "coords": [
+        788.0,
+        42.0,
+        842.0,
+        72.0
+      ],
+      "type": "rectangle",
+      "text": "IDdc",
+      "confidence": 0.9682220136028326
+    },
+    {
+      "coords": [
+        15.0,
+        186.0,
+        60.0,
+        223.0
+      ],
+      "type": "rectangle",
+      "text": "VB",
+      "confidence": 0.9618749450581744
+    },
+    {
+      "coords": [
+        612.0,
+        183.0,
+        686.0,
+        223.0
+      ],
+      "type": "rectangle",
+      "text": "VDdc",
+      "confidence": 0.9593337178230286
+    }
+  ],
+  "image_size": {
+    "width": 912,
+    "height": 447
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "image_path": "Dataset\\Elektroniczne\\sch18.png",
+  "blocks": [
+    {
+      "coords": [
+        59.0,
+        90.0,
+        140.0,
+        119.0
+      ],
+      "type": "rectangle",
+      "text": "Ry=1k",
+      "confidence": 0.819132619011079
+    },
+    {
+      "coords": [
+        169.0,
+        203.0,
+        226.0,
+        222.0
+      ],
+      "type": "rectangle",
+      "text": "20mV",
+      "confidence": 0.7618632912635803
+    },
+    {
+      "coords": [
+        571.0,
+        213.0,
+        701.0,
+        249.0
+      ],
+      "type": "rectangle",
+      "text": "V2 = 16 V",
+      "confidence": 0.5441832379860063
+    },
+    {
+      "coords": [
+        49.0,
+        428.0,
+        135.0,
+        458.0
+      ],
+      "type": "rectangle",
+      "text": "Rz=3k",
+      "confidence": 0.9131703800536738
+    },
+    {
+      "coords": [
+        144.0,
+        443.0,
+        179.0,
+        471.0
+      ],
+      "type": "rectangle",
+      "text": "Cz",
+      "confidence": 0.9848753537090641
+    },
+    {
+      "coords": [
+        322.0,
+        476.0,
+        419.0,
+        507.0
+      ],
+      "type": "rectangle",
+      "text": "Rx=3k",
+      "confidence": 0.8843994201199143
+    }
+  ],
+  "image_size": {
+    "width": 707,
+    "height": 597
+  }
+}
