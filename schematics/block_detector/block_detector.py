@@ -72,7 +72,7 @@ class BlockDetector:
         for *xyxy, conf, cls in results.pred[0].cpu().numpy():
             class_id = int(cls)
             class_name = results.names[class_id]
-            print(f"  {class_name} ({conf:.2f}) at [{int(xyxy[0])}, {int(xyxy[1])}, {int(xyxy[2])}, {int(xyxy[3])}]")
+            print(f" {class_id} {class_name} ({conf:.2f}) at [{int(xyxy[0])}, {int(xyxy[1])}, {int(xyxy[2])}, {int(xyxy[3])}]")
             
             # Create a Box object similar to YOLOv8/11 for consistency
             box = type('Box', (), {})()
