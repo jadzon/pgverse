@@ -3140,11 +3140,13 @@ class SubjectSelectorApp:
                                                 
                                                 log_function(f"    💾 Zapisywanie węzła do bazy...")
                                                 # Dodaj węzeł z embeddingiem tekstowym + base64
+                                                context_embedding = context_embedding.tolist() if hasattr(context_embedding, 'tolist') else context_embedding
+                                                
                                                 graph_builder.insert_node(
                                                     node_id=unique_image_node_id,
                                                     data_type=data_type,
                                                     text=context_text,  # Tekst kontekstu
-                                                    embedding=context_embedding.tolist(),  # Embedding tekstu
+                                                    embedding=context_embedding,  # Embedding tekstu
                                                     path=relative_image_path,
                                                     source=source_type,
                                                     base64_data=base64_data  # base64
