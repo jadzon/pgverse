@@ -136,195 +136,140 @@ class SchematicAnalyzer:
 
         return associated_results
 
-    def create_structure_for_circuit(self, connections, blocks, image_height=None):
+    def create_structure_for_circuit(self, connection_data, blocks, image_height=None):
+        """
+        Creates a structured representation of the circuit for CircuitTikZ.
+        
+        Args:
+            connection_data: Dictionary with connection data from NetDetector.find_connections()
+            blocks: Dictionary of detected blocks with their properties
+            image_height: Height of the original image for coordinate conversion
+            
+        Returns:
+            Processed blocks with CircuitTikZ structure
+        """
         # Initialize connections for all blocks
+        circuit = {}
         for block_id in blocks:
-            blocks[block_id].setdefault("connections", [])
+            print(f"Processing block {block_id} of type {blocks[block_id]['block']}")
+            if blocks[block_id]["block"] == "Node":
+                print(f"Skipping Node block {block_id} as it has no connections.")
+                continue
+            circuit[block_id] = {
+                "block": blocks[block_id]["block"],
+                "connections": connection_data["block_connections"][block_id],
+                "coordinates": blocks[block_id]["coordinates"],
+                "texts": blocks[block_id]["texts"],
+                "connection_points": connection_data["connection_points"][block_id],
+            }
+                # Properly iterate through contours data and find connection points for this block
 
-        # Add connections with proper node handling
-        for block_id, block_connections in connections.items():
-            if block_id not in blocks:
-                # Preserve special node types if detected
-                block_type = "node"
-                if "block" in block_connections:
-                    block_type = block_connections["block"]
-                blocks[block_id] = {"block": block_type, "connections": []}
 
-            for connected_block, start_point, path in block_connections:
-                blocks[block_id]["connections"].append({
-                    "block": connected_block,
-                    "start_point": start_point,  # Start point of the connection
-                    "path": path,
-                    "path_length": len(path)
-                })
-
-        # Create circuitikz data structure
-        circuitikz_data = {
-            "components": [],
-            "connections": [],
-            "image_height": image_height  # Store for coordinate flip
-        }
-
-        # Enhanced component mapping
+        # Store paths separately
+        circuit["paths"] = []
+        for contour_id, contour_data in connection_data["contours"].items():
+            for path in contour_data["paths"]:
+                circuit["paths"].append(path)       
+        
+        # Component mapping (existing code)
         component_mapping = {
-            "ac_source": "sV",          # Sinusoidal voltage source
-            "bjt": "npn",               # Default to NPN transistor
+            "ac_source": "sV",
+            "bjt": "npn",
             "battery": "battery",
             "capacitor": "C",
             "current_source": "I",
-            "dc_source": "V",           # DC voltage source
+            "dc_source": "V",
             "dep_current_source": "american controlled current source",
             "dep_dc_source": "american controlled voltage source",
             "diode": "D",
             "ground": "ground",
             "inductor": "L",
-            "mosfet": "nmos",           # Default to NMOS
-            "node": "",                 # Will be handled differently
+            "mosfet": "nmos",
+            "node": "",
             "opamp": "op amp",
             "resistor": "resistor",
             "resistor_box": "resistor",
             "voltage_source": "V",
-            "zener_diode": "zDo",       # Zener diode
-            "object": "generic",        # Generic component
-            # Add more as needed
+            "zener_diode": "zDo",
+            "object": "generic",
         }
         
-        # Process components
-        for block_id, block_data in blocks.items():
-            comp_type = block_data["block"].lower()
-
-            # Skip pure connection nodes (but keep grounds)
-            if comp_type == "node":
+        circuitikz_data = {
+            "components": [],
+            "connections": [],
+            "image_height": image_height if image_height else 1000,  # Default height if not provided
+        }
+        
+        # Populate circuitikz_data with components
+        for block_id, block_data in circuit.items():
+            if block_id == "paths":
+                continue  # Skip the paths entry
+                
+            component_type = block_data["block"]
+            if component_type == "Node":
                 continue
-
-            # Get circuitikz equivalent
-            circuitikz_type = component_mapping.get(comp_type, "generic")
-
-            # Extract position and dimensions from coordinates
-            x1, y1 = block_data["coordinates"]["x1"], block_data["coordinates"]["y1"]
-            x2, y2 = block_data["coordinates"]["x2"], block_data["coordinates"]["y2"]
-            width = x2 - x1
-            height = y2 - y1
-            
-            # Default center position (will be overridden if connection points are found)
+            circuitikz_type = component_mapping.get(str.lower(component_type), "generic")
+            # Get component coordinates
+            coords = block_data["coordinates"]
+            x1, y1 = coords["x1"], coords["y1"]
+            x2, y2 = coords["x2"], coords["y2"]
             center_x = (x1 + x2) / 2
             center_y = (y1 + y2) / 2
             
-            # Find connection starting points
-            starting_points = []
-            if "connections" in block_data and block_data["connections"]:
-                for conn in block_data["connections"]:
-                    if "start_point" in conn and conn["start_point"]:
-                        starting_points.append(conn["start_point"])
-            
-            # If we have at least one starting point, use it to determine component position
-            start_point1 = None
-            start_point2 = None
-            
-            if len(starting_points) > 0:
-                start_point1 = starting_points[0]
-                
-                # If we have multiple starting points, use the second one too
-                if len(starting_points) > 1:
-                    # Find the point furthest from the first one to get good component orientation
-                    max_distance = 0
-                    for point in starting_points[1:]:
-                        dist = ((point[0] - start_point1[0])**2 + (point[1] - start_point1[1])**2)**0.5
-                        if dist > max_distance:
-                            max_distance = dist
-                            start_point2 = point
-                
-                # If we only found one point, create a second point based on component dimensions
-                if start_point2 is None:
-                    # Create a second point in the opposite direction from the component center
-                    dx = start_point1[0] - center_x
-                    dy = start_point1[1] - center_y
-                    if abs(dx) > abs(dy):  # Horizontal orientation
-                        start_point2 = [center_x - dx, start_point1[1]]
-                    else:  # Vertical orientation
-                        start_point2 = [start_point1[0], center_y - dy]
-                
-                # Calculate new center point based on the two starting points
-                center_x = (start_point1[0] + start_point2[0]) / 2
-                center_y = (start_point1[1] + start_point2[1]) / 2
-
-            # Determine orientation based on starting points if available
-            if start_point1 and start_point2:
-                dx = start_point2[0] - start_point1[0]
-                dy = start_point2[1] - start_point1[1]
-                
-                if abs(dx) > abs(dy):  # Horizontal orientation
-                    rotation = 0
-                else:  # Vertical orientation
-                    rotation = 90
-            else:
-                # Fallback to size-based orientation detection
-                rotation = 0
-                if width > height * 1.5:  # Horizontal component
-                    rotation = 0
-                elif height > width * 1.5:  # Vertical component
-                    rotation = 90
-
-            # Extract label
+            # Get component label from texts
             label = ""
-            if "texts" in block_data and block_data["texts"]:
-                if isinstance(block_data["texts"], list):
-                    # Take first text element if it exists
-                    if block_data["texts"]:
-                        text_item = block_data["texts"][0]
-                        label = text_item[0] if isinstance(text_item, tuple) else str(text_item)
-                else:
-                    label = str(block_data["texts"])
-
-            # Special handling for grounds
-            if "ground" in comp_type:
-                circuitikz_type = "ground"
-                # Grounds are typically at connection points
-                rotation = -90  # Standard ground orientation
+            if block_data.get("texts") and len(block_data["texts"]) > 0:
+                # Handle different text formats based on your structure
+                if isinstance(block_data["texts"][0], tuple):
+                    label = block_data["texts"][0][0]  # (text, distance) format
+                elif isinstance(block_data["texts"][0], dict) and "text" in block_data["texts"][0]:
+                    label = block_data["texts"][0]["text"]
+                elif isinstance(block_data["texts"][0], str):
+                    label = block_data["texts"][0]
             
-            # Create the component with the starting points
-            component_data = {
-                "id": block_id,
-                "type": circuitikz_type,
-                "position": [center_x, center_y],
-                "rotation": rotation,
-                "width": width,
-                "height": height,
-                "label": label
+            # Calculate orientation/rotation based on connection points
+
+            if "connection_points" in block_data and len(block_data["connection_points"]) >= 2:
+                points = block_data["connection_points"]
+                print(f"Block {block_id} has connection points: {points}")
+                component = {
+                    "id": block_id,
+                    "type": circuitikz_type,
+                    "position": (center_x, center_y),
+                    "start_point1": points[0],
+                    "start_point2": points[1],
+                    "label": label or None,
+                    "width": x2 - x1,
+                    "height": y2 - y1
+                }
+            else:
+                # If no connection points, just use component center
+                component = {
+                    "id": block_id,
+                    "type": circuitikz_type,
+                    "position": (center_x, center_y),
+                    "label": label or None,
+                    "width": x2 - x1,
+                    "height": y2 - y1
+                }
+            
+            circuitikz_data["components"].append(component)
+        
+        # Populate circuitikz_data with connections (paths)
+        for i, path in enumerate(circuit["paths"]):
+            connection = {
+                "id": f"conn_{i}",
+                "path": path
             }
-            
-            # Add starting points if available
-            if start_point1:
-                component_data["start_point1"] = start_point1
-            if start_point2:
-                component_data["start_point2"] = start_point2
-                
-            circuitikz_data["components"].append(component_data)
-
-        # Process connections
-        connection_id = 0
-        for block_id, block_data in blocks.items():
-            for connection in block_data.get("connections", []):
-                target_id = connection["block"]
-                path = connection.get("path", [])
-
-                # Only add each connection once
-                if not any(conn["path"] == path for conn in circuitikz_data["connections"]):
-                    circuitikz_data["connections"].append({
-                        "id": connection_id,
-                        "from": block_id,
-                        "to": target_id,
-                        "path": path
-                    })
-                    connection_id += 1
-
+            circuitikz_data["connections"].append(connection)
+        
         # Export to files
         output_folder = os.path.join(self.results_folder, "circuitikz")
         os.makedirs(output_folder, exist_ok=True)
 
-        json_path = os.path.join(output_folder, "circuit.json")
-        with open(json_path, 'w') as f:
-            json.dump(circuitikz_data, f, indent=2)
+        #json_path = os.path.join(output_folder, "circuit.json")
+        #with open(json_path, 'w') as f:
+            #json.dump(circuitikz_data, f, indent=2)
 
         latex_path = os.path.join(output_folder, "circuit.tex")
         with open(latex_path, 'w') as f:
@@ -338,10 +283,9 @@ class SchematicAnalyzer:
         image_height = circuitikz_data.get("image_height", 1000)  # Default if not provided
         
         # Calculate dynamic scale based on image size
-        # Target width for the output diagram in cm
         target_width_cm = 15.0
         
-        # Find the maximum x-coordinate in the circuit to determine the actual width
+        # Find the maximum x-coordinate
         max_x = 0
         for comp in circuitikz_data["components"]:
             if "start_point1" in comp:
@@ -354,7 +298,7 @@ class SchematicAnalyzer:
             for point in conn.get("path", []):
                 max_x = max(max_x, point[0])
         
-        # Calculate scale factor (make sure we don't divide by zero)
+        # Calculate scale factor
         scale = target_width_cm / max_x if max_x > 0 else 0.01
 
         latex = [
@@ -364,7 +308,7 @@ class SchematicAnalyzer:
             f"% Dynamic scale factor: {scale:.5f} (target width: {target_width_cm}cm)",
             "\\begin{circuitikz}"
         ]
-
+        
         # Draw components with orientation
         for comp in circuitikz_data["components"]:
             x1, y1 = comp["start_point1"] if "start_point1" in comp else comp["position"]
@@ -377,9 +321,9 @@ class SchematicAnalyzer:
             x2_scaled = round(x2 * scale,1)
             y2_scaled = round(y2_flipped * scale,1)
 
-            # Handle rotation
-            rotate = f"rotate={comp['rotation']}" if comp.get("rotation", 0) != 0 else ""
-
+            #TODO: Handle tripoles (npn,pnp)
+            rotate = ""
+            print(f"Drawing component {comp['id']} of type {comp['type']} at ({x1_scaled:.1f},{y1_scaled:.1f}) to ({x2_scaled:.1f},{y2_scaled:.1f}) with rotation {rotate}")
             if comp["type"] == "ground":
                 latex.append(f"  \\draw ({x1_scaled:.1f},{y1_scaled:.1f}) to[{comp['type']}] ({x2_scaled:.1f},{y2_scaled:.1f}) {{}};")
             elif comp["type"] == "generic":
@@ -387,24 +331,59 @@ class SchematicAnalyzer:
                              f"minimum height={comp['height']*scale:.1f}cm] "
                              f"at ({x1_scaled:.1f},{y1_scaled:.1f}) ({x2_scaled:.1f},{y2_scaled:.1f}) {{{comp['label']}}};")
             else:
-                latex.append(f"  \\draw ({x1_scaled:.1f},{y1_scaled:.1f}) to[{comp['type']}, l = {{{comp['label']}}}] "
+                latex.append(f"  \\draw ({x1_scaled:.1f},{y1_scaled:.1f}) to[{comp['type']}, l = {{{comp['label']}}}, {rotate}] "
                              f"({x2_scaled:.1f},{y2_scaled:.1f});")
-
         # Draw connections using actual paths
         for conn in circuitikz_data["connections"]:
             if conn["path"]:
-                path_str = ""
-                for i, point in enumerate(conn["path"]):
-                    px, py = point
-                    # Flip y-coordinate
-                    py_flipped = image_height - py if image_height else py
-                    if i == 0:
-                        path_str = f"({px*scale:.1f},{py_flipped*scale:.1f})"
-                    else:
-                        path_str += f" -- ({px*scale:.1f},{py_flipped*scale:.1f})"
-                latex.append(f"  \\draw {path_str};")
-            else:  # Fallback to straight line
-                latex.append(f"  \\draw ({conn['from']}) -- ({conn['to']});")
+                # Sort path points to ensure they form a continuous line
+                path_points = conn["path"]
+                print(f"Processing connection {conn['id']} with {len(path_points)} path points")
+                if len(path_points) >= 2:
+                    path_str = ""
+                    for i, point in enumerate(path_points):
+                        px, py = point
+                        # Flip y-coordinate
+                        py_flipped = image_height - py if image_height else py
+                        
+                        # Format point
+                        scaled_x = round(px * scale, 1)
+                        scaled_y = round(py_flipped * scale, 1)
+                        
+                        if i == 0:
+                            path_str = f"({scaled_x:.1f},{scaled_y:.1f})"
+                        else:
+                            path_str += f" -- ({scaled_x:.1f},{scaled_y:.1f})"
+                    
+                    # Add the path with appropriate styling
+                    latex.append(f"  \\draw[color=black] {path_str};")
+            else:
+                print(f"Connection {conn['id']} has no path points, using straight line.")
+                # Fallback to straight line if no path points
+                from_comp = None
+                to_comp = None
+                
+                # Find component coordinates
+                for comp in circuitikz_data["components"]:
+                    if comp["id"] == conn["from"]:
+                        from_comp = comp
+                    if comp["id"] == conn["to"]:
+                        to_comp = comp
+                
+                if from_comp and to_comp:
+                    # Use component centers
+                    from_x = from_comp["position"][0]
+                    from_y = image_height - from_comp["position"][1] if image_height else from_comp["position"][1]
+                    to_x = to_comp["position"][0]
+                    to_y = image_height - to_comp["position"][1] if image_height else to_comp["position"][1]
+                    
+                    # Scale coordinates
+                    from_x_scaled = round(from_x * scale, 1)
+                    from_y_scaled = round(from_y * scale, 1)
+                    to_x_scaled = round(to_x * scale, 1)
+                    to_y_scaled = round(to_y * scale, 1)
+                    
+                    latex.append(f"  \\draw ({from_x_scaled:.1f},{from_y_scaled:.1f}) -- ({to_x_scaled:.1f},{to_y_scaled:.1f});")
 
         latex.append("\\end{circuitikz}")
         latex.append("\\end{document}")
@@ -500,10 +479,7 @@ class SchematicAnalyzer:
         cv2.waitKey = patched_waitKey
         
         try:
-            # Wykrywanie połączeń
-            net_detector.find_connections()
-            #net_detector.visualize_connections()
-            return net_detector.connections if hasattr(net_detector, "connections") else None
+            return net_detector.find_connections()
         finally:
             # Przywrócenie oryginalnych funkcji
             cv2.imshow = original_imshow
@@ -726,7 +702,7 @@ def main():
         results_folder="main_results",
         preprocess_enabled=False,
     )
-    analyzer.analyze(image_path="img/test4.png")
+    analyzer.analyze(image_path="img/test2.png")
 
 
 if __name__ == "__main__":
