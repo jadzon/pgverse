@@ -21,7 +21,7 @@ class NumpyEncoder(json.JSONEncoder):
         return super(NumpyEncoder, self).default(o)
 
 class SchematicAnalyzer:
-    def __init__(self, model_path, text_detection_enabled=True, preprocess_enabled=True, results_folder="main_results"):
+    def __init__(self, text_detection_enabled=True, preprocess_enabled=True, results_folder="main_results"):
         self.text_detection_enabled = text_detection_enabled
         self.preprocess_enabled = preprocess_enabled
         self.block_detector = BlockDetector()
@@ -51,7 +51,9 @@ class SchematicAnalyzer:
         
         # Wykrywanie bloków
         boxes, nodes_exist = self._detect_blocks(processed_image_path)
-        if len(boxes) != 0:
+        #Modlimy się, że jeśli nie wykryto bloków, to wykryto diagram blokowy
+        #W przeciwnym razie płaczemy
+        if len(boxes) > 1:
             
             connections = self._detect_connections(image, boxes, text_results, nodes_exist)
 
@@ -148,7 +150,7 @@ class SchematicAnalyzer:
             #     print(f"Component {component_type}: Associated with text: {text_content}")
 
         return associated_results
-
+    
     def create_structure_for_circuit(self, connection_data, blocks, image_height=None):
         """
         Creates a structured representation of the circuit for CircuitTikZ.
@@ -267,7 +269,10 @@ class SchematicAnalyzer:
                     component["start_point1"] = points[0]
                     component["start_point2"] = points[1]
                     component["start_point3"] = points[2] if len(points) > 2 else None
-
+            else:
+                component["start_point1"] = None
+                component["start_point2"] = None
+                component["start_point3"] = None
             
             print(f"Component {block_id} connection points: {component.get('start_point1', 'N/A')} to {component.get('start_point2', 'N/A')}")
             circuitikz_data["components"].append(component)
@@ -301,9 +306,9 @@ class SchematicAnalyzer:
         # Find the maximum x-coordinate
         max_x = 0
         for comp in circuitikz_data["components"]:
-            if "start_point1" in comp:
+            if comp["start_point1"] is not None:
                 max_x = max(max_x, comp["start_point1"][0])
-            if "start_point2" in comp:
+            if comp["start_point2"] is not None:
                 max_x = max(max_x, comp["start_point2"][0])
             max_x = max(max_x, comp["position"][0])
         
@@ -325,8 +330,12 @@ class SchematicAnalyzer:
         # Draw components with orientation
         for i,comp in enumerate(circuitikz_data["components"]):
             print()
-            x1, y1 = comp["start_point1"]
-            x2, y2 = comp["start_point2"]
+            if comp["start_point1"] is None or comp["start_point2"] is None:
+                x1, y1 = comp["position"]
+                x2, y2 = comp["position"]
+            else:
+                x1, y1 = comp["start_point1"] 
+                x2, y2 = comp["start_point2"]
             # Flip y-coordinate using image height
             y1_flipped = image_height - y1 if image_height else y1
             x1_scaled = round(x1 * scale,1)
@@ -545,7 +554,8 @@ class SchematicAnalyzer:
             "    line/.style={draw},",
             "    decision/.style={diamond, draw, aspect=2, text centered},",
             "    data/.style={trapezium, trapezium left angle=70, trapezium right angle=110, draw, minimum width=2cm, minimum height=1cm, text centered},",
-            "    text/.style={font=\\normalsize}",
+            "    text/.style={font=\\normalsize},",
+            "    process/.style={rectangle, draw, minimum width=2cm, minimum height=1cm,rounded corners=10mm, text centered},",
             "]"
         ]
 
@@ -553,10 +563,11 @@ class SchematicAnalyzer:
         style_mapping = {
             0: "arrow",
             1: "terminator",
-            2: "arrow",
+            2: "process",
             3: "decision",
             4: "text",
-            5: "data"
+            5: "data",
+
         }
 
         # Process all non-arrow elements first
@@ -693,11 +704,10 @@ class SchematicAnalyzer:
 def main():
     # Inicjalizacja i uruchomienie analizy schematu
     analyzer = SchematicAnalyzer(
-        model_path="block_detector/models/handwritten.pt",
         results_folder="main_results",
         preprocess_enabled=False,
     )
-    analyzer.analyze(image_path="img/test7.jpg")
+    analyzer.analyze(image_path="img/test9.png")
 
 
 if __name__ == "__main__":
