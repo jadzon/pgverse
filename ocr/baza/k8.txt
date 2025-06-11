@@ -1,0 +1,196 @@
+Na rysunku 3.3 przedstawiono zmianę wartości napięcia na zaciskach
+akumulatora w funkcji czasu trwania wyładowania. Wartość napięcia maleje
+stopniowo. Przedstawione wykresy obrazują wpływ temperatury elektrolitu
+na napięcie wyładowania, im wyższa jest temperatura elektrolitu, tym większa
+jest wartość napięcia końcowego. Napięcie końcowe zależy również od war-
+tości prądu wyładowania. Wielkością charakteryzującą akumulator, oprócz
+pojemności, jest dwudziestogodzinny prąd wyładowania, który wyznacza się
+dzieląc znamionową pojemność akumulatora przez 20 godzin
+
+l2o = Q/20
+ (3.5)
+
+Jest to wartość prądu wyładowania, przy której akumulator będzie do-
+starczać energii elektrycznej przez 20h. Przedstawione na rys. 3.3 charak-
+terystyki dotyczą wyładowania takim właśnie prądem.
+
+Maksymalna wartość napięcia ładowania zawiera się w granicach
+2,4 2,75 V/jogniwo i zależy od wartości prądu ładowania oraz temperatury
+elektrolitu. Na rysunku 3.4 przedstawiono charakterystykę ładowania ogniwa
+ołowiowego.
+
+
+
+Rys. 3.4. Charakterystyka ładowania akumulatora
+
+Akumulator można ładować wyłącznie prądem stałym, przy czym jego
+zacisk dodatni łączy się z zaciskiem dodatnim źródła napięcia, a zacisk
+ujemny z zaciskiem ujemnym źródła. W sieciach prądu przemiennego należy
+stosować prostowniki przetwarzające prąd przemienny na stały. Zaleca się
+przeprowadzać ładowanie, gdy temperatura elektrolitu zawiera się w prze-
+dziale 5~40°C. Podczas ładowania akumulatora temperatura elektrolitu
+wzrasta, nie może jednak przekroczyć 50°C. W razie osiągnięcia takiej warto-
+ści temperatury, należy zmniejszyć prąd ładowania albo zastosować wymu-
+szone chłodzenie elektrolitu, albo też przerwać proces ładowania.
+
+Ogniwa nowego, kwasowego akumulatora ołowiowego, będącego w stanie
+suchym, należy napełnić elektrolitem. Krajowe akumulatory samochodowe,
+
+46
+motocyklowe, nienaładowane napełnia się elektrolitem o gęstości
+1,26 g·cm⁻³, a akumulatory rozruchowe samochodowe — elektrolitem o gę-
+stości 1,28 g·cm⁻³. Gdy akumulator jest prawidłowo eksploatowany, wówczas
+elektrolit nie ulega zmianom przez cały okres jego użytkowania. Nie zachodzi
+więc potrzeba wymiany go na nowy. Elektrolitem jest roztwór wodny kwasu
+siarkowego. Należy przygotować go w naczyniu kwasoodpornym (szklanym
+lub kamionkowym) wytrzymałym na szybkie zmiany temperatury. Należy
+zawsze wlewać kwas wolnym strumieniem do wody (nigdy odwrotnie) i mieszać
+roztwór prętem z materiału kwasoodpornego. Pomiar gęstości elektrolitu
+(areometrem) można przeprowadzać dopiero po ostygnięciu roztworu do
+temperatury około 25°C (podczas mieszania kwasu z wodą wydziela się
+znaczna ilość ciepła). Podczas przygotowywania roztworu trzeba zachować
+szczególne środki ostrożności: zabezpieczyć twarz osłoną, założyć gumowe
+rękawice i fartuch. W pogotowiu, na wypadek kontaktu kwasu z ciałem,
+powinien być przygotowany stabilizator — wodny roztwór sody technicznej.
+Elektrolit użyty do napełniania powinien mieć temperaturę 10~30°C. Bez-
+pośrednio po napełnieniu ogniw akumulatora nieładowanego temperatura
+elektrolitu zwiększa się do około 30°C, a czasami nawet do około 50°C.
+Napełniony akumulator należy odstawić na okres do 3 godzin w celu ob-
+niżenia temperatury, a także nasiąknięcia mas czynnych elektrolitem. Następ-
+nie uzupełnia się jego poziom tak, by lustro elektrolitu znajdowało się
+10~15 mm ponad górną krawędzią płyt. Poziom elektrolitu najczęściej jest
+zaznaczony na obudowie dwiema liniami oznaczającymi: poziom minimalny
+i maksymalny. Podczas eksploatacji akumulatora elektrolit uzupełnia się
+wyłącznie wodą destylowaną.
+
+Pierwsze, uruchamiające ładowanie ma decydujący wpływ na właściwości
+elektryczne i trwałość akumulatora. Ładowanie przeprowadza się prądem I₀
+przez określoną ilość godzin, najlepiej w wyspecjalizowanym warsztacie elek-
+tromechanicznym. Akumulatory rozruchowe suche, nienaładowane po uzu-
+pełnieniu elektrolitem ładuje się prądem I₀ przez 50~70 h, aż do uzyskania
+całkowitego naładowania, pamiętając o kontrolowaniu temperatury ele-
+ktrolitu. Gdy temperatura przekroczy 50°C, wartość pierwszego prądu ład-
+owania należy zmniejszyć o połowę lub przerwać ładowanie. Ładowanie mniej-
+szym prądem przedłuża czas ładowania. Bezpośrednio po pierwszym nałado-
+waniu zaleca się poddać akumulator tzw. wyładowaniu eksploatacyjnemu,
+które następuje w czasie użytkowania samochodu (ciągnika).
+
+Krajowe akumulatory suchoładowane po napełnieniu elektrolitem: ładuje
+się prądem I₀ przez 4~10 h do czasu wystąpienia oznak pełnego naładowa-
+nia i od razu poddaje się je eksploatacji. Podczas kilkugodzinnej nieprzerwa-
+nej jazdy samochodem następuje całkowite doładowanie akumulatora.
+
+Akumulator nie używany lub niewłaściwie eksploatowany traci z czasem
+zmagazynowany w nim ładunek elektryczny i wymaga okresowego dołado-
+wania.
+
+47
+Sprawnością elektryczną (pojemnościową) akumulatora nazywa się stosu-
+nek pojemności wyładowania do pojemności ładowania
+
+(3.6)
+
+gdzie: Qwył — ładunek uzyskany do czasu całkowitego wyładowania (do napięcia
+o wartości 1,75 V na ogniwo),
+Qład — ładunek dostarczony akumulatorowi podczas ładowania.
+
+Sprawność elektryczna akumulatora ołowiowego wynosi zwykle 0,85 --0,92.
+
+Sprawność energetyczna akumulatora jest to stosunek energii pobranej
+z akumulatora aż do osiągnięcia stanu jego całkowitego wyładowaniu, do
+energii zużytej na jego naładowanie, czyli
+
+(3.7)
+
+Sprawność energetyczna akumulatorów ołowiowych zawiera się w granicach
+0,7--0,75.
+
+Oprócz powszechnie używanych akumulatorów kwasowych znane są rów-
+nież akumulatory zasadowe, wytwarzane obecnie jako żelazo-niklowe (tzw.
+Edisona), kadmowo-niklowe (Jungnera), srebro-cynkowe (Andre'go). Elek-
+trolitem jest 21% roztwór wodorotlenku potasowego (ługu) KOH. Napięcie
+pojedynczego ogniwa w zależności od rodzaju elektrod wynosi 1,1 -- 1,5 V.
+
+Akumulatory zasadowe mają wiele zalet w porównaniu z kwasowymi:
+są niewrażliwe na wstrząsy, mogą być bez szkody doprowadzone do zupeł-
+nego wyładowania i przez dłuższy czas pozostawać w stanie naładowanym.
+Wadą tych akumulatorów jest ich duży koszt i mała sprawność
+(Ncl= 0,6--0,75;Ncn-- 0,5).
+
+Pytania kontrolne
+
+1. Co to są kationy i aniony?
+2. Na czym polega różnica między przewodnictwem elektrolitycznym
+a przewodnictwem w metalu?
+3. Jakie znasz praktyczne zastosowania elektrolizy?
+4. Na czym polega różnica między ogniwami pierwotnymi i wtórnymi?
+5. Wyjaśnij pojęcie sprawności elektrycznej i energetycznej akumulatora.
+
+4. Pole elektryczne
+
+
+
+4.1. Pojęcia podstawowe ż
+
+Polem elektrycznym nazywa się przestrzeń, w której istnieją ładunki elek-
+tryczne.
+
+Występują dwa rodzaje ładunków elektrycznych: dodatnie i ujemne. Ła-
+dunki jednoimienne odpychają się, a różnoimienne przyciągają. Każdy ładu-
+nek dodatni lub ujemny jest całkowitą wielokrotnością ładunku elektronu
+e = 1,602* 10^-19 C.
+
+Układ dwóch równych punktowych ładunków elektrycznych, lecz o prze-
+ciwnych znakach, położonych nieskończenie blisko siebie nazywa się dipolem
+elektrycznym.
+
+W układzie odosobnionym spełnione jest prawo zachowania ładunku, któ-
+re brzmi: przy powstaniu ładunku jednego znaku w układzie odosobnionym
+musi powstać taka sama ilość ładunku przeciwnego znaku. Prawo lo można
+sformułować matematycznie w następujący sposób: algebraiczna suma ładun-
+ków (z uwzględnieniem ich znaków) w układzie odosobnionym jest stała.
+Oznacza to, że jeśli taki układ na początku pewnego doświadczenia był
+elektrycznie obojętny (ilość ładunków dodatnich równa ilości ładunków
+ujemnych), to w trakcie tego doświadczenia i po nim nadal suma algebraicz-
+na ładunków pozostaje równa zeru.
+
+Wyróżnia się następujące stany ładunków elektrycznych:
+ ładunki nieruchome i niezmienne w czasie, którym odpowiadają zjawiska
+elektrostatyczne (statyczne elektrycznie);
+ ładunki w ruchu lub zmienne w czasie, którym odpowiada zjawisko prądu
+elektrycznego.
+
+49
+Polem elektrostatycznym nazywa się pole elektryczne powstałe dookoła
+ładunków niezmiennych w czasie i nieruchomych względem ziemi.
+
+Polem elektrycznym stacjonarnym (lub ustalonym) nazywa się pole elek-
+tryczne powstałe wewnątrz i dookoła przewodu wiodącego prąd stały.
+
+Rys. 4.1. Ładunek punktowy 4 w polu elektrostatycznym odosobnionego ładunku ©
+
+Jeżeli w polu elektrostatycznym wytworzonym przez ładunek punktowy
++0 (rys. 4.1) umieści się drugi ładunek punktowy +4, to będzie na niego
+działać siła określona wzorem Culomba (siła Culombowska)
+
+gdzie: Q, q — ładunki elektryczne,
+Ey — przenikalność elektryczna próżni,
+Er, — przenikalność elektryczna środowiska, w którym znajdują się ładunki,
+r — odległość między ładunkami.
+
+(4.1)
+
+Kierunek działania siły leży na prostej łączącej te ładunki, a jej zwrot
+zależy od znaków ładunku: jednoimienne odpychają się, a różnoimienne
+przyciągają.
+
+Na ładunki elektryczne umieszczone w polu elektrycznym działają siły.
+Na elementarny ładunek dodatni działa siła styczna do linii, zwanych liniami
+sił pola elektrycznego (rys. 4.2a). Zwrot linii sił pola wytworzonego przez
+ładunek elektryczny przyjęto zgodnie ze zwrotem siły culombowskiej od-
+działującej na elementarny ładunek dodatni q, zwany próbnym. Jeżeli pole
+jest wytworzone przez dodatni ładunek +0, to umieszczenie w nim elemen-
+tarnego ładunku dodatniego +4 spowoduje powstanie siły odpychającej,
+stąd zwrot linii w przestrzeni na zewnątrz (rys. 4.2b). Jeżeli pole elektryczne
+
+50

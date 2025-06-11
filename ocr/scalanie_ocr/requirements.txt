@@ -1,0 +1,12 @@
+numpy
+opencv-python
+Pillow
+matplotlib
+torch
+transformers
+layoutparser               # podstawowa część
+pix2text
+onnxruntime
+pdf2image
+pytesseract
+tqdm

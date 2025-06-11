@@ -1,0 +1,219 @@
+=== Strona 1 ===
+160 161
+
+W urządzeniach cyfrowych rejestry pełnią zazwyczaj funkcje:
+
+-pomocniczych układów pamięciowych, zwykle o niewielkiej pojemności,
+-przetworników informacji szeregowej na równoległą i odwrotnie,
+-układów opóźniających,
+a po wprowadzeniu sprzężenia zwrotnego, również:
+-liczników,
+-generatorów ciągów binarnych.
+W tym miejscu omówimy typowe układy wynikające z objęcia rejestru SIPO 
+sprzężeniem zwrotnym. Układy takie, nazywane ogólnie rejestrami liczacymi, 
+charakteryzują się jednym lub kilkoma zamkniętymi cyklami stanów. 
+Liczba różnych stanów tworzonych przez rejestr wyznacza długość rejestru, 
+zaś liczba stanów w cyklu, uzależniona od stanu początkowego i rodzaju sprzężenia 
+zwrotnego, wyznacza pojemność rejestru liczacego.
+
+Na rys. 5.50 podany jest ogólny schemat rejestru liczącego o długości N = 4.
+
+5.6.2. Liczniki pierścieniowe
+
+Schemat licznika pierścieniowego powstaje z rejestru o długości N przy sprzężeniu zwrotnym.
+Schemat i graf licznika pierścieniowego o długości N = 4 pokazany jest na rys. 5.51.
+Jak wynika z grafu, licznik pierścieniowy (Ring Counter) złożony z N 
+przerzutników ma pojemność P = N i zlicza impulsy zegarowe w kodzie „1 z N”, 
+jeżeli krąży w nim tylko jedna jedynka lub jedno zero. W tym celu trzeba, przed
+rozpoczęciem pracy, ustawić właściwy stan początkowy licznika lub zastosować bardziej
+ złożone, samokorygujące sprzężenie zwrotne o postaci
+
+ które powodują, że startując od dowolnego stanu początkowego, 
+ licznik osiąga cykl roboczy po nie więcej niż N impulsach zegarowych 
+ (patrz zadanie Z.5.10).
+
+Rys. 5.51. Schemat i graf licznika pierścieniowego o długości N = 4
+5.6.3. Liczniki pseudopierścieniowe
+Schemat i graf licznika pseudopierścieniowego (Johnsona, Moebiusa) 
+pokazany jest na rys. 5.52.
+
+Rys. 5.52. Schemat i graf licznika Johnsona o długości N = 4
+
+Sprzężenie zwrotne o postaci
+zapewnia cykl o pojemności P = 2N.
+Cykl roboczym jest cykl zawierający zero, gdyż jest on łatwo 
+dekodowalny na kod „1 z N” z aktywnym zerem (patrz zadanie Z.5.11).
+
+
+=== Strona 2 ===
+162
+
+163
+Jeżeli zachodzi potrzeba zbudowania skróconego licznika Johnsona 
+o pojemności wyrażonej liczbą nieparzystą
+ 2N - 1, to sprzężenie powinno mieć postać
+
+ 5.6.4. Rejestry liniowe
+Rejestr liniowy uzyskujemy przez wprowadzenie w rejestrze SIPO sprzężenia o postaci
+
+
+Zależnie od liczby wyjść biorących udział w tworzeniu sygnału sprzężenia 
+zwrotnego (a_i = 1), rejestry liniowe mogą mieć różną liczbę cykli o różnej
+ długości, czyli różną pojemność maksymalną. Dla sprzężeń optymalnych, podanych
+  na rys. 5.53, rejestry o długości N mają maksymalną pojemność P = 2^N - 1. 
+  Jedynym stanem leżącym poza cyklem jest stan 0...0. Schemat i graf rejestru liniowego
+ o długości N = 4 ze sprzężeniem optymalnym przedstawiony jest na rys. 5.54.
+
+Rys. 5.53. Sprzężenia zapewniające maksymalną pojemność rejestru liniowego
+
+Rys. 5.54. Schemat i graf rejestru liniowego o długości N = 4 ze sprzężeniem optymalnym
+
+Rejestry liniowe służą do generacji ciągów binarnych. W szczególności rejestry o 
+pojemności P = 2^N - 1 służą do generacji ciągów binarnych liczb pseudolosowych.
+
+5.7. Liczniki
+5.7.1. Wiadomości ogólne
+Liczniki służą do zliczania impulsów lub dzielenia częstotliwości. Są to układy sekwencyjne,
+ których graf tworzy zamkniętą pętlę stanów.
+
+Każdy licznik ma pewną pojemność P wynikającą z jego długości N i zastosowanych sprzężeń. 
+Różnym liczbom impulsów wejściowych, różniących się o wielokrotność P, odpowiada ten sam stan licznika; 
+dlatego mówi się, że licznik zlicza modulo P. Liczba P jest nazywana również cyklem licznika. 
+Ciąg P różnych kombinacji stanów przerzutników tworzących licznik wyznacza kod licznika. Jedną z nich,
+ uważaną za zerową, można ustawiać za pomocą specjalnego wejścia zerującego. Po wyzerowaniu licznika i 
+ podaniu na jego wejście liczące P - 1 impulsów, licznik osiąga swój stan początkowy. Następne impulsy 
+ wejściowe powodują przejście do kolejnych stanów. Oprócz sterowania w licznikach często można wywoływać
+  wymuszone stany przejściowe; zasady takiego wpisywania są identyczne jak w rejestrach.
+
+Zależnie od sposobu podawania impulsów zliczanych do poszczególnych przerzutników, liczniki dzielimy na:
+
+synchroniczne (równoległe) – wejście zliczające licznika połączone jest ze wszystkimi zegarowymi wejściami przerzutników;
+asynchroniczne (szeregowe) – wejściem zliczającym połączone są nie wszystkie, a w skrajnym przypadku tylko jeden przerzutnik, ten, który reprezentuje najmniej znaczący bit kodu licznika.
+W trakcie działania stan licznika może się zmieniać w kierunku wartości rosnących lub malejących. Mówimy wtedy o zliczaniu odpowiednio w przód (w górę – Up) lub w tył (w dół – Down). Buduje się również tzw. liczniki rewersyjne (Up/Down Counter), mogące zliczać w obu kierunkach.
+
+W praktyce najczęściej zachodzi potrzeba zliczania w kodzie dwójkowym lub BCD. W związku z tym przyjęto nazwy:
+
+licznik binarny – licznik o pojemności 2^N, liczący w kodzie dwójkowym;
+licznik dziesiętny – licznik o pojemności 10, liczący w kodzie BCD;
+licznik modulo P – licznik o innej pojemności.
+W technice TTL produkowane są niemal wyłącznie 4-bitowe liczniki binarne lub dziesiętne (dekady). Dla uzyskania większej pojemności łączy się je według zasad pokazanych na rys. 5.55, gdzie CE (Count Enable) oznacza wejście zezwalające na zliczanie i generację przeniesienia lub zatrzymujące licznik, zaś RC (Ripple Carry) oznacza wyjście sygnału przeniesienia.
+
+Przy łączeniu szeregowym każdy następny licznik zlicza impulsy przeniesienia licznika poprzedniego. Oznacza to, że tylko pierwszy licznik w szeregu musi zliczać z szybkością wymaganą dla rozróżnienia kolejnych impulsów wejściowych; każdy następny może liczyć wolniej, odpowiednio do pojemności liczników poprzedzających go. Szeregowe rozchodzenie się sygnału przeniesienia i wynikające stąd opóźnienia w...
+=== Strona 3 ===
+164 165
+ustalaniu się stanów kolejnych liczników mogą, w niektórych orzypadkach, obniżać szybkość zliczania całego zespołu
+Rys. 5.55. Łączenie liczników:
+(a) szeregowe,
+(b) kaskadowe (równoległe z przeniesieniem szeregowym),
+(c) równoległe (z przeniesieniem równoległym)
+PRZYKŁAD 5.8
+Z pięciu szeregowo połączonych dekad o maksymalnej częstotliwości zliczania 40 MHz, czasie ustalania stanu 40 ns i czasie propagacji od wejścia do wyjścia przeniesienia równym 50 ns, zbudowano cyfrowy miernik częstotliwości przebiegów prostokątnych działający na zasadzie zliczania impulsów w ciągu 1 milisekundy.
+
+Największe możliwe opóźnienie 4 × 50 + 40 = 240 ns pomiędzy zakończeniem pomiaru a ustaleniem się wyniku nie jest istotne. Maksymalna mierzona częstotliwość może więc wynosić 40 MHz.
+PRZYKŁAD 5.9
+Trzy szeregowo połączone ze sobą dekady z poprzedniego przykładu wyposażono w układ kombinacyjny sygnalizujący zliczenie 500 impulsów. Stan (0101 0000 0000)
+
+BCD
+​
+  ustala się po 140 ns. Zakładając, że musi on być stabilny przez 15 ns dla prawidłowego zadziałania układu sygnalizującego, otrzymujemy minimalny okres przebiegu zliczanego równy 155 ns, co odpowiada maksymalnej częstotliwości około 6,5 MHz.
+
+Przy łączeniu kaskadowym sygnał przeniesienia można wytworzyć już w momencie osiągnięcia przez dany licznik stanu końcowego, czyli o jeden impuls zliczany wcześniej w porównaniu z licznikiem przeznaczonym do łączenia szeregowego. Wyprzedzenie to zmniejsza efektywny czas propagacji szeregowego przeniesienia, zwiększając w ten sposób szybkość zliczania całej kaskady.
+
+Najszybciej zlicza licznik łączony równolegle, w którym opóźnienie sygnału przeniesienia nie kumuluje się.
+
+5.7.2. Liczniki synchroniczne
+Stosując metody syntezy synchronicznych układów sekwencyjnych można zaprojektować na dowolnych przerzutnikach (tak­towanych zboczem lub MS) licznik o dowolnej pojemności, pracujący w dowolnym kodzie i akceptujący dowolną liczbę sygnałów sterujących. W szczególności, zerowanie i równoległe wpisywanie stanu początkowego były omówione w paragrafie poświęconym rejestrom. Pozostaje nam zaznajomienie się z wytwarzaniem sygnału przeniesienia, obwodami związanymi z wejściem zezwalającym CE oraz metodami układowego przyspieszania zliczania na przykładzie typowego licznika MSI serii 74.
+PRZYKŁAD 5.10
+
+Rozpatrzmy dekadę BCD synchronicznie zliczającą w przód dodatnie zbocza impulsów, produkowaną pod numerem 74160. Licznik ten ma następujące wejścia i wyjścia:
+
+C (Count) – wejście zliczające,
+D₀ ÷ D₃ (Data) – wejścia równoległe dla synchronicznego wpisywania stanu początkowego,
+L (Load) – wejście sterujące wpisywaniem stanu początkowego,
+R (Reset) – asynchroniczne wejście zerujące,
+CEP (Count Enable Parallel) – wejście zezwalające na zliczanie,
+CET (Count Enable Trickle) – wejście zezwalające na wytworzenie przeniesienia,
+Q₀ ÷ Q₃ – wyjście równoległe reprezentujące stan licznika,
+RC (Ripple Carry) – wyjście przeniesienia.
+Wprowadzenie dwóch wejść zezwalających CEP i CET ułatwia łączenie tych liczników. Wewnątrz licznika obliczany jest jednak jeden sygnał zezwalający na zliczanie.
+Działanie licznika opisane jest tablicą z rys 5.56.
+
+Spróbujmy odtworzyć proces projektowania tego licznika. Wygodnie jest przy tym wyodrębnić dwa etapy:
+
+synteza licznika bez uwzględnienia sygnałów sterujących,
+modyfikacja uzyskanych funkcji wzbudzeń, dla uwzględnienia sygnałów sterujących.
+W ramach etapu pierwszego, w wyniku standardowej syntezy na przerzutnikach
+=== Strona 4 ===
+166 167
+
+JK, otrzymujemy następujące funkcje sterowań przerzutnikami: (a)
+
+Rys. 5.57. Rozszerzona tablica sterowania licznika 74160. W wyniku zależności CE od L, kombinacja L = 0, CE = 1 nie może wystąpić i odpowiadające jej pobudzenia mogą być dowolne.
+
+Zmodyfikowane funkcje J₁ i K₁ zależą od czterech zmiennych, zgodnie z rozszerzoną tablicą działania licznika (rys. 5.57), na podstawie której funkcje te można zapisać w postaci
+
+Ponadto, funkcję K₁ można również napisać w postaci (różniącej się od podanej tylko na pozycjach nieokreślonych):
+
+Sygnał przeniesienia powinien pojawiać się przy stanie 9 i obecności sygnału CET, tzn.
+
+W tym momencie dysponujemy już wszystkimi funkcjami opisującymi licznik. Przystępując do jego syntezy kombinacyjnej, pamiętajmy, że bramki inwersyjne działają szybciej od nieinwersyjnych. Dlatego też sygnał przeniesienia należy wytwarzać za pomocą bramki NOR.
+a zamiast przerzutników JK użyć przerzutników J𝐾
+, realizując funkcje wzbudzeń za pomocą bramek AND-OR-INVERT
+
+Wreszcie, aby licznik zbudowany z przerzutników Master-Slave zliczał narastające zbocza impulsów, na wejściu zliczającym należy umieścić inwertor.
+Pełny schemat zaprojektowanego licznika podany jest na rys. 5.58a, zaś wykresy czasowe na rys. 5.58b.
+=== Strona 5 ===
+168 169
+
+Rys. 5.58. Dekada synchroniczna 74160: (a) schemat, (b) wykresy czasowe
+
+W licznikach rewersyjnych jest jeszcze jedno wejście, sterujące kierunkiem zliczania (74190, 74191), lub istnieją dwa osobne wejścia zliczające – jedno w górę, drugie w dół (74192, 74193). W pierwszym przypadku przeniesienie generowane jest podczas pierwszego lub ostatniego stanu licznika, zależnie od kierunku zliczania. W drugim przypadku istnieją dwa osobne wyjścia – przeniesienie (carry) i pożyczka (borrow).
+
+5.7.3. Liczniki asynchroniczne
+Stan przerzutnika ustalany jest koincydencyjnie przez sygnał taktujący (zegarowy) i sygnały sterujące (J K lub S R lub D). W liczniku synchronicznym sygnałem taktującym są impulsy zliczane, docierające jednocześnie do wszystkich przerzutników. Odpowiedzialność za właściwe zmiany stanu licznika spada więc wyłącznie na układ kombinacyjny obliczający sygnały sterujące poszczególnych przerzutników.
+
+Jest intuicyjnie oczywiste, że jeśli do określonego przerzutnika będziemy doprowadzać sygnał taktujący tylko w niektórych momentach czasu, to układ kombinacyjny obliczający sygnały sterujące uprości się. Istnieje więc potencjalna możliwość, że licznik asynchroniczny, w którym wejścia zegarowe nie wszystkich przerzutników są ze sobą zwarte, będzie miał budowę prostszą od licznika synchronicznego. Warunkiem tego uproszczenia jest znalezienie w liczniku synchronicznym sygnału, kwalifikującego się do taktowania któregokolwiek przerzutnika. Potencjalnym źródłem tego sygnału mogą być wyjścia Q lub Q̅ któregokolwiek z przerzutników poprzedzających go. Wystąpią to na przykładzie licznika budowanego z przerzutników JK-MS.
+
+Zmiana stanu przerzutnika MS następuje w czasie przejścia H - L sygnału tak...
+
+taktującego. Przyjmijmy, że n-ty przerzutnik powinien zmienić stan po i-tym impulsie. Konieczny do tego celu sygnał taktujący znajdziemy na wyjściu Qₖ k-tego przerzutnika (k < n), jeżeli po (i - 1)-ym impulsie zachodzi KₖQₖ = 1, lub na wyjściu Q̅ₖ, jeżeli JₖQ̅ₖ = 1. Przy spełnieniu tego warunku przerzutnik k-ty zmienia stan po i-tym impulsie zegarowym (patrz rys. 5.59), może więc służyć do taktowania przerzutnika n-tego.
+Tak więc, zasada zamiany układu synchronicznego, zbudowanego z przerzutników JK-MS, na asynchroniczny brzmi:
+Jeśli, dla n > k i dowolnych wyrażeń logicznych Fₙ i Gₙ, zachodzi
+
+to znaczy, że jeżeli zmienia stan przerzutnik n-ty, to na pewno przerzutnik k-ty zmienia stan z 1 na 0 (lub z 0 na 1). Sygnał na wyjściu Qₖ (lub Q̅ₖ) można więc wykorzystać jako taktujący dla przerzutnika n-tego, eliminując z funkcji Jₙ i Kₙ iloczyny KₖQₖ (lub JₖQ̅ₖ), gdyż w chwili poprzedzającej zmianę stanu tego przerzutnika są one równe 1. Przyjmując zatem
+
+uzyskuje się identycznie działający układ asynchroniczny.
+
+▣ PRZYKŁAD 5.11
+Jak pamiętamy z przykładu 5.10, synchroniczna dekada BCD opisana jest równaniami:
+
+Przystępując do zamiany na układ asynchroniczny, zapiszemy te równania w postaci takiej jak we wzorach (5.6). Ponieważ 
+J0=K0=1, więc
+
+i na podstawie (5.7) dekada asynchroniczna dana jest równaniami
+=== Strona 6 ===
+170  171
+
+Licznik, taki jak w powyższym przykładzie, z niewielkimi usprawnieniami produkowany jest pod numerem 7490. Usprawnienia polegają na tym (patrz rys. 5.60), że licznik można zerować, podając jedynki na wejścia R₀ i R₁, lub ustawiać w stan 9, podając jedynki na wejście S₀ i S₁. Ponadto Q₀ i Q₁ nie są połączone, lecz wyprowadzone osobno, co daje możliwość niezależnego korzystania z licznika dwu- i pięciostanowego.
+Dekada z licznikiem dwustanowym (dwójką liczącą, ang. trigger flip-flop) na początku, liczy w kodzie BCD (rys. 5.60b). Dekada z dwójką liczącą na końcu (rys. 5.60c) liczy w kodzie dwuipółkowym (biquinary code), w którym najbardziej znaczący bit zmienia się co pięć stanów. Dekada taka, pracując jako dzielnik częstotliwości 1:10, daje na wyjściu przebieg prostokątny o wypełnieniu 0,5.
+
+Rys. 5.60. Dekada 7490: (a) schemat, (b, c) sposoby łączenia
+
+Stosując opisaną metodę zamiany licznika synchronicznego na asynchroniczny, można łatwo sprawdzić, że asynchroniczny licznik binarny o pojemności 
+2^N składa się z N połączonych szeregowo dwójek liczących, które można uzyskać z dowolnych przerzutników, łącząc je, jak na rys. 5.61.
+Rys. 5.61. Łączenie przerzutników dla uzyskania dwójki liczącej
+
+5.7.4. Skracanie cyklu w licznikach MSI
+Często, np. w dzielnikach częstotliwości, zachodzi potrzeba zbudowania licznika o pojemności niemożliwej do uzyskania przez łączenie szeregowe scalonych liczników dziesiętnych i binarnych lub ich dostępnych fragmentów. Można wtedy zaprojektować taki licznik na przerzutnikach w wersji synchronicznej i ewentualnie przekształcić go w prostszą wersję asynchroniczną (patrz zad. Z.5.13). Przekształcenie takie jest często możliwe ze względu na to, że kod licznika pracującego jako dzielnik częstotliwości jest dowolny i można go dobrać tylko pod kątem uproszczenia budowy licznika. Spośród innych możliwych metod na uwagę zasługuje metoda skracania cyklu w licznikach scalonych. Polega ona na wymuszeniu przeskoku pomijającego nadmiarową liczbę stanów. Omówimy to osobno dla liczników asynchronicznych i synchronicznych.
+Skracanie cyklu w asynchronicznych licznikach MSI
+Scalone liczniki asynchroniczne wyposażone są w wejścia zerujące, toteż skracanie cyklu odbywa się poprzez zerowanie licznika po przejściu zadanej liczby stanów.
+
+▣ PRZYKŁAD 5.12
+Dysponując dekadą 7490 zbudować licznik modulo 6.
+Przyjmijmy, że dekada połączona jest jak na rys. 5.60b i pracuje w kodzie BCD.
+W celu skrócenia cyklu do 6 stanów należy ją wyzerować po zliczeniu 6 impulsów, tzn. z chwilą osiągnięcia stanu (0110)
+(0110)2=(6)10
+​
+W tym celu wystarczy połączyć Q1 z R0 oraz Q2 z R1 , jak na rys. 5.62a.
+
+​

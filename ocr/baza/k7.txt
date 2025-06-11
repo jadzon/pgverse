@@ -1,0 +1,169 @@
+3.2. Sterowanie obrotami silników komutatorowych DC 43
+
+
+
+Rys. 3.8. Najprostsze regulatory obrotów do silników komutatorowych
+
+gulacji napięcie/obroty jest liniowa dla silników z magnesem trwałym i zbliżona do
+parabolicznej dla silników szeregowych. Stabilność obrotów nie jest duża ze wzglę-
+du na silną zależność obrotów silnika komutatorowego od obciążenia. Stabilizacja
+obrotów wymaga zastosowania układu z czujnikiem obrotów i zamkniętą pętlą re-
+gulacji (patrz rozdział 9).
+
+Najprostszą metodą regulacji obrotów jest potencjometr włączony szeregowo z sil-
+nikiem lub regulowany zasilacz (rysunek 3.8). Niestety występują tu bardzo duże
+straty mocy w elemencie regulacyjnym — przy niskich prędkościach obrotowych
+moc wydziełana w potencjometrze (stabilizatorze) jest większa niż moc pobierana
+przez silnik. Jeszcze w latach 60 ubiegłego wieku była to dość popularna metoda
+regulacji — na przykład w tramwajach tzw. „korba” motorniczego była przełączni-
+kiem wielopozycyjnym, przełączającym baterię rezystorów szeregowych.
+
+Znacznie lepszym rozwiązaniem jest zasilanie silnika impulsami prostokątny-
+mi o zmiennym współczynniku wypełnienia (modulacja PWM). Starty mocy
+w tranzystorze kluczującym są niewielkie ze względu na jego pracę w stanach
+zatkanie/nasycenie. Dla silników niskonapięciowych małej mocy można stosować
+
+Rys. 3.9. Przebiegi na wyjściu generatora PWM przy wypełnieniu t/T=50% (a) i t/T=90% (b)
+
+
+3.2.2.
+
+3. Silniki komutatorowe DC
+
+układy kluczy tranzystorowych opisane w rozdziale 2.2. Mostek H (rozdział 2.3)
+umożliwia dodatkowo zmianę kierunku obrotów (tylko dla silników z magnesem
+trwałym) oraz hamowanie dynamiczne.
+
+Zasadę regulacji PWM zilustrowano na rysunku 3.9. Średnia wartość napięcia „wid-
+ziana” przez silnik wynosi Us = Uz - t/T czyli Us = Uz · W. Współczynnik wy-
+pełnienia W = t/T jest liczbą ułamkową, często wyrażaną w procentach. Ważny jest
+dobór odpowiedniej częstotliwości fali prostokątnej (f = 1/T). W silniku komuta-
+torowym działają dwa czynniki „uśredniające” przebieg prostokątny: bezwładność
+mechaniczna napędu oraz indukcyjność uzwojeń silnika. Dla niskich częstotliwości
+(f = 5...50 Hz) czas narastania prądu w indukcyjności nie odgrywa istotnej roli,
+przebieg prądu w uzwojeniu ma kształt prawie prostokątny. W tej sytuacji uśred-
+nianie prędkości zależy od momentu bezwładności wirnika i napędzanych elemen-
+tów. Jeżeli bezwładność układu napędowego jest niewielka, to silnik będzie szar-
+pać lub w najlepszym wypadku pracować bardzo głośno, szczególnie przy małym
+współczynniku wypełnienia tzn. niskiej prędkości obrotowej. Poza tym przy małych
+prędkościach obrotowych mamy do czynienia właściwie z cyklicznym rozruchem
+silnika, a więc impulsy prądowe będą duże. W miarę wzrostu częstotliwości f po-
+prawia się uśrednianie „mechaniczne”, ale coraz większą rolę odgrywa indukcyj-
+ność własna silnika. Na rysunku 3.9 przedstawiono przebieg prądu w uzwojeniach
+silnika dla zakresu średnich częstotliwości (kilkaset Hz). Przy jeszcze wyższych
+częstotliwościach może się okazać, że czas trwania impulsu napięciowego jest krót-
+szy od czasu narastania prądu. Inaczej mówiąc — prąd silnika zostanie ograniczony
+przez impedancję uzwojenia dla częstotliwości f (Z = R + 2πfL). Spowoduje to
+zmniejszenie momentu obrotowego silnika. Maksymalna częstotliwość graniczna
+zależy od indukcyjności własnej uzwojeń i musi być ustalona indywidualnie dla
+wybranego silnika. Poza tym zbyt wysoka częstotliwość powoduje dodatkowe stra-
+ty wywołane prądami wirowymi w rdzeniu oraz zwiększoną emisję zakłóceń elek-
+tromagnetycznych w.cz. Dla większości małych silników komutatorowych opty-
+malne częstotliwości fali prostokątnej PWM zawierają się w granicach od 100 Hz
+do kilku kHz. Można przyjąć praktyczną zasadę: dla maksymalnej przewidywanej
+prędkości obrotowej silnika powinno przypadać przynajmniej 2 do 5 impulsów na
+obrót. Przykład: silnik 12000 obr/min tzn. 200 obr/s. Przyjmujemy częstotliwość f
+z zakresu 400 do 1000 Hz.
+
+Z drugiej strony, w silnikach większej mocy może być podczas pracy słyszalny
+gwizd o częstotliwości f (dla dociekliwych: sprawdzić w encyklopedii hasło „ma-
+gnetostrykcja”), co sugerowałoby zastosowanie częstotliwości powyżej pasma aku-
+stycznego — np. 25 kHz. Dla wielu typów silników jest to możliwe, dlatego dobrze
+jest przeprowadzić próby z różnymi częstotliwościami pracy układu. Wspomniane
+wcześniej silniki bez rdzenia żelaznego szczególnie dobrze nadają się do pracy
+z wysokimi częstotliwościami PWM ze względu na małe indukcyjności własne
+i brak strat w rdzeniu.
+
+
+3.2.2. Układy praktyczne
+
+Bardzo prosty układ regulatora PWM przedstawiono na rysunku 3.10. Generator
+o regulowanym współczynniku wypełnienia jest zrealizowany na bramkach U1A
+i U1B.
+
+Częstotliwość sygnału na wyjściu generatora można określić z przybliżonego wzoru:
+
+f=400
+C1*R2
+
+gdzie f podano w [kHz], pojemność C1 w [nF], rezystancję R2 w [kΩ].
+
+Dla R2 = 220 kΩ i C1 z zakresu 1 nF...22 nF można uzyskać częstotliwości od 2 kHz
+do 100 Hz. W celu dalszego zwiększenia częstotliwości należy zmniejszyć R2 (oraz
+R1 zachowując stosunek R1 = 2...3 · R2). Zamknięcie S1 powoduje start generato-
+ra i uruchomienie silnika. Zamiast S1 można sterować układ sygnałem cyfrowym,
+ale trzeba wtedy zastosować stabilizator napięcia Vcc (+5 V) w celu zapewnienia
+określonego poziomu sygnałów logicznych.
+
+W przypadku silnika z magnesem trwa-
+łym regulacja obrotów będzie liniowa, natomiast dla silnika szeregowego można
+spróbować poprawić liniowość regulacji stosując jako R2 potencjometr o charakte-
+rystyce logarytmicznej.
+
+Przy doborze elementów należy zwrócić uwagę na kilka istotnych szczegółów:
+
+-Dioda D3 — powinna to być dioda szybka na prąd 1...3 A (np. BY299, BY397,
+BY703, BYW72).
+-Tranzystor kluczujący może być typu MOS lub bipolarny, powinien mieć dopusz-
+czalny prąd drenu (kolektora) przynajmniej 3-krotnie większy od prądu znamio-
+nowego silnika, jeżeli stosujemy tranzystor bipolarny (np. Darlington TIP122) to
+R3 = R4 = 1 kΩ.
+-Iskrzenie komutatora może zakłócać pracę układów cyfrowych. Silnik może być
+fabrycznie wyposażony w szeregowe dławiki przeciwzakłóceniowe, jeżeli ich
+brak, to należy zastosować dwa dławiki 22...100 µH przystosowane do odpo-
+wiednich prądów.
+
+
+Rys. 3.10. Schemat elektryczny prostego regulatora PWM
+46
+
+3. Silniki komutatorowe DC
+
+
+
+Rys. 3.11. Regulator PWM wykonany na mikrokontrolerze
+
+wiednio dużego prądu (miniaturowe dławiki w obudowach „rezystorowych” nie
+nadają się). Kondensator tłumiący C5 powinien być umieszczony jak najbliżej
+zacisków silnika.
+
+Na rysunku 3.11 przedstawiono uproszczony schemat regulacji z zastosowaniem
+mikrokontrolera, który jest tutaj źródłem sygnału PWM. Najlepiej gdy mikrokon-
+troler ma wbudowany sprzętowy generator PWM, wtedy zadanie programisty ogra-
+nicza się do wpisania w odpowiednich rejestrach wartości częstotliwości i współ-
+czynnika wypełnienia. Niestety sprzętowy generator mają tylko kontrolery „z wyż-
+szej półki”, w najprostszych mikrokontrolerach trzeba to zrobić programowo.
+
+Typową metodą jest wykorzystanie przerwania timera. Przykład: współczynnik wy-
+pełnienia ma rozdzielczość 8 bitów, tj. 256 kroków. W programie obsługi przerwania
+należy naprzemiennie ustawiać wybraną linię portu w stan „0” lub „1” i wpisywać
+do rejestru licznika timera wartość wypełnienia, na przemian: W albo (256 – W).
+Pamiętajmy o odpowiedniej obsłudze przypadków szczególnych: W = 0 i W = 256.
+
+Częstotliwość przebiegu PWM zależy od częstotliwości zegarowej procesora, od
+wybranego współczynnika podziału dla timera (preskalera) i od rozdzielczości mo-
+dulacji PWM. Na przykład dla zegara 4 MHz i rozdzielczości 8-bitowej maksymalna
+możliwa częstotliwość wynosi 4 MHz/256, czyli ok. 15 kHz. Niższe częstotliwości
+uzyskuje się wprowadzając podział częstotliwości zegarowej (dokładne wartości za-
+leżą od konfiguracji timera w wybranym typie mikrokontrolera).
+3.2. Sterowanie obrotami silników komutatorowych DC 47
+
+
+Rys. 3.12. Uproszczony schemat ilustrujący zasadę działania mostka H
+
+rysunku sposób sterowania tranzystora MOSFET może nie wystarczyć w przypad-
+ku zastosowania częstotliwości kluczowania o wartości 20 kHz lub więcej, należy
+wtedy zastosować układ sterujący opisany w rozdziale 2.2.4 (rysunek 2.7, dotyczy
+to także układu z rysunku 3.10).
+
+W układzie z rysunku 3.11 wprowadzono dodatkowo zmianę kierunku obrotów za
+pomocą przekaźnika sterowanego wyjściem DIR. Jeżeli nie ma takiej potrzeby, to
+silnik podłącza się bezpośrednio między dren tranzystora i plus zasilania. Jeśli jest
+używane wyjście DIR, to w programie sterującym trzeba uwzględnić konieczność
+zatrzymania silnika przed przełączeniem kierunku obrotów, w przeciwnym razie
+przez silnik popłynie bardzo duży prąd w momencie zmiany kierunku.
+
+Wzmacniacz operacyjny U2 realizuje funkcję bezpiecznika przeciążeniowego. Gdy
+prąd silnika wzrośnie nadmiernie, to spadek napięcia na R4 będzie większy od na-
+
+Rys. 3.13. Podstawowa aplikacja scalonego sterownika A3953 firmy Allegro
