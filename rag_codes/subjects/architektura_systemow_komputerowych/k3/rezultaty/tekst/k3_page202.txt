@@ -1,0 +1,36 @@
+LITERATURA
+
+2
+
+11.
+12.
+
+. Stalings W.: Computer Organization and Architecture. Macmilan, New York 1987
+
+Maccabe A.B.: Computer Systems: Architecture, Organization and Programming.
+Irwin, 1993
+
+ Stalings W.: Data and Computers Communication. Macmilan, New York 1985
+. Clements A.: The Principles of Computer Hardware. Oxford University Press, Oxford
+
+1985
+
+„ Alexandridis N.A.: Microprocessor System Design Concepts. Computer Science Press,
+
+1984
+
+. Ercegovac M. D., Lang T.: Digital System and Hardware-Firmware Algorithms.
+
+J. Wiley, New York 1985
+
+- Tanenbaum A. S.: Structured Computer Organization. Prentice Hall, Englewood Clifft
+
+1984
+
+. Tomek I.: Introduction to Computer Organization. Computer Science Press, 1981
+„ Kline R. M.: Stuctured Digital Design. Prentice Hall, Englewood CIifft 1983
+. Gray N. A. B.: /ntroduction to Computer Systems. Prentice Hall, Englewood Clifft
+
+1987
+Stalings W.: Local Network — An Introduction. Macmilan, New York 1987
+Mano M. M.: Architektura komputerów. WNT, Warszawa 1988

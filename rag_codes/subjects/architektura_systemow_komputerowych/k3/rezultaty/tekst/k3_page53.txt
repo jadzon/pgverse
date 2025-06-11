@@ -1,0 +1,46 @@
+<image/wzory/k3_page53_formula1.png>
+
+Jeżeli natomiast na danej pozycji odjemna jest równa 0, to dalsza procedura zależy od
+wartości odjemnika na tej pozycji. W przypadku gdy odjemnik jest równy 0, to wynik jest
+równy 0. W przypadku gdy odjemnik jest równy 1, to wynik też jest równy 1, ale oznacza
+to wykorzystanie tzw. pożyczki z bardziej znaczącej pozycji. Jeżeli na bardziej znaczącej
+pozycji jest 1, to zapożyczenie polega na zamianie tej jedynki na zero. Jeżeli natomiast na
+tej pozycji jest 0, to trzeba dokonać pożyczki z jeszcze bardziej znaczącej pozycji itd.
+Pożyczka powoduje, że kolejne zera będą zmieniały się na jedynki, aż do napotkania
+pierwszej jedynki.
+
+Dla przykładu z tablicy 3.10 mamy:
+
+pożyczka (0000) (0110) (0110) (0110)
+1001 010x 0lxx Oxxx
+0111 0llx 0lxx Oxxx
+xxxx xx10 x010 0010
+
+Ponieważ algorytm przewiduje, że odejmuje się zawsze liczbę, której moduł jest mniejszy
+od liczby, której moduł jest większy, pożyczka nie wykracza poza pozycje odjemnej
+i wynik jest zawsze dodatni.
+
+Operacja odejmowania jest łatwiejsza dla zapisów U1 i U2. W zapisie U1 algorytm
+odejmowania polega na dodawaniu wszystkich pozycji liczby wraz z bitem znaku oraz
+uwzględnieniu powstałego przeniesienia. Oznacza to, konieczność korekcji wyniku w przy-
+padku powstania przeniesienia. Korekcja polega na dodaniu przeniesienia (jedynki) do
+najmniej znaczącej pozycji wyniku. Jest to wada tego zapisu, która powoduje wydłużanie
+czasu trwania operacji arytmetycznych. Wadę tę wyeliminowano przy operacjach w zapisie
+U2. W zapisie U2 algorytm odejmowania jest po prostu dodawaniem wszystkich pozycji
+wraz z bitem znaku. Jeżeli powstanie przeniesienie na bicie znaku, to jest ono ignorowane.
+Zatem algorytm w zapisie U2 daje zawsze poprawny wynik w mniejszej liczbie kroków
+niż w zapisie Ul.
+
+MNOŻENIE
+Przedstawione zostaną tutaj algorytmy mnożenia kolejno dla zapisów: ZM, U1 i U2.
+Algorytm mnożenia dla zapisu znak-moduł
+
+Algorytm mnożenia liczb w kodzie z-m można sprowadzić do dwóch kroków:
+— porównanie bitów znaku i przyjęcie znaku wyniku,
+— wykonanie mnożenia modułów.
+
+W pierwszym kroku, jeżeli znaki obu liczb są różne (suma mod 2 bitów znaków jest równa
+jeden), to wynik jest ujemny i bit znaku wyniku jest 1. Jeżeli znaki są takie same (suma
+mod 2 tych bitów jest równa 0), to wynik jest dodatni i bit znaku wyniku jest równy 0.
+W drugim kroku dokonuje się mnożenia modułów obu liczb. Algorytm mnożenia można
+wykonać podobnie do mnożenia dwóch liczb dziesiętnych „na papierze”.

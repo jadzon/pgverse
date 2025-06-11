@@ -1,0 +1,22 @@
+[
+  {
+    "relative_path": "sterowanie_analogowe/k7/detekcje/figury/k7_page29_figure2.png",
+    "description": "To jest wyrażenie matematyczne przedstawiające transformację macierzy A w postać kanoniczną (diagonalną) poprzez przekształcenie ortogonalne P. Macierz A jest przekształcana do macierzy Λ, która ma na osiach głównych wartości własne λ1, λ2, ..., λn."
+  },
+  {
+    "relative_path": "sterowanie_analogowe/k7/detekcje/figury/k7_page122_figure2.png",
+    "description": "To jest macierz blokowa przedstawiająca równania dla systemu kontroli, gdzie \\(\\mathbf{x}'\\) i \\(\\widetilde{\\mathbf{x}}'\\) są wektorami stanu, \\(\\mathbf{A}\\), \\(\\mathbf{B}\\), \\(\\mathbf{K}\\), \\(\\mathbf{L}\\), i \\(\\mathbf{C}\\) są macierzami kontrolnymi i obserwacyjnymi."
+  },
+  {
+    "relative_path": "sterowanie_analogowe/k7/detekcje/figury/k7_page36_figure1.png",
+    "description": "To jest równanie transferu dla układu kontroli automatycznej, gdzie G(s) to funkcja transferu, Y(s) i U(s) to odpowiednio wyjście i wejście w przestrzeni częstotliwości, C i B to macierze, A to macierz stanów, I to macierz jednostkowa, a D to macierz stała."
+  },
+  {
+    "relative_path": "sterowanie_analogowe/k7/detekcje/figury/k7_page29_figure3.png",
+    "description": "Zdjęcie przedstawia dwie równości matematyczne:\n\n1. \\(\\bar{B} = P^{-1} B\\)\n2. \\(\\bar{C} = CP\\)\n\nGdzie:\n- \\(P\\) jest macierzą,\n- \\(B\\) i \\(C\\) to macierze,\n- \\(\\bar{B}\\) i \\(\\bar{C}\\) są wynikami transformacji macierzy \\(B\\) i \\(C\\) odpowiednio przez macierz \\(P\\) i jej odwrotność.\n\nTen opis może być użyty do stwor"
+  },
+  {
+    "relative_path": "sterowanie_analogowe/k7/detekcje/figury/k7_page151_figure2.png",
+    "description": "To jest graficzne przedstawienie pola magnetycznego wokół kwadratu, gdzie linie pola magnetycznego są prostopadłe do krawędzi kwadratu i mają różne wartości B (B, -B) dla różnych stron kwadratu."
+  }
+]

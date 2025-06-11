@@ -1,0 +1,44 @@
+102 5. Pamięci
+
+ 
+
+<image/figury/k3_page112_figure1.png>
+
+Rysunek 5.14. Zależność pomiędzy czasem dostępu pamięci operacyjnej i pamięci kicszeniowej
+
+Dla danego T, : T. (np. 10) oraz założonego H = 0,8, z podanego wzoru można otrzy-
+mać, że T.: T = 0, 35. Wartość T.:T, jest nazywana współczynnikiem efektywności
+dostępu. Zależność tego współczynnika od współczynnika H pokazano na rysunku 5.14.
+Z rysunku widać, że zakładając określoną wartość współczynnika efektywności i dane
+T,:T, otrzymamy, że wartość współczynnika H nie powinna być zbyt mała. Dlatego
+z wykresu z rysunku 5.13 wynika, że pojemność pamięci kieszeniowej nie może być zbyt.
+mała. Do projektanta systemu należy znalezienie kompromisu pomiędzy wartościami tych
+współczynników dla danego stosunku czasów cyklu obu pamięci.
+
+WSPÓŁPRACA PAMIĘCI OPERACYJNEJ Z PAMIĘCIĄ KIESZENIOWĄ
+
+Niech będzie dana pamięć operacyjna o pojemności 2" = 64 KB i pamięć kieszeniowa
+o pojemności m = 128 linii po q = 8 bajtów. Przy projektowaniu pamięci kieszeniowej
+powstają trzy bardzo ważne zagadnienia:
+
+1) odwzorowanie obszarów pamięci operacyjnej i pamięci kieszeniowej,
+
+2) algorytmy wymiany zawartości pamięci operacyjnej i kieszeniowej,
+
+3) strategia aktualizacji zawartości pamięci kieszeniowej i pamięci operacyjnej.
+
+ODWZOROWANIE OBSZARÓW PAMIĘCI OPERACYJNEJ I KIESZENIOWEJ
+
+Do wzajemnego odwzorowania pamięci operacyjnej i pamięci kieszeniowej (ang. mapping)
+stosuje się najczęściej trzy metody: bezpośrednią, skojarzeniową i skojarzeniową zmody-
+fikowaną.
+
+Metoda bezpośrednia (ang. direct mapping) polega na przydzieleniu pewnego pod-
+zbioru bloków pamięci operacyjnej jednej linii pamięci kieszeniowej. Liczność tego
+podzbioru wynosi k:m (w naszym przykładzie 64). Tylko bloki tego podzbioru mogą być
+przepisywane do i z danej linii pamięci kieszeniowej. Każdy blok tego podzbioru ma
+swoją etykietę o długości log,(k/m), która dla naszego przykładu wynosi 6 bitów. Długość
+linii pamięci kieszeniowej wynosi zatem 70. Procesor odczytując pamięć kieszeniową
+sprawdza etykietę, która stanowi dla procesora wskaźnik mówiący o tym, który z przy-
+pisanych danej linii bloków znajduje się w pamięci. W naszym przykładzie każdemu
+blokowi pamięci kieszeniowej przypisuje się 8192:128 = 64 bloki w sposób pokazany

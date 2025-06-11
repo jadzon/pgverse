@@ -1,0 +1,1072 @@
+[
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page1_figure1.png": [
+      "4 WKAŁAKAŁA śó14 14144 Skład tekstu oraz projekt okładki Dariusz Hocla Redakcja Aleksandra Springer Utwór w całości ani we fragmentach nie może być powielany ani rozpowszechniany za pomocą urządzeń elektronicznych, mechanicznych, kopiujących. nagrywających i innych bez pisemnej zgody posiadacza praw autorskich. ISBN 83-7143-533-9 Wydanie I © Copyright by Politechnika Poznańska, Poznań 2003 WYDAWNICTWO POLITECHNIKI POZNAŃSKIEJ 60-965 Poznań, pl. M. Skłodowskiej-Curie 2 tel. (0-61) 665-3516, faks (0-61) 665-3583 e-mail: olice_edG put poznan.pl huip//warw.ed.put.poznan.pl Sprzedaż publikacji: Księgarnia Połsiechnik 61-138 Poznań, ul. Piotrowo 3 tel. (0-61) 665-2324; faks (0-61) 665 2326 Druk: Wydawnśdwo i Drukarnia UNI-DRUK SC 61-485 Poznań, ul. 28 Czerwca 1956 r. 223/229 tel. (0-61) 831-11-86, -90, faks 831-11-94, e-mail: unidrak Gdefacto.icnxt.pl"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page3_figure1.png": [
+      "4 WKAŁAKAŁA śó14 14144 Skład tekstu oraz projekt okładki Dariusz Hocla Redakcja Aleksandra Springer Utwór w całości ani we fragmentach nie może być powielany ani rozpowszechniany za pomocą urządzeń elektronicznych, mechanicznych, kopiujących. nagrywających i innych bez pisemnej zgody posiadacza praw autorskich. ISBN 83-7143-533-9 Wydanie I © Copyright by Politechnika Poznańska, Poznań 2003 WYDAWNICTWO POLITECHNIKI POZNAŃSKIEJ 60-965 Poznań, pl. M. Skłodowskiej-Curie 2 tel. (0-61) 665-3516, faks (0-61) 665-3583 e-mail: olice_edG put poznan.pl huip//warw.ed.put.poznan.pl Sprzedaż publikacji: Księgarnia Połsiechnik 61-138 Poznań, ul. Piotrowo 3 tel. (0-61) 665-2324; faks (0-61) 665 2326 Druk: Wydawnśdwo i Drukarnia UNI-DRUK SC 61-485 Poznań, ul. 28 Czerwca 1956 r. 223/229 tel. (0-61) 831-11-86, -90, faks 831-11-94, e-mail: unidrak Gdefacto.icnxt.pl"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page6_formula4.png": [
+      "Wyrażam nadzieję, że niniejszy skrypt będzie pomocny w zapoznawaniu się z podstawami automatyki oraz zapewni studentom możliwość symulacyjnego sprawdzenia zdobytej na wykładach wiedzy. Autor 2 Charakterystyki czasowe układów liniowych 2.1 Cel ćwiczenia Ćwiczenie ma na celu zapoznanie się z charakterystykami czasowymi podstawowych elementów automatyki; obejmuje ono wymuszenia: impuls Diraca, skok jednostkowy i skok prędkości (sygnał typu rampa) oraz analizę wpływu wartości poszczególnych parametrów badanych elementów na kształt charakterystyk. 2.2 Podstawowe wiadomości 2.2.1 Liniowy układ automatyki Układ automatyki nazywa się układem liniowym, jeżeli spełnia zasadę superpozycji, czyli jeżeli odpowiedź układu na kombinację liniową wymuszeń jest równa kombinacji liniowej odpowiedzi na każde z wymu- szeń osobno Układy liniowe opisane są liniowymi równaniami: różniczkowymi, całkowymi i algebraicznymi, czyli zawierają jedynie elementy liniowe (o liniowych charakterystykach statycznych). Jednym ze sposobów opisu układu dynamicznego, oprócz różniczkowego równania wejścia-wyjścia (n z m)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page6_formula5.png": [
+      "jest opis transmitancją operatorową w dziedzinie zmiennej zespolonej (s | Założywszy w poprzednim równaniu zerowe warunki początkowe oraz sto- sując transformatę Laplace'a"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page6_formula7.png": [
+      "jest opis transmitancją operatorową w dziedzinie zmiennej zespolonej (s | Założywszy w poprzednim równaniu zerowe warunki początkowe oraz sto- sując transformatę Laplace'a"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page6_formula8.png": [
+      "jest opis transmitancją operatorową w dziedzinie zmiennej zespolonej (s | Założywszy w poprzednim równaniu zerowe warunki początkowe oraz sto- sując transformatę Laplace'a"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page6_formula1.png": [
+      "otrzymuje się wymierną funkcję zmiennej zespolonej |s |, nazywaną transmi- tancją operatorową"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page6_formula2.png": [
+      "otrzymuje się wymierną funkcję zmiennej zespolonej |s |, nazywaną transmi- tancją operatorową"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page6_formula3.png": [
+      "otrzymuje się wymierną funkcję zmiennej zespolonej |s |, nazywaną transmi- tancją operatorową"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page6_formula6.png": [
+      "2.2.2 Charakterystyka czasowa Charakterystyką czasową układu liniowego jest jego odpowiedź na okreś- lone wymuszenie przy założeniu zerowych warunków początkowych. Sygnałem wejściowym może być impuls Diraca 6(t), skok jednostkowy 1(£) (funkcja Heaviside'a) lub sygnał narastający liniowo (rampa) Należy zaznaczyć, że zarówno impuls Diraca, jak i skok jednostkowy są sygnałami niemożliwymi do generacji z uwagi na skończoną szybkość zmian wartości sygnałów (na przykład skończoną prędkość przestawiania zaworu przez siłownik) lub niebezpieczeństwo wywołania dynamicznego wejścia obiektu rzeczywistego w zakres nieliniowości. Odpowiedź v(t) układu danego transmitancją G(s) na dowolne wymusze- nie u(t) (o transformacie U(s) = 4 (u(t))) wyznacza się, korzystając Z odwrntnoi trancfewmaty I anlaro'a"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page7_formula1.png": [
+      "2.2.3 Charakterystyka skokowa Charakterystyką skokową (odpowiedzią skokową) h(t) układu liniowego jest jego odpowiedź na wymuszenie skokiem jednostkowym u(*) = L(t) (rysunek 2.1) przy zerowych warunkach początkowych. Jest ona bardzo ważnym elementem teorii sterowania, ponieważ opisuje właściwości dyna- miki układu w zależności jedynie od jego parametrów i pojedynczej wartości opisującej skok (amplitudy). Dla znanej transmitancji G(s) obiektu odpowiedź skokowa h(t) wyzna- czana jest jako"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page7_figure3.png": [
+      "Charakterystyka skokowa umożliwia proste wyznaczenie współczynnika wzmocnienia obiektu statycznego, równego stosunkowi wartości ustalonej odpowiedzi skokowej do wartości sygnału wejściowego. Obiektem astatycznym nazywa się obiekt z biegunami w początku płasz- czyzny zmiennej zespolonej (s |, czyli bez charakterystyki statycznej. 2.2.4 Charakterystyka impulsowa Charakterystyką impulsową (odpowiedzią impulsową) g(£) układu linio- wego jest jego odpowiedź na wymuszenie impulsem Diraca u(t) = ó(t) (rysunek 2.2) przy zerowych warunkach początkowych. Podobnie jak charakterystyka skokowa opisuje ona również właściwości dynamiki układu w zależności od jego parametrów. Dla znanej transmitancji G(s) obiektu liniowego odpowiedź impulsowa g(t) wyznaczana jest za pomocą odwrotnej transformaty Laplace'a"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page7_formula2.png": [
+      "Charakterystyka skokowa umożliwia proste wyznaczenie współczynnika wzmocnienia obiektu statycznego, równego stosunkowi wartości ustalonej odpowiedzi skokowej do wartości sygnału wejściowego. Obiektem astatycznym nazywa się obiekt z biegunami w początku płasz- czyzny zmiennej zespolonej (s |, czyli bez charakterystyki statycznej. 2.2.4 Charakterystyka impulsowa Charakterystyką impulsową (odpowiedzią impulsową) g(£) układu linio- wego jest jego odpowiedź na wymuszenie impulsem Diraca u(t) = ó(t) (rysunek 2.2) przy zerowych warunkach początkowych. Podobnie jak charakterystyka skokowa opisuje ona również właściwości dynamiki układu w zależności od jego parametrów. Dla znanej transmitancji G(s) obiektu liniowego odpowiedź impulsowa g(t) wyznaczana jest za pomocą odwrotnej transformaty Laplace'a"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page7_formula4.png": [
+      "a w przypadku gdy transmitancja ma stopień licznika m mniejszy od stopnia mianownika n, powiązana jest z odpowiedzią skokową zaleźnością"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page7_figure2.png": [
+      "Charakterystyka impulsowa umożliwia w prosty sposób określenie, czy obiekt jest astatyczny — w tym przypadku wartość g(t) w stanie usta- lonym jest niezerowa | m 0 WE z R W WO A | O 00 WNN"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page7_formula3.png": [
+      "2.2.5 Odpowiedź na sygnał narastający liniowo Charakterystyka czasowa, będąca odpowiedzią układu liniowego na sygnał narastający liniowo u(t) = at (rampę), określa odpowiedź układu na skok prędkości sygnału wejściowego. Sygnał ten nie jest używany do okreś- lania charakterystyk czasowych z wyjątkiem sytuacji, w których wymuszenie sygnałem skokowym spowodowałoby wejście obiektu w stan nieliniowości (przykładowo — wystąpienie w obiekcie elementów różniczkujących — patrz punkt 2.2.6). 2.2.6 Charakterystyki czasowe liniowych członów dynamicznych e CZŁON PROPORCJONALNY Transmitancja i równanie opisujące obiekt mają postać:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page7_formula5.png": [
+      "gdzie k jest współczynnikiem wzmocnienia. odpowiedziskokowiimpulsowopisujwzory"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page8_formula2.png": [
+      "e CZŁON INERCYJNY PIERWSZEGO RZĘDI Transmitancja i równanie opisujące obiekt mają postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page8_formula3.png": [
+      "gdzie k jest współczynnikiem wzmocnienia, a 1 [s| - stałą czasową odpowiedziskokowiimpulsowopisujwzory"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page8_formula5.png": [
+      "e CZŁON INERCYJNY DRUGIEGO RZĘDU [ransmitancja i równanie opisujące obiekt mają postać (Ty £ 12)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page8_formula8.png": [
+      "gdzie k jest współczynnikiem wzmocnienia, a 74, 73 js] są stałymi czasowymi. Postać transmitancji jest słuszna przy założeniu, że dwa szeregowo połączone obiekty inercyjne pierwszego rzędu o stałych czasowych 74 oraz T> wzajemnie siebie nie obciążają. Odpowiedzi skokowa i impulsowa wynoszą odpowiednio:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page8_formula9.png": [
+      "e CZŁON INERCYJNY N-TEGO RZĘDU Transmitancja i równanie opisujące obiekt mają postać:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page8_formula1.png": [
+      "o m W EE EE PE A A A ARKO RERKORD"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page8_formula4.png": [
+      "gdzie k jest współczynnikiem wzmocnienia, a 7 |s| — stałą czasową odpowiedziskokowiimpulsowopisujwzory"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page8_formula7.png": [
+      "Podobnie jak w przypadku obiektu dwuinercyjnego postać transmitan- cji jest słuszna przy założeniu, że szeregowo połączone obiekty inercyjne pierwszego rzędu o stałej czasowej T' wzajemnie siebie nie obciążają CZŁON OŚCYLACYJNY(0<6£< 1) Transmitancja i równanie opisujące obiekt mają postać:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page8_formula6.png": [
+      "LDL"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page9_formula1.png": [
+      "gdzie k jest współczynnikiem wzmocnienia, $ - współczynnikiem tłu- mienia (rozważany jest zakres () < € < 1),w, | 24] — pulsacją saturalną obiektu (pulsacją drgań własnych, nietłumionych), a 7, |s) — stałą cza- sową, powiązaną z pulsacją naturalną zależnością liczbową w, = — 16 odpowiedziskokowiimpulsowopisujwzory"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page9_formula4.png": [
+      "Dla £ = 1 otrzymuje się obiekt o biegunie o krotności dwa (człon iner- cyjny n-tego rzędu, przy n = 2), natomiast dla $ | otrzymuje się obiekt inercyjny drugiego rzędu o T; £ T>. e CZŁON CAŁKUJĄCY IDEALNY Transmitancja i równanie opisujące obiekt mają postać:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page9_formula5.png": [
+      "gdzie k [2] jest współczynnikiem wzmocnienia, równym stosunkowi 15. s Z ś | , pochodnej sygnału wyjściowego do sygnału wejściowego, który wyraża się jako k = ź, gdzie 1, [s] nazywane jest czasem całkowania. odpowiedziskokowiimpulsowopisujwzory"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page9_formula7.png": [
+      "e CZŁON CAŁKUJĄCY Z INERCJA | | Transmitancja i równanie opisujące obiekt mają postać:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page9_formula10.png": [
+      "gdzie k [*] jest współczynnikiem wzmocnienia, równym stosunkowi pochodnej sygnału wyjściowego do sygnału wejściowego w stanie usta- lonym, a T |s| - stałą czasową odpowiedziskokowiimpulsowopisujwzory"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page9_formula2.png": [
+      "Szym aan TY A WZEWOTETE POT EE RAE ET TREO. RERZZEOE CZ AO e CZŁON RÓZNICZKUJĄCY IDEALNY Transmitancja i równanie opisujące obiekt mają postać:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page9_formula3.png": [
+      "gdzie k |s] jest współczynnikiem wzmocnienia równym stosunkowi syg- nału wyjściowego do pochodnej sygnału wejściowego, który wyraża się jako k = Ty, gdzie 7; |s) jest stałą czasową różniczkowania. odpowiedziskokowiimpulsowopisujwzory"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page9_formula6.png": [
+      "e CZŁON RÓŻNICZKUJĄCY RZECZYWISTY Transmitancja i równanie opisujące obiekt mają postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page9_formula8.png": [
+      "gdzie % |s| jest współczynnikiem wzmocnienia, równym stosunkowi sygnału wyjściowego do pochodnej sygnału wejściowego, a 1 (s| - stałą czasową odpowiedziskokowiimpulsowopisujwzory"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page9_formula9.png": [
+      "e CZŁON OPÓŹNIAJĄCY (Z OPÓŹNIENIEM TRANSPORTOWYM) Transmitancja i równanie opisujące obiekt mają postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page10_formula1.png": [
+      "gdzie k jest współczynnikiem wzmocnienia, a 7% |s| - opóźnieniem trans- portowym odpowiedziskokowiimpulsowopisujwzory"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page10_figure1.png": [
+      "W przypadku obiektów inercyjnych rzędu drugiego lub wyższych w praktyce stosuje się ich aproksymację za pomocą obiektu inercyjnego pierw- szego rzędu z opóźnieniem transportowym o parametrach wyznaczonych na podstawie przebiegu charakterystyki skokowej (u(t) = 1(t))."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page10_formula2.png": [
+      "Rys. 2.4: Sposób aproksymacji obiektu wyższego rzędu Stałe Tp oraz T oznaczają zastępczy czas opóźnienia transportowego oraz zastępczą stałą czasową. Aproksymacja obiektu wyższego rzędu dana \"Z"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page10_formula3.png": [
+      "ajegoodpowiedziskokowiimpulsowopisujwzory"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/tabele/k2_page10_table1.png": [
+      "ajegoodpowiedziskokowiimpulsowopisujwzory"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page11_figure2.png": [
+      "22 2.3 Przebieg ćwiczenia 2.3.1 Wpływ wartości parametrów na odpowiedź czasową Określić wpływ podanych niżej parametrów przy wymuszeniu: a) skokiem jednostkowym u(t) = 1(t), b) impulsem Diraca u(t) = ół(t), c) sygnałem narastającym liniowo u(t) = t na odpowiedź czasową obiektów: ż proporcjonalnego (zmienne k), e inercyjnego pierwszego rzędu (zmienne k oraz 7), e inercyjnego drugiego rzędu (zmienne k oraz 7), e inercyjnego n-tego rzędu (zmienne k, 7' oraz n), fig u ry/k2_page 1 2_fig ure 1 png e oscylacyjnego (przy k = 1, zmienne w, oraz 6), e całkującego idealnego (zmienne k), e całkującego z inercją (zmienne k oraz 7'), e różniczkującego rzeczywistego (zmienne k oraz 7), wybierając dla każdego z nich trzy wartości. 2.3.2 Aproksymacja obiektów wyższych rzędów W przypadku obiektów: inercyjnego drugiego rzędu oraz inercyjnego n-tego rzędu dokonać na podstawie uzyskanych odpowiedzi skokowych aproksymacji za pomocą obiektu inercyjnego pierwszego rzędu z opóźnie- niem transportowym; zapisać transmitancje zastępcze."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page13_formula3.png": [
+      "2.3.3 Analityczne wyznaczanie odpowiedzi czasowej Dla obiektu o zadanych parametrach wyprowadzić, korzystając z odwrotnego przekształcenia Laplace'a, wzór na odpowiedź skokowź (u(t) = U - I(t)), impulsową (u(t) = 5(t)) lub na wymuszenie sygnałen narastającym liniowo (u(t) = at). 3 Charakterystyki częstotliwościowe układów liniowych 3.1 Cel ćwiczenia Ćwiczenie ma na celu zapoznanie się z charakterystykami częstotliwościo- wymi podstawowych elementów automatyki, takimi jak: charakterystyka amplitudowo-fazowa, logarytmiczna charakterystyka modułu oraz logaryt- miczna charakterystyka fazowa, z jednoczesną analizą wpływu wartości poszczególnych parametrów na ich kształt. 3.2 Podstawowe wiadomości 3.2.1 Charakterystyki częstotliwościowe Charakterystykami częstotliwościowymi układu liniowego nazywa się odpowiednio przedstawione zależności wartości transmitancji widmowej od pulsacji w (4) wymuszenia. Do najczęściej spotykanych charakterystyk częstotliwościowych zalicza się charakterystykę amplitudowo-fazową, logarytmiczną charakterystykę modułu oraz logarytmiczną charakterystykę fazową. 3.2.2 Transmitancja widmowa POW iedź LONGO układu stacjonarnego na wymuszenie u(t) = Irmie dl 41 doo sanalkoaścia einiseoid alina"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page13_formula4.png": [
+      "Wprowadzając oznaczenia"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page13_formula5.png": [
+      "transmitancję widmową G(jw) można wyrazić następująco:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page13_formula6.png": [
+      "przy czym"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page13_formula1.png": [
+      "o W A EE W EE NKK 25 Transmitancję widmową łączy z transmitancją operatorową zależność"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page13_formula2.png": [
+      "3.2.3 Charakterystyka amplitudowo-fazowa Charakterystyką amplitudowo-fazową (lub krócej wykresem Nyquista) nazywa się wykres transmitancji widmowej na płaszczyźnie zmiennej zespolonej, przy czym na osi rzędnych (osi liczb rzeczywistych) odłożona jest wartość P(w), a na osi odciętych (osi liczb urojonych) wartość Q(w). Każdemu punktowi charakterystyki amplitudowo-fazowej odpowiada odczytana wartość amplitudy i przesunięcia fazowego po zaniknięciu skła- dowych wykładniczych odpowiedzi na wymuszenie sinusoidalne o określo- nej pulsacji w."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page13_figure2.png": [
+      "Zgodnie z rysunkiem 3.1 w stanie ustalonym stosunek amplitudy sygnału wymuszającego u(t) o pulsacji w = w; do odpowiedzi układu y(t) wynosi b. a przesunięcie fazowe ma wartość p(w) < 0. Na przedstawionym na PA 3.2 wykresie Nyquista powyższa zależność ocpow iada punktowi %w1). Qlw1)). gdzie P(w,) = - + cos (Płw; 1)),a Q( wy) = Ł siu (plwą))."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page14_formula2.png": [
+      "Rys. 3.2: Konstrukcja charakterystyki amplitudowo-fazowej Odczytując w powyższy sposób amplitudę sygnału wyjściowego oraz jego przesunięcie fazowe dla zakresu zmian pulsacji wymuszenia () € w < ©, można wykreślić charakterystykę amplitudowo-fazową 3.24 Logarytmiczne charakterystyki modułu i fazy Logarytmiczną charakterystyką modułu (amplitudową) nazywa się w ykres dumndziestu loearvtmów dziesietnych z modułu transmitancji widmowej"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page14_formula5.png": [
+      "jako funkcję pulsacji w, natomiast logarytmiczną charakterystyką fazową — wykres argumentu (fazy) transmitancji widmowej"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page14_formula3.png": [
+      "również jako funkcję logarytmu pulsacji log(w Logarytmiczne charakterystyki amplitudowa i fazowa (nazywane wykre- sami Bodego) dają łącznie identyczną informację o obiekcie jak wykres Nyquista 3.2.5 Omówienie charakterystyk częstotliwościowych liniowych członów dynamicznych e CZŁON PROPORCJONALNY Transmitancja widmowa i jej składowe określone są wzorami:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page14_formula8.png": [
+      "natomiast wykresy Bodego mają postać:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page14_formula1.png": [
+      "e CZŁON INERCYJNY PIERWSZEGO RZĘDU Transmitancja widmowa i jej składowe określone są wzorami:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page14_formula4.png": [
+      "natomiast wykresy Bodego mają postać:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page14_formula6.png": [
+      "e CZŁON INERCYJNY DRUGIEGO RZĘDU Transmitancja widmowa i jej składowe określone są wzorami (7; ź 12):"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page14_formula7.png": [
+      "natomiast wykresy Bodego mają postać:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page14_formula9.png": [
+      "Postać transmitancji widmowej jest słuszna przy założeniu, że dwa szeregowo połączone obiekty inercyjne pierwszego rzędu o stałych czasowych 7; oraz T; wzajemnie siebie nie obciążają e CZŁON INERCYJNY N-TEGO RZĘDU Transmitancja widmowa określona jest wzorem:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula1.png": [
+      "natomiast wykresy Bodego mają postać:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula4.png": [
+      "Postać transmitancji widmowej jest słuszna przy założeniu, że szere- gowo połączone obiekty inercyjne pierwszego rzędu o stałej czasowej T wzajemnie siebie nie obciążają e CZŁON OŚSCYLACYJNY (0 < 6 < 1) Transmitancja widmowa i jej składowe określone są wzorami:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula6.png": [
+      "Moduł transmitancji widmowej G(7w) osiąga maksimum równe"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula8.png": [
+      "Moduł transmitancji widmowej G(7w) osiąga maksimum równe"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula9.png": [
+      "Ala mulsach rezonansowet wWVNosZĄce!"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula11.png": [
+      "i przesunięcia tazowego"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula2.png": [
+      "29 z czego wynika, że w rozpatrywanym zakresie zmian współczynnika tłumienia rezonans występuje dla"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula3.png": [
+      "Przecięcie charakterystyki amplitudowo-fazowej z osią urojoną wystę- k »Uie p rw - puje przy z |) w„ w punkcie o współrzędnych (0 e CZŁON CAŁKUJĄCY IDEALNY Transmitancja widmowa i jej składowe określone są wzorami:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula7.png": [
+      "e CZŁON CAŁKUJĄCY Z INERCJA Iransmitancja widmowa i jej składowe określone są wzorami: | natomiast wykresy Bodego mają postać:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula5.png": [
+      "e CZŁON CAŁKUJĄCY Z INERCJA Iransmitancja widmowa i jej składowe określone są wzorami: | natomiast wykresy Bodego mają postać:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula10.png": [
+      "natomiast wykresy Bodego mają postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page16_formula1.png": [
+      "30 e CZŁON RÓŻNICZKUJĄCY IDEALNY Transmitancja widmowa i jej składowe określone są wzorami:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page16_formula2.png": [
+      "natomiast wykresy Bodego mają postać:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page16_formula3.png": [
+      "e CZŁON RÓŻNICZKUJĄCY RZECZYWISTY Transmitancja widmowa i jej składowe określone są wzorami:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page16_formula4.png": [
+      "natomiast wykresy Bodego mają postać:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page16_formula5.png": [
+      "e CZŁON OPÓŹNIAJĄCY (Z OPÓŹNIENIEM TRANSPORTOWY M) Transmitancja widmowa i jej składowe określone są wzorami:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page16_formula6.png": [
+      "natomiast wykresy Bodego mają postać:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page17_formula1.png": [
+      "tabeh 3.1 | Wykresy Bodego | | £ Lm Olo | i | | | | l - | a 1 | | |"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/tabele/k2_page17_table1.png": [
+      "|"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page17_formula4.png": [
+      "ł | | zez"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page18_formula1.png": [
+      "%6 334 Sprawozdanie Sprawozdanie powinno zawierać: charakterystyki częstotliwościowe wraz Z opisem wpływu na ich kształt poszczególnych parametrów obiektu (polecenie 3.3.1); - wyprowadzenie postaci odpowiedzi czasowej określonego obiektu na zadane wymuszenie (polecenie 3.3.2); — wyprowadzenie wzorów opisujących wykresy Bodego wraz z ich przy* blizonym szkicem (polecenie 3.3.3). 4 Stabilność układów liniowych 4.1 Cel ćwiczenia Ćwiczenie ma na celu zapoznanie się z zagadnieniem określania stabil- ności układów liniowych ze sztywnym sprzężeniem zwrotnym na podstawie następujących charakterystyk układu otwartego: amplitudowo-fazowej, wykresów Bodego oraz wykresu Nicholsa. 4.2 Podstawowe wiadomości 4.2.1 Stabilność, kryteria stabilności Ostabilności układu liniowego najprościej można orzec, znając jego trans- po”o=naa"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page19_formula1.png": [
+      "%6 334 Sprawozdanie Sprawozdanie powinno zawierać: charakterystyki częstotliwościowe wraz Z opisem wpływu na ich kształt poszczególnych parametrów obiektu (polecenie 3.3.1); - wyprowadzenie postaci odpowiedzi czasowej określonego obiektu na zadane wymuszenie (polecenie 3.3.2); — wyprowadzenie wzorów opisujących wykresy Bodego wraz z ich przy* blizonym szkicem (polecenie 3.3.3). 4 Stabilność układów liniowych 4.1 Cel ćwiczenia Ćwiczenie ma na celu zapoznanie się z zagadnieniem określania stabil- ności układów liniowych ze sztywnym sprzężeniem zwrotnym na podstawie następujących charakterystyk układu otwartego: amplitudowo-fazowej, wykresów Bodego oraz wykresu Nicholsa. 4.2 Podstawowe wiadomości 4.2.1 Stabilność, kryteria stabilności Ostabilności układu liniowego najprościej można orzec, znając jego trans- po”o=naa"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page20_formula1.png": [
+      "Układ jest stabilny, jeżeli wszystkie współczynniki wielomianu charakterystycznego są większe od zera oraz wszystkie współczynniki skraj- nej lewej kolumny tablicy Routha są dodatnie. W przeciwnym wypadku liczba zmian znaku w pierwszej kolumnie jest równa liczbie biegunów znajdujących się w prawej półpłaszczyźnie zmiennej zespolonej (s ). 4.2.3 Kryterium Hurwitza W porównaniu z kryterium Routha kryterium Hurwitza nie daje informacji o liczbie biegunów znajdujących się w prawej półpłaszczyźnie zmiennej zespolonej (s |. Układ jest stabilny, jeżeli wszystkie współczynniki wielomianu charakterystycznego są większe od zera oraz wszystkie pod- wyznaczniki wyznacznika Hurwitza są większe od zera. 39 4.2.4 Kryterium Nyquista Kryterium Nyquista umożliwia zbadanie stabi i stabilności układ kni E O > zwrotnym, jak pokazano na anka 01) nak stawie charakterystyk częstotli iow ! i i rystyk częstotliwościowych układu otwartego, przy czym"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page20_figure2.png": [
+      "Układ zamknięty jest stabiln ie, jeżeli A y asymptotycznie, jeżeli układ otwarty jest rów =. stabilny asymptotycznie, wtedy i tylko wtedy, gdy daalacnaa RB R owo-fazowa układu otwartego przy zmianie pulsacji wymuszenia , i ś do sA oo nie obejmuje punktu (-— 1, ;0). ad zamknięty znajduje się na granicy stabilności wtedy i tylk: t gdy A amplitudowo-fazowa stabilnego akc okna aż ie pu i m k BTW sacji wymuszenia od w = 0 do w — oo przechodzi przez punkt Układ zamknięty jest niestabilny, y. gdy charakterystyka amplitud fazowa układu otwartego przy zmianie pulsacji wywi ET a Ó do w — oo obejmuje punkt (—1, ;0)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page21_figure2.png": [
+      "- 4.2.5 Kryterium Bodego Jest to reprezentacja kryterium Nyqui yquista na wykresach I i adj częstotliwościowych: modułu i Koy REMS terium to można także wyrazić w następuj posób e jacy s - układ - zł jest stabilny asymptotycznie, jeżeli układ otwarty jest enie : ż OE się i tylko wtedy, gdy dla pulsacji wymuszenia , w ,90), przy tórych Lm(w) > 0, logarytmiczna ch c styka fazowa przecina parzystą liczbę razy prostą dóę ED ez e"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page21_figure1.png": [
+      "Rys. 4.2: Kryterium Nyquista przy stabilnych transmitancjach układów otwartych 4.2.6 Wykres Nicholsa Podobnie jak charakterystyki logarytmiczne, wykres Nicholsa jest kolejną reprezentacją kryterium Nyquista, tym razem we współrzędnych: przesunięcie fazowe układu otwartego, wzmocnienie układu otwartego, jak pokazano na rysunku 4.3. Wnioski co do stabilności są analogiczne do kryterium Nyquista."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page21_formula1.png": [
+      "Rys. 4.3: Siatka wykresu Nicholsa ona odzwNÓA i 41 4.2.7 Metoda linii pierwiastkowych Metoda ta pozwala na określenie położenia biegunów transmitancji układu zamkniętego na podstawie położenia biegunów transmitancji układu otwartego, którego zmiana powoduje przesunięcie biegunów (pierwiastków równania charakterystycznego) po liniach nazywanych liniami pierwiastko- wymi. Określenie zakresu wzmocnienia układu otwartego, dla którego układ zamknięty będzie stabilny, odbywa przez sprawdzenie dla określonych war- tości k, czy istnieją bieguny o nieujemnej części rzeczywistej, czyli zgodne z definicją stabilności podaną na początku rozdziału. 4.2.8 Zapas modułu i fazy Ważną zaletą wymienionych graficznych kryteriów stabilności jest pros- tota określenia zapasu stabilności (modułu i fazy) za pomocą: e zapasu modułu A [dB] Zapas modułu to krotność, o jaką musiałoby wzrosnąć wzmocnienie układu otwartego przy niezmiennym argumencie transmitancji wid- mowej (przesunięciu fazowym), aby doprowadzić układ zamknięty do granicy stabilności. Pomiędzy zapasem modułu A a zapasem wzmocnienia x istnieje za- leżność"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page22_figure2.png": [
+      "e zapasu fazy Ay [7] Zapas fazy to wartość zmiany argumentu transmitancji widmowej (przesunięcia fazowego) układu otwartego przy niezmiennym wzmocnieniu, która doprowadziłaby układ zamknięty do granicy stabilności. 42 Sposób odczytu zapasu fazy i zapasu wzmocnienia z wykresu Nyquista pokazano na rysunku 4.4, a z wykresów Bodego na rysunku 4.4. Odczyt zapasu stabilności (tutaj: zapasu modułu i fazy) z wykresu Nicholsa jest zgodny z definicją."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page22_figure3.png": [
+      "Rys. 4.4: Wyznaczanie zapasu fazy i zapasu wzmocnienia na wykresie Nyquista"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page23_figure1.png": [
+      "Regulatory 5,1 Cel ćwiczenia Ćwiczenie ma na celu zapoznanie się z podstawowymi typami regula- torów, ich właściwościami oraz wpływem na dynamikę układu zamknię- tego i wartości podstawowych wskaźników jakości regulacji w przypadku wymuszenia skokowego. 5.2 Podstawowe wiadomości 5.2.1 Zadanie regulatora Zadaniem regulatora o transmitancji Gę(s) w układzie automatycznej regulacji jest wytworzenie sygnału sterującego u(t) obiektem regulacji Go(s) poprzez porównanie wartości mierzonej z wartością zadaną (określenie uchybu regulacji e(t) = w(t) — y(t)) według odpowiedniej zależności u(t) = f(e(t)) opisującej regulator."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page24_formula2.png": [
+      "+ regulatory o wyjściu ciągłym: - regulatory o wyjściu całkowicie ciągłym Część wzmacniająca regulatora działa w sposób ciągły w czasie. - regulatory o wyjściu krokowym (regulatory krokowe) i regulatory o wyjściu trójpołożeniowym (regulatory trój- położeniowe) Część wzmacniająca regulatora działa w sposób nieciągły, natomiast ciągłość sygnału sterującego uzyskuje się przez właściwości całkujące elementu wykonawczego. + regulatory o wyjściu nieciągłym: - regulatory impulsowe Istnieje tu narzucony rytm działania w czasie. - regulatory dwupołożeniowe Rytm pracy powstaje w zależności między innymi od właś- ciwości obiektu regulacji. 5.2.2 Uchyb ustalony Obliczanie uchybu ustalonego dla obiektu o transmitancji G(s) odbywa się na podstawie twierdzenia o wartości końcowej (dla funkcji wymiernej <F(sl maiacei bierunv leżace wvłacznie w lewei nółnłaszczyźnie (s 1]"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page24_formula1.png": [
+      "przy czym (dia układu ze sztywnym, ujemnym sprzężeniem zwrotnym jak na rysunku 5.1) zachodzą zależności: - regulatory analogowo-cyfrowe. e Podział według charakteru zmian wielkości zadanej:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page24_formula3.png": [
+      "- regulatory stałowartościowe Realizują zadanie regulacji dookoła stałego punktu pracy. - regulatory programowe Regulacja przebiega w czasie według ustalonego programu zmian wartości parametrów regulatora. r =rdokasssia LbAmasala"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page25_figure1.png": [
+      "Uchyb ustalony można również określić z przebiegu czasowego e(t), jak pokazano na rysunku 5.2. - regulatory nadążne Realizują zadanie śledzenia sygnału zadanego przez sygnał wyj- ściowy z obiektu. - regulatory ekstremalne Nastawy parametrów regulatora dobierane są na podstawie opty- malizacji zadanego wskaźnika jakości. 5.2.3 Czas narastania Czasem narastania tęgę nazywa się czas wymagany, by przy wymusze- niu skokiem jednostkowym odpowiedź y(t) obiektu wzrosła od 10% do %% wartości końcowej (00), jak pokazano na rysunku 5.2. 48"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page25_formula3.png": [
+      "5.2.4 Czas opóźnienia Czasem opóźnienia tę nazywa się czas wymagany, by przy wymuszeniu skokiem jednostkowym odpowiedź y(t) osiągnęła 10% wartości końcowej y(00), jak pokazano na rysunku 5.2 5.2.5 Czas regulacji Czasem regulacji £, 4 nazywa się czas, po upływie którego wartość uchybu e(t) spełnia zależność |e(t) — e(oo)| £ A, czyli wartość y(t) różni się o nie więcej niż A od wartości końcowej y(oc), jak pokazano na rysunkach 5.2 oraz 5.3. Najczęściej przyjmuje się A = 0.02 - y(oo), wtedy czas regulacji oznacza się jako t, 2%. 5.2.6 Przeregulowanie Przeregulowaniem = nazywa się stosunek maksymalnego uchybu przej- ściowego o znaku przeciwnym do maksymalnego uchybu początkowego do wartości maksymalnego uchybu początkowego, jak pokazano na rysunku cm 1-5 zzz"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page25_formula4.png": [
+      "lub, wyrażając przeregulowanie w procentach wartości zadanej"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page25_figure2.png": [
+      "49"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page25_formula1.png": [
+      "5.2.7 Całkowe wskaźniki jakości Nowoczesne układy sterowania najczęściej wymagają wskaźników jakości bardziej wyszukanych niż czas regulacji czy przeregulowanie, za pomocą których w dowolnej chwili czasowej można otrzymać liczbową informację na temat jakości regulacji Najprostszym wskaźnikiem jest całka względem czasu z wartości bezwzględnej uchybu (IAE — integral of the absolute magnitude of the error), pówna"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page25_formula2.png": [
+      "Wyrażenie określające wskaźnik ./, rośnie z upływem czasu t niezależnie od znaku uchybu, natomiast obranie go jako kryterium projektowego skutkuje uzyskaniem układu o słabym tłumieniu. Kolejnym wskaźnikiem jest całka względem czasu z kwadratu uchybu (ISE - integral of tlie squared error), równa"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page26_formula1.png": [
+      "Wskaźnik Ją, podobnie jak J;, rośnie z upływem czasu niezależnie od znaku uchybu, jednak szybciej dla uchybów większych od jedności. Pozostałe wskaźniki to w kolejności: „/; (ITAE — mtegral of the time multi- plied by the absolute value of the error), Ją (ITSE - integral of the time multiplied by the squared error), Js (ISTAE — mitegral of the squared time multiplied by the absolute value of the error), Ję (ISTSE - integral of the squared time multiplied by 50 the squared error), określone jako:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page26_formula3.png": [
+      "5.2.8 Regulator typu P Transmitancja regulatora i jego odpowiedź skokowa na wymuszenie e(t) = e: 1L(t) określone są wzorami:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page26_formula4.png": [
+      "Regulator typu P jest członem proporcjonalnym, nieposiadającym inercji, którego zastosowanie zmniejsza uchyb ustalony wraz ze wzrostem wzmoc- nienia kp (uchyb ustalony jest odwrotnie proporcjonalny do współczynnika wzmocnienia), jednak nie zapewnia sprowadzenia uchybu do zera w przy- padku wystąpienia zakłóceń. 5.2.9 Regulator typu I Transmitancja regulatora i jego odpowiedź skokowa na wymuszenie e(t) = e-1(t) określone są wzorami:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page26_formula2.png": [
+      "Regulator typu I jest członem całkującym, którego właściwości pozwalają sprowadzić uchyb regulacji do zera, powodując przy tym (w stosunku do regulatora typu P) wydłużenie czasu regulacji - sygnał wyjściowy zmieni się do wartości odpowiadającej sygnałowi sterującemu u(t) z regulatora typu P po upływie czasu równego stałej czasowej całkowania 7, (sj (poprzez za- chowanie „historii” wartości uchybu — całkowanie). dy > alb Piw świat 51 Ze względu na właściwości całkujące sygnał sterujący u(t), czyli sygnał wyjściowy regulatora, będzie zmieniał się tak długo, aż uchyb przyjmie wartość równą zeru. Jak wiadomo z analizy stabilności układów astaty- cznych - obecność członu całkującego pogarsza stabilność układu. 5.2.10 Regulator typu PI Transmitancja regulatora i jego odpowiedź skokowa na wymuszenie e(t) = e - 1(t) określone są wzorami:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page26_formula5.png": [
+      "Regulator typu PI łączy właściwości dwóch poprzednich, zapewniając sprowadzenie uchybu do zera i skrócenie (w stosunku do regulatora typu I) czasu regulacji, który jednak ze względu na właściwości całkujące będzie dłuższy od czasu regulacji w układzie z regulatorem typu P. Stała czasowa elementu całkującego regulatora PI nazywana jest stałą zdwojenia, ponieważ przy skokowej zmianie uchybu po upływie czasu 7, sygnał sterujący osiąga dwukrotnie większą wartość niż w regulatorze typu P. Na podstawie logarytmicznej charakterystyki modułu można wyciągnąć wniosek, że warunkiem uzyskania zerowego uchybu ustalonego jest, aby moduł transmitancji regulatora przy częstotliwości bliskiej zeru dążył do nieskończoności. 5.2.11 Regulator typu PD (idealny) Transmitancja regulatora i jego odpowiedź skokowa na wymuszenie e(t) z e: 1(t) określone są wzorami:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page27_formula2.png": [
+      "Regulator typu PD z uwagi na brak członu całkującego nie zapewnia spro- wadzenia uchybu do zera. Stałą wyprzedzenia 7; (s| nazywa się czas, jaki musi upłynąć, aby po wystąpieniu uchybu narastającego liniowo sygnał e(£) zrównał się z sygnałem wyjściowym u(£) z regulatora. Z uwagi na dodanie zera do układu otwartego (pierwiastka licznika trans- mitancji), przy niezmienionym rzędzie układu (stopniu mianownika), regulator typu PD poprawia stabilność układu zamkniętego (poprzez przewidzenie” wartości uchybu — różniczkowanie). Na podstawie logarytmicznej charakterystyki modułu można stwierdzić, że regulator typu PD zwiększa moduł transmitancji w zakresie wielkich częs- totliwości, co powoduje niepożądany efekt wzmacniania zakłóceń o dużej częstotliwości. 5.2.12 Regulator typu PD (rzeczywisty) Transmitancja regulatora i jego odpowiedź skokowa na wymuszenie e(t) =e-1(t) określone są wzorami:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page27_formula3.png": [
+      "Z uwagi na niewystępowanie idealnego różniczkowania w przyrodzie w celu fizycznej realizacji regulatora PD wprowadza się różniczkowanie z inercją, przez co na podstawie logarytmicznej charakterystyki modułu dla wielkich częstotliwości, nie dąży on do nieskończoności, zmniejszając tym samym skutki wystąpienia zakłóceń o wielkiej częstotli- wości. Stała N przyjmuje wartości od 5 do 30, przy czym najczęściej w regu- latorach przemysłowych ma ona wartość N = 10. 5.2.13 Regulator typu PID (idealny) Transmitancja regulatora i jego odpowiedź skokowa na wymuszenie e(t) = e - L(t) określone są wzorami:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page27_formula1.png": [
+      "Regulator typu PID stanowi najbardziej uniwersalny typ regulatora, który przy odpowiednio dużym dozwolonym zakresie zmian parametrów umożliwia sterowanie różnymi typami obiektów. Pozwala on połączyć zalety regulatorów PI oraz PD, umożliwiając uzy- skanie krótkiego czasu narastania i regulacji, małego przeregulowania i zerowego uchybu ustalonego... 53 5.2.14 Regulator typu PID (rzeczywisty) Transmitancja regulatora i jego odpowiedź skokowa na wymuszenie e(t) = e: 1(t) określone są wzorami:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/tabele/k2_page27_table1.png": [
+      "5.2.15 Dobór nastaw regulatorów według metody Zieglera-Nicholsa Regulator PID z idealnym różniczkowaniem ma trzy parametry: kp, 7, oraz Ty, dzięki czemu, z uwagi na możliwość spełnienia wielu wymagań, jest najczęściej stosowanym regulatorem. Wartości tych parametrów mogą być dobierane metodą prób i błędów, co stanowi w przypadku rzeczywistego procesu technologicznego kosztowne rozwiązanie, lub według ustalonych zasad, takich jak metoda Zieglera- -Nicholsa, występująca w dwóch postaciach. e Metoda oparta na odpowiedzi skokowej Układ, dla którego należy dobrać wartości parametrów, pobudza się skokiem jednostkowym i rejestruje przebieg odpowiedzi skokowej, określając wartość czasu opóźnienia tg oraz czasu narastania tyg. Aby osiągnąć współczynnik tłumienia równy £ = 0.2, co odpowiada przeregulowaniu zx = 25%, parametry regulatorów dobiera się według wartości podanych w tabeli 5.1."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/tabele/k2_page28_table1.png": [
+      "e Metoda oparta na wzmocnieniu granicznym Regulator nastawia się na działanie P, następnie zwiększa się wartość jego wzmocnienia przy pracy w pętli sztywnego, ujemnego sprzęże- nia zwrotnego do momentu wystąpienia oscylacji o stałej amplitudzie. Wartość tego wzmocnienia nazywa się wzmocnieniem granicznym kp, natomiast okres wzbudzonych oscylacji oznacza się jako 7. Po zakoń- czeniu eksperymentu parametry regulatorów dobiera się według wartości podanych w tabeli 5.2. Tabela 5.2 Dobór nastaw regulatora PID na podstawie cyklu granicznego"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page29_figure2.png": [
+      "5.3.3 Metoda Zieglera-Nicholsa oparta na wzmocnieniu granicznym (eksperyment) Dla obiektu z podpunktu 5.3.1 należy przeprowadzić eksperyment wyz- naczania wzmocnienia granicznego. Następnie na podstawie zarejestrowanej odpowiedzi skokowej dobrać wartości parametrów regulatorów: P, PI oraz PID z idealnym różniczkowaniem. Porównać odpowiedzi skokowe układu zamkniętego oraz wykonać analizę wskaźników jakości. 5.34 Metoda Zieglera-Nicholsa oparta na wzmocnieniu granicznym (obliczenia) Dla obiektu z podpunktu 5.3.1 z pominiętym opóźnieniem transportowym (Ty = 0) wyznaczyć na podstawie tablicy Routha graniczną wartość wzmocnienia regulatora typu P, które w układzie zamkniętym spowoduje powstanie oscylacji o stałej amplitudzie. Następnie rozwiązać z uwagi na w równanie charakterystyczne powyższego układu zamkniętego M(jw) = 0, wyznaczając w ten sposób okres oscylacji T' = 3*. Na podstawie uzyskanej wartości kp oraz T dobrać wartości parametrów regulatorów: P, PI, PID z idealnym różniczkowaniem. Porównać odpowiedzi skokowe układu zamkniętego oraz wykonać analizę wskaźników jakości. cd. tabeli 5.3"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page30_figure1.png": [
+      "5.3.3 Metoda Zieglera-Nicholsa oparta na wzmocnieniu granicznym (eksperyment) Dla obiektu z podpunktu 5.3.1 należy przeprowadzić eksperyment wyz- naczania wzmocnienia granicznego. Następnie na podstawie zarejestrowanej odpowiedzi skokowej dobrać wartości parametrów regulatorów: P, PI oraz PID z idealnym różniczkowaniem. Porównać odpowiedzi skokowe układu zamkniętego oraz wykonać analizę wskaźników jakości. 5.34 Metoda Zieglera-Nicholsa oparta na wzmocnieniu granicznym (obliczenia) Dla obiektu z podpunktu 5.3.1 z pominiętym opóźnieniem transportowym (Ty = 0) wyznaczyć na podstawie tablicy Routha graniczną wartość wzmocnienia regulatora typu P, które w układzie zamkniętym spowoduje powstanie oscylacji o stałej amplitudzie. Następnie rozwiązać z uwagi na w równanie charakterystyczne powyższego układu zamkniętego M(jw) = 0, wyznaczając w ten sposób okres oscylacji T' = 3*. Na podstawie uzyskanej wartości kp oraz T dobrać wartości parametrów regulatorów: P, PI, PID z idealnym różniczkowaniem. Porównać odpowiedzi skokowe układu zamkniętego oraz wykonać analizę wskaźników jakości. cd. tabeli 5.3"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page30_figure2.png": [
+      "| © | 5.3.5 Sprawozdanie | Sprawozdanie powinno zawierać: - odpowiedzi skokowe układu regulacji dla rozważanych regulatorów wraz z opisem wpływu ich poszczególnych parametrów na wskaźniki jakości (polecenie 5.3.1); - odpowiedź skokową obiektu regulacji o zadanych parametrach | ! z naniesionymi wartościami £4 oraz togę wraz z odpowiedzią skokową układu zamkniętego z regulatorami: P, PI, PID z idealnym różniczko- waniem (polecenie 5.3.2); - odpowiedź skokową obiektu regulacji o zadanych parametrach, w przy- padku gdy regulator jest typu P, a k, = kp, z naniesioną wartością | T, wraz z odpowiedzią skokową układu zamkniętego z regulatorami: | P, PI, PID z idealnym różniczkowaniem (polecenie 5.3.3); - analityczne wyznaczenie wartości kp oraz k, = T' dla obiektu z po- miniętym opóźnieniem Ty wraz z odpowiedzią skokową układu zamkniętego z regulatorami: P, PI, PID z idealnym różniczkowaniem (polecenie 5.3.4); | !"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page31_figure1.png": [
+      "- analizę porównawczą uzyskanych wartości wskaźników jakości. 6 Serwomechanizm 6.1 Cel ćwiczenia Ćwiczenie ma na celu zapoznanie się z właściwościami układu sterowa- nia serwomechanizmem liniowym z regulatorem typu P oraz tachometry- cznym sprzężeniem zwrotnym. Istnieje również możliwość symulacji układu uwzględniającego nieliniowości występujące w rzeczywistych układach serwomechanizmów, jak tarcie czy luz. 6.2 Podstawowe wiadomości 6.2.1 Pojęcie serwomechanizmu Serwomechanizmem (uproszczony schemat blokowy na rysunku 6.1) nazywa się układ regulacji automatycznej, w którym wielkością wyjściową jest przesunięcie mechaniczne lub obrót. Występuje tu najczęściej astatyzm (element całkujący), związany z zastosowaniem serwomotoru (silnika wyko- nawczego), którego stała czasowa dominuje w układzie. Zadaniem serwomechanizmu jest sprowadzanie uchybu regulacji e(t) = = w(t) — y(t) do zera (czyli na przykład zapewnienie dokładnego ustawienia czy przesunięcia pewnych obiektów)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page32_figure1.png": [
+      "6.2.3 Uproszczony model serwomechanizmu W najprostszym wydaniu z pominięciem stałych czasowych wzmacnia- czy (elementów przyjętych jako bezinercyjne w stosunku do stałej czasowej silnika) regulator jest typu P o transmitancji Gp(s) = kp, silnik jest elemen- tem całkującym z inercją, o transmitancji G;4(s) = RUTH: natomiast trans- mitancja sprzężenia tachometrycznego określona jest wzorem Gr(s) = skę, jak pokazano na rysunku 6.2."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page32_formula1.png": [
+      "Rys. 6.2: Schemat modelu serwomechanizmu ze sprzężeniem tachometrycznym Układ otwarty serwomechanizmu składa się ze wzmacniacza (regulatora typu P o wzmocnieniu kp (2), |), serwomotoru zamodelowanego jako układ całkujący z inercją (o wzmocnieniu prędkościowym k, [2] i stałej czasowej T [5|) oraz tachometru zamodelowanego jako idealny układ różniczkujący o wzmocnieniu 4; [s]. Wartością zadaną i wyjściową jest położenie kątowe (stąd obecność całko- wania w transmitancji serwomotoru). Stała czasowa T uwzględnia bezwład- ność silnika, układu przekładni i inne stałe czasowe występujące w układzie elektromechanicznym. Przy założeniu znajomości wszystkich parametrów transmitancja układu zamkniętego (bez wewnętrznego sprzężenia tachometrycznego) ma postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page33_formula2.png": [
+      "|. Dla danego silnika o parametrach k, oraz T jedynym stopniem swobody pozostaje wzmocnienie regulatora kp. Z poprzednich ćwiczeń wiadomo, że korzystne właściwości układu osiągane są dla małych wartości 7, oraz 0.5 S<<£ 1. Powyższa wada może zostać wyeliminowana przez dołączenie sprzęże- nia tachometrycznego (człon różniczkujący stanowić może przykładowo reprezentację prądnicy tachometrycznej wytwarzającej napięcie zależne od prędkości kątowej). W takiej konfiguracji transmitancja układu otwartego określona jest wzo- rem"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page33_formula1.png": [
+      "a transmitancja układu zamkniętego dana jest jako | | | | czyli jest członem oscylacyjnym o parametrach:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page33_formula3.png": [
+      "| gdzie"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page33_figure2.png": [
+      "Przez dołączenie sprzężenia tachometrycznego, przy zwiększaniu wzmoc- nienia regulatora typu P, zmniejsza się stałą czasową 7, układu zamknię- tego przy zachowaniu zwiększonego (w stosunku do układu bez sprzężenia) współczynnika tłumienia €. 65 6.2.4 Charakterystyki częstotliwościowe serwomechanizmu liniowego Na zamieszczonej na rysunku 6.3 asymptotycznej logarytmicznej charak- terystyce modułu widać, że zastosowanie sprzężenia tachometrycznego powoduje zmniejszenie pasma przenoszenia (pasma, w którym moduł ma wartość większą od jedności), co wpływa na zdolność eliminacji zakłó- ceń o wielkiej częstotliwości"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page33_figure1.png": [
+      "Rys. 6.3: Charakterystyka częstotliwościowa układu otwartego serwomechanizmu liniowego: 1* - bez sprzężenia, 2? — ze sprzężeniem tachometrycznym 6.2.5 Serwomotor prądu stałego sterowany prądowo Serwomotory sterowane prądowo są często spotykane, najczęściej w ukła- dach leonarda (prądnica prądu stałego zasilająca serwomotor prądu stałego przy stałym prądzie wzbudzenia). Serwomotor bez uwzględnienia nielinio- wości można przedstawić jak na rysunku 64."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula3.png": [
+      "Zakłada się, że sygnałem wejściowym serwomotoru jest (przy stałym prądzie wzbudzenia) napięcie ez(t)[V| zasilające uzwojenia wirnika, natomiast sygnałem wyjściowym jest kąt 8(£) obrotu wału. Przyjęte oznaczenia"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula4.png": [
+      "Indukowana siła elektromotoryczna wirnika ma wartość"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula6.png": [
+      "a napięcie zasilające wirnik"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula8.png": [
+      "czvli na zastosowaniu transformaty Lablace'a"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula9.png": [
+      "Rozwijany moment My/t) jest funkcją strumienia wzbudzenia, w przy- padku iednak stałei wartości pradu wzbudzenia może on bvć wvrażony iako"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula11.png": [
+      "cformaty | anlaca'a"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula13.png": [
+      "Transmitancja silnika określona jest więc wzorem"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula1.png": [
+      "gdzie"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula2.png": [
+      "gdzie"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula5.png": [
+      "W serwomotorze zamodelowanym w ćwiczeniu przyjęto:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula7.png": [
+      "Zakres zmienności /ł, powoduje, że stałe czasowe 7, oraz Tm przybierają wartości z zakresu"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula12.png": [
+      "6.2.6 Serwomotor prądu stałego sterowany prądowo z uwzględnieniem nieliniowości Na rysunku 6.5 zaznaczono miejsce występowania nieliniowości w ser womotorze, i tak odpowiednio e ograniczenie wartości prądu twornika / momentu dynamicznego silnika (zamodelowane jako blok nieliniowy z nasyceniem) Na schemacie dokonano uproszczenia polegającego na ograniczeniu wartości momentu dynamicznego M/y(t), przy czym w rzeczywistości ograniczenie to występuje jako ograniczenie prądu twornika 1.(t), bez względu na efektywną wartość momentu dynamicznego"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page35_formula1.png": [
+      "| a == | e moment tarcia (suchego i lepkiego) Stanowi on, pomijając zależność od kąta obrotu, sumę momentu tarcia suchego (Coulomba) M,,(t) i momentu tarcia lepkiego (wiskotycznego) M,,(t), gdzie"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page35_formula3.png": [
+      "e luz Zakłada się, że luz A6|”| występuje na przekładni mechanicznej, czyli poza częścią mechaniczną samego silnika. W związku z powyż- szym indukowana siła elektromotoryczna wirnika em(t) jest propor- cjonalna do prędkości „idealnej”. Stosownie do wymienionych nieliniowości rzeczywisty moment dynamiczny dany jest jako"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page35_figure1.png": [
+      "6.2.7 Trajektoria fazowa [rajektorią fazową sygnału r(t) w przedziale czasu t; < t <€ te nazywa się wykres sporządzony w prostokątnej siatce współrzędnych, przy odkłada- niu na osi odciętych wartości x(t), a na osi rzędnych wartości — = ż(t) | | dla każdej chwili czasowej t, € t <€ tą. Trajektoria fazowa w górnej pół- płaszczyźnie jest strzałkowana w prawo, w dolnej półpłaszczyźnie — w lewo, a oś odciętych przecinana jest przez nią zawsze pod kątem prostym. | Punkty na trajektorii odpowiadające stanowi ustalonemu leżą wyłącznie na osi odciętych."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page36_figure1.png": [
+      "amm ZĘ % XL, 7 Regulacja kaskadowa 7.1 Cel ćwiczenia Ćwiczenie ma na celu zapoznanie się ze sposobem dekompozycji układu sterowania na pętle regulacyjne w celu osiągnięcia lepszej jakości regulacji między innymi przez znalezienie wartości reagującej na zmiany wymuszenia szybciej niż wielkość sterowana. 7.2 Podstawowe wiadomości 7.2.1 Idea regulacji kaskadowej Zaprojektowanie prostego układu regulacji (z jednym regulatorem) może być niewystarczające do spełnienia wymogów jakościowych lub może prowadzić do wzrostu stopnia skomplikowania regulatora. W takim wypadku tworzy się odpowiednią strukturę układu regulacji: w wyniku doprowadzenia dodatkowej wielkości pomocniczej do regulatora powstaje kaskada regulatorów, pokazana na rysunku 7.1."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page37_figure2.png": [
+      "poprawianie eliminacji zakłóceń Gdy na obiekt regulacji działają zakłócenia, które muszą być kompen- sowane przez regulator, należy doprowadzić do niego dodatkową informację o ich wartości. Może to pociągać za sobą konieczność znale- zienia (gdy wartość zakłócenia nie może być zmierzona bezpośrednio) zmiennej reagującej na nie szybciej niż zmienna wyjściowa (szczególnie w przypadku obiektu o niedoskonałościach dynamicznych). 7.2.3 Analiza układu regulacji kaskadowej Po rozdzieleniu obiektu regulacji (jak pokazano na rysunku 7.2) na dwie części G;(s), Gz(s) oraz zastosowaniu dwóch reguiatorów schemat układu można przekształcić, zakładając że Gpa2(s) jest regulatorem liniowym, do postaci pokazanej na rysunku 7.3. Gdy G; ma nieliniową charakterystykę statyczną, wypadkowa charakte- rystyka statyczna wewnętrznej pętli regulacji wykazuje bardziej liniowy przebieg od charakterystyki G;. zz"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page37_figure1.png": [
+      "Rys. 7.2: Schemat kaskadowego układu regulacji"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page37_formula1.png": [
+      "Zakładając ponownie, że G; jest częścią liniową (G;(s)) obiektu, można powiedzieć, że regulator nadrzędny G4,; steruje obiektem o transmitancji"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page37_formula2.png": [
+      "Dla częstotliwości, przy których |GR.2(7w)G;(Jw)| > 1, transmitancja wid- mowa obiektu zastępczego określona jest jako"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page37_formula3.png": [
+      "co odpowiada kompensacji dynamiki obiektu C; (s). Jeżeli, jak w niniejszym ćwiczeniu, wzmocnienie regulatora nadrzędnego zostanie ustalone jako a, przy czym kp oznacza wzmocnienie regulatora podrzędnego typu P, możliwa jest zmiana wzmocnienia regulatora podrzęd- nego kp w pętli wewnętrznej bez zmiany wzmocnienia w pętli zewnętrznej"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page38_figure2.png": [
+      "Gdy opóźnienie transportowe włączy się do obiektu G2(s), wtedy, zapewniając dużą wartość wspomnianego wyżej iloczynu, uzyskuje się eliminację zakłócenia z; (t) Jak wspomniano wcześniej, w układzie regulacji kaskadowej regulator pomocniczy jest regulatorem typu P z uwagi na to, że uchyb ustalony występujący na wejściu Gę.2(s) na ogół nie ma istotnego znaczenia dla celu regulacji spełnianego przez regulator nadrzędny. Zastosowanie zamiast regulatora podrzędnego typu P regulatora typu PD spowoduje większą wrażliwość na zakłócenia o wielkiej częstotliwości (a przez to większą możli- wość ich eliminacji), co jest również osiągane, jeżeli G2(s) zawiera opóźnienie transportowe lub dużą inercję. Regulator nadrzędny odpowiada za uzyskanie małej wartości uchybu ustalonego, w związku z czym przyjmuje się go jako regulator zawierający człon całkujący (regulator typu PI lub PID)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page38_figure1.png": [
+      "Rys. 7.4: Schemat kaskadowego układu regulacji z uwzględnieniem zakłóceń 7.24 Przykładowy układ regulacji kaskadowej W układzie napędu elektrycznego robotów zachodzi potrzeba sterowania obiektami elektromechanicznymi składającymi się z silnika wykonawczego (na przykład silnika prądu stałego), przekształtnika oraz układu przekładni (obciążenia). W ten sposób można utworzyć trójobwodową strukturę regulacji o pętlach (od wewnątrz): regulacji momentu / prądu twornika (1), prędkości silnika (2) i położenia (3), jak pokazano na rysunku 7.5. Poszczególne zewnętrzne pętle regulacji obejmują pętle szybsze, tak więc regulacja momentu przebiega szybciej niż regulacja prędkości, która prze- biega z kolei szybciej niż regulacja położenia."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page39_figure1.png": [
+      "7.34 Porównanie jakości regulacji układu jednopętlowego z układem regulacji kaskadowej Dla obiektu zdekomponowanego na dwie części: G;(s) oraz G>(s) porównać jakość regulacji w układzie z regulatorem typu PI (w stosunku do wyników symulacji z ćwiczenia 4 z regulatorem PI o parametrach dobranych według metody odpowiedzi skokowej Zieglera-Nicholsa). 7.3.5 Sprawozdanie Sprawozdanie powinno zawierać: - przebiegi uchybu i trajektorie fazowe wraz z opisem wpływu na jakość regulacji poszczególnych parametrów regulatora (polecenie 7.3.1); określić: czas regulacji, przeregulowanie, amplitudę oscylacji oraz war- tość wskaźnika ISE; - przebiegi uchybu regulacji dla każdego z trzech typów regulatorów o parametrach zapewniających dobrą jakość regulacji (polecenie 7.3.2); określić dla każdego z regulatorów: czas regulacji, przeregulowanie, amplitudę oscylacji oraz wartość wskaźnika ISE; - przebiegi uchybu regulacji dla różnych wzmocnień regulatorów (polecenie 7.3.3) w przypadku wystąpienia zakłóceń; określić dla każdej konfiguracji zmieniane wzmocnienie-włączone zakłócenie: czas regu- lacji, przeregulowanie, amplitudę oscylacji oraz wartość wskaźnika ISE;"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page40_figure2.png": [
+      "8.2 Podstawowe wiadomości 8.2.1 Uzupełnienie wiadomości o układzie nadążnym Zadaniem realizowanym przez układ nadążny o zadanej dynamice (stałych czasowych, opóźnieniu transportowym etc.) jest możliwie dokładne odtwarzanie sygnału odniesienia (sygnału referencyjnego). istnieje więc potrzeba dobrania parametrów regulatora w taki sposób, aby zapewnić odpowiednie pasmo przenoszenia (w zakresie częstotliwości sygnału odniesienia, czy też tak zwanych częstotliwości użytecznych), ale jednocześnie takie, aby występujące zakłócenia nie były przenoszone przez układ, lecz tłumione. Jako przykładowe zadanie śledzenia można rozpatrzyć zadanie sterowa- nia kątem nachylenia klap steru wodolotu, zadawanym przez stery, a zakłó- canym przez moment z(£) wytwarzany na klapach przez uderzające o nie fale. Dodatkowym zakłóceniem mogącym wystąpić w układzie jest za- kłócenie pomiarowe zp(t), które w uproszczeniu może zostać sprowadzone na wejście obiektu. Schemat blokowy omawianego przypadku pokazano na rysunku 8.1."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page40_formula1.png": [
+      "Rys. 8.1: Schemat blokowy układu sterowania klapą steru wodolotu 79 Analizując ponownie problem doboru nastaw regulatora, można zauwa- żyć, że zbyt wolny układ będzie się spóźniał w stosunku do sygnału odnie- sienia, a zbyt szybki, czy też zbyt czuły, będzie reagował nie tylko na sygnał użyteczny, ale również będzie przenosił częstotliwości zakłócenia. Nastawy regulatora muszą być dobrane tak, aby zapewniały odpowiednią jakość na- dążania z uwzględnieniem dynamiki obiektu sterowania oraz właściwości sygnału referencyjnego i zakłócającego. 8.2.2 Błąd nadążania, uchyb regulacji Od układu przedstawionego w poprzednim podpunkcie wymaga się śledzenia sygnału referencyjnego, czyli w idealnym przypadku uzyskania w każdej chwili y(t) = r(t). Z uwagi jednak na możliwość wystąpienia zakłóceń oraz dynamikę obiektu sterowania powstaje błąd nadążania"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page40_figure1.png": [
+      "jan poRazaiw 1d LYBUIIRU O.£."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page41_formula1.png": [
+      "Rys. 8.2: Błąd nadążania e;(t) oraz uchyb regulacji e(£) Błąd taki ma wartość różną od uchybu regulacji e(t) = e;(t) + zp(t), stanowiącego wymuszenie regulatora. Jeżeli, jak w niniejszym ćwiczeniu, zakłada się brak zakłóceń pomiarowych, a uwzględnia się jedynie zakłóce- nia z(t), zachodzi zawsze e(t) = ey(£), przy czym e(t) = r(t) — y(ż) nazywany jest uchybem regulacji. | » | 8.2.3 Optymalne nastawy regulatora Zakładając, że regulator występujący w układzie jest typu P oraz obie- rając pewien wskaźnik jakości regulacji /(t) (na przykład jako J(t) = /,(t) lub J(t) = /z(t)), można analitycznie uzyskać optymalną wartość wzmoc- nienia kp. na podstawie wyrażenia"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page41_formula2.png": [
+      "Przykładowo można postawić warunek"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page41_figure1.png": [
+      "| przyjmując, że znana jest analityczna postać zależności wiążącej e(£) | z gęstością widmową sygnału wyjściowego (uzależnioną z kolei od gęstości widmowej sygnału referencyjnego, zakłócającego oraz transmitancji widmo- wych układu zamkniętego i zakłóceniowej). Wyznaczona w taki sposób optymalna (minimalizująca zadany wskaźnik J(t)) wartość wzmocnienia nie ma charakteru uniwersalnego, co znaczy, że odnosi się ona jedynie do przypadku wystąpienia konkretnego sygnału | referencyjnego, konkretnych sygnałów zakłócających oraz konkretnej dyna- miki obiektu sterowania. 8.3 Przebieg ćwiczenia 8.3.1 Rozpatrywany układ regulacji Jak pokazano na rysunku 8.3, w rozpatrywanym przypadku pominięto zakłócenia pomiarowe, w związku z czym uchyb regulacji staje się błędem nadążania."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page42_figure1.png": [
+      "Głównym elementem najprostszego regulatora dwustawnego jest przekaźnik dwupołożeniowy o charakterystyce statycznej pokazanej na rysunku 9.1."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page43_formula1.png": [
+      "Rys. 9.1: Charakterystyka statyczna przekaźnika dwupołożeniowego Rzeczywisty przekaźnik charakteryzuje się występowaniem strefy histerezy o szerokości H oraz występowaniem stanu załączenia i wyłączenia. Stan wyłączenia, oznaczany umownie jako 0, najczęściej odpowiada wartości Umin © 0, ale w przypadku uwzględnienia strat energii spotyka się również Umie 7 0. Stan załączenia oznacza się umownie jako 1. Najczęściej spotykanym zadaniem regulacji dwustawnej jest regulacja temperatury, gdzie moc grzejna jest wyłączana (0) bądź załączana (1), co odpowiada stanowi stygnięcia i ogrzewania. Na tej podstawie można powiedzieć, że proces regulacji ma charakter nieciągły — istnieją dwa stany sygnału wyjściowego z regulatora. 54 9.2.2 Obiekty cieplne Regulacja temperatury obiektu cieplnego należy do typowych procesów wolnozmiennych, dodatkowo charakteryzujących się silnymi właściwościami uśredniającymi. Z uwagi na fakt, że sygnał sterujący u(£) może przyjmować dwa stany, skutkuje to reagowaniem obiektu na wartość średnią sygnału sterującego"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page43_figure2.png": [
+      "Ponieważ w każdym okresie impulsowania przebieg 1:(t) jest funkcją nie- ciągłą, jak pokazano na rysunku 9.2, traktowanie go w przybliżeniu jako przebiegu ciągłego jest możliwe jedynie, gdy okres impulsowania to. + tud jest dużo mniejszy od stałej czasowej obiektu regulacji."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page43_formula2.png": [
+      "Rys. 9.2: Przykładowy sygnał sterujący u(t) i jego wartość średnia G(t) Z uwagi na złożoność dynamiki obiektu cieplnego najprostszą jego aproksymacją jest zamodelowanie jako obiektu inercyjnego pierwszego rzędu Z a kkoa? usa! asza"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page43_formula3.png": [
+      "przy czym najczęściej czas opóźnienia 7% i stała czasowa 7 są funkcjami sygnału sterującego. O ile różnica wartości opóźnienia 7, dla stanu wyłą- czenia i załączenia mocy grzejnej jest często pomijalnie mała, o tyle z uwagi na przykład na izolację cieplną stała czasowa stygnięcia 7_ jest większa od stałej czasowej grzania /,, wtedy"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page43_figure1.png": [
+      "OOO AWA AE 85"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page43_figure3.png": [
+      "Powyżej zastosowano uproszczenie polegające na pominięciu dodatkowej zależności wartości stałej czasowej ' od aktualnego punktu pracy, czyli od temperatury. 9.2.3 Regulacja dwustawna bez korekcji W najprostszym układzie zamkniętym pokazanym na rysunku 94 do regulatora dwustawnego (przekaźnika) doprowadzana jest wartość różnicy pomiędzy wartością zadaną a wartością regulowaną. W przypadku obiektu cieplnego i przekaźnika bez histerezy, jeżeli temperatura obiektu jest wyższa od temperatury zadanej, następuje wyłączenie mocy grzejnej, a w odwrotnym przypadku - załączenie"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page44_figure1.png": [
+      "Rys. 9.4: Schemat blokowy układu regulacji dwustawnej bez korekcji Proces regulacji polega więc na okresowym załączaniu i wyłączaniu ele- mentu wykonawczego (najczęściej przekaźnika), przy czym częstotliwość łączeń zależna jest od wartości zadanej, właściwości dynamicznych obiektu regulacji i charakterystyki statycznej regulatora, jak pokazano na rysunku 9.5."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page44_figure2.png": [
+      "Z punktu widzenia oceny jakościowej procesu regulacji przedmiotem zainteresowania w fazie ustalonych oscylacji jest ich amplituda, częstotliwość oraz wartość średnia. Regulator dwustawny bez korekcji może być w uproszczeniu uznany za regulator proporcjonalny. Sprzężenie zwrotne w układzie regulacji zamyka się przez obiekt cieplny, którego właściwości dynamiczne decydują © jakości regulacji, ponieważ w wielu przypadkach strefa histerezy regulatora przekaźnikowego (dwupołożeniowego) jest pomijalnie mała w stosunku do zakresu zmian temperatury. 9.2.4 Regulacja dwustawna z korekcją W celu zmniejszenia amplitudy oscylacji w stanie ustalonym (związanych z częstotliwością przełączeń) należy zmniejszyć okres impulsowania, czyli zwiększyć częstotliwość przełączeń. W tym celu element nieliniowy obejmuje się sprzężeniem zwrotnym, przez co amplituda oscylacji ulega zmniejszeniu, a ich charakter jest zależny od obiektu znajdującego się w sprzężeniu. Jeżeli w gałęzi sprzężenia zwrotnego umieści się element inercyjny pierw- szego rzędu (rysunek 9.6), charakterystyka dynamiczna regulatora zostanie uformowana na kształt charakterystyki regulatora typu PD. ZE"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page44_formula1.png": [
+      "Rys. 9.6: Schemat blokowy układu regulacji dwustawnej z korekcją (PD) Przy założeniu, że przekaźnik można traktować jako element o bardzo dużym wzmocnieniu k,, transmitancja układu otwartego po zamknięciu wewnętrznej pętli sprzężenia zwrotnego jest określona wzorem"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page44_formula2.png": [
+      "Dla k, — oo przyjmuje on postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page44_formula3.png": [
+      "a dynamikę regulatora można w przybliżeniu opisać jako"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page44_formula4.png": [
+      "gdzie kp = Ę, Ta =TY. Przykładowe przebiegi w strukturze z korekcją PD pokazano na rysunku 9.7 wraz ze sposobem przybliżonego wyznaczania parametrów regulatora (dla e(t) = e - 1(t)):"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page45_formula3.png": [
+      "gdzie indeks oo oznacza wartość zmierzoną w stanie ustalonych oscylacji. Jeżeli w gałęzi sprzężenia zwrotnego umieści się równoległe połączenie elementów inercyjnych pierwszego rzędu (rysunek 9.8), to po wprowadze- niu do sumatora jednego z sygnałów ze znakiem przeciwnym charaktery- styka dynamiczna regulatora zostanie uformowana na kształt charaktery- styki regulatora typu PID. f—- -— «H-0 —- m mmmAT kim sem) mm m"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page45_figure2.png": [
+      "Rys. 9.7: Przebiegi sygnału ze sprzężenia zwrotnego e; (£), sygnału sterującego u(t) 1 jego wartości średniej Tr(t)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page45_formula4.png": [
+      "Rys. 9.8: Schemat blokowy układu regulacji dwustawnej z korekcją (PID) Przy założeniu, że przekaźnik można traktować jako element o bardzo dużym wzmocnieniu k,, transmitancja układu otwartego po zamknięciu wewnętrznej pętli sprzężenia zwrotnego jest określona wzorem"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page45_formula5.png": [
+      "Dla k, — 0 przyjmuje on postać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page45_formula1.png": [
+      "icz dana tz 89"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page45_formula2.png": [
+      "a dynamikę regulatora można w przybliżeniu opisać jako"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page45_figure1.png": [
+      "gdzie kp = za 1 =] + M4, 7% m rĘ:, a regulator odznacza się interakcją nastaw. FP Przykładowe przebiegi w strukturze z korekcją PID pokazano na rysunku 9.9. Sposób przybliżonego wyznaczania parametrów regulatora jest analo- giczny jak z korekcją PD"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page46_figure1.png": [
+      "Zakłada się, że maksymalną wartością temperatury (czyli wzmocnieniem obiektu regulacji) jest 1007”C, przy załączonym na stałe przekaźniku."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page48_figure3.png": [
+      "10.2 Podstawowe wiadomości 10.2.1 Pojęcie regulacji trójpołożeniowej W odróżnieniu od przypadku regulacji dwustawnej regulatory posiadają czasem dwa punkty nastawcze umożliwiające nastawienie dwóch różnych wartości zadanych; są to regulatory trójpołożeniowe z wyróżnionymi trzema stanami pracy, odpowiednio: +1 - grzanie, 0 -stygnięcie, -1 - chłodzenie lub m - grzanie mocą większą od nominalnej, 1 - grzanie mocą nominalną, 0 -stygnięcie. Głównym elementem regulatora trójpołożeniowego jest element trójstawny (często budowany z odpowiedniego połączenia przekaźników dwupołożeniowych), o charakterystyce statycznej pokazanej na rysunku 10.1. Rzeczywisty przekaźnik charakteryzuje się występowaniem strefy histe- rezy o szerokości Ff, strefy nieczułości B oraz występowaniem dwóch stanów - załączenia ( +1, —1 ) i wyłączenia (0). Najczęstszym zadaniem regulacji trójstawnej jest regulacja temperatury, na przykład w zadaniu stabilizacji jej na stałym poziomie, lub zadanie regu- lacji za pomocą siłownika stopnia otwarcia zaworu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page48_figure4.png": [
+      "Rys. 10.1: Charakterystyka statyczna przekaźnika trójpołożeniowego 10.2.2 Regulacja trójpołożeniowa bez korekcji W najprostszym układzie zamkniętym, pokazanym na rysunku 10.2, do regulatora trójpołożeniowego doprowadzana jest wartość różnicy pomiędzy wartością zadaną a wartością regulowaną. W przypadku zada- nia regulacji temperatury (obiektu cieplnego) i przekaźnika bez histerezy (ale o zadanej strefie martwej), jeżeli temperatura obiektu jest wyższa od temperatury zadanej (co najmniej o wartość odpowiadającą - ). następuje wymuszenie ruchu elementu nastawczego napędzanego przez silnik w umownie przyjętym kierunku dodatnim, a w przeciwnym wypadku — w kierunku ujemnym. Element wykonawczy nie jest przestawiany, jeżeli róż- nica temperatur jest dostatecznie mała (uchyb mieści się w zakresie — $, + 7)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page48_figure1.png": [
+      "Rys. 10.2: Schemat blokowy układu regulacji trójpołożeniowej bez korekcji 10.2.3 Regulacja trójpołożeniowa z korekcją Regulatory trójstawne mogą występować w układzie ze sprzężeniem korekcyjnym, które podobnie jak w przypadku regulatora dwustawnego polega na objęciu elementu nieliniowego inercyjnym sprzężeniem zwrotnym. Jeżeli w gałęzi sprzężenia zwrotnego umieści się element inercyjny pierw- szego rzędu (rysunek 10.3), charakterystyka dynamiczna regulatora zostanie uformowana na kształt charakterystyki regulatora typu PD Ponieważ element wykonawczy (silnik) jest członem całkującym, włączenie go szeregowo z regulatorem trójpołożeniowym z korekcją powoduje powstanie w efekcie regulatora typu PI, przy założeniu, że element wykonawczy zostanie potraktowany jako integralna część regulatora. rr | | | | | | | | | || | | | | | |"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page48_figure2.png": [
+      "Na przedstawionych na rysunku 10.4 przebiegach widać, że regulator trój- położeniowy zachowuje się podobnie jak dwupołożeniowy w analogicznym przypadku. Przebieg zmian stopnia otwarcia zaworu sterowanego silnikiem jest zbliżony do odpowiedzi skokowej regulatora typu PI, a ponieważ charakteryzuje się on stopniową zmianą wartości wraz z nadejściem kolejnych impulsów z elementu trójstawnego, regulatory trójpołożeniowe nazywa się regulatorami krokowymi."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page49_figure2.png": [
+      "| Wstanie ustalonym uchyb regulacji może leżeć w strefie nieczułości ele- | mentu trójstawnego, co z kolei może powodować wystąpienie niezerowej wartości uchybu ustalonego, czyli to, że regulator nie zostanie uruchomiony. 10.2.4 Serwomechanizm przekaźnikowy Regulatory trójpołożeniowe często można spotkać w układzie serwome- |chanizmu przekaźnikowego pokazanego na rysunku 10.5, stanowiącego pewne rozwinięcie idei serwomechanizmu liniowego, od którego wymaga się możliwie szybkiej reakcji na zmianę sygnału odniesienia, |? należałoby interpretować jako wymóg odpowiednio dużego wzmocnie- nia prędkościowego k, [2], czyli występowania sygnałów o znacznych am- plitudach. W układach rzeczywistych występują ograniczenia wartości syg- j nałów, podobnie jak skończoność wzmocnienia, natomiast stosu.ąc element przekaźnikowy, można przyjąć, że układ wykazuje nieskończone wzmoc- nienie, a jednocześnie amplituda sygnałów pozostaje ograniczona (wartości, na których załącza się przekaźnik)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page49_figure1.png": [
+      "Rys. 10.5: Schemat blokowy serwomechanizmu przekaźnikowego 10.2.5 Serwomechanizm przekaźnikowy ze sprzężeniem tachometrycznym | Analogiczniedo przypadku serwomechanizmu liniowego poprawę jakości regulacji serwomechanizmu uzyskuje się po doprowadzeniu do regulatora | dodatkowego sygnału proporcjonalnego do prędkości zmian wielkości | wyjściowej y(t), jak pokazano na rysunku 10.6. z z 97"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page49_formula1.png": [
+      "10.2.6 Wpływ sprzężenia tachometrycznego na portret fazowy serwomechanizmu przekaźnikowego W przypadku serwomechanizmu przekaźnikowego ze strefą histerezy, w procesie regulacji może powstać tak zwany cykl graniczny — stan oscy- lacji wielkości wyjściowej o stałym okresie i stałej amplitudzie. Wystąpienie cyklu granicznego jest uzależnione od strefy nieczułości i histerezy przekaź- nika trójpołożeniowego. Rozpatrując część liniową układu regulacji daną transmitancją"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page49_formula2.png": [
+      "jo ==—- aaaaim i mssieaaski Aniwa zwan zbniołobas 10: wariobA"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page49_formula4.png": [
+      "1U w p'owau4ciuwu ŁAWCE Ly ik KGŁARZYY yYNAG"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page49_formula7.png": [
+      "można narysować trajektorię fazową układu, przedstawioną na rysunku 10.7, na której występują trzy różne rodzaje trajektorii dane odpowiednio równa- pio: fomozenicadswaii mabaawa nio ma siwsetwowecwicrwyntzoh aewwiewwanzoba: 1 41 \" wzorv/ko naae40Q formiila5 nna uzorv/kO nana4Q formiilaAi nna"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page50_figure2.png": [
+      "Rys. 10.7: Trajektoria fazowa układu bez sprzężenia tachometrycznego W przypadku braku strefy nieczułości w przekaźniku nie występuje na portrecie fazowym stan dla v(t) = 0, natomiast szerokość strefy histerczy definiuje rozsunięcie zaznaczonych na rysunku linii przełączeń (przy zbyt szerokiej histerezie powodując destabilizację układu). W celu poprawienia, analogicznie do przypadku serwomechanizmu liniowego, jakości regulacji, stosuje się sprzężenie tachometryczne. Postępując podobnie jak w przypadku bez korekcji, można zapisać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page50_formula2.png": [
+      "Rys. 10.7: Trajektoria fazowa układu bez sprzężenia tachometrycznego W przypadku braku strefy nieczułości w przekaźniku nie występuje na portrecie fazowym stan dla v(t) = 0, natomiast szerokość strefy histerczy definiuje rozsunięcie zaznaczonych na rysunku linii przełączeń (przy zbyt szerokiej histerezie powodując destabilizację układu). W celu poprawienia, analogicznie do przypadku serwomechanizmu liniowego, jakości regulacji, stosuje się sprzężenie tachometryczne. Postępując podobnie jak w przypadku bez korekcji, można zapisać"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page50_formula3.png": [
+      "Po wykorzystaniu zależności e(t) = w(t)-v(t) powyższe wyrażenie przyj- * a anka"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page50_formula4.png": [
+      "Po wprowadzeniu zmiennych fazowych"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page50_formula1.png": [
+      "można narysować trajektorię fazową r2(£) = -€ zr(t) + Ę e(t) układu, przedstawioną na rysunku 10.8, na którym ponownie występują trzy różne rodzaje trajektorii, a linie przełączeń (zakładając, że przełączenie następuje, gdy e(t) +3 TH :ube(t) = +8) dane są wyrażeniami:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page50_figure1.png": [
+      "Rys. 10.8: Trajektoria fazowa układu ze sprzężeniem tachometrycznym Wprowadzenie sprzężenia tachometrycznego powoduje zwiększenie tłumienia oscylacji występujących w układzie, a dla dużych wartości £, - zmniejszenie wpływu nieliniowości. Dodatkowo sprzężenie powoduje zmniejszenie prawdopodobieństwa wystąpienia cyklu granicznego oraz re- dukuje prędkość sygnałów przejściowych Jak pokazano na rysunku 10.9a, dla dużej wartości wzmocnienia w pętli sprzężenia tachometrycznego może pojawić się dodatkowa, sztuczna linia przełączeń (przez istnienie histerezy), powodując wystąpienie ruchu śŚliz- gowego w postaci przełączeń o skończonym czasie trwania. Podobnie niekorzystny przypadek ruchu ślizgowego pokazano na rysunku 10.9b. Występuje tu wymuszenie ruchu po linii przełączeń, co matematy- cznie odpowiada wydłużeniu do nieskończoności czasu regulacji - również tutaj wartość wzmocnienia k, jest zbyt duża. 100"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page51_figure3.png": [
+      "Rys. 10.8: Trajektoria fazowa układu ze sprzężeniem tachometrycznym Wprowadzenie sprzężenia tachometrycznego powoduje zwiększenie tłumienia oscylacji występujących w układzie, a dla dużych wartości £, - zmniejszenie wpływu nieliniowości. Dodatkowo sprzężenie powoduje zmniejszenie prawdopodobieństwa wystąpienia cyklu granicznego oraz re- dukuje prędkość sygnałów przejściowych Jak pokazano na rysunku 10.9a, dla dużej wartości wzmocnienia w pętli sprzężenia tachometrycznego może pojawić się dodatkowa, sztuczna linia przełączeń (przez istnienie histerezy), powodując wystąpienie ruchu śŚliz- gowego w postaci przełączeń o skończonym czasie trwania. Podobnie niekorzystny przypadek ruchu ślizgowego pokazano na rysunku 10.9b. Występuje tu wymuszenie ruchu po linii przełączeń, co matematy- cznie odpowiada wydłużeniu do nieskończoności czasu regulacji - również tutaj wartość wzmocnienia k, jest zbyt duża. 100"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page51_figure1.png": [
+      "e P w FP REKULALOT SIETUJE SIOWIURICII CIERU YCZILYTII (ŁAMIOUCIOWAIIYLII JARO LZlUII całkujący), który z kolei powoduje otworzenie lub przymknięcie zaworu dła- wiącego przepływ czynnika grzewczego, wymuszony przez pompę o sta- łej wydajności. Czynnik grzewczy jest doprowadzany do układu ogrzewa- nia podłogowego, a proces ogrzewania zamodelowany został jako obiekt 101"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page53_figure2.png": [
+      "10.3.6 Sprawozdanie Sprawozdanie powinno zawierać: - odpowiedzi skokowe dla różnych szerokości strefy histerezy i strefy nieczułości (polecenie 10.3.2); określić amplitudę, częstotliwość oraz wartość średnią oscylacji; - odpowiedzi skokowe w układzie z korekcją dynamiczną, wraz z omó- wieniem wpływu zmienianych parametrów (polecenie 10.3.3) na wy- mienione wyżej wskaźniki jakości regulacji; w przypadku zaniku oscylacji określić wartość ustaloną uchybu; 11 Dynamika układów impulsowych \"11.1 Cel ćwiczenia Ćwiczenie ma na celu zapoznanie się z zagadnieniem regulacji impul- sowej, to jest regulacji występującej jedynie w dyskretnych chwilach czasu. Ćwiczenie obejmuje badanie wpływu parametrów zarówno obiektu sterowania, jak i regulatora impulsowego na proces regulacji 11.2 Podstawowe wiadomości 11.2.1 Układ impulsowy Układem impulsowym nazywa się układ, w którym występuje przetwa- rzanie któregokolwiek z sygnałów ciągłych na sygnał impulsowy. Układ taki więc charakteryzuje się występowaniem zarówno sygnałów ciągłych (w(t), v(t), e(t)), jak i dyskretnych (e(nTp), v(n1/p)), jak pokazano na rysunku 11.1."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page53_figure1.png": [
+      "Rys. 11.1: Schemat blokowy impulsowego układu regulacji W literaturze istnieje rozgraniczenie pomiędzy układami impulsowymi \" (sampled-data systems - występują tu sygnały ciągłe i dyskretne) a układami dyskretnymi (discrete systems — występują jedynie sygnały dyskretne w cza- sie). Ponieważ zarówno układy dyskretne, jak i układy impulsowe mogą być opisane za pomocą równań różnicowych, na potrzeby niniejszego opracowa- nia przyjęto, że układy impulsowe będą równoważnie nazywane układami dyskretnymi. Częścią główną układu impulsowego jest regulator (sterownik binarny lub komputer sterujący), który na podstawie sygnału uchybu mierzonego w dyskretnych chwilach czasu wytwarza sygnał sterujący. Dyskretyzacja (próbkowanie lub impulsowanie) w dziedzinie czasu polega najczęściej na okresowym pobieraniu próbek sygnału ciągłego, jak pokazano na rysunku 11.2. Wewnątrz regulatora będącego, jak wspom- niano, urządzeniem cyfrowym, następuje dodatkowo kwantyzacja, 105 czyli dyskretyzacja w dziedzinie wartości (amplitudy - sygna! może przyj- mować określoną ilość wartości dyskretnych)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page53_formula1.png": [
+      "1.2.2 Wybrane metody opisu układów impulsowych Podobnie jak transformata Laplace'a pozwala sprowadzić problem opisu liniowego obiektu ciągłego za pomocą równania różniczkowego do opisu za pomocą równania algebraicznego, tak również w przypadku układów dyskretnych istnieje metoda z punktem wyjścia w postaci równania różni- cowego (transformata Laurenta, nazywana transformatą 2”). W opisie inwariantnego względem czasu układu impulsowego (dyskret- nego) stosuje się operacje: sumowania, mnożenia oraz przesunięcia w czasie o pojedynczy okres próbkowania, reprezentowanego przez operator :\"!. Jednym ze sposobów opisu impulsowego układu dynamicznego, oprócz różnicowego równania wejścia-wyjścia ( ny 7 m)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page53_formula2.png": [
+      "jest opis transmitancją w dziedzinie zmiennej zespolonej (:]. Założywszy w poprzednim równaniu zerowe warunki początkowe, oraz stosując trans- formate Laurenta"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page54_formula1.png": [
+      "106"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page54_formula3.png": [
+      "106"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page54_formula2.png": [
+      "otrzymuje się wymierną funkcję zmiennej zespolonej |: |, nazywaną transmi- om i. Adaralomakaa a"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page54_formula5.png": [
+      "otrzymuje się wymierną funkcję zmiennej zespolonej |: |, nazywaną transmi- om i. Adaralomakaa a"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page54_figure1.png": [
+      "W powyższym zapisie zastosowano powszechne uproszczenie notacji, polegające na domyślnym zastąpieniu przykładowo w wyrażeniu v(n) aktualnej wartości czasu dyskretnego nTp numerem n próbki, przy założe- niu stałości okresu próbkowania Tp."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page54_formula4.png": [
+      "Element formujący, który przedłuża wartość sygnału z bieżącej chwili próbkowania o czas r nazywa się ekstrapolatorem zerowego rzędu, a dany jest transmitancją"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page54_figure2.png": [
+      "Na rysunku 11.4 przedstawiono odpowiedź impulsową ekstrapolatora zerowego rzędu wraz z zaznaczeniem czasu r trwania impulsu. Aby anali- zować układ jako liniowy, przyjmuje się r = 7p."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page54_formula6.png": [
+      "Rys. 11.4: Odpowiedź impulsowa ekstrapolatora zerowego rzędu 11.2.4 Warunek stabilności układu impulsowego W celu umożliwienia analizy stabilności układu impulsowego należy naj- pierw uzyskać reprezentację części ciągłej w dziedzinie |: |, a następnie roz- patrywać tak uzyskany układ jako całość. Istnieje wiele metod otrzymania transmitancji (;(z) na podstawie transmitancji G(s), są to: e przekształcenie za pomocą różnicy wstecznej"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page54_formula7.png": [
+      "e przekształcenie 6 (za pomocą różnicy „w przód”)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page55_formula2.png": [
+      "hs e przekształcenie Tustina, metodą trapezów lub przekształcenie biliniowe"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page55_formula1.png": [
+      "e przekształcenie impulsowo-inwariantne"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page55_figure1.png": [
+      "| « dopasowanie biegunów i zer. Każda z tych metod dla pewnego określonego przedziału okresu próbko- Ivania Tp odznacza się dobrym przybliżaniem obiektu ciągłego - na przykład przekształcenie 6 nadaje się dla bardzo małych wartości p. W niniejszym ćwiczeniu zostanie pokazana przewaga (w określaniu stabilności układu pamkniętego) przekształcenia skokowo-inwariantnego nad przekształceniem f i przekształceniem Tustina. Mając daną transmitancję G(z) = wi , jak pokazano na rysunku 11.5, kład dyskretny będzie się nazywać stabilnym, jeżeli wszystkie bieguny jego transmitancji leżą wewnątrz okręgu jednostkowego na płaszczyźnie zmien- nej zespolonej (z |. Analogicznie układ będzie niestabilny, jeżeli jeden lub więcej biegunów leży poza okręgiem jednostkowym, a będzie znajdował się na granicy stabilności, jeżeli posiada pojedynczy biegun na okręgu jednostkowym Oprócz parametrów układu na stabilność ma wpływ przede wszystkim kres próbkowania Tp (podobnie jak i na oscylacyjność przebiegów | adkiowyńi"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page55_formula4.png": [
+      "Analizę stabilności umożliwia między innymi przekształcenie Mobiusa, za pomocą którego po podstawieniu z = ;** możliwe jest analizowanie 109 stabilności układu dyskretnego za pomocą twierdzeń obowiązujących dla układów ciągłych. Przekształcenie to odwzorowuje wnętrze okręgu na pła- szczyźnie zmiennej zespolonej (z) w lewą półpłaszczyznę zmiennej zespo- lonej (s). Należy podkreślić, że uzyskane w ten sposób równanie charak- terystyczne układu ciągłego nie jest równoznaczne z wykonaniem przekształ- cenia G(z) — G(s) 11.2.5 Transmitancje dyskretne liniowych członów dynamicznych e CZŁON PROPORCJONALNY Transmitancje dyskretne wyznaczone odpowiednio: przekształceniem skokowo-inwariantnym, metodą Tustina i przekształceniem 6 okreś-"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page55_formula5.png": [
+      "e CZŁON INERCYJNY PIERWSZEGO RZĘDU Transmitancje dyskretne wyznaczone odpowiednio: przekształceniem skokowo-inwariantnym, metodą Tustina i przekształceniem 6 okreś- lone są wzorami:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page55_formula6.png": [
+      "e CZŁON INERCYJNY DRUGIEGO RZĘDU Transmitancje dyskretne wyznaczone odpowiednio: przekształceniem skokowo-inwariantnym, metodą Tustina i przekształceniem 6 okreś- lone są wzorami ( 7; Ź 12):"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page56_formula1.png": [
+      "110"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page56_formula3.png": [
+      "e CZŁON INERCYJNY N-TEGO RZĘDU Pominięty z uwagi na zbyt skomplikowaną postać transmitancji e CZŁON OSCYLACYJNY Transmitancje dyskretne wyznaczone odpowiednio: przekształceniem skokowo-inwariantnym, metodą Tustina i przekształceniem 6 okreś- lone są wzorami:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page56_formula6.png": [
+      "e CZŁON CAŁKUJĄCY IDEALNY Transmitancje dyskretne wyznaczone odpowiednio: przekształceniem skokowo-inwariantnym, metodą Tustina i przekształceniem 6 okreś- lone są wzorami"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page56_formula2.png": [
+      "111 e CZŁON CAŁKUJĄCY Z INERCJĄ Transmitancje dyskretne wyznaczone odpowiednio: przekształceniem skokowo-inwariantnym, metodą Tustina i przekształceniem 6 okreś- lone są wzorami:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page56_formula4.png": [
+      "© CZŁON KUZNICZRUJĄCYI IUEALINY Transmitancje dyskretne wyznaczone odpowiednio: przekształceniem skokowo-inwariantnym, metodą Tustina i przekształceniem 6 okreś- lone są wzorami"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page56_formula5.png": [
+      "e CZŁON RÓŻNICZKUJĄCY RZECZYWISTY Transmitancje dyskretne wyznaczone odpowiednio: przekształceniem skokowo-inwariantnym, metodą Tustina i przekształceniem 6 okreś- lone są wzorami:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/wzory/k2_page57_formula1.png": [
+      "— — + e CZŁON OPÓŹNIAJĄCY (Z OPÓŹNIENIEM TRANSPORTOWYM) Transmitancje dyskretne wyznaczone odpowiednio: przekształceniem skokowo-inwariantnym, metodą Tustina i przekształceniem 6, przy za- | łożeniu że 7% jest całkowitą krotnością 7p, określone są wzorami:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/podstawy_automatyki/k2/detekcje/figury/k2_page57_figure1.png": [
+      "11.3 Przebieg ćwiczenia | 11.3.1 Wpływ szybkości próbkowania na odpowiedź czasową Dla zadanych parametrów k oraz 7' obiektu inercyjnego pierwszego rzędu kreślić wpływ szybkości próbkowania fp = TE na jakość odwzorowania (epoaczi skokowej układu ciągłego przez jego odpowiedniki c yskretne, | pacz przekształceniem skokowo-inwariantnym, Tustina oraz 0. 1.3.2 Analiza stabilności układu impulsowego W układzie pokazanym na rysunku 11.6 określić wpływ parametrów obiektu (k, T) oraz szybkości próbkowania fp = TE na stabilność układu mkniętego (na wartość krytyczną wzmocnienia kp). Na podstawie wykresu linii pierwiastkowych układów impulsowych, w których część ciągłą zdyskretyzowano przekształceniem skokowo-inwariantnym, Hook oraz 6, wyciągnąć wnioski co do przydatności wymienionych metod o określania stabilności układu ciągłego z regulatorem impulsowym."
+    ]
+  }
+]

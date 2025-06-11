@@ -1,0 +1,31 @@
+Stan układu — układ pierwszego rzędu, nieautonomiczny
+
+Dla układu nieautonomicznego, przy niezerowym napięciu u,(t,) przebieg napięcia
+wyjściowego możemy łatwo wyznaczyć korzystając ze splotu:
+
+<image/wzory/k/_page4_formula1.png>
+
+<image/wzory/k7_page4_formula2.png>
+
+Aby sprawdzić poprawność rozwiązania należy skorzystać z Twierdzenie Leibniza o
+różniczkowaniu pod znakiem całki:
+
+<image/wzory/k/_page4_formula3.png>
+
+POLITECHNIKA
+GDANSKA
+
+a
+e
+
+of
+0.
+0
+
+A
+m
+
+=Ź
+O
+=
+0

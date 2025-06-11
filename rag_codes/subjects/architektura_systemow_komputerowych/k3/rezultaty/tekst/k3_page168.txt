@@ -1,0 +1,36 @@
+158 8. Mechanizmy przyspieszające pracę komputerów
+
+<image/figury/k3_page168_figure1.png>
+
+Rysunek 8.2. Klasyfikacja Trelcavena
+
+przesłano komunikaty. Komputery tego typu zaproponował Ackerman w roku 1982 i na-
+zwano je komputerami o architekturze przepływowej (ang. data flow architecture).
+W modelu typu DESH założono sposób obliczeń opartych na sieci żądań rozpoczynającej
+się od żądania początkowego, a następne żądania są wywoływane w razie potrzeby dostępu
+do odpowiednich argumentów. Podobnie wykonuje obliczenia model typu DEME, choć
+z tą różnicą, że w tym przypadku każdy blok obliczeniowy ma swoją pamięć. Model typu
+PASH wymaga od każdego bloku obliczeniowego, aby był wyposażony w mechanizm
+rozpoznawania wzorca. Wzorzec rozpoczynający proces obliczeń jest porównywany
+z wzorcem przechowywanym w pamięci, a następnie każdy wykonywany blok oblicze-
+niowy generuje wzorzec wywołujący następny blok. Model typu PAME różni się od
+poprzedniego tym, że łatwiejsze są operacje równoległe, gdyż każdy blok obliczeniowy
+wyposażony jest we własną pamięć.
+
+Rozważania te ilustrują ideę poszukiwań takich architektur, które wykonują program
+w sposób jak najbardziej efektywny. Słowo efektywność można zastąpić słowem szybkość,
+choć będzie to pewne uproszczenie, gdyż nie brane są pod uwagę koszty rozwiązania. Aby
+zwiększyć szybkość wykonywania ciągu operacji, oprócz zastosowania szybszych układów,
+należy zastosować taką architekturę, która umożliwia współbieżność wykonywania
+operacji. Taką współbieżność umożliwiają architektury, które składają się z wielu bloków
+pracujących jednocześnie. Zwiększanie liczby bloków prowadzi oczywiście do zwiększenia
+kosztów. Często zależność ta jest nieliniowa i koszty rosną szybciej. Jedną z przyczyn tego
+jest fakt, że wraz ze złożonością układową trzeba wprowadzać dodatkowe elementy, jak
+na przykład elementy testujące. Wybór architektury jest zatem kompromisem pomiędzy
+szybkością i kosztem.
+
+8.2. PRZYSPIESZANIE WSPÓŁPRACY PROCESORA I PAMIĘCI
+8.2.1. KOLEJKA ROZKAZÓW
+
+Zwykle podczas wykonywania jednego rozkazu procesor kilkukrotnie żąda dostępu do
+pamięci. Każdy pierwszy cykl maszynowy jest cyklem pobrania rozkazu i zawsze dotyczy

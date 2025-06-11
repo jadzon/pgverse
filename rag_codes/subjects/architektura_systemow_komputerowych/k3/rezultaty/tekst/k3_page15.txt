@@ -1,0 +1,51 @@
+1. Wprowadzenie 5
+
+sposobu połączeń pomiędzy blokami, sposobu kodowania przesyłanej informacji, wyboru
+zasady działania układów sterujących itp. Zatem daną architekturę można różnie zapro-
+jektować, czyli może mieć ona różne implementacje. Opis implementacji ma dać od-
+powiedź na pytanie „jak działa?” dany komputer.
+
+Realizacją można nazwać konkretną postać implementacji. Na poziomie realizacji
+projektant może dokonać wyboru elementów, z których będzie budowany dany komputer,
+różnego ich rozmieszczenia, zasilenia, chłodzenia, ekranowania itp. Dlatego daną imple-
+mentację można też na różne sposoby zrealizować. Opis realizacji odpowiada na pytanie
+„Z czego jest zrobiony?” dany komputer.
+
+PARAMETRY KOMPUTERÓW
+
+Współczesne komputery różnią się między sobą parametrami. Niektóre z nich to: moc
+obliczeniowa liczona w liczbie operacji na jednostkę czasu np. MIPS (ang. mega-
+-instruction per second) lub dla operacji zmiennopozycyjnych MFLOPS (ang. mega
+floating point operations per second), szybkość transmisji danych do różnych urządzeń
+liczona w kilobajtach na sekundę (kB/s), pobierana moc mierzona w watach, niezawodność
+itp. Bardzo ważnym parametrem jest także koszt. Projektowanie komputerów to ciągły
+proces poszukiwania kompromisu pomiędzy parametrami a kosztem. Obecna technologia
+pozwala na budowanie komputerów o bardzo wielkich możliwościach. Jednak koszt takich
+urządzeń jest bardzo duży. I odwrotnie, w wielkich seriach budowane są bardzo tanie
+komputery o niezbyt wygórowanych parametrach.
+
+Sądzę, że po zapoznaniu się z treścią niniejszej książki Czytelnik lepiej zrozumie sens
+podanych stwierdzeń.
+
+ZAWARTOŚĆ KSIĄŻKI
+
+W rozdziale drugim niniejszej książki wyjaśniono ogólną koncepcję klasycznego kompu-
+tera o architekturze von Neumana.
+
+W rozdziale trzecim przedstawiono podstawy techniki cyfrowej, które stanowią wstęp
+do zrozumienia budowy klasycznego komputera. Najpierw omówiono elementy, z których
+składane są poszczególne bloki komputera, działanie tych elementów a także pokazano
+sposoby ich łączenia i wykorzystania. W dalszej części tego rozdziału zaprezentowano
+niektóre kody liczbowe oraz przedstawiono zasady wykonywania operacji arytmetycznych
+na liczbach binarnych.
+
+W następnych trzech rozdziałach opisano budowę trzech podstawowych bloków kom-
+putera. W rozdziale czwartym przedstawiono zasady działania procesorów. Pokazano ich
+organizację, przeznaczenie poszczególnych bloków, kolejne fazy wykonywania programu
+i współpracę procesora z pamięcią operacyjną i urządzeniami zewnętrznymi. Przedstawio-
+no tam także zbiór rozkazów typowego komputera i tryby adresowania argumentów dla
+tych rozkazów. Rozdział piąty jest poświęcony pamięciom, ich rodzajom, parametrom
+i hierarchii ich usytuowania w komputerach. W rozdziale szóstym opisano podstawowe
+sposoby współpracy urządzeń zewnętrznych z procesorem i z pamięcią operacyjną. Przed-
+stawiono także prostą klasyfikację urządzeń zewnętrznych oraz organizację transmisji
+danych.

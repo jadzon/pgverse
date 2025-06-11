@@ -1,0 +1,31 @@
+A.3. Układy sekwencyjne 183
+
+<image/tabele/k3_page193_table2.png>
+
+Graya. Stany automatu w pierwszej kolumnie (S,) nazywane są stanami pierwotnymi,
+a stany w czterech następnych kolumnach — stanami następnymi S'. Funkcja boolowska
+S'=f (X, S,) określa zależność pomiędzy stanami następnymi i pierwotnymi dla wszyst-
+kich wzbudzeń. Funkcje te wyznacza się bezpośrednio z tabeli przejść.
+
+<image/tabele/k3_page193_table1.png>
+
+W tablicy D.7 przedstawiono tablicę prawdy funkcji S'=f(X, S,) dla naszego
+przykładu. Ponieważ przykładowy automat jest dwustanowy, to wystarczy wyznaczyć
+jedną funkcję S'=f(X,, S,).
+
+W przypadku, gdy stany automatu są kodowane na k pozycjach binarnych, należy
+wyznaczyć k różnych funkcji.
+
+Realizację tego automatu na bramkach I-LUB-NIE pokazano na rys. D.10a, a na
+bramkach NOR na rys. D.10b. Jak z rysunku widać sekwencyjność układu (właściwość
+pamiętania) realizuje się wprowadzając sprzężenie zwrotne. Taki typ automatów należy do
+klasy automatów asynchronicznych, tj.takich, dla których w momencie zmiany
+wzbudzenia następuje zmiana stanu. Są to automaty o dużej szybkości działania, jednak
+wymagają od projektanta dużej wprawy, gdyż ich poprawne działanie wymaga bardzo
+dokładnej analizy. Dlatego często stosowane są automaty synchroniczne, w których zmiana
+stanu następuje nie w chwili zmiany wzbudzenia układu, ale w chwili określonej przez
+pojawienie się dodatkowego impulsu synchronizującego, czyli tzw. zegara.
+
+<image/figury/k3_page1figury/k3_page193_figure3.png>
+
+Rysunek D.10. Realizacja automatu z tablicy D.7

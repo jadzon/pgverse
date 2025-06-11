@@ -1,0 +1,38 @@
+5.2. Pamięci operacyjne 89
+
+zawartości (niekiedy wejście i wyjście stanowi jedna linia) i końcówki do uaktywniania
+elementu (wybierania). Ze względu na liczbę końcówek wybierających elementy pamięci
+dzielą się na: elementy z jednym wejściem wybierania i elementy z dwoma wejściami
+wybierania. Element pamięci z jednym wejściem jest prostszy, ale pamięć zbudowana z
+takich elementów wymaga bardziej rozbudowanego układu wybierania.
+
+jury/k3_page99_figure2.png '3_page99_figure1.pr
+
+Rysunek 5.3. Pamięć typu 2D: a) matryca i b) układy współpracy
+
+Element z jednym wejściem wybierania jest wybrany, gdy na końcówce wybierania
+jest odpowiedni sygnał (np. logiczna 1). Wówczas można dokonać odczytu lub zapisu. Na
+rysunku 5.3a pokazano 16 elementów z jedną końcówką wybierania, ułożonych w matrycę
+4 x 4. Są one połączone w taki sposób, że wejścia wybierania elementów znajdujących się
+w tym samym wierszu są połączone i końcówki danych (zakładamy, że wejście i wyjście
+stanowią jedną linię) elementów znajdujących się w tej samej kolumnie są połączone. Na
+rysunku 5.3b przedstawiono organizację pamięci zbudowanej z wykorzystaniem takiej
+matrycy. Na wyjściu dwuwejściowego dekodera pojawia się słowo kodu „I z 4” i w ten
+sposób wybierany jest tylko jeden z czterech wierszy, tj. jedna z 4 komórek pamięci.
+Każda komórka składa się z 4 elementów. Każda końcówka danej kolumny jest dołączona
+do wyjścia wzmacniacza zapisu i wejścia wzmacniacza odczytu. Wzmacniacze są stero-
+wane sygnałem R/W, który powoduje ich naprzemienną pracę, tj. wzmacniacz zapisu
+pracuje w cyklu zapisu, a wzmacniacz odczytu w czasie cyklu odczytu.
+
+Pamięć zawierająca elementy z jednym wejściem wybierania jest nazywana pamięcią
+z wybieraniem liniowym lub pamięcią typu 2D (ang. dimension). Wadą tego rozwiązania
+jest konieczność rozbudowywania dekodera wejściowego wraz ze wzrostem pojemności
+pamięci. Wielkość dekodera rośnie bardzo szybko wraz z liczbą komórek pamięci. Przy-
+kładowo dla pamięci o pojemności 64 K (długość słowa nie odgrywa w tym przypadku
+żadnej roli) dekoder jest 16-wejściowy i aż 2'5-wyjściowy. Technologicznie wykonanie
+takiego dekodera jest trudne. Wadę tę można wyeliminować stosując elementy pamięci
+o dwóch wejściach wybierania działających w taki sposób, że element jest aktywny
+wówczas, gdy na obu wejściach są odpowiednie sygnały (np. logiczne 1). Pamięć wy-
+korzystująca takie elementy jest nazywana pamięcią typu 3D.
+
+7 — Podstawy budowy i działania komputerów

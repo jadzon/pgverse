@@ -1,0 +1,24 @@
+72 4. Procesory
+
+<image/figury/k3_page82_figure1.png>
+
+Rysunek 4.8. Schemat prostego procesora bez układu sterowania
+
+<image/tabele/k3_page82_table1.png>
+
+W tablicy 4.2 przedstawiono wartości sygnałów m,, (m) i my, (mo,) programujące
+rejestr do wykonania odpowiedniej funkcji. Multiplekser na wejściu rejestru A jest stero-
+wany bitem m w taki sposób, że gdy m = I, to rejestr A jest zapisywany z magistrali, a gdy
+m = 0, to jest zapisywany z wyjścia ALU. Aby wykonać określony rozkaz, cały ten układ
+musi być odpowiednio wysterowany sygnałami m, Mg, M4 M, Mop Moj Sg S,> S2 S3
+IM. Zadanie to wypełnia układ sterowania procesorem. W następnym podrozdziale za-
+prezentowano sposób, w jaki budowane są układy sterujące.
+
+4.5, UKŁADY STEROWANIA
+
+Operacje zestawione w tablicy 4.1 układ z rysunku 4.8 wykonuje w jednym kroku. Ale
+zwykle lista rozkazów procesora zawiera także rozkazy złożone, które procesor wykonuje
+w kilku krokach. Na przykład rozkaz dodawania dwóch liczb jest wykonywany w jednym
+kroku, ale rozkazy mnożenia i dzielenia są wykonywane w kilku krokach. Rozkazy te są
+wykonywane jako ciąg dodawań i przesuwań. W celu zapewnienia właściwego wystero-
+wania układu procesora trzeba zapewnić odpowiednie sekwencje słów podawanych na

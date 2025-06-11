@@ -1,0 +1,55 @@
+5.3. Pamięci z dostępem cyklicznym 109
+Z ÓÓ A ÓÓ ZZA]
+
+o różnych kierunkach, co odpowiada odczytowi 0 lub 1. Jeżeli z powierzchnią magnetyczną
+współpracuje jedna głowica, to jest ona skokowo przesuwana wzdłuż promienia dysku i
+wówczas na jego powierzchni powstaje zbiór ścieżek (rys. 5.20b). Przesuwanie głowicy
+jest procesem wolnym (rzędu ms) i dlatego w niektórych pamięciach instalowano tyle
+głowic ile miało być ścieżek. Były to tzw. pamięci ze stałymi głowicami, których koszt
+był tak duży, że rozwiązanie to jest stosowane bardzo rzadko. W zależności od technologii
+liczba ścieżek na jednej powierzchni waha się od kilkudziesięciu do kilkuset. Ważnym
+parametrem pamięci dyskowych jest tzw. gęstość poprzeczna, czyli liczba ścieżek na
+jednostkę długości. Wynosi ona od 2 do 10 ścieżek na milimetr. Podobnie określa się
+gęstość wzdłużną — jako liczbę zapisanych bitów na jednostkę długości wzdłuż ścież-
+ki. Uzyskiwano wzdłużne gęstości zapisu rzędu ok. 200 bitów na milimetr (kilku tysięcy
+na cal).
+
+Niech promień dysku twardego wynosi 100 mm i niech uda się wykorzystać 3/4 tej
+długości na zapis ścieżek. Jeśli gęstość ścieżek wynosi 10/mm, to ich liczba wynosi 750.
+Jeżeli gęstość zapisu wzdłuż ścieżki wynosi 200 b/mm, to dla średniej długości ścieżki
+ok. 400 mm, jej pojemność wyniesie ok. 80 Kb. Pojemność takiego dysku wynosi zatem
+
+ok. 7,5 MB.
+
+Pamięci dyskowe są wykorzystywane jako pamięci masowe i ich najważniejszym
+parametrem jest pojemność. Celem zwiększenia pojemności stosuje się często pamięci
+z wieloma talerzami. Liczba talerzy może dochodzić do kilkudziesięciu, co pozwala na
+uzyskiwanie dużych pojemności, dochodzących do wielu gigabitów. Pamięci takie budo-
+wane są zwykle jako pamięci z ruchomymi głowicami w taki sposób, że z każdą powierz-
+chnią współpracuje jedna głowica i są one wspólnie przesuwane (rys. 5.20c). Ramię
+z głowicami jest sterowane wspólnie i ustawiane nad określonymi ścieżkami tworzącymi
+tzw. cylinder.
+
+W pamięciach dyskowych każdą ścieżkę dzieli się na kilkanaście lub kilkadziesiąt
+części zwanych sektorami. Mogą być to równe części (ang. hard sector) zaznaczone
+trwale na nośniku tzw. otworami indeksowymi lub nierówne części zaznaczane poprzez
+odpowiedni zapis magnetyczny (ang. sofł sector). Na rysunku 5.20b pokazano jak można
+podzielić ścieżkę na 8 sektorów stałej wielkości. Przyjmując parametry z podanego już
+przykładu otrzymamy, że każdy sektor ma pojemność 10 Kb. Na jednym talerzu można
+uzyskać 1500 ścieżek (talerz dwustronny) po 8 sektorów każda, co daje 12000 sektorów.
+Zatem potrzeba 14 bitów dla zaadresowania wszystkich sektorów. Jeżeli przykładowa
+pamięć ma 8 talerzy o 16 powierzchniach, to adres składa się z 3 części:
+
+— numeru powierzchni (numer głowicy) — 4 bity,
+
+— numeru cylindra (numer ścieżki) — 11 bitów,
+
+— numeru sektora — 3 bity.
+
+Całkowita pojemność takiej pamięci wynosi ok. 120 MB.
+
+Na rysunku 5.21 pokazano przykładowy format sektora dysku. Każdy sektor składa
+się z dwóch części: pola nagłówka (ang. identificator field) i pola danych. Pomiędzy tymi
+częściami i pomiędzy sektorami są przerwy międzyblokowe (ang. gap). Przerwy między
+nagłówkiem i polem danych zajmują 41 bitów, a przerwy między sektorami 37 (17 przed
+sektorem i 20 za sektorem). Pole nagłówka składa się z bajtu synchronizacji (por. rozdz. 6),

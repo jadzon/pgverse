@@ -1,0 +1,28 @@
+6.4. Systemy wieloprocesorowe 167
+
+ 
+
+Rysunek 8.9. Topologie połączeń procesorów w systemach wieloprocesorowych
+
+struktura połączeń opiera się na trzech podstawowych konfiguracjach pokazanych na
+rysunku 8.9. Najprostsza konfiguracja opiera się na połączeniu procesorów jedną magist-
+ralą. W takim układzie jednocześnie realizowane jest tylko jedno połączenie. Oznacza to,
+że tylko dwa elementy systemu porozumiewają się jednocześnie. Znacznie wydajniejsza,
+ale droższa, jest konfiguracja wielomagistralowa pokazana na rysunku 8.9b. Liczba możli-
+wych jednoczesnych połączeń jest równa liczbie magistral.
+
+Na rysunku 8.9b pokazano strukturę dwumagistralową, która pozwala na jednoczesne
+przeprowadzenie 2 transmisji. Najkosztowniejsza jest konfiguracja typu cross-bar umożli-
+wiająca realizację takiej liczby jednoczesnych połączeń, która jest równa liczbie proceso-
+rów. Matryca procesorów i pamięci o wymiarach N x M tworzona jest w taki sposób, że
+N procesorów steruje N wierszami tej matrycy, a do M kolumn jest dołączonych M mo-
+dułów pamięci. W każdym wierszu zachodzi tylko jedno połączenie, gdyż jeden procesor
+odwołuje się tylko do jednej pamięci. Natomiast w każdej kolumnie może zachodzić
+N połączeń, gdyż do danej pamięci mogą żądać dostępu nawet wszystkie procesory.
+Dlatego taki system nazywany jest systemem z pamięcią wielobramową (ang. multiport
+memory).
+
+Najpowszechniej stosowaną konfiguracją jest konfiguracja magistralowa. Oczywiście
+jej wadą jest konieczność dzielenia dostępu do pamięci i urządzeń zewnętrznych pomiędzy
+procesory. Wymaga to zapewnienia mechanizmu sterującego dostępem. Jednym z moż-
+liwych rozwiązań jest wyróżnienie jednego z procesorów i pozostawienie mu decyzji

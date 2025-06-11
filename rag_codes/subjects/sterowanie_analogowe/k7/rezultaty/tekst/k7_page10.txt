@@ -1,0 +1,22 @@
+Stan układu- układy wyższych rzędów, jednorodne
+
+Rozwiązanie z zastosowaniem przekształcenia Laplace 'a:
+
+<image/wzory/k7/_page10_formula1.png>
+<image/wzory/k/_page10_formula2.png>
+<image/wzory/k/_page10_formula3.png>
+
+<image/wzory/k/_page10_formula4.png>
+
+<image/wzory/k7_page10_formula5.png>
+
+<image/wzory/k/_page10_formula6.png>
+
+ 
+
+POLITECHNIKA
+GDANSKA
+
+ 
+
+SMOUBJS 8|8pOJN

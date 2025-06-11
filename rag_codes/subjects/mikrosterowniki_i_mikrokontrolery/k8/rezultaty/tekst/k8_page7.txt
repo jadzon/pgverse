@@ -1,0 +1,39 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 9
+
+12. Budowa, zasada działania i typowe parametry wewnętrznego przetwornika A/C
+
+w mk.
+
+(dokładniejszy opis przetworników A/C znajduje się w Tomie I materiałów do wykładu oraz w
+dokumentacjach do poszczególnych mikrokontrolerów)
+
+<image/figury/k8_page7_figure1.png>
+
+Typowe parametry przetworników A/C w mk:
+
+długość słowa (najczęściej 10 bitów),
+
+czas konwersji (typowo od kilku do kilkunastu s),
+
+rozdzielczość (zwykle I LSB — 5 mV przy zakresie 5V dla długości słowa 10 bitów),
+błąd całkowity (około 2 LSB).
+
+Aby dokonać pomiaru napięcia należy wykonać następujące kroki:
+
+wybrać źródło referencyjne: zewnętrze na pinie AREF, napięcie zasilania mk Vcc lub z
+wewnętrznych bloków napięć referencyjnych,
+
+ustalić sposób justowania wyniku konwersji w lewo lub w prawo,
+
+wybrać kanał konwersji, i ewentualnie wzmocnienie kanału dla trybu różnicowego,
+ustawić podział sygnału zegarowego taktującego konwersją,
+
+ewentualnie odblokować przerwanie od zakończenia konwersji,
+
+włączyć przetwornik A/C,
+
+uruchomić konwersję ustawiając odpowiedni bit w rej. sterującym A/C — dla programowego trybu
+wyzwalania przetwomika A/C,
+
+konwersja kończy się ustawieniem flagi przerwania, co generuje przerwanie, wynik konwersji
+znajduje się w parze rej. danych przetwornika A/C.

@@ -1,0 +1,24 @@
+Definicja
+
+ 
+
+Funkcją opisującą statycznego członu nieliniowego nazywać będziemy wielkość J(M) określaną
+jako stosunek amplitudy zespolonej pierwszej harmonicznej odpowiedzi u(t) wymuszonej
+sygnałem sinusoidalnym e(t)= M sin (wt) w stanie ustalonym, do wartości zespolonej tego
+wymuszenia
+
+<image/wzory/k/_page158_formula1.png>
+
+eoblnsido eloy4un4
+
+<image/wzory/k7/_page158_formula2.png>
+
+Funkcja opisująca jest więc odpowiednikiem transmitancji widmowej członu liniowego.
+Zauważmy że w odróżnieniu od transmitancji widmowej członu liniowego funkcja opisująca
+układu nieliniowego nie zależy od pulsacji wymuszenia lecz zależy od jego amplitudy
+
+ 
+
+eż  A[
+
+GDAŃSKA

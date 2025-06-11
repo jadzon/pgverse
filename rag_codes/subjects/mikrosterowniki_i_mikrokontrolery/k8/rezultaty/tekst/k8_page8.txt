@@ -1,0 +1,43 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 10
+
+13. Sterowanie oraz sposób odczytu i zapisu danych do wewnętrznej pamięci
+
+EEPROM.
+
+Rejestry służące do obsługi pamięci EEPROM:
+
+rejestr sterujący, w którym uruchamia się procedurę odczytu lub zapisu do pamięci,
+
+rejestr danych przechowujący daną, która ma być wpisana pod adres wskazywany przez rejestry
+adresu lub zawiera daną odczytaną spod wybranego adresu,
+
+jeden lub dwa rejestry adresu zawierajce adres komórki pamięci EEPROM, na której będzie
+wykonana operacja zapisu lub odczytu.
+
+Generalnie odczyt z pamięci EEPROM przebiega według następującej procedury:
+do rejestrów adresu wpisuje się adres bajtu w pamięci EEPROM, spod którego chcemy pobrać daną,
+ustawiamy bit uruchamiający proces odczytu w rejestrze sterującym,
+
+czekamy, aż ustawi się flaga informująca o zakończeniu odczytu (najczęściej wyzerowanie bita
+uruchamiającego proces odczytu),
+
+w rejestrze danych znajduje się już nasza dana.
+
+Zapis danej do pamięci najczęściej przebiega według następującej procedury:
+
+czekamy aż zakończy się poprzedni cykl zapisu (zapis trwa około od 2ms do 4ms), testując flagę
+informującą o zakończeniu zapisu (najczęściej wyzerowanie bita uruchamiającego proces zapisu).
+
+do rejestrów adresu wpisuje się adres bajtu w pamięci EEPROM, do którego chcemy wpisać daną,
+do rejestru danych wprowadzamy naszą daną,
+
+odblokowujemy zapis do pamięci EEPROM ustawiając odpowiedni bit lub wykonując odpowiednią
+sekwencję wpisów do rejestrów sterujących (warto przedtem zablokować wszystkie przerwania),
+
+ustawiamy bit uruchamiający proces zapisu do EEPROM,
+
+14. Schematyczna budowa sterownika komunikacji szeregowej w mk oraz
+
+realizowane przez niego funkcje.
+
+<image/figury/k8_page8_figure1.png>

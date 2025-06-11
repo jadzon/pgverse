@@ -1,0 +1,24 @@
+Pozycjonowanie biegunów — problem nadążania ŚREĘ
+
+ 
+
+ 
+
+Aby zapewnić zerowy uchyb położeniowy, do układu ze sprzężeniem od stanu
+należy dodać dodatkowy układ całkujący. W przypadku układu SISO uzyskamy
+układ sterowania o następującej strukturze:
+
+SMOUBJS 8|8pOJN
+
+<image/figury/k/_page98_figure1.png>
+
+Wykorzystując koncepcję wprowadzenia dodatkowego integratora
+wprowadzamy nową zmienną stanu x;(£)
+
+<image/wzory/k/_page98_formula1.png>
+A
+
+<image/wzory/k/_page98_formula2.png>
+
+POLITECHNIKA
+GDANSKA

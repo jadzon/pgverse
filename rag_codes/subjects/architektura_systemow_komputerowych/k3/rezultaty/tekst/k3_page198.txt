@@ -1,0 +1,66 @@
+188 Dodatek B
+
+są sytuacjami wyjątkowymi i wraz z innymi (błędy adresowania, nielegalna instrukcja,
+próba dzielenia przez zero itp.) mają przyporządkowane sobie słowo adresowe (wektor).
+Wszystkie wektory, w liczbie 256, stanowią tablicę, która umieszczona jest w pamięci
+poczynając od adresu 0.
+
+Procesor ma wbudowany mechanizm do pracy wieloprocesorowej polegający na tym,
+że przyjmuje sygnał żądania zwolnienia magistrali (BR) wysyłany przez inny moduł,
+który chce sterować transmisjami na szynie. Po zakończonym cyklu maszynowym procesor
+zwalnia szynę sygnalizując ten fakt sygnałem (BG). Moduł, który przejmuje sterowanie
+szyną potwierdza to sygnałem (BGACK).
+
+Procesor ma także wbudowany mechanizm współpracy z modułami (pamięci i urzą-
+dzenia zewnętrzne) projektowanymi dla jego 8-bitowych poprzedników. Dlatego został
+wyposażony w linie sterowania szyną mikroprocesora M6800 (E, VMA i VPA). Pozostałe
+sygnały to:
+
+— dwukierunkowa linia RESET dla inicjalizacji pracy procesora (wejściowy sygnał)
+lub dla inicjalizacji pracy urządzeń zewnętrznych podczas wykonywania rozkazu
+RESET (wyjściowy sygnał),
+
+— dwukierunkowa linia HALT jest przeznaczona do zatrzymania pracy procesora
+(sygnał wejściowy) lub do sygnalizacji zatrzymania procesora np. przez wykrycie
+błędu transmisji (sygnał wyjściowy),
+
+— linia wejściowa BERR wskazująca procesorowi zaistniały błąd transmisji na ma-
+gistrali.
+
+Lista rozkazów procesora zawiera 56 typów rozkazów, które można wykorzystywać
+w różnych trybach adresowania. Istnieje 6 podstawowych trybów adresowania:
+
+— rejestrowe (dla danych i adresów),
+
+— rejestrowe wykorzystujące rejestry specjalne (PC, SP, rejestr stanu),
+
+— bezpośrednie (krótkie i długie),
+
+— względne (w trybie prostym względem licznika rozkazów, a w trybie złożonym
+
+względem licznika i indeksu),
+— pośrednie (rejestrowym i złożonym),
+— natychmiastowe.
+
+B.2. PENTIUM
+
+Procesor Pentium został opracowany jako przedłużenie linii mikroprocesorów firmy Intel
+znanych jako 8086, 80286, 80386 i 80486. Procesory te są wykorzystywane w komputerach
+osobistych zgodnych ze standardem IBM PC. Procesor Pentium jest produkowany jako
+układ scalony w obudowie z 273 wyprowadzeniami.
+
+Procesor składa się z następujących bloków (rys. D.16):
+
+— podwójnego bloku ALU wraz z układem potoku instrukcji
+— jednostki arytmetycznej zmiennopozycyjnej,
+
+— podwójnej pamięci kieszeniowej (dla rozkazów i danych),
+— układu prognozowania adresu skoku,
+
+— układu stronicowania,
+
+— bloku łącza z magistralą,
+
+— układu sterowania.
+
+,

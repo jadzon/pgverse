@@ -1,0 +1,49 @@
+136 6. Urządzenia zewnętrzne
+
+<image/figury/k3_page146_figure1.png>
+
+Rysunek 6.15. Współpraca bloków komputera podczas transmisji DMA
+
+Na rysunku 6.15 pokazano konfigurację systemu komputerowego zawierającego ste-
+rownik transmisji DMA. Na rysunku wyróżniono sygnały szyny sterującej, które biorą
+udział w inicjalizacji transmisji DMA. Przykładowy sterownik dysku wysyła sygnał żąda-
+nia transmisji DRQ (ang. DMA request) do sterownika DMA, który na tej podstawie
+wysyła do procesora sygnał żądania wstrzymania HOLD. Po zakończeniu cyklu maszyno-
+wego, w czasie którego zgłoszono sygnał wstrzymania, procesor potwierdza wstrzymanie
+pracy wysyłając do sterownika sygnał HLDA. Sterownik DMA wysyła z kolei sygnał
+potwierdzenia transmisji DACK (ang. DMA acknowledge) do sterownika dysku. Wówczas
+zaczyna się transmisja, za którą odpowiedzialny jest sterownik DMA. Przejmuje on stero-
+wanie pracą systemu, tj. wysyła adresy pamięci i dwa stroby. Stroby te to albo:
+
+— strob odczytu pamięci i strob zapisu urządzenia zewnętrznego w czasie cyklu
+
+odczytu (odczytu pamięci), albo
+
+—  strob zapisu pamięci i odczytu urządzenia zewnętrznego w czasie cyklu zapisu.
+
+Przed każdą transmisją odpowiedni kanał sterownika DMA musi zostać przez procesor
+zaprogramowany. Programuje się trzy podstawowe parametry transmisji:
+
+l) kierunek przesyłania,
+
+2) długość transmisji,
+
+3) początkowy adres obszaru pamięci.
+
+Kierunek transmisji pomiędzy pamięcią a urządzeniem zewnętrznym zależy od cyklu
+DMA, tj. może to być odczyt (kierunek z pamięci do urządzenia) albo zapis (kierunek od
+urządzenia do pamięci). Niekiedy stosuje się tzw. cykl weryfikacji, który polega na tym,
+że po cyklu odczytu, tj. po zapisie urządzenia zewnętrznego, dokonuje się sprawdzenia
+poprawności zapisu. Cykl ten polega na tym, że odczytuje się informację poprzednio
+zapisaną i porównuje się ją z zawartością obszaru pamięci, która była transmitowana.
+Długość transmisji jest zaprogramowana jako liczba transmitowanych słów (lub bajtów)
+i określa liczbę dostępów do pamięci i jednocześnie liczbę adresów pamięci. Ponieważ
+przechowywanie wszystkich adresów byłoby bardzo nieefektywne, więc zawsze zakłada
+się spójny obszar pamięci. W takim przypadku do przeprowadzenia transmisji wystarczy
+znać długość transmisji i adres początkowy pamięci. Stosowane są dwie podstawowe
+techniki transmisji DMA: transmisja blokowa i transmisja kradzieży cykli. Transmisja
+blokowa (ang. burst mode) polega na tym, że przesłania DMA są prowadzone nie-
+przerwanie pomiędzy dwoma cyklami maszynowymi procesora. Technika kradzieży cykli
+(ang. cycle stealing) polega na tym, że pomiędzy dwoma cyklami maszynowymi procesora
+dokonywana jest transmisja DMA tylko jednego słowa. Technika ta pozwala na współ-
+bieżną pracę procesora i urządzenia żądającego transmisji DMA, a więc jednoczesnego

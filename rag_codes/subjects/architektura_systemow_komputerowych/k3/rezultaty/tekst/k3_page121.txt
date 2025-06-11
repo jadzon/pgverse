@@ -1,0 +1,53 @@
+5.4. Pomięć taśmowa 11]
+ZZ ZZ ZZ Z yy
+
+Na rysunku 5.22 pokazano organizację przykładowej pamięci dyskowej z przesuwa-
+nymi głowicami. Sygnały do współpracy z magistralą adresową są podzielone na trzy
+grupy: bity adresu powierzchni, bity adresu cylindra (Ścieżki) i bity adresu sektora.
+Współpraca z komputerem odbywa się w dwóch fazach. Pierwsza faza następuje po
+przesłaniu z komputera adresu cylindra. Wówczas kilka milisekund trwa pozycjonowanie
+głowic, aż do momentu pojawienia się sygnału STOP. W drugiej fazie podawana jest
+pozostała część adresu, która powoduje wybranie odpowiedniej głowicy (adres po-
+wierzchni) i odpowiedniego momentu czasu, tj. momentu pojawienia się impulsu indeksu
+(adres sektora), co jest sygnalizowane pojawieniem się sygnału SEKTOR. Moment ten
+rozpoczyna odczyt lub zapis sektora. Informacja na wejściu i wyjściu pamięci powinna
+być w postaci równoległej (bajty) i dlatego wzmacniacze zapisu i odczytu współpracują
+z układami przesuwania. Taktowanie rejestrów przesuwających odbywa się zgodnie
+z przebiegiem zegarowym, który powstaje na wyjściu specjalnego wzmacniacza odczytu-
+jącego, tzw. ścieżkę zegarową. Ścieżka ta jest nagrana zgodnie z przyjętą dla danego
+dysku częstotliwością odpowiadającą gęstości zapisu.
+
+Sterowanie odczytem i zapisem pamięci dyskowej odbywa się poprzez wejścia steru-
+jące RD (odczytu) i WR (zapisu). Celem zabezpieczenia powierzchni przed zniszczeniem
+przez głowicę (głowice unoszone są aerodynamicznie nad powierzchnią i podczas wy-
+łączenia napięcia zasilania mogą spaść na nośnik) w momencie zaniku napięcia zasilania
+sprowadza się głowice nad ścieżkę zerową (wejście sterujące Przesuń). Po prawidłowym
+przesunięciu pamięć sygnalizuje ten fakt sygnałem Ścieżka zerowa. W niektórych rozwią-
+zaniach pamięci dyskowych dodawane są inne funkcje jak:
+
+— kasowanie informacji,
+
+— zezwolenie na zapis,
+
+— zapis z ochroną (uniemożliwienie powtórnego zapisu),
+
+— wykrywanie zaniku napięcia zasilania,
+
+— korekcja błędów (słowo CRC),
+
+— różne szybkości przesuwu głowicy.
+
+5.4. PAMIĘĆ TAŚMOWA
+
+W pamięciach taśmowych informacja jest zapisywana na nośniku magnetycznym poło-
+żonym na elastycznym poliestrowym podkładzie. Klasyczna taśma magnetyczna ma szero-
+kość %:" i długość 2400 stóp (szerokość ok. 12,7 mm i długość ok. 750 m). Jest ona
+nawijana na standardowe krążki o średnicy 10,5" (ok. 266,5 mm). Szybkość przewijania
+taśmy osiąga nawet 6 m/s, co wymaga specjalnego prowadzenia i naciągu taśmy oraz
+specjalnego napędu. Zapisu na taśmę dokonuje się w 9 rządkach (rys. 5.23) z gęstością
+standardową np. 640 b/mm. Przy szybkości przewijania 6 m/s daje to szybkość transmisji
+384 KB/s. Początek taśmy jest oznaczony znacznikiem BOT (ang. begining of the tape),
+
+<image/figury/k3_page121_figure1.png>
+
+Rysunek 5.23. Rozmieszczenie informacji na taśmie magnetycznej

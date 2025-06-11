@@ -1,0 +1,18 @@
+138 6. Urządzenia zewnętrzne
+
+A,, A>, A,, A, ..., B,, B», B,, B,, ..., C,, C,, C,, C,. Kanał odbiera te ciągi z różnymi
+szybkościami i tworz ieden ciag nrzesvłanv do komnutera. nn.
+
+<image/wzory/k3_page148_formula1.png>
+
+W tym pizyktauzie ŁAOZUNO, ŻE ULŁĄUŁENIE L PiacujE £ aj WIĘKSZĄ SŁYURUŚCIĄ.
+
+Kanał selektorowy współpracuje z szybkimi urządzeniami, więc w danej chwili tylko
+jedno z nich może być aktywne. Dlatego kanał ten jest wyposażony w jedną magistralę, do
+której dołączone są wszystkie urządzenia. Na rysunku 6.16 pokazano schematycznie
+połączenia sterowników urządzeń znakowych z kanałem multiplekserowym (rys. 6.16a)
+i sterowników urządzeń szybkich z kanałem selektorowym (rys. 6.16b). Z rysunku widać,
+że kanał selektorowy w jednym czasie obsługuje tylko jedno urządzenie, gdyż wszystkie
+urządzenia są dołączone do kanału przez wspólną szynę. Natomiast kanał multiplekserowy
+może jednocześnie obsługiwać wiele urządzeń zewnętrznych, gdyż każde z nich dołączone
+jest do innego wejścia kanału.

@@ -1,0 +1,52 @@
+118 6. Urządzenia zewnętrzne
+
+a więc 11 razy dłużej. Jeżeli założyć, że procesor sprawdza stan sterownika klawiatury co
+$ms i że proces ten trwa 0,l ms, to czas wykonania programu wydłuży się jeszcze
+o czas t. gdzie
+
+<image/wzory/k3_page128_formula1.png>
+Unikiięuie tan uuzegu Zwiększenia czasu wykonywania programu jest mozliwe przy
+zastosowaniu sprzętowego systemu przerwań, gdzie urządzenie sygnalizuje procesorowi
+
+swą gotowość. Tę zaletę okupuje się rozbudową układu, co zwiększa koszt systemu.
+
+Jak już wcześniej powiedziano, obsługa przerwania polega na wywołaniu odpowied-
+niego podprogramu. Ale moment wywołania go nie może być przypadkowy. Procesor
+reaguje na sygnał żądania przerwania tylko na końcu cyklu instrukcyjnego. Chodzi o to,
+aby mógł być zapamiętany stan procesora przed rozpoczęciem wykonywania podprogramu
+i aby po jego zakończeniu procesor mógł powrócić do tego samego miejsca i w takim
+samym stanie. Dlatego po odebraniu sygnału przerwania procesor wykonuje program
+zapamiętania swojego stanu, tj. adresu ostatnio wykonywanej instrukcji oraz zawartości
+swoich rejestrów. Wówczas po zakończeniu wykonywania podprogramu obsługi danego
+przerwania procesor, po odczytaniu zapamiętanego stanu, będzie mógł powrócić do stanu,
+w którym był przed przyjęciem przerwania. Zapamiętanie stanu procesora zwykle polega
+na przesłaniu adresu ostatniej instrukcji i zawartości rejestrów na stos (por. rozdz. 4).
+Ułatwia to realizację tzw. wielopoziomowych systemów przerwań, gdzie dopuszcza się
+możliwość przerwania wykonywania podprogramu obsługi jakiegoś przerwania przez
+przerwanie o wyższym priorytecie. Każde przerwanie powoduje odłożenie na stosie stanu
+procesora, a każdy powrót z podprogramu obsługi powoduje zdjęcie ze stosu stanu pro-
+cesora.
+
+6.3.3. SPRZĘTOWY SYSTEM PRZERWAŃ
+
+Periodycznego sprawdzania stanu urządzeń można uniknąć wtedy, gdy każdy sterownik
+wyposażono w możliwość zgłaszania sygnału przerwania do specjalnego układu, tzw. ukła-
+du przerwań. Sygnał będzie odbierany przez ten układ, który z kolei będzie powiadamiał
+procesor o fakcie zgłoszenia przerwania. Dwie podstawowe funkcje systemu przerwań,
+tj. rozróżnienie źródła przerwania i ustalenie kolejności obsługi mogą być wykonywane
+bądź programowo, bądź sprzętowo. W pierwszym przypadku zadaniem układu przerwań
+jest wyłącznie powiadomienie procesora o fakcie zaistnienia przerwania. Po odebraniu
+takiego sygnału procesor przerywa wykonywanie programu głównego i inicjuje wykonanie
+programu przeglądania stanów urządzeń. Zysk czasowy, w stosunku do poprzedniego
+rozwiązania, polega na tym, że procesor odczytuje stany urządzeń nie co zadany czas, ale
+w momencie zgłoszenia przerwania. Ten sposób pracy jest nazywany przerwaniem z prze-
+glądaniem (ang. poll and interrupt). Układ przerwań jest w tym przypadku bardzo prosty
+składa się bowiem z jednej bramki sumy, na której wejścia podawane są sygnały żądań
+przerwania z poszczególnych sterowników. W drugim przypadku, tj. sprzętowego roz-
+poznawania przerwań i ustalania kolejności obsługi, układ jest bardziej złożony. Jego
+zadania to:
+
+— rozróżnienie źródła przerwania polegające na przesłaniu procesorowi numeru
+
+(adresu) urządzenia żądającego przerwania,
+— wyznaczenie kolejności obsługi urządzeń.

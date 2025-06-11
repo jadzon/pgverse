@@ -1,0 +1,51 @@
+8.1. Klasyfikacja komputerów 157
+
+<image/tabele/k3_page167_table1.png>
+
+Rysunek 8.1. Klasyfikacja Flynna
+
+wany program można zastąpić ciągiem bloków obliczeniowych, których kolejność i mo-
+menty rozpoczęcia ich wykonywania są sterowane przez tzw. mechanizm sterujący.
+Wyróżnia się cztery rodzaje mechanizmów sterujących:
+
+1) samosterujące (ang. control driven), gdzie każdy blok obliczeniowy określa jaki
+następny blok ma zostać wykonany,
+
+2) sterowane argumentami (ang. data driven), gdzie każdy blok obliczeniowy ma
+ściśle wyznaczoną liczbę argumentów, a rozpoczęcie wykonywania bloku oblicze-
+niowego następuje w momencie, gdy stają się one dostępne,
+
+3) sterowane żądaniami (ang. demand driven), gdzie każdy blok obliczeniowy wyko-
+nuje się tylko wtedy, gdy wyniki tego bloku są potrzebne do wykonania innego
+bloku obliczeniowego,
+
+4) sterowane wzorcem (ang. pattern driven), gdzie blok obliczeniowy jest wykony-
+wany, gdy pojawi się pewien określony wzorzec generowany przez inny blok
+obliczeniowy.
+
+Podobnie wprowadzono pojęcie mechanizmu wymiany danych (ang. data mechanism)
+zdefiniowane jako sposób wymiany danych pomiędzy blokami obliczeniowymi. Wprowa-
+dzono dwa takie mechanizmy:
+
+1) mechanizm wspólnych danych (ang. shared data) zakładający, że dla wszystkich
+bloków obliczeniowych w pamięci komputera znajduje się tylko jeden zbiór
+argumentów,
+
+2) mechanizm przesłań komunikatów (ang. message passing) zakładający, że każdy
+blok obliczeniowy ma swój własny zbiór argumentów i jeżeli wyniki jakiegoś
+bloku stanowią argumenty dla drugiego bloku, to wyniki te są przesyłane do tego
+bloku jako komunikat.
+
+Na podstawie opisanych mechanizmów wprowadzono 8 typów modeli obliczeniowych.
+Każdemu mechanizmowi sterującemu można przypisać mechanizm wymiany danych. Na
+rysuneku 8.2 przedstawiono tę klasyfikację. Model typu COSH odpowiada tradycyjnej
+architekturze von Neumana. Model typu COME odzwierciedla system komputerowy, w
+którym zachodzą procesy komunikacyjne (system wielodostępny) polegające na
+przesłaniach komunikatów. Model typu DASH zakłada istnienie w systemie elementów
+wykonujących równocześnie wiele bloków obliczeniowych. Jest to model komputerów z
+równoległym wykonywaniem zadań, ale zadania te korzystają z tej samej pamięci
+(poważnym problemem staje się problem synchronizacji dostępu do zasobów). Komputery
+typu DAME są także komputerami równoległymi, choć operacje wykonywane są
+współbieżnie tylko wtedy, gdy argumenty dla tych operacji są dostępne, a więc gdy
+
+12 — Podstawy budowy i działania komputerów

@@ -1,0 +1,40 @@
+150 7. Elementy oprogramowania komputerów
+
+— stan procesora (ang. context data),
+— stan zleceń operacji wejścia-wyjścia (ang. //O status information),
+— licznik czasu pracy (ang. accounting information).
+
+Identyfikator procesu służy do wygodnego manipulowania informacjami o procesie. Znacz-
+nik stanu wskazuje na stan w jakim znajduje się proces. Wskaźnik priorytetu określa
+hierarchię ważności procesu. Licznik rozkazów służy do przechowywania adresu początko-
+wego danego programu, wskaźnik pamięci do przechowywania adresu końcowego, znacz-
+nik stanu procesora do przechowania danych początkowych programu, zawartości rejestrów
+itp., a stan zleceń operacji wejścia-wyjścia przechowuje wykaz urządzeń zewnętrznych
+potrzebnych do wykonania danego programu. Licznik czasu pracy przechowuje tzw.
+ograniczniki czasowe danego programu. Są to wartości liczbowe określające czas, w ciągu
+którego program może przebywać w stanie wykonywania. Jeśli czas ten przekroczono, to
+system operacyjny sam spowoduje przejście tego programu w stan zatrzymania.
+
+<image/figury/k3_page160_figure1.png>
+
+Rysunek 7.3. Kolejność działania programu pod systemem operacyjnym SO
+
+Dalej będzie rozpatrzony przykład, w którym założono, że w pamięci komputera
+znajdują się trzy programy i jądro systemu operacyjnego (ang. nucleus) nazwane SO
+(rys. 7.3). Założono także, że wykonywany jest program A, a programy B i C są w stanie
+gotowości (rys. 7.3a). Jaką akcję podejmuje procesor, kiedy w czasie wykonywania pro-
+gramu A wystąpi sytuacja wyjątkowa (przerwanie), która wprowadza program A w stan
+oczekiwania? Powstanie sytuacji wyjątkowej powoduje, że procesor rozpoczyna wykony-
+wanie programu należącego do jądra systemu operacyjnego (rys. 7.2b). Program ten decy-
+duje o sposobie reakcji na zgłoszone przerwanie oraz o dalszej akcji procesora, tj. o przejś-
+ciu któregoś z pozostałych programów w stan wykonywania. Niech do wykonywania
+wybrano program C. Powstaje sytuacja przedstawiona na rysunku 7.2c. Program A znajduje
+się teraz w stanie oczekiwania, program B w stanie gotowości, a program C w stanie
+wykonywania.
+
+Programy szeregujące ustawiają procesy w trzy kolejki (ang. queue). Program szeregu-
+jący wysokiego poziomu zajmuje się procesami w stanie nowym, program szeregowania
+krótkoterminowego zajmuje się procesami w stanie gotowości i program szeregowania
+zleceń wejścia-wyjścia zajmuje się procesami w stanie oczekiwania. Obsługa kolejek
+może być realizowana według różnych algorytmów. Aby wybrać odpowiedni algorytm
+trzeba dokonać ich porównania stosując pięć następujących kryteriów:

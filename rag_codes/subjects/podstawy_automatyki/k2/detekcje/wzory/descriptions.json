@@ -1,0 +1,654 @@
+[
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula8.png",
+    "description": "Równanie przedstawia amplitudę funkcji G(jωr) w postaci ułamka, gdzie k jest stałą, ωr jest częstością rezonansową, a ε jest współczynnikiem tłumienia."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page26_formula2.png",
+    "description": "Zdjęcie przedstawia dwa równania matematyczne opisujące model regulacji czasowej (G_R(s)) i wyjście (u(t)) w kontekście systemów kontrolnych. Równanie G_R(s) zawiera parametry k_P, T_i, a równanie u(t) zawiera k_P, e oraz T_i."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page6_formula6.png",
+    "description": "To jest równanie opisujące proces przetwarzania sygnału w systemie kontroli, gdzie \\( y(t) \\) to wyjście, \\( G(s) \\) to funkcja przenikania, a \\( U(s) \\) to wejście. Równanie przedstawia transformację Laplace'a od wejścia do wyjścia."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page49_formula7.png",
+    "description": "Zdjęcie przedstawia równanie różniczkowe pierwszego rzędu, które opisuje dynamikę systemu. Równanie to jest podzielone na dwie części: pierwsza część to równanie różniczkowe pierwszego rzędu dla zmiennej \\( \\dot{e}(t) \\), a druga to warunek graniczny dla \\( u(t) \\)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page7_formula2.png",
+    "description": "To jest równanie, które przedstawia odwrotną transformację Laplace'a dla funkcji g(t). Równanie to mówi, że funkcja g(t) jest równa odwrotnej transformacji Laplace'a funkcji G(s)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page7_formula3.png",
+    "description": "To jest równanie dla systemu kontroli, gdzie \\( G(s) = k \\) jest transferowym funkcjami, a \\( y(t) = ku(t) \\) jest odpowiedzią na wejście \\( u(t) \\)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page13_formula4.png",
+    "description": "Zdjęcie przedstawia dwie równości matematyczne, gdzie U(jω) jest równe U, a Y(jω) jest równe Y pomnożone przez e do potęgi jφ."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page54_formula1.png",
+    "description": "To jest matematyczna formuła przedstawiająca transformację Laplace'a dla funkcji u(n) z współczynnikami b_m, b_{m-1}, ..., b_0."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page55_formula6.png",
+    "description": "To jest wzór na funkcję G(z), która jest wyrażona w postaci ułamka złożonego, zawierającego eksponenty i potęgi zmiennych T1, T2, Tp, k oraz z. Wzór jest stosowany w teorii sygnałów i systemów, szczególnie w kontekście modelowania procesów dynamicznych."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page54_formula2.png",
+    "description": "To są równania definiujące transformacje Laplace'a dla sygnałów u(n) i y(n). U(z) jest transformacją Laplace'a dla sygnału u(n), a Y(z) jest transformacją Laplace'a dla sygnału y(n)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page35_formula3.png",
+    "description": "Równanie opisujące zmianę wartości parametru M dla różnych warunków (r2z, st) w funkcji czasu t, gdzie M_{d,r2z}(t) jest różnicą między M_{d,st}(t) a M_t(t)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page33_formula1.png",
+    "description": "Zdjęcie przedstawia dwie matematyczne formuły: \n1. Pierwsza formuła definiuje \\( T_n \\) jako pierwiastek kwadratowy z iloczynu \\( T \\), \\( k_P \\) i \\( k_v \\).\n2. Druga formuła definiuje \\( \\xi \\) jako iloraz 1 przez dwa razy pierwiastek z iloczynu \\( T \\), \\( k_P \\) i \\( k_v \\).\n\nFormuły dotyczą prawdopodobnie teoretycznych"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page50_formula3.png",
+    "description": "To jest równanie matematyczne przedstawiające zmianę wartości ε(t) w czasie t, która jest sumą wartości e(t) i mnożonej przez k_t wartości ε(t)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page8_formula4.png",
+    "description": "To są dwie funkcje matematyczne: h(t) i g(t), które opisują zależności w czasie t. Funkcja h(t) jest sumą geometryczną z wykładniczymi czynnikami, podczas gdy g(t) jest wyrażeniem dla jednego składnika tej sumy. Oba wyrażenia zawierają parametry k, n, T oraz e, co sugeruje, że dotyczą one modelowania procesów ewolucyjnych lub rozkładów czasowych."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page27_formula3.png",
+    "description": "Zdjęcie przedstawia dwa równania opisujące model regulacji czasowej (G_R(s)) i sygnał wyjściowy (u(t)). Równanie G_R(s) zawiera parametry k_P, T_i i T_d, a u(t) opisuje sygnał wyjściowy jako funkcję czasu z parametrami k_P, T_i i T_d oraz delta(t)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page37_formula3.png",
+    "description": "To jest równanie opisujące strukturę blokową systemu kontroli, gdzie \\( G_0(s) \\) jest funkcją przenikania, \\( Y(s) \\) to wyjście, \\( E_1(s) \\) to wejście, a \\( k_N \\), \\( G_{R,1}'(s) \\), \\( k_P \\), \\( G_2(s) \\), i \\( G_1(s) \\) to odpowiednio stała nawiązania, pochodna funkcji przenikania regulatora, stała proporcj"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page16_formula2.png",
+    "description": "Zdjęcie przedstawia dwa równania matematyczne:\n\n1. `Lm(ω) = 20 log(k) + 20 log(ω)`\n2. `φ(ω) = π/2`\n\nTe równania dotyczą logarytmów i wartości fazy dla funkcji ω, gdzie k jest stałą."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula1.png",
+    "description": "To jest równanie opisujące stosunek temperatury theta do energii aktywności E dla funkcji s, gdzie K_e, T_a, T_m i T_m1 są parametrami fizycznymi. Równanie zawiera składniki związane z termiczną aktywnością i interakcjami między cząsteczkami."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page14_formula3.png",
+    "description": "Zdjęcie przedstawia trzy równania matematyczne, które opisują funkcje G(jω), P(ω) i Q(ω). Wszystkie te funkcje mają stałą wartość k dla G(jω) i P(ω), natomiast Q(ω) jest równa 0."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page9_formula9.png",
+    "description": "Zdjęcie przedstawia dwa równania matematyczne opisujące dynamikę systemu. Pierwsze to funkcja G(s) w postaci eksponentialnej, gdzie G(s) = ke^(-sT0), a drugie to równanie dla y(t), które jest proporcjonalne do u(t-T0). Oba równania są związane z modelowaniem sygnałów czasowych i częstotliwościowych."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page17_formula4.png",
+    "description": "To jest wykres przedstawiający zależność fazową (Lm(ω)) w funkcji częstości ω dla systemu o charakterystyce transferu k. Wykres pokazuje, że wartość fazowa maleje liniowo z rosnącą częstością, zaczynając od wartości 20 log(k) przy ω=1 i malejąc do 0 przy ω=k."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page41_formula2.png",
+    "description": "Równanie różniczkowe opisujące zależność kwadratu zmiany energii kinetycznej od zmiany pędu."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula8.png",
+    "description": "Równanie E_a(s) w postaci sumy czterech wyrażeń, gdzie R_a i sL_a są mnożone przez I_a(s), a sK_c jest mnożone przez Θ(s)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page10_formula2.png",
+    "description": "To jest wzór matematyczny przedstawiający funkcję G(s) w postaci transferu Laplace'a, gdzie k, T i T0 są parametrami, a e jest liczbą Eulera."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page24_formula1.png",
+    "description": "Zdjęcie przedstawia równania opisujące dynamikę systemu kontroli, gdzie E(s) to błąd, W(s) to wyjście, Y(s) to wyjście kontrolera, G(s) to przenikanie transferowe, oraz E(s) = W(s) / (1 + G(s))."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula4.png",
+    "description": "Zdjęcie przedstawia trzy wzory matematyczne, które opisują funkcje G(jω), P(ω) i Q(ω). Wszystkie te wzory zawierają parametry k, ωn, ξ oraz ω, co sugeruje, że dotyczą one modelowania dynamiki systemów mechanicznych lub elektrycznych."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page20_formula1.png",
+    "description": "Zdjęcie przedstawia dwie równania matematyczne opisujące funkcje transferowe w kontekście systemów dynamicznych. Pierwsze równanie definiuje G(s) jako funkcję transferową, która jest ilorazem G0(s) i sumy jedności i G0(s). Drugie równanie definiuje G0(s) jako funkcję transferową L0(s) podzieloną przez M0(s), gdzie oba są polinomiem stopnia m i n odpowiednio."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page18_formula1.png",
+    "description": "To jest wykres przedstawiający fazę φ(ω) jako funkcję częstości ω. Wykres pokazuje, że przy ω = π/T0 faza φ(ω) osiąga wartość -90°, a przy ω = π/2T0 faza φ(ω) osiąga wartość -180°."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page53_formula2.png",
+    "description": "To jest matematyczna formuła przedstawiająca równanie różniczkowe. Formuła zawiera sumę wielomianową z funkcjami y(n) i współczynnikami an, gdzie n to indeks. Równanie opisuje zależność między wartością funkcji y(n) a wartościami y(n-i) dla różnych wartości i."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula3.png",
+    "description": "Zdjęcie przedstawia trzy równania matematyczne, które opisują funkcję G(jω), wartość P(ω) i Q(ω). Funkcja G(jω) jest proporcjonalna do 1/jω, gdzie k jest stałą proporcjonalności. Wartość P(ω) jest równa 0, a Q(ω) jest proporcjonalna do -k/ω."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page55_formula1.png",
+    "description": "To jest matematyczna formuła przedstawiająca transformację Laplace'a i jej odwrotność, gdzie G(z) jest funkcją zależną od zmiennych z i t, a G(s) jest funkcją Laplace'a. Formuła dotyczy sytuacji, gdy t jest równe nTP, gdzie T_P jest okresem pewnej fazy."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page53_formula1.png",
+    "description": "To jest równanie różniczkowe o skończonej długości, które opisuje zależność między funkcją y(n) i u(n). Równanie zawiera współczynniki an_i i b_m oraz funkcje y(n) i u(n), które są zależne od n."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula11.png",
+    "description": "To jest matematyczna równość, która przedstawia zależność między funkcjami K_T, I_a(s) i J_Theta(s). Równość mówi, że wartość funkcji K_T pomnożona przez I_a(s) jest równa kwadratowi s pomnożonemu przez J_Theta(s)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page16_formula4.png",
+    "description": "Zdjęcie przedstawia dwie formuły matematyczne opisujące zależności między częstością ω, stałą k i czasem T. Pierwsza formuła to logarytm modułu Lm(ω), która zależy od logarytmu wartości k, logarytmu częstości ω oraz logarytmu pierwiastka kwadratowego z 1 plus kwadratu ωT. Druga formuła to φ(ω), która jest równa π/2 minus arctan ωT."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page49_formula1.png",
+    "description": "To jest równanie transferu dla systemu z jednym złożeniem, gdzie G(s) to funkcja transferu, k_v to stała wstępująca, T to czas zasygnalizowania, a s to operator Laplace'a."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page14_formula6.png",
+    "description": "Zdjęcie przedstawia trzy wzory matematyczne, które opisują funkcje G(jω), P(ω) i Q(ω). Wszystkie wzory zawierają parametry k, T1, T2 oraz ω, co sugeruje, że dotyczą one modelowania systemów dynamicznych lub filtrów w dziedzinie częstotliwości."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page13_formula6.png",
+    "description": "Zdjęcie przedstawia dwie równości matematyczne, które opisują wartości amplitudy i fazę funkcji G(jω) w zależności od częstości ω. Pierwsza równość definiuje wartość rzeczywistą (Re) funkcji G(jω) jako wartość bezwzględną G(jω) pomnożoną przez cosinus fazy φ, a druga równość definiuje wartość urojoną (Im) funkcji G(jω) jako wartość bezwzględną G(j"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page27_formula1.png",
+    "description": "Zdjęcie przedstawia dwa równania matematyczne opisujące dynamikę systemu regulacyjnego. Pierwsze równanie to funkcja transferu G(s), która zależy od parametrów kP, Ti, Td i TN. Drugie równanie to wyrażenie dla sygnału u(t), który również zależy od tych samych parametrów oraz N."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page43_formula1.png",
+    "description": "Zdjęcie przedstawia formułę matematyczną, która definiuje średnią wartość (oznaczoną jako \\(\\bar{u}\\)) jako stosunek czasu aktywnego (\\(t_{\\text{on}}\\)) do sumy czasu aktywnego i czasu nieaktywnego (\\(t_{\\text{off}}\\))."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page33_formula2.png",
+    "description": "To jest równanie transferu dla systemu PID (Proporcjonalny, Integralny, Diferencyjny), gdzie \\( G_0(s) \\) jest funkcją przenikania, \\( Y(s) \\) to wyjście, a \\( E(s) \\) to wejście. Równanie zawiera parametry \\( k_P \\) (proporcjonalne), \\( k_I \\) (integralne), \\( k_D \\) (diferencyjne) oraz \\( T \\) (czas reakcji)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page14_formula7.png",
+    "description": "To jest matematyczna formuła przedstawiająca dwa wyrażenia: \n1. `Lm(ω)`, które jest logarytmem modułu, zawierającym dwie wartości krytyczne `T1` i `T2`.\n2. `φ(ω)`, które jest funkcją fazową, również zawierającą `T1` i `T2`.\n\nFormuły te są związane z analizą sygnałów w dziedzinie częstotliwości."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page56_formula5.png",
+    "description": "Zdjęcie przedstawia trzy funkcje transferowe w postaci zapisu matematycznego: G(z), GT(z) i Gδ(z). Te funkcje są związane z modelami dynamiki systemów, gdzie G(z) opisuje ogólną strukturę, GT(z) uwzględnia specyficzne parametry T i TP, a Gδ(z) jest bardziej skoncentrowana na T i TP."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page13_formula5.png",
+    "description": "Zdjęcie przedstawia wzór na funkcję przenikania w dziedzinie częstotliwości, gdzie \\( G(j\\omega) \\) jest wyrażone jako stosunek amplitudy sygnału wyjściowego \\( Y(j\\omega) \\) do sygnału wejściowego \\( U(j\\omega) \\). Wzór ten jest rozłożony na część modułową \\( |G(j\\omega)| \\) i fazową \\( e^{j\\varphi} \\), która dalej jest podzielona na część rzeczy"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page49_formula6.png",
+    "description": "Zdjęcie przedstawia równanie różniczkowe pierwszego rzędu, gdzie \\( T \\ddot{e}(t) + \\dot{e}(t) = 0 \\), przy czym \\( u(t) = 0 \\)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page56_formula4.png",
+    "description": "Zdjęcie przedstawia trzy funkcje transferowe w postaci zapisu matematycznego: G(z), GT(z) i Gδ(z). Każda funkcja zależy od zmiennych k, Tp oraz z."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page45_formula3.png",
+    "description": "To jest obraz przedstawiający 10 prostokątów ułożonych w rzędzie, z jednym pustym polem po prawej stronie."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page8_formula1.png",
+    "description": "To jest wzór matematyczny przedstawiający równanie różniczkowe n-tego rzędu, gdzie \\( y(t) \\) jest funkcją zależną od czasu \\( t \\), a \\( k \\) i \\( u(t) \\) są parametrami. Wzór zawiera sumę wyrażeń, które są wielomianami pochodnych funkcji \\( y(t) \\) z parametrem \\( T \\)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page16_formula5.png",
+    "description": "Zdjęcie przedstawia trzy równania matematyczne opisujące funkcje G(jω), P(ω) i Q(ω). Wszystkie te funkcje zależą od ω (częstotliwość) i T0 (konstanta czasowa). Funkcja G(jω) jest wyrażona jako eksponentiala z ujemnym argumentem jωT0, podczas gdy P(ω) i Q(ω) są wyrażone jako krotności k, mnożone przez cosinus i sinus odpowiednio, z argument"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page25_formula2.png",
+    "description": "To jest matematyczna formuła przedstawiająca całkę od 0 do nieskończoności funkcji e^2(t) względem t."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page9_formula4.png",
+    "description": "Zdjęcie przedstawia dwa równania matematyczne opisujące dynamikę systemu. Pierwsze to funkcja Greena G(s) = k/s, a drugie to równanie różniczkowe dy(t)/dt = ku(t), gdzie y(t) jest wyjściem, u(t) wejściem, k stałą i t czasem."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page8_formula3.png",
+    "description": "Zdjęcie przedstawia dwie funkcje czasowe: h(t) i g(t), wyrażone w postaci eksponentialnej. Funkcja h(t) jest równa k(1 - e^(-t/T)), a g(t) jest równa (k/T)e^(-t/T). Oba wyrażenia zawierają parametry k i T, gdzie T jest czasem charakterystycznym."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula10.png",
+    "description": "Zdjęcie przedstawia dwie formuły matematyczne opisujące zależności Lm(ω) i φ(ω), które są związane z analizą sygnałów w zakresie częstotliwości."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page10_formula1.png",
+    "description": "To są dwa równania opisujące funkcje czasowe h(t) i g(t), które zależą od parametru k, czasu t i stały T0. Funkcja h(t) jest stała poza okresem (t - T0), a funkcja g(t) ma impulsowy charakter w tym samym momencie."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page50_formula4.png",
+    "description": "To równanie opisuje dwa procesy: pierwszy, który jest funkcją czasu e(t), i drugi, który jest pochodną funkcji e(t)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page54_formula7.png",
+    "description": "To jest matematyczna równość, która definiuje funkcję G(z) jako wartość funkcji G(s) przy s równym (1-z-1)/(z-1TP), gdzie TP jest stałą."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page25_formula1.png",
+    "description": "To jest matematyczna formuła przedstawiająca całkę od zera do nieskończoności bezwzględnej wartości funkcji e(t) względem t."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page55_formula2.png",
+    "description": "Zdjęcie przedstawia wzór matematyczny, który jest równaniem dla funkcji G(z), wyrażonej jako wartość funkcji G(s) przy s równym 2/Tp, gdzie Tp jest określonym parametrem. Wzór zawiera również ułamki i potęgi, które są związane z zmiennej z."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page56_formula3.png",
+    "description": "Zdjęcie przedstawia trzy funkcje G(z), GT(z) i Gδ(z), które są wyrażone za pomocą złożonych wzorów matematycznych, zawierających m.in. potęgi, iloczyny, sinusy, kosinusy oraz eksponenty. Wzory te są związane z dynamiką systemów, szczególnie z zakresu teorii sygnałów i systemów liniowych."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page54_formula3.png",
+    "description": "To jest równanie algebraiczne, które przedstawia zależność między dwoma funkcjami Y(z) i U(z). Równanie zawiera sumy serii zmiennych a_i i b_j, gdzie z jest zmienną zależną."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page49_formula5.png",
+    "description": "Zdjęcie przedstawia równanie różniczkowe i warunek początkowy dla sygnału elektrycznego w systemie kontrolowanym przez u(t) = +1."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page49_formula4.png",
+    "description": "To równanie opisuje dwa procesy: pierwszy, który jest funkcją czasu e(t), i drugi, który jest pochodną funkcji e(t)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page26_formula4.png",
+    "description": "Zdjęcie przedstawia równania matematyczne opisujące model dynamiki systemu. Pierwsze równanie to funkcja przenikania bezzakłóconego \\( G_R(s) \\), która jest funkcją odwrotną do częstości własnej \\( sT_i \\). Drugie równanie to wyjście systemu w czasie, które jest proporcjonalne do wykładniczej funkcji czasu i czasu."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page9_formula1.png",
+    "description": "Zdjęcie przedstawia dwie funkcje matematyczne: h(t) i g(t), które opisują dławienie harmoniczne w systemach mechanicznych. Funkcja h(t) zawiera wyrażenie dla amplitudy dławienia, podczas gdy g(t) opisuje fazę dławienia. Oba wyrażenia zawierają parametry takie jak ωn (częstotliwość naturalna), ξ (stopień dławienia) oraz kąt φ (faza)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula12.png",
+    "description": "To jest matematyczna definicja funkcji ograniczonej momentu dynamicznego \\( M_{d, \\text{ogr}}(t) \\), która zależy od wartości momentu dynamicznego \\( M_d(t) \\). Funkcja ta ma trzy przypadki:\n\n1. Jeśli \\( M_d(t) \\) jest mniejsze niż \\(-M_{d, \\text{ogr}}\\), to \\( M_{d, \\text{ogr}}(t) = -M_{d, \\text{ogr}} \\).\n2. Jeśli wartość \\( |M_d(t)| \\"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page33_formula3.png",
+    "description": "Zdjęcie przedstawia wzór na funkcję przenikania G(s) w postaci transferu, wyrażony jako stosunek Y(s) do W(s). Wzór jest skompaktowany i pokazuje, jak funkcja przenikania zależy od parametrów T, kP, kv, kt oraz ξt i Tnt."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page19_formula1.png",
+    "description": "Zdjęcie przedstawia wzór matematyczny dla funkcji transferu G(s), który jest wyrażony jako stosunek L(s) do M(s)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page35_formula1.png",
+    "description": "To jest równanie matematyczne, które definiuje zależność między wielkością \\( M_t(t) \\) a wielkościami \\( M_{t,s}(t) \\), \\( M_{t,l}(t) \\), oraz funkcjami \\( \\omega(t) \\) i \\( k_l \\). Równanie zawiera również operację signum, która zależy od wartości funkcji \\( \\omega(t) \\)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page7_formula1.png",
+    "description": "To jest równanie opisujące transformację Laplace'a dla funkcji czasowej h(t), gdzie G(s) jest funkcją przenikania w przestrzeni częstotliwości, a s jest zmienną Laplace'a."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page35_formula2.png",
+    "description": "To jest matematyczna funkcja definiująca wartość \\( M_{d,\\text{st}}(t) \\), która zależy od wartości \\( M_{d,\\text{ogr}}(t) \\). Jeśli wartość \\( |M_{d,\\text{ogr}}(t)| \\) jest mniejsza lub równa wartości stałej \\( M_{\\text{st}} \\), to \\( M_{d,\\text{st}}(t) \\) jest równy 0. W przeciwnym razie, jeśli \\( |M_{d,\\text{ogr}}(t)|"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page8_formula2.png",
+    "description": "Zdjęcie przedstawia dwa równania matematyczne opisujące system dynamiczny. Pierwsze to funkcja transferu G(s) w postaci kierunkowej, drugie to równanie różniczkowe opisujące dynamikę sygnału y(t) w zależności od sygnału wejściowego u(t)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page16_formula1.png",
+    "description": "Zdjęcie przedstawia trzy równania matematyczne dotyczące funkcji transferu G(jω), wartości P(ω) i Q(ω)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula6.png",
+    "description": "Zdjęcie przedstawia dwie formuły matematyczne: wzór dla amplitudy fazowej (Lm(ω)) i fazę (φ(ω)) w kontekście systemów dynamicznych, gdzie ω jest częstością, k - stałą, ξ - tłumieniem, a ωn - częstością naturalną."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page26_formula5.png",
+    "description": "Zdjęcie przedstawia dwa równania opisujące system regulacji czasowej. Pierwsze to funkcja przenikania G(s) w postaci transferu, gdzie kP jest stałą proporcjonalności, a Td to czas dead time. Drugie to równanie dla sygnału u(t), który zależy od wartości e i Td oraz od impulsu δ(t)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page45_formula2.png",
+    "description": "To jest równanie opisujące kontrolę proporcjonalną, integralną i różniczkową (PID) w kontekście systemów sterowania. Równanie przedstawia zależność sygnału wyjściowego \\(\\bar{u}(t)\\) od sygnału błędu \\(e(t)\\), jego integralu oraz pochodnej."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page9_formula10.png",
+    "description": "Zdjęcie przedstawia dwie funkcje matematyczne: h(t) i g(t), obie oparte na wyrażeniu k(1 - e^(-t/T)). Funkcja h(t) zawiera dodatkowo wyrażenie t - T(1 - e^(-t/T)), co sugeruje, że h(t) jest bardziej złożona od g(t). Oba wyrażenia zawierają parametr k i T, co może oznaczać, że są one zależne od określonej wartości t i konkretnego"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page16_formula6.png",
+    "description": "Zdjęcie przedstawia dwie równania matematyczne:\n\n1. Pierwsze równanie: \\( Lm(\\omega) = 20 \\log(k) \\)\n2. Drugie równanie: \\( \\varphi(\\omega) = -\\omega T_0 \\)\n\nTe równania dotyczą fizyki lub inżynierii, szczególnie w kontekście sygnałów i systemów liniowych."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page17_formula3.png",
+    "description": "To grafik przedstawiający dwa wykresy: lewy - wykres amplitudy (Lm(ω)) w funkcji częstości (ω/ωn), a prawy - fazę (φ(ω)) w funkcji częstości. Wykresy ilustrują wpływ parametru ξ na charakterystykę systemu, gdzie ξ1 < √2/2 < ξ2."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page6_formula8.png",
+    "description": "To jest matematyczna formuła przedstawiająca Laplace'a transformację funkcji u(t), która jest sumą potęgami czasu mnożonymi przez współczynniki b_m, b_{m-1}, ..., b_0."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page24_formula2.png",
+    "description": "To jest matematyczna równość, która definiuje granicę funkcji e(t) przy t→∞ jako granicę funkcji sE(s) przy s→0."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page14_formula1.png",
+    "description": "Zdjęcie przedstawia trzy funkcje: G(jω), P(ω) i Q(ω), które są wyrażone w postaci ułamków z parametrami k, T oraz ω."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page8_formula6.png",
+    "description": "To jest równanie różniczkowe drugiego stopnia opisujące ruch dławika w systemie mechanicznym, gdzie \\( y(t) \\) to przemieszczenie, \\( u(t) \\) to siła wejściowa, \\( T_n \\) to czas oscylacji naturalnej, \\( \\xi \\) to współczynnik rozpraszania, a \\( k \\) to stała sprężystości."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page13_formula1.png",
+    "description": "To jest matematyczna równość, która przedstawia transformację Laplace'a funkcji G(s) w funkcję G(jω), gdzie ω jest częstością kątową. Równość jest zapisana jako wartość funkcji G(s) przy s=jω."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page56_formula2.png",
+    "description": "Zdjęcie przedstawia trzy wzory matematyczne, które opisują funkcje G(z), GT(z) i Gδ(z). Wszystkie te wzory zawierają zmienną z, która jest związana z zadaniami czasowymi i temperatury, oraz parametrem k. Wzory te są używane w analizie sygnałów i systemów dynamicznych."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula11.png",
+    "description": "To jest matematyczna formuła przedstawiająca funkcję φ(ωr) w zależności od parametru ξ, wyrażoną jako negacja arctangens wartości podanej w ułamku."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page9_formula2.png",
+    "description": "Zdjęcie przedstawia dwa równania matematyczne opisujące dynamikę systemu. Pierwsze to funkcja G(s) równa kπs, gdzie k jest stałą. Drugie to równanie dla y(t), które jest proporcjonalne do prędkości zmiany u(t) względem czasu t, z tym że stała proporcjonalności to k."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page17_formula1.png",
+    "description": "To są dwa wykresy przedstawiające charakterystykę częstotliwościową systemu: \n1. Wykres lewy przedstawia moduł amplitudy (Lm(ω)) w decybelach, gdzie linia prosta oznacza wartość konstantną 20 log(k), a spadek 3 dB następuje przy ω = 1/T.\n2. Wykres prawy przedstawia fazę (φ(ω)), która początkowo jest równa 0°, a następnie maleje do -90°"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page8_formula5.png",
+    "description": "Zdjęcie przedstawia równanie transferu G(s) w postaci frakcyjnej oraz równanie różniczkowe drugiego rzędu opisujące dinamikę systemu."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page27_formula2.png",
+    "description": "Zdjęcie przedstawia dwa równania matematyczne opisujące dynamikę systemu: \n1. Pierwsze równanie to funkcja transferu \\( G_R(s) \\), która zależy od częstotliwości \\( s \\), stałą proporcjonalności \\( k_P \\), czasem dead time \\( T_d \\) i czasem zasięgu \\( T_N \\).\n2. Drugie równanie to wyrażenie dla sygnału wejściowego \\( u(t) \\), które zależy od czasu \\( t \\), stałą proporcj"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page14_formula2.png",
+    "description": "To jest formuła matematyczna, która definiuje funkcję Lm(ω) jako 20-krotny logarytm naturalny kwadratu sumy kwadratów P(ω) i Q(ω)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula9.png",
+    "description": "Równanie opisujące zależność między zmiennej \\( M_d(t) \\) a \\( K_T i a(t) \\)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page6_formula2.png",
+    "description": "Zdjęcie przedstawia dwa równania, które są wyrażeniami Laplace'a dla funkcji czasowych u(t) i y(t). Oznacza to, że U(s) jest transformacją Laplace'a funkcji u(t), a Y(s) jest transformacją Laplace'a funkcji y(t)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page6_formula7.png",
+    "description": "To jest wyrażenie matematyczne przedstawiające transformację Laplace'a dla równania różniczkowego n-tego rzędu. Wyrażenie zawiera pochodne funkcji y(t) do różnych stopni oraz współczynniki an, an-1, ..., a0."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula4.png",
+    "description": "To jest równanie opisujące zmianę mocy elektrycznej \\( e_m(t) \\) w funkcji czasu, gdzie \\( K_e \\) to stała elektromagnetyczna, a \\( \\frac{d\\theta(t)}{dt} \\) to prędkość zmiany kąta \\(\\theta\\) w czasie."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page56_formula1.png",
+    "description": "Zdjęcie przedstawia dwie funkcje transferowe: \\( G_T(z) \\) i \\( G_\\delta(z) \\). Oba wyrażenia zawierają parametry \\( T_P, T_1, T_2 \\), oraz stałą \\( k \\). Funkcje te są używane w modelowaniu systemów dynamicznych, szczególnie w kontekście syntezy filtrów lub systemów sterowania."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula6.png",
+    "description": "To jest równanie opisujące dynamikę prądu w obwodzie elektrycznym, gdzie \\( e_a(t) \\) to napięcie na obwodzie, \\( R_a \\) to rezystancja, \\( i_a(t) \\) to prąd, \\( L_a \\) to induktywność, \\( \\frac{di_a(t)}{dt} \\) to prąd zmienny, a \\( e_m(t) \\) to napięcie mimośrodowe."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page43_formula3.png",
+    "description": "Zdjęcie przedstawia równanie definiujące zbiór T, który składa się z elementów T+ i T-, gdzie dla każdego u(t) = 1, T+ dla u(t) = 1, a dla każdego u(t) = 0, T- dla u(t) = 0."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page25_formula4.png",
+    "description": "Zdjęcie przedstawia formułę matematyczną, która wyraża procentowy odsetek zmiany wartości ε, obliczony jako iloczyn wartości e1 podzielonej przez wartość e0, pomnożone przez 100%."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula10.png",
+    "description": "Równanie ruchu momentu obrotowego w czasie dla ciała sztywnego, gdzie \\( M_d(t) \\) jest momentem obrotowym, \\( J \\) jest momentem inercji, a \\( \\theta(t) \\) to kąt nachylenia."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page14_formula8.png",
+    "description": "To jest równanie opisujące zależność między logarytmem mocy (Lm) i częstotliwością (ω), gdzie Lm(ω) = 20 log(k). Dodatkowo, φ(ω) jest stałą równą 0."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page26_formula1.png",
+    "description": "Zdjęcie przedstawia sześć równań, które definiują funkcje J3 do J6, wyrażone jako całki nieoznaczone od 0 do ∞. Każda funkcja zawiera wyrażenie t, e(t) lub t^2, gdzie e(t) jest funkcją zależną od czasu t."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page7_formula5.png",
+    "description": "Zdjęcie przedstawia dwie funkcje matematyczne: \n- Pierwsza funkcja, oznaczona jako \\( h(t) \\), jest równa \\( k \\cdot 1(t) \\).\n- Druga funkcja, oznaczona jako \\( g(t) \\), jest równa \\( k \\cdot \\delta(t) \\).\n\nGdzie:\n- \\( k \\) jest stałą skali,\n- \\( 1(t) \\) to funkcja jednostkowa,\n- \\( \\delta(t) \\) to delta Diraca.\n\nTen opis może być uży"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page45_formula5.png",
+    "description": "Zdjęcie przedstawia wzór na funkcję przenikania w układzie z dwoma czasami opóźnienia i stałą kierunkową (G_R(s)). Wzór jest rozwinięty w postaci ułamka, gdzie mianownik jest różnicą dwóch ułamków zawierających czas opóźnienia T1 i T2 oraz stałą kierunkową k. Wzór jest następnie uproszczony do postaci, która zawiera sumę i iloczyn czasów opóźnienia oraz stałą kierunk"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page14_formula4.png",
+    "description": "Zdjęcie przedstawia dwie formuły matematyczne:\n\n1. Pierwsza formuła to:\n   \\[\n   Lm(\\omega) = 20\\log(k) - 20\\log\\sqrt{1 + \\omega^2T^2}\n   \\]\n\n2. Druga formuła to:\n   \\[\n   \\varphi(\\omega) = -\\arctg(\\omega T)\n   \\]\n\nFormuły te dotyczą obliczeń związanych z logarytmami i funkcjami trygonometrycznymi, często stosowanych"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page17_formula2.png",
+    "description": "To jest diagram Bode'a przedstawiający charakterystykę częstotliwościową systemu. Na osi X znajduje się częstotliwość ω, a na osi Y - odpowiednio amplituda P(ω) i faza Q(ω). Diagram pokazuje zakres częstotliwości od 0 do ∞ oraz punkty krytyczne ωn, ξ1, ξ2, A_m i ω_r."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page40_formula1.png",
+    "description": "To jest równanie, które definiuje zmienne e1(t) jako różnicę między r(t) a y(t)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula3.png",
+    "description": "Zdjęcie przedstawia listę symboli i ich oznaczeń fizycznych, używanych w opisie silników elektrycznych. Symboly obejmują rezystancję uzwojeń wirnika (R_a), induktywność uzwojeń wirnika (L_a), moment bezwładności wirnika (J), stałą momentu (K_T), wzmocnienie silnika (K_e), elektromechaniczną stałą czasową (T_m) oraz elektromagnetyczną stałą czasową (T_a)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula2.png",
+    "description": "Zdjęcie przedstawia dwie formuły matematyczne, które opisują zależności między parametrami \\( T_a \\) i \\( T_m \\), a innymi zmiennymi takimi jak \\( L_a \\), \\( R_a \\), \\( J \\), \\( K_e \\) oraz \\( K_T \\)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page37_formula2.png",
+    "description": "Zdjęcie przedstawia równanie transferowe dla systemu, gdzie G(jω) jest funkcją przenikania, Y(jω) i U1(jω) to odpowiednio wyjście i wejście, G2(jω) to funkcja przenikania drugiego elementu, GR,2(jω) to funkcja przenikania rezonansu drugiego elementu, G1(jω) to funkcja przenikania pierwszego elementu, a G2(jω) jest przybliżeniem funkcji przenikania drugiego elementu"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page24_formula3.png",
+    "description": "To jest matematyczna formuła przedstawiająca graniczną wartość funkcji e(∞), która jest równa granicy przy s → 0 z ilorazu sW(s) przez (1 + G(s))."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page16_formula3.png",
+    "description": "Zdjęcie przedstawia trzy funkcje matematyczne: G(jω), P(ω) i Q(ω). Każda funkcja zależy od ω (częstotliwość) i innych parametrów k, T i ωk."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page6_formula4.png",
+    "description": "To jest równanie różniczkowe n-tego rzędu, które przedstawia zależność między funkcją y(t) i jej pochodnymi do n-tego stopnia."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula7.png",
+    "description": "Zdjęcie przedstawia dwa równania, które określają zakres wartości dla parametrów \\( T_a \\) i \\( T_m \\). Wartości dla \\( T_a \\) wynoszą od 0.005 do 0.220 sekund, a dla \\( T_m \\) od 1.040 do 0.026 sekund."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page9_formula6.png",
+    "description": "Zdjęcie przedstawia równanie transferu G(s) w postaci frakcyjnej oraz równanie różniczkowe opisujące dynamikę systemu."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula7.png",
+    "description": "Zdjęcie przedstawia dwie równania matematyczne:\n\n1. Pierwsze równanie to:\n   \\[\n   Lm(\\omega) = 20\\log(k) - 20\\log(\\omega)\n   \\]\n   gdzie \\( Lm(\\omega) \\) jest funkcją zależną od częstości \\( \\omega \\), a \\( k \\) jest stałą.\n\n2. Drugie równanie to:\n   \\[\n   \\varphi(\\omega) = -\\frac{\\pi}{2}\n   \\]\n   gdzie \\( \\varphi(\\omega) \\)"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page49_formula2.png",
+    "description": "Równanie różniczkowe opisujące dynamikę systemu, gdzie \\( T \\) jest matrycą masy, \\( \\ddot{y}(t) \\) i \\( \\dot{y}(t) \\) to przyspieszenia i prędkości wektora stanu, a \\( k_v \\) jest współczynnikiem przenikania siły, a \\( u(t) \\) to wektor sił zewnętrznych."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page10_formula3.png",
+    "description": "To są dwa równania opisujące funkcje czasowe h(t) i g(t), które zależą od parametru k, T0 i T. Równanie h(t) jest wyrażeniem dla funkcji Heaviside'a, a g(t) to jej pochodna. Oba równania są używane w teorii sygnałów i systemów."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page56_formula6.png",
+    "description": "Zdjęcie przedstawia trzy równania dla funkcji G, GT i Gδ, które są wyrażone w postaci ułamków zmiennych z. Te równania opisują zależności między zmiennymi zmiennymi zmiennymi zmiennymi zmiennymi zmiennymi zmiennymi zmiennymi zmiennymi zmiennymi zmiennymi zmiennymi zmiennymi zmiennymi zmiennymi zmiennymi zmiennymi zmiennymi zmiennymi zmienn"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page44_formula3.png",
+    "description": "Równanie opisujące sygnał u(t) jako funkcję sygnału e(t), gdzie k_P jest stałą proporcjonalności, T_d to czas dead time, a e(t) i de(t)/dt to odpowiednio sygnał błędu i jego pochodna."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula2.png",
+    "description": "Zdjęcie przedstawia matematyczną nierówność: \\(0 < \\xi \\leqslant \\frac{\\sqrt{2}}{2}\\)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page13_formula3.png",
+    "description": "To jest równanie matematyczne opisujące funkcję sinusoidalną, która zależy od czasu t. Funkcja ma postać y(t) = Y sin(ωt + φ), gdzie Y to amplituda, ω to częstość, a φ to fazowy przesunięcie."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page6_formula3.png",
+    "description": "To jest wzór na funkcję przenikania G(s) w dziedzinie częstotliwości, wyrażona jako stosunek funkcji wyjściowej Y(s) do funkcji wejściowej U(s). Wzór ten jest zapisany w postaci ułamka, gdzie licznik to seria potęgowa z parametrami b_k, a m jest stopniem tej serii, natomiast mianownik to seria potęgowa z parametrami a_k, a n jest stopniem tej serii."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page14_formula9.png",
+    "description": "To jest wzór na funkcję przenikania w dziedzinie częstotliwości dla układu z opóźnieniem, gdzie \\( G(j\\omega) \\) to funkcja przenikania, \\( k \\) to stała proporcjonalności, \\( T \\) to czas opóźnienia, a \\( n \\) to stopień opóźnienia."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page33_formula4.png",
+    "description": "Zdjęcie przedstawia dwie matematyczne równania dotyczące parametrów T i ξ, które są związane z funkcjami kP, kv i kt. Pierwsze równanie definiuje Tnt jako pierwiastek kwadratowy z T podzielony przez iloczyn kP i kv, równy Tn. Drugie równanie definiuje ξt jako iloraz sumy 1 i iloczynu kP, kv i kt przez dwa razy pierwiastek z T, kP i kv, podzielone przez tę sam"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula9.png",
+    "description": "Równanie dla częstości naturalnej rezonansu w układzie damped harmonic oscillator, gdzie ωr jest częstością rezonansu, ωn to częstość naturalna, a ξ jest współczynnikiem tłumienia."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page41_formula1.png",
+    "description": "Równanie różniczkowe określające zależność zmiany funkcji J(t) od zmiany parametru kp."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page50_formula2.png",
+    "description": "To jest równanie opisujące zmianę wartości ε(t) w czasie t, która zależy od wartości e(t) i kryterium krytycznego y(t)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page9_formula8.png",
+    "description": "Zdjęcie przedstawia dwie funkcje czasowe: h(t) i g(t), wyrażone w postaci eksponentialnej i delta funkcji."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page54_formula5.png",
+    "description": "To jest wzór na funkcję G(z), która jest iloczynem dwóch funkcji Y(z) i U(z). FUNKCJA Y(z) jest sumą m wyrazów, gdzie każdy wyraz to b_j z do potęgi -j, a FUNKCJA U(z) jest sumą n_1 wyrazów, gdzie każdy wyraz to a_i z do potęgi -i."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page25_formula3.png",
+    "description": "Zdjęcie przedstawia równanie matematyczne, które definiuje współczynnik ε jako stosunek wartości e1 do wartości e0."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page11_formula1.png",
+    "description": "Równanie opisujące zależność między parametrem k, temperaturą T, wysokością h(0) i wartością U."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page55_formula3.png",
+    "description": "To jest wzór matematyczny przedstawiający transformację Laplace'a dla funkcji G(z). Wzór opisuje sposób obliczenia funkcji G(z) jako iloczynu (1 - z^(-1)) i odwrotnej transformacji Laplace'a funkcji G(s)/s, gdzie t = nTP."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page6_formula5.png",
+    "description": "To jest matematyczna formuła przedstawiająca równanie różniczkowe o niewyższych pochodnych, gdzie \\( u(t) \\) to funkcja zależna od czasu, a \\( b_m, b_{m-1}, \\ldots, b_0 \\) to stałe. Formuła opisuje sumę wielomianu z pochodnymi funkcji \\( u(t) \\)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula5.png",
+    "description": "Zdjęcie przedstawia trzy równania matematyczne opisujące funkcje G(jω), P(ω) i Q(ω). Te równania są związane z analizą częstotliwościowej odpowiedzi systemów, gdzie G(jω) jest funkcją transferu, a P(ω) i Q(ω) to odpowiednio mocy i fazę w zakresie częstotliwości ω."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page50_formula1.png",
+    "description": "Zdjęcie przedstawia cztery równania matematyczne, które opisują zależności między zmiennymi \\(x_1\\) i \\(x_2\\). Wszystkie równania zawierają współczynnik \\(-\\frac{1}{k_t}\\) i zmienne \\(B\\) oraz \\(H\\), co sugeruje, że te równania mogą być częścią modelu fizycznego lub matematycznego, gdzie \\(k_t\\) jest stałą proporcjonalności, a \\(B\\) i \\(H\\) mogą reprezentować inne"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page57_formula1.png",
+    "description": "Zdjęcie przedstawia trzy funkcje: G(z), GT(z) i Gδ(z). G(z) ma postać kierunkową, gdzie G(z) = kz^(-T0/TP). GT(z) i Gδ(z) mają brak opisu."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page14_formula5.png",
+    "description": "To jest wzór matematyczny, który definiuje fazę ϕ(ω) jako argument funkcji G(jω), czyli jako arctangens iloczynu Q(ω) i P(ω)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page54_formula4.png",
+    "description": "To jest wzór matematyczny przedstawiający funkcję G_ex0(s), która jest wyrażona jako 1 - e^(-sτ) / s, gdzie e jest liczbą Eulera, s i τ to zmienne."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page32_formula1.png",
+    "description": "Zdjęcie przedstawia wzór na funkcję przenikania G(s) w postaci transferu, wyrażony jako stosunek Y(s) do W(s). Wzór jest skompaktowany i przedstawia równanie drugiego stopnia w dziedzinie częstotliwości, gdzie T, kP, kv, ξ i Tn są parametrami systemu."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula5.png",
+    "description": "Zdjęcie przedstawia zestaw parametrów technicznych: rezystancja \\( R_a \\) w zakresie 0,05...2,00 [Ω], indukcyjność \\( L_a \\) równą 0,011 [H], moment obrotowy \\( K_T \\) równy 2 [N·m/A], prędkość obrotowa \\( K_e \\) równą 0,24 [V/(obr/s)], oraz moment modyfikacji \\( J \\) równy 0,25 [kg"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page15_formula1.png",
+    "description": "Zdjęcie przedstawia dwie formuły matematyczne: \n1. Formuła dla modułu fazowego (Lm(ω)) w postaci 20 log(k) - n * 20 log √(1 + ω²T²).\n2. Formuła dla fazą (φ(ω)) w postaci -n * arctg(ωT).\n\nFormuły te dotyczą analizy sygnałów w zakresie częstotliwości i są związane z teorią sygnałów i systemów liniowych."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page54_formula6.png",
+    "description": "Zdjęcie przedstawia równanie matematyczne, które definiuje funkcję G(z) jako wartość funkcji G(s) przy s równym (1-z-1)/TP."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page9_formula7.png",
+    "description": "Zdjęcie przedstawia dwa równania matematyczne opisujące system dynamiczny. Pierwsze to funkcja transferu G(s) w postaci frakcyjnej, a drugie to równanie różniczkowe drugiego stopnia opisujące ruch y(t) w zależności od wejścia u(t)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page26_formula3.png",
+    "description": "Zdjęcie przedstawia równania opisujące system regulacji, gdzie \\( G_R(s) = k_P \\) jest funkcją przenikania regulacji, a \\( u(t) = k_P e \\cdot 1(t) \\) jest sygnałem wyjściowym, gdzie \\( e \\) to błąd, a \\( 1(t) \\) to funkcja Heavisida."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page49_formula3.png",
+    "description": "Równanie różniczkowe opisujące dynamikę systemu, gdzie T, ē, k_v i u są funkcjami czasu t."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page34_formula13.png",
+    "description": "To jest równanie opisujące stosunek temperatury Θ(s) do energii aktywności Ea(s). Równanie zawiera współczynniki KT, Ke, J, L, a oraz R, które są związane z procesem termodynamicznym lub fizycznym."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page45_formula4.png",
+    "description": "Zdjęcie przedstawia wzór matematyczny dla funkcji przenikania w systemie kontrolnym, gdzie \\( G_R(s) \\) jest funkcją przenikania, \\( k_r \\), \\( k \\), \\( T_1 \\) i \\( T_2 \\) są parametrami systemu. Wzór jest skomplikowany i zawiera ułamki zmiennych s, co sugeruje, że dotyczy on dynamiki systemów z opóźnieniem."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page8_formula7.png",
+    "description": "Zdjęcie przedstawia dwa równania matematyczne dotyczące dynamiki systemów mechanicznych. Pierwsze to funkcja transferu G(s) w postaci frakcji ułamkowej, a drugie to równanie różniczkowe drugiego stopnia opisujące ruch y(t) pod wpływem siły u(t)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page13_formula2.png",
+    "description": "To grafik przedstawiający dwa fale sinusoidalne, które są przesunięte względem siebie o fazę φ(ω). Na osi x znajduje się czas t, a na osi y wartość y(t). Grafika pokazuje amplitudę U i fazę φ(ω) między dwoma falami."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page37_formula1.png",
+    "description": "Zdjęcie przedstawia wzór matematyczny dla funkcji przenikania G(s), który jest wyrażony jako stosunek Y(s) do U1(s). Wzór ten jest równoznaczny z iloczynem G2(s) i G1(s) podzielonym przez sumę jedności i iloczynu G2(s) i G1(s)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page9_formula3.png",
+    "description": "Zdjęcie przedstawia dwie równania matematyczne opisujące zależności między funkcjami czasu h(t) i g(t), gdzie h(t) jest proporcjonalna do δ(t) z współczynnikiem k, a g(t) jest proporcjonalna do pochodnej δ(t) z tym samym współczynnikiem k."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page44_formula2.png",
+    "description": "Zdjęcie przedstawia wzór matematyczny dla funkcji przenikania w układie RLC, gdzie \\( G_R(s) \\) jest funkcją przenikania, \\( k \\) i \\( T_1 \\) są parametrami systemu, a \\( s \\) jest zmienną Laplace'a. Wzór można zapisać jako: \\( G_R(s) = \\frac{1}{k(1+sT_1)} \\)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page55_formula5.png",
+    "description": "Zdjęcie przedstawia trzy wzory matematyczne opisujące funkcje transferowe w kontekście systemów dynamicznych, gdzie G(z), GT(z) i Gδ(z) są wyrażeniami dla różnych elementów systemu. Wzory zawierają zmienną z, konstanty k, TP, T oraz Tp, co sugeruje, że dotyczą one modelowania dynamiki procesów w systemach kontrolnych lub elektrycznych."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page8_formula9.png",
+    "description": "Zdjęcie przedstawia wzór matematyczny dla funkcji transferu G(s) w systemie kontroli, gdzie k jest stałą proporcjonalności, T jest czasem właściwym, n jest stopniem, a s jest operatorami Laplace'a."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page21_formula1.png",
+    "description": "Równanie przedstawiające zależność między wartością lambda w decybelach (dB) a wartością kappą (κ), gdzie lambda jest równa 20 razy logarytmie dziesiętnym kappi."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page43_formula2.png",
+    "description": "To jest wzór matematyczny przedstawiający funkcję G(s) w postaci transferu Laplace'a, gdzie k0, T, T0 są parametrami, a e jest liczbą Eulera."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page7_formula4.png",
+    "description": "To jest matematyczna funkcja, która definiuje prędkość zmiany h(t) w czasie t, wyrażona jako pochodna h(t) względem czasu t."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page55_formula4.png",
+    "description": "Zdjęcie przedstawia równanie matematyczne, które definiuje funkcję G(z) jako stałą k, gdzie G(z) jest równa G_T(z) i G_δ(z)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page44_formula1.png",
+    "description": "Zdjęcie przedstawia wzór matematyczny dla funkcji przenikania w systemie kontrolnym, gdzie \\( G_R(s) \\) jest funkcją przenikania, \\( k_r \\) i \\( k \\) to stałe, a \\( T_1 \\) jest czasem właściwym. Wzór jest zapisany w postaci ułamka złożonego, który można uproszczyć do formy równoważnej."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page6_formula1.png",
+    "description": "To jest równanie różniczkowe w postaci operatora Laplace'a, gdzie \\( Y(s) \\) to transformacja Laplace'a dla wyjścia, a \\( U(s) \\) dla wejścia. Równanie zawiera sumy potęg \\( s^k \\) z współczynnikami \\( a_k \\) i \\( b_k \\)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page45_formula1.png",
+    "description": "To jest matematyczna równość, która zawiera sumę i iloczyn dwóch zmiennych (T1 i T2), podzielonych przez ich różnicę oraz dodatkowe wyrażenia z liczbą k, s i ich iloczynem."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page8_formula8.png",
+    "description": "To są dwie funkcje matematyczne, które opisują zmiany w czasie (h(t) i g(t)), używając stałych k, T1, T2, T1', i T2'. Oba wyrażenia zawierają eksponenty, co sugeruje, że opisują procesy wykładnicze lub przepływy ciepła."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page9_formula5.png",
+    "description": "Zdjęcie przedstawia dwie funkcje matematyczne: \n- Pierwsza to h(t) = kt, gdzie k jest stałą i t jest zmiennej czasu.\n- Druga to g(t) = k * 1(t), gdzie 1(t) jest funkcją charakterystyczną, która jest równa 1 dla t > 0 i 0 dla t ≤ 0."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/wzory/k2_page44_formula4.png",
+    "description": "Zdjęcie przedstawia dwie formuły matematyczne, które opisują parametry kP i Td w kontekście systemów sterowania. Formuła kP jest związana z czasem pracy (t_on,∞) i czasem odpoczynku (t_off,∞), podczas gdy Td zależy od czasu reakcji (t_1) i stosunku tych czasów."
+  }
+]

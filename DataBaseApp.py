@@ -7,11 +7,11 @@ import hashlib
 import torch
 import time
 
-RELATION_SIMILARITY_THRESHOLD = 0.955 
+RELATION_SIMILARITY_THRESHOLD = 0.985 
 MAX_TOKENS = 150
 
 from rag_codes.rag_functions.metadata_context import ImageTextProcessor
-from rag_codes.rag_functions.embeddings import CLIPEmbedder
+from rag_codes.rag_functions.embeddings import CLIPEmbedder, CohereEmbedder
 from rag_codes.rag_functions.graph import (
     GraphBuilder, Neo4jConnector
 )
@@ -260,13 +260,6 @@ class SubjectSelectorApp:
             return
 
         # Sprawdzenie źródeł (placeholder - zawsze True)
-        incomplete_subjects = [s for s in selected_subjects if not self.check_sources_complete(s)]
-        
-        if incomplete_subjects:
-            messagebox.showerror("Błąd - nieprzypisane źródła", 
-                f"Następujące przedmioty mają nieprzypisane źródła:\n\n" + 
-                "\n".join(f"• {subject}" for subject in incomplete_subjects))
-            return
 
         # Zapisywanie konfiguracji
         saved_count = 0
@@ -301,10 +294,6 @@ class SubjectSelectorApp:
         messagebox.showinfo("Konfiguracja zakończona", success_message)
         self.temp_sources_configs.clear()
         self.open_processing_window(selected_subjects)
-
-    def check_sources_complete(self, subject_name):
-        """Sprawdza czy przedmiot ma kompletne źródła (placeholder)"""
-        return True
     
     def save_sources_config(self, subject_path, config):
         """Zapisuje konfigurację źródeł do pliku JSON"""
@@ -312,46 +301,138 @@ class SubjectSelectorApp:
             config_file = subject_path / "sources_config.json"
             with open(config_file, 'w', encoding='utf-8') as f:
                 json.dump(config, f, indent=2, ensure_ascii=False)
+            print(f"✅ Zapisano konfigurację źródeł do {config_file}")
             return True
-        except Exception:
+        except Exception as e:
+            print(f"❌ Błąd zapisywania konfiguracji źródeł: {e}")
             return False
 
     def open_source_config(self, subject_name):
         """Okno konfiguracji źródeł dla podfolderów wybranego przedmiotu"""
         subject_path = self.subjects_path / subject_name
-        existing = self.temp_sources_configs.get(subject_name, {})
+        
+        # Wczytaj istniejącą konfigurację
+        existing_config = {}
+        config_file = subject_path / "sources_config.json"
+        if config_file.exists():
+            try:
+                with open(config_file, 'r', encoding='utf-8') as f:
+                    existing_config = json.load(f)
+                print(f"📄 Wczytano istniejącą konfigurację z {config_file}")
+            except Exception as e:
+                print(f"⚠️ Błąd wczytywania istniejącej konfiguracji: {e}")
+        
+        # Sprawdź czy są tymczasowe zmiany
+        temp_config = self.temp_sources_configs.get(subject_name, {})
+        # Połącz istniejącą konfigurację z tymczasową (tymczasowa ma priorytet)
+        merged_config = {**existing_config, **temp_config}
 
         win = tk.Toplevel(self.root)
         win.title(f"Źródła: {subject_name}")
-        win.geometry("400x300")
+        win.geometry("500x400")
         win.grab_set()
 
         vars_map = {}
         tk.Label(win, text=f"Typ źródła dla folderów {subject_name}",
-                 font=("Arial", 12, "bold")).pack(pady=10)
+                font=("Arial", 12, "bold")).pack(pady=10)
+
+        # Info o zapisie
+        info_label = tk.Label(win, 
+                            text="💾 Konfiguracja zostanie zapisana do pliku sources_config.json", 
+                            font=("Arial", 9), fg="blue")
+        info_label.pack(pady=5)
 
         frame = tk.Frame(win)
         frame.pack(fill=tk.BOTH, expand=True, padx=10)
 
-        for sub in sorted(subject_path.iterdir()):
-            if not sub.is_dir() or sub.name == "__pycache__":
-                continue
-            row = tk.Frame(frame)
-            row.pack(fill=tk.X, pady=2)
-            tk.Label(row, text=sub.name, width=15, anchor="w").pack(side=tk.LEFT)
+        # Sprawdź podfoldery
+        subfolders = []
+        if subject_path.exists():
+            for sub in sorted(subject_path.iterdir()):
+                if sub.is_dir() and sub.name != "__pycache__":
+                    subfolders.append(sub)
 
-            var = tk.StringVar(value=existing.get(sub.name, "unknown"))
-            menu = ttk.OptionMenu(row, var, var.get(), *self.source_types)
-            menu.pack(side=tk.LEFT, padx=5)
-            vars_map[sub.name] = var
+        if not subfolders:
+            tk.Label(frame, text="Brak podfolderów do konfiguracji", 
+                    font=("Arial", 10), fg="red").pack(pady=20)
+        else:
+            for sub in subfolders:
+                row = tk.Frame(frame)
+                row.pack(fill=tk.X, pady=2)
+                
+                tk.Label(row, text=sub.name, width=20, anchor="w").pack(side=tk.LEFT)
 
+                # Użyj wartości z merged_config lub domyślną "unknown"
+                current_value = merged_config.get(sub.name, "unknown")
+                var = tk.StringVar(value=current_value)
+                menu = ttk.OptionMenu(row, var, current_value, *self.source_types)
+                menu.pack(side=tk.LEFT, padx=5)
+                vars_map[sub.name] = var
+        # DODANA FUNKCJA ZAPISYWANIA I ZAMYKANIA
         def save_and_close():
-            self.temp_sources_configs[subject_name] = {k: v.get() for k, v in vars_map.items()}
+            """Zapisuje konfigurację i zamyka okno"""
+            try:
+                # Pobierz wartości z wszystkich pól
+                new_config = {sub_name: var.get() for sub_name, var in vars_map.items()}
+                
+                # Zapisz do tymczasowej konfiguracji
+                self.temp_sources_configs[subject_name] = new_config
+                
+                # Sprawdź czy ma być zapisane od razu do pliku
+                config_file = subject_path / "sources_config.json"
+                try:
+                    with open(config_file, 'w', encoding='utf-8') as f:
+                        json.dump(new_config, f, indent=2, ensure_ascii=False)
+                    print(f"✅ Zapisano konfigurację źródeł do {config_file}")
+                    messagebox.showinfo("Sukces", 
+                        f"Konfiguracja źródeł została zapisana do pliku:\n{config_file.name}\n\n"
+                        f"Zapisano {len(new_config)} folderów.")
+                except Exception as e:
+                    print(f"❌ Błąd zapisywania do pliku: {e}")
+                    # Mimo błędu zapisu do pliku, zachowaj w temp_sources_configs
+                    messagebox.showwarning("Częściowy sukces", 
+                        f"Konfiguracja została zachowana tymczasowo, ale wystąpił błąd zapisu do pliku:\n{e}\n\n"
+                        f"Konfiguracja zostanie zapisana przy kontynuowaniu.")
+                
+                win.destroy()
+                
+            except Exception as e:
+                messagebox.showerror("Błąd", f"Błąd zapisywania konfiguracji: {e}")
+
+        def cancel():
+            """Anuluje zmiany i zamyka okno"""
             win.destroy()
 
-        tk.Button(win, text="Zapisz", bg="green", fg="white",
-                  command=save_and_close).pack(pady=10)
-
+        # DODANE PRZYCISKI
+        button_frame = tk.Frame(win)
+        button_frame.pack(pady=10, side=tk.BOTTOM)
+        
+        # Przycisk Zapisz i zamknij
+        save_btn = tk.Button(button_frame, 
+                            text="Zapisz i zamknij", 
+                            command=save_and_close,
+                            bg="green", 
+                            fg="white",
+                            font=("Arial", 10, "bold"),
+                            width=15)
+        save_btn.pack(side=tk.LEFT, padx=10)
+        
+        # Przycisk Anuluj
+        cancel_btn = tk.Button(button_frame, 
+                            text="Anuluj", 
+                            command=cancel,
+                            bg="red", 
+                            fg="white",
+                            font=("Arial", 10, "bold"),
+                            width=10)
+        cancel_btn.pack(side=tk.LEFT, padx=10)
+        
+        # DODANE: Info o liczbie folderów
+        if subfolders:
+            info_folders = tk.Label(win, 
+                                text=f"Konfiguracja dla {len(subfolders)} folderów", 
+                                font=("Arial", 8), fg="gray")
+            info_folders.pack(pady=2, side=tk.BOTTOM)
     def open_processing_window(self, selected_subjects):
         """Otwiera okno przetwarzania"""
         processing_window = tk.Toplevel(self.root)
@@ -429,14 +510,6 @@ class SubjectSelectorApp:
                                   "Zaznacz przynajmniej jeden przedmiot przed kontynuowaniem.")
             return
 
-        # Sprawdzenie źródeł (placeholder - zawsze True)
-        incomplete_subjects = [s for s in selected_subjects if not self.check_sources_complete(s)]
-        
-        if incomplete_subjects:
-            messagebox.showerror("Błąd - nieprzypisane źródła", 
-                f"Następujące przedmioty mają nieprzypisane źródła:\n\n" + 
-                "\n".join(f"• {subject}" for subject in incomplete_subjects))
-            return
 
         # Zapisywanie konfiguracji tymczasowych
         saved_count = 0
@@ -563,7 +636,7 @@ class SubjectSelectorApp:
         for subject_name in selected_subjects:
             subject_path = self.subjects_path / subject_name
             ocr_folders = [item for item in subject_path.iterdir() 
-                          if item.is_dir() and item.name != "__pycache__"]
+                        if item.is_dir() and item.name != "__pycache__"]
             subject_ocr_folders[subject_name] = ocr_folders
             total_ocr_folders += len(ocr_folders)
         
@@ -588,22 +661,25 @@ class SubjectSelectorApp:
             for ocr_folder in ocr_folders:
                 processed_count += 1
                 self.update_progress(progress_bar, progress_label, processed_count, total_ocr_folders, 
-                                   f"{subject_name}/{ocr_folder.name}")
+                                f"{subject_name}/{ocr_folder.name}")
                 
                 self.log_message(log_text, f"\nPrzetwarzanie folderu OCR: {subject_name}/{ocr_folder.name}")
+                
+                # NOWE: Sprawdź i skopiuj pliki z rezultaty do detekcje jeśli potrzeba
+                self.log_message(log_text, f"  🔍 Sprawdzanie plików źródłowych...")
+                files_ready = self.copy_required_files_to_detekcje(ocr_folder, log_text)
+                
+                if not files_ready:
+                    self.log_message(log_text, f"  ⚠️ Brak wymaganych plików dla {ocr_folder.name} - pomijam")
+                    continue
                 
                 # Definiuj ścieżkę do folderu detekcje
                 detekcje_path = ocr_folder / "detekcje"
                 
-                # Sprawdź czy folder detekcje istnieje
-                if not detekcje_path.exists():
-                    self.log_message(log_text, f"  ⚠ Brak folderu 'detekcje' w {ocr_folder.name}")
-                    continue
-                
                 # Przetwarzanie tylko pliku txt o nazwie podfolderu
                 expected_txt_file = detekcje_path / f"{ocr_folder.name}.txt"
                 if not expected_txt_file.exists():
-                    self.log_message(log_text, f"  ⚠ Brak pliku {ocr_folder.name}.txt w {ocr_folder.name}/detekcje")
+                    self.log_message(log_text, f"  ⚠️ Brak pliku {ocr_folder.name}.txt w {ocr_folder.name}/detekcje")
                     continue
                 
                 txt_files = [expected_txt_file]  # Lista z jednym plikiem
@@ -740,6 +816,69 @@ class SubjectSelectorApp:
             print(f"DEBUG convert_to_relative_path error for {absolute_path}: {e}")
             return str(absolute_path)
 
+    def copy_required_files_to_detekcje(self, ocr_folder, log_text=None):
+        """
+        Checks for required files in rezultaty folder and copies them to detekcje if needed.
+        Returns True if files are ready in detekcje folder.
+        """
+        try:
+            # Define paths
+            rezultaty_path = ocr_folder / "rezultaty"
+            detekcje_path = ocr_folder / "detekcje"
+            ocr_folder_name = ocr_folder.name
+            
+            # Create detekcje folder if it doesn't exist
+            if not detekcje_path.exists():
+                detekcje_path.mkdir(parents=True, exist_ok=True)
+                if log_text:
+                    self.log_message(log_text, f"  📁 Utworzono folder detekcje dla {ocr_folder_name}")
+            
+            # Check main OCR text file
+            main_txt_file_dest = detekcje_path / f"{ocr_folder_name}.txt"
+            main_txt_file_source = rezultaty_path / f"{ocr_folder_name}.txt"
+            
+            # Check latex_wzory.json file
+            latex_file_dest = detekcje_path / "latex_wzory.json"
+            latex_file_source = rezultaty_path / "wzory" / "latex_wzory.json"
+            
+            files_copied = False
+            
+            # Check and copy main OCR text file if needed
+            if not main_txt_file_dest.exists() and main_txt_file_source.exists():
+                import shutil
+                shutil.copy2(main_txt_file_source, main_txt_file_dest)
+                if log_text:
+                    self.log_message(log_text, f"  📋 Skopiowano {main_txt_file_source.name} do folderu detekcje")
+                files_copied = True
+            
+            # Check and copy latex_wzory.json if needed
+            if not latex_file_dest.exists() and latex_file_source.exists():
+                import shutil
+                shutil.copy2(latex_file_source, latex_file_dest)
+                if log_text:
+                    self.log_message(log_text, f"  📋 Skopiowano latex_wzory.json do folderu detekcje")
+                files_copied = True
+            
+            # Check if files exist in detekcje folder
+            files_ready = main_txt_file_dest.exists()
+            
+            if log_text:
+                if files_copied:
+                    self.log_message(log_text, f"  ✅ Pliki zostały skopiowane do folderu detekcje")
+                if files_ready:
+                    self.log_message(log_text, f"  ✅ Pliki gotowe do przetwarzania w folderze detekcje")
+                else:
+                    self.log_message(log_text, f"  ⚠️ Brak wymaganych plików w folderze detekcje")
+                    if not main_txt_file_source.exists():
+                        self.log_message(log_text, f"  ⚠️ Brak pliku {ocr_folder_name}.txt w folderze rezultaty")
+            
+            return files_ready
+        
+        except Exception as e:
+            if log_text:
+                self.log_message(log_text, f"  ❌ Błąd podczas kopiowania plików: {e}")
+            return False
+
     def process_all_subjects(self, selected_subjects, log_text, progress_bar, progress_label, use_vision):
         """Przetwarza wszystkie wybrane przedmioty"""
         self.log_message(log_text, "=== ROZPOCZĘCIE PRZETWARZANIA PRZEDMIOTÓW ===")
@@ -754,14 +893,14 @@ class SubjectSelectorApp:
             self.log_message(log_text, f"✗ Błąd inicjalizacji procesorów: {e}")
             return
         
-        # Liczenie folderów do przetworzenia - ZMIANA: detekcje zamiast rezultaty
+        # Liczenie folderów do przetworzenia
         total_ocr_folders = 0
         subject_ocr_folders = {}
         
         for subject_name in selected_subjects:
             subject_path = self.subjects_path / subject_name
             ocr_folders = [item for item in subject_path.iterdir() 
-                          if item.is_dir() and item.name != "__pycache__"]
+                        if item.is_dir() and item.name != "__pycache__"]
             subject_ocr_folders[subject_name] = ocr_folders
             total_ocr_folders += len(ocr_folders)
         
@@ -774,7 +913,12 @@ class SubjectSelectorApp:
         processed_count = 0
         success_count = 0
         error_count = 0
-        
+        files_converted = 0
+
+        if use_vision:
+            self.log_message(log_text, "\n🔄 Converting Vision JSON format to standard format...")
+            self.convert_vision_json_format(selected_subjects, lambda msg: self.log_message(log_text, msg))
+            self.log_message(log_text, f"✅ Vision JSON format conversion complete: {files_converted} entries processed")
         # Przetwarzanie
         for subject_name in selected_subjects:
             self.log_message(log_text, f"\n--- PRZETWARZANIE PRZEDMIOTU: {subject_name} ---")
@@ -784,60 +928,79 @@ class SubjectSelectorApp:
             for ocr_folder in ocr_folders:
                 processed_count += 1
                 self.update_progress(progress_bar, progress_label, processed_count, total_ocr_folders, 
-                                   f"{subject_name}/{ocr_folder.name}")
+                                f"{subject_name}/{ocr_folder.name}")
                 
                 self.log_message(log_text, f"\nPrzetwarzanie folderu OCR: {subject_name}/{ocr_folder.name}")
+                
+                # NOWE: Sprawdź i skopiuj pliki z rezultaty do detekcje jeśli potrzeba
+                self.log_message(log_text, f"  🔍 Sprawdzanie plików źródłowych...")
+                files_ready = self.copy_required_files_to_detekcje(ocr_folder, log_text)
+                
+                if not files_ready:
+                    self.log_message(log_text, f"  ⚠️ Brak wymaganych plików dla {ocr_folder.name} - pomijam")
+                    continue
                 
                 # Definiuj ścieżkę do folderu detekcje
                 detekcje_path = ocr_folder / "detekcje"
                 
-                # Sprawdź czy folder detekcje istnieje
-                if not detekcje_path.exists():
-                    self.log_message(log_text, f"  ⚠ Brak folderu 'detekcje' w {ocr_folder.name}")
-                    continue
-                
                 # Przetwarzanie tylko pliku txt o nazwie podfolderu
                 expected_txt_file = detekcje_path / f"{ocr_folder.name}.txt"
                 if not expected_txt_file.exists():
-                    self.log_message(log_text, f"  ⚠ Brak pliku {ocr_folder.name}.txt w {ocr_folder.name}/detekcje")
+                    self.log_message(log_text, f"  ⚠️ Brak pliku {ocr_folder.name}.txt w {ocr_folder.name}/detekcje")
                     continue
                 
                 txt_files = [expected_txt_file]  # Lista z jednym plikiem
                 
                 # Przetwarzanie plików txt
+
+                # Ensure json_data is still available after vision processing
                 for txt_file in txt_files:
                     try:
                         self.log_message(log_text, f"  📄 Przetwarzanie pliku: {txt_file.name}")
                         
                         # KROK 1: Przetwórz plik i pobierz texts
                         texts = processor.process_file(str(txt_file))
-                        self.log_message(log_text, f"    📋 Znaleziono {len(texts)} elementów do przetworzenia")
+                        
+                        
+                        # Dodaj sprawdzenie typu przed użyciem len()
+                        if isinstance(texts, (list, tuple, dict, set)):
+                            self.log_message(log_text, f"    📋 Znaleziono {len(texts)} elementów do przetworzenia")
+                        else:
+                            self.log_message(log_text, f"    ⚠ Nieprawidłowy format danych: {type(texts).__name__}")
+                            # Utwórz pustą listę aby kontynuować przetwarzanie
+                            texts = []
                         
                         # KROK 2: Utwórz JSON z kontekstem obrazów (już przefiltrowany!)
                         if (use_vision):
-                            json_data = processor.get_images_with_context_json(texts, use_vision=True)
+                            json_data = processor.get_images_with_context_json(texts, selected_subjects, use_vision=True)
                         else:
-                            json_data = processor.get_images_with_context_json(texts, use_vision=False)
-                        # NOWE: Normalizuj ścieżki w JSON przed zapisem
-                        if json_data:
-                            normalized_json_data = []
-                            for item in json_data:
-                                normalized_item = {}
-                                for image_path, context_texts in item.items():
-                                    # Normalizuj ścieżkę do formatu z pojedynczymi slashami
-                                    normalized_path = self.normalize_path_separators(image_path)
-                                    normalized_item[normalized_path] = context_texts
-                                normalized_json_data.append(normalized_item)
-                            json_data = normalized_json_data
+                            json_data = processor.get_images_with_context_json(texts, selected_subjects, use_vision=False)
+                            if json_data:
+                                normalized_json_data = []
+                                for item in json_data:
+                                    normalized_item = {}
+                                    for image_path, context_texts in item.items():
+                                        # Normalizuj ścieżkę do formatu z pojedynczymi slashami
+                                        normalized_path = self.normalize_path_separators(image_path)
+                                        normalized_item[normalized_path] = context_texts
+                                    normalized_json_data.append(normalized_item)
+                                json_data = normalized_json_data
+
+                            if not json_data and use_vision==False:
+                                self.log_message(log_text, f"    ⚠ Brak istniejących obrazów w pliku {txt_file.name}")
+                                json_result = False
+                            else:
+                                self.log_message(log_text, f"    ✓ Znaleziono {len(json_data)} istniejących obrazów")
+                                
+                                # Zapisz JSON bezpośrednio (bez dodatkowego filtrowania)
+                                json_output_file = detekcje_path / f"{txt_file.stem}_filtered_context.json"
                         
-                        if not json_data:
-                            self.log_message(log_text, f"    ⚠ Brak istniejących obrazów w pliku {txt_file.name}")
-                            json_result = False
-                        else:
-                            self.log_message(log_text, f"    ✓ Znaleziono {len(json_data)} istniejących obrazów")
-                            
-                            # Zapisz JSON bezpośrednio (bez dodatkowego filtrowania)
-                            json_output_file = detekcje_path / f"{txt_file.stem}_filtered_context.json"
+                        # DODANE: upewnij się, że json_data to lista, inaczej zamień na pustą
+                        if not isinstance(json_data, list):
+                            self.log_message(log_text, f"    ⚠ Nieprawidłowy format danych JSON: {type(json_data).__name__}, oczekiwano listy")
+                            json_data = []
+
+                        
                             
                             try:
                                 with open(json_output_file, 'w', encoding='utf-8') as f:
@@ -847,31 +1010,30 @@ class SubjectSelectorApp:
                             except Exception as e:
                                 self.log_message(log_text, f"    ✗ Błąd zapisywania JSON: {e}")
                                 json_result = False
-                        
-                        # KROK 3: Utwórz plik TXT z samymi chunkami
-                        chunks_output_file = detekcje_path / f"{txt_file.stem}_chunks.txt"
-                        chunks_result = processor.create_output_txt_chunks_only(texts, str(chunks_output_file))
-                        
-                        if chunks_result:
-                            self.log_message(log_text, f"    ✓ Zapisano chunks TXT: {chunks_output_file.name}")
-                        else:
-                            self.log_message(log_text, f"    ✗ Błąd zapisywania chunks TXT: {chunks_output_file.name}")
-                        
-                        # KROK 4: Utwórz plik TXT z base64
-                        base64_output_file = detekcje_path / f"{txt_file.stem}_base64.txt"
-                        base64_result = processor.create_output_txt_with_base64(texts, str(base64_output_file))
-                        
-                        if base64_result:
-                            self.log_message(log_text, f"    ✓ Zapisano base64 TXT: {base64_output_file.name}")
-                        else:
-                            self.log_message(log_text, f"    ✗ Błąd zapisywania base64 TXT: {base64_output_file.name}")
-                        
-                        # Zlicz sukces jeśli przynajmniej jeden plik został utworzony
-                        if json_result or chunks_result or base64_result:
-                            success_count += 1
-                        else:
-                            error_count += 1
-                        
+                            # KROK 3: Utwórz plik TXT z samymi chunkami
+                            chunks_output_file = detekcje_path / f"{txt_file.stem}_chunks.txt"
+                            chunks_result = processor.create_output_txt_chunks_only(texts, str(chunks_output_file))
+                            
+                            if chunks_result:
+                                self.log_message(log_text, f"    ✓ Zapisano chunks TXT: {chunks_output_file.name}")
+                            else:
+                                self.log_message(log_text, f"    ✗ Błąd zapisywania chunks TXT: {chunks_output_file.name}")
+                            
+                            # KROK 4: Utwórz plik TXT z base64
+                            base64_output_file = detekcje_path / f"{txt_file.stem}_base64.txt"
+                            base64_result = processor.create_output_txt_with_base64(texts, str(base64_output_file))
+                            
+                            if base64_result:
+                                self.log_message(log_text, f"    ✓ Zapisano base64 TXT: {base64_output_file.name}")
+                            else:
+                                self.log_message(log_text, f"    ✗ Błąd zapisywania base64 TXT: {base64_output_file.name}")
+                            
+                            # Zlicz sukces jeśli przynajmniej jeden plik został utworzony
+                            if json_result or chunks_result or base64_result:
+                                success_count += 1
+                            else:
+                                error_count += 1
+                            
                     except Exception as e:
                         self.log_message(log_text, f"    ✗ Błąd przetwarzania {txt_file.name}: {e}")
                         error_count += 1
@@ -883,7 +1045,7 @@ class SubjectSelectorApp:
         self.log_message(log_text, f"Przetworzono folderów OCR: {processed_count}")
         self.log_message(log_text, f"Pomyślnie przetworzone pliki: {success_count}")
         self.log_message(log_text, f"Błędy: {error_count}")
-        
+    
         if error_count == 0:
             self.log_message(log_text, "🎉 WSZYSTKIE PLIKI PRZETWORZONE POMYŚLNIE!")
             self.log_message(log_text, "📋 Utworzono dla każdego pliku:")
@@ -899,6 +1061,100 @@ class SubjectSelectorApp:
             self.log_message(log_text, f"⚠ ZAKOŃCZONO Z {error_count} BŁĘDAMI")
         
         self.update_progress(progress_bar, progress_label, total_ocr_folders, total_ocr_folders, "Zakończono")
+
+    def convert_vision_json_format(self, selected_subjects, log_function=None):
+        """
+        Converts improperly formatted JSON files from vision processing into the correct combined format.
+        Creates a single folderOCR_context.json file for each OCR folder.
+        """
+        if log_function is None:
+            log_function = print
+            
+        log_function("🔄 Starting JSON format conversion for vision data...")
+        total_folders_processed = 0
+        total_files_converted = 0
+        
+        for subject_name in selected_subjects:
+            log_function(f"\n📚 Processing subject: {subject_name}")
+            subject_path = self.subjects_path / subject_name
+            
+            # Find all OCR folders
+            ocr_folders = [item for item in subject_path.iterdir() 
+                        if item.is_dir() and item.name != "__pycache__"]
+            
+            log_function(f"📂 Found {len(ocr_folders)} OCR folders in {subject_name}")
+            
+            for ocr_folder in ocr_folders:
+                ocr_folder_name = ocr_folder.name
+                detekcje_path = ocr_folder / "detekcje"
+                
+                if not detekcje_path.exists():
+                    log_function(f"⚠️ Skipping - No 'detekcje' folder in {ocr_folder_name}")
+                    continue
+                    
+                log_function(f"\n🔍 Processing OCR folder: {ocr_folder_name}")
+                
+                # List of subdirectories to search for JSON files
+                subfolders = ["wzory", "tabele", "figury"]
+                all_json_data = []
+                files_converted = 0
+                
+                # Check each subfolder for JSON files
+                for subfolder_name in subfolders:
+                    subfolder_path = detekcje_path / subfolder_name
+                    
+                    if not subfolder_path.exists():
+                        continue
+                        
+                    json_files = list(subfolder_path.glob("*.json"))
+                    log_function(f"  📄 Found {len(json_files)} JSON files in {subfolder_name}")
+                    
+                    for json_file in json_files:
+                        try:
+                            with open(json_file, 'r', encoding='utf-8') as f:
+                                try:
+                                    json_content = json.load(f)
+                                    
+                                    # Process each item in the JSON file
+                                    if isinstance(json_content, list):
+                                        for item in json_content:
+                                            if "relative_path" in item and "description" in item:
+                                                # Transform to the correct format
+                                                full_path = f"pgverse/rag_codes/subjects/{item['relative_path']}"
+                                                transformed_item = {
+                                                    full_path: [item["description"]]
+                                                }
+                                                all_json_data.append(transformed_item)
+                                                files_converted += 1
+                                            
+                                except json.JSONDecodeError:
+                                    log_function(f"    ⚠️ Invalid JSON format in {json_file.name}")
+                                    
+                        except Exception as e:
+                            log_function(f"    ❌ Error processing {json_file.name}: {e}")
+                
+                # Write the combined data to a new JSON file
+                if all_json_data:
+                    output_json_path = detekcje_path / f"{ocr_folder_name}_context.json"
+                    try:
+                        with open(output_json_path, 'w', encoding='utf-8') as f:
+                            json.dump(all_json_data, f, ensure_ascii=False, indent=2)
+                        log_function(f"✅ Created combined JSON file: {output_json_path.name} with {len(all_json_data)} entries")
+                        total_files_converted += files_converted
+                    except Exception as e:
+                        log_function(f"❌ Error creating combined JSON file: {e}")
+                else:
+                    log_function(f"⚠️ No valid JSON data found for {ocr_folder_name}")
+                    
+                total_folders_processed += 1
+        
+        # Summary
+        log_function(f"\n📊 SUMMARY:")
+        log_function(f"✅ Processed {total_folders_processed} OCR folders")
+        log_function(f"📄 Converted {total_files_converted} JSON entries")
+        log_function(f"🎉 JSON format conversion complete!")
+        
+        return total_folders_processed, total_files_converted
 
     def open_graph_management_window(self, selected_subjects):
         """Otwiera okno zarządzania grafem Neo4j"""
@@ -2624,8 +2880,8 @@ class SubjectSelectorApp:
         try:
             log_function("🔄 Inicjalizacja komponentów...")
             
-            # ZMIANA: Użyj singletona embeddera
-            embedder = CLIPEmbedder.get_instance()
+            # Użyj singletona embeddera
+            embedder = CohereEmbedder.get_instance()
             log_function("✅ Embedder (singleton) gotowy do użycia")
             
             cuda_available = torch.cuda.is_available()
@@ -2642,7 +2898,7 @@ class SubjectSelectorApp:
             total_table_nodes = 0
             total_errors = 0
             total_context_found = 0
-            total_base64_found = 0  # DODANE
+            total_base64_found = 0
             
             log_function("\n=== ŁADOWANIE CHUNKÓW Z KONTEKSTU DO NEO4J ===")
             log_function(f"📋 Przedmioty do przetworzenia: {len(selected_subjects)}")
@@ -2731,7 +2987,7 @@ class SubjectSelectorApp:
                                     if chunk_idx % 10 == 0:  # Log co 10 chunków
                                         log_function(f"  📝 Przetwarzanie chunku {chunk_idx+1}/{len(text_chunks)}...")
                                     
-                                    # ZMIANA: Pobierz embedding TEKSTU (nie obrazu)
+                                    # Pobierz embedding TEKSTU (nie obrazu)
                                     text_embedding = embedder.get_text_embedding(chunk_text)
                                     
                                     if text_embedding is not None:
@@ -2751,13 +3007,14 @@ class SubjectSelectorApp:
                                             if existing_count == 0:
                                                 # Konwertuj ścieżkę na względną od pgverse
                                                 relative_path = self.convert_to_relative_path(str(chunks_file))
-                                                
+
+                                                text_embedding = text_embedding.tolist() if hasattr(text_embedding, 'tolist') else text_embedding
                                                 # Dodaj węzeł tekstowy z embeddingiem tekstowym
                                                 graph_builder.insert_node(
                                                     node_id=unique_node_id,
                                                     data_type="text",
                                                     text=chunk_text,
-                                                    embedding=text_embedding.tolist(),
+                                                    embedding=text_embedding,
                                                     path=relative_path,
                                                     source=source_type,
                                                     base64_data=None
@@ -2789,24 +3046,24 @@ class SubjectSelectorApp:
                     else:
                         log_function(f"⚠️ Brak pliku chunków: {chunks_file.name}")
                     
-                    # === KROK 2: WCZYTAJ DANE BASE64 (DODANE) ===
+                    # === KROK 2: WCZYTAJ DANE BASE64 ===
                     log_function(f"\n📋 KROK 2: Ładowanie danych base64...")
                     base64_dict = self.load_base64_data_from_file(subfolder_name, detekcje_path)
                     log_function(f"✅ Wczytano {len(base64_dict)} zapisów base64")
                     
-                    # === KROK 3: WCZYTAJ KONTEKST OBRAZÓW Z JSON (ZMIENIONE NUMEROWANIE) ===
-                    log_function(f"\n🖼️ KROK 3: Ładowanie kontekstu obrazów z pliku context.json...")
+                    # === KROK 3: WCZYTAJ KONTEKST OBRAZÓW Z JSON ===
+                    log_function(f"\n🖼️ KROK 3: Ładowanie kontekstu obrazów...")
                     context_dict = {}
                     
-                    # ZMIANA: Szukaj pliku folderOCR_context.json zamiast folderOCR_filtered_context.json
-                    context_json_file = detekcje_path / f"{subfolder_name}_context.json"
-                    log_function(f"🔍 Szukam pliku: {context_json_file}")
+                    # Użyj pliku folderOCR_filtered_context.json (ma identyczną strukturę jak context.json)
+                    json_files = list(detekcje_path.glob(f"{subfolder_name}_filtered_context.json"))
+                    log_function(f"🔍 Znaleziono {len(json_files)} plików JSON z kontekstem")
                     
-                    if context_json_file.exists():
+                    for json_file in json_files:
                         try:
-                            log_function(f"  📄 Wczytywanie: {context_json_file.name}")
+                            log_function(f"  📄 Wczytywanie: {json_file.name}")
                             
-                            with open(context_json_file, 'r', encoding='utf-8') as f:
+                            with open(json_file, 'r', encoding='utf-8') as f:
                                 images_data = json.load(f)
                             
                             # Zbuduj słownik kontekstu: ścieżka_obrazu -> lista_tekstów_kontekstu
@@ -2817,19 +3074,17 @@ class SubjectSelectorApp:
                                     combined_context = " ".join(context_texts) if context_texts else ""
                                     context_dict[normalized_path] = combined_context
                             
-                            log_function(f"  ✅ Wczytano kontekst dla {len(context_dict)} obrazów z {context_json_file.name}")
+                            log_function(f"  ✅ Wczytano kontekst dla {len(context_dict)} obrazów z {json_file.name}")
                             
                         except Exception as e:
-                            log_function(f"  ✗ Błąd wczytywania JSON {context_json_file.name}: {e}")
+                            log_function(f"  ✗ Błąd wczytywania JSON {json_file.name}: {e}")
                             total_errors += 1
-                    else:
-                        log_function(f"⚠️ Brak pliku kontekstu: {context_json_file.name}")
                     
                     # Policz wszystkie konteksty znalezione dla tego podfolderu
                     total_context_found += len(context_dict)
                     log_function(f"✅ KROK 3 ZAKOŃCZONY: Łącznie {len(context_dict)} obrazów z kontekstem")
                     
-                    # === KROK 4: DODAJ WĘZŁY OBRAZÓW/WZORÓW/TABEL Z EMBEDDINGIEM TEKSTOWYM + BASE64 (ZMIENIONE) ===
+                    # === KROK 4: DODAJ WĘZŁY OBRAZÓW/WZORÓW/TABEL Z EMBEDDINGIEM TEKSTOWYM + BASE64 ===
                     if context_dict:
                         log_function(f"\n🎨 KROK 4: Przetwarzanie {len(context_dict)} obrazów z embeddingami tekstowymi + base64...")
                         
@@ -2843,7 +3098,7 @@ class SubjectSelectorApp:
                                 data_type = self.determine_data_type_from_path(image_path)
                                 log_function(f"    🏷️ Typ danych: {data_type}")
                                 
-                                # DODANE: Znajdź odpowiednie base64 na podstawie ścieżki
+                                # Znajdź odpowiednie base64 na podstawie ścieżki
                                 actual_image_path = self.find_actual_image_path(image_path, detekcje_path)
                                 base64_data = None
                                 
@@ -2860,7 +3115,7 @@ class SubjectSelectorApp:
                                 # KLUCZOWA ZMIANA: Użyj kontekstu do embeddingu TEKSTOWEGO
                                 if context_text:
                                     log_function(f"    🔄 Generowanie embeddingu tekstowego z kontekstu...")
-                                    # ZMIANA: Embedding TEKSTU zamiast obrazu
+                                    # Embedding TEKSTU zamiast obrazu
                                     context_embedding = embedder.get_text_embedding(context_text)
                                     
                                     if context_embedding is not None:
@@ -2884,7 +3139,7 @@ class SubjectSelectorApp:
                                                 relative_image_path = self.convert_to_relative_path(image_path)
                                                 
                                                 log_function(f"    💾 Zapisywanie węzła do bazy...")
-                                                # ZMIANA: Dodaj węzeł z embeddingiem tekstowym + base64
+                                                # Dodaj węzeł z embeddingiem tekstowym + base64
                                                 graph_builder.insert_node(
                                                     node_id=unique_image_node_id,
                                                     data_type=data_type,
@@ -2892,7 +3147,7 @@ class SubjectSelectorApp:
                                                     embedding=context_embedding.tolist(),  # Embedding tekstu
                                                     path=relative_image_path,
                                                     source=source_type,
-                                                    base64_data=base64_data  # DODANE: base64
+                                                    base64_data=base64_data  # base64
                                                 )
                                                 
                                                 if data_type == 'image':
@@ -2923,7 +3178,7 @@ class SubjectSelectorApp:
                     log_function(f"\n📊 PODSUMOWANIE FOLDERU {subfolder_name}:")
                     log_function(f"  📝 Chunki tekstowe: {text_chunks_loaded}")
                     log_function(f"  🖼️ Obrazy z kontekstem: {len(context_dict) if context_dict else 0}")
-                    log_function(f"  📋 Base64 znalezione: {len(base64_dict)}")  # DODANE
+                    log_function(f"  📋 Base64 znalezione: {len(base64_dict)}")
                     log_function(f"  🧮 Typ embeddingów: TYLKO TEKSTOWE")
             
             # === PODSUMOWANIE KOŃCOWE ===
@@ -2931,7 +3186,7 @@ class SubjectSelectorApp:
             log_function(f"🎉 PODSUMOWANIE ŁADOWANIA CHUNKÓW Z KONTEKSTU")
             log_function(f"{'='*80}")
             log_function(f"📝 Kontekst znaleziony dla: {total_context_found} obrazów")
-            log_function(f"📋 Dane base64 znalezione: {total_base64_found}")  # DODANE
+            log_function(f"📋 Dane base64 znalezione: {total_base64_found}")
             log_function(f"🧮 Typ embeddingów: TYLKO TEKSTOWE (nie obrazowe)")
             log_function(f"")
             log_function(f"=== WĘZŁY DODANE DO BAZY ===")
@@ -2954,7 +3209,7 @@ class SubjectSelectorApp:
                 log_function(f"  • {total_image_nodes} węzłów obrazów (embedding kontekstu)")
                 log_function(f"  • {total_formula_nodes} węzłów wzorów (embedding kontekstu)")
                 log_function(f"  • {total_table_nodes} węzłów tabel (embedding kontekstu)")
-                log_function(f"  • {total_base64_found} węzłów z danymi base64")  # DODANE
+                log_function(f"  • {total_base64_found} węzłów z danymi base64")
                 log_function(f"  • BRAK relacji - dodaj je osobno!")
             else:
                 log_function("⚠️ Nie dodano żadnych danych - sprawdź logi błędów")

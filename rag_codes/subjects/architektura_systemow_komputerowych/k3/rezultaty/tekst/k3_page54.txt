@@ -1,0 +1,14 @@
+44 3. Podstowy techniki cyfrowej
+
+figi
+<image/figury/k3_page54_figure3.png>
+
+Rysunek 3.39. Mnożenie dwóch liczb w kodzie NKB
+
+<image/figury/k3_page54_figure1.png>
+
+Rysunek 3.40. Układ rcalizujący operację mnożenia
+
+Na rysunku 3.38 pokazano przykładowe mnożenie dwóch dodatnich liczb 4-bitowych
+(dziesiętnie 5 i 6). Wynik mnożenia ma dwa razy większą długość niż argumenty. Do
+realizacji algorytmu mnożenia stosuje się najczęściej układ składający się z sumatora

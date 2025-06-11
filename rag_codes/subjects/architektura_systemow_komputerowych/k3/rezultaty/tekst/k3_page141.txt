@@ -1,0 +1,58 @@
+6.5. Protokoły transmisji 13]
+
+Znacznik synchronizacji w omawianym protokole przyjęto jako 01111110, co zmusiło
+projektantów tego protokołu do znalezienia sposobu prawidłowego przesłania takiego
+ciągu danych (uniknięcia takiej sekwencji w innych polach). Sposób ten polega na wsta-
+wianiu dodatkowego i nie znaczącego zera po każdych pięciu jedynkach ciągu danych.
+Nadajnik jest wyposażony w specjalny układ wstawiania takiego 0, a oczywiście odbiornik
+jest wyposażony w układ odrzucania tego 0 po każdych pięciu jedynkach. Na przykład
+jeżeli trzeba dokonać transmisji ciągu 7 jedynek, to w rzeczywistości nadajnik wysyła ciąg
+IIIIO011.
+
+Jak widać z rysunku 6.11 adres odbiornika jest 8-bitowy, co pozwala na zakodowanie
+adresów 256 urządzeń. Jeśli w systemie pracuje więcej urządzeń, to protokół zezwala na
+wydłużenie pola adresowego, pod warunkiem, że ostatni bit pola adresowego będzie
+zawsze zerem. Wtedy następny bajt będzie traktowany jako bajt adresowy. Jeśli zaś
+pierwszy bajt adresu jest zakończony 1, to oznacza, że adres jest jednobajtowy. Oczywiście,
+przyjęcie takiego system ogranicza do 128 liczbę urządzeń adresownych jednobajtowo.
+
+Bardzo ważną rolę odgrywa słowo sterujące. Określa ono rodzaj komunikatu. Dla
+każdego rodzaju komunikatu słowo to ma inny format. Są trzy rodzaje komunikatów:
+
+1) komunikat informacyjny,
+
+2) komunikat nadzorczy,
+
+3) komunikat sterujący.
+
+KOMUNIKAT INFORMACYJNY
+
+Komunikat informacyjny jest ramką, której zawartość ma zostać odczytana przez od-
+biornik. Nadajniki i odbiorniki w systemie komputerowym nazywane są stacjami. W zależ-
+ności od konfiguracji stacji w systemie można różnie przesyłać komunikaty. Konfiguracja
+systemu jest określona połączeniami pomiędzy stacjami. W czasie transmisji stacja może
+być stacją główną (ang. primary station) lub stacją podrzędną (ang. secondary station).
+Wyróżnia się przesłania pomiędzy dwiema stacjami (ang. point-to-point configuration)
+i przesłania pomiędzy wieloma stacjami (ang. multipoint configuration). W zależności od
+konfiguracji komunikaty informacyjne są przesyłane w trzech trybach, zwanych trybami
+odpowiedzi. W zależności od nich następuje dalsza reakcja (odpowiedź) w systemie
+transmisji. Wyróżnia się:
+
+— tryb odpowiedzi zwykłej (normalnej) NRM (ang. normal response mode),
+
+— tryb odpowiedzi asynchronicznej ARM (ang. asynchronous response mode),
+
+— tryb odpowiedzi asynchronicznej podwójnej ABM (ang. asynchronous balanced
+
+mode).
+
+Transmisje NRM i ARM są stosowane do przesłań pomiędzy dwiema stacjami lub do
+przesłań z wyróżnioną stacją główną. W tym przypadku stacja główna jest odpowiedzialna
+za inicjalizację transmisji, sterowanie transmisją do/z stacji podrzędnych oraz za odłączanie
+stacji podrzędnych. W trybie NRM stacje podrzędne transmitują tylko na żądanie stacji
+głównej. W trybie ARM stacja podrzędna może zainicjować transmisję. W trybie ABM
+każda stacja może być zarówno stacją główną, jak i stacją podrzędną. Stacja nadawcza
+transmitując kolejne ramki wysyła do stacji odbiorczej także numery tych ramek. Stacja
+odbiorcza sprawdza poprawność transmisji i potwierdza nadajnikowi każdą bezbłędnie
+odebraną ramkę. Ponieważ potwierdzenia są naprzemienne w czasie z samymi transmis-
+Jami, to stacja nadawcza przesyła stacji odbiorczej nie tylko numer kolejnej ramki, ale

@@ -1,0 +1,39 @@
+28 3. Podstawy techniki cyfrowej
+
+<image/figury/k3_page38_figure1.png>
+
+wania informacji z tego wejścia na wyjście. Demiltiplekser zaś wybiera jedno z wielu
+wyjść, na które skierowuje informację z wejścia. Na rysunku 3.23a pokazano układ
+4-wejściowego multipleksera (4 x 1), a na rysunku 3.23b jego oznaczenie.
+
+Na rysunku 3.24a pokazano strukturę 4-wyjściowego demultipleksera (1 x 4), a na
+rysunku 3.24b jego oznaczenie. W obu układach można wyróżnić wejścia informacyjne
+iwejścia sterujące. Stan binarny na wejściach sterujących stanowi kryterium wyboru.
+Wejście E jest wejściem zezwalającym na dostęp. W obu przypadkach funkcję wyboru
+realizuje się za pomocą dekodera, który w podanych przykładach jest dekoderem 2-
+-wejściowym z dodatkowym wejściem dostępu.
+
+Przedstawione na rysunkach 3.23a i 3.24a układy są układami jednobitowymi,
+tj. wejścia informacyjne w multiplekserach, jak i wyjścia informacyjne w demultiplekse-
+rach są jednobitowe. W technice komputerowej stosuje się często układy wielobitowe.
+W takim przypadku dokonywana jest selekcja całej grupy linii. Na rysunkach 3.23c i 3.24c
+pokazano schematycznie układy, w których wybierana jest jedna z dwóch grup 8 linii. Dla
+takiej selekcji wystarczy tylko jedno wejście sterujące. Multipleksery takie stosuje się do
+wprowadzania informacji z dwóch różnych źródeł w jedno określone miejsce przeznacze-
+nia, a demultipleksery do wyprowadzania informacji z danego źródła w dwa różne miejsca
+przeznaczenia.
+
+KOMBINACYJNE UKŁADY MATRYCOWE
+
+W nowoczesnych systemach cyfrowych wykorzystuje się do projektowania złożonych
+układów kombinacyjnych układy wielkoscalone. Układy takie nazywane są układami
+matrycowymi, gdyż najczęściej stanowią one regularną strukturę elementów ułożoną w ma-
+trycę o pewnej liczbie wierszy i kolumn. Przykładowymi przedstawicielami takich układów
+są programowane matryce logiczne PLA (ang. programmable logic array), układy PLD
+(ang. programmable logic devices), tj. PLA wraz z przerzutnikami lub układy FPGA
+(ang. field-programmable gate array), w których komórką matrycy są bardziej złożone
+układy logiczne niż w przypadku PLA. Dla zorientowania Czytelnika w tym zagadnieniu
+omówiono matrycę PLA.
+
+Na rysunku 3.25 pokazano przykładową prostą strukturę PLA. Struktura ta składa się
+z dwu matryc. Załóżmy, że pionowe linie matryc tworzą iloczyn „na drucie”, a poziome

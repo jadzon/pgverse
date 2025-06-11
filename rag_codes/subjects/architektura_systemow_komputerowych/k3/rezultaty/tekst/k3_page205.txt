@@ -1,0 +1,160 @@
+Skorowidz
+
+pamięci dyskowe 87, 108
+
+— operacyjne 2, 88, 96
+
+— pomocnicze 2
+
+— RAM 87
+
+— ROM 87, 92
+
+— statyczne 92
+
+— wirtualne 153
+
+— z dostępem cyklicznym 87, 106
+
+— z dostępem sekwencyjnym 87
+
+— z dostępem swobodnym 87
+
+— zewnętrzne 2
+
+pamięć buforowa typu FIFO 160
+
+— kieszeniowa 86, 99
+
+— masowa 85
+
+— rejestrowa 86
+
+— typu 2D 89
+
+— typu 3D 89
+
+— zewnętrzna 86
+
+plik 147
+
+pobranie argumentu 11
+
+— rozkazu 11
+
+podprogramy 139
+
+podział pamięci 153
+
+pojemność pamięci 9, 85
+
+pole etykiety 144
+
+— komentarza 144
+
+— rozkazu 144
+
+praca krokowa 115
+
+— w trybie pułapki 115
+
+— — śledzenia 115
+
+priorytet 117
+
+procedura 139
+
+proces 149
+
+program 7
+
+— łączący 145
+
+— szeregujący zadania 148
+
+— wspomagający uruchamianie 147
+
+— wynikowy 145
+
+— źródłowy 145
+
+programowa obsługa urządzeń zewnętrz-
+nych 114
+
+prolog 140
+
+protokół BISYNC 134
+
+— HDLC 130
+
+przeglądanie 118
+
+przekazanie parametrów 143
+
+195
+
+przemieszczenie 82
+przerwania 63, 114
+przesunięcie 82
+
+przerzutnik 184
+
+przetwarzanie interakcyjne 147
+przetwarzanie wsadowe 147
+przyłączanie podprogramu 140
+pseudorozkaz 144
+
+ramka 130
+
+rejestr 30
+
+— przesuwający 31
+— rozkazów 9, 62
+— znaczników 62
+relokacja 146
+RISC 163
+
+rozkaz 7
+
+5
+
+segmentacja pamięci 153
+sektor 85, 109
+
+sekwencja czyszcząca 140
+
+— startowa 140
+
+słowo kontrolne CRC 39
+sterownik 113
+
+— łącza równoległego 123-124
+— łącza szeregowego 123, 126
+stronicowanie 153, 154
+
+suma logiczna 172
+
+— na drucie 15
+
+sumator 16, 17
+
+sumowanie 16
+
+sygnał inicjalizacji 63
+
+— pracy krokowej 63
+
+— przerwania 63
+
+— wstrzymania 63
+
+system funkcjonalnie pełny 179
+— operacyjny 3, 116, 146
+
+— plików 147
+
+— priotytetowy przerwań 117
+systemy czasu rzeczywistego 116
+— silnie powiązane 165
+
+— słabo powiązane 165

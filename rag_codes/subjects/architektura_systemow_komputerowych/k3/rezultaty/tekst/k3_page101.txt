@@ -1,0 +1,43 @@
+5.2. Pamięci operacyjne 9]
+
+<image/figury/k3_page101_figure1.png>
+
+ 
+
+Rysunek 5.5. Pamięć typu 2%D
+
+możliwe, gdy n+m jest parzyste. Jeżeli n+m jest nieparzyste, to matryca musi być
+prostokątna. Na rysunku 5.5b pokazano organizację pamięci 2/4D o pojemności IK x8.
+W tym przypadku n=l10 a m=3, więc matryca jest prostokątna. Liczba wierszy wynosi
+I=22"=128 a liczba kolumn k/l = 2 x 2” = 64. Kolumny są podzielone na 8 grup, po
+$ kolumn w każdej grupie. W takim przypadku trzeba zastosować 8 multiplekserów.
+Siedem bitów adresowych steruje dekoderem wybierając jeden spośród 128 wierszy,
+a pozostałe 3 bity adresowe sterują multiplekserami wybierając tylko jedną spośród
+8 kolumn danej grupy.
+
+Pamięci z wybieraniem typu 2D są szybkie, ale drogie (koszt dekodera), pamięci
+z wybieraniem 3D są wolniejsze, ale tańsze, a kompromisowe rozwiązanie pamięci z wy-
+bieraniem typu 2/4D ma dość złożoną organizację.
+
+Przedstawienie drugiej klasyfikacji pamięci, poprzedzi krótkie omówienie dwóch za-
+gadnień: jedno dotyczące niezawodności pracy pamięci i drugie dotyczące pamięci ROM.
+Pierwsze z nich dotyczy problemu błędów, które zdarzają się podczas pracy pamięci,
+a których przyczynami mogą być np. zbyt duże zmiany napięcia zasilającego lub zbyt
+duże natężenie promieniowania. W takich przypadkach mogą powstawać błędy trwałe
+(ang. hard errors) polegające na zmianie zawartości komórki pamięci lub też błędy
+przemijające (ang. sofł errors) polegające na jednokrotnym przekłamaniu powstałym przy
+odczycie zawartości. Celem zwiększenia niezawodności pamięci stosuje się układy de-
+tekcji i korekcji błędów. Jednym ze sposobów detekcji pojedynczego błędu jest dodanie
+do każdego słowa bitu parzystości i sprawdzanie jego wartości przy odczycie (problem ten
+przedstawiono w rozdz. 3). Korekcję błędów można uzyskać dopisując do każdego słowa
+w pamięci bity kodu CRC. Oczywiście przy takim rozwiązaniu potrzebna pojemność
+pamięci musi być zwiększona.
+
+Na rysunku 5.6 pokazano organizację pamięci z układem korekcji błędu. Dla każdego
+m-bitowego słowa wejściowego w układzie KI są obliczane wartości k bitów kodu ko-
+rekcyjnego i w efekcie do pamięci jest zapisywanych m +k bitów. Podczas odczytu układ
+K2 oblicza wartości k bitów korekcyjnych dla słowa odczytywanego z pamięci, które to
+bity są porównywane z odczytanymi z pamięci bitami korekcyjnymi. W przypadku nie-
+zgodności tych słów, na wyjściu komparatora, powstaje sygnał uruchamiający układ ko-
+rekcji K3. Zadaniem tego układu jest obliczenie numeru pozycji, na której nastąpiło
+przekłamanie i dokonanie korekcji tej wartości.

@@ -1,0 +1,51 @@
+146 7. Elementy oprogramowania komputerów
+
+Asemblery z tablicą przypisań już w pierwszym przebiegu tworzą zbiór wynikowy,
+choć rozkazy z odwołaniem do przodu nie mogą zostać w pełni przetłumaczone, gdyż nie
+znane są jeszcze ich adresy. Asembler rezerwuje dostateczną liczbę miejsc w tablicy, która
+jest wypełniana podczas drugiego przebiegu i adresy odwołań do przodu są przypisywane
+właśnie podczas tego przebiegu.
+
+Jak widać z tego opisu w obu przypadkach tłumaczenie zachodzi w dwóch przebie-
+gach. Różnica polega na tym, że w pierwszym przypadku zachodzi dwukrotny przebieg
+programu źródłowego, a w drugim przypadku drugi przebieg zachodzi już na zbiorze
+wynikowym.
+
+ŁĄCZENIE Z INNYMI PROGRAMAMI WYKONYWANE PRZEZ PROGRAM ŁĄCZĄCY
+
+Zadaniem programu łączącego jest scalenie programu napisanego przez programistę
+z programami, do których on się odwoływał. Programami tymi są zwykle programy
+biblioteczne, w jakie wyposażono komputer. W wyniku działania programu łączącego
+powstaje zbiór wynikowy (ang. executable file), który jest ciągiem rozkazów gotowym do
+wykonania przez procesor.
+
+ŁADOWANIE W ODPOWIEDNIE MIEJSCE PAMIĘCI KOMPUTERA WYKONYWANE
+PRZEZ PROGRAM ŁADUJĄCY
+
+Zbiór wynikowy może być umieszczony w dowolnym miejscu pamięci, ponieważ w wy-
+niku działania programu tłumaczącego adresy poszczególnych rozkazów powstają jako
+adresy względne, tj. przypisane są im adresy liczone względem adresu odniesienia. Dlatego
+programista może umieścić je w pamięci poczynając od adresu przypisanego pseudo-
+rozkazem ORG. W niektórych systemach rola programu ładującego jest większa, gdyż
+musi zostać zapewniona możliwość ładowania programu w różne miejsca pamięci w róż-
+nym czasie. Taka możliwość ta zwana jest relokacją (ang. relocation).
+
+Tak przetłumaczony program wynikowy jest gotowy do wykonania. Stanowi on ciąg
+rozkazów w kodzie maszynowym, połączony z bibliotecznymi podprogramami i umiesz-
+czony w określonym miejscu. Wywołuje się go przez podanie adresu początkowego, który
+jest ładowany do licznika rozkazów i pobierany przez procesor do wykonania.
+
+7.3. SYSTEMY OPERACYJNE
+7.3.1. WPROWADZENIE
+
+Aby komputer prawidłowo wykonał program trzeba, aby program ten mógł być zredago-
+wany, sprawdzony, zamieniony na kod operacyjny rozkazów komputera i wreszcie, aby
+mógł być uruchomiony, tj. sprawdzony na danych testowych i ewentualnie poprawiony.
+Wszystkie te czynności są na tyle skomplikowane, że nie są one realizowane przez sprzęt
+lecz przez specjalne programy. Zbiór programów, które umożliwiają wykonanie opisanych
+zadań, a także korzystanie z wszelkich zasobów komputera, tj. z procesora (-ów), pamięci,
+urządzeń wejścia-wyjścia oraz z innych programów użytkowych stanowi tzw. system
+operacyjny (ang. operating system).
+
+Ważnym zadaniem systemu operacyjnego jest zorganizowanie i optymalizacja dostępu
+do urządzeń zewnętrznych oraz efektywne wykorzystanie pamięci. System operacyjny

@@ -1,0 +1,35 @@
+10 2. Architektura klasycznych komputerów
+
+figury/k3_page20_figure2.pn
+figury/k3_page20_
+
+programu w języku wewnętrznym (postać zero-jedynkowa) komputera. Na rysunku 2.4b
+przedstawiono ten sam program w tzw. języku asemblerowym. Jest to postać wykorzystu-
+jąca mnemoniczny zapis rozkazów. Na rysunku 2.4c przedstawiono postać tego programu
+w języku wysokiego poziomu (np. FORTRAN). Zadaniem translatora języka FORTRAN,
+jak i translatora języka asemblera, jest konwersja programu na postać w języku we-
+wnętrznym. Program dodaje dwie liczby i wydrukowuje wynik (najlepiej widać to na
+rys. 2.4c). Wprowadzono dodatkowo trzy założenia. Po pierwsze założono, że jeden ze
+składników sumy (w przykładzie liczba 0000 0101) będzie wprowadzany przez progra-
+mistę, a więc znajdzie się w kodzie programu. Po drugie założono, że drugi składnik sumy
+już wcześniej zapisano pod znany adres (np. 0000 0000 0000 1111). Po trzecie założono,
+że adres drukarki jest 1010 1010.
+
+Jak program taki może być zapisany w pamięci? Pierwszym rozkazem programu jest
+rozkaz zapisania do jednego z rejestrów procesora pierwszego składnika sumy. Jest to
+rozkaz o kodzie mnemonicznym MOV (ang. move — prześlij). W popularnym komputerze
+IBM PC jego kod binarny jest 1011 0001. Trzy ostatnie bity (001) wskazują na rejestr (jest
+to rejestr CL), do którego ma zostać przesłana wartość. Kod ten wskazuje także na to, że
+następny bajt programu (następna komórka pamięci) ma być interpretowany nie jako
+rozkaz, a jako argument tej operacji. W tym przypadku oznacza to, że do rejestru CL ma
+zostać zapisany ten argument, czyli liczba 5. Całkowita długość tej instrukcji wynosi
+zatem 2 bajty. Trzeci bajt programu jest ponownie bajtem rozkazu MOV.
+
+Inny kod tego rozkazu (1010 0000) wskazuje na to, że przesłanie ma nastąpić do
+innego rejestru (ostatnie trzy bity, tj. 000 wskazują, że jest to rejestr A) i że argument tej
+operacji znajduje się w komórce pamięci. Adresem tej komórki są dwa następne bajty
+kodu programu (w naszym przykładzie są to bajty 0000 0000 i 0000 1111). Zatem cała
+instrukcja ma długość trzech bajtów, a w wyniku jej wykonania w rejestrze A zostanie
+umieszczona wartość 2 (zawartość komórki pamięci o podanym adresie). Trzecim
+rozkazem jest rozkaz dodawania (mnemoniczne ADD). Kod 0000 0000 mówi o tym, że
+jest to instrukcja dwubajtowa. Drugi bajt instrukcji wskazuje miejsce skąd należy odczytać

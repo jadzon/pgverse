@@ -1,0 +1,45 @@
+4.3. Współpraca procesora z otoczeniem 67
+
+Celem pokazania zmian zachodzących w rejestrach procesora, w czasie wykonywania
+tego programu, przedstawiono zawartości rejestrów A, B, PC, AD i RR w kolejnych
+fazach wykonywania programu. Dwa pierwsze rozkazy składają się z trzech cykli maszy-
+nowych:
+
+l) pobrania kodu operacyjnego oraz 4 bitów adresu,
+
+2) pobrania dalszych 16 bitów adresu,
+
+3) odczytu argumentu.
+
+Rozkaz dodawania nie wymaga dostępu do pamięci oprócz pobrania kodu rozkazu, ponie-
+waż jest to rozkaz z argumentami w rejestrach. Dlatego jest to rozkaz jednocyklowy.
+Pozostałe rozkazy są rozkazami trzycyklowymi. Po wykonaniu tego programu w rejestrze
+PC (i AD) jest adres 307.
+
+Ten sam program przy założeniu, że w liście rozkazów procesora znajduje się rozkaz
+dodawania, który specyfikuje adres wyniku można zrealizować znacznie prościej. Wów-
+czas program składa się z trzech rozkazów: dwóch rozkazów pobrania argumentów i roz-
+kazu dodawania wraz z zapisem do pamięci. Przy jeszcze innym założeniu, że rozkaz
+dodawania zawiera adres jednego z argumentów w pamięci, można wyeliminować rozkaz
+ładowania rejestru B i dodać zawartość rejestru A do zawartości komórki pamięci
+
+wyspecyfikowanej w rozkazie dodawania. W tym przypadku byłaby to komórka o ad-
+resie 915.
+
+4.3. WSPÓŁPRACA PROCESORA Z OTOCZENIEM
+
+Najczęściej procesor wykonuje cykle maszynowe synchronicznie z zegarem. Każdy okres
+zegara nazywa się taktem. Na rysunku 4.5 pokazano kolejne takty cyklu maszynowego
+odczytu pamięci (lub cyklu pobrania rozkazu). Cykl maszynowy zaczyna się wysłaniem
+na magistralę adresową odpowiedniego adresu. W procesorze z rysunku 4.1 jest to
+zawartość rejestru AD. Po pewnym czasie (na rysunku 4.5 ok. 2 taktów) procesor wysyła
+sygnał strobu odczytu pamięci MR. Ten czas opóźnienia pomiędzy tymi sygnałami zależy
+od tzw. czasu dostępu do pamięci (por. rozdz. 5). Jest to czas, po którym pamięć odpowiada
+na żądanie odczytu, czyli wysyła na szynę danych zawartość odpowiedniej komórki. Na
+rysunku 4.5 pokazano przykładowy cykl maszynowy składający się z 4 taktów. Taki cykl
+zastosowano w komputerach IBM PC. Spotyka się także cykle maszynowe o innej liczbie
+taktów. Takt pierwszy jest zwykle przeznaczony na wysłanie adresu i tym samym na
+
+<image/figury/k3_page77_figure1.png>
+
+Rysunek 4.5. Przebiegi czasowe w czasie cyklu maszynowego odczytu pamięci

@@ -1,0 +1,37 @@
+A.2. Układy kombinacyjne 177
+A.2. UKŁADY KOMBINACYJNE
+
+Rozważmy funkcję opisaną tablicą prawdy z tabl. D.3. Ta sama funkcja może być także
+opisana przez dwie postacie kanoniczne alternatywna i koniunkcyina:
+
+arzamiIz/0 nmnrmańn107 fłnarmiila1 mmm
+
+<image/wzory/k3_page187_formula2.png>
+
+Z postaci alierratywrnej widac, ZE lUIKCJĘ Ię Ga SIĘ ZAJIpPIEIEJIoOWwAdĆ DIUTĄC jedną
+bramkę sumy o pięciu wejściach (dla każdego implikantu po jednym wejściu) i podając na
+jej wejścia wyjścia z pięciu bramek iloczynów. Każdy z tych iloczynów jest trzywejściowy
+i realizuje jeden z implikantów tej funkcji. Ponieważ w kanonicznej postaci alternatywnej
+tej funkcji wszystkie zmienne występują zarówno w postaci afirmowanej (bez zanego-
+wania) jak i negowane, więc dla realizacji tej funkcji trzeba dodać trzy inwertery. Układ
+logiczny realizujący funkcję z tabl. D.3 pokazano na rys. D.2.
+
+<image/figury/k3_page187_figure1.png>
+
+Rysunek D.2. Realizacja postaci alternatywnej funkcji
+
+Podobnie można zrealizować kanoniczną postać koniunkcyjną biorąc trzywejściową
+bramkę iloczynu i trzy trzywejściowe bramki sumy oraz trzy inwertery. Układ pokazano
+na rys. D.3. Nie są to jednak jedyne rozwiązania. Zauważmy z map Karnaugha tych
+funkcji, że istnieją tzw. sąsiednie implikanty i sąsiednie implicenty. Rozpatrzmy kolejno
+oba przypadki.
+
+Sąsiedniość implikantów oznacza, że istnieją dwa implikanty o postaci X"x, i X'x,,
+gdzie X jest iloczynem wszystkich zmiennych oprócz x, (branych w postaci afirmacyjnej
+lub zanegowanych). Stosując prawo pochłaniania otrzymamy, że Xx, + Xx, =X, co
+oznacza, że taką parę implikantów można zastąpić jednym iloczynem X. Dla przykładowej
+funkcji istnieją następujące pary implikantów: 1 i 5, 2 i 6, 5i 7, 6i 7. Do realizacji
+
+<image/figury/k3_page187/_figure2.png>
+
+Rysunek D.3. Realizacja postacji koniunkcyjnej funkcji

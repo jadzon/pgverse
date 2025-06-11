@@ -1,0 +1,39 @@
+24 3. Podstawy techniki cyfrowej
+
+<image/figury/k3_page34_figure1.png>
+
+Układ taki jednak ma tę wadę, że wzrasta liczba jego stopni, a razem z nią czas
+propagacji sygnału od wejścia do wyjścia. Powoduje to zmniejszanie szybkości dekodo-
+wania. Projektowanie dekoderów o dużej liczbie wyjść stawia projektantów przed wy-
+borem pomiędzy złożonością dekodera a szybkością jego działania. Dekodery o dużej
+liczbie wyjść są trudne do realizacji, choćby ze względu na ograniczenie liczby końcówek
+układu scalonego. Dlatego w układach LSI dekodery są scalane wraz z układem, którym
+sterują. W takim przypadku łatwiej dokonać połączeń. Przedstawione układy są dekode-
+rami zwanymi dekoderami liniowymi. Problem dekodowania dużej liczby sygnałów wejś-
+ciowych jest często rozwiązywany także za pomocą tzw. dekodowania matrycowego.
+
+Niech będzie dana matryca 2” dwuwejściowych bramek iloczynów jak na rysun-
+ku 3.16a. Jeżeli n jest parzyste, to matryca jest kwadratowa, natomiast jeżeli n jest nie-
+parzyste, to matryca jest prostokątna. Jak widać z rysunku jedne wejścia bramek (znaj-
+dujących się w tym samym wierszu) są ze sobą połączone i stanowią tzw. wejścia wierszy
+dekodera w,. Pozostałe wejścia bramek (znajdujących się w tej samej kolumnie) także są
+ze sobą połączone i stanowią wejścia kolumn k.. Dla parzystego n mamy m= 2m2 wierszy
+i tyle samo kolumn. Układ pokazany na rysunku 3.16b jest dwustopniowym dekoderem
+n-wejściowym, tj. 2'-wyjściowym. Pierwszy stopień dekodera stanowią dwa klasyczne
+dekodery o 2"? wyjściach każdy, a drugi stopień stanowi matryca 2” bramek AND.
+
+W tablicy 3.2 porównano liczby bramek potrzebne do realizacji dekodera jednostop-
+niowego i dekodera matrycowego, przy czym obok liczby bramek podano w nawiasach
+wymaganą liczbę wejść tych bramek. Cena dekoderów matrycowych jest niższa, gdyż
+mimo większej liczby bramek mają one znacznie mniejszą liczbę wejść. Dekodery takie
+są najczęściej stosowane w pamięciach, gdzie potrzebna jest duża liczba wyjść dekodera,
+
+Tablica 3.2. Porównanie dekoderów
+
+ 
+
+n Dekoder Dekoder
+
+iednactanninuru matruoswwa:
+
+<image/wwzory/k3_page34_formula2.png>

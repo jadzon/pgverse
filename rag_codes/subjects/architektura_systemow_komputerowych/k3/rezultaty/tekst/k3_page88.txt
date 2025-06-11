@@ -1,0 +1,64 @@
+78 4. Procesory
+
+Wszystkie podane operacje są jednoargumentowe. Rozkazy przesunięć mogą dotyczyć
+zarówno zawartości rejestrów jak i zawartości komórki pamięci. W niektórych kompu-
+terach można spotkać różne modyfikacje tych rozkazów, jak np. przesuwanie na dwóch
+połączonych rejestrach lub przesuwanie dwuargumentowe, gdzie drugi argument określa
+liczbę pozycji o jaką ma być przesunięta zawartość danego rejestru.
+
+4.6.2. ROZKAZY PRZESŁAŃ
+
+MOV — move — przesłanie słowa pomiędzy rejestrami procesora.
+
+STR — store — przesłanie słowa ze wskazanego w rozkazie rejestru procesora do ko-
+mórki pamięci.
+
+LD — load — przesłanie słowa z pamięci do wskazanego rejestru procesora.
+
+XCH — exchange — wymiana zawartości rejestrów.
+
+IN — imput— odczyt słowa z urządzenia wejściowego.
+
+OUT — output — przesłanie zawartości wskazanego rejestru procesora do urządzenia
+wyjściowego.
+
+CLR — clear — zerowanie rejestru.
+
+SET — set — zapisanie do rejestru jedynek.
+
+PUSH — push — zapisanie zawartości rejestru na stos (wyjaśnienie pojęcia stosu w dal-
+szym ciągu tekstu).
+POP — pop— odczyt słowa z wierzchołka stosu i przesłanie go do rejestru.
+
+Pierwsze 6 rozkazów to rozkazy jednoargumentowe. Muszą one jednak specyfikować dwa
+adresy operandów. Pierwszy z nich wskazuje miejsce skąd pochodzi argument operacji
+(źródło), a drugi wskazuje miejsce jego przesłania (przeznaczenie). Istnieją procesory,
+w których rozkazy takie mogą być modyfikowane w taki sposób, aby ich wykonanie było
+wielokrotne, tj. powtarzane określoną przez rozkaz liczbę razy. Umożliwia to przesyłanie
+całych bloków słów. Mówimy, że są to rozkazy z powtarzaniem. W takim przypadku
+rozkazy te są dwuargumentowe, gdyż drugi argument specyfikuje ile razy ten rozkaz ma
+
+być wykonany. Pozostałe cztery rozkazy wymienione w tej grupie są rozkazami jedno-
+argumentowymi.
+
+4.6.3. ROZKAZY STERUJĄCE PRACĄ PROGRAMU
+
+JMP — jump — skok bezwarunkowy do miejsca w pamięci wyspecyfikowanego w roz-
+kazie.
+
+Jc — jump conditional — skok warunkowy, gdzie c określa jaki warunek musi być
+spełniony, aby rozkaz wykonać.
+
+CALL— jump to subrouline — wywołanie podprogramu polegające na tym, że wykony-
+wany jest skok wraz z zapamiętaniem na stosie zawartości licznika rozkazów
+(ostatni adres).
+
+Cc — call conditional — warunkowe wywołanie podprogramu.
+
+RET — refurn — skok powrotny z podprogramu polegający na przesłaniu ze stosu
+zapamiętanej wcześniej zawartości licznika rozkazów.
+
+SKIP — skip — przeskok przez jeden rozkaz.
+
+Rozkazy warunkowe są wykorzystywane do realizacji rozgałęzień w programach. Jeśli
+warunek nie jest spełniony, to rozkaz nie jest wykonywany, a wykonywany jest rozkaz

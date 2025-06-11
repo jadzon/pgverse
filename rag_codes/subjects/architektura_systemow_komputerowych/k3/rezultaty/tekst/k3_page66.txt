@@ -1,0 +1,39 @@
+56 3. Podstawy techniki cyfrowej
+
+pozycyjnych dążą do standaryzacji długości mantysy i wykładnika. Choć w różnych
+komputerach wartości te są różne, to jednak dążenia te doprowadziły do przyjęcia norm.
+W tablicy 3.11 zestawiono niektóre standardy.
+
+Załóżmy 32-bitowe słowo ze standardu IEEE 754. Niech mantysa będzie 23-bitowa,
+a cecha 8-bitowa. Dla takiego słowa wyznaczmy zakres reprezentowanych liczb. Najmniej-
+sza liczba wynosi 0.5-2'?*, a największa (1-2**):2''?7. Na rysunku 3.53 porównano grafi-
+cznie zakresy reprezentacji liczb w zapisie U2 i w zapisie zmiennopozycyjnym dla 32-
+bitowych słów. Z tego wykresu widać, że znacznie większy zakres ma zapis
+zmiennopozycyjny. Natomiast rozdzielczość (różnica pomiędzy sąsiednimi liczbami w
+danym zapisie) jest lepsza dla zapisu U2, gdyż wynosi 2!, natomiast dla zapisu
+zmiennopozycyjnego 27%. Tę niedogodność zapisu zmiennopozycyjnego usuwa się
+przyjmując dwa formaty liczb. Jeden dla standardowej dokładności (np. 32 bity) i drugi
+dla podwójnej dokładności (np. 64 bity). Jak widać z rysunku 3.53 zakres prezentowanych
+liczb zmiennopozycyjnyh nie obejmuje liczb bardzo bliskich 0, tj. znajdujących się w
+środku wykresu.
+
+<image/figury/k3_page66_figure1.png>
+
+Celem ilustracji tych rozważań przedstawiono dalej konwersję liczb stałopozycyjnych
+i zmiennopozycyjnych. Niech będzie dana liczba +625.625 w zapisie zmiennopozycyjnym
+z 23-bitową mantysą i 8-bitową cechą. Pierwszą czynnością podczas poszukiwania jej
+postaci zmiennonnzycvinni iest narmalizacia liczhv czuli nrzedstawienie iei w nastaci:
+
+<image/wzory/k3_page66_formula1.png>
+
+W zapisie aziesiętnym DĘQZIE to ICZDA U.0ŁJ0ŁD"1U . Łamiany na iczoę awójkową
+można dokonać przez przedstawienie osobno części całkowitej, tj. 625 i części ułamkowej,
+tj. 0.625. Liczbę 625 da się przedstawić na 10 bitach jako 1001110001. Natomiast
+0.625 można przedstawić jako 0.5+0.125, tj. 0.101. W rezultacie otrzymano liczbę
+1001110001.101. Normalizując tę liczbę, tj. przesuwając ją o 10 pozycji w prawo, otrzyma
+się 0.1001110001101-2'). W ten sposób powstała* zmiennopozycyjna reprezentacja tej
+liczby:
+
+bit znaku mantysa cecha
+
+0 0011 1000 1101 0000 0000 000 10001010

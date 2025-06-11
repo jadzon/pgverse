@@ -1,0 +1,17 @@
+Projektowanie w oparciu o funkcję opisującą
+
+Symulacje układu z korektorem — układ stabilny niezależnie od warunków początkowych oraz
+wartości i szybkości zmiany sygnału zadającego.
+
+<image/figury/k/_page191_figure2.png>
+
+POLITECHNIKA
+SKA
+
+ 
+
+eoblnsido eloy4un4
+
+ 
+
+" AJ

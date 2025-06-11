@@ -1,0 +1,152 @@
+[
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page19_figure1.png": [
+      "Rysunek przedstawia schemat blokowy urządzenia pamięciowego z interfejsem SPI (Serial Peripheral Interface). Zawiera on rejestr statusu, układ kontrolny pamięci, bloki obsługi pamięci oraz matrycę pamięci. Przez blok interfejsu SPI przepływają sygnały SI, SO i SCK, a kontrolne sygnały to CS, HOLD i WP."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page17_figure1.png": [
+      "To jest diagram blokowy przedstawiający strukturę systemu programowania w systemie, który zawiera port JTAG, kontroler JTAG, In-System Programming Controller, FastCONNECT Switch Matrix oraz kilka funkcjonalnych bloków (Function Block 1 do Function Block N), każdy z których zawiera 18 macrocells. Diagram pokazuje również połączenia między poszczególnymi komponentami."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page2_figure1.png": [
+      "To jest diagram blokowy przedstawiający architekturę procesora. Zawiera on komponenty takie jak ALU (Arithmetic Logic Unit), rejestr flag, rejestr rozkazów, układy sterujące, rejestry robocze, wskaźnik stosu i licznik rozkazów. Magistrala danych i magistrala sterująca łączą te elementy."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page9_figure1.png": [
+      "To jest diagram blokowy UART (Universal Asynchronous Receiver Transmitter) w mikrokontrolerze. Ukazuje on strukturę i funkcje UART, w tym rejestr prędkości transmisji, blok odbiorcy, bufor równoległy odczytu, szeregowy rejestr przesuwny, bufor równoległy zapisu, oraz rejesty konfiguracyjne i statusu. Diagram również pokazuje transmisję danych z start bitem do stop bitu, oraz połączenia z portami nadajnika i"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page23_figure2.png": [
+      "To jest schemat blokowy układu AD5260, który zawiera rdzeńDAC (RDA), register RDAC, logiczny moduł, register wejścia szeregowego i moduł resetowania przy włączeniu. Układ obsługuje sygnały SHDN, VDD, VSS, VL, CS, CLK, SDI, GND oraz wyjście SDO i PR. Układ jest zaprojektowany do obsługi sygnałów cyfrowych i analogowych w celu generowania sygnału analogowego"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page24_figure1.png": [
+      "Zdjęcie przedstawia blok diagram interfejsu szeregowego SPI (Serial Peripheral Interface). Diagram zawiera komponenty takie jak bufora danych wejściowych i wyjściowych, kontroler interfejsu szeregowego, rejestr kontrolny, układ nadawczo-odbiorczy oraz linie interfejsu szeregowego."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page23_figure1.png": [
+      "To jest diagram przedstawiający przebiegi czasowe na interfejsie SPI dla układu AD5260. Na osi X znajduje się czas, a na osi Y wartości sygnałów SDI, CLK, CS i VOUT. Diagram ilustruje proces ładowania rejestru RDAC przez przesłanie danych z SDI, synchronizację zCLK oraz aktywację CS."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page12_figure1.png": [
+      "Przykładowy schemat blokowy mikrosystemu elektronicznego, zawierający mikrokontroler, pamięć RAM i FLASH, logikę programowalną, układy peryferyjne, zasilanie oraz interfejsy szeregowe."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page26_figure2.png": [
+      "Przedstawiony jest schemat połączeń między mikrokontrolerem, transceiverem RF AT86RF230 i anteną PCB, z interfejsem SPI."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page5_figure1.png": [
+      "To jest schemat blokowy mikrokontrolera, który pokazuje strukturę portu wejścia-wyjścia (GPIO). Zawiera element zapamiętywania chwilowego stanu sygnału, bufora trójstanowego, oraz połączenia z przetwornikiem analogowo-cyfrowym i wyprowadzeniem portu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page10_figure2.png": [
+      "Zdjęcie przedstawia przebiegi czasowe interfejsu SPI dla sygnału zegarowego o CPHA=1, pokazując sygnały SCLK, MISO i MOSI w zależności od wartości CPOL."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page6_figure1.png": [
+      "To diagram przedstawiający strukturę mikrokontrolera, w tym n-bitowy rejestr, licznik (counter), układ czasowy (timer) i dzielnik częstotliwości. Układ jest połączony z wejściem portu i zliczanym sygnałem zewnętrznym. Sygnał zegarowy pochodzi z układu dystrybucji sygnałów zegarowych."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page22_figure1.png": [
+      "Ogólny schemat przetwornika cyfrowo-analogowego (C/A) z rejestrem DAC, drabiną R-2R i buforem, sterowanym przez układy kontrolne i SPI."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page10_figure1.png": [
+      "Zdjęcie przedstawia przebiegi czasowe interfejsu SPI (Serial Peripheral Interface) dla sygnału zegarowego o CPHA=0. Pokazuje, jak sygnały MISO i MOSI są przesyłane w zależności od wartości CPOL (Clock Polarity)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page15_figure2.png": [
+      "To jest diagram przedstawiający schemat połączeń pamięci RAM. Pamięć ma 20 adresów wejściowych (A0-A19) i 8 danych wyjściowych (DQ0-DQ7). Na wejściu znajdują się kontrolne sygnały: CE#, OE#, WE# oraz RESET#. Na wyjściu znajduje się sygnał RY/BY#. Diagram pokazuje, że pamięć otrzymuje 20-bitowy adres i przesyła 8-bitowe dane."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page13_figure1.png": [
+      "To jest diagram blokowy przedstawiający interfejs wejścia/wyjścia (I/O) dla pamięci RAM. Diagram pokazuje 19-bitowe adresy (A0-A18), trzy kontrolne sygnały (CS, OE, WE) oraz 8-bitowe wyjścia/wyjścia (I/O1-I/O8). Czerwony strzałka wskazuje na 19-bitowe adresy, a niebieska strzałka wskazuje na 8-bitowe dane."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page4_figure1.png": [
+      "Zdjęcie przedstawia strukturę mikrokontrolera, w tym jego komponenty takie jak mikroprocesor, pamięci SRAM i FLASH, system zegarowy, układ resetu, oraz periferyjne moduły takie jak liczniki/timery, przetworniki A/C i C/A, komparatory analogowe, pamięć EEPROM, interfejsy szeregowe, system przerwań i system zdarzeń."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page18_figure1.png": [
+      "Zdjęcie przedstawia schemat ogólny i zasadę działania układu peryferyjnego z interfejsem SPI, w którym wyodrębniono blok warstwy aplikacji, układ kontrolny oraz blok interfejsu SPI. Układ kontrolny odbiera analogowe sygnały wejściowe, cyfrowe sygnały sterujące, CS (Chip Select) oraz sygnały CLK (Clock) i SDI (Serial Data In), a następnie przekazuje dane do rejestru szeregowego, który gener"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page7_figure1.png": [
+      "To jest diagram blokowy przedstawiający architekturę przetwornika analogowo-cyfrowego (ADC) typu SAR (Successive Approximation Register). Układ zawiera rejestr n-bitowy, przetwornik analogowo-cyfrowy (C/A), komparator, sterowanie algorytmem SAR, zegar, magistralę danych oraz układ próbkująco-pamiętający. Napięcie referencyjne jest podawane do przetwornika C/A, a wejście analogowe do ukł"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page8_figure1.png": [
+      "To diagram przedstawiający strukturę mikrokontrolera z sterownikiem komunikacji szeregowej. Mikrokontroler posiada wewnętrzne szyny danych, bufor nadajnika i odbiornika, porty oraz linie nadajnika i odbiornika. Sterownik komunikacji szeregowej zarządza przepływem danych między buforami nadajnika i odbiornika a portami."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page26_figure1.png": [
+      "Zdjęcie przedstawia schemat blokowy urządzenia z czujnikiem mechatronicznym, blokiem kondycjonowania i przetwarzania sygnałów, rejestrami kontrolnymi, statusu i danych, blokiem kalibracji i cyfrowej obróbki danych oraz blokiem realizującym dodatkowe funkcje układu. Linie cyfrowe są połączone z odpowiednimi blokami."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page20_figure1.png": [
+      "To jest schemat blokowy urządzenia przetwarzania analogowo-cyfrowego (ADC). Zawiera on N-bitowy blok przetwarzania A/C, układ próbująco-pamiętający, napięcie referencyjne, multipleksor analogowy K-kanalowy, bufor oraz kontrolny układ i blok interfejsu SPI."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page1_figure1.png": [
+      "Rysunek przedstawia schemat blokowy komputera, który zawiera: rezonator kwarcowy, system zegarowy, jednostkę centralną (CPU), pamięć programu, pamięć danych, porty we/wy oraz układy we/wy (peryferyjne). Komunikacja między częściami jest realizowana poprzez szyny danych i adresowe."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page9_figure2.png": [
+      "To jest diagram przedstawiający schemat transmisji danych w systemie komunikacyjnym. Zawiera ona sekwencję bitów, w tym start bit, stop bit oraz siedem bitów danych (D0-D7). Diagram ilustruje przebieg sygnału zaczynający się od stanu pasywnego, przechodzący przez transmisję danych i kończący się stanem pasywnym."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page25_figure1.png": [
+      "To jest schemat blokowy mikroserwera TCP/IP, który korzysta z kontrolera ENC28J60 sterowanego interfejsem SPI. Schemat przedstawia interakcję między mikrokontrolerem (MCU) a kontrolerem ENC28J60, w tym bufor TX/RX, moduł MAC i fizyczny warstwę (PHY). Zawiera również transformator Ethernet i dwa LED'y."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page21_figure1.png": [
+      "To jest diagram przedstawiający przebiegi interfejsu SPI (Serial Peripheral Interface) dla układu AD7814. Diagram pokazuje sygnały CS, SCLK, DOUT i DIN oraz ich zależności w czasie podczas transmisji danych."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page16_figure1.png": [
+      "Zdjęcie przedstawia diagram blokowy programowalnego układu AND-ARRAY (64 x 32). Układ składa się z kilku OLMC (Output Logic Memory Cells), które są połączone z wyjściami I/O/Q i kontrolą OE. Układ jest synchronizowany z zegarem CLK."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page16_figure2.png": [
+      "To jest schemat blokowy urządzenia OLMC (Output Line Memory Cell), które składa się z kilku podobnych bloków, każdy z 8 wejściami i jednym wyjściem I/O/Q. Schemat pokazuje również kontrolę OE (Output Enable) dla całego układu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page21_figure2.png": [
+      "Schemat blokowy układu AD7814, który jest przedstawicielem cyfrowych czujników temperatury z interfejsem SPI. Układ zawiera czujnik temperatury z oporem bandgapowym, przetwornicę analogowo-digitalną 10-bitową oraz rejestr wartości temperatury, zapisany w niebieskim kolorze."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/mikrosterowniki_i_mikrokontrolery/k8/detekcje/figury/k8_page15_figure1.png": [
+      "To diagram przedstawia przebiegi czasowe cyklu zapisu danych do pamięci, sterowanego sygnałem CS (Chip Select). Na osi czasu widoczne są sygnały adresu (Address), CS, WE (Write Enable) oraz wejścia danych (Data in). Sygnał CS jest ujemny, co oznacza, że pamięć jest aktywna tylko wtedy, gdy CS jest niski. Sygnał WE jest ujemny, co oznacza, że dane są ważne tylko wtedy"
+    ]
+  }
+]

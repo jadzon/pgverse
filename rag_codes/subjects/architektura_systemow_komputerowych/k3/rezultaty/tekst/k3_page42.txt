@@ -1,0 +1,40 @@
+32 3. Podstawy techniki cyfrowej
+
+zegarowego sekwencja tych czterech stanów powtarza się. Taki jednowejściowy układ
+sekwencyjny (przykładowy układ sekwencyjny ma tylko wejście zegarowe) może pełnić
+rolę licznika (por. tekst dalej). W tym przypadku jest to licznik impulsów zegarowych.
+Każdy stan jest powtarzany po określonej liczbie impulsów wejściowych. Liczba ta nazy-
+wana jest okresem licznika. Rozważany układ jest nazywany czterobitowym (cztero-
+stanowym) licznikiem pierścieniowym. W tym przypadku liczba przerzutników jest równa
+okresowi licznika. Zauważmy, że inaczej przebiega sekwencja stanów, jeśli rozpocznie się
+ona od innego stanu. Na rysunku 3.28c pokazano trzy inne możliwe sekwencje licznika
+pierścieniowego. Przypadkowe wejście w stan 0000 lub 1111 powoduje, że układ pozostaje
+w tym stanie.
+
+a b c
+. , 1000 1 0 1 (0
+<image/figury/k3_page42_figure2.png>
+4441 1 13321
+0111 0101
+0011 0010
+0001 LO © 4
+0000 0100
+
+Rysunek 3.29. Licznik liczący w kodzie Johnsona
+
+Rozpatrzmy działanie innego układu pokazanego na rysunku 3.29a i zbudowanego
+z użyciem 4-bitowego rejestru przesuwającego. Także i w tym przypadku załóżmy jako
+stan początkowy stan 1000. Sekwencja 8 stanów pokazana jest na rysunku 3.29b. Tym
+razem czteroprzerzutnikowy rejestr przesuwający jest licznikiem do ośmiu. Taki licznik
+jest nazywany licznikiem w kodzie Johnsona (por. podrozdz. 3.2). Gdyby założyć jako
+stan początkowy stan nie należący do kodu Johnsona, to otrzymamy inną sekwencję
+8 stanów pokazaną na rysunku 3.29c.
+
+<image/figury/k3_page42_figure1.png>
+
+OCOOCO-PFEEPOPFOPEOOP
+OOkPFRPFEPOPOPPEOOŁRO
+OPRRPOPOPEOOPOO
+FRRERPOPOPEOOPOOCOO
+
+Rysunek 3.30. Licznik łańcuchowy

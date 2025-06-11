@@ -1,0 +1,30 @@
+wzory/k3_page17_fcwzory/k3_page17_fo
+
+Klasyczny komputer o architekturze podanej przez von Neumana składa się z trzech
+podstawowych bloków: procesora, pamięci i urządzeń do wprowadzania danych i progra-
+mów oraz do wyprowadzania wyników (rys. 2.1). Urządzenia wprowadzania i wyprowa-
+dzania danych będą dalej nazywane urządzeniami zewnętrznymi lub urządzeniami wejścia-
+-wyjścia (skrótowo urządzenia we/wy — ang.//O devices). Osoba posługująca się
+komputerem, którą nazywać będziemy operatorem, ma bezpośredni dostęp tylko do urzą-
+dzeń zewnętrznych. W wielu komputerach urządzeniami tymi są klawiatura (urządzenie
+wejściowe) i monitor ekranowy (urządzenie wyjściowe). Wypisując na klawiaturze w od-
+powiedniej kolejności odpowiednie znaki, zwane dalej znakami alfanumerycznymi, opera-
+tor może do pamięci komputera zapisać program i dane potrzebne do wykonania tego
+programu. Program jest ciągiem poleceń wydawanych procesorowi. Poszczególne polece-
+nia dotyczą odpowiednich danych. Dane te, zwane dalej argumentami, mogą znajdować
+się w pamięci, mogą znajdować się też w samym procesorze (tzn. w jego rejestrach),
+a mogą także zostać wprowadzone przez operatora w programie.
+
+<image/figury/k3_page17/_figure1.png>
+
+Rysunek 2.1. Ogólny schemat blokowy komputera
+
+Po załadowaniu programu do pamięci komputera może on zostać w dowolnej chwili
+wywołany przez operatora. W tym celu musi on wydać polecenie rozpoczęcia wykonywa-
+nia tego programu przez wymuszenie odczytania pierwszego polecenia tego programu.
+W tym celu należy spowodować, aby procesor wysłał do pamięci odpowiedni adres.
+Dalsze polecenia umieszczone są w pamięci kolejno, więc będą odczytywane przez proce-
+sor automatycznie. Wykonywanie programu polega więc na pobieraniu z pamięci kolejnych
+poleceń i odpowiednich dla tych poleceń argumentów. Dlatego program stanowi odpowied-
+nio ułożony ciąg poleceń i argumentów. Polecenia nazywać będziemy dalej zamiennie
+rozkazami lub instrukcjami. Niektórzy autorzy rozróżniają te pojęcia i rozkazem nazywają

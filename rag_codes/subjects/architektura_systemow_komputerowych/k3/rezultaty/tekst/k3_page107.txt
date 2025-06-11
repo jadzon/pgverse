@@ -1,0 +1,34 @@
+5.2. Pamięci operacyjne 97
+
+sposób rozszerzania liczby bitów, a na rysunku 5.9b rozszerzania liczby słów. Pokazano to
+na przykładzie łączenia 4 układów pamięci o pojemności 16 słów 4-bitowych każda.
+Z rysunków wynika, że zwiększanie liczby słów wymaga zastosowania dodatkowego
+układu dekodera. Do wejść dekodera są dołączane linie adresowe i w ten sposób zapewnia
+się, że w czasie jednego cyklu pamięci aktywny jest tylko jeden z czterech układów.
+
+/k3_page107_figul
+figury/k3_page107_figure2.pnc
+
+Rysunek 5.10. Blok pamięci statycznej
+
+Na rysunku 5.10 przedstawiono blok pamięci o pojemności 32 KB zbudowany z kostek
+(układów scalonych) pamięci statycznej firmy Hitachi HM6117 o pojemności 2 KB. Kostki
+te są wyposażone w dwa wejścia dostępu CE1 i CE2 (rys. 5.10a), co pozwala na prostszą
+realizację dekodowania (por. rozdz. 3). Matryca 4 x 4 jest sterowana (rys. 5.10b) z dwóch
+dekoderów 2-wejściowych. Wszystkie wejścia adresowe A0—A10 układów pamięci, linie
+wejścia-wyjścia dla danych i stroby WE są zwarte. Zwarte wejścia CEl w każdym
+
+wierszu matrycy są sterowane z wyjść jednego dekodera, a zwarte wejścia CE2 w każdej
+kolumnie matrycy są sterowane z wyjść drugiego dekodera. Czas cyklu takiej pamięci
+wydłuża się w stosunku do katalogowego czasu dostępu układów pamięciowych, ponieważ
+dochodzi dodatkowe opóźnienie wnoszone przez dekodery.
+
+Do budowy pamięci o większych pojemnościach są stosowane układy pamięci dyna-
+micznych. Na rysunku 5.1la pokazano końcówki układu pamięci dynamicznej HM4816
+o pojemności 16 Kbitów, a na rys. 5.11b blok pamięci o pojemności 64 KB. Połączono 32
+układy tak, że zwarto wejścia adresowe i wejścia sterujące WE (ze względu na przej-
+rzystość rysunku nie pokazano tego). Siedem wejść adresowych musi być sterowanych
+z multipleksera, który zapewni dołączenie bloku do 14 linii magistrali adresowej. Pozostałe
+dwa bity adresowe A14 i A15 są podawane na wejścia dekodera sygnałów RAS. Wyjścia
+dekodera wybierają jeden z 4 banków pamięci sygnałami RAS. Natomiast wejścia i wyjś-
+cia informacyjne są zwarte w kolumnach. Na rysunku pokazano zwarcia wejść dla

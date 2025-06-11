@@ -1,0 +1,58 @@
+4.1. Organizacja procesora 63
+
+kilkadziesiąt linii, którymi przesyłane są m.in. sygnały strobów odczytu i zapisu, a także
+inne sygnały, o których będzie mowa w dalszym ciągu.
+
+Na rysunku 4.1 pokazano 4 linie przeznaczone dla sygnałów strobów: dwie dla pa-
+mięci (MR — odczyt pamięci i MW — zapis pamięci) i dwie dla urządzeń zewnętrznych
+(IOR — odczyt urządzenia i IOW — zapis urządzenia). Ponadto pokazano 4 wejściowe
+sygnały sterujące przychodzące do procesora z innych zespołów komputera. Są to RESET
+(sygnał inicjalizacji pracy procesora, ustawiający adres pierwszego rozkazu programu),
+STEP (sygnał pracy krokowej, tj. wykonywania programu rozkaz po rozkazie), INT
+(sygnał przerwania wykonywania programu celem wykonania przez procesor np. pro-
+gramu zleconego przez system operacyjny) i HOLD (sygnał wstrzymania pracy procesora
+generowany przez inne urządzenia dla wykonania transmisji pomiędzy tymi urządzeniami
+bez ingerencji procesora). Układ sterowania generuje także dwa wyjściowe sygnały steru-
+jące. Jeden jest sygnałem potwierdzającym przerwanie wykonywania programu przez
+procesor (INTA — ang. interrupt acknowledge) a drugi sygnałem potwierdzającym
+wstrzymanie pracy procesora (HLDA — ang. hold acknowledge).
+
+Załóżmy teraz, że w jakimś momencie w rejestrze adresowym AD znajduje się adres
+aktualnie pobieranego rozkazu (zakładamy, że adres ten znajdzie się na szynie adresowej)
+i układ sterowania równocześnie wyśle strob odczytu z pamięci MR. Po pewnym czasie,
+zwanym czasem dostępu do pamięci (por. rozdz. 5), zawartość danej komórki pamięci
+zostanie wysłana do procesora i zostanie umieszczona w rejestrze rozkazów. Układ stero-
+wania procesorem zdekoduje zawartość tego rejestru i na tej podstawie zadecyduje o dal-
+szej akcji procesora wysyłając odpowiednie sygnały, np. sygnał inkrementacji licznika
+rozkazów celem pobrania argumentu danej operacji. Są rozkazy, które wykonywane są
+warunkowo. Warunkami tych rozkazów jest najczęściej stan rejestru znaczników ZN
+(ang. flag register). Na rysunku 4.1 widać, że zawartość tego rejestru jest ustawiana przez
+układ ALU. Znacznikami są pewne cechy wyniku operacji wykonywanych przez ALU.
+Mogą to być takie cechy jak np.:
+
+— wynik równy zeru — znacznik Z,
+
+— wynik z parzystą liczbą jedynek — znacznik P,
+
+— wynik z przeniesieniem — znacznik C,
+
+— wynik z nadmiarem — znacznik O,
+
+— znak wyniku — znacznik S.
+
+Programista może zatem uzależnić działanie swojego programu od wyników pośrednich,
+używając znaczników jako warunków dla rozkazów skoków warunkowych. W ten sposób
+uzyskać można rozgałęzienia w programach.
+
+„Argumenty operacji wykonywanych przez ALU mogą pochodzić z trzech źródeł:
+1) programu,
+
+2) rejestrów procesora,
+
+3) komórek pamięci.
+
+Kod operacyjny rozkazu musi specyfikować miejsce odczytu argumentów dla danej operac-
+ji. Jeśli argument znajduje się w programie, to zwykle jest to następne słowo w kodzie
+programu i dlatego znajduje się w następnej, po kodzie operacyjnym rozkazu, komórce
+pamięci. Wówczas układ sterowania ma za zadanie spowodowanie odczytania tego słowa,
+co wykonuje przez zwiększenie licznika rozkazów o 1. W komputerach operujących

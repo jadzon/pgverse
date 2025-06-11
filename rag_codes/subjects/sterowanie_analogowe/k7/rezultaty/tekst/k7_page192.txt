@@ -1,0 +1,25 @@
+Noc
+GRS5SA
+
+© BRUTONATYH
+
+Dodatek A— wykreślanie hodografu w arkuszu kalkulacyjnym
+
+Zadanie: Dla układu inercyjnego z opóźnieniem transportowym wykreślić charakterystykę
+Nyquista (hodograf*). Założyć k=10, T=3; t=0,5
+
+<image/wzory/k7_page192_formula1.png>
+
+W pierwszym kroku transmitancję widmową rozbijamy na część rzeczywistą i urojoną:
+
+eoblnsido eloy4un4
+
+<image/wzory/k/_page192_formula2.png>
+
+*hodograf [gr. hodós 'droga', graphó 'piszę'],
+krzywa zakreślana przez koniec wektora (odkładanego od tego samego punktu) pewnej wielkości wektorowej zmieniającej się wraz z
+parametrem t (np. czasem, pulsacją);
+
+SB = A[
+
+GDAŃSKA

@@ -1,0 +1,25 @@
+Pozycjonowanie biegunów — problem nadążania
+
+Wyznaczmy trajektorię stanu układu
+
+<image/wzory/k/_page94_formula1.png>
+
+<image/wzory/k/_page94_formula2.png>
+
+<image/wzory/k/_page94_formula3.png>
+
+W stanie ustalonym, przy stałym sygnale zadanym r(t)=r.. mamy:
+
+<image/wzory/k/_page94_formula4.png>
+
+Stąd, aby dla stałej wartości zadanej uchyb był zerowy musi być spełniony
+
+warunek:
+<image/wzory/k/_page94_formula5.png>
+
+POLITECHNIKA
+GDANSKA
+
+ 
+
+SMOUBJS 8|8pOJN

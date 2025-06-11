@@ -1,0 +1,43 @@
+8.2. Przyspieszanie współpracy procesora i pamięci 16]
+a oc
+
+się cykl dostępu do innego banku. Takie rozwiązanie nazywa się dostępem z przeplotem
+(ang. interleaving). Istotny jest problem adresowania banków, tj. wyboru części, spośród
+n bitów adresu pamięci, przeznaczonej na wskazanie numeru banku. Jeżeli byłyby to
+bardziej znaczące bity adresu, to sąsiednie komórki znajdowałyby się w tym samym
+banku. W tym przypadku, choć łatwiejsze byłoby rozbudowywanie pamięci i zwiększanie
+niezawodności (uszkodzenie jednego modułu powodowałoby wyłączenie tylko określonego
+obszaru pamięci), to jednak, ze względu na lokalność programu, sąsiednie rozkazy wystę-
+powałyby w tym samym banku. Dlatego lepiej, aby banki były adresowane częścią mniej
+znaczących bitów adresu, gdyż kolejne odwołania będą wtedy do różnych banków i w ta-
+kim przypadku dostępy do pamięci będą mogły na siebie nachodzić.
+
+Na rysunku 8.4 pokazano dwa sposoby dostępu z przeplotem do pamięci podzielonej
+na 4 banki. Sposób pokazany na rysunku 8.4a jest nazywany przeplataniem z równo-
+czesnym dostępem (ang. simultaneous access) i polega na tym, że 4 kolejne komórki
+pamięci znajdujące się w 4 różnych bankach są odczytywane (lub zapisywane)
+jednocześnie tym samym adresem, a zawartości tych komórek są zapisywane do czterech
+buforów. Zawartości buforów są następnie multipleksowane (multiplekser jest dwukierun-
+kowy) pozostałą częścią bitów adresowych (w naszym przykładzie dwoma bitami) tak,
+aby ukazywały się na wyjściu multipleksera w odpowiedniej kolejności. Zatem w ciągu
+jednego cyklu pamięci można otrzymać dostęp do 4 komórek. Uproszczone przebiegi
+czasowe tak zorganizowanej pamięci pokazano na rysunku 8.4c.
+
+Drugi sposób pokazany na rysunku 8.4b jest nazywany przeplataniem współbieżnym
+(ang. concurrent access). W tym przypadku dostęp do poszczególnych banków odbywa się
+z przesunięciem czasowym. Czas cyklu pamięci podzielono na 4 części i rejestr adresowy
+każdego banku jest ładowany w różnych chwilach rozpoczynając cykl dostępu do danego
+banku. Na magistralę wysyłane są słowa odczytywane z różnych banków co 1/4 cyklu
+dostępu do pamięci (rys. 8.4d).
+
+8.2.3. ARCHITEKTURA TYPU HARVARD
+
+Podziału pamięci na moduły można dokonać także w inny sposób niż omówiony w po-
+przednim podrozdziale. Można wydzielić osobno obszar pamięci dla programu (rozkazów)
+i dla danych (argumenty). W takim przypadku procesor można wyposażyć w dwa układy
+współpracy z pamięcią. Do współpracy z pamięcią programu stosuje się jako układ adreso-
+wania licznik rozkazów, a odczytywana zawartość jest traktowana jako kod operacyjny
+
+<image/figury/k3_page171_figure1.png>
+
+Rysunek 8.5. Architektura typu Harvard

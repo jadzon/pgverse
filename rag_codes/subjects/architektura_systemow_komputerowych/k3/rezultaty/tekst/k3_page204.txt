@@ -1,0 +1,127 @@
+194
+
+iloczyn logiczny 172
+instrukcja 7
+interpeter 147
+implicent 174
+implikant 174
+
+J
+
+jądro systemu operacyjnego 150
+
+kanał multiplekserowy 137
+
+— selektorowy 137
+
+— wejścia-wyjścia 137
+
+kanoniczna postać alternatywna 174
+
+— — funkcji 174,
+
+— — koniunkcyjna 174
+
+kod „2 z 5” 37
+
+— ASCII 39
+
+— binarny 36, 175
+
+— Graya 36, 176
+
+— korekcyjny 37
+
+— Manchester 128
+
+— nadmiarowy 36
+
+— siedmiosegmentowy 26
+
+— szesnastkowy 37
+
+— „z nadmiarem 3” 37
+
+koder 25
+
+kody nadmiarowe 36
+
+kolejka 148, 150-152, 160
+
+komparator 19
+
+kompilator 147
+
+komputery sterowane przepływem da-
+nych 171
+
+— systoliczne 170
+
+komunikat 130
+
+konwertery kodu 25
+
+kradzież cykli 136
+
+L
+
+licznik 32-33
+— łańcuchowy 33
+— następnikowy 34
+
+Skorowidz
+
+licznik pierścieniowy 32
+— poprzednikowy 34
+
+— rewersyjny 34
+
+— rozkazów 9, 62
+
+— synchroniczny 34
+
+— w kodzie Johnsona 32
+
+Ł
+
+łańcuchowy układ przerwań 119
+łącza 113
+
+— urządzenia zewnętrznego 113, 123
+łącze dupleksowe 123
+
+— półdupleksowe 123
+
+— równoległe 123
+
+— szeregowe 123
+
+magistrala 62
+
+— lokalna 168
+
+— systemowa 168
+mantysa 55
+
+mapa Karnaugha 174
+MFLOPS 5
+mikrooperacja 70
+MIPS 5
+
+modem 126
+monitor 148
+multiplekser 27
+
+negacja 172
+notacja polska 79
+
+0
+
+odejmowanie 41
+odrzucanie 59
+operand 65, 76
+
+P
+
+pamięci asocjacyjne 87-88
+— dynamiczne 92

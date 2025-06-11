@@ -1,0 +1,35 @@
+3.1. Układy cyfrowe 27
+
+<image/wzory/k3_page37_formula1.png>
+
+Rysunek 3.22. Konwerter kodu BCD na kod siedmiosegmentowy
+
+wejściach konwertera kodu, trzeba tak wysterować siedem segmentów wyświetlających,
+aby wyświetlić jedną z kombinacji pokazanych na rys. 3.21b. Taki zespół segmentów
+świecących pozwala na wyświetlenie wszystkich cyfr, a nawet pewnych dodatkowych
+znaków (znaków kodu szesnastkowego lub inaczej heksadecymalnego).
+
+Z rysunku 3.21 można wyznaczyć tabelę prawdy konwertera kodu siedmiosegmento-
+wego (zadanie to pozostawia się czytelnikom). Oznaczenia wejść i wyjść takiego kon-
+wertera pokazano na rysunku 3.22. Jak widać dodano tam pewne dodatkowe wejścia
+i wyjścia sterujące. I tak wejście LT (ang. lamp test) działa w taki sposób, że jeśli na nim
+pojawi się 1, to zapalają się wszystkie segmenty. Jest to test sprawności segmentów.
+Wejście RBI (ang. ripple-blanking input) służy do tego, aby istniała możliwość wygaszenia
+najbardziej znaczących zer. Linia wyjściowa BI/RBO (ang. blanking inputripple blanking
+output) służy bądź jako wejście, bądź jako wyjście. Wykorzystywana jako wejście powo-
+duje zgaszenie wszystkich świecących się segmentów. Możliwość ta służy oszczędności
+pobieranej mocy, gdyż periodyczne wygaszanie wszystkich segmentów zmniejsza średni
+pobierany prąd. Gdy częstotliwość wygaszania jest większa od 40 Hz, to zjawisko wygasza-
+nia jest dla oka ludzkiego niezauważalne. Linia BI/RBO pracująca jako końcówka wyjścio-
+wa służy do współpracy z wejściem RBI sąsiedniego segmentu, aby jako przeniesienie na
+mniej znaczące pozycje (najbardziej znacząca pozycja jest zawsze przyłączona do 1)
+współdecydować o wygaszaniu lub nie wygaszaniu sąsiedniego segmentu.
+
+MULTIPLEKSERY I DEMULTIPLEKSERY
+
+Układy multiplekserów i demultiplekserów są układami realizującymi funkcję wybierania
+(selekcji). Zadaniem multipleksera jest dokonanie wyboru jednego z wielu wejść i skiero-
+
+<image/figury/k3figury/k8_page37_figure3.png>
+
+Rysunek 3.23. Multipleksery

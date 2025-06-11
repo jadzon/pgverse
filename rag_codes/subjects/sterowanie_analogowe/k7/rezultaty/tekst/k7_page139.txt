@@ -1,0 +1,20 @@
+Obserwator stanu i jego zastosowanie
+
+Wielomian charakterystyczny obserwatora
+<image/wzory/k/_page139_formula1.png>
+
+Żądany wielomian charakterystyczny obserwatora
+
+<image/wzory/k/_page139_formula2.png>
+
+Po porównaniu współczynników wielomianów i rozwiązaniu układu równań
+uzyskamy wektor wzmocnień obserwatora:
+
+<image/wzory/k/_page139_formula3.png>
+
+POLITECHNIKA
+GDANSKA
+
+ 
+
+SMOUBJS 8|8pOJN

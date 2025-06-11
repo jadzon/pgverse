@@ -1,0 +1,32 @@
+4.7. Tryby adresowania 83
+
+ 
+
+<image/figury/k3_page93_figure2.png>
+
+Rysunek 4.13. Złożone tryby adresowania indeksowego: a) preindeksowe i b) postindeksowe
+
+czenia tworząc adres efektywny. Na rysunku 4.13 pokazano graficznie różnicę pomiędzy
+tymi sposobami.
+
+Adresowanie indeksowe jest stosowane do posługiwania się złożonymi strukturami
+danych, jak np. wektory czy tablice. Jeśli ustali się miejsce początku wektora w pamięci,
+to baza jest stała i poszczególne składowe wektora są wyliczane przez program i jako
+przesunięcie umieszczone w rejestrze indeksowym. Trudniejszy problem powstaje, gdy
+element wektora zajmuje więcej niż jedną komórkę pamięci. Tak może zdarzyć się w kom-
+puterach z pamięcią o krótkim słowie, np. 8-bitowym. Jeśli składnik wektora jest 32-
+-bitowy, to zajmuje on 4 bajty i odczyt całego składnika odpowiada 4 odczytom pamięci.
+Rozwiązanie tego problemu jest możliwe przez wprowadzenie tzw. skalowania, tj. mnoż-
+nika przesunięcia, który dostosowuje przesunięcie do długości operandu. W omawianym
+przykładzie można zastosować skalę 4, tj. jeśli przesunięcie jest 5 (piąty składnik wektora),
+to adres jego jest o 4 x 5 = 20 większy od adresu bazowego.
+
+Trzeci przypadek z tablicy 4.4 jest nazywany bazowym trybem adresowania. Tym
+razem przemieszczenie jest stałe, a zmienna jest baza. Jeżeli baza i przemieszczenie mają
+tę samą długość, to nie ma żadnej różnicy pomiędzy trybem indeksowym i bazowym.
+W trybie indeksowym rozkaz musiał być odpowiednio długi, gdyż baza umieszczona
+w kodzie programu musi mieć długość równą długości adresu pamięci. W trybie bazowym
+rozkaz może być krótszy, ponieważ długość przemieszczenia łatwiej można ograniczyć.
+Jeżeli natomiast ograniczenie utrudnia efektywność programowania, to wprowadza się
+różną długość przemieszczenia. Stosuje się na przykład przemieszczenia krótkie i prze-
+mieszczenia długie.

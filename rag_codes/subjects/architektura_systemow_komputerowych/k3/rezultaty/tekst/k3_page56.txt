@@ -1,0 +1,29 @@
+46 3. Podstawy techniki cyfrowej
+
+rejestru R dodaje on albo O albo zawartość rejestru mnożnika M. Ponieważ podczas
+dodawania na wyjściu bloku ALU może powstać przeniesienie, to do rejestru R dołączono
+dodatkowo jednobitowy rejestr C, którego zawartość też jest przesuwana wraz z zawartoś-
+cią rejestru R.
+
+Algorytm działania tego układu w postaci sieci działań pokazano na rysunku 3.41.
+W pierwszym kroku do odpowiednich rejestrów wpisywane są początkowe wartości:
+— do RH wpisywane jest 0,
+— do RL wpisywana jest mnożna,
+— do rejestru M wpisywany jest mnożnik,
+— układ sterowania programuje się na odpowiednią liczbę kroków, równą liczbie
+bitów mnożonych liczb.
+
+W drugim kroku sprawdza się wartości najmniej znaczącego bitu rejestru RL. Na tej
+podstawie układ sterowania podejmuje decyzję czy nastąpi operacja dodawania, czy nie.
+W algorytmie pominięto wyznaczenie znaku wyniku. Jak łatwo zauważyć można to
+wykonać biorąc bramkę sumy mod 2, na której wejścia podano bity znaków obu argu-
+mentów.
+
+Algorytm mnożenia dla zapisu UI
+
+Algorytm mnożenia w zapisie Ul przewiduje różne operacje w zależności od znaku
+czynników. Jeśli oba czynniki mają ten sam znak, to algorytm przebiega podobnie jak dla
+kodu NKB. Jeśli znaki obu liczb są dodatnie, to algorytm mnożenia w kodzie NKB stosuje
+się bezpośrednio. Jeśli znaki liczb są ujemne, to algorytm stosuje się po zmianie tych
+
+<image/tfigury/k3_page56_figure1.png>

@@ -1,0 +1,37 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 22
+SI — szeregowe wejście danych przeznaczone do wprowadzania rozkazów i danych do pamięci.
+SCK - zegar taktujący transmisją szeregową (najczęściej polaryzacja *0* i faza *0').
+WP — „write protect” — gdy na tej linii jest stan aktywny (stan niski) i jest ustawiony odpowiedni bit w
+rejestrze statusu, to nie można modyfikować zawartości rejestru statusu.
+
+HOLD — aktywny stanem niskim. Linia służy do wstrzymania (zamrożenia) transmisji szeregowej w
+dowolnym momencie i wprowadzenia linii SO w stan wysokiej impedancji.
+
+12. Uogólniony schemat blokowy N-bitowych K-kanałowych przetworników A/C
+wyposażonych w interfejs SPI, funkcje poszczególnych bloków przetwornika A/C.
+
+<image/figury/k8_page20_figure1.png>
+
+Przetworniki A/C z interfejsem SPI składają się z następujących części:
+
++. Części cyfrowej składającej się z:
+
+„ - Bloku interfejsu SPI zapewniającego komunikację między przetwornikiem A/C a otoczeniem. i dla
+przetworników SAR uruchamiającego przetwarzanie analogowo-Cyfrowe w takt sygnału
+zegarowego na linii SCLK.
+
+„ Układu kontrolnego sterującego wyborem źródła napięcia referencyjnego, kanału przetwarzania
+oraz zwłaszcza dla przetworników Z - A ustawianiem parametrów konwersji A/C.
+
++ Części analogowej, w której skład wchodzą:
+» Dla przetworników wielokanałowych multiplekser analogowy służący do wyboru kanału, z
+którego będzie pobierane napięcie do przetwarzania A/C.
+„ Układ próbkująco-pamiętający (S$£H) zapamiętujący stan napięcia mierzonego i utrzymujący
+niezmienną jego wartość przez cały czas konwersji A/C.
+. Blok przetwarzania A/C — właściwy blok dokonujący konwersji napięcia mierzonego na kod
+cyfrowy bazując na metodzie SAR lub metodzie Z - A.
+
+„ Układ napięcia referencyjnego dostarczający za pośrednictwem bufora napięcia referencyjnego
+dla bloku przetwarzania A/C. Napięcie referencyjne może pochodzić z zewnątrz — wówczas
+podawane jest na pin REFin lub może być wytwarzane przez wewnętrzne źródło referencyjne
+(typowo 2,5 V).

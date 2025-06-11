@@ -1,0 +1,52 @@
+178 Dodatek A
+
+ 
+
+(pokrycia) implikantu o numerze | można użyć wyłącznie pary 1, 5. Taka para nazywa się
+implikantem prostym. Do pokrycia implikantu 2 można użyć wyłącznie pary 2, 6, a więc
+drugiego implikantu prostego. Biorąc te dwie pary pokrywamy cztery implikanty. Ostatni,
+piąty implikant (7) można pokryć parą 5, 7 lub 6, 7 i dlatego otrzymamy dwa rozwiązania:
+
+ory/k3_page188_formula1.png
+
+Pierwszym kryterium porównania przedstawionych rozwiązań jest liczba bramek. Dla obu
+rozwiązań trzeba jednej 3-wejściowej bramki sumy, trzech 2-wejściowych bramek ilo-
+czynów i dwóch inwerterów. Drugim kryterium jest liczba wejść i ono także nie rozróżnia
+obu rozwiązań. Trzecim kryterium porównania jest kryterium niezawodności działania.
+Polega ono na wykrywaniu tzw. zjawiska hazardu. Zjawisko to wyjaśniono na przykładzie
+realizacji na bramkach iloczynów i sumy pierwszej postaci opisywanej funkcji
+(por. rys. D.4a). Załóżmy, że x,=1 i x,=1 i następuje zmiana wartości zmiennej x, z I
+na 0. Z mapy Karnaugha wynika, że przy takiej zmianie funkcja zachowuje wartość |.
+Natomiast ze względu na opóźnienie sygnału wnoszone przez inwerter negujący zmien-
+ną x, na wyjściu inwertera będzie jeszcze 0, gdy na wejściu górnego iloczynu x, już
+przyjmie nową wartość 0. W takim przypadku na wyjściu bramki sumy pojawi się wartość
+0 na czas opóźnienia wnoszonego przez inwerter. Dla drugiej postaci funkcji hazard
+powstaje gdy x„=l i x,=1 i następuje zmiana wartości zmiennej x,. Należy zauważyć,
+że zjawisko hazardu na mapie Karnaugha można stwierdzić jako przejście pomiędzy
+sąsiednimi polami. Zatem w tym przykładzie uzyskaliśmy dwa rozwiązania, które są
+równoważne dla wszystkich trzech kryteriów. Są to tzw. minimalne rozwiązania dla postaci
+alternatywnej.
+
+>| ©
+
+|
+|
+xi ł —
+
+.figury/k83_page188_figure1.pr
+
+ 
+
+Rysunek D.4. Dwa równoważne układy realizujące tę samą funkcję
+
+Poszukajmy teraz minimalnej postaci koniunkcyjnej. Z mapy Karnaugha widać, że
+istnieje tylko jedna para implicentów 0 i 4. Mamv zatem minimalna postać funkcii:
+
+<image/wzory/k3_page188_formula2.png>
+Jest w JĘUynE nuitalie rOZwIĄZanNIie sKfaaające SIĘ Z awuwejsciowej bramki iloczynu,
+jednej dwuwejściowej bramki sumy, jednej trzywejściowej bramki sumy i trzech inwer-
+terów. Układ realizujący taką postać pokazano na rys. D.5. Jest to rozwiązanie zawierające
+mniejszą liczbę bramek w porównaniu z realizacjami postaci koniunkcyjnej.
+
+Powyższe rozważania dotyczyły postaci boolowskich danej funkcji, a więc rozwiązań
+wykorzystujących bramki sumy, iloczynu i negacji (układy I-LUB-NIE). Mówimy, że te

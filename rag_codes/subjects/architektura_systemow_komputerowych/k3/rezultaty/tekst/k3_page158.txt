@@ -1,0 +1,47 @@
+148 7. Elementy oprogramowania komputerów
+
+Jeden z możliwych podziałów systemów operacyjnych jest przedstawiony w tablicy
+7.1. Systemy jednozadaniowe to tzw. systemy dedykowane (np. komputery osobiste czy
+stacje robocze), a systemy wielozadaniowe to systemy z podziałem czasu, w których
+jednocześnie pracuje wielu użytkowników. W takich komputerach system operacyjny
+wyznacza czas dla każdego z użytkowników i stąd nazwa systemów.
+
+W jednozadaniowych systemach (wykonywany jest jeden program) wsadowych
+system operacyjny, zwany monitorem, nie zezwala na bezpośredni dostęp użytkownika do
+komputera. Programy i dane przygotowywane są na nośnikach magnetycznych, które
+następnie są wprowadzane przez operatora i wczytywane przez system. Do użytkownika
+
+<image/tabele/k3_page158_table1.png>
+
+przekazywane są wydruki, na podstawie których może on dokonywać ewentualnych
+poprawek. Obecnie nie stosuje się takich systemów. Wielozadaniowe systemy wsadowe
+jednocześnie mogą obsługiwać wiele programów. Programy te zajmują czas procesora
+naprzemiennie. Oznacza to, że gdy procesor czeka na operację wejścia-wyjścia jednego
+programu, to rozpoczyna się wykonywanie drugiego programu. Sterowaniem takiego
+przełączania zadań zajmuje się część systemu operacyjnego zwana programem szeregu-
+jącym zadania (ang. scheduler). Aby ułatwić to zadanie system operacyjny zajmuje się
+także gospodarką zajętości pamięci. Ponieważ większa część programów i danych znajduje
+się w pamięci dyskowej, to sposób optymalizacji czasu dostępu do tej pamięci, czyli
+sposób wymiany informacji pomiędzy pamięcią operacyjną i pamięcią dyskową staje się
+bardzo istotnym problemem. W systemie operacyjnym zadanie to jest nazywane
+zarządzaniem pamięcią (ang. memory management). Systemy komputerowe, w których
+operatorowi przyznaje się aktywną rolę, nazywane są komputerami interakcyjnymi.
+W takich systemach operator decyduje o każdej akcji komputera.
+
+Z wielu zadań systemu operacyjnego poniżej wyróżniono dwa, które mają największy
+wpływ na architekturę systemu:
+l) szeregowanie zadań (przygotowanie programów, ich wykonywanie, przydzielanie
+zbiorów danych, wykonywanie operacji wejścia-wyjścia itp.),
+2) zarządzanie pamięcią.
+
+W dwóch następnych podrozdziałach omówiono te zagadnienia.
+
+7.3.2. SZEREGOWANIE ZADAŃ
+
+Szeregowanie zadań w systemach komputerowych odbywa się na trzech poziomach:
+
+l) szeregowanie wysokiego poziomu (ang. high-level scheduling), tj. podejmowanie
+decyzji czy dane zadanie (program) ma zostać dołączone do kolejki do wykonania,
+
+2) szeregowanie krótkoterminowe (ang. skort-term scheduling), tj. podejmowanie
+decyzji o zleceniu procesorowi wykonania danego zadania,

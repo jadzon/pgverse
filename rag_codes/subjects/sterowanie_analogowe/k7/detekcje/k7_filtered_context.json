@@ -1,0 +1,227 @@
+[
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page4_formula2.png": [
+      "Aby sprawdzić poprawność rozwiązania należy skorzystać z Twierdzenie Leibniza o różniczkowaniu pod znakiem całki:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page7_formula1.png": [
+      "u(t) — wektor wymuszenia (m x 1) y(t) — wektory wyjścia (p x 1) x(t) — wektor stanu (n x 1) Rozmiary macierzy opisujących proces A — macierz procesu (n x n) B — macierz wejścia (n x m) C — macierz wyjścia (p x n) D — macierz transmisyjna (p x m) POLITECHNIKA GDANSKA Stan układu- układy wyższych rzędów, jednorodne Trajektoria stanu układu wyższego rzędu"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page9_formula3.png": [
+      "Aby sprawdzić poprawność rozwiązania należy ponownie skorzystać z Twierdzenie Leibniza o różniczkowaniu pod znakiem całki:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page10_formula5.png": [
+      "POLITECHNIKA GDANSKA SMOUBJS 8|8pOJN Stan układu Przykład: znaleźć odpowiedź skokową systemu opisanego równaniami stanu przy założeniu zerowvch warunków poczatkowvch a o of (OJ D = 0 = O = o"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page11_formula1.png": [
+      "POLITECHNIKA GDANSKA SMOUBJS 8|8pOJN Stan układu Przykład: znaleźć odpowiedź skokową systemu opisanego równaniami stanu przy założeniu zerowvch warunków poczatkowvch a o of (OJ D = 0 = O = o"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page15_formula2.png": [
+      "SMOLUB]S 8|8pOW Najpierw rozbijamy transmitancję na ułamki proste:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page17_formula1.png": [
+      "Postać kanoniczna sterowalna W rezultacie dla transmitancji:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page18_formula2.png": [
+      "POLITECHNIKA GDANSKA SMOUBJS 8|8pOJN Postać kanoniczna obserwowalna Inna forma realizacji może być przedstawiona za pomocą tzw. dualnych zmiennych fazowych. Nosi ona nazwę postaci kanonicznej obserwowalnej."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page22_formula2.png": [
+      "POLITECHNIKA GDANSKA Stan układu y(t) 12 10 5 8 6 4 0.5 1 1.5 2 x,(0=i, () 0.14 0.12 0.1 c = 0.08 0.06 0.04 0 0.5 1 1.5 2 2.5 xz(t=ugft) 12 10 > 8 6 4 0 0.5 1 1.5 2 2.5 t [ms] POLITECHNIKA GDAŃSKA"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page23_formula2.png": [
+      "SMOUBJS 8|8pOJN Wprowadzamy oznaczenia: x, (£) =u,(t), x1(t)=x,(t), u(t) = u,(t) Wtedy:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page24_formula4.png": [
+      "POLITECHNIKA GDAŃSKA"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page26_formula2.png": [
+      "wzanyii: „pageźć lormua8.png z(i) — „nowy wektor stanu” : OO e e z(t()=P'APz(t)+P Bu(t)"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page26_formula5.png": [
+      "„Nowy” model stanowy: Ą -]"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page26_formula6.png": [
+      "gdzie: B — P\"B"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page31_formula1.png": [
+      "POLITECHNIKA GDANSKA Transformacja stanu - diagonalizacja A=PAP\""
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page32_formula1.png": [
+      "POLITECHNIKA GDAŃSKA a o of (OJ o = 0 = O = o Transformacja stanu - diagonalizacja Jeśli macierz A ma wielokrotne wartości własne, to nie można zastosować przedstawionej procedury diagonalizacyjnej. Wtedy zalecana jest inna forma diagonalizacji: tzw. kanoniczna forma Jordana SMOUBJS 8|8pOJN"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page35_formula1.png": [
+      "Diagonalizacja - Matlab"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page40_formula2.png": [
+      "Powyższy warunek będzie spełniony, jeśli wszystkie bieguny transmitancji G(s) — a więc miejsca zerowe wielomianu mianownika - będą miały ujemne części rzeczywiste. Wielomian mianownika transmitancji będziemy nazywali wielomianem charakterystycznym układu. Dla modelu danego transmitancją SMOUBJS 8|8pOJN"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page41_formula3.png": [
+      "Równanie charakterystyczne"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page42_formula1.png": [
+      "Równanie charakterystyczne"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page42_formula3.png": [
+      "Równanie charakterystyczne"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page47_formula2.png": [
+      "Stabilność Przykład: l CES| I Nastąpiło uproszczenie j(S)z———=—— bieguna w p. s=1 — układ S=| s=] śs=l nie jest wewnętrznie zory/k/_page47/_formula1.png stabilny"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page49_formula1.png": [
+      "Stabilność Wyznaczmy transmitancję systemu danego równaniami stanu:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page51_formula4.png": [
+      "POLITECHNIKA GDANSKA a O of (OJ D = 5 = O = o Stabilność Dla indywidualnej zmiennej stanu zachodzi"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page55_formula1.png": [
+      "SMOUBJS 8|8pOJN Stan x, układu nazywa się sterowalnym, jeżeli dla każdego skończonego czasu ż,>0 istnieje sterowanie u(t), £<4, przeprowadzające ten stan ze stanu początkowego x(0)= x, do stanu x(£,)=0. Układ nazywa się całkowicie sterowalnym, jeżeli każdy stan tego układu jest sterowalny. Konsekwencją sterowalności jest to, że dla układu całkowicie sterowalnego, dla dowolnych dwóch stanów x, i x, istnieje sterowanie u(t), które przeprowadzi stan układu ze stanu początkowego x(0)=x, do stanu x(£,)=X;,. POLITECHNIKA GDANSKA"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page57_formula2.png": [
+      "jest całkowicie sterowalny, gdy jego macierz sterowalności Kalmana:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page57_formula3.png": [
+      "jest całkowicie sterowalny, gdy jego macierz sterowalności Kalmana:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page61_formula2.png": [
+      "SMOUBJ]S 8|8poW"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page74_formula3.png": [
+      "to wektor wzmocnień sprzężenia można wyznaczyć ze wzoru:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page75_formula2.png": [
+      "Transmitancja układu ze sprzężeniem:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page76_formula1.png": [
+      "POLITECHNIKA GDAŃSKA a O of (OJ D = 5 = O = o w HATECAR 94/51TEGOW p BGBAUTONATYKH Pozycjonowanie biegunów w oparciu o sprzężenie od stanu Przykład: Dla danego układu określić wartości wzmocnień w układzie ze sprzężeniem od stanu, zapewniające bieguny -4, -4 i -5. Wyznaczyć transmitancję układu ze sprzężeniem oraz narysować jego schemat SMOUBJS 8|8poJN"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page76_formula2.png": [
+      "Rozwiązanie:"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page76_formula3.png": [
+      "Odp."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page103_formula3.png": [
+      "Sprawdzamy możliwość zastosowania sprzężenia U „(s 20 G(s )=—\"— Ua(5) )_ U,(s) s*+6,5s+30 Wyznaczone"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page114_formula3.png": [
+      "POLITECHNIKA GDAŃSKA — Obserwator stanu i jego zastosowanie"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page115_formula2.png": [
+      "POLITECHNIKA GDAŃSKA — Obserwator stanu i jego zastosowanie"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page121_formula3.png": [
+      "POLITECHNIKA GDANSKA a o of (OJ D = 0 = O = o"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page121_formula4.png": [
+      "POLITECHNIKA GDANSKA a o of (OJ D = 0 = O = o"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page130_formula2.png": [
+      "vvjHMiuUvvuuLiiliy liuwvvy vvuiLUI ULUIIU UMIIIIIUVVYGI ry vv i IAMDtyY|PSUJĄWY JHUDUL. tałym, wymaganym położeniem (wartości"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page138_formula2.png": [
+      "POLITECHNIKA GDAŃSKA a e of 0. o A m =Ź O = 0 Obserwator stanu i jego zastosowanie Wielomian charakterystyczny obserwatora"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page160_formula1.png": [
+      "Przykład 1"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page161_formula2.png": [
+      "TI = = = O. © (e, k-2 7 i © Q W"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page164_formula2.png": [
+      "POLITECHNIKA GDANSKA mi = = = Q. o) o = 7 i cy Q W Zadania — rysowanie wykres'' kasza malawi waxi Wykresy dla B=1 i a=1 e-1 R!"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page183_formula1.png": [
+      "eoblnsido eloy4un4 .page 182_figure1.png IE Al Zadanie - wyznaczanie parametrów cyklu granicznego Di Przeprowadźmy symulacje układu dla k=2"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page192_formula1.png": [
+      "POLITECHNIKA SKA eoblnsido eloy4un4 \" AJ Noc GRS5SA © BRUTONATYH Dodatek A— wykreślanie hodografu w arkuszu kalkulacyjnym Zadanie: Dla układu inercyjnego z opóźnieniem transportowym wykreślić charakterystykę Nyquista (hodograf*). Założyć k=10, T=3; t=0,5"
+    ]
+  }
+]

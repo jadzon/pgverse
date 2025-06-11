@@ -1,0 +1,32 @@
+3.2. Kody binarne i arytmetyka 39
+
+wynik, gdyż obliczone dla słowa 1111 bity parzystości to 111. Dokonuje się wówczas
+porównania słów korekcyjnych (słowa korekcyjnego obliczonego na podstawie odebranych
+bitów i odebranego słowa korekcyjnego) przez operację sumy mod 2 tych bitów. W naszym
+przykładzie w wyniku tego otrzymamy słowo 101. Wynik ten wskazuje, że bity słowa
+parzystości różnią się na pozycjach P1 i P3. Jak wynika z poprzedniego opisu i z tablicy 3.5,
+wskazuje to na błąd na trzeciej pozycji, tj. D3. Po detekcji tego błędu można dokonać jego
+korekcji zmieniając wartość pozycji D3 słowa otrzymanego na wyjściu kanału (w tym
+przykładzie z | na 0).
+
+Przedstawiony kod korekcyjny dla pojedynczego błędu wymagał aż 3 bitów parzys-
+tości dla 4 bitów kodu. Stanowi to 75% długości samego kodu. W tablicy 3.6 zestawiono
+porównanie wymaganych długości słów korekcyjnych dla dwóch przypadków: w pierwszej
+kolumnie dla korekcji pojedynczego błędu oraz w drugiej kolumnie dla korekcji po-
+jedynczego błędu, ale detekcji podwójnego błędu.
+
+W systemach cyfrowych występuje często potrzeba transmisji znacznie dłuższych
+ciągów niż przedstawione. W związku z tym rośnie także długość słów detekcyjnych
+ikorekcyjnych. Jednym z często stosowanych rozwiązań jest wykorzystanie tzw. słowa
+kontrolnego CRC (ang. cyclic redundancy code). Jeden bit tego słowa powstaje jako bit
+parzystości dla co k-tego bitu danego ciągu. Jeżeli mamy ciąg o długości 1024 bity
+i przyjmiemy, że k = 64, to słowo kontrolne będzie miało długość 16 bitów. Każdy z tych
+bitów jest bitem parzystości dla podciągu składającego się z co 64 bitu danego ciągu.
+
+Na zakończenie tego podrozdziału przedstawiono kod stosowany dla znaków alfa-
+numerycznych, tj. dla cyfr, liter, znaków pisarskich i znaków redakcyjnych sterujących.
+Kod ten jest znany jako kod ASCII (ang. American Standard Code for Information
+Interchange) lub też jako kod ISO (/nternational Standard Organization). W tablicy 3.7
+przedstawiono 7-bitowy kod i odpowiadające jego słowom znaczenia. W kolumnach
+
+<image/tabele/k3_page49_table1.png>

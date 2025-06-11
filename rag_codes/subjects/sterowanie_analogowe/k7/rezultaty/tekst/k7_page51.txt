@@ -1,0 +1,32 @@
+Stabilność
+
+Niech dany będzie pewien autonomiczny układ:
+
+<image/wzory/k/_page51_formula1.png>
+
+Mówimy, że układ ten jest asymptotycznie stabilny, gdy dla dowolnego
+warunku początkowego zachodzi:
+
+<image/wzory/k/_page51_formula2.png>
+Dokonajmy diagonalizacji
+
+<image/wzory/k/_page51_formula3.png>
+
+<image/wzory/k7_page51_formula4.png>
+
+POLITECHNIKA
+GDANSKA
+
+a
+O
+
+of
+(OJ
+D
+
+=
+5
+=
+O
+=
+o

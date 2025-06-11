@@ -1,0 +1,26 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z ? 28
+
+19. Schemat blokowy bezprzewodowego systemu elektronicznego bazującego na
+kontrolerze ZigBee (np. AT86RF230), główne cechy standardu ZigBee.
+
+<image/figury/k8_page26_figure2.png>
+
+Bezprzewodowy system elektroniczny bazujący na kontrolerze ZigBee AT86RF230
+
+Główne cechy standardu ZigBee:
+
+. wykorzystywanie pasm 868/915 MHz i 2.4 GHz,
+
+. automatyczna rekonfiguracja sieci (self-healing),
+
+» praca w różnych topologiach: mesh (siatka), gwiazda, drzewo,
+» bardzo mały pobór mocy (kilka lat na jednej baterii),
+
+. globalna implementacja,
+
+» możliwość obsługi dużej liczby urządzeń.
+
+20. Schemat blokowy układów MEMS sterowanych interfejsem SPI, funkcje
+poszczególnych bloków układów, znaczenie linii układów.
+
+<image/figury/k8_page26_figure1.png>

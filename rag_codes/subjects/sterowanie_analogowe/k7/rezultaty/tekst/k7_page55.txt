@@ -1,0 +1,27 @@
+Sterowalność
+
+ 
+
+Rozważmy liniowy układ dynamiczny opisany równaniami stanu
+
+<image/wzory/k/_page55_formula2.png>
+
+<image/wzory/k7_page55_formula1.png>
+
+SMOUBJS 8|8pOJN
+
+Stan x, układu nazywa się sterowalnym, jeżeli dla każdego skończonego
+czasu ż,>0 istnieje sterowanie u(t), £<4, przeprowadzające ten stan ze stanu
+początkowego x(0)= x, do stanu x(£,)=0.
+
+Układ nazywa się całkowicie sterowalnym, jeżeli każdy stan tego układu jest
+sterowalny.
+
+Konsekwencją sterowalności jest to, że dla układu całkowicie sterowalnego,
+dla dowolnych dwóch stanów x, i x, istnieje sterowanie u(t), które
+przeprowadzi stan układu ze stanu początkowego x(0)=x, do stanu x(£,)=X;,.
+
+ 
+
+POLITECHNIKA
+GDANSKA

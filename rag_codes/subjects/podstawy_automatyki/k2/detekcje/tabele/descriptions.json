@@ -1,0 +1,18 @@
+[
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/tabele/k2_page28_table1.png",
+    "description": "Tabela przedstawia parametry regulatorów typu P, PI i PID, w tym wartości współczynników \\( k_P \\), czasów integracji \\( T_i \\) oraz czasów pochodnych \\( T_d \\)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/tabele/k2_page17_table1.png",
+    "description": "Zdjęcie przedstawia tabele z charakterystykami amplitudowo-fazowymi różnych elementów elektrycznych: proporcjonalnego, inercyjnego pierwszego rzędu, oscylacyjnego i całkującego idealnego. Każda kolumna zawiera nazwę elementu oraz jego odpowiednią charakterystykę."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/tabele/k2_page27_table1.png",
+    "description": "Tabela przedstawia zalecenia dotyczące wyboru parametrów regulatora PID na podstawie odpowiedzi skokowej. W tabeli porównuje się typy regulatorów P, PI i PID, podając wartości dla proporcjonalności (kP), integralności (Ti) i deriwatywności (Td)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/tabele/k2_page10_table1.png",
+    "description": "Zdjęcie przedstawia tablicę 2.1, która opisuje charakterystyki czasowe liniowych członów dynamicznych. Tablica zawiera trzy kolumny: \"Człon\", \"Charakterystyka skokowa (u(t) = U * 1(t)) i impulsowa\" oraz \"Uwagi\". W tabeli są przedstawione charakterystyki dla trzech typów członów: proporcjonalnego, inercyjnego pierwszego rzędu i inercyjnego drugiego rzę"
+  }
+]

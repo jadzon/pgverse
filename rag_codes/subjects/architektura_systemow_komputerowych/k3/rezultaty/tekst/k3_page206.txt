@@ -1,0 +1,54 @@
+196 Skorowidz
+
+ 
+
+systemy wieloprocesorowe 165 tryb rejestrowy pośredni 81
+
+— wieloprogramowe 116 tryby adresowania 81
+
+— z podziałem czasu 147
+
+szeregowanie krótkoterminowe 148 U
+
+— wysokiego poziomu 148
+
+— zleceń wejścia-wyjścia 149 układ iteracyjny 17
+
+szyna adresowa 62 — kombinacyjny 14
+
+— danych 62 — przerwań z koderem priorytetowym 119
+— sterująca 62 — sekwencyjny 14, 29
+
+sytuacja wyjątkowa 115 układy mikroprogramowane 73
+
+szybkość transmisji 85
+
+W
+
+wektor przerwań 119
+-' poziomowy system przerwań 118
+programowość 147
+ymanie 63, 68
+:dnik 55
+nanie rozkazu 8
+ana zawartości pamięci 153
+
+T
+
+abele/k3_page206_table1.png -.,.
+
+eżdżanie podprogramów 142
+zrwań 119
+
+ąglanie 58
+
+Ul 40
+
+40
+
+ennopozycyjny 55-56
+k-moduł 40
+
+dzanie pamięcią 148
+
+niki 63

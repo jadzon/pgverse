@@ -1,0 +1,26 @@
+Zadanie - wyznaczanie parametrów cyklu granicznego
+
+ 
+
+Jak widzimy gdy wartość M maleje punkt roboczy
+nrzacinm/a cia na zawnątrz wykresu Nyquista co powoduje
+nplitudy — układ jest stabilny.
+
+'w ( M<1) żaden sygnał nie przechodzi
+wy i układ jest stabilny. Dla nieco
+
+v wzmocnienie jest małe i układ jest
+la większych sygnałów wzmocnienie
+fig taje być stabilny. Jeżeli k <0,5 to
+
+id zawsze będzie stabilny
+
+<image/figury/k7_page182_figure3.png>
+
+eoblnsido eloy4un4
+
+.page 182_figure1.png
+
+ 
+
+IE Al

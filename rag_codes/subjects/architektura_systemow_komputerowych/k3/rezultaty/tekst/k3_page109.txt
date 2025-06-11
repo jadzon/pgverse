@@ -1,0 +1,51 @@
+5.2. Pomięci operacyjne 99
+
+Obsługa tego przerwania polega na zapamiętaniu stanu procesora i na włączeniu pod-
+trzymywania zasilania pamięci przez baterię. Alternatywnym rozwiązaniem jest wcześniej
+omówione zastosowanie pamięci NVRAM.
+
+PRACA Z PRZEPLOTEM
+
+Praca pamięci z przeplotem może znacznie przyspieszyć dostęp do niej, a jest możliwa
+wówczas, gdy blok pamięci składa się z kilku banków. W takim przypadku można zor-
+ganizować współpracę procesora z pamięcią tak, aby nie czekał on na dostęp do pamięci.
+Polega to na tym, że rozpoczyna się dostęp do banku i+1 zanim zakończy się cykl dostępu
+do banku o numerze i. Podobnie rozpoczyna się dostęp do banku i+2 zanim zakończy się
+dostęp do banku i+1 itd. Wymaga to sekwencyjnego uaktywniania banków i multi-
+pleksowania wyjść danych z każdego banku.
+
+PAMIĘĆ DWUBRAMOWA
+
+Praca wielobramowa jest wykorzystywana w systemach wieloprocesorowych. Często
+zachodzi tam konieczność dostępu do pamięci z dwóch lub więcej magistral. Jeżeli dostęp
+ma być z dwóch magistral, to pamięć musi być wyposażona w podwójne wejścia adresowe,
+podwójne wejścia sterujące i podwójne wejścia danych, a ponadto w układ arbitrażu
+określający, która magistrala ma otrzymać dostęp w przypadku, gdy dostępu żądają obie.
+Istnieją kostki pamięci produkowane przez niektóre firmy, które mają wbudowane układy
+zapewniające pracę dwubramową.
+
+UKŁADOWE WSPOMAGANIE SYSTEMU OPERACYJNEGO W ZARZĄDZANIU PAMIĘCIĄ
+
+Układy wspomagające pracę systemu operacyjnego zwane są układami zarządzania
+pamięcią (ang. memory management unit MMU). Ich funkcje i zadania będą opisane
+w rozdz. 7.
+
+5.2.3. WSPÓŁPRACA PAMIĘCI OPERACYJNEJ Z PAMIĘCIĄ KIESZENIOWĄ
+
+Z poprzedniego podrozdziału wynika, że pamięci półprzewodnikowe RAM można po-
+dzielić na dwie klasy. Jedne to szybkie, ale o niewielkiej pojemności, drogie i pobierające
+dużą moc pamięci statyczne. Drugie to wolniejsze, ale o większej pojemności, tańsze
+i pobierające niewielką moc pamięci dynamiczne. Projektantom systemów komputerowych
+ten podział nasunął myśl jednoczesnego wykorzystania obu typów pamięci przy pro-
+jektowaniu pamięci operacyjnych. Do pamięci operacyjnej o dużej pojemności i zbu-
+dowanej z kostek pamięci dynamicznej można dodać stosunkowo niewielką, ale szybką,
+pamięć statyczną, pamiętającą jedynie fragment zawartości pamięci operacyjnej. Pomysł
+ten narodził się z badań związanych z tzw. zjawiskiem lokalności (ang. /ocality). Zjawisko
+to polega na tym, że kolejne odwołania do pamięci zachodzą zwykle w pewnym
+niewielkim obszarze. Obszar ten pokrywa się z miejscem ulokowania danego programu
+w pamięci i program rzadko odwołuje się do odległych obszarów. Dlatego jeśli obszar taki
+zostanie przepisany do niewielkiej, szybkiej pamięci, zwanej pamięcią kieszeniową
+(ang. cache memory), to istnieje duże prawdopodobieństwo, że najczęstsze odwołania
+podczas wykonywania tego programu będą do tej właśnie pamięci. Dlatego tak organizuje
+się współpracę procesora z pamięcią, aby odwołania procesora do pamięci dotyczyły
+jedynie pamięci kieszeniowej. Jeśli w czasie wykonywania programu procesor wyśle adres

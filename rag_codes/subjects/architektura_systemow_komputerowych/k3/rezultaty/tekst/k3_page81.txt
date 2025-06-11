@@ -1,0 +1,35 @@
+4.4. Blok arytmetyczno-logiczny 71
+
+dołącza się sygnał wyjściowy C, z poprzedniego stopnia sumatora. Takie połączenie,
+zwane dalej połączeniem kaskadowym, ma pewną wadę. Polega ona na tym, że prze-
+niesienia generowane przez poszczególne stopnie są propagowane przez cały układ. Powo-
+duje to znaczne opóźnienie wprowadzane do operacji sumowania. Aby tego uniknąć,
+arytmometr wyposażono w dodatkowe wyjścia G i T. Są to sygnały dwóch przeniesień:
+tzw. przeniesienia generowanego i tzw. przeniesienia transmitowanego. Służą one do
+równoległego wyliczenia przeniesień wszystkich stopni sumatora zbudowanego z wielu 4-
+-bitowych układów (podobnie jak przeniesienia g, i p, w układzie sumatora jednobitowego).
+Sygnał wyjściowy A = B służy do wskazania przypadku kiedy argumenty operacji są
+równe.
+
+<image/figury/k3_page81_figure2.png>
+
+Rysunek 4.7. Dwie konfiguracje połączeń układów ALU
+
+Na rysunku 4.7 pokazano dwie konfiguracje połączeń dwóch układów ALU: jedną z
+przeniesieniem generowanym kaskadowo (rys. 4.7a) i drugą z przeniesieniem równoległym
+(rys. 4.7b). Na rysunku 4.7a przedstawiono 8-bitowy sumator dwóch słów wejściowych A,
+i B,. Przeniesienie wyjściowe z tego bloku jest generowane kaskadowo i powstaje na
+wyjściu C, układu dolnego. Natomiast na rysunku 4.7b pokazano jak, celem przyspieszenia
+pracy sumatora, połączono dwa sumatory 4-bitowe z układem wyliczającym przeniesienie
+w sposób równoległy (układ SN74182). Wylicza on przeniesienie wyjściowe na podstawie
+stanów na wyjściach T i G. Jak widać z rysunku układ ten zaprojektowano do współpracy
+z czterema sumatorami 4-bitowymi.
+
+Na rysunku 4.8 pokazano fragment 8-bitowego procesora (bez układu sterowania).
+Argumenty operacji dla bloku ALU są podawane z rejestrów A i B. Do rejestru A
+dołączono rejestr Q, który jest wykorzystywany przy wykonywaniu rozkazów
+arytmetycznego mnożenia i dzielenia (por. rozdz. 3). Rejestry A i Q są rejestrami
+przesuwającymi. Rejestr B ma tylko jedno wejście sterujące m,„, które jest wejściem
+ładującym rejestr zawartością z magistrali (gdy m; = 1). Rejestry A i Q mają po dwa
+wejścia sterujące, ponieważ oprócz funkcji ładowania wykonują także funkcję
+przesuwania.

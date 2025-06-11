@@ -1,0 +1,23 @@
+Sterowalność
+
+Układ n-tego rzędu opisany równaniami:
+
+<image/wzory/k/_page57_formula1.png>
+<image/wzory/k7_page57_formula2.png>
+jest całkowicie sterowalny, gdy jego macierz sterowalności Kalmana:
+
+<image/wzory/k7_page57_formula3.png>
+
+ma pełny rząd tzn.:
+
+<image/wzory/k/_page57_formula4.png>
+
+Wynika stąd, że aby układ był całkowicie sterowalny, w macierzy P. musi się
+znaleźć n niezależnych kolumn.
+
+POLITECHNIKA
+GDANSKA
+
+ 
+
+SMOUBJS 8|8pOJN

@@ -1,0 +1,23 @@
+Trajektoria fazowa — ruch poślizgowy
+
+ 
+
+Rozważmy małe nachylenie linii przełączeń. Stan układu osiągnąwszy punkt P2 na
+linii przełączeń nie może jej opuścić. Punkt P2 jest to taki punkt w którym nachylenie
+trajektorii typu 2 jest równe nachyleniu linii przełączeń, Punkt P2 oznacza stan
+nierównowagi. Linia przełączeń nabiera teraz cech trajektorii stanu. Aby
+przeanalizować zachowanie układu, załóżmy że przekaźnik nie jest idealny, lecz
+występuje w nim pewna bardzo mała histereza. W takim przypadku będziemy mieli
+do czynienia z dwoma liniami przełączeń.
+
+Ruch poślizgowy — są to drgania o dużej częstotliwości i bardzo małej amplitudzie.
+Częstotliwość drgań rośnie wraz ze zmniejszaniem się histerezy a amplituda maleje
+
+[am0ZEJ] AuzAZOZSEŁd Epo]SIN
+
+<image/figury/k/_page215_figure1.png>
+
+ 
+
+POLITECHNIKA
+GDANSKA

@@ -1,0 +1,66 @@
+4 1. Wprowadzenie
+
+ 
+
+rozwój technik mikrokomputerowych, w tym także obejmujący mikroprocesory specjali-
+zowane, a w szczególności procesory przeznaczone do grafiki komputerowej i do prze-
+twarzania sygnałów analogowych.
+
+Dziś przemysł komputerowy rozwija się nadal bardzo dynamicznie. Stymuluje on
+także rozwój wielu gałęzi techniki. W szczególności dotyczy to mikroelektroniki i innych
+dziedzin technologii elektronicznych. Ale trudno byłoby także wskazać taką dziedzinę
+życia, gdzie nie dotarły zastosowania komputerów. Dla różnych zastosowań powstają
+nowe specjalizowane opracowania systemów komputerowych i nowe urządzenia z nimi
+współpracujące. Przykładowo:
+
+— zastosowania poligraficzne:
+
+— sprzęt specjalizowany: skanery (urządzenia do przetworzenia obrazów na postać
+cyfrową) i naświetlarki (urządzenia do naświetlania klisz służących dalej w pro-
+cesie drukowania),
+
+— Oprogramowanie: edytory tekstowe i edytory graficzne;
+
+— zastosowania handlowe:
+
+— _ sprzęt specjalizowany: kasy sklepowe i czytniki kart kredytowych,
+
+— oprogramowanie: systemy zaopatrzenia magazynów, systemy podatkowe, bilanso-
+we, księgowe;
+
+— zastosowania bankowe:
+
+— sprzęt specjalizowany: bankomaty, automaty do liczenia pieniędzy, czytniki pod-
+pisów itp.,
+
+— oprogramowanie: sprawdzanie kont kredytowych, kontrolery kursów walut i pa-
+pierów wartościowych, systemy prognozowania;
+
+— inne zastosowania jak np. zastosowania do sterowania procesami przemysłowymi
+
+i obiektami specjalnymi (samolotami), do analizy sygnałów analogowych (analiza
+
+i synteza mowy), systemy alarmowe i zabezpieczające, systemy wojskowe.
+
+Każde z wymienionych zastosowań narzuca komputerom nieco inne wymagania i ich
+konstruktorzy stają przed problemem konfliktu pomiędzy uniwersalnością rozwiązań (niska
+cena) a specjalizacją rozwiązań. Jednym z nurtów prowadzących do rozstrzygnięć tych
+konfliktów są poszukiwania z zakresu architektury komputerów.
+
+ARCHITEKTURA
+
+Co nazywamy architekturą komputerów? Słowo zaczerpnięte z budownictwa ma oddać
+złożoność tego obiektu technicznego. Tak jak wielki biurowiec, tak i komputer jest bardzo
+złożonym obiektem. Jego projektowanie, a następnie opisywanie, odbywa się na różnych
+poziomach. W szczególności wyróżnić można 3 poziomy opisu komputera: architekturę,
+implementację i realizację. Każdemu z tych trzech poziomów można przypisać odpo-
+wiednio jedno z trzech pytań: „co robi?”, „jak działa?” i „z czego jest zrobiony?”.
+Prawdopodobnie pojęcie architektury po raz pierwszy wprowadził Buchholz kiedy w roku
+1962 opisywał komputer firmy IBM o nazwie Stretch. W roku 1964 Amdhal zdefiniował
+architekturę komputerów jako „funkcjonalny wygląd komputera przeznaczony dla jego
+
+bezpośrednich użytkowników”. Opis architektury komputera ma odpowiedzieć na pytanie
+„Co robi?”.
+
+Implementacja, czasem nazywana organizacją komputerów, jest opisem sposobu w jaki
+ten „funkcjonalny wygląd” zrealizowano. Projektant, na tym poziomie, dokonuje wyboru

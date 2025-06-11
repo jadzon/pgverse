@@ -1,0 +1,36 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 29
+Składa się on z następujących bloków:
+
+„ Blok interfejsu SPI — obsługuje on interfejs SPI służący do komunikacji między mk a układem
+MEMS. Za jego pomocą transmitowane są dane do rejestrów konfiguracyjnych, a czytane dane z
+rejestrów statusu i rejestrów danych. Ponadto zawiera on rejestry kontrolne i statusowe, jak i rejestry
+danych
+
+« Czujnik mechatroniczny — właściwy blok układu MEMS przetwarzający daną wielkość fizyczną, do
+jakiej pomiaru jest ten układ przeznaczony, na wielkość elektryczną (najczęściej napięcie).
+
+« Blok kondycjonowania i przetwarzania sygnałów — przetwarza on sygnał elektryczny (np.
+wzmacnia, jak to jest konieczne — konwertuje na napięcie, filtruje) do postaci mierzalnej przez
+zawarty w nim przetwomik A/C, po czym konwertuje go na wartość cyfrową.
+
+« Blok kalibracji i cyfrowej obróbki danych — ze względu na nieliniowe zależności między
+wielkością fizyczną a przetworzonym na postać cyfrową sygnałem elektrycznym układ ten np.
+dokonuje kalibracji i przeskalowania wartości cyfrowej uzyskanej z poprzedniego bloku tak, aby
+reprezentowała ona rzeczywistą wielkość fizyczną.
+
++ Blok realizujący dodatkowe funkcje cyfrowe — odbiera i wysyła dane, konwertuje je na
+odpowiednie sygnały elektryczne zgodnie ze specyfikacją danego protokołu.
+
+Znaczenie linii układu:
++. SI — szeregowe wejście danych interfejsu SPI dla danych konfiguracyjnych,
+
++ SO — szeregowe wyjście danych interfejsu SPI służące do odbioru danych i odczytu danych statusu
+układu,
+
++. SCK -zegar taktujący transmisję szeregową interfejsu SPI.
++.  CS$- wejście wyboru układu uaktywniające interfejs SPI do udziału w transmisji,
+
+« LINIE CYFROWE — linie cyfrowe realizujące dodatkowe funkcje np. wyjście przerwania, wejście
+resetu, sygnały alarmowe, itp. Ich liczba i funkcje zależne są od specyfiki danego układu.
+
+„  Vref — napięcie referencyjne dla wewnętrznego przetwornika A/C.

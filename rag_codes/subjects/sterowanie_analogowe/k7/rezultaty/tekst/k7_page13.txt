@@ -1,0 +1,24 @@
+W nowoczesnej teorii sterowania stosujemy opis układu za pomocą n równań różniczkowych 1.
+
+rzędu. Równania te nazywamy równaniami stanu.
+
+Podstawowym problemem jest wybór zmiennych stanu. Zmienne stanu wybieramy w
+
+następujący sposób:
+
+1. Jeżeli struktura rzeczywistego układu jest dostępna, to opis stanowy wynika bezpośrednio z
+tej struktury
+
+<image/wzory/k/7_page13_formula1.png>
+
+SMOLUB]S 8|8pOW
+
+<image/wzory/k/_page13_formula2.png>
+<image/figury/k/_page13_figure1.png>
+
+<image/wzory/k/_page13_formula3.png>
+
+ 
+
+POLITECHNIKA
+GDAŃSKA

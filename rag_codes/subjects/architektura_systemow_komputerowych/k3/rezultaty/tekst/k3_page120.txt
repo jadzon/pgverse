@@ -1,0 +1,28 @@
+110 5. Pamięci
+
+ 
+
+<image/figury/k3_page120_figure2.png>
+
+Rysunek 5.21. Format sektora
+
+bajtu numeru powierzchni (głowicy), 2 bajtów numeru cylindra (Ścieżki), bajtu numeru
+sektora i 2 bajtów słowa CRC. Pole danych zaczyna się bajtem synchronizacji, za którym
+zapisywane są 512 bajty danych i 2 bajty CRC.
+
+Zestrajanie geometrii układu głowica-nośnik jest trudnym zadaniem. Najistotniejszym
+problemem jest powtarzalność ustawienia głowicy nad ścieżkami nawet przy wymianie
+nośnika. Jednym z rozwiązań tego zagadnienia są dyski typu Winchester. Są to dyski
+z twardym podłożem, w którym nośnika nie oddziela się od układu przesuwania głowic,
+aw razie potrzeby wymienia się cały napęd. Takie rozwiązanie ma na celu zestrojenie
+mechanizmu przesuwania głowic z danym dyskiem.
+
+Szybkość pracy pamięci dyskowych zależy od obrotów silnika. Niech dysk
+będzie sterowany silnikiem synchronicznym, to jest obracającym się z prędkością
+3000 obr/min (50 Hz). Jeden obrót trwa zatem 20 ms, a średni czas dostępu jest równy
+połowie czasu jednego obrotu, tj. 10 ms. Jeżeli na ścieżce jest 40 Kb, to szybkość transmisji
+wynosi 2 Mb/s, co pozwala na transmisję jednego sektora (512 bajtów) w czasie ok. 2 ms.
+
+<image/figury/k3_page120_figure1.png>
+
+Rysunek 5.22. Układ sterujący pamięcią dyskową

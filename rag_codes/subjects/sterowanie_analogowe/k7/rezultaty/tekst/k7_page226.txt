@@ -1,0 +1,16 @@
+Dodatek A
+
+Symulacja układu z podwójnym c
+
+figury/k7_pa
+<image/dy_0figury/k/_page226_figure3.png>
+dt :
+w = u(t)
+figury/k7_
+
+dX u(t)dt
+
+ba: = x,(t)dt
+
+POLITECHNIKA
+GDANSKA

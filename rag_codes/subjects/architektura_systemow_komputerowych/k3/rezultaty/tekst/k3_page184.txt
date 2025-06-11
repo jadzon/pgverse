@@ -1,0 +1,39 @@
+174 Dodatek A
+
+ 
+
+<image/tabele/k3_page184_table2.png>
+
+wiednich wartości (0 lub 1) każdej z ośmiu kombinacji zmiennych wejściowych. Te cztery
+sposoby to:
+
+1) tablica prawdy,
+
+2) kanoniczna postać funkcji,
+
+3) dziesiętny zapis funkcji,
+
+4) mapa Karnaugha.
+
+Tablicę prawdy pokazano w tab. D.3. Jest to funkcja, która dla pięciu kombinacji zmien-
+nych wejściowych przyjmuje wartość jeden, a dla trzech kombinacji wartość zero. Każdą
+kombinację zmiennych wejściowych można wyróżnić za pomocą jednej z dwóch prostych
+funkcji boolowskich. Pierwsza z nich przyjmuje wartość 1 tylko dla danej kombinacji
+zmiennych wejściowych i druga, która tylko dla tej kombinacji przyjmuje wartość 0. Na
+przykład kombinację zmiennych x,= 1, x,=0 i x,= I można wskazać funkcją
+y= X,'X,'X,, która przyjmuje wartość | tylko dla tej kombinacji, a dla innych — wartość
+0. Funkcję taką nazywa się implikantem lub mintermem. Podobnie, opisywaną kombinację
+zmiennych można wskazać inną funkcją y = ż, +x, + ka; która przyjmuje wartość 0 tylko
+dla tej kombinacji, a dla wszystkich innych wartość 1. Taką funkcję nazywa się impli-
+centem lub maxtermem. W przykładowej funkcji mamy pięć implikantów i 3 implicenty.
+Funkcję boolowską można przedstawić jako zbiór implikantów, bądź zbiór implicentów.
+
+Kanoniczna postać funkcji, to algebraiczny zapis sumy logicznej wszystkich impli-
+kantów lub iloczynu logicznego wszystkich implicentów. Można zatem określić dwie
+postacie kanoniczne:
+
+1) kanoniczną postać alternatywną (dysjunkcyjną),
+
+2) kanoniczną postać koniunkcyjną.
+
+<image/tabele/k3_page184_table1.png>

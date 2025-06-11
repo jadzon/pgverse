@@ -1,0 +1,24 @@
+170 8. Mechanizmy przyspieszające pracę komputerów
+
+<image/figury/k3_page180_figure1.png>
+
+Rysunek 8.12. Systoliczna architektura równoległych systemów komputerowych
+
+W systemach asynchronicznych nie jest wymagana synchronizacja wszystkich proce-
+sorów i może zajść taka sytuacja, że jedne procesory zaczynają kolejny krok zanim
+zostanie zakończony odpowiedni krok w innych procesorach.
+
+Systemy synchroniczne wymagają jednoczesności rozpoczynania poszczególnych kro-
+ków dla wszystkich procesorów. Przykładem takich systemów są tzw. komputery systo-
+liczne (ang. systolic machine). Nazwa bierze się z analogii do układu naczyniowego
+człowieka, gdzie rytm pracy jest narzucany przez skurcze serca (ang. systole). Analogia
+dotyczy matrycy systolicznej pokazanej na rysunku 8.12. Każdy węzeł takiej matrycy jest
+wyposażony w dwa wejścia i dwa wyjścia i wykonuje swój własny program. Ponieważ do
+każdego wiersza i każdej kolumny matrycy doprowadzono strumień danych, to system
+taki można zakwalifikować do komputerów klasy MIMD. W pierwszym kroku przetwa-
+rzania pracują procesory znajdujące się tylko w pierwszym wierszu i pierwszej kolumnie,
+tylko do nich bowiem dotrą dane. W drugim kroku zaczynają pracę procesory znajdujące
+
+<image/figury/k3_page180_figure2.png>
+
+Rysunek 8.13. Mnożenie macierzy w strukturze systolicznej

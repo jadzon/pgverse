@@ -1,0 +1,20 @@
+Sterowalność
+
+Przykład:
+Sprawdzić sterowalność układu danego w postaci kanonicznej sterowalnej:
+
+SMOLUB]S 8|8pOW
+
+<image/wzory/k/_page62_formula1.png>
+
+<image/wzory/k/_page62_formula2.png>
+
+Wynik:
+Nzory/k7_page62_formula3.png
+
+Wniosek: układ dany w postaci kanonicznej sterowalnej jest zawsze sterowalny
+
+ 
+
+POLITECHNIKA
+GDANSKA

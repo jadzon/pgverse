@@ -96,7 +96,7 @@ class CohereEmbedder:
             if not self._api_key:
                 raise ValueError("❌ Brak klucza API Cohere!")
             
-            self._client = cohere.Client(api_key=self._api_key)
+            self._client = cohere.ClientV2(api_key=self._api_key)
             print(f"✅ Klient Cohere utworzony dla klucza: {self._api_key[:8]}...{self._api_key[-4:]}")
 
     def get_text_embedding(self, text, model="embed-v4.0", input_type="search_document"):
@@ -135,30 +135,12 @@ class CohereEmbedder:
                     texts=[text],
                     model=model,
                     input_type=input_type,
-                    truncate="END"
+                    embedding_types=["float"]
                 )
                 
-                # Sprawdź czy embedding jest poprawny
-                if response and response.embeddings and len(response.embeddings) > 0:
-                    embedding = np.array(response.embeddings[0], dtype=np.float32)
-                    
-                    # Sprawdź czy embedding nie jest pusty
-                    if embedding is not None and len(embedding) > 0:
-                        print(f"✅ Embedding wygenerowany (wymiar: {len(embedding)})")
-                        return embedding
-                    else:
-                        print("⚠️ Embedding jest pusty")
-                else:
-                    print("⚠️ Brak odpowiedzi z API")
+                return response.embeddings.float[0]
                 
-                # Jeśli embedding jest pusty, przejdź do następnego klucza
-                keys_tried += 1
-                if keys_tried < max_keys:
-                    if self._switch_to_next_key():
-                        continue
-                    else:
-                        break
-                        
+                
             except Exception as e:
                 print(f"❌ Błąd API (klucz {keys_tried + 1}): {e}")
                 
@@ -183,88 +165,6 @@ class CohereEmbedder:
         print("⚠️ WARNING: Nie udało się wygenerować embeddingu żadnym z dostępnych kluczy!")
         return None
 
-    def get_text_embeddings_batch(self, texts, model="embed-v4.0", input_type="search_document", batch_size=96):
-        """
-        Generuje embeddingi dla wielu tekstów w batch'ach
-        
-        Args:
-            texts: Lista tekstów
-            model: Model Cohere
-            input_type: Typ wejścia
-            batch_size: Rozmiar batcha (max 96)
-            
-        Returns:
-            list: Lista embeddingów numpy.ndarray lub None
-        """
-        if not texts:
-            return []
-        
-        embeddings = []
-        total_batches = (len(texts) + batch_size - 1) // batch_size
-        
-        print(f"🔄 Przetwarzanie {len(texts)} tekstów w {total_batches} batch'ach")
-        
-        for i in range(0, len(texts), batch_size):
-            batch = texts[i:i + batch_size]
-            batch_num = i // batch_size + 1
-            
-            print(f"📦 Batch {batch_num}/{total_batches}: {len(batch)} tekstów")
-            
-            # Filtruj puste teksty
-            valid_texts = [text for text in batch if text and text.strip()]
-            if not valid_texts:
-                embeddings.extend([None] * len(batch))
-                continue
-            
-            # Skróć długie teksty
-            processed_texts = []
-            for text in valid_texts:
-                if len(text) > 8000:
-                    text = text[:8000]
-                processed_texts.append(text)
-            
-            # Próbuj z każdym kluczem
-            keys_tried = 0
-            max_keys = len(self._available_keys) if self._available_keys else 1
-            batch_success = False
-            
-            while keys_tried < max_keys and not batch_success:
-                try:
-                    self._ensure_client_initialized()
-                    
-                    # API call
-                    response = self._client.embed(
-                        texts=processed_texts,
-                        model=model,
-                        input_type=input_type,
-                        truncate="END"
-                    )
-                    
-                    if response and response.embeddings:
-                        batch_embeddings = [np.array(emb, dtype=np.float32) for emb in response.embeddings]
-                        embeddings.extend(batch_embeddings)
-                        print(f"✅ Batch {batch_num} zakończony pomyślnie")
-                        batch_success = True
-                    else:
-                        print(f"⚠️ Batch {batch_num}: Brak odpowiedzi z API")
-                        
-                except Exception as batch_error:
-                    print(f"❌ Błąd batch {batch_num} (klucz {keys_tried + 1}): {batch_error}")
-                    
-                keys_tried += 1
-                if keys_tried < max_keys and not batch_success:
-                    if not self._switch_to_next_key():
-                        break
-            
-            if not batch_success:
-                embeddings.extend([None] * len(valid_texts))
-                print(f"⚠️ WARNING: Batch {batch_num} nieudany - wszystkie klucze wyczerpane")
-        
-        success_count = sum(1 for emb in embeddings if emb is not None)
-        print(f"📊 Pomyślnie wygenerowano {success_count}/{len(texts)} embeddingów")
-        
-        return embeddings
-    
     @classmethod
     def get_instance(cls, api_key=None):
         """Pobiera instancję Singleton"""
@@ -281,7 +181,6 @@ class CohereEmbedder:
             print("✅ CohereEmbedder zamknięty")
         except Exception as e:
             print(f"⚠️ Błąd zamykania: {e}")
-
 
 class CLIPEmbedder:
     """

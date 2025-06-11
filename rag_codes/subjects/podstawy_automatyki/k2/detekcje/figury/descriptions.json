@@ -1,0 +1,322 @@
+[
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page18_figure1.png",
+    "description": "Zdjęcie przedstawia cztery różne typy filtrów: całkujący z inercją, różniczkujący idealny, różniczkujący rzeczywisty oraz z opóźnieniem transportowym. Każde z nich jest opisane w tabeli 3.1 i ilustrowane odpowiednimi diagramami amplitudy częstotliwości Q(ω) w zależności od ω."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page48_figure3.png",
+    "description": "To jest diagram przedstawiający schematycznie strukturę przepływu u (prędkość) wzdłuż osi x, gdzie B to szerokość przestrzeni, H to wysokość przepływu, e to odległość od osi symetrii do punktu maksymalnej prędkości, a +1 i -1 oznaczają wartości maksymalne i minimalne prędkości."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page49_figure2.png",
+    "description": "To jest diagram blokowy przedstawiający układ sterowania z zastosowaniem sprzężenia zwrotnego. Wejściem jest sygnał referencyjny \\( w(t) \\), a wyjściem jest sygnał \\( y(t) \\). Układ zawiera elementy: odchylenie \\( e(t) \\), który jest różnica między sygnałem referencyjnym a sygnałem wyjściowym, oraz regulator (zaznaczony jako \"block\") z funkcją przetwarzania \\( u(t) \\). Wy"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page11_figure2.png",
+    "description": "Zdjęcie przedstawia trzy różne typy odpowiedzi systemów: oscylacyjny, całkujący idealny i całkujący z inercją. Każda kolumna zawiera wykresy dla funkcji h(t) i g(t), oraz odpowiednie wzory matematyczne opisujące ich charakterystykę."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page12_figure1.png",
+    "description": "Zdjęcie przedstawia fragment tekstu z numerem strony 23, dotyczący sekcji \"2.3.4 Sprawozdanie\". Tekst opisuje wymagania dotyczące zawartości sprawozdania, w tym przebiegi czasowe, wpływ parametrów obiektu oraz analityczne wyprowadzenie odpowiedzi czasowej."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page11_figure1.png",
+    "description": "Zdjęcie przedstawia trzy różne typy filtrów: różniczkujący idealny, różniczkujący rzeczywisty i z opóźnieniem transportowym. Każde z nich ma swoje odpowiednie wyjście czasowe (h(t) i g(t)) oraz parametry (k, T, T0)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page13_figure2.png",
+    "description": "To jest wykres przedstawiający zależność Q(ω) od ω, gdzie ω to częstość. Wykres pokazuje, że Q(ω) maleje wraz z wzrostem ω, osiągając minimum w punkcie ω = ω₁, gdzie Q(ω₁) = 0. Wartość φ(ω₁) jest nachyleniem linii tangencjalnej do krzywej w punkcie ω = ω₁."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page51_figure3.png",
+    "description": "Zdjęcie przedstawia trajektorie fazowe układu ze sprzężeniem tachometrycznym dla różnych wartości współczynnika regulacji \\( k_t \\). Na rysunku a) pokazano trajektorię dla \\( k_t > k_{t,1} \\), a na b) dla \\( k_t = k_{t,1} \\). Układ jest analizowany w kontekście regulatora trójpołożeniowego do regulacji temperatury pomieszczenia."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page7_figure3.png",
+    "description": "Zdjęcie przedstawia wykres skoku jednostkowego (1(t)) oraz równanie transformacji Laplace'a dla funkcji h(t), która jest odwrotną transformacją Laplace'a do wyrażenia G(s)/s."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page55_figure3.png",
+    "description": "To jest wzór na funkcję G(z), która zawiera sumę dwóch skomplikowanych wyrażeń, zawierających eksponenty i potęgi zmiennych T1, T2, TP, Tp oraz zmienną z. Wzór jest stosowany w teorii sygnałów i systemów, szczególnie w kontekście modelowania dynamiki procesów."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page46_figure1.png",
+    "description": "Zdjęcie przedstawia dwa schematy blokowe układowych regulacji dwustawnych: a) z korekcją PD i b) z korekcją PID. Układy zawierają elementy takie jak błąd (e(t)), błąd poprzedniego okresu (ε(t)), sygnał wyjściowy (u(t)) oraz sygnał wyjściowy układu (y(t)). Schematy różnią się dodatkowymi elementami w drugim przypadku, które reprezentują integralną"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page45_figure2.png",
+    "description": "To jest diagram blokowy systemu regulacji, który zawiera elementy takie jak błąd wejściowy (e(t)), błąd wyjściowy (ε(t)), oraz dwa环节 (T1 i T2) z parametrami k. System ten jest złączony z obiektem (OBJEKT), który generuje wyjście y(t). Diagram przedstawia również zasilanie (w(t)) i kontroler, który może być regulowany przez u(t)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page41_figure1.png",
+    "description": "To jest schemat blokowy układu regulacji PID, gdzie:\n\n- `r(t)` to sygnał wejściowy,\n- `e(t)` to błąd,\n- `k_P` to stała proporcjonalna,\n- `1/s` reprezentuje integrator,\n- `ke^(-sT_0)/(1+sT_1)(1+sT_2)` to model obiektu kontrolowanego,\n- `z(t)` to zakłócenie,\n- `y(t)` to sygnał wyjściowy.\n\nUkład ten jest"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page48_figure1.png",
+    "description": "To jest schemat blokowy układu regulacji trójpołożeniowej z korekcją PD (P - proporcjonalna, D - dydaktyczna). Układ zawiera elementy takie jak błąd (e(t)), błąd poprzedniego okresu (e1(t)), silnik, zawór i obiekt. Schemat pokazuje również połączenia między poszczególnymi elementami układu."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page29_figure1.png",
+    "description": "Zdjęcie przedstawia cztery wykresy Bodego, które ilustrują charakterystykę częstotliwościową dla różnych typów regulatorów: proporcjonalnego (P), integralnego (I) i różniczkowego (D). Wykresy pokazują zależność amplitudy (Lm(ω)) i fazę (φ(ω)) od częstotliwości ω."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page43_figure1.png",
+    "description": "Zdjęcie przedstawia charakterystykę czasową modelu obiektu cieplnego, gdzie wykresy y(t) i u(t) pokazują odpowiedź systemu na impulsowy wejście. Wykres y(t) ilustruje maksymalną wartość y_max oraz czasowe parametry T_0, T_+ i T_. Wykres u(t) przedstawia stałe wejście u(t) = 1."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page13_figure1.png",
+    "description": "Zdjęcie przedstawia przejście sygnału sinusoidalnego przez czynnik liniowy, gdzie u(t) to wejściowy sygnał, y(t) to wyjściowy sygnał, U to amplituda sygnału, a φ(ω) to fazę przesunięcia."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page42_figure1.png",
+    "description": "To jest diagram przedstawiający zależność sygnału u od sygnału e, gdzie u_max i u_min to maksymalne i minimalne wartości sygnału u odpowiednio dla sygnału e w zakresie od -H/2 do H/2. Sygnał e jest podzielony na dwa zakresy: od -H/2 do 0 i od 0 do H/2. W każdym z tych zakresów sygnał u ma stałą wartość u_max lub u_min."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page30_figure2.png",
+    "description": "Zdjęcie przedstawia trzy diagramy Bode'a, które ilustrują charakterystykę częstotliwościową dla różnych układów sterowania. Każdy diagram zawiera dwa wykresy: lewy przedstawia logarytm modułu (Lm(ω)), a prawy fazę (φ(ω)). Diagramy obejmują różne wartości ω i pokazują jak zmieniają się wartości Lm(ω) i φ(ω) w zależności od ω."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page25_figure1.png",
+    "description": "Rysunek przedstawia wykres funkcji y(t) w czasie t, ilustrujący sposób określania podstawowych wskaźników jakości. Na wykresie zaznaczono punkty: t90%, t∞+Δ, t∞-Δ oraz tr,Δ, które są kluczowe dla analizy dynamiki procesów."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page21_figure2.png",
+    "description": "To diagram przedstawiający diagram Nyquista, który analizuje stabilność układu. Na osi X znajduje się funkcja P(ω), a na osi Y funkcja Q(ω). Układ jest stabilny po zamknięciu, jeśli nie przekroczy granicy stabilności (na granicy stabilności). Jeśli przekroczy, to układ jest niestabilny."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page56_figure1.png",
+    "description": "Zdjęcie przedstawia trzy funkcje transferowe w postaci zapisu matematycznego: G(z), GT(z) i Gδ(z). Każda funkcja zawiera parametry k, T, TP oraz operatory z-1, które są związane z modelowaniem systemów dynamicznych lub filtrów w teorii sygnałów."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page22_figure3.png",
+    "description": "To grafik przedstawiający dwa wykresy: \"Im(ω)\" i \"φ(ω)\". Wykres \"Im(ω)\" pokazuje zmianę wartości Im(ω) w zależności od ω, podczas gdy wykres \"φ(ω)\" przedstawia zmianę wartości φ(ω) w zależności od ω. Na obu wykresach widoczne są punkty oznaczone jako 1 i -180°, które mogą być kluczowe dla analizy systemów dynamicznych lub elektrycz"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page48_figure2.png",
+    "description": "To grafik przedstawiający cztery różne sygnały czasowe: e1(t), u(t), u̅(t) oraz u1(t). Sygnał e1(t) jest liniowo rosnący z początkiem od 0 i osiągającym wartość e. Sygnał u(t) jest impulsowy, z wartością 1 w określonych momentach czasu. Sygnał u̅(t) jest również impulsowy, ale z wartością 1 tylko w pierwszym impulsie. Sygnał u1(t)"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page36_figure1.png",
+    "description": "To jest schemat blokowy układu regulacji kaskadowej, przedstawiający dwa poziomy sprzężenia zwrotnego w systemie kontroli. Układ składa się z dwóch pierwiastków regulacyjnych \\( G_{R,1}(s) \\) i \\( G_{R,2}(s) \\), obiektu oraz pomiaru \\( y_P(t) \\). Wejściem do układu jest sygnał referencyjny \\( w(t) \\), a wyjściem jest sygnał kontroli \\( u_2"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page38_figure2.png",
+    "description": "To jest diagram blokowy przedstawiający układ sterowania z dwoma pierścieniami sprzężenia zwrotnego. Układ składa się z trzech głównych elementów: G_R,1(s), G_R,2(s) i G_1(s), które są połączone w串联, oraz G_2(s), który jest połączony z G_1(s) w pierścień sprzężenia zwrotnego. Wejściem do układu jest sygnał wejściowy w(t) + e_1(t), a wyjściem jest sy"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page33_figure2.png",
+    "description": "To jest wykres przedstawiający zależność fazową (Lm(ω)) od częstości (ω) dla różnych wartości parametrów kP, kv i kt. Wykres pokazuje trzy linie, które reprezentują różne poziomy fazowe (1°, 2°), oraz punkty przecięcia z osią ω, które odpowiadają częstotliwościom ω = 1/T, ω = 1/Tr, ω = kPkvkt."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page56_figure2.png",
+    "description": "Zdjęcie przedstawia trzy wzory matematyczne, które opisują funkcje G(z), GT(z) i Gδ(z). Wzory te są związane z modelowaniem systemów termodynamicznych lub elektrycznych, gdzie T, TP, Tp, k oraz e są parametrami fizycznymi."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page50_figure1.png",
+    "description": "To jest rysunek geometryczny przedstawiający krzywą, która jest wynikiem przesunięcia i obracania pierścienia wokół osi x1. Krzywa ma kształt zbliżony do półkola, z dwoma prostymi odcinkami, które tworzą kąt α z osią x2. Wartością tangensa kąta α jest -1/kt, gdzie kt to stała techniczna. Rysunek zawiera również oznaczenia dla punktów na osiach x1"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page53_figure2.png",
+    "description": "To jest diagram blokowy systemu regulacji, który zawiera elementy takie jak: sygnał wejściowy (w(t)), błąd (e(t)), sygnał wyjściowy (y(t)), oraz elementy takie jak regulator, element formujący i obiekt. Schemat pokazuje również okres próbkowania (T_P) i sygnał wyjściowy (v(nT_P))."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page30_figure1.png",
+    "description": "Zdjęcie przedstawia trzy różne typy regulatorów PID: PD, PID idealny i PID rzeczywisty, wraz z ich odpowiednimi diagramami czasowymi (u(t) vs e(t)) oraz diagramami częstotliwościowymi (P(ω) i Q(ω)). Każdy typ regulatora ma swoje charakterystyczne wykresy i zależności od parametrów kP, Ti, Td i N."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page33_figure1.png",
+    "description": "To jest diagram blokowy przedstawiający schemat serwowolta. Schemat obejmuje elementy takie jak źródło napięcia (e_a(t)), przetwornik prądowy (1/(R_a + sL_a)), silnik (K_T), moment obrotowy (M_d(t)), prędkość (ω(t)) i kąt (θ(t)). Diagram zawiera również sprzężenie zwrotne poprzez czynnik sprzężenia (sK_e)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page55_figure1.png",
+    "description": "Rysunek przedstawia schemat układu całkowicie dyskretnego, gdzie wejściem jest sygnał \\( W(z) \\), a wyjściem \\( Y(z) \\). Układ składa się z dwóch bloków: \\( G_R(z) \\) i \\( G_0(z) \\), połączonych między sobą oraz z powrotem do wejścia. Schemat uwzględnia także sygnał błędu \\( E(z) \\)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page51_figure1.png",
+    "description": "To jest diagram blokowy układowy regulacji temperatury w domku jednorodzinnym, przedstawiający proces przetwarzania sygnału temperatury w celu osiągnięcia kontrolowanego stanu. Układ zawiera elementy takie jak porównanie sygnałów, filtracja, oraz bloki reaktywne i wyjściowe."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page8_figure1.png",
+    "description": "To jest wzór na Taylorowski rozwinięcie funkcji y(t) wokół punktu t=0, gdzie T to stała czasowa, n to stopień rozwinięcia, dy/dt, d²y/dt², itd., to pochodne funkcji y(t), a ku(t) to wyraz reszty."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page8_figure2.png",
+    "description": "To są dwie funkcje matematyczne: h(t) i g(t), które opisują zależności w czasie t, gdzie k, n, T to stałe. Funkcja h(t) jest sumą geometryczną z wykładniczymi czynnikami, podczas gdy g(t) jest jej częścią składową."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page20_figure1.png",
+    "description": "Zdjęcie przedstawia dwa równania matematyczne opisujące funkcje G(s) i G0(s). Funkcja G(s) jest wyrażona jako stosunek funkcji G0(s) do sumy jedności i G0(s), podczas gdy G0(s) jest funkcją proporcjonalną do L0(s) i M0(s), gdzie L0(s) i M0(s) są polinomiem stopnia m i n odpowiednio, z współczynnikami b0, ..., bm i a0, ..., an."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page43_figure3.png",
+    "description": "To jest diagram blokowy przedstawiający układ regulacji. Wejściem jest sygnał referencyjny \\( w(t) \\), który jest porównywany z wyjściem obiektu \\( y(t) \\). Różnica między tymi sygnałami, zwana błędem \\( e(t) \\), jest przetwarzana przez kontroler (zaznaczony jako \"obiekt\"), który generuje sygnał sterujący \\( u(t) \\), który wpływa na obiekt."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page49_figure1.png",
+    "description": "Rysunek przedstawia schemat blokowy serwomechanizmu przekaźnikowego, który zawiera elementy takie jak błąd (e(t)), odchylenie (ε(t)), sygnał sterujący (u(t)), oraz elementy regulacyjne i przetwarzające sygnały."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page6_figure1.png",
+    "description": "Zdjęcie przedstawia wzór na funkcję przenikania G(s) w dziedzinie częstotliwości, wyrażoną jako stosunek transformacji Laplace'a sygnału wyjściowego Y(s) do sygnału wejściowego U(s). Wzór ten jest zapisany w postaci ułamka, gdzie licznik to sumacja potęg s z współczynnikami b_k, a mianownik to sumacja potęg s z współczynnikami a_k."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page1_figure1.png",
+    "description": "Zdjęcie przedstawia okładkę książki pt. \"Podstawy Automatyki: Ćwiczenia laboratoryjne\" autorstwa Dariusza Horli. Wydanie zostało wydane w Poznaniu w 2003 roku."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page35_figure1.png",
+    "description": "To jest diagram blokowy serwomotora, uwzględniający nieliniowości. Schemat przedstawia przetwarzanie sygnału sterującego (e_a(t)) do pozycji (θ_rz(t)), uwzględniając różne elementy takie jak moment obciążenia (M_d(t)), moment tarcia (M_t(t)), oraz inne parametry fizyczne i elektryczne."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page40_figure1.png",
+    "description": "To jest diagram blokowy systemu sterowania, który zawiera następujące elementy:\n\n1. Wejście sygnału referencyjnego \\( r(t) \\).\n2. Regulator, który otrzymuje błąd \\( e(t) = r(t) - y(t) \\).\n3. Zespół napędu, który otrzymuje sygnał sterujący \\( u(t) \\).\n4. Klapa steru, która otrzymuje sygnał \\( M(t) \\) i wyjście \\( y(t) \\).\n5. Zmiana sy"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page7_figure2.png",
+    "description": "Zdjęcie przedstawia grafikę impulsu Diraca, gdzie osią x jest czas (t), a osią y jest wartość impulsu (δ(t)). Na dole znajduje się zwiększone przedstawienie impulsu, z podpisem \"a\" na szerokości i \"1/a\" na wysokości, ukazującymi parametry impulsu."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page39_figure1.png",
+    "description": "Zdjęcie przedstawia fragment tekstu w języku polskim, który opisuje porównanie wartości wskaźnika ISE w układzie regulacji kaskadowej z regulatorem nadrzędnym typu PI oraz w układzie jednopętlowym z regulatorem dobranym metodą odpowiedzi skokowej Zieglera-Nicholsa."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page32_figure1.png",
+    "description": "To jest diagram blokowy przedstawiający układ sterowania PID (P - proporcjonalny, I - integralny, D - dydaktyczny). Układ składa się z czterech elementów: proporcjonalnego regulatora (kP), integralnego elementu (skt), dydaktycznego elementu (1/(s(1+sT))) oraz połączenia zwrotnego. Wejściem do układu jest sygnał wejściowy w(t) i sygnał referencyjny w(t), a wyj"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page54_figure1.png",
+    "description": "Rysunek przedstawia schemat obiektu ciągłego z impulsatorami na wejściu i wyjściu, gdzie u(t) i y(t) to sygnały wejściowe i wyjściowe, odpowiednio. Symbole Tp oznaczają okres próbkowania. Obiekt jest opisany przez funkcję G(s)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page51_figure2.png",
+    "description": "Zdjęcie przedstawia dwa diagramy (a) i (b), które ilustrują zależności między dwiema zmiennymi \\(x_1\\) i \\(x_2\\). W obu przypadkach, linie ciągłe reprezentują różne wartości funkcji, podczas gdy linie przerywane są granicami określonymi przez \\(-\\frac{B}{2} + H\\) i \\(\\frac{B}{2}\\). Diagram (a) pokazuje liniowe zmiany, podczas gdy diagram (b) przed"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page37_figure2.png",
+    "description": "To jest diagram blokowy przedstawiający strukturę systemu kontroli z dwoma pierścieniami sprzężenia zwrotnego. System składa się z dwóch pierścieni sprzężenia zwrotnego, gdzie pierwszy pierścień ma dwa环节 (G_{R,1}(s) i G_{R,2}(s)), a drugi pierścień ma dwa环节 (G_1(s) i G_2(s)). Wejściem do systemu jest sygnał wejściowy \\( w(t) \\), a wyjściem jest"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page45_figure3.png",
+    "description": "To grafik przedstawiający trzy różne sygnały czasowe: \n1. Wyjście systemu e1(t) jako funkcja czasu t, pokazującego długotrwałe wahania.\n2. Sygnał u(t), który jest impulsowy i zmienia się co t1.\n3. Sygnał średniej wartości u(t), który spada po pierwszym impulsie i utrzymuje się na tym poziomie."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page37_figure1.png",
+    "description": "To jest diagram przedstawiający przekształcony schemat kaskadowego układu regulacji. Układ składa się z kilku bloków, w tym sprzężonego zwrotnego, które są połączone między sobą za pomocą funkcji transferu (G1(s), G2(s), GR1(s), GR2(s)). Wejściem do układu jest sygnał wejściowy (w(t)), a wyjściem (y(t)) jest sygnał kontroli. Diagram uwzględnia również sygnał pomiar"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page15_figure1.png",
+    "description": "Zdjęcie przedstawia wzory matematyczne opisujące wykresy Bodego dla układów oscylacyjnych, w tym wyrażenia dla modyfikacji amplitudy (Lm(ω)) i fazowej (φ(ω))."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page3_figure2.png",
+    "description": "Zdjęcie przedstawia strukturę treści rozdziału 5 i 7 w języku polskim, dotyczącą metody Zieglera-Nicholsa, serwomechanizmu oraz regulacji kaskadowej."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page31_figure1.png",
+    "description": "To jest schemat blokowy serwomechanizmu, który zawiera elementy takie jak regulator, silnik, tachometr i pomiar położenia. Schemat pokazuje proces反馈控制， gdzie sygnał wejściowy (w(t)) jest porównywany z sygnałem wyjściowym (y(t)), a różnica (e(t)) jest przetwarzana przez regulator, aby dostosować sygnał sterujący (u(t)) do silnika."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page48_figure4.png",
+    "description": "To jest diagram blokowy systemu sterowania, który zawiera elementy takie jak błąd (e(t)), regulator, silnik, zawór i obiekt. Błąd jest porównywany z sygnałem wyjściowym (y(t)) i wpływa na sygnał sterujący (u(t)). Sygnał sterujący jest przetwarzany przez silnik, zawór i obiekt, a następnie porównywany z sygnałem wyjściowym w celu dostosowania sygnału sterującego."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page29_figure2.png",
+    "description": "Tabela przedstawia charakterystyki podstawowych typów regulatorów: P, I, PI i PD. Każdej kategorii odpowiadają wykresy charakterystyki skokowej (u(t) vs e(t)) oraz wykresy Nyquista (Q(ω) vs P(ω))."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page38_figure1.png",
+    "description": "Rysunek przedstawia schemat kaskadowego układu regulacji położenia serwomotora, gdzie węzły (1), (2) i (3) reprezentują różne elementy kontrolne, a \"SERWOMOTOR\" oznacza serwomotor jako element wyjściowy. Układ jest zasilany sygnałem wejściowym \\( w(t) \\) i generuje sygnał wyjściowy \\( y(t) \\)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page7_figure1.png",
+    "description": "Zdjęcie przedstawia dwa rysunki: Rysunek 2.2 przedstawia impulsa Diraca, a Rysunek 2.3 pokazuje jego aproksymację dla małego parametru \\(a\\). Impuls Diraca jest skoncentrowany w jednym punkcie czasu, podczas gdy jego aproksymacja to prostokąt o szerokości \\(a\\) i wysokości \\(\\frac{1}{a}\\), gdzie \\(a\\) tenduje do zera."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page23_figure1.png",
+    "description": "Rysunek przedstawia schemat blokowy układu regulacji, gdzie wsteczna korekcja jest realizowana przez regulator \\( G_R(s) \\), który odbiera błąd \\( e(t) \\) i generuje sygnał sterujący \\( u(t) \\). Ten sygnał jest następnie przetwarzany przez obiekt \\( G_0(s) \\), a jego wyjście \\( y(t) \\) jest porównywane z sygnałem referencyjnym \\( w(t) \\)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page25_figure2.png",
+    "description": "Rysunek przedstawiający sposób określania przeregulowania na podstawie sygnału uchybu, gdzie e(t) jest funkcją czasową, e(∞) + Δ i e(∞) - Δ to granice przeregulowania, a e0 i e1 są odpowiednio maksymalnym i minimalnym uchybieniem."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page21_figure1.png",
+    "description": "To jest diagram rozmieszczenia częstotliwości (frequency response diagram) przedstawiający charakterystykę częstotliwościową systemu lub urządzenia. Diagram ten pokazuje jak moc sygnału zmienia się w zależności od kąta fazowego i częstotliwości. Linie na diagramie reprezentują różne poziomy mocy (w dB), co pozwala ocenić zakres pasma i zakłócenia w różnych kierunkach."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page44_figure2.png",
+    "description": "To jest diagram blokowy systemu kontroli, który zawiera elementy takie jak błąd (e(t)), błąd poprzedniego okresu (ε(t)), błąd obecny (e1(t)), oraz element regulacji (k/(1+sT1)). System ten jest podłączony do obiektu, którego wyjście (y(t)) jest sprzężone z wejściem (u(t)). Wszystko to sugeruje, że jest to przykład systemu z regulacją sprzężoną."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page22_figure1.png",
+    "description": "Zdjęcie przedstawia wykresy Bodego dla zapasu fazy i modułu, pokazujące zmiany w fazie i wartościach modułu w zależności od częstości ω. Wykresy ilustrują kryterium stabilności systemu."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page20_figure2.png",
+    "description": "Rysunek przedstawia liniowy układ regulacji, gdzie wejściem jest sygnał u(t), a wyjściem y(t). Układ ten składa się z bloku G0(s) i sprzężenia zwrotnego."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page44_figure1.png",
+    "description": "Zdjęcie przedstawia przebiegi sygnału regulowanego (y(t)) dla różnych wartości ustawień czasowych (Tzad,1 < Tzad,2 < Tzad,3 = Tmax) oraz sygnału sterującego (u(t)) dla Tzad,1. Wykres ilustruje zmiany w odpowiedzi systemu na różne wartości ustawień czasowych."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page44_figure3.png",
+    "description": "Zdjęcie przedstawia dwie formuły matematyczne, które dotyczą koncepcji czasu reakcji i czasu opóźnienia w kontekście systemów kontrolnych. Pierwsza formuła definiuje współczynnik proporcjonalności \\(k_P\\) jako stosunek czasu reakcji \\(t_{on,\\infty}\\) do sumy czasów reakcji i opóźnienia \\(e(t_{on,\\infty} + t_{off,\\infty})\\). Druga formuła oblic"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page50_figure2.png",
+    "description": "To jest graficzne przedstawienie geometrycznego obiektu w układzie współrzędnych (x1, x2). Obiekt ma kształt zbliżony do półkuli z dodatkowymi liniami i punktami oznaczonymi przez wartości B/2 i H. Linie poprzeczne podzielone są na trzy części: -B/2 + H, B/2 - H i B/2. Ta struktura może być użyta do tworzenia embeddingów w kontekście matematyki lub fizyki, szczególnie w"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page54_figure3.png",
+    "description": "To jest wzór na funkcję generującą (Generating Function) w teorii liczb, gdzie \\( G(z) \\) jest wyrażone jako iloraz dwóch polinomów: \\( Y(z) \\) i \\( U(z) \\). Wzór przedstawia sumę nieskończoną z współczynnikami \\( b_j \\) i \\( a_i \\), odpowiednio dla potęg \\( z^{-j} \\) i \\( z^{-i} \\)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page53_figure1.png",
+    "description": "Zdjęcie przedstawia proces dyskretyzacji sygnału czasowego \\( e(t) \\). Na górze jest wykres sygnału kontynuacyjnego, a na dole jego dyskretna wersja z oznaczeniami wartości dla różnych wartości \\( nT_P \\), gdzie \\( T_P \\) to okres próbkowania."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page57_figure1.png",
+    "description": "Rysunek przedstawia schemat blokowy układu regulacji, który zawiera dwa pierścienie sprzężenia zwrotnego z elementami proporcjonalnymi (kP), filtrami czasowymi (Gex0(s) i k/(s(1+sT))) oraz wyjściami y1(t) i y2(t). Układ jest opisany jako Rys. 11.6: Schemat blokowy rozpatrywanego układu regulacji."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page55_figure2.png",
+    "description": "Zdjęcie przedstawia trzy funkcje transferowe w postaci zapisu matematycznego, które są związane z modelami systemów dynamicznych. Funkcje te są wyrażone w zmiennych z i k, gdzie z jest zmienną zależną, a k, Tp, T i Tdelta to parametry systemu."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page18_figure2.png",
+    "description": "Zdjęcie przedstawia cztery różne typy diagramów Bodego dla różnych funkcji transferu w systemach dynamiki. Każdy diagram zawiera wykres amplitudy (Lm(ω)) i fazę (φ(ω)) jako funkcję częstości ω. Diagramy pokazują charakterystyczne postacie dla różnych elementów systemów, takich jak pojemność, rezystancja, oraz inne elementy elektryczne i mechaniczne."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page3_figure1.png",
+    "description": "Zdjęcie przedstawia strukturę treści rozdziału 4 i 5, dotyczącego kryteriów stabilności systemów, metody regulacji oraz przykładów zastosowania tych metod w praktyce. Rozdział 4 obejmuje kryteria Routha, Hurwitza, Nyquista, Bodego, wykres Nicholasa, metodę linii pierwiastkowych i zapas modułu i fazy. Rozdział 5 dotyczy regulacji, w tym celu ćwiczenia, podstawowych"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page43_figure2.png",
+    "description": "To grafik przedstawiający dwa sygnały czasowe: górny sygnał u(t) i dolny sygnał u̅(t). Sygnał u(t) jest impulsowy, zgodnie z wartością 1 lub 0, podczas gdy sygnał u̅(t) jest wynikiem przetworzenia u(t), który ma tendencję do osiągnięcia stałości w czasie. Oznacza to, że u̅(t) jest średnim wartościowym sygnałem u"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page10_figure1.png",
+    "description": "To jest wykres funkcji h(t), która przedstawia zmianę wartości w czasie t. Funkcja osiąga stałą wartość k po okresie T, po upływie którego osiąga asymptotycznie stałą wartość k. Na osi x znajduje się czas t, a na osi y - wartość h(t)."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page54_figure2.png",
+    "description": "To jest wykres funkcji czasowej g(t), która jest stała w przedziale od 0 do τ, a następnie spada do zera poza tym przedziałem."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page22_figure2.png",
+    "description": "To jest diagram przedstawiający charakterystykę fazową systemu, gdzie osią x jest ω (częstotliwość), a osią y jest Q(ω). Na diagramie widoczny jest punkt (-1, j0) oraz kąt φ. Diagram ilustruje zmiany w fazie i amplitudzie dla różnych wartości ω."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page52_figure1.png",
+    "description": "Zdjęcie przedstawia fragment tekstu w języku polskim, zawierające instrukcje dotyczące tworzenia trajektorii fazowych dla serwomechanizmu przekaźnikowego z i bez sprzężenia tachometrycznego, wraz z określeniem amplitudy oscylacji oraz wartości ustalonej uchybu."
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page45_figure1.png",
+    "description": "To grafik przedstawiający trzy funkcje czasowe: \n1. Wykres -c1(t) pokazujący zmiany w funkcji czasowej, która początkowo rośnie szybko i następnie stabilizuje się.\n2. Wykres u(t) przedstawiający impulsowy sygnał, który jest stały na wartości 1 przez okres t1, a następnie przerzuca się na wartość 0.\n3. Wykres u̅(t) przedstawiający średnie wartości sygnału u(t), które początkowo są"
+  },
+  {
+    "relative_path": "podstawy_automatyki/k2/detekcje/figury/k2_page40_figure2.png",
+    "description": "To jest diagram blokowy systemu sterowania, który zawiera następujące elementy:\n\n1. Wejście sygnału referencyjnego \\( r(t) \\).\n2. Zmienne przeszkodowe \\( z_P(t) \\).\n3. Regulator, który wykorzystuje błąd \\( e(t) = r(t) - y(t) \\) do generowania sygnału sterującego \\( u(t) \\).\n4. Zespół napędu, który przekształca sygnał sterujący \\( u(t) \\) w moment"
+  }
+]

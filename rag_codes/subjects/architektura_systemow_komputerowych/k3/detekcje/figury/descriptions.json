@@ -1,0 +1,758 @@
+[
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page113_figure3.png",
+    "description": "To diagram przedstawiający strukturę danych, gdzie liczby od 0 do 8191 są rozłożone na dwa bloki po 70 bitów każdy. Każda liczba jest przypisana do określonego miejsca w każdym bloku, co sugeruje, że to może być schemat reprezentacji danych w systemie binarnym lub kodowaniu."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page173_figure2.png",
+    "description": "To jest diagram przedstawiający proces przetwarzania danych, gdzie wejściem są argumenty, które przechodzą przez serię operacji (Operacja 1, Operacja 2, ..., Operacja N), a wynikiem jest końcowe wynik."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page170_figure2.png",
+    "description": "To jest diagram przedstawiający sygnały elektryczne w systemie pamięci. Na górze znajduje się ciągły sygnał oznaczony jako A2-A_N, który reprezentuje adresy pamięci. Poniżej znajduje się sygnał strobu odczytu (Strob odczytu), który jest krótkim impulsowym sygnałem. Na dole znajdują się dwa sygnały A0 i A1, które są również impulsowymi sygnałami, ale mają różne długości impulsów."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page138_figure2.png",
+    "description": "To jest diagram przedstawiający połączenie sterownika i odbiornika w systemie komunikacyjnym. Sterownik wysyła dane przez port TxD do odbiornika, który odbiera je przez port RxD. Sterownik również wysyła sygnały RTS i CTS do odbiornika, które są odpowiednio odbierane przez DSR i DTR."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page93_figure2.png",
+    "description": "Rysunek przedstawia schemat architektury komputera, gdzie kod operacyjny i baza są przetwarzane w bloku rejestrów. W wyniku tego procesu generowane jest przemieszczenie, które jest dodawane do adresu pamięci, aby uzyskać argument."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page135_figure3.png",
+    "description": "To diagram przedstawiający schemat połączenia sterownika z urządzeniem wyjściowym w systemie komputerowym. Sterownik odbiera adres i dane, a urządzenie wyjściowe przesyła potwierdzenia (ACK) i sygnał gotowości (STB). Schemat zawiera również interfejsy sterujące (INT, INTA, RD, WR)."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page99_figure1.png",
+    "description": "Rysunek przedstawia schemat blokowy urządzenia pamięciowego, gdzie wejścia adresowe (A0, A1) i kontrolne (E) są przetwarzane przez logiczny element, który dostarcza sygnał do matrycy pamięciowej. Sygnał R/W (czytanie/writing) jest przekazywany do czterech tranzystorów, które reprezentują wyjścia danych (D0, D1, D2, D3)."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page108_figure1.png",
+    "description": "Zdjęcie przedstawia dwa schematy elektroniczne. Pierwszy (a) pokazuje prosty układ pamięci oznaczony jako \"HM 4816 S16kx1\", który odbiera sygnały wejściowe (A0-A6, Din, RAS, CAS, WE) i generuje sygnał wyjściowy (Dout). Drugi (b) przedstawia bardziej złożoną strukturę pamięci, gdzie kilka podobnych układów pamięci jest połączonych w"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page59_figure3.png",
+    "description": "To jest diagram blokowy przedstawiający algorytm lub proces logiczny. Diagram zawiera dwie warunkowe decyzje (N i RL0=1), operacje arytmetyczne (RH←RH+M) oraz instrukcję przesunięcia w prawo. Algorytm sprawdza, czy N jest równe 1, a następnie sprawdza, czy RL0 jest równy 1. Jeśli oba warunki są spełnione, wykonuje się operację dodawania M do RH i przesunięcie w prawo"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page43_figure2.png",
+    "description": "To jest diagram przedstawiający trzy flip-flop T (T-type) oraz ich wyjścia Q1, Q2 i Q3. Na prawo od diagramu znajduje się wykres sygnałów czasowych dla ZEG (zegar), Q1, Q2 i Q3, pokazujący ich zachowanie w odpowiedzi na sygnał zegarowy. Flip-flop T jest typem触发器, który przekształca sygnał zegarowy w sygnały wyjściowe Q1, Q2 i Q3,"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page25_figure3.png",
+    "description": "Rysunek przedstawia bramki typu OC (Open Collector) z podłączonym rezystorem w obwodzie wyjściowym."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page114_figure2.png",
+    "description": "To jest diagram blokowy przedstawiający proces przetwarzania danych. Na wejściu mamy liczbę 13, która przechodzi przez pamięć asocjacyjną, gdzie jest ona zmieniona na 127. Następnie ten wynik wpływa do kodera, który generuje wyjście o wartości 7."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page25_figure4.png",
+    "description": "Zdjęcie przedstawia symbole logicznych elementów: NAND, iloczyn, suma mod 2 oraz NOT."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page138_figure3.png",
+    "description": "To jest diagram przedstawiający sygnały zegar nadajnika i dane. Sygnał zegar nadajnika ma postać impulsów, które są synchronizowane z sygnałem danych. Sygnał danych zawiera ciąg bitów, które są przesłane w określonym tempie zgodnym z sygnałem zegarowym."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page176_figure3.png",
+    "description": "To jest sześciokątna grafa, gdzie każdy wierzchołek jest połączony z sąsiednimi wierzchołkami. Graf ten ma 6 wierzchołków i 6 krawędzi."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page36_figure3.png",
+    "description": "To jest diagram przedstawiający strukturę neuronu w sieci neuronowej, gdzie b1, b2, ..., bn to wejścia, g1, g2, ..., gn to wyjścia, a każdy neuron (symbolizowany przez trójkąt) przetwarza swoje wejścia i generuje wyjście. Diagram ilustruje proces przetwarzania danych przez warstwę neuronową."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page104_figure2.png",
+    "description": "To jest diagram przedstawiający schemat sygnałów wejściowych i wyjściowych w systemie pamięci RAM, gdzie Adres, RAS, CAS, DOUT, WE i DIN są połączone odpowiednimi liniami sygnałowymi."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page41_figure4.png",
+    "description": "Zdjęcie przedstawia schemat blokowy rejestru przesuwającego, zaznaczonym jako \"Rejestr przesuwający\". Na diagramie widoczny jest również zegar (ZEG), który jest podłączony do rejestru przesuwającego."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page147_figure1.png",
+    "description": "Zdjęcie przedstawia dwa rodzaje kanałów WE/WY: a) kanał multipleksowy i b) kanał selektorowy. Na obrazku wyjaśniono, jak te kanały są używane w komputerach."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page191_figure2.png",
+    "description": "To jest tablica binarna, która przedstawia wartości dla czterech zmiennych (x1, x2, x3, x4). Każda kolumna odpowiada jednej zmiennej, a każdy wiersz reprezentuje różne kombinacje wartości tych zmiennych. Wartości w tabeli są 0 lub 1, co może oznaczać obecność lub brak określonej kombinacji zmiennych."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page55_figure1.png",
+    "description": "To jest diagram blokowy przedstawiający algorytm mnożenia liczb w kodzie NKB (Nawiasy Kolejności Bity). Algorytm rozpoczyna się od ustawienia inicjalnych wartości i kontroli, następnie przeprowadza iteracyjne mnożenie, przesunięcie w prawo i zmniejszanie licznika, aż do momentu osiągnięcia wartości 0, co kończy proces."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page113_figure2.png",
+    "description": "Zdjęcie przedstawia schemat adresowania pamięci operacyjnej, gdzie etykieta ma 13 bitów i jest to trzecie słowo w bloku."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page179_figure1.png",
+    "description": "Tabela przedstawia trzy kroki (Krok 1, Krok 2, Krok 3) dla trzech procesów (P1, P2, P3), gdzie każdy proces wykonuje program w każdym kroku."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page31_figure1.png",
+    "description": "To jest diagram przedstawiający porównanie dwóch liczb binarnych (A i B) za pomocą logicznych operacji. Liczby A i B są podzielone na cztery bity (A0, A1, A2, A3 i B0, B1, B2, B3). Diagram pokazuje, jak porównywane są odpowiednie pary bitów, aby określić, czy A jest większe niż B, równe B, czy mniejsze niż B."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page147_figure2.png",
+    "description": "To jest diagram przedstawiający schemat działania kanału multipleksującego. Na diagramie widoczny jest kanał multipleksujący, który przekazuje sygnał do n różnych odbiorników numerowanych od 1 do n. Schemat ilustruje proces multipleksowania, gdzie jeden kanał może jednocześnie obsługiwać wiele odbiorników."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page135_figure1.png",
+    "description": "Zdjęcie przedstawia strukturę połączenia sterownika z urządzeniem wyjściowym (a) oraz wykres czasowy przesyłania znaku (b). Sterownik odbiera adres, szynę danych i kontrolne sygnały (INT, INTA, RD, WR), a urządzenie wyjściowe odpowiada sygnałem ACK. Wykres (b) ilustruje przebiegi czasowe sygnałów: WR, SZYNA DANYCH, INT, DANE, STB i ACK."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page38_figure1.png",
+    "description": "Zdjęcie przedstawia trzy różne typy demultiplexerów: a) z trzema wejściami sygnału sterującego (S1, S2, E), b) z dwoma wejściami sygnału sterującego (S1, S2) i jednym wejściem sygnału sterującego (E), c) z jednym wejściem sygnału sterującego (S). Każdy typ ma swoje wyjścia (Y0, Y1, Y2, Y3) oraz we"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page102_figure1.png",
+    "description": "Rysunek przedstawia schemat układu korekcji błędów w pamięci RAM, gdzie m oznacza dane wejściowe, k - kod korekcyjny, a K1, K2 i K3 są blokami korekcyjnymi."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page170_figure3.png",
+    "description": "Zdjęcie przedstawia diagram sygnałów elektrycznych, gdzie A2-AN, A0 i A1 to adresy wejścia, a M1, M2, M3 i M4 to stroby odczytu. Diagram pokazuje przepływ sygnałów między tymi elementami."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page34_figure1.png",
+    "description": "Zdjęcie przedstawia diagram dekodera matrycowego, który składa się z AND-gates i wejść/wyjść oznaczonych jako \\( w_1 \\) do \\( w_m \\) oraz \\( k_1 \\) do \\( k_m \\). Diagram ten ilustruje proces przetwarzania danych przez matrycę, gdzie wejścia są podawane na AND-gates, a wyjścia są zapisywane w matrycy."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page44_figure1.png",
+    "description": "To jest diagram blokowy licznika zgodnego z standardem TTL, który zawiera wejścia i wyjścia takie jak CEP, CET, CLK, LD, CLR oraz wyjścia Q0, Q1, Q2, Q3 i D0, D1, D2, D3. Licznik ma również wyjście TC."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page111_figure1.png",
+    "description": "Wykres przedstawia zależność wartości H od pojemności pamięci kieszonkowej dla różnych wartości q (64, 16, 8). Wartości H osiągają stałą wartość wraz z wzrostem pojemności pamięci."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page107_figure1.png",
+    "description": "Rysunek przedstawia schemat podłączenia pamięci HM 6117 o pojemności 2 KB. Pamięć jest sterowana przez 11 linii wejściowych (AO-A10), 3 linie kontrolne (CE1, WE, CE2) oraz 8 wyjścia."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page169_figure2.png",
+    "description": "To diagram przedstawiający cykl wykonywania instrukcji w procesorze komputerowym. Cykl obejmuje następujące etapy: dostęp do pamięci, dekodowanie rozkazu, obliczanie adresu i wykonanie rozkazu. Na osi czasu (N, N+1, N+2) przedstawiono kolejne fazy wykonywania instrukcji, w tym pobieranie rozkazu, pobieranie argumentu, zapis wyniku oraz wykonywanie rozkazu."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page59_figure2.png",
+    "description": "To jest diagram blokowy przedstawiający algorytm mnożenia liczb binarnych. Algorytm rozpoczyna się od inicjalizacji zmiennych, następnie przeprowadza iteracyjne mnożenie, przesunięcie i odejmowanie, aż do momentu, gdy wszystkie bity są przetworzone."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page110_figure2.png",
+    "description": "Zdjęcie przedstawia dwa schematy blokowania danych:\n\na) Schemat przedstawiający blokowanie danych w sposób liniowy, gdzie każdy blok zawiera odpowiednią liczbę pozycji (0, 1, ..., q-1).\n\nb) Schemat przedstawiający blokowanie danych w sposób, który uwzględnia logarytmiczną strukturę, gdzie pierwszy blok ma długość log2k, a pozostałe bloki mają długość q słów."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page180_figure2.png",
+    "description": "To jest diagram przedstawiający strukturę sieci neuronowej, gdzie każdy neuron (N00, N01, N10, N11, N20, N21) otrzymuje wejścia od innych neuronów lub zewnętrznych sygnałów (a00, a01, a10, a11, a20). Neurony są połączone wzdłuż kolumn i wierszy, co sugeruje strukturę typu \"grid\" lub \"convolutional\"."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page191_figure1.png",
+    "description": "To są dwie tabele logiczne przedstawiające funkcje logiczne w formie tablicowej. Każda tabela zawiera wartości 0 i 1, które reprezentują wyniki funkcji dla różnych kombinacji wejściowych (x1, x2, x3, x4). Tabela \"a\" ma trzy wejścia (x1, x2, x3), a tabela \"c\" ma cztery wejścia (x1, x2, x3, x4)."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page185_figure2.png",
+    "description": "To jest sześciokrotny kwadrat, zgodnie z podziałem na 6 x 6 komórki. Każda komórka jest oznaczona przez wartości x1, x2, x3 i x4, co sugeruje, że jest to schemat przedstawiający strukturę danych lub matrycę."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page162_figure1.png",
+    "description": "Rysunek przedstawia schemat procesów komputerowych, gdzie procesy nowe są dodawane do kolejki procesów nowych, które następnie przechodzą do kolejki procesów gotowych. CPU wykonywa procesy z tej kolejki. Procesy gotowe mogą być przeniesione do kolejek procesów oczekujących na dysk, druk lub taśmę, w zależności od potrzeb."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page135_figure2.png",
+    "description": "Zdjęcie przedstawia diagram sygnałów elektronicznych, który zawiera następujące linie: WR, SZYNA DANYCH, INT, DANE, STB i ACK. Każda linia ma swoje odpowiednie przebiegi czasowe, zaznaczone jako porytek. Diagram jest podzielony na dwie części, z lewej strony przedstawiająca sygnały wejściowe, a z prawej strona przedstawiająca sygnały wyjściowe lub ich brak."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page189_figure1.png",
+    "description": "To jest diagram blokowy logicznej kombinacji AND-OR, gdzie wejścia x0, x1 i x2 są przetwarzane przez luty (inverters), po czym ich wyniki są podawane na wejścia AND i OR, a następnie na wyjście y."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page30_figure1.png",
+    "description": "Zdjęcie przedstawia komparator dwubitowy, który porównuje dwa dwucyfrowe liczby binarne (A i B) i wyznacza ich porządkowanie oraz równość. Na rysunku A jest przedstawiony schemat logiczny, na rysunku B tabela prawdy dla operacji porównania, a na rysunku C symbol blokowy komparatora."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page82_figure1.png",
+    "description": "To jest schemat elektroniczny, który zawiera kilka elementów logicznych, takich jak 74181 (licznik), B i A, które są połączone ze sobą za pomocą różnych sygnałów wejściowych i wyjściowych. Schemat przedstawia strukturę systemu liczącego lub przetwarzającego dane."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page121_figure1.png",
+    "description": "To jest diagram przedstawiający strukturę danych, która składa się z trzech sekcji: \"BOT\" (beginning of text) na lewo, \"EOT\" (end of text) na prawo oraz trzech pośrednich sekcji, które mogą zawierać dane lub informacje."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page54_figure1.png",
+    "description": "To jest diagram blokowy przedstawiający strukturę procesora, gdzie:\n\n- M - pamięć\n- RL i RH - rejestrów przesuwania (RL przesuwa w prawo)\n- ALU - jednostka arytmetyczno-logiczna\n- C - rejestr wyników\n- Układ sterowania - kontroluje działania\n\nDiagram pokazuje kierunek przesuwania danych w prawo oraz przepływ informacji między różnymi elementami procesora."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page42_figure1.png",
+    "description": "To jest schemat blokowy rejestru przesuwającego, który zawiera wejście (ZEG) i wyjście. Rejestr przesuwający jest połączony z linią przepływu danych, a jego stan jest kontrolowany przez sygnał ZEG."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page57_figure1.png",
+    "description": "To jest diagram blokowy przedstawiający algorytm mnożenia liczb binarnych. Algorytm rozpoczyna się od inicjalizacji zmiennych, następnie porównuje pierwszy bit liczby binarnej (RL0). Jeśli jest on równy 1, dodaje do wyniku (RH) wartość liczby binarnej (RL). Następnie przesuwa się w prawo i zmniejsza licznik (N) o 1. Proces powtarza się, dopóki N nie osiągnie wartości 0."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page178_figure1.png",
+    "description": "Rysunek przedstawia wieloprocesorowy system z magistralami lokalnymi, gdzie procesory (P1) komunikują się z pamięcią (PAM 1 i PAM 2) poprzez magistrale lokalne (B). System korzysta z dekoderów adresów i ukłału arbitrażu do zarządzania dostępem do wspólnych pamięci i urządzeń zewnętrznych. Układ sterowania centralny (arbiter) decyduje o priorytetach dostępu do pamięci."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page17_figure1.png",
+    "description": "To jest diagram przedstawiający podstawowe elementy komputera: procesor, pamięć i urządzenia zewnętrzne. Procesor wymienia się z pamięcią, a pamięć wymienia się z urządzeniami zewnętrznymi."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page60_figure2.png",
+    "description": "To jest tabela przedstawiająca operacje arytmetyczne w systemie dwójkowym, gdzie RH, RL i RL-1 to rejestrów, a operacje obejmują dodawanie, odejmowanie i przesunięcie (SHR)."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page72_figure1.png",
+    "description": "Zdjęcie przedstawia schemat systemowy komputera, gdzie CPU (Central Processing Unit) jest połączony z PAM (Peripherals Access Module) i WE/WY (wejście/wyjście), wszystko poprzez magistralę systemową komputera."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page22_figure2.png",
+    "description": "Zdjęcie przedstawia diagram cyklu instrukcyjnego w procesorze komputerowym, który składa się z pięciu faz: pobrania kodu rozkazu, dekodowania rozkazu, pobrania bajtu adresu, pobrania argumentu i wykonania rozkazu."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page18_figure1.png",
+    "description": "To jest diagram blokowy przedstawiający architekturę procesora, która zawiera:\n\n1. LR (Liczba Registrowa) - dostarcza adres pamięci.\n2. A i B - rejestrów wejściowych, które dostarczają dane do ALU (Arithmetic Logic Unit).\n3. RR (Rejestr Rezultatu) - przechowuje wynik operacji.\n4. Dekoder - przetwarza sygnały sterujące.\n5. ALU - wykonuje operacje arytmetyczne lub logiczne na"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page29_figure2.png",
+    "description": "To jest diagram przedstawiający串行滤波器的结构。它显示了四个级联的Σ（求和）节点，每个节点接收来自前一个节点的输入，并产生输出。输入信号从左到右依次为c0、c4、c8、c12，最终输出为c16。每个节点的输入和输出都标记为4，表示每个节点处理的数据量或带宽。"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page41_figure2.png",
+    "description": "Zdjęcie przedstawia diagram i tabela stanów dla przesuwającego się rejestru (Rysunek 3.27). Diagram pokazuje cztery segmenty (P1, P2, P3, P4) z wejściem WE i zegarem ZEG, podczas gdy tabela opisuje możliwe kombinacje wejść WE i STAN oraz wynik WY."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page100_figure1.png",
+    "description": "To jest diagram przedstawiający strukturę systemu, który zawiera matrycę 4x4 oraz wzmacniacze. Wejścia i wyjścia są oznaczone jako A0, A1, A2, A3, E, R/W, a matryca jest pośrednim elementem przetwarzania danych."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page79_figure1.png",
+    "description": "To jest diagram blokowy ALU (Arithmetic Logic Unit), która wykonuje operacje arytmetyczne i logiczne na wejściach A0-A3, B0-B3 i C0. Wynikiem są wyjścia F0-F3 i C4, a kontrola operacji jest kontrolowana przez sygnały T, G, A=B, M oraz s0-s3."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page112_figure1.png",
+    "description": "Wykres przedstawia zależność temperatury krytycznej (Tc) od temperatury startowej (Ts) w funkcji magnetyzmu (H). Na wykresie widoczne są dwie linie dla różnych wartości T0/Tc, które wpływają na zachowanie się Tc w zależności od H."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page200_figure1.png",
+    "description": "To jest diagram przedstawiający strukturę komputera CPU (Central Processing Unit). Diagram pokazuje różne elementy i bloki, takie jak pamięć kieszonkowa danych i programu, ALU (Arithmetic Logic Unit) dla operacji stało- i zmienno-pozycyjnych, sterownik pamięci, sterownik urządzeń WE/WY, sterownik łącza szerokopasmowego z pamięcią ROM oraz układ sterowania. Każdy z tych elementów jest połączony liniami, co wskazuje na ich funkcje i interak"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page63_figure1.png",
+    "description": "To jest tabela przedstawiająca operacje arytmetyczne na liczbach binarnych, gdzie \"RH\" i \"RL\" oznaczają odpowiednio rejestr górny i dolny. Operacje obejmują dodawanie i przesunięcie (SHL - shift left). Wyniki są podsumowane w kolumnie \"ejestr\"."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page107_figure2.png",
+    "description": "To jest diagram przedstawiający strukturę sieci neuronowej lub procesorów komputerowych, gdzie wejścia (A11, A12, E) są przetwarzane przez serię bloków (sześciany), a następnie wyjście (A13, A14, E) jest generowane. Struktura może reprezentować architekturę procesora lub sieci neuronowej."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page169_figure1.png",
+    "description": "Zdjęcie przedstawia dwa schematy operacji komputera, gdzie w części (a) pokazano sekwencję operacji dla pojedynczego rozkazu, a w części (b) - sekwencję operacji przy użyciu kolejki rozkazów. Schematy ilustrują proces wykonywania rozkazów w pamięci komputera, uwzględniając kroki takie jak dekodowanie, obliczanie adresu i wykonanie rozkazu."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page113_figure1.png",
+    "description": "To jest diagram przedstawiający strukturę danych, gdzie liczby od 0 do 127 są przypisane do wartości od 0 do 8191 w sposób, który wykorzystuje 77 bitów. Diagram ilustruje sposób mapowania i przekształcania danych."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page110_figure3.png",
+    "description": "To jest diagram przedstawiający strukturę bloków w systemie pamięci. Na ilustracji widoczne są różne rozmiary bloków, oznaczone jako 1 blok, 2 bloki, k-1 bloki i k bloki. Bloki są ułożone w kolejności od 0 do q-1."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page33_figure1.png",
+    "description": "To jest diagram przedstawiający schemat przepływu materiału lub energii w systemie. Na rysunku widoczne są trzy bloki (oznaczone jako 1, 2 i 9) połączone strumieniami materiału oznaczonymi numerami od 3 do 8. Blok 9 jest źródłem materiału, który podawany jest do bloków 1, 2 i 8. Bloki 1 i 2 wydzielają część materiału (oznaczoną jako 7), a"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page180_figure1.png",
+    "description": "To jest diagram przedstawiający strukturę sieci neuronowej. Wejściowe dane są przetwarzane przez serię warstw neuronów, gdzie każdy neuron otrzymuje wejścia z poprzednich neuronów i generuje wyjście. Diagram pokazuje trzy warstwy ukrytej, zaczynając od wejścia i kończąc na wyjściu."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page100_figure2.png",
+    "description": "To jest diagram przedstawiający strukturę sieci neuronowej, gdzie kwadraty reprezentują warstwy neuronów, a strzałki pokazują kierunek przepływu danych. Diagram zawiera również oznaczenia wejścia (E) i wyjścia (R/W)."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page197_figure1.png",
+    "description": "To jest schemat blokowy procesora MC68000, który przedstawia jego interfejsy i kontrolne sygnały. Schemat obejmuje źródła zasilania (Vcc, GND), zegar (CLK), adresową (ADDRESS BUS) i danych (DATA BUS), oraz różne kontrolne sygnały takie jak asynchroniczne sterowanie busem (AS, R/W, UDS, LDS, DTACK), kontrolę arbitrażu na busie (BR, BG, BGACK), kontrolę przerywań ("
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page41_figure3.png",
+    "description": "To tabela przedstawiająca wyniki doświadczalne w formie tablicy binarnej, gdzie kolumna \"WE\" reprezentuje wejście, \"STAN\" stan, a \"WYJ\" wyjście. W tabeli znajdują się różne kombinacje wartości dla \"WE\" i \"STAN\", zgodnie z którymi \"WYJ\" ma wartość 0 lub 1."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page159_figure1.png",
+    "description": "To jest diagram przedstawiający cykl życia zadania lub procesu w systemie zarządzania projektami. Cykl obejmuje następujące etapy: Nowy, Gotowość, Wykonanie, Zatrzymanie oraz Oczekiwanie. Etap \"Gotowość\" jest punktem kluczowym, z którego można przejść do \"Wykonania\", a także powrócić do \"Oczekiwania\"."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page181_figure1.png",
+    "description": "To są dwa diagramy przedstawiające struktury danych w postaci drzewa operacyjnego. W obu przypadkach operacje są wykonywane na wektorach, gdzie wejściem są wartości \\(a_{00}\\), \\(b_{00}\\), \\(a_{01}\\), \\(b_{10}\\) (lub \\(b_{01}\\)) i wyjściem jest wartość \\(c_{00}\\) (lub \\(c_{01}\\)). Operacje obejmują mnożenie (\\(x\\)) i"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page110_figure1.png",
+    "description": "To jest diagram przedstawiający strukturę pamięci lub algorytmu, gdzie:\n\n- Pierwsza linia zawiera log2k i q słów.\n- Druga linia to puste pole.\n- Trzecia linia zawiera m-2 i m-1.\n\nTen diagram może być związany z algorytmem lub strukturą danych, gdzie wartości są organizowane w określonych sekcjach."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page172_figure2.png",
+    "description": "Zdjęcie przedstawia trzy schematy procesu wykonania instrukcji komputerowych, gdzie każda kolumna reprezentuje etap wykonania instrukcji (PR - przetwarzanie, DR - dekodowanie, PA - przetwarzanie adresu, WR - zapis, ZW - zakończenie). Schematy pokazują różne fazy i kolejność wykonywania instrukcji w czasie, zgodnie z numerami k, k+1 i k+4."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page45_figure2.png",
+    "description": "To jest schemat blokowy licznika z zastosowaniem logicznej operacji NOT i AND. Licznik ma wejścia CLK (Clock) i CLR (Clear). Schemat przedstawia proces przetwarzania sygnału zliczającego."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page31_figure2.png",
+    "description": "To jest diagram przedstawiający proces przetwarzania danych w systemie, gdzie dane są podzielone na cztery tetrady i przetwarzane przez trzy bloki, z których każdy przetwarza najmniej znaczącą do najbardziej znaczącej tetradę."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page27_figure3.png",
+    "description": "To są dwie tabele prawdy dla operacji logicznych, przedstawiające wyniki dla kombinacji wartości wejściowych `a_i`, `b_i` i `c_i`. Pierwsza tabela przedstawia wynik `y_i`, a druga tabela przedstawia wynik `c_{i+1}` w zależności od wartości `a_i`, `b_i` i `c_i`."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page117_figure1.png",
+    "description": "To jest diagram przedstawiający pamięć z dostępnym cyklicznym, gdzie dane są zapisywane i odczytywane poprzez rejestr wejściowy (Rej. we.) i rejestr wyjściowy (Rej. wy.). Procesor (PAM) steruje przepływem danych, a zegar synchronizuje operacje. Adres jest przekazywany przez rejestr adresowy (RA), a dane przechowywane w pamięci (LB). Diagram pokazuje również mechanizm strobu odc"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page60_figure1.png",
+    "description": "To jest diagram blokowy przedstawiający algorytm mnożenia liczb binarnych. Algorytm rozpoczyna się od ustawienia inicjalnych wartości dla zmiennych i kontroli, następnie porównuje pierwszą bitową wartość (R0) z 1. Jeśli jest to prawda, wykonuje operację odejmowania lub dodawania zależnie od drugiego bitu (R1). Następnie przesuwa się w prawo i kontynuuje porównywanie z 0, aż wszystkie bity są przet"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page75_figure1.png",
+    "description": "Zdjęcie przedstawia cykl rozkazowy procesora, który składa się z kilku etapów: wysłania adresu rozkazu, dekodowania rozkazu, obliczenia adresu argumentu I, obliczenia adresu argumentu II, wykonania rozkazu i zapisu wyniku."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page190_figure2.png",
+    "description": "To jest diagram blokowy przedstawiający logiczną operację AND dla trzech wejść (x0, x1, x2) i jednego wejścia kontrolującego (E). Wynik tej operacji jest wyjściem (y)."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page203_figure1.png",
+    "description": "Zdjęcie przedstawia listę kluczowych wyrazów i pojęć związanych z komputerami, mikroprocesorami i architekturą komputerową, takimi jak cecha 56, ciało podprogramu, CISC, CPU, cykl instrukcyjny, maszynowy, odczyt pamięci, rozkazowy, pobranie kodu rozkazu, zapis do pamięci, cylinder, czas cyklu, dostęp."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page190_figure3.png",
+    "description": "To tabela prawdy dla funkcji logicznej, która zależy od trzech wektorów binarnych (x0, x1, x2) i generuje jeden wyjście (y). W tabeli można zobaczyć różne kombinacje wartości wektorów i ich wpływ na wartość wyjścia y."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page22_figure1.png",
+    "description": "Zdjęcie przedstawia sekwencję czynności procesora w czasie wykonywania instrukcji, podzieloną na dwa diagramy (a i b). Diagram (a) pokazuje trzy fazy: pobranie rozkazu, pobranie argumentu i wykonanie rozkazu, wszystkie w ramach jednego cyklu instrukcyjnego. Diagram (b) przedstawia dodatkową fazę pobrania kodu rozkazu, co powoduje rozdzielenie cyklu instrukcyjnego na"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page173_figure1.png",
+    "description": "To jest diagram przedstawiający schemat procesu, w którym argumenty są przekazywane do różnych operacji (Operacja 1, Operacja 2, Operacja N), które generują wyniki."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page83_figure1.png",
+    "description": "To jest diagram blokowy przedstawiający strukturę systemu sterowania. Diagram zawiera następujące elementy:\n\n1. RR (Rejestr Rozkazów)\n2. Układ następczy\n3. RA (Rejestr Adresu)\n4. PAM (Pamięć Adresowana Modyfikacyjnie)\n5. RM (Rejestr Modyfikacyjny)\n6. WY (wyjście)\n\nDiagram pokazuje przepływ danych i sterowania między tymi elementami, w tym wpływ warunków zewnętrznych"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page120_figure2.png",
+    "description": "Zdjęcie przedstawia diagram struktury pliku, gdzie wyodrębnione są następujące elementy: indeks ścieżki, indeks sektora, przewody nagłówka i dane, oraz wartości liczbowe 17, 56, 41, 515 i 20. Diagram ilustruje strukturę danych w systemie plików lub dysku twardym."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page27_figure4.png",
+    "description": "To jest tabela prawdopodobieństw dla trójargumentowego logiki, gdzie `ci` to ciąg bitów, `ai` i `bi` to dwa argumenty, a `yi` to wynik. Tabela przedstawia wartości logiczne dla różnych kombinacji wejściowych."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page35_figure2.png",
+    "description": "To jest diagram blokowy przedstawiający procesor elementarny (PE) w systemie komputerowym. Wejścia to x_i, E i 8, a wyjścia to y_i, EO i GS."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page138_figure1.png",
+    "description": "Zdjęcie przedstawia dwa schematy współpracy sterownika łącza szeregowego z urządzeniem. W obu przypadkach sterownik jest połączony z odbiornikiem lub nadajnikiem za pomocą odpowiednich linii sygnałowych, takich jak TxD, RxD, RTS, CTS, DSR i DTR. Schemat (a) pokazuje połączenie sterownika z odbiornikiem, a (b) z nadajnikiem."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page66_figure1.png",
+    "description": "Zdjęcie przedstawia zakresy wartości 32-bitowych liczb w zapisie U2 i zmiennopozycyjnym, z podziałem na dodatnie i ujemne liczby oraz zero."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page101_figure1.png",
+    "description": "Zdjęcie przedstawia schemat pamięci matrycowej o rozmiarze 128 x 64 bitów. Schemat pokazuje, jak adresy są przekazywane do pamięci, gdzie adres 7-bitowy jest przekazywany do modułu adresowego, a adres 3-bitowy do modułów danych. Każda kolumna pamięci ma swoje wejścia i wyjścia (Wzm), które są kontrolowane przez sygnał R/W (czytanie lub zapis)."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page103_figure1.png",
+    "description": "To jest diagram przedstawiający cykły pracy pamięci RAM (Random Access Memory) w systemie komputerowym. Diagram pokazuje zależności między różnymi sygnałami i ich czasami trwania, takimi jak adres, CS (Chip Select), OE (Output Enable), WE (Write Enable), dane wejściowe i wyjściowe, oraz ich odpowiednie czasy przekazywania danych. Diagram zawiera również oznaczenia dla różnych faz cyklu, takich jak tAA, tACS, toe, tAS, tWP, t"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page36_figure2.png",
+    "description": "To jest diagram przedstawiający strukturę logiczną, która wygląda jak część układu logicznego. Układ składa się z kilku elementów AND, gdzie każdy z nich otrzymuje wejście od poprzedniego elementu AND lub od źródła (0). Wynik każdego AND jest przekazywany jako wejście do następnego AND lub jako wyjście całego układu. Układ jest zakończony elementem AND, który otrzymuje wejście 0 i g1, a jego wynik jest wyjściem b1."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page190_figure1.png",
+    "description": "To jest diagram przedstawiający funkcję logiczną oraz jej wykres. Funkcja logiczna jest oparta na trzech wejściach (x0, x1, x2) i jednym wyjściu (y). Wykres funkcji pokazuje, że y jest równa 1 tylko wtedy, gdy dokładnie dwa z trzech wejść są równe 1. Diagram również zawiera symbol bloku logicznego, który reprezentuje tę funkcję."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page134_figure2.png",
+    "description": "Rysunek przedstawia schemat interfejsu sterowania urządzeniem wejściowym. Sterownik odbiera adres i dane, a także sygnały kontrolne (INT, INTA, RD, WR). Urządzenie wejściowe przesyła dane oraz sygnały STB i ACK."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page193_figure1.png",
+    "description": "Zdjęcie przedstawia trzy różne schematy logiczne:\n\na) Schemat logiczny z wejściami x1 i x2, przetwarzającymi je poprzez AND, OR i NOT.\n\nb) Schemat logiczny z wejściami x1 i x2, przetwarzającymi je poprzez AND i NOT.\n\nc) Schemat logiczny z wejściami w i z, przetwarzającymi je poprzez AND i NOT, generującymi wyjścia Q i Q̅ ("
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page146_figure1.png",
+    "description": "Rysunek przedstawia schemat komunikacji między CPU, PAM, sterownikiem DMA i sterownikiem dysku. CPU jest głównym kontrolerem, który wysyła sygnały HOLD i HLDA do sterowników DMA i dysku. Sterownik DMA odbiera sygnał DRQ od sterownika dysku i wysyła DACK, aby potwierdzić przyjęcie danych."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page91_figure1.png",
+    "description": "Zdjęcie przedstawia schematyczne diagramy różnych sposobów przekazywania argumentów w procesorach komputerowych. Każdy diagram przedstawia różne kombinacje kodu operacyjnego, adresu rejestrów lub pamięci oraz argumentu. Diagramy różnią się sposobem dostarczania argumentu do procesora, co może wpływać na wydajność i strukturę programu."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page106_figure1.png",
+    "description": "To jest diagram blokowy przedstawiający strukturę pamięci 64-bitowej, która składa się z czterech 16-bitowych modułów pamięci (16 x 4). Adresy A0-A3 są używane do adresowania modułów pamięci, podczas gdy A4 i A5 wykorzystywane są do wyboru konkretnego modułu pamięci. R/W oznacza, że jest to interfejs do czytania i zapisu danych."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page69_figure1.png",
+    "description": "Zdjęcie przedstawia proces normalizacji i różnicy między dwoma liczbami w systemie binarnym, stosując bity ochrony."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page187_figure2.png",
+    "description": "To jest diagram schematu logicznego, który przedstawia logiczne połączenia i operacje AND, OR oraz NOT. Schemat zawiera trzy wejścia (x0, x1, x2) i jedno wyjście (y). Wejścia są przetwarzane przez operatory logiczne, takie jak inwersja (NOT), kombinacja AND i OR, co prowadzi do obliczenia wartości wyjściowej y."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page37_figure1.png",
+    "description": "Oto bardzo krótki opis dla tworzenia embeddingu:\n\n\"RBI, LT i BI/RBO są wejściami do układu BCD/7 seg., który generuje wyjście 7.\""
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page42_figure2.png",
+    "description": "To jest diagram blokowy przedstawiający przepływ danych przez przesuwający rejestr. Znak \"ZEG\" oznacza zegar, który steruje przesunięciem danych w rejestrze."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page37_figure3.png",
+    "description": "To jest diagram przedstawiający dwa bloki procesów. Pierwszy blok ma cztery wejścia (X1, X2, X3, X4) i trzy wyjścia (Y, E, S1, S2). Drugi blok ma dwa wejścia (8, 8) i dwa wyjścia (8, S). Bloki są połączone liniami, co sugeruje przetwarzanie danych lub sygnałów."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page37_figure2.png",
+    "description": "Zdjęcie przedstawia trzy różne diagramy logiczne:\n\na) Diagram przedstawiający logiczną funkcję AND, gdzie wejścia X1, X2, X3 i X4 są podłączone do czterech AND-ów, a ich wyniki są podłączone do OR. Na dole znajduje się prostokąt z oznaczeniami E, S1 i S2.\n\nb) Diagram przedstawiający logiczną funkcję AND-OR, gdzie wejścia X1, X2, X3 i X4 są"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page108_figure2.png",
+    "description": "To jest diagram przedstawiający strukturę pamięci RAM, gdzie A14 i A15 to adresy banków pamięci (Bank 0, Bank 1, Bank 2, Bank 3), a E i CAS to sygnały kontrolne. Każdego banku pamięci są połączone z blokiem D_in/RAS/CAS, co oznacza, że każdy bank może być odczytywany lub zapisywany jednocześnie. Diagram ilustruje sposób przekazywania danych między bankami pamięci."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page185_figure3.png",
+    "description": "Zdjęcie przedstawia cztery różne diagramy, które mogą być użyte do reprezentacji różnych kombinacji wartości dla zmiennych x0, x1, x2 i x3. Diagramy są podzielone na kwadraty, co może symbolizować różne kombinacje wartości tych zmiennych. Diagramy (a) i (c) mają dwie i cztery kolumny odpowiednio, co sugeruje, że zmienna x0 ma dwa i cztery możliwe wartości. Diagramy (b) i (d) mają jedno i trzy"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page54_figure2.png",
+    "description": "Zdjęcie przedstawia przykład mnożenia dwóch liczb czterobitowych w systemie dwójkowym, używając operacji przesuwania (SHR) i dodawania. Wynik mnożenia wynosi 01110."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page44_figure2.png",
+    "description": "Zdjęcie przedstawia trzy flip-flop T, połączone w szereg jako licznik następczy. Flip-flop T ma wejścia ZEG (zegar), CLK (klucz) i Q (wyjście). Wyjścia Q są połączone z wejściem ZEG kolejnego flip-flopa, tworząc cykliczny przepływ sygnału."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page171_figure1.png",
+    "description": "Rysunek przedstawia schemat architektury komputera, gdzie licznik rozkazów i rejestr rozkazów dostarczają informacje do pamięci programu, a układ adresowania i blok rejestrów dostarczają informacje do pamięci danych."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page77_figure1.png",
+    "description": "To diagram przedstawiający cykl przesyłu danych w systemie komputerowym, gdzie:\n\n- Zegar (Clock) generuje impulsy synchronizujące.\n- Magistrala adresowa (Address Bus) przesyła adresy.\n- Strob MR (Master Reset) jest sygnałem resetu.\n- Magistrala danych (Data Bus) przesyła dane.\n\nCykl jest podzielony na cztery fazy: T1, T2, T3 i T4."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page178_figure2.png",
+    "description": "To jest diagram przedstawiający strukturę systemu pamięci, gdzie:\n\n- PAM 1 i PAM 2 to pamięci adresowane przez dekoder adresu.\n- WE/WY to kontrolne sygnały wejścia/wyjścia.\n- B to bufor.\n- P1 to pamięć optymalizowana dla danych.\n- Arbiter jest urządzeniem decydującym o dostępie do pamięci.\n\nDiagram pokazuje interakcję między pamięciami, buforami i dekoderem adresu, oraz roli arbitra"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page103_figure2.png",
+    "description": "Przedstawiony jest schemat architektury pamięci, która składa się z trzech głównych elementów: matrycy (16x8), buforów (8) i sterowania (Ster). Adresy są podawane do matrycy i buforów, a sterowanie kontroluje dostęp do pamięci. Schemat pokazuje również połączenia między tymi elementami."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page62_figure1.png",
+    "description": "To jest diagram blokowy przedstawiający algorytm dzielenia liczb. Algorytm rozpoczyna się od etapu \"START\", gdzie inicjalizuje zmienne: C, RH, RL, M i STER. Następnie następuje seria operacji arytmetycznych i logicznych, w tym przesunięcie w lewo, porównanie wartości RH i M, oraz aktualizacja wartości RL0. Algorytm kończy się etapem \"STOP\" po osiągnięciu warunku N=0."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page58_figure1.png",
+    "description": "To jest tabela przedstawiająca operacje arytmetyczne i logiczne na liczbach binarnych. Wiersze zawierają operacje dodawania (RH + RL), przesuwania do prawej (SHR) oraz wyniki tych operacji."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page106_figure2.png",
+    "description": "To jest diagram przedstawiający schemat pamięci 16x4 bitowej, gdzie adresy są wprowadzane na wejście adresowe, a sygnał E i R/W kontroluje operacje czytania i zapisu danych."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page133_figure1.png",
+    "description": "To jest diagram blokowy przedstawiający architekturę systemu komputerowego, gdzie ukazane są interfejsy i komponenty. Układ sterowania odbiera adresy i dane, które są przekazywane do rejestrów buforowych i stanu. Rejestr buforowy przekazuje dane do urządzenia zewnętrznego (UZ), podczas gdy sygnały sterowania są przekazywane do UZ. Układ sterowania również odbiera sygnały INT, INTA, RO i WR, które są używ"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page44_figure3.png",
+    "description": "To jest diagram przedstawiający sygnały czasowe dla trzech wyjść Q1, Q2 i Q3 oraz wejścia ZEG w systemie logicznym. Sygnały są pokazane jako ciągłe linie prostokątne, co sugeruje, że są to impulsy cyfrowe."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page32_figure1.png",
+    "description": "To jest diagram schematu logicznego, który przedstawia układ AND z trzema wejściami (x2, x1, x0) i siedmioma wyjściami (y7, y6, y5, y4, y3, y2, y1, y0). Wejścia są przetwarzane przez trzy niektóry (inverters), a następnie połączone z wejściami AND, które generują wyjścia. Dodatkowo, na diagramie znajduje się wejście E, które może być"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page188_figure1.png",
+    "description": "To jest diagram schematu logicznego, który przedstawia kombinację bramek AND i INVERTER (lub NOT) oraz bramkę OR. Wejścia to x0, x1 i x2, a wyjście to y. Schemat jest używany w elektronice cyfrowej do realizacji funkcji logicznych."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page20_figure2.png",
+    "description": "Zdjęcie przedstawia sekwencję instrukcji w języku maszynowym, które wykonują operacje arytmetyczne i wywołanie funkcji PRINT. Instrukcje obejmują ustawienie wartości w rejestrze CL, pobranie wartości z pamięci, dodanie wartości z CL do A, oraz wysłanie wyniku do pamięci i wyświetlenie na ekranie."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page193_figure2.png",
+    "description": "To jest diagram schematu logicznego, który przedstawia kombinację elementów logicznych takich jak AND, OR i NOT. Schemat składa się z wejść x1 i x2, które są podłączone do odpowiednich elementów logicznych, a następnie dołączonych do wyjścia y poprzez dodatkowy NOT."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page143_figure1.png",
+    "description": "Zdjęcie przedstawia dwa schematy, które porównują poprawne i błędne przetwarzanie danych. Na lewej stronie widoczny jest ciąg numerów z błędami, podczas gdy na prawej stronie pokazano poprawną sekwencję z wykrytymi i naprawionymi błędami."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page54_figure3.png",
+    "description": "Zdjęcie przedstawia proces dodawania liczb czterobitowych w systemie dwójkowym, używając rejestru RH i RL oraz operacji SHR (Shift Right). Wynik końcowy to 1110."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page39_figure1.png",
+    "description": "To jest diagram przedstawiający schemat logiczny, gdzie wejścia (X1, X2, X3, X4) są podłączone do AND-gates, które następnie łączą się z wyjściami (Y1, Y2, Y3, Y4). Schemat jest zaprojektowany w formie tablicy, co sugeruje, że może być używany w celach logicznych lub obliczeniowych."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page64_figure1.png",
+    "description": "To jest diagram algorytmu wykonującego dzielenie liczb. Algorytm rozpoczyna się od ustawienia początkowych wartości zmiennych i kontroli sterowania. Następnie, w pętli, przesuwa się w lewo, porównuje wartość dzielnika z resztą dzielenia, i jeśli dzielnik jest większy niż reszta, zmniejsza resztę o dzielnik i ustawia flagę na 1, w przeciwnym razie ustawia flagę na 0. Pęt"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page199_figure1.png",
+    "description": "To jest diagram blokowy architektury komputera, przedstawiający różne elementy i ich połączenia. Diagram zawiera pamięć kieszonową programu i danych, układ sterowania, zestaw rejestrów, jednostkę operacji zmienno-pozycyjnych, układy prognozowania adresu skoku i stronico-wania, oraz blok łączący z magistralą. Są również wskazane szyny adresowa i danych."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page177_figure1.png",
+    "description": "To jest diagram przedstawiający strukturę systemu pamięci, gdzie PAM1 i PAM2 są pamięciami adresowymi, WE/WY1 i WE/WY2 to wejścia/wyjścia, a P1, P2, ..., PN to procesory. Są one połączone w sposób, który sugeruje równoległe przetwarzanie danych."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page62_figure2.png",
+    "description": "Zdjęcie przedstawia tabliczkę operacji arytmetycznych w systemie dwójkowym, gdzie jest wykonana seria operacji SHL (shift left) na rejestrach RH i RL. Wyniki operacji są podane w formacie binarnym."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page71_figure1.png",
+    "description": "To jest schemat blokowy procesora, który zawiera elementy takie jak ALU (Arithmetic Logic Unit), rejestr A, rejestr B, rejestr PC (Program Counter), rejestr ZN, układy sterowania oraz interfejsy wejścia/wyjścia. Schemat przedstawia również magistralę procesora i połączenia między różnymi komponentami."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page44_figure4.png",
+    "description": "Tło: Schemat trzech flip-flopów T触发器, zgodnie z sygnałem ZEG. Flip-flop Q1, Q2 i Q3 mają wejścia T, CLK i wyjścia Q oraz Q̅. Flip-flop Q1 ma dodatkowe wejście ZEG."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page118_figure1.png",
+    "description": "Zdjęcie przedstawia trzy schematy dotyczące pamięci dyskowej: a) układ głowica-nośnik, b) ścieżki z podziałem na sektory, c) pamięć wielotalerzowa."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page93_figure1.png",
+    "description": "Zdjęcie przedstawia dwa schematy operacji komputerowych, gdzie:\n\na) Kod operacyjny i adres są dodawane do przemieszczenia, aby uzyskać adres argumentu w pamięci.\nb) Kod operacyjny i baza są dodawane do przemieszczenia, aby uzyskać adres argumentu w pamięci."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page40_figure1.png",
+    "description": "Zdjęcie przedstawia dwa schematy elektroniczne. Schemat a przedstawia czteroczęściowy rejestr (P1, P2, P3, P4) z wejściami UST, ZEG i ZER oraz wyjściami Q1, Q2, Q3, Q4. Schemat b przedstawia ogólny widok rejestracji (REJESTR) z wejściami D1, D2, D3, D4 i wyjściami Q1, Q2, Q3"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page25_figure5.png",
+    "description": "To jest diagram logiczny przedstawiający dwie AND-gate (bramki AND) połączone z jednym OR-gate (bramką OR)."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page194_figure3.png",
+    "description": "To jest diagram przedstawiający sygnały wejściowe i wyjściowy dla systemu logicznego. Sygnały wejściowe \\( x_1 \\) i \\( x_2 \\) są przedstawione jako ciągi bitów, a sygnał wyjściowy \\( y \\) również jako ciąg bitów. Diagram ilustruje, jak sygnały wejściowe wpływają na sygnał wyjściowy w danym systemie."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page30_figure2.png",
+    "description": "Oto bardzo krótki opis obrazka:\n\n\"Diagram przedstawiający logiczny blok porównujący dwa wejścia A i B, z trzema wyjściami: A>B, A=B, A<B.\""
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page45_figure3.png",
+    "description": "Tego obrazku przedstawia trzy identyczne liczniki, połączone wspólnym sygnałem CLK. Liczniki mają wejścia CEP i CET oraz wyjście TC. Schemat przedstawia strukturę złożoną z trzech takich liczników, gdzie każdy licznik otrzymuje sygnał CLK od poprzedniego licznika."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page176_figure1.png",
+    "description": "To jest sześcian wizualizowany jako graf, gdzie kropki reprezentują węzły, a linie między nimi - krawędzie. Sześć węzłów tworzy sześcian, co może być użyte do tworzenia embeddingu, który reprezentuje strukturę i połączenia w danych."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page28_figure1.png",
+    "description": "To jest diagram czterobitowego sumatora z przeniesieniem wspólnym, przedstawiający logiczne połączenia i operacje na wejściach (a0b0, a1b1, a2b2, a3b3) oraz wyjściach (y0, y1, y2, y3, c4). Sumator wykonuje dodawanie dwóch liczb binarnych, z uwzględnieniem przeniesienia początkowego (c0), i generuje wynik oraz przeniesienie końcowe (c"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page81_figure1.png",
+    "description": "Zdjęcie przedstawia schemat połączeń między dwoma układami scalonymi 74181 i jednym układem 74182. Układy 74181 są połączone ze sobą oraz z układem 74182 za pomocą linii przewodzących."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page19_figure2.png",
+    "description": "To jest diagram przedstawiający strukturę pamięci o długości 8 bitów, gdzie adresy są numeryczne i rozciągają się od 0 do n-1."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page59_figure1.png",
+    "description": "To jest diagram algorytmu mnożenia liczb w kodzie U2, przedstawiony w formie schematu przepływu. Algorytm rozpoczyna się od inicjalizacji zmiennych i kontroli warunków, następnie przeprowadza iteracyjne mnożenie i przesunięcie, aż do osiągnięcia końcowego stanu."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page81_figure2.png",
+    "description": "To jest diagram blokowy przedstawiający dwie ALU (Arithmetic Logic Units) połączone ze sobą. Wejścia A_i i B_i są podawane do obu ALU, a ich wyniki są przekazywane do F_i. Dodatkowo, s_i i M są podawane jako wejścia do jednej z ALU."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page25_figure2.png",
+    "description": "Zdjęcie przedstawia symbole logicznych bramek: NOR, NAND, suma i suma mod 2."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page98_figure1.png",
+    "description": "To jest diagram blokowy przedstawiający strukturę pamięci komputerowej. Zawiera ona elementy takie jak adres, licznik, rejestry przesuwające, zegar i bufor (BUF). Diagram pokazuje przepływ danych między tymi elementami, gdzie adres jest wprowadzany do licznika, który następnie przekazuje dane do rejestrów przesuwających, a następnie do bufora. Zegar synchronizuje pracę licznika i rejestrów przesuwających."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page43_figure1.png",
+    "description": "Zdjęcie przedstawia schemat blokowy urządzenia, gdzie UK (Urządzenie Kontrolujące) jest połączone z Rejestr Przesuwającym poprzez ZEG (Znakę Ewentualną). Układ działa w sposób ciągły, przesuwając dane z UK do Rejestru Przesuwającego."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page185_figure1.png",
+    "description": "To jest graficzne przedstawienie siatki z etykietami osi x0, x1, x2, x3 i x4. Siatka składa się z 6 rzędów i 5 kolumn, tworząc 30 kwadratów."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page56_figure1.png",
+    "description": "To jest obrazek przedstawiający proces dodawania binarnych liczb oraz przesuwania (SHR) w systemie komputerowym. Zawiera kolumny RH i RL, które reprezentują różne operacje arytmetyczne i logiczne, takie jak dodawanie, przesuwanie i dodawanie 1 do wyniku poprzedniego."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page134_figure1.png",
+    "description": "Zdjęcie przedstawia strukturę połączenia sterownika z urządzeniem wejściowym (a) oraz wykres czasowy przesyłania znaku (b). Sterownik dostarcza adres, dane, a także sygnały kontrolne (INTA, RD, WR), które są odbierane przez urządzenie wejściowe. Wykres czasowy ilustruje kolejność sygnałów STB, danych, ACK, INT i RD w trakcie przesyłania znaku."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page36_figure4.png",
+    "description": "To jest diagram przedstawiający strukturę logiczną, która wygląda jak część układu logicznego. Układ składa się z kilku elementów AND, gdzie wejścia są oznaczone jako \\( b_n \\), \\( b_{n-1} \\), ..., \\( b_1 \\). Każdy element AND generuje wyjście \\( g_n \\), \\( g_{n-1} \\), ..., \\( g_1 \\) odpowiednio. Diagram ilustruje sposób, w jaki te elementy AND są połączone w串, co może być użyte do tworzenia"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page181_figure2.png",
+    "description": "To jest diagram przedstawiający strukturę neuronową lub sieci neuronowej. Na diagramie widoczne są wejścia (a00, b01, a01, b11), dwie warstwy ukryte (x), oraz wyjście (c01). Wejścia są połączone z warstwami ukrytymi za pomocą strzałek, co oznacza przepływ danych. Wyjście jest połączone z sumatorem, który generuje wynik (c01). Diagram ilustruje"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page104_figure1.png",
+    "description": "Zdjęcie przedstawia diagram blokowy pamięci dynamicznej HM4864 oraz jej sygnały sterujące. Diagram (a) pokazuje strukturę pamięci, w tym rejestr wierszy, matrycę 256x256, wzmacniacze regeneracji i bufor. Diagram (b) przedstawia sygnały sterujące: Adres, ADR. WIER., ADR. KOL., RAS, CAS, DOUT, WE, DIN."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page27_figure1.png",
+    "description": "To jest diagram przedstawiający logiczną strukturę dodawacza binarnego, gdzie `y_i` i `c_{i+1}` są wynikami dodawania bitów `a_i`, `b_i` i `c_i`. Diagram zawiera AND, OR i NOT logiczne elementy, które reprezentują operacje logiczne w procesie dodawania."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page194_figure2.png",
+    "description": "To jest diagram przedstawiający sygnały wejściowe (x1 i x2) oraz wyjście (y). Sygnały wejściowe są reprezentowane jako ciągi bitów, gdzie 1 oznacza obecność sygnału, a 0 jego brak. Wyjście y jest również reprezentowane jako ciąg bitów, gdzie 1 oznacza obecność sygnału, a 0 jego brak. Diagram ilustruje, jak sygnały wejściowe wpływają na sygna"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page120_figure1.png",
+    "description": "To jest schemat blokowy urządzenia dyskietki, przedstawiający jego strukturę i funkcje. Schemat pokazuje interakcję między różnymi komponentami, takimi jak układ sterowania, rejestry wejścia i wyjścia, wzmacniacze, a także układy przesuwu głowic i detekcji indeksu."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page90_figure1.png",
+    "description": "Zdjęcie przedstawia algorytm obliczenia wyrażenia w notacji polskiej, pokazujący krok po kroku proces obliczeń."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page36_figure1.png",
+    "description": "Zdjęcie przedstawia układ iteracyjny konwertera kodu NKB na kod Graya, zgodnie z zależnością \\( g_i = b_i \\oplus b_{i+1} \\)."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page27_figure2.png",
+    "description": "To jest diagram przedstawiający串行进位加法器（serial carry lookahead adder），一种用于数字电路中的加法器设计。它由一系列全加器（Σ）组成，每个全加器接收两个输入位（a和b）以及前一个全加器的进位输出（c）。结果是k个输出位（y0到yk-1）和最终的进位输出（ck）。初始进位（c0）被设置为0。"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page131_figure2.png",
+    "description": "To jest schemat blokowy urządzenia sterującego, które zawiera logiczne elementy takie jak AND, OR i inicjalizator sterowania (Sterownik 1). Schemat pokazuje interakcję między różnymi wejściami (EI, IRQ, M, INTA) i wyjściami (INT, EO), w tym bufor i rejestr numeru."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page168_figure1.png",
+    "description": "To jest diagram przedstawiający klasę mechanizmów wymiany danych w systemach komputerowych. Mechanizmy są podzielone na cztery kategorie: samosterujące, sterowanie danymi, sterowanie na żądanie i sterowanie wzorcem. W każdym z nich znajdują się dwa mechanizmy: wspólnych danych (COSH, DASH, DESH, PASH) i przesłania komunikatów (COME, DAME, DEME, PAME)."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page45_figure1.png",
+    "description": "To jest diagram blokowy licznika, który ma wejścia CLK (zegarowe) i LD (load), oraz wyjście TC (terminal carry). Licznik jest ustawiony na wartości 1010."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page131_figure1.png",
+    "description": "To jest diagram blokowy przedstawiający system logiczny, który zawiera rejestr maski, logiczne AND, dekoder (DP), kodera i kontroler (WZ). Rejestr maski dostarcza sygnały wejściowe do logicznych AND, które następnie wpływają na działanie dekodera. Kodek przekształca sygnały w wyjście kodowane, które są przekazywane do kontrolera (WZ) oraz wyjścia INT. Diagram ilustruje proces przetwarzania syg"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page170_figure1.png",
+    "description": "To jest diagram przedstawiający strukturę systemu lub procesu, który składa się z czterech bloków (B1, B2, B3, B4) połączonych z buforami (BUF 1, BUF 2, BUF 3, BUF 4). Wejściem do systemu są sygnały A2-A0, które są przetwarzane przez bloki i bufora, a następnie przekazywane do wyjścia. Diagram może być użyty do opisu procesów przetwarzania danych w systemach komputerowych"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page176_figure2.png",
+    "description": "Zdjęcie przedstawia cztery różne typy konfiguracji sieci komputerowych: liniową, pierścieniową, macierzową i drzewiastą."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page193_figure3.png",
+    "description": "Zdjęcie przedstawia dwa logiczne diagramy Gate AND (b) i Gate NAND (c). Diagram Gate AND ma wejścia x1 i x2, podczas gdy Gate NAND ma wejścia \\(\\overline{W}\\) i \\(\\overline{Z}\\), co oznacza, że jest to Gate NAND z przesunięciem logicznym."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page33_figure2.png",
+    "description": "To jest schemat elektroniczny przedstawiający dwa elementy logiczne, które są połączone z wspólnym wejściem dodatkowym i wyjściem 3. Schemat zawiera również symbol inwersji dla jednego z elementów."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page25_figure1.png",
+    "description": "Zdjęcie przedstawia oznaczenia podstawowych bramek logicznych: NOR, NAND, iloczyn, suma, suma mod 2 oraz NOT."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page97_figure1.png",
+    "description": "Przedstawiony jest schemat architektury pamięci, gdzie adres (n-bitowy) i kontrola (E) wejściem są przekazywane do modułu adresowego, który generuje indeks do matrycy 2^n x m. Wyróżnione są również bloki matrycy i bufora (BUF), z których każdy otrzymuje m-bitowe dane wejściowe i wyjściowe. Kontrola R/W (czytanie lub zapis) jest podłączona do matrycy i bufora."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page41_figure1.png",
+    "description": "Zdjęcie przedstawia licznik pierścieniowy, który działa w trybie przesuwającym. Schemat pokazuje rejestr przesuwający z zegarem (ZEG) oraz trzy przykłady cyklicznych zmian stanów rejestru: b) 1000 → 0100 → 0010 → 0001 → 1000, c) 1100 → 0110 → 0011 → 1011 →"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page136_figure1.png",
+    "description": "To jest diagram przedstawiający synchronizację zegarów nadajnika i odbiornika w systemie transmisji danych. Zegar nadajnika generuje impulsy, które synchronizują przepływ danych, podczas gdy zegar odbiornika synchronizuje odbiór tych impulsów. Przebieg danych jest zgodny z częstotliwością zegara nadajnika, co zapewnia poprawną synchronizację między nadajnikiem a odbiornikiem."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page43_figure3.png",
+    "description": "Tresc obrazka przedstawia trzy flip-flop T (trigger) złączone w szereg. Flip-flop T ma wejścia: T (trigger), CLK (clock) i ZEG (prawdopodobnie zegar). Flip-flop T ma również wyjścia Q i Q, które są przeciwnymi stanami Q. Flip-flop T jest używany do przechowywania i przekazywania sygnału z jednego flip-flopa do drugiego."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page35_figure3.png",
+    "description": "Zdjęcie przedstawia diagram blokowy i tabelę wartości dla jednostki obliczeniowej PE (Processing Element). Diagram pokazuje wejścia x_i, E oraz wyjścia y_i, EO (End of Operation) i GS (Gate Select). Tabela zawiera kombinacje wartości wejściowych x_0, x_1, x_2 oraz wynik E."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page20_figure1.png",
+    "description": "Tabela zawiera adresy komórek i ich zawartości w binarnym kodzie."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page196_figure1.png",
+    "description": "Zdjęcie przedstawia schemat struktury pamięci procesora, gdzie:\n\n- D0-D7 reprezentują 8-bitowe rejestrów danych.\n- A0-A6 reprezentują 6-bitowe rejestrów adresowych.\n- A7 (USP) jest 7-bitowym rejestrów adresu użytkownika.\n- PC (Program Counter) jest 32-bitowym rejestrów programu.\n- CCR (Condition Code Register) jest 16-bitowym rejestrów stanu warunkowego.\n\nSchemat jest podzielony"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page130_figure1.png",
+    "description": "Zdjęcie przedstawia dwa typy układów przerwań: a) typu łańcuchowego i b) z kodem priorytetowym. Układ łańcuchowy (a) ma sterowniki połączone w łańcuch, podczas gdy układ z kodem priorytetowym (b) ma sterowniki połączone równolegle."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page194_figure1.png",
+    "description": "Zdjęcie przedstawia synchroniczny przerzutnik typu D, zgodnie z rysunkiem D.12. Na obrazku widoczne są trzy elementy: a) schemat logiczny przerzutnika, b) symbol logiki i c) wykres sygnałów wejściowych i wyjściowych."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page147_figure3.png",
+    "description": "To jest diagram przedstawiający kanał selektorowy, który umożliwia przekierowanie sygnału do różnych urządzeń (1, 2, n). Kanał selektorowy działa jako interfejs między dwoma obszarami, umożliwiając wyborową transmisję danych."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page35_figure1.png",
+    "description": "To jest diagram przedstawiający logiczną strukturę AND-gates, gdzie wejścia X0 do X7 są podłączone do odpowiednich AND-gates, a ich wyjścia są złączone z wyjściami y0, y1 i y2."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page108_figure3.png",
+    "description": "To jest diagram blokowy przedstawiający interfejs wejścia/wyjścia (I/O) dla pamięci RAM o typie S16kx1, oznaczony jako HM 4816. Diagram pokazuje, że wejścia AO-A6, D_in i RAS są podłączone do pamięci, a wyjście D_out jest również podłączone do pamięci. Dodatkowo, CAS i WE są kontrolowymi sygnałami, które wpływają na funkcjonowanie pamięci."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page99_figure2.png",
+    "description": "To jest diagram przedstawiający strukturę sieci neuronowej, gdzie wejścia wyborcze są połączone z liniami danych, tworząc warstwę wyborczą."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page19_figure1.png",
+    "description": "To jest diagram przedstawiający schemat pamięci komputerowej. Na obrazku widoczne są wejścia WE (Write Enable), O/Z (Output/Zero) oraz adres, które prowadzą do pamięci. Wyjście WY (Write) jest również zaznaczone. Diagram ilustruje proces zapisu i odczytu danych w pamięci."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page114_figure1.png",
+    "description": "To diagram przedstawiający strukturę bloków danych w systemie pamięci. Każdy blok zawiera 71 bitów, a wszystkie bloki są rozłożone w 64 bloki o numerach od 0 do 63 i 2 dodatkowe bloki o numerach 126 i 127. Wszystkie bloki są rozłożone w 8192 pozycji pamięci."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page160_figure1.png",
+    "description": "Zdjęcie przedstawia trzy kolumny, każda z której zawiera informacje o procesach komputerowych w systemie operacyjnym (SO). Pierwsza kolumna pokazuje proces A jako wykonywany, proces B jako gotowy i proces C jako gotowy. Druga kolumna pokazuje proces A jako oczekiwany, proces B jako gotowy i proces C jako gotowy. Trzecia kolumna pokazuje proces A jako oczekiwany, proces B jako gotowy i proces C jako wykonywany"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page194_figure4.png",
+    "description": "To jest diagram przedstawiający wykresy sygnałów czasowych dla trzech zmiennych: R, S i Q. Wykresy pokazują zmiany wartości tych sygnałów w czasie, gdzie R i S są sygnałami wejściowymi, a Q to sygnał wyjściowy. Sygnały R i S mają postać impulsów, podczas gdy Q ma postać prostokątną."
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page172_figure1.png",
+    "description": "Zdjęcie przedstawia trzy schematy cykli wykonania instrukcji w procesorze komputerowym. Schematy (a), (b) i (c) pokazują różne etapy wykonywania instrukcji, odpracowywane w kolejności PR (Pridawanie), DR (Dekodowanie), PA (Przesunięcie Adresu), WR (Zapis), ZW (Zakończenie). Cykle są zgodnie z numerami instrukcji k, k+1, k+2"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page187_figure1.png",
+    "description": "To jest diagram blokowy logicznej kombinacji AND-OR, która przyjmuje trzy wejścia (x0, x1, x2) i generuje jedno wyjście (y). Wejścia są przetwarzane przez trzy niektory (inverters), które odwracają ich wartości. Następnie, połączone są one z czterema drzwiami AND, które generują cztery wyjścia AND. Tytuł wyjścia AND jest połączone z drugim drzwem AND, który"
+  },
+  {
+    "relative_path": "architektura_systemow_komputerowych/k3/detekcje/figury/k3_page29_figure1.png",
+    "description": "Zdjęcie przedstawia logiczne układy AND i OR, które porównują dwa wejścia A i B. Układ generuje trzy wyjścia: A > B (A jest większe niż B), A = B (A jest równe B) oraz A < B (A jest mniejsze niż B)."
+  }
+]

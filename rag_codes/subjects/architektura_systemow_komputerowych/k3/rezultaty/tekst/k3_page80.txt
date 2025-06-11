@@ -1,0 +1,33 @@
+70 4. Procesory
+
+ 
+
+16 bitów mają ALU 16-bitowe. Współczesne procesory, a więc i bloki ALU są projekto-
+wane jako układy wielkiej skali integracji. Natomiast celem łatwiejszego zrozumienia
+działania takich bloków, w podrozdziale tym przedstawiono standardowy 4-bitowy moduł
+ALU (odpowiednik układu SN 74181).
+
+Na rysunku 4.6 pokazano oznaczenia końcówek typowego układu ALU. Wejścia
+sterujące s„-s; wraz z wejściem ustawiającym tryb pracy M (ang. mode) służą do
+programowania funkcji wykonywanych przez układ. W zależności od stanu na wejściu M
+układ wykonuje operacje logiczne lub operacje arytmetyczne.
+
+<image/tabele/k3_page80_table1.png>
+
+W tablicy 4.1 zestawiono zbiór wszystkich funkcji wykonywanych przez ALU wraz
+z odpowiednimi wartościami sygnału M i $g7$;. Argumenty operacji oznaczono przez A
+i B, a wynik operacji przez F. Zarówno argumenty jak i wynik są 4-bitowe. Nie wszystkie
+operacje zawarte w kolumnie „Operacje arytmetyczne” (M = 1) mają sens, tzn. da się
+znaleźć ich sensowne zastosowanie. Są to operacje, w których występują jednocześnie
+działania logiczne i arytmetyczne. Powstały one podczas projektowania układu celem jego
+minimalizacji. Operacje te znajdują się w wierszach 2, 3, 5, 6, 8,9, 11, 12, 14i 15. Z po-
+danego opisu wynika, że prezentowany układ wykonuje 22 operacje nazywane dalej
+mikrooperacjami. Wyboru odpowiedniej mikrooperacji dokonuje się przez podanie 5-bito-
+wego słowa sterującego (SqS,S,S, i M).
+
+W tablicy 4.1 zestawiono przypisanie poszczególnym słowom sterującym odpowiada-
+jących im operacji. Wyjaśnienia wymagają jeszcze 4 sygnały wyjściowe: C,, G, T iA=B.
+Sygnał C, jest tzw. przeniesieniem wyjściowym, powstającym w ostatnim stopniu 4-
+-bitowego sumatora. Sygnał ten jest wykorzystywany do łączenia ze sobą kilku takich
+samych układów, celem zaprojektowania sumatora operującego dłuższym słowem. W ta-
+kim połączeniu do wejścia C, (przeniesienie wejściowe) określonego stopnia sumatora

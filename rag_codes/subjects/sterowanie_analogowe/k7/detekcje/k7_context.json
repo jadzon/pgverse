@@ -1,0 +1,1622 @@
+[
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page42_formula2.png": [
+      "To jest równanie stanu systemu kontroli, gdzie x(t) to wektor stanu, A to macierz stanu, B to macierz kontroli, u(t) to wektor wejścia, a t to czas."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page139_formula3.png": [
+      "Zdjęcie przedstawia macierz wektorów prędkości i przyspieszenia, gdzie każdy element ma jednostkę m/s/m."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page11_formula3.png": [
+      "To jest wyrażenie dla odwrotnej transformacji Laplace'a (L⁻¹) dla funkcji X(s), która jest sumą dwóch funkcji Heavisida 1(t). Wynik to dwa wyrażenia, które są funkcjami czasu x(t), przedstawiającymi dwa różne sygnały: pierwszy jest suma dwu wykładniczych funkcji, drugi to różnica między dwoma wykładniczymi funkcjami."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page115_formula2.png": [
+      "Zdjęcie przedstawia równanie algebraiczne, które jest rozwiązaniem równania kwadratowego. Równanie to jest iloczynem dwóch wyrażeń kwadratowych, a wynik to s² + 4s + 8."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page91_formula2.png": [
+      "To jest równanie transferu systemu, gdzie \\( G_S(s) \\) to funkcja transferu, \\( Y(s) \\) to wyjście, a \\( R(s) \\) to wejście. W tym przypadku funkcja transferu jest równa \\( \\frac{1}{s+5} \\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page4_formula3.png": [
+      "To jest równanie różniczkowe z całką, które opisuje zależność między pochodną czasu funkcji f(t,τ) w zakresie od t0 do t oraz wartością funkcji w punkcie t i jej pochodną względem czasu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page161_formula1.png": [
+      "To jest funkcja skokowa, która przyjmuje wartość -B dla e mniejszego lub równego 0, a B dla e większego od 0."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page36_formula1.png": [
+      "To jest równanie stanu systemu kontroli, gdzie x(t) to wektor stanu, A to macierz stanu, B to macierz kontroli, u(t) to wektor wejścia, a t to czas."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page24_formula3.png": [
+      "To jest równanie stanu dla układu RC, opisujące zmiany prądu i napięcia w czasie. Układ składa się z kondensatora C i rezystora R połączonego z indukcyjnością L. Równanie zawiera wektor prądów i napięć, macierz stanu, oraz wektor wejść."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page65_formula1.png": [
+      "To jest równanie stanu systemu kontroli, gdzie x(t) to wektor stanu, A to macierz stanu, B to macierz kontroli, u(t) to wektor wejścia, a t to czas."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page10_formula4.png": [
+      "To równanie opisuje dynamikę stanu systemu kontroli, gdzie X(s) jest wektorem stanu w czasie s, Φ(s) jest macierzą przejściową, X(0+) to stan początkowy, B jest macierzą kontroli, a U(s) to wektor kontroli w czasie s."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page82_formula1.png": [
+      "Zdjęcie przedstawia układ równań liniowych:\n\n\\[\n\\begin{cases}\nk_1 - 5 = 3 \\\\\n-4k_1 + 3k_2 - 2 = 2\n\\end{cases}\n\\]"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page4_formula2.png": [
+      "To jest równanie dla funkcji u(t), która jest rozwiązaniem równania różniczkowego pierwszego rzędu. Funkcja ta zależy od czasu t, początkowej wartości u(t0) i integralu od czasu t0 do t, gdzie b jest stałą, a u(τ) jest funkcją wejściową."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page70_formula3.png": [
+      "Równanie opisujące transformację wektora czasowej z(t) za pomocą macierzy T, w wyniku której otrzymujemy wektor x(t)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page87_formula2.png": [
+      "To równanie opisuje zachowanie systemu w odpowiedzi na impulsowy sygnał wejściowy (r(t) = 1(t)). Wynika z niego, że stała wyjściowa y(∞) wynosi 1/2, co jest granicą funkcji G_s(s) dla s → 0."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page136_formula1.png": [
+      "Zdjęcie przedstawia równanie matematyczne, które definiuje masę obiektu jako 1 kilograma."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page32_formula2.png": [
+      "Zdjęcie przedstawia trzy macierze: A, B i C. Macierz A jest trójkątna dolna, B to wektor kolumnowy, a C to wektor wierszowy. Macierz A ma podkreślony podmatryksa 2x2, który jest trójkątny dolny. Wektor B ma podkreślone elementy, a wektor C ma podkreślone elementy w wierszu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page72_formula2.png": [
+      "Równania opisujące dynamikę systemu kontroli, gdzie x(t) to stan systemu w czasie t, A i B to macierze stanu i wejścia, K to macierz korektora, r(t) to wektor wejścia, y(t) to wyjście systemu, a C jest macierzą wyjścia."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page31_formula1.png": [
+      "To jest matematyczna równość, która przedstawia działanie kwadratu macierzy A, gdzie A = PΛP⁻¹, co oznacza, że A² = PΛ²P⁻¹. Równość ilustruje, jak transformacja diagonalizacji macierzy A powoduje, że kwadrat macierzy A jest równy macierzy P, mnożonej przez kwadrat macierzy Λ, a następnie przez macierz P⁻¹."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page121_formula2.png": [
+      "To jest macierz blokowa P, która składa się z identycznościowych macierzy I_n w lewym górnym i prawym dolnym rogu oraz macierzy zerowej 0_n w lewym dolnym rogu. Macierz P jest symetryczna, co oznacza, że jej odwrotna jest równa samej macierzy P."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page13_formula2.png": [
+      "To jest równanie matematyczne, które definiuje wartość zmiennej x1 jako równą wartości y."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page39_formula1.png": [
+      "To jest równanie integralne, które opisuje sygnał wyjściowy y(t) jako sumę całkową od funkcji u(t-τ) pomnożonej przez funkcję g(τ), gdzie całka jest wykonywana od 0 do nieskończoności."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page192_formula1.png": [
+      "To jest równanie transferu systemu, przedstawione w postaci funkcji G(s). Równanie to opisuje dynamikę systemu kontroli, gdzie G(s) jest funkcją przetwarzania Laplace'a, 10 jest stałą proporcjonalności, e^(-0,5s) reprezentuje wykładniczy rozkład czasowy, a 3s + 1 jest mianownikiem, który określa charakterystykę systemu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page105_formula2.png": [
+      "To jest równanie charakterystyczne macierzy A1, które zależy od parametrów k1, k2 i ki. Równanie ma postać trójmianu stopnia trzeciego w zmiennych s."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page17_formula3.png": [
+      "To jest równanie wektorowe, które definiuje zależność między wektorem wyjściowym \\( y(t) \\) a wektorem wejściowym \\( x = [x_1, x_2, x_3] \\). Wektor \\( y(t) \\) jest wynikiem mnożenia macierzy \\([1, -3, 2]\\) przez wektor \\( x \\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page159_formula1.png": [
+      "To jest wzór na funkcję J(M), która jest wyrażona jako całka od 0 do 2π, gdzie f(M sin(φ)) jest mnożone przez e^(-jφ) i całkowane względem φ. Wzór zawiera również j i πM w mianowniku."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page88_formula2.png": [
+      "To jest równanie różniczkowe opisujące dynamiczną system, gdzie x(t) to wektor stanu, u(t) to wektor kontroli, a y(t) to wektor wyjścia. Równanie opisuje dynamikę systemu liniowego z kontroli i wyjściem."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page188_formula3.png": [
+      "To jest wyrażenie matematyczne przedstawiające funkcję P(ω) w postaci ułamka nieskracalnego, gdzie mianownik to ω kwadratowy plus 2 ω kwadratowy plus 1, a licznik to -8."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page10_formula6.png": [
+      "Równanie różniczkowe opisujące dynamikę systemu kontynuacyjnego, gdzie x(t) jest wektorem stanu w czasie t, Φ(t) jest macierzą fazy, x(0+) to stan początkowy, B to macierz kontrolna, u(τ) to wektor kontroli w czasie τ, a całka jest całką od 0 do t."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page49_formula1.png": [
+      "Zdjęcie przedstawia macierze matematyczne A, B, C i D w postaci wektorów i macierzy."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page183_formula2.png": [
+      "To jest funkcja f(e), która definiuje trzy przypadki dla wartości e:\n\n1. Jeśli e ≤ a, to f(e) = k(e + a).\n2. Jeśli |e| < a, to f(e) = 0.\n3. Jeśli e ≥ a, to f(e) = k(e - a).\n\nFunkcja zależy od wartości e i parametru a oraz konstanty k."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page70_formula4.png": [
+      "To jest równanie stanu systemu kontynuacyjnego, które opisuje dynamikę zmiennej stanu \\(\\mathbf{z}(t)\\) w zależności od czasu \\(t\\), gdzie \\(\\bar{\\mathbf{A}}\\) to macierz stanu, \\(\\bar{\\mathbf{B}}\\) to macierz kontroli, a \\(\\mathbf{u}(t)\\) to wektor wejść."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page128_formula3.png": [
+      "Zdjęcie przedstawia równanie algebraiczne, które można rozwiązać dla zmiennej k. Równanie ma postać: |sI - A + BK| = s - 2 + 4k = s + 2, co prowadzi do wniosku, że k = 1."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page40_formula2.png": [
+      "To jest wzór na funkcję przenikania G(s) w dziedzinie częstotliwości, przedstawiający stosunek wyjścia Y(s) do wejścia U(s). Wzór ten jest zapisany w postaci ułamka wielomianowego, gdzie m i n są stopniami odpowiednio licznika i mianownika, a b_i i a_i to współczynniki wielomianów."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page110_formula1.png": [
+      "Równania stanu i wyjścia dla systemu kontroli automatycznej, gdzie \\(\\dot{x} = Ax + Bu\\) opisuje zmianę stanu \\(x\\) w czasie, a \\(y = Cx + Du\\) określa wyjście \\(y\\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page35_formula1.png": [
+      "Zdjęcie przedstawia trzy macierze: A, B i C. Macierz A ma rozmiar 3x3, B ma rozmiar 2x2, a C ma rozmiar 2x3. Wszystkie macierze zawierają tylko wartości 0 i 1."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page19_formula1.png": [
+      "To jest wzór na funkcję przenikania G(s) w dziedzinie częstotliwości, przedstawiający stosunek wyjścia Y(s) do wejścia U(s). Wzór jest zapisany w postaci ułamka wielomianowego, gdzie mianownik i licznik są wielomianami stopnia n."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page75_formula3.png": [
+      "To jest równanie różniczkowe pierwszego rzędu dla n zmiennych, które opisuje dynamikę systemu. Równanie zawiera macierz koeficjentów, wektor wejściowy i wyjściowy oraz wektor zmiennych stanu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page139_formula2.png": [
+      "To jest równanie kwadratowe, które można rozwinąć do postaci polinomu czwartego stopnia: Δ̇ = λ^4 + 8λ^3 + 24λ^2 + 32λ + 16."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page90_formula1.png": [
+      "To jest równanie różniczkowe opisujące dynamikę systemu, gdzie x(t) to sygnał wejściowy, u(t) to sygnał sterujący, a y(t) to sygnał wyjściowy. Równanie opisuje przetwarzanie sygnału wejściowego przez system o współczynniku sprzężenia -0,5."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page57_formula1.png": [
+      "Równanie stanu systemu kontroli, gdzie x(t) to wektor stanu, A to macierz stanu, B to macierz kontroli, u(t) to wektor wejścia, a t to czas."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page53_formula1.png": [
+      "To jest funkcja transferu G(s) w postaci ułamka wymiernego, gdzie mianownik to s kwadrat + s - 2, a licznik to s - 1."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page171_formula1.png": [
+      "Równanie matematyczne przedstawiające zależność między funkcją G przy frekwencji ω₀, macierzą J i wartością M₀, równa -1."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page46_formula1.png": [
+      "Zdjęcie przedstawia obliczenia dla układu sterowania w dziedzinie częstotliwości, gdzie:\n\n- \\( G(s) = \\frac{1}{s-1} \\)\n- \\( C(s) = \\frac{s-1}{s+1} \\)\n- \\( H(s) = 1 \\)\n\nObliczono:\n- \\( H(s)C(s)G(s) = \\frac{s-1}{s+1} \\cdot \\frac{1}{s-1} = \\frac{1}{s+1} \\)\n- \\( \\frac{Y"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page29_formula1.png": [
+      "To jest wykres przedstawiający postać kanoniczną macierzy A, gdzie A = P⁻¹AP = Λ, gdzie Λ to diagonalna macierz z eigenwartami λ₁, λ₂, ..., λₙ na przekładniach. Ponadto, B = P⁻¹B i C = CP, co sugeruje, że B i C są mnożone przez P⁻¹ i P odpowiednio."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page23_formula3.png": [
+      "To jest równanie różniczkowe opisujące ruch w układzie RC-LC, gdzie x1(t) i x2(t) są funkcjami czasu, u(t) jest wektorem wejściowym, a L i C są odpowiednio indukcyjnością i pojemnością."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page85_formula2.png": [
+      "To jest matematyczna forma równania, które przedstawia macierz K. Macierz K jest zdefiniowana jako iloczyn macierzy [0 0 ... 0 1] (która ma n zera i jedynkę na końcu) z macierzą P_C^{-1} i różniczką po czasie (A). Równanie to może być użyte w kontekście dynamiki systemów lub analizy danych, gdzie P_C jest macierzą odwrotną do pewnej macierzy C, a Δż(A) reprezent"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page22_formula1.png": [
+      "Zdjęcie przedstawia kod w języku MATLAB lub Octave, który definiuje zmienną `sys` jako model systemu dynamicznego zgodnie z równaniem `ss(A,B,C,D)`, gdzie `A`, `B`, `C` i `D` są macierzami określającymi parametry tego modelu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page40_formula1.png": [
+      "To jest matematyczna nierówność, która przedstawia całkę od 0 do nieskończoności bezwzględnej wartości funkcji g(τ) względem τ, ograniczoną przez stałą Q, która jest skończona."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page6_formula1.png": [
+      "Równanie stanów kontroli systemu dynamicznego, gdzie x(t) to wektor stanu, A to macierz dynamiki, B to macierz kontroli, u(t) to wektor wejścia, a t to czas."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page51_formula1.png": [
+      "To równanie różniczkowe pierwszego rzędu opisujące dynamikę wektora x(t) w czasie t, gdzie A jest macierzą, a x(0) = x₀ jest warunkiem początkowym."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page81_formula2.png": [
+      "Zdjęcie przedstawia macierz \\(\\mathbf{P}_C\\) złożoną z dwóch podmacierzy: \\(\\mathbf{B}\\) i \\(\\mathbf{AB}\\), gdzie \\(\\mathbf{B} = \\begin{bmatrix} 1 & 1 \\\\ 0 & 3 \\end{bmatrix}\\). Dodatkowo podaje się wartość determinanta tej macierzy, która wynosi 3."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page69_formula1.png": [
+      "To jest równanie stanu systemu kontroli, gdzie x(t) to wektor stanu, A to macierz dynamiki, B to macierz kontroli, u(t) to wektor wejścia, a t to czas."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page150_formula1.png": [
+      "To jest wzór matematyczny, który definiuje funkcję u(t) jako funkcję f z wartością e(τ) od 0 do t. Wzór może być użyty w kontekście dynamiki systemów lub innych obliczeniach matematycznych."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page61_formula1.png": [
+      "Zdjęcie przedstawia dwie macierze: A i B. Macierz A ma rozmiar 3x3, a macierz B ma rozmiar 2x2. Macierz A zawiera wartości: -2, 1, 2; 4, 0, 3; 1, -1, 0. Macierz B zawiera wartości: 0, 4; -5, 0; 0, 0."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page21_formula2.png": [
+      "Równanie opisujące zależność prądu w obwodzie z kondensatorem i rezystorem, gdzie \\( i_c(t) \\) to prąd kondensatora, \\( i_L(t) \\) to prąd indukcyjności, \\( u_c(t) \\) to napięcie na kondensatorze, a \\( R \\) to rezystancja."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page136_formula2.png": [
+      "Zdjęcie przedstawia równanie matematyczne, które definiuje masę obiektu oznaczonego jako \\( m_2 \\), która wynosi 2 kilogramy."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page140_formula1.png": [
+      "To jest wektor początkowy, który zawiera wartości dla x i y oraz ich prędkości w kierunku x i y. Wektor ma postać [0, 10m/s, 0, 10m/s]^T, co oznacza, że początkowo obiekt znajduje się w punkcie (0, 0) i ruch się z prędkością 10 m/s w kierunku południowym i wschodnim."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page5_formula4.png": [
+      "To jest równanie Laplace'a dla rozwiązania równania różniczkowego pierwszego rzędu z warunkiem początkowym i użyciem funkcji Heaviside'a. Równanie opisuje postać czasową rozwiązania, gdzie \\( x(t) \\) to funkcja czasowa, \\( L^{-1} \\) oznacza przekształcenie odwrotne Laplace'a, \\( (s-a)^{-1} \\) jest operatorem Laplace'a, \\( x(0^+) \\) to wartość początkowa, a \\( bU(s) \\) to"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page164_formula1.png": [
+      "Równanie różniczkowe opisujące zmianę funkcji J(M) w zależności od M, zawierające parametry B i a, oraz wyrażenie związane z pierwiastkiem kwadratowym i pierwiastkiem z 1 - (a^2/M^2)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page42_formula3.png": [
+      "Równanie charakterystyczne macierzy A, gdzie det[sI - A] = 0, wyznacza wartości własne macierzy A."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page4_formula1.png": [
+      "Równanie różniczkowe opisujące przetwarzanie sygnału w filtrze RC, gdzie \\(\\dot{u}_c(t)\\) jest prędkością zmiany napięcia na kondensatorze, \\(u_c(t)\\) to napięcie na kondensatorze, \\(u(t)\\) to wejściowy sygnał, a \\(a\\) i \\(b\\) są współczynnikami proporcjonalności."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page15_formula1.png": [
+      "To jest wyrażenie dla funkcji transferu G(s) w formie ułamka wymiernego, gdzie mianownik to sześcianowy wyrażenie, a licznik to kwadratowy wyrażenie."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page36_formula2.png": [
+      "Równanie stanów w postaci transferowej dla systemu kontroli, gdzie sX(s) jest wektorem stanu, A i B są macierzami, X(s) to wektor stanu w przestrzeni częstotliwości, U(s) to wektor wejścia w przestrzeni częstotliwości."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page84_formula1.png": [
+      "To jest równanie różniczkowe opisujące dynamikę systemu kontroli, gdzie \\(\\dot{\\mathbf{x}}(t)\\) jest wektorem prędkości stanu, \\(\\mathbf{A}\\) i \\(\\mathbf{B}\\) są macierzami, \\(\\mathbf{K}\\) to macierz korektora, \\(\\mathbf{r}(t)\\) to wektor sygnału wejściowego, a \\(\\mathbf{y}(t)\\) jest wektorem wyjścia."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page23_formula2.png": [
+      "Równanie różniczkowe opisujące dynamikę systemu elektrycznego, gdzie \\( x_2(t) \\) jest prądem, \\( x_1(t) \\) jest napięciem, \\( u(t) \\) jest wejściem, a \\( L \\), \\( C \\), i \\( R \\) są odpowiednio indukcyjność, pojemność i oporność."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page3_formula3.png": [
+      "To jest seria Taylora dla funkcji e^(at), która można zapisać jako sumę nieskończoną szeregów, gdzie każdy wyraz zawiera potęgę t podzieloną przez k! i mnożoną przez a^k."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page12_formula1.png": [
+      "To jest wyrażenie dla funkcji czasowej x(t) w postaci transformacji Laplace'a, które przedstawia rozwiązanie układu równań różniczkowych. Wyrażenie zawiera integralne przekształcenie odwrotne i funkcje Heavisida 1(t), które reprezentują odpowiedzi impulsowe dla różnych częstotliwości."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page137_formula1.png": [
+      "To jest równanie stanu i wyjścia dla systemu dynamicznego opisanego w postaci macierzowej. Równanie stanu opisuje zmiany wektorów stanu \\(\\dot{x}(t)\\) w funkcji czasu, gdzie \\(x_1(t)\\), \\(x_2(t)\\), \\(x_3(t)\\) i \\(x_4(t)\\) to odpowiednio prędkość, przyspieszenie, prędkość i przyspieszenie drugiego ciała w systemie. Wyjście \\(y(t)\\) zależy tylko od \\("
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page128_formula1.png": [
+      "To jest równanie różniczkowe i zależność między wektorami x(t) i y(t), gdzie x'(t) to pochodna wektora x(t) w czasie t, u(t) to wektor sterujący, a y(t) jest funkcją wektora x(t)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page36_formula5.png": [
+      "To jest równanie transferu dla układu kontroli automatycznej, przedstawione w postaci macierzowej. Oznacza to, że funkcja transferu G(s) jest równa iloczynowi macierzy Y(s) i U(s) odwrotnej, czyli Y(s)U^(-1)(s). Równanie to również można zapisać jako produkt macierzy C, odwrotnej do macierzy [sI - A], mnożonej przez B, dodane do macierzy D."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page195_formula2.png": [
+      "Zdjęcie przedstawia wzory do obliczeń matematycznych w arkuszu kalkulacyjnym, używając funkcji potęgowania i pierwiastkowania. Wzory dotyczą obliczania wartości B6, C6, E6 i F6 w zależności od wartości A6, D6, B2 i B3."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page21_formula3.png": [
+      "To jest równanie wektorowe opisujące sygnały czasowe w systemie elektrycznym, gdzie \\( y(t) \\) to wektor sygnałów, składający się z prądu w obwodzie indukcyjnym \\( i_L(t) \\) i napięcia na kondensatorze \\( u_C(t) \\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page195_formula1.png": [
+      "To jest wyrażenie dla funkcji przenikania częstotliwościowej G(jω) w postaci ułamka wymiernego, podzielonego przez kwadrat sumy jω i 2. Wyrażenie jest również rozłożone na część rzeczywistą P(ω) i urojoną Q(ω)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page68_formula1.png": [
+      "To są trzy macierze: A, B i C. Macierz A ma rozmiar 2x2, B jest wektorem 2x1, a C jest macierzą 2x2."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page51_formula3.png": [
+      "Równanie opisujące zależność wektora x(t) od wektora z(t), gdzie P jest macierzą transformacji."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page90_formula2.png": [
+      "To jest równanie transferu dla systemu, gdzie \\( G_p(s) \\) to funkcja przenikania, \\( Y(s) \\) to wyjście, a \\( U(s) \\) to wejście. Równanie jest zapisane w postaci przekształconej Laplace'a i ma postać \\( G_p(s) = \\frac{1}{s + 0,5} \\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page158_formula2.png": [
+      "Równanie matematyczne przedstawiające wartość N1 jako pierwiastek kwadratowy z sumy kwadratów A1 i B1."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page198_formula1.png": [
+      "To jest równanie różniczkowe opisujące system dynamiczny z dwoma zmiennymi zależnymi \\(x_1(t)\\) i \\(x_2(t)\\), które są funkcjami czasu \\(t\\). Równania te opisują zmiany tych zmiennych w czasie, zależnie od ich wartości obecnej oraz od wektora wektorów wejściowych \\(u(t)\\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page39_formula4.png": [
+      "To jest matematyczna notacja przedstawiająca całkę od 0 do nieskończoności modułu funkcji g(τ) względem τ, która jest ograniczona przez stałą Q, gdzie Q jest skończona."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page30_formula2.png": [
+      "Równanie różniczkowe opisujące dynamikę wektora x(t) w przestrzeni liniowej, gdzie A jest macierzą liniową."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page175_formula1.png": [
+      "Zdjęcie przedstawia wzory matematyczne dla funkcji G(jω) w postaci sumy rzeczywistej P(ω) i urojonej Q(ω). Dodatkowo zawiera równania do obliczenia parametrów J(M), M oraz ω₀, gdzie ω₀ jest ustawiony na 1."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page43_formula1.png": [
+      "Równanie charakterystyczne macierzy A, gdzie det[sI - A] = 0, wyznacza wartości własne macierzy A."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page78_formula3.png": [
+      "To jest równanie wektorowe przedstawiające układ równań liniowych. Wektor kolumnowy na lewej stronie jest mnożony przez macierz, a wynik ten jest równy wektorowi kolumnowemu na prawej stronie."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page13_formula3.png": [
+      "To jest równanie różniczkowe drugiego rzędu opisujące ruch dławika mechanicznego. Równanie opisuje zmiany wektora stanu \\(\\mathbf{x} = [x_1, x_2]^T\\), gdzie \\(x_1\\) to prędkość, a \\(x_2\\) to przyspieszenie. W równaniu pojawiają się parametry \\(k\\) (sprężystość), \\(b\\) (zdrowienie) i \\(m\\) (masa), oraz siła zewnętrzna \\(f\\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page86_formula1.png": [
+      "To jest równanie różniczkowe opisujące dynamiczną system, gdzie wektor stanu \\(\\dot{\\mathbf{x}}(t)\\) zależy od wektora wejścia \\(u(t)\\). Równanie opisuje również wyjście \\(y(t)\\) jako funkcję wektora stanu \\(\\mathbf{x}(t)\\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page73_formula1.png": [
+      "To jest równanie transferu systemu kontroli, gdzie \\( G_S(s) \\) jest funkcją przenikania, \\( Y(s) \\) to sygnał wyjściowy, \\( R(s) \\) to sygnał wejściowy, \\( C \\), \\( A \\), \\( B \\) i \\( K \\) są macierzami, a \\( sI \\) reprezentuje operator Laplace'a."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page118_formula1.png": [
+      "To jest równanie różniczkowe opisujące dynamiczną system, gdzie wektor stanu x(t) jest zależny od wektora wejścia u(t). Równanie opisuje również wyjście y(t) jako funkcję wektora stanu x(t)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page176_formula1.png": [
+      "Zdjęcie przedstawia dwa równania matematyczne, które obliczają wartości amplitudy dla funkcji G przy argumentach j3 i j1. Wartość dla G(j3) wynosi 4/30, a dla G(j1) wynosi 2."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page111_formula2.png": [
+      "Równanie różniczkowe opisujące dynamikę systemu kontroli, gdzie \\(\\dot{x}^*\\) jest prędkością zmiany stanu, \\(A\\) i \\(B\\) są macierzami, \\(u\\) to wektor sterujący, \\(L\\) jest macierzą korektora, a \\(C\\) i \\(y\\) reprezentują macierz obserwacji i wektor obserwacji odpowiednio."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page209_formula1.png": [
+      "Równanie matematyczne przedstawiające zależność między dwiema zmiennymi, gdzie pierwsza zmienna \\( x_1 \\) jest równa połowie kwadratu drugiej zmiennej \\( x_2 \\) minus 2."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page131_formula1.png": [
+      "Zdjęcie przedstawia równanie transferowe systemu w postaci funkcji G(s), gdzie Y(s) to wyjście, X_r(s) to wejście referencyjne, a G(s) jest funkcją przetwarzania. Równanie ma postać: G(s) = (24s + 16) / (s^4 + 6s^3 + 18s^2 + 24s + 16)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page47_formula3.png": [
+      "Zdjęcie przedstawia równanie transferowe systemu, które można zapisać jako U(s)/R(s) = C(s)/(1 + C(s)G(s)) = 1/((s-1)(s+2))."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page72_formula1.png": [
+      "To równanie opisuje układ dynamiczny w postaci równania stanu i wyjścia, gdzie x(t) to wektor stanu, u(t) to wektor kontroli, y(t) to wektor wyjścia, a A, B i C są macierzami."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page55_formula2.png": [
+      "Równanie stanów kontroli systemu dynamicznego, gdzie x(t) to wektor stanu, A to macierz dynamiki, B to macierz kontroli, u(t) to wektor wejścia, a t to czas."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page194_formula1.png": [
+      "To jest wzór matematyczny przedstawiający funkcję J(M) w zależności od M, a i B. Wzór zawiera pierwiastki kwadratowe i ujemną wartość j, co sugeruje, że dotyczy ona obliczeń fizycznych lub inżynierskich, szczególnie w kontekście elektromagnetyzmu lub mechanicznego momentu obrotowego."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page164_formula2.png": [
+      "Zdjęcie przedstawia równanie różniczkowe dla funkcji J(M) i wynikające z niego wartości minimalnej masy M_min oraz jej wartość funkcji J w punkcie minimum."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page103_formula2.png": [
+      "Zdjęcie przedstawia macierze i wektory matematyczne: A, B, C oraz wektor x, gdzie A to 2x2 macierz, B to 2x1 wektor, C to 2x1 wektor, a x to 2x1 wektor zmiennych il i uc."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page121_formula1.png": [
+      "To jest matematyczna notacja przedstawiająca macierzową reprezentację wektora, gdzie \\(\\mathbf{z}\\) i \\(\\mathbf{w}\\) są wynikami operacji na wektorach \\(\\mathbf{x}\\) i \\(\\mathbf{x}^*\\). Macierz \\(\\mathbf{P}\\) jest złożona z bloków macierzy identyfikacyjnej \\(\\mathbf{I}_n\\) i macierzy zerowej \\(\\mathbf{0}_n\\), co prowadzi do wyniku \\"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page169_formula1.png": [
+      "To jest wzór na funkcję J(M), która zależy od wartości M i parametru k. Funkcja ma dwa przypadki: \n1) Jeśli |M| < a, to J(M) = 0.\n2) Jeśli |M| ≥ a, to J(M) = (2k/π) * [π/2 - arcsin(a/M) - a/M * √(1 - (a/M)^2)]."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page63_formula3.png": [
+      "To jest równanie opisujące macierz W(t), która jest integralną w czasie od 0 do t, gdzie e^Aτ jest macierzą eksponentialną, B to macierz wektorów, a A to macierz dynamiki systemu. Równanie jest symetryczne względem zmiany zmiennych τ i t-τ."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page139_formula1.png": [
+      "To jest wyrażenie dla determinanta macierzy kwadratowej, gdzie lambda (λ) jest parametrem, a A, L, C to macierze. Wyrażenie zawiera cztery potęgi lambda i współczynniki l1, l2, l3, l4, które są parametrami macierzy."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page32_formula1.png": [
+      "Zdjęcie przedstawia równanie transferowe G(s) w postaci ułamka wymiernego, który jest rozłożony na sumę ułamków prostych. Równanie to opisuje stosunek Y(s) do U(s), gdzie Y(s) to wyjście układu, a U(s) to wejście. Równanie jest podzielone na trzy ułamki: 3/(s+4), 7/(s+2), i -3/(s+2)^2."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page231_formula1.png": [
+      "To jest diagram przedstawiający przekształcenie równań różniczkowych w równania dyskretnego czasu. Na lewej stronie widoczne są równania różniczkowe dla sygnałów x1(t) i x2(t), a na prawej stronie - ich odpowiednie równania dyskretnego czasu, gdzie t jest zamieniony na nTs, a dt na Ts. Dodatkowo na prawej stronie znajduje się również równanie dla sygnału e1[n], które jest wynikiem pomiaru r[n] minus"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page76_formula1.png": [
+      "To jest równanie stanu i wyjścia dla systemu kontroli automatycznej, przedstawione w postaci macierzowej. Równanie opisuje dynamikę stanu x(t) zależną od wektora wejściowego u(t), oraz wyjście y(t)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page5_formula2.png": [
+      "To jest równanie różniczkowe w dziedzinie częstotliwości, gdzie X(s) to transformata Laplace'a dla sygnału X(t), U(s) to transformata Laplace'a dla sygnału U(t), a x(0+) to wartość początkowa sygnału X(t). Równanie opisuje dynamikę systemu kontynuacyjnego."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page90_formula3.png": [
+      "Zdjęcie przedstawia równanie matematyczne, które pokazuje, że wartość k wynosi 4,5, aby spełnić warunek równania |sI - A + BK| = s + 0,5 + k = s + 5."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page39_formula2.png": [
+      "To jest matematyczna nierówność, która opisuje granicę wartości bezwzględnej funkcji y(t) jako sumę całkową od u(t-τ)g(τ)dτ, gdzie u(t-τ) i g(τ) są funkcjami czasu. Nierówność ta jest ograniczona przez całkę od u(t-τ) do g(τ) dla wszystkich τ od 0 do nieskończoności."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page49_formula4.png": [
+      "Zdjęcie przedstawia wzór na funkcję przenikania G(s) w postaci macierzy i ułamka. Wzór jest skrócony do ułamka jednokrotnej wartości s+2."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page39_formula3.png": [
+      "To jest matematyczna nierówność, która przedstawia ograniczenie wartości funkcji y(t) w zależności od całki funkcji g(τ) od 0 do nieskończoności."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page62_formula3.png": [
+      "To równanie matematyczne, które wyraża wartość bezwzględną wektora \\(\\mathbf{P}_c\\) równą -1."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page69_formula3.png": [
+      "Równanie charakterystyczne macierzy A w postaci polinomu stopnia n, gdzie s jest zmienną, a a_n, ..., a_1 są współczynnikami."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page135_formula1.png": [
+      "To są dwa wektory, każdy składający się z dwóch elementów. Pierwszy wektor to [2; 1], a drugi wektor to [0; 0]. Wektory te mogą reprezentować wartości funkcji H1(0) i H2(0), oraz ich pochodne H1'(0) i H2'(0) w punkcie x=0."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page160_formula1.png": [
+      "Zdjęcie przedstawia wzór matematyczny, który opisuje transformację funkcji f(t) w zależności od e(t). Wzór zawiera wyrażenia z potęgami i sinusami, oraz stosowanie twierdzenia Mollweida do redukcji wyrażeń trigonometrycznych."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page19_formula2.png": [
+      "To jest równanie stanu systemu kontynuacyjnego, przedstawione w postaci macierzowej. Równanie opisuje dynamikę n-zmiennego systemu, gdzie x1, x2, ..., xn to zmienne stanu, a u(t) to wektor sterujący. Macierz A reprezentuje dynamikę systemu bez sterowania, a wektor b reprezentuje wpływ sterowania na zmienne stanu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page162_formula3.png": [
+      "To jest matematyczna równość, która zawiera całki z wyrażeń zawierających eksponenty i funkcje sinusoidalne. Równość jest złożona z trzech całek, każda z różnych granic i współczynników, podzielona przez jądro i wielkość M."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page157_formula1.png": [
+      "Zdjęcie przedstawia wzór na rozwinięcie Fouriera funkcji u(t) oraz wzory na wyznaczanie współczynników A_k i B_k w tej rozwinięciu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page28_formula2.png": [
+      "Równanie charakterystyczne dla macierzy A, gdzie \\(\\lambda_i\\) jest wartością Eigen, \\(\\mathbf{I}\\) to identyfikacyjna macierz, a \\(\\mathbf{v}_i\\) to wektor Eigen."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page188_formula5.png": [
+      "To jest wzór matematyczny przedstawiający funkcję P1(ω) w postaci ułamka nieskracalnego, gdzie ω jest zmiennej, a kc jest stałą. Wzór zawiera potęgi ω i liczby stałe."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page28_formula3.png": [
+      "To jest macierz P, która składa się z n wierszy, gdzie każdy wiersz reprezentuje wektor (v1, v2, ..., vn)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page115_formula3.png": [
+      "Zdjęcie przedstawia równanie charakterystyczne dla układu elektrycznego, gdzie \\( sI - A + LC \\) jest macierzą charakterystyczną, a \\( l_1 \\) i \\( l_2 \\) są parametrami układu. Równanie końcowe to \\( s^2 + l_1s + l_2 \\), co odpowiada równaniu charakterystycznemu dla układu LC."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page169_formula3.png": [
+      "To są dwa równania granicowe, które opisują zachowanie funkcji \\(1/J(M)\\) w dwóch różnych sytuacjach: gdy \\(M\\) zbliża się do wartości \\(a\\), funkcja \\(1/J(M)\\) diverguje do nieskończoności; gdy \\(M\\) jest bardzo dużym wartością, funkcja \\(1/J(M)\\) zbliża się do wartości \\(1/k\\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page9_formula2.png": [
+      "Równanie różniczkowe opisujące dynamikę systemu kontroli, gdzie y(t) jest wyjściem, x(t) wektorem stanu, C macierz wyjścia, Φ(t, t₀) dystrybucja przejść, x(t₀) wektorem stanu początkowego, B macierz kontroli, u(τ) wektorem kontroli, a t₀ punktem początkowym czasu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page62_formula1.png": [
+      "To jest matematyczna notacja przedstawiająca macierze A, B i wektor C. Macierz A ma rozmiar 3x3, macierz B jest wektorem 3x1, a wektor C jest wektorem 1x3. Wartości w macierzy A to 0, 1, -a1, -a2, -a3, podczas gdy wektor B zawiera wartości 0, 0, 1, a wektor C zawiera wartości b1, b2, b3."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page18_formula1.png": [
+      "To jest równanie transferu G(s) w dziedzinie częstotliwości, przedstawiające stosunek wyjścia Y(s) do wejścia U(s). Równanie to opisuje system dynamiczny, gdzie Y(s) i U(s) są funkcjami Laplace'a, a G(s) jest funkcją transferu. W równaniu G(s) występują współczynniki b1, b2, ..., bn w liczniku oraz a1, a2, ..., an w mianowniku, co odpowiada strukturze pol"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page81_formula3.png": [
+      "To jest wyrażenie dla determinanta macierzy sI - A + BK, gdzie A i B są macierzami, a K to wektor kontrolny. Macierz ma postać 2x2, a jej determinant jest równy s^2 + (k1 - 5)s + (-4k1 + 3k2 - 2)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page49_formula2.png": [
+      "To jest wyrażenie dla odwrotnej macierzy \\([s\\mathbf{I} - \\mathbf{A}]^{-1}\\), gdzie \\(\\mathbf{A}\\) to macierz, a \\(s\\) jest parametrem. Wyrażenie jest podzielone przez \\((s-1)(s+2)\\) i ma postać macierzy 2x2, której elementy to \\(\\frac{s}{(s-1)(s+2)}\\) i \\(\\frac{2}{(s-1)(s+2)}\\) w pierwszym rz"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page105_formula4.png": [
+      "Zdjęcie przedstawia transmitancję układu zamkniętego w postaci funkcji G1(s) = U_out(s)/R(s), gdzie U_out(s) to wyjście układu, a R(s) to wejście. Wyrażenie matematyczne funkcji transmitancji ma postać 125/(s^3 + 15s^2 + 75s + 125)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page7_formula2.png": [
+      "To jest równanie opisujące ewolucję wektora stanu x(t) w czasie t, gdzie A to macierz dynamiki systemu, t_0 to początkowy czas, a e^A(t-t_0) jest macierzą Eulera, która reprezentuje ewolucję wektora stanu od czasu t_0 do czasu t."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page150_formula2.png": [
+      "To jest diagram blokowy przedstawiający funkcję f, która przyjmuje wejście e(t) i generuje wyjście u(t). Funkcja f może reprezentować dowolną operację lub model, który przekształca wejście w wyjście."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page23_formula4.png": [
+      "To jest równanie wektorowe, które definiuje zależność między wektorem wyjściowym \\( y(t) \\) a wektorem wejściowym \\( x_1(t) \\) i \\( x_2(t) \\). Wektor wyjściowy jest wynikiem mnożenia macierzy \\(\\begin{bmatrix} 1 & 0 \\end{bmatrix}\\) przez wektor wejściowy \\(\\begin{bmatrix} x_1(t) \\\\ x_2(t) \\end{bmatrix}\\), co oznacza"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page33_formula1.png": [
+      "Zdjęcie przedstawia macierz A, wektor B i wektor C. Macierz A ma rozmiar 3x3, wektor B jest jednokomórkowy o wartościach [0, 0, 1], a wektor C to trójkomórkowy [k1, k2, k3]."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page9_formula1.png": [
+      "To równanie opisuje dynamikę systemu kontynuacyjnego, gdzie wektor stanu x(t) zależy od wektora stanu początkowego x(t₀), oraz od integralu wektora wejścia u(τ) w czasie τ, mnożonego przez macierz Φ(t,τ)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page94_formula2.png": [
+      "To jest równanie opisujące dynamikę systemu kontroli, gdzie \\( u(t) \\) to sygnał kontrolny, \\( x(t) \\) to stan systemu, \\( r(t) \\) to sygnał referencyjny, a \\( K \\) i \\( M \\) są macierzami kontrolnymi i masy. Równanie opisuje wpływ sygnału referencyjnego oraz sygnału stanu systemu na sygnał kontrolny."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page177_formula1.png": [
+      "To jest wzór matematyczny przedstawiający funkcję J(M) oraz jej odwrotność, gdzie M i a są parametrami, a B jest stałą. Wzór zawiera pierwiastki kwadratowe i działań zmiennych zespolonych (j)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page66_formula1.png": [
+      "To jest matematyczna równość, która mówi, że wartość wektora \\(\\mathbf{P}_0\\) różna od zera."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page188_formula6.png": [
+      "Zdjęcie przedstawia trzy równania matematyczne:\n1. ω₀ = 1\n2. Q₁(jl) = 0\n3. P₁(ω₀) = -2kc\n\nTe równania dotyczą fizyki lub matematyki, szczególnie w kontekście dynamiki i akustyki."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page42_formula1.png": [
+      "Równanie stanów systemu kontroli, gdzie y(t) to wyjście, x(t) to stan, u(t) to wejście, a C i D to macierze."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page104_formula1.png": [
+      "Zdjęcie przedstawia macierze i wektory matematyczne: A, B, C oraz wektor x. Macierz A ma rozmiar 2x2, B i C są wektorami kolumnowymi, a x jest wektorem dwuelementowym."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page52_formula1.png": [
+      "To równanie opisuje dynamikę zmiennej \\(z_i(t)\\) w czasie, gdzie \\(z_i(t)\\) jest zmiennością w momencie \\(t\\), a \\(\\lambda_i\\) jest stałą proporcjonalności. Równanie sugeruje, że zmiana \\(z_i(t)\\) jest liniowo zależna od samej siebie, co może być charakterystyczne dla procesów dyfuzyjnych lub rozprzestrzeniania się informacji w systemach dynamicznych."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page52_formula2.png": [
+      "To jest równanie opisujące eksponentialny wzrost lub spadek wartości \\(z_i(t)\\) w funkcji czasu \\(t\\), gdzie \\(z_i(0)\\) to wartość początkowa, \\(\\lambda_i\\) jest stałą rosnącą lub malejącą, a \\(e^{\\lambda_i t}\\) reprezentuje eksponentialne zmiany w czasie."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page192_formula2.png": [
+      "To jest wzór na transformację Laplace'a dla funkcji przenikania systemu z opóźnieniem i przeszkodą fazową. Wzór przedstawia sposób wyrażenia tej funkcji w postaci sumy sinusoidalnej i kosinusowej, co pozwala na analizę częstotliwościowej odpowiedzi systemu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page7_formula1.png": [
+      "Równanie różniczkowe opisujące dynamikę systemu liniowego, gdzie x(t) jest wektorem stanu, A jest macierzą kontrolującą zmiany stanu w czasie t."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page11_formula2.png": [
+      "To jest równanie stanów dla systemu kontroli, które opisuje dynamikę stanu X(s) w funkcji czasu s. Równanie zawiera macierz stanu Φ(s), macierz wejścia B, oraz wektor wejścia u(s). Macierz stanu jest złożona z elementów s+3 i -2, a macierz wejścia ma elementy 1 i s. Wektor wejścia to [0; 1]."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page41_formula1.png": [
+      "To jest równanie różniczkowe n-tego rzędu, które opisuje zależność między funkcją y(t) i funkcją u(t). Równanie zawiera pochodne y(t) do n-tej stopni oraz pochodne u(t) do m-tej stopni, z współczynnikami a_i i b_j."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page9_formula3.png": [
+      "To jest równanie różniczkowe z całką, które opisuje zależność między pochodną czasu funkcji f(t,τ) w zakresie od t0 do t oraz wartością funkcji w punkcie t, t."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page41_formula3.png": [
+      "To jest równanie wielomianowe stopnia n, gdzie s jest niewiadomą, a \\(a_n, a_{n-1}, \\ldots, a_0\\) są stałymi. Równanie ma postać: \\(s^n + a_{n-1}s^{n-1} + \\cdots + a_1s + a_0 = 0\\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page176_formula2.png": [
+      "Zdjęcie przedstawia równanie matematyczne, które porównuje wartości funkcji G dla argumentów j1 i j3. Wynik obliczeń wynosi 15."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page129_formula1.png": [
+      "To jest równanie stanu i wyjścia dla systemu kontroli automatycznej, przedstawione w postaci macierzowej. Równanie opisuje dynamikę sygnałów wejściowych i wyjściowych oraz ich zależność od parametrów systemu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page41_formula2.png": [
+      "To jest równanie różniczkowe w dziedzinie częstotliwości, gdzie Y(s) to transformata Laplace'a dla wyjścia, U(s) to transformata Laplace'a dla wejścia, a a_i i b_i są współczynnikami. Równanie opisuje zależność między wyjściem a wejściem w dziedzinie częstotliwości."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page72_formula3.png": [
+      "Równanie charakterystyczne dla układu kontroli, gdzie sI - A + BK = 0, reprezentuje równanie dla pierwiastków charakterystycznych w kontrolejerożądłowym systemie."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page11_formula4.png": [
+      "To jest równanie dla sygnału y(t) w postaci macierzowej, gdzie y(t) jest wynikiem mnożenia macierzy [2 -1] przez wektor x(t), który jest funkcją czasu (1-3e^(-t)+2e^(-2t))·1(t)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page8_formula1.png": [
+      "Równanie różniczkowe opisujące dynamikę macierzy przejść Φ(t, t₀) w czasie t, gdzie A jest macierzą operatora."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page160_formula2.png": [
+      "Równanie J(M) = (3M^3)/4, gdzie M jest zmiennej."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page63_formula1.png": [
+      "Równanie różniczkowe opisujące dynamikę systemu kontroli, gdzie x(t1) jest wektorem stanu w czasie t1, A jest macierzą dynamiki, x(0) to wektor stanu początkowy, B jest macierzą kontroli, u(τ) to wektor kontroli w czasie τ, a całka przedstawia wpływ kontroli na stan systemu od czasu 0 do t1."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page91_formula1.png": [
+      "Zdjęcie przedstawia wzór matematyczny dla funkcji przenikania Gp(s), który jest stosowany w teorii sygnałów i układów kontrolnych. Wzór jest zapisany jako stosunek Y(s) do U(s) i ma postać 1/(s + 0,5)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page62_formula2.png": [
+      "To jest równanie transferu systemu dynamicznego w postaci funkcji G(s), gdzie Y(s) to wyjście, U(s) to wejście, a b1, b2, b3, a1, a2, a3 są współczynnikami polinomów. Równanie opisuje stosunek wyjścia do wejścia w przestrzeni częstotliwości."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page86_formula2.png": [
+      "To jest matematyczna operacja na macierzy A, gdzie Δ̂(A) = A² + 2A + 2I, gdzie I to identyfikacyjna macierz. Wynik tej operacji dla podanej macierzy A wynosi macierz [[2, 2], [0, 2]]."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page78_formula1.png": [
+      "To jest równanie różniczkowe opisujące dynamiczną system liniowy, gdzie wektor stanu \\(\\dot{\\mathbf{x}}(t)\\) zależy od wektora wejścia \\(u(t)\\). Matryca \\(A\\) reprezentuje dynamikę systemu, a wektor \\(b\\) zawiera parametry wejścia."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page130_formula3.png": [
+      "To jest równanie różniczkowe opisujące dynamikę systemu kontroli, gdzie \\(\\mathbf{z}'(t)\\) jest wektorem stanu, \\(\\mathbf{A}\\) i \\(\\mathbf{B}\\) są macierzami, \\(\\mathbf{x}(t)\\) to wektor stanu, a \\(\\mathbf{u}(t)\\) to wektor kontroli. Równanie przedstawia model dynamiczny systemu, w którym wektor stanu \\(\\mathbf{z}(t)\\) zależy od wektora stan"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page31_formula4.png": [
+      "Równanie opisujące ewolucję wektora x(t) w czasie t, gdzie x(0) jest wektorem początkowym, a A jest macierzą dynamiki systemu. Równanie to jest rozwiązane za pomocą macierzy P, która przekształca wektor x(0) do postaci diagonalnej, gdzie e^At jest macierzą wykładniczą."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page65_formula2.png": [
+      "Równanie stanów systemu kontroli, gdzie y(t) to wektor wyjścia, x(t) to wektor stanu, u(t) to wektor wejścia, a C i D są macierzami."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page8_formula3.png": [
+      "To równanie przedstawia warunek początkowy dla operatora czasowego Φ(t, t₀) w przypadku, gdy t₀ = 0. Oznacza to, że wartość operatora w momencie t₀ = 0 jest równa wartości operatora w momencie t."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page3_formula2.png": [
+      "Równanie opisujące wykładniczy rozkład napięcia na kondensatorze w czasie, gdzie \\( y(t) \\) to napięcie na kondensatorze w momencie \\( t \\), \\( u_c(t) \\) to napięcie początkowe, \\( u(t_0) \\) to napięcie początkowe w momencie \\( t_0 \\), a \\( a = -\\frac{1}{RC} \\) jest stałą proporcjonalności zależną od rezystancji \\( R \\) i pojemności"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page96_formula1.png": [
+      "To jest równanie różniczkowe opisujące dynamiczną system, gdzie \\(\\dot{\\mathbf{x}}(t)\\) jest wektorem prędkości, \\(\\mathbf{x}(t)\\) wektorem stanu, \\(u(t)\\) jest wektorem kontroli, a \\(b\\) jest stałą. Równanie opisuje dynamikę systemu z wektorami kontrolnymi i wyjściowymi."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page115_formula4.png": [
+      "To jest równanie kwadratowe w postaci standardowej, gdzie współczynniki są porównywane ze stałymi. Równanie ma postać \\( s^2 + 4s + 8 = s^2 + l_1s + l_2 \\), co prowadzi do identyfikacji \\( l_1 = 4 \\) i \\( l_2 = 8 \\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page212_formula1.png": [
+      "Równania matematyczne opisujące zależności między zmiennymi \\(x_1\\) i \\(x_2\\), gdzie pierwsze równanie jest równoważne zeru, a drugie wyraża \\(x_2\\) jako funkcję \\(x_1\\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page26_formula3.png": [
+      "To równanie przedstawia zależność wektora x(t) od wektora z(t), gdzie P jest macierzą transformacji."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page113_formula1.png": [
+      "Równanie różniczkowe opisujące dynamikę systemu kontroli, gdzie \\(\\dot{x}^*\\) jest prędkością zmiany stanu, \\(A\\) i \\(L\\) są macierzami, \\(C\\) jest macierzą obserwacji, \\(B\\) i \\(L\\) są macierzami kontrolnymi, \\(x^*\\) to stan systemu, \\(u\\) to wektor kontroli, a \\(y\\) to wektor obserwacji."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page161_formula2.png": [
+      "To jest matematyczna formuła przedstawiająca obliczanie funkcji J(M) za pomocą całki z wykorzystaniem funkcji sinus i eksponenta. Formuła zawiera integral z funkcji f(M sin(φ))e^(-jφ) dla φ od 0 do 2π, podzielony przez j/πM. W rezultacie obliczenia, funkcja J(M) jest równa 4B/πM."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page10_formula2.png": [
+      "Równanie transferu Laplace'a dla układu kontroli, gdzie X(s) to wektor stanu, A i B to macierze, U(s) to wektor wejścia, a X(0+) to stan początkowy."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page98_formula1.png": [
+      "To równanie opisuje proces integralny, który jest centralnym elementem w modelowaniu dynamiki systemów, szczególnie w kontekście sterowania i syntezy systemów. Równanie przedstawia zależność między wektorem stanu \\(x_i(t)\\) a różnicą między wektorem sygnału wejściowego \\(r(\\tau)\\) a sygnałem wyjściowym \\(y(\\tau)\\), lub sygnałem wyjściowym \\(Cx(\\tau)\\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page24_formula1.png": [
+      "To jest równanie różniczkowe opisujące ruch w układzie RC-LC, gdzie x1(t) i x2(t) są funkcjami czasu, u(t) to wektor wejściowy, a L i C są odpowiednio indukcyjnością i pojemnością. Równanie zawiera macierz stanu, macierz wejścia oraz wektor wejścia."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page220_formula1.png": [
+      "To jest równanie transferu systemu, gdzie G(s) to funkcja transferu, a s jest zmienną Laplace'a. Równanie przedstawia model matematyczny systemu liniowego czasu ciągłego."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page103_formula3.png": [
+      "To jest macierz 2x2 o nazwie \\(\\mathbf{P}_c\\), która zawiera wartości: [2, -8] w pierwszym wierszu i [0, 20] w drugim wierszu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page128_formula4.png": [
+      "Zdjęcie przedstawia równanie matematyczne, które jest rozwiązaniem dla parametru \\( l \\). Równanie to jest postacią \\(\\left| sI - A + LC \\right| = s - 2 + 3l = s + 5\\), z którego wynika, że \\( l = \\frac{7}{3} \\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page128_formula2.png": [
+      "Zdjęcie przedstawia trzy macierze: A, B i C, każda z jednym wektorem zawierającym odpowiednio 2, 4 i 3 elementy."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page206_formula1.png": [
+      "Równanie różniczkowe opisujące zależność między zmianami \\(x_1\\) i \\(x_2\\), gdzie \\(\\frac{dx_1}{dx_2} = -\\frac{x_2}{B}\\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page81_formula1.png": [
+      "To jest równanie stanu i wyjścia dla systemu kontroli liniowego. Równanie stanu opisuje dynamikę systemu, gdzie x(t) to wektor stanu, u(t) to wektor wejścia, a y(t) to wektor wyjścia. Matryca A reprezentuje dynamikę stanu, B reprezentuje wpływ wejścia na stan, a C reprezentuje wyjście z stanu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page2_formula2.png": [
+      "To jest równanie matematyczne przedstawiające zależność y(t) od u_c(t), gdzie y(t) to funkcja zależna od czasu t, a u_c(t) to funkcja kontrolna zależna od czasu t."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page76_formula2.png": [
+      "Zdjęcie przedstawia równanie charakterystyczne dla systemu kontroli, gdzie \\(\\Delta_{\\dot{z}}\\) jest wyrażone jako determinant macierzy \\(sI - A + BK\\). Równanie to jest rozłożone na czynniki i ma postać polinomu trzeciego stopnia: \\(s^3 + 13s^2 + 56s + 80\\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page23_formula1.png": [
+      "Równanie różniczkowe opisujące ruch w obwodzie elektrycznym, gdzie \\( u_2(t) \\) jest napięciem na kondensatorze, \\( L \\) i \\( C \\) są odpowiednio indukcyjnością i pojemnością, \\( R \\) jest oporem, a \\( u_1(t) \\) jest wejściowym napięciem."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page18_formula2.png": [
+      "To jest równanie stanu i wyjścia dla systemu dynamicznego, przedstawione w postaci macierzowej. Równanie opisuje zależność między wektorem stanu \\( x(t) \\), wektorem wejść \\( u(t) \\) oraz wektorem wyjść \\( y \\). Wektor stanu składa się z n zmiennych \\( x_1, x_2, \\ldots, x_n \\), a macierz jest trójdiagonału, z elementami \\( -a_i \\) na głównej przekątnej od"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page100_formula1.png": [
+      "To jest równanie różniczkowe dla systemu kontroli, które opisuje dynamikę stanu x(t) w zależności od wejścia u(t). Równanie jest zapisane w postaci stanu i wyjścia, gdzie A to macierz stanu, B to macierz wejścia, C to macierz wyjścia, a x(t) i y(t) to wektory stanu i wyjścia odpowiednio."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page68_formula2.png": [
+      "To jest równanie transferu G(s) w postaci frakcji ułamkowej, gdzie Y(s) to wyjście, U(s) to wejście, a b1, c1, b2, c2 są parametrami systemu. Równanie przedstawia zależność między wyjściem i wejściem w przestrzeni częstotliwości."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page115_formula1.png": [
+      "Równanie matematyczne przedstawiające operację odejmowania macierzy A od iloczynu macierzy L i C, wynikającej w nową macierz A*."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page123_formula1.png": [
+      "To jest macierz równań różniczkowych pierwszego rzędu, która opisuje dynamikę systemu kontrolowanego przez parametry A, Bk i LC. Macierz ta zawiera dwie linie: pierwsza zawiera pochodne x i x*, a druga zawiera współczynniki A, -Bk, LC i A - LC - Bk."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page188_formula2.png": [
+      "To jest wyrażenie matematyczne przedstawiające funkcję Q(jω) w postaci ułamka wymiernego, gdzie ω jest częstością. Wyrażenie zawiera potęgi ω i jest związane z analizą sygnałów i filtrów w teorii sygnałów i systemów."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page88_formula1.png": [
+      "Równanie matematyczne przedstawiające wartość s12 jako -1 plus lub minus jednostkę urojoną (j)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page28_formula1.png": [
+      "Równanie charakterystyczne macierzy A, które wyznacza wartości własne λ."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page206_formula3.png": [
+      "Równanie matematyczne przedstawiające zależność między zmiennej \\( x_1 \\) i \\( x_2 \\), gdzie \\( Bx_1 = -\\frac{1}{2}x_2^2 + C_2 \\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page162_formula1.png": [
+      "Zdjęcie przedstawia dwie równości matematyczne, które opisują zależności między wartościami \\( \\phi_1 \\) i \\( \\phi_2 \\), a parametrami \\( M \\) i \\( a \\). W obu przypadkach stosuje się wzór \\( M \\sin(\\phi) = a \\), gdzie dla \\( \\phi_1 \\) otrzymujemy \\( \\sin(\\phi_1) = \\frac{a}{M} \\), a dla \\( \\phi_2 \\) otrzymujemy \\( \\sin(\\phi_2"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page132_formula1.png": [
+      "To jest równanie różniczkowe pierwszego rzędu dla wektora stanu \\(\\begin{bmatrix} H_1'(t) \\\\ H_2'(t) \\end{bmatrix}\\), gdzie \\(H_1(t)\\) i \\(H_2(t)\\) są funkcjami czasu, a \\(Q_1(t)\\) i \\(Q_2(t)\\) to macierze zależne od czasu. Równanie opisuje dynamikę zmian wektorów stanu w czasie, uwzględniając ich pochodne i wpływ"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page31_formula2.png": [
+      "To jest matematyczna równość, która przedstawia sposób obliczania potęgi macierzy A. Macierz A jest przekształcana przez macierz P i jej odwrotną, co daje wynik, który jest równy macierzy P pomnożonej przez potęgę macierzy Λ do trzeciej potęgi, a następnie przez odwrotną macierz P."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page98_formula2.png": [
+      "To równanie opisuje dynamikę systemu, gdzie \\( x_i(t) \\) jest zmiennością stanu systemu w czasie \\( t \\), \\( r(t) \\) to wartość referencyjna, \\( C \\) jest macierzą kontrolną, a \\( e(t) \\) to błąd systemu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page114_formula3.png": [
+      "To jest macierz \\( P_0 \\) złożona z dwóch wierszy: pierwszy to wektor [1, 0], drugi to wektor [0, 1]. Macierz ma rangę równą 2, co oznacza, że jest to macierz pełnej rangi."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page22_formula2.png": [
+      "Zdjęcie przedstawia trzy wartości: rezystancja (R) równa 100, induktywność (L) równa 0.01 oraz pojemność (C) równa 2e-6."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page183_formula1.png": [
+      "To jest równanie transferu systemu, które można zapisać jako: Gp(s) = 4 / [s(s + 1)^2]. Równanie to opisuje dynamikę systemu kontroli, gdzie Gp(s) jest funkcją przenikania w przestrzeni częstotliwości."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page57_formula2.png": [
+      "Równanie stanów systemu kontroli, gdzie y(t) to wyjście, x(t) to stan, u(t) to wejście, a C i D to macierze."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page181_formula2.png": [
+      "Zdjęcie przedstawia dwie funkcje matematyczne: P(ω) i Q(ω), które są wyrażone w postaci ułamków zmiennych ω."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page76_formula4.png": [
+      "Zdjęcie przedstawia równanie transferowe systemu kontroli, gdzie G(s) jest funkcją przetwarzania, Y(s) to wyjście, a R(s) to wejście. Równanie ma postać: G(s) = (3s^2 + 4s - 2) / (s^3 + 13s^2 + 56s + 80)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page49_formula3.png": [
+      "To jest wyrażenie dla macierzy transferu G(s) w systemie kontroli, przedstawione w postaci matematycznej. Wyrażenie zawiera macierze A, B, C oraz s, które reprezentują parametry systemu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page70_formula1.png": [
+      "Równanie przedstawiające transformację macierzy A za pomocą macierzy T, gdzie \\(\\bar{A} = T^{-1}AT\\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page111_formula1.png": [
+      "Równania stanu i wyjścia dla systemu kontroli automatycznej, gdzie \\(\\dot{x}^*\\) to pochodna stanu, \\(A\\) jest macierzą stanu, \\(B\\) to macierz kontroli, \\(x^*\\) to stan, \\(u\\) to wektor kontroli, \\(y^*\\) to wyjście, \\(C\\) to macierz wyjścia, a \\(D\\) to macierz przekształceń."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page26_formula4.png": [
+      "To jest równanie opisujące model systemu kontroli, gdzie y(t) to wyjście, x(t) to stan, u(t) to wejście, C i D są macierzami, a P to przekształcenie. Równanie przedstawia, jak wyjście zależy od stanu i wejścia, oraz jak stan może być zdefiniowany w zależności od zmiennych zewnętrznych zdefiniowanych przez P."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page36_formula4.png": [
+      "To jest równanie stanów dla układu kontroli automatycznej, gdzie Y(s) to wektor wyjścia, X(s) to wektor stanu, U(s) to wektor wejścia, C i D są macierzami, a A jest macierzą stanu. Równanie opisuje dynamikę układu w przestrzeni częstotliwości."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page87_formula1.png": [
+      "To jest matematyczna równość, która przedstawia operację mnożenia macierzy. Macierz K jest wynikiem mnożenia macierzy [0 1] z macierzą P_C^{-1} i macierzą Δ_z(A). Wynik ten jest równy [2 2]."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page51_formula2.png": [
+      "To równanie przedstawia graniczną sytuację, w której czas \\( t \\) nieskończonych wartości prowadzi do zera wektora stanu \\( \\mathbf{x}(t) \\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page8_formula2.png": [
+      "To równanie przedstawia własność identyfikacyjną operatora czasowej transformacji, gdzie operator Φ(t,t) jest równy jednostkowej macierzy I dla wszystkich t."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page169_formula2.png": [
+      "To jest matematyczna notacja granicy funkcji J(M) gdy M tenduje do nieskończoności, równa konkretnemu wartości k."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page99_formula1.png": [
+      "To jest równanie różniczkowe opisujące dynamikę systemu kontroli, gdzie \\(\\dot{\\mathbf{x}}(t)\\) i \\(\\dot{x}_i(t)\\) są wektorami prędkości stanu, \\(\\mathbf{A}\\), \\(\\mathbf{B}\\), \\(\\mathbf{K}\\), \\(\\mathbf{C}\\) to macierze stanu, sterowania i obserwacji, \\(k_i\\) to stała kontrolna, \\(\\mathbf{r}(t)\\) to wektor wejścia,"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page10_formula3.png": [
+      "To jest równanie Laplace'a dla układu dynamicznego, które opisuje zmiany wektora stanu X(s) w funkcji czasu s, w zależności od macierzy A, wektora stanu początkowego X(0+), macierzy B i wektora wejścia U(s)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page40_formula3.png": [
+      "To jest równanie wielomianowe stopnia n, gdzie s jest niewiadomą, a \\(a_{n-1}, \\ldots, a_0\\) są stałymi."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page197_formula1.png": [
+      "To jest równanie różniczkowe n-tego rzędu, które opisuje dynamikę systemu z n zmiennymi zależnymi od czasu t i wektora wejściowego u(t)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page188_formula1.png": [
+      "Równanie transferu systemu, gdzie Gc(s) to funkcja transferu, k_c to stała korekcyjna."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page203_formula2.png": [
+      "To jest równanie transferu G(s) dla systemu mechanicznego, gdzie X1(s) to prędkość, F(s) to siła, m to masa, b to siła rozporu, k to sprężystość. Równanie ma postać: G(s) = X1(s)/F(s) = m/(s^2 + (b/m)s + (k/m))."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page61_formula2.png": [
+      "Zdjęcie przedstawia dwie macierze: A i B, które są podane w postaci tablicy wektorów. Macierz A ma rozmiar 3x3, a macierz B ma rozmiar 3x2."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page7_formula4.png": [
+      "To równanie przedstawia operator Heunego, który opisuje ewolucję stanów w czasie dla układu liniowego. Równanie to jest używane w teorii dynamiki układów liniowych i fizyce kwantowej."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page74_formula2.png": [
+      "To jest matematyczna formuła przedstawiająca charakterystyczną równanie dla systemu kontroli, gdzie Δż jest zmianą wektora stanu, sI - A + BK to macierz charakterystyczna, a αn, αn-1, ..., α1 są współczynnikami pola charakterystycznego."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page21_formula1.png": [
+      "Równanie opisujące różnicę między sygnałem wejściowym \\( u(t) \\) a sygnałem wyjściowym \\( u_c(t) \\), gdzie \\( L_i(t) \\) jest zmianą sygnału w czasie."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page13_formula1.png": [
+      "Równanie ruchu dla systemu mechanicznego, gdzie \\( m \\ddot{y} = f - ky - b\\dot{y} \\) opisuje siłę \\( f \\), siłę sprężystą \\( ky \\), oraz siłę oporową \\( b\\dot{y} \\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page218_formula1.png": [
+      "To równanie opisuje dynamikę zmiennej e(t) jako funkcji x1(t). Równanie pierwsze mówi, że e(t) jest równa -x1(t), a równanie drugie mówi, że prędkość zmiany e(t) jest równa -x1'(t)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page112_formula1.png": [
+      "To równanie przedstawia odchylenie wektora \\(\\mathbf{e}\\) od wektora \\(\\mathbf{x}^*\\), gdzie \\(\\mathbf{x}^*\\) jest referencyjnym wektorem."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page75_formula2.png": [
+      "To jest wzór na funkcję przenikania systemu w dziedzinie częstotliwości, gdzie \\( G_S(s) \\) to funkcja przenikania, \\( Y(s) \\) to wyjście, a \\( R(s) \\) to wejście. Wzór jest zapisany w postaci ułamka wielomianowego, gdzie \\( b_1, b_2, \\ldots, b_n \\) są współczynnikami w liczniku, a \\( \\alpha_1, \\alpha_2, \\ldots, \\alpha_n"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page30_formula4.png": [
+      "To jest macierz eksponentialna, która wynika z wykładniczej funkcji dla macierzy diagonalnej. Każda wartość własna λi jest podnoszona do potęgi t, a wartości własne 0 pozostają niezmienione."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page198_formula2.png": [
+      "To jest równanie różniczkowe opisujące zależność między dwoma zmiennymi dependentnymi \\(x_1(t)\\) i \\(x_2(t)\\), oraz niezależną zmiennej \\(t\\). Równanie zawiera funkcję \\(f_1\\) i \\(f_2\\), które zależą od \\(x_1(t)\\), \\(x_2(t)\\) oraz \\(u(t)\\), co sugeruje, że to może być równanie różniczkowe określające dynamikę systemu kontrolowanego przez \\(u(t)\\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page202_formula1.png": [
+      "To jest równanie transferu dla systemu mechanicznego, gdzie G(s) jest funkcją transferu, X1(s) to wejście, F(s) to wyjście, m to masa, k to sprężystość i s to zmienna Laplace'a."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page121_formula3.png": [
+      "To jest matematyczna równość przedstawiająca transformację macierzy A poprzez przekształcenie P, co prowadzi do nowej macierzy Ã. Równość zawiera operacje na macierzach identyfikacyjnych In i zerowych On, oraz operatory A, B, K, L i C."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page60_formula1.png": [
+      "To są trzy macierze: A, B i C, przedstawione w postaci tablicy. Macierz A ma rozmiar 3x3, B ma rozmiar 2x2, a C ma rozmiar 2x3. Wszystkie macierze zawierają tylko wartości 0 i 1."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page15_formula2.png": [
+      "To jest wyrażenie dla funkcji przenikania G(s) w postaci sumy ułamków, gdzie s jest zmienną zespoloną. Wyrażenie zawiera trzy ułamki: 1/s, -3/(s-1), i 3/(s+3)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page30_formula1.png": [
+      "Równanie opisujące ewolucję wektora x(t) w czasie t, gdzie e^A t jest macierzą eksponentialną, a x(0) to wektor początkowy."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page74_formula1.png": [
+      "To jest równanie stanu dla systemu dynamicznego, przedstawione w postaci macierzowej. Równanie opisuje zmiany wektorów stanu \\( x \\) w czasie, zależne od wektora wejściowego \\( u(t) \\) i wektora wyjścia \\( y \\). Wektor stanu składa się z \\( n \\) elementów, a macierz jest trójdiagonału, co sugeruje, że jest to równanie różniczkowe liniowe."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page105_formula1.png": [
+      "To jest macierz A1, wektor B1, macierz C1 i wektor x1, które są używane w modelu matematycznym lub systemie dynamiki. Macierz A1 zawiera parametry k1, k2 i ki, wektor B1 ma wartość 0, macierz C1 jest jednostkową macierzą 3x3, a wektor x1 zawiera wartości il, uc i xi."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page11_formula1.png": [
+      "Zdjęcie przedstawia równania różniczkowe i macierzową reprezentację systemu dynamicznego, w tym wyliczanie macierzy transferu (Φ(s)) dla danego układu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page54_formula1.png": [
+      "Zdjęcie przedstawia równanie transferowe G(s) w postaci ułamka wymiernego, który jest rozkładany na sumę ułamków prostych. Równanie to jest podzielone na trzy części, pokazując różne etapy rozkładu: pierwotne równanie, następnie rozkład na ułamki prostsze i ostateczny wynik."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page19_formula3.png": [
+      "To jest ilustracja macierzy wektorowej, gdzie wektor y jest równy wektorowi x1, ale z dodatkowym elementem 1 na początku. Wektor x zawiera n elementów x1 do xn."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page67_formula2.png": [
+      "To równanie matematyczne, które wyraża wartość bezwzględną macierzy P0 równą 1."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page26_formula1.png": [
+      "To jest równanie stanu systemu kontroli, gdzie x(t) to wektor stanu, A to macierz stanu, B to macierz kontroli, u(t) to wektor wejścia, a t to czas."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page94_formula3.png": [
+      "To jest równanie opisujące dynamikę systemu kontroli, gdzie x(t) to wektor stanu systemu w czasie t, A i B to macierze stanu i kontroli, K to macierz korektora, r(t) to wektor wejścia sterującego."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page103_formula1.png": [
+      "To jest równanie różniczkowe opisujące dynamikę obwodu elektrycznego z kondensatorem i induktorem, gdzie \\( i_L(t) \\) to prąd w induktorze, \\( u_C(t) \\) to napięcie na kondensatorze, \\( R_1 \\), \\( L \\), \\( C \\), \\( R_2 \\) są odpowiednio rezystancja, induktywność, pojemność i druga rezystancja w obwodzie."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page26_formula5.png": [
+      "To jest równanie stanu systemu kontroli, gdzie \\(\\mathbf{z}(t)\\) to wektor stanu, \\(\\bar{\\mathbf{A}}\\) to macierz stanu, \\(\\bar{\\mathbf{B}}\\) to macierz kontroli, i \\(\\mathbf{u}(t)\\) to wektor wejścia."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page31_formula3.png": [
+      "To jest wzór na wykładniczą funkcję macierzy, który przedstawia rozszerzenie Taylor'a do wykładniczej funkcji macierzy A przez czas t. Wzór pokazuje, że e^At można wyrazić jako produkt macierzy P, macierzy diagonalnej Λ i macierzy P^{-1}, gdzie Λ to macierz wartości własnych macierzy A."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page76_formula3.png": [
+      "To jest matematyczny przykład macierzy k, która wynika z odejmowania odpowiednich elementów wierszy i kolumn. Wynik to [75 49 10]."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page24_formula4.png": [
+      "To jest równanie wektorowe opisujące sygnały czasowe \\( y(t) \\), gdzie \\( i_L(t) \\) to prąd w obwodzie indukcyjnym, a \\( u_C(t) \\) to napięcie na kondensatorze. Wektor \\( y(t) \\) składa się z dwóch składowych: prądu w obwodzie indukcyjnym i napięcia na kondensatorze."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page57_formula4.png": [
+      "Równanie przedstawiające rangę macierzy \\(\\mathbf{P}_c\\), która jest równa n."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page70_formula2.png": [
+      "Równanie matematyczne przedstawiające transformację wektora B poprzez macierz T, gdzie \\(\\bar{\\mathbf{B}}\\) jest wynikiem tej transformacji."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page47_formula1.png": [
+      "Zdjęcie przedstawia dwa równania transferowe w postaci funkcji G(s) i C(s), które są wyrażone w zmiennych s. Funkcja G(s) jest równa (s-1)/(s+1), a funkcja C(s) jest równa 1/(s-1)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page158_formula1.png": [
+      "Zdjęcie przedstawia wzór matematyczny, który definiuje funkcję J(M) jako iloraz liczby N1 pomnożonej przez e do potęgi φ, podzielonej przez M, równa jest ilorazu B1 dodanej do j-mnożonego A1, podzielonej przez M."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page172_formula1.png": [
+      "To równanie zawiera dwie warunki dla funkcji G(jω₀)J(M₀): realna część wynosi -1, a wyimaginarna jest równa 0."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page218_formula3.png": [
+      "Zdjęcie przedstawia równanie różniczkowe i rozwiązanie dla funkcji e(t). Równanie różniczkowe to: e'(t) = 1/a * e(t), a rozwiązanie to: e(t) = e_0 * e^(-t/a)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page63_formula2.png": [
+      "To jest wzór matematyczny opisujący równanie dla wektora u(t) w kontekście systemów dynamicznych, gdzie A, B, W, x(0), i x1 są macierzami i wektorami, a t1 jest czasem. Wzór zawiera operacje mnożenia macierzy, potęgowania macierzy, oraz odejmowania wektorów."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page65_formula3.png": [
+      "To jest macierz o nazwie \\( P_O \\), która jest zbudowana z wektorów, gdzie każdy wektor jest wynikiem mnożenia wektora \\( C \\) przez macierz \\( A \\) w różnych potęgach od 0 do \\( n-1 \\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page130_formula4.png": [
+      "To jest równanie opisujące sygnał wyjściowy y(t) w systemie kontroli, gdzie y(t) = Cx(t), x(t) jest wektorem stanu, a C jest macierzą. Równanie pokazuje, że sygnał wyjściowy wynika z sumy sygnału wygenerowanego przez funkcję z(t) i stałego wektora x_r."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page37_formula1.png": [
+      "Zdjęcie przedstawia równanie transferowe G(s) w postaci ułamka wymiernego, który jest rozłożony na sumę trzech ułamków prostej i liniowej. Równanie to opisuje stosunek Y(s) do U(s), gdzie Y(s) to wyjście układu, a U(s) to wejście. Równanie jest rozłożone na trzy części: -2/(s+2) oraz dwa ułamki prostej (4+j)/(s+1+j3) i (4-j)/(s+"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page67_formula1.png": [
+      "Zdjęcie przedstawia macierze A, B i C oraz funkcję transferową G(s) dla systemu kontroli. Macierz A ma rozmiar 3x3, macierz B jest wektorem 3x1, a macierz C jest wektorem 1x3. Funkcja transferowa G(s) jest zapisana w postaci ułamka wymiernego zmiennych s."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page64_formula1.png": [
+      "Równanie stanów systemu kontroli, gdzie y(t) to wyjście, x(t) to wektor stanu, u(t) to wektor kontroli, a C i D są macierzami."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page7_formula3.png": [
+      "To zdjęcie przedstawia rozwinięcie funkcji eksponentialnej dla macierzy A, gdzie \\( e^{\\mathbf{A}t} \\) jest sumą nieskończoną serii Taylora. Druga linia pokazuje, że pochodna funkcji \\( e^{\\mathbf{A}t} \\) względem t równa się macierzy A pomnożonej przez \\( e^{\\mathbf{A}t} \\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page10_formula1.png": [
+      "Równanie stanu systemu kontroli, gdzie x(t) to wektor stanu, A to macierz stanu, B to macierz kontroli, u(t) to wektor wejścia, a t to czas."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page2_formula1.png": [
+      "Równanie różniczkowe opisujące przepływ prądu w kondensatorze RC, gdzie \\(\\dot{u}_c(t)\\) jest prędkością zmiany napięcia na kondensatorze, \\(u_c(t)\\) to napięcie na kondensatorze, \\(u(t)\\) to napięcie wejściowe, a \\(R\\) i \\(C\\) to odpowiednio rezystancja i pojemność."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page203_formula1.png": [
+      "To jest równanie różniczkowe drugiego stopnia opisujące ruch dwojszczepnego wahadła. Równanie zawiera dwie zależności od czasu \\( t \\): pierwsza opisuje prędkość \\( x_1(t) \\), a druga - przyspieszenie \\( x_2(t) \\). W równaniu pojawiają się parametry \\( k, m, b \\) oraz funkcja \\( f(t) \\), która reprezentuje siłę zewnętrzna działającą na wahadło."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page188_formula4.png": [
+      "To jest wyrażenie matematyczne przedstawiające funkcję Q1(jω) w postaci ułamka wymiernego, gdzie ω jest częstością, a kc jest stałą. Wyrażenie opisuje charakterystykę częstotliwościową systemu kontrolnego."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page94_formula4.png": [
+      "To jest równanie statystyczne opisujące model liniowy, gdzie \\( \\mathbf{0} = (\\mathbf{A} - \\mathbf{B}\\mathbf{K})\\mathbf{x}_{ss} + \\mathbf{BMr}_{ss} \\) i \\( \\mathbf{x}_{ss} = (\\mathbf{BK} - \\mathbf{A})^{-1}\\mathbf{BMr}_{ss} \\). Ostatecznie, \\( y_{ss} = r_{ss} = \\mathbf{C}(\\mathbf{BK} - \\math"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page208_formula1.png": [
+      "Równanie matematyczne przedstawiające zależność między dwiema zmiennymi x1 i x2, gdzie x1 jest funkcją kwadratową z x2, z wartością stałą 2."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page122_formula1.png": [
+      "To jest macierz blokowa przedstawiająca równania dla systemu kontroli, gdzie \\(\\mathbf{x}'\\) i \\(\\widetilde{\\mathbf{x}}'\\) są wektorami stanu, \\(\\mathbf{A}\\), \\(\\mathbf{B}\\), \\(\\mathbf{K}\\), \\(\\mathbf{C}\\), oraz \\(\\mathbf{L}\\) są macierzami, a \\(\\mathbf{0}_n\\) jest macierzą n×n z wszystkich zer."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page36_formula3.png": [
+      "To jest równanie opisujące dynamikę systemu kontroli, gdzie X(s) to wektor stanu w przestrzeni częstotliwości, A to macierz stanu, B to macierz kontroli, U(s) to wektor wejść w przestrzeni częstotliwości, a I to macierz jednostkowa. Równanie to jest często używane w teorii kontroli i analizie układów dynamicznych."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page206_formula2.png": [
+      "Równanie matematyczne przedstawiające zależność między zmiennymi x1 i x2, gdzie Bx1 jest równa połowie kwadratu x2 plus stałą C1."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page55_formula1.png": [
+      "Równanie stanów systemu kontroli, gdzie y(t) to wyjście, x(t) to wektor stanu, u(t) to wektor wejścia, a C i D są macierzami."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page85_formula1.png": [
+      "To jest wzór na różniczkę Lagrange'a dla wielomianu stopnia n, który zależy od zmiennej s i ma n pierwiastków. Wzór ten przedstawia wielomian w postaci iloczynu różniczkowanych funkcji liniowych oraz jego rozwinięcie w szereg Taylor'a."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page78_formula2.png": [
+      "To jest wzór na funkcję W(s), która jest kwadratową funkcją s, zawierającą parametry b1, b2, k1 i k2."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page82_formula3.png": [
+      "To jest macierz \\(\\mathbf{K}\\) z dwoma elementami \\(k_1\\) i \\(k_2\\), które mają wartości 8 i 12 odpowiednio."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page94_formula1.png": [
+      "Równania stanów i wyjścia dla systemu kontroli liniowego, gdzie x(t) to wektor stanu, u(t) to wektor wejścia, y(t) to wektor wyjścia, a A, B, C są macierzami odpowiednio stanu, wejścia i wyjścia."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page52_formula3.png": [
+      "To jest matematyczna notacja, która oznacza, że część rzeczywista wartości eigenvalue'ów (oznaczonych jako λi) jest mniejsza niż zero."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page5_formula1.png": [
+      "Równanie różniczkowe opisujące przepływ prądu w kondensatorze w obwodzie RC."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page24_formula2.png": [
+      "To jest równanie wektorowe, które definiuje wyjście y(t) jako funkcję czasu t, złożone z dwóch składowych x1(t) i x2(t). Wyjście jest zdefiniowane przez macierz 2x2, gdzie pierwsza kolumna to [1, 0], a druga kolumna to wektor [x1(t), x2(t)]."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page6_formula2.png": [
+      "Równanie stanów systemu kontroli, gdzie y(t) to wyjście, x(t) to wektor stanu, u(t) to wektor kontroli, a C i D są macierzami."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page47_formula2.png": [
+      "To jest równanie transferu dla systemu kontroli, które przedstawia stosunek wyjścia (Y(s)) do wejścia (R(s)). Równanie to jest zapisane w postaci przetwarzania Laplace'a i przedstawia model systemu, gdzie C(s) to funkcja sprzężenia zwrotnego, G(s) to funkcja przenikania, a s jest zmienną Laplace'a. W przypadku podanego przykładu, stosunek wyjścia do wejścia jest równy 1/(s+"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page120_formula1.png": [
+      "To jest diagram blokowy i równania opisujące układ dynamiczny. Diagram przedstawia sygnały wejściowe i wyjściowe, a równania opisują dynamikę stanów systemu."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page87_formula3.png": [
+      "To jest równanie transferu dla systemu kontroli, przedstawione w postaci blokowej. Równanie opisuje zależność między wejściem (R(s)) i wyjściem (Y(s)) systemu, gdzie G(s) jest funkcją transferu, C, A, B, K są macierzami, a I to macierz jednostkowa. Równanie końcowe pokazuje, że G(s) ma postać 1/(s^2 + 2s + 2)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page85_formula3.png": [
+      "To jest wzór na macierzową różniczkę Zeta (Δ̇_Z(A)), która jest sumą szeregu potęg macierzy A, gdzie każdy wyraz jest mnożony przez odpowiedni współczynnik α_i."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page130_formula1.png": [
+      "Zdjęcie przedstawia równania różniczkowe opisujące dynamiczną sytuację w systemie kontroli, gdzie x1(t) i x2(t) to zmienne stanu, u(t) to wektor sterujący, a y(t) jest wektorem wyjścia. Równania są zapisane w postaci macierzowej, gdzie A, B i C to odpowiednio macierze stanu, sterowania i wyjścia."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page17_formula1.png": [
+      "To jest równanie transferu systemu, przedstawione w postaci funkcji G(s), gdzie Y(s) to wyjście, U(s) to wejście, a G(s) to funkcja transferu. Równanie ma postać: G(s) = (2s^2 - 3s + 1) / (s^3 + 2s^2 + 4s - 1)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page116_formula1.png": [
+      "To jest równanie dla wektora stanu x(t) w czasie t, gdzie u(t) = 0 i początkowy stan x(0) jest określony jako [−10; 3]."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page17_formula2.png": [
+      "To jest równanie stanu systemu kontroli, przedstawione w postaci macierzowej. Równanie opisuje dynamikę trzech zmiennych stanowych (\\(x_1\\), \\(x_2\\), \\(x_3\\)) jako funkcję czasu, gdzie \\(u(t)\\) to wektor sterujący."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page3_formula1.png": [
+      "Równanie różniczkowe opisujące przepływ prądu w obwodzie RC, gdzie \\(\\dot{u}_c(t)\\) jest prędkością zmiany napięcia na kondensatorze, \\(u_c(t)\\) to napięcie na kondensatorze, \\(u(t)\\) to napięcie wejściowe, a \\(R\\) i \\(C\\) to odpowiednio rezystancja i pojemność."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page114_formula1.png": [
+      "To jest równanie stanu i wyjścia dla systemu kontroli automatycznej, przedstawione w postaci macierzowej. Równanie stanu opisuje dynamikę systemu, a równanie wyjścia pozwala na uzyskanie sygnału wyjściowego z sygnału wejściowego."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page26_formula6.png": [
+      "Równanie opisujące dynamikę systemu kontroli, gdzie y(t) to wyjście, z(t) to stan, u(t) to wejście, a C i D są macierzami kontrolnymi."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page94_formula5.png": [
+      "To jest równanie matematyczne przedstawiające postać macierzy i wektora w kontekście algorytmów matematycznych lub statystycznych, szczególnie w obszarze teorii sterowania lub analizy danych."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page10_formula5.png": [
+      "To równanie przedstawia zależność między macierzą fazową Φ(t) w czasie t, a jej wartością w częstotliwości s, wyrażoną przez transformację Laplace'a. Równanie to jest związane z teorią układów dynamicznych i matematyką kontynuacyjną."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page82_formula2.png": [
+      "Zdjęcie przedstawia równanie algebraiczne, które jest równoważne do iloczynu dwóch wyrażeń kwadratowych. Równanie ma postać: \\( s^2 + (k_1 - 5)s + (-4k_1 + 3k_2 - 2) = s^2 + 3s + 2 \\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page181_formula1.png": [
+      "Zdjęcie przedstawia przekształcenie funkcji G(s) do G(jω), gdzie G(s) = 4 / s(s+1)^2, a G(jω) jest rozłożone na realną część P(ω) i wyimaginarną Q(ω)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page138_formula1.png": [
+      "Zdjęcie przedstawia macierze A, B i C w postaci tablicy. Macierz A ma rozmiar 4x4, B jest wektorem 4x1, a C również wektorem 4x1."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page69_formula2.png": [
+      "To jest macierz W, która ma rozmiar (n+1) x n i zawiera elementy a_{n-1}, a_{n-2}, ..., a_1 oraz 1 na przekątnej i w ostatniej kolumnie."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page34_formula1.png": [
+      "Zdjęcie przedstawia wzór transferowy G(s) w postaci ułamka wymiernego, który jest rozłożony na sumę trzech ułamków prostych. Wzór zawiera wyrażenie Y(s)/U(s), gdzie Y(s) to wyjście układu, a U(s) to wejście. Wzór jest rozłożony na trzy ułamki: -2/(s+2), (4+j)/(s+1+j3), oraz (4-j)/(s+1-j3)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page117_formula1.png": [
+      "Zdjęcie przedstawia równanie wektorowe i warunek początkowy dla zadania dynamiki: \n- Wektor wejściowy \\( u(t) = 5 \\sin(t) \\),\n- Warunek początkowy wektora stanu \\( x(0) = \\begin{bmatrix} -10 \\\\ 3 \\end{bmatrix} \\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page59_formula1.png": [
+      "To są dwie macierze: A i B. Macierz A ma rozmiar 2x2, a macierz B ma rozmiar 2x1. Macierz A zawiera wartości [2, 3; 6, -1], a macierz B zawiera wartości [1; -2]."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page114_formula2.png": [
+      "To jest przykład mnożenia macierzy, gdzie macierz \\( C \\) jest równa \\([1 \\ 0]\\), a macierz \\( A \\) jest równa \\(\\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix}\\). Wynikem mnożenia jest macierz \\([0 \\ 1]\\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page51_formula4.png": [
+      "To równanie opisuje system dynamiczny w postaci równania różniczkowego pierwszego rzędu, gdzie \\(\\dot{\\mathbf{z}}(t)\\) jest wektorem prędkości, \\(\\overline{\\mathbf{A}}\\) jest macierzą z wartościami własnymi, \\(\\mathbf{z}(t)\\) to wektor stanu, a \\(\\mathbf{P}^{-1}\\) i \\(\\mathbf{x}(0)\\) to odpowiednio macierz przekształceń i wektor początkowy. Równanie def"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page162_formula4.png": [
+      "To jest matematyczna równość, która przedstawia wyrażenie w postaci ułamka złożonego z pierwiastka kwadratowego i ujemnego iloczynu komplexowego. Wyrażenie zawiera parametry B, π, M, α, a i j."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page138_formula2.png": [
+      "To jest macierz 4x4 o nazwie \\(\\mathbf{P}_o\\), zawierająca wartości liczbowe. Macierz ma postać:\n\n\\[\n\\begin{bmatrix}\n1 & 0 & 0 & 0 \\\\\n0 & 1 & 0 & 0 \\\\\n-2 & -2,5 & 2 & 0,5 \\\\\n5,5 & 4,375 & -5,5 & 0,125\n\\end{bmatrix}\n\\]"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page64_formula2.png": [
+      "Równanie stanów kontroli systemu dynamicznego, gdzie x(t) to wektor stanu, A to macierz dynamiki, B to macierz kontroli, u(t) to wektor wejścia, a t to czas."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page218_formula2.png": [
+      "Równanie różniczkowe pierwszego rzędu opisujące dynamiczną zależność między zmiennej e(t) i jej pochodną czasową, gdzie a jest stałą."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page58_formula1.png": [
+      "To jest matematyczna notacja, która oznacza, że wartość wektora \\(\\mathbf{P}_c\\) różni się od zera."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page132_formula2.png": [
+      "Zdjęcie przedstawia równanie matematyczne, które jest kwadratem sumy liczby s i 10, wynikającym w postaci s² + 20s + 100."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page121_formula4.png": [
+      "To jest macierz blokowa przedstawiająca równania dla systemu kontroli, gdzie \\(\\mathbf{x}'\\) i \\(\\widetilde{\\mathbf{x}}'\\) są wektorami stanu, \\(\\mathbf{A}\\), \\(\\mathbf{B}\\), \\(\\mathbf{K}\\), \\(\\mathbf{C}\\), oraz \\(\\mathbf{L}\\) są macierzami kontrolnymi i obserwacyjnymi."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page74_formula3.png": [
+      "To jest macierz K, która zawiera różnice między wartościami α dla różnych indeksów n, n-1, ..., 2, 1."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page75_formula1.png": [
+      "To jest wzór na funkcję przenikania systemu dynamicznego w dziedzinie częstotliwości, gdzie \\( G_P(s) \\) to funkcja przenikania, \\( Y(s) \\) to wyjście, a \\( U(s) \\) to wejście. Wzór jest zapisany w postaci ułamka niewłaściwego, gdzie mianownik i licznik są polinomiem stopnia n."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page26_formula2.png": [
+      "Równanie stanów systemu kontroli, gdzie y(t) to wyjście, x(t) to stan, u(t) to wejście, a C i D to macierze."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page173_formula1.png": [
+      "To jest wzór matematyczny, który definiuje funkcję G(jω₀) jako iloraz liczby -1 przez J(M₀). Wzór ten może być związany z analizą sygnałów w dziedzinie częstotliwości lub z mechaniką, gdzie J(M₀) może reprezentować moment obrotowy."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page57_formula3.png": [
+      "To jest macierz \\(\\mathbf{P}_C\\) zbudowana z kolumn, gdzie każda kolumna to potęga macierzy \\(\\mathbf{A}\\) pomnożona przez \\(\\mathbf{B}\\), zaczynając od \\(\\mathbf{B}\\) do \\(\\mathbf{A}^{n-1}\\mathbf{B}\\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page222_formula1.png": [
+      "Zdjęcie przedstawia równania opisujące zmianę prędkości orbitalnej (e) w zależności od wartości e1 i warunków dla e > 0 oraz e < 0."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page130_formula2.png": [
+      "Zdjęcie przedstawia równanie wektora z(t), który jest definiowany jako różnica między dwoma funkcjami czasowymi x1(t) i xr oraz drugą funkcją czasową x2(t). Wektor ten zależy od czasu t, gdzie xr jest wartością zadawaną."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page95_formula1.png": [
+      "To jest równanie matematyczne przedstawiające postać macierzy i wektora w kontekście algorytmów matematycznych lub statystycznych, szczególnie w obszarze teorii sterowania lub analizy danych. Równanie zawiera mnożenie i odwrotność macierzy oraz wektorów, co może być użyte do obliczenia parametrów modelu lub rozwiązań w problemach optymalizacyjnych."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page30_formula3.png": [
+      "Rozkład eksponenta macierzy A na serię Taylora."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page70_formula5.png": [
+      "To jest macierz trójdiagonału, gdzie na głównej diagonali znajdują się zera, a na drugiej i trzeciej diagonali od góry do dołu znajdują się jedynki. Na ostatniej linii znajdują się liczby \\(-a_n, -a_{n-1}, \\ldots, -a_1\\)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page169_formula4.png": [
+      "To jest matematyczna notacja przedstawiająca granicę funkcji J(M) dla M tendencyjnie do a, która równa się 0."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page163_formula1.png": [
+      "Zdjęcie przedstawia dwie funkcje J(M) w zależności od wartości M i a, z podziałem na dwa przypadki: dla |M| < a i dla |M| ≥ a. Funkcje zawierają wyrażenia z użyciem funkcji trygonometrycznych i pierwiastków kwadratowych."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page5_formula3.png": [
+      "To jest równanie Laplace'a dla sygnału X(s), który zależy od czasu. Równanie opisuje postać sygnału X(s) jako sumy dwóch składników: pierwszy to wartość początkowa x(0+) pomnożona przez (s-a)^(-1), drugi to integral U(s) pomnożony przez (s-a)^(-1)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page105_formula3.png": [
+      "Zdjęcie przedstawia rozwinięcie trzeciego stopnia funkcji s + 5, wyrażone w postaci sumy sześcianów i potęg mniejszych."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/wzory/k7_page162_formula2.png": [
+      "To jest wzór matematyczny, który przedstawia funkcję J(M) jako integral z funkcji f(M sin(φ)) w zakresie od 0 do 2π, podzielony przez jπM. Wzór zawiera również eksponentialną funkcję e^(-jφ)."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/figury/k7_page29_figure2.png": [
+      "To jest wyrażenie matematyczne przedstawiające transformację macierzy A w postać kanoniczną (diagonalną) poprzez przekształcenie ortogonalne P. Macierz A jest przekształcana do macierzy Λ, która ma na osiach głównych wartości własne λ1, λ2, ..., λn."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/figury/k7_page122_figure2.png": [
+      "To jest macierz blokowa przedstawiająca równania dla systemu kontroli, gdzie \\(\\mathbf{x}'\\) i \\(\\widetilde{\\mathbf{x}}'\\) są wektorami stanu, \\(\\mathbf{A}\\), \\(\\mathbf{B}\\), \\(\\mathbf{K}\\), \\(\\mathbf{L}\\), i \\(\\mathbf{C}\\) są macierzami kontrolnymi i obserwacyjnymi."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/figury/k7_page36_figure1.png": [
+      "To jest równanie transferu dla układu kontroli automatycznej, gdzie G(s) to funkcja transferu, Y(s) i U(s) to odpowiednio wyjście i wejście w przestrzeni częstotliwości, C i B to macierze, A to macierz stanów, I to macierz jednostkowa, a D to macierz stała."
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/figury/k7_page29_figure3.png": [
+      "Zdjęcie przedstawia dwie równości matematyczne:\n\n1. \\(\\bar{B} = P^{-1} B\\)\n2. \\(\\bar{C} = CP\\)\n\nGdzie:\n- \\(P\\) jest macierzą,\n- \\(B\\) i \\(C\\) to macierze,\n- \\(\\bar{B}\\) i \\(\\bar{C}\\) są wynikami transformacji macierzy \\(B\\) i \\(C\\) odpowiednio przez macierz \\(P\\) i jej odwrotność.\n\nTen opis może być użyty do stwor"
+    ]
+  },
+  {
+    "pgverse/rag_codes/subjects/sterowanie_analogowe/k7/detekcje/figury/k7_page151_figure2.png": [
+      "To jest graficzne przedstawienie pola magnetycznego wokół kwadratu, gdzie linie pola magnetycznego są prostopadłe do krawędzi kwadratu i mają różne wartości B (B, -B) dla różnych stron kwadratu."
+    ]
+  }
+]

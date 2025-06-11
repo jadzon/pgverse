@@ -1,0 +1,23 @@
+Transformacja stanu
+
+Związki pomiędzy realizacjami =
+<image/wzory/k/_page26_formula1.png>
+<image/wzory/k7_page26_formula2.png>
+
+wzanyii: „pageźć lormua8.png z(i) — „nowy wektor stanu” :
+OO e e
+
+z(t()=P'APz(t)+P Bu(t)
+<image/wzory/k/_page26_formula4.png>
+„Nowy” model stanowy:
+
+Ą -]
+<image/wzory/k7_page26_formula5.png>
+gdzie: B — P"B
+<image/wzory/k7_page26_formula6.png>
+C=CP
+
+ 
+
+POLITECHNIKA
+GDANSKA

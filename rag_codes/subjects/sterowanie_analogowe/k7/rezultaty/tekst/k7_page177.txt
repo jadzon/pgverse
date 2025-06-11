@@ -1,0 +1,22 @@
+Zadania - wyznaczanie parametrów cyklu granicznego
+
+ 
+
+Zadanie: Metodą funkcji opisującej sprawdzić występowanie drgań w układzie pokazanym na
+schemacie. Jeśli drgania wystąpią określić ich amplitudę i pulsację. Wykonać symulacje układu
+w Simulinku.
+
+eoblnsido eloy4un4
+
+<image/figury/k/_page177_figure2.png>
+
+Rozwiązanie: Wyznaczamy przebieg funkcji -1/J(M) i badamy punkt jej przecięcia z funkcją G(jw)
+na płaszczyźnie zespolonej
+
+<image/figury/k/_page177_figure1.pnwzory/k/_page177_formula1.png>
+
+ 
+
+ŚW z |Sf
+POLITECHNIKA i |
+GDANSKA

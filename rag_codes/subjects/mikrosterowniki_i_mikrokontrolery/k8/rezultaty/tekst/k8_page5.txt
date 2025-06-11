@@ -1,0 +1,36 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 7
+Możemy wyróżnić następujące źródła resetu:
++ reset po włączeniu zasilania,
++. reset wywołany zewnętrznym sygnałem RESET,
+
+» reset programowy wywołany przez wykonanie instrukcji RESET lub ustawienie odpowiedniego
+bita,
+
+« reset wywołany przez układ watchdog,
+
+« reset wywołany przez układy nadzorujące poprawność pracy mk (np. od układu wykrywającego
+spadek napięcia zasilania LVD (Low Voltage Detector) w ST72215G, BOR (Brown-out Reset) w
+PIC18F452).
+
+9. Budowa i zasada działania linii portów równoległych.
+
+(obsługa portów równoległych znajduje się w Tomie I materiałów do wykładu oraz w dokumentacjach do
+poszczególnych mikrokontrolerów)
+
+<image/figury/k8_page5_figure1.png>
+
+— Czytanie danych (pobieranie) podawanych z zewnątrz na wyprowadzenia portu, przez ten port polega
+na doprowadzeniu chwilowych stanów napięć na tych wyprowadzeniach (tzn. istniejących w
+momencie operacji czytania) do wewnętrznej szyny danych układu. Jest to realizowane przez
+uaktywnienie trójstanowego bufora sygnałem „czytanie”.
+
+- Natomiast operacja wpisania (wprowadzenia) danej do portu powoduje, że chwilowy stan
+wewnętrznej szyny danych zostaje zapamiętany w elementach zapamiętujących poszczególnych linii
+(najczęściej są nimi przerzutniki typu D) i wystawiany na wyprowadzeniach portu za pośrednictwem
+aktywnego bufora trójstanowego. Stan wyprowadzeń portu pozostaje niezmienny, dopóki nie nastąpi
+kolejna operacja wpisania do portu.
+
+— Linia portu równoległego jest linią wejściową, gdy bufor trójstanowy jest w stanie wysokiej
+impedancji. Uaktywnienie bufora trójstanowego sygnałem „kierunek”, ustawia linię jako wyjściową.
+Wówczas „I” na wyjściu przerzutnika odpowiada stan wysoki (około Vcc — napięcie zasilania mk) na
+wyprowadzeniu portu, a „O” stan niski (około O V).

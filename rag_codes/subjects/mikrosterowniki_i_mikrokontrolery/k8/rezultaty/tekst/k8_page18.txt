@@ -1,0 +1,42 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 20
+
+9. Metody zapisu i odczytu danych oraz techniki adresowania układów peryferyjnych
+z interfejsem SPI.
+Metody zapisu i odczytu danych:
+« W przypadku prostych układów (o jednym typie danych i niezależnym sygnale zapisu danych)
+możliwe jest przepełnienie zawartości odbiorczego rejestru szeregowego. Zatem w układzie po
+
+przesłaniu do niego dowolnej liczby bitów zostaje zapamiętane tylko N ostatnich bitów (N — długość
+danych dla danego układu) w rejestrze odbiorczym.
+
+« Przy bardziej złożonych układach wprowadza się do formatu danych bit startu. Czyli układ pomija
+kolejno przychodzące bity dopóki nie pojawi się pierwsza jedynka będąca bitem startu. Po niej dane
+są ważne.
+
+. Słowa sterujące są krotnością 8 bitów. Liczba wysyłanych bajtów zależy od typu rozkazu.
+
+Techniki adresowania układów peryferyjnych:
+
+«  Wydzieleniu jednej linii adresującej układ (CS- chip select). W prowadzenie tej linii w stan aktywny
+(najczęściej niski) jest jednoznaczne z zaadresowaniem układu do udziału w transmisji.
+
+.  Zawarciu adresu w przesyłanym ciągu danych. Gdy układ odbiorczy stwierdzi zgodność adresu, to
+odbiera dane zawarte po adresie. Np. stosuje się tę technikę w układach składających się z wielu
+niezależnie programowanych bloków, z których każdy ma swój własny adres.
+
+<image/figury/k8_page18_figure1.png>
+
+Wszystkie układy peryferyjne z interfejsem SPI składają się z
+
+. bloku interfejsu SPI służącego do komunikacji z układem (wysyłanie i odbiór danych, wysyłanie
+rozkazów i odbiór danych statusowych):
+
+. Rejestru szeregowego. do którego w takt sygnału zegarowego CLK są na linii wejście danych
+SDI szeregowo bit po bicie wprowadzane dane (najczęściej 8-bitowe — czyli bajty). Dane z układu
+szeregowo są wystawiane na linii wyjście danych SDO. Transmisja odbywa się, gdy na linii
+wyboru układu CS jest stan aktywny (najczęściej stan niski).
+
+„ Układ kontrolny steruje interfejsem SPI za pośrednictwem linii C$ oraz podłączonych do niego
+cyfrowych sygnałów sterujących, których występowanie (liczba i pełnione funkcje) zależą od
+zastosowania układu (warstwy aplikacji). Zarządza również komunikacją między rejestrem
+szeregowym a blokiem aplikacji.

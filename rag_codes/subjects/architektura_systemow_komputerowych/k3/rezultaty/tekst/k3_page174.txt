@@ -1,0 +1,58 @@
+164 8. Mechanizmy przyspieszające pracę komputerów
+
+pisanych w języku symbolicznym. Komputery takie nazwano komputerami z rozbudowaną
+listą instrukcji lub typu CISC (ang. complex instruction set computer). Liczba rozkazów
+w takich komputerach sięgała 200 (IBM 370), a nawet 300 (VAX 11) rozkazów. Różnią się
+one formatem i wykorzystywanymi trybami adresowania. Natomiast po przeprowadzeniu
+badań częstości występowania różnych rozkazów i różnych trybów adresowania, okazało
+się, że można wprowadzić pewną ich klasyfikację, np. pod względem częstości ich wy-
+stępowania. Są rozkazy powtarzające się w programach bardzo często, jak np. rozkazy
+przesłań, które stanowią ok. 33% wszystkich występujących rozkazów. Inne rozkazy, jak
+np. skoki (15%), rozkazy arytmetyczne i logiczne (15%), rozkazy porównań (10%) mają
+mniejszą częstotliwość występowania. Można także stwierdzić, że wiele rozkazów wy-
+stępuje w programach jeszcze rzadziej. Są to rozkazy mnożenia, dzielenia, alokacji stosu
+itp. Podobnie pośród trybów adresowania są jedne występujące częściej (rejestrowe
+pośrednie i rejestrowe bezpośrednie) i drugie występujące rzadziej (względne). Z drugiej
+strony, wyróżnić można rozkazy wykonywane w niewielkiej liczbie cykli maszynowych
+(szczególne znaczenie mają rozkazy jednocyklowe), czyli rozkazy trwające krótko.
+Przesłanki te nasunęły myśl budowania szybkich komputerów, które wyposażone byłyby
+w zestaw instrukcji zawierający tylko rozkazy trwające krótko i często powtarzające się
+w programach. Taka filozofia projektantów doprowadziła do powstania komputerów ze
+zredukowaną listą instrukcji typu RISC (ang. reduced instruction set computer). Charakte-
+ryzują się one nie tylko uboższym zestawem rozkazów, ale i rozkazy dobierane są według
+pewnych cech. Lista instrukcji komputerów RISC charakteryzuje się następującymi
+cechami:
+
+— dostęp do pamięci operacyjnej jest możliwy tylko rozkazami przesłań,
+
+— operandy wszystkich rozkazów znajdują się tylko w rejestrach procesora,
+
+—. stosowane są tylko rozkazy o stałym formacie (długości), co pozwala przyspieszać
+
+operację pobierania rozkazów,
+— stosowanie niewielkiej liczby trybów adresowania pozwala uprościć sterowanie
+procesorem.
+
+Architektura komputerów typu RISC odznacza się także cechami, które odróżniają ją od
+klasycznego rozwiązania von Neumana. Niektóre z nich to:
+
+1) architektura potokowa umożliwia skrócenie cyklu dostępu do pamięci, ponieważ
+różne bloki procesora jednocześnie wykonują różne zadania,
+
+2) układ sterowania procesora jest zwykle bardzo prosty, gdyż niewielka liczba
+rozkazów, stały ich format oraz proste tryby adresowania pozwalają na zmniejsze-
+nie pamięci mikroprogramów,
+
+3) rozdziela się obszary pamięci dla programów i dla danych stosując architekturę
+typu Harvard,
+
+4) ze względu na odpowiednio dużą liczbę rejestrów procesora stos jest realizowany
+sprzętowo, co przyspiesza wywoływanie i zagnieżdżanie podprogramów.
+
+Ta ostatnia cecha pozwala na zwiększenie efektywności procesora podczas implementacji
+języków wyższego rzędu. Jak wynika z rozdziału 7 efektywność translacji bardzo zależy
+od realizacji stosu, który jest przeznaczony do pamiętania aktualnych parametrów wywoły-
+wanych procedur i ich zmiennych lokalnych. Przeprowadzono badania wywołań procedur
+w językach wyższego rzędu i badania liczności ich parametrów i zmiennych. Najczęściej
+występujące procedury mają kilka (np. 5) parametrów wejściowych i kilka (np. 7) zmien-
+nych lokalnych, do przechowania których potrzeba kilkunastu rejestrów. Zakładając, że

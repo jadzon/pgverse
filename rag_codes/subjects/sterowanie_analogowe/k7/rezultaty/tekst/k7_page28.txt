@@ -1,0 +1,25 @@
+Transformacja stanu - diagonalizacja
+
+W przypadku, gdy A nie ma wielokrotnych wartości własnych można znaleźć
+takie przekształcenie P, że odpowiadająca mu A jest diagonalna, z
+wartościami własnymi na głównej przekątnej. Takie przekształcenie nazywamy
+diagonalizacją.
+
+Procedura:
+
+1. Znajdujemy wartości własne macierzy A, czyli pierwiastki równania:
+
+SMOUBJS 8|8poJN
+
+<image/wzory/k/_page28_formula1.png>
+2. Znajdujemy wektory własne vi dla każdej wartości własnej A,
+<image/wzory/k/_page28_formula2.png>
+
+3. Tworzymy macierz przekształcenia P z wektorów własnych
+
+<image/wzory/k/_page28_formula3.png>
+
+ 
+
+POLITECHNIKA
+GDANSKA

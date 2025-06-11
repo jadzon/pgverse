@@ -1,0 +1,52 @@
+62 4. Procesory
+
+ 
+
+Na rysunku 4.1 pokazano uproszczoną strukturę klasycznego procesora. Składa się on
+z trzech podstawowych podzespołów: bloku rejestrów, bloku arytmetyczno-logicznego
+i układu sterującego przebiegiem pracy. Blok rejestrów zawiera rejestry ogólnego przezna-
+czenia, tj. takie, które operator może dowolnie wykorzystywać, jak np. rejestr operacyjny
+(akumulator). Jak już wcześniej powiedziano w różnych komputerach może być różna
+ich liczba. W popularnym komputerze IBM PC jest ich 8 (8-bitowych). Jak widać na
+rysunku 4.1 w skład tego bloku nie zaliczono rejestrów specjalnego przeznaczenia. Są to:
+
+— rejestr rozkazów, do którego zapisywany jest kod operacji, którą ma wykonać
+
+procesor,
+— licznik rozkazów PC wraz z rejestrem AD adresującym pamięć,
+— rejestr znaczników (por. dalsza część opisu).
+
+Blok procesora nazywany będzie dalej blokiem CPU (ang. central processor unit). Przesła-
+nia informacji pomiędzy blokami procesora odbywają się poprzez połączenia, które tworzą
+tzw. magistralę (ang. bus) lub inaczej szynę. Taka struktura pozwala na jednoczesne
+przesłanie informacji tylko pomiędzy dwoma blokami. Na przykład jeśli wynik z wyjścia
+bloku ALU jest przesyłany do rejestrów, to w tym czasie nie można zapisywać lub
+odczytywać rejestrów RR lub PC. Przesłania pomiędzy różnymi blokami zachodzą
+sekwencyjnie. Za ich kolejność odpowiada układ sterowania. Należy tu zaznaczyć, że
+stosowane są także inne, niż magistrala, struktury połączeń, które umożliwiają jedno-
+czesne przesłania pomiędzy wieloma blokami. Problem ten przedstawiono nieco szerzej
+w rozdz. 8.
+
+<image/figury/k3_page72_figure1.png>
+
+Rysunek 4.2. Schemat blokowy komputera
+
+Podobnie połączenia procesora z pamięcią i z urządzeniami zewnętrznymi (rys. 4.2)
+mogą być realizowane przez magistralę. Jest to najczęściej spotykany sposób połączeń
+wewnątrz jednoprocesorowego komputera. W magistrali komputera można wyróżnić trzy
+grupy linii:
+
+— linie danych tworzące tzw. szynę danych,
+
+— linie adresowe tworzące tzw. szynę adresową,
+
+— linie sterujące tworzące tzw. szynę sterującą.
+
+Liczba linii każdej grupy jest różna w różnych komputerach. Liczba linii szyny danych
+jest na ogół równa długości słowa danego procesora (ewentualnie uzupełniona o bity
+detekcji lub korekcji błędów). W mikrokomputerach i minikomputerach wynosi ona 8 lub
+16, w większych komputerach jest wielokrotnością tych liczb. Liczba linii szyny adresowej
+zależy od pojemności pamięci współpracującej z danym procesorem i zwykle waha się
+pomiędzy 20 a 32. Wielkość ta wyznacza rozmiar licznika rozkazów i rejestru adresowego
+pamięci. Jeśli liczba linii szyny adresowej wynosi 20, to można zaadresować 2*" (nieco
+więcej niż milion) komórek pamięci. Liczba linii szyny sterującej to kilkanaście, a czasem

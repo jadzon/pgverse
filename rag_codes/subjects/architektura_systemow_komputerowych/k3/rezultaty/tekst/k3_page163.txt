@@ -1,0 +1,45 @@
+7.3. Systemy operacyjne 153
+7.3.3. ZARZĄDZANIE PAMIĘCIĄ
+
+Ze względu na ograniczoną pojemność pamięci operacyjnej rezydują w niej tylko te
+programy, które ustawiono w kolejkę programów gotowych i oczekujących. Pozostałe
+programy znajdują się w pamięci dyskowej i są z niej pobierane w miarę potrzeb.
+W pamięci operacyjnej powinien znajdować się co najmniej jeden proces w stanie goto-
+wości. Natomiast może się zdarzyć, że wszystkie programy będą oczekujące, gdyż zmusi
+ich do tego długi czas oczekiwania na urządzenia zewnętrzne. Wtedy powinna zostać
+przygotowana nowa kolejka procesów gotowych i w tym celu trzeba sięgnąć do pamięci
+dyskowej. Efektywność pracy komputera zależy bardzo od sposobu wymiany zawartości
+pamięci operacyjnej i dyskowej. Czynność ta jest nazywana wymianą zawartości
+(ang. swapping). Stosowane są dwie strategie wymiany: jedna tylko pod kontrolą systemu
+operacyjnego i druga pod kontrolą systemu operacyjnego, ale z możliwością ingerencji
+użytkownika. Pierwsza z nich jest realizowana w tzw. pamięci wirtualnej, a druga
+w tzw. segmentacji pamięci.
+
+PAMIĘĆ WIRTUALNA
+
+Pojęcie pamięci wirtualnej (pozornej) wprowadzono dla ułatwienia progamiście
+posługiwaniem się dużymi zbiorami. Chodzi o to, aby nie zajmować jego uwagi podziałem
+zbioru na część mieszczącą się w pamięci operacyjnej i na część którą umieszcza się
+w pamięci dyskowej. Podziałem takim zajmuje się sam komputer.
+
+Celem zwiększenia efektywności wymiany zawartości pamięci operacyjnej i dyskowej
+wprowadza się jeden z dwu sposobów przydziału obszaru pamięci operacyjnej danemu
+procesowi. Pierwszy nazywany jest podziałem pamięci (ang. partitioning), a drugi
+stronicowaniem pamięci (ang. paging).
+
+<image/tabele/k3_page163_table1.png>
+
+Podział pamięci polega na przydzieleniu każdemu procesowi spójnego obszaru
+pamięci operacyjnej. Stosowany jest podział stały (ang. fired-size partition) lub podział
+zmienny (ang. variable-size partition). W pierwszym przypadku pamięć operacyjna jest
+podzielona na niezmienne co do pojemności obszary. Na rysunku 7.6a pokazano taki
+podział pamięci. Trzeba zaznaczyć, że poszczególnym procesom przyporządkowuje się
+obszary o stałej wielkości (niezmienne), choć nie są one równe. Wymiana procesów
+pomiędzy pamięcią operacyjną a pamięcią dyskową polega na usuwaniu procesów z pa-
+mięci operacyjnej i zapisywaniu nowych. Nowy proces jest zapisywany do pamięci opera-
+cyjnej w taki sposób, aby zająć jak najmniejszy wolny obszar, który jest pozostawiony po
+procesach odesłanych do pamięci dyskowej. Taki sposób prowadzi jednak zawsze do tego,
+że część pamięci operacyjnej nie będzie wykorzystana. Pod tym względem bardziej
+efektywny jest podział zmienny.
+
+11 — Podstawy budowy : działania komputerów

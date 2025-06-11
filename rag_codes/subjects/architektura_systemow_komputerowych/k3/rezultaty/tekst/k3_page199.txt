@@ -1,0 +1,49 @@
+B.2. Pentium 189
+
+— JO ACCCCJCCCCLGGCCCNNNN
+
+<image/figury/k3_page199_figure1.png>
+
+Rysunek D.16. Architektura mikroprocesora PENTIUM
+
+Układy potokowania umożliwiają realizację dwóch 5-stopniowych potoków rozkazów.
+Rozwiązanie to umożliwia wykonywanie dwóch rozkazów jednocześnie (istnieją pewne
+ograniczenia) i dlatego w czasie jednego cyklu maszynowego otrzymuje się dwa wyniki.
+Potokowanie umożliwia jednoczesne:
+
+l) pobieranie rozkazów,
+
+2) dekodowanie rozkazów,
+
+3) obliczanie i generację adresów,
+
+4) wykonywanie rozkazów,
+
+5) przesłanie wyniku operacji i ewentualne modyfikowanie stanu procesora.
+
+Zmiennopozycyjna jednostka ALU ma 8-stopniowe potokowanie. Trzy pierwsze stopnie
+potoku są takie same jak już opisane, a pozostałe to:
+
+4) odczyt zawartości pamięci i rejestrów,
+
+5) konwersja formatu liczb zmiennopozycyjnych (z formatu przechowywanego
+
+w pamięci do formatu ALU),
+
+6) wykonanie rozkazu,
+
+7) zapisanie wyniku operacji,
+
+8) sygnalizacja błędu i ewentualne modyfikowanie stanu procesora.
+
+Pamięć kieszeniowa Pentium jest podzielona na dwie części po 8 KB każda. Jedna część
+jest przeznaczona dla danych a druga dla rozkazów. W pamięci kieszeniowej zastosowano
+zmodyfikowaną metodę skojarzeniową dla odwzorowania jej zawartości z zawartością
+pamięci operacyjnej. Pamięć jest podzielona na 128 linii po dwa bloki każda. Każdy blok
+zawiera 32 B oraz etykietę. Wymiana zawartości pamięci jest dokonywana według meto-
+dy LRU.
+
+Układ prognozowania adresów skoków wykorzystuje rejestr adresu skoku, w którym
+pamiętany jest adres ostatniego skoku. Algorytm prognozowania wykorzystuje fakt, że
+najczęściej w pętli powtarzany jest ten sam adres. Oczywiście wyjście z pętli powoduje,
+że przewidywanie będzie chybione i potok będzie zatrzymany i uruchamiany ponownie.

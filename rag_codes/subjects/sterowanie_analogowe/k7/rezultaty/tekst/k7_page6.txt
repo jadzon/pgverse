@@ -1,0 +1,33 @@
+Stan układu — układy wyższych rzędów
+
+ 
+
+Liniowy, stacjonarny układ MIMO możemy opisać za pomocą tzw. równań stanu. Zakładamy, że
+opisujemy układ rzędu n o m wejściach i p wyjściach
+
+<image/wzory/k/_page6_formula1.png>
+
+SMOLUB]S 8|8pOW
+
+<image/figury/k7_page6_figure1.png>
+<image/wzory/k/_page6_formula2.png>
+
+u(t) — wektor wymuszenia (m x 1)
+
+y(t) — wektory wyjścia (p x 1)
+
+x(t) — wektor stanu (n x 1)
+
+Rozmiary macierzy opisujących proces
+A — macierz procesu (n x n)
+
+B — macierz wejścia (n x m)
+
+C — macierz wyjścia (p x n)
+
+D — macierz transmisyjna (p x m)
+
+ 
+
+POLITECHNIKA
+GDANSKA

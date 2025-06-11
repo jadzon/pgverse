@@ -1,0 +1,49 @@
+142 7. Elementy oprogramowania komputerów
+
+wybierając tym samym miejsce w pamięci, gdzie znajdzie się wynik programu. Ponieważ
+następny rozkaz zwiększa ten adres o 1, to wynikiem działania programu będzie zbiór
+(wektor) w pamięci, którego początek znajdzie się w komórce, której adres programista
+umieści w bajcie 9 i 10 programu. Po inkrementacji adresu wektora następuje
+inkrementacja zawartości rejestru B, czyli przejście do następnego kroku. Rozkazy STR
+oraz oba rozkazy inkrementacji stanowią sekwencję czyszczącą. Rozkazy tworzące pętlę
+programową, to rozkaz SUB i JNZ. W programie użyto rozkazu SUB dla porównania
+zawartości rejestrów C i B, czyli określenia czy dokonano już 100 kroków, czy też nie.
+Można wykorzystać także rozkaz porównania CMP, który odejmuje dwa argumenty nie
+przesyłając nigdzie wyniku. Ponieważ założono, że blok ALU przesyła wyniki do rejestru
+akumulatora, to po wykonaniu tego rozkazu akumulator zawiera wartość C — B, natomiast
+rejestr znaczników na pozycji znacznika zera Z został ustawiony w zależności od aktu-
+alnego numeru kroku. Dla początkowych kroków Z ź£ 0 (różnica w akumulatorze nie jest
+równa 0) i wykonywać się będzie rozkaz warunkowy JNZ (ang. jump non zero). Dopiero
+w setnym kroku Z stanie się równe 1 i skok nie wykona się, a program przejdzie do
+rozkazu HALT i procesor zostanie zatrzymany.
+
+Podprogram umieszczono bezpośrednio za programem, choć zwykle umieszcza się go
+w innych miejscach. Początkiem podprogramu POLE jest rozkaz MOV, którego zadaniem
+jest zapewnienie właściwych danych do obliczeń. Ponieważ ostatnim rozkazem programu
+jest rozkaz SUB, to po jego zakończeniu w rejestrze akumulatora znajduje się różnica
+C - B. Wartość ta zostanie stracona, na początku bowiem podprogramu wpisuje się tam
+zawartość rejestru B. Po rozkazie MOV wykonywane jest ciało podprogramu, tj. rozkaz
+mnożenia MUL. Jest to rozkaz jednobajtowy, gdyż nadal obowiązuje założenie, że numery
+rejestrów z argumentami operacji znajdują się w samym kodzie rozkazu, a wynik jest
+przesyłany do akumulatora. Zakończenie podprogramu stanowi rozkaz RET, który w na-
+szym przykładzie jest jednobajtowy.
+
+Z sekwencji programu nie wynika, dlaczego rozkaz RET wymusi powrót do komórki
+8 pamięci, czyli do właściwego miejsca programu głównego. Dzieje się tak dlatego, że
+w czasie wykonywania rozkazu CALL wykonywał się skok do komórki 18 i jednocześnie
+aktualna wartość licznika rozkazów po inkrementacji (8 — adres następnego rozkazu)
+została zapamiętana (np. przesłana na stos). Rozkaz RET korzysta z zapamiętanego adresu
+jako adresu skoku do programu głównego, tj. do komórki 8 pamięci. Rozkaz RET jest
+wielocyklowy. Jeżeli procesor jest wyposażony w rejestr wskaźnika stosu, to pierwszy
+cykl jest cyklem pobrania kodu operacyjnego, następne cykle są cyklami odczytania
+zawartości wierzchołka stosu (jeżeli adres jest krótki to w szczególności może to być
+jeden cykl) celem załadowania licznika rozkazów i dopiero następny cykl jest cyklem
+pobrania następnego rozkazu (w naszym przykładzie rozkazu STA). Jeżeli natomiast
+procesor nie jest wyposażony we wskaźnik stosu, to cały opisany mechanizm należy
+zorganizować programowo.
+
+Opisany program jest przykładem uproszczonym i nie pokazuje dwóch ważnych
+mechanizmów: zagnieżdżania podprogramów i ich alokacji. Zagnieżdżanie podprogra-
+mów jest to wywoływanie podprogramów przez inne podprogramy. Stos jest mechanizmem
+stwarzającym możliwość zagnieżdżania, jeżeli każde wywołanie pociągać będzie
+zapamiętanie stanu procesora na stosie.

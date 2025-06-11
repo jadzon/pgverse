@@ -1,0 +1,33 @@
+3.2. Kody binarne i arytmetyka 53
+
+iuaktualnia się wartość dzielnej „spisując” następny w kolejności mniej znaczący bit.
+W pierwszym kroku naszego przykładu dzielnik był równy aktualnej dzielnej i dlatego
+jako wynik tego kroku przyjęto 1. W pozostałych dwóch krokach aktualna wartość dzielnej
+jest mniejsza od dzielnika i jako wynik kroków przyjęto 0. Wynikiem dzielenia jest liczba
+100 i reszta 000010.
+
+Realizacji takiego algorytmu można dokonać w układzie jak na rysunku 3.40, gdzie
+dla dzielnika przeznaczono rejestr M oraz dla dzielnej rejestr R. Ten ostatni musi być
+rejestrem przesuwającym w lewo. Zadaniem układu ALU jest tym razem porównanie
+liczb. W każdym kroku zawartość rejestru R jest przesuwana w lewo, a bit powstały
+w wyniku porównania w tym kroku jest zapisywany na najmniej znaczącą pozycję rejest-
+ru R. Po czterech krokach algorytmu w rejestrze RL znajduje się trzybitowa część całkowi-
+ta ilorazu, a w rejestrze RH jest reszta. W naszym przykładzie, w wyniku działania tego
+algorytmu otrzymamy iloraz 4 i resztę 2. Oczywiście znak ilorazu jest sumą mod 2
+znaków dzielnej i dzielnika. Stany rejestrów w kolejnych krokach pokazano na rysun-
+ku 3.49a, a sieć działań tego algorytmu pokazano na rysunku 3.49b.
+
+jury/k3_page63_figure1.png Ible1.png
+
+Rozpatrzona będzie teraz operacja dzielenia w zapisie Ul. Na rysunku 3.50
+przedstawiono dwa przykłady dzielenia dwóch liczb o różnych znakach (14 przez -3 oraz
+-14 przez 3). W każdym kroku algorytmu dokonuje się porównania odpowiednich bitów
+dzielnej z dzielnikiem. Porównania dokonuje się poprzez operację dodawania (w zasadzie
+jest to operacja odejmowania) ujemnego dzielnika i kontrolę znaku wyniku. Jeżeli wynik
+ma znak dzielnej, to jego wartość pozostaje w rejestrze, a na najmniej znaczącą pozycję
+rejestru R zapisuje się 1. Jeżeli wynik ma znak dzielnika, to przywraca się poprzednią
+zawartość rejestru R, a na najmniej znaczącą pozycję rejestru R zapisuje się 0. Po drugim
+kroku dzielenia +14 przez -3 w wyniku porównania otrzymano 1111. Ponieważ jest to zero
+w zapisie Ul, to wynik ma znak dzielnej i na najmniej znaczącą pozycję wpisano 1. Do
+dalszych kroków algorytmu przywrócono zawartość rejestru R na 0000, a po przesunięciu
+na 0001.

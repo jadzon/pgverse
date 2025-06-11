@@ -1,0 +1,54 @@
+116 6. Urządzenia zewnętrzne
+A...  „_„_„D.D.o0o0o/ó0.Yrządzenia zewnęjrzne
+
+— błąd transmisji, gdzie wykryto różnicę danych wysłanych i odebranych,
+— błąd zasilania, gdzie układ elektroniczny stwierdził brak napięcia zasilającego lub
+niewłaściwe warunki zasilania.
+
+Synchronizacja pracy procesora z wolnymi urządzeniami zewnętrznymi ma na celu dopusz-
+czenie możliwości współbieżnej pracy procesora i urządzeń zewnętrznych. Przykładowo
+drukowanie na wolnej drukarce wyników pomiarów temperatury w reaktorze atomowym
+nie może przerywać na długi czas procesu samego pomiaru. Dlatego po każdym zakoń-
+czeniu drukowania jednego wyniku drukarka zgłasza swoją gotowość do przyjęcia następ-
+nej informacji i wtedy procesor przerywa wykonywanie właściwego programu (pomiar
+temperatury) tylko na czas jej przesłania, a w czasie jej drukowania wykonuje dalej swój
+program. Przykład dotyczył specjalnego rodzaju pracy systemów komputerowych, tzw.
+systemów czasu rzeczywistego (ang. real-time system). Przykład ten nie oddaje w pełni
+zasadności synchronizacji. Ujawnia się ona dopiero w tzw. systemach wieloprogramo-
+wych, gdzie jednocześnie wykonuje się wiele programów i mogą one wszystkie żądać
+dostępu do urządzeń zewnętrznych. Dostępem tym steruje program stale rezydujący w pa-
+mięci komputera, tzw. system operacyjny. Będzie o nim mowa w następnym rozdziale,
+a tu zatrzymamy się bliżej na sposobach organizacji współpracy procesora z urządzeniami
+zewnętrznymi, a w szczególności na systemie przerwań.
+
+6.3. SYSTEMY PRZERWAŃ
+
+6.3.1. ZASADY OBSŁUGI PRZERWAŃ
+
+W komputerach pracuje zwykle wiele urządzeń zewnętrznych i każde z nich ma własny
+sterownik, którego jednym z zadań jest zgłaszanie procesorowi żądań przerwań. Procesor
+może wykrywać te zdarzenia na dwa sposoby:
+
+1) przez okresowe sprawdzanie stanów sterowników,
+
+2) przez odebranie sygnałów informujących o zdarzeniu.
+
+Pierwszy sposób jest nazywany programowym sposobem obsługi urządzeń wejścia-wyjścia
+i omówiono go w podrozdzale 6.3.2. Polega on na tym, że system operacyjny
+(por. rozdz. 7) co pewien czas, ustalony przez projektantów komputera, przerywa wykony-
+wanie programu i przechodzi do wykonywania programu sprawdzającego stany źródeł.
+Drugi sposób jest nazywany sprzętowym sposobem obsługi przerwań, gdyż procesor
+odbiera sygnał o powstałym zdarzeniu. Wadą pierwszego sposobu jest wydłużenie czasu
+pracy wykonywania programu, a wadą drugiego sposobu jest to, że komputer należy
+wyposażyć w odpowiednie układy realizujące ten proces. Sposób pierwszy jest stosowany
+w tanich i prostych komputerach, a sposób drugi w systemach złożonych i droższych.
+
+Są dwa najważniejsze zadania systemu przerwań:
+
+— rozpoznanie źródła przerwania,
+
+— zapewnienie odpowiedniej kolejności obsługi wielu urządzeń, które mogą jedno-
+cześnie żądać takiej obsługi.
+
+Sposoby realizacji tych zadań będą omówione kolejno: najpierw dla programowego syste-
+mu przerwań, a następnie dla sprzętowego.

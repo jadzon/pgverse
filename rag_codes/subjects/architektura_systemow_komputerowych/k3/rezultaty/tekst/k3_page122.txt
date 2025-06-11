@@ -1,0 +1,24 @@
+112 5. Pamięci
+
+a koniec znacznikiem EOT (ang. end of tape). Za znacznikiem BOT znajduje się nagłó-
+wek — preambuła — (ang. preamble), który składa się z jedynki i czterdziestu zer. Na
+końcu taśmy, przed znacznikiem EOT, są bity posłowia (ang. postamble), które składają
+się z czterdziestu zer i jedynki.
+
+W pamięciach taśmowych informację pisze się i czyta blokami, tzw. rekordami, które
+są zapisywane w kolejności przychodzenia do zapisu. Dlatego nie stosuje się adresowania
+miejsca na taśmie, a dostęp do danego rekordu odbywa się przez podanie jego numeru
+licząc od początku taśmy. Kolejne rekordy są oddzielone przerwami międzyblokowymi
+o długości ok. 20 mm. Pojemność taśmy zależy od liczby rekordów. Załóżmy długość
+rekordu 4 KB, czyli 51,2 mm przy gęstości zapisu 640 b/mm. Każdy rekord, wraz z przer-
+wą międzyblokową, zajmuje 71,2 mm, czyli na długości 750 m może ich być ok. 10000.
+Stąd pojemność takiej taśmy wynosi 40 MB.
+
+Pamięci z dostępem sekwencyjnym są budowane także jako pamięci taśmowe wy-
+korzystujące kasety taśmowe (ang. cartridge). Jest kilka standardów takich kaset. Jednym
+z nich jest standard stosowany w magnetowidach (ang. VCR — video casette recorder).
+Częściej jednak firmy produkujące takie urządzenia stosują swój standard. Przykładowa
+pamięć taśmowa PHD668 WangDAT model 1300 ma pojemność 1,3 GB na kasecie typu
+DAT, która mieści się w typowym napędzie o wielkości 5/4 cala. Kaseta zawiera taśmę
+o szerokości ok. 4 mm, którą napęd przesuwa z szybkością 8,15 mm/s. Gęstość zapisu
+wynosi ok. 2400 b/mm, a szybkość transmisji 183 KB/s (w trybie blokowym 4 MB/5).

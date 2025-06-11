@@ -1,0 +1,38 @@
+108 5. Pomięc
+
+stanowi tzw. sektor. Dlatego jeżeli schemat z rys. 5.19 ma przedstawiać pamięć dyskową,
+to trzeba uzupełnić go o jeszcze jeden licznik. Jest to licznik sektorów o długości równej
+liczbie sektorów. Licznik ten jest sterowany z wyjścia licznika słów. Dopiero zawartość
+tego licznika jest porównywana z zawartością rejestru adresowego.
+
+Zamiana postaci równoległej na szeregową odbywa się w wejściowym rejestrze prze-
+suwającym. Słowo wejściowe jest równolegle zapisywane do tego rejestru w momencie
+zgodności adresu z zawartością licznika słów. Następnie, zgodnie z taktami zegara, słowo
+wejściowe jest przesuwane w rejestrze i podawane na wejście pamięci. W czasie odczytu
+dokonywana jest zamiana postaci informacji z szeregowej na równoległą. Informacja
+z wyjścia pamięci jest szeregowo zapisywana do rejestru wyjściowego i jest w nim prze-
+suwana. W momencie zgodności adresu z licznikiem słów powstaje strob odczytu i słowo
+z tego rejestru może zostać odczytane równolegle. W przypadku pamięci dyskowych, gdy
+adresowany jest sektor, to ładowanie rejestru wejściowego i odczytywanie rejestru wyjścio-
+wego odbywa się zgodnie z przepełnieniem licznika bitów. Impuls przepełnienia tego
+licznika wskazuje na momenty czasu, kiedy rozpoczyna się odczyt lub zapis nowego
+słowa. Zadaniem układów współpracujących z pamięcią jest zapewnienie odpowiedniego
+podawania bloków słów na wejście pamięci lub odpowiednie odbieranie słów z jej wyjścia.
+Długość bloku jest równa długości sektora. Kolejne słowa muszą być podawane do rejestru
+wejściowego lub odbierane z rejestru wyjściowego z szybkością wyznaczoną przez zegar.
+
+5.3.2. PAMIĘCI DYSKOWE
+
+Pamięci dyskowe zbudowane są w ten sposób, że na cylindrycznych powierzchniach
+(talerz aluminiowy w przypadku dysków twardych i krążek folii poliestrowej w przypadku
+dysków elastycznych) jest naniesiona warstwa materiału magnetycznego, z którą współ-
+pracuje głowica odczytująco-zapisująca (rys. 5.20a). W czasie zapisu kierunek prądu
+w głowicy powoduje odpowiednie przemagnesowanie materiału, co z kolei, w czasie
+odczytu, powoduje zaindukowanie się siły elektromotorycznej w uzwojeniu głowicy. Przy-
+pisując stałej logicznej „,1” jeden kierunek prądu, a stałej „0” drugi, otrzymuje się ciąg
+przemagnesowań dla różnych wartości bitów, w odpowiednich miejscach materiału magne-
+tycznego. Ponieważ nośnik obraca się pod głowicą przez cały czas pracy pamięci, to
+kolejne przemagnesowania układają się w tzw. ścieżkę (ang. track). Podczas odczytu,
+w zależności od kierunku przemagnesowania, indukują się siły elektromagnetyczne
+
+<image/figury/k3_page118_figure1.png>

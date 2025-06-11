@@ -1,0 +1,24 @@
+Trajektoria fazowa — przykład 4 (układ z przekaźnikiem)
+
+ 
+
+Narysować trajektorie fazowe dla układu pokazanego na schemacie (8=/,
+r()=0, x,(0)=2, x>(t)=0). Wykreślić przebieg sygnału wyjściowego układu.
+
+<image/figury/k/_page208_figure1.png>
+
+[am0ZEJ] AuzAZOZSEŁd Epo]SIN
+
+Rozwiązanie:
+
+Zauważmy, że dla t=0* ruch układu będzie opisywała trajektoria (parabola)
+typu drugiego (e(0)<0 więc u(t)<0). Po uwzględnieniu warunku początkowego
+trajektoria ta dana jest równaniem:
+
+zory/k/_page208_formula1.png
+Przełączenie nastąpi, gdy uchyb będzie zerowy (wtedy x,=0, x,=-2 ).
+
+ 
+
+POLITECHNIKA
+GDANSKA

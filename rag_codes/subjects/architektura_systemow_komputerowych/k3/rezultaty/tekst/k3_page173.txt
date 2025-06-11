@@ -1,0 +1,38 @@
+8.3. Architektury potokowe 163
+
+— pobranie rozkazu,
+
+— dekodowanie rozkazu,
+— pobranie argumentu,
+— wykonanie rozkazu,
+— zapamiętanie wyniku.
+
+Załóżmy, że wszystkie cykle są tej samej długości, choć jest to uproszczenie (zwykle drugi
+i czwarty trwają krócej, gdyż nie wymagają dostępu do pamięci).
+
+figury/k3_page17
+figury/k3_page173_figure2.pr
+
+Rysunek 8.7. Porównanie techniki potokowej i równoległej
+
+Jak pokazano na rysunku 8.6a wynik wykonania każdego rozkazu w klasycznej archi-
+tekturze von Neumana otrzymywany jest co 5 cykli maszynowych. W architekturze
+potokowej zakładamy istnienie wielu (w naszym przykładzie pięciu) bloków działających
+niezależnie i mogących wykonywać współbieżnie różnie operacje danego cyklu. Każdy
+z 5 bloków czeka jednak na wynik uzyskany z innego bloku. W takiej architekturze wynik
+działania rozkazu można otrzymać co jeden cykl maszynowy (por. rys. 8.6b). W architek-
+turze równoległej zakłada się możliwość współbieżnego wykonywania operacji, ale zakłada
+się także dostępność argumentów dla każdego z 5 bloków w każdym cyklu maszynowym.
+Na rysunku 8.6c pokazano, że taka współbieżność pozwala na uzyskanie wyników 5 rozka-
+zów co każde 5 cykli maszynowych. Architektura potokowa polega zatem na rozbudowaniu
+systemu w taki sposób, aby uzyskać możliwość rozpoczęcia nowego rozkazu zanim za-
+kończy się wykonywanie poprzedniego. Architektura równoległa polega zaś na tym, aby
+rozkazy były wykonywane współbieżnie i całkowicie niezależnie, co jest równoznaczne
+z koniecznością zapewnienia dostępu do argumentów poszczególnych operacji.
+
+Na rysunku 8.7 zilustrowano różnicę pomiędzy obiema technikami.
+
+8.3.2. ARCHITEKTURY TYPU RISC
+
+Konstruktorzy klasycznych komputerów dążyli do wyposażenia ich procesorów w
+możliwie uniwersalny zestaw rozkazów, tak aby umożliwiał on optymalizację programów

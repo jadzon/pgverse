@@ -1,0 +1,50 @@
+7.3. Systemy operacyjne 155
+
+stronicowania umożliwiła zaprojektowanie tzw. pamięci wirtualnej. Jest to taka organizacja
+pamięci operacyjnej i pamięci dyskowej, która umożliwia wykonywanie programów, które
+wymagają większego obszaru pamięci niż wynosi pojemność pamięci operacyjnej. Innymi
+słowy programista nie jest ograniczony, przy projektowaniu programów, pojemnością
+pamięci operacyjnej. System operacyjny dzieli każdy proces na strony i część z nich
+umieszcza w pamięci operacyjnej, a część w pamięci dyskowej. Dopuszcza się, że część
+stron danego procesu będzie rezydować w pamięci operacyjnej, a część w pamięci
+dyskowej. Do pamięci operacyjnej są przepisywane tylko te strony, które w danym
+momencie są niezbędne. Jeśli nastąpi odwołanie do komórki pamięci, która w danym
+momencie znajduje się w pamięci dyskowej, to powstaje sytuacja wyjątkowa „błąd strony”
+(ang. page fault) i zainicjowanie programu wymiany strony w pamięci. Rozwiązanie
+problemu wyboru strony do usunięcia z pamięci jest problemem analogicznym do prob-
+lemu wymiany bloku w pamięci kieszeniowej. Pozwala to na stosowanie tych samych
+algorytmów wymiany, które opisano w rozdziale 5.
+
+SEGMENTACJA
+
+Omówione sposoby współpracy pamięci operacyjnej i pamięci dyskowej były całkowicie
+podporządkowane systemowi operacyjnemu. Natomiast w systemach komputerowych
+jednoprogramowych, przeznaczonych dla jednego użytkownika, często powstaje problem
+zwiększenia efektywności pracy systemu poprzez stworzenie użytkownikowi możliwości
+decydowania o tym, która część jego programu będzie w pamięci operacyjnej, a która
+w pamięci dyskowej. Możliwość taka powstaje, gdy programista może swój program
+podzielić na segmenty, których adresy bazowe będą przez niego ustalone. Adresy te
+umieszczono w odpowiednich rejestrach procesora. W takim przypadku liczba rejestrów
+decyduje o tym, na ile segmentów można dzielić programy. Segmenty mogą mieć stałą lub
+zmienną wielkość. Na przykład użytkownik może podzielić obszar pamięci na trzy części:
+część dla kodu rozkazowego, część dla danych i część przeznaczoną dla stosu.
+
+Zalety segmentacji są następujące:
+
+l) Uproszczenie zarządzania skomplikowanymi strukturami danych. Jeżeli użytkow-
+nik nie potrafi z góry określić potrzebnej pojemności pamięci operacyjnej, to
+pozostawia ten problem systemowi operacyjnemu, który będzie określać potrzebną
+wielkość segmentów.
+
+2) Możliwość dokonywania zmian i rekompilacji tylko części programu bez koniecz-
+ności przeładowywania, kompilacji i dołączania całego programu.
+
+3) Możliwość wykonywania różnych programów działających na tych samych da-
+nych i możliwość wykonywania tego samego programu na różnych danych.
+
+4) Ułatwienie ochrony zasobów, gdyż dla każdego programu istnieje dobrze określony
+obszar danych.
+
+5) Możliwość jednoczesnego wykorzystania mechanizmu segmentacji i stronicowa-
+nia, czyli wykorzystanie systemu operacyjnego przy jednoczesnym stworzeniu
+programiście możliwości dzielenia programu na segmenty.

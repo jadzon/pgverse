@@ -1,0 +1,35 @@
+3.1. Układy cyfrowe 29
+
+<image/figury/k3_page39_figure1.png>
+
+Rysunek 3.25. Matryca PLA dla 6 funkcji 4 zmiennych
+
+sumę „na drucie”. Załóżmy ponadto, że potrafimy programować takie matryce, tj. doko-
+nywać połączenia w dowolnym miejscu skrzyżowań lub też zostawiać te miejsca bez
+połączenia. Kropkami oznaczono połączenia w matrycach, które na rysunku 3.25 realizują
+dwie funkcje logiczne y, i y>:
+
+<image/wzory/k3_page39_formula1.png>
+
+W podanym przykładzie użyto tylko 3 zmiennych, choć w przykładowej matrycy
+można projektować funkcje 4 zmiennych. Górna matryca realizuje funkcję iloczynu.
+Istnieje 16 możliwych iloczynów 4 zmiennych, jednak zakłada się zwykle mniejszą liczbę
+kolumn w górnej matrycy, aby uzyskać duże wykorzystanie powierzchni przy danych
+rozmiarach matrycy. Dolna matryca jest matrycą realizującą funkcję sumy. Jej rozmiary,
+w naszym przykładzie, pozwalają na realizację 6 różnych funkcji. W przykładzie wy-
+korzystano jedynie dwa wiersze dla realizacji dwóch funkcji.
+
+Pokazany układ PLA jest nazywany matrycą AND-OR, ze względu na funkcje
+realizowane przez matryce (górną i dolną). Stosowane są także matryce OR-AND, NAND-
+-NAND i NOR-NOR. Celem umożliwienia projektowania układów sekwencyjnych
+(por. podrozdz. 3.2) często do takich matryc dodawane są jeszcze przerzutniki.
+
+3.1.3. UKŁADY SEKWENCYJNE
+
+Jak wcześniej już powiedziano istnieją takie układy cyfrowe, które pobudzane takim
+samym słowem wejściowym w różnych momentach czasu dają różne odpowiedzi. Zależy
+to od „stanu” układu, w jakim zastało go dane pobudzenie. Takie układy nazywane są
+układami sekwencyjnymi. Nazwa ta bierze się stąd, że dla danej sekwencji pobudzeń
+układ generuje odpowiednią sekwencję wyjściową. Mówimy, że układ sekwencyjny
+pamięta swoje stany. Projektuje się dwa rodzaje układów sekwencyjnych: synchroniczne
+i asynchroniczne. Układy synchroniczne zmieniają swój stan, i tym samym stan swoich

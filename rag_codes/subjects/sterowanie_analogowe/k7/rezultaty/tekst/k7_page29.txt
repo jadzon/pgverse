@@ -1,0 +1,17 @@
+Transformacja stanu - diagonalizacja
+
+W wyniku przekształcenia uzyskujemy:
+
+SMOLUB]S 8|8pOW
+
+<image/wzory/k/_page29_formula1.png>
+
+figury/k
+
+Równania stają się odsprzężone, dana zmienna stanu nie zależy od innej
+zmiennej stanu.
+
+ 
+
+POLITECHNIKA
+GDANSKA

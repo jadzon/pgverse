@@ -1,0 +1,25 @@
+<image/tabele/k3_page145_table1.png>
+
+tekstu ETX (ang. end of text). Cała transmisja jest kończona znakiem BCC (ang. block
+check character), który jest najczęściej bitem parzystości wzdłużnej, tj. bitem parzystości
+dla wszystkich bitów ramki. Znak BCC może być także słowem CRC.
+
+W tablicy 6.1 pokazano przykład transmisji znakowej. Ramka jest przeznaczona dla
+
+odbiornika o adresie 2, a długość pola tekstu wynosi 8 znaków. Transmitowane jest słowo
+„NAZWISKO”.
+
+6.6. BEZPOŚREDNIA TRANSMISJA DO PAMIĘCI
+
+Szybkie urządzenia zewnętrzne współpracują z komputerem na zasadzie bezpośredniego
+dostępu do pamięci DMA. Urządzenie żądające takiej transmisji zgłasza ten fakt do
+specjalnego sterownika. Sterownik ten spełnia funkcje nadzorujące transmisje pomiędzy
+urządzeniem zewnętrznym i pamięcią. Zadaniem takiego sterownika jest wysłanie, na
+żądanie urządzenia zewnętrznego, sygnału wstrzymania pracy procesora (HOLD) jako
+inicjalizacji transmisji. Procesor po przyjęciu tego sygnału generuje do sterownika sygnał
+potwierdzenia HLDA i odłącza się od magistrali (jego linie przechodzą w stan trzeci).
+W tym momencie sterownik transmisji DMA musi przejąć zarządzanie magistralą.
+Zarządzanie polega na generacji odpowiednich adresów i odpowiednich sygnałów steru-
+jących. Ponieważ w komputerze często jest wiele urządzeń, które mogą jednocześnie
+żądać transmisji DMA, to sterowniki DMA buduje się jako wielokanałowe, tj. wyposażone
+w wiele (np. 4) wejść żądań transmisji.

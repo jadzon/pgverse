@@ -1,0 +1,25 @@
+3.1. Układy cyfrowe 2]
+
+<image/figury/k3_page31_figure2.png>
+
+Rysunek 3.11. Iteracyjny układ komparatora wielobitowego
+
+Natomiast na rysunku 3.9a pokazano schemat dwubitowego komparatora. Jak widać
+z rysunku jest to układ o wiele bardziej złożony. Często układ taki przedstawia się na
+schematach w sposób przedstawiony na rysunku 3.9c. Na rysunku 3.9b pokazano tabelę
+prawdy opisującą działanie takiego układu.
+
+Pie:
+sę
+<image/_tabele/k3_page31_table1.png>
+ukł
+=
+
+<image/figury/k3_page31_figure1.png>
+
+Rysunek 3.12. Kaskadowy układ komparatora 16-bitowego
+
+Istnieje także inny sposób łączenia komparatorów pokazany na rysunku 3.12. Taki
+układ komparacji może pracować szybciej niż układ iteracyjny, gdyż przeniesienie nie
+propaguje się przez wszystkie stopnie. Natomiast wadą tego układu jest ograniczenie
+długości porównywanych słów do 16 bitów.

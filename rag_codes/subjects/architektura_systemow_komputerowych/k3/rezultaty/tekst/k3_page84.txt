@@ -1,0 +1,26 @@
+74 4. Procesory
+
+Na rysunku 4.9 pokazano ogólny schemat układu sterującego. W układzie tym zasad-
+niczą częścią jest pamięć PAM, która zwykle jest pamięcią stałą, tj. zapisywaną jedno-
+krotnie podczas uruchamiania systemu (por. rozdz. 5). Na wejściu układu jest umieszczony
+rejestr rozkazów RR, do którego jest zapisywany kod rozkazu, który ma być wykonany.
+Zawartość rejestru jest przekształcana w taki sposób, aby stanowiła adres pamięci PAM
+ina podstawie tego adresu można było odczytać z pamięci słowo sterujące. Ponieważ
+adres pamięci może pochodzić także z innych źródeł, to rejestr adresowy RA adresujący
+pamięć stałą jest zapisywany z 3 źródeł poprzez multiplekser. Źródłami tymi są: rejestr
+RR (wraz z dekoderem), zawartość pamięci (w odczytywanym słowie sterującym jest
+także pamiętany adres następnego mikrorozkazu) oraz układ następnika. Zawartość od-
+czytanej komórki pamięci jest zapisywana do rejestru wyjściowego RM, czyli do
+tzw. rejestru mikrooperacji. W pokazanym układzie odczytane słowo podzielone jest na
+trzy części: część adresową (wskazującą adres następnego mikrorozkazu), część operacyjną
+określającą wysterowanie procesora (WY ) oraz część określającą źródło następnego mikro-
+rozkazu (sterowanie multiplekserem). Istnieją także modyfikacje podanej struktury, gdyż
+można zaprojektować układy bez rejestru RA lub bez rejestru RM.
+
+Jeżeli procesor ma wykonać rozkaz w jednym kroku, to na jego wejścia sterujące
+podaje się tylko jedno słowo z układu sterującego. Natomiast jeśli rozkaz jest rozkazem
+złożonym, to układ sterowania musi wygenerować odpowiedni ciąg słów, który nazywa
+się mikroprogramem. Jednemu krokowi rozkazu odpowiada jedno słowo wyjściowe układu
+sterowania, czyli jeden mikrorozkaz wymuszający w układzie ALU odpowiednią mikro-
+
+<image/tabele/k3_page84_table1.png>

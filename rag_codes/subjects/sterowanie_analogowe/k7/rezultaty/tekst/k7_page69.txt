@@ -1,0 +1,24 @@
+Transformacja modelu stanowego do postaci
+kanonicznej sterowalnej
+
+Zakładamy, że układ dany modelem stanowym posiada jedno wejście oraz, że
+jest on sterowalny:
+
+ 
+
+<image/wzory/k/_page69_formula1.png>
+W tym przypadku macierz sterowalności P. będzie kwadratowa oraz
+
+odwracalna (jej wyznacznik będzie różny od zera). Macierz transformacji
+będzie dana wzorem:
+
+SMOUBJS 8|8poJN
+
+<image/wzory/k/_page69_formula2.png>
+
+<image/wzory/k/_page69_formula3.png>
+
+ 
+
+POLITECHNIKA
+GDAŃSKA

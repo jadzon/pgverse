@@ -1,0 +1,16 @@
+Zadanie
+
+ 
+
+Wyznaczyć przebieg sygnału wyjściowego dla układu z podwójnym
+całkowaniem i przekaźnikiem ze strefą nieczułości. r(t)=0, a=4; B=2; x1(0)=0;
+x2(0)=1. Wykreślić trajektorie fazowe korzystając z symulacji.
+
+<image/figury/k/_page228_figure1.png>
+
+[am0ZEJ] AuzAZOZSEŁd Epo]SIN
+
+ 
+
+POLITECHNIKA
+GDANSKA

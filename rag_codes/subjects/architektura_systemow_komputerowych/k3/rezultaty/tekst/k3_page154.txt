@@ -1,0 +1,60 @@
+144 7. Elementy oprogramowania komputerów
+
+waniem w języku symbolicznym (języku asemblera). Reguły tworzenia języka dla różnych
+komputerów mają pewne wspólne cechy. Podstawowym elementem takiego programu jest
+wiersz (linia). Każdy wiersz składa się z trzech wydzielonych części zwanych polami:
+
+— pola etykiety (ang. label field),
+
+— pola rozkazu (ang. instruction field),
+
+— pola komentarza (ang. comment field).
+
+Pole etykiety może być puste lub może zawierać adres symboliczny ułatwiający pisanie
+programu. Adres symboliczny stosuje się w programie w tych miejscach, gdzie programista
+nie jest w stanie określić właściwego adresu. Ma to miejsce najczęściej przy rozkazach
+skoków. Jako adresu symbolicznego używa się zwykle ciągu trzech (lub więcej) znaków
+alfanumerycznych, przy czym zakłada się zwykle, że pierwszy znak jest literą.
+
+Pole rozkazu wskazuje rodzaj operacji i jej argumenty. W zależności od typu rozkazu
+postać tego pola może być różna.
+
+l) Jeśli rozkaz jest bezargumentowy, to w danym polu występuje jedynie mnemonik
+tego rozkazu.
+
+2) Jeśli rozkaz jest jednoargumentowy, to po mnemoniku określającym kod rozkazu
+następuje odstęp (spacja), a następnie wskazywany jest argument. Mogą zajść trzy
+przypadki, w zależności od zastosowanego trybu adresowania:
+
+— jeśli rozkaz jest w trybie natychmiastowym, to po kodzie rozkazu powinien
+zostać podany argument,
+
+— jeśli rozkaz jest w trybie rejestrowym lub rejestrowym pośrednim, to po
+kodzie rozkazu powinna zostać podana nazwa (lub numer) rejestru,
+
+— jeśli rozkaz jest w trybie bezpośrednim, pośrednim lub złożonym, to po
+kodzie rozkazu powinien zostać podany adres argumentu (adres symboliczny).
+
+3) Jeśli rozkaz jest dwuargumentowy, to po kodzie rozkazu podawane są kolejno
+adresy jego argumentów. Na przykład, dla rozkazu przesłania, kolejność może
+oznaczać, że jako pierwszy występuje adres źródła, a drugi adres przeznaczenia.
+
+Pole komentarza programista może wykorzystać do opisu celowości użycia danego roz-
+kazu. Komentarz w danym wierszu jest wpisywany po specjalnym znaku (np. /), który
+służy do poinformowania programu tłumaczącego, że dalsze znaki nie podlegają translacji.
+
+Poniżej pokazano przykładowy wiersz programu zawierający rozkaz oznaczony
+etykietą ABC. Rozkaz ten jest umieszczony w komórce pamięci o adresie ABC i wykonuje
+przesłanie pomiędzy komórką pamięci o adresie symbolicznym ADR a rejestrem A pro-
+cesora:
+
+<image/wzory/k3_page154_formula1.png>
+
+ejestru A
+
+Proces translacji, czyli tłumaczenia ciągu rozkazów napisanych w języku symbolicz-
+nym na binarny kod maszynowy jest wykonywane przez translator, czyli program tłuma-
+czący w tym przypadku zwany asemblerem (ang. assembler). Programista zapisując
+program w języku symbolicznym ma do dyspozycji także pewne rozkazy, sterujące pro-
+cesem asemblacji, zwane pseudorozkazami (ang. pseudocommand). Przykładowe pseudo-
+rozkazy to:

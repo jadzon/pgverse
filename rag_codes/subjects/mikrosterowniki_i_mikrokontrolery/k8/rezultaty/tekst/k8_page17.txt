@@ -1,0 +1,37 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 19
+
+7. Tryby pracy układów SPLD standardu GALI6V8 oraz ich ograniczenia
+projektowe.
+
+. W trybie rejestrowym piny 1 i 11 są stale skonfigurowane odpowiednio jako zegar CLK i wejście
+OE. Nie mogą być one dedykowanymi wejściami.
+
+. W trybie złożonym piny I i 11 stają się dedykowanymi wejściami i używają ścieżek sprzężenia
+zwrotnego (feedback paths) odpowiednio pinów 19 i 12. Z tego powodu piny 19 i 12 nie mają opcji
+sprzężenia w tym trybie, są wyłącznie wyjściami.
+
+« W trybie prostym wszystkie ścieżki sprzężenia zwrotnego pinów wyjściowych są poprowadzone
+przez przyległe piny. Z tego powodu dwa wewnętrzne piny (15 i 16) nie mają opcji sprzężenia
+zwrotnego i są zawsze skonfigurowane jako dedykowane kombinacyjne wyjścia.
+
+8. Schemat blokowy architektury układów CPLD np. XC9500 oraz funkcje bloków
+zamieszczonych na tym schemacie.
+
+JT/
+
+<image/figury/k8_page17_figure1.png>
+
+Architektura układów rodziny XC9500
+
+« JTAG pozwala nie tylko na testowanie zgodnie ze standardem IEEE 1149.1, ale również i
+programowanie układów zamontowanych już w systemie.
+
+„ Bloki IOB między innymi buforują sygnały wejściowe i wyjściowe z układu oraz zapewniają
+odpowiednie parametry elektryczne zacisków.
+
+. Każdy blok funkcyjny składa się z 18 niezależnych makrokomórek, z których każda może
+realizować funkcję kombinacyjną bądź rejestrową.
+
+. ' Matryca przełączająca dostarcza sygnały z bloków IOB i FB do wejść bloków FB. Za pomocą
+matrycy użytkownik wybiera sygnały, które mają dochodzić do danego bloku FB. Dodatkowo
+realizuje ona iloczyn logiczny na drucie co zwiększa funkcjonalność całego układu.

@@ -1,0 +1,41 @@
+Problem śledzenia wartości zadanej
+
+Roz
+
+<image/wzory/k/_page103_formula1.png>
+
+a
+o
+
+of
+O
+D
+
+=
+0
+=
+O
+=
+o
+
+<image/wzory/k/_page103_formula2.png>
+
+Sprawdzamy możliwość zastosowania sprzężenia
+
+U „(s 20
+G(s )=—"— Ua(5) )_
+U,(s) s*+6,5s+30
+Wyznaczone
+<image/wzory/k7_page103_formula3.png>
+
+rank(P.)=2
+Warunki spełnione!
+
+ 
+
+ 
+
+ 
+
+POLITECHNIKA
+GDANSKA

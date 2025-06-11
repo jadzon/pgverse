@@ -1,0 +1,45 @@
+7.3. Systemy operacyjne 15]
+
+— wykorzystanie czasu pracy procesora,
+— przepustowość komputera,
+
+— czas obsługi procesu,
+
+— czas oczekiwania,
+
+— czas odpowiedzi.
+
+Wykorzystanie czasu pracy procesora jest istotnym parametrem w przypadku, gdy cena
+procesora jest wysoka. Zwykle parametr ten mierzony jest w procentach i wynosi od 40 do
+90 procent. Przepustowość jest parametrem wskazującym na liczbę procesów jaka jest
+wykonywana w jednostce czasu i wskazuje na czasochłonność procesów oczekujących.
+Czas obsługi procesu jest ważnym parametrem z punktu widzenia pojedynczego procesu,
+ponieważ wskazuje na całkowity czas jaki upływa od momentu ustawienia procesu w ko-
+lejkę, aż do momentu zakończenia wykonywania tego procesu. Czas oczekiwania jest
+parametrem wskazującym na to ile czasu upływa od momentu ustawienia procesu
+
+<image/tabele/k3_page161_table1.png>
+
+Rysunek 7.4. Działanie algorytmów szeregowania: a) FCFS, b) SJF, c) Round-Robin
+
+w kolejkę, aż do momentu rozpoczęcia wykonywania tego procesu. Czas odpowiedzi jest
+to czas jaki upływa od momentu ustawienia procesu w kolejkę, aż do ukazania się
+odpowiedzi na wyjściu komputera. Parametr ten odgrywa szczególną rolę w systemach
+interakcyjnych.
+
+Spośród wielu stosowanych algorytmów tutaj przedstawiono trzy algorytmy szeregowania:
+1) algorytm wyboru najdłużej oczekującego procesu FCFS,
+2) algorytm wyboru najkrócej wykonywanego procesu SJF,
+3) algorytm Round-Robin.
+
+ALGORYTM FCFS
+
+Algorytm FCFS (ang. first-come-first-served) polega na wyborze tego procesu, który usta-
+wiono w kolejkę najdawniej. Na rysunku 7.4a pokazano przykładowe trzy procesy
+o różnych czasach trwania mierzonych w umownych jednostkach czasu: są to odpowiednio
+24, 3 i 3 jednostki. Kolejność procesów jest na rysunku 7.4a od lewej do prawej. Średni
+czas wykonania trzech programów «wynosi (24 + 27 + 30)/3 = 27. Czas ten ulegnie zmia-
+nie, gdy zmieni się kolejność ustawienia procesów. Załóżmy, że pierwszym będzie proces 2,
+drugim 3 i ostatnim 1. Wówczas średni czas wykonania będzie wynosił (3 + 6 + 30)/3 = 13,
+a więc będzie ponad dwukrotnie mniejszy. Wadą algorytmu FCFS jest to, że średni czas
+wykonania programów jest zmienny w funkcji kolejności procesów.

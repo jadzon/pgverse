@@ -1,0 +1,21 @@
+Stabilność
+
+ 
+
+Rozważmy typowy schemat układu sterowania ze sprzężeniem zwrotnym:
+
+SMOUBJS 8|8pOJN
+
+<image/figury/k/_page44_figure1.png>
+
+Totalna (wewnętrzna) stabilność tego układu wymaga, aby wszystkie
+występujące w nim sygnały były ograniczone, jeśli sygnały wejściowe są
+ograniczone.
+
+Wszystkie występujące w układzie transmitancje muszą więc być stabilne w
+sensie BIBO.
+
+ 
+
+POLITECHNIKA
+GDANSKA

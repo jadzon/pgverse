@@ -1,0 +1,35 @@
+6.3. Systemy przerwań 12]
+
+<image/figury/k3_page131_figure2.png>
+
+Rysunek 6.2. Łańcuchowy układ przerwań i pierwszy sterownik w łańcuchu
+
+W zależności od tego czy układ przerwań jest zaprojektowany jako jednopoziomowy
+czy jako wielopoziomowy, układ zgłoszenia przerwań blokuje lub nie cały łańcuch. Jeśli
+układ jest jednopoziomowy, to układ zgłoszenia przerwań wysyła 0 na wejście łańcucha
+itym samym nie dopuszcza do dalszych zgłoszeń. Jeśli układ jest wielopoziomowy, to
+układ zgłoszenia przerwań wysyła 1 i sterowniki umieszczone bliżej tego układu mogą
+zgłosić przerwanie w czasie obsługi już zgłoszonego przerwania. W takim przypadku, po
+potwierdzeniu przyjęcia przerwania przez procesor, przerwany zostanie podprogram
+obsługi pierwotnie zgłoszonego przerwania i zostaje wywołany podprogram obsługi
+przerwania o wyższym priorytecie. Po zakończeniu wykonywania tego podprogramu
+system powraca do dokończenia poprzednio rozpoczętego podprogramu obsługi urządzenia
+o niższym priorytecie. Jeśli układ przerwań jest wyposażony w system maskowania, to
+sterownik musi także odczytać bit maski M.
+
+Na rysunku 6.2 pokazano uproszczony sposób wykorzystania bitu M. Jeśli dane
+urządzenie ma zostać zamaskowane, to należy ustawić bit maski M na 0. Powoduje to
+blokadę sygnału IRQ (przerzutnik nie zostanie zapalony) oraz dezaktywację dalszych
+stopni łańcucha. W pokazanym układzie zamaskowanie danego sterownika powoduje
+zablokowanie przyjmowania zgłoszeń przerwań od urządzeń o niższych priorytetach.
+
+Na rysunku 6.3 pokazano układ przerwań z koderem priorytetowym. Układ ten
+(rys. 6.1b) rejestruje fakt zgłoszenia przerwania, a następnie sam znajduje, koduje i wysyła
+na magistralę numer urządzenia o najwyższym priorytecie. Sygnały żądań przerwań l,
+przychodzące ze sterowników są podawane na wejścia układu dekodera priorytetowego
+
+<image/figury/k3_page131_figure1.png>
+
+Rysunek 6.3. Układ przerwań z koderem priorytetów
+
+9 — Podstawy budowy i działania komputerów

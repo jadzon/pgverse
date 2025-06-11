@@ -1,0 +1,50 @@
+2 1. Wprowadzenie
+
+Natomiast dziedzinę wiedzy zajmującą się budową i wykorzystywaniem komputerów
+nazwano informatyką. W krajach anglosaskich nosi ona nazwę computer science lub
+computer engineering. Za twórców tej nauki uważa się Amerykanina Johna von Neumana
+i Anglika Alana Turinga. Niezależnie od siebie podali oni dwie różne koncepcje budowy
+maszyn obliczeniowych, automatycznie wykonujących wcześniej zadany program. W reali-
+zacjach technicznych powszechnie przyjęła się koncepcja von Neumana i można stwier-
+dzić, że znakomita większość budowanych dotąd komputerów wykorzystywała podaną
+przez niego architekturę. Architektura oznacza koncepcję działania, a szerszą definicję
+tego pojęcia można znaleźć na końcu niniejszego rozdziału.
+
+Pierwsze komputery budowano na skalę przemysłową już w latach czterdziestych.
+Powstawały one w pojedynczych egzemplarzach i dlatego były bardzo drogie. Były to
+komputery lampowe (zbudowane z lamp elektronowych) zwane komputerami pierwszej
+generacji. Wykorzystywanie ich było utrudnione, gdyż jedynym językiem programowania
+był tzw. język maszynowy. Program i dane były wprowadzane do pamięci w postaci zer
+i jedynek.
+
+W roku 1949 wynaleziono tranzystor, który bardzo szybko znalazł zastosowanie
+w komputerach. Dlatego lata pięćdziesiąte, to lata drugiej generacji komputerów — kom-
+puterów tranzystorowych. Technologia ta umożliwiała wydłużenie serii produkowanych
+maszyn, co pozwoliło obniżyć ich cenę. Wprowadzono także translatory, czyli programy
+tłumaczące język używany przez programistów na język maszynowy. Zadaniem transla-
+torów było ułatwienie pracy programistom przy pisaniu programów. Ułatwienie polegało
+na wprowadzeniu języków programowania wyższego poziomu niż język maszynowy.
+Powstały języki asemblerowe, w których zero-jedynkowe kody instrukcji maszynowych
+zastąpiono kodami mnemonicznymi. Na przykład zero-jedynkowy kod maszynowy ope-
+racji dodawania zastąpiono literami ADD, co w języku angielskim oznacza dodawanie.
+Zadaniem translatora było zamienienie ciągu 3 liter ADD na odpowiednie słowo zero-
+-jedynkowe kodu maszynowego. W drugiej generacji komputerów ich pamięci główne
+(czyli tzw. pamięci operacyjne) realizowane były jako pamięci ferrytowe, tzn. budowane
+na magnetycznych rdzeniach toroidalnych. Pamięciami pomocniczymi były pamięci
+bębnowe, a pamięciami zewnętrznymi pamięci na taśmach magnetycznych (w różnych
+odmianach stosowane do dzisiaj). Pamięci pomocnicze i pamięci zewnętrzne nazwano
+pamięciami masowymi ze względu na możliwość zapamiętywania dużej ilości informacji.
+Wprowadzanie programów i danych odbywało się najczęściej poprzez taśmę papierową.
+Komputery były wyposażane w bardzo zawodne i wolne urządzenia wejściowe i wyjściowe
+jakimi były czytniki i perforatory taśmy papierowej. Stosowano także dalekopisy jako
+urządzenia operatorskie, a wyniki drukowano na drukarkach. Koszt takich komputerów
+wynosił setki tysięcy dolarów. Największą część tego kosztu stanowił koszt montażu.
+Typowy komputer składał się z dziesiątek tysięcy tranzystorów i z setek tysięcy rezystorów
+i kondensatorów. Połączenie tych elementów ze sobą było wykonywane ręcznie, wymagało
+żmudnego sprawdzania i nie pozwalało na osiągnięcie dużej niezawodności. Zmuszało to
+konstruktorów do poszukiwania innych rozwiązań. Poszukiwania te doprowadziły techno-
+logów do opracowania układów scalonych.
+
+Trzecia generacja komputerów powstała w połowie lat sześćdziesiątych kiedy zaczęto
+stosować układy scalone tzw. małej skali integracji, tj. układy SSI (ang. small scale
+integration) i średniej skali integracji, tj. układy MSI (ang. medium scale integration).

@@ -1,0 +1,41 @@
+182 Dodatek A
+
+sygnałów wyjściowych. Istnieją jednak układy, dla których stan wyjść zależy nie tylko od
+stanu wejść, ale i od stanu samego układu, zwanego stanem wewnętrznym. Takie układy
+będziemy nazywali układami sekwencyjnym albo automatami sekwencyjnymi.
+
+Automat cakuencvinv nnienia cie niatka:
+
+<image/wzory/k3_page192_formula1.png>
+
+gdzie S jest zoiorem stanow wewnętrznycn automaru, o jest runKcją przejsc automatu,
+czyli funkcją, która określa zmiany stanów automatu wszystkich wzbudzeń, a A jest
+funkcją wyjść automatu, czyli stanom automatu i danym wzbudzeniom przyporządkowuje
+sygnały wyjściowe. Taki automat nosi nazwę automatu Mealy'ego w odróżnieniu od
+automatu Moore'a, dla którego funkcja wyjść A jest określona jako A : S > Y. W tym
+ostatnim przypadku sygnały wyjściowe są uzależnione jedynie od stanów automatu.
+Automaty Moore'a i Mealy'ego są równoważne, jeśli dla każdej sekwencji wzbudzeń
+generują taką samą sekwencję wyjściową. Na ogół automat Moore'a ma więcej stanów niż
+automat Mealy'ego.
+
+Załóżmy dwustanowy 4+S,,S,;) automat o czterech wzbudzeniach X = X, X,, X,, X,),
+dwóch stanach sygnałów wyjściowych Y = £Y,, Y,) oraz funkcjach 0 i A określonych
+następująco:
+
+<image/wzory/k3_page192_formula3.png>
+ry/k3_page192_formula2.png
+
+Jest to automat sekwencyjny typu Moore'a. Przy projektowaniu automatu wygodnie
+jest zamienić opis algebraiczny na opis graficzny. Jednym z bardzo powszechnie
+stosowanych opisów jest tzw.tablica przejść i wyjść automatu. W tablicy D.5
+przedstawiono tablicę przejść i wyjść zadanego automatu. Tablica przejść ma dwa wiersze
+(dwa stany automatu) i cztery kolumny (cztery różne wzbudzenia). Ponieważ jest to
+automat Moore'a, to tablica wyjść jest jednokolumnowa. Tablica wyjść automatu Mealy'ego
+miałaby cztery kolumny.
+
+Podczas projektowania automatu sekwencyjnego tablicę przejść i wyjść należy
+zakodować binarnie. Przyjmując, że S,=0, S,=l1, Y,=l, Y,=0, X, =, X,=01,
+X,=10, X,=11 otrzymamy zakodowaną tablicę przejść i wyjść przedstawioną w
+tablicy D.6. Należy zwrócić uwagę, że kolumny tablicy przejść zakodowano w kodzie
+
+<image/tabele/k3_page192_table1.png>

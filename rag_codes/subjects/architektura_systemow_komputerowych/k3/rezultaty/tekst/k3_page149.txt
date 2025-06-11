@@ -1,0 +1,44 @@
+ELEMENTY OPROGRAMOWANIA |.
+KOMPUTERÓW | /
+
+ 
+
+7.1. WYWOŁYWANIE PODPROGRAMÓW
+
+Przy omawianiu systemów przerwań często była mowa o wywoływaniu podprogramów.
+Podobnie programista projektując program czasami staje przed problemem, że pewne
+operacje (lub ciągi operacji) mają powtarzać się w wielu miejscach programu. Wówczas
+program staje się niepotrzebnie długi i skomplikowany. Aby efektywnie wykorzystać
+możliwości programowania komputerów wprowadzono mechanizm podprogramów
+(ang. subroutines). Jest to ciąg operacji zrealizowany w postaci oddzielnego programu tak
+skonstruowany, aby w odpowiednich miejscach programu głównego, zamiast wpisywania
+ciągu tych operacji, można było zapisać jedynie odwołanie do podprogramu. Taka kon-
+strukcja pozwala programiście napisać program składający się z dwóch części: programu
+głównego oraz podprogramów. W ogólnym przypadku podprogramów dołączanych do
+programu głównego może być wiele. W niektórych językach wyższego rzędu (np. FOR-
+TRAN) wyróżnia się dwie klasy podprogramów: jedną zwaną funkcją i drugą zwaną
+procedurą.
+
+Funkcją nazywa się taki podprogram, który jest wywoływany przez jego nazwę i który
+dla zmiennych wejściowych oblicza wartość wyjściową. Wartość ta jest następnie wy-
+korzystvwana nrzez nraoram ołównv Na nrzvbład wurażenia
+
+<image/wzory/k3_page149_formula1.png>
+obliczające powierzcnnię prostokąta, gay aane są awa jego boki jest runkcją. Jest to
+funkcja o nazwie POW i o dwóch zmiennych wejściowych Bl i B2. Program główny
+odwołuje się do tej funkcji przez nazwę podając wartości zmiennych wejściowych. Na
+przykład umieszczając w programie napis POW(2,3) otrzymamy, że w wyniku działania
+podprogramu zwracana będzie programowi głównemu wartość 6.
+
+Procedurą nazywa się podprogram, który dla programu głównego nie reprezentuje
+sobą jednej wartości, jak to było w przypadku funkcji. Procedura pozwala dla danych
+zmiennych wejściowych obliczyć ciąg wartości wyjściowych lub wykonać inne operacje.
+Wynikiem działania procedury może być na przykład usunięcie najmniejszej liczby z ciągu
+liczb. Innymi przykładami procedury, której argumentami jest ciąg liczb (wektor) może
+być procedura uporządkowania tych liczb w porządku rosnącym (wynikiem jest inny
+wektor) lub procedura wydrukowania jakiejś liczby.
+
+Dalej rozważono problem sterowania pracą procesora w czasie, gdy program odwołuje
+się do podprogramu. Wywołanie podprogramu może nastąpić w wielu różnych miejscach
+programu. Po wykonaniu podprogramu procesor powinien zapewnić powrót z podpro-
+gramu w odpowiednie miejsce programu głównego (to miejsce, z którego wywoływano

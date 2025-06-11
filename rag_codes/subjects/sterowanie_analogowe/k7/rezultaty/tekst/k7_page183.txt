@@ -1,0 +1,16 @@
+Zadanie - wyznaczanie parametrów cyklu granicznego
+
+Di
+
+Przeprowadźmy symulacje układu dla k=2
+
+<image/wzory/k7_page183_formula1.png>
+
+eoblnsido eloy4un4
+
+<image/wzory/k/_page183_formula2.png>
+
+<image/figury/k/_page183_figure1.png>
+
+POLITECHNIKA
+GDAŃSKA

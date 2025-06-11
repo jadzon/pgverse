@@ -1,0 +1,37 @@
+3.1. Układy cyfrowe 33
+
+Rozpatrzmy jeszcze układ pokazany na rysunku 3.30a. Nosi on nazwę licznika łańcu-
+chowego. W ogólnym przypadku długość sekwencji stanów takiego licznika może wynosić
+maksymalnie 27-1. W naszym przykładzie sekwencja stanów ma długość 15 i jedynie stan
+0000 nie może do niej należeć, gdyż układ nie ma możliwości wyjścia z tego stanu.
+W przedstawionej na rysunku 3.30b sekwencji stanów trudno doszukać się jakiejś regular-
+ności. Dlatego licznik łańcuchowy jest często wykorzystywany jako generator sekwencji
+tzw. pseudoprzypadkowej. W przedstawionym przykładzie wykorzystuje się sprzężenie
+zwrotne, które jest sumą mod 2 wyjść przedostatniego i ostatniego przerzutnika. Poleca się
+Czytelnikowi sprawdzenie czy sekwencją stanów takiego układu będzie rzeczywiście
+sekwencja podana na rysunku 3.30b.
+
+figury/k3_page4wzory/k3_page43_formula1.
+
+Rysunek 3.31. Generator sekwencji
+
+Za pomocą rejestru z rysunku 3.27 można zbudować generator dowolnej sekwencji
+(oczywiście o określonej długości) projektując układ jak na rysunku 3.31a. Na przykład
+jeśli układ kombinacyjny UK realizuje funkcję negacji sumy Q,Q,+ Q;Q,, to sekwencja
+stanów ma długość 5 i są to stany: O110, 1011, 0101, 1010 i II01 (rys. 3.31b).
+Zainteresowanemu Czytelnikowi zaleca się próbę opracowania sposobu projektowania
+takiego generatora dla zadanej sekwencji wyjściowej.
+
+LICZNIKI
+
+W poprzednim podrozdziale omówiono zastosowania rejestrów przesuwających jako licz-
+ników. Zliczane były impulsy zegarowe. Teraz rozpatrzymy inne układy zliczające rozpo-
+czynając od układu pokazanego na rysunku 3.32. Ponieważ na wejścia przerzutników typu
+T (por. Dodatek) podano na stałe 1, to pierwszy przerzutnik Q, zmienia swój stan przy
+każdym impulsie zegarowym (z definicji tego przerzutnika). Wyjście tego przerzutnika
+steruje wejściem zegarowym następnego stopnia, a więc przerzutnik Q, zmienia swój stan
+przy każdym impulsie pojawiającym się na wyjściu przerzutnika Q,. Podobnie przerzut-
+
+jury/k3_page43_figure3.png —figure2.png
+
+Rysunek 3.32. Licznik poprzednikowy
