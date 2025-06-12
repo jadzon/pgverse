@@ -1,0 +1,235 @@
+=== Strona 1 ===
+2.1. Wielowrotniki i sieci 207
+
+E. Zasada kompensacji w odniesieniu do zwarcia i rozwarcia. Zasada
+kompensacji pozostaje słuszna, jeśli wybrany dwójnik D jest rozwarciem
+(i = 0) lub zwarciem (u = 0). Oznacza to, że jeśli na wybranych rozwartych
+zaciskach w sieci pierwotnej występuje napięcie u, to dołączenie do tych
+zacisków idealnego źródła napięciowego o sile elektromotorycznej e = u nie
+zmieni prądów i napięć w sieci. W szczególności pozostanie równy zeru prąd i
+w dołączonym źródle napięciowym (rys. 2.1-27a).
+
+Rys. 2.1-27
+
+Podobnie, jeśli na wybranych zwartych zaciskach w sieci pierwotnej występu-
+je prąd i, to zastąpienie zwarcia idealnym źródłem prądowym o wydajności
+prądowej j = i nie zmieni prądów i napięć w sieci. W szczególności pozostanie
+równe zeru napięcie u na dołączonym źródle prądowym (rys. 2.1-27b).
+
+F. Przykłady.
+
+Przykład 2.1-27. Załóżmy, że w układzie pokazanym na rys. 2.1-28a jest poszukiwany prąd
+I płynący przez źródło stałe o sile elektromotorycznej E i że zmierzono w tym celu prąd IN
+w oporze nieliniowym RN występującym na przekątnej mostka. Przyjmiemy następujące wartości
+liczbowe: E = 24V, R=lkΩ, IN = 6mA.
+
+Zgodnie z zasadą kompensacji, prąd I możemy obliczyć rozpatrując układ zmodyfikowany
+(rys. 2.1-28b), w którym opór R, został zastąpiony idealnym źródłem prądowym o wydajności
+prądowej I„. Korzystając z zasady superpozycji obliczamy na podstawie układu zmodyfikowanego
+już bez trudu:
+
+Rys. 2.1-28
+
+Przykład 2.1-28. Zasada kompensacji jest słuszna dla dowolnego układu skupionego pod
+warunkiem, że zarówno w układzie pierwotnym, jak i zmodyfikowanym prądy i napięcia są określone
+jednoznacznie. W celu zilustrowania istotności warunku jednoznaczności rozwiązań w sieci
+
+
+
+=== Strona 2 ===
+206 2. Pojęcia podstawowe — układy
+
+Rys. 2.1-26
+
+Prądy i napięcia są również jednoznacznie określone przy danych pobudzeniach
+e1,e2,...,em,jm+1,...,jn oraz j, to są one identyczne jak w sieci pierwotnej.
+Przy przyjętych założeniach co do jednoznaczności rozwiązań w sieci
+pierwotnej (rys. 2.1-20) i w sieciach zmodyfikowanych (rys. 2.1-26a,b) możemy
+sformułować zasadę kompensacji w następujący sposób.
+
+W sieci skupionej, w której na wyróżnionym dwójniku D występuje napięcie 
+u oraz prąd i dowolne napięcia i prądy nie ulegną zmianie, jeśli dwójnik D
+zastąpimy idealnym źródłem napięciowym o sile elektromotorycznej e = u albo idealnym źródłem prądowym o wydajności prądowej j = i.
+
+Źródła występujące w sieciach zmodyfikowanych z rys. 2.1-26 nazywamy często źródłami kompensującymi.
+
+Uwaga. Zasada kompensacji wynika z następującego rozumowania. Załóżmy, że w sieci pierwotnej przy danych pobudzeniach e₁, e₂, ..., eₘ, jₘ + 1, ..., jₙ, prądy i napięcia w elementach sieci D (np. iₖ, uₖ dla k = 1, 2, ..., K) są równe iₖ₀ oraz napięcia uₖ₀ na wyróżnionych dwójnikach wynoszą uₖ₀ = Zₖ iₖ₀. Wielkości iₖ₀ i uₖ₀ spełniają oczywiście warunki określone przez równania Kirchhoffa oraz przez równania pozostałych elementów sieci.
+Rozpatrzmy teraz sieć zmodyfikowaną (np. z rys. 2.1-26a) i jej rozwiązanie iₖ, uₖ, dla k = 1, 2, ..., K, przy czym z założeń iₖ = iₖ₀ oraz uₖ = eₖ = uₖ₀. Wówczas dla dowolnego oczka spełnione są równania napięciowe, wynikające z równań Kirchhoffa dla dowolnego oczka D. Wszystkie pozostałe oczka sieci spełniają równania Kirchhoffa oraz równania pozostałych elementów sieci.
+Wielkości iₖ₀, uₖ₀, k = 1, 2, ..., K, będące rozwiązaniem sieci zmodyfikowanej są zatem spełnione przez te same wielkości, co w sieci pierwotnej (rys. 2.1-28), jeśli sieć pierwotna jest jednoznacznie określona przy danych pobudzeniach i warunkach brzegowych. Wobec założenia jednoznaczności innych rozwiązań, to samo rozwiązanie istnieje również w sieci zmodyfikowanej niezależnie od metody wyznaczenia, a więc: iₖ = iₖ₀; uₖ = uₖ₀; k = 1, 2, ..., K.
+
+
+=== Strona 3 ===
+2.1. Wielowrotniki i sieci 209
+
+
+
+Dwójnik nazywamy pasywnym (P), jeśli dla każdej pary chwil t₀ i t ∈ ⟨t₀, +∞⟩
+ oraz dla każdego dopuszczalnego stanu zaciskowego u, i energia (2.1-50)
+ jest nieujemna, tzn.:
+
+
+Definicja ta ma prostą interpretację fizyczną. Dwójnik pasywny może
+pobierać energię z otoczenia, może ją gromadzić, może ją także oddawać do
+otoczenia. Zawsze jednak (tzn. w każdej chwili i dla każdego dopuszczalnego
+stanu zaciskowego) całkowita energia dostarczona do dwójnika pasyw-
+nego jest nieujemna. Dwójnik pasywny nie może zatem oddać do otoczenia
+więcej energii, niż wynosi suma energii pobranej przez niego uprzednio
+z otoczenia i energii zgromadzonej w chwili początkowej t₀.
+
+Dwójnik, który nie jest pasywny, nazywamy dwójnikiem aktywnym (A).
+Definicję dwójnika aktywnego możemy zatem sformułować przez zaprzeczenie
+definicji (2.1-51).
+
+Dwójnik jest aktywny (A), jeśli istnieją takie chwile t₀ i t ∈ ⟨t₀, +∞⟩ oraz
+taki dopuszczalny stan zaciskowy u, i, że energia (2.1-50) jest ujemna, tzn.:
+
+
+
+Oznacza to, że dwójnik aktywny jest zdolny do tego, aby oddać do otoczenia
+większą energię, niż suma energii pobranej uprzednio z otoczenia i energii
+zgromadzonej w chwili początkowej. O ile jednak cecha pasywności jest cechą
+globalną (nierówność (2.1-51) dla dwójnika pasywnego jest spełniona zawsze),
+o tyle cecha aktywności jest cechą lokalną. Dwójnik jest aktywny, jeśli
+nierówność (2.1-52) zachodzi dla pewnego dopuszczalnego stanu zaciskowego
+i dla pewnej pary chwil t₀, t ≥ t₀; dla innych stanów zaciskowych i dla innych
+chwil energia (2.1-50) może być nieujemna.
+
+B. Przypadek wielowrotnika. Definicje (2.1-51) i (2.1-52) można bez trudu uogólnić na przypadek wielowrotnika, którego stan zaciskowy u = u(t), i = i(t) – por. wzory (2.1-14) – jest określony w przedziale ⟨t₀, +∞⟩. Wówczas:
+
+
+
+
+
+=== Strona 4 ===
+208 2. Pojęcia podstawowe — układy
+
+zmodyfikowanej rozważmy przykład układu z rys. 2.1-29a. W układzie tym dioda tunelowa
+o charakterystyce pokazanej na rys. 1.3-4c jest połączona równolegle z oporem liniowym R = 40 Q
+i powstały w ten sposób dwójnik jest zasilany ze źródła prądowego o wydajności prądo-
+wej J = 7 mA.
+
+
+
+Rys. 2.1-29
+
+
+
+Na rys. 2.1-29b jest przedstawiona konstrukcja charakterystyki łącznej połączenia równoległego
+diody tunelowej oporu R (por. p. 1.5.2-C), z której wynika, że przy wartości J = 7mA napięcie na
+układzie jest określone jednoznacznie i wynosi U = 0,2 V oraz że prąd płynący przez diodę
+tunelową jest równy I = 2 mA. Punkt pracy diody tunelowej (punkt A na rys. 2.1-29b) ma zatem
+współrzędne (U = 0,2 V, I = 2 mA). Zastąpmy obecnie dwójnik dołączony do diody tunelowej
+idealnym Źródłem prądowym o wydajności prądowej I = 2 mA (rys. 2.1-29c). Jak wynika
+z rys. 2.1-29b możliwe są teraz trzy rozwiązania, odpowiadające punktom A,B,C, z których tylko
+jedno (odpowiadające punktowi 4) jest identyczne jak dla układu pierwotnego z rys. 2.1-29a.
+
+Zasada kompensacji przestaje zatem obowiązywać, jeśli układ zmodyfikowany nie ma rozwiązań
+jednoznacznych.
+
+2.1.8. Układy pasywne i układy aktywne
+
+Omówimy teraz jeszcze jedną, ważną linię podziału układów na: pasywne (P)
+i aktywne (A). Przez słowo „układ” będziemy rozumieli w tym punkcie
+wielowrotnik i jego przypadki szczególne (dwójnik, czwórnik).
+
+A. Pojęcie pasywności i aktywności. Dyskusję zaczniemy od dwójnika (rys. 2.1-2a). Załóżmy, że jego stan zaciskowy u = u(t), i = i(t) jest określony w przedziale ⟨t₀, +∞⟩, gdzie t₀ jest dowolnie wybraną chwilą.
+
+Rozważmy dowolną chwilę t ∈ ⟨t₀, +∞⟩. Energia pobrana z otoczenia przez dwójnik w przedziale czasu ⟨t₀, t⟩ jest określona zależnością (2.1-18).
+W chwili t₀ w dwójniku mogła być zgromadzona pewna energia, bowiem dwójnik może zawierać elementy zdolne do gromadzenia energii. Oznaczmy tę energię przez ℰ (t₀). Całkowitą energię, jaka została dostarczona do dwójnika do chwili t, możemy zatem zapisać w postaci:
+
+
+
+=== Strona 5 ===
+2.1. Wielowrotniki i sieci 211
+
+z podaną definicją, wielowrotnik bezstratny jest wielowrotnikiem pasywnym.
+Spełnia on zatem zawsze, oprócz równości (2.1-56), nierówność definicyjną
+(2.1-54). Wynika stąd w szczególności, że obie strony równości (2.1-56) są zawsze
+nieujemne.
+
+Wielowrotnik pasywny, który nie jest wielowrotnikiem bezstratnym, nazy-
+wamy wielowrotnikiem stratnym.
+
+D. Przykłady i uzupełnienia.
+
+Przykład 2.1-29. Opór stacjonarny (liniowy lub nieliniowy) jest dwójnikiem pasywnym.
+Z warunku definicyjnego (1.3-3) wynika bowiem, że moc pobierana przez opór jest nieujemna:
+
+ (2.1-57)
+
+a więc energia pobrana w przedziale czasu ⟨t₀, t⟩, t > t₀ jest też zawsze nieujemna:
+(2.1-58)
+
+Opór nie jest zdolny do gromadzenia energii, tzn.:
+
+(2.1-59)
+
+a więc zależność definicyjna (2.1-51) jest spełniona. Opór jest oczywiście dwójnikiem stratnym.
+
+Przykład 2.1-30. Dwójnikiem pasywnym jest także opór niestacjonarny liniowy lub nielinio-
+wy (p. 1.6.1-A), a także każdy element rezystancyjny (p. 1.3.4-G), którego charakterystyka
+określona równaniem (1.3-26) nie przechodzi przez drugą lub czwartą ćwiartkę płaszczyzny u, i.
+W przypadkach tych są spełnione również nierówności (2.1-57) i (2.1-58) oraz równość (2.1-59).
+
+Przykład 2.1-31. Nietrudno sprawdzić, że indukcyjność stacjonarna (liniowa lub nieliniowa),
+a także pojemność stacjonarna (liniowa lub nieliniowa) są dwójnikami pasywnymi bezstratnymi.
+Powróćmy do rozważań z p. 1.3.2-C dotyczących energii gromadzonej przez indukcyjność. Rozważmy dowolną chwilę t₀, przedział ⟨t₀, +∞⟩ oraz dowolną chwilę t ∈ ⟨t₀, +∞⟩. Energia ℰ(t₀) zgromadzona w chwili t₀ przez indukcyjność jest energią zgromadzoną w polu magnetycznym. Zgodnie ze wzorem (1.3-14):
+(2.1-60)
+
+gdzie ψ₀ = ψ(t₀). Energię pobraną z otoczenia przez indukcyjność w przedziale czasu ⟨t₀, t⟩ obliczamy ze wzoru:
+
+1) Zwracamy uwagę, iż pasywność oporu niestacjonarnego wynika z przyjętego w p. 1.6.1-A
+założenia, iż charakterystyki określone równaniem (1.6-1) zawsze przechodzą tylko przez pierwszą
+i trzecią ćwiartkę.
+
+
+
+=== Strona 6 ===
+210 2. Pojęcia podstawowe — układy
+
+jest całkowitą energią dostarczoną do wielowrotnika do chwili t, zaś 6 (ty) je
+energią zgromadzoną w wielowrotniku w chwili ty.
+
+Wielowrotnik nazywamy pasywnym (P), jeśli dla każdej pary chwil t
+ite Kto, + oo) oraz dla każdego dopuszczalnego stanu zaciskowego u, i
+energia (2.1-53) jest nieujemna, tzn.:
+
+AA NEO ju ride > 0 (2.1-54)
+
+to t>to u,i
+
+jest całkowitą energią dostarczoną do wielowrotnika do chwili t, zaś ℰ(t₀) jest energią zgromadzoną w wielowrotniku w chwili t₀.
+
+Wielowrotnik nazywamy pasywnym (P), jeśli dla każdej pary chwil t₀ i t ∈ ⟨t₀, +∞⟩ oraz dla każdego dopuszczalnego stanu zaciskowego u, i energia (2.1-53) jest nieujemna, tzn.:
+
+ (2.1-55)
+
+
+
+C. Pojęcie bezstratności. Z pojęciem pasywności jest związane pojęcie
+bezstratności układu. O indukcyjności stacjonarnej i pojemności stacjonarnej
+mówiliśmy, że są to elementy bezstratne (por. p. 1.3.2-C i p. 1.3.3-C).
+Cecha ta oznaczała, że indukcyjność i pojemność, a więc elementy zdolne do
+gromadzenia energii, mogą w całości oddać do otoczenia energię, którą
+uprzednio z otoczenia pobrały i zmagazynowały. Proces pobierania i oddawania
+energii odbywał się zatem bez strat. Analogicznie zachowują się indukcyjności
+sprzężone.
+
+W p. 2.1.2-H wykazaliśmy, że moc pobierana przez transformator idealny
+i żyrator — wzory (2.1-21) i (2.1-22) — jest zawsze równa zeru. Są to zatem
+czwórniki, które również nie wprowadzają strat. Różnica w porównaniu
+z indukcyjnością i pojemnością jest jednak istotna. Transformator idealny
+i żyrator są czwórnikami bezinercyjnymi (p. 2.1.5- G), które nie są
+zdolne do gromadzenia energii.
+
+Z przytoczonych przykładów wynika potrzeba ogólnego określenia pojęcia
+bezstratności układu. Odpowiednią definicję sformułujemy od razu dla przypad-
+ku wielowrotnika.
+
+Wielowrotnik pasywny jest wielowrotnikiem bezstratnym, jeśli przy dowolnym wyborze chwili t₀ dla każdej pary chwil t₁, t₂ ∈ ⟨t₀, +∞⟩, t₂ > t₁ oraz dla każdego dopuszczalnego stanu zaciskowego u, i:
+(2.1-56)
+
+
+Związek (2.1-56) ma prostą interpretację. Oznacza on, że energia pobrana z otoczenia w dowolnym przedziale czasu ⟨t₁, t₂⟩ jest zawsze równa przyrostowi energii zmagazynowanej w układzie. Zwracamy jednak uwagę, iż zgodnie
+
+

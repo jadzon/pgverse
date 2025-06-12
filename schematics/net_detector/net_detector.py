@@ -3,8 +3,7 @@ import numpy as np
 import os
 from collections import Counter, deque
 #TODO: Dynamic offsets
-CUT_OFFSET = 1  # Offset for cutting out blocks
-OFFSET = 5  # Offset for the bounding box expansion
+
 class NetDetector():
     def __init__(self,image:cv2.typing.MatLike,blocks,text_blocks,build_nodes=True):
         self.image = image.copy()
@@ -12,6 +11,68 @@ class NetDetector():
         self.text_blocks = text_blocks
         self.results = {}
         self.build_nodes = build_nodes
+        # Calculate image dimensions for scaling
+        self.img_height, self.img_width = self.image.shape[:2]
+        
+    def _calculate_cut_offset(self, width, height, block_type=None):
+        """
+        Calculate dynamic offset for cutting out blocks based on block size.
+        
+        Args:
+            width: Block width
+            height: Block height
+            block_type: Type/class of the block
+            
+        Returns:
+            Appropriate offset value
+        """
+        # Base offset on minimum dimension (width or height)
+        min_dimension = min(width, height)
+        
+        # Scale based on image size
+        img_scale = min(1.0, max(0.3, (self.img_width + self.img_height) / 2000))
+        
+        # Set minimum and scale by block size
+        min_offset = 3
+        offset = max(min_offset, min_dimension * 0.05 * img_scale)
+        
+        # Adjust based on block type if needed
+        if block_type is not None:
+            # Add type-specific adjustments here
+            if block_type == 0:  # For example, if block_type 0 needs larger offset
+                offset *= 1.5
+                
+        return int(offset)
+    
+    def _calculate_edge_offset(self, width, height, block_type=None):
+        """
+        Calculate dynamic offset for edge detection based on block size.
+        
+        Args:
+            width: Block width
+            height: Block height
+            block_type: Type/class of the block
+            
+        Returns:
+            Appropriate edge offset value
+        """
+        # Edge offset should be larger than cut offset
+        base_offset = self._calculate_cut_offset(width, height, block_type)
+        
+        # Scale for edge detection (slightly larger than cut offset)
+        edge_scale = 2.5
+        
+        # Adjust based on block type
+        if block_type is not None:
+            # Nodes might need smaller offsets
+            if block_type == 12:  # If it's a node
+                edge_scale = 1.5
+            # Small components need larger relative offsets
+            elif min(width, height) < 20:
+                edge_scale = 2.5
+                
+        return int(base_offset * edge_scale)
+
     def find_connections(self):
         """
         Main function of the class. It finds connections between blocks based on the skeletonized image.
@@ -141,8 +202,8 @@ class NetDetector():
                         merged_contour = np.vstack([merged_contours[i], merged_contours[j]])
                         
                         hull = cv2.convexHull(merged_contour)
-                        #epsilon = 0.1*cv2.arcLength(hull,True)
-                        #hull = cv2.approxPolyDP(hull, epsilon, True) 
+                        epsilon = 0.1*cv2.arcLength(hull,True)
+                        hull = cv2.approxPolyDP(hull, epsilon, True) 
                         # Update the first contour with the merged result
                         merged_contours[i] = hull
 
@@ -158,29 +219,43 @@ class NetDetector():
     def cut_out_blocks(self):
         self.no_block_img = self.image.copy()
         for block in self.blocks:
-            if block.cls == 12 :  # Skip nodes
+            if block.cls == 12:  # Skip nodes
                 continue
             x1, y1, x2, y2 = map(int, block.xyxy[0].tolist())
-            print(x1, y1, x2, y2)   
+            width, height = x2 - x1, y2 - y1
+            block_type = int(block.cls)
+            
+            # Calculate dynamic offset for this block
+            cut_offset = self._calculate_cut_offset(width, height, block_type)
+            
+            print(f"Block {block_type} size: {width}x{height}, cut_offset: {cut_offset}")
+            
             cv2.rectangle(
                 self.no_block_img,
-                (x1 - CUT_OFFSET, y1 - CUT_OFFSET),
-                (x2 + CUT_OFFSET, y2 + CUT_OFFSET),
+                (x1 - cut_offset, y1 - cut_offset),
+                (x2 + cut_offset, y2 + cut_offset),
                 (255, 255, 255),  # Fill interior with white
                 -1
             )
         cv2.imshow("Cut Out Blocks", self.no_block_img)
         cv2.waitKey(0)
+        
     def cut_out_text(self):
         self.cut_out_image = self.no_block_img.copy()
         print(self.text_blocks)
         for block in self.text_blocks:
-            x1, y1, x2, y2 = map(int,block["coords"])
-            print(x1, y1, x2, y2)
+            x1, y1, x2, y2 = map(int, block["coords"])
+            width, height = x2 - x1, y2 - y1
+            
+            # Calculate dynamic offset for this text block
+            cut_offset = self._calculate_cut_offset(width, height)
+            
+            print(f"Text size: {width}x{height}, cut_offset: {cut_offset}")
+            
             cv2.rectangle(
                 self.cut_out_image,
-                (x1 - CUT_OFFSET, y1 - CUT_OFFSET),
-                (x2 + CUT_OFFSET, y2 + CUT_OFFSET),
+                (x1 - cut_offset, y1 - cut_offset),
+                (x2 + cut_offset, y2 + cut_offset),
                 (255, 255, 255),  # Fill interior with white
                 -1
             )
@@ -206,42 +281,71 @@ class NetDetector():
     def find_starting_points(self):
         starting_points = {}
         for i, block in enumerate(self.blocks):
-            if block.cls == 12 :  # Skip nodes
+            if block.cls == 12:  # Skip nodes
                 continue
             x1, y1, x2, y2 = map(int, block.xyxy[0].tolist())
-            #See if block is bipole, dipole, or tripole
-            class_type = "bipole" if block.cls in [0,1,2,3,4,5,6,7,8,14,15,16,17] else "dipole" if block.cls in [4, 5, 6] else "tripole" if block.cls in [7, 8] else "other"
+            width, height = x2 - x1, y2 - y1
+            block_type = int(block.cls)
+            
+            # Calculate dynamic edge offset for this block
+            edge_offset = self._calculate_edge_offset(width, height, block_type)
+            
+            print(f"Block {i} type: {block_type}, size: {width}x{height}, edge_offset: {edge_offset}")
+            
+            # Calculate block center
+            block_center_x = (x1 + x2) // 2
+            block_center_y = (y1 + y2) // 2
+            
+            # See if block is bipole, dipole, or tripole
+            class_type = "bipole" if block.cls in [0,2,3,4,5,6,7,8,14,15,16,17] else "dipole" if block.cls in [4, 5, 6] else "tripole" if block.cls in [1,11] else "other"
 
-            # Check all 4 edges of the block
+            # Define edges with their centers - using dynamic edge_offset
             edges = [
-                (x1 - OFFSET, x2 + OFFSET, y1 - OFFSET, "top"),    # Top edge (y = y1)
-                (x1 - OFFSET, x2 + OFFSET, y2 + OFFSET, "bottom"),  # Bottom edge (y = y2)
-                (y1 - OFFSET, y2 + OFFSET, x1 - OFFSET, "left"),    # Left edge (x = x1)
-                (y1 - OFFSET, y2 + OFFSET, x2 + OFFSET, "right")    # Right edge (x = x2)
+                {"range": (x1 - edge_offset, x2 + edge_offset), "const": y1 - edge_offset, "type": "top", "center": (block_center_x, y1 - edge_offset)},
+                {"range": (x1 - edge_offset, x2 + edge_offset), "const": y2 + edge_offset, "type": "bottom", "center": (block_center_x, y2 + edge_offset)},
+                {"range": (y1 - edge_offset, y2 + edge_offset), "const": x1 - edge_offset, "type": "left", "center": (x1 - edge_offset, block_center_y)},
+                {"range": (y1 - edge_offset, y2 + edge_offset), "const": x2 + edge_offset, "type": "right", "center": (x2 + edge_offset, block_center_y)}
             ]
+            
             detected_edges = []
             detected_points = []
             starting_points[i] = []
-            for start, end, const, edge_type in edges:
-                for pos in range(start, end + 1):
+            
+            # Process each edge
+            for edge in edges:
+                edge_points = []
+                
+                # Scan along the edge
+                for pos in range(edge["range"][0], edge["range"][1] + 1):
                     # Get coordinates based on edge type
-                    if edge_type in ["top", "bottom"]:
-                        x, y = pos, const
+                    if edge["type"] in ["top", "bottom"]:
+                        x, y = pos, edge["const"]
                     else:
-                        x, y = const, pos
+                        x, y = edge["const"], pos
                     
                     # Validate bounds
                     if (0 <= x < self.skeletonized_image.shape[1] and 
                         0 <= y < self.skeletonized_image.shape[0]):
                         # Check if pixel is part of the skeleton
                         if self.skeletonized_image[y, x] == 255:
-                            detected_points.append((x, y))
-                            detected_edges.append(edge_type)
-                            # Visualize starting point
-                            cv2.circle(self.cut_out_image, (x, y), 1, (0, 0, 255), -1)
-                            cv2.putText(self.cut_out_image, f"({x},{y})", (x + 5, y - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.3, (0, 0, 255), 1)
-                            #if detected, continue to next edge
-                            break
+                            edge_points.append((x, y))
+                
+                # If points found on this edge, keep only the closest to center
+                if edge_points:
+                    # Calculate distances to edge center
+                    edge_center = edge["center"]
+                    distances = [((p[0] - edge_center[0])**2 + (p[1] - edge_center[1])**2) for p in edge_points]
+                    closest_idx = distances.index(min(distances))
+                    closest_point = edge_points[closest_idx]
+                    
+                    detected_points.append(closest_point)
+                    detected_edges.append(edge["type"])
+                    
+                    # Visualize the closest point
+                    cv2.circle(self.cut_out_image, closest_point, 1, (0, 0, 255), -1)
+                    cv2.putText(self.cut_out_image, f"({closest_point[0]},{closest_point[1]})", 
+                               (closest_point[0] + 5, closest_point[1] - 5), 
+                               cv2.FONT_HERSHEY_SIMPLEX, 0.3, (0, 0, 255), 1)
 
             #check detected edges, if we have a bipole we need to have all horizontal or vertical edges
             if class_type == "bipole":
@@ -251,47 +355,41 @@ class NetDetector():
                 vertical = edge_counter["top"] + edge_counter["bottom"]
                 if horizontal > vertical:
                     for j,edge in enumerate(detected_edges):
-                        if edge in ["top,bottom"]: detected_points[j] = None
+                        if edge in ["top","bottom"]: detected_points[j] = None
                 else:
                     for j,edge in enumerate(detected_edges):
-                        if edge in ["left,right"]: detected_points[j] = None
-            
-            starting_points[i].append([point for point in detected_points if point != None])
+                        if edge in ["left","right"]: detected_points[j] = None
+            elif class_type == "tripole":
+                # Tripole should have one horizontal and two vertical edges or vice versa, and the odd one(base) out should be first
+                if len(detected_edges) == 3:
+                    edge_counter = Counter(detected_edges)
+                    if edge_counter["top"] == 1 or edge_counter["bottom"] == 1:
+                        # If top or bottom is the odd one out, it should be first
+                        if detected_edges[0] in ["top", "bottom"]:
+                            # Ensure the first point is the odd one out
+                            detected_points = [detected_points[0]] + [p for p in detected_points[1:] if p is not None]
+                        else:
+                            # Otherwise, swap the first point with the odd one out
+                            for j, edge in enumerate(detected_edges):
+                                if edge in ["top", "bottom"]:
+                                    detected_points[0], detected_points[j] = detected_points[j], detected_points[0]
+                                    break
+                    elif edge_counter["left"] == 1 or edge_counter["right"] == 1:
+                        # If left or right is the odd one out, it should be first
+                        if detected_edges[0] in ["left", "right"]:
+                            # Ensure the first point is the odd one out
+                            detected_points = [detected_points[0]] + [p for p in detected_points[1:] if p is not None]
+                        else:
+                            # Otherwise, swap the first point with the odd one out
+                            for j, edge in enumerate(detected_edges):
+                                if edge in ["left", "right"]:
+                                    detected_points[0], detected_points[j] = detected_points[j], detected_points[0]
+                                    break
+            starting_points[i].append([point for point in detected_points if point is not None])
 
         cv2.imshow("Starting Points", self.cut_out_image)
         return starting_points
-    def remove_intermiediate_point_in_path(self, path):
-        """
-        Remove intermediate points in the path that are not necessary.
-        """
-        if len(path) < 3:
-            return path
-        
-        simplified_path = [path[0]]
-        change_along_x = path[1][0] != path[0][0]
 
-        for i in range(1, len(path) - 1):
-            current = path[i]
-            prev_point = path[i + 1]
-            
-            # Check if the current point is an intermediate point
-            if change_along_x:
-                if current[0] == simplified_path[-1][0]:    
-                    # If the x-coordinate is the same as the last point, skip this point
-                    continue
-                else:
-                    change_along_x = False
-                    simplified_path.append(prev_point)
-            else:
-                if current[1] == simplified_path[-1][1]:    
-                    # If the y-coordinate is the same as the last point, skip this point
-                    continue
-                else:
-                    change_along_x = True
-                    simplified_path.append(prev_point)
-            simplified_path.append(current)
-        simplified_path.append(path[-1])
-        return simplified_path
     def draw_random_color_contours(self, contours,text="Contours"):
         """
         Draws contours on the cut out image with random colors.
@@ -372,17 +470,32 @@ class NetDetector():
                 
                 # Find paths between connection points
                 paths = []
+                seen_paths = set()  # Track unique paths
+                
                 for i in range(len(connection_indices)):
                     for j in range(i+1, len(connection_indices)):
                         start_idx = connection_indices[i]
                         end_idx = connection_indices[j]
                         
                         # Find shortest path on the contour
-                        path = self.find_shortest_path(graph, start_idx, end_idx, len(contour_points))
-                        if path:
-                            path_points = [contour_points[idx] for idx in path]
-                            paths.append(path_points)
-            
+                        path_indices = self.find_shortest_path(graph, start_idx, end_idx, len(contour_points))
+                        if path_indices:
+                            # Filter points that are too close to each other
+                            path_points = []
+                            for idx in path_indices:
+                                curr_point = contour_points[idx]
+                                if not path_points or curr_point not in path_points:
+                                    path_points.append(curr_point)
+                            
+                            # Convert to tuple for hashing
+                            path_tuple = tuple(path_points)
+                            # Also check reversed path to catch paths in opposite direction
+                            path_tuple_rev = tuple(reversed(path_points))
+                            
+                            if path_tuple not in seen_paths and path_tuple_rev not in seen_paths:
+                                paths.append(path_points)
+                                seen_paths.add(path_tuple)
+                
                 path_endpoints[contour_id] = {
                     'connection_points': connection_points,
                     'contour_points': contour_points,
@@ -409,11 +522,12 @@ class NetDetector():
             for next_vertex in graph[vertex]:
                 if next_vertex == end:
                     return path + [next_vertex]
-                if next_vertex not in visited:
+                if next_vertex not in visited and next_vertex not in path:
+                    # Check if the next vertex is not too close to the last point in the path
+                    
                     visited.add(next_vertex)
                     queue.append((next_vertex, path + [next_vertex]))
         
         return None
-
 
 
