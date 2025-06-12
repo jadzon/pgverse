@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog
 from bielik_app import ChatApplication
-from rag_app import RagApplication
+from integrated_rag_app import IntegratedRagApplication
 import os
 import sys
 import subprocess
@@ -190,7 +190,7 @@ class MainWindow(tk.Tk):
         # Ukryj okno menu
         self.withdraw()
         # Otwórz okno Bielik
-        chat_window = RagApplication()
+        chat_window = IntegratedRagApplication()
         # Po zamknięciu okna Bielik, pokaż menu
         chat_window.protocol("WM_DELETE_WINDOW", lambda: self.on_bielik_close(chat_window))
 
