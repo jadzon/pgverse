@@ -1,0 +1,37 @@
+Odbierane przez GCM dane mogą być wpisywane do jednego z obszarów %/,
+%Q, %G, %Al, %AQ lub %R pamięci sterownika. GCM może być skonfiguro-
+wany tak, aby ignorował część lub całość danych odbieranych z poszczególnych
+urządzeń w sieci.
+
+Przykład rozwiązania wymiany danych między czterema sterownikami przed-
+stawia Rys. 3.46.
+
+<image/figury/k4_page172_figure1.png>
+
+o adresach SBA 16, 18, 20, 23.
+
+Moduł komunikacyjny GCM umożliwia komunikację między elementami sieci
+z wykorzystaniem zmiennych globalnych, natomiast moduł kontrolera sieci GBC
+(Genius Bus Controller Module) ma znacznie większe możliwości komunika-
+cyjne. Oprócz wymiany zmiennych globalnych umożliwia wymianę paczek
+informacji, tzw. datagramów, obsługę oddalonych modułów systemu Field Con-
+trol i bogatszą diagnostykę elementów sieci Genius .
+
+Elementami tej sieci mogą być moduły wejściowo-wyjściowe zwane blokami
+Genius , komputery typu PC lub elementy rozproszonego systemu wejść i wyjść
+Field Control.
+
+Bloki Genius posiadają rozbudowane funkcje diagnostyczne, zarówno dla sieci
+(takie jak wykrywanie, dołączenie i odłączenie elementu sieci, konfliktu adre-
+sów) jak i dla modułów (uszkodzenie pamięci lub obwodów wewnętrznych).
+W diagnostyce obwodów dyskretnych wykrywają brak zasilania, przeciążenie,
+przerwę lub zwarcie w obwodzie, przekroczenie dopuszczalnej temperatury.
+Natomiast dla modułów analogowych umożliwiają wykrycie: błędnego podłą-
+czenia modułu, przerwę lub zwarcie w obwodzie, przekroczenie zadanego
+zakresu pomiarowego. Moduły te mają możliwość programowego forsowania
+stanów wejść i wyjść oraz ustalania tych stanów w określonych sytuacjach awa-
+ryjnych, np. w przypadku uszkodzenia połączenia sieciowego.
+
+ 
+
+172 Rozdział : 3. Sprzęt sterowników PLC

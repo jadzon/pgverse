@@ -1,0 +1,36 @@
+33. Metody analizy obwodów liniowych prądu stałego 251
+
+b) Korzystając ze wzorów dla dzielnika prądowego, w analogiczny sposób obliczamy wprost
+ze schematu układu z rys. 3.2-12b prąd w oporze 3 Q:
+
+<image/wzory/k4_page249_formula1.png>
+
+e.dzielnikisygnawzmiennychwczasie.wzory3.214i3.215oraz
+(3.2-18) i (3.2-19) zostały zapisane przy założeniu, że prądy i napięcia w ukła-
+dachdzielnikwsstae.wzorytepozostajoczywiciesusznedladowolnych
+prądów i napięć i można je zapisać w ogólnej postaci dla dzielnika napięcia:
+
+<image/wzory/k4_page249_formula2.png>
+
+<image/wzory/k4_page249_formula3.png>
+
+i dla dzielnika prądu:
+<image/wzory/k4_page249_formula4.png>
+
+<image/wzory/k4_page249_formula5.png>
+
+jakzobaczymywrozdziale4wzorytemonatakeuoglninaprzypadek
+dzielników innych niż dzielniki oporowe (por. p. 4.3.3-F).
+
+3.3. METODY ANALIZY OBWODÓW LINIOWYCH
+PRĄDU STAŁEGO
+
+Typowym zagadnieniem analizy jest poszukiwanie prądu lub napięcia
+w wyróżnionym elemencie (wyróżnionej gałęzi”) układu o znanej strukturze
+
+D Tu iw dalszych rozważaniach celowe będzie posługiwanie się pojęciem gałęzi (układu, sieci,
+obwodu). Po ME tego nie będziemy formalnie definiować, poprzestając na jego rozumieniu
+intuicyjnym. Dla ilustracji, w dwójniku z rys. 3.2-5 można wyróżnić dwie gałęzie: prąd 7, występuje
+
+w gałęzi zawierającej sterowane źródło napięciowe rl, a R;,zaśp p: lą — w gałęzi zawierają-
+cej opór R,. Pojęcie gałęzi scharakteryzujemy nieco dokładniej w p. 3.

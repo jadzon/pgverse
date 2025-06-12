@@ -1,0 +1,24 @@
+274 4. Obwodv nradu stalego
+
+<image/wzory/k3_page274_formula1.png>
+
+Jeżeli teraz związki (3.3-15) uwzględnimy w układzie równań (3.3-13), tzn.
+wykonamy przekształcenie obwodowe, to prądowe równania równowagi tego
+układu stają się tożsamościami, zaś napięciowe równania równowagi przejdą
+w następujące równania obwodowe:
+
+Oczko
+
+<image/wzory/k3_page274_formula2.png>
+
+Tak więc, układ g = 6 równań (3.3-13) względem zmiennych 1;,..., I;
+redukuje się do układu n = 3 równań obwodowych (3.3-16) względem zmien-
+nych I,, 1, 1,. Po wyznaczeniu z równań (3.3-16) prądów obwodowych możemy,
+na podstawie związków (3.3-15), obliczyć prądy gałęziowe. Zmniejszenie złożo-
+ności obliczeniowej metody prądów obwodowych jest widoczne.
+
+Równania obwodowe (3.3-16) można zapisać w postaci macierzowej:
+
+<image/wzory/k3_page274_formula3.png>
+
+iub w postaci:

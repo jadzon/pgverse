@@ -1,0 +1,55 @@
+<image/wzory/k3_page11_formula1.png>
+
+ 
+  
+
+  
+  
+
+ 
+  
+
+ 
+
+ 
+
+PRZEZNACZENIE KSIĄŻKI
+
+Niniejsza książka jest przeznaczona dla osób, które chcą zapoznać się z budową i dzia-
+łaniem komputerów. Do dobrego zrozumienia tej książki nie jest wymagana żadna spec-
+jalistyczna wiedza, a zatem książka może być czytana przez każdego kto ma ogólne
+średnie wykształcenie. W książce nie wystarczyło miejsca, aby dostatecznie szeroko opra-
+cować wszystkie zagadnienia i dlatego w przypadku, gdy Czytelnik napotka trudniejsze
+fragmenty, to zaleca się sięgnięcie do odpowiedniej pozycji literatury, której spis umiesz-
+czono na końcu książki. Autor poleca książkę jako pomocną w procesie dydaktycznym
+w szkołach zawodowych i w uczelniach, a szczególnie uczniom i studentom, którzy mają
+zajęcia z informatyki.
+
+RYS HISTORYCZNY
+
+Budową urządzeń przeznaczonych do wspomagania obliczeń matematycznych zajmowano
+się od bardzo dawna. Maszyny obliczeniowe projektowali tacy wielcy matematycy jak
+Blaise Pascal (1623-1661), Gotfried Wilhelm von Leibnitz (1646-1716), Joseph Marie
+Jacquard (1752-1832), Charles Babbage (1792-1871) i inni. Projekty tych aparatów
+polegały zwykle na konstruowaniu bardzo skomplikowanych urządzeń mechanicznych.
+Ale już wtedy wiele koncepcji zawierało myśl o prowadzeniu obliczeń według pamiętanego
+w maszynie programu. Rozwiązania mechaniczne nie pozwalały na budowę efektywnych
+urządzeń. Dopiero pomysł wykorzystania elementów elektromechanicznych (przekaźni-
+ków) doprowadził Howarda Aikena do pomyślnej realizacji urządzenia o nazwie MARK I,
+którego budowę sponsorował koncern IBM. Praca ta rozpoczęła się w latach trzydziestych,
+ale uruchomienie urządzenia nastąpiło w roku 1944 i jemu przyznaje się miano pierwszego
+komputera. Jednak w tym samym czasie profesor uniwersytetu w Iowa John Atanasoff
+wraz z asystentem Cliffordem Berry pracowali nad modelem aparatu obliczeniowego
+wykorzystującego lampy elektronowe. Model ten nie znalazł zastosowania. Natomiast
+John Presper Eckert i John Mauchly z Moore School of Electrical Engineering (University
+of Pennsylvania) w roku 1946 zaprojektowali i uruchomili pierwszą elektroniczną maszynę
+matematyczną o nazwie ENIAC (Electronic Numerical Integrator and Computer), którą
+wykorzystano między innymi do obliczeń balistycznych. ENIAC był maszyną zawierającą
+18 tysięcy lamp elektronowych i 1500 przekaźników. Ważył on 30 ton i zajmował po-
+wierzchnię 1000 m”. Maszyna pobierała ogromną moc ponad 140 kW, a szybkość obliczeń
+wynosiła zaledwie 5000 dodawań na sekundę. Natomiast od chwili skonstruowania Eniaca
+datuje się początek ery komputerów. Powstała nowa, ale bardzo dynamicznie rozwijająca
+się dziedzina techniki — zwana dziś informatyką.
+
+W Polsce komputery nazywano początkowo maszynami matematycznymi i dopiero
+stosunkowo od niedawna przyjęła się spolszczona nazwa angielskiego słowa computer.

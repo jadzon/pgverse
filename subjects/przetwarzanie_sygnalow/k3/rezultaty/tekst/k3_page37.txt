@@ -1,0 +1,58 @@
+3. Przetwarzanie analogowo-cyfrowe i cyfrowo-analogowe
+
+Na rys. 3.3 przedstawiono kilka przebiegów sinusoidalnych przed i po digitalizacji. Linia cią-
+gła obrazuje sygnał analogowy wprowadzany do przetwornika a/c, a kwadratowe znaczniki
+— sygnał cyfrowy z tego przetwornika. Na rys. 3.3 a) sygnał analogowy jest napięciem stałym
+(DC), a więc jest kosinusoidą o częstotliwości zero. Ponieważ ten sygnał analogowy jest
+szeregiem linii prostych między poszczególnymi próbkami, więc w danych cyfrowych jest
+zawarta pełna informacja niezbędna do odtworzenia sygnału analogowego. Zgodnie z naszą
+definicją, jest to próbkowanie prawidłowe.
+
+Przebieg sinusoidalny przedstawiony na rys. 3.3 b) ma częstotliwość równą 0,09 częstotli-
+wości próbkowania. Może to być np. sinusoida o częstotliwości 90 Hz próbkowana z czę-
+stotliwością 1000 próbek/s. Wyrażając to inaczej, mamy 11,1 próbek pobieranych w każ-
+dym pełnym okresie sinusoidy. Jest to sytuacja bardziej skomplikowana niż w poprzednim
+przypadku, ponieważ nie da się zrekonstruować sygnału analogowego, prowadząc linie pro-
+ste między punktami. Czy zebrane próbki prawidłowo reprezentują przebieg analogowy?
+Odpowiedź jest pozytywna, gdyż żadna inna sinusoida ani kombinacja sinusoid nie wytwo-
+rzą takiego właśnie rozkładu próbek (z uwzględnieniem rozsądnych ograniczeń dalej wy-
+szczególnionych). Te próbki odpowiadają tylko jednemu sygnałowi analogowemu, a zatem
+ten sygnał może być dokładnie odtworzony. Znowu mamy tu więc przykład prawidłowego
+próbkowania.
+
+Na rys. 3.3 c) sytuacja jest trudniejsza, gdyż częstotliwość fali sinusoidalnej została zwiększo-
+na do 0,31 częstotliwości próbkowania. Wtedy uzyskuje się tylko 3,2 próbki na jeden okres
+sinusoidy. Tutaj próbki są tak od siebie odległe, że — jak się wydaje — nie reprezentują ogólne-
+go charakteru sygnału analogowego. Czy te próbki w sposób właściwy reprezentują przebieg
+analogowy? Odpowiedź jest znowu pozytywna, i to z tego samego powodu, co poprzednio.
+Próbki są unikatową reprezentacją tego sygnału analogowego. W danych cyfrowych jest zawar-
+
+ta pełna informacja konieczna do odtworzenia przebiegu ciągłego. W dalszej części rozdziału
+
+będzie wyjaśnione, jak zrealizować taką rekonstrukcję sygnału. Oczywiście musi to być sposób
+bardziej wyszukany niż zwykłe prowadzenie linii prostych między punktami danych. Choć to
+może wydać się dziwne, to — zgodnie z naszą definicją - mamy tu próbkowanie prawidłowe.
+
+W przebiegu na rys. 3.3 d) częstotliwość przebiegu analogowego zwiększono jeszcze bardziej — do
+wartości 0,95 częstotliwości próbkowania, uzyskując zaledwie 1,05 próbki na okres przebiegu si-
+nusoidalnego. Czy te próbki prawidłowo reprezentują przebieg analogowy? Nie, nie reprezentują.
+Próbki reprezentują falę sinusoidalną inną niż występująca w sygnale wejściowym. Ściślej mówiąc,
+oryginalna fala sinusoidalna o częstotliwości 0,95 częstotliwości próbkowania jest w sygnale cy-
+frowym fałszywie przedstawiana jako fala sinusoidalna o częstotliwości równej 0,05 częstotliwości
+próbkowania. To zjawisko zmiany częstotliwości podczas próbkowania nazywamy aliasingiem.
+Tak jak kryminalista może używać przybranego nazwiska lub tożsamości (alias), sinusoida przyj-
+muje inną, nie swoją częstotliwość. Jednoznaczne odtworzenie sygnału analogowego nie jest moż-
+liwe, gdyż w tym przypadku dane cyfrowe nie są w sposób niepowtarzalny związane z jakimś
+szczególnym przebiegiem analogowym. W spróbkowanych danych nie ma żadnej informacji suge-
+rującej, że oryginalny sygnał analogowy miał częstotliwość 0,95 a nie 0,05 częstotliwości próbko-
+wania. Przebieg sinusoidalny całkowicie ukrył swoją prawdziwą tożsamość — popełniono zbrodnię
+doskonałą! Według naszej definicji mamy tu próbkowanie nieprawidłowe.
+
+Ten tok rozumowania prowadzi do twierdzenia o próbkowaniu, będącego kamieniem milo-
+wym w dziedzinie DSP. Jest ono często nazywane twierdzeniem Shannona lub twierdzeniem
+Nyquista, autorów publikacji na ten temat w latach 40. ubiegłego wieku. Zgodnie z twier-
+dzeniem o próbkowaniu, że sygnał ciągły może być prawidłowo spróbkowany, tylko jeśli nie
+zawiera składowych o częstotliwościach większych niż połowa częstotliwości próbkowania. Na
+przykład próbkowanie z częstotliwością 2000 próbek/s wymaga, aby sygnał analogowy zawie-
+rał tylko częstotliwości poniżej 1000 okresów/s. Jeśli w sygnale występują składowe o często-
+tliwościach większych od tej granicy, to będą one przypisane do zakresu częstotliwości między

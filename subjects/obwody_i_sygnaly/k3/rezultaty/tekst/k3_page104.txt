@@ -1,0 +1,34 @@
+104 1. Pojęcia podstawowe — elementy
+
+idla iy=zlj=...=i,=0 mamyy, =y,=
+że wspomniane składniki stałe muszą być równe m
+
+<image/wzory/k3_page104_formula2.png>
+Przy połączeniu równoległym skojarzenia magne
+ności są jednakowe.
+W wyniku połączenia równoległego indukcyjn
+otrzymujemy:
+
+<image/wzory/k3_page104_formula3.png>
+Równanie to określa charakterystykę nowego elem
+
+<image/wzory/k3_page104_formula4.png>
+
+gdzie:
+<image/wzory/k3_page104_formula5.png>
+lub:
+<image/wzory/k3_page104_formula6.png>
+
+gdzie f, oznacza funkcję odwrotną względem funk«
+Połączenie równoległe indukcyjności jest indukc
+niami (1.5-42) lub (1.5-44).
+W przypadku szczególnym, gdy wszystkie łączon
+otrzymujemy, zgodnie z równaniem (1.5-41):
+
+<image/wzory/k3_page104_formula7.png>
+a więc:
+<image/wzory/k3_page104_formula8.png>
+
+Wzór (1.5-46) określa odwrotność indukcyjności nowego elementu po-
+wstałego w wyniku połączenia równoległego n indukcyjności liniowych
+ly,k==1,2,...,n.

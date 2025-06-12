@@ -1,0 +1,9 @@
+<image/figury/k4_page387_figure1.png>
+
+Rys. 8.3 Schemat obwodu zasilania dla rozpędzającego się silnika
+
+<image/figury/k4_page387_figure2.png>
+
+Rys. 8.4 Schemat stykowy obwodu sterowania rozruchem rozpędzającego się silnika
+
+<image/wzory/k4_page387/_formula1.png>

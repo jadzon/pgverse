@@ -1,0 +1,11 @@
+<image/figury/k2_page74_figure1.png>
+
+Iloczyn (produkt) kartezjański dwóch zbiorów rozmytych A i B zdefiniowanych w
+przestrzeniach X i Y jest zbiorem rozmytym w przestrzeni iloczynu kartezjańskiego
+X xY i posiada funkcie nrzvnależności
+
+<image/wzory/k2_page74_formula1.png>
+Definicja 5.7 Suma (koprodukt) kartezjański zbiorów
+
+Suma (koprodukt) kartezjański dwóch zbiorów rozmytych A i B zdefiniowanych w
+przestrzeniach X i Y jest zbiorem rozmytym w przestrzeni iloczynu kartezjańskiego

@@ -1,0 +1,31 @@
+« SUS (SUSpend) wprowadzanie sterownik w stan uśpienia. Parame-
+trem podawanym podczas wprowadzania tej in-
+strukcji jest numer z zakresu -32768 + 32767. Jest
+to tzw. identyfikator uśpienia. W momencie, w któ-
+rym nastąpi wykonanie instrukcji SUS do elementu
+pliku statusowego $2 o numerze 7 zostanie wpisany
+identyfikator uśpienia, natomiast w elemencie
+onumerze 8 zostanie umieszczony numer pliku
+programowego z którego instrukcja SUS została
+wywołana.
+
+Instrukcja SUS jest użyteczna podczas wyszukiwa-
+nia błędów w programie procesora.
+
+Poza wymienionymi wyżej instrukcjami sterującymi dostępnymi we wszystkich
+rodzajach procesorów, sterowniki SŁC 500 z procesorem powyżej 5/02 dyspo-
+nują instrukcjami pozwalającymi na periodyczne przerwania wykonywania pro-
+gramu użytkownika STI (Sełectable Timed Interrupts).
+
+Są to instrukcje do programowania okresowych zadań, z okresami mniejszymi
+niż czas cyklu programowego sterownika.
+
+<image/tabele/k4_page273_table1.png>
+
+Wyd. 4.49 Instrukcja skoku JMP i LBL
+
+ 
+
+pO WY TATY TT WE ZZ ZPTPRT PAN CCYJWĘ TYCZCE TTE =Y ” a=rn
+
+5.11 Funkcje sterujące 273

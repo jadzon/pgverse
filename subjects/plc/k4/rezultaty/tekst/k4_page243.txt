@@ -1,0 +1,39 @@
+Plik danych (Data File)
+Nazwa tych plików składa się ze znaku literowego oraz numeru pliku.
+Do standardowych plików danych (numerowanych od 0 do 9) należą:
+0. Plik wyjściowy O (Output)
+W pliku zapisywane są binarne wartości wyjść dla obwodów podłączonych
+do modułów wyjść sterownika.
+
+1. Plik wejściowy 7 (/ntput)
+W pliku zapisywane są binarne wartości wejść dla obwodów podłączonych
+do modułów wejść sterownika.
+Pliki wejściowe 7 oraz wyjściowe O posiadają elementy o długości 1 słowa
+16 bitowego. Każdy element jest określony przez numer złącza (slot), do
+którego podłączony jest dany moduł wejść albo wyjść oraz przez numer
+słowa.
+
+<image/tabele/k4_page243_table1.png>
+
+2. Plik statusowy S$ (Szatus)
+W pliku zapisywane są informacje dotyczące operacji wykonywanych przez
+procesor. Plik statusowy jest użyteczny podczas wyszukiwania błędów
+w programach. Jest także wykorzystywany przez niektóre instrukcje, np. 32
+bitowe operacje arytmetyczne.
+
+3. Plik bitowy B (Bit)
+Plik zawiera zmienne wewnętrzne, które wykorzystuje się do zapisu wyni-
+ków operacji bitowych
+
+Pliki statusowy S$, bitowy B i liczb całkowitych N składają się z elementów
+jednego 16 bitowego słowa.
+
+<image/figury/k4_page243_figure1.png>
+
+4. Plik czasomierzy 7 (Timer);
+Plik przeznaczony do zapisu aktualnych wartości odmierzanego czasu jego
+wartości zadanej oraz bitów statusowych czasomierzy.
+
+ 
+
+5.1 Plikowa organizacja danych i programów 243

@@ -1,0 +1,42 @@
+2.2. Rozwiązania równań układów SLS 225
+
+przypadki. Ich wyraźne rozróżnienie jest jednak celowe ze względów metodologicznych. Rozróż-
+nienie takie ma również tę zaletę, że pozwala — w podanej kolejności — rozpatrywać zagadnienia
+od najprostszych do bardziej skomplikowanych.
+
+B. Warunki powstania stanu ustalonego. W każdym realnie istniejącym
+układzie wszelkie zjawiska mają swój początek w czasie. Rozpatrywanie układu,
+w którym wszystkie sygnały są określone dla te(— 0, +0), jest zatem pewną
+idealizacją (abstrakcją), której sens postaramy się teraz wyjaśnić.
+
+Powróćmy do rozpatrywanego w p. 2.2.1 układu SLS, przedstawionego na
+rys. 2.1-20 i przypomnijmy, że jest to układ inercyjny. Załóżmy dla uproszcze-
+nia, że w układzie tym działa tylko jedno źródło niezależne, np. e, =e
+(e, =... = e, = ( oraz j„,, =... = j, = 0). Załóżmy, jak w p. 2.2.1, że
+pobudzenie e zostaje włączone do układu w chwili t = O i działa w przedziale
+czasu (0, + 00). Wszystkie prądy i napięcia w układzie są zatem określone także
+dla te 40, + o). Przyjmijmy również, iż są zadane warunki początkowe (zerowe
+lub niezerowe) określające zasób energii zmagazynowanej w układzie w chwili
+t=Q0.
+
+Wybierzmy dowolny element układu (rys. 2.1-20) i rozważmy np. prąd i
+tego elementu. Z równań sieciowych układu, po dokonaniu odpowiednich
+przekształceń i eliminacji pozostałych prądów i napięć, możemy otrzymać
+równanie wiążące wybrany prąd i z siłą elektormotoryczną e. Wobec zało-
+żenia, że rozpatrywany układ jest układem SLS, równanie to jest równaniem
+różniczkowym zwyczajnym, liniowym, o stałych współczynnikach, niejednorod-
+nym o postaci:
+
+<image/wzory/k3_page223_formula1.png>
+Załóżmy teraz, że siła elektromotoryczna e jest albo stała:
+
+k3_page223_formula2.png (2.2-8)
+
+albo sinusoidalnie zmienna:
+
+:ory/k3_page223_formula3.png (2.2-9)
+albo okresowa o okresie T = 2n/o, ”:
+
+<image/wzory/k3_page223_formula4.png>
+
+1) Stosujemy tu rozwinięcie funkcji okresowej w szereg Fouriera — por. p. 5.1.1.

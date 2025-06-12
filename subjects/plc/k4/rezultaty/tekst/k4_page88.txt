@@ -1,0 +1,15 @@
+<image/tabele/k4_page88_table1.png>
+
+W prezentowanych przykładach wskażnik etapu $8.X został użyty w celu uzy-
+skania wymaganego działania polegającego na tym, że z chwilą gdy etap S8
+przestaje być aktywny, wyjście %Q0X17:=0, a zmienna %MX10 zachowuje swoją
+poprzednią wartość.
+
+W sterownikach programowalnych, w których możliwe jest stosowanie formali-
+zmu SFC istnieją również odpowiednie mechanizmy do kojarzenia etapów
+z działanianu (step/action association). Przykłady takiego kojarzenia przedsta-
+wiono w [ab. 2.45.
+
+c
+
+88 Rozdział : 2.Programowanie sterowników PLC

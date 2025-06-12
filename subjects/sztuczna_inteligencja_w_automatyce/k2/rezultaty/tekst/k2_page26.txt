@@ -1,0 +1,22 @@
+<image/figury/k2_page26_figure3.png>
+
+Rys. 3.11: Ilustracja zachowania się mrówek mających dwie możliwe drogi do pożywienia:
+(a) początkowo nieliczne mrówki znajdują się na drogach nie preferując wyraźnie żadnej z
+dróg, (b) po upływie pewnego czasu na drogach znajduje się wiele mrówek, jednak zdecy-
+dowanie wybierających drogę krótszą
+
+<image/figury/k2_page26_figure1.png>
+
+Rys. 3.12: Algorytm mrówkowy - ilustracja działania. Zadanie znalezienia najkrótszej drogi
+między węzłami 1 i 10, 7;, — całkowita ilość feromonu na krawędzi (żj)
+
+się w węźle i w epoce £, wybiera jako następny węzeł j z prawdopodobieństwem
+
+<image/wzory/k2_page26_formula1.png>
+
+gdzie N$ jest zbiorem dopuszczalnych, w odniesieniu do mrówki k, węzłów połączo-
+nych krawędziami z węzłem ż (zakłada się, że mrówka nie zawraca), a jest dodatnią
+stałą, 7,; jest całkowitą ilością feromonu na krawędzi (żj)
+
+Gdy wszystkie mrówki przejdą drogę od węzła startowego do końcowego usuwane
+są wszystkie pętle które mrówki mogły przebyć i na wszystkich krawędziach (żj) na

@@ -1,0 +1,55 @@
+18 Rozdział 1. Grafy (nieskierowane)
+
+dwa jego wierzchołki są stopnia nieparzystego. Pamiętamy, wniosek 1.4, że w każdym
+
+grafie liczba wierzchołków nieparzystego stopnia jest parzysta. Tak więc graf z drogą
+Eulera ma dwa lub zero wierzchołków nieparzystego stopnia.
+
+Przykład 1.31 Graf na rysunku 1.1 ma dwa wierzchołki nieparzystego stopnia ci gi
+posiada drogę Eulera c,b,a,e, f,c,g,a,d, f,g.
+
+Wyobraźmy sobie, że idziemy wzdłuż krawędzi grafu, i po przejściu każdej krawędzi
+usuwamy ją z grafu. Przechodząc przez jakiś wierzchołek usuwamy dwie krawędzie, tą,
+którą weszliśmy do wierzchołka, i tą, którą go opuściliśmy. Dlatego, jeżeli po dojściu do
+jakiegoś wierzchołka, nie ma już krawędzi z niego odchodźących, to albo doszliśmy do
+wierzchołka początkowego, albo do wierzchołka nieparzystego stopnia.
+
+Z tego wynika, że jeżeli w grafie istnieje droga Eulera, to mogą w nim być co najwyżej
+dwa wierzchołki nieparzystego stopnia, początek i koniec drogi, a jeżeli droga Eulera jest
+zamknięta i stanowi cykl Eulera, to wszystkie wierzchołki w grafie są parzystego stopnia.
+
+Pokażemy teraz, że są to także warunki wystarczające. Zaczniemy od cyklu Eulera.
+
+Twierdzenie 1.32 Spójny graf posiada cykl Eulera wtedy i tylko wtedy, gdy każdy jego
+wierzchołek jest parzystego stopnia.
+
+Dowód: Konieczność warunku udowodniliśmy wyżej. Teraz pokażemy, że jest to wa-
+runek wystarczający. Załóżmy, że każdy wierzchołek jest parzystego stopnia. Niech ©
+będzie najdłuższą pod względem liczby krawędzi drogą w grafie bez powtarzania krawędzi.
+Z rozważań zrobionych wyżej wynika, że jest to droga zamknięta. Przypuśćmy, że droga
+ta nie zawiera jeszcze wszystkich krawędzi grafu. Ponieważ graf jest spójny, więć istnieje
+wierzchołek v na tej drodze, od którego odchodzi krawędź e nie należąca do C. Może-
+my teraz utworzyć dłuższą drogę bez powtarzania krawędzi: zawiera ona e i potem idzie
+wzdłuż C. Jest to sprzeczne z założeniem, że C była najdłuższą drogą. o
+
+Twierdzenie 1.33 Spójny graf posiada drogę Eulera wtedy i tylko wtedy, gdy posiada co
+najwyżej dwa wierzchołki nieparzystego stopnia.
+
+Dowód: Konieczność warunku pokazano wyżej. Teraz pokażemy, że jest to warunek
+wystarczający. Ponieważ graf nie może posiadać tylko jednego wierzchołka stopnia niepa-
+rzystego, to wystarczy rozważyć graf z dwoma wierzchołkami u i v nieparzystego stopnia.
+Dodajmy do grafu nowy wierzchołek z i połączmy go krawędziami z u i v. Teraz każdy
+wierzchołek jest stopnia parzystego i posiada cykl Eulera. Po usunięciu z niego Lwy
+krawędzi i wierzchołka z otrzymamy drogę Eulera w pierwotnym grafie.
+
+Powyższy dowód, chociaż krótki, ma tę wadę, że nie daje dobrego algorytmu znaj-
+dowania drogi Eulera. Nie sposób przeglądąć wszystkich możliwych dróg, bo jest ich
+bardzo dużo.
+
+Poniżej pokażemy dwa znacznie szybkie algorytmy znajdowania cyklu Eulera.
+Algorytm wyszukiwania cyklu Eulera
+Dane wejściowe: spójny graf G ze wszystkimi wierzchołkami parzystego stopnia.
+
+e Zaczynamy od dowolnego wierzchołka vy.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

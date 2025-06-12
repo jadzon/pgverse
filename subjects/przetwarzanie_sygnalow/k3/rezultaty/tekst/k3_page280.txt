@@ -1,0 +1,54 @@
+EE W O AE
+
+   
+  
+ 
+   
+  
+ 
+   
+  
+    
+  
+  
+   
+ 
+   
+ 
+
+Polepszenie szybkości
+
+Kiedy FFT jest szybsze od splotu standardowego? Odpowiedź na to pytanie zależy od długc
+ści odpowiedzi impulsowej filtru, jak to pokazano na rys. 18.3. Czas wykonania splotu stan:
+dardowego jest wprost proporcjonalny do liczby punktów w odpowiedzi impulsowej filtru.
+Wymagany czas splotu FFT zaś rośnie bardzo wolno, tylko łogarytmicznie, w miarę wzrost
+liczby punktów w odpowiedzi impulsowej. Przecięcie się wykresów tych dwóch żności
+następuje przy liczbie próbek w odpowiedzi równej ok. od 40 do 80 (zależnie od zastosowa-
+nych rozwiązań sprzętowych).
+Ważna rzecz do zapamiętania: odpowiedzi impulsowe filtru krótsze niż ok. 60 punktów
+można realizować szybciej splotem standardowym i czas wykonania jest wtedy wpros
+proporcjonalny do długości odpowiedzi impulsowej filtru. Dłuższe odpowiedzi impulso-
+we można szybciej realizować splotem FFT. W tym przypadku można odpowiedź im-
+pulsową wybrać dowolnie długą, gdyż długość ma niewielki wpływ na czas wykonania.
+Na przykład odpowiedź 16 000-punktowa wymaga czasu tylko dwukrotnie dłuższego niż
+odpowiedź 64-punktowa.
+
+Szybkość splotu decyduje również o dokładności obliczeń (jak to opisano przy oma-
+wianiu FFT w rozdziale 12). Przyczyną jest zależność błędu zaokrąglania w sygnale
+wyjściowym od całkowitej liczby obliczeń, która z kolei jest wprost proporcjonalna do
+czasu obliczania. Jeśli sygnał wyjściowy zostaje obliczony szybciej, to wtedy będzie on
+też obliczony dokładniej. Rozpatrzmy na przykład splot sygnału z 1000-punktową od:
+powiedzią częstotliwościową, z obliczaniem zmiennoprzecinkowym o pojedynczej do-
+kładności. Stosując splot standardowy, można oczekiwać typowego błędu zaokrąglania
+ok. I część na 20 000 (jak wynika z wytycznych w rozdziale 4). Można się natomiast
+spodziewać, że splot FFT będzie o rząd wielkości szybszy i także o rząd wielkości do"
+kładniejszy (tj. 1 część na 200 000).
+
+Splot FFT zachowajcie do tych sytuacji, gdy macie bardzo dużo danych do przetworzenia
+i musicie zastosować bardzo długą odpowiedź impulsową filtru. Trzeba tu myśleć w katego-
+riach sygnału o milionie próbek i odpowiedzi impulsowej o tysiącu próbek. Wszelkie mniej-
+sze liczby próbek nie uzasadniałyby wkładania dodatkowego wysiłku w oprogramowanie.
+Jeśli nie chcecie pisać własnego podprogramu splotu FFT, zajrzyjcie do bibliotek oprogra-
+mowania i znajdźcie tam gotowy program.
+
+<image/figury/k3_page280_figure1.png>

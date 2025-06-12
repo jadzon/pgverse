@@ -1,0 +1,57 @@
+114 6. Urządzenia zewnętrzne
+—/ o O O  _ _.  ..___ 0. UQdZENO zewnęlrzne
+
+i zapisu z magistrali sterującej. Współpraca sterowników z procesorem odbywa się w trzech
+krokach. W pierwszym kroku procesor, wykonując rozkaz dotyczący urządzeń zewnętrz-
+nych, wysyła na magistralę adresową odpowiedni adres. W drugim kroku sterowniki
+dekodują wysłany adres i ten który rozpozna swój adres przechodzi w stan aktywny.
+Rozkaz może dotyczyć przesłania informacji do lub z urządzenia (rozkazy IN lub OUT
+procesora), a może też przygotowywać urządzenie do współpracy (rozkazy TEST lub
+START). W tym drugim przypadku procesor przesyła odpowiednie parametry, jak np. ilość
+transmitowanej informacji, sposób jej przesyłania. Niekiedy procesor żąda od sterownika
+informacji na temat stanu urządzenia (a także stanu samego sterownika), jak np. jego
+zajętości. Trzecim krokiem jest dokonanie samego przesłania.
+
+Transmisje mogą być dwóch rodzajów:
+— znakowe, jeśli przesyłany jest jeden bajt,
+— blokowe, gdy przesyłany jest ciąg bajtów.
+
+Urządzenia realizujące transmisje pierwszego rodzaju nazywane są urządzeniami znako-
+wymi. Są to urządzenia wolne, których czas działania znacznie przewyższa czas wy-
+konania rozkazu przez procesor. Na przykład klawiatura jest urządzeniem, którego
+szybkość nie przekracza 10 znaków na sekundę. Popularne drukarki drukują ok. 100
+znaków na sekundę, co odpowiada czasowi transmisji ok. 10 ms na znak. Czas ten także
+jest znacznie dłuższy niż czas wykonania jednego rozkazu. Przykładowo wydrukowanie
+na drukarce jednego znaku zajmuje czas wykonania ok. 10 000 rozkazów. Taka różnica
+szybkości stwarza pewne problemy przy współpracy tych układów. Dla synchronizacji
+pracy procesora wykonującego program z wolnym urządzeniem zewnętrznym stosuje się
+2 podstawowe sposoby. Pierwszy to programowa obsługa urządzeń zewnętrznych,
+a drugi to współpraca polegająca na przerwaniu (ang. interrupt) pracy procesora (przer-
+wany zostaje wykonywany program) przez wolne urządzenie. W następnym podrozdziale
+omówiono oba te sposoby.
+
+Urządzenia realizujące transmisje blokowe są zwykle urządzeniami szybszymi niż
+urządzenia znakowe. Transmisje blokowe zachodzą pomiędzy pamięcią i urządzeniami
+i mogą być realizowane na dwa sposoby:
+
+|) pod nadzorem procesora, który wykonuje program kolejnego odczytywania ko-
+
+mórek pamięci i przesyłania ich zawartości do urządzenia,
+
+2) pod nadzorem innego układu, który generuje adresy i stroby dla pamięci i urządzeń
+
+zewnętrznych.
+
+Pierwszy sposób to po prostu wielokrotnie powtarzana transmisja znakowa. Transmisja
+zachodzi z szybkością wykonywania programu przez procesor. Załóżmy, że szybkość
+transmisji z pamięci dyskowej wynosi 4 MB/s, a czas cyklu pamięci operacyjnej 250 ns.
+Szybkości pracy obu tych urządzeń są równe i dlatego czas transmisji jednego bajtu może
+wynosić 250 ns. Ponieważ czas wykonania rozkazu procesora Jest zawsze dłuższy od
+czasu dostępu do pamięci (np. 1 Hs), to transmisja pod nadzorem procesora jest zawsze
+wolniejsza (np. 4-krotnie).
+
+Drugi sposób stosuje się wtedy, gdy wymagana szybkość transmisji jest duża. Sposób
+ten polega na tym, że po zainicjowaniu transmisji, procesor odłącza się od magistrali,
+zwalniając ją dla specjalnego układu generacji adresów i strobów, aby zapewnić możliwość
+przesłań bezpośrednio pomiędzy urządzeniem i pamięcią. Taki sposób transmisji nazywa
+się transmisją bezpośredniego dostępu do pamięci — DMA (ang. direct memory access).

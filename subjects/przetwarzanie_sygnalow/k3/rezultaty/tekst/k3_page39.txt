@@ -1,0 +1,25 @@
+3. Przetwarzanie anałogowo-cyfrowe i cyfrowo-analogowe
+
+definiuje sposób stosowania tych wielkości. W tej książce stosujemy pojęcie częstotliwości
+Nyquista oznaczającej połowę częstotliwości próbkowania.
+
+Na rys. 3.4 przedstawiono, jak częstotliwości zmieniają się w wyniku aliasingu. Przede
+wszystkim trzeba pamiętać, że nie jest możliwe, aby sygnał cyfrowy zawierał częstotli-
+wości większe od połowy częstotliwości próbkowania (tj. od częstotliwości Nyquista).
+Gdy częstotliwości w przebiegu ciągłym są poniżej częstotliwości Nyquista, to te same
+częstotliwości są w sygnale spróbkowanym. Jeśli jednak częstotliwość sygnału ciągłego
+jest powyżej częstotliwości Nyquista, to zjawisko aliasingu zmienia częstotliwość na taką,
+która może być reprezentowana w spróbkowanych danych. Jak pokazano za pomocą li-
+nii łamanej na rys. 3.4, każda częstotliwość w przebiegu ciągłym powyżej częstotliwości
+Nyquista ma odpowiadającą jej częstotliwość leżącą pomiędzy zerem a połową częstotli-
+wości próbkowania. Jeśli zdarzy się, że w tym dolnym obszarze częstotliwości jest już ja-
+kiś przebieg sinusoidalny, to sygnał poddany aliasingowi doda się do tamtego przebiegu,
+powodując stratę informacji. Aliasing jest podwójnie szkodliwy: może być utracona in-
+formacja zarówno o większych, jak i małych częstotliwościach. Załóżmy, że mamy sygnał
+cyfrowy zawierający częstotliwość równą 0,2 częstotliwości próbkowania. Jeśli ten sygnał
+był uzyskany w wyniku prawidłowego próbkowania, to oryginalny sygnał analogowy mu-
+siał mieć częstotliwość 0,2 częstotliwości próbkowania. Jeśli podczas próbkowania nastąpił
+aliasing, to częstotliwość przebiegu cyfrowego 0,2 mogła powstać z każdej z nieskończonej
+liczby częstotliwości sygnału analogowego: 0,2; 0,8; 1,2; 1,8; 2,2, ...
+
+<image/figury/k3_page39_figure1.png>

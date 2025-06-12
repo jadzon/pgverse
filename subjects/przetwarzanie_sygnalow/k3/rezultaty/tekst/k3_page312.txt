@@ -1,0 +1,35 @@
+22. Przetwarzanie sygnałów fonicznych
+
+<image/tabele/k3_page312_table1.png>
+
+doskonale dźwiękochłonnym, zostawiając tylko 1% powierzchni niepokrytej na drzwi, narożniki,
+wentylatory itd. Mimo że zredukowaliście poziom natężenia dźwięku do zaledwie 1% poprzed-
+niej wartości, to odczuwalna głośność zmniejszyła się tylko do ok. 0,01% = 0,2, czyli do 20%.
+Ogólnie przyjmuje się, że zakres ludzkiego słyszenia obejmuje częstotliwości od 20 Hz
+do 20 kHz, lecz z największą czułością w zakresie od | do 4 kHz. Człowiek odczuwa już
+dźwięki o poziomie natężenia 0 dB przy częstotliwości 3 kHz, lecz trzeba poziomu natęże-
+nia aż 40 dB, aby usłyszeć dźwięk o częstotliwości 100 Hz (amplituda wzrasta stukrotnie).
+Słuchający może stwierdzić, że dwa tony różnią się wysokością, jeśli różnica ich częstotli-
+wości jest co najmniej 0,3% przy częstotliwości 3 kHz. Ta wymagana różnica wzrasta do 3%
+dla częstotliwości 100 Hz. Dla porównania warto wiedzieć, że częstotliwość tonów dwóch
+sąsiednich klawiszy fortepianu różni się o ok. 6%.
+
+Główną zaletą posiadania dwojga uszu jest możliwość ustalania kierunku dźwięku. Człowiek jest
+w stanie wykryć różnicę między dwoma źródłami o kierunkach dochodzenia dźwięku różnią-
+cych się zaledwie o 3 stopnie, a więc źródeł rozstawionych mniej więcej na szerokość człowieka,
+w odległości 10 m. Informacja kierunkowa jest uzyskiwana dwiema oddzielnymi drogami. Po
+pierwsze, sygnały o częstotliwości powyżej ok. 1 kHz są silnie zacieniane przez głowę. Inaczej
+mówiąc, ucho znajdujące się od strony źródła dźwięku odbiera silniejszy sygnał niż ucho po prze-
+ciwnej stronie głowy. Drugi wskaźnik kierunkowości polega na tym, że ucho położone z bardziej
+odległej strony głowy odbiera dźwięk nieco później niż drugie ucho, ze względu na większą odle-
+głość od źródła dźwięku. Przyjmując typowy rozmiar głowy (ok. 22 cm) i prędkość rozchodzenia
+się dźwięku (ok. 340 m/s), można obliczyć, że rozróżnialność kierunku wynosząca 3 stopnie
+wymaga dokładności określania czasu ok. 30 mikrosekund. Ponieważ takie dokładne rozróżnianie
+czasu wymaga mechanizmu opartego na teorii czasu, więc ten wskaźnik kierunkowości jest wy-
+korzystywany przede wszystkim do dźwięków o częstotliwości poniżej ok. I kHz.
+
+Oba te mechanizmy wyznaczania kierunkowości są w dużym stopniu wspomagane obserwo-
+waniem zmian sygnału przy poruszaniu głową. Ciekawe odczucia mają miejsce wówczas,
+gdy słuchacz odbiera dwa zupełnie identyczne dźwięki w obu uszach, np. słuchając oboma
+uszami jednakowego dźwięku doprowadzonego do słuchawek nagłownych. Mózg wnioskuje
+wtedy, że dźwięk dochodzi z punktu położonego w środku głowy słuchacza!

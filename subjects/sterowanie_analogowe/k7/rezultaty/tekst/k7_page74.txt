@@ -1,0 +1,24 @@
+Pozycjonowanie biegunów w oparciu o sprzężenie od stanu
+
+ 
+
+Wyznaczanie macierzy wzmocnień dla obiektu o jednym wejściu opisanego
+modelem stanowym w postaci kanonicznej sterowalnej.
+
+Jeśli obiekt dany jest w postaci kanonicznej sterowalnej:
+
+SMOUBJS 8|8poJN
+
+<image/wzory/k/_page74_formula1.png>
+
+oraz wymagany wielomian charakterystyczny układu ze sprzężeniem:
+<image/wzory/k/_page74_formula2.png>
+
+to wektor wzmocnień sprzężenia można wyznaczyć ze wzoru:
+
+<image/wzory/k7_page74_formula3.png>
+
+ 
+
+POLITECHNIKA
+GDANSKA

@@ -1,0 +1,50 @@
+2. Architektura klasycznych komputerów 11
+
+argumenty. Dwie pierwsze jedynki drugiego bajtu wskazują na to, że argumenty znajdują
+się w rejestrach procesora i że do drugiego z nich ma zostać zapisany wynik. Pozostałe
+bity określają te rejestry (pierwszym jest rejestr CL — bity 001, drugim jest rejestr A —
+bity 000). Wynik (liczba 7) zostanie wpisany do drugiego rejestru (do rejestru A). Ostatni
+rozkaz jest też rozkazem dwu bajtowym. Jest to rozkaz przesłania zawartości rejestru A do
+urządzenia wyjściowego umieszczonego pod adresem 1010 1010 (drugi bajt tej instrukcji).
+W wyniku działania tego programu drukarka wydrukuje liczbę 7.
+
+Po tym ogólnym opisie warto przyjrzeć się nieco dokładniej kiedy i jak poszczególne
+bloki procesora uczestniczą w wykonywaniu tego programu. Inicjalizacja wykonania pro-
+gramu polega na odpowiednim załadowaniu licznika rozkazów LR. Należy wpisać do
+niego taką wartość, która wskaże miejsce w pamięci, gdzie znajduje się pierwszy rozkaz
+programu. W przykładzie jest to adres 0000 0000. Następuje wtedy faza odczytania rozkazu
+z pamięci. Nazywa się ona fazą pobrania rozkazu. W fazie tej odczytany z pamięci kod
+rozkazu zostaje zapisany do rejestru rozkazów (rejestr RR). Zawartość tego rejestru jest
+przesyłana do układu dekodera, który ma uruchomić odpowiedni proces wykonania tego
+rozkazu. Dekodowanie rozkazu polega głównie na rozpoznaniu: „co rozkaz ma zrobić?”
+(jaka to ma być operacja) i „jak ma zrobić?” (jakie są argumenty danej operacji). Pierwszy
+rozkaz naszego programu ma za zadanie przesłanie argumentu do rejestru CL. Jedno-
+cześnie wskazuje on, że argumentem tym będzie następny bajt kodu programu. Dlatego
+następuje teraz druga faza wykonania tego rozkazu, tj. pobranie argumentu. Licznik
+rozkazów zostaje zwiększony o 1 i odczytana zostanie następna komórka pamięci. Po
+skompletowaniu całej instrukcji nastąpi trzecia i ostatnia faza, zwana fazą wykonania
+rozkazu i wówczas argument operacji, zgodnie z treścią rozkazu, zostanie przesłany do
+rejestru CL.
+
+Ponieważ na tym zakończyło się wykonywanie tego rozkazu, to gdy licznik rozkazów
+zostanie ponownie zwiększony o 1 i odczytana zostanie zawartość następnej komórki
+pamięci, to będzie ona traktowana jako kod rozkazu i zostanie przesłana do rejestru
+rozkazów. W tym przypadku dekodowanie tego rozkazu pokaże, że jest to rozkaz prze-
+słania do rejestru A argumentu, który znajduje się w pamięci, a adres komórki pamięci
+znajduje się w kodzie programu w następnych dwóch bajtach. Dlatego po fazie pobrania
+kodu rozkazu nastąpi faza pobrania adresu argumentu. Zawartość licznika rozkazów zo-
+stanie zwiększona o 1 i odczytany zostanie pierwszy bajt adresu, a następnie zawartość LR
+zostanie jeszcze raz zwiększona o 1 i odczytany drugi bajt adresu. Wtedy nastąpi faza
+pobrania argumentu. Dwa bajty przesłane będą na wejście adresowe pamięci i odczytany
+zostanie argument tego rozkazu. Potem nastąpi ostatnia faza wykonania tego rozkazu, tj.
+przesłanie argumentu do rejestru A. Po zwiększeniu zawartości licznika rozkazów o 1
+odczytana z pamięci zawartość komórki pamięci będzie interpretowana jako rozkaz. Kod
+tego rozkazu (0000 0000) wskazuje, że jest to rozkaz dodawania zawartości dwóch
+rejestrów. Które z rejestrów procesora przechowują argumenty operacji wskazuje następny
+bajt kodu programu. Dlatego następuje zwiększenie zawartości licznika rozkazów o 1
+i bajt ten zostanie odczytany. Po tych dwóch odczytach pamięci zakończono fazę pobrania
+rozkazu i następuje faza pobrania argumentów. Drugi bajt rozkazu wskazuje na to, że
+argumentami są rejestry CL (bity 001) i A (bity 000), a wynik ma zostać przesłany do
+drugiego rejestru (rejestru A). W fazie wykonania rozkazu zawartości tych dwóch rejestrów
+zostaną podane na wejścia układu ALU, a wynik operacji zostanie przesłany do rejestru A.
+Po zwiększeniu zawartości licznika rozkazów o 1, nastąpi faza pobrania ostatniego roz-

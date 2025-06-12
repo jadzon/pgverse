@@ -1,0 +1,55 @@
+84 4. Procesory
+
+ 
+
+Przykładowo załóżmy, że w mikrokomputerze 8-bitowym jest pamięć o pojemności
+64 kB, co odpowiada 16-bitowemu adresowi. Stosując adresowanie indeksowe należy
+w rozkazie umieścić 16-bitową bazę, a więc rozkaz w takim trybie adresowania będzie co
+najmniej 3-bajtowy. Stosując adresowanie bazowe można ograniczyć przemieszczenie do
+256 i wówczas rozkaz może być 2-bajtowy. Jeśli jest to niedogodne, to można zastosować
+2 rodzaje rozkazów: jedne 2-bajtowe z przemieszczeniem ograniczonym do 256 i drugie
+3-bajtowe z przemieszczeniem ograniczonym do 16K.
+
+Adresowanie bazowe jest pomocne przy stosowaniu relokowalnych procedur, pod-
+programów, funkcji lub bloków danych (por. rozdz. 7 i 8). W takich przypadkach adres
+początkowy, tj. baza może być zmieniana przez system operacyjny, a przemieszczenia
+w programie poprawnie adresują lokalne zmienne lub parametry (por. rozdz. 7).
+
+W przypadku gdy oba składniki są zmienne, to tryb adresowania nazywamy bazowo-
+-indeksowym. Oba składniki znajdują się w rejestrach, gdyż są wyliczane dopiero w czasie
+wykonywania programu. Procesor, który umożliwia taki tryb adresowania najczęściej jest
+wyposażony w dwa rejestry służące adresacji. Jeden z nich nazywany jest rejestrem
+indeksowym, a drugi rejestrem bazowym.
+
+Specjalną odmianą trybu adresowania dwuskładnikowego jest tryb, który jako rejestr
+adresu bazowego wykorzystuje licznik rozkazów PC. Chodzi o stworzenie możliwości
+adresowania danych względem aktualnej wartości licznika rozkazów. Z tablicy 4.4 wynika,
+że licznik rozkazów może być wykorzystany na dwa sposoby. Pierwszy wykorzystuje
+rejestr PC jako rejestr bazowy (tryb adresowania bazowy). Wówczas zmienne przemiesz-
+czenie o niewielkiej długości (często dane i rozkazy są blisko siebie w pamięci, tj. lo-
+kalność danych) może być zapisywane do innych rejestrów procesora. Jest to tryb bazowy,
+zwany adresowaniem względnym (ang. relative addressing). Druga z nich to zwykłe
+adresowanie bazowo-indeksowe (ang. base indexed), zwane także indeksowo-względnym
+(ang. relative-indexed addressing).
+
+W wielu nowoczesnych komputerach stosowane są także tryby adresowania wykorzys-
+tujące więcej niż jeden składnik do obliczenia adresu efektywnego. Istnieje wielka gama
+możliwości różnych kombinacji tych składników i tworzenia wielu rodzajów trybów
+adresowania. Tutaj przedstawiono jedynie przykład ilustrujący jedną z tych możliwości.
+Niech rozkaz zawiera numer rejestru, w którym przechowywany jest adres bazowy AB,
+a także dwa rodzaje przemieszczenia: jedno dla trybu bazowego — pb i drugie dla trybu
+indeksowego — pi. Jeśli założyć, że procesor zawiera skalowany rejestr indeksowy RI, to
+
+efektywnu adrac anarandn moża hvóń nturarzanu uadhua farmnłu:
+
+<image/wzory/k3_page94_formula1.png>
+
+gdzie, jak tatwo zauwazyc, adres jest obliczany w awocn Krokacn. Najpierw jest obliczany
+adres miejsca w pamięci, dla odczytania przemieszczenia dla rejestru indeksowego. W tym
+celu dodaje się do zawartości rejestru bazowego AB wartość przemieszczenia pb. Po
+odczytaniu pamięci, do odczytanej zawartości komórki pamięci dodaje się zawartość
+rejestru indeksowego oraz przemieszczenia pi.
+
+Celem tworzenia takich struktur adresowania jest uzyskanie możliwości skrócenia
+długości rozkazów, przy zachowaniu elastyczności relokowania używanych struktur
+danych.

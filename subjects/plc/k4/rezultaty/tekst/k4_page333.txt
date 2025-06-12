@@ -1,0 +1,38 @@
+<image/wzory/k4_page333_formula1.png>
+
+Za pomocą operatorów:
+
+e  [L- wprowadzenie,
+
+e T- przekazanie
+można dokonać wymiany informacji między różnymi typami argumentów. Wy-
+miana informacji odbywa się pośrednio poprzez tzw. akumulatory (Rys. 7.7).
+Akumulatory są to dwa rejestry procesora specjalnego przeznaczenia (16 lub 32
+bitowe, w zależności od CPU). Są one wykorzystywane jako pamięć pośrednia.
+Tam znajdują się wartości argumentów, na których procesor ma wykonać opera-
+cje i do tych rejestrów procesor wpisuje wyniki wykonanych operacji. Operatory
+wprowadzania i przekazania są wykonywane niezależnie od wyniku poprzedza-
+jących je operacji logicznych i nie powodują zmiany tego wyniku.
+
+<image/figury/k4_page333_figure1.png>
+
+Rys. 7.7 Operacje wprowadzenia i przekazania
+
+_ 7.6.1 Wprowadzanie
+
+ 
+
+Operator wprowadzania umożliwia przepływ informacji z pamięci do akumula-
+tora. W trakcie wprowadzania odpowiedni obszar pamięci jest kopiowany do
+akumulatora I. Równocześnie poprzednia zawartość akumulatora | jest kopio-
+wana do akumulatora 2. Poprzednia zawartość akumulatora 2 jest tracona.
+Obszar pamięci, z którego ma być wykonane kopiowanie jest wskazywany przez
+argument operatora wprowadzania (np. Ł /W /0). W przypadku wprowadzania
+obszaru, który nie wypełnia w całości akumulatora pozostałe bity zostają wypeł-
+nione zerami. Po wykonaniu operacji wprowadzania zawartość obszaru pamięci.
+który jest kopiowany do akumulatora | pozostaje niezmieniona. Ponieważ dane
+są adresowane jako słowa, więc przy bajtowym wprowadzaniu danych konieczne
+jest określenie, który bajt słowa danych ma zostać wprowadzony do akumulato-
+ra.
+
+7.6 Operacje wprowadzania i przekazania 333

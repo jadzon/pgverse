@@ -1,0 +1,18 @@
+Zadania do rozdziału 2 235
+
+<image/figury/k3_page233_figure2.png>
+
+Rys. Z-2.14
+
+Odp.:
+
+<image/wzory/k3_page233_formula2.png>
+
+<image/wzory/k3_page233_formula3.png>
+'asady superpozycji obliczyć prądy i; oraz i, w układzie z rys. Z-2.15.
+
+2233_formula1.png
+
+/K3_page233_figure1.png
+
+Rys. Z-2.15

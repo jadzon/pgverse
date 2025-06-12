@@ -1,0 +1,22 @@
+Na początku algorytmu ART wszystkie piksele w matrycy obrazu są ustawiane na jakąś do-
+wolną wartość. Następnie stosuje się procedurę iteracyjną, stopniowo zmieniając matrycę
+obrazową tak, aby odpowiadała ona profilom. Cykl iteracyjny zawiera pętlę przebiegającą
+
+przez każdy punkt w zmierzonych danych. Przy każdej wartości zmierzonej stawia się py-
+00 OOOO nikacii e ai hl GOA
+pomiarem? Inaczej mówiąc, zmierzona próbka jest porównywana z sumą pikseli obrazo-
+wych wzdłuż promienia wskazującego próbkę. Jeśli suma wzdłuż promienia jest mniejsza
+niż zmierzona próbka, to wartości wszystkich pikseli wzdłuż tego promienia ulegają zwięk-
+szeniu. Natomiast są one zmniejszane, jeśli suma pikseli wzdłuż promienia jest większa
+
+poprzednio. Zasada polega na tym, że błędy stają się coraz mniejsze w miarę powtarzanych
+iteracji, aż obraz osiągnie właściwą postać.
+
+Metody iteracyjne są — ogólnie biorąc — wolne, lecz przydatne, gdy lepsze algorytmy nie
+są „ Faktycznie, technikę ART stosowano w pierwszym komercyjnym skanerze
+CT z 1972 roku - EMI Mark I. Do metod iteracyjnych powrócimy w następnym rozdziale
+przy omawianiu sieci neuronowych. Rozwój trzeciego i czwartego spośród wspomnia-
+nych czterech sposobów obliczania obrazu przekroju spowodował, że prawie całkowicie
+zastąpiły one techniki iteracyjne w komercyjnej aparaturze do tomografii komputerowej.
+
+<image/figury/k3_page392_figure1.png>

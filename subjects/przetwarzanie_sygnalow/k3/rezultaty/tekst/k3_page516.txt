@@ -1,0 +1,62 @@
+32. Przekształcenie Laplace'a
+
+ 
+
+a dolna — ujemne. Zwróćcie szczególną uwagę na fakt, że wartości na osi y płaszczyzny
+zmiennej zespolonej s (6 = 0) są dokładnie równe wartościom przekształcenia Fouriera sy-
+gnału w dziedzinie czasu.
+
+Jak podano w poprzednim rozdziale, zespolone przekształcenie Fouriera jest opisane wzorem:
+
+<image/wzory/k3_page516_formula1.png>
+To wyrażenie można rozwinąć w przekształcenie Laplace'a, mnożąc najpierw sygnał w dzie-
+dzinie czasu przez wyraz wykładniczy:
+
+<image/wzory/k3_page516_formula2.png>
+
+Chociaż nie jest to najprostsza postać przekształcenia Laplace'a, jest to przypuszczalnie naj-
+lepszy opis strategii i sposobu działania w tej metodzie.
+
+W celu uzyskania prostszej postaci tego wzoru można połączyć ze sobą oba wyrazy wykładnicze:
+
+<image/wzory/k3_page516_formula3.png>
+Wreszcie, położenie na płaszczyźnie zmiennej zespolonej może być reprezentowane przez
+zmienną zespoloną s, przy czym s = 6 + jw. Dzięki temu wzór można zredukować do jeszcze
+bardziej ży%%%%* —%%*=%**
+
+<image/wzory/k3_page516_formula4.png>
+
+Wzór 32.1. Przekształcenie Laplace'a. Ten wzór określa zależność między sygnałem w
+
+py ary or ar dj czworo rzy doom AA
+
+w dziedzinie czasu zaś może być zespolony, ale na ogół jest rzeczywisty
+
+Jest to końcowa postać przekształcenia Laplace'a — jeden z najważniejszych wzorów
+w dziedzinie przetwarzania sygnałów i w elektronice. Szczególną uwagę zwróćcie na
+wyraz e ”, zwany zespoloną funkcją wykładniczą. Jak wynika z powyższego wyprowe-
+dzenia, dzięki zespolonej funkcji wykładniczej można w najbardziej zwartej postaci jednym
+wzorem wyrazić zarówno sinusoidy, jak i funkcje wykładnicze.
+
+Chociaż objaśniliśmy przekształcenie Laplace'a jako pewien proces dwustopniowy (mnoże-
+nie przez krzywą wykładniczą, a po nim przekształcenie Fouriera), to pamiętajcie, że ma to
+być tylko ułatwieniem w uczeniu się i sposobem podziału wzoru 32.1 na prostsze składniki.
+Przekształcenie Laplace'e jest jednym równaniem wyrażającym zależność między x(1) i X(s),
+a nie procedurą wielokrokową. Wzór 32.1 określa, jak obliczać każdy punkr na płaszczyźnie
+zmiennej zespolonej s (opisany współrzędnymi 6 i ©) na podstawie wartości 6 i © oraz
+sygnału w dziedzinie czasu x(f). Zastosowanie przekształcenia Fouriera do jednoczesnego
+obliczenia wszystkich punktów wzdłuż osi pionowej jest po prostu udogodnieniem, ale nie
+wymogiem. Jednak trzeba koniecznie pamiętać, że wartości na płaszczyźnie zmiennej zespo-
+lonej s wzdłuż osi y (6 = 0) są dokładnie równe wartościom przekształcenia Fouriera. Jest
+to podstawowa cecha, dzięki której przekształcenie Laplace'a jest tak użyteczne. Będziemy
+jeszcze o tym mówić w dalszej części tego rozdziału.
+
+W celu lepszego poznania natury wzoru 32.1, wybierzmy kilka punktów na płaszczyźnie
+zmiennej zespolonej s i sprawdźmy, jak wartości w tych punktach są powiązane z sygna-
+łem w dziedzinie czasu. Najpierw przypomnijcie sobie, w jaki sposób poszczególne punkty
+w dziedzinie częstotliwości zależą od sygnału w dziedzinie czasu. Każdy punkt w dziedzinie
+częstotliwości, identyfikowany przez jakąś specyficzną wartość ©, odpowiada dwóm sinuso-
+idom cos(«/) i sin(r). Część rzeczywistą wyznacza się, mnożąc sygnał w dziedzinie czasu
+przez fałę kosinusoidalną i następnie całkując uzyskane wyrażenie w granicach od — do
+eo, Część urojoną wyznacza się w taki sam sposób, lecz z wykorzystaniem fali sinusoidal-
+nej. Jeśli mamy do czynienia z zespołonym przekształceniem Fouriera, to dla częstotliwości

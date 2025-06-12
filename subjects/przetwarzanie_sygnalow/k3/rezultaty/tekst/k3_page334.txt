@@ -1,0 +1,58 @@
+Aparaty fotograficzne i oczy 365
+
+drganiami aparatu i ruchami obiektu. W systemach optycznych jest wiele takich parametrów
+wymagających kompromisowego doboru.
+
+Regulacja średnicy źrenicy (w oku) lub przesłony (w aparacie) jest konieczna, gdyż zmia-
+ny natężenia światła w otoczeniu są znacznie większe niż te, które mogą być bezpośrednio
+przetwarzane w czujniku światła. Na przykład stosunek natężeń światła słonecznego i księży-
+cowego jest jak ok. jeden do miliona. Uwzględniając jeszcze współczynnik odbicia światła,
+który może zmieniać się od 1 do 99%, uzyskujemy zakres zmian natężenia światła prawie
+jeden do stu milionów.
+
+Zakres dynamiczny elektronicznego aparatu fotograficznego wynosi typowo od 300 do
+1000. Jest on definiowany jako największy sygnał, jaki można zmierzyć, podzielony przez
+szum własny urządzenia. Patrząc na to w inny sposób, możemy powiedzieć, że maksymalny
+wytwarzany sygnał jest 1 V, a wartość skuteczna szumu ciemnego wynosi ok. I mV. Typowa
+soczewka aparatu ma przesłonę zmieniającą powierzchnię otworu świetlnego o czynnik ok.
+300. Z tego wynika zakres dynamiczny równy kilkaset tysięcy. Jest jasne, że ciemną nocą
+będzie całkiem bezużyteczny aparat fotograficzny z zespołem soczewek takim samym, jak
+stosowany w jasnym świetle słonecznym.
+
+Oko zaś działa w zakresie dynamicznym, który niemal pokrywa duży zakres zmian natężenia
+światła w otoczeniu. To zaskakujące, że wcale nie zmiany źrenicy są głównym sposobem
+uzyskania tego ogromnego zakresu dynamicznego. Przy przejściu od ciemności do jasnego
+światła powierzchnia źrenicy zmienia się tylko o czynnik ok. 20. Pozostała część zakresu
+dynamicznego jest uzyskiwana w wyniku stopniowej adaptacji czułości komórek nerwowych
+wykrywających światło. Na przykład trzeba kilku minut, aby nasze oczy dostosowały się do
+słabego nawet światła po wyjściu z ciemnego kina.
+
+Jednym ze sposobów, w jaki DSP może ulepszać obrazy, jest redukowanie zakresu dynamicz-
+nego, jaki musi być odbierany przez obserwatora. Nie chcemy bowiem mieć bardzo jasnych
+i bardzo ciemnych obszarów w tym samym obrazie. Widziany obraz tworzy się z dwóch
+sygnałów obrazowych: dwuwymiarowego obrazu pochodzącego z bezpośredniego oświetle-
+nia oglądanego widoku i dwuwymiarowego obrazu odbitego. Obraz odbity ma zakres dy-
+namiczny mniejszy od 100, ponieważ zwykłe materiały odbijają od 1% do 99% padającego
+światła. W świetle odbitym jest zawarta większość informacji o obrazie, a więc informacji
+o położeniu obiektu i o właściwościach jego powierzchni. Natomiast sygnał od oświetlenia
+bezpośredniego zależy od źródeł światła umiejscowionych wokół obiektów, ale nie od sa-
+mych obiektów. Sygnał od oświetlenia bezpośredniego może mieć zakres dynamiczny nawet
+rzędu milionów, ale typowa wartość dla pojedynczego obrazu to 10 do 100. Ten sygnał niesie
+niewiele interesujących informacji, lecz może pogorszyć jakość końcowego obrazu przez
+nadmierne zwiększenie jego zakresu dynamicznego. DSP może poprawić tę sytuację, wytłu-
+miając sygnał oświetlenia bezpośredniego w taki sposób, żeby w obrazie dominował sygnał
+odbity. W następnym rozdziale przedstawimy sposób implementacji takiego algorytmu.
+Tylną powierzchnię gałki ocznej pokrywa śŚwiatłoczuła siatkówka. Siatkówka może być
+podzielona na trzy główne warstwy wyspecjalizowanych komórek nerwowych (rys. 23.5).
+Jedna z warstw to komórki przetwarzające Światło na sygnały neuronowe, druga warstwa
+służy do przetwarzania obrazów, a trzecia — do przekazywania informacji do nerwu wzroko-
+wego prowadzącego do mózgu. U prawie wszystkich zwierząt te warstwy są ułożone odwror-
+nie. To znaczy, że komórki światłoczułe znajdują się w ostatniej warstwie, a światło, przed
+detekcją, musi przejść przez inne warstwy.
+
+Są dwa typy komórek wykrywających światło: pręciki oraz czopki, których nazwy pocho-
+dzą od wyglądu pod mikroskopem. Pręciki są wyspecjalizowane do odbioru światła bardzo
+słabego, na przykład światła z nocnego nieba. Widzenie prawie w zupełnej ciemności jest
+bardzo zaszumione; obrazy wydają się być pokryte ciągle zmieniającym się ziarnistym wzo-
+rem. Przyczyną nie są ograniczenia oka, lecz bardzo słaby sygnał obrazu. Tak mało energii
+świetlnej wchodzi do oka, że detekcja indywidualnych fotonów następuje w sposób losowy.

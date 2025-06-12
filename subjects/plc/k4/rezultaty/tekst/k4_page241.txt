@@ -1,0 +1,32 @@
+ZE l KARE a RA ROBA M
+
+ 
+
+<image/wzory/k4_page241_formula1.png>
+
+ 
+
+W rozdziale tym przedstawia się podstawy do oprogramowania sterowników serii
+SLC 500 produkcji firmy Allen-Bradley. Program narzędziowy APS (Advvanced
+Programming Software) [2][3], który jest wykorzystywany do programowania
+tych sterowników oraz większych sterowników PLC tego samego producenta,
+umożliwia korzystania z języka drabinkowego LD i języka instrukcji IL.
+
+W rozdziałe podano sposoby adresowania zmiennych i ogólne zasady tworzenia
+programu drabinkowego oraz opisy podstawowych elementów tego języka.
+
+Celem tego rozdziału jest więc raczej omówienie reguł użycia języka i pokazanie
+jego możliwości oraz prezentacja typowych, najczęściej używanych elementów
+języka oraz szczególności elementów unikalnych nie spotykanych w oprogramo-
+waniu innych sterowników. W rozdziale 8 przedstawiono program sterowania
+sekwencyjnym procesem wsadowym na przykładzie reaktora chemicznego. Przy-
+kład ten obejmuje zadania sterowania logicznego jak i zadania regulacji z w:ko-
+rzystaniem bloku funkcyjnego PID.
+
+<image/figury/k4_page241_figure1.png>
+
+ 
+
+per""""PREWTZJTTTTTWIĘTERTTT"N
+
+Rozdział : 5. Język schematów drabinkowych dla SLC 500 241

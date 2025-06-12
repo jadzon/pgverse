@@ -1,0 +1,49 @@
+16 Rozdział 1. Kombinatoryka
+
+Twierdzenie 1.15 (zasada włączania i wyłączania) Liczba elementów uniwersum X, któ-
+re nie należą do żadnego podzbioru A;, wynosi:
+
+<image/wzory/k2_page51_formula1.png>
+Sumujemy tutaj po wszystkich podzbiorach 7 zbioru £1,...,n).
+
+Dowód. Podobnie jak w poprzednim podrozdziale, żeby obliczyć sumę (??), liczymy ele-
+menty poszczególnych zbiorów A;, i dla każdego elementu dodajemy (—1)' 7! do sumy
+(+1, gdy |7| jest parzyste, lub — 1, gdy |7| jest nieparzyste). Udział pojedynczego elemen-
+tu r w tak utwirzonej sumie wynosi
+
+<image/wzory/k2_page51_formula2.png>
+
+czyli jest równy sumie współczynników (—1)'” dla tych podzbiorów 7 € f1,...„n), dla
+których r € A;.
+
+Jeżeli x nie należy do żadnego z podzbiorów 4;, to z jest liczony tylko raz, w zbio-
+rze Ag, i jego udział w sumie (??) wynosi 1. Przypuśćmy teraz, że x należy do jakiś
+
+dzb
+owzory/k2_page51_formula3.pn
+
+czyli J W LUUŁCADY LYCLI PUUŁUIULUW, KAWIE Ławitiają£. Łauważziiiy ia, ŁU © AJ wtedy
+
+i tylko wtedy, gdy 7 C J. Rzeczywiście z € A; = (|,., A; wtedy i tylko wtedy, gdy
+r € A;, dla każdego i € I, czyli gdy I € J. Tak więc udział elementu r w sumie (??)
+wynos'*
+
+<image/wzory/k2_page51_formula4.png>
+
+Jest to suma po wszystkich podzbiorach 7 zbioru J. Uporządkujmy teraz składniki tej
+sumy według mocy podzbiorów 7 i niech |J| = j. Mamy (+) podzbiorów mocy £, więc:
+
+<image/wzory/k2_page51_formula5.png>
+
+Przedostatnia równość wynika ze wzoru Newtona.
+
+Tak więc wkłady elementów, które nie należą do żadnego A;, wynoszą po 1, a wkłady
+tych elementów, które należą do jakiegoś A;, wynoszą po 0. A zatem suma (??) zlicza
+elementy nie należące do żadnego A;. go
+
+Stosując zasadę włączania i wyłączania do przykładu ze studentami możemy teraz
+policzyć studentów, którzy nie uprawiają żadnego sportu:
+
+<image/wzory/k2_page51_formula6.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

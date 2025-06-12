@@ -1,0 +1,31 @@
+e Język schematów blokowych FBD (Function Block Diagram), będący
+odpowiednikiem schematów przepływu sygnału dla obwodów logicznych
+przedstawionych w formie połączonych bramek logicznych oraz bloków
+funkcyjnych takich jak w języku ŁD.
+
+Ponadto w normie /EC 1/31-3 przedstawiono sposób tworzenia struktury we-
+wnętrznej programu w postaci grafu sekwencji SFC (Sequential Function
+Chart), który pozwala na opisywanie zadań sterowania sekwencyjnego za pomo-
+cą grafów zawierających etapy (kroki) i warunki przejścia (tranzycji) między
+tymi etapami. Grafy SFC mogą być wykorzystane przy programowaniu sterow-
+nika w jednym ze zdefiniowanych w normie języków w celu otrzymania
+odpowiedniej struktury programu użytkownika.
+
+Trzecia część normy /EC 1131 specyfikuje syntaktykę i semantykę wymienio-
+nych języków programowania oraz elementy konfiguracji, które wspomagają
+instalację oprogramowania w sterownikach PŁC.
+
+Definiowane są również możliwości komunikacyjne dla ułatwienia połączenia
+sterowników z innymi elementami automatycznego systemu sterowania.
+
+<image/tabele/k4_page31_table1.png>
+
+Konfiguracja jest elementem języka, który odpowiada systemowi sterowników
+programowalnych rozumianemu jako całość obejmującą wszystkie pozostałe
+elementy oprogramowania. Zasób z kolei jest odpowiednikiem funkcji przetwa-
+rzania sygnałów (signal processing function) łącznie z funkcjami określonymi
+przez podłączone czujniki i elementy wykonawcze (sensor and actuator interfa-
+ce) oraz urządzenia operatorskie HMI (Human-Machine Interface).
+
+DZ TZ O O ET TE WET TB OT ĘY PATTY PU YO AOWYRZEEO ZR EOT TED PPI OOOO POPP OZJ POZA ZZOZ WRZ,
+2.1 Norma IEC 1131 31

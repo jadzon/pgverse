@@ -1,0 +1,51 @@
+226
+
+Wykonanie programu — unifikacja
+
+W czasie wykonania programu w Prologu następuje wielokrotne próby unifikacji pre-
+dykatów zawartych w pytaniu lub predykatów występujących po prawych stronach
+klauzul z predykatami w nagłówkach klauzul. Ten proces sprawdzania zgodności
+jest podstawową operacją przeprowadzaną w czasie realizacji programu. W trakcie
+unifikacji zmienne mogą zostać przyporządkowane do konkretnych obiektów i wtedy
+nazywane są zmiennymi ukonkretnionymi. Zmienne przed przyporządkowaniem na-
+zywane są swobodnymi.
+
+PRZYKŁAD 9.4
+Przeprowadźmy unifikację predykatów:
+
+test(dom,X,f(g(deska))) i test(Z,f(g(las) ,f(U))).
+
+Łatwo widać, że po podstawieniach: dom/Z, f (g(1as))/X i g(deska) /U argumenty
+obydwu predykatów stają się identyczne i otrzymujemy: test (dom, f (g(las)) ,f(g(deska))).
+Zauważmy też, że występujące w predykatach zmienne wolne zostały w procesie uni-
+fikacji związane.
+Natomiast nie udaje się zunifikować predykatów:
+
+test (dom,X,f(g(deska))) i test (dom,Y,h(g(deska) ))
+
+ponieważ nazwy funktorów w trzecim argumencie są różne.
+Unifikacja predykatów zawierających listy np.
+
+test ([GI0]) i test([[1,3,4] [2,4], [33,66] ,[123]])
+następuje dla G=(1,3,4] i 0=[[2,4] , [33,66] ,[123]]. m
+
+PRZYKŁAD 9.5
+
+Rozpatrzmy Program 5 dołączający element (pierwszy argument predykatu dolacz_element)
+do listy (drugi argument) tworząc nową listę (trzeci argument).
+
+/* Program 4 */
+
+dolacz_element(X,Y, [XIY]).
+Wykonajmy powyższy program podając zapytanie
+dolacz_element (5, [1,2,3] ,L)
+
+Unifikuje się ono z predykatem dolacz_element (X,Y, (XIY]) dla podstawień X=5,
+Y=[1,2,3] oraz L=[X|Y]=[5,1,2,3] i takie rozwiązanie dla L otrzymujemy. Po-
+dajmy teraz zapytanie: dolacz_element(X,Y,[11,33,55]). Otrzymujemy: X=11,
+Y=[33,55], co oczywiście znów wynika z unifikacji zadanego zapytania z klauzulą
+programu. Ten ostatni przykład wywołania ilustruje częste zjawisko występujące w
+Prologu, a mianowicie, że zakres działania otrzymanego programu wykracza poza
+wymagania stawiane przy jego tworzeniu (celem programu było dołączanie elementu
+do listy, zaś otrzymany program może także rozdzielić listę na pierwszy jej element
+i pozostałą listę). ami

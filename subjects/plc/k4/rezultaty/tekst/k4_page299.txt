@@ -1,0 +1,24 @@
+<image/tabele/k4_page299_table4.png>
+
+Wyd. 6.18 Przykład zastosowania funkcj i matematycznych podwójnej precyzji: pier-
+wiastkowanie liczb zmiennoprzecinkowych, zmiana znaku, liczba pi, sinus,
+cosinus.
+
+<image/tabele/k4_page299_table1.png>
+
+Wyd. 6.19 Przykład zastosowania funkcj i matematycznych podwójnej precyzji: tan-
+gens, arc, Sinus, arc cosinus, arc tangens, konwersja RAD -> STOPNIE.
+
+<image/tabele/k4_page299_table3.png>
+
+Wyd. 6.20 Przykład zastosowania funkcj i matematycznych podwójnej precyzji: kon-
+wersja STOPNIE -> RAD, EXP, logarytm naturalny, logarytm dziesiętny.
+
+<image/tabele/k4_page299_table2.png>
+
+Wyd. 6.21 Przykład zastosowania funkcj i matematycznych podwójnej precyzji "Error
+Report Log".
+
+= — m z m 2 A
+
+wzory/k4_page299_formula1.p

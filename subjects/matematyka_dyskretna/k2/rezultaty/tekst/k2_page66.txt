@@ -1,0 +1,42 @@
+1.3. Prawdopodobieństwo warunkowe i zdarzenia niezależne 7
+
+Twierdzenie 1.9 Niech A;,....- A„ będzie rodziną parami rozłącznych zdarzeń (A; n
+A; = Q dla każdej pary indeksów i < j). Wtedy
+<image/wzory/k2_page66_formula1.png>
+Dowód przez indukcję:
+Dla n = 1 twierdzenie zachodzi w sposób trywialny.
+Załóżmy, że twierdzenie jest prawdziwe dla dowolnej rodziny n zbiorów. Rozpatrzmy
+<image/wzory/k2_page66_formula2.png>
+Poniewa?
+
+<image/wzory/k2_page66_formula3.png>
+
+z aksjomatu A 3 i z założenia indukcyjnego wynika
+
+<image/wzory/k2_page66_formula4.png>
+
+o
+
+Twierdzenie 1.10 Dla dowolnej rodziny zbiorów A4....,- A„ (niekoniecznie parami rozłącznych)
+mamy
+
+<image/wzory/k2_page66_formula5.png>
+Dowód przez indukcję: Dla n = 1 twierdzenie zachodzi w sposób trywialny. Załóżmy,
+
+że twierdzenie jest prawdziwe dla dowolnej rodziny n zbiorów. Z twierdzenia 1.7c i z
+założenia indukcyjnego mamy
+
+<image/wzory/k2_page66_formula6.png>
+
+o
+1.3  Prawdopodobieństwo warunkowe i zdarzenia nieza-
+leżne
+
+Definicja 1.11 Prawdopodobieństwo warunkowe zajścia zdarzenia A pod warunkiem, że
+zaszło zdarzenie B oznaczane przez P(A|B) określamy jako
+
+<image/wzory/k2_page66_formula7.png>
+
+Ma to sens tylko wtedy gdy P(B) > 0.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

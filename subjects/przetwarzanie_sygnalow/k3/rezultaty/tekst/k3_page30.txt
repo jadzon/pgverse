@@ -1,0 +1,60 @@
+<image/wzory/k3_page30_formula1.png>
+
+o dowolnych wartości średniej i odchyleniu standardowym. Dla każdej próbki sygnału trzeba:
+(1) zsumować 12 liczb losowych, (2) odjąć sześć, aby Średnią uczynić równą zero, (3) pomno-
+żyć przez żądane odchylenie standardowe oraz (4) dodać żądaną wartość średnią.
+
+Matematycznych podstaw tego algorytmu trzeba szukać w centralnym twierdzeniu gra-
+nicznym, jednej z najważniejszych koncepcji w rachunku prawdopodobieństwa. W swej
+najprostszej postaci centralne twierdzenie graniczne głosi, że rozkład sumy liczb losowych
+staje się tym bardziej zbliżony do normalnego, im więcej liczb losowych jest sumowanych.
+Centralne twierdzenie graniczne nie zawiera wymagania, aby poszczególne liczby losowe
+pochodziły z jakiegoś szczególnego rozkładu ani nawet żeby pochodziły z takiego samego
+rozkładu. Centralne twierdzenie graniczne przynosi odpowiedź na pytanie, dlaczego w przy-
+rodzie tak często spotyka się sygnały o rozkładzie normalnym. Gdziekolwiek wiele różnych
+sił losowych oddziałuje wzajemnie na siebie, uzyskuje się w wyniku gaussowski rozkład
+gęstości prawdopodobieństwa.
+
+W drugiej metodzie generowania liczb losowych o rozkładzie normalnym przywołuje się
+dwukrotnie generator liczb losowych w celu uzyskania R, i Rz. Liczbę o rozkładzie norma|-
+nym X można znaleźć z wzoru:
+
+<image/wzory/k3_page30_formula2.png>
+Wzór 2.9. Generowania liczb losowych o rozkładzie normalnym. Ry i R. są liczbami losowymi
+o rozktadzie równomiernym między zerem i jedynką. Jako wynik uzyskuje się liczbę X o rozkładzie
+normalnym, o wartości średniej równej zero i odchyleniu standardowym równym jeden. in jest
+logarytmem naturalnym (o podstawie e), kosinus jest podany w radianach
+
+Tak jak poprzednio, tą metodą można generować sygnały losowe 0 rozkładzie normalnym
+o dowolnej wartości średniej i dowolnym odchyleniu standardowym.
+
+Generatory liczb losowych pracują, zaczynając od pewnej liczby początkowej zwanej ziar-
+nem (seed), o wartości między 0 i 1. Gdy jest przywoływany generator liczb losowych,
+liczba początkowa jest poddawana przetworzeniu przez ustalony algorytm, dając w wyniku
+nową liczbę o wartości między 0 i 1. Ta nowa liczba jest generowaną liczbą losową i jest na-
+stępnie wewnętrznie rejestrowana, aby mogła być użyta jako liczba początkowa przy następ-
+nym przywołaniu generatora liczb losowych. Algorytm przetwarzający liczbę początkową
+(ziarno) w liczbę losową ma często postać
+
+<image/wzory/k3_page30_formula3.png>
+
+Wzór 2.10. Często stosowany algorytm do generowania liczb losowych o rozktadzie równomiernym
+między 0 i 1. W tej metodzie $ jest wartością początkową (ziarnem), R jest nową liczbą losową, a, b, c są
+odpowiednio wybranymi statymi. Wyrażmy ten wzór słowami: wielkość aS + b trzeba podzielić przez c
+
+i reszta z tego dzielenia daje R
+
+W ten sposób generuje się ciągłą sekwencję liczb losowych, z których wszystkie pochodzą od
+tej samej wartości początkowej. Dzięki temu można uruchamiać ten program wielokrotnie,
+stosując dokładnie takie same sekwencje liczb losowych. Jeśli chcemy zmienić sekwencję, to
+w większości programów mamy możliwość powtórnego zainicjowania pracy (reseeding)
+generatora liczb losowych z możliwością wyboru wartości początkowej. Często jako ziarno
+stosuje się czas (wskazywany przez zegar systemu), uzyskując w ten sposób nową sekwencję
+przy każdym uruchomieniu programu.
+
+Z czysto matematycznego punktu widzenia liczby generowane w ten sposób nie mogą być
+całkowicie losowe, gdyż każda liczba jest w pełni określona przez liczbę poprzednią. Do
+opisu tej sytuacji stosuje się często termin pseudolosowy. Nie trzeba się jednak przejmować
+tą kwestią. Sekwencje liczb generowane przez generatory liczb losowych są w wystarczająco
+dużym stopniu statystycznie losowe. Jest bardzo mało prawdopodobne spotkanie sytuacji,
+w której te sekwencje nie są właściwe.

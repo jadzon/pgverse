@@ -1,0 +1,25 @@
+<image/tabele/k4_page68_table1.png>
+
+konfiguracji
+
+ 
+
+2.4.1 Konfiguracje, zasoby i ścieżki dostępu
+
+Tab. 2.35 wymienia elementy języków programowania dla deklaracji konfigu-
+racji, zasobów, zmiennych globalnych i ścieżek dostępu. Częściowo
+wymieniono także deklaracje dla zadań — informacje uzupełniające na temat
+zadań przedstawiono w punkcie 2.4.2. Tab. 2.36 dostarcza przykładów użycia
+tych deklaracji odpowiadających przykładowej konfiguracji przedstawionej na
+Rys. 2./10i w Tab. 2.34.
+
+Używany w deklaracji zasobu RESOURCE...ON...END_RESOURCE kwalifika-
+tor ON służy określeniu funkcji procesora, interfejsu użytkownika oraz interfejsu
+z czujnikami i elementami wykonawczymi, na których zasób oraz skojarzone
+z nim programy i zadania są realizowane (implemented). Producent powinien
+dostarczyć odpowiednią bibliotekę zasobu (resource library) zawierającą takie
+funkcje. Każdemu elementowi tej biblioteki powinien towarzyszyć identyfikator
+(nazwa typu zasobu) do wykorzystania w deklaracji zasobu.
+
+Z Z W OOO
+68 Rozdział : 2.Programowanie sterowników PLC

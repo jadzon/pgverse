@@ -1,0 +1,24 @@
+"HF WE TOY 19777300 7—
+
+Pp FATTY 9 90 -
+
+17. Filtry dostosowane do szczególnych wyma
+
+ 
+
+musi więc każdorazowo być dostosowany do danego zastosowania.
+Rozplot jest prawie niemożliwy do zrozumienia w dziedzinie czasu, a jest całkiem prosty
+w dziedzinie częstotliwości. W każdej sinusoidzie wchodzącej w skład sygnału oryginalnego
+może nastąpić zmiana amplitudy i/lub fazy w wyniku niepożądanego spłotu. W celu wyodręb-
+nienia sygnału oryginalnego filtr rozplatający musi z/ikwidować te zmiany amplitudy i fazy.
+Jeśli na przykład splot zmienia amplitudę sinusoidy o czynnik 0,5 z przesunięciem fazy o 30%,
+to filtr rozplatający musi wzmocnić sinusoidę o czynnik 2,0 ze zmianą fazy o -307.
+
+Przykładem ilustrującym rozplot niech będzie detektor promieniowania gamma. Urządzenie
+(rys. 17.3) składa się z dwóch części — scyntylatora i detektora światła. Scyntylator jest sub-
+stancją zystą o szczególnych właściwościach; może nim być np. jodek sodu lub ger-
+
+atom wysyła przy tym foton świtała widzialnego. Sumarycznym wynikiem jest impuls świetl-
+ny o wartości zanikającej w ciągu kilkuset nanosekund (w jodku sodu). Ponieważ pojawienie
+
+<image/figury/k3_page265_figure1.png>

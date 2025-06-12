@@ -1,0 +1,8 @@
+198
+
+talnie wpływ wartości wejść na konkluzję, ale nie jest to równoważne ze znajomością
+łańcucha wnioskowania. Ostatnie badania w dziedzinie sieci neuronowych próbują
+rozwiązać zadanie wytworzenia bazy wiedzy w postaci reguł i faktów na podstawie
+wag nauczonej sieci neuronowej. |
+
+<image/figury/k2_page193_figure1.png>

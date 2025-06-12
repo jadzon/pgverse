@@ -1,0 +1,28 @@
+Rozwiązanie
+
+Analizując schemat układu, można go przerysować do postaci pokazanej na rysun-
+ku 2.11b. Następnie węzeł zaczepowy 3 przesuwamy za blok o transmitancji G,(s) oraz
+zamieniamy węzły 3 i 4 miejscami, otrzymując w ten sposób schemat pokazany na
+rysunku 2.11c.
+
+stosujcpodstawowewzoryalgebryschematwblokowychnapodstawieschema
+tu z rysunku 2.11d, wyznaczamy transmitancję zastępczą układu:
+
+<image/wzory/k1_page59_formula1.png>
+
+<image/wzory/k1_page59_formula2.png>
+
+Przykład 2.20
+
+Narysować schemat blokowy oraz wyznaczyć transmitancję zastępczą układu
+przedstawionego na rysunku 2.12.
+
++
+
+<image/figury/k1_page59_figure1.png>
+
+Rys. 2.12. Schemat układu z słownikiem hydraulicznym; a, b — długości ramion dźwigni, A — po-
+wierzchnia tłoka siłownika, d — długość rurki strumieniowej, Q, / - wymiary okienka, v — prędkość
+przepływu oleju w okienku, p, — ciśnienie zasilające
+
+61

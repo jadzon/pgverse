@@ -1,0 +1,32 @@
+2.6. Stabilność układów automatyki
+Przykład 2.25
+
+Dany jest układ regulacji z regulatorem całkowym o schemacie przedstawionym
+na rysunku 2.22 i transmitancjach:
+
+<image/wzory/k1_page7/7_formula1.png>
+- | T — stała czasowa,
+K, — wzmocnienie regulatora całkującego.
+
+<image/figury/k1_page77_figure1.png>
+
+Rys. 2.22. Układ regulacji z regulatorem całkującym
+
+Znaleźć obszar stabilności układu regulacji na płaszczyźnie parametrów 7, K,.
+Rozwiązanie
+Transmitancja układu zamkniętego:
+
+<image/wzory/k1_page77_formula2.png>
+
+<image/wzory/k1_page77_formula3.png>
+
+lub ogólnie
+
+<image/wzory/k1_page77_formula4.png>
+
+Równanie charakterystyczne tego układu jest równe mianownikowi transmitancji
+układu zamkniętego
+
+<image/wzory/k1_page77_formula5.png>
+
+79

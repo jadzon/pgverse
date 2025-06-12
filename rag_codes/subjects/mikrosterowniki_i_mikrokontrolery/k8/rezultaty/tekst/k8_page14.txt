@@ -1,0 +1,24 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 16
+Znaczenie linii sterujących pamięcią asynchroniczną SRAM:
+„ - Linia C$ służy do uaktywnienia układu. Stan niski na tej linii aktywuje układ do transmisji.
+„ Linia QE jest wykorzystywana w trakcie czytania danej, niski poziom na tej linii uaktywnia bufory
+
+wyjściowe pamięci.
+
+„ Niski poziom na linii WE uaktywnia bufory wejściowe i dezaktywuje wyjściowe (niezależnie od
+stanu na linii OE), czyli służy do wprowadzenia danej do pamięci
+
++ za pośrednictwem dwukierunkowych linii 1/01 — I/Os,
+« pod adres wskazany przez linie Ao — A 18.
+
+Uwaga: Chwile, w których sygnały CS, OE, czy WE mogą przyjmować dowolny stan (.„0” lub „I”)
+zostały zaznaczone na przebiegach czasowych jako szare pola między linią reprezentującą stan
+niski a linią reprezentującą stan wysoki.
+
+<image/tabele/k8_page14_table2.png>
+
+Przebiegi czasowe cyklu odczytu danych z pamięci (zmiana adresu)
+
+<image/tabele/k8_page14_table1.png>
+
+<image/tabele/k8_page14_table3.png>

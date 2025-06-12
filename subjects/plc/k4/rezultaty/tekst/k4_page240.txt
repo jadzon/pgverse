@@ -1,0 +1,7 @@
+<image/tabele/k4_page240_table2.png>
+
+<image/wzory/k4_page240_formula1.png>
+
+<image/tabele/k4_page240_table1.png>
+
+240 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

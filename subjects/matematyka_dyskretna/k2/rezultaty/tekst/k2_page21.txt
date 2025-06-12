@@ -1,0 +1,44 @@
+6 Rozdział 1. Arytmetyka
+
+Mówiąc inaczej, szukamy pierwszego zera od prawej strony, zamieniamy go na jedynkę,
+a wszystkie jedynki stojące za nim zamieniamy na zera.
+Przykład 1.2 Liczba o jeden większa od liczby 100100111 to 100101000.
+
+Jeżeli liczba nie zawiera zer, tylko same jedynki, to zamieniamy te jedynki na zera i
+stawiamy jedynkę na początku.
+
+Przykład 1.3 Po liczbie 11111 jest liczba 100000.
+Zauważmy, że podobnie działa algorytm zwiększania o jeden liczb w systemie dziesięt-
+nym (lub dowolnym innym systemie). Szukamy pierwszej od prawej cyfry różnej od dzie-
+
+wiątki (największej cyfry w systemie), zwiększamy tę cyfrę o jeden, a wszystkie stojące
+za nią dziewiątki zamieniamy na zera.
+
+1.4 Porównywanie liczb
+
+Algorytm porównywania liczb. A by stwierdzić, która z dwóch liczb w postaci dwójko-
+wej jest większa, postępujemy w następujący sposób:
+e jeżeli zapisy liczb nie są tej samej długości, to większą jest liczba z dłuższym zapi-
+sem (zakładamy tu, że zapis liczby różnej od zera nie ma zer na początku),
+e jeżeli zapisy liczb są równej długości, to porównujemy bit po bicie od lewej strony
+do prawej:
+o jeżeli bity są takie same, to przechodzimy do następnego bitu w prawo,
+o jeżeli bity są różne, to kończymy i stwierdzamy, że większa jest ta liczba,
+która ma większy bit na tej pozycji,
+e jeżeli wszystkie bity są takie same, to porównywane liczby są równe.
+Przykład 1.4 1011010 > 1010101. Liczby te są tej samej długości, mają takie same trzy
+pierwsze bity, a różnią się dopiero czwartym bitem — czwarty bit pierwszej liczby jest
+większy od czwartego bitu drugiej liczby.
+
+1.5 Operacje arytmetyczne w systemie dwójkowym
+
+Operacje dodawania, mnożenia, odejmowania i dzielenia w systemie dwójkowym można
+wykonywać podobnie do tak zwanych szkolnych pisemnych działań arytmetycznych w
+systemie dziesiętnym. Działania w systemie dwójkowym są prostsze, ponieważ mamy tu
+tylko dwie cyfry, 0 i 1, i prostsze są operacje na pojedynczych cyfrach.
+
+Zacznijmy od tabliczki dodawania i mnożenia. Wyglądają one tak:
+
+<image/tabele/k2_page21_table1.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,45 @@
+2.1. Wielowrotniki i sieci 189
+
+E. Równania zaciskowe układów SLS. W p. A i B podaliśmy klasyfikację
+układów na podstawie ich równań sieciowych oraz wyjaśniliśmy, jak o tym
+podziale można wnioskować, wiedząc z jakich elementów układ jest zbudowany.
+Pozostaje do rozstrzygnięcia kwestia dotycząca równań zaciskowych,
+a więc opisu charakterystycznego dla wielowrotników i wielobiegunników.
+
+Przypominamy (por. p. 2.1.2), że równania zaciskowe układu można
+otrzymać z równań sieciowych przez eliminację prądów i napięć „wewnętrz-
+nych”, tj. doprowadzając je do postaci, w której występują tylko prądy i napięcia
+zaciskowe. Eliminacja ta (zakładamy milcząco, że jest ona zawsze możliwa) nie
+narusza niektórych właściwości równań sieciowych, tzn. właściwości te będą
+miały także równania zaciskowe.
+
+Na podstawie rezultatów przedstawionych w p. A—C można sformułować
+zatem następującą konkluzję:
+
+Równania zaciskowe wielowrotników i wielobiegunników SLS można przed-
+stawić w postaci równań różniczkowych zwyczajnych, liniowych o stałych
+współczynnikach i/lub równań algebraicznych, liniowych o stałych współczyn-
+nikach.
+
+Jeśli wśród równań zaciskowych występuje równanie, które nie należy do
+wymienionych kategorii, świadczy to o tym, że nie jest to układ SLS. Jeśli np.
+wśród równań zaciskowych występuje równanie nieliniowe, to układ jest
+nieliniowy (por. przykłady przedstawione w p. D).
+
+Zwracamy jednak uwagę, że w ogólnym przypadku nie można określić do
+jakiej kategorii należy układ tylko na podstawie jego równań zaciskowych.
+W przykładzie 2.1-19 w p. F rozpatrzymy np. dwójnik nieliniowy, którego
+równanie zaciskowe jest liniowe.
+
+F. Komentarze i przykłady. Omówimy teraz kilka przykładów układów
+zawierających wprawdzie element nieliniowy (lub elementy nieliniowe), ale
+o których możemy umownie powiedzieć, że występowanie w nich elementu
+nieliniowego jest „nieistotne”. Podobne zagadnienie rozważaliśmy w p. 2.1.4-C
+przy rozpatrywaniu cechy bezźródłowości.
+
+Przykład 2.1-16, Rozważmy układ z rys. 2.1-12a zawierający dwójnik D (załóżmy, że, jest to
+dwójnik SLS), opór nieliniowy N oraz idealne źródło napięciowe. Układ ten, rozpatrywa: jako
+całość jest układem nieliniowym; jego opis zawiera bowiem równanie nieliniowe oporu N, rp.
+iy = g,(e). Układ ten da się jednak rozdzielić na dwa niezależne od siebie układy: liniowy
+
+<image/figury/k3_page187_figure1.png>

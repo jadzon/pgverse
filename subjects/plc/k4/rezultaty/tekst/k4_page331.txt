@@ -1,0 +1,38 @@
+y/k4_page331_formula1.png KMK)
+
+Do programowania przerzutników można się posługiwać operatorami:
+
+a S  -ustawianie,
+
+"= R -zerowanie.
+Operatory ustawiania jak i zerowania są wykonywane wyłącznie, gdy wynik po-
+przedzających je operacji logicznych jest równy 1. Gdy wynik operacji logicz-
+nych poprzedzających operator S jest równy I, instrukcja zawierająca operator S$
+jest wykonywana i jego argument zostaje ustawiony (przyjmuje wartość I). Gdy
+wynik operacji logicznych poprzedzających operator R jest równy I, instrukcja
+zawierająca operator R jest wykonywana i jej argument zostaje wyzerowany
+(przyjmuje wartość 0). Wykonanie instrukcji zawierających operatory R i S nie
+powoduje zmiany wyniku poprzedzających je operacji logicznych.
+Różnica w działaniu przerzutników SR i RS objawia się tylko wtedy, gdy oby-
+dwa wejścia przerzutnika mają wartość 1. W przypadku przerzutnika SR domi-
+nuje w takiej sytuacji wejście ustawiające, zaś w przypadku przerzutnika RS
+dominuje wejście zerujące.
+Przerzutnik SR
+
+<image/tabele/k4_page331_table1.png>
+
+W trakcie programowania należy pamiętać, że dominuje to z wejść przerzutnika,
+które zostanie zaprogramowane jako ostatnie w liście instrukcji. W przypadku
+przerzutnika SR, gdy wejścia / 7.7 i 77.2 mają wartość 1, zostanie wykonana
+instrukcja zerowania wyjścia Q 4.0, a następnie instrukcja ustawienia tego wyj-
+ścia. Po wykonaniu tych instrukcji w przedstawionym przykładzie wyjście © 4.0
+będzie miało wartość 1. W przypadku przerzutnika RS, również zostanie wyko-
+nana instrukcja ustawiania i zerowania wyjścia © 4.0, lecz w odwrotnej kolejno-
+ści. Najpierw zostanie wykonana instrukcja ustawiania, a następnie zerowania.
+W wyniku tego wartość wyjścia Q 4.0 będzie w tym przypadku równa 0. Dla
+każdej innej kombinacji wejść / 7.7 i / 7.2 działanie obydwu przerzutników jest
+identyczne.
+
+ 
+
+7.5 Przerzutnik SR i RS 331

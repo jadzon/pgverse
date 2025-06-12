@@ -1,0 +1,50 @@
+7.3. Systemy operacyjne 147
+
+musi określić kiedy i w jaki sposób urządzenie zewnętrzne może zostać wykorzystane
+przez dany program, w którym miejscu pamięci ma znaleźć się program użytkowy, a gdzie
+dane dla niego i jak przydzielać adresy różnym programom. Zadania i funkcje systemu
+operacyjnego ulegały zmianie w zależności od stosowanego rodzaju przetwarzania. W star-
+szych typach komputerów wykorzystywano tzw. przetwarzanie wsadowe (ang. batch
+processing). Polegało ono na tym, że użytkownik przygotowywał program i dane do niego
+na odpowiednim nośniku tak, aby można było te informacje załadować do komputera bez
+udziału użytkownika (przez operatorów), a po przetworzeniu dostarczyć mu wydrukowa-
+ne wyniki. We współczesnych komputerach stosuje się przetwarzanie interakcyjne
+(ang. interactive processing), polegające na ustawicznej ingerencji użytkownika w proces
+przetwarzania na wszystkich jego etapach. W takim przypadku system operacyjny jest
+wykorzystywany przez użytkownika i dlatego projektanci systemów operacyjnych dążą do
+tego, aby był on przyjazny (ang. friendly) użytkownikowi. Określenie to przyznano tym
+systemom operacyjnym, które ułatwiają użytkownikowi korzystanie z komputera i po-
+magają mu w rozstrzyganiu napotkanych problemów.
+
+Komputery podzielić można na komputery przeznaczone dla jednego użytkownika
+(ang. single user) i dla wielu użytkowników (ang. multi-user). W pierwszym przypadku
+komputer wykonuje zwykle jeden program, a w drugim wykonują się jednocześnie
+programy wielu użytkowników. Zadania systemu operacyjnego są znacznie bardziej
+złożone w tym drugim przypadku, gdzie musi on zapewnić wieloprogramowość
+(ang. multiprogramming). Jednym ze sposobów realizacji takich systemów jest przydział
+czasu na wykonywanie poszczególnych programów i takie systemy są nazywane
+systemami z podziałem czasu (ang. time sharing). Zdarza się jednak, że w działanie
+systemu ingerują zdarzenia zewnętrzne (np. stan alarmowy na wyjściu czujnika w sys-
+temach sterowania przemysłowego) i one sterują wykonywaniem poszczególnych pro-
+gramów. Mówi się wówczas, że system jest systemem czasu rzeczywistego (ang. real-
+-time systems). Ponieważ w tych ostatnich systemach dane pochodzą z zewnątrz, to
+ważnym parametrem jest czas reakcji komputera na dane zdarzenie zewnętrzne. Często
+jest to reakcja na zgłoszone przerwanie, a więc czas jego obsługi. Aby czas reakcji był
+krótki, wymagana jest duża szybkość pracy komputera.
+
+Współpraca użytkownika z komputerem organizowana jest, na poziomie systemu
+operacyjnego, za pomocą tzw. systemu plików (ang. file). System operacyjny umożliwia
+programiście posługiwanie się plikiem, tj. ciągiem znaków opisanym nazwą. Nazwa jest
+wybierana przez użytkownika, który może plik utworzyć, przepisać w inne miejsce
+pamięci, chronić przed przypadkowym zapisem, wywoływać, łączyć itp. W plikach tych
+użytkownik umieszcza programy i dane. Aby użytkownikowi ułatwić posługiwanie się
+plikami, system operacyjny zawiera programy pomocnicze (ang. utilities). Przy tworzeniu
+plików pomocne są programy zwane edytorami (ang. editor). Edytory są programami
+bardzo przydatnymi operatorowi zwłaszcza podczas pisania programów w języku wysokie-
+go poziomu, gdyż ułatwiają przygotowanie ich do translacji. Translatory języków
+wysokiego poziomu można podzielić na interpretery (tłumaczące program instrukcja po
+instrukcji), gdzie program wykonuje się w czasie translacji i kompilatory (tłumaczące
+cały program), które przygotowują program wynikowy do wykonania. Podczas
+poprawiania programu bardzo przydatnym narzędziem jest program wspomagający
+uruchamianie (ang. debugger). Wszystkie wymienione programy są częścią systemu
+operacyjnego.

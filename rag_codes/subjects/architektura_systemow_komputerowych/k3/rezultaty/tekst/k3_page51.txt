@@ -1,0 +1,53 @@
+3.2. Kody binorne i arytmetyka 4]
+
+reprezentacją liczby dodatniej w kodzie NKB. Natomiast gdy bit znaku jest | (liczba
+ujemna), to dalsze bity reprezentują moduł liczby ujemnej, w taki sposób, że zanegowane
+ich wartości odpowiadają modułowi tej liczby w kodzie NKB (por. tabl. 3.8). Zakres liczb
+tego zapisu jest taki sam jak dla zapisu znak-moduł, a liczba zero ma także dwie re-
+prezentacje.
+
+Trzecim zapisem jest zapis uzupełnień do 2 czyli tzw. U2 (ang. 2s complement). Zapis
+ten różni się od U1 tylko dla liczb ujemnych. Moduł liczby ujemnej zapisanej w kodzie U2
+jest obliczany w taki sposób, że do zanegowanych pozycji słowa jest arytmetycznie
+dodawana jedynka i dopiero tak utworzone słowo odpowiada w kodzie NKB modułowi tej
+liczby. Celowość tego zapisu wyjaśniono w następnym podrozdziale przy omawianiu
+arytmetyki binarnej.
+
+Zapis liczb ułamkowych (liczb zmiennopozycyjnych) omówiono w podrozdzia-
+le 3.2.4. Tutaj przedstawiono jeszcze tzw. zapis polaryzowany (ang. bias), który jest po-
+mocny przy tworzeniu liczb w zapisie zmiennopozycyjnym. Zapis polaryzowany przedsta-
+wia liczby w taki sposób, że O jest reprezentowane przez n-bitowe słowo 1000...00, a więc
+przez liczbę 2”' kodu NKB. Wszystkie inne liczby A są przedstawiane na n pozycjach
+jako binarne wartości liczby 2"'+A.
+
+W tablicy 3.8 przedstawiono 8-bitowe liczby (z bitem znaku) w omówionych już
+zapisach i w zapisie BCD. W tym ostatnim przypadku przedstawiono zapis 12-bitowy
+wraz z 13 bitem znaku, tj. dziesiętne liczby trzycyfrowe (3 tetrady).
+
+3.2.3. ARYTMETYKA STAŁOPOZYCYJNA
+
+Najczęściej do reprezentacji liczb całkowitych (stałopozycyjnych) w procesorach kompu-
+terów są stosowane przedstawione wyżej kody U1, U2 i znak-moduł. Ponieważ jednak
+także spotykane są realizacje bloków ALU pracujących w kodzie BCD, to dalej przed-
+stawiono algorytmy wykonywania 4 podstawowych działań arytmetycznych dla 4 wymie-
+nionych zapisów. Algorytmy będą zilustrowane przykładami. Pominięto zapis polaryzo-
+wany, gdyż nie jest on stosowany w arytmetyce stałopozycyjnej.
+
+DODAWANIE I ODEJMOWANIE
+
+Operacje dodawania i odejmowania przedstawiono łącznie, gdyż operację odejmowania
+można zastąpić operacją dodawania dwóch liczb z jednoczesną zamianą znaku jednej
+znich. Rozpatrzono zatem dwa przypadki: pierwszy dodawania dwóch liczb dodatnich
+I drugi dodawania dwóch liczb o przeciwnych znakach.
+
+Przypadek 1. Jeżeli obie liczby są dodatnie, to operacja dodawania jest wykonywana
+w identyczny sposób dla zapisów Ul, U2 i znak-moduł. Pokazane to będzie na przykładzie
+dwóch liczb: + 89 i + 45. Dla zapisów ZM, Ul i U2 reprezentacja tych liczb jest taka sama
+i przedstawimy je jako liczby 8-pozycyjne. Dla zapisu BCD założymy 9 pozycji (dwie
+tetrady i bit znaku). W zapisach ZM, Ul i U2 na najbardziej znaczącej pozycji powstało
+przeniesienie (jedynka w nawiasie), co oznacza, że wynik dodawania jest liczbą większą
+od 128. Wynikiem dodawania jest zatem +6 oraz przeniesienie +128. Przy dodawaniu w
+zapisie BCD na obu tetradach powstały słowa nie należące do kodu BCD. W takim
+przypadku należy dokonać korekcji, która polega na dodaniu liczby sześć do tych tetrad,
+
+4 — Podstawy budowy i działania komputerów

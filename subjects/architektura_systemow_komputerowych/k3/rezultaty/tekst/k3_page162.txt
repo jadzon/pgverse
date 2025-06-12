@@ -1,0 +1,34 @@
+152 7. Elementy oprogramowania komputerów
+
+ALGORYTM SJF
+
+Algorytm SJF (ang. shortest-job-first) ustawia procesy w kolejce według ich czasów
+trwania. Na rysunku 7.4b pokazano ustawienie w kolejce czterech procesów. Jako pierwszy
+wykonano program o najkrótszym czasie trwania, a jako ostatni będzie wykonany program
+o najdłuższym czasie wykonania. Algorytm ten zapewnia minimalny średni czas wykona-
+nia, ale jego wadą jest konieczność znajomości czasów wykonania poszczególnych pro-
+cesów. Dlatego też nie może być stosowany podczas szeregowania krótkoterminowego,
+gdyż w tym przypadku nie można ustalić czasu trwania procesu.
+
+ALGORYTM ROUND-ROBIN
+
+Algorytm Round-Robin jest najczęściej stosowanym algorytmem szeregowania.
+Polega on tym, że czas procesora jest podzielony na pewne kwanty. Jeżeli po zakończeniu
+kwantu czasu wykonywanego procesu nie zakończono, to jest on przerwany i ustawiony
+na koniec kolejki, a do wykonania jest pobierany proces następny według algorytmu
+FCFS. Tak samo jest wybierany nowy proces w przypadku, gdy ostatnio wykonywany
+proces zakończono i usunięto z kolejki. Na rysunku 7.4c pokazano kolejność wykonywania
+
+<image/figury/k3_page162_figure1.png>
+
+Rysunek 7.5. Kolejki procesów do wykonania
+
+poszczególnych procesów według tego algorytmu, przy założeniu, że kwant czasu wynosi
+4 (proces drugi i trzeci nie zajmują całego kwantu czasu).
+
+Na rysunku 7.5 pokazano schemat ilustrujący oczekiwanie w kolejkach przez procesy.
+Każdy przychodzący proces jest ustawiany w kolejkę procesów nowych, które są
+szeregowane przez program wysokiego poziomu. Następnie procesy przechodzą przez
+kolejkę procesów gotowych, która jest ustawiana przez program szeregujący
+krótkoterminowy. Następnie, w zależności od odwołań do urządzeń zewnętrznych, procesy
+są ustawiane w kolejki dla procesów oczekujących na dostęp do różnych urządzeń.

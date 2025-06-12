@@ -1,0 +1,31 @@
+- .— m a I1.aA m m ma m AT7 L£— mmm. .-— -— ma
+
+<image/wzory/k4_page14/_formula2.png>
+
+Obliczone wartości sygnałów sterujących w obszarze danych %AO są przetwa-
+rzane przez przetworniki cyfrowo-analogowe w modułach wyjść analogowych na
+wartości napięcia lub prądu w obwodach wyjściowych tych modułów. Zapewnia
+się najczęściej optoizolację tych obwodów od magistrali sterownika.
+
+Schemat połączenia takiego modułu z obciążeniami, którymi są elementy wyko-
+nawcze układu sterowania, pokazano na Rys. 3.27.
+
+<image/figury/k4_page147_figure1.png>
+
+Rys. 3.27 Schemat połączeń obciążeń modułów analogowych
+dla wyjść prądowych.
+
+3.6.1 Moduł analogowych wyjść napięciowych i prądowych
+
+(Analog Current/Voltage Output Module)
+
+ 
+
+Dla omówienia modułów wyjść analogowych wybrany został moduł ALG 392
+(Analog Current/Voltage Qutput - 8 Channel). Jest to moduł, który udostępnia 8
+jednokońcówkowych kanałów wyjściowych w dwóch zakresach prądowych lub
+napięciowych.
+
+ 
+
+3.6 Moduły wyjść analogowych AO 147

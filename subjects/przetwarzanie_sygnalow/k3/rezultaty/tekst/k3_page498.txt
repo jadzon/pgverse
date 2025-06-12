@@ -1,0 +1,59 @@
+30. Liczby zespolone
+
+ 
+
+Operacje właściwe do reprezentowania przebiegów sinusoidalnych są, na szczęście, jasno
+zdefiniowane. Muszą być spełnione dwa warunki. Po pierwsze, wszystkie sinusoidy muszą
+mieć taką samą częstotliwość. Na przykład, jeśli liczby zespolone 1 + 1j i 2 + 2j reprezentują
+sinusoidy o takiej samej częstotliwości, wtedy suma tych sinusoid jest reprezentowana przez
+liczbę zespoloną 3 + 3j. Jeśli jednak liczby I + 1j i 2 + 2j reprezentują sinusoidy o różnych
+częstotliwościach, to niczego nie da się zrobić z ich reprezentacją zespoloną. W tym przypad-
+ku suma liczb zespolonych 3 + 3 nie ma żadnego sensu.
+
+Mimo to, przy stosowaniu liczb zespolonych częstotliwość może być pozostawiona jako
+zmienna, lecz musi to być wszędzie ra sama częstotliwość. Jest np. całkiem poprawne do-
+dawanie 20 + 30j i 30 + Ij dające w wyniku 5w + (3w + 1)j. Te wartości reprezentują
+sinusoidy, w których amplituda i faza zmieniają się przy zmianie częstotliwości. Chociaż nie
+wiemy, jaka jest ta określona częstotliwość, to wiemy na pewno, że wszędzie jest raka sama,
+tj. równa ©.
+
+Drugie wymaganie mówi o tym, że reprezentowane operacje muszą być liniowe, jak to
+rozważano w rozdziale 5. Na przykład sinusoidy można łączyć ze sobą przez dodawanie
+lub odejmowanie, ale nie można przez mnożenie lub dzielenie. Podobnie jest z systemami,
+które mogą być wzmacniaczami, dzielnikami, filtrami górno- lub dolnoprzepustowymi, ale
+nie układami takimi, jak podnoszące do kwadratu, obcinające lub progowe. Zapamiętajcie
+— nawet spłot i analiza Fouriera są słuszne tylko dla systemów liniowych.
+
+Zespolona reprezentacja systemów
+
+Na rys. 30.4 przedstawiono przykład zastosowania liczb zespolonych do reprezentowania si-
+nusoidy przechodzącej przez system liniowy. W tym przykładzie będziemy korzystać z sygna-
+łów ciągłych, chociaż w ten sam sposób operuje się sygnałami dyskretnymi. Ponieważ sygnał
+wejściowy jest sinusoidalny, a system jest liniowy, więc na wyjściu też uzyska się sinusoidę
+o częstotliwości takiej samej jak na wejściu. Jak już wykazano, konwencjonalną reprezenta-
+cją przykładowego sygnału wejściowego jest: 3 cos(oł + x/4) lub wyrażenie równoważne:
+2,1213 cos(wr) — 2,1213sin(wr). Wyrażone w liczbach zespolonych wyrażenia te przyjmują
+postać: Je % *4 lub 2,1213 + j 2,1213. Podobnie, konwencjonalna reprezentacja sygnału wyj-
+ściowego jest: 1,5cos(«xr — x/8) lub w formie alternatywnej: 1,3858 cos(wr) + 0,5740 sin(cx).
+To można wyrazić liczbą zespoloną 1,5e/ ** lub 1,3858 — j 0,5740.
+
+Charakterystyka systemu też może być wyrażona przez pewną liczbę zespoloną. Moduł
+tej liczby zespolonej jest stosunkiem modułów sygnałów wyjściowego i wejściowego
+(tj. M,„,/M,„). Kąt fazowy zaś jest negacją różnicy między kątami sygnałów wyjściowe-
+go i wejściowego (tj. — [$,, — $,]). W omawianym przykładzie system jest opisany liczbą
+zespoloną 0,$e /3%%, A więc amplituda sinusoidy została zredukowana o 0,5, a kąt fazowy
+zmieniony 0 -31/8.
+
+Liczbę zespolona reprezentującą system można zamienić na współrzędne prostokątne jako:
+0,1913 — ; 0,4619, lecz musimy być ostrożni w interpretacji znaczenia tego rezultatu. Ta re-
+prezentacja systemu nie znaczy, że fala sinusoidalna przechodząc przez system, zmienia swoją
+amplitudę o 0,1913 lub że kosinusoida zmienia się o -0,4619. Ogólnie biorąc, czyste fale sinu-
+soidalne lub kosinusoidalne wchodzące do systemu liniowego są przekształcane w mieszaninę
+fal sinusoidalnych i kosinusoidalnych.
+
+Na szczęście, matematyka liczb zespolonych śledzi te przekształcenia. Gdy sinusoida przecho-
+dzi przez system liniowy, liczby zespolone reprezentujące sygnał wejściowy oraz system są
+mnożone przez siebie, dając w wyniku liczbę zespoloną reprezentującą sygnał wyjściowy. Jeśli
+którekolwiek dwie liczby zespolone są znane, to trzecią można obliczyć. Obliczenia można
+prowadzić tak przy użyciu zapisu we współrzędnych prostokątnych, jak i w biegunowych, jak
+to przedstawiono na rys. 30.4.

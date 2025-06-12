@@ -1,0 +1,12 @@
+<image/tabele/k4_page398_table1.png>
+
+Tekst programu w języku IL realizującego algorytm sterowania panciem
+przedstawiono na Wyd. 8.27 - Wyd. 8.32. W programie uwzględniono do-
+datkowo ograniczenie na dopuszczalny czas włączenia wypychaczy, który
+nie powinien przekraczać 5s.
+
+<image/tabele/k4_page398_table2.png>
+
+<image/wzory/k4_page398_formula1.png>
+
+398 Rozdział : 8.Programy przykładowe

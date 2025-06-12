@@ -1,0 +1,48 @@
+310 3. Obwody prądu stałego
+
+<image/wzory/k3_page310_formula1.png>
+
+Widzimy więc, że przy dopasowaniu obciążenia do źródła połowa mocy
+oddawanej przez źródło E do obwodu wydziela się w obciążeniu, a druga
+połowa jest tracona w źródle. Tym samym sprawność źródła wynosi 50%.
+
+C. Warunek dopasowania dla źródła prądowego. W podobny sposób
+przebiega analiza zagadnienia dopasowania obciążenia do źródła w przypadku
+źródła prądowego. Rozpatrzmy obwód z rys. 3.5-7b przy założeniu, że parametry
+źródła prądowego J oraz G„ > 0 są ustalone. Szukamy takiej wartości prze-
+wodności obciążenia G > 0, przy której w obciążeniu wydziela się maksymalna
+moc. Powiemy wówczas, że obciążenie jest dopasowane do źródła.
+
+Moc P w obciążeniu wyrazimy w tym celu w funkcji przewodności G.
+Napięcie na obciążeniu:
+
+<image/wzory/k3_page310_formula2.png>
+
+stąd moc wydzielana w obciążeniu:
+
+<image/wzory/k3_page310_formula3.png>
+
+Postać tej funkcji jest identyczna jak funkcji (3.5-19) (zagadnienia są dualne),
+zatem bez powtarzania analizy możemy sformułować końcowy wniosek.
+
+W przypadku źródła prądowego obciążenie jest dopasowane do źródła wtedy
+i tylko wtedy, kiedy spełniona jest równość:
+
+ory/k3_page310_formula4.png (3.5-26)
+
+Równość (3.5-26) nazywamy warunkiem dopasowania.
+
+Widzimy więc, że w obu przypadkach, tzn. dla źródła napięciowego i dla
+źródła prądowego, warunek dopasowania jest identyczny.
+
+Uwzględniając warunek (3.5-26) we wzorze (3.5-25) otrzymamy maksymalną
+wartość mocy wydzielanej w obciążeniu przy dopasowaniu:
+
+<image/wzory/k3_page310_formula5.png>
+
+Jest to jednocześnie maksymalna moc, jaką rzeczywiste źródło prądowe
+o wydajności prądowej J i przewodności wewnętrznej G„ może oddać do
+obciążenia i z tego względu, podobnie jak w przypadku źródła napięciowego,
+moc ta jest nazywana mocą dysponowaną źródła prądowego i oznaczana P,
+
+ysp”

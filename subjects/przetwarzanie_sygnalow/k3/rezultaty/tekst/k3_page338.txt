@@ -1,0 +1,56 @@
+Telewizyjne sygnały wideo
+
+co trzecie elektrody są ze sobą połączone. Stosuje się krzem typu p, a więc krzem z nadmia-
+rem nośników dodatnich zwanych dziurami. W tych rozważaniach przyjmiemy, że dziura jest
+dodatnio naładowaną cząstką, mogącą swobodnie poruszać się w krzemie. Na rysunku dziury
+oznaczono symbolem „+”.
+
+Na rys. 23.7 a) do jednej z trzech faz dołączono napięcie +10 V. Pozostałe dwie fazy są
+utrzymywane na potencjale © V. To powoduje, że dziury oddalają się od każdej co trzeciej
+elektrody, gdyż ładunki dodatnie są odpychane przez dodatnie elektrody. Pod tymi elektro-
+dami powstają więc obszary zwane studniami, co jest skróconą wersją pojęcia fizycznego
+studnia potencjału.
+
+Każda studnia w układzie CCD jest czujnikiem światła o bardzo dużej sprawności. Jak po-
+kazano na rys. 23.7 b), pojedynczy foton uderzając w krzem, traci swoją energię na utworze-
+nie dwóch cząstek naładowanych — jednego elektronu i jednej dziury. Dziura jest odpychana
+od elektrody, pozostawiając elektron tkwiący w studni, utrzymywany tam przez dodatni
+potencjał elektrody. Elektrony na rysunku są oznaczone symbolem „=” . Podczas okresu
+całkowania wzór obrazu Światła padającego na układ CCD jest przekształcany na wzór
+ładunków w studniach CCD. Ciemniejsze źródła światła wymagają dłuższych okresów cał-
+kowania. Dla standardowego obrazu telewizyjnego okres całkowania jest 1/60 s (w Polsce
+1/50 s — przyp. tłum.), a w astrofotografii światło można zbierać nawet przez wiele godzin.
+Odczyt obrazu elektronicznego jest całkiem prosty. Elektrony zebrane w każdej studni są
+wypychane w kierunku wzmacniacza wyjściowego. Napięcie dodatnie, jak pokazano na rys.
+23.7 e), zostaje dołączone do dwóch linii fazowych. W ten sposób każda studnia rozszerza się
+w prawo. Następnym krokiem jest zdjęcie napięcia z pierwszej fazy (rys. 23.7 d), co powo-
+duje, że poprzednio utworzone studnie zanikają. W ten sposób zebrane elektrony przesunęły
+się o jedną studnię w prawo. Powtarzając taką sekwencję taktowania w trzech liniach fazy,
+przesuwa się zgromadzone elektrony w prawo, aż dotrą do wzmacniacza ładunkowego. Ta
+nazwa dotyczy kondensatora połączonego ze wzmacniaczem o wzmocnieniu +1. Elektrony
+wypychane z ostatniej studni wpływają do kondensatora, wytwarzając w nim pewne napięcie.
+Pojemność kondensatora musi być bardzo mała (zwykle poniżej I pF), aby czułość wzmacnia-
+cza była duża. Ten kondensator wraz ze wzmacniaczem są częścią układu scalonego CCD i są
+wykonane z tego samego kawałka krzemu. Sygnał uzyskiwany z układu CCD jest sekwencją
+poziomów napięcia proporcjonalnych do ilości światła padającego na kolejne studnie.
+
+Na rys. 23.8 przedstawiono, w jaki sposób obraz dwuwymiarowy jest odczytywany z CCD.
+Po okresie całkowania ładunek zgromadzony w każdej studni jest przesuwany w górę
+kolumny, za każdym razem o jeden wiersz. Na przykład wszystkie studnie w wierszu 15
+są najpierw przesuwane do wiersza 14, potem do 13, do 12 itd. Za każdym razem, gdy
+wiersze są przesuwane w górę, wszystkie studnie z wiersza © numerze | są przekazywane
+do rejestru poziomego. W tym wierszu znajdują się specjalne studnie CCD, które bardzo
+szybko przesuwają ładunek w kierunku poziomym do wzmacniacza ładunkowego.
+Zwróćcie uwagę, że taka architektura układu umożliwia przetwarzanie dwuwymiarowej
+matrycy danych w szeregowy strumień danych o określonej kolejności. Pierwszy odczyta-
+ny piksel jest lewym górnym narożnikiem obrazu. Następnie odczyt przesuwa się od lewej
+do prawej strony w pierwszym wierszu, a potem od lewej ku prawej w kolejnych wier-
+szach. Jest to tzw. odczyt z główną kolejnością wg wierszy (row major order), prawie za-
+wsze obowiązującą przy konwersji matrycy (obrazu) dwuwymiarowej na dane szeregowe.
+
+Telewizyjne sygnały wideo
+
+Standardowy sygnał telewizyjny, choć ma już przeszło 50 lat, jest ciągle jednym z najpopular-
+niejszych sposobów przesyłania obrazów. Na rys. 23.9 przedstawiono, jak sygnał telewizyjny
+wygląda na oscyloskopie. Jest to tzw. całkowity sygnał wizji zawierający impulsy synchro-
+nizacji poziomej i pionowej zmieszane z faktyczną informacją obrazową. Te impulsy są wy-

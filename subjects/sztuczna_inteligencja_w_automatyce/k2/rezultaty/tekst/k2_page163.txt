@@ -1,0 +1,25 @@
+168
+
+Jak widać z wykresu zwiększanie liczby obrazów uczących powoduje wzrost ja-
+kości generalizacji. Przewaga jakości wyników generowanych przez drzewa decyzyjne
+wynika w tym przypadku ze specyfiki problemu (funkcja boolowska) bardziej odpo-
+wiedniego dla drzew decyzyjnych. | —_
+
+6.8.2. Nierówność Vapnika
+
+Omówimy tu klasyczną nierówność Vapnika pokazującą zależność pomiędzy błędem
+generalizacji, a błędem uczenia (ryzyka empirycznego), złożonością systemu klasy-
+fikującego oraz rozmiarem zbioru uczącego.
+
+Wymiar VC
+
+Tzw. wymiar VC (Vapnik-Chervonenkis) jest miarą złożoności systemu klasyfikują-
+cego lub miarą jego zdolności do klasyfikacji.
+Najpierw zdefiniujemy pojęcie rozdzielania (ang. shattering) zbioru.
+
+Definicja 6.5 Maszyna y = f(x;,w) może rozdzielić zbiór punktów Xy,X2.-.,Xn
+wtedy i tylko wtedy, gdy dla każdego możliwego zbioru uczącego w postaci
+
+<image/wzory/k2_page163_formula1.png>
+
+<image/figury/k2_page163_figure2.png>

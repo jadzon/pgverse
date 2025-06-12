@@ -1,0 +1,15 @@
+201
+
+<image/figury/k2_page196_figure3.png>
+
+Rvs. 8.2: Taksonomia modeli
+
+<image/figury/k2_page196_figure2.png>
+
+Rys. 8.3: Przykłady modeli fizycznych
+
+PRZYKŁAD 8.4
+
+Równanie Lorenza. Klasyczny przykład równania, którego rozwiązaniem są przebiegi
+
+<image/figury/k2_page196_figure1.png>

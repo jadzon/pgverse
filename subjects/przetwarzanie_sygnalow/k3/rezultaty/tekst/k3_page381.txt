@@ -1,0 +1,59 @@
+414
+
+25. Specjalne techniki obrazowe
+
+Natomiast z krzywej MTF na rys. 25.6 d) wynika, że rozdzielczość tego systemu jest ogra:
+niczona obiema wymienionymi wielkościami. Opadanie krzywej MTF przy dużych często-
+tliwościach wyraża utratę informacji spowodowaną aperturą próbkowania. Ponieważ wykres
+MTF nie opadł do zera poniżej częstotliwości 0,5, więc jakaś część informacji jest również
+tracona w wyniku ograniczonej wartości odstępu próbkowania. Który z tych parametrów,
+odstęp czy apertura, bardziej ogranicza rozdzielczość? Na to pytanie trudno odpowiedzieć
+jakąś liczbą, ponieważ każdy z tych dwóch parametrów pogarsza rozdzielczość w inny spo
+sób. Zadowólcie się stwierdzeniem, że rozdzielczość detektora idealnego (przykład 1) jest
+ograniczona przede wszystkim odstępem próbkowania.
+
+Chociaż te rozważania wydają się trudne, to sprowadzają się one do bardzo prostej reguły,
+przydatnej w zastosowaniach praktycznych. Rozważcie system, w którym odległość dla na
+stania od 10 do 90% odpowiedzi krawędziowej jest równa np. 1 mm. Jeśli odstęp próbkowani
+jest większy niż 1 mm (czyli wzdłuż krawędzi jest mniej niż jedna próbka), to ograniczenie
+systemu będzie odstęp próbkowania. Jeśli odstęp próbkowania jest mniejszy od 0,33 mm (na
+krawędzi jest więcej niż 3 próbki), to rozdzielczość będzie ograniczana aperturą próbkowa:
+nia. Gdy system daje na krawędzi od 1 do 3 próbek, to ograniczać będą oba czynniki.
+
+Stosunek sygnału do szumu
+
+Obiekt jest widoczny na obrazie, ponieważ ma jaskrawość inną niż otoczenie. Tak więc kon=
+trast obiektu (czyli sygnału) powinien przeważać nad szumem obrazu. Można tu wyróżnić
+ograniczenia oka i ograniczenia danych.
+
+Eksperyment przedstawiony na rys. 25.7 służy do pomiaru zdolności oka do wykrywania sł
+bych sygnałów. Zależnie od warunków obserwacji oko ludzkie może wykrywać minimalny
+kontrast od 0,5 do 5%. Człowiek potrafi więc rozróżniać między od ok. 20 do 200 odcie
+niami szarości — od najczarniejszej czerni do najbielszej bieli. Dokładna liczba tych odcieni
+zależy od różnych czynników, takich jak jaskrawość oświetlenia otoczenia, odległość międz
+dwoma porównywanymi obszarami i sposób tworzenia obrazu w skali szarości (monitor wi:
+zyjny, fotografia, chemigrafia itd.).
+Opisane w rozdziale 23 przekształcenie skali szarości może być wykorzystane do zwiększ
+nia kontrastu w wybranym zakresie wartości pikseli. Jest to cenne narzędzie w pokon
+ograniczeń ludzkiego wzroku. Kontrast przy jednym poziomie jaskrawości jest zwiększany
+kosztem zmniejszenia kontrastu przy innych jaskrawościach. Jednak jest to skuteczne tylkę
+po warunkiem, że kontrast obiektu nie ginie w losowym szumie obrazowym. Wtedy sytuac
+jest trudniejsza; sygnał nie zawiera wystarczająco dużo informacji, aby móc ujawnić obieki
+niezależnie od działania oka.
+
+Na rys. 25.8 pokazano obraz z trzema kwadratami o kontrastach 5, 10 i 20%. Tło zawie
+szum losowy o rozkładzie normalnym z odchyleniem standardowym równym ok. 10% kon
+trastu. Stosunek sygnału do szumu jest definiowany jako kontrast podzielony przez odchyłe
+nie standardowe szumu. Trzy kwadraty mają więc stosunek sygnału do szumu o wartościać
+0,5; 1,0 oraz 2,0. Kłopoty zaczynają się na ogół wówczas, gdy stosunek sygnału do sz:
+zmniejsza się poniżej wartości ok. 1,0.
+
+   
+   
+    
+   
+  
+   
+  
+
+<image/tabele/k3_page381_table1.png>

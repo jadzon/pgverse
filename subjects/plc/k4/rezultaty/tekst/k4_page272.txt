@@ -1,0 +1,75 @@
+Do pozostałych instrukcji sterujących należy :
+
+JMP
+(JuMp to Label)
+
+LBL (ŁaBeŁ)
+
+JSR
+(Jump to SubRouti-
+ne)
+
+SBR (SuBRoutine)
+
+RET
+
+(RETurn from su-
+broutine)
+
+MCR
+
+(Master Control Re-
+set)
+
+TND
+(Temporary eND)
+
+wykonanie skoku. Jeżeli są spełnione warunki ob-
+wodu logicznego następuje skok do obwodu logicz-
+nego rozpoczynającego się etykietą o numerze wy-
+szczegółnionym w instrukcji JMP.
+
+etykieta, do której następuje skok przy użyciu in-
+strukcji JMP. Podczas wprowadzania instrukcji
+jedynym parametrem jest numer etykiety (wartość
+z zakresu od 0 do 999).( Wyd. 4.49)
+
+wykonanie skoku do podprogramu. Jeżeli spełnione
+są warunki obwodu logicznego następuje skok do
+pliku programowego o podanym w instrukcji JSR
+numerze.
+
+rozpoczęcie podprogramu. Nie jest to jednak in-
+strukcja konieczna do prawidłowego działania.
+Jej istnienie ma raczej znaczenie porządkujące
+strukturę programu.
+
+powrót z podprogramu. Tak jak wcześniejsza in-
+strukcja SBR również i ta instrukcja nie jest ko-
+nieczna do prawidłowego działania programu.
+minięcie wybranego fragmentu programu realizo-
+wanego przez sterownik. Jest to instrukcja która
+musi być użyta w parze. Dwie instrukcje MCR
+ustalają strefę, w której istniejący fragment progra-
+mu sterownika nie będzie wykonywany tak długo,
+jak długo warunki obwodu logicznego, w którym
+istnieje pierwsza instrukcja MCR będą spełnione.
+Zaleca się nie stosować wewnątrz strefy zawartej
+między instrukcjami MCR etykiet do których wy-
+stępują skoki instrukcją JMP gdyż może to prowa-
+dzić do zawieszenia się programu.
+
+w wypadku spełr.ionych warunków obwodu logicz-
+nego powodowanie natychmiastowego przerwania
+wykonywania programu przez sterownik oraz uak-
+tualnienie wszystkich wejść oraz wyjść. Następnie
+program sterowania zostaje uruchomiony od począt-
+ku tzn. jako pierwszy zostaje wykonany obwód lo-
+giczny o numerze (0 znajdujący się w pliku progra-
+mowym nr 2.
+
+- pa W A AA PTY TYT M YJ 9 A A W 1000 mg NY
+
+212 Rozdział : 5. Język schematów drabinkowych dla SLC 500
+
++.

@@ -1,0 +1,43 @@
+326 3. Obwody prądu stalego
+
+<image/figury/k3_page326_figure1.png>
+
+Rys. 3.7-3
+
+Ponieważ prąd w elemencie indukcyjnym ZL, ma wartość 1 A, zatem punkt pracy tego
+elementu leży na odcinku charakterystyki, dla którego strumień jest stały. Energia gromadzona
+w elemencie Z, jest więc równa polu trójkąta ograniczonego charakterystyką, osią rzędnych i prostą
+y = 2 mWb (pole zakreskowane na rys. 3.7-2b) i wynosi:
+
+<image/wzory/k3_page326_formula1.png>
+
+Energia gromadzona w pojemności nieliniowej przyjmuje wartość:
+
+<image/wzory/k3_page326_formula2.png>
+
+W celu obliczenia energii gromadzonej w indukcyjnościach sprzężonych obliczymy najpierw
+1 a
+indukcyjność wzajemną. Ponieważ k = > więc |M| =k/LL =2 mH. Z usytuowania
+zacisków jednoimiennych wynika, że M<0, azatem M = —2mH. Stąd:
+
+<image/wzory/k3_page326_formula3.png>
+
+C. Stan ustalony w układach nieliniowych. W p. A i B zakładaliśmy, że
+rozpatrywane układy zawierające elementy inercyjne znajdują się w stanie
+ustalonym przy pobudzeniach stałych. Jeśli układ jest liniowy, to warunki
+powstania stanu ustalonego przy pobudzeniach stałych są dobrze znane i zostały
+omówione w p. 2.2.2. Obecność w układzie nieliniowym elementów inercyjnych
+(liniowych lub nieliniowych) stawia natomiast pod znakiem zapytania kwestię,
+czy w ogóle w układzie takim może wystąpić stan ustalony. Rozstrzygnięcie, czy
+po włączeniu źródeł stałych do układu zawierającego elementy inercyjne może on
+osiągnąć stan ustalony, jest w ogólnym przypadku trudne, niekiedy wręcz
+niemożliwe”. Problem silnie zależy od typu elementów występujących w ukła-
+dzie, rodzaju ich nieliniowości i struktury układu.
+
+Zakładając zatem, że układ nieliniowy zawierający elementy inercyjne
+znajduje się w stanie ustalonym przy pobudzeniach stałych, należy zastanowić
+się, czy założenie takie ma sens, tzn. czy w układzie tym prądy i napięcia mogą
+przyjąć wartości ustalone.
+
+V Zagadnienie to jest przedmiotem badań zaawansowanych działów teorii obwodów nielinio-
+wych i wyraźnie wykracza poza ramy książki.

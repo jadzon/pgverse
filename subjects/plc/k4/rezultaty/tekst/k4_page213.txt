@@ -1,0 +1,25 @@
+(* Zarowanie rejestrów dla przygotowania operacji 32 bitowych *)
+
+gury/k4_page213_figure3.png
+
+(* Ustawianie wartości w słowach mniej znaczących dla operacji 32 bitowych *)
+
+ 
+
+ 
+
+gury/k4_page213_figure1.png
+
+jury/k4_page213_figure2.png
+
+Wyd. 4.30 Przykład użycia funkcji SHFR do obliczania średniej ruchomej
+
+Blok funkcyjny BITSEQ (BIT SEQuencer) umożliwia generację sekwencji bi-
+tów przesuwanych w tablicy bitów, której adres podany jest na wejście ST.
+Parametrami bloku są: liczba elementów tablicy (LEN) oraz adres wykorzysty-
+wanego obszaru pamięci (numer pierwszego rejestru). Do prawidłowego
+działania blok ten potrzebuje trzech słów (rejestrów), w których przechowywane
+
+EO RZECE EECC DOE TOBOZTYT TORD E EYE TOPY TY ZEP PETE YES "TE TRTETY TEZY TTP TPETCZYZETOW MEC TEECEYW "CEO KYCYTCJY TEEKTEPEBZIE
+
+4.9 Operacje na tablicach danych 213

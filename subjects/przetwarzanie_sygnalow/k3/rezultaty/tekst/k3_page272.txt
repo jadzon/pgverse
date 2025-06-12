@@ -1,0 +1,43 @@
+Filtry optymalne 297
+
+b mm m R R
+
+Powyższa zależność jest stosowana do przekształcenia widma z rys. 17.7 b) w odpowiedź
+_ częstotliwościową filtru Wienera z rys. 17.8 b). Filtr Wienera jest optymalny w tym sensie,
+że maksymalizuje stosunek mocy sygnału do mocy szumu (na całej szerokości sygnału, nie
+w poszczególnych jego punktach). Właściwa odpowiedź impulsowa filtru jest projektowana
+na podstawie odpowiedzi częstotliwościowej Wienera przy użyciu metod projektowania fil-
+trów dostosowanych do szczególnych wymagań.
+Chociaż pomysły dotyczące filtrów optymalnych są matematycznie eleganckie, to często za-
+wodzą w praktyce. Nie wynika stąd, że nie powinny być w ogóle stosowane. Chodzi o to,
+żebyście nie przestawali myśleć, usłyszawszy słowo „optymalny”. Przyjrzyjmy się kilku
+przyczynom, dla których możecie nie chcieć stosować takich filtrów.
+Pierwszy powód: różnice między sygnałami na rys. 17.9 są niezbyt duże. Rzeczywiście,
+gdyby nie powiedziano, które parametry zostały zoptymalizowane, to prawdopodobnie
+nie dałoby się tego stwierdzić, patrząc na przebiegi sygnałów. Tak jest na ogół wtedy,
+gdy w problemie występują nakładające się widma częstotliwościowe. Niewielka poprawa
+działania osiągnięta dzięki filtrowi optymalnemu może nie być warta zwiększonej zło-
+żoności programu, dodatkowego wysiłku włożonego w oprogramowanie lub dłuższego
+czasu wykonania.
+
+PEAT PEPE CZAD Z O Z
+
+ 
+
+<image/figury/k3_page272_figure3.png>
+
+<image/figury/k3_page272_figure2.png>
+
+zz m aiw i
+
+e adw
+PRL IZAZOJCIZZIE DŁEZZ 1
+
+17.9. Przyktad zastosowania trzech filtrów optymalnych. Przedstawione sygnaty są wynikiem filtracji
+
+(rys. a) daje najostrzejszą odpowiedź na zbocze przy danym poziomie tłumienia szumu losowego. Filtr dopasowany
+b) daje pik położony nad resztkowym szumem znacznie wyżej niż w innych filtrach. Filtr Wienera (rys. c) jest opty-
+pod względem stosunku sygnatu do szumu
+
+YB — „ET
+- 2

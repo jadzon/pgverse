@@ -1,0 +1,30 @@
+1.7. Algorytm Euklidesa 11
+
+<image/wzory/k2_page126_formula1.png>
+
+<image/figury/k2_page126_figure1.png>
+
+<image/wzory/k2_page126_formula2.png>
+
+jest WIGŁ MIUCJAŁA, A PUIUĆWAŁ JEJ W ZAWIŁE LLU LGUIIGILIA UVUGULIG, WIĘ IiE może
+zmniejszać się w nieskończoność. Zauważmy przy okazji, że jeżeli jedna z dwóch liczb,
+a lub b, jest zerem, to algorytm nie zatrzyma się.
+
+Twierdzenie 1.19 Niech a i b będą dwoma dodatnimi liczbami naturalnymi i niech d =
+
+NW nu. M Wtładw ietniaia Nerhu ralbnuita mi +. talia 7a:
+<image/wzory/k2_page126_formula3.png>
+lub Riowiąt IMGLZEJ, U JEM AUINDIIALJĄ LAIAUWIWIILZDUWĄ 1IL2U (I 1 u.
+
+Dowód. Pokażmy, że wszystkie wartości, jakie przyjmują zmienne p i q w trakcie wy-
+konywania algorytmu Euklidesa, są całkowitoliczbowymi kombinacjami liczb a i b. Na
+poczt" ru m m— ni a—h mamer:
+
+zg, ZOTY/K2 _page 126_formula4.png
+.ZOrY/K2_page126_formula5.png
+<image/wzory/k2_page126_formula6.png>
+
+teGu wyiuna, 4© uażc UNaWuŁIa WALWM ŁULUCHNEJ jł (NWA JEM 1UWLIA 4) JEM tainuwitoliczbową
+kombinacją liczb a i b. o
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

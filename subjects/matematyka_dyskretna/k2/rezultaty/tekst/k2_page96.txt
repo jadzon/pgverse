@@ -1,0 +1,39 @@
+1.1. Algebra Boole'a 5
+
+<image/tabele/k2_page96_table1.png>
+
+Ponieważ trzecia kolumna jest identyczna z pierwszą, więc równość p + pq = pjest
+prawdziwa dla każdego podstawienia, czyli jest tożsamością.
+
+Innym przykładem algebry Boole'a jest zbiór wszystkich podzbiorów jakiegoś zbioru
+X z operacjami określonymi w następujący sposób:
+
+<image/figury/k2_page96_figure1.png>
+
+'Także te operacje spełniają tozsamosci z lematu 1.1.
+
+Udowodnimy, dla przykładu, tożsamość A + AB = A. Jeżeli element r należy do
+zbioru A, to należy także do sumy A + AB. Jeżeli zaś x nie należy do A, to nie należy
+także do iloczynu AB, a więc z nie należy do żadnego składnika sumy A + AB, czyli nie
+należy do A + AB. Tak więc zbiory A i A + AB zawierają dokładnie te same elementy,
+a więc są równe.
+
+Oprócz trzech podstawowych, w algebrze Boole'a definiuje się inne operacje. Dla nas
+ważna będzie operacja xor (ang. exclusive or) albo altematywa wykluczająca. xor jest
+operacją dwuargumentową, oznaczaną przez:
+
+<image/wzory/k2_page96_formula1.png>
+
+i określoną przez tabelę:
+
+<image/wzory/k2_page96_formula2.png>
+
+Operacja ta jest nazywana altematywą wykluczającą, ponieważ w logice zdaniowej
+zdanie p © q jest prawdziwe, jeżeli albo p, albo q jest prawdziwe, ale nie jest prawdziwe,
+gdy pi q naraz są prawdziwe. Operacja ror ma następujące własności:
+
+Lemat 1.2
+
+(a) pBq=qGp (jest przemienna),
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

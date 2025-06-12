@@ -1,0 +1,12 @@
+Przykłady filtrów okienkowanych funkcją sine
+
+<image/figury/k3_page257_figure1.png>
+
+w przykładzie założymy, że sygnał EEG został wzmocniony elektronicznymi układami
+oe i następnie przetworzony na sygnał cyfrowy z częstotliwością próbkowania
+
+| naranak sauńiaeaiacy SMMM) ninktów.
+
+ 
+
+<image/figury/k3_page257_figure3.png>

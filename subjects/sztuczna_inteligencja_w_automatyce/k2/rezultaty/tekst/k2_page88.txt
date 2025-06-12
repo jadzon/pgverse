@@ -1,0 +1,37 @@
+93
+
+Podstawiając do powyższego wzoru wartości prawdopodobieństw z tablicy ?? otrzy-
+mujemy rozkład p(x|ż) przedstawiony w tablicy ??. ami
+
+<image/tabele/k2_page88_table1.png>
+
+Tablica 5.2: Obliczony rozkład prawdopodobieństwa p(z|:) w przykładowej sieci bayesow-
+skiej o strukturze r * y + z
+
+PRZYKŁAD 5.13
+
+Korzystając z niezależności warunkowej można łatwo dla sieci bayesowskiej z rys.
+77 wyznaczyć prawdopodobieństwo łączne. Korzystając z reguły łańcuchowej i nie-
+zależności warunkowych otrzymujemy
+
+<image/wzory/k2_page88_formula1.png>
+
+Z otrzymanego wzoru i rozkładów warunkowych mamy np.
+
+<image/wzory/k2_page88_formula2.png>
+
+5.2.2. Rodzaje wnioskowania w sieciach bayesowskich
+
+Można wyróżnić cztery następujące typy wnioskowania w sieciach bayesowskich,
+(rysunek ??):
+
+e Wnioskowanie diagnostyczne: Od objawów do przyczyn.
+e Wnioskowanie przyczynowe: Od przyczyn do objawów.
+
+e Wnioskowanie pomiędzy przyczynami (wyjaśnienie osłabiające (ang. explaining
+away)): Pomiędzy kilkoma przyczynami tego samego objawu (jakie jest praw-
+dopodobieństwo wystąpienia przyczyny, gdy zaszły objawy i inne przyczyny).
+Często występowanie objawu i jednej przyczyny zmniejsza prawdopodobieństwo
+przyczyny drugiej.
+
+e Wnioskowanie mieszane: Połączenie dwóch lub więcej powyższych typów.

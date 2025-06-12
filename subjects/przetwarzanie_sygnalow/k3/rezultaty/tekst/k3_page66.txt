@@ -1,0 +1,33 @@
+4. Oprogramowanie DSP
+
+ 
+
+Dokładność liczb
+
+Błędy związane z reprezentacją liczb są bardzo podobne do błędów kwantyzacji powsta-
+jących podczas przetwarzania analogowo-cyfrowego. Chcemy zapisywać ciągły przedział
+wartości, jednak możemy posługiwać się tylko skończoną liczbą skwantowanych poziomów.
+Za każdym razem, gdy pojawia się nowa liczba, na przykład w wyniku operacji matema-
+tycznych, musi ona zostać zaokrąglona do najbliższej wartości, która może być zapisana
+w zastosowanym formacie.
+
+Jako przykład wyobraźmy sobie, że do zapisania liczby są przeznaczone 32 bity. Ponieważ
+jest dokładnie 2 = 4 294 967 296 różnych możliwych sekwencji bitów, więc można wyrazić
+dokładnie 4 294 967 296 różnych liczb. W niektórych językach programowania jest dopusz-
+czalna zmienna o nazwie długa liczba całkowita (long integer), zapisywana, jako stałoprze-
+cinkowa, w 32 bitach w zapisie uzupełnienia do 2. Wynika stąd, że 4 294 967 296 możliwych
+sekwencji bitów reprezentuje liczby całkowite między —2 147 483 648 i 2 147 483 647. Warto
+wspomnieć, dla porównania, że przy zapisie zmiennoprzecinkowym o pojedynczej dokładno-
+ści te 4 294 967 296 sekwencji bitów reprezentuje liczby w znacznie szerszym zakresie: od
+-3,4 x 107% do 3,4 x 1075.
+
+W przypadku zmiennych stałoprzecinkowych odstępy między sąsiednimi liczbami są zawsze
+równe dokładnie jeden. W zapisie zmiennoprzecinkowym te odstępy zmieniają się zależnie
+od zakresu reprezentowanych liczb. Jeśli losowo wybierzemy jakąś liczbę zmiennoprzecin-
+kową, to odstęp za tą liczbą jest w przybliżeniu dziesięć milionów razy mniejszy niż sama
+liczba (dokładnie stanowi od 27% do 27% tej liczby). Jest to kluczowa koncepcja zapisu
+zmiennoprzecinkowego — duże liczby mają duże odstępy między sobą, a małe — małe od-
+stępy. Zilustrowano to na rys. 4.3, pokazując kolejne liczby zmiennoprzecinkowe i odstępy
+między nimi. -
+
+<image/tabele/k3_page66_table1.png>

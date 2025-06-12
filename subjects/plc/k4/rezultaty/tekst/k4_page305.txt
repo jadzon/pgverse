@@ -1,0 +1,27 @@
+W przykładzie z Wyd. 6.25, do rejestrów od adresu 40201 wpisane są 43 słowa.
+Za pomocą bloku SENS sprawdzany jest bit 12 rejestru 40201. Tab. 2.4 ilustruje,
+dlaczego odpowiada to sprawdzaniu stanu baterii.
+
+<image/tabele/k4_page305_table1.png>
+
+Sterowniki Modicon udostępniają jeszcze jedną instrukcję operującą na bitach.
+Jest nią instrukcja BROT wykonująca rotację lub przesunięcie bitów w wyzna-
+czonym obszarze pamięci. Bity przesuwane są z prędkością jednego bitu na cykl
+sterownika.
+
+<image/tabele/k4_page305_table2.png>
+
+Wyd. 6.26 Przesuniecie bitów z wykorzystaniem bloku BROT.
+
+Wyd. 6.26 pokazuje sposób zastosowania bloku BROT. Każdorazowe wyzwole-
+nie wejścia 10001 powoduje przesunięcie o jeden bit zawartości tablicy o długo-
+ści 2 rejestrów (32 — bity) zaczynającej się od rejestru 40001 i zapisaniu wyniku
+do tablicy o tej samej długości, zaczynającej się w rejestrze 40010. Jeżeli w tym
+czasie wejście 10002 jest w stanie wysoki, przesuwanie następuje w prawo, gdy
+w stanie niskim — w lewo. Ponadto, jeśli wejście 10003 jest w stanie niski, bit
+opuszczający tablicę, zostaje zapisany na ostatnią pozycję (rotacja). W przeciw-
+nym razie bit ten jest tracony.
+
+ 
+
+6.7 Funkcje na ciągach bitów 305

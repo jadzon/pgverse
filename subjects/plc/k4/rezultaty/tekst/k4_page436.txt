@@ -1,0 +1,20 @@
+Blok programowy PB2 realizuje algorytm regulacji PID.
+SEGMENT 1
+
+   
+
+<image/figury/k4_page436_figure1.png>
+
+Wyd. 8.95 Realizacja algorytmu regulacji PID
+
+<image/tabele/k4_page436_table1.png>
+
+Wyd. 8.96 Ustawienie okresu przerwań dla bloku OB13
+
+<image/tabele/k4_page436_table2.png>
+
+Wyd. 8.97 Blok danych DB2 zawiera parametry elementu trójpołożeniowego
+
+ 
+
+436 Rozdział : 8.Programy przykładowe

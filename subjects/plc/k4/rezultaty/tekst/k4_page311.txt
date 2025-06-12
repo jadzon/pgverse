@@ -1,0 +1,38 @@
+W ramach podprogramu wykonywana jest instrukcja dodania do zawartości reje-
+stru 40255 wartości 10, a wynik tej operacji wpisywany jest do rejestru 40256 po
+czym, dzięki wystąpieniu bloku RET(0001) następuje powrót z podprogramu
+0001 do programu zasadniczego.
+
+O wiele wygodniejszym narzędziem, jakie można wykorzystać do tworzenia
+podprogramów jest umieszczenie podprogramu w segmencie sterowanym (con-
+trolled segment) stanem dowolnego styku lub cewki. Jak wspomniano we wstę-
+pie, harmonogram segmentów (segment sheduler) służy przede wszystkim do
+narzucania, w jakiej kolejności ma się odbywać przeglądanie i wykonywanie
+poszczególnych segmentów programu. Dowolny segment może być realizowany
+bezwarunkowo i w każdym cyklu (continuous) lub tylko wtedy, gdy zostanie
+spełniony warunek realizacji (controlled). Jeżeli zatem w części głównej progra-
+mu wykonamy operacje sterujące cewkami warunków, to przez spełnienie kon-
+kretnego warunku uaktywnimy dany segment programu. Wyd. 6.33 ilustruje
+przykład zastosowania harmonogramu segmentów do sterowania podprograma-
+mi.
+
+<image/tabele/k4_page311_table1.png>
+
+Wyd. 6.33 Korzystanie z harmonogramu segmentów.
+
+Program główny umieszczony w segmencie 01 obsługiwany jest w każdym cy-
+klu. Jeżeli w ramach tego segmentu wysterowana zostanie którekolwiek z cewek
+od 00001 do 00005, to wykonywany będzie również związany z tą cewką pod-
+program umieszczony w odpowiednim segmencie. Oczywiście, któraś z cewek
+warunków może zostać wyzwolona w segmencie warunkowym, włączając do
+realizacji kolejny segment.
+
+Jednocześnie, ten sam segment programu można umieścić kilkakrotnie na liście
+segmentów, przez co będzie on wykonany tyle razy w ramach jednego cyklu
+sterownika. W omawianym przykładzie podprogram umieszczony w segmencie
+02 będzie wykonywany dwukrotnie w jednym cyklu, gdy aktywne będą jedno-
+cześnie wyjścia 00004 i 00005.
+
+p W M M W M W W AT. WTZ NN a M A W O W YW TYT TYT TĄ
+
+6.10 Funkcje sterujące 31 1

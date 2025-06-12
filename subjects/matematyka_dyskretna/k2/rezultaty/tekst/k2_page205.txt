@@ -1,0 +1,44 @@
+1.13. Rozgłaszanie wiadomości 27
+
+Rysunek 1.13: a) Hiperkostka H, , b) Hiperkostka Ha
+
+<image/figury/k2_page205_figure1.png>
+
+krawędziami odpowiadające sobie wierzchołki z obu kopii, czyli wierzchołek Or jest
+połączony z wierzchołkiem 1z, dla każdego r € (0,1)*"'. Rysunek 1.14 przedstawia
+hiperkostkę H3.
+
+W rezultacie hiperkostka to graf Hx = (V, E), gdzie V = £0,1)* zawiera wszystkie
+ciągi bitów długości k, a dwa wierzchołki u, v € V są połączone krawędzią wtedy i tylko
+wtedy, gdy różnią się dokładnie jednym bitem.
+
+Jak łatwo widać w kostkach H» i Hz są cykle Hamiltona (w H; jest droga Hamiltona).
+Ogólniej mamy
+
+Lemat 1.42 Każda hiperkostka Hz zawiera drogę Hamiltona. zaczynającą się w wierz-
+chołku 0* i kończącą w wierzchołku 10*-*.
+
+Dowód przez indukcję ze względu na wymiar kostki. H; zawiera drogę Hamiltona 0, 1
+Załóżmy, że H,_, zawiera drogę Hamiltona z 0*"! do 10*72. H* składa się z dwóch
+hiperkostek H*"'. Droga w H; zaczyna się w punkcie 0*. W pierszej hiperkostce (tej z
+0 na początku każdego wierzchołka) przechodzi do 010* "?, potem krawędzią do 110* 2
+iw aa hiperkostce (tej z 1 na początku każdego wierzchołka) w odwrotnym kierunku
+do 10*7'. D
+
+Cykl Hamiltona w Hx tworzy tak zwany kod Graya. Jest to ciąg wszyskich k elemen-
+towych ciągów bitów, każdy występuje raz, każde dwa kolejne różnią się jednym bitem
+oraz ostatni ciąg różni się jednym bitem od pierwszego.
+
+1.13  Rozgł aszanie wiadomóci
+
+Graf G = (V, E) może przedstawiać sieć połączeń. Wierzchołki są agentami, a krawędzie
+to łącza, którymi agenci mogą się komunikować. Wyobraźmy sobie, że jeden agent posia-
+da jakąś wiadomość, którą chce przekazać wszystkim innym agentom w sieci. Reguły są
+następujące. Komunikacja odbywa się synchronicznie w taktach. W każdym takcie każdy
+agent może przekazać wiadomość jednemu swojemu sąsiadowi.
+
+Powyższy problem nazywa się problemem rozgłaszania. Poniżej pokażemy, że można
+go bardzo efektywnie rozwiązać, jeżeli graf jest hiperkostką H,. Będziemy traktować
+ciąg bitów jako przedstawienie dwójkowe liczby naturalnej.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

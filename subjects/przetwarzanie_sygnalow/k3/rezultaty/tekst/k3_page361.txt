@@ -1,0 +1,56 @@
+Przykład dużej funkcji PSF — spłaszczanie oświetlenia 393
+
+Co jest lepsze — dzielenie czy skorzystanie z drogi przetwarzania homomorficznego? Obie
+metody są prawie identyczne, ponieważ logarytmowanie i odejmowanie są równoważne
+dzieleniu. Jedyną różnicą jest aproksymacja zastosowana do obrazu uzyskanego na pod-
+stawie oświetlenia. W jednej metodzie stosuje się wygładzoną wersję pobranego obrazu,
+a w drugiej — wygładzoną wersję logarytmu pobranego obrazu.
+
+Ta technika spłaszczania sygnału oświetlenia jest tak użyteczna, że jest włączona do neu-
+ronowej struktury oka. Przetwarzanie zachodzące w środkowej warstwie siatkówki opi-
+sano poprzednio jako wyostrzanie krawędzi lub jako filtr górnoprzepustowy. Choć jest
+to prawda, to jednak nie cała. Pierwsza warstwa oka działa w sposób nieliniowy; doko-
+nuje — w przybliżeniu — logarytmowania pobieranego obrazu. To czyni z oka procesor
+homomorficzny. Jak już powiedziano, logarytmowanie i następnie filtracja zaostrzająca
+krawędzie powodują spłaszczanie składowej oświetleniowej, co umożliwia oku widzenie
+w warunkach złego oświetlenia. Inne interesujące zastosowanie przetwarzania homomor-
+ficznego pojawia się w fotografii. Gęstość (naświetlenie) negatywu jest równe logaryt-
+mowi jaskrawości w końcowym zdjęciu. To oznacza, że wszystkie operacje z negatywem
+podczas jego wywoływania są pewnym rodzajem przetwarzania homomorficznego.
+
+Przed zakończeniem omawiania tego przykładu trzeba wspomnieć o pewnej niedogodności.
+Jak już stwierdzono w rozdziale 6, gdy N-punktowy sygnał jest splatany z M-punktową odpo-
+wiedzią impulsową filtru, to uzyskuje się sygnał o długości (N + M — 1) punktów. Podobnie,
+gdy obraz M x M jest splatany z odpowiedzią impulsową N x N, to wynikiem jest obraz
+(M + N- 1) x (M + N- 1). Kłopot z tym, że czasem trudno sobie poradzić ze zmieniającymi
+się rozmiarami obrazu. Musi być zmieniana np. przydzielona pojemność pamięci, dobiera-
+ny wyświetlacz, ewentualnie zmieniane indeksowanie matrycy itd. Zazwyczaj te kwestie po
+prostu się pomija. Jeśli zaczynamy od obrazu 512 x 512, to chcemy zakończyć też na obrazie
+512 x 512. Piksele niepasujące do pierwotnych granic są odrzucane.
+
+W ten sposób utrzymuje się wprawdzie takie same rozmiary obrazu, lecz nie rozwiązuje
+się całego problemu. Ciągle pozostają warunki graniczne dla splotu. Wyobraźmy sobie, na
+przykład, że próbujemy obliczyć wartość piksela w prawym, górnym rogu w obrazie na rys.
+24.8 d). Wykonuje się to przez wypośrodkowanie gaussowskiej funkcji PSF na prawym,
+górnym rogu obrazu na rys. 24.8 c). Każdy piksel obrazu na rys. 24.8 c) jest następnie
+wymnażany przez odpowiadający mu piksel w nakładanej PSF i iloczyny są sumowane.
+Trudność polega na tym, że trzy czwarte PSF leży na zewnątrz zdefiniowanego obrazu.
+Najłatwiejszym rozwiązaniem jest przypisanie niezdefiniowanym pikselom wartości zero.
+Tak właśnie utworzono obraz na rys. 24.8 d), co wyjaśnia pochodzenie ciemnego paska na
+obwodzie obrazu. Tak więc jaskrawość łagodnie maleje aż do zerowej wartości piksela na
+zewnątrz zdefiniowanego obrazu.
+
+Na szczęście ten ciemny obszar wokół granicy można skorygować, choć nie zrobiono
+tego w podanym przykładzie. Korekcję wprowadza się, dzieląc każdy piksel na obrazie
+z rys. 24.8 d) przez współczynnik korygujący. Ten współczynnik jest takim ułamkiem
+funkcji PSF, jaki był wprowadzony do obrazu, gdy obliczano wartość piksela. Tak więc
+aby skorygować pojedynczy piksel w obrazie z rys. 24.8 d), wyobraźmy sobie, że funk-
+cja PSF jest wypośrodkowana na odpowiednim pikselu na rys. 24.8 c). Na przykład
+górny, prawy piksel na rys. 24.8 c) jest tylko w 25% wynikiem funkcji PSF nakładanej
+na obraz wejściowy. A zatem korygujemy ten piksel na obrazie z rys. 24.8 d), dzieląc go
+przez czynnik 0,25. Z tego wynika, że piksele w środku obrazu na rys. 24.8 d) pozosta-
+ną niezmienione, lecz ciemne piksele na obwodzie zostaną rozjaśnione. Aby wyznaczyć
+współczynniki korygujące, wyobraźmy sobie splatanie odpowiedzi impulsowej filtru
+z obrazem, w którym wszystkie piksele mają wartość równą jeden, W uzyskanym w ten
+sposób obrazie piksele mają wartości równe współczynnikom korygującym, koniecznym
+do usunięcia zjawisk krawędziowych.

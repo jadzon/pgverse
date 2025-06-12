@@ -1,0 +1,49 @@
+1. Pojęcia podstawowe — elementy
+
+ści sprzężone a transformator idealny. Przedstawione
+lie, choć ma charakter formalny, zawiera jednak wiele
+'h dla rozwiązań praktycznych. Jeśli bowiem chcielibyś-
+ości sprzężone miały właściwości możliwie zbliżone do
+matora idealnego, należałoby w układzie z rys. 1.8-3 spełnić
+i:
+
+winno być jak największe, tzn. jak najmniejsze powinny być
+*nia. Warunku tego nie da się praktycznie spełnić w transfor-
+rm (tzn. bez rdzenia ferromagnetycznego). Dopiero za-
+dzenia stwarza — dzięki właściwościom ferromagnetyka do
+magnetycznego — praktyczne możliwości uzyskania do-
+spółczynnika sprzężenia.
+i Ly, Lą,|M| powinny być jak największe. Indukcyjności
+adzie z rdzeniem ferromagnetycznym są w przybliże-
+ge156_formula1.png : od indukcyjności uzyskiwanych bez rdzenia, por. wzór
+»zenikalność magnetyczna m, ferromagnetyka może osią-
+iesiąt, kilkaset, a nawet kilka tysięcy. Tak więc i ten warunek
+żna spełnić w układzie transformatc
+
+ 
+
+uzwojenia jest proporcjonalna do k
+uże wartości L;, L, można więc uz;
+(liczbach zwoi z;,zą. Ze względów te:
+rymaga nawinięcia uzwojenia wielow
+na więc zbytnio powiększać co najmni
+liczby zwoi rośnie grubość warstwy
+ia, który nie koncentruje się w rdzen
+: liczby zwoi rośnie opór przewodu u:
+u indukcyjności sprzężonych (rys. 1.8
+
+uwag wynika, że właściwości zbliżo1
+1aeainego mozna uzyskać praktycznie tylko w układzie ©
+rdzeń ferromagnetyczny. Zwracamy jednak uwagę, iż ukłe
+ferromagnetycznym nie da się opisać modelem liniowym pr
+1.8-3 i opisanym równaniami (1.8-16) i (1.8-17). Wprowad:
+powoduje bowiem, że układ staje się silnie nieliniowy i wy
+kilku zjawisk, które całkowicie pomija model liniowy tran
+nego (np. nieliniowa i niejednoznaczna zależność skojar:
+W od prądu i w postaci pętli histerezy, zjawisko prądów
+itp. — por. p. 1.3.7).
+Analizą transformatora z rdzeniem ferromagnetyczn'
+zajmować. Zainteresowanego Czytelnika odsyłamy do lit
+133).
+
+wzory/k3_page156_

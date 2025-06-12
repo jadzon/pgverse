@@ -1,0 +1,46 @@
+drodze przebytej przez każdą mrówkę umieszcza się feromon w ilości
+
+<image/wzory/k2_page27_formula1.png>
+
+gdzie L*(t) jest długość trasy przebytej przez mrówkę k w epoce t.
+Całkowita ilość feromonu na krawędzi ij, na początku epoki £ + 1 wynosi
+
+<image/wzory/k2_page27_formula2.png>
+
+gdzie ny jest liczbą mrówek.
+Ilość feromonu może się zmniejszać (parowanie) przed dodaniem nowej porcji
+według wzo
+
+<image/wzory/k2_page27_formula3.png>
+
+gdzie p € [0,1].
+
+Heurystyczny algorytm mrówkowy
+
+Podobnie jak algorytm szukania A*, algorytm mrówkowy może wykorzystywać do-
+datkowe informacje o jakości wezłów do których mrówka ma przejść. Można to np.
+zrealizować wybierając następujace prawdopodobieństwo przejścia mrówki do na-
+stępnego węzła:
+
+<image/fi.wzory/k2_page27_formula4.png>
+
+—
+m
+
+gdzie N$ jest zbiorem dopuszczalnych, w odniesieniu do mrówki k, węzłów połączo-
+nych krawędziami z węzłem ż (zakłada się, że mrówka nie zawraca), a jest dodatnią
+stałą, 7,, jest całkowitą ilością feromonu na krawędzi (żj), zaś n(t) reprezentuje
+atrakcyjność przejścia mrówki z węzła ż do j (informacja heurystyczna).
+
+porwnujcwzoryi72widaewykorzystanieinformacjiheurystycznej
+zwiększa prawdopodobieństwo przejscia do węzła o wiekszej atrakcyjności. Miarą
+atrakcyjnością może tu być np. szacowany najtańszy koszt przejścia drogi od danego
+węzła do węzła końcowego.
+
+3.9. Szukanie na grafach AND/OR
+3.9.1. Systemy dekomponowalne — grafy AND/OR
+
+Niektóre zadania daje się zdekomponować do zespołów zadań prostszych. Schemat
+dekompozycji wygodnie jest przedstawić w postaci grafu AND/OR.
+
+Przykłady

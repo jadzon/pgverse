@@ -1,0 +1,48 @@
+22 Rozdział 1. Kombinatoryka
+
+16. Oblicz ile liczb mniejszych od 100 nie jest podzielnych przez 2, 3, 5 lub 7. Udo-
+wodnij, że wszystkie te liczby oprócz 1 są pierwsze. Ile jest liczb pierwszych mniej-
+szych od 100?
+
+17. Wypisz wszystkie podzbiory zbioru f1, 2,3, 4).
+
+18. Wypisz wszystkie 2 elementowe podzbiory zbioru f1, 2,3, 4,5).
+
+19. Wypisz 14 kolejnych permutacji zbioru f1. 2, 3, 4,5,6) poczynając od permutacji
+456321.
+
+20. Napisz programy realizujące opisane w tym rozdziale algorytmy generowania obiek-
+tów kombinatorycznych.
+
+1.14 Problemy
+
+1.14.1  Rozmieszczanie przedmiotów w pudeł kach.
+Przypuśćmy, że mamy n nierozróżnialnych kul. Udowodnij, że istnieje
+
+<image/wzory/k2_page57_formula1.png>
+
+sposobów rożłożenia tych kul do k rozróżnialnych pudełek.
+
+Wskazówka. Każde rozmieszczenia n kul w k pudełkach może być przedstawione jako
+ciąg zer i jedynek długosci n + k — 1, w którym występuje dokładnie k — 1 jedynek. Zera
+symbolizują kule a jedynki przegrody pomiędzy pudełkami. Na przykład ciąg 00110100
+przedstawia rozłożenie pięciu kul do czterech pudełek, w których pierwsze pudełko za-
+wiera dwie kule, drugie jest puste, trzecie zawiera jedną kule, a czwarte dwie kule.
+
+1.14.2 Wybór n przedmiotów k rozróżnialnych typów
+
+Wyobraźmy sobie, że mamy przedmioty w k różnych typach, że liczba przedmiotów każ-
+dego typu jest nieograniczona i że przedmioty jednego typu są nierozróżnialne. Zasta-
+nówmy się na ile sposobów można wybrać n przedmiotów spośród tych k typów, przy
+założeniu, że dopuszczalne są powtórzenia typów. Pokaż, że można to zrobić na
+
+<image/wzory/k2_page57_formula2.png>
+
+sposobów.
+
+Na ile sposobów można wybrać 5 monet jeżeli mamy nieograniczone zapsy złotówek,
+dwuzłotówek i pięciozłotówek?
+Wskazówka. Wybory przedmiotów k typów są równoważne rozkładaniu nierozróżnial-
+nych kul do k szuflad. Włożenie kuli do ;-tej szuflady oznacza, że jest ona i tego typu.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

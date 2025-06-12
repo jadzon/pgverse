@@ -1,0 +1,9 @@
+<image/tabele/k3_page406_table1.png>
+
+   
+ 
+
+<image/figury/k3_page406_figure1.png>
+
+Rys. 26.6. Węzeł aktywny sieci neuronowej. Jest to sieć przepływu węzłów aktywnych stosowanych
+w warstwach ukrytej i wyjściowej. Wszystkie wartości wejściowe są oi

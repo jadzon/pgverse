@@ -1,0 +1,52 @@
+3.7.2 Układy zasilania
+
+Warunki zasilania urządzenia elektrycznego, w tym również systemu sterowni-
+
+kowego, określone są przez [13]:
+
+e układy sieci zasilającej oznaczonej TN, TT, IT różniących się połączeniem
+neutralnego punktu sieci N z ziemią, których opis zestawiono w Tab. 3.14,
+
+e wartość napięcia znamionowego sieci,
+
+e własności elektryczne sprzętów i pomieszczeń, w których znajduje się urzą-
+dzenie elektryczne.
+
+Powyższe czynniki determinują zagrożenie porażeniem prądem oraz ustalają
+sposoby i środki ochrony przeciwporażeniowej w warunkach pracy normalnej
+oraz w warunkach uszkodzeń instalacji i urządzeń.
+
+Podobnie jak inne urządzenia elektryczne, sterownik i jego obwody z punktu wi-
+dzenia układu zasilania powinny mieć właściwą klasę ochronności oraz
+odpowiednie sposoby ochrony przeciwporażeniowej.
+
+Dla urządzeń elektrycznych prądu przemiennego o napięciu nie wyższym niż
+440 V i napięciu wzgłędem ziemi nie wyższym niż 250V ustalono kłasy ochron-
+ności 0, I, II i III. Pomijając © klasę ochronności, którą nie dopuszcza się
+w omawianym zakresie zasilania sterowników, omówione zostaną pozostałe kla-
+sy.
+
+W I klasie ochronności ochronę przed porażeniem zapewnia się przez zastoso-
+wanie izolacji podstawowej oraz przez połączenie przewodów PE i PEN
+z zaciskiem ochronnym, co ogranicza napięcia dotykowe do wartości mniej-
+szych od napięć uznanych za bezpieczne. Dodatkowo zapewnia się zadziałanie
+zabezpieczeń nadprądowych i różnicowoprądowych, które wyłączają zasilania w
+czasie mniejszym niż ustalone czasy włączenia dla odpowiednich układów zasi-
+lania.
+
+W obwodach zasilania sterownika, które powinny spełniać wymogi tej klasy,
+należy zapewnić ochronę przed dotykiem pośrednim stosując elementy samo-
+czynnego szybkiego wyłączenia zasilania w zależności od zastosowanej sieci
+zasilającej oznaczonej TN, TT, IT. Przykładowe schematy połączenia z takimi
+zabezpieczeniami dla różnych sieci zasilających pokazano na Rys. 3.29, Rys. 3.30
+i Rys. 3.32.
+
+W sieciach typu 7TIV wszystkie części przewodzące powinny być połączone
+z uziemionym punktem sieci za pomocą przewodów ochronnych PE i/lub prze-
+wodów ochronno-neutralnych PEN. Wyłączniki ochronne instaluje się na
+przewodach liniowych Ł. Mogą być też stosowane na przewodach neutralnych.
+Na przewodach PE i PEN nie mogą być stosowane żadne wcze
+ochronne powodujące utratę ciągłości przewodów.
+
+ EEETWECYCWOWAWY ZATARTE TY PPR TAPEPPEPYY TOO PICZEOY EOT TOPI W POT TYETY TOW TT TORTU OO TTE YE ZE Y PPPOE Z R TIOIEIPAOWRONOOONA
+3.7 Zasiłanie sterowników 1 5 1

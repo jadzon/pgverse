@@ -1,0 +1,33 @@
+b)
+FUNCTION BLOCK
+
+<image/figury/k4_page60_figure2.png>
+
+ 
+  
+ 
+
+<image/figury/k4_page60_figure1.png>
+
+rap. Z.2y Frzykład deklaracji bloku tunkcyjnego
+
+ 
+
+2.3.4 Standardowe bloki funkcyjne
+
+W punkcie tym przedstawione zostaną opisane w normie /EC //3/-3 bloki funk-
+cyjne wspólne dla różnych języków programowania. Bloki będą prezentowane
+w formie graficznej (język FBD) oraz tekstowej (język S7). Bloki standardowe
+występują na ogół w oprogramowaniu dostarczanym przez producentów sterow-
+ników programowalnych.
+
+Wśród standardowych bloków funkcyjnych wyróżnia się następujące grupy:
+e Elementy bistabilne (Bistable elements)
+
+Elementy bistabilne — przerzutniki i semafor zebrano w Tab. 2.30.
+
+Ciało przerzutników przedstawiono w języku FBD. Wartość początkowa zmien-
+nej Q/ powinna wynosić O.
+
+TTE OPORY TTE ZP WOO TOO OZ YOOZZ ZZOZ Y ZZOZ ZZZZZY Z ZI OŻOOOOOOQ_——ZZODL ZO ZPOW OOO O ZE TE ZZOZ Y OAZY OWO ZZOZ ZĘ PO ZI,
+60 Rozdział : 2.Programowanie sterowników PLC

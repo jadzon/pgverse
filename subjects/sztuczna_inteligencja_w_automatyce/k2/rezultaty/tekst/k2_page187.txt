@@ -1,0 +1,40 @@
+192
+
+<image/figury/k2_page187_figure2.png>
+
+e wartości średnie wygranych V (a;), i = 1.2... .n — uzyskane jako realizacje zmien-
+nych losowych o równomiernych gęstościach prawdopodobieństwa w przedziale
+[--0,5,0,5).
+
+e wygrane r; — realizacje zmiennych losowych o równomiernych gęstościach praw-
+dopodobieństwa w przedziałach (V (a,) — 0,5, V (a,) + 0,5],
+
+e liczba gier — 10000,
+
+e liczba eksperymentów — 3000. W każdym eksperymencie generowano nowe warto-
+ści średnie wygranych V (a,). Wyniki poszczególnych eksperymentów uśredniono.
+
+e zbadano strategie:
+
+losowa,
+mieszana — 2500 kroków losowo, a następnie zachłannie,
+-— mieszana — 125 kroków losowo, a następnie zachłannie,
+zachłanna — każdy automat po jednej próbie, a następnie zachłannie,
+
+e-zachłanna, e = 0.2, zastosowano modyfikacje metody: co grę o numerze
+1/e = 5 losowo wybierano automat,
+
+e-zachłanna, e = 0.01, zastosowano modyfikacje metody: co grę o numerze
+1/e = 100 losowo wybierano automat,
+
+-  softmax — przyjęto (po kilku próbach) zasadę zmniejszania się współczyn-
+5
++ 0.001
+
+ 
+
+ika 7 wedł lgoryt =
+nika 7 według algorytmu 7 I0żk
+
+Wyniki eksperymentów przedstawiono na rys. ??. Na rysunku ??a przedstawiono
+średnie wygrane w funkcji liczby gier (dotychczasowa suma wygranych podzielona

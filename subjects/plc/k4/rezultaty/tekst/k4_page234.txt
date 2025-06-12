@@ -1,0 +1,43 @@
+Sposoby strojenia układu regulacji PID, tzn. dobór takich parametrów regulatora
+jak współczynnik wzmocnienia, stała różniczkowania i całkowania (która po-
+zwala wyznaczyć częstość całkowania) omówiono w Dodatku B.
+
+ 
+
+4.12.2 Opis działania bloku PID
+
+Kiedy blok funkcyjny PID jest aktywny, ustawiony wcześniej okres próbkowania
+(Sample Period) jest porównywany z czasem mierzonym od ostatnio wykonanej
+iteracji algorytmu. Jeżeli upłynął już zadany czas, to wykonywana jest kolejna
+iteracja. Gdy obliczona zmienna wyjściowa bloku CV jest poza podanym zakre-
+sem (Upper Output Clamp lub Lower Output Clamp) lub zmieniła się szybciej
+niż zezwala na to minimalny czas zmiany wyjścia (Minimum Slew Time), to
+zmienna CV jest utrzymywana na odpowiedniej wartości granicznej, a wartość w
+buforze części całkującej jest odpowiednio dostosowywana (anti-reset windup).
+
+Po wyliczeniu zmiennej CV jest ona umieszczana w rejestrze przechowującym
+wartość wielkości wyjściowej w trybie sterowania ręcznego (Manual Command)
+i w wewnętrznym rejestrze wielkości wyjściowej (/nternal CV), pod warunkiem,
+że blok funkcyjny jest w trybie pracy automatycznej (AUTO). Jeżeli blok znaj-
+duje się w trybie sterowania ręcznego (wejście MAN w stanie ON), to wielkość
+wyjściowa CV jest równa wartości z rejestru sterowania ręcznego, która z kolei
+może być inkrementowana, gdy na wejściu UP pojawi się wartość 7 lub dekre-
+mentowana, gdy / pojawi się na wejściu DN. Do rejestru przechowującego
+wielkość wyjściową w trybie regulacji ręcznej może być także wpisana dowolna
+wartość, pod warunkiem że blok PID znajduje się w trybie regulacji ręcznej.
+
+Blok funkcyjny PID zapewnia bezuderzeniowe (bumpless) przejście między try-
+bami sterowania ręcznego i automatycznego, ponieważ zawartość bufora części
+całkującej jest dostosowywana do wielkości wyjściowej w trybie ręcznym.
+W czasie sterowania ręcznego nada! sprawdzane jest, czy nie zostały przekro-
+czone zadane ograniczenia na wyjście (Upper Clamp, Lower Clamp) oraz czy
+prędkość jego zmian jest mniejsza niż podany współczynnik narastania Minimum
+Słew Time.
+
+Przesunięcie bazowe (Bias) może być wykorzystane nie tylko do przeniesienia
+wartości wyjścia na odpowiedni poziom, ale także w układzie regulacji z korek-
+cją od zakłócenia, zwanym też sterowaniem ze sprzężeniem w przód
+(Feedforward Control), por. 8.7.
+
+RETYETTZSPET RT TYTREP DEBT" TE PZATOT” TOT FTPPPTATTY NOO TTE PY PE OE TO EPO TYY TWY TYN ZEE TCA PREY A CZY WY" IE TOOJO TOTO TY EP YRZ NY PNNAYPOJENNEAOCEPEYTY.
+234 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

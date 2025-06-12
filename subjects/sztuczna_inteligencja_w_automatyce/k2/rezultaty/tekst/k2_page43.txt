@@ -1,0 +1,19 @@
+<image/figury/k2_page43_figure1.png>
+
+Poniżej przedstawiony jest inny, interesujący przykład wskazujący na występowa-
+nie w przyrodzie zjawisk, których stan równowagi stanowi jednocześnie rozwiązanie
+pewnych zadań.
+
+PRZYKŁAD 3.8
+
+Zamiast rozwiązywać metodą równomiernych kosztów zadanie znalezienia najkrót-
+szej drogi pomiędzy dwoma miastami, wystarczy wykonać ze sznurka model, w któ-
+rym węzły reprezentujące miasta połączone są sznurkami o długościach proporcjo-
+nalnych do długości drogi pomiędzy nimi. Wystarczy teraz rozciągnąć dwa węzły
+odpowiadające miastom, pomiędzy którymi poszukiwana jest droga, a uzyskany na-
+pięty sznurek reprezentował będzie najkrótszą drogę pomiędzy nimi. m
+
+W przeszłości postępowano podobnie stosując maszyny analogowe. Przez od-
+powiednie połączenie wzmacniaczy operacyjnych realizujących całkowanie i prze-
+kształtników nieliniowych otrzymywano układ elektryczny, w którym przebieg na-
+pięcia w czasie odpowiadał rozwiązaniu zadanego równania różniczkowego.

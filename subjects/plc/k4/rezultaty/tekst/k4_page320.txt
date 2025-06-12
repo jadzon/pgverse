@@ -1,0 +1,60 @@
+//k4_page320_formula1.png | nI
+
+Program dla sterownika Simatic S5 ma strukturę modularną i może być podzie-
+lony na mniejsze części zwane blokami. Istnieje pięć typów bloków:
+e - Bloki organizacyjne OB
+
+Stanowią one pomost między systemem operacyjnym a programem utwo-
+
+rzonym przez użytkownika. Można je podzielić na trzy grupy:
+
+« bloki organizacyjne wywoływane cyklicznie przez system operacyjny,
+
+" bloki organizacyjne wywoływane przez system operacyjny po wystąpieniu
+odpowiedniego zdarzenia (np. przerwanie, restart po zaniku zasiłania itp.)
+lub po upływie zaprogramowanego czasu,
+
+" bloki organizacyjne, które mogą być wywoływane w programie użytkow-
+nika. Wywołując te bloki można uzyskać dostęp do pewnych standardo-
+wych funkcji zintegrowanych z systemem operacyjnym sterownika (np.
+wywołując blok organizacyjny OB251 moźna uruchomić zintegrowaną
+z jednostką centralną sterownika funkcje regulatora PID).
+
+e Bloki programowe PB
+Wykorzystuje się je do strukturyzacji programu sterującego.
+e - Bloki funkcyjne FB
+
+Bloki funkcyjne mają następujące cechy wyróżniające je od pozostałych
+
+typów bloków:
+
+« mogą być wywoływane z argumentami,
+
+« można w tych blokach wykorzystywać cały zbiór dostępnych instrukcji
+procesora.
+
+Błok funkcyjny umieszczony w pamięci może być przetwarzany wiele ra-
+
+zy z różnymi argumentami. Z tego względu programowanie funkcji z ar-
+
+gumentami stosuje się w programach z wielokrotnie powtarzającymi się
+sekwencjami. Z uwagi na możliwość korzystania z całego zbioru instrukcji
+procesora bloki te niezbędne są do programowania złożonych zadań ste-
+rowania.
+
+e Bloki sekwencyjne SB
+
+Bloki sekwencyjne są pewną szczególną formą bloków programowych.
+
+Zawierają one program ciągu sekwencyjnego i wywoływane są z bloku
+
+funkcyjnego "sterowanie sekwencyjne". Są one wykorzystywane do pro-
+
+gramowania zadań sterowania sekwencyjnego. Bloki sekwencyjne mogą
+odpowiadać bezpośrednio następującym po sobie fazom technologicznym.
+
+Sekwencja taka składa się z pewnej liczby bloków-akcji oraz warunków
+
+przejścia (tranzycji) pomiędzy nimi.
+
+320 Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5

@@ -1,0 +1,44 @@
+Najczęściej stosowany jest zakres od 4 do 20 mA. Moduł ma możliwość skalo-
+wania wielkości umieszczonych w rejestrach %AJ.
+
+Domyślnie 4 mA odpowiada liczba 0, a 20 mA odpowiada liczba 32000. Dla
+drugiego zakresu 0 mA odpowiada liczba 0, a 20 mA odpowiada liczba 32000.
+
+Przetwarzanie analogowo-cyfrowe jest realizowane z rozdzielczością 12 bitów,
+czyli zawartość rejestru przetwornika zmienia się od 0 do 4095, W rejestrze %A/
+umieszczana jest natomiast liczba obliczana zgodnie z zadeklarowanym zakre-
+sem, np. od 0 do 32000 jak w przykładach powyżej.
+
+Trzeci zakres, od 4 do 20 mA z rozszerzeniem określa jednoznacznie, że 0 mA
+odpowiada liczba —8000, 4 mA odpowiada liczba 0, zaś 20 mA liczba 32000.
+Zakres ten odpowiada zakresowi 0 do 20 mA, lecz daje możliwość pomiaru
+wejść dla prądów mniejszych od 4 mA, przy czym wynik pomiaru jest w zakresie
+liczb ujemnych.
+
+Na etapie konfiguracji zakresów dla poszczególnych kanałów można też ustalić
+wartości graniczne dla alarmu górnego i dolnego, których przekroczenie jest sy-
+gnalizowane przez wartości odpowiednich zmiennych binarnych %/.
+
+zory/k4_page144_formula1.png 1 png
+
+Moduły wejść napięciowych przetwarzają na postać cyfrową wartości napięcia
+źródła o dużej rezystancji i wyniki tego przetworzenia umieszczają w obszarze
+danych CPU oznaczonym jako %AI. Wartości te są proporcjonalne do wielkości
+napięć tych źródeł, które z kolei zależą od sygnału pomiarowego. Schemat połą-
+czeń przetworników  potencjałowych z modułem analogowych wejść
+napięciowych pokazano na Rys. 3.26.
+
+Należy pamiętać, że jest to pomiar napięcia źródła, które nie powinno być zbyt
+obciążane. Rezystancja wejściowa kanału powinna więc być duża, a wejścia
+o dużej rezystancji są bardzo wrażliwe na zakłócenia i z reguły przewody tych
+obwodów wejściowych muszą być ekranowane. Powoduje to z kolei znaczne
+pojemnościowe obciążanie źródła, a co gorsza, pojemność ta często może się
+zmieniać w czasie. Stosując wejścia napięciowe trzeba się więc liczyć z obecno-
+ścią nieraz dużych i zmiennych w czasie napięć zakłócających.
+
+Wejścia napięciowe są wejściami różnicowymi. Przy takim połączeniu chodzi
+o pomiar i przetworzenie napięcia różnicowego bez wpływu napięcia wspólnego.
+
+ 
+
+144 Rozdział : 3. Sprzęt sterowników PLC

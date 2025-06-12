@@ -1,0 +1,59 @@
+3. Przetwarzanie anałogowo-cyfrowe i cyfrowo-analogowe
+
+Proszę zwrócić uwagę, że unikamy porównywania przebiegów 3.1 a) i c), gdyż wtedy kwan-
+tyzacja i próbkowanie byłyby traktowane wspólnie. Ważne jest, aby te dwa procesy analizo-
+wać oddzielnie, ponieważ w różny sposób pogarszają właściwości sygnału i są uzależnione
+od różnych parametrów układów elektronicznych. Bywa też, że jeden z tych procesów jest
+stosowany oddzielnie, bez drugiego. Na przykład próbkowanie bez kwantyzacji jest stosowa-
+ne w filtrach z przełączanymi pojemnościami.
+
+Najpierw rozpatrzymy wpływ kwantyzacji. Każda próbka w sygnałe przetworzonym na liczbę
+może mieć maksymalny błąd +1/2 LSB (najmniej znaczącego bitu — Least Significant Bit, od-
+powiadającemu odstępowi między kolejnymi poziomami kwantyzacji). Błąd kwantyzacji w tym
+konkretnym przykładzie, uzyskany przez odejmowanie przebiegów 3.1 b) i c) (z odpowiednią kon-
+wersją) przedstawiono na rys. 3.1 d). Można więc powiedzieć, że cyfrowy sygnał wyjściowy ©) jest
+równoważny ciągłemu sygnałowi wejściowemu b) płus błąd kwantyzacji d). Z tej analizy wynika
+ważny fakt, że błąd kwantyzacji jest, jak się okazuje, bardzo podobny do szumu losowego.
+
+Dzięki temu można utworzyć przydatny model błędu kwantyzacji. W większości przypad-
+ków kwantyzacja powoduje tylko dodanie do sygnału pewnej specyficznej ilości szumu lo$o-
+wego. Ten szum addytywny jest rozmieszczony równomiernie w zakresie £lLLS$B, ma wartość
+średnią równą zero i odchylenie standardowe 1/12 LSB = 0,29 LSB. Poddanie sygnału
+analogowego przetwarzaniu, na przykład w 8-bitowym przetworniku a/c, powoduje powsta-
+nie szumu o wartości skutecznej 0,29/256 czyli ok. 1/900 pełnego zakresu. Przetwarzanie
+12-bitowe dodaje szum równy 0,29/4096 = 1/14000, a 16-bitowe 0,29/65536 = 1/227000.
+Ponieważ błąd kwantyzacji jest szumem losowym, więc liczba bitów określa precyzję” da-
+nych. Można powiedzieć na przykład: „Zwiększyliśmy precyzję pomiaru z 8 do 12 bitów”.
+Ten model jest niezwykle dogodny, gdyż szum losowy wytwarzany w wyniku kwantyzacji po prostu
+dodaje się do jakiegokolwiek szumu już obecnego w sygnale analogowym. Wyobraźmy sobie np.
+sygnał o maksymalnej wartości 1,0 V i z szumem losowym 1,0 mV (wartość skuteczna). Wartość
+1,0 V w wyniku 8-bitowej digitalizacji staje się liczbą 255, a 1,0 mV odpowiada 0,255 LSB. Jak już
+stwierdzono w poprzednim rozdziale, szumy losowe sumuje się przez dodawanie ich wariancji. Tak
+więc sumuje się kwadraty: 44 +B =C. Całkowity szum w sygnale przetworzonym na wartość
+cyfrową jest równy 0,255 +0,29 = 0,386LSB w stosunku do szumu, który już był w sygnale
+analogowym. Przetwarzanie 12-bitowe tego samego sygnału nie spowodowałoby praktycznie
+żadnego wzrostu szumu i nie byłoby żadnej straty spowodowanej kwantyzacją. Stając więc
+przed decyzją o liczbie bitów przetwornika, trzeba sobie zadać dwa pytania: 1) Jaki szum jaź jest
+w sygnale analogowym?, 2) Jak duży szum jest dopuszczalny w sygnale cyfrowym?
+
+Kiedy taki model kwantyzacji nie jest słuszny? Tylko wtedy, gdy błędu kwantyzacji nie moż-
+na traktować jako wartości losowej. Taka sytuacja powstaje tylko wówczas, gdy wartość sy-
+gnału analogowego pozostaje prawie stała w wielu kolejnych próbkach, jak na rys. 3.2 a). Ta
+sama wartość cyfrowa na wyjściu pozostaje stała podczas szeregu kolejnych próbek, nawet
+jeśli sygnał analogowy zmienia się w granicach +1/2 LSB.W tym przypadku błąd kwantyza-
+cji nie ma charakteru addytywnego szumu losowego, a wygląda raczej jak wpływ zjawiska
+progowania lub szumu granulacyjnego (zniekształcenia typu weird).
+
+Często spotykaną techniką udoskonalenia procesu digitalizacji takich powolnych przebie-
+gów jest dithering*. Do sygnału analogowego jest dodawany szum losowy o niewielkiej
+wartości (rys. 3.2 b). W podanym przykładzie szum losowy ma rozkład normalny o od-
+chyleniu standardowym 2/3 LSB, co daje wartość międzyszczytową ok. 3 LSB. Na rys.
+3.2 ©) pokazano, jak dodawanie tego szumu ditheringu wpływa na sygnał przetworzony
+na wartość cyfrową. Nawet gdy sygnał analogowy zmienia się o wartość mniejszą niż
++1/2LSB, to szum dodany powoduje, że sygnał wyjściowy losowo zmienia swój stan mię-
+dzy sąsiednimi poziomami.
+
+ 
+
+$ Autor precyzją nazywa dokładność związaną z błędami losowymi (przyp. tłum.).
+6 Dosłownie: dygotanie. W polskiej literaturze technicznej używa się oryginalnej nazwy angielskiej.

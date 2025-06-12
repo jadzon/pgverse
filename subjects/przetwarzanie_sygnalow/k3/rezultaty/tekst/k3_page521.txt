@@ -1,0 +1,39 @@
+Metodyka przekształcenia Laplace'a 561
+
+Przypuśćmy, że próbujemy zrozumieć pewien system liniowy, którego działanie opisują
+równania różniczkowe. Niech to będzie np. jakiś obwód elektryczny. Rozwiązanie rów-
+nań różniczkowych jest matematycznym sposobem wyznaczenia odpowiedzi impulsowej.
+Alternatywnie możemy mierzyć odpowiedź impulsową, stosując odpowiednie generatory
+impulsów, oscyloskopy, rejestratory itd. Zanim poznamy świeżo wyznaczoną odpowiedź
+impulsową, spytajmy samych siebie, co spodziewamy się zobaczyć. Jest kilka właściwości
+przebiegu, które znamy nawet bez obejrzenia tej odpowiedzi. Po pierwsze, odpowiedź im-
+pulsowa musi być przyczynowa. Inaczej mówiąc, odpowiedź impulsowa musi mieć wartość
+zero, zanim sygnał wejściowy stanie się niezerowy w chwili £ = 0. Jest to zasada przyczyny
+i skutku, na której oparty jest nasz Wszechświat.
+
+Drugą, znaną nam właściwością odpowiedzi impulsowej jest fakt, że składa się ona z sinuso-
+id i funkcji wykładniczych. Takie są bowiem rozwiązania równań różniczkowych rządzących
+działaniem systemu. Choćbyśmy nie wiem jak się starali, nigdy nie znajdziemy tego typu
+systemu mającego odpowiedź impulsową w postaci np. przebiegu prostokątnego lub trójkąt-
+nego. Trzecia znana właściwość to nieskończona długość odpowiedzi impulsowej. A więc
+ta odpowiedź ma wartości niezerowe od £ = 0 do £ = +». Fale kosinusoidalna i sinusoidalna
+mają bowiem stałą amplitudę, a funkcje wykładnicze maleją, dążąc do zera, ale nigdy go nie
+osiągając. Jeśli badany przez nas system jest stabilny, to wartość odpowiedzi impulsowej
+zmniejsza się w funkcji czasu, osiągając wartość zero dla 1 = +ee. Jest też możliwość, że
+system jest niestabilny — np. wzmacniacz samorzutnie oscylujący w wyniku zbyt silnego
+sprzężenia zwrotnego. W takim przypadku odpowiedź impulsowa wzrasta w funkcji czasu,
+stając się nieskończenie duża. W takim systemie nawet najmniejsze zaburzenie spowoduje
+nieograniczenie duży sygnał wyjściowy.
+
+Ogólne zasady matematyczne przekształcenia Laplace'a są bardzo podobne do zasad prze-
+kształcenia Fouriera. W obu przypadkach wcześniej określone przebiegi są mnożone przez
+sygnał w dziedzinie czasu i uzyskany wynik jest całkowany. Na pierwszy rzut oka może się
+wydawać, że metodyka przekształcenia Laplace'a jest taka sama, jak Fouriera — skorelowanie
+sygnału w dziedzinie czasu z zestawem funkcji bazowych w celu uzyskania rozkładu prze-
+biegu. Ale to nieprawda! Chociaż operacje matematyczne są prawie takie same, to racjonalne
+uzasadnienia obu metod są w znacznym stopniu różne. W przekształceniu Laplace'a nastę-
+puje badanie przebiegu w dziedzinie czasu w celu zidentyfikowania jego głównych cech
+— częstotliwości sinusoid oraz współczynników tłumienia funkcji wykładniczych. Te kwestie
+wyjaśnimy na przykładzie.
+
+<image/figury/k3_page521_figure1.png>

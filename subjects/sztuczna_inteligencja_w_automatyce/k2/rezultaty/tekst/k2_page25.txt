@@ -1,0 +1,34 @@
+30
+
+Mrówki — poszukiwanie pożywienia
+
+Szacuje się, że na świecie żyje około 10'$ mrówek w koloniach liczących do 30 milio-
+nów osobników. Złozone zachowanie (patrz rys. ??) wyłaniające się ze współdziała-
+nia owadów w koloniach zawsze bardzo intrygowało ludzi.
+
+<image/figury/k2_page25_figure1.png>
+
+Obserwując zachowanie się zbiorowiska mrówek zauważono, że mrówki począt-
+kowo poruszają się chaotycznie. Po znalezieniu pożywienia coraz więcej mrówek
+porusza się po tej samej drodzr do pożywienia, aby w końcu wszystkie mrówki
+poruszają się po jednej, najkrótszej, drodze. W rzeczywistych eksperymentach an
+mrówkach obserwowano sytuację przedstawioną na rys. ??. Stosunkowo niedawno
+wyjaśniono przyczyny takiego zachowania się mrówek. Okazało się, że mrówki po-
+ruszając się wydzielają i pozostawiają na drodze specyficzny zapachowy związek
+chemiczny, feromon. zostawiają w ten spsób ślad swojej drogi. Inne mrówki z kolei
+poruszając się wybierają z większym prawdopodobieństwem drogę na której jest sil-
+niejszy zapach feromonu. W ten sposób, jeżeli do pożywienia są możliwe drogi o róż-
+nej długości, to mrówki poruszając się początkowo losowo, stopniowo pozostawiają
+silniejszy ślad na drodze krótszej ponieważ przebywają na niej krócej. Początkowo
+niewielkie różnice w koncentracji zapachu szybko się powiększają dzięki temu, że na-
+stępne mrówki wybierają krótszą drogę, bo na niej jest silniejszy zapach (dodatnie
+sprzężenie zwrotne).
+
+Algorytm mrówkowy
+
+Powyżej omówione zachowanie mrówek nasladują algorytmy mrówkowe (ang ACO -
+ant colony optimization) poszukujące najtańszej drogi w grafie. Omówiony tu będzie
+najprostszy algorytm (ang. SACO — simple ACO).
+
+Mrówka rozpoczyna swoją drogę od węzła startowego (patrz np. rys. ??). W
+każdym węźle mrówka decyduje którą krawędź wybrać. Jeżeli mrówka k znajduje

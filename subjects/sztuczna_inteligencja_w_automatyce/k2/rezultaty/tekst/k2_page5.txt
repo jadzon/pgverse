@@ -1,0 +1,26 @@
+10
+
+1.2.4. Sprzęt
+
+Maszyny szeregowe. Maszyny równoległe. Maszyny specjalizowane: automaty ko-
+mórkowe, sieci neuronowe, ewolujący hardware.
+
+We wszystkich kierunkach SI wyróżnić można nurt poznawczy i inżynierski.
+
+1.2.5. Historia
+
+Gry. tłumaczenia, rozpoznawanie obrazów. sieci neuronowe, systemy ekspertowe —
+obiecujące poczatki w latach 50-tych, późniejsze porażki i zahamowanie (np. tłuma-
+czenia, sieci neuronowe na podstawie błędnej opinii że nie są w stanie klasyfikować
+obrazów należących do klas nie separowalnych liniowo). Stopniowy rozwój na uni-
+wersytetach, nowe nadzieje i komercjalizacja od połowy lat 80-tych spowodowane ta-
+nimi szybkimi komputerami i nagromadzeniem wiedzy i doświadczeń. Obecnie coraz
+więcej cząstkowych zastosowań metod reprezentacji wiedzy i wnioskowania, metod
+rozpoznawania i klasyfikacji obrazów oraz metod uczenia w problemach diagnostyki
+medycznej i technicznej, w wykrywaniu sytuacji niebezpiecznych, w klasyfikacji i
+wyszukiwaniu informacji tekstowych, w sterowaniu robotami (np. roboty odkurza-
+jące mieszkania) oraz w innych, czasami spektakularnych zadaniach jak np. mecz
+szachowy Kasparow — komputer IBM Deep Blue.
+
+Ostatnio ożywione badania nad inteligentnymi działaniami realizowanymi przez
+autonomiczne zespoły robotów lub agenty softwarowe.

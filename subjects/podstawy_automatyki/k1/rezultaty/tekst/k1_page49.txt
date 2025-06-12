@@ -1,0 +1,22 @@
+otrzymujemy równania stanu
+
+<image/wzory/k1_page49_formula1.png>
+
+<image/.figury/k1_page49_figure2.png>
+
+a ym m
+
+Zapisać model układu przedstawionego na rysunku 2.7 w postaci równań stanu.
+
+<image/figury/k1_page49_figure1.png>
+
+Rozwiązanie
+
+Załóżmy, że zmiennymi stanu w powyższym przykładzie są: napięcie na konden-
+satorze uc oraz prąd płynący przez cewkę i,. W związku z tym, wykorzystując prawa
+Kirchhoffa oraz Ohma, możemy napisać następujące równania różniczkowe, opisujące
+działanie układu:
+
+<image/wzory/k1_page49_formula2.png>
+
+51

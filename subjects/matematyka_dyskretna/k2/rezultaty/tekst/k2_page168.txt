@@ -1,0 +1,30 @@
+6 Rozdział 1. Struktury danych
+
+Jeżeli mamy drzewo biname 7, to z każdym wierzchołkiem r możemy skojarzyć
+poddrzewo T, złożone z wierzchołka r i wszystkich jego potomków. Na przykład w
+drzewie przedstawionym na rysunku 1.1 wierzchołek r = 1 wyznacza poddrzewo 7;
+przedstawione na rysunku 1.2.
+
+<image/wzory/k2_page168_formula1.png>
+
+1.3 Drzewa wyrażeń arytmetycznych
+
+Przykładem zastosowania drzew binamych są drzewa wyrażeń arytmetycznych. Najpierw
+przykład. Na rysunku 1.3 przedstawiono drzewo wyrażenia 2a +3/d. W drzewie tym każ-
+dy wierzchołek ma etykietę. Liście etykietowane są stałymi albo zmiennymi. Wierzchołki
+nie będące liśćmi etykietowane są operacjami arytmetyczymi. Każdemu wierzchołkowi
+w drzewie możemy przypisać wyrażenie arytmetyczne według następującej zasady:
+
+e dla liści wyrażeniami są etykiety tych liści (stałe lub zmienne),
+
+e jeżeli wierzchołek z ma etykietę op, a jego synom przypisano wyrażenia W (z0) i
+W (1), to wierzchołkowi z przypisujemy wyrażenie W (x) = (W (10) op W (1 1)).
+
+Przykład 1.4 W drzewie z rysunku1.3 wierzchołkowi z etykietą - odpowiada wyrażenie
+2 - a, wierzchołkowi z etykietą / wyrażenie 3/d, a korzeniowi wyrażenie
+
+<image/wzory/k2_page168_formula2.png>
+Wyrażenie to zawiera więcej nawiasów, niż to się zwykle stosuje. Normalnie to samo wy-
+rażenie przedstawiamy bez nawiasów w postaci 2a + 3/d.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

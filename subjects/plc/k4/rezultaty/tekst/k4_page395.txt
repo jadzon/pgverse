@@ -1,0 +1,27 @@
+<image/figury/k4_page395_figure1.png>
+
+<image/wzory/k4_page395_formula1.png>
+
+<image/tabele/k4_page395_table2.png>
+
+zwolenia na wprowadzenie kłody
+
+<image/tabele/k4_page395_table1.png>
+
+Wyd. 8.15 Przerzutnik RS dla zezwolenia na start następnej kłody
+i €ępnej i
+
+Warunek ustawienia zmiennej zezwolenia na start obejmuje sytuacje w trybie
+pracy automatycznej, gdy:
+
+e następuje załączenie układu w pierwszym cyklu,
+
+e poprzednia kłoda opuści taśmociąg.
+
+Ponadto. ustawienie nastąpi po przełączeniu z pracy ręcznej na automatyczną.
+Warunkiem zerowania jest wprowadzenie kłody na taśmociąg, czyli zadziałanie
+fotokomórki Bl.
+
+ 
+
+8.2 Sterowanie urządzeniem do sortowania drewna 395

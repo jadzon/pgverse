@@ -1,0 +1,65 @@
+Zależność Parsevala
+
+Ponieważ w dziedzinach czasu i częstotliwości występują równoważne reprezentacje tego
+samego sygnału, więc powinny one mieć taką sama energię. Jest to nazwane zależnością
+Parsevala obowiązującą we wszystkich przekształceniach z rodziny transformat fouri
+rowskich. Dla przekształcenia DFT zależność Parsevala ma postać:
+
+<image/wzory/k3_page186_formula1.png>
+
+Wzór 10.3. Zależność Parsevala. W tym wzorze [i] jest sygnatem w dziedzinie czasu, gdzie i zmienia
+się od 0 do N- 1, a X[K] jest jego zmodylikowanym widmem częstotliwościowym, gdzie k zmienia
+się od 0 do N/2. Zmodyfikowane widmo częstotliwościowe jest znajdowane przez przeprowadzenie
+przekształcenia DFT sygnału i podzielenie pierwszej i ostatniej częstotliwości widma (próbki 0 i N/2)
+przez pierwiastek kwadratowy z 2
+
+   
+  
+ 
+   
+  
+  
+  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+
+Lewa strona powyższego równania wyraża całkowitą energię zawartą w sygnale w dziedzinie
+czasu, obliczoną przez sumowanie energii N indywidualnych próbek. Prawa strona równania.
+w podobny sposób wyraża energię zawartą w sygnale w dziedzinie częstotliwości, obliczoną
+przez sumowanie energii N/2 + 1 sinusoid. Przypomnijmy sobie z fizyki, że energia jest pro-
+porcjonalna do kwadratu wartości próbki, na przykład energią zmagazynowana w sprężynie
+jest proporcjonalna do kwadratu odkształcenia, a zgromadzona w kondensatorze — do kwa-
+dratu napięcia. We wzorze 10.3 X[/] jest widmem częstotliwościowym x[n], z jedną niewiel-
+ką mod ją: pierwsza i ostatnia składowa częstotliwości X[0] i X[N/2] zostały podzielone
+przez v2. Ta modyfikacja, łącznie z czynnikiem 2/N z prawej strony równania, zalicza się do
+tych kilku niuansów obliczania i sumowania energii.
+
+W celu zrozumienia tych modyfikacji zacznijmy od wyznaczenia reprezentacji sygnału
+w dziedzinie częstotliwości przy użyciu DFT. Następnie przetwórzmy sygnał w dziedzi-
+nie częstotliwości w amplitudy sinusoid koniecznych do odtworzenia sygnału, zgodnie
+z wzorem 8.3. Wykonuje się to przez podzielenie pierwszego i ostatniego punktu (prób-
+ki 0 i N/2) przez 2 i następnie podzielenie wszystkich próbek przez N/2. W ten sposób
+uzyskuje się,amplitudy sinusoid, a więc ich wartości szczytowe, a nie wartości skuteczne
+potrzebne do obliczania energii. W przebiegu sinusoidalnym wartość szczytowa jest prze-
+twarzana na skuteczną w wyniku podzielenia przez V2. Ta poprawka musi być wprowa-
+dzona dla wszystkich wartości w dziedzinie częstotliwości oprócz próbek O i N/2. Jest
+tak, gdyż te sinusoidy są wyjątkowe; jedna jest wartością stałą, a druga zawiera zmiany
+między dwiema wartościami stałymi. W tych dwóch przypadkach szczególnych wartość
+szczyłowa jest równa skutecznej. Wszystkie wartości w dziedzinie częstotliwości są pod-
+noszone do kwadratu i sumowane. Ostatnim krokiem jest podzielenie uzyskanej sumy
+przez N ze względu na to, że każda próbka w dziedzinie częstotliwości jest przetwarzana
+na sinusoidę, która pokrywa N wartości w dziedzinie czasu. Uwzględnienie tych wszyst-
+kich szczegółów prowadzi do sformułowania wzoru 10.3.
+
+Wprawdzie zależność Parsevala jest interesująca ze względu na opisywane zjawisko fizyczne
+(zachowanie energii), lecz jej praktyczne zastosowanie w DSP jest niewielkie.

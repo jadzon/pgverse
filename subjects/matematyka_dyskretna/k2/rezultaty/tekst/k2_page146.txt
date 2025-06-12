@@ -1,0 +1,57 @@
+1.19. Testy pierwszości 31
+
+1.19.3 Test Millera-Rabina
+
+Zakładamy, że n jest nieparzyste (2 jest jedyną parzystą liczbą pierwszą). Najpierw spraw-
+
+dzamy, czy n jest potęgą jakiejś liczby naturalnej. Dla a od 2 do loga n sprawdzamy czy
+
+n = k*, dla jakiegoś k. W rozdziale o arytmetyce opisano jak za pomocą binary search
+
+stwierdzić, czy liczba jest potęgą innej liczby. Jeżeli n jest potęgą, to jest złożona.
+Ponieważ n iest nieparzyste. to n — 1 możemy przedstawić w postaci
+
+<image/wzory/k2_page146_formula1.png>
+
+dla jakiegoś m nieparzystego.
+
+Losujemy a < n. Sprawdzamy, czy NW D(a,n) = 1 (jeżeli NW D(a,n) > 1,ton
+jest złożona).
+
+Następnie obliczamy a”* mod n. Jeżeli a”* mod n = 1, to koniec, stwierdzamy, że n
+jest pierwsza. |eżeli a* mod n 4 1, to obliczamy po kolei
+
+<image/wzory/k2_page146_formula2.png>
+
+Zauważmy, że w tym ciągu każda liczba jest kwadratem poprzedniej. Jeżeli wśród tych
+liczb nie ma jedynki, to z twierdzenia Fermata wynika, że n jest złożona, bo wtedy
+
+<image/wzory/k2_page146_formula3.png>
+
+Jeżeli w tym ciąqu jest jedynka, na przykład
+
+<image/wzory/k2_page146_formula4.png>
+
+to patrzymy na poprzedni element x = a”? ". Jeżeli x £ —1, to znaleźliśmy nietrywial-
+ny pierwiastek z 1. Z twierdzenia 1.46 wynika, że jest to możliwe tylko wtedy gdy n nie
+jest pierwsze. Jeżeli 1 = —1, to orzekamy, że n jest pierwsze.
+
+Łatwo więc widać, że jeżeli n jest pierwsze, to test zawsze odpowie prawidłowo,
+niezależnie od losowania. Wiadomo też, że jeżeli n jest złożona i nie jest potęgą licz-
+by pierwszej, to z prawdopodobieństwem większym niż 1/2 wykryjemy to (dowód tego
+faktu wybiega poza zakres tej książki i pomijamy go).
+
+W praktyce stosujemy wszystkie trzy testy na raz. Mając nieparzystą liczbę n, naj-
+pierw sprawdzamy, czy dzieli się ona przez kilka kolejnych liczb pierwszych
+
+<image/wzory/k2_page146_formula5.png>
+
+Dobor d zalezy od tego Jak duze liczby sprawdzamy. W ten sposob eliminujemy dużą
+część liczb. Zauważmy, że obliczając iloczyn tych liczb
+
+<image/wzory/k2_page146_formula6.png>
+
+i sprawdzając, czy NW D(z,n) = 1 możemy za jednym razem sprawdzić, czy n dzieli
+się przez którąś z tych liczb.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

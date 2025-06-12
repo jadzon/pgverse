@@ -1,0 +1,21 @@
+<image/tabele/k4_page50_table2.png>
+
+Funkcje standardowe mogą być realizowane dla argumentów wejściowych okre-
+ślonego typu (tzw. typed functions) albo dla argumentów pewnego rodzaju
+(tzw. overloaded function), np. funkcja dodawania ADD może być określona
+tyłko dla argumentów całkowitych typu /N7 albo dla jakichkolwiek danych licz-
+bowych, a więc typu LREAL, REAL, DINT, INT lub S/NT (por. przykłady
+w Tab. 2.18). Funkcje definiowane przez użytkownika mogą być tylko dla ar-
+gumentów określonego typu.
+
+<image/tabele/k4_page50_table1.png>
+
+nego typu.
+
+Jeżeli funkcja jest zdefiniowana tylko dla danych określonego typu, a występuje
+konieczność jej użycia dla danych innego typu, to należy wykonać konwersję
+danych. Przykłady konwersji danych dla funkcji określonego typu pokazano
+w Tab. 2.19. W przykładzie pierwszym z tabeli konwersja danych nie jest po-
+trzebna.
+
+wzory/k4_paqae50_formula1.ona

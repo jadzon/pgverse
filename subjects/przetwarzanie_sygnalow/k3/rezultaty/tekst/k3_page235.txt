@@ -1,0 +1,14 @@
+Parametry w dziedzinie częstotliwości 257
+
+<image/figury/k3_page235_figure1.png>
+
+Dlaczego w tych parametrach w ogóle nie ma mowy o fazie? Po pierwsze, faza nie jest
+
+we o doskonałej odpowiedzi fazowej, tj. takiej, wszystkie częstotliwości
+
+przez filtr z fazą zerową (wrócimy do tej kwestii w rozdziale 19). a 2
+są pod tym względem bardzo niekorzystne.
+
+W oprzednich rozdziałach rozważano, w jaki sposób stosują DET. pzekzac ię odpo
+wiedź impulsową systemu w jego odpowiedź częstotliwościową. Oto krótkie przypomnie-
+nie. Najszybszym sposobem obliczenia DFT jest zastosowanie algorytmu FFT omówionego

@@ -1,0 +1,17 @@
+<image/tabele/k4_page315_table1.png>
+
+regulatora PID2.
+
+Wartość w dolnym węźle bloku PID2 wskazuje jak często operacja powinna być
+wykonywana. Liczba ta musi mieścić się w zakresie 1..255 a reprezentuje war-
+tość czasu wyrażoną w dziesiętnych sekundy (w przykładzie wprowadzona war-
+tość 40001 oznacza, że funkcja PID2 powinna być uaktywniana co 0.1 sek.).
+
+Rejestr numer 4012]! wskazuje na początek kolejnego bloku dziewięciu rejestrów
+wykorzystywanych przez blok PID2 na obliczenia. Funkcje poszczególnych reje-
+strów opisuje Tab. 2.6. W Dodatku B przedstawiono sposoby doboru parame-
+trów układu regulacji takich jak współczynnik wzmocnienia, stała całkowania
+
+221 DĄ NĄCT PY PON A A DI | W A | PIE M A EE OW A NA WA PA WAM GZ WEW WT ZE TM ZWT WOK TOW gi ZA PATIO
+
+6.12 Algorytm regulacji PID 3 15

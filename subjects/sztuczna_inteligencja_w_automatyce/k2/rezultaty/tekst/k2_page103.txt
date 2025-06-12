@@ -1,0 +1,28 @@
+108
+
+<image/figury/k2_page103_figure1.png>
+
+stałej długości.
+Działanie algorytmu genetycznego przebiega w następujących etapach:
+wybór początkowej populacji łańcuchów,
+ocena jakości łańcuchów,
+
+sprawdzenie czy jakość całej populacji łańcuchów lub jakość łańcucha najlepszego
+osiągnęła wymaganą wartość. Jeżeli tak to zakończenie algorytmu, jeżeli nie to
+przejście do etapu następnego.
+
+selekcja łańcuchów,
+5. krzyżowanie łańcuchów.
+
+mutacja
+Poszczególne etapy realizowane są następująco:
+
+1. Wybór początkowej populacji łańcuchów można realizować na wiele sposobów
+ale bardzo często dokonywane jest to losowo, co zapewnia w miarę równomierny
+rozkład początkowej populacji, a w konsekwencji ułatwia znajdywanie globalnego
+maksimum jakości (zapobiega zatrzymaniu się w lokalnych maksimach).
+
+2. Ocena jakości może być dokładna, jak np. w przypadku poszukiwania ekstremum
+funkcji, lub — co ma miejsce bardzo często — przybliżona lub obarczona błędem.
+Przybliżenie to może wynikać z faktu, że jakość łańcucha może być zależna od pa-
+rametru przy którym przeprowadzano ocenę jakości, np. od stanu początkowego

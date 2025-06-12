@@ -1,0 +1,54 @@
+5.2. Pamięci operacyjne 95
+
+strobu CAS (ADR KOL) i wybiera odpowiedni bit z tego rejestru. Jeżeli jest to cykl
+odczytu, to bit ten zostaje przepisany do bufora wyjściowego. Jeżeli jest to cykl zapisu, to
+na wejście WE musi zostać podany strob zapisu i wartość z bufora wejścia-wyjścia BUF
+zostanie zapisana na odpowiednią pozycję wzmacniaczy regeneracji. Z opisu wynika, że
+odczyt wiersza lub jego zapis powodują regenerację jego zawartości w pamięci. W czasie
+pracy pamięci w systemie komputerowym nie ma gwarancji, że każdy wiersz wybrano co
+wymagany czas (np. 2 ms). Dlatego układ sterowania pamięcią musi zapewnić co 2 ms
+przerwanie współpracy pamięci z procesorem i dokonanie odświeżenia jej zawartości.
+
+Proces odświeżania pamięci może być wykonywany na różne sposoby. Kolejne wiersze
+matrycy mogą być odświeżane naprzemiennie z pracą procesora lub można dokonać
+odświeżenia wszystkich wierszy (całej pamięci) jednorazowo. Pierwszy sposób może
+okazać się lepszy w systemach czasu rzeczywistego, tj. tam gdzie jednorazowe zatrzymanie
+procesora na dłuższy czas jest niedopuszczalne. Dla drugiego sposobu czas odświeżania
+jest iloczynem liczby wierszy i czasu cyklu pamięci. Dla przykładowej pamięci czas ten
+wynosi 256 x 125 ns = 32 Hs, co stanowi 1,6% czasu pracy bez odświeżania, tj. 2 ms. Jeśli
+czas wykonywania programu jest dłuższy niż 2 ms, to zostanie on wydłużony średnio
+o 1,6%. Jeśli czas wykonania jakiegoś programu jest krótszy niż 2 ms, to efektywny czas
+jego wykonania zależy od momentu jego rozpoczęcia. Jeżeli wykonywanie programu
+rozpocznie się tuż po zakończeniu odświeżania, to będzie on wykonany bez przerwy.
+W innym przypadku będzie on przerwany i jego efektywny czas wykonania będzie
+zwiększony o 32 is. Współczesne pamięci dynamiczne są wyposażone w mechanizmy
+realizujące różne tryby procesu odświeżania zawartości. Ich celem jest przyspieszanie
+pracy pamięci przez skrócenie cyklu regeneracji. Opisane będą 4 takie tryby:
+
+l) normalny,
+
+2) wierszowy,
+
+3) statyczny,
+
+4) ukryty.
+
+Tryb normalny polega na zwykłym odczytywaniu poszczególnych wierszy, co jak już
+powiedziano, regeneruje ich zawartość.
+
+Tryb wierszowy (ang. RAS onły) polega na podawaniu tylko adresów wierszy i stro-
+bów RAS. Ponieważ w czasie odświeżania nie trzeba odczytywać zawartości wzmacniaczy
+regeneracji, więc podawanie adresów kolumn i strobu CAS jest niepotrzebne. W czasie
+cyklu regeneracji zmieniają się adresy wierszy, a wyjścia pamięci utrzymywane są w sta-
+nie wysokiej impedancji, czyli są odłączone od pozostałych układów.
+
+Tryb statyczny realizuje się przez wyprzedzenie strobu RAS względem CAS
+(ang. CAS before RAS). W tym trybie jeśli pamięć zauważy, że strob CAS pojawi się
+wcześniej niż strob RAS, to dokona automatycznego odświeżania całej pamięci. Aby
+zrealizować taki tryb, pamięć musi być wyposażona w wewnętrzny licznik wierszy, który
+zapewni pojawienie się adresów wszystkich wierszy.
+
+Tryb ukryty (ang. hidden) jest podobny do trybu normalnego z tą różnicą, że na
+wyjściu informacyjnym nie zmieniane są sygnały danych. Inicjalizacja tego trybu polega
+na tym, że pierwszy cykl jest normalnym trybem odczytu, a następnie każdorazowa
+zmiana RAS powoduje wybranie następnego wiersza.

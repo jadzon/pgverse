@@ -1,0 +1,54 @@
+233
+
+/* Program 12 */
+
+wykonaj :- kolor(X), write(X), write(” ”), fail.
+kolor(czerwony).
+
+kolor(zielony).
+
+kolor(niebieski).
+
+kolor(czarny).
+
+W programie oprócz predykatu fail występuje standardowy predykat write(X).
+Predykat write(X) jest zawsze spełniony i przez swoje działanie uboczne drukuje
+nazwę obiektu, z którym jest związane X.
+
+Aby zbadać działanie predykatu fail, usuńmy go z pierwszej klauzuli programu i
+wykonajmy program z zapytaniem wykonaj. Otrzymujemy wydruk: czerwony yes.
+Program nie wydrukował wszystkich obiektów spełniających zapytanie, ponieważ
+predykat wykonaj nie zawiera argumentów, a w takim przypadku Prolog zatrzy-
+muje się po stwierdzeniu, że zapytanie zostało spełnione. Stwierdzenie spełnienia
+nastąpiło poprzez spełnienie kolor(X) dla X=czerwony i wydrukowanie czerwony
+przez predykat write(X). Umieśćmy teraz z powrotem predykat fail i ponownie
+wykonajmy program dla dyrektywy wykonaj. Tym razem program drukuje:
+
+czerwony zielony niebieski czarny no
+
+Wydruk wszystkich obiektów spowodowany został przez predykat fail. Program
+napotykając na fail stwierdzał niespełnienie zapytania wykonaj, co wymuszało
+nawracanie do predykatu kolor (X), który unifikowany był z kolejnymi klauzulami.
+Zauważmy, że ostatecznie zapytanie wykonaj nie zostało spełnione, co sygnalizowane
+jest przez komunikat no. ami
+
+9.2.2. Odcięcie
+
+Prolog umożliwia sterowanie mechanizmem nawracania. Dokonuje się tego przez
+zastosowanie standardowego predykatu odcięcia (ang. cut), oznaczonego przez wy-
+krzyknik (!). Predykat ! jest zawsze spełniony i jego działanie uboczne polega na
+tym, że blokuje wszystkie możliwe, pozostałe do wykonania, sprawdzenia spełnienia
+predykatów znajdujących się w danej klauzuli pomiędzy jej nagłówkiem i predyka-
+tem ! oraz predykatu wywołującego nagłówek. Tym samym predykat ! uniemożliwia
+nawracanie w obrębie klauzuli w której występuje i uniemożliwia ponowną unifikację
+predykatu wywołującego nagłówek klauzuli.
+
+PRZYKŁAD 9.15
+
+Rozpatrzmy kilka wariantów użycia predykatu ! w Programie 14 wywoływanym
+kwerendą pp(P,Q,R).
+
+/* Program 13 +*/
+
+pp(X,Y,Z) :- p(X), p(Y), p(Z).
+pp(aa,bb,cc) :- p(c).

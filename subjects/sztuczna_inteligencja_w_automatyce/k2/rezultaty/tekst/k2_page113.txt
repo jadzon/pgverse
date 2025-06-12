@@ -1,0 +1,19 @@
+118
+
+zaś pozycja najlepsza lokalnie jest obliczana ze wzoru
+
+<image/wzory/k2_page113_formula1.png>
+
+gdzie N, jest zbiorem cząstek sąsiednich względem cząstki ż (wraz z cząstką ż).
+Na rysunkach ?? przedstawiono typowe sąsiedztwa cząstek. Nie ma ogólnie naj-
+
+<image/figury/k2_page113_figure1.png>
+
+Rys. 6.16: Typowe sąsiedztwa cząstek: (a),(b),(c) struktury pierścieniowe, (d) struktura
+kołowa i (e) tzw. struktura von Neumana
+
+lepszej topologii sąsiedztwa dla wszystkich problemów. Na ogół ze względu na więk-
+szą liczbę połączeń duże sąsiedztwa zapewniają szybszą zbieżność do ekstremum,
+natomiast cząstki są bardziej skupione niż w przypadku sąsiedztw małych. Odwrot-
+nie, sąsiedztwa małe zapewniają większy rozrzut położeń cząstek, tym samym są
+mniej podatne na ugrzęźnięcia w lokalnych ekstremach

@@ -1,0 +1,48 @@
+54
+
+Reguły wnioskowania
+
+Wnioskowanie jest na ogół procesem wielokrokowym i w każdym kroku stosowana
+jest odpowiednio dobrana reguła wnioskowania. Reguła wnioskowania składa się ze
+zbioru wyrażeń nazywanych warunkami i zbioru wyrażeń nazywanych konkluzjami.
+Gdy mamy zbiór wyrażeń odpowiadający warunkom reguły uznajemy, że wnioskiem
+są wyrażenia odpowiadające jej konkluzjom. W ten sposób stosując reguły wniosko-
+wania, z wpz i zbiorów wpz otrzymujemy nowe wpz, aż do uzyskania wymaganego
+wyrażenia.
+
+Jedną z ważnych i często stosowanych reguł wnioskowania jest reguła odrywania
+(modus ponens). Mówi ona, że ze zdania (reguły) jeżeli A to B, i zdania (faktu) A
+wynika konkluzja (fakt) B (patrz rys. ??a).
+
+<image/figury/k2_page49_figure1.png>
+
+Inną regułą wnioskowania jest uniwersalna specjalizacja (requła podstawiantia),
+która wytwarza wpz W (a) z wpz (YX)W(X).
+
+Regułą wnioskowania, ne której oparte są metody automatycznego dowodze-
+nia jest reguła rezolucji. Mówi ona, że ze zdania A lub B i zdania nie A lub € wy-
+nika zdanie B lub © (rys. ??b). Reguła rezolucji zawiera w sobie, jako szczególne
+przypadki, inne reguły wnioskowania. Usuwając np. w regule rezolucji wyrażenie B
+otrzymujemy regułę odrywania.
+
+Klauzule
+
+Regułę odrywania i rezolucję można stosować do pewnej klasy wpz zwanych klauzu-
+lami. Klauzula jest to wbz w postaci sumv logicznej literałów
+
+<image/wzory/k2_page49_formula1.png>
+
+gdzie L;,i = 1.2..... n. sa hterałam. Na przykład:
+
+<image/wzory/k2_page49_formula2.png>
+
+Klauzule, które zawierają tylko jeden nie zanegowany atom nazywają się klauzulami
+Horna
+<image/wzory/k2_page49_formula3.png>
+
+gdzie A;, i = 1,2,...,n są atomami.
+Zauważmy. że Kinie Horna można zapisać w postaci
+
+<image/wzory/k2_page49_formula4.png>
+Dowolne wpz może być przekształcone do postaci zbioru klauzul co będzie pokazane
+w dalszej części skryptu.

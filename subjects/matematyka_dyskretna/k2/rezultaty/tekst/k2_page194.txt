@@ -1,0 +1,45 @@
+16 Rozdział 1. Grafy (nieskierowane)
+
+w całości do jednej składowej spójności, bo sam jest spójny, i może być przedstawiony
+jako różnica symetryczna cykli fundamentalnych. W całym grafie G mamy więc
+
+<image/wzory/k2_page194_formula1.png>
+cykli fundamentalnych. Udowodniliśmy więc następujące
+
+Twierdzenie 1.29 W dowolnym grafie G mamy r(G) = m =n+pcykli fundamentalnych,
+gdzie n jest liczbą wierzchołków, m liczbą krawędzi, a p liczbą składowych spójności.
+
+Aby przekonać się, czy graf G ma cykl wystarczy policzyć r(G) i jeżeli r(G) = 0, to
+graf nie ma cykli.
+
+1.8 Minimalne drzewo spinające
+
+Wyobraźmy sobie, że każda krawędź e w grafie G = (V, E) ma długość w(e). Na przy-
+kład, wierzchołki grafu są miejscowościami i długość krawędzi jest odległością miejsco-
+wości. Chcemy teraz skonstruować minimalne drzewo spinające, czyli drzewo spinające
+T = (V,Eq) z minimalną sumą długości krawędzi
+
+<image/wzory/k2_page194_formula2.png>
+
+Algorytm budowy minimalnego drzewa spinającego
+Dane wejściowe: graf G = (V,E) z funkcją wagi w : E R.
+Dane wyjściowe: minimalne drzewo spinające 7 = (V, E7).
+
+e Er:=0
+e Posortuj krawędzie E grafu G według długości, od najkrótszej do najdłuższej.
+
+e Dla każdej krawędzi e € E wstaw ją do Er pod warunkiem, że nie tworzy ona
+cyklu z krawędziami, które już są w Er.
+
+Przykład 1.30 Po zastosowaniu powyższego algorytmu do grafu z rysunku 1.9a otrzyma-
+my drzewo przedstawione na rysunku 1.9b
+
+Najpierw pokażemy, że tak utworzony graf T' jest drzewem spinającym. Po każdej
+iteracji pętli, graf T' nie zawiera cyklu, więc na końcu też jest acykliczny. Przypuśćmy,
+że po zakończeniu algorytmu 7 nie jest spójny. Istnieją więc w G dwa wierzchołki z i y,
+które są połączone w G drogą x = 1,...,1k = y (bo G jest spójny), ale które nie są
+połączone w 7. Na drodze tej są więc dwa sąsiednie wierzchołki r, i 1,4, , które nie są
+połączone w T drogą. Ale wtedy dodanie krawędzi -;, 1:4; ) do drzewa 7 nie tworzy w
+nim cyklu i algorytm powinien dodać krawędź fz;, 7,4, ) do 7, sprzeczność.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,26 @@
+<image/figury/k1_page7/9_figure2.png>
+
+Rys. 2.23. Obszar stabilności układu regulacji
+
+Przykład 2.26
+
+Zbadać stabilność układu (w którym występuje człon z opóźnieniem) pokazanego
+na rysunku 2.24, wykorzystując kryterium Hurwitza.
+
+<image/figury/k1_page7/9_figure1.png>
+
+Rys. 2.24. Schemat blokowy układu
+
+Rozwiązanie
+
+Do zbadania stabilności powyższego układu zastosowano aproksymację Padego
+funkcji e * w postaci
+
+<image/wzory/k1_page/9_formula1.png>
+
+gdzie T — czas opóźnienia.
+Dla 1 = 4
+
+<image/wzory/k1_page7/9_formula2.png>
+
+81

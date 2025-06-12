@@ -1,0 +1,33 @@
+Regulacja jaskrawości i kontrastu 373
+
+Na rys. 23.10 przedstawiono cztery możliwości złego doboru jaskrawości i kontrastu. Gdy
+jaskrawość jest zbyt duża (rys. 23.10 a), najbielsze piksele są nasycone, powodując zanik-
+nięcie szczegółów w tych obszarach. Odwrotną sytuację pokazano na rys. 23.10 b), gdzie
+jaskrawość jest zbyt mała i nasycone są najczarniejsze piksele. Z powodu zbyt dużego
+kontrastu (rys. 23.10 c) obszary czarne stają się zbyt czarne, a białe — zbyt białe. Wreszcie,
+na rys. 23.10 d) mamy sytuację, gdy kontrast jest zbyt mały; wszystkie piksele mają średni
+odcień szarości i obraz się zaciera.
+
+Na rys. 23.11 i 23.12 bardziej szczegółowo zilustrowano jaskrawość i kontrast. Na rys. 23.12
+przedstawiono obrazy testowe o sześciu różnych poziomach jaskrawości i kontrastu. Na rys.
+23.11 pokazano strukturę obrazu testowego. Jest to matryca o wymiarze 80) x 32 pikseli,
+które mogą mieć wartości od 0 do 255. Tło obrazu testowego jest wypełnione szumem loso-
+wym, rozmieszczonym równomiernie między 0 i 255. Na obrazie są trzy kwadraty o warto-
+ściach pikseli 75, 150 i 225, patrząc od lewej strony do prawej. Wewnątrz każdego kwadratu
+znajdują się dwa trójkąty z pikselami o wartościach niewiele różniących się od otoczenia.
+Innymi słowy, na obrazie mamy obszary ciemny, średnio ciemny i jasny, każdy z nich ze
+słabo wyróżniającymi się szczegółami.
+
+b, Jaskrawość zbyt mata
+
+  
+
+nmmacazmzoz
+
+c. Kontrast zbyt duży d. Kontrast zbyt mały
+
+Rys. 23.10. Regulacja jaskrawości i kontrastu. Zwiększanie jaskrawości powoduje, że każdy piksel w ob-
+razie staje się jaśniejszy. Natomiast zwiększania kontrastu powoduje, że jasne obszary stają się jaśniej-
+sze, a ciemne ciemniejsze. Podane obrazy są przyktadami ztej jaskrawości i kontrastu
+
+<image/figury/k3_page342_figure1.png>

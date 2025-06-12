@@ -1,0 +1,57 @@
+22. Przetwarzanie sygnałów fonicznych
+
+pozostawić. Jeśli zaś wartość składowej jest mała, to tę składową można z największym
+prawdopodobieństwem przyporządkować szumowi i powinna, wobec tego, być pominięta,
+tj. wyzerowana. Składowe o średnich wartościach są dobierane w pewien sposób pośredni
+między przypadkami skrajnymi.
+
+Przedstawiony powyżej sposób postępowania jest podobny do działania zmiennego w cza:
+sie filtru Wienera. Jak pamiętacie, z odpowiedzi częstotliwościowej filtru Wienera wynika,
+że przepuszczane są częstotliwości, które w większości należą do sygnału, a odrzucane te,
+które głównie są szumem. To wymaga wcześniejszej wiedzy o widmach sygnału i szumu,
+aby można było określić odpowiedź częstotliwościową filtru. W metodzie nieliniowej, którą
+omawiamy, korzysta się z tej samej zasady, z tą tylko różnicą, że odpowiedź częstotliwo-
+ściową filtru Wienera jest ponownie obliczana dła każdego segmentu. Tak więc
+częstotliwościowa filtru zmienia się od segmentu do segmentu, co wynika z właściwości
+samego sygnału.
+
+Jedną z trudności w implementacji tej (i innych) technik nieliniowych jest to, że przy filtracji
+długich sygnałów nie obowiązuje metoda dodawania z nakładaniem (overłap-add). Ponieważ
+odpowiedź częstotliwościowa się zmienia, więc przebieg w dziedzinie czasu w każdym
+z segmentów nie będzie pasował do segmentów sąsiednich. Tę trudność można pokonać, pa-
+miętając, że informacja o sygnale fonicznym jest zakodowana w zmieniającym się w czasie
+widmie częstotliwościowym, a nie w kształcie przebiegu czasowego. Typowym podejściem
+Z
+z zakładkami). Po przetwarzaniu każdy z nakładających się segmentów jest poddawany wy-
+gładzającemu okienkowaniu, przed ich połączeniem ze sobą. Daje to łagodne przejście wid-
+ma częstotliwościowego z jednego segmentu do następnego.
+
+Druga metoda nieliniowa nosi nazwę homomorficznego przetwarzania sygnałów.
+Homomorficzny znaczy dosłownie: o takiej samej strukturze. Dodawanie nie jest jedyną
+możliwością łączenia szumu i zakłóceń z sygnałem użytecznym. Innymi, często stosowany-
+mi sposobami mieszania ze sobą sygnałów mogą być mnożenie lub splot. Gdy sygnały są
+łączone w sposób nieliniowy (a więc w każdy inny sposób oprócz dodawania), to nie da się
+ich rozdzielić przez filtrację liniową. Metoda homomorficzna polega na próbie rozdzielania
+sygnałów połączonych ze sobą w sposób nieliniowy w taki sposób, aby to zadanie stało się
+problemem liniowym. Innymi słowy, zadanie zostaje tak przekształcone, że jego struktura
+staje się taka sama, jak systemu liniowego.
+
+   
+  
+  
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+
+<image/wzory/k3_page326_formula1.png>

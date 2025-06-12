@@ -1,0 +1,18 @@
+padku wystąpienia błędu na wartość 1 jest ustawiany bit ER.
+W wypadku wystąpienia zgodności podczas porównania bit
+FD zostaje ustawiony na 1.
+Moduły procesorów powyżej 5/02 dysponują dodatkowo instrukcją SQL (SeQu-
+encer Load) pozwalającą na wczytywanie do określonego pliku danych stanów
+plików wejściowych pobranych z modułów wejść.
+
+<image/tabele/k4_page275_table1.png>
+
+Wyd. 4.50 Instrukcja przesyłania sekwencyjnego SOC.
+
+<image/figury/k4_page275_figure1.png>
+
+Wyd. 4.51 Instrukcja porównania sekwencyjnego SQO
+
+ 
+
+5.12 Funkcje generatora sekwencji 275

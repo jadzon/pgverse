@@ -1,0 +1,42 @@
+10 Rozdział 1. Grafy skierowane
+
+Jako dowód przedstawimy algorytm, który odpowiednio numeruje wierzchołki gra-
+fu kolejnymi liczbami naturalnymi. Najpierw są numerowane i usuwane z grafu wierz-
+chołki, do których nie wchodzą żadne krawędzie. Po usunięciu tych wierzchołków i
+wychodzących z nich krawędzi znowu otrzymamy graf bez cykli, który zawiera wierz-
+chołki bez wchodzących krawędzi. Teraz te z koleji wierzchołki są numerowane kolejny-
+mi numerami i usuwane z grafu, i tak dalej aż do ponumerowania wszystkich wierzchoł-
+ków. o
+
+<image/figury/k2_page219_figure1.png>
+
+Przykład 1.9 Zastosujmy powyższy algorytm do grafu z rysunku 1.4. Wierzchołkami bez
+wchodzących krawędzi są s i b. Przypisujemy więc h(s) = 1 i h(b) = 2 oraz usuwa-
+my s i b z grafu wraz z wychodzącymi z nich krawędziami. Teraz wierzchołek c nie ma
+wchodzących krawędzi, przypisujemy mu h(c) = 3 i usuwamy z grafu. W dalszych kro-
+kach algorytm przypisze wartości h(a) = 4, h(d) = 5 oraz h(t) = 6. Ostatecznie hunkcja
+
+h ma postać:
+
+| v |ls]fa]b]fc]jd]t |
+
+ho LIJ4T2J35][5]6
+Przedstawimy teraz algorytm wyliczający odległości z s do wszystkich wierzchołków w
+grafie acyklicznym. Zakładamy przy tym, że w grafie G wierzchołki są ponumerowane
+
+tak, jak opisano to w lemacie 1.8. Bez straty ogólności można założyć, że s jest pierwszy,
+ponieważ nie ma ścieżek z s do wierzchołków o niższych numerach.
+
+Algorytm wyliczający odległości wszystkich wierzchołków w grafie acyklicznym
+Dane wejściowe: acykliczny graf skierowany G = (V, E), długości krawędzi w : E +
+R.
+
+Dane wyjściowe: Macierz D odległości z s do wszystkich wierzchołków.
+
+e dla każdego v € V podstaw D[v] := oo
+e Dls| := 0;
+
+e dla każdego v € V po kolei według numerów zrób:
+o dla każdego u < v, Dfe] := min(Dfe], Du] + w(u,v))
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

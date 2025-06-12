@@ -1,0 +1,61 @@
+1.11. Funkcja liniowa 17
+
+1.11 Funkcja liniowa
+
+Zastanówmy Sie iak w nierścienin 7... działa funkcia liniowa
+
+<image/wzory/k2_page132_formula1.png>
+
+Rozpatzmy najpierw przypadek, gdy a 1 m są względnie pierwsze, czyl gdy VW La, m) =
+1. Dlam = 8 i a = 3 wartości funkcji przedstawia tabela
+
+[x LO LL [21345 [6[7)
+K©Y|KOKIKIESKIKAŁKIEJ
+W takim przypadku istnieje a”* element odwrotny do a i funkcja g(z) = a”'r, która
+
+jest Qdwmtna da £ Rzorzuwiśria
+
+<image/wzory/k2_page132_formula2.png>
+
+Z tego wynika, ze f jest wzajemnie jednoznaczna 1 "na" oraz, ze dla kazdego b € Z,
+rów!
+
+<image/wzory/k2_page132_formula3.png>
+
+Ma QuniauiuC jCUIU LUŁYWIQŁAIC W PICIYLACIUU pp, JOR ULU 1ŁUWIICŁZ "U VU.
+
+Funkcja f jest permutacją w Z „ i wykorzystuje się ją, gdy trzeba wymieszać (prze-
+permutować) elementy Z „. Zauważmy, że / jest także permutacją w Z;,. Rzeczywiście,
+jeżeli x € Z;,, to na podstawie lematu 1.35 f(z) = ar € Z;,. Mamy więc
+
+Lemat 1.36 Jeżeli NW D(a,m) = 1, to funkcja f(x) = az jest funkcją wzajemnie
+jednoznaczną w Z, iw Z;,.
+
+Rozpatrzmy teraz przypadek, gdy a i m nie są względnie pierwsze, czyli gdy NW D(a, m) =
+d > 1. Dlam = 8 i a = 6 wartości funkcji przedstawia tabela
+
+[x [OJJ 2]3]4]5[6] 7]
+L6x JOJ6[%]2]0J6[3] 2]
+
+Zauważmy. że ieżeli b iest wartościa funkcji f. czvli adv
+
+<image/wzory/k2_page132_formula4.png>
+<image/wzory/k2_page132_formula5.png>
+
+a pOiucwaz u UŁiCi U 1 144, W U UŁICII U, A WIGL WOLWMIGILI 1ULIAUJI | IUUYG WYU ylko
+
+liczby podzielne przez d.
+
+Lemat 1.37 Iażali NW Dla mi = darazdlh ta równania
+
+<image/wzory/k2_page132_formula6.png>
+
+oraz
+
+<image/.wzory/k2_page132_formula7.png>
+
+SĄ TGmasuwazic, vy iQJG Gik MULI ŁAJIUŁ ŁUŁWIGŁAŁA WY ŁAJUŁ ŁC 1IUŁIJ UGI WiŁY LAŁ.
+
+toi
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

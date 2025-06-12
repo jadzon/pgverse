@@ -1,0 +1,56 @@
+Trenowanie sieci neuronowych
+
+z błędami typu „fałszywie negatywny”. W rozważanym teraz przykładzie przyjmijmy w spo-
+sób dowołny, że błąd w wykryciu celu jest pięciokrotnie gorszy niż błąd w wykryciu obiektu
+niebędącego celem. W rezultacie to narzuca na sieć wymaganie, żeby lepiej działała w po-
+szukiwaniu celu nawet kosztem gorszego wykrywania obiektów niebędących celem.
+Podprogram 3000 jest sercem strategii stosowanej w sieciach neuronowych, algorytmem do
+zmiany wag po każdej iteracji. W celu wyjaśnienia podstaw matematycznych skorzystamy
+z pewnej analogii. Rozważmy dylemat skoczka spadochronowego zrzuconego między linie
+nieprzyjacielskie. Ląduje w nieznanym terenie, w takich ciemnościach, że widoczność jest
+ograniczona do kilku metrów. Otrzymał rozkaz posuwania się w kierunku dna najbliższej
+doliny, gdzie ma rozpocząć dalszą część swojej misji. Pojawia się jednak trudność — jak przy
+tak słabej widoczności znaleźć drogę do dna doliny. Można powiedzieć, że potrzebny jest
+algorytm określający położenie x i y spadochroniarza na powierzchni ziemi, aby móc zmini-
+malizować wysokość tego położenia. Jest to zagadnienie analogiczne do ustawiania wag sieci
+neuronowej w taki sposób, żeby błąd sieci ESUM był minimalizowany.
+
+W celu rozwiązania tego problemu weźmiemy pod uwagę dwa algorytmy: ewolucji (evolu-
+tion) oraz najszybszego spadku (steepest descent). Według algorytmu ewolucji spadochro-
+niarz wykonuje skokowy ruch w jakimś kierunku wybranym losowo. Jeśli nowe położenie
+znajduje się wyżej niż poprzednie, to spadochroniarz klnie i wraca do położenia początko-
+wego. Jeśli nowe położenie znajduje się niżej, to spadochroniarz odczuwa początek sukcesu
+i powtarza procedurę, zaczynając od tego nowego położenia. Wreszcie osiągnie dno doliny,
+choć bardzo nieskuteczną i przypadkowo wybraną drogą. Tę metodę nazywa się ewolucją,
+gdyż jest to algorytm taki sam, jaki występuje w przyrodzie, w procesie ewolucji biolo-
+gicznej. W każdym nowym pokoleniu danego gatunku pojawiają się jakieś losowe zmiany
+w stosunku do pokolenia poprzedniego. Takie zmiany, które działają na korzyść danego
+gatunku, mają większą szansę na to, aby były utrzymane i przekazane następnemu pokole-
+niu. Takie udoskonalenia umożliwiają zwierzętom zdobywać więcej pożywienia, skutecz-
+niej uciekać przed wrogami, wydawać na świat więcej potomstwa itd. Jeśli zaś nowa cecha
+okaże się szkodliwa, to zwierzę nią dotknięte stanie się obiadem jakiegoś drapieżnika i ta
+zmiana zostaje odrzucona. W tym sensie każde nowe pokolenie jest iteracją w ewolucyjnej
+procedurze optymalizacji.
+
+Przy zastosowaniu ewolucji jako algorytmu trenującego każda waga w sieci neuronowej jest
+nieco zmieniana przez dodanie pewnej wartości z generatora liczb losowych. Jeśli zmodyfi-
+kowane wagi ulepszają sieć (tj. dają mniejszą wartość zmiennej ESUM), to takie zmiany są
+utrzymywane, w innym razie są odrzucane. Wprawdzie ta procedura działa, ale jej zbieżność
+jest bardzo powolna. Pojęcie zbieżności jest używane do opisu ciągle postępującego ulep-
+szania w kierunku rozwiązania optymalnego (dna doliny). Prościej mówiąc, na osiągnięcie
+rozwiązania program może potrzebować raczej dni, a nie minut czy godzin.
+
+Na szczęście algorytm najszybszego spadku działa znacznie szybciej. Według tego algo-
+rytmu spadochroniarz zachowałby się w sposób naturalny. Oceniłby, która droga prowa-
+dzi w dół i poruszałby się w tym kierunku. Pomyślmy o tej sytuacji w sposób następujący.
+Spadochroniarz poruszy się o jeden krok na północ i zanotuje zmianę wysokości swojego
+położenia. Po powrocie do położenia początkowego zrobi jeden krok w kierunku wschod-
+nim i znowu zarejestruje zmianę wysokości. Korzystając z tych uzyskanych wartości, może
+określić, jaki kierunek prowadzi w dół. Przyjmijmy że spadochroniarz obniżył się o 10 cm,
+robiąc krok na północ, a o 20 cm, robiąc krok ku wchodowi. Aby wędrował prosto w dół,
+jego droga wzdłuż każdej osi powinna być proporcjonalna do nachylenia wzdłuż tej osi.
+W omawianym przypadku mógłby przesunąć się na północ o 10 kroków i na wschód o 20
+kroków. Dzięki temu przemieści się po najbardziej stromej części stoku o to +20? = 22,4
+kroków. Mógłby, alternatywnie, poruszać się po linii prostej do nowego położenia, robiąc
+22,4 kroków po przekątnej. Najważniejsze jest to, że: najszybszy spadek uzyskuje się przez
+poruszanie się wzdłuż każdej osi na odległość proporcjonalną do nachylenia wzdłuż tej osi.

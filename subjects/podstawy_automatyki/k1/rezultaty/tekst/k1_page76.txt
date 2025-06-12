@@ -1,0 +1,28 @@
+Powracamy do zadania.
+Przedstawiamy G(s) w postaci iloczynu transmitancji członów elementarnych
+
+<image/wzory/k1_page76_tormula1.png>
+
+Wyznaczamy wartość modułu:
+
+<image/wzory/k1_page/6_formula2.png>
+
+Wyznaczamy pulsacje charakterystyczne:
+<image/wzory/k1_page/6_formula3.png>
+<image/wzory/k1_page/6_formula4.png>
+
+Rysujemy charakterystyki dla poszczególnych członów elementarnych, a następ-
+nie dokonujemy ich algebraicznego sumowania (rys. 2.21).
+
+<image/figury/k1_page7/6_figure2.png>
+
+<image/figury/k1_page7/6_figure1.png>
+
+Rys. 2.21. Charakterystyki logarytmiczne modułu i fazy dla elementu różniczkującego rzeczywistego
+opisanego transmitancją G(s) = | CZ charakterystyka składowa D, ——— charakterystyka
++1
+składowa ©, -.-.— charakterystyka składowa ©), ==— charakterystyka wypadkowa)
+
+ 
+
+78

@@ -1,0 +1,18 @@
+<image/figury/k4_page454_figure2.png>
+
+ 
+
+Wyd. 8.116 Podprogram FAZA 2 (grzanie) — zamknięcie zaworów dopływu czynni-
+ków i przepływu medium chłodzącego
+
+<image/figury/k4_page454_figure1.png>
+
+Wyd. 8.117 Podprogram FAZA_2 (grzanie) — ustalenie temperatury początkowej
+i zamknięcie zaworu odpływu produktu reakcji
+
+<image/figury/k4_page454_figure5.png>
+
+ 
+
+454 Rozdział : 8.Programy przykładowe
+ly prz,

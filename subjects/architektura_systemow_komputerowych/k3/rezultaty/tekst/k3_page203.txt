@@ -1,0 +1,82 @@
+SKOROWIDZ
+
+ 
+
+A
+
+adres efektywny 82
+
+— przeznaczenia 65
+adresowanie względne 84
+akumulator 62
+
+algorytm Bootha 51
+
+— FCFS 151
+
+— Round-Robin 152
+
+— SJF 152
+
+alokacja 143
+
+arbiter 165
+
+architektura potokowa 16
+— przepływowa 158
+
+— równoległa 162-163
+
+— typu Harvard 161
+arytmometr 7]
+
+asembler 144
+
+asemblery z tablicą adresów 145
+— — przypisań 146
+
+automat asynchroniczny 183
+
+— Mealy'ego 182
+
+— Moore'a 182
+
+automaty synchroniczne 183
+
+bajt 9, 85
+
+baza 82
+
+bazowy tryb adresowania 83
+bezpośredni dostęp do pamięci 68, 114
+bit parzystości 37
+
+bity ochrony 59
+
+blok arytmetyczno-logiczny ALU 8, 69
+— sterujący 149
+
+bramka 14
+
+bramki trzystanowe 15
+
+— typu OC 15
+
+<image/figury/k3_page203_figure1.png>
+
+dekoder 22
+dekodowanie liniowe 24
+— matrycowe 24
+demultiplekser 27
+dostęp z przeplotem 161
+
+edytor 147
+egzekutor 149
+enkoder 25
+epilog 140
+
+F
+
+funkcja (podprogram) 139
+
+Hazard 178

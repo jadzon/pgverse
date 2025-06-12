@@ -1,0 +1,46 @@
+2.2. Rozwiązania równań układów SLS 219
+
+y/k3_page217_formula1.png (2.1-86)
+
+Przy spełnieniu warunku (2.1-86) moc pobierana (2.1-85) jest nieujemna, a zatem zawsze
+zachodzi nierówność:
+
+(/k3_page217_formula2.png
+
+co świadczy o pasywności układu.
+Jeśli warunek (2.1-86) nie jest spełniony, to forma kwadratowa (2.1-85) może przybierać wartości
+ujemne i czwórnik jest aktywny.
+
+H. Aktywność elementów a aktywność układu. Z przykładów 2.1-41
+i 2.1-42 wynika ważny praktycznie wniosek.
+
+Układ, który zawiera element lub podukład aktywny nie musi być układem
+aktywnym.
+
+Jak wynikało to z cytowanych przykładów pasywność czy aktywność układu
+może w takim przypadku zależeć od wartości liczbowej parametru charaktery-
+zującego element aktywny.
+
+Pragniemy zwrócić uwagę Czytelnika na odmienność sformułowanego wyżej
+wniosku w porównaniu z wnioskami podanymi w p. 2.1.5 - A,B, a odnoszącymi
+się do rozstrzygania takich cech układu jak skupioność, liniowość, stacjonarność
+i bezźródłowość.
+
+2.2. ROZWIĄZANIA RÓWNAŃ UKŁADÓW SLS
+
+Zajmiemy się obecnie omówieniem niektórych ogólnych właściwości ro z -
+wiązań równań opisujących układy SLS oraz związanych z nimi inter-
+pretacji i klasyfikacji. Nie będziemy przy tym prezentować metodyki wy-
+znaczania tych rozwiązań, odkładając sprawy me t o d rozwiązywania równań
+układów SLS do następnych rozdziałów.
+
+2.2.1. Warunki początkowe. Stan wymuszony i stan swobodny
+
+A. Model sieciowy. Rozważmy sieć skupioną, liniową i stacjonarną (SLS),
+w której działają źródła niezależne: napięciowe o siłach elektromotorycznych
+ey, €»,..., e, Oraz prądowe o wydajnościach prądowych jj, 4; Jm+ 2:---> Jw
+Podobnie jak to zrobiliśmy w p. 2.1.7-A przy omawianiu zasady superpozycji,
+sieć taką można przedstawić w postaci wielowrotnika bezźródłowego
+(rys. 2.1-20), na którego zaciskach występują wszystkie działające w sieci źródła
+niezależne. W dalszych rozważaniach tak przedstawioną sieć będziemy nazywać
+układem.

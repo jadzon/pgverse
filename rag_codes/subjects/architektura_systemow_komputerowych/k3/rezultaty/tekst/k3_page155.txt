@@ -1,0 +1,54 @@
+7.2. Proces tronslacji 145
+
+l) ORG (ang. origin) — wraz z wyrażeniem umieszczonym za symbolem ORG usta-
+wia wartość licznika rozkazów, a więc przypisuje adres rzeczywisty rozkazowi
+umieszczonemu bezpośrednio za tym pseudorozkazem, np.:
+
+ORG O0F0F — oznacza, że, przy założeniu 16-bitowego adresu podawanego szes-
+nastkowo, następny rozkaz umieszczono pod adresem 0000 1111 0000 1111.
+
+2) EQU (ang. equate) — oznacza przypisanie nazwie stojącej po lewej stronie sym-
+bolu wartości wyrażenia stojącego po prawej stronie symbolu, np.:
+
+POL EQU 10 — oznacza, że nazwie POL przypisuje się wartość 0001 0000
+(szesnastkowo).
+
+3) END — oznacza koniec programu.
+
+Proces translacji jest realizowany w trzech krokach:
+1) tłumaczenie wykonywane przez asembler,
+2) łączenie z innymi programami wykonywane przez program łączący (ang. linker),
+3) ładowanie w odpowiednie miejsce pamięci komputera wykonywane przez pro-
+gram ładujący (ang. loader).
+
+TŁUMACZENIE WYKONYWANE PRZEZ ASEMBLER
+
+Program napisany w języku symbolicznym tworzy program źródłowy dla programu
+tłumaczącego i jest pamiętany w tzw. pliku źródłowym (ang. source file). Zadaniem pro-
+gramu tłumaczącego jest utworzenie programu wynikowego (ang. object program),
+tj. ciągu rozkazów zapisanych w języku maszynowym (binarnie). Program tłumaczący
+rozpoczyna swoje działanie od zarezerwowania miejsca w pamięci dla tzw. tablicy symboli
+adresowych oraz ustawienia początkowego adresu programu (adresu bazowego) w liczniku
+adresów. Tablica symboli jest zapełniana nazwami etykiet napotykanych przez program
+tłumaczący w miarę odczytywania linii programu źródłowego i każdej etykiecie jest
+przypisywana liczba będąca odpowiednim adresem względnym (względem adresu zade-
+klarowanego jako bazowy pseudorozkazem ORG). Jeżeli odczytany wiersz zawiera rozkaz,
+to asembler zapisuje do zbioru wynikowego odpowiednie słowo kodu maszynowego oraz
+zwiększa zawartość licznika adresów. Jeżeli wiersz zawiera pseudorozkaz, to jest on
+odpowiednio interpretowany i wykonywany. Jeżeli odczytany wiersz zawiera etykietę, to
+mogą zajść dwa przypadki: pierwszy, gdy nazwa tej etykiety wystąpiła już wcześniej
+(odwołanie wsteczne — ang. backward references), i drugi, gdy w czasie tłumaczenia,
+asembler jeszcze nie napotkał tej nazwy (odwołania do przodu — ang. forward reference).
+W pierwszym przypadku asembler już wcześniej przypisał tej etykiecie pewną wartość.
+W drugim przypadku problem jest trudniejszy. Jest on rozwiązywany poprzez takie
+zaprojektowanie programu tłumaczącego, które polega na dwukrotnym odczytywaniu
+programu czyli na tzw. dwóch jego przebiegach (asemblery dwuprzebiegowe — ang. two-
+-pass assembler).
+
+Istnieją dwa rodzaje asemblerów dwuprzebiegowych: asemblery z tablicą adresów
+i asemblery z tabelą przypisań (sklejeń).
+
+Asemblery z tablicą adresów w pierwszym przebiegu tworzą tablicę adresów, w któ-
+rej różnym symbolom adresowym przyporządkowano różne wartości, a w drugim prze-
+biegu przypisywane są adresom symbolicznym programu źródłowego adresy według
+gotowej tablicy adresów.

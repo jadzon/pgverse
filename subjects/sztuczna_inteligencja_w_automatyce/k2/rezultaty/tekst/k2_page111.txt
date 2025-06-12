@@ -1,0 +1,21 @@
+116
+
+<image/figury/k2_page111_figure4.png>
+
+Rys. 6.13: Przykładowe operacje mutacji w programowaniu genetycznym: (a) program po-
+czątkowy, (b) program po zastąpieniu wybranego symbolu terminalnego przez inny symbol
+terminalny i wybranej operacji przez inną operację, (c) program po zastąpieniu jednej z
+
+gałęzi drzewa przez inną gałąź
+
+<image/figury/k2_page111_figure3.png>
+figury/k2_
+
+<image/wzory/k2_page111_formula1.png>
+
+Na rys. 77 zilustrowano wyznaczanie nowej pozycji cząstki.
+Najlepsza pozycja osobista jest wyznaczana z wzoru
+
+<image/wzory/k2_page111_formula2.png>
+
+gdzie E jest minimalizowaną funkcją.

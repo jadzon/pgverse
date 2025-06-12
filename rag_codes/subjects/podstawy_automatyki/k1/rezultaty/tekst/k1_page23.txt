@@ -1,0 +1,33 @@
+1.5. Równania różniczkowe zwyczajne
+
+W tym podrozdziale przedstawimy zastosowanie przekształcenia Laplace'a do
+rozwiązywania równań różniczkowych liniowych.
+Mamy dane równanie różniczkowe
+
+<image/wzory/k1_page23_formula1.png>
+gdzie: ay, ..., a, są stałymi, a funkcja f(1) jest oryginałem.
+
+Wyznaczymy teraz rozwiązanie równania (1.41) spełniające warunki początkowe:
+
+<image/wzory/k1_page23_formula2.png>
+
+Z treści zadania wynika, że rozwiązanie x(/) też jest oryginałem.
+Oznaczając:
+
+<image/wzory/k1_page23_formula3.png>
+otrzymamy:
+
+<image/wzory/k1_page23_formula4.png>
+
+3)
+
+ł
+<image/wzory/k1_page23_formula5.png>
+<image/wzory/k1_page23_formula6.png>
+
+Stosując przekształcenie Laplace'a do prawej i lewej strony równania (1.41),
+uwzględniając oznaczenia (1.43) oraz liniowość przekształcenia Laplace'a, otrzymujemy
+
+<image/wzory/k1_page23_formula7.png>
+
+25

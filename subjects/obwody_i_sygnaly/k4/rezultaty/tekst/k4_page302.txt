@@ -1,0 +1,53 @@
+302
+
+z Z W W
+
+3. Obwody prądu stalego
+
+<image/figury/k4_page302_figure1.png>
+
+elementów (dwójników) rezystancyjnych. Przy przyjętym sposobie strzałkowa-
+nia źródeł (por. p. 1.7.1) wielkości:
+
+<image/wzory/k4_page302_formula1.png>
+
+mają interpretację mocy oddawanych przez — odpowiednio — idealne
+źródło napięciowe i idealne źródło prądowe.
+
+3.5.2. Bilans mocy
+
+A. Bilans mocy dla elementów. Zgodnie z zasadą Tellegena, sformułowa-
+ną w p. 1.5.1, dla każdej sieci skupionej suma mocy chwilowych p, pobieranych
+przez wszystkie elementy sieci jest w każdej chwili równa zeru:
+
+Nzory/k4_page302_formula2.png (3.5-9)
+
+W odniesieniu do sieci rezystancyjnej prądu stałego zasada Tellegena
+przyjmuje oczywistą postać:
+
+<image/wzory/k4_page302_formula3.png>
+
+gdzie P, = U,I, jest mocą pobieraną przez k-ty element sieci.
+
+Przy założeniu, że nie wszystkie moce P, są równe zeru, z równości (3.5-10)
+wynika, że suma mocy pobieranych przez elementy sieci (P, > 0) jest równa
+sumie mocy oddawanych przez pozostałe elementy sieci (P, < 0). Mówimy
+niekiedy, że w sieci jest spełniony bilans mocy.
+
+Przykład 3.5-5. Rozważmy układ ładowania akumulatora samochodowego (rys. 3.5-6). Dla
+
+układu tego obliczymy następujące moce:
+
+P, — moc wytwarzaną wewnątrz prądnicy (oddawaną do układu przez źródło idealne 14 V);
+
+P, — moc oddawaną przez prądnicę do układu (oddawaną do dwójnika na prawo od zacisków AB);
+
+P, — moc traconą w prądnicy (pobieraną przez opór wewnętrzny prądnicy 0,1 Q);
+
+P, — moc traconą w doprowadzeniach (pobieraną przez opór 0,6 Q);
+
+P, — moc doprowadzoną do układu akumulatora (pobieraną przez dwójnik na prawo od zacisków
+CD);
+
+P,— moc wydzielaną w postaci ciepła w akumulatorze (pobieraną przez opór wewnętrzny
+akumulatora 0,05 Q);

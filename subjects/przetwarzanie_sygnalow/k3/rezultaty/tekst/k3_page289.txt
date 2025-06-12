@@ -1,0 +1,69 @@
+316
+
+19. Filtry reku
+
+   
+ 
+   
+  
+ 
+ 
+   
+   
+  
+
+Odpowiedź fazowa
+
+Filtr może mieć odpowiedź fazową jednego z trzech rodzajów: faza zerowa, faza liniowa
+i faza nieliniowa. Przykłady każdej z tych odpowiedzi zamieszczono na rys. 19.7. Filtr o fa-
+zie zerowej charakteryzuje się odpowiedzią impulsową symetryczną wokół próbki zero (rys.
+19.7 a). Kształt odpowiedzi nie ma znaczenia; chodzi tylko o to, żeby próbki o numeracji
+ujemnej były lustrzanym obiciem próbek o numeracji dodatniej. Gdy dokona się przekształ
+cenia Fouriera takiego przebiegu symetrycznego, uzyska się przebieg fazy całkowicie zero:
+wy (rys. 19.7 b).
+Wadą filtru o fazie zerowej jest konieczność użycia ujemnych indeksów, którymi posługiwa-
+nie się może być niewygodne. Można tego uniknąć, stosując filtr o fazie liniowej. Jego od-
+powiedź impulsowa (rys. 19.7 d) jest identyczna z pokazaną na rys. 19.7 a), lecz przesunięta,
+aby można było stosować tylko próbki o numeracji dodatniej. Ta odpowiedź impulsowa jest
+nadal symetryczna lewo-prawostronnie, lecz oś symetrii jest przesunięta w stosunku do zera.
+To przesunięcie powoduje, że charakterystyka fazowa jest linią prostą (rys. 19.7 e), dlatego
+mówimy o fazie liniowej. Nachylenie tej linii prostej jest wprost proporcjonalne do wartości
+przesunięcia odpowiedzi impulsowej. Ponieważ to przesunięcie nie powoduje niczego poza
+identycznym przesunięciem w sygnale wyjściowym, więc filtr o fazie liniowej jest w więk-
+szości zastosowań równoważny filtrowi o fazie zerowej.
+
+Odpowiedź impulsowa pokazana na rys. 19.7 g) nie jest lewo-prawostronnie symetryczna.
+Odpowiednio do tego, przebieg fazy (rys.19.7 h) nie jest linią prostą. Mamy tu więc fazę
+nieliniową. Nie pomylcie pojęć nieliniowa i liniowa faza z koncepcją liniowości systemu
+rozważaną w rozdziale 5, Chociaż w obu tych pojęciach występuje słowo liniowy, to jednak
+nie ma między nimi żadnego związku.
+
+Dlaczego zastanawiamy się nad tym, czy charakterystyka fazy jest liniowa czy nieli-
+niowa? Odpowiedź na to pytanie wynika z rys. 19.7 c), f), i). Na tych rysunkach przed-
+stawiono odpowiedzi na impuls prostokątny każdego z trzech filtrów. Odpowiedzi ie
+są niczym innym, jak odpowiedzią skokową o zboczu dodatnim, po której następuje
+odpowiedź skokowa o zboczu ujemnym. Pokazano tu odpowiedzi na impuls prostokątny,
+gdyż one obrazują, co dzieje się zarówno z narastającym, jak i opadającym zboczem
+sygnału. A teraz ważna informacja: filtry o fazie zerowej lub liniowej dają zbocze lewe
+i prawe wyglądające jednakowo, podczas gdy w filtrach o fazie nieliniowej te zbocza są
+różne. W wielu zastosowaniach taka różnica jest niedopuszczalna. Jednym z przykładów
+jest wyświetlacz oscyloskopu, gdzie ta różnica mogłaby być błędnie interpretowana jako
+cecha mierzonego sygnału. Innym przykładem jest przetwarzanie sygnału wizyjnego.
+Czy możesz sobie wyobrazić, że włączasz telewizor i widzisz, że jedno ucho ulubionego
+aktora różni się od drugiego?
+
+Łatwo można zrealizować filtr o skończonej odpowiedzi impulsowej (SOI) mający linio-
+wą fazę. Odpowiedź impulsowa filtru SOI jest bowiem określana bezpośrednio w procesie
+projektowania. Konieczne jest tylko spowodowanie, aby ta odpowiedź miała symetrię lewo-
+-prawostronną. Inna sytuacja jest z filtrami o nieskończonej odpowiedzi impulsowej (NON),
+czyli rekursywnymi, gdyż w nich są określane współczynniki rekursywne, a nie odpowiedź
+impulsowa. Odpowiedź impulsowa filtru rekursywnego nie jest symetryczna lewo-prawo-
+stronnie, a więc ma fazę nieliniową.
+
+Takie same problemy z odpowiedzią fazową występują w elektronicznych układach analogo-
+wych. Wyobraźcie sobie, że na swoim stole laboratoryjnym macie układ złożony z rezysto-
+rów i kondensatorów. Jeśli na wejściu układu jest zawsze zero, to i na wyjściu będzie zero.
+Gdy do wejścia zostanie doprowadzony impuls, kondensatory szybko się ładują do pewnej
+wartości, a potem zaczynają się rozładowywać wykładniczo przez rezystory. Odpowiedź im-
+pulsowa (tj. sygnał wyjściowy) jest kombinacją tych różnych zanikających przebiegów
+wykładniczych. Ta odpowiedź impulsowa nie może być symetryczna, ponieważ sygnał

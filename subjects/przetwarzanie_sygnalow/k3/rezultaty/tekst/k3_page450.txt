@@ -1,0 +1,39 @@
+28. Cyfrowe procesory sygnałowe
+
+musi być określona wartość kroku adresowania pamięci. Na rys. 28.3 wartość kroku wynosi
+jeden, np. pod adresem 20 043 jest zawarta jedna próbka, pod 20 044 następna itd. Często
+bywa inaczej. Na przykład adresowanie może być wykonywane zgodnie z bajtami i do prze-
+chowywania wartości każdej próbki może być wymagane dwa lub cztery bajty. W takich
+przypadkach wartość kroku mogłaby być, odpowiednio, dwa lub cztery.
+
+Wartości tych trzech parametrów określają rozmiar i konfigurację bufora cyklicznego i nie
+zmieniają się podczas działania programu. Czwarta wartość, wskaźnik ostatnio pobranej
+próbki powinien być modyfikowany przy pobraniu każdej kolejnej próbki. Innymi słowy,
+musi istnieć logika programowa sterująca sposobem uaktualniania wskaźnika ostatnio po-
+branej próbki, na podstawie wartości trzech poprzednio wymienionych parametrów. Ta logi-
+ka jest wprawdzie całkiem prosta, ale musi być bardzo szybka. I to jest podstawowy punkt
+rozważań; procesor DSP powinien być zoptymalizowany pod względem posługiwania się
+buforem cyklicznym w taki sposób, żeby osiągnąć możliwie jak największą szybkość wy-
+konywania programu.
+
+Buforowanie cykliczne jest dodatkowo przydatne w przetwarzaniu autonomicznym (off-line).
+Rozważmy program, w którym tak sygnał wejściowy, jak i wyjściowy są w całości zawar-
+te w pamięci. Buforowanie cykliczne nie jest tu konieczne do obliczania splotu, ponieważ
+wszystkie próbki są w każdej chwili natychmiast dostępne. Jednak wiele algorytmów jest re-
+alizowanych etapowo, z sygnałem pośrednim tworzonym między kolejnymi etapami. W ten
+sposób działa na przykład filtr rekursywny realizowany jako szereg stopni bikwadratowych.
+Metodą najprostszą jest przechowanie w pamięci każdego sygnału pośredniego w pełnej jego
+długości. Buforowanie cykliczne daje inną możliwość — zapamiętanie tylko tych pośrednich
+próbek, które są niezbędne do natychmiastowych obliczeń. W ten sposób redukuje się wy-
+maganą wielkość pamięci kosztem bardziej skomplikowanego algorytmu. Ważny wniosek:
+bufory cykliczne są przydatne w przetwarzaniu off-line, a niezbędne w systemach pracują:
+cych w czasie rzeczywistym.
+
+Spójrzmy teraz, jakie kroki trzeba wykonać, aby zrealizować filtr SOI, stosując bufory cy-
+kliczne zarówno dla sygnału wejściowego, jak i dla współczynników. Ta lista może wydać
+się trywialna i zbyt szczegółowa — ale wcale tak nie jest! Skuteczne posługiwanie się po-
+szczególnymi zadaniami jest tym, co odróżnia DSP od tradycyjnego mikroprocesora. Dia
+każdej nowej próbki powinny zostać podjęte kroki wymienione w tablicy 28.1.
+Tablica 28.1. Kroki konieczne do realizacji filtru SOI
+
+<image/tabele/k3_page450_table1.png>

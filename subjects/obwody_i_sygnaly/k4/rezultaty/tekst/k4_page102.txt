@@ -1,0 +1,26 @@
+102 a 1. Pojęcia podstawowe — elementy | 3
+
+E. Połączenie równoległe pojemności. Analog
+przeprowadzić dla połączenia równoległego n poje
+lonych równaniami o postaci (1.3-17) i (1.3-18), tzn
+
+ 
+
+<image/wzory/k4_page102_formula3.png>
+
+wzory/k4_page102_for
+
+figury/k4_page102_figi
+
+W wyniku połączenia równoległego otrzymujem:
+<image/wzory/k4_page102_formula4.png>
+gdzie:
+<image/wzory/k4_page102_formula1.png>
+
+Równanie to określa charakterystykę nowego elementu (rys. 1.5-11):
+
+<image/wzory/k4_page102_formula5.png>
+
+gdzie:
+
+<image/wzory/k4_page102_formula6.png>

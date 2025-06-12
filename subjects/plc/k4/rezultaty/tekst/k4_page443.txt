@@ -1,0 +1,9 @@
+<image/figury/k4_page443_figure1.png>
+
+<image/tabele/k4_page443_table1.png>
+
+<image/wzory/k4_page443_formula1.png>
+
+<image/tabele/k4_page443_table2.png>
+
+8.7 Regulacja PID z korekcją statyczną 443

@@ -1,0 +1,26 @@
+330 3. Obwody prądu stałego
+
+Odp.: a) Ry; = 24 kQ, b) R,, = 1000
+
+Zadanie 3.8. W układzie z rys. Z-3.8 prąd płynący przez opór 25 Q, wynosi I = 0,6 A. Obliczyć
+napięcie U na zaciskach AB. Wskazówka: Przekształcić trójkąt ACD w gwiazdę.
+
+<image/figury/k3_page330_figure4.png>
+
+Zadanie 3.9. Stosując metodę zamiany źródeł, obliczyć prąd 7 w układzie z rys. Z-3.9.
+
+<image/figury/k3_page330_figure2.png>
+
+Odp.: I = 4 mA
+
+Zadanie 3.10. Posługując się metodą zamiany źródeł, obliczyć napięcie U w układzie z rys. Z-3.10.
+Dane: J; = 5 mA, J, = 10 mA, E, = 3 V,E, = 3V,R, = 18 kQ, R, = 12kQ, R, = 1 kQ,
+R, = 1,5 kQ.
+
+<image/figury/k3_page330_figure1.png>
+
+Odp: U=5SV
+
+Zadanie 3.11. Stosując metodę zamiany źródeł, obliczyć napięcie U w układzie z rys. Z-3.11. Dane:
+J = 1mA,E = 30 V,R, = 6kQ, R, = 20 kQ, R, = 10 kQ, g = 0,2 mS. Wskazówka: Porów-
+naj przykład 3.3-2.

@@ -1,0 +1,47 @@
+4. Oprogramowanie DSP
+
+ 
+
+Bardziej rozbudowane działania matematyczne są wykonywane przez transfer danych do spe-
+cjalnego układu nazywanego koprocesorem arytmetycznym (zwany też jednostką arytme-
+tyczno-logiczną ALU — Arithmetic Logic Unit). Koprocesor arytmetyczny może znajdować
+się w tym samym układzie scalonym co jednostka centralna ałbo może stanowić oddzielny
+układ. Na przykład przy dodawaniu dwóch liczb zmiennoprzecinkowych jednostka centralna
+powinna przesłać 8 bajtów (4 na każdą liczbę) do koprocesora arytmetycznego, a także kilka
+bajtów określających, co należy zrobić z przesłanymi danymi. Po krótkim czasie obliczania,
+koprocesor arytmetyczny przekazuje cztery bajty z powrotem do CPU. Te bajty zawierają
+liczbę zmiennoprzecinkową będącą obliczoną sumą. Najtańsze systemy komputerowe nie
+mają koprocesora arytmetycznego lub mają go tylko jako opcję. Na przykład mikroprocesor
+80486DX ma wewnętrzny koprocesor arytmetyczny, podczas gdy 80486SX go nie ma. W ta-
+kich systemach o ograniczonym działaniu zastępuje się rozbudowę sprzętu oprogramowaniem.
+Każda funkcja matematyczna jest dzielona na elementarne operacje binarne, które mogą być
+wykonywane bezpośrednio przez jednostkę centralną. Uzyskany wynik jest wprawdzie taki
+sam, lecz czas wykonania znacznie dłuższy, o czynnik, powiedzmy od 10 do 20.
+
+Większość oprogramowania komputerów osobistych może być używana z koprocesorem aryt-
+metycznym lub bez niego. Uzyskuje się to dzięki posiadaniu kompilatora generującego kod
+maszynowy do obsługi obu tych sytuacji. Wszystko jest zapisane w końcowym wykonywal-
+nym programie. Jeśli w właśnie stosowanym komputerze jest koprocesor arytmetyczny, to tyl-
+ko jedna sekcja kodu jest realizowana. Jeśli zaś koprocesora nie ma, to będzie używana inna
+sekcja kodu. Kompilator może też być tak sterowany, żeby generował kod tylko dla jednej
+z wymienionych sytuacji. Można na przykład czasem spotkać program, który wymaga obecno-
+ści koprocesora arytmetycznego i załamuje się, jeśli napotka komputer bez koprocesora. Takie
+zastosowania, jak przetwarzanie tekstów, zwykle nie czerpią żadnej korzyści z koprocesora
+arytmetycznego. Wymagają one bowiem przemieszczania danych w pamięci, a nie obliczania
+wyrażeń matematycznych. Obecność koprocesora arytmetycznego nie ma również wpływu na
+obliczenia obejmujące zmienne stałoprzecinkowe (liczby całkowite), gdyż są one realizowane
+wewnątrz jednostki centralnej. Z drugiej jednak strony, szybkość wykonywania DSP i innych
+programów obliczeniowych zawierających operacje zmiennoprzecinkowe może różnić się
+o rząd wielkości zależnie od tego, czy jest koprocesor arytmetyczny, czy go nie ma,
+
+W większości systemów komputerowych jednostka centralna (CPU) i główna pamięć znaj-
+dują się w oddzielnych układach scalonych. Z oczywistych względów chcielibyśmy, żeby
+główna pamięć była bardzo duża i bardzo szybka. Niestety taka pamięć jest bardzo kosz-
+
+<image/wzory/k3_page74_formula1.png>
+
+<image/figury/k3_page74_figure1.png>
+
+Rys. 4.5. Architektura typowego systemu komputerowego. Szybkość działania komputera jest ograniczo-
+na przez: 1) szybkość pracy poszczególnych podsystemów, 2) szybkość, z jaką dane mogą być przesyta-
+ne między tymi podsystemami

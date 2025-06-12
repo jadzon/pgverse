@@ -1,0 +1,61 @@
+semantyka (semantics) — relacje między symbolicznymi elementami języka
+programowania a ich znaczeniem, interpretacją i użyciem;
+
+słowo długie (long word) — element danych 64 bitowy;
+
+słowo kluczowe (Keyword) — jednostka leksykalna charakteryzująca element
+języka, np. /F;
+
+słowo podwójne (double word) — element danych zawierający 32 bity;
+ścieżka dostępu (access path) — skojarzenie nazwy symbolicznej ze zmienną
+w celu uzyskania komunikacji;
+
+tablica (array) — zmienna złożona zawierająca dane o identycznych
+cechach, do każdej z nich można odwoływać się osobno przy użyciu indek-
+sowania;
+
+typ danych (data type) — zbiór wartości razem ze zbiorem dozwolonych dla
+nich operacji:
+
+typ strukturalny danych (structured data type) — zmienna złożona z typów
+danych z wykorzystaniem deklaracji STRUCT lub FUNCTION_BLOCK,
+ukonkretnienie (instance) — pojedyncza, nazwana kopia pewnej struktury
+danych skojarzona z blokiem funkcyjnym lub programem, która istnieje
+od wywołania do następnego wywołania skojarzonego bloku lub programu:
+ulokowanie logiczne (/ogicał location) — lokalizacja adresowanej hierar-
+chicznie zmiennej w systemie, która może (ale nie musi) odnosić się
+do struktury fizycznych wejść, wyjść i pamięci sterownika;
+
+wartość początkowa (initial value) — wartość jaką przyjmuje zmienna
+w chwili startu systemu;
+
+węzeł OR (wired OR) — konstrukcja umożliwiająca realizację funkcji logicz-
+nego OR w języku LD przez złączenie prawych końców linii poziomych
+z linią pionową;
+
+wiadomość (message) — zbiór danych w określonym formacie przeznaczony
+do wymiany w połączeniu;
+
+wołanie (call) — element języka służący wywołaniu (invoke) do wykonania
+funkcji lub bloku funkcyjnego:
+
+wyznaczanie wartości (evaluation) — proces ustalania wartości dla wyraże-
+nia lub funkcji albo wyjść obwodu lub bloku funkcyjnego w trakcie wyko-
+nywania programu;
+
+zadanie (task) — element kontrolujący wykonanie grupy skojarzonych z nim
+elementów oprogramowania (okresowo lub przez wyzwolenie);
+
+zasięg (scope) — część elementu oprogramowania, w obrębie którego obo-
+wiązuje definicja deklaracji lub etykiety;
+
+zasięg globalny (global scope) — zasięg deklaracji obejmujący wszystkie
+elementy programu w ramach zasobu lub konfiguracji;
+
+zasięg łokalny (local scope) — zasięg stosowania deklaracji lub etykiety
+tylko w ramach elementu oprogramowania, w którym się pojawiają;
+
+zasób (resource) — element języka, który reprezentuje funkcje przetwarzania
+sygnałów (signal processing function) łącznie z funkcjami określonymi przez
+
+Dodatek A. Definicje wybranych pojęć według normy IEC 1131-3 509

@@ -1,0 +1,60 @@
+Wartość średnia i odchylenie standardowe 23
+
+ 
+
+ 
+
+mierzyć gęstość skał w równych, jednakowych odległościach na powierzchni Ziemi. W tej
+sytuacji parametrem opisującym oś poziomą będzie po prostu numer próbki. Gdyby to był
+sygnał ciągły, można by użyć innego opisu, jak np. czas, odległość, x itp.
+
+Dwa parametry tworzące sygnał są na ogół niezamienialne. O parametrze na osi y (zmienna
+zależna) mówi się jako o funkcji parametru na osi x (zmiennej niezależnej). Inaczej mówiąc,
+zmienna niezależna opisuje jak i kiedy jest pobierana każda próbka, podczas gdy zmienna
+zależna jest wynikiem pomiaru. Wybierając jakąś wartość na osi x, możemy zawsze znaleźć
+odpowiadającą jej wartość na osi y, lecz stwierdzenie odwrotne na ogół nie obowiązuje.
+Szczególną uwagę proszę zwrócić na słowo dziedzina, bardzo często używane w DSP. Na przy-
+kład o sygnale, dla którego zmienną niezależną (tj. parametrem na osi poziomej) jest czas,
+mówi się jako o sygnale w dziedzinie czasu. Dla innego, często występującego w DSP sygna-
+łu, zmienną niezależną jest częstotliwość; jest to sygnał w dziedzinie częstotliwości. Podobnie
+sygnały, dla których zmienną niezależną jest odległość, są sygnałami w dziedzinie przestrzeni
+(odległość jest wielkością związaną z przestrzenią). Rodzaj parametru na osi poziomej określa
+dziedzinę sygnału — to proste. A jak to jest w przypadku, gdy na osi poziomej jest wyrażona
+jakaś wielkość o charakterze ogólnym, jak np. numer próbki? Autorzy publikacji traktują na
+ogół taki sygnał jako sygnał w dziedzinie czasu. Próbkowanie odbywa się bowiem na ogół
+w równych odstępach czasu, a trudno znaleźć jakąś inną specjalną nazwę dla takich sygnałów.
+Chociaż na rys. 2.1 przedstawiono sygnały dyskretne, to jednak narysowano je liniami ciągły-
+mi. Próbek jest bowiem zbyt wiele, aby mogły być rozróżnialne jako pojedyncze punkty. Na
+wykresach wyrażających krótsze sygnały, powiedzmy o 100 próbkach, zwykle pokazuje się
+poszczególne punkty. Punkty mogą być lub nie łączone liniami ciągłymi, w zależności od spo-
+sobu, w jaki autor chce zaprezentować dane. Linia ciągła może na przykład sugerować, co się
+dzieje pomiędzy próbkami lub po prostu ułatwiać oku czytelnika śledzenie tendencji przebiegu
+wśród danych zaszumionych. Należy więc sprawdzić oznaczenie osi poziomej, aby stwierdzić,
+czy mamy do czynienia z sygnałem dyskretnym, czy ciągłym. Nie polegajcie tylko na zdolno-
+ściach ilustratora do zaznaczania 5
+
+Zmienna N jest w DSP używana zazwyczaj do wyrażania całkowitej liczby próbek w sygnale.
+Na przykład dla sygnałów na rys. 2.1 N=512. W celu uporządkowania danych przyporządko-
+wuje się każdej próbce jej numer, czyli indeks. Te liczby pojawiają się wzdłuż osi poziomej.
+Stosuje się dwa rodzaje sposobu zapisu numerów próbek. W pierwszym zapisie numery pró-
+bek zmieniają się od 1 do N (np. od 1 do 512), a w drugim od 0 do N— 1 (np. od O do 511).
+Matematycy często stosują pierwszy sposób (od 1 do N), a specjaliści od DSP — drugi (od 0
+do N— 1). W'tej książce będziemy używać drugiego zapisu. Nie traktujcie tego problemu jako
+trywialnego. Na pewno nieraz sprawi wam kłopor. Zwracajcie więc uwagę na tę kwestię!
+
+Wartość średnia i odchylenie standardowe
+
+Średnią, oznaczaną jako u (mała grecka litera mi), jest w potocznym języku statystyków
+nazywana średnia wartość sygnału. Wyznacza się ją tak, jak można się tego spodziewać,
+a więc przez zsumowanie wartości wszystkich próbek i podzielenie przez N. W postaci ma-
+tematycznej wygląda to następująco:
+
+<image/wzory/k3_page13_formula1.png>
+
+Wzór 2.1. Obliczanie wartości średniej sygnalu. Sygnal zawiera się od x, do xy _ ,, i jest indeksem
+zmieniającym się w tym zakresie wartości, jest wartością średnią
+
+Wyrażając to słownie: trzeba zsumować wartości sygnału x,, zmieniając indeks i od 0 do
+N-|1. Kończymy obliczanie, dzieląc uzyskaną sumę przez N. Jest to taki sam wzór jak:
+H; = (X9 + Xy + X Ł ... + Xy_ MN. Jeśli nie znacie jeszcze oznaczenia Z (duża litera grecka
+sigma) stosowanego jako symbol sumowania, dokładnie przestudiujcie te równania i porów-

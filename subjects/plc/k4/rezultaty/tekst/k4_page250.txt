@@ -1,0 +1,36 @@
+ry/k4_page250_formula1.png JH
+
+W oprogramowaniu APS obwody logiczne w języku ŁD wprowadza się często
+poprzez instrukcje języka /Ł.
+Podstawowe instrukcje bitowe (stykowe) tego oprogramowania są następujące:
+
+e XIC (eXamine If Closed) sprawdzanie czy styk zwierny jest zwarty
+(czy styk normalnie otwarty jest zamknięty).
+
+e XIO (eXamine If Open) sprawdzanie czy styk rozwierny jest rozwarty
+(czy styk normalnie zamknięty jest otwarty).
+
+e OTE (OuTput Energize)  wzbudzenie cewki przekaźnika
+Instrukcja OTE ustawia wartość na | zmiennej przyporządkowanej cewce, jeżeli
+w obwodzie logicznym dopływa do niej sygnał. Na Wyd. 4.7 są pokazane pod-
+
+stawowe funkcje stykowe. Natomiast Wyd. 4.2 pokazuje jak za pomocą tych
+instrukcji zrealizować następującą funkcję logiczną:
+
+<image/wzory/k4_page250_formula2.png>
+
+Z kolei bardziej złożoną funkcje logiczną pokazano na Wyd. 4.3, zaś Wyd. 4.4
+pokazuje możliwość przypisania wartości funkcji obwodu logicznego
+do plików danych różnych typów.
+
+<image/tabele/k4_page250_table2.png>
+
+Wyd. 4.1 Instrukcje XIC, XIO i OTE.
+
+<image/tabele/k4_page250_table1.png>
+
+Wyd. 4.2 Kombinacja OR/AND z wykorzystaniem instrukcji XIC i XIO.
+
+ 
+
+250 Rozdział : 5. Język schematów drabinkowych dła SLC 500

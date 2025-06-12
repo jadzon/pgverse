@@ -1,0 +1,38 @@
+190 2. Pojęcia podstawowe — układy
+
+przedstawiony na rys. 1.2-12b i nieliniowy pokazany na rys. 1.2-12c. Dla dwójnika D wy-
+stępowanie w obwodzie z rys. 1.2-12a oporu nieliniowego N jestzatem nieistotne, nie wpły-
+wa on bowiem ani na stan zaciskowy dwójnika D, ani na prądy lub napięcia występujące w jego
+strukturze. Zarówno równanie zaciskowe dwójnika D (wiążące wielkości u, i), jak i jego równania
+sieciowe, są równaniami liniowymi.
+
+Analogiczna sytuacja w obwodzie zawierającym źródło prądowe jest przedstawiona na
+rys 21-13
+
+   
+
+<image/figury/k3_page190_figure2.png>
+
+Przykład 2.1-17. Rozważmy połączenie, np. szeregowe, dwóch oporów nieliniowych N , i Na
+(rys. 2.1-14a) o równaniach:
+
+<image/wzory/k3_page190_formula1.png>
+
+W szczególnym przypadku można tak dobrać charakterystyki tych oporów, aby charakterystyka
+łączna (por. p. 1.5.2-B) była linią prostą, tzn. aby:
+
+<image/wzory/k3_page190_formula2.png>
+
+W takim przypadku nieliniowości obu oporów N, i N, kompensują się, ich połączenie zaś jest
+równoważne oporowi liniowemu R (rys. 21-14b).
+
+<image/figury/k3_page190_figure1.png>
+
+Przykład 2.1-18. Na rys. 2.1-15a jest przedstawiony mostek zbudowany z oporów liniowych
+Ry, Ra, R; i R,, przekątną mostka stanowi natomiast opór nieliniowy N, np. o równaniu:
+
+vzory/k3_page190_formula3.png (2.1-27)
+
+Równania sieciowe układu można zapisać w postaci:
+
+<image/wzory/k3_page190_formula4.png>

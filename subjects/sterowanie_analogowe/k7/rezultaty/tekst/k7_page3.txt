@@ -1,0 +1,34 @@
+Stan układu — układ autonomiczny, pierwszego rzędu
+
+Dla układu autonomicznego u(t)=0, przy niezerowych warunkach początkowych u,(ty)
+przebieg napięcia wyjściowego możemy łatwo wyznaczyć:
+
+<image/wzory/k/_page3_formula1.png>
+
+<image/wzory/k/_page3_formula2.png>
+R
+
+u(t | C - | y = uc(t)
+
+<image/wzory/k/_page3_formula3.png>
+
+d p — „al
+—e =ae
+dt
+
+POLITECHNIKA
+GDANSKA
+
+a
+O
+
+of
+(OJ
+D
+
+=
+5
+=
+O
+=
+o

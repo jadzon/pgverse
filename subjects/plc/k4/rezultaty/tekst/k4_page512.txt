@@ -1,0 +1,44 @@
+Dla części całkującej obliczanie pola powierzchni pod przebiegiem uchybu re-
+gulacji można w najprostszym przypadku zastąpić sumowaniem pól prostokątów:
+
+<image/wzory/k4_page512_formula1.png>
+
+Przy realizacji całkowania w regulatorze należy zwrócić uwagę na zapobieganie
+zjawisku nasycenia. Przy dużych uchybach regulacji lub przy szybkich zmianach
+uchybu regulacji sygnał wyjściowy regulatora przechodzi w jedno ze skrajnych
+położeń i wtedy nawet po zmianie znaku uchybu regulacji sygnał wejściowy
+przez pewien czas nie zmienia się. Aby temu przeciwdziałać można np. zatrzy-
+mać całkowanie w przypadku przekroczenia przez sygnał wyjściowy jednego ze
+skrajnych wartości (anti-reset windup).
+
+Część różniczkująca regulatora może być w najprostszym przypadku zrealizo-
+wana wg następującej zależności:
+
+<image/wzory/k4_page512_formula2.png>
+
+Aby ograniczyć wpływ szumów o dużych częstotliwościach, które po przejściu
+przez element różniczkujący mogłyby poważnie zakłócać układ regulacji, cyfro-
+wy element różniczkujący upodabnia się do analogowego przez dodanie
+elementu inercyjnego (filtru dolnoprzepustowego) o następującej transmitancji
+operatorowej:
+
+<image/wzory/k4_page512_formula3.png>
+
+Po jej przekształceniu otrzymujemy równanie różnicowe dla składowej różnicz-
+kowej :
+
+<image/wzory/k4_page512_formula4.png>
+gdzie:
+
+Tp- stała różniczkowania
+Tp/d- stała inercji (d - współczynnik podziału)
+
+Bardzo istotnym zagadnieniem podczas uruchamiania systemu jest dobór odpo-
+wiednich nastaw regulatorów. Istnieje wiele metod strojenia regulatorów, a ich
+dobór zależy często od możliwości jakie udostępnia obiekt regulacji. W dalszej
+części przedstawione zostaną metody doboru nastaw dla regulatorów PID oparte
+o badanie drgań krytycznych w zamkniętym układzie regulacji oraz o odpowiedź
+skokową obiektu w układzie otwartym.
+
+WZROSTY OTOZ TT TOTO TOT ER O ERO Z WZORZEC
+512 Dodatek B. Dobór optymalnych nastaw dła regułatora PID

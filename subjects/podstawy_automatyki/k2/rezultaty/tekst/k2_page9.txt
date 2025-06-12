@@ -1,0 +1,78 @@
+16
+
+odpowiedziskokowiimpulsowopisujwzory
+
+<image/wzory/k2_page9_formula1.png>
+
+Dla £ = 1 otrzymuje się obiekt o biegunie o krotności dwa (człon iner-
+cyjny n-tego rzędu, przy n = 2), natomiast dla $ | otrzymuje się
+obiekt inercyjny drugiego rzędu o T; £ T>.
+
+e CZŁON CAŁKUJĄCY IDEALNY
+
+Transmitancja i równanie opisujące obiekt mają postać:
+
+<image/wzory/k2_page9_formula4.png>
+
+gdzie k [2] jest współczynnikiem wzmocnienia, równym stosunkowi
+
+15. s Z ś | ,
+pochodnej sygnału wyjściowego do sygnału wejściowego, który wyraża
+się jako k = ź, gdzie 1, [s] nazywane jest czasem całkowania.
+
+odpowiedziskokowiimpulsowopisujwzory
+
+<image/wzory/k2_page9_formula5.png>
+
+e CZŁON CAŁKUJĄCY Z INERCJA
+
+| | Transmitancja i równanie opisujące obiekt mają postać:
+
+<image/wzory/k2_page9_formula7.png>
+
+gdzie k [*] jest współczynnikiem wzmocnienia, równym stosunkowi
+pochodnej sygnału wyjściowego do sygnału wejściowego w stanie usta-
+lonym, a T |s| - stałą czasową
+
+odpowiedziskokowiimpulsowopisujwzory
+
+<image/wzory/k2_page9_formula10.png>
+
+Szym aan TY A WZEWOTETE POT EE RAE ET TREO. RERZZEOE CZ AO
+
+e CZŁON RÓZNICZKUJĄCY IDEALNY
+
+Transmitancja i równanie opisujące obiekt mają postać:
+
+<image/wzory/k2_page9_formula2.png>
+
+gdzie k |s] jest współczynnikiem wzmocnienia równym stosunkowi syg-
+nału wyjściowego do pochodnej sygnału wejściowego, który wyraża
+się jako k = Ty, gdzie 7; |s) jest stałą czasową różniczkowania.
+
+odpowiedziskokowiimpulsowopisujwzory
+
+<image/wzory/k2_page9_formula3.png>
+
+e CZŁON RÓŻNICZKUJĄCY RZECZYWISTY
+
+Transmitancja i równanie opisujące obiekt mają postać
+
+<image/wzory/k2_page9_formula6.png>
+
+gdzie % |s| jest współczynnikiem wzmocnienia, równym stosunkowi
+sygnału wyjściowego do pochodnej sygnału wejściowego, a 1 (s| - stałą
+czasową
+
+odpowiedziskokowiimpulsowopisujwzory
+
+<image/wzory/k2_page9_formula8.png>
+
+e CZŁON OPÓŹNIAJĄCY (Z OPÓŹNIENIEM TRANSPORTOWYM)
+
+Transmitancja i równanie opisujące obiekt mają postać
+
+<image/wzory/k2_page9_formula9.png>
+
+gdzie k jest współczynnikiem wzmocnienia, a 7% |s| - opóźnieniem trans-
+portowym

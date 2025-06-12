@@ -1,0 +1,42 @@
+141
+
+<image/figury/k2_page136_figure1.png>
+
+Rys. 6.36: Wyniki predykcji szeregu czasowego. Linia niebieska przedstawia szereg zadany,
+linia zielona predykcje przez sieć radialną, czarna — przez warstwową sieć neuronową, czer-
+wona — przez uczący się system rozmyty
+
+Sieci przyrostowe
+
+W sieciach przyrostowych liczba neuronów jest na ogół mniejsza od liczby wektorów
+uczących. Tworzenie sieci rozpoczyna się od sieci z jednym neuronem, a następnie
+na stopniowym dodawaniu neuronów, aż do uzyskania błędu uczenia mniejszego od
+zadanego.
+
+Procedurę postępowania jest następująca:
+
+Symulacja sieci
+
+2. Na podstawie symulacji wyznaczenie wektora wejściowego xx dla którego po-
+wstaje największy błąd.
+
+*
+
+Dodanie do sieci jednego neuronu z centrum cy = X;.
+
+4. Ponowne wyznaczenie wag.
+
+PRZYKŁAD 6.11
+
+Zastosowano sieć przyrostową do aproksymacji następującej funkcji jednej zmiennej
+
+<image/wzory/k2_page136_formula1.png>
+
+Jej przebieg oraz użyty zbiór uczący przedstawiono na rys. ??
+
+Przy uczeniu przyjęto błąd graniczny wynoszący 1079. Poniżej tego błędu zeszła
+sieć o 32 neuronach (pełna sieć zawierała by 51 neuronów). Na rysunku ?? przedsta-
+wiono przebieg aproksymowanej funkcji i jej aproksymacje uzyskiwane przez sieci o
+6, 15 i 32 neuronach, a na rys. ?? przedstawiono przebieg błędu średniokwadratowego
+w trakcie dodawania kolejnych neuronów podczas uczenia. Dla oceny generalizacji
+sieci obliczono błąd średniokwadratowy dla 50 punktów znajdujących się pomiędzy

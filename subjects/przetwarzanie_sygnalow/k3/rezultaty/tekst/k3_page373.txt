@@ -1,0 +1,58 @@
+25. Specjalne techniki obrazowe
+
+W tym rozdziale przedstawiono cztery szczególne aspekty przetwarzania obrazów. Najpie
+są rozważane sposoby definiowania rozdzielczości przestrzennej, Określa ona, jaki musi być
+minimalny rozmiar obiektu, aby był on widoczny na obrazie. Następnie jest rozpatrywa
+ny stosunek sygnału do szumu, decydujący o tym, jak słaby obiekt może jeszcze być
+krywany. W dalszej części rozdziału wprowadzono techniki morfologiczne. Są to operacje
+nieliniowe stosowane do obróbki obrazów binarnych, w których każdy piksel jest albo bia:
+ły, albo czarny. Opisano też szczególnie godną uwagi technikę tomografii komputerowej,
+
+Zrewolucjonizowała ona diagnostykę medyczną, udostępniając szczegółowe obrazy wnętrz
+ciała ludzkiego.
+
+Rozdzielczość przestrzenna
+
+Przypuśćmy, że chcemy porównać dwa systemy obrazowe pod względem ich rozdzielcza
+przestrzennej. Chcemy więc się dowiedzieć, który system jest zdolny do wykrycia najmniej.
+szego obiektu. Dla uproszczenia problemu chcielibyśmy uzyskać odpowiedź w postaci jec
+liczby charakteryzującej każdy system. Umożliwi to bezpośrednie porównania i ułatwi decy:
+zję o wyborze systemu. Niestety, jeden parametr nie zawsze wystarcza do scharakteryzowa:
+nia wszystkich subtelnych aspektów obrazowania. Sprawę komplikuje fakt, że rozdzielczość
+przestrzenna jest ograniczona dwoma wyraźnymi i wzajemnie powiązanymi wpływami: od:
+stępem i aperturą próbkowania. Ten podrozdział poświęcono dwom głównym zagadnienior
+1) jaki pojedynczy parametr może najlepiej scharakteryzować rozdzielczość przestrzenną
+2) jaka jest zależność między odstępem i aperturą próbkowania.
+
+Na rys. 25.1 a) przedstawiono profile trzech kołowo symetrycznych funkcji PSF -
+„okrągła czapka”, gaussowskiej i wykładniczej. Są to rodzaje PSF najczęściej stoso
+
+w systemach obrazowych. Jak stwierdzono w poprzednim rozdziale, ksztak funkcji PSF
+„okrągła czapka” może wynikać z niewłaściwego zogniskowania układu soczewek. Funkc
+gaussowska zaś powstaje, gdy kumulują się błędy losowe, np. przy oglądaniu gwiazd prze
+zaburzoną atmosferę, Wykładnicza PSF jest wytwarzana na przykład wówczas, gdy elekt
+ny lub promieniowanie rentgenowskie padają na warstwę luminoforu, gdzie są przetwarza
+ne na światło. Jest stosowana w detektorach promieniowania, wzmacniaczach noktowii
+nych i monitorach ekranowych z lampami elektronopromieniowymi. W tych ra
+dokładny kształt trzech wymienionych funkcji PSF nie jest ważny. One tylko reprez
+wszystkie funkcje PSF spotykane w zastosowaniach praktycznych.
+
+Funkcja PSF zawiera pełną informację o rozdzielczości przestrzennej. Aby wyrazić rozdzie
+czość jedną liczbą, możemy pominąć kszłałt PSF i po prostu zmierzyć szerokość wykresu £
+funkcji. Najczęściej stosowanym sposobem określania szerokości jest wartość FWHM (Fu
+Width at Half Maximum), czyli szerokości w połowie maksymalnej wysokości. Na p
+wszystkie PSF na rys. 25.1 a) mają szerokość FWHM równą 1 jednostce.
+
+Ten sposób, niestety, ma dwie istotne wady. Po pierwsze, nie jest on zgodny z innymi mi
+rami określającymi rozdzielczość przestrzenną, włącznie z subiektywną oceną obserwator
+oglądających obrazy. Po drugie, zazwyczaj bardzo trudno jest bezpośrednio pomierzyć I
+Wyobraźcie sobie wprowadzanie impulsu do systemu obrazowego, czyli uzyskanie obra
+będącego bardzo małą, białą plamką na czarnym tle. Pobrany obraz będzie, z definicji, fu
+cją PSF systemu. Trudność polega na tym, że zmierzona funkcja PSF będzie zawierała tył
+kilka pikseli, a kontrast będzie mały. Jeśli nie będziecie wystarczająco staranni, to szum st
+mi cały pomiar. Jako przykład wyobraźmy sobie, że obraz impulsowy jest matrycą 512 x $
+pikseli złożoną z samych zer oprócz jednego piksela mającego wartość 255. Porównajmy
+teraz z normalnym obrazem, gdzie wszystkie 512 x 512 pikseli mają średnią wartość ok.
+Według przybliżonego oszacowania, sygnał w obrazie impulsowym jest ok. 100 000 raz
+słabszy niż normalny obraz. Nic więc dziwnego, że stosunek sygnału do szumu jest zły;
+nie ma prawie żadnego sygnału!

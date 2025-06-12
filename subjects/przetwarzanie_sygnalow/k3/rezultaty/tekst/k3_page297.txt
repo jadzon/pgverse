@@ -1,0 +1,27 @@
+Stabilność 325
+
+<image/figury/k3_page297_figure1.png>
+
+Stabilność
+
+Podstawowym ograniczeniem w filtrach cyfrowych realizowanych przez splot jest czas
+
+<image/figury/k3_page297_figure3.png>
+
+Przyjrzyjmy się dokładnie tym parametrom. Współczynniki b mają wartości bezwzględne ok.
+dziesięć. Stosując pojedynczą dokładność, uzyskuje się szum zaokrąglenia w każdej z tych
+liczb równy ok. jednej dziesięciomilionowej wartości współczynnika, tj. 10%. Spójrzmy te-
+raz na współczynniki a o wartości ok. 107”. Coś tu jest w sposób oczywisty nie w porząd-
+ku. Udział pochodzący od sygnału wejściowego (przez współczynniki a) będzie 1000 razy
+mniejszy od szumu z poprzednio obliczonego sygnału wyjściowego (przez współczynniki b).
+Taki filtr nie będzie działał. Krótko mówiąc, szum zaokrąglania ogranicza liczbę biegunów,
+jaką można zastosować w filtrze. Ta liczba będzie w niewielkim stopniu zależna od zafalo-
+wań i od rodzaju przepustowości filtru (dolno- czy górnoprzepustowy). Przybliżone liczby,
+przy pojedynczej dokładności, podano w tablicy 20.3.
+
+Działanie filtru zaczyna się pogarszać, gdy dochodzi się do granic określonych w tablicy
+20.3. Na odpowiedzi skokowej pojawi się wówczas zwiększony przerzut, tłumienie w pa-
+śmie zaporowym będzie słabe, a odpowiedź częstotliwościowa będzie miała nadmierne za-
+falowania. Jeśli, projektując filtr, posuniemy się zbyt daleko lub występuje jakiś błąd we
+współczynnikach, to na wyjściu przypuszczalnie pojawi się oscylacja, zanim nie nastąpi
+przekroczenie zakresu.

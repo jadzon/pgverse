@@ -1,0 +1,29 @@
+12. Szybkie przekształcenie Fouriera
+
+Ważne różnice między algorytmami FFT dotyczą sposobu wprowadzania i wyprowadza:
+nia danych do i z podprogramu. W programie w BASIC-u dane wchodzą do podprogramu
+i opuszczają go w postaci matryc REX[ ] i IMX[ ], o próbkach od 0 do N— 1. W programie
+w FORTRAN-ie dane są przekazywane w zespolonej matrycy X( ), o próbkach od 1 do N.
+Ponieważ jest to matryca zmiennych zespolonych, więc każda próbka w X[ ] zawiera dwie
+liczby — część rzeczywistą i część urojoną. Informacja o długości DFT też powinna
+wprowadzona do tych podprogramów. W programie w BASIC-u do tego celu służy i
+N%. W programie w FORTRAN-ie zaś stosuje się zmienną M, która jest zdefiniowana j
+równa log>N. Na przykład, M będzie równe 8 dla 256-punktowego DFT, 12 - dla 4096 -punk-
+towego itd. Rzecz w tym, że programista piszący podprogram FFT ma do dyspozycji wi
+opcji powiązania z programem głównym. Szczególnie kłopotliwe są matryce o próbkach
+I do N, tak jak w programie w FORTRAN-ie. W większości publikacji o DSP (z tą książ:
+ką włącznie) algorytmy są objaśniane przy założeniu, że matryce zawierają próbki od 0
+N— 1. Na przykład jeśli matryce obejmują próbki od 1 do N, to w dziedzinie częstotliw
+występuje symetria wokół punktów 1 i N/2 + 1, a nie wokół 0 i N/2. Stosowanie zespoł
+DFT do obliczania rzeczywistego DFT ma jeszcze jedną ciekawą zaletę. Symetria zespo
+nego DFT między dziedzinami czasu i częstotliwości jest lepsza niż rzeczywistego DFT.
+
+Tablica 12.3. FFT w FORTRAN-ie. Dane są wprowadzane do tego podprogramu w postaci
+X( ) M. Liczba całkowita M jest logarytmem o podstawie 2 z dlugości DFT, tj. M = 8 dla
+256-punktowego DFT, M = 12 dla 4096-punktowego itd. W matrycy zespolonej X( ) są
+
+X( ) w miejsce poprzednich danych wpisuje się dane z dziedziny częstotliwości. Uwaga: w tym
+podprogramie jest wymagane, żeby sygnaty wejściowy i wyjściowy zmieniały się od X(1) do X(N),
+a nie od X(0) do X(N - 1), jak zwykle
+
+<image/tabele/k3_page208_table1.png>

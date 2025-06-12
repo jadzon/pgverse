@@ -1,0 +1,11 @@
+112 6. Spłot
+
+a. Filtr dolnoprzepustowy
+
+<image/figury/k3_page98_figure1.png>
+
+<image/figury/k3_page98_figure2.png>
+
+Rys. 6.4. Przykłady sygnałów przetwarzanych przy użyciu spłotu. W wielu operacjach przetwarzania sygnatów stosuje
+się bardzo proste odpowiedzi impulsowe. Jak wynika z podanych przykładów, bardzo duże zmiany można uzyskać przy
+użyciu bardzo niewielu punktów niezerowych w odpowiedzi impulsowej

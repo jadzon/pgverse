@@ -1,0 +1,17 @@
+213
+
+dykaty: exists (selektywne rozpoznawanie cząsteczek), bind (utworzenie wiązania),
+unbind (rozrywanie wiązań) oraz move (przesuwanie cząsteczek).
+
+Przykładowy program został przedstawiony w tablicy ??. Jak można zauważyć
+program składa się z sekwencji dwóch predykatów search i action, przy czym pierw-
+szy z nich grupuje predykaty służące do rozpoznawania struktur, natomiast drugi,
+predykaty umożliwiające manipulowanie rozpoznanymi cząsteczkami.
+
+Każdy predykat structure składa się z sekwencji wywołań predykatu exists oraz
+zanegowanego predykatu structure. Pozwala to na wykrycie określonej struktury przy
+warunku nie występowania innych określonych struktur. W przykładowym progra-
+mie cząsteczka o typie 10101010 jest inhibitorem reakcji. Jej występowanie zabloko-
+wałoby zajście przemiany.
+
+<image/tabele/k2_page208_table1.png>

@@ -1,0 +1,53 @@
+22. Rozwiązania równań ukladów SLS 227
+
+Jeśli warunek (2.2-13) jest spełniony w odniesieniu do każdego elementu układu i,
+w konsekwencji, dla każdego elementu układu można przyjąć równość typu
+(2.2-14), mówimy wówczas, że w układzie panuje już stan ustalony. Oznacza to, że
+rozwiązanie (2.2-14) staje się praktycznie identyczne z rozwiązaniem, które odpo-
+wiadałoby działaniu siły elektromotorycznej e w przedziale czasu (— ©, -+ co).
+
+Składową i, w rozwiązaniu (2.2-11) nazywamy składową przejściową lub
+składową nieustaloną; składową i, nazywamy składową ustaloną.
+
+Z rozważań tych wynika, że warunkiem powstania stanu ustalonego w roz-
+ważanym układzie SLS jest, aby składowe przejściowe prądów i napięć wszystkich
+elementów układu dążyły do zera przy t > + ©, tzn. aby były spełnione warunki
+typu (2.2-13).
+
+Jak będzie to wynikało z rozważań, które przedstawimy w tomie III, warunki
+te są spełnione przy założeniu, że wielowrotnik z rys. 2.1-20 jest pasyw-
+ny i stratny? (por. p. 4.3.4-]).
+
+Uwaga. Przeprowadzone rozważania można bez trudu uogólnić na przypadek włączenia
+w chwili t = 0 więcej niż jednego źródła niezależnego (rys. 2.1-20) pod warunkiem, że wszystkie siły
+elektromotoryczne i wydajności prądowe są albo stałe, albo sinusoidalnie zmienne o tej samej
+pulsacji, albo okresowe o tym samym okresie. Jedyna różnica (formalna, zresztą) polegałaby na tym,
+że prawa strona równania (2.2-7) byłaby kombinacją liniową wszystkich sił elektromotorycznych
+i wydajności prądowych oraz odpowiednich ich pochodnych. Przy przyjętych założeniach nie
+zmieniłoby to w niczym toku rozumowania i wynikających z niego konkluzji.
+
+C. Przejście od stanu nieustalonego do stanu ustalonego. Przyjmijmy, że
+nadal obowiązują wszystkie założenia z p. B. Po włączeniu źródeł w chwi-
+li t = O wszystkie prądy i napięcia w układzie mają postać (2.2-11), tzn. są
+sumami składowej przejściowej i składowej ustalonej. Przy założeniu, że dla
+wszystkich prądów i napięć warunki typu (2.2-13) są spełnione, składowe
+przejściowe stają się po pewnym czasie dostatecznie małe i można je pominąć
+wobec składowych ustalonych. Mówimy wówczas, że układ znajduje się już
+w stanie ustalonym.
+
+Prądy i napięcia w układzie w stanie ustalonym są takie, jakie występowałyby,
+gdyby pobudzenia działały od — ©, tzn. w przedziale (— co, +00).
+
+Stan ustalony charakteryzuje się tym, iż upłynął dostatecznie duży
+czas od chwili włączenia t = 0 i efekty przejściowe, które reprezentują
+składowe przejściowe, zdążyły zaniknąć. Tak długo natomiast, jak długo
+składowe przejściowe nie są do pominięcia wobec składowych ustalo-
+nych, mówimy, że układ znajduje się w stanie nieustalonym lub w stanie
+przejściowym.
+
+Przejście od stanu nieustalonego do stanu ustalonego jest ciągłe, a granica
+między nimi umowna. Zależy ona w praktyce od tego, z jaką dokiadnością
+jesteśmy gotowi zaakceptować przybliżoną równość (2.2-14).
+
+1) Problem tu poruszony wiąże się z pojęciem stabilności układu, o którym będzie mowa
+w tomie III.

@@ -1,0 +1,55 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 13
+
+« na poziomie urządzeń peryferyjnych. Modyfikacje w tej warstwie stanowią podstawowy wyróżnik
+danego typu mk. Użytkownik otrzymuje do dyspozycji całą, niekiedy dość liczną rodzinę mk
+różniących się kombinacjami wbudowanych w układ scalony układami we/wy.
+
+« na poziomie warstwy zacisków zewnętrznych i typu obudowy. Dotyczy głównie parametrów
+elektrycznych zacisków mk oraz stosowanego typu obudowy mk.
+
+18. Definicja programowania zagnieżdżonego i cechy programów zagnieżdżonych.
+Definicja:
+
+Tworzenie oprogramowania dla mse opartych na mk (i nie tylko) i ukierunkowanych na zadania
+pomiarowo-sterujące oraz komunikacyjne określa się w literaturze mianem programowania
+zagnieżdżonego (embeded programming).
+
+Cechy programów zagnieżdżonych:
+
+» Program jednoznacznie ustala funkcję mse, tzn. użytkownik ma możliwość zmiany funkcji systemu
+zazwyczaj tylko w niewielkim zakresie przewidzianym przez program użytkowy. Ta właśnie cecha
+określana jest jako „zagnieżdżenie” programu.
+
++ Działanie programu musi spełniać określone wymagania czasowe dotyczące przekraczania
+maksymalnego czasu reakcji na określone zdarzenia zewnętrzne oraz realizacji określonych zadań
+programowych w nieprzekraczalnym czasie. Ta cecha określana jest jako praca programu w „czasie
+rzeczywistym”.
+
+. Są to programy działające na specyficznych zasobach sprzętowych warunkowanych
+ukierunkowaniem budowy sprzętowej mse na konkretne zadanie.
+
+19. Metody uruchamiania programów napisanych na mk.
+
+« metoda prób i błędów - polega na wielokrotnym programowaniu mk i za każdym razem obserwacji
+działania programu w mse i jego korekcji na podstawie tych obserwacji, aż do uzyskania
+prawidłowego działania mk,
+
+« zastosowanie monitorów programowych (monitors) i programów śledzących (debuggers) — są
+najczęściej stosowane.
+
+- Monitory są instalowane w pamięci programu mk i kontrolują wykonywanie właściwego
+programu użytkowego oraz komunikują się z systemem rozwojowym poprzez złącze szeregowe.
+
+- — Natomiast debugery pracują w przyłączonych do systemu komputerach PC,
+
+« zastosowanie emulatora sprzętowego mk (ICE — in-circuit emulators) — polega to na umieszczeniu,
+na czas uruchamiania programu, w podstawce na mk sondy połączonej ze specjalnym układem
+sprzętowym, który emuluje działanie mk. Emulator wiernie odtwarza wszystkie właściwości mk
+łącznie z jego wszystkimi układami peryferyjnymi oraz pamięcią,
+
+. wykorzystanie specjalnych zasobów wewnętrznych mk — niektóre mk zwłaszcza 32-bitowe
+posiadają specjalne zasoby sprzętowe przeznaczone do wspierania procesu uruchomiania programu.
+Zasoby te oferują w przybliżeniu wszystkie te możliwości co emulator sprzętowy, między innymi
+ustawienie pułapek oraz pracę krokową. Zasoby te komunikują się przez dedykowane wyprowadzenia
+mk. Są one dostępne wyłącznie na etapie uruchamiania programu, zatem nie są wykorzystywane
+przez normalny program użytkowy.

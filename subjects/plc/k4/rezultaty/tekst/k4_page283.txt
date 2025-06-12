@@ -1,0 +1,23 @@
+e w obrębie danego segmentu przeglądane są poszczególne podsieci zgodnie
+z kolejnością ich umieszczenia w programie, a więc wynikającą z numeracji,
+
+e stan poszczególnych elementów podsieci sprawdzany jest od elementu poło-
+żonego najwyżej po położony najniżej w skrajnej lewej kolumnie by w ko-
+lejnym kroku, przesuwając się na prawo, powtarzać czynność przeglądania
+od góry ku dołowi, por. Rys. 6.3.
+
+<image/figury/k4_page283_figure1.png>
+
+Rys. 6.2 Sterownik Modicon984 A120 Compact
+
+Network 1
+
+<image/figury/k4_page283_figure2.png>
+
+Rys. 6.3 Sposób przeglądania programu w sterownikach Modicon.
+
+   
+
+OPZZ YZ
+
+6.1 Wprowadzenie 283

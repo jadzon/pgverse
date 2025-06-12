@@ -1,0 +1,53 @@
+Efekt Gibbsa 213
+p o p R Z
+
+Na rysunkach 11.5 c), d) pokazano, że impuls trójkątny w dziedzinie czasu odpowiada w dzie-
+—. dzinie częstotliwości kwadratowi funkcji sin(x)/x (plus aliasing). Tu ważna jest nie tyle ta para
+ transformat, co raczej przyczyna jej słuszności. Trójkąt o długości 2M — 1 punktów w dziedzinie
+czasu może być utworzony przez splot M-punktowego impulsu prostokątnego z samym sobą.
+Ponieważ splot w dziedzinie czasu daje mnożenie w dziedzinie częstotliwości, więc splatanie
+przebiegu z samym sobą powoduje podnoszenie do kwadratu w dziedzinie częstotliwości.
+Czy istnieje jakiś przebieg, który jest swoją własną transformatą Fouriera? Tak, jest tylko jeden
+taki przebieg — gaussowski. Na rys. 11.5 e) pokazano krzywą Gaussa, a na rys. 11.5 f) — od-
+powiadające jej widmo częstotliwościowe, będące też krzywą gaussowską. Ta zależność jest
+słuszna tylko wtedy, gdy pomija się aliasing. Zależność między odchyleniami standardowymi
+w dziedzinach czasu i częstotliwości jest określona wzorem: 2x0; = 1/6,. Na rys. 11.5 f) poka-
+zano jedną część krzywej Gaussa; ujemne częstotliwości w widmie uzupełniają całą krzywą,
+której środkiem symetrii jest częstotliwość zerowa.
+Na rys. 11.5 g) przedstawiono tak zwany pakiet gaussowski. Jest on utworzony przez po-
+mnożenie fali sinusoidalnej przez krzywą Gaussa. Na przykład przebieg na rys. 11.5 g)
+jest falą sinusoidalną pomnożoną przez krzywą Gaussa taką, jak pokazana na rys. 11.5 e).
+Takiemu przebiegowi odpowiada w dziedzinie częstotliwości przebieg gaussowski o środku
+symetrii innym niż częstotliwość zerowa. Tak jak poprzednio, ważna jest nie tyle ta para
+transformat, co sposób jej uzasadnienia. Ponieważ sygnał w dziedzinie czasu jest w tym
+przypadku iloczynem dwóch przebiegów, więc przebieg w dziedzinie częstotliwości będzie
+| splotem dwóch widm częstotliwościowych. Widmo częstotliwościowe fali sinusoidalnej jest
+| funkcją delta o środku symetrii w punkcie częstotliwości fali sinusoidalnej. Widmo często-
+| tliwościowe przebiegu gaussowskiego jest też przebiegiem gaussowskim o środku symetrii
+przy częstotliwości zerowej. Splot tych dwóch widm daje przebieg gaussowski o środku sy-
+metrii przy częstotliwości fali sinusoidalnej. Ten rezultat wydaje się nam już znany; jest to
+procedura identyczna z modulacją amplitudy opisaną w poprzednim rozdziale.
+
+Efekt Gibbsa
+
+Na rys. 11.6 przedstawiono sygnał w dziedzinie czasu syntetyzowany z sinusoid. Odtwarzany sygnał
+pokazano na ostatnim rysunku (rys. 11.6 h). Ponieważ ten sygnał ma długość 1024 punkty, więc do
+pełnego odtworzenia jest wymagane 513 indywidualnych częstotliwości. Na rysunkach 11.6 a) + g)
+Na przykład na rys. 11.5 f) zobrazowano sygnał odtworzony przy zastosowaniu częstotliwości od 0
+do 100. Ten sygnał utworzono, wykonując przekształcenie DFT sygnału z rys. 11.6 h), ustawiając
+sygnały o częstotliwościach od 101 do 512 na wartość zerową i wykonując następnie odwrotne
+przekształcenie DFT w celu znalezienia wynikowego sygnału w dziedzinie czasu.
+
+W miarę dodawania do syntezy coraz to większej liczby częstotliwości, odtworzony sygnał staje
+
+zboczu pojawia się przerzut i tzw. dzwonienie (oscylacje zanikające). Jest to tzw. efekt Gibbsa, od
+nazwiska matematyka i fizyka Josiaha Gibbsa, który wyjaśnił to zjawisko w roku 1899.
+Przyjrzyjmy się dokładniej przerzutowi na rysunkach 11.6 e), f), g). W miarę dodawania większej
+liczby sinusoid przerzut staje się węższy, jednak amplituda przerzutu pozostaje w przybliżeniu
+taka sama i wynosi ok. 9% amplitudy impulsu. Nie ma kłopotu z sygnałami dyskretnymi; prze-
+rzut zostaje wyeliminowany wraz z dodaniem ostatniej wymaganej częstotliwości. Nie da się jed-
+nak tak łatwo wyjaśnić odtwarzania sygnału ciągłego. Do syntezy sygnału ciągłego trzeba by za-
+stosować nieskończoną liczbę sinusoid. Problem w tym, że amplituda przerzutu nie zmniejsza się,
+gdy liczba sinusoid dąży do nieskończoności. Przerzut ciągle pozostaje ok. 9%. Uwzględniając tę
+sytuację (i inne argumenty), można się zastanawiać, czy jest możliwe odtworzenie zbocza przez
+sumowanie ciągłych sinusoid. Wspomnijmy tu spór między Lagrangem i Fourierem.

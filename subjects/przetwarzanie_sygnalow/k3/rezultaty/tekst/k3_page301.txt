@@ -1,0 +1,10 @@
+Stabilność 329
+
+   
+
+odpowiedzi
+w charakterystyce filtru, ustawiana jako zmienna NP, musi być parzysta, z zakresu od 2 do 20. Na zakończenie programu
+współczynniki a i b są zapisane w matrycach A ] i B[ ] (a = A[0], a, = A[1] itd.). Tablica 20.5 zawiera podprogram
+wywoływany z wiersza 340 programu głównego. Do tego podprogramu jest przekazywanych sześć zmiennych, a uzyskuje
+
+<image/tabele/k3_page301_table1.png>

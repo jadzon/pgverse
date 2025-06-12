@@ -1,0 +1,59 @@
+2 | |. m 0 w Z
+
+33. Przekształcenie Z
+
+c
+
+Tak jak filtry analogowe projektuje się, stosując przekształcenie Laplace'a, to rekursywne
+filtry cyfrowe są opracowywane przy użyciu metody będącej odpowiednikiem przekształce-
+nia Laplace'a, a zwanej przekształceniem Z. Ogólna metodyka obu tych przekształceń jest
+taka sama — wykonuje się przebadanie odpowiedzi impulsowej sinusoidami i przebiegami
+wykładniczymi w celu znalezienia zer i biegunów systemu. W przekształceniu Laplace'a
+posługujemy się równaniami różniczkowymi, dziedziną s i płaszczyzną zmiennej zespolo-
+nej s. W przekształceniu Z zaś posługujemy się, odpowiednio, równaniami różnicowymi,
+dziedziną z i płaszczyzną zmiennej z. Obie metody nie są jednak wzajemnym odbiciem lu-
+strzanym; płaszczyzna zmiennej zespolonej s jest ujęta w prostokątny układ współrzędnych,
+podczas gdy na płaszczyźnie zmiennej z stosuje się współrzędne biegunowe. Rekursywne
+filtry cyfrowe często się projektuje, rozpoczynając od jednego z klasycznych filtrów anało-
+gowych, takiego jak filtr Butterwortha, Czebyszewa lub eliptyczny. Następnie przeprowa-
+dza się szereg przekształceń matematycznych w celu uzyskania żądanego filtru cyfrowego.
+Przekształcenie Z tworzy ogólną strukturę tych operacji matematycznych. Takie podejście
+zastosowano w programie do projektowania filtru Czebyszewa przedstawionym w rozdziale
+20. W tym rozdziale ta metoda będzie omówiona szczegółowo.
+
+Właściwości dziedziny z
+
+W celu uzasadnienia stwierdzenia, że przekształcenia Z i Laplace'a są odpowiednikami, wy-
+każemy, w jaki sposób można przekształcenia Laplace'a przemienić w przekształcenie Z.
+Według informacji podanych w poprzednim rozdziale przekształcenie Laplace'a definiuje się
+zależnościa miedzy syegnałami w dziedzinie czasu i w dziedzinie s:
+
+<image/wzory/k3_page535_formula1.png>
+
+gdzie x(1) i X(s) są — odpowiednio — reprezentacjami sygnału w dziedzinach czasu i s. Jak
+powiedziano w poprzednim rozdziale, ten wzór daje analizę sygnału w dziedzinie czasu jako
+sumy fal sinusoidalnych i kosinusoidalnych o amplitudach zmieniających się w sposób wy-
+kładniczy. Można to zrozumieć, zamieniając zmienną zespoloną s przez równoważne wyra-
+żenie 6 + jw. Przy tym alternatywnym zapisie przekształcenie Laplace'a przyjmuje postać:
+
+<image/wzory/k3_page535_formula2.png>
+
+Jeśli interesują nas tylko rzeczywiste sygnały w dziedzinie czasu (najczęstszy przypadek), to
+górna i dolna połówka płaszczyzny zmiennej zespolonej s są wzajemnie odbiciami lustrzany-
+mi i wyraz e** redukuje się do prostych przebiegów sinusoidalnych i kosinusoidalnych. Ten
+wzór określa każde położenie na płaszczyźnie zmiennej zespolonej s dwoma parametrami
+G i ©. Wartość każdego położenia jest liczbą zespoloną składającą się z części rzeczywistej
+i urojonej. W celu wyznaczenia części rzeczywistej mnoży się sygnał w dziedzinie czasu
+przez falę kosinusoidalną o pulsacji © i o amplitudzie zmieniającej się wykładniczo zgodnie
+ze współczynnikiem tłumienia o. Wartość części rzeczywistej X(06,0) jest równa całce uzy-
+skanego przez mnożenie przebiegu. W podobny sposób uzyskuje się wartość części urojonej,
+stosując jednak falę sinusoidalną. Jeśli to wszystko wydaje się wam mało znane, to przed
+przejściem do dalszej części materiału powinniście przejrzeć poprzedni rozdział.
+Przekształcenie Laplace'a można zamienić w przekształcenie Z w trzech krokach. Pierwszy
+krok jest najbardziej oczywisty — zamiana sygnału ciągłego na dyskretny. Wykonuje się to,
+zastępując zmienną czasową £ numerem próbki n i zamieniając całkę na sumowanie:
+
+x(e.0)- Ż. z|n]e"e 7"
+
+Zauważcie, że w wyrażeniu X(6, ©) zastosowano nawiasy okrągłe, co wskazuje, że sygnał
+jest ciągły, a nie dyskretny. Chociaż operujemy już sygnałem dyskretnym w dziedzinie czasu

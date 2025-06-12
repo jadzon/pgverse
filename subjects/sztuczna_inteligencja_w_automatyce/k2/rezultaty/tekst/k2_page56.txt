@@ -1,0 +1,46 @@
+61
+
+Przykład dowodu metodą rezolucji
+
+PRZYKŁAD 4.11
+
+Dany jest zbiór formuł rachunku predykatów (zbiór wpz)
+
+<image/wzory/k2_page56_formula1.png>
+
+2. (vX)jd(X ) * —p(X)|
+
+3. (3X)|d(X) A ż(X)]
+Należy udowodnić, że:
+
+4. (3X)[i(X) A pk(X)|
+
+Wyrażenia 1, 2, 3 wraz z zanegowaną tezą 4 po przekształceniu do postaci klauzul:
+
+<image/wzory/k2_page56_formula2.png>
+
+Teraz stosując rezolucję do wybranych par klauzul otrzymujemy kolejno:
+
+5. pk(a) rezolwenta 3b i 4
+6. p(a) rezolwenta 5i 1
+7. —d(a) rezolwenta 6i 2
+8. NIL rezolwenta 7 i 3a.
+Powyższe etapy dowodzenia zilustrowane są na rys ??.
+Zauważmy, że np. nadając predykatom pk(X), p(X), d(X), i(X) interpretację:
+
+programujący komputery, programista, delfin i inteligentny, udowodniliśmy powyżej,
+że ze zdań:
+
+programujący komputery jest programistą
+delfiny nie są programistami
+niektóre delfiny są inteligentne
+
+wynika zdanie:
+niektórzy nie programujący komputerów są inteligentni.
+
+4.1.6. Język PROLOG a wnioskowanie w rachunku predyka-
+tów
+
+Na poniższym przykładzie pokażemy, że język PRÓLOG (patrz rozdział 7) jest sys-
+
+temem dowodzenia twierdzeń rachunku predykatów w oparciu o rezolucję.

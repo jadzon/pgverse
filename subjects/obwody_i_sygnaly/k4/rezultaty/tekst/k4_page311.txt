@@ -1,0 +1,38 @@
+3.6. Obwody rezystancyine ze wzmacniaczami oberacvinvmi 313
+
+damnilza saaadj|_figure'1.ong
+<image/wzory/k4_page311_formula1.png>
+
+| Zauważmy, że moc P. jest równa mocy dysponowanej źródła. Wynik ten jest oczywisty wobec
+faktu, że żyrator jest elementem bezstratnym, tzn. nie pobiera mocy. Całkowita moc pobierana ze
+źródła przez obciążenie wydziela się w przewodności G. Uwzględniając właściwość bezstratności
+żyratora, moglibyśmy zatem od razu podać wynik na moc P,, bez przeprowadzania obliczeń prądów
+i napięć.
+
+Przykład 3.5-11. W układzie z rys. 3.5-13a dobierzemy wartość oporu Ry, dla której w oporze
+tym wydziela się maksymalna moc. Następnie obliczymy tę moc. Przyjmiemy następujące wartości
+parametrów układu: E=2V, J=2mA, R=3kQ, f=2.
+
+Dwójnik źródłowy AB możemy, zgodnie z twierdzeniem Thevenina, przedstawić w postaci
+zastępczego źródła napięciowego o parametrach (por. przykłady 3.2-2, 3.3-4 i 3.3-7):
+
+<image/wzory/k4_page311_formula2.png>
+
+b) R.
+
+ 
+
+Rys. 3.5-13
+Tak więc:
+
+<image/wzory/k4_page311_formula3.png>
+
+3.6. OBWODY REZYSTANCYJNE ZE WZMACNIACZAMI
+OPERACYJNYMI
+
+Współczesne wzmacniacze operacyjne są tanimi, masowo produkowanymi
+układami scalonymi”) o bardzo szerokim zakresie zastosowań. Występują one
+
+1) Produkowane fabrycznie wzmacniacze operacyjne są złożonymi układami scalonymi
+zawierającymi kilkadziesiąt oazykie i rezystorów. Znanych jest obecnie ponad tysiąc różnych
+typów wzmacniaczy operacyjnyc

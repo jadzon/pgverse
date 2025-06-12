@@ -1,0 +1,29 @@
+e Jeżeli na wejściu EN występuje wartość TRUE (1) to operacje zdefiniowane
+przez ciało funkcji są wykonywane a na wyjściu ENO powinna pojawić się
+wartość 7RUE pod warunkiem. że operacje te zostały wykonane prawidłowo.
+Wystąpienie błędu wykonania powoduje pojawienie się na wyjściu ENO
+wartości FALSE (0).
+
+Przykłady użycia w językach graficznych wejścia EN i wyjścia ENO pokazano
+w Tab. 2.16.
+
+<image/tabele/k4_page49_table1.png>
+
+wzory/k4_page49_formula1.pn
+
+Dek!aracja funkcji może być wykonana tekstowo lub graficznie. Przykład takiej
+deklaracji dla funkcji o nazwie S/ZMPLE_FUN w języku tekstowym i graficznym
+pokazano w Tab. 2.17. Słowami kluczowymi ograniczającymi deklarację funkcji
+są FUNCTION oraz END_FUNCTION. Ciało funkcji określa jakie działania
+mają być wykonane na argumentach wejściowych i w jaki sposób należy obli-
+czyć wartość wyjściową funkcji.
+
+ 
+
+<image/figury/k4_page49_figure1.png>
+
+ 
+
+ 
+
+2.3 Elementy oprogramowania 49

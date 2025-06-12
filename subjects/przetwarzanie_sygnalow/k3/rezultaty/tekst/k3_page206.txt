@@ -1,0 +1,34 @@
+m zzz
+
+ 
+   
+  
+   
+   
+    
+ 
+   
+
+12. Szybkie przekształcenie Fouriera
+
+Ta prosta sieć przepływu sygnałów jest, ze względu na swój kształt, nazywana motylkiem.
+Motylek jest podstawowym elementem obliczeniowym w FFT, przekształcającym dwa punk-
+ty zespolone w dwa inne punkty zespolone.
+
+Na rys. 12.7 przedstawiono strukturę całego FFT. Rozkład w dziedzinie czasu jest realizo-
+wany algorytmem sortowania z odwróceniem bitowym. Przeniesienie poddanych rozkładowi
+danych w dziedzinę częstotliwości nie wymaga żadnych operacji i dlatego nie jest uwidocz-
+nione na rysunku.
+
+Synteza w dziedzinie częstotliwości wymaga trzech pętli. Pętla zewnętrzna przechodzi
+przez log;N stopni. Stopniem nazywamy tu każdy poziom na rys. 12.2, poczynając od
+dołu i przesuwając się ku górze. Środkowa pętla przechodzi przez każde przetwarzane
+indywidualne widmo częstotliwościowe w danym stopniu (4. przez każdą z ramek na
+kolejnych poziomach na rys. 12.2). W pętli najbardziej wewnętrznej zastosowano mo-
+tylek do obliczania punktów w każdym widmie częstotliwościowym, a więc jest to pę-
+tla przechodząca przez próbki wewnątrz każdej ramki na rys. 12.2. Ramki „nagłówek”
+(overhead) na rys. 12.7 określają indeksy początkowe i końcowe dla pętli, jak również do
+obliczania sinusoid w motylkach. Przejdziemy teraz do sedna tego rozdziału, a więc do
+programów FFT.
+
+<image/figury/k3_page206_figure1.png>

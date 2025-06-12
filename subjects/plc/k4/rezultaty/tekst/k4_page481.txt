@@ -1,0 +1,13 @@
+_B.8.5 Realizacja dla sterownika Simatic S5.
+
+Tab. 8.15 przedstawia zestawienie połączeń wejść i wyjść sterownika Simatic
+z panelem symulującym reaktor.
+
+<image/tabele/k4_page481_table1.png>
+
+Tekst programu w języku //Ł realizującego zadanie sterowania procesem wsado-
+wym przedstawiono na Wyd. 8.762 - Wyd. 8.184.
+
+ 
+
+8.8 Sterowanie sekwencyjne procesem wsadowym 481

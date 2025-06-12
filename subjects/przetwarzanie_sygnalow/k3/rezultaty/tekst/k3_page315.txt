@@ -1,0 +1,36 @@
+Barwa dźwięku 345
+
+ 
+
+<image/figury/k3_page315_figure2.png>
+
+podstawową 55 Hz, piętnasty — 110 Hz itd. Dźwięki odpowiadające tym klawiszom, będące
+wzajemnie swymi harmonicznymi, brzmią podobnie do siebie, a zagrane unisono dźwięczą har-
+monijnie i melodyjnie. Dlatego wszystkie one są nazywane dźwiękiem A. W ten sam sposób
+biały klawisz znajdujący się bezpośrednio na prawo od każdego z klawiszy A jest nazywany B,
+i wszystkie klawisze 8 dają dźwięki będące względem sicbie harmonicznymi. Ten sposób ozna-
+czania powtarza się dla siedmiu dźwięków: A, B, C, D, E, F' i G. (W Polsce stosuje się nieco inne
+nazewnictwo, podstawowa różnica polega na tym, że B jest zastąpione przez H — przyp. iłum.).
+Pojęcie oktawa wyraża czynnik dwa na skali częstotliwości. Na klawiaturze fortepianu jed-
+na oktawa obejmuje osiem białych klawiszy i stąd pochodzi jej nazwa (ocło to po łacinie
+osiem). Inaczej mówiąc, częstotliwość dźwięku wytwarzanego przez fortepian podwaja się
+co siódmy biały klawisz, a cała klawiatura fortepianu obejmuje trochę ponad siedem oktaw.
+Zakres słuchu ludzkiego ogólnie się przyjmuje jako obejmujący częstotliwości od 20 Hz do
+20 kHz, co wykracza o ok. 1/2 oktawy na lewo i o dwie oktawy na prawo poza skalę klawia-
+tury fortepianu. Ponieważ oktawy oznaczają podwajanie częstotliwości co pewną określoną
+liczbę klawiszy, więc wyrażają one częstotliwość w skali logarytmicznej. Jest to ważne, gdyż
+informacja o sygnale fonicznym charakteryzuje się też na ogół takim rozkładem. Na przykład
+tyle samo tej informacji jest przenoszonych w oktawie od 50 do 100 Hz, co w oktawie od
+10 do 20 kHz. Chociaż fortepian pokrywa tylko ok. 20% zakresu częstotliwości dźwięku
+słyszanego przez człowieka (4 kHz z zakresu 20 kHz), to jednak może wytwarzać więcej
+niż 70% informacji, jaką człowiek może odebrać (7 z 10 oktaw). Trzeba też uwzględnić,
+że największa częstotliwość dźwięku słyszanego przez człowieka zmniejsza się od. 20 do
+10 kHz w miarę trwania życia. Jest to wszakże strata tylko ok. 10% zdolności słyszenia (jed-
+na oktawa z dziesięciu). Jak dalej będzie wykazane, ten logarytmiczny rozkład informacji ma
+bezpośredni wpływ na wymaganą częstotliwość próbkowania sygnałów fonicznych.
+
+<image/figury/k3_page315_figure1.png>
+
+Rys. 22.4. Klawiatura fortepianu. Jest ona logarytmiczną skałą częstotliwości, na której częstotliwość podstawowa
+ZZ odc dci wow kora z E, FiG. Jest to
+nazewnictwo anglosaskie. W Polsce stosuje się nieco inne — m.in. zamiast oznaczenia B używa się H (przyp. tłum.).

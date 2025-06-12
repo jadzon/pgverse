@@ -1,0 +1,67 @@
+<image/figury/k2_page48_figure3.png>
+
+Rys. 10.1: Charakterystyka statyczna przekaźnika trójpołożeniowego
+
+10.2.2 Regulacja trójpołożeniowa bez korekcji
+
+W najprostszym układzie zamkniętym, pokazanym na rysunku 10.2,
+do regulatora trójpołożeniowego doprowadzana jest wartość różnicy
+pomiędzy wartością zadaną a wartością regulowaną. W przypadku zada-
+nia regulacji temperatury (obiektu cieplnego) i przekaźnika bez histerezy
+(ale o zadanej strefie martwej), jeżeli temperatura obiektu jest wyższa od
+temperatury zadanej (co najmniej o wartość odpowiadającą - ). następuje
+wymuszenie ruchu elementu nastawczego napędzanego przez silnik
+w umownie przyjętym kierunku dodatnim, a w przeciwnym wypadku —
+w kierunku ujemnym. Element wykonawczy nie jest przestawiany, jeżeli róż-
+nica temperatur jest dostatecznie mała (uchyb mieści się w zakresie — $, + 7).
+
+<image/figury/k2_page48_figure4.png>
+Rys. 10.2: Schemat blokowy układu regulacji trójpołożeniowej bez korekcji
+
+10.2.3 Regulacja trójpołożeniowa z korekcją
+
+Regulatory trójstawne mogą występować w układzie ze sprzężeniem
+korekcyjnym, które podobnie jak w przypadku regulatora dwustawnego
+polega na objęciu elementu nieliniowego inercyjnym sprzężeniem zwrotnym.
+
+Jeżeli w gałęzi sprzężenia zwrotnego umieści się element inercyjny pierw-
+szego rzędu (rysunek 10.3), charakterystyka dynamiczna regulatora zostanie
+uformowana na kształt charakterystyki regulatora typu PD
+
+Ponieważ element wykonawczy (silnik) jest członem całkującym,
+włączenie go szeregowo z regulatorem trójpołożeniowym z korekcją
+powoduje powstanie w efekcie regulatora typu PI, przy założeniu, że element
+wykonawczy zostanie potraktowany jako integralna część regulatora.
+
+rr
+|
+|
+|
+|
+|
+|
+|
+|
+|
+||
+|
+|
+|
+|
+|
+|
+
+<image/figury/k2_page48_figure1.png>
+
+Na przedstawionych na rysunku 10.4 przebiegach widać, że regulator trój-
+położeniowy zachowuje się podobnie jak dwupołożeniowy w analogicznym
+przypadku. Przebieg zmian stopnia otwarcia zaworu sterowanego silnikiem
+jest zbliżony do odpowiedzi skokowej regulatora typu PI, a ponieważ
+charakteryzuje się on stopniową zmianą wartości wraz z nadejściem
+kolejnych impulsów z elementu trójstawnego, regulatory trójpołożeniowe
+nazywa się regulatorami krokowymi.
+
+<image/figury/k2_page48_figure2.png>
+
+Rys. 10.4: Przebiegi sygnału ze sprzężenia zwrotnego e; (t), sygnału sterującego u(t),
+jego wartości średniej 7i(t) i sygnału sterującego zaworem u; (£)

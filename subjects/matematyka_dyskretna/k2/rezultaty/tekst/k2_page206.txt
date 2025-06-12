@@ -1,0 +1,29 @@
+28 Rozdział 1. Grafy (nieskierowane)
+
+Rysunek 1.14: Hiperkostka Hz
+
+<image/figury/k2_page206_figure1.png>
+
+Najpierw prześledźmy działanie tego protokułu na hiperkostce H; (rysunek 1.14).
+Załóżmy, że wierzchołek 0 = 000 jest żródłem wiadomości. W pierwszym takcie przeka-
+zuje on ją do wierzchołka 1 = 001. Zauważmy, że po pierwszym takcie wiadomość jest
+znana wierzchołkom o numerach mniejszych od 2 i, że te wierzchołki tworzą hiperkostkę
+wymiaru 1. W drugim takcie wierzchołek 0 = 000 przekaże wiadomość do wierzchoł-
+ka 2 = 010, a wierzchołek 1 = 001 do 3 = 011. Po drugim takcie wiadomość znają
+wierzchołki o numerach mniejszych od 4 i tworzą one hiperkostkę wymiaru 2. W trzecim
+takcie 0 = 000 przekazuje wiadomość do 4 = 100, 1 = 001 do 5 = 101, 2 = 010 do
+6 = 110, a3 = 011 do 7 = 111. Tak więc po trzech taktach wszystkie wierzchołki w Hz
+znają wiadomość.
+
+Protokół rozsyłania wiadomości w hiperkostce 77,
+Na początku wiadomość ma wierzchołek 0 = 0*.
+Powtarzaj dla; = 1,...,k
+e wi-tymtakcie każdy wierzchołek z < 2"! przekazuje wiadomość do wierzchołka
+z+21.
+
+Aby pokazać poprawność tego protokołu, pokażemy przez indukcje, że po i-tym
+takcie wiadomość jest znana wszystkim wierzchołkom o numerach mniejszych od 2*.
+Przed pierwszym taktem wiadomość jest znana wierzchołkom o numerach mniejszych
+od 2? = 1, czyli wierzchołkowi 0. Załóżmy, że przed -tym taktem wiadomość jest znana
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

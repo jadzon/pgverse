@@ -1,0 +1,22 @@
+8 Rozdział 1. Funkcje boolowskie
+
+Są to wszystkie funkcje boolowskie jednej zmiennej, ponieważ są to funkcje ze zbioru B
+w zbiór B, a takich funkcji jest:
+
+<image/wzory/k2_page99_formula1.png>
+
+Funkcii boolowskich dwóch zmiennych jest:
+
+<image/wzory/k2_page99_formula2.png>
+
+Ich wartości zestawiono w tabeli:
+
+<image/tabele/k2_page99_table1.png>
+
+Zauważmy, że ciąg wartości każdej z tych funkcji czytany od góry do dołu stanowi zapis
+
+binamu ioi numom Przvirzyimu cia hliżoi tum funlriam:
+
+<image/figury/k2_page99_figure1.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

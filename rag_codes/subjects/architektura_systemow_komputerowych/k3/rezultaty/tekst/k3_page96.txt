@@ -1,0 +1,57 @@
+86 5. Pamięci
+
+ 
+
+Czas cyklu jest to najkrótszy czas jaki musi upłynąć pomiędzy dwoma żądaniami
+dostępu do pamięci. Zwykle czas ten jest nieco dłuższy od czasu dostępu, a wynika to
+z fizycznej realizacji pamięci, tj. opóźnień wnoszonych przez układy elektroniczne.
+
+Szybkość transmisji mierzy się liczbą bitów (bajtów) jaką można przesłać w jednostce
+czasu pomiędzy pamięcią a innym urządzeniem. Parametr ten jest szczególnie ważny
+w pamięciach, w których adresowane są fragmenty większe niż słowo (np. pamięci dys-
+kowe). Ponieważ w takich pamięciach odczytuje się lub zapisuje bloki słów, to mniej
+istotny jest czas dostępu do pamięci, a bardziej istotny jest czas w jakim taka porcja
+informacji może zostać przesłana. Najczęściej szybkość transmisji mierzy się w bitach lub
+bajtach na sekundę.
+
+Nowe technologie pozwalają na ciągłe zmniejszanie kosztu produkcji pamięci i ulep-
+szanie ich parametrów. Dlatego pamięci dość szybko starzeją się, a często po paru latach
+są wycofywane z użytku. Taki los spotkał rdzeniowe pamięci ferrytowe, które w latach
+sześćdziesiątych dominowały jako pamięci operacyjne komputerów, a teraz nie są już
+spotykane. Najniższym kosztem, wsród pamięci operacyjnych komputerów, charakteryzują
+się pamięci półprzewodnikowe. Jednak one także różnią się między sobą pojemnością
+i szybkością działania, a co za tym idzie i ceną. Produkowane są tanie układy scalone
+pamięci półprzewodnikowych, ale charakteryzują się one niezbyt dużą szybkością dzia-
+łania. Natomiast szybkie układy pamięciowe mają niewielkie pojemności a cena ich jest
+stosunkowo duża. Dlatego poszukuje się nowych rozwiązań w architekturze komputerów,
+które pozwolą na optymalizację pracy komputerów, a w szczególności parametrów pamięci.
+Jednym ze stosowanych rozwiązań dla pamięci operacyjnych jest zastosowanie dwóch
+rodzajów pamięci półprzewodnikowych: pamięci szybkich, ale o mniejszej pojemności
+i pamięci wolniejszych, ale o dużych pojemnościach. Pamięci wolniejsze umożliwiają
+budowanie pamięci operacyjnych o dużych pojemnościach, a pamięci szybkie, o mniej-
+szych pojemnościach, umożliwiają przyspieszenie pracy. Szybka pamięć o niewielkiej
+pojemności współpracująca z pamięcią operacyjną jest nazywana pamięcią kieszeniową
+(ang. Cache memory). Współpraca tych dwóch rodzajów pamięci omówiono w dalszej
+części niniejszego rozdziału.
+
+Pobór mocy jest też ważnym parametrem, którego znaczenie uwypukla się przy
+budowaniu pamięci operacyjnych o bardzo dużych pojemnościach, gdzie istnieje problem
+połączenia dużej liczby układów scalonych i odprowadzenie wydzielanego ciepła. Innym
+przykładem konieczności dążenia do zmniejszania pobieranej mocy komputerów, a co za
+tym idzie i pamięci, są komputery kieszonkowe.
+
+Ponieważ konstruktorzy komputerów zmuszeni są do stosowania wielu rodzajów
+pamięci w jednym komputerze, to zwykle wprowadza się tzw. hierarchię pamięci. Na
+samej górze tej hierarchii znajdują się pamięci najszybsze, ale o najmniejszej pojemności.
+Wraz ze wzrostem pojemności pamięci szybkość ich maleje. Można wyróżnić 5 poziomów
+hierarchii pamięci:
+
+l) pamięć rejestrowa,
+
+2) pamięć kieszeniowa,
+
+3) pamięć operacyjna,
+
+4) pamięć masowa,
+
+5) pamięć zewnętrzna.

@@ -1,0 +1,10 @@
+<image/figury/k4_page248_figure3.png>
+
+Tab. 4.5 Adresowanie w plikach danych sterowania.
+<image/figury/k4_page248_figure1.png>
+
+Rys. 4.3 Format danych w plikach sterowania
+
+ 
+
+248 Rozdział : 5. Język schematów drabinkowych dla SLC 500

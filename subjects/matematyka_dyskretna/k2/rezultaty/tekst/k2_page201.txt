@@ -1,0 +1,40 @@
+1.11. Kolorowanie grafów 23
+
+<image/figury/k2_page201_figure1.png>
+
+1.11 Kolorowanie grafów
+
+Chodzi o takie pokolorowanie wierzchołków grafu, żeby wierzchołki połączone krawędzią
+były pokolorowane innymi kolorami i żeby liczba kolorów była jak najmniejsza.
+Definicja 1.38 Pokolorowanie grafu G = (V,E) k kolorami jest to funkcja c : VY +
+(1,...,k), taka że c(u) 5 c(v) jeżeli (u,v) € E.
+
+Najmniejsze takie k, że graf G można pokolorować k kolorami nazywamy liczbą
+chromatyczną grafu G i oznaczamy przez y(G).
+
+W przypadku kolorowania grafów, podobnie jak dla dróg Hamiltona, nie są znane do-
+bre i szybkie algorytmy. Naiwny algorytm sprawdzający wszystkie możliwe kolorowania
+działa zbyt długo. Także tu mamy algorytm z nawrotami.
+
+Algorytm z nawrotami kolorowania wierzchołków grafu
+
+Dane wejściowe: graf G = (V, E) oraz liczba naturalna k.
+
+Dane wyjściowe: pokolorowanie wierzchołków grafu G za pomocą k kolorów c : V +
+(1,...,k) lub informacja, że takiego pokolorowania nie ma.
+
+e dla każdego v € V podstaw c(v) := 0 (c(u) = 0 oznacza, że u nie ma jeszcze
+
+koloru).
+
+e włóż pierwszy wierzchołek na STOS,
+
+e powtarzaj aż do skutku:
+
+o jeżeli u jest wierzchołkiem na wierzchu STOSU, to próbujemy przypisać mu
+kolor, większy od bieżącego koloru c(u), który nie koliduje z kolorami wierzchoł-
+
+ków znajdujących się na STOSIE. Jeżeli to się uda, to wkładamy kolejny wierzcho-
+łek na stos. Jeżeli się nie uda, to zdejmujemy u ze stosu i podstawiamy c(u) := 0.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

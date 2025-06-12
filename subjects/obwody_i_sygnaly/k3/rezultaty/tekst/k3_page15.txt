@@ -1,0 +1,86 @@
+Wykaz oznaczeń 15
+
+ 
+
+w, — energia gromadzona w indukcyjności
+
+w. — energia gromadzona w pojemności
+
+wy — energia gromadzona w indukcyjnościach sprzężonych
+wą — energia pobrana przez opór
+
+X — reaktancja
+
+y.y(t) — sygnał
+
+y, — współczynniki zespolonego szeregu Fouriera
+Y — amplituda zespolona sygnału sinusoidalnego y; admitancja
+Y, — amplituda
+
+Y, — wartość skuteczna
+
+Y, — admitancja wewnętrzna źródła
+
+Y(s) — admitancja operatorowa
+
+Y,„ — macierz admitancji węzłowych
+
+z — liczba zwoi
+
+Z — impedancja
+
+Z„ — impedancja wewnętrzna źródła
+
+Z,p — impedancja zastępcza dwójnika AB
+
+Z(s) — impedancja operatorowa
+
+Z, — macierz impedancji obwodowych
+
+« — współczynnik (dekrement) tłumienia
+
+y — przewodność właściwa
+
+5 — gęstość prądu
+
+Ao — odchyłka pulsacji
+
+Af — odchyłka częstotliwości
+
+e — przenikalność elektryczna
+
+e, — przenikalność elektryczna próżni
+
+e, — przenikalność elektryczna względna
+
+e, — sygnał błędu
+
+eq; — miara błędu aproksymacji
+
+6(t) — energia zgromadzona w układzie w chwili t
+p — faza początkowa
+
+pp — napięcie dyfuzyjne
+
+D, P(t) — strumień magnetyczny
+
+A — długość fali
+
+HL — przenikalność magnetyczna
+
+1 — przenikalność magnetyczna próżni
+
+u, — przenikalność magnetyczna względna
+
+vy — rozstrojenie względne
+
+w — pulsacja
+
+«wy — pulsacja rezonansowa; pulsacja podstawowa
+©; — dolna pulsacja graniczna
+
+w; — górna pulsacja graniczna
+
+w, — pulsacja drgań swobodnych
+
+p — opór charakterystyczny

@@ -1,0 +1,27 @@
+*
+
+Trajektoria fazowa — przykład 5a (sprzężenie prędkościowe)
+
+  
+
+HATEOAR 94/5TEROWU
+AUTONATYKH
+
+Zauważmy, że układ możemy również przedstawić w takiej postaci:
+
+<image/figury/k/_page212_figure1.png>
+
+[am0ZEJ] AuzAZOZSEŁd Epo]SIN
+
+Rozwiązanie:
+Zmieniły się warunki przełączenia w porównaniu do poprzedniego przykładu:
+
+<image/wzory/k/_page212_formula1.png>
+
+Równania parabol pozostają takie same jak poprzednio, zmieniają się jedynie
+wartości stałych oraz punkty przełączeń.
+
+ 
+
+POLITECHNIKA
+GDANSKA

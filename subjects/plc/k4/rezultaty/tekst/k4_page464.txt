@@ -1,0 +1,11 @@
+<image/figury/k4_page464_figure1.png>
+
+<image/figury/k4_page464_figure2.png>
+
+Wyd. 8.132 Podprogram (4) FAZA 2 (grzanie) — zamknięcie zaworów dopływu
+czynników i przepływu medium chłodzącego, stabilizacja temperatury, koniec
+fazy grzania i zamknięcie zaworu dopływu medium grzewczego
+
+ 
+
+464 Rozdział : 8.Programy przykładowe

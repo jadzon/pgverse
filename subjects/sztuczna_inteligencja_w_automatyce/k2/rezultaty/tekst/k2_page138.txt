@@ -1,0 +1,37 @@
+143
+
+<image/figury/k2_page138_figure1.png>
+
+Rys. 6.39: Przebieg błędu średniokwadratowego w trakcie dodawania kolejnych neuronów
+podczas uczenia sieci przyrostowej. Korzystano ze środowiska Matlab, Neural Networks
+
+Toolbox
+
+punktami ze zbioru uczącego. Uzyskano błąd wynoszący około 10779. Dla porówna-
+nia sieci zastosowano do tego samego zadania pełną sieć radialną, uzyskując błąd
+1075, warstwową sieć neuronową — 107% i system rozmyty — 1077. Uzyskane wyniki
+w tym przypadku pokazują wyraźnie lepsze generalizacje uzyskiwane przez sieci ra-
+dialne. | |
+
+Sieci specjalne
+
+Siecią specjalną będziemy nazywali prostą sieć radialną przedstawioną na rys. ??.
+Wagi tej sieci równe są oczekiwanym sygnałom wyjściowym i nie potrzeba ich wy-
+znaczać. Działanie sieci ilustruje rys. ??, gdzie przedstawiono wyniki aproksymacji
+funkcji jednej zmiennej.
+
+6.5.8. Sieci neuronowe jako pamięci asocjacyjne
+
+Przedstawione tu zostanie jedno ze specyficznych zastosowań sieci neuronowych jako
+pamięci asocjacyjnych. W szczególności zastosowanie sieci ze sprzężeniami zwrot-
+nymi niesie ze sobą wiele problemów teoretycznych i analogii do mechanizmów pa-
+mięci ludzkiej.
+
+Podstawowe pojęcia
+
+Pamięć asocjacyjna jest układem odwzorowującym wektory x"), x©), ...,xP) na-
+leżące do R” w wektory yt”), y?), ...,y) należące do R”. Wektory x") i y)
+nazywane są wżorcowymi lub prototypowymi.
+
+Umieszczenie w pamięci wektorów wzorcowych nazywa się zapisem i pociąga za
+sobą odpowiednie dobranie wartości wag. Odwzorowanie wykonane przez pamięć na

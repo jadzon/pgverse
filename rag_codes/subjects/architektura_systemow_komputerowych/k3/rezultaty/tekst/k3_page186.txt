@@ -1,0 +1,40 @@
+176 Dodotek A
+
+ 
+
+Kanonicznej postaci alternatywnej przykładowej funkcji odpowiada w zapisie dziesięt-
+nym zbiór liczb dziesiętnych w postaci: y = Z(1, 2, 5, 6, 7), gdzie , nie oznacza sumowa-
+nia arytmetycznego, ale wskazanie na postać alternatywną. Kanonicznej postaci koniunk-
+cyjnej odpowiada zbiór w postaci: y= [[(0,4,3).
+
+Ostatnim prezentowanym tu sposobem przedstawienia funkcji boolowskiej jest tzw.
+mapa Karnaugha. Jest to zapis graficzny przedstawiający wartości funkcji dla poszcze-
+gólnych kombinacji zmiennych w odpowiednich polach prostokąta. Dla parzystej liczby
+zmiennych prostokąt jest kwadratem. Na rysunku D.1 pokazano mapy dla 2, 3, 4 i 5 zmien-
+nych. Mapa dla dwóch zmiennych (rys. D.1a) ma 4 pola. Pozioma kreska nad lewą stroną
+wraz z napisem x, oznacza, że dwóm lewym polom mapy odpowiada wartość Xg= 1,
+a dwóm prawym x,=0. Podobnie, dla dwóch górnych pól wartość Xx,= 1, a dla dwóch
+prawych x,=0. Dla przykładowej funkcji z tabl. D.3 mapa Karnaugha jest prostokątem
+o ośmiu polach i wraz z wartościami funkcji przedstawiono ją na rys. D.lb.
+
+Zasadą przy tworzeniu map Karnaugha jest, aby sąsiednie pola odpowiadały takim
+kombinacjom zmiennych, które różnią się wartością tylko jednej pozycji. Na przykład
+niektóre sąsiednie kombinacje zmiennych w tabl. D.3 (dwa kolejne wiersze) różnią się na
+więcej niż jednej pozycji. Wiersz drugi (kombinacja 100) i wiersz trzeci (kombinacja 010)
+różnią się na dwóch pozycjach: pozycji odpowiadającej zmiennej x, i zmiennej x,. Tabli-
+cę D.3 tak ułożono, że kolejne wiersze odpowiadają kolejnym liczbom binarnym.
+
+W tablicy D.4 porównano naturalny kod binarny z kodem Graya. Kodem Graya
+nazywa się taki kod, którego kolejne słowa różnią się tylko na jednej pozycji. Kod Graya
+tworzy się z naturalnego kodu binarnego biorąc:
+
+<image/wzory/k3_page186_formula1.png>
+
+gdzie g, to kolejne bity słowa kodu Graya, a b, słowa naturalnego kodu binarnego.
+
+<image/tabele/k3_page186_table1.png>
+
+Każdy z czterech podanych sposobów opisu funkcji jest wygodny do stosowania na
+innym etapie projektowania. I tak na przykład tablicę prawdy stosuje się najczęściej we
+wstępnym etapie projektu, gdzie dokonuje się zamiany opisu słownego układu na opis
+formalny, a mapy Karnaugha podczas minimalizacji układu.

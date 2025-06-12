@@ -1,0 +1,61 @@
+Jednobitowe przetwarzanie danych
+
+ 
+
+Technika przetwarzania o wielu częstotliwościach próbkowania może też być stosowana w wyj-
+ściowej części rejestratora omawianego jako przykład. Dane 8 kHz są wyprowadzane z pamięci
+i przekształcane na częstotliwość próbkowania 64 kHz. Jest to procedura zwana interpołacją.
+Polega ona na umieszczaniu 7 próbek o wartości zerowej między kolejnymi próbkami otrzy-
+
+mywanymi z pamięci. Uzyskany sygnał jest cyfrowym ciągiem impulsowym zawierającym
+żądane pasmo głosu między 100 i 3000 Hz oraz powielane widma między 3 kHz i 32 kHz.
+Spójrzmy jeszcze raz na rys. 3.6 a), b), aby zrozumieć dlaczego tak jest. Wszystkie składowe
+powyżej 3 kHz są następnie usuwane cyfrowym filtrem dolnoprzepustowym. Po przetworzeniu
+na sygnał analogowy przetwornikiem c/a wystarczy prosty układ RC do wytworzenia końco-
+wego sygnału głosowego.
+
+Technika przetwarzania danych z użyciem wielu częstotliwości próbkowania jest cenna
+z dwóch powodów: 1) umożliwia zastąpienie podzespołów analogowych przez oprogramo-
+wanie, co jest oczywistą korzyścią ekonomiczną przy produkcji masowej oraz 2) umożliwia
+osiągnięcie lepszego działania w krytycznych zastosowaniach. Taka technika jest stosowana
+na przykład w odtwarzaczach płyt kompaktowych w celu uzyskania najlepszej możliwej ja-
+kości dźwięku. To udoskonalone działanie jest wynikiem zastąpienia elementów analogo-
+wych (dokładność 1%) algorytmami cyfrowymi (dokładność 0,0001% spowodowana błę-
+dami zaokrąglenia). Jak to wyniknie z rozważań w następnych rozdziałach, filtry cyfrowe
+w najważniejszych dziedzinach zastosowania działają serki razy lepiej niż filtry analogowe.
+
+Jednobitowe przetwarzanie danych
+
+Metodą często stosowaną w telekomunikacji i odtwarzaniu muzyki z bardzo dobrą wier-
+nością jest jednobitowe przetwarzanie a/c i c/a. Jest to technika przetwarzania należąca
+do grupy metod o wielu częstotliwościach próbkowania, w której większą częstotliwość
+próbkowania osiąga się kosztem zmniejszenia liczby bitów. W skrajnym przypadku wy-
+starcza tylko jeden bit na każdą próbkę, Jest wiele różnych rozwiązań układowych, lecz
+w większości z nich stosuje się modulację delta. Omówione dalej trzy przykłady rozwią-
+zań będące dobrym wprowadzeniem w tę problematykę. Wszystkie trzy rozwiązania są
+zrealizowane jako układy scalone, nie trzeba się więc martwić o rozmieszczenie wszyst-
+kich tranzystorów i wzmacniaczy operacyjnych. Na pewno nikt was nie poprosi o skon-
+struowanie tych układów z elementów dyskretnych.
+
+Na rys. 3.16 przedstawiono schemat blokowy typowego modulatora delta. Wejściowym sygnałem
+analogowym jest sygnał głosowy o amplitudzie kilku woltów, sygnałem wyjściowym zaś — sy-
+gnał cyfrowy będący strumieniem logicznych jedynek i zer. Komparator decyduje, które z dwóch
+napięć jest większe — wejściowy sygnał analogowy czy napięcie zapamiętane na kondensatorze.
+Ta decyzja, w postaci logicznego zera lub jedynki, jest wprowadzona na wejście przerzutnika
+zatrzaskowego. Za każdym impulsem zegarowym (typowo o częstotliwości kilkuset kHz) prze-
+rzutnik przenosi aktualny stan logiczny ze swojego wejścia na wyjście. Dzięki przerzutnikowi
+zatrzaskowemu wyjście jest zsynchronizowane z zegarem, wyznaczając w ten sposób szybkość
+próbkowania, tj. szybkość, z jaką może następować aktualizacja 1-bitowego wyjścia.
+
+Cyfrowy sygnał wyjściowy steruje przełącznikiem elektronicznym, tworząc w ten sposób
+pętlę sprzężenia zwrotnego. Jeśli na wyjściu jest stan logiczny jeden, to przełącznik dołą-
+cza kondensator do iniektora ładunku dodatniego. Jest to układ, który zwiększa napięcie
+na kondensatorze o określoną wartość, np. o I mV na jeden impuls zegarowy. Może to być
+tylko rezystor dołączony do dużego napięcia dodatniego. Jeśli na wyjściu jest stan logiczny
+zero, to kondensator jest dołączany do iniektora ładunku ujemnego. Powoduje on zmniej-
+szanie napięcia na kondensatorze o taką sama ustaloną wartość.
+
+Na rys. 3.17 przedstawiono przebiegi sygnałów w tym układzie. W chwili zero zarówno wej-
+
+ściowy sygnał analogowy, jak i napięcie na kondensatorze są równe zeru. Jak pokazano na rys.
+3.17 a), w chwili ósmego impulsu zegarowego napięcie wejściowe wzrasta nagle do 9,5 V.

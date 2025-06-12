@@ -1,0 +1,63 @@
+mm
+
+Kompresja i ekspansja, przetwarzanie o wielu częstotliwościach próbkowania
+
+ 
+
+- lizowane sygnały są ciągłe, to pierwsze rozwiązanie daje częstotliwości od zera do dodatniej
+". nieskończoności, podczas gdy drugie — od zera do ujemnej nieskończoności. Trzecia grupa
+„rozwiązań nie istnieje dla sygnałów ciągłych.
+
+W wielu metodach DSP nie ma konieczności stosowania częstotliwości ujemnych lub zrozu-
+mienia okresowości DFT. Przykłady dwóch takich często spotykanych metod opisano w po-
+przednim rozdziale. Była to analiza widmowa oraz odpowiedź częstotliwościowa systemu.
+W tych zastosowaniach zupełnie wystarcza rozpatrywanie sygnałów w dziedzinie czasu jako
+obejmujących próbki od 0 do N — 1, a w dziedzinie częstotliwości — od zera do połowy czę-
+stotliwości próbkowania. W tych metodach można w prostszy sposób patrzeć na świat sygna-
+łów, gdyż nigdy w rezultacie nie uzyskuje się tu zachodzenia części sygnału z jednego okresu
+na inne okresy. W takich przypadkach rozpatrywanie pojedynczego okresu jest równie dobre
+jak całego sygnału okresowego.
+
+Jednakże niektóre procedury mogą być realizowane tyłko z uwzględnieniem zacho-
+dzenia sygnału na inne okresy. Dwa takie przykłady już zaprezentowano — spłot koło-
+wy oraz przetwarzanie analogowo-cyfrowe. W przypadku splotu kołowego mnożenie
+widm częstotliwościowych daje w wyniku w dziedzinie czasu sygnały spłatane. Jeśli
+sygnał uzyskany w dziedzinie czasu jest zbyt długi, aby mógł zmieścić się w pojedyn-
+czym okresie, to zachodzi na sąsiednie okresy, powodując aliasing w dziedzinie czasu.
+Przetwarzanie analogowo-cyfrowe zaś jest przykładem aliasingu w dziedzinie częstotli-
+wości. W dziedzinie czasu jest przeprowadzana operacja nieliniowa — zamiana sygnału
+ciągłego w dyskretny przez próbkowanie. Trudność polega na tym, że widmo oryginal-
+nego sygnału analogowego może być zbyt długie, aby zmieścić się wewnątrz widma.
+Forsowanie wykonania tej operacji może spowodować, że krańce widma będą wystawać
+poza pojedynczy okres i zachodzić na sąsiednie. Rozpatrzmy dwa dalsze przykłady,
+w których ważny jest okresowy charakter DFT. Są to kompresja i ekspansja sygnału
+oraz modułacja amplitudy.
+
+Kompresja i ekspansja, przetwarzanie o wielu
+częstotliwościach próbkowania
+
+Kompresja sygnału w jednej dziedzinie powoduje ekspansję w drugiej, jak to przedsta-
+wiono na rys. 10.12. Dla sygnałów ciągłych, jeśli X(f) jest transformatą Fouriera sygnału
+x(1), to 1/k x X(ffk) jest transformatą Fouriera sygnału x(kr), gdzie Kk jest parametrem opi-
+sującym ekspansję lub kompresję. Jeśli zdarzenie przebiega szybciej (czyli podlega kom-
+presji w czasie), to musi być złożone z większych częstotliwości. Jeśli zdarzenie przebiega
+wolniej (podlega ekspansji w czasie), to musi się składać z mniejszych częstotliwości. Ta
+zasada dotyczy także sytuacji skrajnych. Tak więc, jeśli sygnał w dziedzinie czasu poddano
+takiej kompresji, że stał się on impulsem, to odpowiadające mu widmo częstotliwościo-
+we ulega ekspansji tak daleko idącej, że staje się wartością stałą, Podobnie, jeśli sygnał
+w dziedzinie czasu poddano tak silnej ekspansji, że stał się wartością stałą, to przebieg
+w dziedzinie częstotliwości staje się impulsem.
+
+Sygnały dyskretne zachowują się w podobny sposób, lecz trzeba tu dodać kilka szczegółów.
+Pierwszym zagadnieniem w przypadku sygnałów dyskretnych jest ałiasing. Przyjmijmy, że
+impuls na rys. 10.12 a) jest poddany kompresji kilkakrotnie większej, niż to pokazano na
+rysunku. Widmo częstotliwościowe ulega ekspansji o taki sam czynnik i kilka garbów na
+rys. 10.12 b) jest zepchniętych do częstotliwości powyżej 0,5. Powstający aliasing łamie pro-
+stą zależność między ekspansją i kompresją. Aliasing tego rodzaju może również zachodzić
+w dziedzinie czasu. Wyobraźmy sobie, że widmo częstotliwościowe na rys. 10.12 f) ulega
+znacznie silniejszej kompresji. Może to spowodować rozciąganie się sygnału w dziedzinie
+czasu (rys. 10.12 e) na sąsiednie okresy.
+
+ 
+
+IPPT NEA EM 2 PK DZK WAD WAŻ

@@ -1,0 +1,42 @@
+<image/tabele/k3_page9_table1.png>
+
+7.1. Wywoływanie podprogramów .....--------e-s--sas zee ae eee aaa aaanaznanazyaaarynaaaauLLnLuruua: 139
+
+OZYROO| GE ZGK OO ZZOZ Z OZ OSAIK 140
+
+w2. SIOCOG A RIAMKCJ aaa a GÓRA AAAA AEP WT A ERACI 143
+
+Tłumaczenie wykonywane przez asembler -........--esussueaeaaaanaaeaaaaaaa aaa: 145
+
+Łączenie z innymi programami wykonywane przez program łączący ................. 146
+Ładowanie w odpowiednie miejsce pamięci komputera wykonywane
+
+przoz (PROZA JBJOJĘCY EG AAAA AGA AAAA AA AAAA EPOE WERKA FAA 146
+
+7.3. Systemy operacyjne ............2.--------e eee aaa aaa a aaa ananazanyzyny aaa aa kaka ryuz uz LuLuruzu 146
+
+TSL. Wprowadzenie sowa Sid wawa KARO RAGE OG OLOFA AAA OKAD ADA AŁA AAAA EE SZEEGĘĄ 146
+
+7.3.2. Szeregowanie zadań ............-.---osssusa aaa aaa onoa eee a zawo a aaa aaa aaa taaa t aaa ananytzrttYew LLL a 148
+
+Algorytm FEES amo OOOO ERGO EiwL AL 151
+
+AZOTEM ŚJ NEORATOR OO OZ 152
+
+Algorytm Round-Robin ........-..e seen anzanzaznanzaaa ada! 152
+
+7.3.3. Zarządzanie PAaMiĘCIĄ eee eee eee aaa aaa znninaiL 153
+
+Pamięć WIUALGA waz SEE AAA APA AAAA AAAA AEON ANAL RAE 4 AGEDYZE 153
+
+SOBOIOREGCJ oszcz iwo WSK OB AAAA AA EEK EEG AB AAA AAAA 155
+
+8. MECHANIZMY PRZYSPIESZAJĄCE PRACĘ KOMPUTERÓW... 156
+
+8.1. Klasyfikacja komputerów ........--e- esesman nuaaaaaauraaaayazyaaaadau: 156
+8.2. Przyspieszanie współpracy procesora i pamięci ......-.----ueuesuasuauaaanacznzaniananaaa. 158
+8.2.1. Kolejka rozkazów ............- eee zaaaanaauaniniai 158
+8.2.2. Pamięć z przeplotem..............-.-.-e- eee aaa aznazznnazuzaurywyyry aurea LaLLLJ 160
+8.2.3. Architektura typu Harvard... eee osa eee) 161
+8.3. Architektury potokowe.........-----e- eee mewa naninnznaiuinnnaLa aa. 162
+8.3.1. Zasada działania ....................-.--se-moseowsawowaanaanoaeaananea aaa ruta azana aaa td reetuaeuruneurLatuL tua: 162

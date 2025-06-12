@@ -1,0 +1,29 @@
+1.3. Elementy nieliniowe 83
+
+i= I„sinot
+
+Zależność skojarzenia magnetycznego W od prądu i (rys. 1.3-39a) ma wówczas
+kształt pętli histerezy, obieganej przez punkt pracy okresowo z okresem
+T = Żn/o. Charakterystyka z rys. 1.3-39a da się opisać równaniem typu (1.3-27),
+ale tylko dla ustalonych wartości I„,w. Na rys. 1.3-39b pokazano dwie pętle
+histerezy odpowiadające tej samej pulsacji oraz dwóm wartościom amplitu-
+dy I„ > I„. Narys. 1.3-39c zilustrowano natomiast zależność pętli histerezy od
+pulsacji; krzywa ciągła odpowiada większej wartości pulsacji w niż krzywa
+przerywana. Tak rozumiana pętla histerezy bywa nazywana dynamiczną pętlą
+histerezy. Pole przez nią ograniczone jest miarą strat w rdzeniu wywołanych
+zjawiskami histerezy magnetycznej i prądów wirowych (por. np. [7 ], p. 2.2.2).
+W praktyce, jedynie dla dostatecznie małych pulsacji można przyjmować, że
+charakterystyka rzeczywistego dławika ma postać przedstawioną na rys. 1.3-11,
+tzn. nie ma charakteru pętlowego.
+
+<image/figury/k3_page81_figure1.png>
+
+Trzeba przy tym wyraźnie podkreślić, że rozpatrywany dławik jest ele-
+mentem, który oprócz pola magnetycznego i związanej z tym polem indukcji
+(stąd opis w płaszczyźnie i,/) odznacza się także stratami w rdzeniu,
+występującymi np. przy zmiennym prądzie magnesującym. Straty te są właśnie
+powodem, iż charakterystyka w płaszczyźnie i,/ ma postać pętli”.
+
+U Inne pozykłady elementów rzeczywistych, które — z różnych przyczyn — nie dadzą się
+
+prawidłowo modelować przy użyciu elementów obwodowych, omówione są np. w [7], p. 1.1.5.

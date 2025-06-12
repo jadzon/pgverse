@@ -1,0 +1,25 @@
+przetwornik posiada dwa sygnały (/, i 75 albo U, i Up) fazowo przesunięte
+względem siebie o 90”. Trzeci sygnał (Ip lub Up) to kodowany punkt referencyj-
+ny. Sygnały sinusoidalne przetwarzane są na sygnały cyfrowe i poddane 4-
+krotnej digitalizacji w dodatkowym układzie elektronicznym. Otrzymujemy wte-
+dy krok pomiaru stanowiący !4 okresu sygnału przetwornika (Rys. 3.47 a).
+
+Aby uzyskać jeszcze mniejszy krok pomiaru, sygnały sinusoidalne przed digitali-
+zacją m
+
+<image/figury/k4_page163_figure2.png>
+
+oraz sygnat referencyjny.
+e Konfiguracje modułu HSC
+
+Bezpośrednie zliczanie impulsów przez HSC oznacza, że moduł może realizo-
+wać operacje liczenia i sterowania swoimi wyjściami samodzielnie, bez potrzeby
+komunikacji z jednostką centralną sterownika CPU.
+
+Przykładowy moduł APM 300 firmy GE Fanuc korzysta z obszaru 16 słów wej-
+ściowych sterownika, | słowo zawierające 16 bitów dyskretnych wejść (%7/)
+i 15 słów wejść analogowych (%A7). Słowa danych analogowych przesyłane są z
+HSC do CPU po każdym cyklu programowym, podobnie jak 16 dyskretnych
+wyjść HSC (%Q).
+
+3.8 Moduł szybkiego licznika HSC 163

@@ -1,0 +1,49 @@
+1.13. Zadania 21
+
+2. Ile liczb trzycyfrowych zawiera cyfrę 4 lub 8?
+
+3. W grupie jest pięć dziewcząt i pięciu chłopców. Na ile sposobów można wybrać
+podgrupę składającą się z dwóch dziewcząt i dwóch chłopców?
+
+Na ile sposobów można utworzyć w tej grupie pięć par, z jednym chłopcem i jedną
+dziewczyną w każdej parze?
+
+4. Znana jest zabawka dla dzieci składająca się z dwunastu sześciennych klocków z
+naklejonymi na ściankach fragmentami obrazków. Na ile sposobów można ułożyć
+te klocki w prostokąt (trzy rzędy po cztery klocki w rzędzie)?
+
+5. Ile słów można utworzyć z liter słowa ULICA (litery nie mogą się powtarzać)?
+6. Udawadnii wzór
+
+<image/wzory/k2_page56_formula1.png>
+
+Wskazówka. Policz na dwa różne sposoby, ile *-elementowych drużyn z kapitanem
+można utworzyć ze zbioru n sportowców.
+
+7. Udowodnii wzór:
+
+<image/wzory/k2_page56_formula2.png>
+
+Wskazówka. Policz na dwa różne sposoby, ile n-elementowych grup można utwo-
+rzyć w klasie złożonej z n chłopców i n dziewcząt
+
+8. Udowodnij, że („) jest największe dla k = [5]ik = [3].
+9. Udawadnii 3
+
+<image/wzory/k2_page56_formula3.png>
+
+10. Rozwiń wielomian (1 + t)*.
+
+11. Udowodnij, że
+
+<image/wzory/k2_page56_formula4.png>
+
+12. Przedstaw wzór na sumę czterech zbiorów A, B, C i D.
+13. Ile elementów zawiera różnica symetryczna A 6 B?
+
+14. Wyznacz liczbę elementów |A n BNC| oraz |C'|, wiedząc, że |A| = 10, |B| = 9,
+|ANB|=3,|]ANC|=1,|BNC| =1omz|AUBUC|= 18.
+
+15. Oblicz ile liczb mniejszych od 100 jest podzielnych przez 2, 3 lub 5.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

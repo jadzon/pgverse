@@ -1,0 +1,33 @@
+inicjalizacja ) 4t:= to
+
+wznowienie ) (x(t) := x(to) = xo=[]
+dla t > t+
+
+reguły interakcji > model formalny
+
+Om msskh: imómomiemii
+
+<image/wzory/k1_page7_formula1.png>
+
+symulacja modelu ti — ti+1
+
+zbiór T - momenty obliczeniowe - czasy modelowe dla których można wytworzyć zbiór
+wartości zmiennych opisowych modelu Z
+
+stały krok: ti+1 - ti = h — symulacja dyskretna w czasie
+
+Model stacjonarny (niezmienny)
+
+Prototypowa procedura symulacji
+- _ model dyskretny, niezmienny w czasie
+- _ wartości początkowe: t=to, x(to)=xo
+- momenty obliczeniowe tT = (ty, ty m „t.j
+- dokładność, głębokość wglądu: h - parametr symulacji
+krok 1) inicjalizacja zegara/czasu: t := to
+krok 2) inicjalizacja zmiennych stanu: x(t) := xo <= stan początkowy
+
+krok 3) zastosowanie reguł interakcji:
+krok 4) przesunięcie zegara: t := t+h
+
+krok 5) sprawdzenie warunków końcowych: KONIEC := (t > to + s * h)
+krok 6) jeśli NIE KONIEC — krok 3)

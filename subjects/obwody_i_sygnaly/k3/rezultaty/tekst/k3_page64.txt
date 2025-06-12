@@ -1,0 +1,33 @@
+64 1. Pojęcia podstawowe — elementy
+
+Przykład 1.3-11. Rozważmy indukcyjność nieliniową o «
+
+a = | Wb:A"*£ (por. przykład 1.3-4b). Wyznaczymy energię w, g
+ności w zależności od prądu i oraz wartość tej energii w punkcie prac
+Energię gromadzoną w indukcyjności nieliniowej można obliczyć t
+
+a) Sposób pierwszy polega na bezpośrednim wykorzystaniu wzoru
+dysponujemy charakterystyką i = 9„(W) indukcyjności. Jeżeli indukcy
+rystyką W = f,(i), wówczas należy wyznaczyć charakterystykę odwro
+indukcyjności wynika, że charakterystyka taka jest jednoznaczna. Y
+wyznaczenie charakterystyki odwrotnej i = g,(%) nie nastręcza tr
+
+(im
+
+<image/wzory/k3_page64_formula3.png>
+
+Niekiedy jednak (por. przykład 1.3-4f), charakterystyka odwrotna je
+Stosujemy wówczas jeden z dwóch sposobów przedstawionych poniżej. .
+bdrugisposbobliczaniaenergiizgromadzonejwindukcyjnociwzory/k3_page64_
+nych we wzorze definicyjnym (1.3-14). W wyniku takiej zamiany otrzym
+
+<image/wzory/k3_page64_formula1.png>
+
+J
+<image/wzory/k3_page64_formula4.png>
+
+c) Trzeci sposób obliczania energii zgromadzonej w indukcyjności
+geometrycznej przedstawionej na rys. 1.3-10b. Pole w, (rys. 1.3-22) mo
+pól prostokąta o bokach i, dy oraz pola oznaczonego na rysunku symbx
+
+<image/figury/k3_page64_figure1.png>

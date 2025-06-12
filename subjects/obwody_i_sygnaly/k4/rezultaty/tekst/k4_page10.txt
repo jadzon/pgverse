@@ -1,0 +1,53 @@
+|
+
+10 Przedmowa
+
+Zgodnie z przyjętą koncepcją dwa pierwsze rozdziały podręcznika po-
+święcono w całości pojęciom podstawowym teorii obwodów, z podziałem na
+elementy (rozdział 1) i układy (rozdział 2). W rozdziałach tych przedstawiono
+także najważniejsze linie podziału oraz klasyfikacje elementów i układów.
+Umożliwiło to, obrazowo mówiąc, stworzenie szkieletu konstrukcji, która
+następnie została wypełniona odpowiednimi „cegiełkami”. Jest rzeczą niezwykle
+ważną, aby Czytelnik, studiując poszczególne fragmenty tekstu, zdawał sobie
+w pełni sprawę z ich miejsca w całości „gmachu” teorii obwodów.
+
+Następne cztery rozdziały są poświęcone podstawowym metodom
+analizy obwodów, w kolejności od najprostszych (obwody prądu stałego
+— rozdział 3), poprzez trudniejsze (obwody prądu sinusoidalnego — rozdział
+4 oraz obwody prądu okresowego — rozdział 5), do bardziej zaawansowanych
+(obwody liniowe pobudzane dowolnymi sygnałami — rozdział 6). Intencją naszą
+było omówienie w pierwszych dwóch tomach podręcznika wszystkich tych pojęć
+i metod, bez których byłoby niemożliwe studiowanie zagadnień bardziej
+złożonych, którym poświęcony będzie tom trzeci.
+
+Podręcznik jest obszerny, co wynika z przyjętego założenia, że powinien on
+służyć do studiowania. Staraliśmy się dać Czytelnikowi tekst w miarę
+kompletny, zawierający często naświetlenia tego samego problemu z różnych
+punktów widzenia. Wszystkie zagadnienia teoretyczne zilustrowano licznymi
+przykładami, od zupełnie elementarnych poczynając, do wyraźnie trudniejszych.
+Sądzimy, że stwarza to szansę zróżnicowanego korzystania z podręcznika.
+Czytelnik łatwiej przyswajający sobie treść bez trudu zauważy, które rozważania
+i przykłady może opuścić. Z kolei, niektóre bardziej elementarne fragmenty
+tekstu mogą być przydatne dla innego kręgu Czytelników.
+
+Do każdego rozdziału dołączono zadania i problemy do samodzielnego
+rozwiązania, również o zróżnicowanym stopniu trudności. Aby umożliwić
+kontrolę stopnia opanowania materiału przez studenta, do każdego zadania
+podano odpowiedzi.
+
+Ambicją naszą było zachowanie ścisłości formalnej wykładu przy jednoczes-
+nej jego poglądowości i przystępności. Przyjęliśmy założenie, że Czytelnikowi są
+znane podstawowe działy matematyki i fizyki w zakresie wykładanym zwykle na
+pierwszym roku studiów. W zakresie matematyki dotyczy to zwłaszcza (w
+kolejności występowania w podręczniku): analizy matematycznej (wraz zelemen-
+tami logiki matematycznej i teorii zbiorów), algebry macierzy, algebry liczb
+zespolonych, szeregów trygonometrycznych Fouriera, równań różniczkowych
+zwyczajnych liniowych o stałych współczynnikach, przekształcenia Laplace'a
+oraz elementów teorii funkcji zmiennej zespolonej. W przypadkach, w których
+mieliśmy obawy, czy stosowane pojęcia lub metody będą Czytelnikowi do-
+statecznie znane, odsyłaliśmy Go do dostępnej literatury podręcznikowej.
+
+Teoria obwodów może być traktowana jako dział fizyki technicznej, co wiąże
+się z faktem, iż jest ona — w określonym sensie — przybliżeniem teorii pola
+elektromagnetycznego. Do jej właściwego zrozumienia jest zatem wymagana
+także podstawowa znajomość tych działów fizyki, które dotyczą zjawisk

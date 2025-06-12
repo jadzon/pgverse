@@ -1,0 +1,23 @@
+Obserwowalność
+
+ 
+
+Rozważmy liniowy układ dynamiczny opisany równaniami stanu
+
+<image/wzory/k/_page64_formula2.png>
+
+<image/wzory/k/_page64_formula1.png>
+
+SMOUBJS 8|8pOJN
+
+Stan x(0) układu nazywa się obserwowalnym, jeżeli można go określić znając
+przebieg sygnału wyjściowego y(t) oraz sterującego u(t) w przedziale (O, £,)
+dla każdego £,>0
+
+Układ nazywa się całkowicie obserwowalnym jeżeli każdy stan tego układu
+jest obserwowalny.
+
+ 
+
+POLITECHNIKA
+GDANSKA

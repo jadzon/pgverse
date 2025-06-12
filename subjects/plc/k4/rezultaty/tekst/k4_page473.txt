@@ -1,0 +1,21 @@
+<image/figury/k4_page47/3_figure3.png>
+
+Wyd. 8.141 Realizacja styku pierwszego cyklu programowego
+
+<image/figury/k4_page473_figure2.png>
+
+Wyd. 8.142 Program główny - przerzutnik RS wyboru fazy napełniania realizowanej
+w segmencie 03. Ustawienie markerów wyboru fazy następuje w pracy automa-
+tycznej lub ręcznej pod warunkiem, że zbiornik nie jest pełny
+
+<image/figury/k4_page473_figure1.png>
+
+Wyd. 8.143 Program główny - przerzutnik RS wyboru fazy grzania realizowanej
+w segmencie 04. Ustawienie markerów wyboru fazy następuje w pracy automa-
+tycznej lub ręcznej pod warunkiem, że poziom w zbiorniku jest wyższy niż mini-
+
+malny a temperatura procesu nie została ustabilizowana
+
+ 
+
+8.8 Sterowanie sekwencyjne procesem wsadowym 473

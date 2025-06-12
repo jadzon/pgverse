@@ -1,0 +1,29 @@
+Należy zaznaczyć, że otrzymane rozwiązanie nie jest jedyną postacią równań sta-
+nu, jaką możemy uzyskać. Jednakże liczba zmiennych stanu (trzy) w dowolnej innej
+przestrzeni zawsze będzie taka sama.
+
+Przykład 2.12
+Wyznaczyć równania stanu i równanie wyjścia dla układu opisanego poniższą
+transmitancją
+
+<image/wzory/k1_page45_formula1.png>
+
+Rozwiązanie
+Biorąc pod uwagę szeregowe połączenie członów jak na rysunku 2.4, napiszemy:
+
+<image/wzory/k1_page45_formula2.png>
+
+<image/wzory/k1_page45_formula3.png>
+<image/wzory/k1_page45_formula4.png>
+
+<image/figury/k1_page45_figure1.png>
+
+Stosując odwrotną transformację Laplace'a, otrzymamy:
+
+<image/wzory/k1_page45_formula5.png>
+
+Układ równań w przestrzeni stanu możemy zapisać więc w postaci
+
+<image/wzory/k1_page45_formula6.png>
+
+47

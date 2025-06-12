@@ -1,0 +1,20 @@
+<image/wzory/k4_page317_formula1.png>
+
+ 
+
+Simatic jest jednym z najbardziej rozpowszechnionych na naszym rynku przemy-
+słowym sterownikiem programowalnym. Niniejszy rozdział jest poświęcony pro-
+gramowaniu sterowników Simaric S5 firmy SIEMENS. Obecnie weszła na rynek
+nowa seria tych sterowników - Simatic $7. Nałeży podkreślić, iż nowa seria S7
+jest bezpośrednim rozszerzeniem serii S5. W nowej serii zostały wprowadzone
+dodatkowe funkcje wzbogacające możliwości programowania i dokonano ujed-
+nolicenia składni stosowanego języka programowania zgodnie z normą IEC
+1131-3. Główne zasady i metody programowania pozostały jednak takie same.
+
+<image/figury/k4_page317_figure1.png>
+
+Rys. 7.1 Sterownik SIMATIC S5-115U.
+
+W M 0
+
+Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5 317

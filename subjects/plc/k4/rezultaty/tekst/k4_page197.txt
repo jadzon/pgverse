@@ -1,0 +1,50 @@
+zory/k4_page197_formula1.pNg_1 png
+
+Lista funkcji arytmetycznych w sterownikach serii 90-30 (tu noszą one nazwę
+Math Functions) obejmuje:
+
+ADD (ADDition) - dodawanie;
+
+SUB (SUBtraction) - odejmowanie;
+
+MUL (MULtiplication) - mnożenie;
+
+DIV (DłYVision) - dzielenie (liczb całkowitych);
+
+MOD (MOduło Division) - reszta z dzielenia (liczb całkowitych);
+SQRT (SQuare RooT) - pierwiastek kwadratowy.
+
+.... ..e e ©
+
+Wymienione funkcje są dwuargumentowe, z wyjątkiem jednoargumentowej
+funkcji SQRT. Ich wykonanie zależy od dopływu prądu do wejścia zezwolenie
+(enable). Oba argumenty wejściowe oraz wyjście powinny być tego samego ty-
+pu, a nazwa wybranego typu danych (/NT lub D/NT) określa typ funkcji
+i dodawana jest do jej nazwy.
+
+Wszystkie funkcje arytmetyczne mogą być realizowane na liczbach całkowitych
+(Integer lub Double Integer) i do programisty należy zadbanie o to, by nie zo-
+stały przekroczone zakresy zmienności dla wyniku wykonywanej operacji.
+Dlatego też często operacje takie wykonuje się na danych 32 bitowych (podwój-
+nej precyzji). Oczywiście, w takiej sytuacji trzeba pamiętać o tym, że zarówno
+argumenty wejściowe jak i wyjściowe funkcji są liczbami typu D/N7T, a więc
+zajmują w pamięci po dwa słowa.
+
+Należy także pamiętać o tym, że jeżeli jako argument funkcji arytmetycznej
+podana zostanie zmienna typu B/7, to dla funkcji typu /NT kolejnych szesnaście
+zmiennych binarnych zostanie potraktowanych jako jedna liczba całkowita typu
+INT. Podobnie w przypadku funkcji typu DINT, dla której 32 kolejne zmienne
+binarne mogą być traktowane jako jeden argument typu D/N7.
+
+Prawidłowe wykonanie funkcji (tzn. gdy nie wystąpił błąd przepełnienia — over-
+flow) powoduje przesłanie na wyjście Q wyniku operacji oraz pojawienie się
+prądu na wyjściu ok, co umożliwi kontynuowanie sprawdzania obwodu znajdu-
+jącego się na prawo od funkcji. Brak prądu na wyjściu ok oznacza, że wystąpiło
+przepełnienie lub próba dzielenia przez zero.
+
+Na Wyd. 4.14 pokazano przykład realizacji ciągu pięciu operacji arytmetycznych
+dla argumentów typu /NT oraz DINT, wykonywanego w cyklu sterownika, w
+którym zmienna %// przyjmuje wartość /.
+
+EBTI TYT TWP TTE YTTNEW TA PZE PTI IAPECETTTE JOTTKA TT TTC TPEEECY TOY TE JETZT Y WAZJTZOY NE TTEOP TT TT EPERYTOW TWE PPEETOOCYT ZI
+4.6 Funkcje arytmetyczne 197 .

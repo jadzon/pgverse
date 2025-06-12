@@ -1,0 +1,43 @@
+Literatura
+
+[1] Adami Ch., Introduction to artifial life, Springer, New York, 1998.
+[2] Arabas J., (2001) Wykłady z algorytmów ewolucyjnych. WNT. Warszawa 2001.
+
+[3] Bedau M.A., McCaskill J.S., Packard N., Rasmussen $., Adami C., Green D.G.,
+Ikegami T., Kaneko K., Ray T.S.: Open Problems in Artificial Life, Artificial
+Life, v. 6, pp 363-376, 2000.
+
+[4] Bishop M.C., (1996) Neural Networks for Pattern Recognition, Clarendon Press,
+Oxford.
+
+[5] Bolec L, Cytowski J., (1989, 1991) Metody przeszukiwania heurystycznego, t.l i
+t.II, PWN, Warszawa 1989, 1991
+
+[6] Bolc L, Zaremba J., (1992), Wprowadzenie do uczenia się maszyn, Akademicka
+Oficyna Wydawnicza RM, Warszawa.
+
+[7] Bonabeau E., Dorigo M., Theraulaz G., Swarm Intelligence: From Natural to
+Artificial Systems, Oxford University Press, New York 1999.
+
+[8] Brachman R.J., Levesque H.J., (2004), Knowledge representation and reaso-
+ning, Morgan Kaufman Publishers, Amsterdam.
+
+[9] Brit (1998), Encyclopedia Britannica CD 99, Multimedia Edition, Shockwave
+Macromedia, Inc., Encyclopedia Britannica, Inc.
+
+[10] Buller A., (1998), Sztuczny mózg, Prószyński i S-ka, Warszawa.
+
+[11] Callan R. (2003), Artificial Intelligence, Palgrave Macmillan, Houndmills,
+Hampshire.
+
+[12] Campbell M., Hoane J.A.Jr., Hsu F., (2002), Deep Blue, Artificial Intelligence
+v. 134, pp. 57-83.
+
+[13] Cichosz P., (2000), Systemy uczące się, WNT, Warszawa.
+
+[14] Engelbrecht A., Fundamentals of computational swarm intelligence, J. Wiley,
+Chichester, 2006.
+
+[15] Engelbrecht A., Computational intelligence, J. Wiley, Chichester, 2007.
+
+239

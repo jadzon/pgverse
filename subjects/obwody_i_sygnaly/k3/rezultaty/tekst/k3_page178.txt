@@ -1,0 +1,47 @@
+178 2. Pojęcia podstawowe — układy
+
+Przykład 2.1-14. Obliczymy moc chwilową pobieraną przez czwórnik z rys. 2.1-5c.
+podstawie równań (2.1-13) otrzymujemy:
+
+<image/wzory/k3_page178_formula1.png>
+
+lub:
+
+   
+   
+
+<image/wzory/k3_page178_formula2.png>
+
+Zależność (2.1-23) jest ilustracją zasady Tellegena dla rozważanego czwórnika (p. 1.5.1-B).
+Moc u,j jestmocą oddawaną przez źródło prądowe — por. wzór (1.7-4); lewa strona równości
+(2.1-23) jest zatem sumą mocy p pobieranej przez czwórnik z otoczenia i mocy dostarczanej przez.
+źródło. Składniki prawej strony równości (2.1-23) są oczywiście mocami chwilowymi pobieranymi
+przez poszczególne opory układu.
+
+2.1.3. Układy wielozaciskowe
+
+Wielowrotnik charakteryzuje się parzystą liczbą 2n zacisków zgrupowa-
+nych w n par. Prądy zacisków tworzących parę (wrota) są jednakowe i przeciw-
+nie skierowane, tzn. spełniają warunek zrównoważenia (2.1-15). W ujęciu
+zaciskowym wielowrotnik nie jest więc strukturą najbardziej ogólną, podlega
+bowiem wymienionym wyżej ograniczeniom. Celowe staje się zatem wprowadze-
+nie struktury o dowolnej, niekoniecznie parzystej liczbie zacisków, dla której
+ponadto nie jest wymagane spełnienie warunku (2.1-15).
+
+A. Pojęcie wielobiegunnika. Układem wielozaciskowym lub wielobiegun-
+nikiem nazywamy układ (rys. 2.1-7), w którym:
+a) wyróżniono m zacisków;
+b) stan zaciskowy jest określony przez m prądów zaciskowych i; ,i,,...,i,,
+spełniających prądowe prawo Kirchhoffa:
+
+vzory/k3_page178_formula3.png (2.1-24)
+
+oraz przez m napięć u;,u>,..., u„ poszczególnych zacisków względem dodat-
+kowego zacisku odniesienia (masy, ziemi);
+
+c) wielkości zaciskowe iy, i;,..., in, Uy, Ua,..., u, SĄ związane ze sobą m
+niezależnymi równaniami, wliczając w to równanie (2.1-24).
+
+W układzie z rys. 2.1-7 można utożsamić zacisk odniesienia z którymś
+z zacisków wielobiegunnika, np. z zaciskiem o numerze m (rys. 2.1-8a). Mamy
+wówczas:

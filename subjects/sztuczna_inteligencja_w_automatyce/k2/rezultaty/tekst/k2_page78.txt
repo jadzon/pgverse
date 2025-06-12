@@ -1,0 +1,28 @@
+83
+
+Niech relację R i S są zdefiniowane przez następujące dwuwymiarowe funkcje
+przynależności:
+
+<image/wzory/k2_page78_formula1.png>
+
+<image/wzory/k2_page7/8_formula2.png>
+
+Wtedy wyznaczenie funkcji przynależności złożenia tych relacji przebiega jak przed-
+stawiono poniżej, gdzie wyznaczono wartość funkcji przynależności tej relacji dla
+wartości z = 2 i z = a (patrz też rys. ??).
+
+<image/wzory/k2_page7/8_formula3.png>
+
+<image/figury/k2_page78_figure1.png>
+
+Rys. 5.10: Przykład złożenia relacji rozmytych. Linie pogrubione ilustrują wyznaczenie
+wartości relacji pomiędzy 2 i a
+
+Definicja 5.11 Złożenie zbioru rozmytego i relacji rozmytej
+
+Dany jest zbiór rozmyty A € X oraz relacja rozmyta F € X xY, wtedy złożenie
+
+B = AoFJ zbioru A i relacji F jest zbiorem rozmytym B C Y zdefiniowanym
+natępująco (patrz rys. ??):
+
+<image/wzory/k2_page7/8_formula4.png>

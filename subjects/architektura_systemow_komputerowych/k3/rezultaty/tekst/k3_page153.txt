@@ -1,0 +1,52 @@
+7.2. Proces translacji 143
+
+ 
+
+W poprzednim przykładzie na stos zapisywana była tylko zawartość licznika rozkazów,
+ponieważ podprogram nie naruszał zawartości rejestrów w taki sposób, aby program
+w pętli działał błędnie. Aby jednak zapewnić procesorowi możliwość korzystania ze
+wszystkich zasobów komputera (w szczególności rejestrów procesora) w czasie wykony-
+wania podprogramu, trzeba zapamiętywać zawartości wszystkich jego rejestrów. W tym
+celu początki podprogramów zawierają zwykle sekwencję rozkazów PUSH przesyłającą
+na stos zawartości rejestrów. Zakończenie podprogramów jest wtedy sekwencją rozkazów
+POP przywracającą rejestrom ich poprzednie zawartości.
+
+Z powyższego opisu wynika, że w ogólnym przypadku wywołanie podprogramu, czyli
+sekwencja startowa programu głównego, ma za zadanie przekazanie parametrów
+(ang. parameter passing) dla podprogramu, który na zakończenie swego działania przeka-
+zuje wyniki do programu głównego. Istnieją podprogramy, które z racji swego działania
+zmieniają wartości przekazanych im parametrów. Takie parametry podprogramów
+nazywane są parametrami zmiennymi, w odróżnieniu od parametrów stałych niezmienia-
+nych przez podprogramy. Jeśli stosuje się podprogramy z parametrami stałymi, to program
+może przekazywać je podprogramowi poprzez rejestry procesora. Mówimy wówczas, że
+przekazanie parametrów nastąpiło przez wartość (ang. pass-by-value). Jeśli zaś stosuje się
+podprogramy z parametrami zmiennymi, to program może przekazywać je podprogramowi
+poprzez wskazanie w rejestrach procesora ich adresu. Mówi się wówczas, że przekazanie
+parametrów nastąpiło przez nazwę (ang. pass-by-reference).
+
+Przekazanie parametrów przez wartość ma tę wadę, że argumenty podprogramu nie
+mogą być zbyt długie, podczas gdy przekazanie parametrów przez nazwę umożliwia
+praktycznie dowolną długość argumentów. W tym przypadku w pamięci rezerwuje się
+odpowiednią liczbę komórek, tworzących blok, który podczas przekazywania parametrów
+do podprogramu jest zapisywany przez program główny, a odczytywany przez podprogram.
+W czasie przekazywania wyników podprogram zapisuje blok a program główny go odczy-
+tuje. Istnieje problem umieszczenia w pamięci i zaadresowania tego bloku. Problem ten
+zwie się alokacją (ang. allocation). Blok parametrów umieszcza się w spójnym obszarze
+pamięci. Adres pierwszej komórki pamięci jest adresem bazowym bloku, a każdy parametr
+zajmuje jedną lub więcej komórek pamięci o określonym przesunięciu (ang. offset)
+względem adresu bazowego.
+
+Jeśli adres bloku parametrów jest związany z programem i alokowany przy każdo-
+razowym wywołaniu podprogramu, to przy każdorazowym wykonaniu podprogramu może
+on być w innym miejscu. Mówi się wówczas o alokacji dynamicznej, tj. alokacji w czasie
+wykonywania programu. Jeżeli zaś blok jest związany z podprogramem, to jego adres
+bazowy jest ustalany w czasie kompilacji (translacji) programu i jest niezmienny. Dlatego
+program główny musi znać ten adres przed wykonaniem programu. W takim przypadku
+mówi się o alokacji statycznej, tj. alokacji w czasie ładowania programu przez program
+ładujący.
+
+7.2. PROCES TRANSLACJI
+
+Sposób programowania, w którym programista stosuje mnemoniczne kody rozkazów
+danego procesora jest nazywany programowaniem na najniższym poziomie (w odróżnieniu
+od języków wysokiego poziomu jak język C, FORTRAN lub PASCAL) lub programo-

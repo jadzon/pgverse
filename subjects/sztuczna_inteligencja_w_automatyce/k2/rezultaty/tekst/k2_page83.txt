@@ -1,0 +1,38 @@
+<image/figury/k2_page83_figure1.png>
+
+Rys. 5.13: Funkcja przynależności wyjściowego zbioru rozmytego s(r) dla wartości wejścio-
+wych wysokości i prędkości odpowiednio 100m i 12m/s oraz wartość wynikowa wynosząca
+50
+
+W pierwszej metodzie rozwiązaniem jest środek ciężkości funkcji przynależności,
+który wyznaczany jest z wzoru
+
+<image/wzory/k2_page83_formula1.png>
+
+gdzie s(:) jest funkcją przynależności, zaś przedział [a, b] jest jej dziedziną. W oma-
+wianym przykładzie środek cięzkości otrzymanej funkcji przynależności jest równy
+s, = 50 i ta wartość jest odpowiedzią systemu na sygnały wejściowe 100 i 12 co
+pokazano na rys. ??.
+
+W drugiej metodzie rozwiązaniem jest wartość zmiennej niezależnej, dla której
+funkcja przynależności przyjmuje wartość maksymalną. mu
+
+PRZYKŁAD 5.9
+Na rys. ?? przedstawiono inny przykład wnioskowania rozmytego. Zwróćmy uwagę
+na występowanie w regułach funkcji OR. |
+
+PRZYKŁAD 5.10
+
+Na rys. ?? przedstawiono przykład wnioskowania rozmytego metodą Sugeno.
+imi
+
+5.2. Sieci bayesowskie
+
+W połowie lat 90. do wnioskowania w sytuacjach niedeterministycznych zaczęto
+stosować metody rachunku prawdopodobieństwa, a w szczególności sieci bayesowskie
+lub steci przekonań (ang. bayestan networks lub bayestan belief networks) (Russel,
+Norvig 1995 str. 436, Heckerman, Wellman 1995, Li 1998). Ich stosowanie wynika z
+następujących spostrzeżeń:
+
+e Wiedza posiadana przez ludzi i obserwowane fakty stanowiące podstawę wnio-
+skowania są niepewne.

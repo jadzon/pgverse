@@ -1,0 +1,44 @@
+111
+
+I(P,S,t) liczba łańcuchów w populacji ?* reprezentowana przez schemat S$ w
+cyklu ł
+Pm prawdopodobieństwo mutacji
+
+Definicja 6.3 Przystosowaniem schematu 5 w cyklu t nazywamy liczbę
+
+<image/wzory/k2_page106_formula1.png>
+
+Definicja 6.4 Przystosowaniem populacji P w cyklu t nazywamy liczbę
+
+<image/wzory/k2_page106_formula2.png>
+
+Wyznaczymy teraz liczbę łańcuchów reprezentowanych przez schemat $ w cyklu
+t + 1 zależną od tej liczby w cyklu t, czyli
+
+<image/wzory/k2_page106_formula3.png>
+Etap selekcji
+Prawdopodobieństwo wylosowania w trakcie selekcji łańcucha reprezentowanego
+przez 5 wynosi
+
+<image/wzory/k2_page106_formula4.png>
+
+Sposób losowania łańcuchów na etapie selekcji jest schematem Bernoulliego (z praw-
+dopodobieństwem p wylosowania łańcucha reprezentowanego przez $ (sukces) i
+prawdopodobieństwem 1 — p wylosowania łańcucha nie reprezentowanego przez S).
+Ponieważ wartość średnia liczby sukcesów w schemacie Bernoulliego wynosi px liczba
+prób mamy
+
+<image/wzory/k2_page106_formula5.png>
+Etap krzyżowania
+W czasie krzyżowania pary łańcuchów, z których jeden należy. a drugi nie należy
+do schematu $, prawdopodobieństwo zamiany łańcucha należącego do schematu S$
+na nie należący do niego wynosi (im większa jest długość schematu, D(S), tym
+większa jest szansa, że dany łańcuch przestanie być przez niego reprezentowany)
+
+<image/wzory/k2_page106_formula6.png>
+
+Etap mutacji
+Prawdopodobieństwo, że podczas mutacji łańcuch nie przestanie należeć do sche-
+matu $ w)
+
+<image/wzory/k2_page106_formula7.png>

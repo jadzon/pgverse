@@ -1,0 +1,32 @@
+Przyjmuje się, że zbiornik jest pusty jeżeli poziom płynu w zbiorniku znajduje
+się poniżej czujnika b, odpowiednio b; w Zbiorniku 1 i bz w Zbiorniku 2, co od-
+powiada wartościom b,=0 lub b;=0. Natomiast zbiornik jest pełny gdy poziom
+znajduje się powyżej czujnika h, czyli odpowiednio dla h,=/ lub h;=]7. Zakłada
+się, że w stanie początkowym oba zbiorniki są puste. Jeśli zostanie naciśnięty
+przycisk m (m=1) to powinno rozpocząć się napełnianie obu zbiorników prze
+
+otwarcie górnych zaworów V; i V» (V,=/ lub V;=/ oznacza, że odpowiedni za:
+wór jest otwarty).
+
+<image/figury/k4_page77_figure1.png>
+
+Gdy zbiornik zostanie wypełniony, należy zamknąć zawór górny, a jego zawar-
+tość może być zużywana przez otwarcie zaworu dolnego. (odpowiednio W;
+i W»). Kiedy zbiornik się opróżni, to zawór dolny jest zamykany. Ponowne na-
+pełnianie może rozpocząć się dopiero wtedy, gdy oba zbiorniki będą puste
+i zostanie naciśnięty przycisk m.
+
+Poniżej przedstawiono cztery różne sposoby modelowania automatu sterującego
+napełnianiem zbiorników zgodnie z podanymi wymaganiami.
+
+1) Opis w formie tablicy stanów.
+
+W tablicy tej każda kolumna odpowiada pewnej kombinacji wejść, natomiast
+wiersz reprezentuje wewnętrzny stan automatu. Stan wewnętrzny i kombinacja
+wejść definiują stan automatu. Stan początkowy (zaznaczony gwiazdką) jest sta-
+nem 1, który jest stanem stabilnym dla kombinacji wejść mh,h+b,b;=00000
+(stan stabilny oznacza się poprzez umieszczenie numeru stanu w kółku). Wszyst-
+kie wyjścia dla tego stanu są równe O. Jeśli wejście m przyjmie wartość /, to
+
+WRP ZÓÓOZ ZOO ZZ ZEP ZO DDD OOOO LO. ZZOZ ZZLCVCVV O OOO LLC COR LLL OCR LLOQOVLV(LLLLLVSLOLLŚ LS LDDDLŃ
+2.5 Programowanie w oparciu o graf sekwencji SFC 77

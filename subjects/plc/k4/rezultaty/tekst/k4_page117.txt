@@ -1,0 +1,56 @@
+3.2 Jednostka Centralna CPU
+
+NACE KOLUMBA
+
+ 
+
+Jednostka centralna CPU 351 sterowników GE
+
+Fanuc serii 90-30 posiada dwa wbudowane łącza
+» 485/422 oraz RS 232. Mogą być
+ywane podobnie jak łącze szerego-
+e w zasilaczu kasety. Na każdym z
+munikacja odbywa się z użyciem
+(Series Ninety Protocol), będącego
+mowym GE Fanuc. Trzy diody typu
+e przez SNP, PI, P2 (Port 1, 2) sy-
+sy tych łącz.
+
+'4_page1 1 7_figure 1 png ownika oraz zapis konfiguracji ste-
+
+J może być zabezpieczony kluczem
+
+CPU zawiera bateryjnie podtrzy-
+
+zć typu RAM, w której mieści się
+
+rogramowanie i dane użytkownika,
+
+guracji, słowa identyfikacyjnego /D
+
+v tablicy statusów. Moduł CPU za-
+
+nieulotną pamięć typu FLASH,
+
+bezbateryjne podtrzymanie prze-
+
+w niej oprogramowania
+
+aplikacyjnego i systemowego, tzw. firmware. Za-
+
+stosowanie tego typu pamięci umożliwia łatwą
+aktualizację tego oprogramowania.
+
+Najnowsza CPU 364 posiada interfejs Ethernet TCP/IP, który m.in. może wyko-
+rzystywać deterministyczny standard przesyłania danych EGD (Ethernet Global
+Data). Transmisja EGD w ustałonym czasie pozwala elementowi tej sieci (pro-
+ducentowi) przesyłać dane do jednego lub wielu innych sieciowych urządzeń
+(konsumentów). Model CPU 364 wyposażony jest w 246 KB konfigurowalnej
+pamięci, arytmetykę zmiennoprzecinkową i sekwencyjny rejestrator zdarzeń,
+który umożliwia chronologiczny zapis zmian 1024 sygnałów binarnych z roz-
+dzielczością 1ms. Rejestrator taki znajduje zastosowanie głównie jako rejestrator
+zdarzeń awaryjnych.
+
+ 
+
+3.2 Jednostka centralna CPU 1 17

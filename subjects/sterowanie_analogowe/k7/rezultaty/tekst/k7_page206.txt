@@ -1,0 +1,20 @@
+Trajektoria fazowa — przykład 3 (liniowy, stałe pobudzenie)
+
+ 
+
+ 
+
+<image/figury/k/_page206_figure1.png>
+
+Załóżmy, że pobudzenie jest stałowartościowe. Rozważmy dwa przypadki (B>0):
+" u(t) =-B
+
+<image/wzory/k/_page206_formula1.png>
+<image/figury/k/_page206_figure2.png>
+
+<image/nzory/k7_page206_formula2.pnwzory/k7_page206_formula3.png>
+
+Wartości stałych C, i C, wyznaczymy znając warunki początkowe
+
+>OLITECHNIKA i |
+GDAŃSKA

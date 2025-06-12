@@ -1,0 +1,45 @@
+12. Szybkie przekształcenie Fourie.
+
+<image/tabele/k3_page210_table1.png>
+
+ 
+   
+ 
+    
+ 
+
+Załóżmy, że kopiujecie jeden z tych algorytmów FFT do programu w waszym Kompute e
+i go uruchamiacie. Skąd wiadomo, czy działa on poprawnie? Do wykrywania błędów stosuje
+się zwykle dwie sztuczki. Po pierwsze, zacznijcie od jakiegoś dowolnego sygnału w dziedzi:
+nie czasu, np. z generatora liczb losowych, i poddajcie go przekształceniu FFT. Potem uzy.
+skane widmo częstotliwościowe poddajcie odwrotnemu przekształceniu FFT i porówn jcie
+wynik z sygnałem oryginalnym. Powinny one być identyczne, z pominięciem szumu spowe
+dowanego zaokrąglaniem (kilka części na milion, przy pojedynczej dokładności).
+Drugim możliwym testem prawidłowego działania jest sprawdzenie, czy sygnały mają pe
+prawną symetrię. Gdy część urojona sygnału w dziedzinie czasu składa się z samych za
+(normalny przypadek), to zespolone DFT jest symetryczne wokół próbek 0 i N/2, jak to ju
+poprzednio stwierdzono.
+
+Również gdy występuje taka poprawna symetria w dziedzinie częstotliwości, to odwrotne DFT
+sygnał w dziedzinie czasu mający część urojoną zawierającą same zera (plus szum aokrąglani
+Te metody szukania błędów są bardzo ważne w zastosowaniach FFT. Dobrze je poznajcie.
+
+Porównanie szybkości i dokładności
+
+Przy obliczaniu DFT metodą korelacji (jak w tablicy 12.2) zastosowano w programie dwi
+zagnieżdżone pętle, każda przechodząca przez N punktów. Z tego wynika, że całkowita lic
+ba operacji jest proporcjonalna do N razy N. Czas konieczny do wykonania programu je
+więc określony wzorem:
+
+Czas wykonania =k,,, N*
+Wzór 12.1. Czas wykonania programu obliczania DFT. Ten czas w przypadku obliczania przez korelację
+jest proporcjonalny do kwadratu długości DFT
+gdzie N jest liczbą punktów w DFT, a kppr — współczynnikiem proporcjonalności. Jeśli v
+tości sinusoid i kosinusoid są obliczane wewnątrz zagnieżdżonych pętli, to Kpyrr jest równe «
+25 us w Pentium 100 MHz. Jeśli wartości sinusoid i kosinusoid są obliczone wcześniej i z:
+jestrowane w tablicach przeglądowych, to kpypy zmniejsza się do 7 us. Na przykład 1024-p
+towe DFT będzie wymagało ok. 25 s, czyli prawie 25 ms na jeden punkt. To jest długo!”
+
+a +
+16 Współczesne (rok 2006) komputery biurowe radzą sobie z obliczaniem 1024-punktowego DFT
+czasie rzeczywistym (za: http://www.intel.com) (przyp. tłum.).

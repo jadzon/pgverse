@@ -1,0 +1,31 @@
+Zadanie 2.24
+Dla układu opisanego transmitancją
+
+<image/wzory/k1_page104_formula1.png>
+
+należy wyznaczyć i narysować charakterystykę amplitudowo-fazową oraz charaktery-
+styki logarytmiczne modułu i fazy.
+
+Zadanie 2.25
+
+Wyznaczyć i narysować charakterystyki logarytmiczne modułu i fazy dla układów
+o transmitancjach:
+
+/k1_page104_table1.png
+
+Zadanie 2.26
+
+Narysować charakterystyki logarytmiczne modułu i fazy układów opisanych po-
+niższymi transmitancjami (wykorzystując metodę „graficzną ”):
+
+k1_page104_figure1.png
+
+Zadanie 2.27
+
+Dany jest układ o strukturze podanej na rysunku 2.49.
+Przyjmując, że k = 5 i T= 5 s, należy wyznaczyć i narysować:
+a) odpowiedź skokową układu,
+b) charakterystykę amplitudowo-fazową układu,
+c) charakterystyki logarytmiczne modułu i fazy układu.
+
+106

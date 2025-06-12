@@ -1,0 +1,41 @@
+180 2. Pojęcia podstawowe — układy
+
+Widzimy zatem, że wychodząc z ogólnej struktury, jak
+z rys. 2.1-7, dochodzimy jednak (w wyniku przyjęcia :
+jednego z zacisków układu) do struktury wielowrotnika
+wielowrotniki, zwane wielowrotnikami o wspólnej masi
+w elektronice istotną rolę. W wielu przypadkach praktycz
+aby można było jeden z zacisków każdych wrót dołączyć
+odniesienia (wspólnej masy, wspólnej ziemi).
+
+Warto jeszcze podkreślić, że równania układów z rys.
+od tego, czy wspólny zacisk odniesienia ma istotnie
+(u„ = 0), czy też ma jakąkolwiek inną wartość. Istotne
+wszystkie uziemione zaciski układu z rys. 2.1-8b miały te
+były między sobą zwarte.
+
+b.dwubiegunnikadwjnik.rozpatrzmyniecowzory/k4_page180_
+szczególne wielobiegunników dla m =2im=3.
+
+Dir m = 2 dostajemy układ przedstawiony na rys
+innych oznaczeniach, łatwych do porównania z oznac;
+Utożsamienie zacisków C i B przy spełnieniu równośc
+strukturę dwójnika z rys. 2.1-2a, którego stan zaciskowy
+jeden prąd i oraz jedno napięcie u. Dwubiegunnik i dw
+turami, które można uważać za tożsame. W praktyce n
+rozróżniania tych pojęć.
+
+C. Trójnik. Układ o trzech zaciskach (m = 3) p:
+2.1-9a jest nazywany trójnikiem. Przyjmując jako zacisk od
+
+<image/figury/k4_page180_figure1.png>
+
+(rys. 2.1-9b), możemy wyeliminować z opisu trójnika napięcie u, oraz prąd is
+(u; = 0, i; = — i, — i»). Rozczepiajączacisk na dwa zwarte zaciski dostajemy
+czwórnik (rys. 2.1-9c) o takich samych równaniach jak trójnik z rys. 2.1-9b.
+Czwórnik o strukturze przedstawionej na rys. 2.1-9c nazywamy czwórnikiem
+o strukturze trójnikowej albo czwórnikiem o wspólnej masie (ziemi). Czwórniki
+o takiej konfiguracji odgrywają istotną rolę w praktyce.
+
+Powróćmy do rozpatrywanych już przykładów czwórników. Czwórniki
+z rys. 2.1-5 są czwórnikami o strukturze trójnikowej, podobnie jak źródła

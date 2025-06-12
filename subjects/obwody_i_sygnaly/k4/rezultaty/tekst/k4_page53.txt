@@ -1,0 +1,49 @@
+1.3. Elementy nieliniowe 53
+
+Wzór (1.3-14)) wyraża całkowitą energię gromadzoną (magazynowaną) w polu
+magnetycznym indukcyjności w chwili bieżącej t, w której punkt pracy A ma
+współrzędne i(t), W(t) (rys. 1.3-10b). Energia ta, pobierana z otoczenia podczas
+ruchu punktu pracy od początku układu współrzędnych do położenia A, może
+być w całości oddana do otoczenia. Oznacza to, że indukcyjność jest elementem
+
+bezstratnym.
+
+Wzór (1.3-14) ma prostą interpretację geometryczną. Wartość energii w;
+gromadzonej w indukcyjności jest miarą pola ograniczonego charakterystyką,
+
+ly = const (rys. 1.3-10b). Jest rzeczą oczywistą, że zawsze:
+
+ry/k4_page53_formula2.png (1.3-15)
+
+mnadzona w indukcyjności liniowej. Dla indukcyjności linio-
+»dnie ze wzorem (1.3-14) (por. także rys. 1.3-10c):
+
+<image/wzory/k4_page53_formula3.png>
+
+je53_formula1.png
+
+indukcyjności. Indukcyjność (liniową lub nieliniową) zali-
+' inercyjnych, tj. takich, które są zdolne do gromadzenia
+ństwie do elementów bezinercyjnych, opisywanych rów-
+ymi (por. p. 1.3.1.-E), równanie indukcyjności wiążące
+ijestrwnaniemrniczkowympor.wzory1.38
+
+/ki elementów (i układów) inercyjnych powrócimy w p.
+
+Podamy teraz kilka przykładów charakterystyk aprok-
+ste charakterystyki indukcyjności nieliniowych spotyka-
+
+mentem powszechnie stosowanym w urządzeniach radiotechnicznych jest
+zej wersji jest to cewka nawinięta na rdzeń ferromagnetyczny. Dławik jako
+vik idealny) jest indukcyjnością nieliniową. Typowa charakterystyka
+1 1>0 na rys. 1.3-11.
+
+aproksymacji charakterystyk rzeczywistych indukcyjności nieliniowych
+' funkcje przedstawione na rys. 1.3-12.
+
+unkcje wykazują wolny wzrost strumienia skojarzonego dla większych
+kterystyczny dla tzw. zakresu nasycenia rzeczywistych indukcyjności
+cach d i e strumień w jest ograniczony.
+
+1) W występujących tu całkach stosujemy konsekwentnie sposób oznaczania zmiennych
+całkowania omówiony w uwadze końcowej w p. 1.1-G.

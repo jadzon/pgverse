@@ -1,0 +1,24 @@
+34. Nieliniowe obwody rezystancyjne prądu stalego 291
+
+<image/figury/k3_page289_figure2.png>
+
+D. Obwody z diodami idealnymi. Podane w p. C reguły pozostają
+oczywiście słuszne, jeżeli źródło idealne jest dołączone do dowolnego elementu
+rezystancyjnego. W obwodach nieliniowych spotyka się szczególnie często
+różnorodne kombinacje połączeń źródeł stałych i prostownikowych elementów
+rezystancyjnych: prostownika idealnego o równaniach (1.3-31) i charakterystyce
+pokazanej na rys. 1.3-25b lub prostownika idealnego o równaniach (1.3-32)
+i charakterystyce pokazanej na rys. 1.3-25c. Oba elementy są nazywane także
+diodami idealnymi. W wyniku połączeń źródeł stałych z diodami idealnymi
+możemy uzyskać dwójniki rezystancyjne o bardzo użytecznych w praktyce
+charakterystykach.
+
+Przykład 3.4-3. Wyznaczymy charakterystykę dwójnika z rys. 3.4-11a. Występujące w nim
+diody idealne mają charakterystyki przedstawione na rys. 3.4-11b. Wartości sił elektromotorycz-
+nych obu źródeł są jednakowe i równe E > 0.
+
+<image/figury/k3_page289_figure3.png>
+
+aja w AA
+
+m — ew

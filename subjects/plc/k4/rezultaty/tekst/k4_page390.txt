@@ -1,0 +1,54 @@
+Urządzenie może pracować w dwóch trybach:
+
+|. praca automatyczna (SJA w stanie ON) - wszystkie czynności związane
+z wprowadzaniem drewna na taśmociąg i jego sortowaniem odbywają się au-
+tomatycznie;
+
+2. praca ręczna (S3M w stanie ON) - wprowadzanie drewna na taśmociąg od-
+bywa się przez naciśnięcie przycisku wprowadź oznaczonego jako 54, co
+możliwe jest tylko wtedy gdy świeci się lampka zezwolenie, natomiast w celu
+wprowadzenia kłody do właściwej komory należy po wykonaniu pomiaru
+długości nacisnąć przycisk $/ lub S2 włączający odpowiedni wypychacz.
+Usiłowanie wprowadzenia kłody do niewłaściwej komory powinno spowo-
+dować jej przesunięcie na koniec do dalszej obróbki.
+
+Wejściami sterującymi dla urządzenia są:
+QI - sygnał włączający wypychacz 1;
+
+Q2 - sygnał włączający wypychacz 2;
+
+Q3 - sygnał wprowadzenia następnej kłody;
+Q4 - sygnał zapalający lampkę zezwolenie.
+
+Wyjściami informującymi o stanie urządzenia są:
+
+BI, B2, B3 - sygnały z fotokomórek do pomiaru długości kłody (stan ON oznacza
+przysłonięcie strumienia świetlnego);
+
+B4, BS - sygnały z fotokomórek rejestrujących wprowadzenie kłody do komory;
+B6 - sygnał z fotokomórki rejestrującej opuszczenie taśmociągu przez kłodę;
+B7, B8 - sygnały z czujników końca kłody;
+
+$/ — sygnał z przycisku ręcznego włączenia wypychacza 1;
+
+S$2 — sygnał z przycisku ręcznego włączenia wypychacza 2;
+
+sygnały z przełącznika trybu pracy:
+
+S3JA - praca automatyczna;
+
+$3M - praca ręczna;
+
+54 - przycisk zezwalający na wprowadzenie następnej kłody na taśmociąg.
+
+<image/tabele/k4_page390_table1.png>
+Tab. 8.3 przedstawia zestawienie połączeń wejść i wyjść dwustanowych sterow-
+nika GE Fanuc serii 90-30 z odpowiednimi wyjściami i wejściami panelu dy-
+daktycznego, dla którego napisano przykładowy program realizujący opisane
+wyżej zadanie sterowania.
+
+Tekst programu w języku ŁD realizującego algorytm sterowania panelem poka-
+zują Wyd. 8.3-Wyd. 8.10.
+
+EEBEWEPEM PY 10. I PINY "0 03 CELY AWA ZINE aI NBO TC ACC RCR TOO KO CA 7 KO PA RT AO WOCZAACO ZO OE" JK ZWOZEROZIEY POJ
+390 Rozdział : 8.Programy przykładowe

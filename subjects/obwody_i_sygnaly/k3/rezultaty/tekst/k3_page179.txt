@@ -1,0 +1,44 @@
+2.1. Wielowrotniki i sieci 181
+
+A ———
+
+-20 oraz czwórnik z rys. 1.8-12. Nie mają natomiast
+: źródła sterowane z rys. 1.7-18, indukcyjności sprzężone
+nator idealny (rys. 1.8-16) oraz żyrator (rys. 1.7-25a).
+vagę, iż podobnie jak w przypadku źródeł sterowanych
+zwierając dolne zaciski w czwórnikach z rys. 1.8-3, 1.8-16
+strukturę trójnikową, oczywiście bez zmiany równań tych
+
+ 
+
+) podano przykład czwórnika (tzw. czwórnik mostkowy
+
+e179_formula1.png
+ry/k3_page179_figure1.png
+
+który nie ma struktury trójnikowej. W przeciwieństwie do
+wyżej przykładów, nie można w tym czwórniku uzyskać
+de np. dolnych zacisków zmieniłoby strukturę i opis
+
+.7.2-C znaczenie źródeł sterowanych w modelowaniu
+znych podaliśmy przykłady tranzystorów bipolarnego
+»y trójelektrodowej. Czytelnik bez trudu zauważy, iż
+są trójnikami. Na rys. 1.7-2la, 1.7-23a i 1.7-24a
+„„ . „ Dstaci czwórników o strukturze trójnikowej, tj. przecho-
+dząc od razu od struktury z rys. 2.1-9b do struktury z rys. 2.1-9c.
+
+D. Układy równoważne. W p. 1.5.2-I wprowadziliśmy pojęcie elementu
+zastępczego lub elementu równoważnego. W dalszych fragmentach tekstu
+również wspominaliśmy kilkakrotnie o równoważności, poprzestając jednak
+z konieczności na bardziej intuicyjnym niż formalnym pojmowaniu tego pojęcia.
+Obecnie, po omówieniu właściwości wielowrotników i wielobiegunników,
+możemy dokładniej scharakteryzować równoważn ość układów. Przez
+słowo „układ” będziemy dalej rozumieć wielowrotnik lub wielobiegunnik.
+
+Zwracamy przede wszystkim uwagę na to, iż mówiąc o układach równoważ-
+nych używamy często wymiennie nazwy układ zastępczy (niekiedy — schemat
+zastępczy, por. np. przykład 1.8-3). W nazwie tej przejawia się wyraźnie określona
+intencja. Układ zastępczy to taki układ, którym można zast ępować dany
+układ, jest on bowiem równoważn y rozpatrywanemu układowi. Wyjaśnij-
+my nieco dokładniej sens tego sformułowania dokonując następującego ekspery-
+mentu myślowego.

@@ -1,0 +1,50 @@
+220 2. Pojęcia podstawowe — układy
+
+Załóżmy, że wszystkie pobudzenia e;, €»,..., j,_4, j, są określone dla
+t e (0, + co). Odpowiada to założeniu, że wszystkie źródła niezależne zostały
+włączone do układu w chwili t =0 i działają w przedziale czasu
+40, + oo). Wszystkie prądy i napięcia elementów układu będą zatem również
+określone dla t e 40, +0)".
+
+Uwaga. Nasze rozważania nie uległyby zmianie, gdybyśmy przyjęli d ow olną chwilę tę
+włączenia źródeł i rozpatrywali wszystkie występujące w układzie sygnały dla t € (ty, +00). Wynika
+to ze sformułowanych na początku założeń. Dla uproszczenia przyjęliśmy i, = 0.
+
+B. Warunki początkowe. Włączenie źródeł niezależnych w chwili t = 0
+odbywa się przy pewnych warunkach początkowych. Kwestia warunków począt-
+kowych ma zasadnicze znaczenie dla dalszych rozważań i może być rozpat-
+rywana z dwóch punktów widzenia.
+
+1. W układzie mogą występować elementy inercyjne (indukcyjności
+i pojemności) zdolne do gromadzenia energii i energia zgromadzona w tych
+elementach w chwili t = 0 może być niezerowa. Niezerowa wartość energii
+w chwilit = O może wynikać zfaktu, iż dla czasów t < O układ nie znajdował się
+w stanie spoczynku i w chwili t = O zbiorniki energii nie były puste.
+
+Energia gromadzona w indukcyjności zależy od wartości chwilowej płynące-
+go przez nią prądu — wzór (1.3-16). Energia gromadzona w pojemności zależy od
+wartości chwilowej panującego na niej napięcia — wzór (1.3-24)
+
+Znajomość wartości całkowitej energii zgromadzonej w układzie SLS w do-
+wolnej chwili ty wymaga znajomości w chwili t, wartości prądów we wszystkich
+indukcyjnościach i wartości napięć na wszystkich pojemnościach.
+
+Warunkami początkowymi nazywamy zatem wartości w chwili początkowej
+t = 0 prądów we wszystkich indukcyjnościach i napięć na wszystkich pojem-
+nościach. Warunki początkowe określają całkowitą wartość energii gromadzonej
+w układzie w chwili t = O.
+
+2. Równania sieciowe układu SLS można przedstawić w postaci równań
+różniczkowych zwyczajnych, liniowych, o współczynnikach stałych i/lub równań
+algebraicznych (p. 2.1.5-E). Jeśli sieć nie jest bezinercyjna (tj. jeśli zawiera
+elementy inercyjne), to wśród tych równań występują równania różnicz-
+kowe. Jednoznaczne wyznaczenie ich rozwiązań dla te 0, +00) wymaga
+znajomości warunków początkowych, tj. wartości odpowiednich prądów i napięć
+w chwili t = 0. Ze związków: (1.2-26) dla indukcyjności i (1.2-38) dla
+pojemności wynika, że dla ustalenia wzajemnie jednoznacznej zależności między
+prądem a napięciem w indukcyjności i pojemności dla czasów te 40, +00)
+potrzebna jest znajomość w chwili « = 0 wartości prądu w indukcyjności
+i wartości napięcia na pojemności. Wartości te określają zbiór warunków
+
+5 Niekiedy dogodniej jest rozpatrywać przebiegi niektórych prądów lub napięć w przedziale
+otwartym (0, + co). Rozróżnienia tego nie będziemy w tym punkcie eksponować.

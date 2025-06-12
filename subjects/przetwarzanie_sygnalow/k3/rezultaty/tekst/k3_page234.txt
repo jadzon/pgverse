@@ -1,0 +1,54 @@
+14. Wprowadzenie do filtrów 0
+
+Przyjmijmy na przykład, że dano wam jakiś sygnał nieznanego pochodzenia i poproszor
+o jego przeanalizowanie. Pierwszą rzeczą, jaką zrobimy, będzie podział sygnału na obs
+o podobnych właściwościach. Nie możecie się od tego powstrzymać, wasz umysł
+na to automatycznie. Niektóre obszary mogą być gładkie, inne mogą zawierać duże piki,
+inne mogą być zaszumione. Taką segmentację przeprowadza się przez identyfikację punktów
+rozdzielających obszary. Wtedy właśnie zaczyna być potrzebna funkcja skokowa. Jest ona:
+najczystszym sposobem reprezentowania podziału między dwoma odmiennymi obszarami.
+Funkcja skokowa może być zaznaczeniem początku, a także końca zdarzenia. Zgodnie z nią
+wszystko, co jest na łewo, różni się w jakiś sposób od tego, co jest na prawo. W ten właśnie
+sposób nasz umysł widzi informację w dziedzinie czasu — jako grupę funkcji skokowych
+dzielących informację na obszary o zbliżonych właściwościach. Odpowiedź skokowa, z ko-
+lei, jest ważna, gdyż opisuje, jak te linie podziału są modyfikowane przez filtr.
+Parametry odpowiedzi skokowej, mające istotne znaczenie w projektowaniu filtrów, przedsti
+wiono na rys. 14.2. Aby móc rozróżnić zdarzenia w sygnale, czas trwania odpowiedzi skoka ej
+musi być krótszy niż odstęp między zdarzeniami. Z tego wynika, że odpowiedź skokowa po in-
+na być możliwie jak najszybsza (tak się mówi w żargonie stosowanym w DSP), jak pokazano
+na rysunkach 14.2 a), b). Najlepszym sposobem określenia czasu narastania jest podanie liczby
+próbek znajdujących się między 10% i 90% poziomu maksymalnego. Dlaczego nie zawsze jest
+możliwy krótki czas narastania? Jest wiele przyczyn — konieczność zredukowania szumu, og
+niczenia nieodłącznie związane z systemem akwizycji danych, unikanie aliasingu itd.
+Rysunki 14.2 c), d) ilustrują następny ważny parametr — przerzut odpowiedzi skokowej.
+Ogólnie biorąc, przerzut trzeba eliminować, bo zmienia on amplitudy próbek w sygnale.
+Jest to podstawowe źródło zniekształceń informacji zawartej w dziedzinie czasu. Trzeba tu
+jednak zadać pytanie: czy obserwowany przerzut pochodzi z mierzonego sygnału, czy jest
+spowodowany zastosowanym filtrem?
+Na koniec trzeba powiedzieć, że często jest wymagane, aby górna połówka odpowiedzi sko-
+kowej była symetryczna z dolną, jak to pokazano na rysunkach 14.2 e), f). Symetria jest
+konieczna po to, aby zbocza narastające były identyczne ze zboczami opadającymi. Taka
+symetria nosi nazwę liniowości fazy, gdyż odpowiedź częstotliwościowa ma wtedy charak-
+terystykę fazową będącą linią prostą (omówienie — w rozdziale 19). Upewnijcie się, czy
+rozumiecie te trzy parametry; są one kluczem do obliczania filtrów w dziedzinie czasu.
+
+Parametry w dziedzinie częstotliwości
+
+Cztery najważniejsze parametry odpowiedzi częstotliwościowej przedstawiono na rys. 14.3.
+Zadaniem tych filtrów jest przepuszczenie niezmienionych sygnałów w pewnym zakresie
+częstotliwości przy całkowitym zablokowaniu innych częstotliwości. Pasmo przepustowe
+obejmuje te częstotliwości, które są przepuszczane, zaporowe zaś — częstotliwości bloko-
+wane. Między nimi jest pasmo przejściowe. Przy szybkim opadaniu charakterystyki pas
+przejściowe jest bardzo wąskie. Częstotliwość dzieląca pasma zaporowe i przepustowe jes
+nazywana częstotliwością odcięcia (lub graniczną). W filtrach analogowych częstotliwość
+odcięcia jest zwykle definiowana jako częstotliwość, przy której wartość odpowiedzi spada
+do 0,707 wartości maksymalnej (w paśmie przepustowym), tj. o -3 dB. Filtry cyfrowe nie
+są tak znormalizowane; można spotkać definicje częstotliwości odcięcia dla spadku do 99%,
+90%, 70,7% i 50% wartości maksymalnej.
+
+Na rys. 14.4 przedstawiono trzy parametry będące miarą jakości działania filtru w dziedzinie
+częstotliwości. Dla dobrego oddzielenia pasm częstotliwości filtr powinien mieć szybkie opa-
+danie charakterystyki w paśmie przejściowym (rysunki 14.4 a, b). Aby sygnał w paśmie prze-
+pustowym przechodził przez filtr niezmieniony, nie powinno być zafalowań na charakterystyce
+w tym paśmie (rysunki 14.4 c, d). Wreszcie, dla dobrego blokowania sygnału w paśmie zaporo-
+wym, filtr powinien mieć dobry współczynnik tłumienia w tym paśmie (rysunki 14.4 e, f).

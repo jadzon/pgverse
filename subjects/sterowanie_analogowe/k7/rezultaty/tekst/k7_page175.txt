@@ -1,0 +1,26 @@
+Parametry cyklu granicznego
+
+Zadanie
+Metodą funkcji opisującej określić czy w układzie wystąpią drgania oraz określić ich
+amplitude i pulsację
+
+Y(s)
+
+<image/figury/k/_page175_figure1.png>
+Jim)=ś$=
+aM
+
+<image/wzory/k/_page175_formula1.png>
+
+ 
+
+POLITECHNIKA
+GDANSKA
+
+ 
+
+eoblnsido eloy4un4
+
+ 
+
+AJ

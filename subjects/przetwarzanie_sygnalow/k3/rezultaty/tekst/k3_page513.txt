@@ -1,0 +1,84 @@
+552
+
+31. Zespolone przekształcenie Fouriera
+
+8. Skalowanie
+
+Aby równania analizy i syntezy się nawzajem anulowały, trzeba do jednego z nich dodać współ-
+
+czynnik skałowania. W tablicy 31.1 współczynniki skalowania umieściliśmy przy równaniach
+analizy. W przypadku przekształceń zespolonych współczynniki skalowania są: 1/N, 1/7 lub
+1/2n. Ponieważ w przekształceniach rzeczywistych nie stosuje się częstotliwości ujemnych,
+więc współczynniki skalowania są dwukrotnie większe: 2/N, 2/7 lub 1/x. Przekształcenia rze-
+czywiste zawierają też ujemny znak w obliczeniu części urojonej widma częstotliwościowego
+(opcja stosowana w celu osiągnięcia większej spójności przekształceń rzeczywistych z zespo-
+lonymi). Wreszcie równania syntezy dla rzeczywistego DFT i rzeczywistego szeregu Fouriera
+są zaopatrzone w specjalne zalecenie skalowania dotyczące Re X(0) i Re X(N/2).
+
+9. Różnice
+
+Te równania w innych publikacjach mogą wyglądać nieco inaczej. Oto kilka różnic, na które
+należy zwrócić uwagę:
+
+. Stosowanie f zamiast © w zależności w = Żręf
+
+* Całkowanie w innych okresach, np. od —7 do 0, od —7/2 do 7/2 lub od © do 7
+
+* Przeniesienie, całkowicie lub częściowo, współczynnika skalowania do równania syntezy
+
+  
+   
+ 
+ 
+ 
+ 
+  
+  
+ 
+   
+    
+   
+   
+   
+   
+ 
+    
+  
+
+Zastąpienie okresu częstotliwością podstawową: f, = 1/7
+Stosowanie innych oznaczeń zmiennych, np. zamiast © może być Q w DTFT, a Re X[k]
+i Im X[k)] mogą być oznaczone jako a, i bę w szeregu Fouriera.
+
+Dlaczego stosuje się przekształcenie Fouriera
+
+Z tego rozdziału wynika bezsprzecznie, że zespolone DFT jest znacznie bardziej skomplikowane
+niż rzeczywiste DFT. Czy korzyści wynikające z zespolonego DFT są rzeczywiście warte wysiłku
+uczenia się zawiłej matematyki? Odpowiedź na takie pytanie zależy od tego, kim jesteście i do
+czego macie zamiar zastosować DSP. Podstawowym przesłaniem tej książki jest udowodnienie, że
+najpraktyczniejsze metody DSP można zrozumieć i stosować bez uciekania się do przekształceń
+zespolonych. Jeśli uczycie się DSP po to tylko, aby was wspomogło w waszych badaniach i pro-
+jektach technicznych, to poznawanie zespolonego DFT byłoby chyba niepotrzebną przesadą.
+Niemniej jednak, matematyka liczb zespolonych jest głównym językiem dla tych, którzy spe-
+cjalizują się w DSP. Jeśli nie rozumiecie tego języka, to nie możecie porozumieć się Z pro-
+fesjonalistami w tej dziedzinie. To dotyczy także możliwości zrozumienia literatury o DSP
+— książek, artykułów, publikacji technicznych itd. Dlaczego metody zespołone są tak popu-
+larne wśród rzeszy profesjonalistów DSP?
+
+jestkilkaprzyczynktrejuwymienilimywzoryozwartejformiesymetriarwnaana
+lizy i syntezy, symetria dziedzin czasu i częstotliwości, włączenie częstotliwości ujemnych
+oraz fakt, że te metody są krokiem prowadzącym do przekształceń Z i Laplace'a, itd.
+
+Jest jeszcze bardziej filozoficzna przyczyna, o której nie mówiliśmy, a którą czasem nazywa
+się prawdą. Rozpoczęliśmy ten rozdział od wyszczególnienia kilku przyczyn, dla których
+rzeczywiste przekształcenie Fouriera jest kłopotliwe. Po wprowadzeniu zespolonego prze-
+kształcenia Fouriera te kłopoty znikły. Powiedzieliśmy: świetnie, zespolone przekształcenie
+Fouriera rozwiązało trudności.
+
+Chociaż to prawda, to jednak nie w pełni oddaje zalety zespołonego przekształcenia Fouriera.
+Spójrzmy na tę sprawę w sposób następujący. Mimo swej abstrakcyjnej natury, zespolone prze-
+kształcenie Fouriera prawidłowo opisuje, jak się zachowują systemy fizyczne. Jeśli operacje mate-
+matyczne ograniczamy do liczb rzeczywistych, to pojawiają się problemy. Można więc powiedzieć,
+że te problemy nie są rozwiązywane przez zespolone przekształcenie Fouriera, lecz są one wpro:
+wadzane przez rzeczywiste przekształcenie Fouriera. Matematycznie, przekształcenie zespolone
+daje więcej prawdy niż rzeczywiste. W tym jest wielka zasługa matematyków i innych uczonych
+— grupy, która rozszerza ludzką wiedzę, a nie tylko po prostu rozwiązuje problemy bieżące.

@@ -1,0 +1,38 @@
+1.4. Przeszukiwanie grafów 11
+
+<image/tabele/k2_page189_table1.png>
+
+W metodzie przeszukiwania w głąb po każdym kroku algorytmu wierzchołki znajdujące
+się na stosie tworzą drogę od wierzchołka wejściowego do wierzchołka aktualnie odwie-
+dzanego.
+
+Udowodnimy teraz, że algorytm odwiedzi wszystkie wierzchołki osiągalne z wierz-
+chołka początkowego v. Przypuśćmy bowiem, że w grafie istnieje wierzchołek w osiągalny
+z v, ale nie odwiedzony przez algorytm. Skoro w jest osiągalny z v, to istnieje droga
+
+<image/wzory/k2_page189_formula1.png>
+
+Ponieważ tą był odwiedzony, a vx nie, to na tej drodze mamy dwa sąsiednie wierzchołki
+v; OTaZ v;, takie, że v;, był odwiedzony, a v;;; nie. W pewnym momencie algorytmu
+wierzchołek v; był na stosie, a potem został z niego zdjęty, ponieważ algorytm kończy
+pracę dopiero po zdjęciu wszystkich wierzchołków ze stosu. Zastanówmy się teraz nad
+krokiem algorytmu, w którym v, jest zdejmowany ze stosu. Alev, nie mógł być zdjęty ze
+stosu, ponieważ istnieje jego sąsiad v,+,, który nie był odwiedzony.
+
+Aby udowodnić, że algorytm zawsze się zatrzyma wystarczy zauważyć, że w każdej
+iteracji pętli albo jakiś wierzchołek jest wkładany na stos, albo jakiś jest zdejmowany ze
+stosu. Z drugiej strony każdy wierzchołek jest tylko raz wkładany na stos (bo wkładane
+są tylko wierzchołki nieodwiedzane). Mamy więc nie więcej niż 2n = 2|V| iteracji pętli,
+a ponieważ w każdej pętli algorytm wykonuje tylko kilka kroków, więc czas działania
+algorytmu jest rzędu O(n).
+
+Algorytm przeszukiwania wszerz.
+Dane wejściowe: graf G = (V, E) oraz wierzchołek początkowy v € V;
+
+e odwiedzamy v, wkładamy go do KOLEJKI; zaznaczamy v jako wierzchołek od-
+wiedzony,
+
+e dopóki KOLEJKA nie jest pusta, powtarzamy:
+o bierzemy jeden wierzchołek v z początku KOLEJKI,
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

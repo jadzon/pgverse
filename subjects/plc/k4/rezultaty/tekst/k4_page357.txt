@@ -1,0 +1,34 @@
+anych DB 7/0
+
+artości 5-tego słowa z bloku danych
+
+tora |
+
+anych DB 20
+k4_page357_table 1 „png artości 5-tego słowa z bloku danych
+
+tora 1
+
+'u słów danych
+
+iie ustawiony gdy porównywane
+
+słowa danych będą równe
+
+W celu utworzenia nowego bloku danych należy się posłużyć operatorem G.
+Przed utworzeniem nowego bloku danych należy do akumulatora | wprowadzić
+wartość, która w chwili tworzenia nowego bloku zostanie przyjęta jako jego dłu-
+gość (liczona w słowach). Jeżeli w chwili wykonania operatora G w akumulato-
+rze | znajduje się zero to blok danych będący argumentem tego operatora jest
+usuwany z pamięci sterownika. W przypadku, gdy blok, który ma zostać utwo-
+rzony już istnieje wykonanie instrukcji "G DB nr" nie przynosi żadnych zmian.
+
+ości 127 do akumulatora |
+i anych DB 20 o długości 128 słów
+k4_page357/_table2.png ości O do akumulatora |
+
+ych DB 5
+
+—
+
+7.12 Programowanie bloków danych 357

@@ -1,0 +1,23 @@
+Porównując obie wersje programu warto zwrócić uwagę na to, że przy przejściu
+z programu w wersji z „zatrzaskiem” do wersji z wykorzystaniem przerzutników
+RS, na wejście wpisujące (tu pokazane jako cewka S$) funkcję załączającą podaje
+się bez zmian. Natomiast na wejście zerujące R podaje się funkcję wyłączającą
+zanegowaną. W tym przypadku funkcja wyłączająca jest iloczynem logicznym:
+
+<image/wzory/k4_page19_formula1.png>
+
+który po zanegowaniu staje się sumą logiczną negacji poszczególnych czynni-
+ków tego iloczynu, czyli:
+
+NOT %13 OR NOT %/4 OR %0Q2.
+
+<image/tabele/k4_page19_table1.png>
+
+Wyd. 1.4 Program sterowania silnikiem w języku schematów drabinkowych
+(wersja 2)
+
+A AA A 1 A © YZ T PNA  © TA T TĄ  | MA 0 PTM
+
+ 
+
+1.2 Pojęcia podstawowe 19

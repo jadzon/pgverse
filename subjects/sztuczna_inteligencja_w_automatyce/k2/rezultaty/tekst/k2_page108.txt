@@ -1,0 +1,19 @@
+113
+
+kryterium jakości algorytmów przyjmuje się różnice pomiędzy wartością przewidy-
+waną, a wartością rzeczywiście zachodzącą. Uczenie można przeprowadzać off line
+na danych zgromadzonych wcześniej.
+
+Przykład zastosowania algorytmu genetycznego — wyznaczenie minimum
+funkcji
+
+Na rys. ?? przedstawiono początkową i końcową populacje punktów przy poszuki-
+waniu minimum funkcji.
+
+<image/figury/k2_page108_figure1.png>
+
+6.4.5. Programowanie genetyczne
+
+Programowanie genetyczne jest odmianą algorytmu genetycznego, w którym ewolu-
+cji podlegają programy. Przykłady operacji krzyżowania i mutacji przedstawiono na
+rysunkach ??, 272, 27.

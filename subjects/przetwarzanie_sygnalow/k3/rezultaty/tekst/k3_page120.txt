@@ -1,0 +1,35 @@
+Właściwości matematyczne 135
+
+ 
+
+| Korelacja
+
+| Pojęcie korelacji najlepiej przedstawić na przykładzie. Na rys. 7.13 pokazano najważniej-
+sze elementy systemu radarowego. Specjalnie zaprojektowana antena wysyła w wybranym
+kierunku krótką wiązkę fal radiowych. Jeśli rozchodząca się fala napotka jakiś obiekt, np.
+pokazany na rysunku śmigłowiec, mała część energii jest odbijana wstecz w kierunku od-
+biornika fal radiowych, umieszczonego w pobliżu nadajnika. Przesyłany impuls ma okre-
+ślony kształt, który mu nadano, np. trójkątny, jak w omawianym przykładzie. Odebrany
+sygnał będzie się składał z dwóch części: z przesuniętej i przeskalowanej wersji wysła-
+nego impulsu oraz z szumu losowego powstającego na skutek zakłóceń fal radiowych,
+szumu cieplnego w podzespołach elektronicznych itd. Ponieważ fale radiowe poruszają
+się ze znaną prędkością, czyli z prędkością światła, więc przesunięcie między impulsa-
+mi nadanym i odebranym jest bezpośrednią miarą odległości od wykrytego obiektu. I tu
+jest problem do rozwiązania — mając sygnał o danym kształcie, trzeba znaleźć najlepszy
+sposób stwierdzenia, gdzie (i czy) ten sygnał mieści się w innym sygnale. Rozwiązaniem
+tego problemu jest korelacja.
+
+<image/figury/k3_page120_figure1.figury/k3_page120_figure3.png>
+
+<image/figury/k3_page120_figure2.png>
+
+  
+ 
+
+Numer próbki
+
+7.12. Przyktad wykonywania operacji spłotu przebiegu imputsowego z tym samym przebiegiem. Zgodnie z cen-
+twierdzeniem granicznym przebieg gaussowski jest wytwarzany, gdy dowolnie uksztattowany impuls jest wie-
+
+poddawany spłotowi z samym sobą. Na rys. a) podano przykład impulsu. Na rys. b) impuls, po jednokrotnym
+z samym sobą, zaczyna być gładki i regularny, a na rys. c) po trzech takich operacjach jest dobrym przybli-

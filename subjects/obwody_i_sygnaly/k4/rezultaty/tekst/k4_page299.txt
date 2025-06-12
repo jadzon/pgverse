@@ -1,0 +1,50 @@
+3.5. Moce w obwodach prądu stałego 301
+
+ 
+
+przez drugą i czwartą ćwiartkę płaszczyzny u,i(por. przykłady 2.1-29 i 2.1-35).
+Oznacza to, że dwójnik rezystancyjny jest pasywny wtedy i tylko wtedy, kiedy:
+
+»ry/k4_page299_formula1.png (3.5-4)
+
+tzn. gdy moc pobierana przez ten dwójnik przy pobudzeniach stałych jest zawsze
+nieujemna.
+Dwójnik rezystanycyjny jest zatem aktywny, jeżeli:
+
+»ry/k4_page299_formula2.png (3.5-5)
+
+tzn. gdy może wystąpić taki stan pracy (taka para U, I), w którym moc pobierana
+jest ujemna.
+
+W przypadku gdy rozważany dwójnik jest bezźródłowy, wówczas ze
+związków (3.5-2) i (3.5-3) oraz nierówności (3.5-4) wynika, że dwójnik ten jest
+pasywny, jeżeli:
+
+'k4_page299_formula3.png (3.5-6)
+
+w przypadku dwójnika liniowego oraz:
+
+//k4_page299_formula4.png (3.5-7)
+
+w przypadku dwójnika nieliniowego.
+Jeżeli natomiast Ry; < 0 (dla dwójnika liniowego) lub V R, < 0 (dla
+U,I
+
+dwójnika nieliniowego), to jest on aktywny.
+
+Dla dwójników rezystancyjnych prądu stałego pozostają oczywiście w mocy
+wszystkie wnioski natury ogólnej, sformułowane w p. 2.1.8 w ramach dyskusji
+pojęć pasywności i aktywności dwójników. Powtórzmy je raz jeszcze.
+
+— Każdy dwójnik bezźródłowy oporowy (zbudowany tylko z oporów
+liniowych lub nieliniowych) jest pasywny.
+
+— Każdy dwójnik źródłowy jest aktywny.
+
+— Dwójniki bezźródłowe rezystancyjne mogą być zarówno pasywne, jak
+i aktywne, w zależności od wartości ich parametrów. Na przykład dwójnik
+z przykładu 3.2-1c (rys. 3.2-2c) jest pasywny, gdy R, + R, > r i aktywny
+w przeciwnym wypadku.
+
+D. Moc oddawana przez źródła. Jak stwierdziliśmy w p. 1.7.1-H idealne
+niezależne źródła stałe (rys. 3.5-5) można uważać za przypadki szczególne

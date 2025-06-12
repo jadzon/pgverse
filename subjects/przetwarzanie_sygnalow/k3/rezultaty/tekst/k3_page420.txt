@@ -1,0 +1,20 @@
+26. Sieci neuronowe (i więcej!)
+
+Projektowanie filtru rekursywnego
+
+W rozdziałach 19 i 20 pokazano, jak się projektuje filtry rekursywne o standardowych odpo-
+wiedziach częstotliwościowych: górno- , dolno-, pasmowoprzepustowe itd. A co zrobić, jeśli
+trzeba wykonać filtr według specjalnych wymagań? Trzeba wtedy zaprojektować filtr rekur-
+sywny tak, jakby się projektowało sieć neuronową — zacząć od ogólnego zestawu współczyn-
+ników rekursywnych i zastosować iterację, aby powoli ukształtować je w 10, czego a
+Ta metoda jest ważna z dwóch powodów. Po pierwsze, umożliwia
+
+rekursywnych bez konieczności szamotania się z matematycznymi Roos
+nia Z. Po drugie, a o za ble aandE EAZA. API dej
+neuronowych, uzyskuje się świetne algorytmy.
+
+że komórki od T[0] do T[128] odnoszą się do częstotliwości między O a 0,5 częstotliwości
+próbkowania. W tej matrycy są zapisane tylko moduły, faza w tym przykładzie nie jest wy-
+znaczana i będzie, jaka będzie.
+
+<image/tabele/k3_page420_table1.png>

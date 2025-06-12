@@ -1,0 +1,60 @@
+Filtry analogowe w przetwarzaniu danych 59
+
+ 
+
+ 
+
+Ten rodzaj układu jest stosowany w produkcji małoseryjnej i w pracach badawczych. W urzą-
+dzeniach produkowanych wielkoseryjnie konieczne są filtry wykonywane jako układy scalone.
+Pojawia się tu trudność z wykonywaniem rezystorów bezpośrednio w krzemie. Rozwiązaniem
+tego problemu są filtry z przełączanymi pojemnościami. Na rys. 3.10 zilustrowano zasadę
+działania takiego filtru przez porównanie go z prostym obwodem RC. Wprowadzając funkcję
+skokową na wejście dolnoprzepustowego filtru RC, uzyskuje się eksponencjalne narastanie na-
+pięcia wyjściowego aż do zrównania się z sygnałem wejściowym. Napięcie na kondensatorze
+nie zmienia się natychmiastowo, gdyż rezystor ogranicza przepływ ładunku elektrycznego.
+W filtrze z przełączanymi pojemnościami podstawowy obwód rezystor-kondensator zastę-
+puje się dwoma kondensatorami i przełącznikiem. Nowo dodany kondensator ma wartość
+znacznie mniejszą niż kondensator z obwodu RC, jest to, powiedzmy 1% pojemności tego
+kondensatora. Przełącznik dołącza mały kondensator na przemian do wejścia i wyjścia,
+z bardzo dużą częstotliwością, typowo 100 razy większą niż częstotliwość odcięcia filtru.
+Gdy do wejścia jest dołączony mały kondensator, ładuje się on szybko do chwilowej warto-
+ści napięcia wejściowego. Gdy przełącznik zostaje dołączony do wyjścia, ładunek z małego
+kondensatora jest przekazywany do dużego. W rezystorze szybkość przekazywania ładunku
+jest określona rezystancją. W układzie z przełączaną pojemnością szybkość przekazywania
+ładunku jest określona pojemnością małego kondensatora oraz częstotliwością przełączania.
+Stąd wynika bardzo korzystna cecha filtrów z przełączanymi pojemnościami: częstotliwość
+odcięcia filtru jest wprost proporcjonalna do częstotliwości taktowania zastosowanej do
+sterowania przełącznikami. To czyni filtr z przełączanymi pojemnościami idealnym roz-
+wiązaniem do systemów akwizycji danych pracujących z więcej niż jedną częstotliwością
+próbkowania. Są to układy dostępne do powszechnego stosowania; za 10 dolarów można
+mieć 8-biegunowy filtr w postaci układu scalonego z 8 wyprowadzeniami.
+
+Przejdźmy teraz do ważnej kwestii dotyczącej parametrów trzech klasycznych typów
+filtrów. Pierwszym parametrem, któremu poświęcimy nieco uwagi, jest stromość spad-
+ku charakterystyki w obszarze odcięcia. Filtr dolnoprzepustowy jest przeznaczony do
+tłumienia wszystkich częstotliwości powyżej częstotliwości odcięcia (pasmo zaporowe)
+i przepuszczania wszystkich częstotliwości poniżej odcięcia (pasmo przepustowe). Na
+rys. 3.11 pokazano w skali logarytmicznej (dB) odpowiedzi częstotliwościowe filtrów
+trzech podstawowych rodzajów. Wykresy przedstawiono dla filtrów o częstotliwości od-
+cięcia I Hz, lecz można je łatwo przeskalować dla każdej innej wymaganej częstotliwości
+odcięcia. Jak wypada porównanie tych filtrów pod względem stromości spadku charak-
+- terystyki? Wyraźnie najlepszy jest filtr Czebyszewa, Butterwortha jest gorszy, a Bessela
+całkiem koszmarny! Jak pewno już zauważyliście, filtr Czebyszewa jest zaprojektowany
+tak, aby spadek amplitudy (roll-off) był możliwie jak najszybszy.
+
+Niestety, nawet 8-biegunowy filtr Czebyszewa nie jest wystarczająco dobry do filtrów an-
+tyaliasingowych. Wyobraźmy sobie np. system 12-bitowy o częstotliwości próbkowania
+10 000 próbek/s. Z twierdzenia o próbkowaniu wynika, że wszystkie częstotliwości powyżej
+5 kHz podlegają aliasingowi, a tego właśnie chcemy uniknąć. Po krótkim namyśle decyduje-
+my, że amplituda wszystkich składowych powyżej 5 kHz powinna być zredukowana o czyn-
+nik 100. Wtedy wszystkie składowe o częstotliwościach podlegających aliasingowi miałyby
+amplitudy poniżej 1%. Na podstawie rys. 3.11 c) stwierdzamy, że 8-bitowy filtr Czebyszewa
+o częstotliwości odcięcia 1 Hz osiąga współczynnika tłumienia (czyli redukcji sygnału) równy
+100 przy częstotliwości ok. 1,35 Hz. Dokonując przeskalowania odpowiedniego dla naszego
+przykładu, trzeba ustalić częstotliwość odcięcia filtru na 3,7 kHz, aby wszystkie składowe
+powyżej 5 kHz zostały należycie stłumione. W rezultacie zakres od 3,7 do 5 kHz jest niepo-
+trzebnie tracony z powodu niewłaściwego odcięcia filtrem analogowym.
+
+l jeszcze delikatna kwestia. Współczynnik tłumienia 100 w tym przykładzie jest przypusz-
+czalnie wystarczający, mimo że w 12 bitach mamy tu 4096 poziomów. Zgodnie z rys. 3.4
+składowa 5100 Hz będzie się nakładała na 4900 Hz, 6000 Hz na 4000 Hz itd. Nie musimy

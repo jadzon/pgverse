@@ -1,0 +1,11 @@
+<image/figury/k4_page430_figure3.png>
+
+Wyd. 8.80 Ustawienie punktów histerezy A,B,C i D
+
+<image/figury/k4_page430_figure1.png>
+
+Wyd. 8.81 Realizacja histerezy na przerzutniku RS dla ujemnych wartości uchybu.
+Rejestr 40201 zawiera wartość liczbową dla części A, a rejestr 40202 — dla części
+B histerezy
+
+430 Rozdział : 8.Programy przykładowe

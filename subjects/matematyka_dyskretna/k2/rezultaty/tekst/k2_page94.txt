@@ -1,0 +1,28 @@
+Rozdział 1
+Funkcje boolowskie
+
+1.1 Algebra Boole'a
+
+Przykładem algebry Boole'a jest zbiór dwuelementowy:
+<image/wzory/k2_page94_formula1.png>
+
+z trzema operacjami: altematywą, koniunkcją i negacją.
+
+Alternatywa, którą będziemy też nazywać po prostu sumą, jest operacją dwuargumentową,
+oznac:
+
+<image/wzory/k2_page94_formula2.png>
+
+i okresioną przez taDelę:
+
+<image/wzory/k2_page94_formula3.png>
+
+Koniunkcja (lub iloczyn) jest drugą operacją dwuargumentową, oznaczaną przez:
+
+<image/wzory/k2_page94_formula4.png>
+
+i określoną przez tabelę:
+
+<image/wzory/k2_page94_formula5.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,43 @@
+38 1. Pojęcia podstawowe — elementy
+
+D. Prąd przesunięcia. W p. 1.1-F podkreślaliśmy, że prąd występuje
+w obwodzie zamkniętym. Odpowiedniej interpretacjj wymaga zatem fakt
+występowania prądu zmiennego w obwodzie zawierającym kondensator, a więc
+obszar nieprzewodzącego dielektryka (rys. 1.2-7b). Interpretacja taka wynika
+z tzw. postulatu Maxwella o przedłużeniu linii pola gęstości 177%" 5 —: =—— =
+niku na obszar dielektryka przez wprowadzenie w nim gęs
+cia określonej jako:
+
+<image/wzory/k4_page38_formula2.png>
+j
+
+Występowanie w dielektryku prądu przesunięcia powodi
+(np. w postaci towarzyszącego mu pola magnetycznego
+prądu przewodzenia w przewodniku. Ze wzorów (1.2-39)
+
+<image/wzory/k4_page38_formula3.png>
+
+tzn. że prąd przesunięcia i, w dielektryku jest równy pr
+dzeniach do kondensatora.
+W tym sensie można więc mówić o występowniu prądu
+wobwodachzkondensatorami.wdielektrykurolwzory/k4_page38_.
+przejmuje prąd przesunięcia.
+
+E. Pojemność jako model pola elektrycznego. Pojen
+modelującym pole elektryczne, a w szczególności zdoln
+energii w polu elektrycznym, o czym będzie szczegółowie
+
+F. Przykłady. Rozpatrzymy następujące przykłady
+wania i interpretację zależności (1.2- 36) — (1.2-38).
+
+Przykład 1.2-5. Wyznaczymy prąd i w pojemności (rys. 1.2-8) pr:
+trzech przypadków:
+
+<image/wzory/k4_page38_formula4.png>
+Korzystamy z zależności (1.2-36). Otrzymujemy odpowiednio:
+
+du
+a) i=C 4 = (; jeżeli napięcie na pojemności jest stałe, to prąd przez nią nie płynie.
+t
+
+aa

@@ -1,0 +1,34 @@
+26 1. Pojęcia podstawowe — elementy
+
+| co po uwzględnieniu związków (1.2-1) i (1.2-2) prowadzi do zależności:
+
+<image/_wzory/k4_page26_formula1.png>
+
+| Otrzymujemy zatem prawo Ohma:
+
+<image/wzory/k4_page26_formula2.png>
+w którym:
+
+<image/wzory/k4_page26_formula3.png>
+
+jest oporem rozważanego przewodnika.
+
+B. Opór jako element obwodu. Rozpatrzymy teraz przypadek, kiedy
+pole E jest niestacjonarne (tj. zmienne w czasie). Zmienne w czasie są wówczas
+również napięcie u oraz prąd i. Załóżmy, że wszystkie zależności, które do-
+prowadziły nas poprzednio do równania (1.2-4) pozostają nadal słuszne. Słusz-
+ne pozostaje zatem również samo równanie (1.2-4), tzn.:
+
+<image/wzory/k4_page26_formula4.png>
+
+gdzie u = u(t), i =i(t) lub:
+
+<image/wzory/k4_page26_formula5.png>
+
+Równanie (1.2-6) określa opór jako element obwodu (rys. 1.2-2). Zapis
+(1.2-7) podkreśla, iż napięcie w chwili t jest proporcjonalne do prądu w tej
+
+<image/figury/k4_page26_figure1.png>
+
+samej chwili Przyjmujemy przy tym, że współczynnik R w równaniu (1.2-6)
+jest identyczny z oporem R określonym przez wzór (1.2-5) dla prądu stałego.

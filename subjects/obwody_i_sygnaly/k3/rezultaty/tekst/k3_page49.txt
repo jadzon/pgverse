@@ -1,0 +1,27 @@
+1.3. Elementy nieliniowe A9
+
+1.3.2. Indukcyjność
+
+A. Indukcyjność skupiona i stacjonarna. Indukcyjność skupiona stacjonar-
+na!) (w skrócie indukcyjność) jest elementem (rys. 1.3-6a) o równaniach:
+
+<image/figury/k3_page49_figure2.png>
+
+ry/k3_page49_formula1.png
+
+<image/figury/k3_page49_figure3.png>
+
+Wykres funkcji (1.3-8) nazywamy charakterystyką indukcyjności. Z przyję-
+tych założeń wynika, że charakterystyka indukcyjności jest krzywą ciągłą, gładką
+lub przedziałami gładką, rosnącą, leżącą tylko w pierwszej i trzeciej ćwiartce oraz
+mającą z osiami i,y jedyny punkt wspólny w początku układu współrzędnych
+(rys. 1.3-6b). Z założeń tych wynika ponadto, że równanie indukcyjności (1.3-8)
+może być zapisane także w równoważnej postaci:
+
+»ry/k3_page49_formula2.png (1.3-11)
+gdzie o, — funkcja odwrotna względem funkcji f,.
+
+W indukcyjności może wystąpić dowolny prąd i e %, przy czym każdej
+wartości prądu i odpowiada dokładnie jedna wartość skojarzenia magnetycz-
+
+1 Por. przypis na str. 43.

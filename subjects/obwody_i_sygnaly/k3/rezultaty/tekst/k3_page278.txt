@@ -1,0 +1,17 @@
+278 3. Obwody prądu stałego
+
+Napięcia gałęziowe sieci można w sposób oczywisty wyrazić przez napięcia
+węzłowe. Napięcie U, gałęzi o numerze k jest różnicą napięcia węzłowego
+węzła początkowego k-tej gałęzi i napięcia węzłowego węzła końcowego tej gałęzi.
+
+Dla rozważanej sieci napięcia gałęziowe U;,..., U wyrażają się poprzez
+napięcia węzłowe U ,, Ug, U, następująco:
+
+<image/figury/k8_page278_figure2.png>
+
+Taal? none resessaoolzi (2 2 V1V siwe nladnim=r *., ubłiadwia rAurnoań (A 2.14) tom
+
+<image/wzory/k3_page278_formula1.png>
+
+SZEDIC ZAOZOLDOSCI ODIICZELI.
+Równania węzłowe (3.3-22) możemy zapisać w postaci macierzowej:

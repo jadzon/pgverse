@@ -1,0 +1,45 @@
+1.15. Funkcja Eulera 25
+
+Dowód Jeżeli z =y* (mod m), to m dzieli z? — y? = (z — y)(z + y), a ponieważ m
+jest pierwsze to m dzieli z — y lub z + y. W pierwszym przypadkuz =y (mod m), w
+drugim z = —y (mod m). o
+
+Przykład 1.47 Tak nie musi być, jeżeli m nie jest liczbą pierwszą. Na przykład w Zy5
+mamy cztery pierwiastki z 1, są to 1, 4, 11i 14.
+
+Ogólnie rozważmy liczbę m która jest iloczynem dwóch różnych liczb pierwszych
+p > ą > 2. Weźmy teraz dowolną liczbę y, dla której
+
+<image/wzory/k2_page140_formula1.png>
+
+oraz
+
+<image/wzory/k2_page140_formula2.png>
+
+w
+
+<image/wzory/k2_page140_formula3.png>
+
+czyli z chinskieqo twierdzenia o resztach wynika, ze
+
+<image/wzory/k2_page140_formula4.png>
+
+Ponieważ p > q > 2,01 4 —1 (mod p) oraz 1 4 —1 (mod q) i mamy wtedy
+cztery różne pierwiastki z 1, y:, v2> vs, y4. SĄ to liczby dla których
+
+<image/wzory/k2_page140_formula5.png>
+ię
+
+1.15 Funkcja Eulera
+
+Definicja 1.48 Funkcja Eulera, jest to funkcja, która liczbie m przypisuje ó(m) liczbę
+elementów odwracalnych w Z „. Z definicji przyjmujemy 6(1) = 1.
+
+<image/wzory/k2_page140_formula6.png>
+
+Lemat 1.50 a) Jeżeli p jest liczbą pierwszą, to dla dowolnego a > 1 6(p*) =
+p*”! (p — 1). W szczególności $(p) = p— 1.
+
+b) Jeżeli m i n są względnie pierwsze, to $(m : n) = $(m) : ó(n)
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

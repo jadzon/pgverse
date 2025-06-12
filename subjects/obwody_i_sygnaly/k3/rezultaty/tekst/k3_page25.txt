@@ -1,0 +1,43 @@
+1.2. Podstawowe modele zjawisk w obwodzie 25
+
+uproszczony. Bardziej precyzyjne rozważania są zawarte w Dodatku 1. Wyma-
+gają one jednak posłużenia się zaawansowanym aparatem matematycznym
+teorii pola.
+
+1.2.1. Opór
+
+A. Podstawowe zależności. Rozważmy obszar przewodnika w po-
+staci walca kołowego o długości I i polu przekroju poprzecznego S (rys. 1.2-1).
+
+ 
+
+<image/figury/k3_page25_figure1.png>
+
+Rys. 1.2-1
+
+Przyjmijmy, że w obszarze przewodnika występuje pole elektryczne scharak-
+teryzowane wektorem natężenia pola E (tzw. pole przepływowe). Towarzyszyć
+mu będzie przepływ prądu (ruch ładunków elektrycznych) określony przez pole
+wektorowe gęstości prądu 0, związane z natężeniem pola elektrycznego
+E zależnością”:
+
+'ory/k3_page25_formula1.png (1.2-1)
+
+gdzie y jest przewodnością właściwą przewodnika.
+
+Załóżmy, że w rozważanym obszarze przewodnika pole E jest jednorodne
+i stacjonarne, tzn. wektor E jest w każdym punkcie przewodnika jednakowy co
+do długości, kierunku i zwrotu (jednorodność) i stały w czasie (stacjonarność).
+Przyjmiemy także, że kierunek wektora E pokrywa się z osią walca.
+
+Prąd stały I przepływający przez powierzchnię S dowolnego przekroju
+poprzecznego można zapisać w postaci:
+
+ory/k3_page25_formula2.png (1.2-2)
+
+bowiem wektor 6 jest prostopadły do płaszczyzny przekroju walca. Napięcie
+stałe U na rozważanym przewodniku jest określone wzorem:
+
+'ory/k3_page25_formula3.png (1-38)
+
+1) Zależność ta bywa czasem nazywana różniczkową postacią prawa Ohma.

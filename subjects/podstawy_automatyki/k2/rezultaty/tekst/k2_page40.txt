@@ -1,0 +1,65 @@
+8 Układ nadążny
+
+8.1 Cel ćwiczenia
+
+Ćwiczenie ma na celu zapoznanie się z problemem doboru nastaw regula-
+tora w układzie nadążnym, którego definicja została podana
+w ćwiczeniu 5, w celu zapewnienia odpowiedniej jakości regulacji
+reprezentowanej przez wartości wskaźników całkowych, w układzie
+z zakłóceniami oraz bez zakłóceń.
+
+8.2 Podstawowe wiadomości
+
+8.2.1 Uzupełnienie wiadomości o układzie nadążnym
+
+Zadaniem realizowanym przez układ nadążny o zadanej dynamice
+(stałych czasowych, opóźnieniu transportowym etc.) jest możliwie
+dokładne odtwarzanie sygnału odniesienia (sygnału referencyjnego).
+istnieje więc potrzeba dobrania parametrów regulatora w taki sposób,
+aby zapewnić odpowiednie pasmo przenoszenia (w zakresie częstotliwości
+sygnału odniesienia, czy też tak zwanych częstotliwości użytecznych),
+ale jednocześnie takie, aby występujące zakłócenia nie były przenoszone
+przez układ, lecz tłumione.
+
+Jako przykładowe zadanie śledzenia można rozpatrzyć zadanie sterowa-
+nia kątem nachylenia klap steru wodolotu, zadawanym przez stery, a zakłó-
+canym przez moment z(£) wytwarzany na klapach przez uderzające
+o nie fale. Dodatkowym zakłóceniem mogącym wystąpić w układzie jest za-
+kłócenie pomiarowe zp(t), które w uproszczeniu może zostać sprowadzone
+na wejście obiektu. Schemat blokowy omawianego przypadku pokazano na
+rysunku 8.1.
+
+<image/figury/k2_page40_figure2.png>
+
+Rys. 8.1: Schemat blokowy układu sterowania klapą steru wodolotu
+
+79
+
+Analizując ponownie problem doboru nastaw regulatora, można zauwa-
+żyć, że zbyt wolny układ będzie się spóźniał w stosunku do sygnału odnie-
+sienia, a zbyt szybki, czy też zbyt czuły, będzie reagował nie tylko na sygnał
+użyteczny, ale również będzie przenosił częstotliwości zakłócenia. Nastawy
+regulatora muszą być dobrane tak, aby zapewniały odpowiednią jakość na-
+dążania z uwzględnieniem dynamiki obiektu sterowania oraz właściwości
+sygnału referencyjnego i zakłócającego.
+
+8.2.2 Błąd nadążania, uchyb regulacji
+
+Od układu przedstawionego w poprzednim podpunkcie wymaga się
+śledzenia sygnału referencyjnego, czyli w idealnym przypadku uzyskania
+w każdej chwili y(t) = r(t). Z uwagi jednak na możliwość wystąpienia
+zakłóceń oraz dynamikę obiektu sterowania powstaje błąd nadążania
+
+<image/wzory/k2_page40_formula1.png>
+
+jan poRazaiw 1d LYBUIIRU O.£.
+
+<image/figury/k2_page40_figure1.png>
+
+Rys. 8.2: Błąd nadążania e;(t) oraz uchyb regulacji e(£)
+
+Błąd taki ma wartość różną od uchybu regulacji e(t) = e;(t) + zp(t),
+stanowiącego wymuszenie regulatora. Jeżeli, jak w niniejszym ćwiczeniu,
+zakłada się brak zakłóceń pomiarowych, a uwzględnia się jedynie zakłóce-
+nia z(t), zachodzi zawsze e(t) = ey(£), przy czym e(t) = r(t) — y(ż) nazywany
+jest uchybem regulacji.

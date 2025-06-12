@@ -1,0 +1,33 @@
+Redundancy Check), a po niej następuje przerwa czasowa 3,5 znaków ciszy na
+łączu przed następną ramką.
+
+3.9.2 Sieci lokalne.
+
+W przypadku połączenia między sobą większej liczby sterowników, komputerów
+lub innych urządzeń powstaje sieć lokalna ŁAN (Local Area Network), która mo-
+że mieć różnorodną strukturę, lub inaczej topologię sieci, por. Rys. 3.45.
+
+<image/figury/k4_page169_figure1.png>
+
+Centralnym punktem sieci gwiaździstej jest koncentrator (Hub), który ma od-
+dzielne łącze do każdego elementu sieci. W sieci takiej można korzystać nawet
+ze zwykłego interfejsu RS 232 lub łączy TTY bez implementacji specjalnego
+protokołu.
+
+Sieć o strukturze pętlowej (Interface Loop Bus) posiada kontroler sieci, który ste-
+ruje i testuje dołączone elementy sieci. Każdy taki element przesyła dane do
+następnego, dodając swoje dane. Wadą takiej struktury jest awaria całego syste-
+mu w chwili awarii jednego elementu lub połączenia.
+
+W sieci o strukturze pierścieniowej wszystkie elementy są równouprawnione
+i zbędny jest kontroler sieci. Dane przesyłane są w jednym kierunku, kolizji za-
+pobiega cykliczny sygnał zezwalający (Control Token) wysyłany przez stację,
+która przetwarzała dane jako ostatnia. Inną możliwością zapobiegania kolizji jest
+reguła, która zapewnia podział czasu dła dostępu poszczególnych elementów do
+sieci.
+
+W sieciach szeregowych lub magistralowych najwcześniej stosowana była reguła
+wymiany paczek danych w sieci „nadrzędny-podrzędny” (master-slave), która
+OP WZ W ZE ZO PT ZEE EE ZE ETA ZA
+
+3.9 Moduł komunikacyjny 169

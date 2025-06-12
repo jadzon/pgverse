@@ -1,0 +1,63 @@
+Rzeczywiste DFT z zastosowaniem zespolonego DFT 221
+
+ 
+
+Podstawą FFT jest zespolone przekształcenie DFT, bardziej skomplikowana wersja rzeczywi-
+stego DFT, które omawialiśmy w czterech poprzednich rozdziałach. Nazwy tych przekształ-
+ceń wynikają ze sposobu reprezentacji danych — w postaci liczb rzeczywistych lub zespo-
+lonych. Określenie zespołony nie znaczy, że takie wyrażanie liczb jest trudne lub skompli-
+kowane, lecz że wiąże się z zastosowanymi metodami matematycznymi. Matematyka liczb
+zespolonych często jest trudna i skomplikowana, lecz nie stąd pochodzi jej nazwa. Zespolone
+DFT jest omówione w rozdziale 29 i tam też są zawarte podstawowe informacje konieczne
+do zrozumienia szczegółów algorytmu FFT. Tematyka tego rozdziału jest prostsza. Będzie
+mowa o tym, jak zastosować FFT do obliczania rzeczywistego DFT, bez zagłębiania się
+w grząskie obszary matematyki wyższej.
+
+Ponieważ FFT jest algorytmem do obliczania zespolonego DFT, więc ważną sprawą jest zro-
+zumienie, jak transferować dane z rzeczywistego DFT do formatu zespolonego DFT i z tego
+formatu, Na rys. 12.1 porównano sposoby gromadzenia danych w rzeczywistym i zespolo-
+nym DFT. W rzeczywistym DFT N-punktowy sygnał w dziedzinie czasu jest przekształcany
+na dwa (N/2 + 1)-punktowe sygnały w dziedzinie częstotliwości. Sygnał w dziedzinie czasu
+jest nazywany po prostu sygnałem w dziedzinie czasu. Dwa sygnały w dziedzinie częstotli-
+wości są nazywane częścią rzeczywistą i częścią urojoną, odnoszącymi się, odpowiednio, do
+wartości fali kosinusoidalnej i sinusoidalnej. To już wiadomo z poprzednich rozdziałów.
+
+W zespolonym DFT następuje przekształcenie dwóch N-punktowych sygnałów w dziedzinie
+czasu na dwa N-punktowe sygnały w dziedzinie częstotliwości. Dwa sygnały w dziedzi-
+nie czasu są nazywane częścią rzeczywistą i częścią urojoną, a więc tak samo jak sygnały
+w dziedzinie częstotliwości. Mimo swych nazw, wszystkie wartości w tych matrycach są po
+prostu zwyczajnymi liczbami. (Jeśli znacie liczby zespolone, to warto powiedzieć, że j nie
+występuje w wartościach zawartych w tablicach; jest stosowne w operacjach matematycz-
+nych. Pamiętajcie, że symbol /m( ) oznacza wartość rzeczywistą).
+
+Przyjmijmy, że mamy sygnał N-punktowy i chcemy zrealizować rzeczywiste przekształce-
+nie DFT, stosując zespolone przekształcenie DFT (np. stosując algorytm FFT). Najpierw
+przesuńmy sygnał N-punktowy do części rzeczywistej zespolonego DFT w dziedzinie czasu,
+a następnie wszystkie próbki w części urojonej ustawmy na wartość zero. Obliczenie zespo-
+lonej transformaty DFT daje w rezultacie w dziedzinie częstotliwości sygnał rzeczywisty
+i sygnał urojony, a każdy z nich składa się z /V punktów. Próbki od O do /V/2 w tych sygnałach
+odpowiadają widmu rzeczywistego DFT. 5
+
+Zgodnie z rozważaniami w rozdziale 10, widmo częstotliwościowe DFT jest okresowe, gdy
+są uwzględnione częstotliwości ujemne (patrz rys. 10.9). Wybór pojedynczego okresu jest
+dowolny; można wybrać okres między —1,0 i 0, —0,5 i 0,5, O i 1,0 lub każdy inny przedział
+o szerokości jednostkowej w odniesieniu do częstotliwości próbkowania. Zespolone widmo
+DFT obejmuje częstotliwości ujemne przy wyborze okresu od 0 do 1,0. Inaczej mówiąc,
+jeden pełny okres rozciąga się od próbki © do próbki N —- 1, co odpowiada wielokrotności
+0 lub I częstotliwości próbkowania. Częstotliwości dodatnie są między próbkami 0 i N/2, co
+odpowiada 0 i 0,5. Inne próbki, pomiędzy V/2 +1 i N- 1, zawierają wartości dla częstotliwo-
+ści ujemnych, które są na ogół pomijane.
+
+Nieco trudniejsze jest wykonywanie rzeczywistego odwrotnego przekształcenia DFT przy uży-
+ciu zespołonego odwrotnego przekształcenia DFT. Przyczyną jest konieczność upewnienia się,
+czy częstotliwości ujemne wprowadzono we właściwym formacie. Pamiętajmy, że punkty od
+0 do N/2 w zespolonym DFT są takie same, jak w rzeczywistym DFT, zarówno jeśli chodzi
+o część rzeczywistą, jak i urojoną. W części rzeczywistej punkt N/2 + | jest taki sam, jak punkt
+NI2 - 1, punkt N/2 + 2 taki sam jak punkt N/2 — 2 itd., aż do punktu N- I, który jest taki sam,
+jak punkt 1. Podobna zasada obowiązuje dla części urojonej, z tym tylko, że następuje zmiana
+znaku. To znaczy, że punkt N/2 + 1 ma ujemną wartość punktu N/2 — 1, punkt N/2 + 2 — ujemną
+wartość punktu N/2 — 2 itd. Zwróćmy uwagę, że próbki O i N/2 nie mają swych równoważnych
+punktów w tym schemacie powtórzeń. Skorzystajcie z rys. 10.9 jako z przewodnika ułatwia-
+
+H
+H

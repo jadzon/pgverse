@@ -1,0 +1,25 @@
+Przykład 2.3
+Znaleźć oryginał funkcji dla transformaty
+
+<image/wzory/k1_page29_formula1.png>
+
+Rozwiązanie
+Rozkładając transformatę F(s) na ułamki proste, otrzymujemy
+
+<image/wzory/k1_page29_formula2.png>
+
+Wyliczamy współczynniki 4 i B:
+
+<image/wzory/k1_page29_formula3.png>
+
+<image/wzory/k1_page29_formula4.png>
+Otrzymujemy
+<image/wzory/k1_page29_formula5.png>
+Oryginał f(1) wyliczamy jako odwrotną transformatę Laplace'a F(s)
+
+<image/wzory/k1_page29_formula6.png>
+
+Przykład 2.4
+Znaleźć oryginał funkcji dla transformaty
+
+<image/wzory/k1_page29_formula7.png>

@@ -1,0 +1,23 @@
+Plik ten zawiera też funkcje umożliwiające narysowanie postaci czasowej dla każ-
+dego ułamka prostego oraz wykres postaci czasowej transformaty X(s) (rys. 3.7) będą-
+cy rozwiązaniem równania różniczkowego.
+
+Wykres postaci czasowej transformaty X,(S)
+<image/figury/k1_page119_figure1.png>
+
+Wykres postaci czasowej transformaty X>(S)
+
+<image/figury/k1_page119_figure2.png>
+
+3.4. Postacie modeli dynamicznych
+Wykorzystuje się trzy postacie liniowych modeli dynamicznych:
+
+l) równania stanu;
+do ich pełnego określenia wystarcza podanie macierzy 4, B, C i D, np.:
+
+<image/wzory/k1_page119_formula1.png>
+
+2) macierze transmitancji (tylko dla układów SIMO — jedno wejście, wiele wyjść);
+transmitancje podaje się w postaci pary wektorów zawierających współczynniki
+
+121

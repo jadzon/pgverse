@@ -1,0 +1,48 @@
+—
+
+2. L [W10 ; wprowadzenie zawartości /W/0 do akumulatora |
+
+3. L IWI12 ; wprowadzenie zawartości /W/2 do akumulatora 1;
+IWIO jest przesunięte do akumulatora 2
+
+4.<=F , porównanie typu "mniejsze lub równe" zawartości obu
+akumulatorów
+
+3:
+
+6. A(
+
+7 L FWI10 ; wprowadzenie zawartości FW/0 do akumulatora I
+
+8.L FWI12 ; wprowadzenie zawartości FW/2 do akumulatora I;
+FWIO jest przesunięte do akumulatora 2
+
+9. t=E ; porównanie typu "równe" zawartości obu akumulato-
+
+rów
+10.)
+IlL=- Q40
+
+Wyjście 04.0 będzie miało wartość 1 gdy:
+
+zawartość 10-tego słowa wejściowego (/W70) będzie mniejsza lub równa od
+zawartości 12-tego słowa wejściowego (/W/2)i
+
+zawartość 10-tego słowa markerów (FWI/O) będzie równa zawartości
+12-tego słowa markerów (FW/2).
+
+W każdym innym przypadku wartość wyjścia Q4.0 jest równa zero.
+
+Niezależnie od rodzaju wykonywanej operacji porównania ustawiane są dwa bity
+
+(CC
+przy
+
+ 
+
+350 Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5
+
+0,CC1) słowa statusowego procesora. Stan tych bitów może być sprawdzany
+pomocy odpowiednich instrukcji skoku (por. 7.14).
+
+<image/tabele/k4_page350_table1.png>

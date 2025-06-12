@@ -1,0 +1,25 @@
+<image/figury/k2_page17/0_figure2.png>
+
+Rys. 6.73: Przykład działania samoorganizującej się mapy cech — siatka jednowymiarowa
+
+6.10. Uczenie ze wzmocnieniem
+
+Uczenie z krytykiem ma miejsce wtedy, gdy systemowi uczącemu nie są znane oczeki-
+wane odpowiedzi, a jedynie oceny liczbowe wartościujące dokonane akcje. Najczęściej
+uczenie z krytykiem stosowane jest do sterowania wieloetapowymi procesami decy-
+zyjnymi, a powszechnie stosowane wtedy algorytmy uczenia noszą nazwę uczenia ze
+wzmocnieniem (ang. reinforcement learning)
+
+6.10.1. Wieloetapowe procesy decyzyjne
+
+Wieloetapowy proces decyzyjny jest systemem dynamicznym przechodzącym, w wy-
+niku podjętej akcji a,, z bieżącego stanu do stanu następnego, generując przy tym
+liczbę r; będącą oceną wykonanego kroku (nagrodą, ang. reward) (rys. ??). Ocena
+całego procesu decyzyjnego jest sumą tych ocen po pewnej (dużej) liczbie kroków,
+
+PT = 2 al Ti-
+
+<image/figury/k2_page170_figure1.png>
+
+Rys. 6.74: Wieloetapowy proces decyzyjny — w wyniku podjętej akcji a w bieżącym stanie
+s układ przeskakuje do wskazanego stanu, otrzymując przy tym nagrodę r

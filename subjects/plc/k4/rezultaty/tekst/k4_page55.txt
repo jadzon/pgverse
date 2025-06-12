@@ -1,0 +1,17 @@
+e Funkcje wyboru i porównania (Selecfion and comparison functions)
+
+Standardowe funkcje wyboru (selection functions) zebrano w Tab. 2.25 nato-
+miast funkcje porównania (comparison funciions) w Tab. 2.26. Obie grupy
+funkcji mogą być stosowane dla dowolnych typów danych (overloaded func-
+Itons).
+
+<image/tabele/k4_page55_table1.png>
+
+Tab. 2.25 Standardowe funkcje wyboru
+Wejściami funkcji MAX, MIN, LIMIT oraz funkcji porównania mogą być argu-
+menty dowolnego typu z zastrzeżeniem. że wszystkie z nich muszą być tego
+samego typu (w tabelach zaznaczono to za pomocą **). Jeżeli to wymaganie nie
+jest spełnione to konieczne jest wykonanie odpowiedniej konwersji typu danych.
+
+HA ZEZEZEK ZEE OOEE JEZEZCZOREEEO YU ONE. UR DKK ROR SK RPAEE A PEPE TAT — IE RLEKII I DI ZEE PODAJ TORBA. YCZA TPA LZYPAZRÓÓCĄK I |. | t- KPU UM
+2.3 Elementy oprogramowania 33

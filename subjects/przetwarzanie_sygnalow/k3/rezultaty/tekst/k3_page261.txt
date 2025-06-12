@@ -1,0 +1,22 @@
+286 17. Filtry dostosowane do szczególnych agd
+
+ze w"rzea
+
+« — EN 717
+
+Większość filtrów charakteryzuje się jedną z czterech typowych odpowiedzi częstotliwościo-
+wych: dolnoprzepustową, górnoprzepustową, pasmowoprzepustową i pasmowozaporową. W
+
+dziedzinie, dając iązani , które w znacznym przekraczają
+elektroniki analogowej. Omówione będą dwie ważne dziedziny filtrów
+bór Pe: aj upojne a "pay
+pożądanemu splotowi oraz filtracja optymalna, a więc problem rozdzielania sygnałów, któryc
+widma nakładają się na siebie. W tych problemach zalety DSP są wyzyskane najlepiej.
+
+Dowolna odpowiedź częstotliwościowa
+
+Przedstawiony w poprzednim rozdziale sposób podejścia do zaprojektowania filtru okienko-
+wanego kj e może by te zatoswany o rojktowania łów o w zasad (aż
+dej dowolnej odpowiedzi częstotliwościowej. Jedyną różnicą jest inna metoda p enia
+
+<image/figury/k3_page261_figure1.png>

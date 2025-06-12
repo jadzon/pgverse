@@ -1,0 +1,48 @@
+2.1. Wielowrotniki i sieci 173
+
+lub, po zróżniczkowaniu względem t, w postaci:
+
+y/k4_page171_formula1.png (2.1-7)
+
+Przykład 2.1-6. Dwójnik przedstawiony na rys. 2.1-3d jest zbudowany z dwóch oporów
+nieliniowych N; i Ną oraz oporu liniowego R. Załóżmy, że charakterystyki oporów N; i N» są
+określone nastenuiaco (oznaczenia iak na rvs. 2.1-3d]:
+
+<image/wzory/k4_page171_formula2.png>
+
+Możemy więc napisać następujące równania:
+
+<image/wzory/k4_page171_formula3.png>
+
+Otrzymujemy stąd równanie dwójnika w postaci:
+
+/zory/k4_page171_formula4.png
+BE
+
+Inh:
+
+Nzory/k4_page171_formula5.png SĘ
+Przykład 2.1-7. Źródło napięciowe (rys. 1.7-3a) i źródło prądowe (rys. 1.7-3b) są dwój-
+
+nikami o równaniach określonych odpowiednio zależnościami (1.7-6) i (1.7-7). Dwójnikami są
+
+także połączenia (szeregowe i równoległe) źródeł napięciowych i prądowych rozważane w p. 1.7.1-E.
+
+C. Pojęcie czwórnika. Czwórnikiem (rys. 2.1-4a) nazywamy układ, w któ-
+
+a) wyróżniono cztery zaciski zgrupowane w dwie pary (wrota);
+
+b) stan zaciskowy jest określony przez dwa napięcia u,, u, pomiędzy
+zaciskami tworzącymi pary oraz dwa prądy i;, i;, przy czym jest spełniony
+warunek zrównoważenia (rys. 2.1-4b):
+
+zory/k4_page171_formula6.png (2.1-9)
+c) wielkości zaciskowe u;, u, i,, i; są związane ze sobą dwoma niezależ-
+
+nymi równaniami.
+Warunek zrównoważenia (2.1-9) jest spełniony automatycznie w typowych
+warunkach pracy czwórnika, polegających na dołączeniu do jego wrót dwój-
+
+ników (rys. 2.1-4C).
+
+<image/figury/k4_page171_figure1.png>

@@ -1,0 +1,20 @@
+<image/figury/k4_page119_figure1.png>
+
+Rys. 3.2 System sterownikowy potrójnej redundancji
+
+W pierwszym etapie programowania sterownika ustala się jego konfigurację.
+Polega to na podaniu typów modułów włączonych do poszczególnych łącz płyty
+sterownika w kasecie podstawowej i ewentualnie w kasetach rozszerzeń oraz ka-
+setach zdalnych. Ponadto, na etapie konfiguracji dla poszczególnych modułów
+podaje się ich podstawowe parametry oraz adresy przyporządkowanych im
+zmiennych wejściowych i/lub wyjściowych. Przykładowo, dla jednostki
+CPU 351 podaje się parametry jak na ekranie przedstawionym na Rys. 3.3, a ze-
+brane w Tab. 3.3.
+
+<image/tabele/k4_page119_table1.png>
+
+Rys. 3.3 Przykładowy ekran do konfiguracji jednostki CPU
+
+ 
+
+3.2 Jednostka centralna CPU 1 19

@@ -1,0 +1,18 @@
+28. Cyfrowe procesory sygnałowe
+
+<image/figury/k3_page47/2_figure1.png>
+
+Jak nadążyć za tak szybko zmieniającą się dziedziną? Najlepszym sposobem jest czy-
+tanie fachowych czasopism śledzących rynek DSP, takich jak EDN („Electronic Design
+News”, http//: www.ednmag.com) i ECN („Electronic Component News”, http//: www.
+ecnmag.com). Są one rozprowadzane gratisowo i zawierają najaktualniejsze informa-
+cje o tym, co jest dostępne w sprzedaży oraz o kierunkach rozwoju. Lektura fachowym
+czasopism jest niezbędna dla wszystkich poważnie zainteresowanych dziedziną DSP.
+Powinniście też się znaleźć na listach wysyłkowych kilku producentów DSP. Wtedy bę-
+dziecie otrzymywać zapowiedzi nowych produktów, cenniki i oferty specjalne (takie jak
+darmowe oprogramowanie i tanie zestawy próbne). Niektórzy producenci wydają też pe-
+riodyczne biuletyny informacyjne. Na przykład Analog Devices ma witrynę www, która
+jest ciągle uaktualniana nowymi informacjami. Możecie zaprenumerować kilka biule-
+tynów kwartalnych: hrtp://www.analog.com/misc/enewsletters_jumppage.html, Zawsze
+możecie rozpocząć od przejrzenia witryn internetowych producentów i wysłania do nich
+listów pocztą elektroniczną z prośbą o dostarczenie potrzebnych wam informacji.

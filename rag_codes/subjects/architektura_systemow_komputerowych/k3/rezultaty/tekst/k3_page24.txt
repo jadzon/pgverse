@@ -1,0 +1,44 @@
+PODSTAWY
+TECHNIKI CYFROWEJ
+
+ 
+
+ 
+
+3.1. UKŁADY CYFROWE
+3.1.1. WPROWADZENIE
+
+Poszczególne bloki komputerów są budowane z układów cyfrowych zwanych także ukła-
+dami logicznymi. Pod tą nazwą kryją się zarówno proste układy małej skali integracji, tj.
+bramki i przerzutniki (układy SSI), jak i bardziej złożone układy średniej skali integracji,
+np. sumatory czy rejestry (układy MSI), a także te najbardziej złożone układy wielkiej
+skali integracji lub bardzo wielkiej skali integracji, jak procesory czy pamięci (układy LSI
+i VLSI). Każdy układ cyfrowy można przedstawić jako „czarną skrzynkę” (blok) z określo-
+ną liczbą wejść i wyjść. Sygnały wejściowe i wyjściowe są sygnałami binarnymi, tj. przyj-
+mują jedną z dwu wartości: zero lub jeden. Formalny opis zależności pomiędzy wejścio-
+wymi i wyjściowymi sygnałami binarnymi umożliwia algebra Boole'a, która w zakresie
+wystarczającym dla potrzeb tej książki, jest przedstawiona w Dodatku A. Czytelnik zainte-
+resowany bardziej szczegółowymi informacjami na ten temat musi sięgnąć do innych
+pozycji bogatej literatury obejmującej ten temat.
+
+Uporządkowany ciąg wartości wszystkich sygnałów wejściowych danego bloku nazy-
+wamy słowem wejściowym, a uporządkowany ciąg wartości wszystkich sygnałów wyjścio-
+wych — słowem wyjściowym. Działanie takiego układu opisuje się zależnością pomiędzy
+zbiorem słów wejściowych i zbiorem słów wyjściowych. Jeżeli danemu słowu wejściowe-
+mu odpowiada zawsze tylko jedno słowo wyjściowe, to blok taki daje się opisać funkcją
+boolowską i mówi się, że jest to układ kombinacyjny. Układy kombinacyjne opisano
+w podrozdziale 3.1.2. Jeżeli zaś istnieje co najmniej jedno słowo wejściowe, na które dany
+blok odpowiada różnymi słowami wyjściowymi w różnych chwilach czasu, to układ taki
+jest nazywany układem sekwencyjnym. Dla takich układów słowo wyjściowe zależy nie
+tylko od słowa wejściowego, ale i od stanu w jakim blok się znajduje w danym momencie
+i dlatego opis takich bloków jest bardziej złożony. Układy sekwencyjne przedstawiono
+w podrozdziale 3.1.3.
+
+3.1.2. UKŁADY KOMBINACYJNE
+
+W technice cyfrowej układy kombinacyjne realizuje się stosując bądź odpowiedni zestaw
+bramek, bądź standardowe bloki kombinacyjne jak dekodery lub multipleksery, bądź
+przedstawione dalej układy matrycowe. Rozpatrzmy teraz to pierwsze rozwiązanie, tj. ukła-
+dy kombinacyjne zbudowane za pomocą bramek. Bramka (ang. gate) jest to podstawowy
+układ logiczny, który realizuje prostą funkcję boolowską, na przykład sumę lub iloczyn
+logiczny. Istnieją bramki dwu- i więcej wejściowe. Bramki elektroniczne realizuje się

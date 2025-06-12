@@ -1,0 +1,53 @@
+10 Rozdział 1. Oznaczenia
+
+Przykład 1.11 Konkatenacja słów u = aaba i v = abba to SÓWO uv = aabaabba.
+
+Słowo u jest prefiksem lub przedrostkiem słowa v, jeżeli istnieje takie słowo w, że
+v = uw. Podobnie, słowo u jest sufiksem lub przyrostkiem słowa v, jeżeli istnieje takie
+słowo w, Że v = wu.
+
+Przykład 1.12 Na przykład aba jest prefiksem słowa abaaab, a słowo ab jest sufiksem
+słowa abaaab. Słowo puste jest prefixem i sufiksem dowolnego słowa v. Każde słowo v
+jest swoim własnym prefiksem i sufiksem.
+
+Zwykle alfabet jest zbiorem uporządkowanym, lub mówiąc inaczej mamy pewną ko-
+lejność liter w alfabecie. Na przykład w zbiorze £ = fa, b) litera a stoi przed b. Możemy
+też wtedy uporządkować zbiór słów nad alfabetem ©.
+
+Jeden porządek nazywa się porządkiem leksykograficznym. Jest to porządek słów w
+słownikach. Aby porównać dwa słowa u, v € Z, szukamy pierwszej pozycji, na której te
+dwa słowa się różnią. Słowo, które ma na tej pozycji wcześniejszą literę, jest wcześniejsze
+w porządku leksykograficznym. Jeżeli takiej pozycji nie ma, to albo u = v, albo jedno
+ze słów jest prefiksem drugiego, wtedy wcześniejszy w porządku leksykograficznym jest
+prefiks.
+
+Przykład 1.13 W porządku leksykograficznym słowo ab jest wcześniejsze od słowa ababa,
+a to jest wcześniejsze od abb.
+
+Porządek leksykograficzny jest wygodny, jeżeli zbiór słów jest skończony. Zauważmy, że
+w zbiorze wszystkich słów fa,b)* nieskończenie wiele słów (wszystkie słowa złożone
+tylko z litery a) poprzedza słowo b. Dlatego czasami stosuje się inny porządek, tak zwany
+porządek kanoniczny.
+
+Słowo u poprzedza słowo v w porządku kanonicznym, jeżeli:
+
+e albo |u| < [e|,
+e albo |u| = [| i u poprzedza v w porządku leksykograficznym.
+
+Przykład 1.14 Początkowe słowa zbioru (a, b) * uporządkowane według porządku kano-
+nicznego to:
+
+<image/wzory/k2_page10_formula1.png>
+
+1.8  Zaokr aglenia
+
+W prowadźmy dwa oznaczenia na zaokrąglenie liczby rzeczywistej. Dla dowolnej liczby
+rzeczywistej z
+
+[x] oznacza zaokręglenie z w górę do najbliższej liczby całkowitej.
+
+[r] oznacza zaokrąglenie z w dół do najbliższej liczby całkowitej.
+
+Zaokrąglenie [x] nazywamy sufitem z r, a zaokrąglenie |x | nazywamy podłogą z r.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

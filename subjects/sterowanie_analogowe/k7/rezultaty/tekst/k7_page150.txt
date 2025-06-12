@@ -1,0 +1,20 @@
+Histereza
+
+W przypadku zależności z histerezą mamy do czynienia z
+niejednoznacznością zależności wyjścia od sygnału wejściowego.
+
+Sygnał wyjściowy w chwili t zależy nie tylko od sygnału wejściowego w chwili t
+ale również od charakteru zmian tego sygnału w okresie poprzedzającym.
+Dlatego też ściśle rzecz biorąc charakterystyki takich elementów nieliniowych
+nie są funkcjami lecz funkcjonałami (czyli „funkcjami od funkcji”)
+
+<image/wzory/k7/_page150_formula1.png>
+
+<image/wzory/k7/_page150_formula2.png>
+
+POLITECHNIKA
+GDANSKA
+
+ 
+
+eMmoluljsiu ApEłĄN)

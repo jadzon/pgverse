@@ -1,0 +1,25 @@
+1.3. Drzewa 7
+
+<image/figury/k2_page185_figure2.png>
+
+Lemat 1.11 Jeżeli w grafie istnieją dwa wierzchołki u i v, u 34 v które można połączyć
+dwoma różnymi drogami prostymi, to w grafie istnieje cykl.
+Dowód: Niech u = tg,ty,...,Vk © VU = Wg,wy,...,Wj = v, będą dwoma roż-
+nymi prostymi drogami łączącymi u i v. Możemy założyć, że v; 4% wy (w przeciw-
+nym przypadku możemy usunąć wspólny początek obu dróg). Niech v, będzie pierw-
+szym wierzchołkiem po vo, który występuje w drodze wg, w;,... , wm, i niech v; = w;.
+Wierzchołki v;,...,v;_+ nie występują w drodze wg,w;,...,twy, I droga w9,...,V; =
+Wj, Wj-1y:.- Wi, Wg © tg tworzy cykl (w drodze tej występują conajmniej trzy różne
+wierzchołki vp, vy Oraz w; ). o
+Z tego lematu wynika, że graf jest acykliczny (nie ma cykli) wtedy i tylko wtedy, gdy
+każde dwa wierzchołki grafu można połączyć co najwyżej jedną drogą prostą.
+
+1.3 Drzewa
+Definicja 1.12 Spójny i acykliczny (bez cykli) graf to drzewo.
+
+Z rozważań z poprzedniego podrozdziału wynika:
+
+Lemat 1.13 Graf jest drzewem wtedy i tylko wtedy, gdy każde dwa jego wierzchołki moż-
+na połączyć dokładnie jedną prostą drogą.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

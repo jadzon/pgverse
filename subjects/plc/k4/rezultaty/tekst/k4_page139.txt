@@ -1,0 +1,49 @@
+e  Liniowość (Zinearity).
+Jest różnicą między zmierzonymi zmianami dla dwóch sąsiednich kanałów
+dokładnie o jeden bit LSB — przykładowo mniejsza od 1 ŁSB w zakresie
+od 4 do 20 mA.
+
+e Tłumienie napięcia wspólnego.
+
+Współczynnik tłumienie napięcia wspólnego CMRR (Common Mode Re-
+jection Ratio) wyraża się w decybelach, podając pomnożony przez 20
+logarytm dziesiętny stosunku napięcia wspólnego do napięcia różnicowego
+odpowiadającego jego wpływowi na wyjście kanału. Określa on tłumienie
+napięcia wspólnego w kanale — przykładowo większe od 80 dB (10* :1)
+w zakresie od O do I kHz. W katalogach podaje się również dopuszczalne
+napięcie wspólne, np. 200V oraz napięcie przebicia izolacji magistrali
+(isolation) - przykładowo 1500V.
+
+e Tłumienie zakłóceń międzykanałowych.
+Określa wpływ zmian w sąsiednim kanale na kanał badany. Współczynnik
+tłumienie zakłóceń międzykanałowych CCRR (Cross-Channel Rejection
+Ratio) wyraża się w decybelach, podając pomnożony przez 20 logarytm
+dziesiętny stosunku sygnału w kanale sąsiednim do sygnału w kanale ba-
+danym, np. większe od 100 dB (10”:1) w zakresie od 0 do 1 kHz.
+
+e  Czasuaktualnienia (Update Rate) podanej liczby kanałów, przykładowo 4ms.
+
+Moduły wejściowe zazwyczaj zapewniają filtrację sygnałów dla jego ochrony
+przed wysokoczęstotliwościowymi pikami napięć. W danych katalogowych po-
+daje się częstotliwość graniczną filtracji dolnoprzepustowej, np. 325 Hz.
+
+Dla zmniejszenia wpływu pól elektromagnetycznych i elektrostatycznych na ob-
+wody analogowe stosuje się ekranowanie przewodów użytych w tych
+obwodach.
+
+Przewód ekranu elektrostatycznego powinien być wykonany z materiału o dużej
+przewodności i musi być podłączony z punktem uziemienia GND lub z punktem
+wspólnym COM. Ważne jest to, aby ekrany nie stanowiły obwodów zamknię-
+tych, przez które mogłyby płynąć prądy, bo w takim przypadku nie zapewnia się
+eliminacji sprzężenia między źródłem szumu a obwodami wejść analogowych.
+Ekrany elektromagnetyczne powinny być wykonane z materiałów o dużej prze-
+nikalności magnetycznej i nie muszą być uziemione. Eliminację wpływu szumów
+elektromagnetycznych uzyskuje się również stosując dla obwodów wejściowych
+kable splecionych przewodów w ekranie (tzw. skrętka w ekranie).
+
+Najczęściej stosuje się ekranowanie zapewniające skuteczne tłumienie szumów
+zarówno elektrostatycznych jak i elektromagnetycznych.
+
+PRETEC EPE TT PETE OE TTE OPORY YI TPP TTE PT EET TYT TOYO AT TEE YPOTW PTT TY PETE ZY EOPRAT POT PT POT OCEPIERCTACERO RE
+
+3.5 Moduły wejść anałogowych AI 139

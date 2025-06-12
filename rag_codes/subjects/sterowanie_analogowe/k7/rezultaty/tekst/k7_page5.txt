@@ -1,0 +1,29 @@
+Stan układu — układ pierwszego rzędu, nieautonomiczny
+
+Rozwiązanie możemy również znaleźć korzystając z transformaty Laplace'a:
+
+<image/wzory/k/_page5_formula1.png>
+
+SMOLUB]S 8|8pOW
+
+| l
+sX(s)-x(0')=aX(s)+bU(s) gdzie: a= "+6 p= << x(t) =u_(t)
+t,=0"
+
+<image/wzory/k/_page5_formula2.png>
+x(0 )=u_(0')
+
+<image/wzory/k/_page5_formula3.png>
+
+<image/wzory/k/_page5_formula4.png>
+
+=
+
+rozwiązanie swobodne rozwiązanie wymuszone
+(wynika z własności układu (wynika z własności układu
+i warunków początkowych) i pobudzenia)
+
+ 
+
+POLITECHNIKA
+GDANSKA

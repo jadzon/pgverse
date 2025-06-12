@@ -1,0 +1,33 @@
+164
+
+Podstawiając otrzymane wyniki do wzoru (??) mamy:
+
+<image/wzory/k2_page159_formula1.png>
+
+i następnie E(Da) = 0.4636, E(D4) = 0.4636, E(D;) = 0.3936. Stąd wynika, że
+należy wybrać atrybut 15.
+Drugi etap dla zz = 1:
+
+<image/wzory/k2_page159_formula2.png>
+
+i następnie E(D,) = 0.6666, E(Da) = 0.0000, E(D4) = 0.6666, E(D;) = 0.6666.
+Stąd wynika, że w tym przypadku należy wybrać atrybut za.
+Drugi etap dla z3 = 2:
+
+<image/wzory/k2_page159_formula3.png>
+
+i następnie E(D,) = 0.0000, E(Dą) = 1.0000, E(D4) = 1.0000, E(D;) = 0.0000.
+Czyli w tym przypadku należy wybrać atrybut z; lub zz.
+Kontynuując obliczenia otrzymujemy drzewo decyzyjne przedstawione na ry-
+
+sunku ??. imi
+
+<image/figury/k2_page159_figure1.png>
+
+Rys. 6.59: Drzewo decyzyjne uzyskane przy wyborze atrybutów o minimalnej entropii
+
+6.8. Generalizacja
+
+Zdolność systemu do poprawnych odpowiedzi na sygnały wejściowe nie występujące
+w zbiorze uczącym nazywa się generalizacją. Podstawowym zadaniem uczenia jest
+utworzenie systemu który będzie dobrze generalizował.

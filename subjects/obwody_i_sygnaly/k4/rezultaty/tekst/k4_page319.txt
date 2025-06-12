@@ -1,0 +1,45 @@
+3.6. Obwody rezystancyjne ze wzmacniaczami operacyjnymi | 321
+
+niezależnym od wartości oporu R, reprezentującego w tym przypadku odbiornik (obciążenie)
+sterowany prądem i. Układ ten jest zarazem ŹPSN.
+c) Układ z rys. 3.6-7c jest sumatorem o równaniu:
+
+<image/wzory/k4_page319_formula1.png>
+
+Układ realizuje operację dodawania napięć doprowadzonych do jego poszczególnych zacisków
+wejściowych. Sumowanie odbywa się z wagami równymi stosunkom oporu sprzęgającego R do
+oporów R, oraz ze zmianą znaku.
+
+d) Na rys. 3.6-7d jest przedstawiony wzmacniacz różnicowy o równaniu:
+
+:ory/k4_page319_formula2.png
+
+Napięcie wyjściowe u,, jest proporcjonalne do różnicy napięć u, — u, na obu wejściach, a współ-
+czynnik wzmocnienia jest równy stosunkowi oporów R>/R;.
+e) Układ z rys. 3.6-7e realizuje opór ujemny. Z równania:
+
+<image/wzory/k4_page319_formula3.png>
+
+dostajemy bowiem:
+
+<image/wzory/k4_page319_formula4.png>
+
+D. Układy nieliniowe z WO. Wzmacniacz operacyjny pracujący w za-
+kresie liniowym bywa również wykorzystywany w nieliniowych układach
+rezystancyjnych. W wielu przypadkach nie można ograniczać warunków pracy
+WO tylko do zakresu liniowego i konieczne jest uwzględnienie modelu
+nieliniowego wzmacniacza operacyjnego.
+
+Rozpatrzymy kilka odpowiednich przykładów.
+
+Przykład 3.6-5. Na rys. 3.6-8 są podane przykłady nieliniowych układów, w których
+występuje wzmacniacz operacyjny pracujący w zakresie liniowym. Diody występujące w tych
+układach rozpatrujemy jako diody idealne o charakterystyce z rys. 1.3-25b. Szczegóły wy-
+prowadzenia podanych niżej wzorów oraz ograniczeń, jakimi one podlegają, pozostawiamy
+Czytelnikowi do przemyślenia.
+
+a) Na rys. 3.6-8a jest pokazany układ wybierający większe z dwóch napięć wejściowych u;, u,
+bowiem:
+
+<image/wzory/k4_page319_formula5.png>
+<image/figury/k4_page319_figure1.png>

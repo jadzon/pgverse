@@ -1,0 +1,39 @@
+<image/figury/k2_page165_figure2.png>
+jure1.png
+
+Maszyna y = sgn (wy(z7 + 13) + w] = sgn |(w;x'x + wa] jest w stanie rozdzielić dwa
+punkty, co ilustruje rys. ??. m
+
+Definicja 6.6 Wymiar VC maszyny y = f(x,w) jest maksymalną liczbą punktów,
+które mogą być tak ustawione aby maszyna mogła je rozdzielić.
+
+Nierówność Vapnika: niech h będzie wymiarem VC pewnej maszyny y = f(x.w).
+wtedy z prawdopodobieństwem 1-7 zachodzi
+
+<image/wzory/k2_page165_formula1.png>
+
+gdzie n jest liczbą obrazów uczących.
+
+Nierówność (??) pozwala oszacować błąd dla danych nie używanych w procesie
+uczenia opierając się tylko na wymiarze VC i liczebności zbioru uczącego. Widać
+z niej, że ze zwiększaniem wymiaru h, a tym samym, na ogół złożoności systemu
+zwiększa się wyrażenie pod pierwiastkiem, ale maleje też błąd empiryczny. Z kolei
+zmniejszanie h powoduje zmniejszenie wyrażenia pod pierwiastkiem, ale powoduje
+zwiększanie błędu empirycznego. Istnieje więc optymalna złożoność systemu, co ilu-
+struje rysunek ??, gdzie przedstawiono ogólnie zależności błędu generalizacji od
+liczby obrazów uczących i złożoności systemu uczącego się.
+
+Specyfika klasyfikacji obrazów dwuwymiarowych
+
+Problemy klasyfikacji przedstawione na rysunkach ??a i b różnią się jedynie przesta-
+wieniem punktów. Sieć neuronowa warstwowa o pełnych połączeniach nie rozróżnia
+sąsiedztwa przestrzennego sygnałów wejściowych i dlatego nauczenie jej klasyfikacji
+obrazów przedstawionych na rysunkach ??ab stanowi dokładnie taką samą trudność
+mimo, że dla człowieka problem przedstawiony na rys. ??a jest znacznie łatwiejszy.
+
+6.9. Samoorganizacja
+
+Samoorganizacja jest typem uczenia, gdzie nie dysponujemy ani poprawnymi od-
+powiedziami ani ocenami odpowiedzi. Samoorganizacja sprowadza się zazwyczaj do
+wyznaczenia centrów klastrów obrazów wejściowych lub wyznaczaniu innych powią-
+zań pomiędzy obrazami wejściowymi.

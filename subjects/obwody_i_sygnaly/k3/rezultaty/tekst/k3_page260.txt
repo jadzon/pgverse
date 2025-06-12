@@ -1,0 +1,34 @@
+3. Obwody prądu stalego
+
+<image/wzory/k3_page260_formula2.png>
+
+<image/wzory/k3_page260_formula3.png>
+
+gę, że do obliczenia prądu I w tym przykładzie nie mażna
+/ zamiany źródeł. Ze względów oczywistych (tylko jedno
+| także skorzystać z metody superpozycji. Podkreślamy
+i zaletą obliczania prądu (napięcia) w wyróżnionej gałęzi
+niem metody Thevenina jest uproszczenie, często radykalne,
+1. Usunięcie (rozwarcie) wyróżnionej gałęzi prowadzi do
+tórym wyznaczenie napięcia rozwarcia U, i oporu zastęp-
+ge260_formula 1 png 'aźnie prostsze od bezpośredniego wyznaczenia prądu w tej
+jącym przykładem jest tu układ z rys. 3.3-8 (przykład 3.3-6),
+ie gałęzi z poszukiwanym prądem I „rozrywa” strukturę
+
+źródło prądowe. Dla każdego rzeczywistego źródła napię-
+'noważne rzeczywiste źródło prądowe. Wynika stąd oczywis-
+y liniowy rezystancyjny dwójnik źródłowy AB (rys. 3.3-4b)")
+że rzeczywistym źródłem prądowym. Wydajność prądową
+zewodność wewnętrzną oznaczymy odpowiednio J „oraz Gy
+
+ry/k3_page260_figure1.png
+
+Rys. 3.3-9
+
+Zgodnie z zasadami zamiany źródeł, parametry J„ i G„ zastępczego źródła
+prądowego możemy wyrazić poprzez parametry zastępczego źródła napięciowe-
+20:
+
+<image/wzory/k3_page260_formula4.png>
+
+1) Wykluczamy tu przypadek idealnego źródła napięciowego.

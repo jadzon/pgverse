@@ -1,0 +1,16 @@
+A WA O M M M M 0
+
+<image/wzory/k4_page182_formula1.png>
+
+Typy danych używane w języku schematów drabinkowych dla sterowników serii
+90-30 firmy GE Fanuc przedstawiono w Tab. 4.1.
+
+<image/tabele/k4_page182_table1.png>
+
+Tab. 4.1 Typy danych
+Zmienne przechowywane są w pamięci sterownika jako zmienne binarne (zaj-
+
+mują 1 bit pamięci) lub zmienne rejestrowe (16 bitów). W Tab. 4.2
+przedstawiono zmienne binarne, natomiast Tab. 4.3 zawiera zmienne rejestrowe.
+
+<image/tabele/k4_page182_table2.png>

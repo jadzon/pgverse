@@ -1,0 +1,49 @@
+126 6. Urządzenia zewnętrzne
+
+ 
+
+standard IEEE-488 lub IEC-625. Jest to także łącze równoległe przeznaczone dla transmisji
+znakowych (bajtowych) z potwierdzaniem.
+
+Niekiedy istnieje potrzeba współpracy procesora z prostymi układami wejścia lub
+wyjścia, jak np. wyświetlacz diodowy jako układ wyjściowy lub przekaźnik jako układ
+wejściowy. Stosowane są wówczas prostsze, niż już opisane, sterowniki pracujące bez
+potwierdzania. Są to zwykle rejestry umieszczone w odpowiednim miejscu obszaru adre-
+sowego (odpowiednio dołączone do magistrali adresowej). Współpraca procesora z takimi
+rejestrami odbywa się poza systemem przerwań i są one albo zapisywane rozkazem OUT
+z właściwym adresem albo odczytywane rozkazem IN.
+
+6.4.3. STEROWNIK STANDARDOWEGO ŁĄCZA SZEREGOWEGO
+
+Łącze szeregowe służy do transmisji informacji na duże odległości (kilku lub kilku-
+dziesięciu metrów), a także na bardzo duże odległości (setek i więcej metrów), jeśli
+zastosuje się specjalne urządzenie transmisyjne, tzw. modem. Sterownik łącza szerego-
+wego współpracuje z magistralą systemową w podobny sposób jak sterownik łącza równo-
+ległego. Sterownik jest wyposażony w układ zamiany równoległej postaci informacji na
+postać szeregową (przy nadawaniu) i zamiany szeregowej na równoległą (przy odbiorze).
+Łącze pomiędzy urządzeniem a sterownikiem zależy od rodzaju transmisji jaka jest sto-
+sowana dla danego urządzenia. Stosowane są dwa rodzaje transmisji:
+
+— transmisja asynchroniczna,
+
+— transmisja synchroniczna.
+
+TRANSMISJA ASYNCHRONICZNA
+
+Transmisję asynchroniczną stosuje się do przesłań pojedynczych bajtów, a więc do współ-
+pracy z urządzeniami wolnymi. Jednostką szybkości transmisji jest baud (czyt. bod).
+Odpowiada ona liczbie transmitowanych bitów na sekundę. Typowymi wartościami szyb-
+kości transmisji asynchronicznej są 300 b/s, 1200 b/s, 4800 b/s, 9600 b/s, 19,2 Kbitów/s.
+Transmisja asynchroniczna polega na przesyłaniu danych bez oddzielnej synchronizacji
+sygnałem zegarowym. Zakłada się, że generator odbiornika ma zbliżoną częstotliwość do
+częstotliwości generatora nadajnika. Ponieważ w rzeczywistości te częstotliwości są różne,
+więc tylko przez krótki czas (czas trwania kilku bitów) da się utrzymać synchronizację
+transmisji. Synchronizacja polega na strobowaniu przesyłanej informacji za pomocą
+generatora odbiornika. Strobuje się w środku czasu trwania poszczególnych bitów
+(wysyłanych w takt generatora nadajnika). Ze względu na różnice częstotliwości
+generatorów nadajnika i odbiornika, po kilku bitach strob wypadnie poza czasem trwa-
+nia bitu.
+
+<image/figury/k3_page136_figure1.png>
+
+Rysunek 6.7. Synchronizacja przebiegu nadawanego i odbieranego w czasie transmisji asynchronicznej

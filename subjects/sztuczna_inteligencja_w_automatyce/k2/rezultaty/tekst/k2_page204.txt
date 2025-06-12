@@ -1,0 +1,37 @@
+209
+
+<image/figury/k2_page204_figure2.png>
+
+Rys. 8.15: Graf przejść stanu komórki w grze LIFE. Przy łukach podano liczbę sąsiednich
+komórek w stanie „1”
+
+<image/figury/k2_page204_figure1.png>
+
+Rys. 8.16: Przykłady charakterystycznych struktur gry LIFE: (a,b) konfiguracje ginące
+po jednym takcie, (c,.d) konfiguracje stabilne, (e,f) konfiguracje oscylujące — pionowa li-
+nia zamienia się po każdym takcie w poziomą i odwrotnie, figura w kształcie kwadratu
+oscyluje z okresem pięciu taktów, (g) konfiguracja oscylująca i przesuwająca się, zwana
+„szybowcem”", (h) konfiguracja rozpadająca się na dwa „szybowce" przesuwające się w
+przeciwnych kierunkach, (ij) konfiguracje długowieczne osiągające stan końcowy po 1103
+i 5206 taktach (stan końcowy składa się z konfiguracji stabilnych, oscylujących oraz oscy-
+lujących i przesuwających się), (k) „działo” — konfiguracja generująca szybowce co 30
+taktów i powracająca do stanu początkowego
+
+e powinno składać się z populacji prostych programów lub specyfikacji:
+e nie powinien w nim występować program sterujący pozostałymi programami:
+
+e każdy program powinien zawierać opis reakcji jednostki na zaistniałe lokalne
+sytuacje w swoim otoczeniu włączając w to spotkania z innymi jednostkami:
+
+e w systemie nie powinno być reguł sterujących jego globalnym zachowanie się.
+
+Postulaty Langtona mogą być spełniane przez środowiska modelowania indywi-
+duowego.
+
+Z dziedziną sztucznego życia blisko związane jest pojęcie inteligencji roju
+
+Swarm Intelligence is the property of a system whereby the collective behaviours
+of (unsophisticated) agents interacting locally with their environment cause coherent
+functional global patterns to emerge. SI provides a basis with which it is possible
+to explore collective (or distributed) problem solving without centralized control or
+the provision of a global model.

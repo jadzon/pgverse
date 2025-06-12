@@ -1,0 +1,34 @@
+1.2. Drzewa biname 5
+
+1.2 Drzewa binarne
+
+Drzewo jest hierarchiczną strukturą danych. Jeden element drzewa, zwany korzeniem, jest
+wyróżniony. Inne elementy drzewa są jego potomstwem lub potomstwem jego potomstwa
+itd. Terminologia używana do opisu drzew jest mieszaniną terminów z teorii grafów, bo-
+taniki i stosunków rodzinnych. Elementy drzewa nazywa się wierzchołkami lub węzłami.
+Liście to wierzchołki nie mające potomstwa. Drzewa często przedstawia się w formie
+grafu, gdzie każdy wierzchołek jest połączony krawędzią ze swoim ojcem i ze swoimi
+dziećmi (swoim potomstwem). Dla każdego elementu w drzewie istnieje dokładnie jedna
+ścieżka prowadząca od korzenia do tego wierzchołka.
+
+Drzewa biname to takie drzewa, w których każdy wierzchołek ma co najwyżej dwóch
+synów. Do oznaczania wierzchołków w drzewie binamym wygodnie jest używać ciągów
+zer i jedynek. Niech £0, 1)* oznacza zbiór wszystkich skończonych ciągów zer i jedy-
+nek. Zbiór ten zawiera ciąg pusty (długości 0), oznaczany przez A. Wierzchołki drzewa
+oznaczamy w następujący sposób:
+
+e korzeń drzewa oznaczamy przez A — pusty ciąg,
+
+e jeżeli jakiś wierzchołek jest oznaczony przez z, to jego synowie oznaczeni są przez
+z0 i z1.
+
+Rysunek 1.1: Przykład drzewa binarnego
+
+<image/figury/k2_page167_figure1.png>
+
+Przy takim oznaczeniu wierzchołków drzewa binamego nazwa wierzchołka r mówi
+nam, jaka ścieżka prowadzi od korzenia do r. Na przykład, aby dojść od korzenia do
+wierzchołka 110 nalezy: pójść w prawo do 1, potem znowu w prawo do 11, a na końcu w
+lewo do 110.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

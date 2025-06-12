@@ -1,0 +1,45 @@
+136 1. Pojęcia podstawowe — elementv
+
+<image/figury/k3_page136_figure1.png>
+
+    
+   
+  
+  
+   
+   
+   
+ 
+  
+
+Załóżmy, że w uzwojeniu I występuje prąd i, wytwarzający w tym uzwoj
+niu strumień magnetyczny D,. Przyjmijmy, że część linii pola magnetyczneg
+składających się na strumień ©, jest obejmowana przez uzwojenie II, czyli, j
+mówimy, część strumienia ©, ko jarzy się z uzwojeniem II (rys. 1.8-2a
+Oznaczmy tę część przez ©,, (tzw. strumień wzajemny). Mamy zatem:
+
+<image/wzory/k3_page136_formula1.png>
+
+gdzie przez ©,, oznaczono tę część strumienia Q,, która nie jest obejmowan
+przez uzwojenie II (tzw. strumień rozproszenia). Zgodnie z zależnością (1.2-1
+możemy napisać:
+
+<image/wzory/k3_page136_formula2.png>
+oraz:
+<image/wzory/k3_page136_formula3.png>
+
+gdzie L,, jest umowną indukcyjnością odpowiadającą tylko części D, stru
+mienia ©,. Ze wzoru (1.8-1) wynika, że jest spełniona nierówność:
+
+<image/wzory/k3_page136_formula4.png>
+
+przy czym Ly = 0, jeśli strumień wzajemny jest równy zeru oraz Ly = Ly
+jeśli strumień rozproszenia jest równy zeru.
+
+Załóżmy teraz, że w uzwojeniu II płynie prąd i, wytwarzający w t
+uzwojeniu strumień ©,. Część ©,, tego strumienia kojarzy się z uzwojeni
+I (rys. 1.8-2b). Możemy zatem, analogicznie jak poprzednio, napisać:
+
+<image/wzory/k3_page136_formula5.png>
+gdzie ©,, jest strumieniem wzajemnym, zaś ©, — strumieniem rozproszenia,
+oraz:

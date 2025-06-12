@@ -1,0 +1,23 @@
+<image/tabele/k4_page433_table1.png>
+
+lem operatorskim
+
+Tekst programu w języku IL realizującego regulację trójpołożeniową PID przed-
+stawiono na Wyd. 8.88 - Wyd. 8.98.
+
+<image/tabele/k4_page433_table2.png>
+
+372.0 © ©7 TYm roaara mira wenn? mosonaszala
+
+OB
+
+L
+
+_figure1.png
+<image/figury/k4_page433_figure2.png>
+
+Rys. 8.11 Struktura progranu
+
+ 
+
+8.5 Regułacja trójpołożeniowa PID 433

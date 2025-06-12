@@ -1,0 +1,59 @@
+110
+
+gdzie f, oceną punktu w kroku ż, a e, jest oceną skumulowaną. Przyjęcie powyższego
+wzoru zapewnia malejący wpływ poprzednich ocen jakości. Stosując ten wzór” mamy
+
+<image/wzory/k2_page105_formula1.png>
+
+Algorytmy genetyczne mają zdolność wychodzenia z lokalnych ekstremów, a tym
+samym zdolność do znajdywania ekstremów globalnych. Ponadto algorytmy gene-
+tyczne działające przez cały czas mają zdolność do nadążania za zmieniającym się
+środowiskiem. Zasady działania algorytmu genetycznego też mogą zmieniać się we-
+dług algorytmu genetycznego!
+
+Własności algorytmów genetycznych
+
+Wyprowadzimy tu kilka ogólnych własności zachowania się klasycznego algorytmu
+genetycznego.
+
+Schemat jest to łańcuch o długości k zbudowany z elementów /0,1,*), gdzie
+* reprezentuje pozycje nieokreślone. Np. O0**1*1. Schemat S reprezentuje łańcuchy
+składające się z elementów 0, 1, gdy ich długość wynosi k i są z nim identyczne na
+pozycjach określonych.
+
+PRZYKŁAD 6.4
+
+Schemat 1*0* reprezentuje łańcuchy 1000, 1001, 1100 i 1101. Schemat 01001 re-
+prezentuje tylko jeden łańcuch, a schemat ***** reprezentuje wszystkie łańcuchy o
+długości 5.
+
+Łańcuch 010 reprezentowany jest przez schematy: 010, +10, 0*0, 01*, **0, *1*,
+(+=, £żt. mi
+
+Dowolny schemat S$ zawierający n symboli * reprezentuje 2” łańcuchy.
+Dowolny łańcuch o długości k reprezentowany jest przez 2* schematów.
+
+Definicja 6.1 Licznością schematu S$ jest liczba L(S) równa liczbie pozycji określo-
+nych w schemacie. Np. S = (+lx0x11), L(S) = 4.
+
+Definicja 6.2 Długością schematu S$ jest liczba D(S) równa odległości pomiędzy
+pierwszą ti ostatnią określoną pożycją w tym schemacie. Np. $ = (+fx0x*), D(S) =
+4-2=2.
+
+Przyjmijmy oznaczenia:
+
+ch — łańcuch
+
+P - populacja łańcuchów
+
+k - długość łańcucha
+
+I(P) - liczba łańcuchów w populacji P
+
+F(ch;) kryterium jakości łańcucha ch,
+
+t numer cyklu działania algorytmu genetycznego
+
+Zastosowanie analogicznego wzoru, w którym współczynnik 1/2 zastąpiony zostałby zmien-
+nym współczynnikiem 1/ż, prowadziłoby do skumulowanej oceny będącej średnią arytmetyczną
+wszystkich cząstkowych ocen.

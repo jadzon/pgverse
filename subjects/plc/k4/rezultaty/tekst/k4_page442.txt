@@ -1,0 +1,31 @@
+<image/wzory/k4_page442_formula1.png>
+
+Jako przykład wykorzystania algorytmu PID w układzie regulacji z korekcją
+statyczną wybrano regulację pH soku po defekacji wstępnej w procesie cukrow-
+niczym [12]. Defekacja jest procesem nawapniania soku buraczanego.
+
+Zadaniem układu regulacji jest ciągłe utrzymywanie poziomu pH na zadanej
+wartości. Czynnikiem utrudniającym dokładną regulację jest nieliniowa zmiana
+pH w zależności od zmiany natężenia przepływu. Ponadto zmiana wartości zada-
+nej może wywołać zmianę wzmocnienia procesu a co za tym idzie optymalnego
+wzmocnienia regulatora nawet kilkakrotnie, doprowadzając w efekcie do po-
+wstania drgań nietłumionych.
+
+W tym trudnym układzie regulacji wprowadzenie korekcji wyjścia regulatora
+PID proporcjonalnie do zmian przepływu soku umożliwia zmniejszenie prze-
+rgułowań i skrócenie czasu regulacji dzięki wykorzystaniu sterowania w przód
+(feedforward control). Rys. 8.14 pokazuje układ regulacji pH z korekcją od natę-
+żenia przepływu soku. Na Rys. 8.75 zamieszczono schemat blokowy układu re-
+gulacji. Doboru wartości współczynnika korekcji k należy dokonać tak, aby dla
+znanego przepływu F zmierzony został sygnał sterujący dozownikiem mleka
+wapiennego CV, przy pH odpowiadającym wymaganiom technologicznym.
+Współczynnik korekcji wyznacza się z zależności k = CV/F.
+
+<image/figury/k4_page442_figure1.png>
+
+Rys. 8.14 Schemat układu regulacji pH soku
+z korekcją statyczną od natężenia przepływu
+
+ 
+
+442 Rozdział : 8.Programy przykładowe

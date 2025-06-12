@@ -1,0 +1,62 @@
+1.3. Zbiory 5
+
+13 Zbiory
+
+0 oznacza zbiór pusty, który nie zawiera żadnych elementów.
+N oznacza zbiór liczb naturalnych N = £0,1,2,3,.. .).
+
+Z oznacza zbiór liczb całkowitych.
+
+Q oznacza zbiór liczb wymiemych.
+
+R oznacza zbiór liczb rzeczywistych.
+
+a € A oznacza, że elment a należy do zbioru A, a £ A, że elment a nie należy do
+zbioru A. Najprostszy sposób zdefiniowania zbioru polega na wypisaniu jego elementów
+w nawiasach klamrowych. Na przykład zbiór / 1, 2,3) zawiera elementy 1,2,3. Inny spo-
+sób definiowania zbioru polega na podaniu własności, którą spełniają elementy zbioru.
+Na przykład fz | r € N,3 < z < 7) oznacza zbiór liczb naturalnych większych od 3 i
+mniejszych od 7.
+
+|A| oznacza mac zbiam A. czyli liczhe ienn elementów
+
+<image/wzory/k2_page5_formula1.png>
+
+A U B oznacza sumę zbiorów, czyli zbior, który zawiera elementy, które nalezą do A lub
+
+do B:
+<image/wzory/k2_page5_formula2.png>
+
+A zateru dua 1 U D zawicia wOŁYDUME UICLUCILY ŁAMULŁU 71 1 WDŁYDUNE UICILUCLILY zbioru
+
+B.
+A M B oznacza iloczyn lub przekrój zbiorów, czyli zbiór, który zawiera te elementy,
+które należa do obu zhiańńw naraz
+
+<image/wzory/k2_page5_formula3.png>
+
+A — B oznacza roznicę zbiorów, czyli zbior, ktory zawiera te elementy, ktore należą
+do A i nie należa do B.
+
+<image/wzory/k2_page5_formula4.png>
+
+Przykład 1.1 la A = 11.92.4118 = 1.4.61 mamv
+
+<image/wzory/k2_page5_formula5.png>
+
+A € B oznacza, ze zbior A zawiera Się w zbiorze £3, to znaczy wszystkie elementy zbioru
+
+A należ
+<image/wzory/k2_page5_formula6.png>
+
+wa ZDsusy "4 AW kaw jJ4w44 <A saujy M JKakkk uśukiiwśśLy , 4 AALINGAC | A A W way i tylko
+
+wtedy gdv A © RIiRCA
+
+<image/wzory/k2_page5_formula7.png>
+Jak widac kolejność elementów w zapisie zbioru nie ma znaczenia. I tak na przykład
+(1,2) = 42,1). Taki zbiór dwuelementowy nazywamy czasami parą nieuporządkowaną.
+W poniższym lemacie zebrano podstawowe własności operacji sumy i iloczynu zbio-
+rów.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

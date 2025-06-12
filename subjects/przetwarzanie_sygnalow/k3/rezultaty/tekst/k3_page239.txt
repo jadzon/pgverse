@@ -1,0 +1,36 @@
+Filtry górnoprzepustowe, pasmowoprzepustowe i pasmowozaporowe 261
+
+-_ dającą odpowiedź częstotliwościową pokazaną na rys. 14.5 d). Inwersja widmowa powoduje
+
+Na rys. 14.6 przedstawiono, dlaczego taka dwustopniowa modyfikacja w dziedzinie
+czasu daje w wyniku odwrócenie widma częstotliwościowego. Sygnał wejściowy xfn]
+— rys. 14.6 a) — jest wprowadzany do dwóch systemów połączonych równolegle. Jeden
+z systemów jest filtrem dolnoprzepustowym o odpowiedzi impulsowej h[n]. Drugi sys-
+tem w ogóle nie zmienia sygnału i dlatego ma odpowiedź impulsową będącą funkcją
+delta Ś[n]. Na wyjściu całego systemu uzyskuje się różnicę sygnałów wyjściowych syste-
+mu wszechprzepustowego i systemu dolnoprzepustowego. Ponieważ składowe o małych
+częstotliwościach są odejmowane od sygnału oryginalnego, więc na wyjściu pojawiają
+się tylko składowe o dużych częstotliwościach. Tak więc został utworzony filtr górno-
+przepustowy.
+
+Można to wykonać jako dwuetapową operację w programie komputerowym polegającą na
+
+wanego od oryginalnego. Można jednak zrealizować w jednym etapie, łącząc
+ze sobą dwie odpowiedzi impulsowe. Jak podano w rozdziale 7, systemy równoległe o su-
+mowanych wyjściach mogą być łączone w jeden stopień przez sumowanie ich odpowiedzi
+impulsowych. Odpowiedź impulsowa filtru górnoprzepustowego (rys. 14.6 b) jest opisana
+wzorem: Ś[n] — h[n]. A zatem trzeba zmienić znak wszystkich próbek i potem dodać I do
+próbki będącej w środku symetrii.
+
+JE
+pil
+8EE
+gl
+(i
+JL
+śl
+2433
+
+<image/wzory/k3_page239_formula1.png>
+
+<image/figury/k3_page239_figure1.png>

@@ -1,0 +1,19 @@
+<image/figury/ka_page137_figure2.png>
+
+ązaniu
+ójnej
+
+. m w w w m m m m w —
+
+Podwójne lub potrójne czujniki
+
+Rys. 3.20 Połączenie modułów wejść w sieci sterownikowej
+przy zastosowaniu podwójnego lub potrójnego czujnika obiektowego.
+
+<image/figury/k4_page137_figure1.png>
+
+Rys. 3.21 Układy bloków wyjść dla różnych wariantów redundancji
+
+ 
+
+3.4 Moduły wyjść dyskretnych DO 137

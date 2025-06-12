@@ -1,0 +1,40 @@
+<image/figury/k2_page37_figure1.png>
+
+PRZYKŁAD 3.6
+
+Na rysunku ?? przedstawiono inny, bardziej złożony przykład obliczeń metodą
+a — 8, zaczerpnięty z monografii |?| mi
+
+3.11.1. Szachy komputerowe
+
+Szachy powszechnie są uważane za grę wymagająca inteligencji i jak to ujął Goethe
+
+„szachy to kamień probierczy umysłu”. Uważano, że zbudowanie maszyny wybitnie
+grającej w szachy będzie dowodem, że myśłenie można modelować lub przeciwnie, że
+szachy nie wymagają myslenia. Każda z tych konkluzji zmienia powszechnie przyjętą
+koncepcje inteligencji.
+
+Kryteriami oceny stanu gry w szachach mogą być: liczba figur posiadanych przez
+graczy, liczba możliwych ruchów w danym stanie, otwarcie głownych przekątnych
+otwarte dla własnych figur, wzajemnie bronione piony i opanowanie przez nie środka
+pola itp.
+
+Kilka sytuacji na szachownicy wraz ze słownymi ich ocenami jest przedstawio-
+nych na rys. ??.
+
+Oddzielnym problemem jest dobranie głębokości szukania. Naturalnym jest przy-
+jęcie stałej głębokości. Może to jednak prowadzić do niebezpiecznych sytuacji wyni-
+kających z niedoskonałości funkcji oceny stana gry. Np. przyjmijmy dla gry prowa-
+dzonej przez białe, że stan przedstawiony na rys. ??d znajduje się na maksymalnej
+głębokości oraz, że następny ruch mają czarne. Ponieważ białe mają przewagę w sile
+figur, ocena stanu jest wysoka przy zastosowaniu typowej funkcji oceniającej prefe-
+rującej siłę figur. Jednak w następnym ruchu czarne mogą zbić hetmana i uzyskać
+pozycję wygraną, ale program to uwzględniający musiałby prowadzić szukanie o je-
+den krok głębiej. W związku z tym stosuje się zwykle zmienną głębokość szukania.
+Dopuszcza się zakończenie szukania, gdy widać na podstawie dodatkowych testów,
+że stan gry nie ulegnie gwałtownym zmianom w najbliższej przyszłości.
+
+Innym problemem przy stosowaniu metody minimax jest trudność dostrzeżenia
+oczywistego (dla człowieka) rozwiązania znajdującego się poza maksymalną głębo-
+kością szukania. Rozpatrzmy sytuację szachową przedstawioną na rys. ??a. Czarne
+mają nieznaczną przewagę materialną ale białym wystarczy jeden ruch pionem do

@@ -1,0 +1,31 @@
+<image/figury/k2_page94_figure2.png>
+
+Z kolei przyjmując inną funkcję maszyny, np.
+
+<image/wzory/k2_page94_formula1.png>
+
+gdzie
+<image/wzory/k2_page94_formula2.png>
+
+ryzyko empiryczne wynosi (rys. ??b)
+
+<image/wzory/k2_page94_formula3.png>
+
+Różnica między przedstawionym przypadkami polega na tym, że w pierwszym
+przypadku wpływ parametrów w na odwzorowanie realizowane przez maszynę był
+liniowy, a w drugim przypadku nieliniowy. Przyjęcie modelu liniowego lub nielinio-
+wego pociąga za sobą zasadnicze różnice w algorytmach uczenia. mi
+
+<image/figury/k2_page94_figure1.png>
+
+Rys. 6.2: Wykres powierzchni ryzyka empirycznego do przykładu ??, (a) dla maszyny
+z liniowym wpływem parametrów w na realizowane odwzorowanie oraz (b) z wpływem
+
+nieliniowym
+
+Zadanie uczenia indukcyjnego sprowadza się do znalezienia wektora parametrów
+w minimalizujących ryzyko empiryczne dane wzorem (??). Oczekuje się, że funkcja
+f(x, w) określona poprzez wektor w zapewni też minimum ryzyka średniego danego
+wzorem (??). Zależności pomiędzy uzyskiwanym ryzykiem empirycznym, a ryzykiem
+średnim i zdolność nauczonego systemu do generalizacji omówione będą w dalszej
+części rozdziału.

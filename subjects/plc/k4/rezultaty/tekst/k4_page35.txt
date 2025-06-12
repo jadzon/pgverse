@@ -1,0 +1,35 @@
+wykorzystujących definiowane za pomocą VAR_ACCESS ścieżki dostępu do
+zmiennych typu READ_ONŁY lub WR/TE_ONŁY, jak to ilustruje Rys. 2.5.
+
+<image/figury/k4_page35_figure1.png>
+
+Rys. 2.5 Wymiana danych przez deklarację ścieżki dostępu
+
+2.1.3 Elementy języków programowania
+
+ 
+
+W normie IEC 1131-3 wyróżniono następujące elementy języków programowa-
+nia dla sterowników PLC:
+e Typy danych (Data types),
+e Elementy organizacyjne oprogramowania (Program organization units):
+" Funkcje (Functions),
+a - Bloki funkcyjne (Function blocks),
+* Programy (Programs),
+e Elementy programowania za pomocą grafu sekwencji (SFC),
+e Elementy konfiguracji:
+* zmienne globalne (Global variables),
+u zasoby (Resources),
+s zadania (Tasks),
+" ścieżki dostępu (Access paths).
+
+W kolejnych punktach tego rozdziału omówiono elementy wspólne dla różnych
+Języków programowania, takie jak typy danych i sposoby deklaracji zmiennych
+(2.2), elementy oprogramowania (2.3) oraz elementy konfiguracji (2.4). Opis
+programowania algorytmu sterowania za pomocą grafu sekwencji umożliwiają-
+cego tworzenie odpowiedniej struktury wewnętrznej programu można znaleźć
+w punkcie 2.5, natomiast elementy typowe dla poszczególnych języków przed-
+stawiają następne punkty tego rozdziału.
+
+ap CPOO OAZĘ ZOT COO ZĘ EE ZZO KOSZY
+2.1 Norma IEC 1131 35

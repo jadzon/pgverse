@@ -1,0 +1,14 @@
+czy różniczkowania. W rozdziale 8 pokazano przykłady wykorzystania bloku
+PID2 w układach regulacji.
+
+<image/tabele/k4_page316_table1.png>
+
+gulatora PID2.
+
+ 
+
+   
+
+Rozdział : 6 Programowanie sterowników AEG SCHNEIDER Modicon
+
+316

@@ -1,0 +1,41 @@
+88 5. Pamięci
+
+Pamięci z dostępem cyklicznym można podzielić na dwie grupy: pamięci z
+nieruchomym nośnikiem i pamięci z ruchomym nośnikiem. Do pierwszej grupy należą
+pamięci, wykorzystywane tylko w specjalnych zastosowaniach, zbudowane na rejestrach
+przesuwających, gdzie informacja krąży zamknięta w pętli sprzężenia zwrotnego. Odczytu
+dokonuje się na wyjściu ostatniego stopnia, a zapisu na wejściu pierwszego stopnia
+(logicznie jest to ten sam punkt). Do drugiej grupy należą kinetyczne pamięci
+magnetyczne, tj. pamięci dyskowe.
+
+<image/figury/k3_page98_figure1.png>
+
+Rysunek 5.2. Schemat pamięci z dostępem cyklicznym
+
+Na rysunku 5.2 pokazano ogólny schemat pamięci z dostępem cyklicznym. Adres
+podawany jest na wejście komparatora, który porównuje go z tzw. adresem bieżącym,
+tj. adresem generowanym przez pamięć i wskazującym miejsce w pamięci, które w tym
+momencie może zostać odczytane lub zapisane. W momencie uzyskania zgodności
+następuje odczyt albo zapis do pamięci, w zależności od stanu na linii R/W.
+
+Pamięci z dostępem sekwencyjnym są pamięciami na taśmach magnetycznych. W ta-
+kich pamięciach informacja zapisywana jest w kolejności jej przychodzenia. Porcja danych,
+nazywana blokiem lub rekordem, jest zapisywana sekwencyjnie, tj. kolejno jedna za drugą
+na całej długości taśmy. Odczytu dokonuje się podając numer rekordu liczony od początku
+taśmy.
+
+Pamięci asocjacyjne (ang. associative memory) są czasem nazywane pamięciami
+adresowanymi zawartością (ang. content addressable memory) lub pamięciami skojarze-
+niowymi. Działanie tej pamięci jest złożeniem funkcji pamięci RAM i dodatkowej funkcji
+przeszukiwania zawartości pamięci. Sposób wykorzystania tej funkcji podany zostanie
+w dalszym ciągu tego rozdziału.
+
+5.2. PAMIĘCI OPERACYJNE
+5.2.1. RODZAJE PAMIĘCI OPERACYJNYCH
+
+W niniejszym podrozdziale przedstawiono dwie klasyfikacje pamięci stosowanych jako
+pamięci operacyjne. Pierwsza z nich dotyczy różnych sposobów wybierania (uaktywniania)
+elementów z matryc, a druga technologii wykonania.
+
+Pierwsza klasyfikacja wynika z faktu stosowania elementów pamięci RAM o różnej
+liczbie końcówek. Końcówki te to: wejście do zapisywania bitu, wyjście do odczytywania

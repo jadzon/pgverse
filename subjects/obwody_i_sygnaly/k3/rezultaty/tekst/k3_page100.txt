@@ -1,0 +1,40 @@
+100 1. Pojęcia podstawowe — elementy
+
+W przypadku szczególnym, kiedy wszystkie łączone opory są liniowe,
+
+otrzymujemy:
+<image/wzory/k3_page100_formula1.png>
+a więc:
+|
+<image/wzory/k3_page100_formula2.png>
+lub:
+
+<image/wzory/k3_page100_formula3.png>
+
+ 
+
+1
+przy czym G = R
+
+Wzór (1.5-22) określa odwrotność oporu (przew
+powstałego w wyniku połączenia równoległego
+k==],2...,n.
+
+Proponujemy Czytelnikowi wykazanie następują
+
+1. Połączenie szeregowe lub równoległe oporów nii
+nieuzależnionym.
+
+2. Jeśli charakterystyki (1.5-10) oporów łączony;
+kterystyki (1.5-16) oporów łączonych równolegle są s:
+styka połączenia jest też symetryczna.
+
+D. Połączenie szeregowe indukcyjności. Rozwa
+n indukcyjności (rys. 1.5-10) określonych równaniami
+tzn.:
+
+wzory/k3_page100_fori
+
+<image/wzory/k3_page100_formula5.png>
+
+<image/wzory/k3_page100_formula6.png>

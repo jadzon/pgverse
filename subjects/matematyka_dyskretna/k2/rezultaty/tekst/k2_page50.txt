@@ -1,0 +1,19 @@
+1.10. Zasada włączania i wyłączania 15
+
+Rysunek 1.2: Diagram Venna
+
+<image/figury/k2_page50_figure1.png>
+
+podzbioru 7 zbioru indeksów 7 C 41,...,n) definiujemy zbiór
+
+<image/wzory/k2_page50_formula1.png>
+przyjmujemy przy tym Ag = X.
+W naszym przykładzie X to zbiór wszystkich studentów, A; to uprawiający koszykówkę,
+Aa — pływanie, a Az — szachy:
+e A, = A1M1A2 to uprawiający koszykówkę i pływanie,
+e Aq13) 5 A1 (1 As to uprawiający koszykówkę i szachy,
+e As) = A2 1 Az to uprawiający pływaniei szachy,
+
+e Aq2,3) 5 A1 (1 Az] As to uprawiający wszystkie trzy sporty.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

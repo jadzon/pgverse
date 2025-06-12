@@ -1,0 +1,28 @@
+30. Liczby zespolone
+
+ 
+
+Czy można by rozwiązać to zadanie bez liczb zespolonych? Oczywiście tak. Liczby zespo-
+lone dają tylko formalną drogę operowania dwiema składowymi tworzącymi jeden wektor.
+Trzeba więc pamiętać, że niektóre problemy fizyczne można wyrażać w liczbach zespolo-
+nych, po prostu dodając j do jednej ze składowych. Powrót do świata fizycznego jest niczym
+innym, jak usunięciem tego j. To jest istota metody zastępowania.
+
+I tu pojawia się pewna trudność. Skąd mamy wiedzieć, czy reguły i prawa obowiązujące w ma-
+tematyce liczb zespolonych stosują się też do danego zagadnienia fizycznego? Zastosowaliśmy
+np. wzór 30.1 do sumowania wektorów sił w zadaniu o żaglówce. Skąd wiemy, że dodawanie
+liczb zespołonych daje taki sam wynik, jak dodawanie wektorów sił? W większości przypad-
+ków wiemy, że matematyka liczb zespolonych może być stosowana do danej aplikacji, gdyż
+
+Rozważmy teraz taki przykład, w którym nie działa metoda zastępowania liczbami zespoło-
+
+nymi. Powiedzmy, że kupujecie jabłka po 5 złotych za skrzynkę i pomarańcze po 10 złotych
+za skrzynkę. Wyrażacie to liczbą zespoloną 5 + 10j. Podczas któregoś tygodnia kupujecie
+6 skrzynek jabłek i 2 skrzynki pomarańcz, co wyrażacie liczbą zespoloną 6 + 2j. Całkowita
+cena, jaką musicie zapłacić za te owoce, jest równa liczbie skrzynek pomnożonej przez cenę
+każdej z nich, czyli (5 + 10;)(6 + 25) = 10 + 705. Z działań na liczbach zespolonych wynika
+więc, że musicie zapłacić za jabłka 10 złotych i za pomarańcze 70 złotych. Otóż ta odpowiedź
+jest całkiem błędna! Zasady matematyki liczb zespolonych nie są zgodne z zasadami tego
+postawionego zadania.
+
+<image/figury/k3_page496_figure1.png>

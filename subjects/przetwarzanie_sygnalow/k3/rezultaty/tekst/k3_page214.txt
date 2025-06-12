@@ -1,0 +1,42 @@
+12. Szybkie przekształcenie Fo
+
+Stosowanie rzeczywistego FFT ma dwie małe wady. Po pierwsze, kod programu jest ok. ć
+razy dłuższy. Po drugie, usuwanie błędów z takiego programu jest nieco trudniejsze, g
+nie można korzystać z symetrii jako sprawdzianu właściwego działania. W tych algc
+jest wymuszana zerowa część urojona w dziedzinie czasu oraz symetria lewo-prawos
+w dziedzinie częstotliwości. W celu usunięcia błędów trzeba sprawdzić, czy te programy daj
+taki sam wynik jak konwencjonalne algorytmy FFT.
+Na rys. 12.10i 12.11 pokazano, jak działa rzeczywiste FFT. Na rysunkach 12.10 a), b) prze
+stawiono sygnał w dziedzinie czasu, który składa się z impulsu w części rzeczywistej i z
+mych zer w części urojonej. Na rysunkach 12.10 c), d) przedstawiono odpowiadające
+
+przebiegom widmo częstotliwościowe. Jak już poprzednio powiedziano, część rzeczywi
+w dziedzinie częstotliwości ma symetrię parzystą wokół próbek 0 i N/2, część urojona z
+— symetrię nieparzystą wokół tych samych punktów.
+Teraz rozpatrzmy rys. 12.11, na którym impuls jest w części urojonej, a w części rz
+czywistej są same zera. Symetria w dziedzinie częstotliwości jest tu odwrócona; czę
+rzeczywista ma symetrię nieparzystą, podczas gdy urojona — parzystą. Taką sytuację om
+wimy w rozdziale 29. Na razie przyjmijcie do wiadomości, że tak właśnie zachowuje si
+zespolone DFT.
+A co się dzieje, gdy sygnał znajduje się zarówno w części rzeczywistej, jak i urojonej w dzie
+dzinie czasu? Zgodnie z zasadą addytywności sygnał w dziedzinie częstotliwości będzź
+sumą dwóch widm częstotliwościowych. A teraz najważniejsza sprawa — widmo częstotliwe
+
+  
+
+|-——
+
+. zazowiikki 00:
+
+    
+
+SA |
+ł
+
+    
+
+| ofe EC |
+<image/p__figury/k3_page214_figure1.png>
+o 16 EE 48 63
+
+Rys. 12.10. Symetria części rzeczywistej DFT

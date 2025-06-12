@@ -1,0 +1,16 @@
+Zadanie - wyznaczanie parametrów cyklu granicznego
+
+ 
+
+Rozwiązanie w Simulinku dla a=1 i B=Z
+
+<image/tabele/k/_page179_table1.png>
+
+eoblnsido eloy4un4
+
+<image/figury/k/_page179_figure1.png>
+
+ 
+
+POLITECHNIKA 3 a |
+GDAŃSKA

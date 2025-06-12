@@ -1,0 +1,50 @@
+1.19. Testy pierwszości 29
+
+każdy znak jako 8 bitów i cały ciąg może być traktowany jako liczba w postaci dwójko-
+wej.) Bob szyfruje wiadomość przy pomocy funkcji szyfrującej
+
+<image/wzory/k2_page144_formula1.png>
+
+i przesyła ją Alicji. Alicja odszyfrowuje za pomocą funkcji deszyfrującej
+
+<image/wzory/k2_page144_formula2.png>
+
+Pokażemy teraz, że jeżeli NW D(z,n) = 1, to
+
+<image/wzory/k2_page144_formula3.png>
+
+Man
+
+<image/wzory/k2_page144_formula4.png>
+
+Ponieważ ed= 1 (mod 6(n)), więc istnieje k takie, że ed = 1 + kó(n), czyli
+
+<image/wzory/k2_page144_formula5.png>
+
+ale jeżeli NW D(z,n) = 1,to z**") = (x799) = | (mod n). Takwięc Da(Ca(z)) =
+1. Do powyższego potrzebne było założenie, że NW D(z, n) = 1. Ale gdy ktoś trafi na
+wiadomość z, która nie jest względnie pierwsza z n, to Alicja ma pecha, ponieważ wtedy
+można dokonać rozkładu liczby n i złamać jej szyfr.
+
+Łatwo też można pokazać, że C4(D4(z)) = r.
+
+Niesymetryczne szyfry dają nowe możliwości. Można ich na przykład używać do
+podpisu. Aby podpisać jakąś wiadomość m, Alicja szyfruje ją swoim szyfrem prywat-
+nym D4(m) i jest to podpis wiadomości m. Alicja wysyła Bobowi parę (m, D4(m)).
+Zeby sprawdzić, że wszystko się zgadza Bob szyfruje podpis publicznym kluczem Alicji
+"= m-..
+
+<image/wzory/k2_page144_formula6.png>
+
+1.19 Testy pierwszości
+W tym rozdziale zajmiemy się zagadnieniem jak sprawdzić, czy liczba n jest pierwsza.
+
+Możemy sobie wyobrazić, że n ma kilkaset bitów. Jak widać z poprzedniego rozdziału
+duże liczby pierwsze mogą być przydatne.
+
+1.19.1 Test naiwny
+
+Najprostszy sposób to, dzielić n przez kolejne liczby (pierwsze) aż do 4. Jednak ten
+test jest zupełnie niepraktyczny, jeżeli n ma kilkaset bitów.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

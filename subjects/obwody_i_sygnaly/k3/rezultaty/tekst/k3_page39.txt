@@ -1,0 +1,27 @@
+jury/k3_page39_figure2.png
+
+»ojemność, na zaciskach której panuje sinusoidalnie zmienne napięcie
+przebiegiem sinusoidalnym o tej samej pulsacji. Amplituda prądu 7, jest
+ia U„ pomnożonej przez czynnik wC, natomiast faza prądu jest większa
+ówimy, że prąd na pojemności wyprzedza w fazie napięcie o kąt n/2 lubże
+tie względem prądu o kąt n/2).
+
+<image/wzory/k3_page39_formula2.png>
+
+je39_formula 1 png sądu są w tym przypadku równokształtne z przebiegami — odpowiednio
+kładu 1.2-3c. Szybkość zmian tych przebiegów jest jednakowa i określona
+
+$ wykazują wyraźne podobieństwo. Przejawia się ono zarówno w uzys-
+prądem i napięciem jak i w ich interpretacji i wiąże się ze swojego rodzaju
+ących w nich wielkości elektrycznych (por. p. 2.1.6).
+
+płytkach odchylania poziomego oscyloskopu należy wytworzyć okresowy
+ięcia u (rys. 1.2-9a). Płytki można uważać za kondensator o pojemności C.
+ądu i (jego kształt i parametry), jaki należy doprowadzić do płytek, aby
+ieg napięcia u.
+
+<image/wzory/k3_page39_formula3.png>
+
+Z rys. 1.2-9a wynika, że:
+
+<image/wzory/k3_page39_formula4.png>

@@ -1,0 +1,35 @@
+184 Dodotek A
+
+ 
+
+<image/figury/k3_page194_figure3.png>
+
+Rysunek D.11. Sekwencja wzbudzenia automatu i sekwencja wyjściowa
+
+Rozpatrzmy automat opisany wykresem czasowym pokazanym na rys. D.11. Sekwen-
+cję stanów wejściowych i sygnału wyjściowego zapisano binarnie oraz graficznie. Z ry-
+sunku wynika, że pojawienie się I na wejściu x, powoduje, że na wyjściu układu pojawia
+się 0, natomiast pojawienie się | na wejściu x, powoduje, że na wyjściu pojawia się 1.
+W przypadku, gdy na obu wejściach pojawią się 1, to na wyjściu będzie 0. Taki dwu-
+stanowy układ nazywany jest przerzutnikiem (ang. /lip-flop). Jest to asynchroniczny
+przerzutnik typu wz, gdzie wejście w jest wejściem wzbudzającym stan 1 przerzutnika,
+a wejście z jest wejściem zerującym. W podanym przykładzie wejście x, jest wejściem
+wzbudzającym, a wejście x, jest wejściem zerującym. Jeżeli przerzutnik jest jednocześnie
+wzbudzany i zerowany (w=| i z=1), to w tym układzie przewagę ma wejście zerujące
+ina wyjściu będzie y=0. Zauważmy, że dualny do omawianego układ zbudowany na
+bramkach NAND (rys. D.10.c) stanowi układ przerzutnika wz, dla którego jednoczesne
+podanie 0 na oba wejścia powoduje ustawienie stanu 1, więc przewagę ma wejście
+wzbudzające. Aby uniknąć niejednoznaczności działania i aby oba zaznaczone na
+rys. D.10c wyjścia przerzutnika były komplementarne trzeba, aby w + z = 1, tj. aby wejścia
+nie były jednocześnie zerami. Jeżeli na obu wejściach są 0, to po zmianie obu wejść na 1,
+układ przejdzie do stanu, który zależy od różnicy opóźnień na bramkach. Na wyjściu
+bramki o mniejszym czasie propagacji ustali się 0.
+
+figury/k3_pafigury/k3_page194_figure4.
+
+Aby uniknąć zjawiska hazardu, stosuje się przerzutniki synchroniczne jak pokazany
+na rys. D.12a. Zmiana stanu na wyjściu układu następuje w czasie trwania impulsu
+synchronizującego, a nie w momencie zmiany na wejściach układu (por. rys. D.12c). Ten
+
+typ przerzutnika jest nazywany przerzutnikiem typu RS od angielskich słów reset
+(zerować) i ser (ustawiać stan jeden).

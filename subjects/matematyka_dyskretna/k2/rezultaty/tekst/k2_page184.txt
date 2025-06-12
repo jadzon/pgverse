@@ -1,0 +1,47 @@
+6 Rozdział 1. Grafy (nieskierowane)
+
+(a) Gi H mają tyle samo wierzchołków, |VG| = IVyl.
+(b) Gi H mają tyle samo krawędzi, |EG| = |En|,
+(c) Dla każdego k, G i H mają tyle samo wierzchołków stopnia k.
+
+Dowód:
+(a) wynika bezpośrednio z definicji.
+(b) Niech h będzie izomorfizmem z VG na Vy. Ale h określa także wzajemną jednoznacz-
+ność pomiędzy zbiorem krawędzi h(fu,v)) = fh(u),h(v)).
+(c) Udowodnimy, że jeżeli v € VG jest stopnia k, to i h(v) € Vy jest stopnia k. Więc h
+odwzorowuje wierzchołki stopnia k na wierzchołki stopnia k.
+
+Niech v;, ... , vą będą wszystkimi wierzchołkami z VG połączonymi krawędziami z
+v, Wtedy h(v;), ... , h(vx) są wszystkimi wierzchołkami z Vy połączonymi krawędziami
+z h(v). a
+
+1.2 Drogi i cykle
+
+Droga lub ścieżka w grafie jest to ciąg wierzchołków vg, v;.. .. „vy, taki, że dla każdego
+i, 1 £< i < k, wierzchołki v;,_y, v, są połączone krawędzią, czyli (v;_;,v,) € EG. O
+drodze vg, v;,. . . ,vg mówimy, że łączy wierzchołki vy i vą. Mówimy także, że wierzcho-
+łek v„ jest osiągalny z wierzchołka v, . Droga jest zamknięta jeżeli vo = vs. Droga jest
+prosta, jeżeli wszystkie występujące w niej wierzchołki są różne. Drogę vo,v:;,...,tk
+nazywamy cyklem jeżeli vę = vx, k > 3 oraz wszystkie wierzchołki vy ,.. . ,v; Są różne.
+
+Przykład 1.8 W grafie z rysunku 1.1 ciąg e, a, d, a,b, c, g jest drogą, a ciąg a, e, f,d,a
+jest cyklem. Ciąg a, e, f,d, a,b,c, g, a jest drogą zamkniętą, ale nie jest cyklem.
+
+Graf G jest spójny, jeżeli dla każdych dwóch wierzchołków u, v € VG istnieje ścieżka
+łącząca u i v. Składowa spójności to maksymalny spójny podgraf grafu. Zauważmy, że w
+zbiorze wierzchołków grafu istnieje relacja osiągalności: u i v są w relacji jeżeli u = v
+lub v jest osiągalny z u. Relacja ta jest relacją równoważności i dzieli zbiór wierzchołków
+grafu na składowe spójności.
+
+Przykład 1.9 Graf z rysunku 1.1 jest spójny, zawiera jedną składową spójności (cały
+graf).
+Graf z rysunku 1.5 nie jest spójny i zawiera trzy składowe spójności:
+
+e H, ze zbiorem wierzchołków fa,e) i jedną krawędzią fa,e)
+e Ha ze zbiorem wierzchołków fb, c, g) i dwoma krawędziami fb,c) i 4c,g),
+e Hz z jednym wierzchołkiem fd) i bez krawędzi.
+
+Lemat 1.10 Jeżeli istnieje droga łącząca wierzchołki u i v, u ź v, to istnieje też droga
+prosta łącząca u iv.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

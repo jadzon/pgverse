@@ -1,0 +1,11 @@
+o nazwach FAZA_/ — FAZA _4, sterowanie cykliczne kolejnymi fazami oraz je-
+den pełny cykl wykonuje podprogram FAZA_N.
+
+<image/figury/k4_page449_figure1.png>
+
+Rys. 8.18 Schemat układu regulacji temperatury w reaktorze chemicznym
+z wykorzystaniem bloku PID sterownika GE Fanuc
+
+<image/tabele/k4_page449_table1.png>
+
+<image/wzory/k4_page449_formula1.png>

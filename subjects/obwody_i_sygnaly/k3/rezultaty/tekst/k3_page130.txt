@@ -1,0 +1,21 @@
+130 1. Pojęcia podstawowe — elementy
+
+B. Inne konfiguracje źródeł sterowanych. Na rys. 1.7-18 sygnały sterujące:
+napięcie u, oraz prąd i, występują odpowiednio na zaciskach rozwartych lub
+zwartych. Nie zmniejsza to ogólności rozważań. Sygnały sterujące (u, lub i;)
+mogą występować na dowolnym elemencie, zawsze jednak można je uważać za
+sygnały występujące na zaciskach rozwartych (u,) lub zwartych (i,), co po-
+glądowo ilustruje rys. 1.7-19.
+
+<image/figury/k3_page130_figure1.png>
+
+Na rys. 1.7-18 zaciski, na których występują sygnały sterujące, są całkowicie
+odseparowane od zacisków, na których występuje efekt sterowania, tj. siła
+elektromotoryczna lub wydajność prądowa. Można jednak również rozważać
+źródła sterowane jako układy mające wspólny zacisk, jak to pokazano na
+rys.1.7-20.
+
+<image/figury/k3_page130_figure2.png>
+
+C. Znaczenie źródeł sterowanych. Znaczenie źródeł sterowanych w teorii
+obwodów wynika z faktu, iż występują one w modelach obwodowych (schema-

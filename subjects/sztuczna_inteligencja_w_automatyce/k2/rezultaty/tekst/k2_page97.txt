@@ -1,0 +1,32 @@
+<image/figury/k2_page97_figure1.png>
+
+Ponieważ system jest liniowy względem parametrów w = [wy..... wę| do wyzna-
+czenia wektora w zastosowano metodę najmniejszych kwadratów.
+
+Po podstawieniu danych z tablicy ?? do wzoru (??) otrzymujemy następującą
+macierz A i wektor d:
+
+<image/wzory/k2_page97_formula1.png>
+
+Stąd, stosując wzór (??) obliczamy wartości wektora w i podstawiając go do wzoru
+(77) otrzymujemy ostatecznie
+
+<image/wzory/k2_page97_formula2.png>
+
+Dla tego wyniku błąd E(w) = 0,0306.
+Postępując analogicznie łatwo sprawdzić, że stosując prostszy system, np.
+
+<image/wzory/k2_page97_formula3.png>
+
+otrzymujemy większy błąd, E(w) = 2,2707 mu
+
+6.4. Podstawowe metody iteracyjne szukania eks-
+tremum
+
+Jak pokazano powyżej, większość problemów indukcyjnego uczenia się maszyn można
+sprowadzić do zadania określenia przepisu funkcji f poprzez poszukiwanie minimum
+funkcji ryzyka empirycznego E(w),„, danej wzorem (??). Przy wyznaczaniu mini-
+mum dostępne są wartości funkcji E(w),„, dla zadanego punktu w, a w przypadku
+stosowania uczenia z nauczycielem znana jest postać analityczna funkcji F(w)-mp-
+
+za wyjątkiem pewnych szczególnych doborów danych wejściowych

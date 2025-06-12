@@ -1,0 +1,28 @@
+Przykład 2.7
+Rozwiązać równanie różniczkowe
+
+<image/wzory/k1_page34_formula1.png>
+z warunkami początkowymi y(0) = y(0)=0.
+Rozwiązanie
+Stosujemy transformatę Laplace'a do obu stron równania:
+
+wzorv/k1 0aae34 formula2.ong
+<image/wzory/k1_page34_formula3.png>
+Nzory/k1_page34_formula4.png
+stąd
+
+<image/wzory/k1_page34_formula5.png>
+czyli
+
+<image/wzory/k1_page34_formula6.png>
+
+Następnie rozkładamy Y(s) na ułamki proste, wyliczając współczynniki 4, Bi C:
+<image/wzory/k1_page34_formula7.png>
+czyli:
+wzoryv/k1pade34formula8.pna
+<image/wzory/k1_page34_formula9.png>
+tąd:
+
+s
+
+<image/wzory/k1_page34_formula10.png>

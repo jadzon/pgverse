@@ -1,0 +1,8 @@
+Splot przez dziedzinę częstotliwości
+
+ 
+
+ 
+
+W dziedzinie czasu x[n] jest spłatane z hfn], dając w wyniku y[n], jak to po-
+procedurę można zastosować w dziedzinie częstotliwości. Zastosowano DFT w celu

@@ -1,0 +1,28 @@
+338 | 3. Obwody prądu stalego
+
+ 
+
+<image/figury/k4_page338_figure1.png>
+
+ 
+
+Odp.: R = Z — jA =4kQ
+<image/wzory/k4_page338_formula1.png>
+
+Zadanie 3.38. Dla układu z rys. Z-3.38 wyznaczyć napięcie wyjściowe u, w zależności od napięć u;,
+u,, uz i wartości oporów.
+
+<image/figury/k4_page338_figure2.png>
+
+<image/wzory/k4_page338_formula2.png>
+
+zadanie3.39.jakzmieniajsiwzorynawspczynnikwzmocnieniaku/uwzmacniacza
+nieodwracającego (rys. 3.6-5a) i wzmacniacza odwracającego (rys. 3.6-5b), jeżeli występujący w nich
+WO ma skończone wzmocnienie, tzn. A y% ©.
+
+O
+
+<image/figury/k4_page338_figure3.png>
+
+Zadanie 3.40. Na rys. Z-3.40 jest przedstawiony ukłdd przerzutnika Schmitta, będący modyfikacją
+układu komparatora (rys. 3.6-9, przykład 3.6-6). Wykazać, że dla tego układu:

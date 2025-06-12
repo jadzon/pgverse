@@ -1,0 +1,9 @@
+<image/figury/k4_page503_figure2.png>
+
+<image/figury/k4_page503_figure1.png>
+
+<image/figury/k4_page503_figure3.png>
+
+Wyd. 8.192 Etap FAZA4 grafu sekwencji — opróźnianie
+
+8.8 Sterowanie sekwencyjne procesem wsadowym 503

@@ -1,0 +1,41 @@
+:1 początkowej licznika 5
+icznika
+
+znika
+
+cznika
+
+y/k4_page346_figure2.png
+j wartości licznika
+'artości licznika do FW20
+4 licznika w kodzie BCD
+„,_ "artości licznika do QW30
+
+W przypadku zmiany stanu wejścia / 7.0 z 0 na | (zbocze narastające), jeżeli
+I 7.3 =0, to aktualny stan licznika CI jest zwiększany o 1. W przypadku zmiany
+stanu wejścia / 7./ z O na | (zbocze narastające) gdy / 7.3=0 aktualny stan licz-
+nika C] jest zmniejszany o |. Jeżeli aktualna wartość licznika osiągnie zero, to
+wystąpienie zbocza narastającego na wejściu /7./ nie powoduje dalszego
+zmniejszania wartości licznika. Jeżeli stan wejścia / 7.2 zmieni się z O na I (zbo-
+cze narastające) oraz / 7.3 =0, to licznik CI zostanie ustawiony. Jako wartość
+licznika zostanie przyjęta wartość znajdująca się w akumulatorze 1. W analizo-
+wanym przykładzie aktualny stan licznika będzie wynosił 5. Jeżeli na wejściu
+I 7.3 jest |, to aktualny stan licznika wynosi 0, bez względu na stany pozostałych
+wejść. Wyjście Q 4.0 ma wartość | wtedy, gdy aktualna wartość licznika jest
+
+różna od zera.
+i
+
+<image/figury/k4_page346_figure1.png>
+
+SI
+
+Rys. 7.16 Diagram pracy licznika
+
+z — A M A A A: R W O A W BB M PM | M
+
+ 
+
+——— ZA A AP O A A M A A TM MM | M LiRM M O M MATA
+
+346 Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC $$

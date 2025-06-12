@@ -1,0 +1,39 @@
+36 1. Pojęcia podstawowe — elementy
+
+Na powierzchni okładziny O, (dokładniej, na powierzchni granicznej metal-
+dielektryk) zachodzi związek:
+
+<image/wzory/k3_page36_formula1.png>
+
+bowiem wektor D jest prostopadły do płaszczyzny O,. Stąd, po uwzględnieniu
+związków (1.2-27) i (1.2-28), otrzymujemy:
+
+eS
+g=U
+lub:
+<image/wzory/k3_page36_formula2.png>
+gdzie:
+<image/wzory/k3_page36_formula3.png>
+
+jest pojemnością rozważanego kondensatora.
+
+B. Pojemność jako element obwodu. Rozpatrzmy teraz przypadek, kiedy
+ładunek kondensatora q = q(t) jest zmienny w czasie, a więc pole elektryczne
+E oraz indukcja elektryczna D są niestacjonarne. W konsekwencji, zmienne
+w czasie jest także napięcie u = u(t). Załóżmy, że wszystkie zależności z p. A
+pozostają słuszne. Słuszne pozostaje zatem również samo równanie
+(1.2-30), tzn.:
+
+<image/wzory/k3_page36_formula4.png>
+gdzie u = u(t), q = q(t) lub:
+
+<image/wzory/k3_page36_formula5.png>
+
+Zapis (1.2-33) podkreśla, iż napięcie w chwili t jest proporcjonalne do
+ładunku w tej samej chwili. Przyjmujemy przy tym, że współczynnik C w rów-
+naniu (1.2-32) jest identyczny z pojemnością C określoną przez wzór (1.2-31)
+dla przypadku pola elektrostatycznego (tj. pola elektrycznego ładunku stałego).
+
+Uwaga. Jeszcze raz podkreślamy (uczyniliśmy to już w odniesieniu do oporu i indukcyjności),
+że przejście od równania (1.2-30) do równania (1.2-32) ma charakter ekstrapolacji i wymagać
+będzie odrębnego określenia warunków, przy których jest ono dopuszczalne (por. p. 1.4).

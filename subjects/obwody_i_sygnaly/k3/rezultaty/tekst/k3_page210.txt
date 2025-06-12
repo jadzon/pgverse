@@ -1,0 +1,48 @@
+2. Pojęcia podstawowe — układy
+
+zią dostarczoną do wielowrotnika do chwili t, zaś 6 (tę) j
+ną w wielowrotniku w chwili ty.
+
+nazywamy pasywnym (P), jeśli dla każdej pary chwil
+az dla każdego dopuszczalnego stanu zaciskowego u,
+. nieujemna, tzn.:
+
+<image/wzory/k3_page210_formula2.png>
+
+zst aktywny (A), jeśli nie jest pasywny, tzn. jeśli istnieje
+Ć tg, +0) oraz taki dopuszczalny stan zaciskowy u, i, ż
+. ujemna, tzn.:
+
+<image/ge210_wzory/k3_page210_formula3.png>
+
+*zstratności. Z pojęciem pasywności jest związane pojęcie
+u. O indukcyjności stacjonarnej i pojemności stacjonarn
+to elementy bezstratne (por. p. 1.3.2-C i p. 1.3.3-C).
+„ że indukcyjność i pojemność, a więc elementy zdolne d
+gli, mogą w całości oddać do otoczenia energię, któ
+ua pobrały i zmagazynowały. Proces pobierania i oddawani
+zatem bez strat. Analogicznie zachowują się indukcyjności
+
+ykazaliśmy, że moc pobierana przez transformator idealn
+
+(2.1-21) i (2.1-22) — jest zawsze równa zeru. Są to zatem
+
+ównież nie wprowadzają strat. Różnica w porównaniu
+
+pojemnością jest jednak istotna. Transformator idealny
+nikami bezinercyjnymi (p. 2.1.5-G), które nie są
+idzenia energii.
+
+1 przykładów wynika potrzeba ogólnego określenia pojęcia
+bczsiraLnosci ukiaau. Odpowiednią definicję sformułujemy od razu dla przypad-
+ku wielowrotnika.
+
+Wielowrotnik pasywny jest wielowrotnikiem bezstratnym, jeśli przy do-
+wolnym wyborze chwili £, dla każdej pary chwil t,, t, EC ty, +00), tą > ly
+oraz dla każdego dopuszczalnego stanu zaciskowego u, i:
+
+<image/wzory/k3_page210_formula4.png>
+
+Związek (2.1-56) ma prostą interpretację. Oznacza on, że energia pobrana
+z otoczenia w dowolnym przedziale czasu € ty, tą ) jest zawsze równa przyros-
+towi energii zmagazynowanej w układzie. Zwracamy jednak uwagę, iż zgodnie

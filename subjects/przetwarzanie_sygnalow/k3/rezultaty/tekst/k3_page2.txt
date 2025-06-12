@@ -1,0 +1,62 @@
+Przedmowa
+
+ 
+
+Jest to najprostszy styl programowania, jaki udało mi się znaleźć. Niektórzy mogą sądzić,
+że książka byłaby lepsza, gdyby programy napisano w języku C. Całkowicie się z tym nie
+zgadzam.
+
+Spodziewany krąg czytelników
+
+Ta książka jest zamierzona przede wszystkim jako materiał dla rocznych praktycznych szko-
+leń w technice DSP, których uczestnikami są osoby pracujące w różnych dziedzinach nauki
+i techniki. Proponowanym przygotowaniem wstępnym są:
+
+* Kurs elektroniki praktycznej (wzmacniacze operacyjne, układy RC itd.)
+
+*- Kurs programowania komputerowego (Fortran lub podobne)
+
+* Roczny wykład rachunku różniczkowego i całkowego
+
+Pisząc tę książkę, miałem też na uwadze potrzeby osób profesjonalnie zajmujących się DSP.
+Opisano wiele często spotykanych zastosowań: filtry cyfrowe, sieci neuronowe, kompresję
+danych, przetwarzanie dźwięku i obrazu itd. Rozdziały książki o tej tematyce są w dużym
+stopniu niezależne, aby Czytelnik dla rozwiązania konkretnego problemu nie musiał przeszu-
+kiwać całej książki.
+
+Podziękowania
+
+Wielu osobom składam szczególne podziękowania za uwagi i sugestie dotyczące tej
+książki. Ci pierwsi recenzenci, dzięki wspaniałomyślnemu poświęceniu swojego cza-
+su i zdolności, przyczynili się do udoskonalenia książki. A oto oni: Magnus Aronsson
+(Wydział Elektryczny, Uniwersytet Utah); Bruce B. Azimi (Marynarka Wojenna USA),
+Vernon L. Chi (Wydział Informatyki, Uniwersytet Karoliny Północnej), Manohar Das,
+Ph.D. (Wydział Elektryki i Inżynierii Systemowej, Uniwersytet Oakland), Carol A. Dean
+(Analog Devices, Inc.), Fred DePiero, Ph.D. (Wydział Elektryczny, Uniwersytet Stanowy
+CalPoly), Jose Fridman, Ph.D. (Analog Devices, Inc.), Frederick K. Duennebier,
+Ph.D. (Wydział Geologii i Geofizyki, Uniwersytet Hawajów, Manoa), D. Lee Fugal
+(Space%Signals Technologies), Filson H. Glanz, Ph.D. (Wydział Elektryki i Techniki
+Komputerowej, Uniwersytet New Hampshire), Kenneth H. Jacker (Wydział Informatyki,
+Uniwersytet Stanowy Appalachian), Rajiv Kapadia, Ph.D. (Wydział Elektryczny,
+Uniwersytet Stanowy Mankato), Dan King (Analog Devices, Inc.), Kevin Leary (Analog
+Devices, Inc.), A. Dale Magoun, Ph.D. (Wydział Informatyki, Uniwersytet Północno-
+Wschodniej Luizjany), Ben Mbugua (Analog Devices, Inc.), Bernard J. Maxum, Ph.D.
+(Wydział Elektryczny, Uniwersytet Lamar), Paul Morgan, Ph.D. (Wydział Geologii,
+Uniwersytet Północnej Arizony), Dałe H. Mugler, Ph.D. (Wydział Matematyki,
+Uniwersytet Akron), Christopher L. Mullen, Ph.D. (Wydział Inżynierii Lądowej,
+Uniwersytet Missisipi), Cynthia L. Nelson, Ph.D. (Sandia National Laboratories),
+Branislava Perunicic-Drazenovic, Ph.D. (Wydział Elektryczny, Uniwersytet Lamar),
+John Schmeelk, Ph.D.(Wydział Matematyczny, Uniwersytet Virginia Commonwealth),
+Richard R. Schultz, Ph.D. (Wydział Elektryczny, Uniwersytet Dakoty Północnej), David
+Skolnick (Analog Devices, Inc.), Jay J. Smith, Ph.D. (Centrum Techniki Kosmicznej,
+Uniwersytet Stanowy Weber), Jeffrey Smith, Ph.D. (Wydział Informatyki, Uniwersytet
+Georgia), Oscar Yanez Suarez, Ph. D. (Wydział Elektryczny, Metropolitan University,
+kampus Iztapalapa, Mexico City) oraz inni, którzy pragną pozostać anonimowi.
+
+Teraz książka jest w rękach ostatecznych recenzentów, którymi jesteście Wy — jej Czytelnicy.
+Poświęćcie, proszę, trochę czasu na przekazanie mi swoich uwag i sugestii. Przyczynią się one
+do poprawienia dalszych wydań książki, aby mogła jeszcze lepiej służyć waszym potrzebom.
+Nie więcej niż dwie minuty zajmie wam wysłanie e-maila pod adresem: Smith © DSPguide.
+com. Dziękuję. Mam nadzieję, że książka się Wam spodoba.
+
+Steve Smith

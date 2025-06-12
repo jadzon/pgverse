@@ -1,0 +1,15 @@
+328 20. Filtry Czeł
+
+<image/tabele/k3_page300_table1.png>
+
+Tab. 20.4
+100 "OBLICZANIE PARAMETRÓW REKURSYWNYCH FILTRU CZEBYSZEWA |
+110 ' |
+120 *INICJALIZACJA ZMIENNYCH (
+130 DIM A(22) 'przechowuje współczynniki "a" po zakończeniu progranu |
+140 DIM B]22] "przechowuje współczynniki ”b" po zakończeniu progranu
+150 DIM TA[22] 'wewnętrzne zastosowanie do łączenia stopni
+
+<image/figury/k3_page300_figure1.png>
+
+6390 END

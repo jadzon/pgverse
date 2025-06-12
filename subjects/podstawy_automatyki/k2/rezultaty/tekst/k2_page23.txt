@@ -1,0 +1,46 @@
+— wykres linii pierwiastkowych obiektu o zadanych parametrach wraz
+z porównaniem krytycznej wartości wzmocnienia odczytanej Z wykresu
+z wartością k uzyskaną z kryterium Routha (polecenie 4.3.3).
+Na podstawie tak wyznaczonej krytycznej wartości wzmocnienia
+należy zamieścić analityczne określenie pulsacji „ [-*] drgań w przy-
+padku, gdy układ znajduje się na granicy stabilności.
+
+ 
+
+5. Regulatory
+
+5,1 Cel ćwiczenia
+
+Ćwiczenie ma na celu zapoznanie się z podstawowymi typami regula-
+torów, ich właściwościami oraz wpływem na dynamikę układu zamknię-
+tego i wartości podstawowych wskaźników jakości regulacji w przypadku
+wymuszenia skokowego.
+
+5.2 Podstawowe wiadomości
+
+5.2.1 Zadanie regulatora
+
+Zadaniem regulatora o transmitancji Gę(s) w układzie automatycznej
+regulacji jest wytworzenie sygnału sterującego u(t) obiektem regulacji Go(s)
+poprzez porównanie wartości mierzonej z wartością zadaną (określenie
+uchybu regulacji e(t) = w(t) — y(t)) według odpowiedniej zależności
+u(t) = f(e(t)) opisującej regulator.
+
+<image/figury/k2_page23_figure1.png>
+
+Przy projektowaniu regulatora należy uwzględnić właściwości obiektu
+regulacji, takie jak: astatyzm, brak astatyzmu, opóźnienie transportowe
+czy inercja. Istnieje kilka możliwości sklasyfikowania regulatorów,
+które przedstawiono poniżej.
+
+e Podział według budowy regulatora:
+
+- regulatory działania bezpośredniego
+Regulatory te nie korzystają z energii pomocniczej, a energia
+potrzebna do oddziaływania na obiekt regulacji jest pobierana
+z czujnika.
+
+— regulatory działania pośredniego
+Regulatory te korzystają ze źródła energii pomocniczej, można je
+podzielić według rodzaju nośnika tej energii na hydrauliczne,
+pneumatyczne i elektryczne.

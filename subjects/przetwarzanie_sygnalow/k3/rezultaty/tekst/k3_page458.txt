@@ -1,0 +1,38 @@
+28. omen mówej
+
+dzieć, jakie przeskalowanie jest konieczne. Te kwestie nie występują w systemach zmienno-
+oe io CANONA ROCA
+Aby umożliwić lepsze zrozumienie tych probłemów, na rys. 28.7 pokazano tablicę zaczerpniętą
+z podręcznika użytkownika procesorów SHARC. Podano w niej sposoby przeprowadzania mno-
+m
+żone liczby zmiennoprzecinkowe; jest tylko jeden sposób: Fn = Fx * Fy, gdzie Fn, Fx i Fy są
+dowolnymi z 16 rejestrów danych. Jeszcze prościej być nie może. Dla porównania, przyjrzyjmy
+się wszystkim możliwym instrukcjom mnożenia liczb stałoprzecinkowych. Jest tam wiele opcji
+koniecznych do skutecznego rozwiązania problemów zaokrąglania, skalowania i formatu.
+Na rys. 28.7 Rn, Rx, Ry dotyczą dowolnych z 16 rejestrów, a MRF i MRB są akumulato-
+rami 80-bitowymi. Linie pionowe wskazują opcje. Na przykład lewy górny zapis w tabli-
+cy oznacza, że wszystkie następujące instrukcje są ważne: Rn = Rx * Ry, MRF =Rx * Ry,
+i MRB =Rx * Ry. Innymi słowy, wartości dwóch dowolnych rejestrów mogą być przemno-
+żone, a wynik umieszczony w innym rejestrze lub w jednym z akumulatorów o rozszerzonej
+dokładności. Z tablicy wynika też, że liczby mogą być ze znakiem (S — Signed) lub bez zna-
+ku (U - Unsigned) oraz ułamkowe (F — Fractionał) lub całkowite (I — Integer). Opcje RND
+i SAT są sposobami kontroli zaokrąglania i przepełnienia rejestru.
+Tablica zawiera jeszcze inne szczegóły i opcje, lecz nie są one istotne w naszych obecnych.
+
+|
+|
+
+ 
+ 
+   
+  
+   
+ 
+ 
+    
+ 
+  
+
+programista systemów zmiennoprzecinkowych może cały swój czas poświęcić algorytmowi.
+
+<image/tabele/k3_page458_table1.png>

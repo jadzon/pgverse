@@ -1,0 +1,17 @@
+| Wykres charakterystyki logarytmicznej modułu dla elementu całkującego rzeczy-
+wistego przedstawia rysunek 2.18a.
+
+<image/figury/k1_page7/2_figure2.png>
+
+pulsacja [rad/s]
+b) charakterystyka logarytmiczna fazy
+
+dla elementu całkuiacann rzaczuwietann
+
+<image/figury/k1_page7/2_figure1.png>
+
+Rys. 2.18. Charakterystyka logarytmiczna modułu (a) oraz charakterystyka logarytmiczna fazy (b)
+dla elementu całkującego rzeczywistego (- — — charakterystyka rzeczywista, —— charakterystyka
+przybliżona)
+
+74

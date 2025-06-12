@@ -1,0 +1,28 @@
+28. Cyfrowe procesory sygnałowe
+
+ważne przyczyny przemawiające za tym, aby nie projektować systemu na szybkość większą od
+koniecznej. Ze wzrostem szybkości wzrasta bowiem także koszt, pobór mocy, trudność projek-
+towania itd. To powoduje, że znajomość dokładnej wartości czasu wykonania jest niezbędna
+w celu wyboru właściwego układu, jak również algorytmów, które mogą być zastosowane.
+
+Buforowanie cykliczne
+
+Cyfrowe procesory sygnałowe są zaprojektowane w taki sposób, aby mogły szybko realizo-
+wać filtry SOI i podobne zadania. Aby zrozumieć rozwiązania układowe, musimy najpierw
+zrozumieć ałgorytmy. W tym podrozdziale przedstawimy szczegółową listę kroków koniecz-
+nych do implementacji filtru SOI. W następnym podrozdziale zobaczymy, jak projektuje się
+procesory DSP, aby realizowały te kroki w sposób możliwie najskuteczniejszy.
+
+Na początku musimy rozróżnić przetwarzanie autonomiczne, czyli off-line i przetwarzanie
+w czasie rzeczywistym. W przypadku przetwarzania autonomicznego cały sygnał wejściowy
+
+zebrana informacja może być wczytana do komputera i w jakiś sposób analizowana. Innym
+przykładem przetwarzania autonomicznego jest obrazowanie medyczne, np. tomografia kom-
+puterowa i obrazowanie za pomocą rezonansu magnetycznego. Zestaw danych jest pobiera-
+ny, gdy pacjent jest wewnątrz urządzenia, a odtworzenie obrazu może być wykonane z opóź-
+nieniem. Kluczowy jest tu fakt, że cała informacja jest jednocześnie dostępna dła programu
+przetwarzającego. Taka sytuacja występuje często w badaniach naukowych i w technice, lecz
+nie w produktach powszechnego użytku. Przetwarzanie autonomiczne (off-line) jest domeną
+zarówno osobistych, jak i dużych komputerów.
+
+<image/figury/k3_page448_figure1.png>

@@ -1,0 +1,45 @@
+15, Filtry o zasadzie średniej kroczącej
+
+ 
+
+Wielokrokowe filtry o średniej kroczącej działają na zasadzie przechodzenia sygnału wej-
+ściowego przez filtr dwa lub więcej razy. Na rys. 15.3 a) przedstawiono całkowitą odpo-
+wiedź impulsową filtru wynikającą z jednego, dwóch lub czterech kroków filtracji, czyli
+przejść sygnału przez filtr. Dwa kroki są równoważne zastosowaniu odpowiedzi impulsowej
+o kształcie trójkątnym (prostokątnej odpowiedzi impulsowej poddanej splotowi z samą sobą).
+Po czterech lub więcej krokach równoważna odpowiedź impulsowa ma kształt zbliżony do
+krzywej gaussowskiej (przypomnijcie sobie centralne twierdzenie graniczne). Jak pokazano
+na rys. 15.3 b), wielokrotne przejścia przez filtr dają odpowiedź skokową o kształcie litery
+„S”, podczas gdy pojedyncze przejście daje linię prostą. Odpowiedzi częstotliwościowe (ry-
+sunki 15.3 c, d) wynikają z wzoru 15.2 przemnażanego przez siebie przy każdym kolejnym
+przejściu. Każdy splot w dziedzinie czasu powoduje mnożenie widm częstotliwościowych.
+Na rys. 15.4 pokazano odpowiedzi częstotliwościowe dwóch innych filtrów pokrewnych fil-
+trowi o średniej kroczącej. Jeśli jako odpowiedź filtru zastosować czystą krzywą Gaussa,
+to odpowiedź częstotliwościowa też będzie gaussowska, jak to rozważano w rozdziale 11.
+Krzywa Gaussa jest istotna, gdyż jest to kształt odpowiedzi impulsowych wielu systemów na-
+turalnych i zbudowanych przez człowieka. Na przykład krótki impuls światła wchodzący do
+długiej światłowodowej linii przesyłowej wychodzi z niej jako impuls o kształcie gaussow-
+skim, co wynika z różnic dróg przebytych przez fotony wewnątrz światłowodu. Gaussowska
+odpowiedź impulsowa jest też szeroko stosowana w przetwarzaniu obrazu, ponieważ jej uni-
+katowe właściwości umożliwiają szybkie sploty dwuwymiarowe (patrz rozdział 24). Druga
+odpowiedź częstotliwościowa na rys.15.4 wynika z odpowiedzi impulsowej filtru zgodnej
+z oknem Blackmana. (Pojęcie okno nie ma tu żadnego znaczenia, jest po prosta częścią
+powszechnie przyjętej nazwy tej krzywej). Dokładny kształt okna Blackmana opisano w roz-
+dziale 16 (wzór 16.2, rys. 16.2); wygląda ono bardzo podobnie jak krzywa gaussowska.
+
+W jakiej mierze te filtry pokrewne są lepsze od samego filtru o średniej kroczącej? Są lepsze
+pod trzema względami. Po pierwsze i najważniejsze, te filtry mają tłumienie w paśmie zapo-
+rowym lepsze niż filtr o średniej kroczącej. Po drugie, odpowiedzi impulsowe tych filtrów są
+w swojej końcowej części zbieżne do mniejszych wartości. Pamiętajmy, że każdy punkt w sy-
+gnale wyjściowym jest sumą ważoną grupy próbek wejściowych. Jeśli odpowiedź impulsowa
+filtru jest zbieżna, to próbkom sygnału wejściowego leżącym dalej nadaje się mniejsze wagi
+niż próbkom leżącym bliżej. Po trzecie, odpowiedzi skokowe są raczej krzywymi gładkimi,
+
+<image/figury/k3_page247_figure1.png>
+
+Rys. 15.4. Odpowiedź częstotliwościowa okna Blackmana i filtru gaussowskiego. Oba te filtry dają
+tłumienie w paśmie zaporowym lepsze niż filtr o średniej kroczącej. Nie daje to żadnych korzyści
+
+w usuwaniu szumu losowego z sygnałów zakodowanych w dziedzinie czasu, lecz może być pożyteczne
+w problemach z dziedzin mieszanych. Wadą tych filtrów jest konieczność stosowania splotu, który jest
+algorytmem bardzo wolnym

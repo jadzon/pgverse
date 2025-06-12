@@ -1,0 +1,20 @@
+Gdybyśmy w tym miejscu zakończyli analizę, to popełnilibyśmy jeden z najczęściej spotyka-
+nych (i poważnych) błędów w wykrywaniu celu. Aby nadać sens wykresowi na rys. 26.1 d),
+trzeba na ogół uwzględnić inne źródło informacji. Taką informacją jest względna liczba ce-
+lów w stosunku do liczby obiektów niebędących celem, w badanej populacji. Możemy na
+przykład stwierdzić, że tylko jedna na tysiąc osoba ma raka, którego próbujemy wykryć.
+Aby włączyć informację do analizy, tak dobiera się amplitudę wykresu pdf na rys. 26.1 c)
+dotyczącego obiektów niebędących poszukiwanym celem, żeby powierzchnia pod krzywą
+była 0,999. Amplituda wykresu pdf dotyczącego poszukiwanego celu zaś jest tak dobierana,
+żeby powierzchnia pod krzywą była 0,001. Następnie, podobnie jak poprzednio, oblicza się
+krzywą z rys. 26.1 d), uzyskując wartości prawdopodobieństwa, że pacjent ma raka.
+Pominięcie tej dodatkowej informacji jest poważnym błędem, gdyż w istotny sposób wpływa
+na interpretację wyników testu. Krzywa na rys. 26.1 d) zmienia się bardzo znacznie w wyni-
+ku uwzględnienia informacji o rozpowszechnieniu raka. Jeśli na przykład ułamek populacji
+mającej raka jest 0,001, to wynik testu równy 15 daje prawdopodobieństwo, że pacjent ma
+raka, równe tylko 0,025%. Ten wynik bardzo się różni od prawdopodobieństwa 25% wyzna-
+czonego przy wykorzystaniu tylko wyników uzyskanych z urządzenia.
+
+Ta metoda przetwarzania uzyskanej liczby na wartość prawdopodobieństwa może być po-
+żyteczna dla zrozumienia problemu, lecz nie jest głównym sposobem realizacji wykrywania
+celu. W większości zastosowań jest wymagana decyzja typu tak/nie dotycząca istnienia lub

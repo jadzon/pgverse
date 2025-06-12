@@ -1,0 +1,57 @@
+23. Tworzenie i wyświetlanie obraz
+
+Obraz jest opisem zmian jakiegoś parametru na pewnej powierzchni. Na przykład standard
+we obrazy wizyjne powstają w wyniku zmian natężenia światła na płaszczyźnie dwuwymi:
+rowej. Światło wszakże nie jest jedynym parametrem stosowanym w obrazowaniu w nauce
+Można na przykład utworzyć obraz na podstawie temperatury w układzie scalonym, sz
+kości przepływu krwi w arterii pacjenta, emisji promieniowania renigenowskiego z odlegie
+galaktyki, ruchów skorupy ziemskiej podczas trzęsienia ziemi itd. Te nietypowe obrazy $
+zwykle przetwarzane na konwencjonalne (tj. obrazy świetlne), aby mogły być oceniane ludz:
+kim okiem. W tym pierwszym rozdziale dotyczącym przetwarzania obrazów opisano sposo
+by tworzenia obrazów i ich prezentacji obserwatorom.
+
+Struktura obrazu cyfrowego
+
+Strukturę obrazu cyfrowego przedstawiono na rys. 23.1. Przykładem jest obraz planety Wems
+uzyskany za pomocą mikrofalowego radaru z sondy kosmicznej umieszczonej na orbicie wokół
+planety. Obrazowanie mikrofalowe jest tutaj niezbędne, gdyż gęsta atmosfera Wenus pochł
+nia światło widzialne, uniemożliwiając fotografię standardową. Pokazany obraz jest utworzony
+z 40 000 próbek ułożonych w dwuwymiarową matrycę zawierającą 200 kolumn i 200 wier:
+szy. Podobnie jak w przypadku sygnałów jednowymiarowych, te kolumny i wiersze można
+ponumerować od 0 do 199 lub od 1 do 200. Każda próbka jest nazywana pikselem (od słów
+picture element). Każdy piksel w tym przykładzie jest pojedynczą liczbą od O do 255. Podcz:
+pobierania obrazu, każdej z tych liczb przyporządkowano ilość energii mikrofalowej odbitej od
+odpowiadającego temu pikselowi położenia na powierzchni planety. Aby te informacje przed-
+stawić w postaci obrazu, wyraża się wartość każdego piksela w skali szarości (grayscale),
+gdzie 0 oznacza czerń, 255 biel, a wartości pośrednie są różnymi odcieniami szarości.
+Informacja o obrazie jest zakodowana w dziedzinie przestrzeni, obrazowym równow żniku
+dziedziny czasu. Inaczej mówiąc, cechy obrazu są reprezentowane przez zbocza sygna
+
+a nie przez sinusoidy. Wynika z tego, że rozstaw i liczba pikseli zależą raczej od wielkość
+szczegółów obrazu, które powinny być widoczne, niż od formalnych ograniczeń t ierdzenia
+o próbkowania. Aliasing może wprawdzie występować w obrazach, lecz jest na ogół trak
+towany jako pewna niedogodność, a nie poważny problem. Na przykład garnitury w p ż
+fatalnie wyglądają w telewizji, gdyż powtarzający się wzór ma częstotliwość większą o
+częstotliwości Nyquista. Częstotliwości aliasingowe pojawiają się jako jasne i ciemne p
+przesuwające się po garniturze, gdy osoba go nosząca zmienia pozycję.
+
+„Typowy” obraz cyfrowy składa się z ok. 500 wierszy i 500 kolumn. Taka jakość obrazu je
+spotykana w telewizji, komputerach osobistych i w typowych badaniach naukowych. Obra:
+o mniejszej liczbie pikseli, powiedzmy 250 na 250, są uważane za obrazy o niezwykle słabe
+rozdzielczości. W miarę rozwoju techniki i nowych zastosowań techniki obrazowej doć je
+się więcej pikseli. Te obrazy o małej rozdzielczości mają zauważalnie nienaturalny wygl
+często są widoczne poszczególne piksele, Z drugiej strony, obrazy o liczbie pikseli iększe
+niż 1000 na 1000 są uważane za wyjątkowo dobre. Odpowiada to jakości najlepszej grafi
+komputerowej, telewizji wysokiej jakości (high definition TV) i filmów 35-milimetrc
+
+Są też aplikacje wymagające jeszcze większej rozdzielczości, np. obrazu o każdym z bokć
+równym kilku tysiącom pikseli. Są to zdigitalizowane zdjęcia rentgenowskie, fotografie z kc
+smosu i lśniące reklamy w magazynach ilustrowanych.
+
+Najsiłniejszą motywacją do stosowania obrazów o niższej rozdzielczości jest mniejsza liczh
+pikseli, którymi trzeba operować. Nie jest to sprawa trywialna; jednym z najtrudniejszych
+problemów w przetwarzaniu obrazów jest posługiwanie się ogromną ilością danych. Jed
+sekunda cyfrowego sygnału audio wymaga, na przykład, ok. 8 kilobajtów, podczas gdy jed:
+na sekunda sygnału telewizyjnego ok. 8 megabajtów. Przesyłanie obrazu 500 x 500 pikse
+modemem o przepływności bitowej 33,6 kbiUs wymaga prawie minuty! Przejście do obraz
+o wymiarze 1000 x 1000 powoduje zwiększenie tych problemów o czynnik cztery.

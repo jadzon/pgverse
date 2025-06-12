@@ -1,0 +1,20 @@
+<image/figury/k4_page428_figure1.png>
+
+Wyd. 8.74 Realizacja elementu trójpołoż eniowego
+
+<image/tabele/k4_page428_table1.png>
+
+Wyd. 8.75 Ustawienie sygnałów dla siłownika: zamykaj (-RZ), stój lub
+otwieraj (-RO) w sterowaniu ręcznym (-MA) i automatycznym
+
+<image/wzory/k4_page428_formula1.png>
+
+Tab. 8.9 przedstawia zestawienie połączeń wejść i wyjść dwustanowych oraz
+wejść analogowych sterownika Modicon z obiektem i panelem operatorskim.
+
+Tekst programu w języku ŁD realizującego regulację trójpołożeniową PID
+przedstawiono na Wyd. 8.76 - Wyd. 8.86.
+
+ 
+
+428 Rozdział : 8.Programy przykładowe

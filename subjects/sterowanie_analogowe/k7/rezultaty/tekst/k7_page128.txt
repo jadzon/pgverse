@@ -1,0 +1,25 @@
+Obserwator stanu i jego zastosowanie
+
+Przykład
+
+Dla danego równaniem różniczkowym obiektu zaprojektować regulator ze
+sprzężeniem od obserwowanego stanu. Biegun układu z regulatorem S,=-2,
+biegun obserwatora s„=-5. Narysować schemat otrzymanego układu i
+wyznaczyć jego transmitancję.
+
+SMOUBJS 8|8poJN
+
+<image/wzory/k/_page128_formula1.png>
+
+<image/wzory/k/_page128_formula2.png>
+Macierz sterowalności: Pc=[-1] <-układ sterowalny
+Macierz obserwowalności: Po=[3] <-układ obserwowalny
+
+<image/wzory/k7/_page128_formula3.png>
+
+<image/wzory/k7/_page128_formula4.png>
+
+ 
+
+POLITECHNIKA
+GDAŃSKA

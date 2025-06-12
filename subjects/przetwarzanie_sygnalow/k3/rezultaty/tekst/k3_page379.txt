@@ -1,0 +1,62 @@
+412
+
+25. Specjalne techniki obraze
+
+par linii na milimetr przy kontraście 10% jest równoważne odpowiedzi krawędziowej (od l
+do 90%) wynoszącej 1/40 par linii/mm = 0,025 mm. Jeśli MTF jest określone dla pozior
+kontrastu 3%, to odpowiedź impulsowa będzie od ok. 1,5 do 2 razy szersza.
+Mierząc rozdzielczość przestrzenną systemu obrazowego, wyżej opisane kroki wykonuje
+w odwrotnej kolejności. Trzeba umieścić ostrą krawędź w obrazie i zmierzyć wynikaj.
+z tego odpowiedź krawędziową. Na tej krzywej odległość odpowiadająca narastaniu od 0d
+90% jest najlepszą, wyrażoną jednym parametrem, miarą rozdzielczości systemu. Wysta
+teraz obliczyć pierwszą różnicę odpowiedzi krawędziowej, aby wyznaczyć LSF i n
+stosując FFT, określić MTF.
+
+   
+  
+   
+ 
+
+Odstęp i apertura próbkowania
+
+Na rys. 25.6 pokazano dwa skrajne przypadki próbkowania, które będziemy nazywać detel
+torem idealnym oraz detektorem rozmytym. Wyobraźcie sobie, że na rys. 25.6 a) prze
+stawiono powierzchnię detektora obrazowego, np. CCD. Światło, trafiając gdziekol
+w granicach jednego z kwadratowych pikseli, będzie miało wpływ na wartość tylko teg
+właśnie piksela, a nie żadnych innych. Zaznaczono to na rysunku na czamo jako apert
+próbkowania dokładnie wypełniającą jeden z kwadratowych pikseli. Dla detektora obra
+jest to sytuacja optymalna, gdyż całe Światło ulega detekcji i nie ma żadnego nakład
+się ani przesłuchu między sąsiednimi pikselami. Inaczej mówiąc, apertura próbkowania je
+dokładnie równa odstępowi próbkowania.
+
+Przykład alternatywny przedstawiono na rys. 25.6 e). Tutaj apertura próbkowania jest znać
+nie większa od odstępu próbkowania i jest zgodna z rozkładem gaussowskim. Tak więc wa!
+tość każdego piksela w detektorze uzyskuje pewien wkład od światła padającego na detektt
+w obszarze wokół piksela. To stwierdzenie powinno się wydać już znane, gdyż jest to zgodn
+z rozpatrywaniem splotu od strony wyjścia. Przy rozpatrywaniu od strony wejścia, wąsł
+wiązka światła padająca na detektor miałaby udział w wartościach kilku sąsiadujących piks
+li, także zgodnie z rozkładem gaussowskim.
+Zwróćmy teraz uwagę na odpowiedzi impulsowe w tych dwóch podanych przykładad
+Znaczniki na każdym z wykresów wskazują aktualne wartości pikseli, które można
+na obrazie, a linie łączące pokazują krzywą podlegającą próbkowaniu. Ważne jest, że ksz
+tej krzywej jest określony ryłko przez aperturę próbkowania. Wynika stąd, że rozdzielczo
+końcowego obrazu może być ograniczona dwoma sposobami. Po pierwsze, próbko
+krzywa może mieć słabą rozdzielczość spowodowaną zbyt dużą aperturą próbkowania. P
+drugie, odstęp próbkowania może być zbyt duży, w wyniku czego są tracone drobne szc%
+góły między próbkami. Dla każdego z dwóch przykładów przedstawiono odpowiedzi krą
+wędziowe, z których wynika, że pobieranie próbki może następować w różnych dowolnyc
+miejscach wzdłuż próbkowanej krzywej. A zatem obrazowana krawędź może znajdować $
+na pikselu albo obejmować dwa piksele. Zauważcie, że detektor idealny ma na jącć
+części krawędzi zero próbek lub jedną próbkę. Natomiast detektor rozmyty ma trzy lub czt
+próbki na narastającej części krawędzi.
+
+Jaka jest rozdzielczość ograniczająca w tych dwóch systemach? Odpowiedzi dostareż
+twierdzenie o próbkowaniu. Jak to rozważano w rozdziale 3, próbkowanie wychwytu
+wszystkie składowe o częstotliwościach leżących poniżej połowy częstotliwości prób
+wania. Większe częstotliwości są tracone z powodu zjawiska aliasingu. Spójrzcie teraz
+funkcję MTF na rys. 25.6 h). Apertura próbkowania detektora rozmytego spowodowała u
+nięcie wszystkich częstotliwości większych od połowy częstotliwości próbkowania, a zate
+nic nie jest tracone podczas próbkowania. To znaczy, że rozdzielczość tego systemu je
+ograniczona całkowicie przez aperturę, a nie przez odstęp próbkowania. Patrząc na to zi
+nej strony, można stwierdzić, że apertura próbkowania zadziałała jak filtr antyaliasingow
+umożliwiając bezstratne próbkowanie.

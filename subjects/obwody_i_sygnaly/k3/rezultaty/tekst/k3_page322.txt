@@ -1,0 +1,30 @@
+322 3. Obwody prądu stałego
+
+ 
+
+<image/figury/k3_page322_figure1.png>
+
+b) Układ prostowania jednopołówkowego jest przedstawiony na rys. 3.6-8b. Przy u,, > 0
+dioda nie przewodzi prądu i układ działa jak wzmacniacz odwracający (rys. 3.6-5b). Przy u,, < 0
+dioda stanowi zwarcie i napięcie u,, jest równe napięciu u, między zyciskami wejściowymi WO,
+tzn. jest równe zeru. W rezultacie:
+
+<image/wzory/k3_page322_formula1.png>
+
+c) Na rys. 3.6-8c jest pokazany układ prostowania dwupołówkowego z zastosowaniem dwóch
+WO. Stanowi on połączenie dwóch układów: układu z rys. 3.6-8b oraz sumatora z rys. 3.6-7c.
+Napięcie ug na wyjściu pierwszego wzmacniacza jest równe uę = — Żu,, dla u,, > 0 oraz
+ug = 0 dla u,, < 0. Napięcie u, jest sumowane z napięciem u, w układzie sumatora (drugi WO),
+a więc:
+
+<image/wzory/k3_page322_formula2.png>
+
+to znaczy:
+
+zory/k3_page322_formula3.png
+
+Przykład 3.6-6. Na rys. 3.6-9 jest przedstawiony układ komparatora, służący do porównania
+napięcia wejściowego u,, ze stałym napięciem E,. Ze schematu komparatora wynika od razu, że
+uy m Q tylko w szczególnym przypadku u,, = E,. Przy u,, % E, mamy u, % 0 i nie można
+stosować modelu liniowego WO. Przyjmując zatem charakterystykę WO przedstawioną na rys. 3.6-4
+otrzymujemy:

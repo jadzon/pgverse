@@ -1,0 +1,21 @@
+Kompensacja zer i biegunów transmitancji a
+sterowalność/obserwowalność
+
+Przykład:
+
+<image/wzory/k/_page68_formula1.png>
+
+<image/wzory/k/_page68_formula2.png>
+
+Jeśli b1=0 (lub c1=0) to mod związany z wartością własną 1 staje się
+niesterowalny (nieobserwowalny). Podobnie dzieje się z modem związanym z
+wartością własną -2 gdy b2=0 (lub c2=0). Przykład ten pokazuje, że utrata
+sterowalności bądź obserwowalności prowadzi do uproszczeń w transmitancji i
+odwrotnie.
+
+POLITECHNIKA
+GDANSKA
+
+ 
+
+SMOUBJS 8|8poJN

@@ -1,0 +1,22 @@
+Trajektoria fazowa — przykład 7 (ruch poślizgowy)
+
+ 
+
+Wyznaczyć transmitancję zastępczą układu pokazanego na schemacie przy
+założeniu, że działa on w „trybie” ruchu poślizgowego
+
+<image/figury/k/_page220_figure1.png>
+
+[am0ZEJ] AuzAZOZSEŁd Epo]SIN
+
+Odpowiedź:
+<image/wzory/k/_page220_formula1.png>
+Wniosek:
+
+W przykładzie w ruchu transmitancja układu zamkniętego nie zależy od
+parametrów obiektu
+
+ 
+
+POLITECHNIKA
+GDANSKA

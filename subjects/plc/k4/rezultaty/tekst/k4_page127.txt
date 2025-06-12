@@ -1,0 +1,25 @@
+wzory/k4_page127/_formula1.p
+
+1.png
+
+<image/figury/k4_page127_figure2.png>
+
+Rys. 3.9 Schemat obwodu wewnętrzne go i układu połączeń zewnętrznych modułu
+wejść prądu przemiennego MDL 231 (240 Volt AC Isolated Input Module)
+
+//k4_page127_formula3.png jj
+
+Następny przykładowy moduł MDL646 (24 Volt DC Positive/Negative Logic In-
+put, FAST, 16 Point ) jest modułem dla grupy 16 obwodów wejściowych prądu
+stałego zasilanych z zewnętrznego źródła napięciowego 24VDC z polaryzacją
+dodatnią albo ujemną. Moduł ten wyróżnia się krótkim czasem odpowiedzi na
+zmiany między stanami ON i OFF równym 1 ms, dlatego też określany jest jako
+szybki (FAS7).
+
+W Tab. 3.7 podano główne parametry tego modułu, natomiast Rys. 3.10 przed-
+stawia schemat obwodów zewnętrznych oraz schemat jednego wewnętrznego
+obwodu tego modułu.
+
+ 
+
+3.3 Moduły wejść dyskretnych DI 127

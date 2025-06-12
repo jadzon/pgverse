@@ -1,0 +1,27 @@
+<image/wzory/k4_page517/_formula1.png>
+
+BRA Z KD
+
+re | Oznaczenia literowe | |
+
+Kolejność liter w oznaczeniu.
+
+Oznaczenia literowe należy tworzyć w następujący sposób :
+
+a) pierwsza litera powinna określać wielkość mierzoną lub sterowaną, bądź
+rodzaj sterowania i powinna być wybrana wg Tab. C.1 kolumna 2; w razie
+konieczności uściślenia wielkości mierzonej lub sterowanej należy dopisać
+drugą literę, która powinna być wybrana wg Tab. C.1 kolumna 3,
+
+b) następne litery powinny oznaczać funkcje punktów automatyki PA i powinny
+być wybrane wg Tab. C.1 kolumna 4 oraz powinny być umieszczone w na-
+stępującej kolejności : I, R, C, T, Q. S. Z, A. Kombinacja liter IR oznacza, że
+rejestracja odbywa się na jednym przyrządzie, natomiast wskazanie na dru-
+gim. Jeżeli rejestracja i wskazanie odbywa się na jednym przyrządzie to lite-
+rę I pomija się.
+
+ 
+
+<image/tabele/k4_page517/_table1.png>
+
+wzoryv/k4_badae517_formula2.pna

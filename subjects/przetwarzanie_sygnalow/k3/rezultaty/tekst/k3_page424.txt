@@ -1,0 +1,13 @@
+- za A M TM
+
+ 
+
+Na rys. 26.13 c) przedstawiono filtr 2-biegunowy dla 1/sinc(x). Jak już powiedziano w
+działe 3, taki filtr może być stosowany do przeciwdziałania
+
+pamiętania
+nadszac nrzatwarzania sufrawo-analońawacn fnatrz rve 16) Rład w tvm filtrm
+
+ 
+
+<image/figury/k3_page424_figure1.png>

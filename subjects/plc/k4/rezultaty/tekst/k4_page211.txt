@@ -1,0 +1,27 @@
+Przykład na Wyd. 4.29 pokazuje wykorzystanie funkcji BLKCLR do wyzerowa-
+nia wszystkich wyjść binarnych od %QI do %Q32 (dwa słowa) w pierwszym
+cyklu sterownika (styk FST_SCN).
+
+<image/tabele/k4_page211_table1.png>
+
+Wyd. 4.28 Przykład wykorzystania funkcji BLKMYV do ustawienia warunków począt-
+kowych
+
+<image/figury/k4_page211_figure1.png>
+
+ 
+
+Wyd. 4.29 Przykład użycia funkcji BLKC LR do wyzerowania tablicy wyjść binarnych
+
+Przesunięcia o jedną pozycję jednego lub więcej elementów tablicy (słów lub
+bitów) z możliwością jej wyzerowania można dokonać wykorzystując funkcję
+SHFR. Parametrem funkcji jest liczba przesuwanych danych LEN (od / do 256).
+Wejściami funkcji są:
+
+e R (Reset) - jeżeli do tego wejścia dopływa prąd, to wyzerowane zostaną
+wszystkie dane (słowa lub bity) poczynając od pierwszej, której adres jest
+podany na wejściu ST, a których liczbę określa parametr LEN;
+
+ 
+
+4.9 Operacje na tablicach danych 211

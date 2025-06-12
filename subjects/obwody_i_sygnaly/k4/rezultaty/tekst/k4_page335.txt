@@ -1,0 +1,47 @@
+„= "zmiwzn  - a nNN . |  OOÓE Z TREO A O A ERROR
+
+"=
+
+<< w"
+
+Zadania do rozdziału 3 337
+
+ 
+
+<image/wzory/k4_page335_formula1.png>
+
+Zadanie 332. Dla jakich wartości parametru ge % dwójnik z rys. Z-3.19 jest dwójnikiem
+pasywnym?
+
+2
+Odp.: g> ——
+: R
+
+Zadanie 3.33. Na płaszczyźnie g, r wyznaczyć zbiór punktów (g. r), dla których dwójnik z rys.
+Z-3.33a (por. zad. 3.16b) jest pasywny.
+
+ 
+
+<image/figury/k4_page335_figure1.png>
+
+Rys. Z-3.33
+Odp.: Szukany zbiór jest zaznaczony na rys. Z-3.33b.
+Zadanie 3.34. Obliczyć sprawność źródła (dwójnika na lewo od zacisków AB) w układzie
+wzmacniacza tranzystorowego z zad. 3.20. Jaka część mocy dysponowanej źródła wydziela się
+w oporze obciążenia R?
+Odp.: q = 99,3%, P/P,,, = 2,7%
+
+Zadanie 3.35. Obliczyć moce dysponowane dwójników źródłowych z rys. Z-3.15a i rys. Z-3.17b.
+1
+Odp.: P,,, = 10 mW, P,,, = 247 R
+
+Zadanie 3.36. Jaką wartość powinien przyjąć parametr g, aby dwójnik z rys. Z-3.19 (zad. 3.19) był
+dopasowany na maksimum mocy do dwójnika z rys. Z-3.15b (zad. 3.15). Obliczyć moc wydzielaną
+wówczas w dwójniku obciążającym.
+
+1
+Odp.: g = 2 m$, Fa ZMW
+
+Zadanie 3.37. Dany jest układ przedstawiony na rys. Z-3.37. Dla jakiej wartości oporu R moc
+wydzielana w dwójniku AB jest największa? Obliczyć tę moc. Skorzystać z twierdzenia Thevenina.
+Dane: E = 3V, R; = 7,5kQ, R = 15kQ, Rz:i = au|u|, a = 5 mA/V2.

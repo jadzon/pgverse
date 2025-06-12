@@ -1,0 +1,43 @@
+1.7. Rozwiązywanie równań i nierówności rekurencyjnych 9
+
+e jeżeli problem jest duży, to:
+o dzielimy problem na podproblemy,
+o rozwiązujemy podproblemy,
+o łączymy rozwiązania podproblemów w rozwiązanie całego problemu.
+
+1.7 Rozwiązywanie równań i nierówności rekurencyjnych
+
+Oszacujmy teraz czas działania algorytmu sortowania przez scalanie. Niech 7 (n) oznacza
+liczbę operacji porównania potrzebną do posortowania ciągu długości n. Mamy następujące
+oszacowania:
+
+<image/wzory/k2_page158_formula1.png>
+
+Druga zależność wynika stąd, że aby posortować ciąg długości n, sortujemy dwa ciągi
+długości n/2, a następnie potrzebujemy n porównań, aby scalić te dwie połówki. Dla pro-
+stoty rozważań zakładamy tutaj, że n jest potęgą dwójki, n = 2* dka jakiegoś naturalnego
+k.
+
+Istnieje wiełe sposobów wyliczania lub szacowania funkcji określonej rekurencyjnie.
+Przedstawimy teraz dwa najprostsze z nich: metodę podstawiania i metodę iteracji.
+
+1.8 Metoda podstawiania
+
+W metodzie podstawiania odgadujemy rozwiązanie albo jego oszacowanie, a nstępnie
+pokazujemy, że jest ono poprawne. Pokażemy działanie tej metody szacując złożoność
+czasową merge-sortu określoną rekurencją (1.2)-(1.3). Zgadujemy, że
+
+<image/wzory/k2_page158_formula2.png>
+dla jakiejś stałej c > 0 i udowodnimy przez indukcję, że powyższa nierówność zacho-
+dzi dla każdego potęgi dwójki n > 1. Zachodzi ona dla n = 1. Zakładamy teraz, że
+T(n/2) < c-n/2log(n/2) i podstawiamy do nierówności (1.3)
+
+<image/wzory/k2_page158_formula3.png>
+
+Ostatnia nierówność jest spełniona, jeżeli c > 1.
+Metoda podstawiania została zastosowana w podrozdziale o funkcji Fibonacciego do
+pokazania, że
+
+<image/wzory/k2_page158_formula4.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

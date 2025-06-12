@@ -1,0 +1,27 @@
+Dla sprężyny i tłumika siła F(s) = (cs + KJ[X1(5) — Xq(s)], co przedstawiono na
+rysunku 4.3.
+
+<image/figury/k1_page137_figure3.png>
+
+Ponieważ wymuszenie działające na sprężynę/tłumik wynosi X, 1(5) — Xo(S), a wiel-
+kością wyjściową jest F(s), więc transmitancja dana jest wzorem cs + k. Układy te moż-
+na połączyć, uzyskując schemat blokowy, co pokazano na rysunku 4.4.
+
+<image/figury/k1_page137_figure1.png>
+
+Rys. 4.4. Pierwotny schemat blokowy układu
+
+Po przekształceniu schematu blokowego z rysunku 4.4 otrzymano schemat jak na
+rysunku 4.5.
+
+<image/figury/k1_page137_figure2.png>
+
+Rysunek 4.5 przedstawia tradycyjny układ z pojedynczą pętlą sprzężenia zwrotne-
+go. Zasadniczo układ sprężyna-tłumik zachowuje się jak urządzenie wrażliwe na błąd
+i generuje siłę przeciwdziałającą, proporcjonalną do wielkości błędu.
+
+Ponieważ
+
+<image/wzory/k1_page137_formula1.png>
+
+139

@@ -1,0 +1,60 @@
+24. Liniowe przetwarzanie obraz
+
+Fourierowska analiza obrazu
+
+W przetwarzaniu obrazów analiza fourierowska jest stosowana w podobny sposób, ji
+w przypadku sygnałów jednowymiarowych. Jednak obrazy nie mają informacji zakodowa
+nych w dziedzinie częstotliwości, co czyni tę analizę mniej użyteczną. Na przykład reali:
+zując przekształcenie Fouriera sygnału audio, zamienia się trudny do interpretacji przebie
+czasowy na łatwiejsze do zrozumienia widmo częstotliwościowe. Wykonując zaś przekształ:
+cenie Fouriera obrazu, zamienia się jasną informację w dziedzinie przestrzeni na zagmu
+ną w dziedzinie częstotliwości. Krótko mówiąc, nie spodziewajcie się, że przekształceni
+Fouriera pomoże wam w zrozumieniu informacji zakodowanych w obrazach.
+Nie zaglądajcie też do dziedziny częstotliwości przy projektowaniu filtrów do przetwarzania ob:
+razów. Najważniejszą cechą w obrazie jest krawędź, linia oddzielająca jeden obiek? lub obszar «
+drugiego obiektu lub obszaru. Próby modyfikacji krawędzi przez operowanie widmem częstodl
+wościowym są na ogół mało skuteczne, gdyż krawędź zawiera bardzo szeroki zakres częstotliwe
+ści składowych. Filtry obrazowe są zwykle projektowane w dziedzinie przestrzeni, gdzie informa
+cja jest zakodowana w najprostszej formie. Trzeba tu myśleć raczej w kategoriach wygładza
+
+i wyostrzania krawędzi, a nie filtrów górno- i dolnoprzepustowych (w dziedzinie częstotliwości).
+Mimo to fourierowska analiza obrazów ma kilka pożytecznych właściwości. Na prz
+spłot w dziedzinie przestrzeni odpowiada mnożeniu w dziedzinie częstotliwości. Jest to
+
+ne, gdyż mnożenie jest operacją matematyczną prostszą niż splot. Podobnie jak dla sygm
+łów jednowymiarowych, ta właściwość umożliwia spłot FFT i różne metody rozpłotu. Im
+korzystną cechą dziedziny częstotliwości jest twierdzenie Fouriera o projekcji (Fourier Ślic
+Theorem) wyrażające zależność między obrazem i jego rzutami (obrazem widzianym z jeg
+boków). Jest ono podstawą tomografii komputerowej, rentgenowskiej techniki obrazowej
+szeroko stosowanej w medycynie i przemyśle.
+
+Widmo częstotliwościowe obrazu można obliczać kilkoma różnymi sposobami, ale znacze
+nie praktyczne ma tylko przedstawiona tutaj metoda FFT. Obraz oryginalny powinien być
+złożony z N wierszy i N kolumn, gdzie N jest potęgą 2, tj. 256, 512, 1024 itd. Jeśli i
+obrazu oryginalnego nie jest potęgą 2, to dodaje się piksele o wartości zero, aby rw 0
+wać ten wymiar. Dwuwymiarową matrycę zawierającą obraz będziemy nazywać m
+rzeczywistą. Dodatkowo potrzebna jest jeszcze druga matryca o takich samych wymia
+którą będziemy nazywać matrycą urojoną.
+
+Recepta na obliczanie transformaty Fouriera obrazu jest całkiem prosta: wyznacza się jedno-
+wymiarowe FFT każdego wiersza, a następnie — każdej kolumny. Zacznijcie od wyznaczenia
+transformaty FFT dla wartości N pikseli w wierszu © matrycy rzeczywistej. Część rzeczywiś
+uzyskanej transformaty FFT jest z powrotem umieszczana w wierszu () matrycy rzeczywistej,
+podczas gdy część urojona tej transformaty jest umieszczana w wierszu matrycy urojonej. |
+powtórzeniu tej procedury dla wierszy od 1 do N- 1, zarówno matryca rzeczywista, jak i uro
+jona zawierają obraz pośredni. Potem procedurę trzeba powtórzyć dla każdej kolumny danych
+pośrednich. Weźcie N wartości pikseli z kołumny O matrycy rzeczywistej oraz N wartość
+pikseli z kolumny O matrycy urojonej i obliczcie FFT. Część rzeczywista uzyskanej transfor
+maty FFT jest umieszczana z powrotem w kolumnie 0 matrycy rzeczywistej, a część urojo
+
+— z powrotem w kolumnie 0 matrycy urojonej. Po powtórzeniu tych operacji na kolumnach «
+
+l do N- 1 do obu matryc zostało wpisane widmo częstotliwościowe obrazu.
+
+Ponieważ w obrazie kierunki poziomy i pionowy są sobie równoważne, więc ten algoryt
+można także realizować, poddając przekształceniu najpierw kolumny, a potem wi
+Niezależnie od przyjętej kolejności, wynik jest taki sam. Ze względu na drogę śledzeni
+danych przez FFT, amplitudy składowych małoczęstotliwościowych znajdują swoje miejsc
+w narożnikach widma dwuwymiarowego, a duże częstotliwości — w jego środku. Odwrot
+transformata Fouriera obrazu jest obliczana przez wyznaczenie odwrotnego FFT każde
+wiersza i następnie każdej kolumny (lub vice versa).

@@ -1,0 +1,40 @@
+Dla zobrazowania wpływu niezerowych warunków początkowych na postaci
+rozwiązania dokonamy przekształcenia Laplace'a równania różniczkowego z ich
+uwzględnieniem:
+
+wzoarv/k1 naaa54 farmiila1 nna
+
+<image/wzory/k1_page54_formula2.png>
+<image/wzory/k1_page54_formula3.png>
+
+Jak widać, takie przekształcenie pozwoliło na wyróżnienie części odpowiedzi za-
+leżnej tylko od sygnału wejściowego (tzw. odpowiedź wymuszona) oraz części zależ-
+nej wyłącznie od stanu początkowego (tzw. odpowiedź swobodna). Powyższy wzór
+pokazuje, że transmitancja operatorowa G(s) opisuje jedynie zachowanie układu w za-
+leżności od sygnału wejściowego u;(£) bez uwzględnienia warunków, w jakich układ
+pozostawał przed podaniem sygnału wejściowego.
+
+Kolejną postacią modelu matematycznego, którą można zastosować do opisu roz-
+ważanego obwodu LR są równania stanu i wyjścia. W celu wyznaczenia tych równań
+przyjmujemy zmienną stanu: x = w, (będącą jednocześnie wyjściem układu, y = u») oraz
+wejście: u = u. Po podstawieniu ich do równania różniczkowego otrzymujemy
+
+<image/wzory/k1_page54_formula4.png>
+
+czyli
+
+<image/wzory/k1_page54_formula5.png>
+
+oraz
+y = Xx.
+
+Powyższe równania można zapisać w postaci macierzowej:
+
+<image/wzory/k1_page54_formula6.png>
+
+<image/szwzory/k1_page54_formula7.png>
+
+Zatem znajomość macierzy 4, B, C, D jest wystarczająca do wyznaczenia odpo-
+wiedzi układu z uwzględnieniem stanu początkowego.
+
+56

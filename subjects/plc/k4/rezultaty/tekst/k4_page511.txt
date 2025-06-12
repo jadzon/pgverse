@@ -1,0 +1,32 @@
+<image/wzory/k4_page511_formula1.png>
+
+zory/k4_page511_formula2.png |
+Zależność sygnału wyjściowego u(t) analogowego regulatora PID od uchybu
+regulacji eft) przedstawia się następującym wzorem:
+
+<image/figiwzory/k4_page511_formula3.png>
+
+gdzie :
+
+K, — współczynnik proporcjonalności (wzmocnienie),
+Ty -— czas zdwojenia (stała całkowania),
+
+Tp = czas wyprzedzenia (stała różniczkowania),
+
+e(t) — uchyb regulacji (różnica między wartością zadaną a wartością mierzoną),
+u(t) — wielkość wyjściowa regulatora,
+Uo - początkowa wartość całki (dla PI, PID).
+
+W regulatorze cyfrowym informacja o aktualnej wartości uchybu regulacji jest
+pobierana co okres próbkowania 7, i co ten sam okres aktualizowana jest war-
+tość sygnału wyjściowego regulatora. Zależność (1) należy więc zastąpić
+odpowiednim równaniem różnicowym.
+
+Dla składowej proporcjonalnej wartość sygnału wyjściowego w n-tym okresie
+próbkowania wynosi:
+
+<image/wzory/k4_page511_formula4.png>
+
+ 
+
+Dodatek B. Dobór optymalnych nastaw dla regulatora PID 511

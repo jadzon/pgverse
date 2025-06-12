@@ -1,0 +1,21 @@
+ujemny a w drugim dodatni, połączony jest z punktem wspólnym obwodów wej-
+ściowych.
+
+<image/figury/k4_page13_figure1.png>
+
+Rys. 1.4 Schemat połączeń obwodów wejściowych z modułem wejść dwustanowych
+
+Mając zapisany w pamięci sterownika stan styków określony przez wartości bi-
+tów oznaczonych jako zmienne %/1 .. %14, można przystąpić do programowania
+sygnałów wyjściowych. Wyd. 1.1 przedstawia program przykładowy napisany
+w języku schematów drabinkowych i języku listy instrukcji z uwzględnieniem
+deklaracji zmiennych pokazanych w Tab. 1.2. Program w języku drabinkowym
+składa się z dwóch pionowych linii oznaczających szyny zasilające, między które
+włączono szczeble programu składające się z obwodów styków i cewek — po-
+dobnie jak na schemacie układu stykowo-przekaźnikowego.
+
+<image/tabele/k4_page13_table1.png>
+
+ 
+
+1.2 Pojęcia podstawowe 13

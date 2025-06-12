@@ -1,0 +1,10 @@
+<image/tabele/k4_page466_table2.png>
+
+Wyd. 8.133 Podprogram (5) FAZA_3 (chłodzenie) -- zamknięcie zaworów dopływu
+czynników reakcji, dopływu i odpływu medium grzewczego oraz odpływu
+produktu reakcji, otwarcie zaworów przepływu medium chłodzącego i załączenie
+mieszadła, koniec chłodzenia po osiągnięciu temperatury początkowej reakcji
+
+<image/tabele/k4_page466_table1.png>
+
+466 Rozdział : 8.Programy przykładowe

@@ -1,0 +1,48 @@
+który jest określony przez najazdowy wyłącznik pozycji bazowej (Home Limit).
+Na podstawie tego pomiaru realizuje się algorytmy ciągłego sterowania napędem
+zasilanym przez przetwornicę częstotliwości. Enkoder podłączony jest do mo-
+dułu HSC w układzie różnicowym (np. wejścia A+ i A-), ale bywa też, że stosuje
+się mniej odporne na zakłócenia wejścia jednokońcówkowe. Charakter przebie-
+gów czasowych tych sygnałów pokazuje Rys. 3.47.
+
+e Przetworniki obrotowo-impulsowe.
+
+Przetworniki obrotowo-impulsowe służą do odczytu położeń kątowych z dużą
+dokładnością. Posiadają one naniesioną siatkę na tarczę o liczbie kresek rzędu
+kilku tysięcy. Podziałka pomiarowa wykorzystuje odczyt fotoelektryczny, tzn.
+fotoogniwo, które reaguje na różnice intensywności światła. Odczyt fotoelek-
+tryczny uzyskuje się na dwa sposoby.
+
+Pierwszy z nich to prosta zasada projekcji obrazu, stosowana gdy długość fali
+świetlnej nie jest większa od szerokości szczeliny i ugięta część wiązki nie
+wpływa na pomiar.
+
+Drugi sposób odczytu jest stosowany, gdy szerokość szczeliny siatki jest bliska
+długości fali świetlnej. Wtedy potrzeba dodatkowych podziałek do wyznaczenia
+wartości przesunięcia fazowego we wzorach interferencyjnych. Interferencyjne
+systemy pomiarowe posiadają znacznie dokładniejszy krok odczytu (poniżej kil-
+ku nanometrów), przy okresie podziału: 8.im, 41m lub mniej.
+
+Fotoelektryczny odczyt pojedynczej szczeliny daje w rezultacie przyrost. Zliczo-
+ne przyrosty dają wartość pomiaru przyrostowego.
+
+Ponadto przetworniki obrotowo-impulsowe posiadają jeden punkt referencyjny
+na tarczy w celu określenia absolutnego punktu odniesienia. Wyznaczanie tego
+punktu jest stosowane, gdy wyłącznik położenia bazowego nie jest wyłączany
+jednoznacznie względem wskazań przetwornika, a wyłączanie względem punktu
+referencyjnego jest jednoznaczne. Punktów referencyjnych może być więcej (np.
+w przetwornikach produkcji firmy HEIDENHAIN) i wtedy są one kodowane
+odległościowo, tzn. rozmieszczone zgodnie z algorytmem matematycznym
+(np. odległość miedzy kolejnymi punktami referencyjnymi zwiększa się o 2 sy-
+gnały pomiarowe). Przyśpiesza się przez to ustalenie absolutnego punktu
+odniesienia.
+
+Kodowanie odległościowe służy do określenia, który punkt referencyjny został
+najechany. Wartość absolutnego punktu odniesienia można określić po przeje-
+chaniu odległości między dwoma punktami referencyjnymi.
+
+Na wyjściu przyrostowego przetwornika obrotowo-impulsowego otrzymujemy
+w zależności od sposobu realizacji sinusoidalne lub prostokątne sygnały pomia-
+rowe (Rys. 3.40). W celu umożliwienia rozróżnienia kierunku wirowania
+PEEP TTYYZNET""RTPCFEEPT TE "TREE TTP TTP WT TYT CC TY YE U TT TOY ET TYTPPOTETTTCOWO
+162 Rozdział : 3. Sprzęt sterowników PLC

@@ -1,0 +1,23 @@
+/k4_page309_formula1.png KEG |
+
+Oprócz funkcji specjalnych w sterownikach Modicon wykorzystywanych do
+obsługi podprogramów (opisanych w następnym rozdziale) istnieje także instruk-
+cja SKP, służąca do pomijania w trakcie wykonywania programu jego fragmen-
+tów, zwanych podsieciami (networks). Jej parametrem jest jedynie liczba podsie-
+ci do pominięcia. Wyd. 6.37 ilustruje przykład zastosowania funkcji SKP.
+
+ 
+
+<image/tabele/k4_page309_table1.png>
+
+Wyd. 6.31 Przykładowe zastosowanie instrukcji SKP.
+
+Jeżeli wejście 10001 jest aktywne, to pozostała część podsieci 11 oraz cała pod-
+sieć 12 zostają pominięte. Cewka 00001 pozostaje sterowana przez styk 10003,
+ponieważ wysterowanie nią nastąpiło przed wystąpieniem błoku SKP. Cewka
+00011 pozostanie w stanie w jakim znajdowała się dotychczas. Podobnie nie
+zmieni się stan cewki 00131.
+
+PET TTP PR R O O PO Z EO O W O OE
+
+6.10 Funkcje sterujące 309

@@ -1,0 +1,47 @@
+zmiennych przestrzennych.
+
+Możemy zatem sformułować następującą konkluzję:
+
+Elementy skupione to takie elementy, których zachowanie się w obwodzie
+i wszystkie ich właściwości można opisać tylko funkcjami czasu t.
+
+Do właściwości i charakterystyki elementów skupionych będziemy jeszcze
+wielokrotnie wracać.
+
+D. Elementy rozłożone. Nasuwa się pytanie, czy każdy element ob-
+wodowy jest elementem skupionym. Odpowiedź jest negatywna. Nie zawsze
+można stworzyć taki model rzeczywistości elektromagnetycznej, który od-
+powiadałby podanej definicji elementu skupionego (por. p. 1.4-J, K). Prowadzi
+to, przy spełnieniu określonych warunków (będzie o nich mowa w tomie III), do
+pojęcia elementu rozłożonego lub, ściślej, obwodu o parametrach rozłożonych.
+W obwodzie takim prądy i napięcia zależą nie tylko od czasu t, ale również
+od położenia punktu w przestrzeni,wktóryn na
+i = i(x,t), u = u(x,y, t) itp. (x, y — zmienne przestrz
+
+W tomach I i II elementami rozłożonymi nie będzier
+
+E. Stałe charakteryzujące ośrodek. Ogólnie biorąc,
+rym występują zjawiska elektromagnetyczne, jest scharak
+wielkości (będące stałymi materiałowymi): przewodność
+ność magnetyczną „i przenikalność elektryczną e oraz
+związki:
+
+<image/wzory/k4_page42_formula2.png>
+
+Przy wyprowadzaniu równań podstawowych elen
+przyjmowaliśmy kolejno, że jedna z tych wielkości ma c
+a pozostałe można pominąć. Zakładamy zatem milczą
+przypadkach, że:
+wzory/k4_page42_f
+<image/wzory/k4_page42_formula3.png>
+
+| (pomijamy pole indukcji magnetycznej i pole indukcji el
+
+42 maa 1. Pojęcia podstawowe — elementy
+ładunki i skojarzenia magnetyczne — zależą tylko od czasu t i nie zależą od
+
+indukcyjność: B=uH, Y)=0 e
+(pomijamy pole gęstości prądu i pole indukcji elektryczi
+pojemność: D=«E, y=0, u=(
+
+(pomijamy pole gęstości prądu i pole indukcji magnetyc

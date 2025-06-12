@@ -1,0 +1,44 @@
+3.5. Moce w obwodach prądu stałego 299
+
+gdy wymuszany jest w nim stały prąd /. Przy pobudzaniu stałym napięciem dwójnik pobiera moc,
+1 1 1
+jeśli U > 27 i oddaje moc, jeśli U <.5.M U = z” mamy I = (,awięcrównież P = 0.
+
+E E
+Przy pobudzaniu stałym prądem dwójnik pobiera moc jeśli I > — R oddaje moc, jeśli I < — :
+
+E
+"R PICO TRZA MA
+
+<image/figury/k3_page297_figure1.png>
+
+Proponujemy Czytelnikowi skonstruowanie charakterystyki dwójnika z rys. 3.5-2 i wyznaczenie
+punktów jej przecięcia z osiami.
+Przykład 3.5-2. Obliczymy moc pobieraną przez dwójnik nieliniowy z rys. 3.4-16a, jeżeli
+napięcie na nim wynosi 4 V.
+Z charakterystyki dwójnika (rys. 3.4-16b) wynika, że przy napięciu U = 4 V, prąd dwójnika
+I = 2 mA, a zatem moc:
+
+zory/k3_page297_formula1.png
+
+B. Przypadek dwójnika bezźródłowego. Załóżmy, że rozpatrywany dwój-
+nik rezystancyjny (liniowy lub nieliniowy) jest dwójnikiem bezźródłowym.
+Można wówczas posługiwać się pojęciem jego oporu zastępczego R ,5(przewod-
+ności zastępczej Gyp = 1/R,5) dla dwójnika liniowego bądź oporu statycznego
+R,, (przewodności statycznej G,, = 1/R,) dla dwójnika nieliniowego (por.
+przypis na str. 282). Przy obliczaniu mocy pobieranej przez dwójnik bezźródłowy
+możemy zatem korzystać również ze wzorów:
+
+Nzory/k3_page297_formula2.png (3.5-2)
+jeśli dwójnik jest liniowy lub:
+
+rzory/k3_page297_formula3.png (3.5-3)
+
+jeśli jest on nieliniowy.
+
+Także i dla tej klasy dwójników moc pobierana może być ujemna. Na
+przykład, jeżeli w dwójniku z rys. 3.2-2c (przykład 3.2-1c) r > R, + R,, to
+R; < 0 i wówczas P < O.
+
+Jeżeli natomiast dwójnik bezźródłowy jest dwójnikiem oporowy m (tzn.
+składa się wyłącznie z oporów liniowych i/lub oporów nieliniowych), to jego

@@ -1,0 +1,39 @@
+13. Przetwarzanie sygnałów cią
+
+<image/figury/k3_page223_figure1.png>
+
+Przekształcenie Fouriera
+
+W przekształceniu Fouriera dla sygnałów ciągłych można wyróżnić dwie kategorie: p
+kształcenie dla sygnałów okresowych oraz dla sygnałów nieokresowych. Do sygnałów okre
+ych sj wenę paska fin z eryk Pm BĘ
+
+fourierowskie są omawiane przy użyciu tylko liczb rzeczywistych, tak jak to uczyniono w p
+przednich kilku rozdziałach w odniesieniu do sygnałów dyskretnych. Znacznie silniejsze
+rzędzie, jakim są liczby zespolone, pozostawiamy do rozpatrzenia w rozdziale 31.
+
+Na rys. 13.8 przedstawiono przykład ciągłego sygnału probe RZ ae zę:
+tliwościowe. Sygnał w dziedzinie czasu obejmuje zakres od minus do płus nieskończc
+
+a każdy z sygnałów w dziedzinie częstotliwości ma zakres od zera do plus nieskot ś
+Toa ÓW AGO WAĆ 46 GaGa kW GG
+rzeczywista i urojona), lecz współrzędne biegunowe (moduł i faza) też są stosowane do sy:
+gnałów ciągłych. Podobnie jak w przypadku sygnałów dyskretnych, równanie syntezy dak
+przepis na stworzenie sygnału w dziedzinie czasu na podstawie danych z dziedziny częstot
+wości. Równanie ma postać matematyczną: :
+
+<image/wzory/k3_page223_formula1.png>
+
+Wzór 13.2. Przeksztatcenie Fouriera, równanie syntezy. W tym wzorze x(t) jest wyznaczanym przez
+syntezę sygnałem w dziedzinie czasu, a Re X(w) i Im X(w) to części rzeczywista i urojona widma
+częstotliwościowego
+
+Omawiając słownie powyższe wyrażenie, trzeba stwierdzić, że sygnał w dziedzinie czasu jes
+tworzony przez sumowanie (drogą całkowania) nieskończonej liczby przeskalowanych f
+sinusoidalnych i kosinusoidalnych. Część rzeczywista przebiegu w dziedzinie częstotliwość
+zawiera współczynniki skalowania fal kosinusoidalnych, a część urojona — fal s inusoid:
+
+nych. Tak jak w przypadku sygnałów dyskretnych, równanie syntezy jest zwykle z:
+
+z ujemnymi falami sinusoidalnymi. GEY „ik inline śe wa Zack © OK ż
+niach, to jest on konieczny, aby sposób zapisu uczynić zgodnym z rachunkiem na śczbać

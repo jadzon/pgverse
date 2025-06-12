@@ -1,0 +1,30 @@
+30 3. Podstawy techniki cyfrowej
+
+wyjść, tylko w określonych chwilach, zadawanych przez odpowiedni generator zwany
+zegarem. Mówimy, że ich działanie jest synchronizowane zegarem. Układy asynchroniczne
+zmieniają swój stan i stan swoich wyjść w czasie zmiany sygnałów wejściowych. Układy
+synchroniczne budowane są nie tylko z bramek logicznych, ale także z elementów pamięta-
+jących czyli tzw. przerzutników (por. Dodatek A). Układy asynchroniczne mogą być
+budowane z przerzutnikami albo bez przerzutników i wtedy rolę elementu pamiętającego
+spełnia tzw. sprzężenie zwrotne. W systemach komputerowych częściej stosowane są
+układy synchroniczne ze względu na większą pewność ich działania. Układy asynchro-
+niczne znalazły większe zastosowanie w układach automatyki. Często złożone układy
+sekwencyjne projektuje się nie tylko z bramek i przerzutników (por. Dodatek), ale także za
+pomocą pewnych standardowych układów sekwencyjnych. Najczęściej spotykane
+standardowe układy sekwencyjne to rejestry i liczniki. Dalej omówiono je w takiej właśnie
+kolejności.
+
+REJESTRY
+
+Najpowszechniej stosowanym standardowym układem sekwencyjnym jest rejestr. Jest to
+układ składający się z przerzutników, przy czym każdy z nich wykonuje podobne funkcje
+i każdy z nich jest podobnie wysterowany. Na przykład są one jednocześnie odczytywane
+lub zapisywane, jednocześnie ustawiane (termin ten oznaczać będzie wpisywanie wartości
+I do przerzutnika) lub zerowane. Na rysunku 3.26a pokazano rejestr składający się z czte-
+rech przerzutników. Jest on wyposażony w 4 wejścia informacyjne D, oraz 3 wejścia
+sterujące: wejście zegarowe ZEG (ang. CLK), wejście zerujące ZER (ang. CLR) i wejście
+ustawiające UST (ang. PRESET), tj. wpisujące do wszystkich przerzutników wartość |.
+
+<image/figury/k3_page40_figure1.png>
+
+Rysunek 3.26. Czterobitowy rejestr ustawiany i zerowany

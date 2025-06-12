@@ -1,0 +1,36 @@
+292 3. Obwody prądu stałego
+
+Dwójnik jest połączeniem równoległym dwóch dwójników (rys. 3.4-12a, b). Charakterystyka
+pierwszego z nich, skonstruowana zgodnie z podanymi wcześniej regułami, jest wykreślona
+w układzie współrzędnych i,u na rys. 3.4-12c. Chcąc wyznaczyć charakterystykę drugiego dwójnika,
+należy — ze względu na przyjęte strzałki prądu i, i napięcia u, — odbić najpierw zwierciadlanie
+charakterystykę diody idealnej względem osi prądów i osi napięć, a następnie otrzymaną w ten
+sposób charakterystykę przesunąć o wartość E w kierunku napięć ujemnych (rys. 3.4-12d).
+W efekcie otrzymujemy charakterystykę łączną równoległego połączenia obu dwójników pokazaną
+na rys. 3.4-12e. Charakterystykę tę można opisać równaniami:
+
+<image/wzory/k3_page292_formula1.png>
+
+Element rezystancyjny o charakterystyce z rys. 3.4-126 jest nazywany przekaźnikiem idealnym.
+Dwójnik z rys. 3.4-11a realizuje zatem funkcję przekaźnika idealnego.
+
+Charakterystykę rozważanego dwójnika można także wyznaczyć w sposób mniej formalny,
+przeprowadzając następujące rozumowanie. W zakresie napięć |u| < E obie diody są spolaryzowa-
+ne w kierunku zaporowym, tzn. napięcia na nich są ujemne. Jak wynika z charakterystyki diod (rys.
+3.4-11b), ich opór jest wówczas nieskończenie duży. Tym samym stanowią one rozwarcie. Prądy i,
+
+<image/figury/k3_page292_figure1.png>
+
+oraz i, a więc również prąd dwójnika i są równe zeru. Jeśli napięcie na dwójniku osiągnie wartość
+E, dioda D, zaczyna przewodzić, a ponieważ w kierunku przewodzenia — jak wynika z charak-
+terystyki — jest ona zwarciem, zatem na zaciskach dwójnika jest utrzymywane napięcie równe sile
+elektromotorycznej E źródła idealnego, niezależnie od wartości prądu i > 0 dwójnika. Jednocześ-
+nie, z uwagi na źródło idealne, napięcie na dwójniku nie może przekroczyć wartości E. Podobnie,
+jeżeli napięcie na dwójniku przyjmie wartość — E, zaczyna przewodzić dioda D, i na jego zaciskach
+ustala się napięcie — E dla dowolnej wartości prądu i < 0.
+
+Jeżeli w dwójniku z rys. 34-1la przyjmiemy różne wartości sił elektromotorycznych źródeł,
+wówczas możliwa jest realizacja przekaźnika idealnego o charakterystyce niesymetrycznej.
+
+Przykład 3.44. Włączając równolegle między zaciski dwójnika z rys. 3.4-11a dodatkowy opór
+liniowy R (rys. 3.4-13a) uzyskujemy element rezystancyjny nazywany ogranicznikiem napięcia.

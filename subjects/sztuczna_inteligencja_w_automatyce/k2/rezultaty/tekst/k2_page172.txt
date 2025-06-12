@@ -1,0 +1,47 @@
+e kierunek ruchu wind (góra, dół, zatrzymanie),
+
+e sygnały z przycisków umieszczonych na piętrach,
+
+e sygnały z przycisków wewnątrz wind,
+
+e (ewentualnie) sygnały z czujników wagi pasażerów i/lub liczby przekroczeń drzwi
+
+wejściowych.
+
+Ograniczenia: np. winda, której docelowe piętro zostało wskazane przez pasażera
+wewnątrz windy, jadąca we wskazanym kierunku nie może zawrócić nie zatrzymując
+się uprzednio na wskazanym piętrze.
+
+Przyznawane nagrody mogą wynikać z następujących wskaźników:
+
+e Liczba pasażerów dowieziona do miejsc wskazanych przez nich,
+e czas oczekiwania pasażera na windę i czas spędzony w windzie,
+e koszt energii zużytej przez system,
+
+e koszt zużycia windy (zależny od jej ruchu).
+
+Np. można przyjąć, że w każdym kroku czasowym nagroda (kara) wynosi —50
+punktów za każde piętro na którym oczekują pasażerowie (sygnalizowane przyci-
+
+skiem) oraz —1 punkt za każdą windę w ruchu.
+msi
+
+6.10.2. Własność Markowa
+
+Rozpatrując wieloetapowe procesy decyzyjne zakłada się, że spełniają one własność
+Markowa:
+
+<image/wzory/k2_page172_formula1.png>
+
+czyli. że efekt akcji a, w stanie s, zależy tylko od tej akcji i tego stanu, a nie zależy
+od przeszłości (rys. ??). Często wieloetapowe procesy decyzyjne mające własność
+Markowa nazywane są procesami decyzyjnymi Markowa.
+
+<image/wzory/k2_page172_formula2.png>
+<image/figury/k2_page172_figure1.png>
+
+6.10.3. Optymalizacja wieloetapowych procesów decyzyjnych
+
+Zbiór reguł mówiących jaką należy podejmować akcje w poszczególnych stanach
+nazywa się polityką. Istnieje wiele metod poszukiwania optymalnej polityki i są
+one intensywnie badane i rozwijane (Sutton, Barto 1998, Jang i inni 1997, Cichosz

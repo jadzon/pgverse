@@ -1,0 +1,42 @@
+="
+
+60 1. Pojęcia podstawowe — elementy
+
+1.3.4. Uzupełnienia i przykłady
+
+A. Oznaczenia. Zwracamy uwagę Czytelnika na różnicę, która występuje
+w oznaczeniach na rys. 1.3-1a i 1.3-3a (opór), rys. 1.3-6a i 1.3-8a (indukcyj-
+ność) oraz rys. 1.3-13a i 1.3-14a (pojemność). Na rysunkach tych oznacze-
+nia R, L lub C występują tylko w przypadku elementów liniowych, gdyż
+tylko dla elementów tej klasy wartości R, Llub C określają jednoznacznie
+charakterystykę. W przypadkach ogólnych, kiedy charakterystyka nie jest linią
+prostą i jest określona odpowiednio przez równania (1.3-1), (1.3-2),
+(1.3-8) lub (1.3-17), używanie tych symboli nie miałoby sensu i mogłoby być
+mylące. Jeśli chcemy na schemacie wyraźnie zaznaczyć, że element jest nielinio-
+wy, stosujemy niekiedy umowne oznaczenia jak na rys. 1.3-19.
+
+<image/figury/k4_page60_figure1.png>
+
+Często zachodzi jednak potrzeba oznaczania literowego elementów nie-
+liniowych. Będziemy wówczas stosować albo ogólny symbol elementu nie-
+liniowego w postaci litery N, albo — zwłaszcza w przykładach — symbole Ry,
+l, C„, oznaczające odpowiednio: opór nieliniowy, indukcyjność nieliniową
+i pojemność nieliniową.
+
+B. Elementy stacjonarne. W sformułowaniu definicji: oporu (p. 1.3.1),
+indukcyjności (p. 1.3.2) i pojemności (p. 1.3.3) użyliśmy przymiotnika stacjonar-
+ny. Pora wyjaśnić jego znaczenie.
+
+Element nazywamy stacjonarnym, jeśli jego właściwości nie zmieniają się
+w czasie. W szczególności, charakterystyka elementu stacjonarnego jest ustalona
+i nie zmienia się w czasie. Opór o równaniu (1.3-1) lub (1.3-2), indukcyjność
+o równaniu (1.3-8) i pojemność o równaniu (1.3-17) są zatem elementami
+stacjonarnymi. O elementach niestacjonarnych będzie mowa w p. 1.6.
+
+C. Jednoczesność przyczyny i skutku. Równania (1.3-1), (1.3-8) i(1.3-17) są
+uogólnieniami równań liniowych (1.2-6), (1.2-17) i (1.2-32). Zachowują
+one tę samą właściwość, którą w przypadku elementów liniowych (p. 1.2)
+podkreślaliśmy poprzez zapisy (1.2-7), (1.2-18) i (1.2-33). Odpowiednikiem tych
+zapisów w przypadku nieliniowym są równości:
+
+<image/wzory/k4_page60_formula1.png>

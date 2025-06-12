@@ -1,0 +1,61 @@
+220
+
+Nazwy zmiennych. Ciągi liter, cyfr i podkreśleń zaczynające się od dużej litery.
+Np.: Autor, W. Wyróżnia się też pojedynczy znak podkreślenia „_” nazywany
+zmienną anonimową.
+
+Termy złożone. Ogólną postacią termu zlożonego jest
+
+<image/wzory/k2_page215_formula1.png>
+
+gdzie f nazywa się funktorem. Funktor jest atomem lub nazwą zmiennej.
+
+Listy. Ciągi
+
+<image/wzory/k2_page215_formula2.png>
+
+gdzie ty, i = 1,2,...n są termami.
+
+Przykłady list: [dom,as,sok], [2,4,6,3,b,c], [[a,b],[c,f],[g,h,s,w]].
+(., gdzie (] oznacza listę pustą.
+
+W liście wyróżniony jest pierwszy jej element, zwany głową i lista, która po-
+zostaje po usunięciu pierwszego elementu, zwana ogonem. Np. głową listy
+[1,4,5) jest 1, zaś ogonem (4,5); głową listy [a] jest a, zaś ogonem lista
+pusta []. W Prologu listę można także zapisać w postaci: [G10], gdzie G jest
+glową listy zaś 0 jest ogonem. Np. przyrównując listę [XIY] do listy [a,b,c],
+zmiennej X odpowiada element a, zaś zmiennej Y lista [b,c].
+
+Łańcuchy. Ciągi znaków otoczone podwójnymi apostrofami. Np. "Rok 1812".
+
+Uwzgledniajac powyższe przykładami termów są wyrażenia: dom, [Glw,x,y,z],
+student (S,politechnika,gdansk), gniazdo (gniazdo (gniazdo(X))).
+
+Liczby całkowite, liczby rzeczywiste, atomy i łańcuchy nazywane są stałymi.
+
+Programy w Prologu tworzone są z formuł atomowych zdefiniowanych następu-
+jąco:
+
+Definicja 9.1 Jeżeli p jest nazwą n-argumentowego predykatu oraz ty, tą,...,ty Są
+
+termami, to wyrażenie p(t4,ta....; t) jest formułą atomową. Żadne inne wyrażenie
+nie jest formułą atomową.
+
+W Prologu za pomocą klauzul Horna zapisuje się program, który jest zbiorem
+faktów i reguł dotyczących obiektów jakiejś dziedziny. Klauzule w Prologu mają
+postać:
+
+P- (9.1)
+
+lub
+
+<image/wzory/k2_page215_formula3.png>
+gdzie p. p+.P2::..; p. są formutam atomowymi. Wyrazenie (ff) nazywa się taktem,
+zaś wyrażenie (??) regułą.
+
+Znaki „:-” i przecinek „,” reprezentują odpowiednio spójniki jeżeli (if) ii
+(and). Nagłówkiem klauzuli nazywa się formuła atomowa stojąca w niej na pierw-
+szym miejscu. Klauzule posiadające w nagłówku tą samą nazwę predykatu noszą
+nazwę procedury i muszą być zgrupowane razem.
+
+”

@@ -1,0 +1,62 @@
+26. Sieci neuronowe (i więce ł
+
+Taki sam algorytm najszybszego spadku zaimplementowano dla wag sieci neurono
+w podprogramie 3000. Przed wejściem w podprogram 3000, jeden z przykładów obrazu je
+wprowadzany do warstwy wejściowej i ta informacja przechodzi na wyjście. To znaczy,
+wszystkie wartości dla X1[ ], X2[ ] i X[3] są określone, podobnie jak aktualnie wartości wa
+WHI „ ] i WOF[ |]. Ponadto znamy błąd ELET, jaki powstaje w sieci dla tego właśnie obra:
+Wagi warstwy ukrytej są uaktualniane w wierszach od 3050 do 3120, wagi zaś warstwy
+ściowej w wierszach od 3150 do 3190. Jest to realizowane przez obliczanie nachylenia ć
+każdej wagi i następnie zmienianie każdej wagi o wartość proporcjonalną do tego na
+nia. W przypadku spadochroniarza nachylenie wzdłuż osi jest wyznaczane przez przesuwank
+się © małą odległość wzdłuż osi (powiedzmy, Ax), pomiar zmiany wysokości (powiedzmy
+AE) i następnie podzielenie tych dwóch wartości przez siebie (AE/Ax). Nachylenie wagi sie
+neuronowej można wyznaczyć w taki sam sposób — przez dodanie małego przyrostu do w;
+tości wagi (Aw), określenie powstałej zmiany sygnału wyjściowego (AX3) i podzielenie tyć
+dwóch wartości (AX3/Aw). W dalszej części tego rozdziału rozpatrzymy przykład, w który!
+nachylenie jest obliczane właśnie w ten sposób. Jednak w przykładzie teraz omawian
+zastosujemy skuteczniejszą metodę. |
+Powiedzieliśmy poprzednio, że funkcja nieliniowa (sigmoida) powinna być różniczkowa
+Teraz właśnie skorzystamy z tej właściwości. Jeśli znamy nachylenie w każdym punkć
+przebiegu nieliniowego, możemy bezpośrednio zapisać wzór na nachylenie każdej z w
+(AX3/Aw) bez konieczności jej zaburzania. Rozważmy pewną określoną wagę, np. WOJ
+odpowiadającą pierwszemu wejściu węzła wyjściowego. Spójrzcie na struktury przedstaw
+ne na rys. 26.5 i 26.6 i spytajcie, jaki wpływ na wyjście (X3) będzie miała niewielka zmiś
+tej określonej wagi (w), jeśli wszystko poza tym pozostanie bez zmian. A oto odpowied:
+to pytanie:
+
+AX3
+
+Aw
+Wzór 26.3. Nachylenie wag warstwy wyjściowej. Wzór zapisano dla wagi WO[1]
+gdzie SLOPE, jest pierwszą pochodną sigmoidy warstwy wyjściowej, obliczoną na
+w punkcie pracy. Innymi słowy, SLOPE, opisuje, o ile zmienia się sygnał wyjściowy 8
+moidy w odpowiedzi na zmianę na wejściu tej sigmoidy. Wartość SLOPE, można oblic
+z wzoru na podstawie aktualnej wartości X3 sigmoidy. To obliczenie przedstawiono w
+szu 3160. W wierszu 3170 nachylenie tej wagi jest obliczane z wzoru 26.3 i rejestrow
+jako zmienna DX3DW (tj. AX3/Aw). |
+Podobnie oblicza się nachylenie wagi warstwy ukrytej, takiej jak WH[1,1], korzystając z
+
+= X1[I]SLOPE,, WO[I]SLOPE,
+
+Wzór 26.4. Nachylenie wag warstwy ukrytej. Wzór zapisano dla wagi WH[1,1]
+
+W powyższym wzorze SLOPEyy; jest pierwszą pochodną sigmoidy warstwy ukrytej, oblic
+ną w punkcie pracy na tej krzywej. Inne wielkości, X1[1] i WO[1], są po prostu pex
+stałymi, napotykanymi przez zmianę wagi w jej drodze do wyjścia sieci. W wierszach
+
+i 3080 następuje obliczanie nachyleń sigmoidy według wzoru 26.2. Nachylenie wagi »
+stwy ukrytej DX3DW jest obliczane w wierszu 3090 z wzoru 26.4.
+
+Teraz, znając już nachylenie każdej z wag, możemy popatrzeć, jak każda waga zmienić
+w wyniku następnej iteracji. Nową wartość każdej wagi wyznacza się, biorąc wagę ak
+
+i dodając do niej pewną wartość proporcjonalną do nachylenia:
+
+=X2[1]SLOPE,
+
+w. =w,+ AAŻSELETMU
+new ołd Aw >
+
+Wzór 26.5. Uaktualnianie wag. Każda z wag jest uaktualniania przez dodanie do niej pewnej w:
+proporcjonalnej do nachylenia tej wagi

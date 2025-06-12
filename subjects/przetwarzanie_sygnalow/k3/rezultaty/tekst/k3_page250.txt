@@ -1,0 +1,59 @@
+16. Filtry okienkowane funkcją sine
+
+ 
+
+Filtry okienkowane funkcją sinc są stosowane do oddzielania jednego pasma częstotliwości
+od innego. Są one bardzo stabilne, bardzo rzadko powodują kłopotliwe niespodzianki i moż
+na w nich osiągnąć parametry o niewiarygodnie wysokim poziomie. Te wyjątkowe właści
+wości w dziedzinie częstotliwości są uzyskiwane kosztem słabego działania w dziedzinie
+czasu, m.in. dużych zafalowań i przerzutów w odpowiedzi skokowej. Filtry okienkowane
+funkcją sinc, realizowane przez standardowy splot, są łatwe do programowania, lecz wolne
+w działaniu. W rozdziale 18 opisano, w jaki sposób można zastosować FFT w celu znaczne-
+go polepszenia szybkości obliczeń w tych filtrach.
+
+Sposób realizacji filtrów z okienkowaniem
+
+funkcją sinc
+
+Na rys. 16.1 przedstawiono zasadę działania filtrów okienkowanych funkcją sinc. Na rys. 16.1 a)
+pokazano odpowiedź częstotliwościową idealnego filtru dolnoprzepustowego. Wszystkie czę-
+stotliwości poniżej częstotliwości odcięcia f, przechodzą z amplitudą równą jedności, a więk-
+sze częstotliwości są tłumione. Charakterystyka w paśmie przepustowym jest idealnie płaska,
+tłumienie w paśmie zaporowym — nieskończenie duże, a obszar przejścia między obu pasmami
+Wyznaczając odwrotną transformatę Fouriera tej idealnej odpowiedzi częstotliwościowej, uzysku-
+je się idealną odpowiedź impulsową filtru (rys. 16.1 b). Jak to już poprzednio rozważano (rozdział
+11, wzór 11.4) ta krzywa ma postać ogólną sin(x)/x zwaną funkcją sine, daną wzorem:
+
+<image/wzory/k3_page250_formula1.png>
+
+Splecenie sygnału wejściowego z taką odpowiedzią impulsową filtru tworzy doskonały filtr
+dolnoprzepustowy. Trudność polega na tym, że funkcja sinc przebiega od minus do plus
+nieskończoności bez schodzenia do wartości zero. O ile ta nieskończona długość nie jest
+problemem pod względem matematycznym, to jest przeszkodą dla komputerów.
+
+Dla ominięcia tej trudności wprowadzimy dwie modyfikacje do funkcji sinc na rys. 16.1 b),
+uzyskując przebieg pokazany na rys. 16.1 c). Po pierwsze, przebieg jest obcinany do M +1
+punktów, wybranych symetrycznie wokół głównego listka, przy czym M jest liczbą parzystą.
+Wszystkie próbki, poza tymi M + 1 punktami, są ustawione na zero lub po prostu pomija-
+ne. Po drugie, cała sekwencja zostaje przesunięta tak, aby przebiegała od 0 do M. Dzięki
+temu odpowiedź impulsowa filtru może być wyrażona przy użyciu indeksów tylko dodat-
+nich. Choć wiele języków programowania dopuszcza indeksy ujemne, to ich stosowanie jest
+jednak kłopotliwe. Jedynym skutkiem takiego przesunięcia o M/2 w odpowiedzi impulsowej
+filtru jest przesunięcie sygnału wyjściowego o tę samą wartość.
+
+Ponieważ zmodyfikowana odpowiedź impulsowa filtru jest tylko przybliżeniem filtru ideal-
+nego, więc filtr nie będzie miał idealnej odpowiedzi częstotliwościowej. W celu wyznaczenia
+tej odpowiedzi trzeba określić transformatę Fouriera sygnału z rys. 16.1 c). W ten sposób
+uzyskuje się krzywą przedstawioną na rys. 16.1 d). Co za bałagan! Mamy tu nadmierne za-
+falowania w paśmie przepustowymi i słabe tłumienie w paśmie zaporowym (przypomnijcie
+sobie efekt Gibbsa omówiony w rozdziale 11). Te mankamenty są spowodowane gwałtowną
+nieciągłością na krańcach obciętej funkcji sinc. Wydłużanie odpowiedzi impulsowej filtru nie
+usuwa tych kłopotów; nieciągłość ma istotny wpływ niezależnie od długości M.
+
+Istnieje, na szczęście, prosty sposób poprawy tej sytuacji. Na rys. 16.1 e) pokazano łagodnie zbież-
+ną krzywą zwaną oknem Blackmana. Wymnażając obciętą funkcję sinc (rys. 16.1 c) przez okno
+Blackmana (rys. 16.1 e), uzyskuje się odpowiedź impulsową filtru okienkowanego funkcją sinc
+(rys. 16.1 f). Idea tej metody polega na usunięciu gwałtownego opadania na obciętych krańcach
+odpowiedzi impulsowej i poprawieniu w ten sposób odpowiedzi częstotliwościowej. To ulepszenie
+jest widoczne na rys. 16.1 g). Charakterystyka jest teraz płaska w paśmie przepustowym, a tłumie--
+nie w paśmie zaporowym jest tak dobre, że nie jest możliwe do określenia na podstawie wykresu.

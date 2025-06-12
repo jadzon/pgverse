@@ -1,0 +1,32 @@
+130
+
+<image/figury/k2_figury/k2_page125_figure3.png>
+
+Rys. 6.28: Przykładowa sieć neuronowa sumująca dwie bramki (a) oraz funkcja przez nią
+realizowana (b)
+
+<image/figury/k2_page125_figure1.png>
+
+Rys. 6.29: Aproksymacja funkcji y = ryce przez dwuwarstwową sieć neuronową o 16 neu-
+ronach wejściowych. Aproksymację przeprowadzono korzystając z 1000 par uczących
+
+bliżenie. Na rys. ?? przedstawiono przykład aproksymacji funkcji y = zyraą przez
+sieć dwuwarstwową mającą 16 neuronów wejściowych.
+
+6.5.5. Metoda propagacji wstecznej błędu
+
+Sieci warstwowe poprzez odpowiedni dobór wag są w stanie aproksymować dowolne
+funkcje, czyli są w stanie po nauczeniu rozwiązywać dowolne zadania. Spośród metod
+uczenia sieci warstwowych najczęściej stosowana jest gradientowa metoda najwięk-
+szego spadku, która w przypadku uczenia sieci neuronowych nazywana jest metodą
+propagacji wstecznej błędu, (ang. error back propagation method), którą poniżej
+krótko omówimy dla przypadku sieci dwuwarstwowej.
+
+Przyjmijmy oznaczenia jak na schemacie sieci przedstawionym na rys. ??. Przy
+oznaczeniach jak na rysunku ??, sygnał wyjściowy sieci dwuwarstwowej wynosi
+
+<image/wzory/k2_page125_formula1.png>
+
+gdzie:
+
+<image/wzory/k2_page125_formula2.png>

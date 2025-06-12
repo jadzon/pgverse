@@ -1,0 +1,55 @@
+ry/k4_page312_formula1.png KEMER
+
+Sterowniki Modicon wyposażone są w blok PID, który umożliwia realizację
+zadań regulacji z zamkniętą pętlą sprzężenia zwrotnego. Blok ten występuje pod
+nazwą PID2 i realizuje algorytm regulacji PID ISA, tzn. obliczający wielkość
+wyjściową według następującego wzoru:
+
+<image/wzory/k4_page312_formula2.png>
+
+gdzie :
+
+Y - zmienna sterująca (wyjście regulatora),
+E — uchyb regulacji liczony jako E = SP-PV, przy czym:
+SP — (Ser Point) oznacza wartość zadaną (wejście regulatora),
+PV — (Process Variable)zmienna procesowa (wejście regulatora),
+K, - wzmocnienie części proporcjonalnej,
+K,- wzmocnienie części całkującej (K»=1/T,), T, - stała całkowania (czas
+zdwojenia),
+K; - wzmocnienie części różniczkującej, (K;=Tx), Ty - stała różniczkowa-
+nia (czas wyprzedzenia).
+
+Rys. 6.6 prezentuje schemat blokowy regulatora PID2 zaimplementowanego
+w sterowniku. Na schemacie przyjęto następujące oznaczenia:
+
+E - uchyb regulacji,
+
+SP - wartość zadana z zakresu 0..4095,
+
+PV - zmienna procesowa z zakresu 0..4095,
+
+K» - wzmocnienie części całkującej, wyrażone w 0.01 min”,
+
+K; - wzmocnienie części różniczkującej, wyrażone w 0.0! min,
+
+RGL (Rate Gain Limiting)- filtr ograniczający na PV, z zakresu 2..30,
+
+T. - czas obliczeń, wyrażony w 0.01 s,
+
+PB - współczynnik proporcjonalności z zakresu 5..500%; K„=100/PB,
+
+Bias - przesunięcie wyjścia w zakresie 0..4095,
+
+Y - wyjście regulatora,
+
+I - składowa całkowa,
+
+X - składowa różniczkowa.
+
+     
+
+= z tworz z s rza "wz"
+
+Rozdział : 6. Programowanie sterowników AEG SCHNEIDER Modicon
+
+312

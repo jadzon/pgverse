@@ -1,0 +1,29 @@
+Dwa pozostałe elementy języka LL to przedstawione na Wyd. 6.3 cewki zwykłe
+oraz cewki z pamięcią stanu podtrzymywaną przez baterię (latched coil), tzn.
+takie, dla których skojarzone z nimi zmienne zachowają swoją wartość mimo
+zaniku napięcia zasilania (w normie /EC //3/ noszą nazwę retentive variables).
+
+<image/figury/k4_page286_figure1.png>
+
+Wyd. 6.3 Cewki w sterowniku Modicon.
+
+Oprócz standardowych elementów języka można również korzystać ze zmien-
+nych systemowych, informujących o stanie sterownika. Jedną z nich jest wskaź-
+nik stanu baterii (battery coil) zajmujący jeden bit obszaru wyjść dyskretnych
+sterownika (Wyd. 6.4).
+
+<image/tabele/k4_page286_table1.png>
+
+Wyd. 6.4 Zastosowanie cewki specjalnej "battery coil".
+
+W powyższym przykładzie, w trakcie konfiguracji przyporządkowano stykowi
+specjalnemu battery coil numer 00528. W razie rozładowania baterii styk ten
+zostanie zwarty, co spowoduje ustawienie wartości logicznej | na wyjściu 00067.
+
+ 
+
+ 
+
+- pęzmr=
+
+286 Rozdział : 6 Programowanie sterowników AEG SCHNEIDER Modicon

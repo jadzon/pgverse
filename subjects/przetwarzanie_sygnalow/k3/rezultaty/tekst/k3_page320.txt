@@ -1,0 +1,39 @@
+22. Przetwarzanie sygnałów fonicznych
+
+Dźwięk czterokanałowy stosowany w filmach nosi nazwę Dolby Stereo, a jego wersja do-
+mowa -— Dolby Surround Pro Logic (Dolby i Pro Logic są znakami firmowymi Dolby
+Laboratories Licensing Corp.). Cztery kanały są zakodowane w standardowym lewym i pra-
+wym kanale, aby można było odtwarzać muzykę w zwykłych, dwukanałowych systemach
+stereo. Dekoder Dolby stosuje się podczas odtwarzania w celu zrekonstruowania dźwięku
+w czterech kanałach. Kanały lewy i prawy, z głośnikami umieszczonymi po każdej stronie
+ekranu kinowego lub telewizyjnego, są podobne jak w zwykłym, dwukanałowym systemie
+stereofonicznym. Głośnik kanału środkowego jest zazwyczaj umieszczany bezpośrednio nad
+ekranem lub pod nim. Jego zadaniem jest odtwarzanie dialogów lub innych dźwięków bez-
+pośrednio związanych z obrazem i utrzymywanie tych dźwięków zawsze pośrodku ekranu
+niezależnie od umiejscowienia widza-słuchacza. Głośniki otaczające (surround) są umicsz-
+czane na lewo i na prawo od słuchacza. Tych głośników w dużym pomieszczeniu może być
+nawet do dwudziestu. Kanał otaczający przekazuje tylko średnie częstotliwości (powiedzmy
+od 100 Hz do 7 kHz) i ma opóźnienie o 15 do 30 ms. To opóźnienie stwarza u słuchacza
+wrażenie, że mowa dociera z ekranu, a nie z boków. Słuchacz słyszy bowiem najpierw sy-
+gnał mowy przychodzący z przodu, a potem opóźnioną wersję sygnału mowy przychodzącą
+z boków. Mózg słuchacza interpretuje sygnał opóźniony jako odbicie od ścian i go ignoruje.
+
+Kompansja
+
+W telekomunikacji przepływność bitowa ma istotne znaczenie, bo wprost proporcjonalnie wpły-
+wa na kosz przesyłania sygnału. Oszczędzanie bitów jest więc równoważne z oszczędzaniem
+pieniędzy. Kompansja jest często stosowaną techniką służącą do zmniejszenia przepływności
+
+zo eż roko redni dęta Jak już wspomnia-
+
+no poprzednio, najgłośniejszy wytrzymywany przez ucho dźwięk (120 dB) ma amplitudę ok.
+milion razy większą niż najsłabszy dźwięk wykrywany (0 dB). Ucho nie może jednak rozróżnić
+dźwięków różniących się od siebie o mniej niż o 1 dB (12% amplitudy). Tak więc jest tylko ok.
+120 różnych poziomów głośności, które mogą być wykrywane przez słuch ludzki. Poziomy te są
+logarytmicznie rozmieszczone w pełnym zakresie amplitudy o dynamice jeden do miliona.
+Jest to stwierdzenie ważne dla digitalizacji sygnałów fonicznych. Jeśli poziomy kwantyzacji
+są rozmieszczone równomiernie, to trzeba zastosować 12 bitów dla uzyskania jakości od-
+powiadającej sygnałowi mowy w telefonii. Wystarczy jednak tylko 8 bitów, jeśli zastosuje
+się niejednakowe poziomy kwantyzacji, dopasowując je do charakterystyki słuchu ludzkiego.
+
+<image/figury/k3_page320_figure1.png>

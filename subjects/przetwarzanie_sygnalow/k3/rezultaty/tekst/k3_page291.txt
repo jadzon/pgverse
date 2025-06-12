@@ -1,0 +1,29 @@
+318
+
+19. Filtry reki
+
+<image/figury/k3_page291_figure1.png>
+
+  
+    
+   
+  
+
+wydścżowy Wy! way zepo prze Angelo -4 przebieg wykladoczy niędy 46.0 3
+kiem do zera. W filtrach analogowych rozwiązuje się ten problem, stosując filtr Be
+
+Jest na szczęście prosty sposób modyfikacji filtrów rekursywnych tak, aby uzyskać fazę ze”
+rową. Na rys. 19.8 przedstawiono przykład działania takiego filtru. Na rys. 19.8 a) pokazano
+sygnał, który ma być filtrowany, a na rys. 19.8 b) — sygnał po przefiltrowaniu w jednobie-
+gunowym filtrze dolnoprzepustowym. Ponieważ jest to filtr o fazie nieliniowej, więc prawe
+i lewe zbocze nie wyglądają jednakowo, mają kształty odwrócone względem siebie. Jak
+iut. pogczednio powiedziana,.les-1Hr rektegywny: est. WoplomyeDiOWKRY: DAROCZYNAJĄE d
+próbki O zero i dochodząc aż do próbki 150, z kolejnym obliczeniem każdej próbki m
+tymi wartościami.
+
+Ter Syna Zaj, EE PAY 00 POPE 0 do a PCA RI I R
+i posuwamy się w kierunku próbki 0. Inaczej mówiąc, każda próbka w sygnale *
+
+wym jest obliczana na podstawie próbek wejściowych i wyjściowych leżących na pre
+od próbki właśnie obliczanej. Wynika stąd, że wzór rekursywny 19.1 został zamieniony
+na wzór:

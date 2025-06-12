@@ -1,0 +1,22 @@
+<image/tabele/k4_page489_table3.png>
+
+Wyd. 8.170 Faza grzanie i stabilizacja — Odczytanie aktualnej temperatury w reakto-
+rze, wywołanie bloku regulatora PID, sterowanie zaworem AV2 na dopływie me-
+dium ogrzewającego. Blok PB4 jest wywoływany z OB13
+
+'1.png
+<image/figury/k4_page489_figure1.png>
+
+Wyd. 8.171 Blok PBS - Faza Opróżnianie — Odczytanie i sprawdzanie aktualnego
+poziomu w reaktorze
+
+<image/tabele/k4_page489_table2.png>
+
+Wyd. 8.172 Blok PB5S - Faza Opróżnianie — Całkowite otwarcie zaworu spustowego,
+gdy reaktor nie jest opróżniony
+
+ 
+
+ 
+
+8.8 Sterowanie sekwencyjne procesem wsadowym 489

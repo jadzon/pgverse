@@ -1,0 +1,34 @@
+tualnego stanu wejścia, a nie od jego historii. Na przykład chwilowa wartość prądu w re-
+zystorze zależy tylko od chwilowej wartości spadku napięcia na nim, a nie od tego, w jaki
+a NZ Jeśli system charaktery-
+zuje się liniowością statyczną i jest bezpamięciowy, to musi być systemem liniowym. To
+iąć wię eski owa A kORAR ADI W COOO0ów
+
+Ważną cechą systemów liniowych jest ich zachowanie się w przypadku sygnałów sinu-
+soidalnych. Jest to właściwość zwana wiernością odtwarzania sinusoidy. Jeśli sygna-
+łem wejściowym systemu liniowego jest przebieg sinusoidalny, to na wyjściu też będzie
+przebieg sinusoidalny o częstotliwości dokładnie takiej samej, jak przebiegu wejściowe-
+
+różnić się amplitudą i fazą. Jest to w elektronice rzecz znana. Układ może być opisany
+PE Ore czyli przez wykresy zmian wzmocnienia i kąta fazo-
+wego w funkcji częstotliwości
+Zakieńńwy jak aż yo AGE Kiba i daj BAJM
+przebieg sinusoidalny w odpowiedzi na sinusoidę na wejściu, to czy taki system jest
+na pewno liniowy? Odpowiedź jest „nie”, choć wyjątki są rzadkie i na ogół oczywi-
+ste. Wyobraźmy sobie na przykład ukrytego wewnątrz systemu diabełka, który chce
+nas wprowadzić w błąd. Diabełek dysponuje oscyloskopem do obserwacji sygnału
+wejściowego oraz generatorem przebiegu sinusoidalnego do wytwarzania sygnału wyj-
+ściowego. Gdy wprowadzamy sygnał sinusoidalny na wejście, diabełek szybko mierzy
+częstotliwość i tak ustawia swój generator, aby wytwarzał odpowiedni sygnał wyjścio-
+wy. Oczywiście ten system nie jest liniowy, gdyż nie jest addytywny. Aby to wykazać,
+wprowadźmy do systemu sumę dwóch przebiegów sinusoidalnych. Diabełek może od-
+powiedzieć na wyjściu tylko jednym przebiegiem sinusoidalnym. Ten przykład wcale
+nie jest tak bardzo zmyślony, jak by się mogło wydawać. Na podobnej zasadzie działa-
+ją układy z pętlą synchronizacji fazowej (PLL — Phase Locked Loops).
+Aby lepiej uchwycić pojęcie liniowości, pomyślmy o techniku próbującym a.
+czy jego urządzenie jest liniowe. Technik do wejścia urządzenia dołączy generator
+biegu sinusoidalnego, a do wyjścia — oscyloskop. Mając sinusoidę na wejściu zaa.
+technik będzie sprawdzał, czy występuje ona także na wyjściu. Przebieg, na przykład,
+nie powinien być obcięty ani od góry, ani od dołu, górna połówka nie może różnić się od
+
+<image/figury/k3_page84_figure1.png>

@@ -1,0 +1,48 @@
+Morfologiczne przetwarzanie obrazu
+
+ 
+
+Podstawą decyzji o usunięciu piksela są cztery warunki zawarte w podprogramie w tablicy
+25.2. Wszystkie te warunki muszą być spełnione, aby piksel został zamieniony z czarnego
+w biały. Pierwsze trzy warunki są dość proste, a czwarty raczej skomplikowany. Jak po-
+kazano na rys. 25.12 a), każdy piksel o lokalizacji [R,C] ma ośmiu sąsiadów (czyli piksele
+sąsiednie). Cztery piksele sąsiednie w kierunku poziomym i pionowym (oznaczone 2, 4, 6, 8)
+są często nazywane bliskimi sąsiadami. Piksele sąsiadujące ukośnie (oznaczone 1, 3, 5, 7)
+są dalekimi sąsiadami. Cztery warunki są następujące:
+
+Warunek 1: Rozpatrywany piksel musi być czarny. Jeśli piksel już jest biały, to nie jest po-
+dejmowane żadne działanie.
+
+Warunek 2: Co najmniej jeden z pikseli będących bliskimi sąsiadami musi być biały. To
+gwarantuje, że erozja grubych grzbietów będzie się odbywała od zewnątrz. Inaczej mówiąc,
+jeśli piksel jest czarny i jest otoczony ze wszystkich stron czarnymi pikselami, to nie powi-
+nien być poddawany tej iteracji. Dlaczego są sprawdzani tylko bliscy, a nie wszyscy sąsiedzi?
+Odpowiedź jest prosta. Przeprowadzono próby z dwoma algorytmami i ten z bliskimi sąsia-
+dami okazał się lepszy. Pamiętajmy, że w metodach iteracyjnych bardzo często korzysta się
+z metody prób i błędów w celu określenia, czy jedna metoda jest lepsza od drugiej.
+Warunek 3: Piksel musi mieć więcej niż jednego czarnego sąsiada. Jeśli ma tylko jednego, to
+znaczy, że znajduje się na końcu linii i dlatego nie powinien zostać usunięty.
+
+Warunek 4: Piksela nie można usunąć, gdyby miało to spowodować rozłączenie pikseli są-
+siednich. Chodzi bowiem o to, aby każdy grzbiet zamienić w linię ciągłą, a nie w grupę
+rozerwanych segmentów. Jak wynika z przykładów na rys. 25.12, pojęcie połączone oznacza,
+że wszystkie czarne piksele będące sąsiadami stykają się ze sobą, niepołączone zaś, że czarni
+sąsiedzi tworzą dwie lub więcej grup.
+
+a. Numeracja pikseli
+
+Kołumny
+C-1. .. C. ;CHl
+
+„ET
+-H[-
+„ef
+
+<image/wzory/k3_page388_formula1.png>
+
+c. Sąsiedzi niepołączeni
+<image/wzory/k3_page388_formula2.png>
+
+RI Sąsiadujące piksele. Aoaj c lokalkacji AJ me osłam plkoal oęoiodnich (opoiodkej, które na
+a) ponumerowano od 1 do 8. Na rys. b), c) pokazano przykłady sąsiednich pikseli połączonych i niepo-
+ET kan he oem para) W O NAA

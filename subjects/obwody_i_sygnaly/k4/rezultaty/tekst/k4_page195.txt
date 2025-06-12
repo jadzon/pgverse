@@ -1,0 +1,51 @@
+ai TTWENYWIWLZZAŁZ £ MĘLZ z77
+
+Przykład 2.1-20. Rozpatrzmy elementy SLS: opory, indukcyjności i pojemności.
+1
+Dwa opory R; i R; o wartościach: R, = a[Q] i „1 = a[S] są elementami du-
+2
+zlnymi, bowiem z równania: u = ai oporu R; po podstawieniu iu, u—i' otrzymujemy
+równanie: i* = aw' oporu R,.
+Elementami dualnymi są: indukcyjność o wartości L= a[H] i pojemność o wartości
+C = a[F], co wynika wprost z porównania równań (1.2-24) i (1.2-36) tych elementów.
+Przykład 2.1-21. Elementami dualnymi są: idealne źródło napięciowe o sile elektromotorycz-
+zej: e = f(t) [V] oraz idealne źródło prądowe o wydajności prądowej: j = f(t) [A].
+Przykład 2.1-22. O dualności elementów można mówić także w odniesieniu do elementów
+zieliniowych i/lub niestacjonarnych.
+Opór (nieliniowy) o charakterystyce u = f(i) oraz opór (nieliniowy) o charakterystyce: i = f(u)
+opuszczamy „primy”) są elementami dualnymi. Opory są zatem elementami dualnymi, jeśli ich
+charakterystyki — jedna w układzie współrzędnych i, u, druga w układzie współrzędnych u, i — są
+takie same.
+Analogicznie, indukcyjność (nieliniowa) o równaniach:
+
+»ry/k4_page195_formula1.png
+
+jest elementem dualnym względem pojemności (nieliniowej) o równaniach:
+
+ry/k4_page195_formula2.png
+Mówimy zatem, że wielkościami dualnymi są także skojarzenie magnetyczne i ładunek.
+
+B. Układy dualne. Przejdziemy teraz do omówienia układów dualnych,
+przyjmując pewne założenia ograniczające. Załóżmy mianowicie, że rozpat-
+rywany układ U powstał przez połączenie szeregowe i/lub równoległe dwuzacis-
+kowych elementów skupionych (mówimy wówczas, że układ U ma strukturę
+szeregowo-równoległą). Wyłączamy zatem z rozważań układy zawierające
+elementy wielozaciskowe, np. indukcyjności wzajemne, transformatory idealne,
+żyratory i źródła sterowane. Rozpatrzmy układ U”, który możemy otrzymać
+z układu U w wyniku następującego przekształcenia.
+
+Przyjmujemy, że przejście od układu U do układu U” polega na tym, że:
+
+— każdy element układu U przechodzi w element dualny w układzie U';
+
+— każde połączenie szeregowe (równoległe) elementów w układzie U prze-
+chodzi odpowiednio w połączenia równoległe (szeregowe) elementów dualnych
+w układzie U';
+
+— każde zwarcie (rozwarcie) w układzie U przechodzi odpowiednio w roz-
+warie (zwarcie) w układzie U”.
+
+Jeżeli warunki powyższego przekształcenia są spełnione, powiemy, że układ
+U' jest dualny względem układu U. Jest przy tym oczywiste, że jeśli układ U' jest
+dualny względem układu U, to także układ U jest dualny względem układu U”.
+Możemy zatem mówić wówczas o układach dualnych U i U'.

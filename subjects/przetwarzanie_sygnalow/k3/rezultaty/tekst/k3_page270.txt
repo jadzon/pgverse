@@ -1,0 +1,75 @@
+Filtry optymalne 295
+
+ 
+
+„Filtry optymalne
+
+"Na rys. 17.7 a) przedstawiono często spotykany problem wymagający filtracji. Chodzi tu
+
+o próbę wydobycia przebiegu (w tym przypadku impulsu wykładniczego) ukrytego w szumie
+losowym. Ten problem, jak pokazano na rys. 17.7 b), wcale nie jest łatwiejszy w dziedzi-
+nie częstotliwości. Sygnał ma widmo złożone głównie ze składowych o małych częstotliwo-
+ściach. Szum zaś ma widmo białe (jednakowa amplituda przy wszystkich częstotliwościach).
+Ponieważ widma szumu i sygnału nakładają się na siebie, więc nie jest jasne, jak je można
+w najlepszy sposób rozdzielić. Faktycznie, istotną kwestią jest zdefiniowanie, co tutaj oznacza
+słowo „najlepszy”. Rozpatrzymy trzy filtry, z których każdy jest w innym sensie „najlepszy”
+(optymalny). Na rys. 17.8 przedstawiono odpowiedzi impulsowe i częstotliwościowe wszyst-
+kich trzech filtrów, a na rys. 17.9 — wyniki ich użycia do filtracji przebiegu z rys. 17.7 a).
+Filtr o średniej kroczącej był tematem rozdziału 15. Jak pamiętacie, każdy punkt w sygnale
+jest wyznaczany przez filtr o średniej kroczącej jako średnia pewnej liczby punktów z sygnału
+wejściowego. To powoduje, że odpowiedź impulsowa tego filtru jest impulsem prostokątnym
+o amplitudzie równej odwrotności liczby punktów w tej średniej. Filtr o średniej kroczącej jest
+optymalny w tym sensie, że daje najszybszą odpowiedź skokową przy danym tłumieniu szumu.
+Filtr dopasowany omówiono już poprzednio w rozdziale 7. Jak pokazano na rys. 17.8 a),
+odpowiedź impulsowa filtru dopasowanego jest taka sama, jak sygnał, który ma być wykry-
+ty, z tą tylko różnicą, że jest odwrócony lewo-prawostronnie. Zasadą filtru dopasowanego
+jest korelacja, i takie odwrócenie jest niezbędne do przeprowadzenia korełacji przy użyciu
+
+<image/figury/k3_page270_figure1.png>
+
+15
+
+    
+
+  
+
+NZ
+
+m
+,
+'
+,
+,
+1
+ę
+i
+|
+'
+,
+
+aasjpkozapoozzoooa
+
+17.7. Przykład filtracji optymalnej. Na rys. a) przedstawiono sygnał wykładniczy ukryty w szumie losowym, a na rys.
+widma sygnału
+
+i szumu. Ponieważ sygnał i szum naktadają się na siebie zarówno w dziedzinie
+
+częstotliwościowe
+, jak i częstotliwości, więc nie jest oczywiste określenie najlepszego sposobu ich rozdzielenia
+
+446400817 196 bakd zzoipried o 2002
+WPRoEE Lo | Paa PODR w Dió
+
+au
+
+wępasiowow
+a£2 sir
+
+SZĘSE2
+
+a> r.
+
+4717"
+w
+
+177% TW

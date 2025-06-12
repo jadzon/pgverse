@@ -1,0 +1,71 @@
+422
+
+25. Specjalne techniki obraza
+
+Algorytm do określania, czy piksele-sąsiedzi są połączone, czy niepołączone, polega na z
+czaniu przejść z czerni do bieli sąsiadów położonych obok siebie, w kierunku obrotu wskaż
+wek zegara. Na przykład jeśli piksel 1 jest czarny, a piksel 2 biały, to mamy jedno przejś
+typu czerń-biel. Takie jedno przejście mamy także wówczas, gdy piksel 2 jest czarny, a
+piksele 3 i 4 są białe. Ogółem jest osiem lokalizacji, gdzie mogą zajść przejścia czert i
+Aby jeszcze lepiej zilustrować tę definicję, w przykładach na rys. 25.12 b), c) zamies
+gwiazdki przy każdym przejściu czerń-biel. Kluczem do tego algorytmu jest fakt, że wó
+czas nie ma przejść czerń-biel lub jest tyko jedno takie przejście, gdy piksele-Ssąsiedzi
+połączone. Więcej przejść niż jedno wskazuje, że piksele-sąsiedzi są niepołączone.
+
+Jako dodatkowe przykłady przetwarzania obrazu binarnego rozważmy te typy algorytmów, k
+re mogą być przydatne do przetwarzania obrazu po operacji jego szkieletowania. Wadą on
+wionego algorytmu jest pozostawienie znacznej ilości rozmyć, krótkich odrośli wystając
+na końcach dłuższych segmentów. Do kwestii likwidacji tych rozmyć można podejść na k
+różnych sposobów. Na przykład można zapętlić program wokół obrazu w taki sposób,
+usuwać piksele na końcach linii. Te piksele są identyfikowane przez fakt, że mają tylko jed
+czarnego sąsiada. Po kilkakromym powtórzeniu takiej procedury usuwa się rozmycia kosz
+skrócenia wszystkich prawidłowych linii. Lepsza metoda polega na utworzeniu pętli pre
+mowej, która obejmuje obraz i identyfikuje piksele gałęziowe, czyli piksele mające więcej
+dwóch sąsiadów. Rozpoczynając od każdego z pikseli gałęziowych, zlicza się liczby pik
+w każdej odrośli. Jeśli liczba pikseli w odrośli jest mniejsza od pewnej wartości (powiedzmy
+to stwierdza się, że jest to rozmycie i piksele w tej gałęzi zmienia się z czarnych w białe.
+Inny algorytm może zamieniać format danych z mapy bitów w mapę wektorową. To pe
+ga za sobą stworzenie listy grzbietów zawartych w obrazie i pikseli zawartych w każd
+grzbiecie. W mapie wektorowej każdy grzbiet w obrazie linii papilarnych ma swoją ind
+dualną tożsamość, w przeciwieństwie do obrazu złożonego z wielu niezwiązanych ze
+pikseli. Taki algorytm można zrealizować, obejmując obraz pętlą i szukając końcówek
+dej linii, a więc pikseli mających tylko jednego czarnego sąsiada. Zaczynając od końcó
+trzeba prześledzić każdą linię, przechodząc od piksela do piksela łączącego. Po osiągi
+przeciwnego końca linii, deklaruje się wszystkie prześledzone piksele jako obiekty poje
+cze i tak są one traktowane w realizowanych później algorytmach. |
+
+ 
+  
+ 
+  
+ 
+ 
+ 
+  
+  
+ 
+ 
+  
+
+Tomografia komputerowa
+
+Główną trudnością przy tworzeniu obrazów rentgenowskich (lub pochodzących od inn egr
+mieniowania przenikliwego) jest dwuwymiarowość obrazowania trójwymiarowych ob
+To powoduje, że struktury mogą na siebie zachodzić w uzyskanym obrazie, chociaż w ob
+są całkowicie oddzielne. Jest to kłopotliwe zwłaszcza w diagnostyce medycznej, gdzie
+dające się obrazy wielu organów anatomicznych mogą lekarzowi utrudniać interpretację. |
+tach 30. usiłowano przezwyciężyć tę trudność przez przesuwanie, podczas tworzenia ob
+źródła promieniowania rentgenowskiego i detektora. Ruchy są wykonywane w pewien ś
+dynowany sposób. Geometria tego ruchu powoduje, że tylko jedna płaszczyzna w cielef
+ta jest zogniskowana, a struktury leżące poza tą płaszczyzną stają się rozmyte. Jest to a
+do aparatu fotograficznego, który zogniskowany na obiekcie w odległości np. 2 met
+rozmycie obiektów znajdujących się w odległości np. I lub 20 metrów. Te powiązane
+techniki, polegające na rozmywaniu w wyniku ruchu, są teraz objęte ogólną nazwą tc
+klasycznej. Słowo tomografia znaczy dosłownie obraz płaszczyzny.
+
+Prace nad tomografią klasyczną prowadzono przez ponad 50 lat, ale mimo to jest onaf
+stosowana. Przyczyną jest zasadnicza wada tej metody — zakłócające obrazy nie są
+ne, lecz tylko rozmywane. Uzyskiwane obrazy nie mają zwykle praktycznego zastos
+z powodu zbyt słabej jakości. Długo poszukiwanym rozwiązaniem okazał się system m
+tworzyć obraz reprezentujący przekrój 2D (dwuwymiarowy) obiektu 3D (trójwymi
+bez żadnych zakłóceń pochodzących od innych struktur w obiekcie 3D.

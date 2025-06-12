@@ -1,0 +1,45 @@
+3.5. Moce w obwodach prądu stalego 305
+
+moc P; oddawaną przez idealne źródło napięciowe E z mocą P, oddawaną
+przez idealne źródło prądowe J w obu układach.
+Moc P„ możemy wyrazić przez moc P,, następująco:
+
+<image/wzory/k4_page303_formula1.png>
+
+Podobnie:
+
+<image/wzory/k4_page303_formula2.png>
+
+Jeżeli R, 4 R, to P„; P„ oraz P;, 4 Pz. Widzimy więc, że zas-
+tąpienie danego źródła rzeczywistego źródłem równoważnym nie zmienia
+wprawdzie warunków pracy obciążenia (tzn. prąd I, napięcie U i moc P nie
+ulegają zmianie), powoduje jednak w ogólnym przypadku zmianę warunków
+pracy wewnątrz samego źródła.
+
+Ze wzoru (3.5-11) wynika, że jeśli R > R. to pod względem energetycznym
+korzystniejsza jest współpraca obciążenia ze źródłem napięciowym. Przy tej
+samej mocy dostarczonej do obciążenia mniejsza jest bowiem wówczas moc
+tracona w oporze wewnętrznym źródła, a tym samym i moc oddawana przez
+źródło idealne do układu (por. wzór (3.5-12)".
+
+Analogicznie, jeśli R < R„, korzystniejsze warunki współpracy z obciążeniem
+zapewnia źródło prądowe. Należy podkreślić, że wnioski te mają istotne
+znaczenie praktyczne.
+
+C. Nieaddytywność mocy. W p. 2.1.7 i 3.3.2 sformułowaliśmy zasadę
+superpozycji dla układów liniowych. Jak pamiętamy zasada ta odnosi się do
+prądów i napięć. Nie jest ona natomiast słuszna dla mocy, tzn. jeżeli w układzie
+liniowym występuje kilka źródeł niezależnych, to moc wydzielana w wyróżnionym
+elemencie układu nie j es t sumą mocy wydzielanych w tym elemencie przez każde
+ze źródeł działających z osobna”.
+
+Przykład 3.5-7, W układzie z rys. 3.5-8a w oporze R. jest wydzielana moc:
+
+/k4_page303_formula3.png
+
+Gdyby źródła E oraz J działały osobno (rys. 3.5-8b, c), dostarczałyby do oporu R, — odpo-
+wiednio — moce:
+
+1 Wynika to także z zasady Tellegena, jako że P, = P,„ + Poraz P, = P* +-P.
+% Mechaniczne przeniesienie zasady superpozycji na moce jest częstym studenckim błędem
+popełnianym podczas analizy obwodów liniowych.

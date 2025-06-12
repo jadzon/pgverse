@@ -1,0 +1,11 @@
+<image/tabele/k4_page477_table1.png>
+
+aktorze z wartością maksymalna
+
+<image/figury/k4_page477_figure1.png>
+
+Wyd. 8.154 Druga faza sterowania (grzanie) — odliczanie czasu trwania fazy grzania
+
+— > ——
+
+wzory/k4_page477_formula1.pnq

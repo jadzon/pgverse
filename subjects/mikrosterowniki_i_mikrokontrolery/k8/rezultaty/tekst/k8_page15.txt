@@ -1,0 +1,31 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 17
+
+<image/figury/k8_page15_figure1.png>
+
+5. Schemat logiczny, znaczenie linii pamięci FLASH typu NOR o dostępie
+
+równoległym i pojemności np. 1 MB.
+
+<image/figury/k8_page15_figure2.png>
+
+Znaczenie linii pamięci FLASH z interfejsem standardowym:
+
+A0 — An — (n+1)-bitowa magistrala adresowa (dla Am29F080B n = 19), wystawiany jest na niej n-
+bitowy adres komórki do odczytu lub zapisu,
+
+DQO0 - DQ7 - 8-bitowa dwukierunkowa magistrala danych służąca do wprowadzania i
+wyprowadzania danych spod adresów ustawianych na magistrali adresowej,
+
+CEż- (Chip Enable) wybór (aktywacja) układu poziomem niskim,
+
+WE+ — (Write Enable) niski poziom na tej linii powoduje zapis bajta pod wskazany adres (ale nie
+zapis bajta do pamięci FLASH — to wymaga uruchomienia procedury programowania),
+
+OE — (Output Enable) niski poziom na tej linii powoduje wystawienie na magistrali danych danej
+spod wskazanego adresu,
+
+RESET — sprzętowy reset wprowadzający pamięć w tryb odczytu, aktywny stanem niskim,
+
+RY/BYŁ — wyjście służące do sprawdzania czy pamięć zakończyła wewnętrzne algorytmy
+kasowania/programowania, stan wysoki oznacza gotowość na przyjęcie kolejnych poleceń, stan niski
+informuje, że pamięć jest zajęta (niegotowa), bo jest w trakcie wykonywania wewnętrznych operacji.

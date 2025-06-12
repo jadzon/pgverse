@@ -1,0 +1,67 @@
+Rozplot 293
+
+ 
+
+Są pewne granice udoskonaleń, które można osiągnąć przez rozplot. Można więc powie-
+- dzieć, że jeśli jesteśmy zbyt zachłanni, to zawodzi zastosowana metoda. W tym przypadku
+zachłanność oznacza próbę uzyskania nadmiernego zwężenia impulsu. Spójrzmy, co się wte-
+dy dzieje. Jeśli żądany impuls zostaje zwężony, to jego widmo częstotliwościowe musi wtedy
+zawierać więcej składowych o dużych częstotliwościach. Ponieważ te składowe o dużych
+częstotliwościach mają w wykrywanym impulsie bardzo małe amplitudy, więc filtr powinien
+mieć bardzo duże wzmocnienie dla tych częstotliwości. Na przykład z rys. 17.5 f) wynika,
+że niektóre częstotliwości powinny zostać wzmocnione o czynnik £rzy, aby można było uzy-
+skać żądany impuls przedstawiony na rys. 17.5 c). Jeśli uczynić żądany impuls węższym, to
+wzmocnienie filtru rozplatającego przy dużych częstotliwościach musi być jeszcze większe.
+Trudność polega na tym, że w tej sytuacji nawet małe błędy mszczą się bezlitośnie. Na
+przykład jeśli składowe o pewnych częstotliwościach będą wzmacniane o czynnik 30,
+podczas gdy wymagane jest tylko 28, to w sygnale rozplecionym powstanie przypusz-
+czalnie bałagan. Chcąc przenieść rozplot na wyższy poziom działania, trzeba bardziej
+szczegółowo i ze znacznie większą dokładnością rozumieć właściwości splotu. W świe-
+cie rzeczywistych zastosowań zawsze są jakieś niewiadome spowodowane takimi kło-
+potliwymi zjawiskami, jak np. szumem elektronicznym, dryfem cieplnym, różnicami
+między poszczególnymi układami itp. Te właśnie niewiadome czynniki stawiają granice
+jakości działaniu rozplotu.
+
+Nawet, jeśli niechciany spłot jest doskonałe rozumiany, to istnieje jednak pewien czyn-
+nik ograniczający działanie rozplotu — jest nim szum. Na przykład większość niechcia-
+nych splotów przyjmuje postać filtru dolnoprzepustowego, ograniczającego amplitudę
+składowych o dużych częstotliwościach w sygnale. Przez rozplot wprowadza się korektę,
+wzmacniając te częstotliwości. Jeśli jednak amplituda tych składowych obniży się poniżej
+poziomu nieuniknionego szumu systemu, to informacja w nich zawarta jest tracona. Nie
+odzyska się tych informacji przez żadne, choćby nie wiadomo jak rozbudowane, przetwa-
+rzanie sygnału. Jest stracona na zawsze. Żegnaj informacjo! Goodbye! Adios! Sayonara!
+Próba przywrócenia tych danych spowoduje tylko wzmocnienie szumu. W skrajnym przy-
+padku wartość sygnału przy pewnych częstotliwościach może być sprowadzona do zera.
+To nie tylko wymazuje informację, lecz także będzie próbować wymusić nieskończenie
+duże wzmocnienie dla tych częstotliwości w filtrze rozpłatającym. A oto rozwiązanie tych
+trudności: projektujcie mniej „agresywny” filtr rozplatający i/lub stawiajcie pewne ograni-
+czenia na dopuszczalne wzmocnienie przy każdej z częstotliwości.
+
+Jak daleko możemy się posunąć? Kiedy nasza „chciwość” jest zbyt duża? To całkowicie
+zależy od rozwiązywanego problemu. Gdy sygnał jest dość gładki i ma mały szum, wtedy
+można uzyskać znaczna poprawę (powiedzmy o czynnik 5-10). Gdy zaś sygnał bardzo się
+zmienia z upływem czasu, nie jest zbyt dobrze rozumiany lub jest zaszumiony, to poprawa
+będzie słabsza (powiedzmy o czynnik 1-2). Pomyślny rozplot wymaga sporego testowania.
+Gdy rozplot działa na pewnym poziomie, spróbujcie pójść nieco dalej i zauważycie, kiedy
+wszystko traci sens. Żadna analiza teoretyczna nie zastąpi takiego procesu iteracyjnego.
+Rozplot można też zastosować do sygnałów zakodowanych w dziedzinie częstotliwości.
+Klasycznym przykładem jest rekonstrukcja starych nagrań sławnego śpiewaka operowe-
+go Enrica Carusa (1873-1921). Dokonywano tych nagrań na sprzęcie bardzo prymityw-
+nym, jak na obecne standardy. Najpoważniejszym problemem są rezonanse długiej tuby
+rurowej służącej do zbierania dźwięku przy nagraniach. Za każdym razem, gdy śpiewak
+trafia w jedną z częstotliwości rezonansowych, głośność nagrania gwałtownie wzrasta.
+Rozplot cyfrowy poprawia subiektywną jakość tych nagrań przez stłumienie głośnych
+momentów muzyki. Opiszemy tu tylko zasadę ogólną. Opis szczegółowy można znaleźć
+w oryginalnej publikacji: T. Stockham, T. Cannon i R. Ingebretsen: Blind Deconvolution
+Through Digital Signal Processing, „Proc. IEEE”, vol. 63, kwiecień 1975, str. 678-692.
+
+ 
+
+|
+
+ł
+i
+
+38 | 4 T.TETSEIEW.
+
+Ma

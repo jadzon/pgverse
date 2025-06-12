@@ -1,0 +1,28 @@
+Typowe odpowiedzi impulsowe 127
+
+Z wzoru wynika, że każda próbka w sygnale wyjściowym jest równa różnicy między dwie-
+ma sąsiednimi próbkami w sygnale wejściowym. Na przykład y[40] = x[40] — x[39]. Trzeba
+zaznaczyć, że nie jest to jedyny sposób wyznaczania pochodnej dyskretnej. Inną, często sto-
+sowaną metodą, jest określanie nachylenia symetrycznie wokół wyznaczonego punktu, na
+przykład y[n] = (xn + 1] - x[n - 1])/2.
+
+Stosując takie samo podejście, można obliczyć każdą próbkę w sumie bieżącej przez sumowanie
+wszystkich punktów sygnału oryginalnego, znajdujących się na lewo od położenia próbki. Na
+przykład, jeśli y[n] jest sumą bieżącą x[n], to próbkę y[40] oblicza się, sumując próbki od x[0] do
+x[40]. W podobny sposób jest obliczana próbka y[41] przez sumowanie próbek od x[0) do x[41 |.
+Obliczanie sum bieżących w taki sposób byłoby, oczywiście, bardzo nieefektywne. Można jed-
+nak — na przykład — jeśli y[40) zostało już obliczone, obliczyć y[41] przez proste dodawanie:
+y(41] = xf411 + vi401 Postać wzom osólnesa:
+
+<image/wzory/k3_page112_formula1.png>
+AOR. Obliczanie sumy bieżącej. W tej zależności x[n] jest sygnatem oryginainym a y[n] sumą
+
+<image/figury/k3_page112_figure1.png>
+
+ 
+
+Rys. 7.3. Przykład operacji podobnych do różniczkowania i catkowania. Sygnał na rys. b) jest pierwszą
+różnicą sygnału z rys. a). Odpowiednio, sygnał z rys. a) jest sumą bieżącą sygnału z rys. b). Te metody
+przetwarzania są stosowane do sygnałów dyskretnych, tak samo jak różniczkowanie i catkowanie do
+
+sygnatów ciągłych

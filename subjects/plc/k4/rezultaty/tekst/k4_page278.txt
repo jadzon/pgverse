@@ -1,0 +1,48 @@
+Manual, a następnie przełączony w tryb Auzo. Ograniczenia na wyjście CV działa
+także w trybie Manual.
+
+[F2] Bit wyboru trybu uaktualniania 7M (Time Mode Bit) (słowo 0, bit 0),
+który przełącza między trybem czasowym a trybem S77/. Tryb czasowy oznacza,
+że wartość wyjściowa jest uaktualniana w odstępach czasowych określonych
+przez okres uaktualniania (loop update) bloku PID. Kiedy użyty jest tryb czaso-
+wy, okres uaktualniania powinien być przynajmniej 10 razy większy niż czas
+cyklu programowego procesora co zapobiega nieścisłościom czasowym lub za-
+kłóceniom.
+
+Przy wyborze trybu S77 instrukcja P/D powinna być zaprogramowana w podpro-
+gramie przerwań S7/, a procedura S7/ powinna mieć czas uaktualniania zgodny
+z parametrem uaktualniania pętli. Okres S7/ ustawiany jest w słowie statusu
+$:30.
+
+[F3] Bit wyboru wzoru na uchyb regulacji CM (Control Mode Bit) (słowo 0,
+bit 2) ustala wybór wzoru na uchyb regulacji: E=SP-PV lub E=PV-SP. Wybór
+ten pozwala zapewnić ujemne sprzężenie zwrotne w pętli regulacyjnej biorąc pod
+uwagę wzmocnienie obiektu, czujnika i przetwornika pomiarowego oraz organu
+wykonawczego.
+
+Wartość zadana SP (Set Point) (słowo 2), którą należy wpisać do trzeciego
+słowa Control Block. Np., gdy jest on zaadresowany przez N:/0:0, to wartość
+SP wpisujemy pod adres N/0:2. Bez skalowania zakres tej wielkości wynosi od 0
+do 16383, w przeciwnym razie od minimum skalowania $min (słowo 8) do mak-
+simum Smax (słowo 7).
+
+Współczynnik proporcjonalności (wzmocnienie) Kc (Gain) (słowo 3), którego
+zakres wynosi od 0.1 do 25.5.
+
+Czas zdwojenia (stała całkowania) 7, (Reset) (słowo 4) ustawiany w zakresie
+od 0.1 do 25.5 min/powtórkę.
+
+Czas wyprzedzenia (stała różniczkowania) Tp (Rate) (słowo 5) ustawiany w
+zakresie od 0.01 do 25.5 min. Dla procesora powyżej SŁC 5/03 poprawny jest dla
+trzech powyższych parametrów również zakres od 0 do 32767. W tych proceso-
+rach można stosować zmiany zakresów dla Kc oraz 7, przez ustawienie bitu RG
+(Range Enhancement Bit). Ponadto, w zadaniach regulacji z częstymi i szybkimi
+zmianami wartości zadanej SP, warto rozważyć możliwość innego obliczania
+składowej różniczkowania. Bit wyboru akcji różniczkowania DA (Derivitive
+Rate Action Bit) umożliwia wybór różniczkowania wielkości PV zamiast uchybu
+regulacji. W takim przypadku zmiany SP nie podlegają różniczkowaniu i nie
+wpływają na wielkość wyjściową.
+
+ 
+
+278 Rozdział: 5. Język schematów drabinkowych dla SLC 500

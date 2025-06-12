@@ -1,0 +1,52 @@
+170 2. Pojęcia podstawowe — układy
+
+O L<ŁLhę Z
+
+nie tylko w zagadnieniach analizy, ale również przy formułowaniu i rozwiązywa-
+niu niektórych problemów ogólnych. Są one także stosowane w problemach
+syntezy, polegających na znajdowaniu układu o z góry zadanych właściwościach.
+
+2.1.2. Dwójnik, czwórnik, wielowrotnik
+
+Omówimy teraz najważniejsze pojęcia charakterystyczne dla ujęcia zacis-
+kowego.
+
+A. Pojęcie dwójnika. Dwójnikiem (rys. 2.1-2a) nazywamy układ, w któ-
+rym:
+
+a)
+
+9—
+
+<image/figury/k3_page170_figure1.png>
+
+ 
+
+Rys. 2.1-2
+
+a) wyróżniono dwa zaciski (parę zacisków);
+b) stan zaciskowy jest określony przez jeden prąd i |
+jedno napięcie u (między zaciskami dwójnika);
+c) prąd i jest związany z napięciem u jednym równa
+Przyjmujemy przy tym, że (rys. 2.1-2b):
+1) zachodzi równość:
+
+vzory/k3_page170_formula3.png
+
+co umożliwia posługiwanie się tylko jednym prądem zacis
+znaczne ze spełnieniem prądowego prawa Kirchhoffa;
+
+2) napięcie u jest różnicą potencjałów rozumianycł ,
+kwaibmierzonychwzgldemzaciskuodniesieniacwzory/k3_page170_
+
+<image/wzory/k3_page170_formula1.png>
+
+co umożliwia posługiwanie się tylko jednym napięcier
+dwójnika (bez dodatkowego zacisku odniesienia C) i je
+spełnieniem napięciowego prawa Kirchhoffa.
+
+Pojęcie dwójnika jest zatem uogólnieniem pojęcia
+zaciskowego. Każdy z rozpatrywanych w rozdziale 1 el
+wych jest przypadkiem szczególnym dwójnika. Przykładami
+opory, indukcyjności i pojemności, omawiane uprzednio v
+rozpatrywane w p. 1.5 połączenia szeregowe i równoległe

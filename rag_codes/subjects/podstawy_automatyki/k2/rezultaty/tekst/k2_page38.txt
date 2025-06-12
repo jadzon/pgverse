@@ -1,0 +1,65 @@
+74
+
+Zakładając, że na obiekt regulacji działają zakłócenia z;(t) oraz z>(t),
+jak pokazano na rysunku 7.4, można stwierdzić, że zakłócenie z;(t) jest
+kompensowane Ga2()w)G;(jw) razy silniej niż zakłócenie zą(t).
+Gdy opóźnienie transportowe włączy się do obiektu G2(s), wtedy,
+zapewniając dużą wartość wspomnianego wyżej iloczynu, uzyskuje się
+eliminację zakłócenia z; (t)
+
+Jak wspomniano wcześniej, w układzie regulacji kaskadowej regulator
+pomocniczy jest regulatorem typu P z uwagi na to, że uchyb ustalony
+występujący na wejściu Gę.2(s) na ogół nie ma istotnego znaczenia dla celu
+regulacji spełnianego przez regulator nadrzędny. Zastosowanie zamiast
+regulatora podrzędnego typu P regulatora typu PD spowoduje większą
+wrażliwość na zakłócenia o wielkiej częstotliwości (a przez to większą możli-
+wość ich eliminacji), co jest również osiągane, jeżeli G2(s) zawiera opóźnienie
+transportowe lub dużą inercję.
+
+Regulator nadrzędny odpowiada za uzyskanie małej wartości
+uchybu ustalonego, w związku z czym przyjmuje się go jako regulator
+zawierający człon całkujący (regulator typu PI lub PID).
+
+<image/figury/k2_page38_figure2.png>
+Rys. 7.4: Schemat kaskadowego układu regulacji z uwzględnieniem zakłóceń
+
+7.24 Przykładowy układ regulacji kaskadowej
+
+W układzie napędu elektrycznego robotów zachodzi potrzeba sterowania
+obiektami elektromechanicznymi składającymi się z silnika wykonawczego
+(na przykład silnika prądu stałego), przekształtnika oraz układu przekładni
+(obciążenia). W ten sposób można utworzyć trójobwodową strukturę
+regulacji o pętlach (od wewnątrz): regulacji momentu / prądu twornika (1),
+prędkości silnika (2) i położenia (3), jak pokazano na rysunku 7.5.
+
+Poszczególne zewnętrzne pętle regulacji obejmują pętle szybsze, tak więc
+regulacja momentu przebiega szybciej niż regulacja prędkości, która prze-
+biega z kolei szybciej niż regulacja położenia.
+
+ 
+
+<image/figury/k2_page38_figure1.png>
+
+7.3 Przebieg ćwiczenia
+7.3.1 Wpływ wartości parametrów regulatora podrzędnego na odpowiedź
+skokową
+
+Określić wpływ wartości wzmocnienia regulatora podrzędnego na odpo-
+wiedź skokową, w przypadku gdy regulatorem nadrzędnym jest regulator
+typu PI, wybierając dla kp trzy wartości.
+
+7.3.2 Wpływ wartości parametrów regulatora nadrzędnego na odpowiedź
+skokową
+
+Określić wpływ podanych niżej parametrów regulatora nadrzędnego na
+odpowiedź skokową:
+
+e dla regulatora typu PI - kp oraz 77,
+e dla regulatora typu PID (rzeczywistego) — kp, T;, Ty oraz N,
+e dla regulatora typu PID (idealnego) — Kp, 7, oraz Ty,
+
+wybierając dla każdego z nich trzy wartości. |
+
+Dla zadanych parametrów układu regulacji dobrać na podstawie symu-
+lacji parametry każdego z regulatorów zapewniające krótki czas regulacji
+oraz małe przeregulowanie.

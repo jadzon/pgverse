@@ -1,0 +1,22 @@
+<image/figury/k2_page90_figure1.png>
+
+Rys. 5.18: Trzy rodzaje algorytmów stosowanych do wyznaczania poszukiwanych rozkładów
+
+prawdopodobieństwa w sieciach bayesowskich
+
+<image/figury/k2_page90_figure2.png>
+
+Rys. 5.19: Symulacja stochastyczna prawdopodobieństw dla sieci z rys. ??. Wykresy błędów
+
+ 
+
+Pp-=p "=" , z = a
+w funkcji liczby kroków symulacji, gdzie p oznacza estymowane prawdopodobieństwo,
+,
+
+a p prawdopodobieństwo wyznaczone dokładnie: (1) wykres błędu dla prawdopodobieństwa
+p(SIW), (2) p(S$|-W'). (3) p(B|W). (4)p(B|-W')
+
+<image/figury/k2_page90_figure3.png>
+
+LUKU LU/ NN _|]FPUJGUU _LUKILU „|=! 'Y

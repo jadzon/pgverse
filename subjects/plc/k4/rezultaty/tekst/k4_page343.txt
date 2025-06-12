@@ -1,0 +1,42 @@
+<image/tabele/k4_page343_table1.png>
+
+Liczniki umożliwiają zliczanie impulsów. Elementy zliczające można progra-
+mować za pomocą następujących operatorów:
+e S -ustawianie licznika,
+e R -zerowanie licznika,
+e CU-zliczanie w górę,
+e  CD-zliczanie w dół.
+Argument powyższych operatorów ma następującą postać:
+C nr - € oznacza, że operujemy na typie zmiennych odnoszących się do
+liczników, nr jest liczbą określającą numer programowanego licznika.
+
+Ustawianie licznika
+Licznik zostanie ustawiony w chwili, gdy wynik warunku ustawienia licznika
+zmieni się z 0 na |. Zawartość akumulatora | jest przyjmowana jako wartość
+początkowa licznika. W związku z powyższym, przed ustawieniem licznika na-
+leży wprowadzić do akumulatora jego wartość początkową. Można to zrealizo-
+wać w następujący sposób:
+
+L KC wartość,
+przy czym wartość (value) jest liczbą z przedziału [0; 999] określającą wartość
+początkową licznika.
+Przykład
+Wprowadzić do akumulatora wartość licznika 50.
+
+L KC 50
+Wartość początkową licznika można również wprowadzić z następujących ob-
+szarów pamięci:
+
+DW słowo danych,
+
+IW słowo wejść cyfrowych,
+
+QW słowo wyjść cyfrowych,
+
+FW słowo markerów.
+Należy wówczas pamiętać. że wartość początkowa licznika musi być zapisana
+w kodzie BCD.
+
+m m MML 2 M2 2 —2107——
+
+7.8 Liczni!: 343

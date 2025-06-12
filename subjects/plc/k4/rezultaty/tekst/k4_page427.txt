@@ -1,0 +1,22 @@
+<image/figury/k4_page427_figure1.png>
+
+Wyd. 8.71 Blok funkcyjny regulatora PID
+
+<image/figury/k4_page427_figure4.png>
+
+ 
+
+Wyd. 8.72 Podstawienie wartości z pozycjonera do wyjścia regulatora (-CV)
+w sterowaniu ręcznym dla zapewnienia bezuderzeniowego powrotu do sterowa-
+nia automatycznego
+
+<image/figury/k4_page427_figure3.png>
+
+Wyd. 8.73 Obliczanie różnicy wielkości w yjściowej regulatora i sygnału z pozycjone-
+ra siłownika
+
+<image/figury/k4_page427_figure2.png>
+
+ 
+
+8.5 Regulacja trójpołożeniowa PID 427

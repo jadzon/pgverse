@@ -1,0 +1,48 @@
+3. Obwody prądu stałego
+
+m fragmentam struktury sieci, który jest utworzony przez
+ęzi i węzłów (por. p. 1.5.1-A, rys. 1.5-2), a więc w którym
+rw prądu. Zakładamy przy tym, że każdy węzeł obwodu jest
+de z dwoma gałęziami należącymi do tego obwodu. Oznacza
+ie powtarzają się ani gałęzie ani węzły. W każdym obwodzie,
+nić w sieci, musi być spełnione napięciowe prawo Kirchhoffa
+
+worzą węzły i łączące je gałęzie. Na sieci, które będziemy dalej
+"my pewne warunki, mające na celu ograniczenie ich struktur
+w sposób sensowny reprezentują realnie istniejące sieci
+my zatem zakładać, że dla każdych dwóch węzłów sieci
+którego węzły te nalężą, a więc, że każda gałąź należy do
+znacza to,że w każdej gałęzi sieci może wystę-
+wy prąd.
+dto zakładać, że w sieci można wyodrębnić zbiór oczek.
+ge268_formula1.png ' taki obwód, którego żadne dwa węzły nie są połączone
+shemacie sieci wewnątrz obszaru wyznaczonego przez ten
+wyróżnienia oczek w sieci jest cechą sieci płaskiej, tzn. sieci,
+na narysować na kartce papieru w taki sposób, aby gałęzie
+się. Schematy rozważanych sieci będą zatem przypominać
+. sieć rybacką.
+
+równowagi. Załóżmy, że zadanie analizy sieci spełniającej
+j warunki i zawierającej w węzłów oraz g gałęzi polega na
+wu prądów lub rozkładu napięć w sieci.
+zła sieci musi być spełnione PPK. Dla sieci o w węzłach
+sać dokładnie w opisujących tę sieć równań wynikających
+te wiążą ze sobą prądy gałęziowe. Można zauważyć (por.
+iwsze jedno (dowolne) z tych równań jest liniową kombinacją
+ym pozostałe równania są liniowo niezależne. Oznacza to, że
+— 1 równań wynikających z PPK jest zbiorem równań
+biór ten ma tę właściwość, że każdy prąd gałęziowy I,,
+uje co najmniej raz w jednym z jego równań. Wynika stąd,
+że dla sieci o w węzłach i g gałęziach możemy zapisać w — 1 niezależnych
+równań wynikających z PPK z g niewiadomymi I,,..., I,. Równania te
+nazywamy prądowymi równaniami równowagi sieci.
+
+Zbiór węzłów, dla których można zapisać w — 1 prądowych równań rów-
+nowagi, nazywamy zbiorem węzłów niezależnych. Zbiór węzłów niezależnych
+dla danej sieci można wybrać wyróżniając w niej dowolny z węzłów, który
+przyjmujemy za węzeł odniesienia. Tym samym zbiór wszystkich pozostałych
+węzłów sieci przyjmujemy jako zbiór węzłów niezależnych”).
+
+» Ponieważ równanie wynikające z PPK dla węzła odniesienia jest kombinacją liniową równań
+dla węzłów niezależnych, zatem, jeżeli PPK jest spełnione dla węzłów niezależnych, to jest
+spełnione dla całej sieci.

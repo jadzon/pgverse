@@ -1,0 +1,57 @@
+108
+
+5. Systemy liniowe
+
+Rozkład Fouriera jest ważny z trzech powodów. Po pierwsze, bardzo wiele sygnałów jest,
+z natury rzeczy, tworzonych przez nakładanie się sinusoid. Dobrym przykładem są sygnały
+foniczne. Rozkład Fouriera umożliwia bezpośrednią analizę informacji zawartych w sygna-
+łach tego rodzaju. Po drugie, systemy liniowe w specyficzny sposób przenoszą przebiegi
+sinusoidalne; sinusoidalny przebieg wejściowy zawsze daje na wyjściu też przebieg sinuso-
+idalny. Właściwości tych systemów są określane przez zmiany amplitudy i fazy przebiegów
+sinusoidalnych przez nie przenoszonych. Ponieważ sygnał wejściowy można rozłożyć na si:
+nusoidy, więc znajomość reakcji systemu na przebiegi sinusoidalne umożliwia wyznaczenie
+odpowiedzi systemu. Po trzecie, rozkład Fouriera jest podstawą rozległej i ważnej dziedziny,
+zwanej analizą fourierowską, a także przekształceń Lapłace'a i Z. W większości ciekawych
+algorytmów DSP korzysta się z tych metod.
+
+Dlaczego jest możliwe rozłożenie dowolnego sygnału na przebiegi sinusoidalne i kosinuso-
+idalne? Jak są wyznaczane amplitudy sinusoid dla poszczególnych sygnałów? Jakiego rodza-
+ju systemy można projektować przy użyciu tej metody? Na te właśnie pytania odpowiemy
+w następnych rozdziałach. Szczegóły rozkładu Fouriera są zbyt skomplikowane, aby móc
+je przedstawić w tym krótkim omówieniu. Na razie najważniejsze jest zrozumienie faktu,
+że można dokładnie odtworzyć przebieg oryginalny, dodając do siebie wszystkie składowe
+sinusoidalne. Więcej na ten temat powiemy w rozdziale 8.
+
+Alternatywy liniowości
+
+W celu docenienia ważności systemów liniowych zwróćmy uwagę, że jest tylko jeden główny
+sposób analizy tych systemów, które są nieliniowe. Sposób polega na uczynieniu systemów
+nieliniowych podobnymi do liniowych. Można to przeprowadzić jednym z trzech sposobów.
+Po pierwsze, można zignorować nieliniowość. Jeśli nieliniowość jest wystarczająco mała, to
+system można aproksymować jako liniowy. Błędy wynikające ze wstępnego założenia są trak-
+towane jako szum lub po prostu pomijane.
+
+Po drugie, można przyjąć, że sygnały są bardzo małe. Wiele systemów nieliniowych można
+traktować jako liniowe, jeśli sygnały mają bardzo małe wartości. Na przykład tranzystory
+są bardzo nieliniowe w pełnym zakresie roboczym, lecz dają dokładne, liniowe wzmacnia-
+nie, gdy sygnały są nie większe niż kilka miliwoltów. Ta cecha jest w największym stopniu
+widoczna we wzmacniaczach operacyjnych. Stosując bardzo duże wzmocnienie z otwartą
+pętlą oraz ujemne sprzężenie zwrotne, utrzymuje się sygnał wejściowy wzmacniacza (a więc
+różnicę napięć między wejściem odwracającym i nieodwracającym) na poziomie kilku mi-
+krowoltów. Ten bardzo mały sygnał wejściowy powoduje, że liniowość układu, w innych
+przypadkach bardzo nieliniowego, jest doskonała,
+
+Po trzecie, można stosować przekształcenia linearyzujące. Rozważmy na przykład dwa sygna-
+ły, które po przemnożeniu dają trzeci: a[n] = b[n] x c[n]. Zlogarytmowanie sygnałów zmienia
+nieliniowy proces mnożenia w liniowy proces dodawania: log(a[n]) = log(b(n]) + log(c[n]). Ta
+metoda jest nazywana homomorficznym przetwarzaniem sygnałów. Na przykład obraz wizual-
+ny może być modelowany jako dwuwymiarowy sygnał odbity od oglądanej sceny pomnożony
+przez oświetlenie otoczenia (drugi sygnał również dwuwymiarowy). Dzięki technice homo-
+morficznej sygnał oświetlenia można uczynić bardziej równomiernym, poprawiając w ten
+sposób jakość obrazu.
+
+W następnych rozdziałach zajmiemy się dwiema najważniejszymi metodami przetwarzania
+sygnałów — analizą fourierowską i splotową. Obie są oparte na procedurze opisanej w tym
+rozdziale: 1) rozłożenie sygnału na proste składowe addytywne, 2) przetworzenie składo-
+wych w jakiś pożyteczny sposób oraz 3) synteza składowych w celu uzyskania wyniku koń-
+cowego. To jest właśnie DSP.

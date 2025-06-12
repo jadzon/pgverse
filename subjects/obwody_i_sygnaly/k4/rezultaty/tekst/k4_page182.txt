@@ -1,0 +1,53 @@
+182 2. Pojęcia podstawowe — układy |
+
+Wyobraźmy sobie, że dany układ (możemy go tra
+skrzynkę”) jest fragmentem pewnej sieci, tzn. jest — jak m
+w pewnym otoczeniu. Załóżmy, że „wyjmiemy” go z tego
+innym układem. Jeśli po takiej zamianie w sieci otaczające
+zmieni (tzn. nie zmieną się ani prądy ani napięcia), to ob
+równoważne.
+
+Definicja ta, choć poglądowa, jest dostatecznie ścisła.
+odrębnego określenia warunków, jakie winny spełniać
+Sformułujemy je w następujących punktach.
+
+1. Układy równoważne muszą mieć tę samą liczbę
+wrotniki) lub tę samą liczbę zacisków (wielobiegunnik
+przyjąć, że numeracja wrót (zacisków) jest w obu «
+W konsekwencji stan zaciskowy układów równoważnych
+samewektorynapiiprdw2.114otymsamymwzory/k4_page182_
+kolejności występowania wielkości zaciskowych.
+
+2. Układy równoważne muszą mieć ten sam oq
+i napięcia zaciskowe obu układów spełniają te same rów
+
+Konieczność obu wymienionych warunków jest oczyv
+pytanie, czy ich spełnienie jest wystarczające do tego, aby u
+ne.
+
+Aby rozstrzygnąć tę kwestię powróćmy do czwórników
+Czwórniki te spełniają oba wymienione warunki. Ich równ:
+zapisać w identyczej postaci (1.8-22). Występuje jednak p
+nimi, wiążąca się z zagadnieniami omówionymi w
+z rys. 1.8-12 ma strukturę trójnikową i napięcie między di
+wrót jest tożsamościowo równe zeru. Czwórnik z rys. 1
+trójnikowej i wspomniane napięcie nie musi być równe
+zwarcia między dolnymi zaciskami czwórnika z rys. 1.8-12
+(ale nie musi) pojawienie się różnic między siecią z
+z rys. 1.8-3 i tą samą siecią z czwórnikiem z rys. 1.8-12 w
+poprzedniego. Ściśle zatem biorąc, czwórnik z rys. 1.8-12 ji
+ny indukcyjnościom sprzężonym z rys. 1.8-3, ale przy zwarciu ich dolnych
+zacisków (co, jak podkreślaliśmy w p. C, nie zmienia równań). Czwórniki
+z rys. 1.8-18 są natomiast równoważne bez żadnych dodatkowych warunków.
+
+Omówiony przykład prowadzi do wniosku, iż układy równoważne winny
+spełniać jeszcze jeden dodatkowy warunek, który nie jest zawarty w warunkach
+l i 2,a który można sformułować następująco.
+
+3. W układach równoważnych dodatkowe ograniczenia wynikające ze
+struktury wewnętrznych połączeń między zaciskami winny być jednakowe.
+
+Zwracamy jednak uwagę, iż poza tym zastrzeżeniem struktury wewnętrznych
+połączeń układów równoważnych mogą być zupełnie różne. Układ y równoważ-
+ne mogą także różnić się liczbą i rodzajem zawartych w nich elementów (np.
+czwórniki z rys. 1.8-18).

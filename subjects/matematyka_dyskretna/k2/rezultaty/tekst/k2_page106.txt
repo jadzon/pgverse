@@ -1,0 +1,30 @@
+1.5. Operacje boolowskie na wektorach 15
+
+Rysunek 1.5: Schemat sieci sortującej
+
+<image/figury/k2_page106_figure1.png>
+
+1.5 Operacje boolowskie na wektorach
+Operacje boolowskie można wykonywać także na ciągach bitów określonej długości, czy-
+
+li na
+<image/wzory/k2_page106_formula1.png>
+
+Dla awuua: uiauuw:
+
+<image/wzory/k2_page106_formula2.png>
+
+operacje koniunkcji, altematywy, xori neqacji wykonywane są po współrzędnych:
+tarzanillz0 nanmoa1Tya fnrmiu:la nnm
+
+2-2 cm M am 6 1.7 a a AONOÓW ma m A m m m
+
+cam m «m Śl «4% aaa WANA Gauanoacalj a FP aa aa 2
+
+<image/wzory/k2_page106_formula6.png>
+
+Jeżeu WERWI ZŁIUWY (U,U;,. . . ;, UJ UZIIdLZYIIY PIŁEŁ U, a WEAWI ZIUŁUJIY Ł sauny tui jedy-
+nek (1,1,...,1) — przez 1, to zachodzą wszystkie tożsamości lematu1.1 oraz tożsamo-
+ści (a)-- (e) z lematu 1.2. Nie jest natomiast na ogół spełniona własność (e) lematu 1.2,
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,34 @@
+IDE ZEZDI 0 ay - tw ef DM
+
+17. Filtry dostosowane do szczególnych wymagań
+
+<image/figury/k3_page271_figure1.png>
+
+splotu. Amplituda każdego punktu w sygnale wyjściowym jest miarą tego, I PR a
+wiedź impulsowa filtru jest dopasowana do odpowiedniego segmentu sygnału v
+Przypomnijcie
+
+sobie, że sygnał na wyjściu filtra dopasowanego niekoniecznie ssa ak.
+jak wykrywany sygnał. To, w istocie rzeczy, nie ma większego znaczenia. Jeśli stosuje się
+filtr dopasowany, to kształt docelowego impulsu wykrywanego musi już być znany. Filtr do-
+
+pasowany jest optymalny w tym sensie, że szczyt piku sięga powyżej szumu znacznie v
+niż to jest możliwe w jakimkolwiek innym filtrze liniowym (patrz rys. 17.9 b).
+Filtr Wienera (nazwany tak od nazwiska twórcy teorii estymacji Norberta Wienera) ro
+
+dziela sygnały na podstawie ich widm częstotliwościowych. Jk: pokazano na rys 17.7 b)
+
+przy pewnych częstotliwościach występuje głównie sygnał, a przy innych — głównie sz
+
+Wydaje się logiczne, że częstotliwości, przy których mamy głównie sygnał, powinny by
+
+przepuszczane przez filtr, a te z szumem — stłumione. Z taką zasadą w filtrze Wienera po
+
+nięło cię jeść Krok Gie Pay Bój czadlióści *anocokiale filo jes okrstod
+
+przez względny stosunek sygnału do szumu przy tej częstotliwości:
+
+<image/wzory/k3_page271_formula1.png>
+
+Wzór 17.1. Filtr Wienera. Odpowiedź częstotliwościowa H[!] jest określona przez widma e
+częstotliwościowe szumu N[(] i sygnału S[f]. Istotne są tylko moduty, wszystkie fazy są zerowe

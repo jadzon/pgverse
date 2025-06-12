@@ -1,0 +1,26 @@
+<image/wzory/k4_page235_formula1.png>
+
+W sterownikach GE Fanuc istnieje możliwość wyboru jednego z dwóch dostęp-
+nych algorytmów P/D, a mianowicie P/DISA lub P/DIND.
+
+Standardowy algorytm PIDISA realizuje wzmocnienie (mnożenie przez współ-
+czynnik P) sygnału stanowiącego sumę wyjść wszystkich trzech bloków
+
+regulatora: proporcjonalnego, różniczkującego i całkującego, co ilustruje
+Rys. 4.8.
+
+<image/figury/k4_page235_figure1.png>
+
+Rys. 4.8 Schemat blokowy algorytmu PIDISA
+
+Algorytm czynników niezależnych PIDIND (Independent Term Algorithm) re-
+alizuje wzmocnienie tylko dla części proporcjonalnej regulatora, co pokazano na
+Rys. 4.9. Poza tym oba algorytmy są takie same.
+
+<image/figury/k4_page235_figure2.png>
+
+Rys. 4.9 Schemat blokowy algorytmu PID IND
+
+ 
+
+4.12 Blok funkcyjny PID 235

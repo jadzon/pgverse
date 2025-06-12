@@ -1,0 +1,54 @@
+229
+
+więc spełniony. Sprawdzeniu podlega teraz predykat lubi (monika auto). Unifikuje
+się on z faktem lubi(_,auto), jest więc także spełniony. W ten sposób wykazano,
+że kwerenda korzysta(monika,Rzecz) jest spełniona dla Rzecz=auto. Program
+wyświetla to rozwiązamnie i kontynuuje proces poszukiwania nowych rozwiązań.
+
+Ponieważ predykat lubi (monika,auto) nie unifikuje się żadnym innym nagłów-
+kiem, więc następuje nawrót do poprzedniego predykatu (posiada(monika Rzecz) ).
+z oswobodzeniem zmiennej Rzecz. Ponieważ nie unifikuje się on z nagłówkiem żadnej
+klauzuli, następuje kolejne nawrócenie tym razem do korzysta (monika ,Rzecz). Ko-
+lejna unifikacja predykatu korzysta (monika ,Rzecz) następuje więc z nagłówkiem
+klauzuli:
+
+korzysta(X,Y) :- ma_dostep(X,Y), lubi(X,Y).,
+
+przy czym X zostaje związane z monika, zaś zmienna Rzecz pozostaje swobodną. Da-
+lej, ma_dostep(monika,Rzecz) unifikuje się z ma_dostep(monika,wideo) i nastę-
+puje sprawdzanie spełnienia predykatu lubi (monika, wideo). Predykat ten nie daje
+się zunifikować z nagłówkiem żadnej klauzuli, więc następuje nawrót do predykatu
+ma_dostep (monika ,Rzecz), który teraz unifikuje się z ma_dostep(monika,radio),
+ale ponieważ lubi (monika ,radio), jest niespełniony, więc następuje ponowny na-
+wrót do predykatu ma_dostep(monika,Rzecz). który tym razem unifikuje się z
+ma_dostep(monika,ksiazki). Ponieważ lubi (monika,ksiazki) jest spełniony, to
+tym samym oba predykaty prawej strony klauzuli są spełnione, więc spełniony jest
+także nagłowek korzysta(X,Y) dla X=monika i Y=ksiazka i wobec tego spełnione
+jest zapytanie korzysta(monika,Rzecz) dla Rzecz=ksiazka. Program wyświetla
+na ekranie to nowe rozwiązanie i ponieważ wszystkie możliwości nawracania zostały
+wyczerpane wykonanie programu zostaje zakończone. |)
+
+9.1.6. Rekursje
+
+Procedurę, która bezpośrednio lub pośrednio wywołuje sama siebie, nazywamy reku-
+rencyjną. Zastosowanie rekursji często prowadzi do bardziej zrozumiałych i zwięzłych
+algorytmów, ale z drugiej strony, wykonanie algorytmów rekurencyjnych może trwać
+dłużej i zajmować więcej pamięci niż algorytmów iteracyjnych.
+
+Prolog dopuszcza rekursję i stanowi ona w nim ważną technikę programowa-
+nia. Pojawiające się przy jej stosowaniu problemy z przepełnieniem stosu i metody
+unikania takiego przepełnienia omawiane są w rozdziale 11.
+
+Jako przykład programu zawierającego rekursje rozpatrzymy klasyczny program
+obliczania silni.
+
+PRZYKŁAD 9.8
+
+Rozpatrzmy działanie Programu 7 dla zapytania silnia(4,S).
+
+/* Program 6 */
+
+silnia(i,1).
+silnia(N,Roz) :-
+
+<image/wzory/k2_page224_formula1.png>

@@ -1,0 +1,23 @@
+6.3. Model matematyczny silnika
+zapisany w postaci równań stanu i wyjścia
+
+Przyjmując jako zmienne stanu prąd płynący w uzwojeniach wirnika (i) oraz
+prędkość kątową wirnika (w,), możemy zapisać model silnika w postaci równań stanu
+i wyjścia. Dokonujemy zamiany zmiennych:
+
+<image/wzory/k1_page155_formula1.png>
+
+otrzymując układ równań:
+
+<image/figury/kwzory/k1_page155_formula2.png>
+Równania (6.6) zapisujemy w postaci macierzowej:
+
+vzory/k1_page155_formula3.png
+
+lub po rozpisaniu
+
+<image/figwzory/k1_page155_formula4.png>
+
+<image/ziewzory/k1_page155_formula5.png>
+
+157

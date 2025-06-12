@@ -1,0 +1,42 @@
+60
+
+<image/wzory/k2_page55_formula1.png>
+
+mm
+PRZYKŁAD 4.9
+Przykład nie unifikowalności
+wzorv/k2 paae55 formula2.ona
+urzonullz nanńnaRkR fnrmuila2 nnm
+<image/wzory/k2_page55_formula4.png>
+W następnym podstawieniu pojawi się $ = 4..., funkcja zmiennej Y/Y) co pro-
+wadzi do nieskończonej rekurencji i w konsekwencji powoduje, że wyrażenia są nie
+unifikowalne. a
+
+Rezolucja dwóch klauzul
+Dane są dwie blanznla
+
+<image/wzory/k2_page55_formula5.png>
+
+gdzie l, i m, są literałami. Niech
+
+<image/wzory/k2_page55_formula6.png>
+
+Jeżeli istnieje unifikator S$ dla 2, i my, to klauzule Z i M mają rezolwentę
+
+<image/wzory/k2_page55_formula7.png>
+
+PRZYKŁAD 4.10
+Stosując po '
+
+<image/wzory/k2_page55_formula8.png>
+
+dwie klauzule
+
+<image/wzory/k2_page55_formula9.png>
+
+zostają przekształcone do postaci
+
+<image/wzory/k2_page55_formula10.png>
+i ich rezoly i
+
+<image/wzory/k2_page55_formula11.png>

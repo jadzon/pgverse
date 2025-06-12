@@ -1,0 +1,13 @@
+2. Mrchitektura klasycznych komputerów 13
+
+procesora. Projektując komputer stajemy przed problemem kompromisu pomiędzy kosztem
+sprzętu a czasem wykonywania programu.
+
+Podany opis działania procesora nie ujmuje jednak wielu problemów związanych
+z działaniem procesora. Na przykład ze schematu z rysunku 2.2 nie wynika jak zwiększyć
+zawartość licznika rozkazów lub jak załadować do niego nową wartość? Jak dekoder
+instrukcji wymusza odpowiednie wysterowania procesorem? Jak połączyć procesor z pa-
+mięcią? itd. Zagadnienia te opisano bardziej szczegółowo w rozdziale 4, ale dla ich
+zrozumienia trzeba poznać elementy z jakich składa się komputer oraz kody jakimi się on
+posługuje. Problemy te przedstawiono w rozdziale 3 w zakresie potrzebnym dla podanego
+celu.

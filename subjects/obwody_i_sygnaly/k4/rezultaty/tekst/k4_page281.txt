@@ -1,0 +1,50 @@
+34. Nieliniowe obwody rezystancyjne prądu stalego 283
+
+można wówczas zastąpić oporem liniowym o wartości Rglw (rys. 3.4-1b).
+Należy jednak podkreślić, że zastąpienie w analizowanym obwodzie dwójnika
+nieliniowego Dy jego oporem statycznym jest możliwe dopiero po wyznaczeniu
+punktu pracy dwójnika, a więc po przeprowadzeniu analizy ob-
+wodu. Tym samym równoważność dwójników z rys. 3.4-1 nie może być
+wykorzystana w celu uproszczenia analizy.
+
+Z tych samych względów w analizie obwodów nieliniowych nie znajdują
+zastosowaniawzorynadzielnikinapiciaiprdumetodazamianyrdeoraz
+metody źródeł zastępczych jeśli tylko analizie podlega część obwodu zawierająca
+elementy nieliniowe. Nic natomiast nie stoi na przeszkodzie, aby metody te
+wykorzystywać do uproszczenia liniowych fragmentów obwodu nieliniowego.
+
+Nieliniowy charakter obwodu wyklucza także zastosowanie metod siecio-
+wych do wyznaczania rozpływu prądu lub rozkładu napięć w obwodzie. Jeżeli
+ponadto uwzględnimy fakt, że obwód nieliniowy nie spełnia
+zasady superpozycji, to oczywisty staje się wniosek, że analiza obwo-
+dów nieliniowych wymaga stosowania odmiennych metod niż w przypadku
+obwodów liniowych.
+
+Metody analityczne mają w odniesieniu do obwodów nieliniowych ograni-
+czony zasięg. Tylko w nielicznych przypadkach, gdy charakterystyki elementów
+nieliniowych występujących w obwodzie dadzą się opisać dostatecznie prostymi
+funkcjami, równania opisujące obwód można bezpośrednio rozwiązać analitycz-
+nie. Z reguły analiza obwodu nieliniowego wymaga skomplikowanych obliczeń
+i często prowadzi do równań przestępnych. W takich przypadkach konieczne
+staje się użycie metod graficznych, grafo-analitycznych bądź też numerycznych.
+Metody te wymagają zazwyczaj stosowania rozmaitych aproksymacji charakte-
+rystyk elementów nieliniowych i umożliwiają uzyskanie jedynie przybliżonych
+rozwiązań.
+
+W związku z szybkim rozwojem komputerowej techniki obliczeniowej
+szczególnego znaczenia nabrały ostatnio metody numeryczne. Ich dyskusja
+wykracza jednak poza ramy podstaw teorii obwodów. W dalszym ciągu
+ograniczymy się w związku z tym do przedstawienia przykładów obwodów
+nieliniowych, które dadzą się rozwiązać metodami analitycznymi oraz do
+omówienia łatwych i poglądowych metod graficznych, umożliwiających szybkie,
+aczkolwiek niezbyt dokładne, wyznaczenie rozwiązania.
+
+3.4.1. Obwody z jednym elementem nieliniowym
+
+A. Metoda Thevenina. Rozważymy najpierw najprostszy przypadek rezy-
+stancyjnego obwodu nieliniowego zawierającego tylko jeden element nieliniowy
+N. W analizie tego typu obwodów można skorzystać z twierdzeń o źródłach
+zastępczych zastępując część liniową obwodu (do zacisków której jest dołączony
+element nieliniowy) zastępczym źródłem napięciowym lub zastępczym źródłem
+prądowym. Analizę rozważanego obwodu sprowadzamy wówczas do analizy
+prostego obwodu przedstawionego na rys. 3.4-2a lub rys. 3.4-2b.

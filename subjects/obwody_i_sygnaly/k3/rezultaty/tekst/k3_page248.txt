@@ -1,0 +1,28 @@
+248 3. Obwody prądu stałego
+
+ 
+
+<image/wzory/k3_page248_formula2.png>
+
+prost, że:
+
+<image/wzory/k3_page248_formula3.png>
+
+rzekształceniach, otrzymujemy identyczny wzór jak w przykładzie 3.2-1b.
+
+strukturze gwiazdy występujący w dwójniku
+y ze wzorami (3.2-9) — (3.2-11), na równoważny
+3e248_formula1.png FF" "przy a 22 ago cp
+
+<image/wzory/k3_page248_formula4.png>
+
+ury/k3_page248_figure1.png
+
+3.2.3. Dzielniki oporowe
+
+Przykładami najprostszych układów oporowych są dzielniki.
+
+ 
+
+<image/figury/k3_page248_figure2.png>
+<image/wzory/k3_page248_formula5.png>

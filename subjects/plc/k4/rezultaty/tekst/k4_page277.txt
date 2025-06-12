@@ -1,0 +1,30 @@
+Obszar roboczy Control Block jest plikiem przechowującym dane wymagane do
+działania regulatora P/D. Plik ten składa się z 23 słów i musi być podany przez
+adres typu integer. Na przykład, wprowadzając adres N/0:0 elementy tego pliku
+będą ulokowane od adresu N/0:0 do adresu N/0:22
+
+Zmienna procesowa PV ustala adres wartości wejściowej. Adres określa war-
+tość analogowego sygnału wejściowego tj. wartość regulowanej wielkości wej-
+Ściowej, będący wynikiem przetwarzania analogowo-cyfrowego. Adres może też
+określać zmienną typu integer jeżeli przeskalowana zostanie do zakresu od 0
+do16383.
+
+Zmienna sterująca CV określa adres przechowywanej wartości wyjściowej
+z regulatora P/D. Zakresem wartości wyjściowej jest przedział: od 0 do 16383:
+gdzie 16383 oznacza 100% wartości wyjściowej. Jest to zmienna typu integer,
+przy czym istnieje możliwość przeskalowania jej do zakresu sygnałów analogo-
+wych, jeśli wymaga tego zadanie testowania i pomiarów w obwodach wyjścio-
+wych.
+
+<image/figury/k4_page277_figure1.png>
+
+Podstawowe parametry regulatora P/D są następujące:
+
+[F1] Bit zmiany trybu sterowania AM (Auto/Manual Bir) (słowo 0, bit 1), który
+przełącza między Auto i Manual. Auto oznacza, że wyjście jest kontrolowane
+przez PID (AM= O). Manual znaczy, że wartość wyjściowa jest ustawiana ręcznie
+(AM=1). Podczas doboru parametrów regulatora zaleca się by ustawiony był tryb
+
+   
+
+5.13 Blok funkcyjny PID 277

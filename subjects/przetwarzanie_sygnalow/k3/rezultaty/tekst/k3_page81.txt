@@ -1,0 +1,47 @@
+5. Systemy liniowe
+
+ 
+
+części tego rozdziału rozpatrzymy bardziej intuicyjne sposoby rozumienia liniowości. Na
+razie rozważmy matematyczne właściwości systemów liniowych.
+
+Jak to przedstawiono na rys. 5.2, homogeniczność oznacza, że zmiana wartości sygnału wej-
+ściowego powoduje odpowiadającą jej zmianę sygnału wyjściowego. Wyrażając to w formie
+matematycznej, można stwierdzić, że jeśli sygnał wejściowy x[n] daje sygnał wyjściowy
+y[n], to sygnał wejściowy kxfn] powinien dawać na wyjściu sygnał kx[n] dla dowolnego
+sygnału wejściowego i dowolnej stałej k.
+
+Prosty rezystor może być dobrym przykładem systemu zarówno homogenicznego, jak
+i nichomogenicznego. Jeśli wejściem systemu jest napięcie u(r) na rezystorze, a sygnałem
+wyjściowym prąd i(1) płynący przez rezystor, to system jest homogeniczny. Wynika to
+z prawa Ohma — wzrost lub spadek napięcia wywołują proporcjonalny wzrost lub spadek
+prądu. Rozważmy teraz inny system, w którym sygnałem wejściowym jest napięcie u(1)
+na rezystorze, a wyjściowym moc p(f) rozpraszana w rezystorze. Ponieważ moc jest pro-
+porcjonalna do kwadratu napięcia, więc jeśli sygnał wejściowy wzrośnie dwukrotnie, to
+wyjściowy wzrośnie czterokrotnie. A zatem system nie jest homogeniczny, tak więc nie
+może być liniowy.
+
+Właściwość addytywności zilustrowano na rys. 5.3. Rozpatrzmy system, w którym sygnał
+wejściowy x;[n] daje wyjściowy y;[n]. Załóżmy następnie, że inny sygnał wejściowy x>[n]
+daje na wyjściu y>[n]. System jest addytywny, jeśli sygnał wejściowy x,[n] + x>[n] daje na
+wyjściu y;[n] + ys[n] dla wszystkich możliwych sygnałów wejściowych. Mówiąc prościej,
+sygnały zsumowane na wejściu dają na wyjściu sygnały, które też się sumują.
+
+Ważne jest, żeby sygnały zsumowane przechodziły przez system bez wzajemnego oddzia-
+ływania na siebie. Dla przykładu pomyślmy o rozmowie telefonicznej waszej ciotki Edny
+z wujkiem Berniem. Ciotka Edna rozpoczyna dość rozwlekłą opowieść o tym, jak świetnie
+w tym roku udały się jej rzodkiewki. W tle tej opowieści wujek Bernie krzyczy na psa, który
+właśnie narobił na ulubiony fotel wujka. Dwa sygnały głosowe są dodawane do siebie i prze-
+syłane elektroniczne siecią telefoniczną. Ponieważ system jest addytywny, więc dźwięk, któ-
+
+IF
+
+> Y4 =
+
+<image/wzory/k3_page81_formula1.png>
+THEN
+<image/wzory/k3_page81_formula2.png>
+
+Rys. 5.3. Definicja addytywności. System jest addytywny, jeśli sygnaty zsumowane przechodzą przez
+system bez wzajemnego oddziatywania na siebie. Formalnie znaczy to, że jeśli x,/n] daje na wyjściu y;/n]
+a xa/n] daje yzfn], to xyfn] +xzfn] daje yyln] + yz/n]

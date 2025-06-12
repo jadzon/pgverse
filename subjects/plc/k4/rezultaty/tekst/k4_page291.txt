@@ -1,0 +1,43 @@
+Wyd. 6.9 i Wyd. 6.10 przedstawiają przykłady zastosowania funkcji ADD:
+
+e Wyzwolenie wejścia 10001 spowoduje dodanie wartości 11 do wartości 76
+i umieszczenie wyniku w rejestrze 40021. Gdyby suma przekroczyła wartość
+9999, nastąpiłoby uaktywnienie wyjścia 00121.
+
+e Wyzwolenie wejścia 10002 spowoduje dodanie wartości z rejestru 40021 do
+wartości 999 i umieszczenie wyniku w rejestrze 40022. Jeżeli suma przekro-
+czy wartość 9999, nastąpi uaktywnienie wyjścia 00122.
+
+Wyd. 6.// przedstawia przykład wykorzystania funkcji SUB do odejmowania.
+Liczby mogą być podane w sposób jawny (jako stałe) bądź znajdować się w reje-
+strach. Wyzwolenie wejścia 10006 spowoduje odjęcie od zawartości rejestru
+wejściowego 30048 wartości 999 i umieszczenie wartości bezwzględnej wyniku
+tej operacji w rejestrze 40029. Jeżeli wynik będzie dodatni to jednocześnie uak-
+tywnione zostanie wyjście 00128, a gdy będzie ujemny — wyjście 00130. Gdy
+w wyniku otrzymamy zero, jednocześnie uaktywnione zostanie wyjście 00129.
+
+<image/tabele/k4_page291_table1.png>
+
+Wyd. 6.11 Odejmowanie liczb z wykorzystaniem bloku SUB.
+
+Wyd. 6.12 pokazuje w jaki sposób można zastosować funkcje DIV i MUL do
+wykonania obliczeń na liczbach stałoprzecinkowych, na przykład do przeliczenia
+temperatury ze skali Fahrenheita na skalę Celsjusza. W momencie, gdy na wej-
+ściu 10014 pojawi się stan wysoki, od zawartości rejestru wejściowego 30001
+zostanie odjęta wartość 32. Wynik tej operacji zostanie zapisany w rejestrze
+40068. O znaku wyniku odejmowania informują stan wysoki na jednym z wyjść
+00148, 00149 lub 00150.
+
+Jeżeli wynik jest ujemny (00150) lub dodatni (00148) to następuje przemnożenie
+zawartości tejestru40068 przez wartość 5, a wynik zapisywany jest w rejestrach
+40069 i 40070:
+
+<image/tabele/k4_page291_table2.png>
+
+ 
+
+M A A BB M
+
+r 0 0 w wy p e W w
+
+6.5 Funkcje arytmeryczne 291

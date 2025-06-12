@@ -1,0 +1,46 @@
+Twierdzenie 1.2
+Jeżeli funkcje f(1) i f(1) "są oryginałami oraz istnieje transformata
+£ [f(1)] = F(s) i granica lim /(f), to
+
+10
+
+<image/wzory/k1_page17/_formula1.png>
+
+Przykład 1.10
+Obliczyć wartość funkcji /(0), gdy dana jest jej transformata F(s)
+
+<image/wzory/k1_page1/_formula2.png>
+
+Na podstawie wzoru (1.18) możemy zapisać
+
+<image/wzory/k1_page1/_formula3.png>
+
+Przykład 1.11
+
+Załóżmy, że oba pierwiastki równania s? +cs+d=0 (z poprzedniego przykładu)
+leżą w półpłaszczyźnie Re s < 0, a więc przy założeniu c > 0, d > 0, obliczmy wartość
+funkcji f(eo). Na podstawie wzoru (1.19) możemy zapisać
+
+<image/wzory/k1_page1/_formula4.png>
+
+1.4. Przekształcenie odwrotne
+
+W podrozdziale 1.1 wspomnieliśmy, że zasadnicze znaczenie w zastosowaniach
+przekształcenia Laplace'a ma jednak zagadnienie odwrotne: dana jest funkcja zmiennej
+zespolonej F(s), należy wyznaczyć funkcję /(1), dla której F(s) jest obrazem.
+
+Zachodzą następujące pytania:
+
+— Jak wyznaczyć oryginał /(t), znając jego transformatę (obraz) F(s)?
+
+— Czy każdej transformacie odpowiada tylko jeden oryginał?
+
+— Jakie warunki powinna spełnić funkcja F(s) zmiennej zespolonej s = u + jv, aby była
+transformatą?
+
+Jeżeli funkcja f(t) jest rozwiązaniem równania (1.1), to ten fakt będziemy zapisy-
+wać w postaci wzoru
+
+<image/wzory/k1_page1/_formula5.png>
+
+który nazwiemy odwrotnym przekształceniem Laplace'a.

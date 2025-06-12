@@ -1,0 +1,28 @@
+3.7__ Zasilanie sterowników
+
+Sterowniki jako urządzenia elektryczne mogą być wykorzystywane w różnych
+warunkach technicznych i środowiskowych. W zależności od przeznaczenia, po-
+trzeb i wymagań jakie mają spełniać, należy zaprojektować dla nich układy
+instalacji elektrycznej. Dotyczy to zarówno zasilania zasilaczy sterownika jak
+również układów zasilania obwodów wejściowych i wyjściowych.
+
+3.7.1 Zasilacz sterownika
+
+ 
+
+Rys. 3.28 przedstawia zasilacz do sterowników GE-Fanuc serii 90-30, który jest
+zasilany ze źródła napięcia od 100 do 240 VAC albo od 10 do 48 VDC. Zasilacz
+ten jest źródłem zasilania 5 VDC oraz 24 VDC, które są wykorzystywane w za-
+silaniu wewnętrznym. Mogą też być wykorzystywane do zasilania obwodów
+zewnętrznych, zarówno wejściowych jak i wyjściowych. Zasilacz posiada
+wskaźniki statusu pracy sterownika oraz gniazdo łącza programowego w stan-
+dardzie RS-485/422. Bateria litowa o bardzo dużej trwałości zapewnia
+podtrzymanie danych i programu oraz konfiguracji sterownika w przypadku
+utraty zasilania zewnętrznego.
+
+<image/figury/k4_page150_figure1.png>
+
+Rys. 3.28 Moduł zasilacza do sterowników GE-Fanuc serii 90-30.
+
+FEFK POPE EYE EYEYT TEE TREE ZEE PE PR PROTO WO POCZET EC W SERIE TE EWY TEZY ZE CZY PEC PEPE PETE EZ EZR WY EPEE CZECCZEY-CCCZE PRRNRASE
+150 Rozdział : 3. Sprzęt sterowników PLC

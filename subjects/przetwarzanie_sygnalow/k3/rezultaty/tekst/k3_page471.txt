@@ -1,0 +1,88 @@
+Rynek cyfrowych procesorów sygnałowych (DSP) 507
+
+Przypuśćmy, że konstruujecie telefony komórkowe i chcecie zastosować DSP. Prawdopodobnie
+
+będziecie chcieli kupić DSP w postaci procesora, a więc układu scalonego zawierające-
+
+go rdzeń, pamięć i inne niezbędne cechy wewnętrzne. Na przykład procesor sygnałowy
+
+SHARC ADSP-21060 jest wytwarzany w 240-końcówkowej obudowie typu „Metric PQFP”,
+
+o rozmiarach tylko 35 x 35 x 4 mm. Aby wprowadzić ten układ scalony do waszego pro-
+
+duktu, projektujecie płytkę drukowaną, w której procesor będzie włutowany obok innych
+
+układów elektronicznych. To jest najczęstszy sposób zastosowania DSP.
+
+A'teraz przyjmijmy, że firma, dla której pracujecie, produkuje własne układy scalone. W tym przy-
+
+padku możecie nie potrzebować całego procesora, a wystarczy wam projekt samego rdzenia. Po
+
+elastyczność wyboru wielkości pamięci, która ma znaleźć się w tej strukturze scalonej oraz wyboru
+
+sposobu wprowadzania i wyprowadzania danych z układu, a także rodzaju obudowy itd. Układy
+
+tego rodzaju wykonywane na zamówienie stają się coraz ważniejszym segmentem rynku DSP.
+
+Jest też wreszcie kilkadziesiąt firm sprzedających cyfrowe procesory sygnałowe już zmonto-
+
+wane na płytce drukowanej. Mają one takie właściwości, jak dodatkowa pamięć, przetwor-
+
+niki a/c i c/a, gniazda do układów EPROM, wiele procesorów na jednej płytce itd. Niektóre
+
+z tych płytek są przewidziane do pracy jako samodzielne komputery, lecz większość skon-
+
+figurowano w taki sposób, żeby były wtykane do gniazda w jednostce głównej, np. w kom-
+
+puterze osobistym. Firmy produkujące tego rodzaju płytki są nazywane wytwórcami po-
+
+średniczącymi. Najlepszym sposobem znalezienia takich wytwórców jest zapytanie o nich
+
+w firmach wytwarzających te procesory DSP, które macie zamiar zastosować. Przejrzyjcie
+
+strony internetowe producentów; jeśli nie znajdziecie tam interesującej was listy, wyślijcie
+
+do nich list pocztą elektroniczną. Będą bardzo zadowoleni, mogąc poinformować was, kto
+
+stosuje ich produkty i jaki jest kontakt z tymi wytwórcami.
+
+Rynek cyfrowych procesorów sygnałowych był w roku 2002 zdominowany przez dwie fir-
+
+my. Poniżej podano te firmy i ogólną zasadę, według której oznaczają swoje produkty:
+
+Analog Devices (www.analog.com/dsp)
+
+ADSP-218x 16-bitowy, stałoprzecinkowy
+
+ADSP-219x 16-bitowy, stałoprzecinkowy, podwójne działanie procesora 218x
+
+ADSP-2106x 32-bitowy, zmiennoprzecinkowy
+
+ADSP-2116x 32-bitowy, zmiennoprzecinkowy, rdzeń SIMD
+
+ADSP-2153x 16-bitowy, o dużej wydajności
+
+ADSP-TSxxx _ z możliwością pracy 8-, 16-, 32-bitowej, stało- i zmiennoprzecinkowy,
+MIMD, o bardzo dużej wydajności.
+
+Texas Instruments (www.fi.com)
+
+TMS320C6xx 16-bitowy, zmiennoprzecinkowy
+
+TMS320C5xx 32-bitowy, zmiennoprzecinkowy
+
+TMS320C2xx 32-bitowy, stałoprzecinkowy.
+
+Pamiętajcie o tym, że rozróżnienie między cyfrowym procesorem sygnałowym (DSP) a in-
+nymi mikroprocesorami nie zawsze jest wyraźne. Spójrzmy, na przykład, jak Intel opisuje
+wprowadzenie techniki MMX do swojego procesora Pentium:
+
+Inżynierowie Intela wprowadzili 57 silnych, nowych instrukcji, specjalnie opracowanych do
+skutecznego operowania i przetwarzania sygnałów wizyjnych i fonicznych oraz danych gra-
+ficznych. Te instrukcje są ukierunkowane na powtarzalne sekwencje w wielkim stopniu rów-
+noległe, często spotykane w operacjach multimedialnych.
+
+W przyszłości z pewnością pojawi się więcej funkcji zbliżonych do DSP, a włączanych do tra-
+dycyjnych mikroprocesorów i mikrosterowników. Siłą napędową tych zmian są aplikacje zwią-
+zane z Intemetem i multimediami. Te zastosowania rozwijają się tak szybko, że za dwadzieścia
+lat, być może, cyfrowy procesor sygnałowy stanie się „tradycyjnym” mikroprocesorem.

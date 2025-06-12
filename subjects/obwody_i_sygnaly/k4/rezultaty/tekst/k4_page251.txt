@@ -1,0 +1,26 @@
+3.3. Metody analizy obwodów liniowych prądu stałego 253
+
+<image/figury/k4_page251_figure2.png>
+
+Przykład 3.3-2. W układzie z rys. 3.3-2a należy znaleźć prąd I,. Po zamianie źródła
+prądowego na napięciowe i połączeniu szeregowym źródeł napięciowych układ przyjmuje postać jak
+na rys. 3.3-2b. W dalszym ciągu napięciowe źródło sterowane zamieniamy na prądowe źródło
+sterowane (rys. 3.3-20) i — po połączeniu równoległym oporów — ponownie na napięciowe źródło
+sterowane. W rezultacie powstaje układ (rys. 3.3-2d), dla którego słuszne jest równanie:
+
+1
+E—-RI,
+2
+
+ 
+
+I, =
+
+R
+3R+7
+2
+
+E
+Rozwiązując to równanie względem prądu /, otrzymujemy I | = aa"
+
+<image/figury/k4_page251_figure1.png>

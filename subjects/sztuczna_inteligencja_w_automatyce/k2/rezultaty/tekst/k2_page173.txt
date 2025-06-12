@@ -1,0 +1,25 @@
+178
+
+2000). Oprócz podejścia klasycznego, opartego na rachunku wariacyjnym, stosowane
+są metody ewolucyjne oraz metody oparte na tzw. zasadzie optymalności Bellmana,
+do których zalicza się programowanie dynamiczne oraz metodę różnic czasowych.
+Niektóre z tych metod wymagają znajomości rozkładów prawdopodobieństwa czyn-
+ników losowych oddziaływujących na system. Zestawienie stosowanych typowych
+metod i ich podstawowych własności przedstawia rysunek ?? oraz tablica ??.
+
+ę Pinenoaaimi mt mam mimi ałmómoanimi mie mam m
+
+<image/figury/k2_page173_figure1.png>
+
+Rys. 6.77: Rodzaje i metody optymalizacji wieloetapowych procesów decyzyjnych
+
+<image/figury/k2_page173_figure2.png>
+
+6.10.4. Metody ewolucyjne
+
+Metody ewolucyjne poszukują najlepszej polityki operując na populacji polityk i
+stosując typowe operacje algorytmów genetycznych. Politykę ocenia się na podsta-
+wie pewnej liczby kompletnych sekwencji sterowania. Metody ewolucyjne zalicza
+się do tzw. grupy metod całościowych, w których ocenia się całą politykę, a nie
+poszczególne akcje. Przykłady zastosowania metod ewolucyjnych do wyznaczania
+neuronowego sterownika odwróconego wahadła przedstawiono poniżej.

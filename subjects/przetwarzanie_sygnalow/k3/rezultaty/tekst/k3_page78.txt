@@ -1,0 +1,26 @@
+4. Oprogramowanie DSP
+
+DJ nnnnnnN
+
+Tab. 4.7. Obliczanie funkcji rzadko stosowanych na podstawie funkcji bardziej popularnych. Wszystkie
+kąty podano w radianach, ATN(XD) to arcus tangens, LOG(X) — logarytm naturalny, SGN(X) — funkcja
+znaku (ti. -1 dła X £ 0, 1 dla X > 0), EXP(X) to jest e"
+
+<image/tabele/k3_page78_table1.png>
+
+Wartość odpowiadająca każdej z możliwych 256 wartości napięcia może być obliczona wcze-
+śniej i zapisane w pamięci przeglądowej. Gdy system jest uruchomiony, zmierzone napięcie
+— będące liczbą między 0 i 255 — staje się indeksem w tablicy przeglądowej służącym do
+odszukania odpowiadającej mu mocy. Stosując tablice przeglądowe, można uzyskać szybkość
+setki razy większą niż w bezpośrednim obliczeniu.
+
+Po trzecie, powinniście wiedzieć, co w waszym systemie jest szybkie, a co wolne. Ta wie-
+dza przychodzi wraz z doświadczeniem i próbami. Zawsze pojawiają się jakieś niespodzian-
+ki, Szczególną uwagę zwróćcie na instrukcje graficzne i we/wy. Jest zwykle kilka sposobów
+realizacji tych instrukcji, dlatego szybkości ich wykonania mogą być bardzo zróżnicowane.
+Na przykład w BASIC-u instrukcja BŁOAD przesyła plik danych bezpośrednio do jakiejś
+sekcji pamięci. Wczytywanie tego samego pliku do pamięci bajt po bajcie (w pętli) może
+być 100 razy wolniejsze. Innym przykładem może być instrukcja BASIC-a Ł/NE stosowana
+do rysowania kolorowej ramki na ekranie wizyjnym. Rysowanie takiej samej ramki piksel
+po pikselu również może trwać 100 razy dłużej. Nawet wprowadzenie do pętli instrukcji
+drukowania (aby śledzić, co się dzieje) może spowolnić tę operację tysiące razy.

@@ -1,0 +1,30 @@
+zataorm
+
+<image/wzory/k1_page71_formula1.png>
+
+Charakterystyka jest więc nachylona — 40 dB/dek.
+
+Największe odchylenie charakterystyki przybliżonej od rzeczywistej, obliczone
+dla w, =>. wynosi:
+
+<image/wzory/k1_page7/1_formula2.png>
+
+Przecięcie wykresu z osią odciętych: Z(w) = O:
+<image/wzory/k1_page7/1_formula3.png>
+log — log 0? =0,
+
+K
+log— =0,
+Tw?
+
+<image/wzory/k1_page71_formula4.png>
+
+Dla K=2i 7T=4 otrzymamy
+
+<image/wzory/k1_page71_formula5.png>
+
+vzory/k1_page71_formula6.png
+
+Przecięcie osi odciętych w= 2 =0,7 rad/s. |
+
+73

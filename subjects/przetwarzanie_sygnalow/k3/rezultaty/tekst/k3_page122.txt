@@ -1,0 +1,11 @@
+Właściwości matematyczne 137
+
+<image/figury/k3_page122_figure1.png>
+
+Rys. 7.14. Maszyna korelacyjna. Jest to sieć działań pokazująca, w jaki sposób jest obliczana korelacja
+wzajemna dwóch sygnałów. W tym przykładzie y[n] jest korełacją wzajemną x[n] i tn]. Zaznaczona linią
+ramka jest przesuwana w lewo lub w prawo tak, aby jej ZZM
+
+Maszyna korelacyjna
+tym że sygnał wewnątrz ramki nie jest odwracany lewo-prawostronnie. W podanym przykładzie są obli-
+czane tyko te próbki y[n], dla których t[n] jest catkowicie zanurzone w x[n]

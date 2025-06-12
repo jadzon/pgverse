@@ -1,0 +1,20 @@
+Stan układu- układy wyższych rzędów
+
+Trajektoria stanu dla układu niejednorodnego:
+<image/wzory/k/_page9_formula1.png>
+lo
+Trajektoria wyjściowa układu niejednorodnego:
+
+<image/wzory/k/_page9_formula2.png>
+
+Aby sprawdzić poprawność rozwiązania należy ponownie skorzystać z Twierdzenie Leibniza o
+różniczkowaniu pod znakiem całki:
+
+<image/wzory/k7_page9_formula3.png>
+
+POLITECHNIKA
+GDANSKA
+
+ 
+
+SMOLUB]S 8|8pOW

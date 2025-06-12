@@ -1,0 +1,54 @@
+Zespolone DFT 547
+
+ 
+
+Podobnie, każda wartość w części urojonej sygnału w dziedzinie częstotliwości wnosi rze-
+czywistą falę sinusoidalną oraz urojoną kosinusoidalną. Sygnał w dziedzinie czasu znajduje
+się, sumując te wszystkie rzeczywiste i urojone sinusoidy. Ważne jest to, że każda wartość
+sygnału w dziedzinie częstotliwości wytwarza w dziedzinie czasu zarówno sinusoidę rzeczy-
+wistą, jak i urojoną.
+
+Przypuśćmy na przykład, że chcemy odtworzyć falę kosinusoidalną o amplitudzie jednostko-
+wej przy częstotliwości 2nk/N. Wymaga to wykorzystania tak częstotliwości dodatniej, jak
+i ujemnej, obu z rzeczywistej części widma częstotliwościowego. Dwa kwadratowe znaczni-
+ki na rys. 31.1 są tego przykładem, z częstotliwościami ustawionymi na k/N = 0,23. Sygnał
+o dodatniej częstotliwości odpowiadającej wartości 0,23 (oznaczonej 1 na rys. 31.1) wnosi
+do dziedziny czasu falę kosinusoidalną i urojoną falę sinusoidalną:
+
+<image/wzory/k3_page508_formula1.png>
+
+Podobnie sygnał o częstotliwości ujemnej odpowiadającej wartości -0,23 (oznaczenie 2 na
+rys. 31.1) również wnosi do dziedziny czasu kosinusoidę i urojoną sinusoidę:
+
+<image/wzory/k3_page508_formula2.png>
+Ujemny znak w argumentach cosinusa i sinusa można wyeliminować, korzystając z zależności:
+cos(-x) = cos x oraz sin(-X) = —Sin x. Można więc udział częstotliwości ujemnej zapisać jako:
+
+<image/wzory/k3_page508_formula3.png>
+Zsumowanie udziałów od częstotliwości ujemnych i dodatnich daje odtworzenie sygnału
+w dziedzinie czasu:
+
+udział od częstotliwości dodatniej  — 00s(210,23n)+ > jsin(2x0,23n)
+
+udział od częstotliwości ujemnej - c0s(280,23n)- jsin(200,23n)
+wymikowy sygnał w dziedzinie czasu — cos(2x0,23n)
+
+W ten sam sposób możemy zsyntezować falę sinusoidalną w dziedzinie czasu. W tym przy-
+padku potrzebna jest częstotliwość dodatnia i ujemna z części urojonej widma częstotliwo-
+ściowego. Zaznaczono je okrągłymi znacznikami na rys. 31.1. Z wzoru 31.8 wynika, że te
+wartości widma wnoszą do dziedziny czasu falę sinusoidalną i urojoną falę kosinusoidalną.
+Urojone fale kosinusoidalne się kasują, a rzeczywiste sinusoidalne sumują:
+
+udział od częstotkiwości dodatniej 35in(2x0,23n)--> jeos(2x0,23n)
+
+udział od częstotliwości ujemnej + 3sin(2x0,23n)+ > jcos(2x0,23n)
+wynikowy sygnał w dziedzinie czasu — - sin (2x0,23 n)
+
+Zauważcie, że jest generowana ujemna fala sinusoidalna, chociaż sygnał o dodatniej często-
+tliwości miał wartość, która była dodatnia. Odwrócenie znaku jest nierozerwalnie związane
+z operacjami matematycznymi zespolonego DSP. Jak pamiętacie, takie samo odwrócenie znaku
+jest zwykle stosowane w rzeczywistym DFT. To znaczy, że dodatnia wartość w części urojonej
+widma częstotliwościowego odpowiada ujemnej fali sinusoidalnej. Większość autorów włącza
+to odwrócenie znaku do definicji rzeczywistego przekształcenia Fouriera, aby było ono zgodne
+z jego zespolonym odpowiednikiem. Rzecz jest w tym, że takie odwrócenie znaku musi być
+stosowane w zespolonym przekształceniu Fouriera, a w rzeczywistym jest tylko opcją.

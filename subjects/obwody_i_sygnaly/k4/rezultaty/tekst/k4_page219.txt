@@ -1,0 +1,53 @@
+2.2. Rozwiązania równań układów SLS 221
+
+początkowych potrzebnych do jednoznacznego rozwiązania dla t € 40, + oo)
+wspomnianych równań różniczkowych”.
+
+Niezależnie zatem od sposobu rozpatrywania warunków początkowych
+dochodzimy do tego samego wniosku: warunki początkowe w układzie SLS są
+określone przez wartości w chwili t = 0 prądów w indukcyjnościach i napięć
+na pojemnościach układu.
+
+C. Warunki początkowe zerowe i niezerowe. Jeśli w chwili t = O:
+
+— napięcia na wszystkich pojemnościach i prądy wszystkich indukcyjności
+układu są równe zeru;
+
+— w konsekwencji, energia zmagazynowana w układzie w chwili £ = 0
+jest równa zeru;
+to mówimy wówczas o warunkach początkowych zerowych. W przeciwnym przy-
+padku mówimy o warunkach początkowych niezerowych.
+
+W przypadku ogólnym, gdy źródła niezależne są włączane w chwili t = 0
+przy niezerowych warunkach początkowych, prądy i napięcia w układzie SLS
+w przedziale t e (0, + o) są wynikiem działania dwóch niezależnych przyczyn:
+
+— pobudzeń zewnętrznych w postaci sił elektromotorycznych e;,e,,...,e,,
+i wydajności prądowych jo + 1, Jm + 2:--- > Ja;
+— energii zmagazynowanej w układzie w chwili t = 07.
+
+D. Stan wymuszony i stan swobodny. Załóżmy, że rozpatrywany układ jest
+inercyjny, zawiera zatem indukcyjności i/lub pojemności i może być w nim
+magazynowana energia.
+
+Stanem wymuszonym układu nazywamy taki stan, w którym wszystkie prądy
+i napięcia w układzie, określone dla te(0, +co), są wywołane działaniem
+włączonych w chwili t = 0 zewnętrznych pobudzeń e;, €4,..., ©, Jn41--+ J,
+przy zerowych warunkach początkowych, tj. przy zerowej
+energii zmagazynowanej w układzie w chwili początkowej t = 0. Roz-
+wiązanie w stanie wymuszonym jest nazywane rozwiązaniem wymuszonym lub
+składową wymuszoną.
+
+Stanem swobodnym układu nazywamy taki stan, w którym wszystkie prądy
+i napięcia w układzie, określone dla te40, +00), są wywołane działaniem
+energii zmagazynowanej w układzie w chwili t = 0, tzn. przy zerowych
+pobudzeniach zewnętrznych e,=€e,=...=e,=0 oraz
+Jm+1 = Jm+2 5 +-- 5j, 50 i przy niezerowych warunkach po-
+czątkowych .Rozwiązanie wstanie swobodnym jest nazywane rozwiązaniem
+swobodnym lub składową swobodną.
+
+*) Do spraw tu poruszonych powrócimy w rozdziale 6, gdzie rozpatrzymy je dokładniej.
+
+2) Z założenia rozpatrywany układ jest liniowy. Przedstawiona konkluzja może być zatem
+uważana za konsekwencję zasady superpozycji (por. p. 2.2.7). Do sprawy tu poruszonej nawiążemy
+jeszcze w rozdziale 6.

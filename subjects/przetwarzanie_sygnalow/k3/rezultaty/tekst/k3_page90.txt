@@ -1,0 +1,3 @@
+<image/tabele/k3_page90_table1.png>
+
+<image/wzory/k3_page90_formula1.png>

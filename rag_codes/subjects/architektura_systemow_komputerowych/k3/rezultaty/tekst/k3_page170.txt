@@ -1,0 +1,24 @@
+160 8. Mechonizmy przyspieszające pracę komputerów
+
+pobierane są zatem przed zakończeniem wykonywania rozkazu poprzedniego i są one
+umieszczane w tzw. kolejce. Do zrealizowania kolejki rozkazów wykorzystuje się pamięć
+buforową typu FIFO, której zasada działania polega na tym, że słowa odczytywane są
+w kolejności ich zapisu. Procesor wyposażony jest w pamięć buforową typu FIFO o pojem-
+ności kilku rozkazów, która zwykle zapełniana jest szybciej niż rozkazy są wykonywane.
+Zatem kolejne rozkazy oczekują na dekodowanie i wykonanie. Pewna trudność może
+powstać wtedy, gdy pojawi się rozkaz skoku. Wówczas układ sterowania procesorem musi
+opróżnić zawartość bufora kolejki i rozpocząć jego ładowanie ponownie od nowego
+miejsca, tj. od miejsca wskazanego przez adres skoku.
+
+8.2.2. PAMIĘĆ Z PRZEPLOTEM
+
+Ponieważ operacje wykonywane przez procesor są na ogół szybsze niż operacje dostępu
+do pamięci, to konstruktorzy komputerów poszukują metod pozwalających na przyspie-
+szenie współpracy procesora z pamięcią operacyjną. Jedną z nich jest taki podział pamięci
+operacyjnej na banki, aby do danego banku można było rozpocząć dostęp, zanim skończy
+
+ 
+
+ury/k3_page170_figufigury/k3_page170_figure3.
+
+Rysunek 8.4. Praca pamięci z przeplotem

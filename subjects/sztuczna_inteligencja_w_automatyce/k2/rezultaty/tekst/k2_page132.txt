@@ -1,0 +1,51 @@
+uczenia.
+
+Przy przyjętym sposobie odczytu klasy i definicji błędu łącznego, będącego sumą
+błędu po wszystkich obrazach wejściowych, widać, że klasyfikacja wszystkich obra-
+zów będzie bezbłędna, gdy wartość błędu łącznego będzie mniejsza od 0,125. Wartość
+ta zapewnia, że różnica pomiędzy sygnałem oczekiwanym a rzeczywistym na wyj-
+ściu dowolnego neuronu i dla każdego obrazu nigdy nie przekroczy wartości progowej
+0,5, a tym samym odczyt klasy będzie bezbłędny. Na podstawie przytoczonych wy-
+żej wartości błędów widać, że bezbłędne klasyfikacje zapewniły procesy uczenia dla
+współczynników 7 =0,5, 1 i 2.
+
+Dla ilustracji charakteru reakcji sieci poniżej przedstawiono sygnały wyjściowe
+neuronów nauczonej sieci (dla q7 = 2) odpowiadającej na przykładowy obraz wej-
+ściowy (znak A), gdzie w nawiasach przy liczbach podano znaki reprezentowane
+przez poszczególne neurony:
+
+<image/tabele/k2_page132_table1.png>
+
+<image/wzory/k2_page132_formula1.png>
+Odległość jest zwykle odległością Euklidesową, chociaż stosowane są też inne me-
+tryki. Typowymi funkcjami radialnymi (r = ||x — cl|) są (rys. ?2):
+e f(r) =exp(—r*) — Gaussowska
+
+l
+
+= odwrotna kwadratowa
+prź
+
+e f(r) =
+
+ 
+
+odwrotna wielokwadrykowa (ang. multiquadric)
+
++ 160= op
+
+Funkcje radialne są często stosowane do aproksymacji funkcji w postaci sumy
+
+<image/wzory/k2_page132_formula2.png>
+
+Parametr b wpływa na szerokość funkcji radialnej, zaś waga wys; określa wartość
+funkcji y(x) dla wartości x odległych od centrów c,. Ponieważ funkcja (??) jest
+liniowo zależna od wag wy, więc mogą one być wyznaczane metodą najmniejszych
+kwadratów.
+
+Suma (??) może być reprezentowana przez dwuwarstwową sieć neuronową przed-
+stawiona na rysunku ??.
+
+W sieci radialnej każdy neuron realizuje jedną funkcję radialną f,(x) = g(||x — c,||)
+z centrum c; równym jednemu z wektorów wejściowych w zbiorze uczącym, czyli
+c,=xX

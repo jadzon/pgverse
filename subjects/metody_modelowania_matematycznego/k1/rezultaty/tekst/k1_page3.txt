@@ -1,0 +1,58 @@
+weryfikacja - porównanie reakcji modelu i układu rzeczywistego
+błędy:
+- w modelu matematycznym
+- _ wrealizacji komputerowej
+- w mechanizmie (w interpretacji czasu, realizacji zmiennych losowych, całkowaniu)
+- w strategii (uporządkowanie działań i zdarzeń)
+
+model nieformalny - względem opisu:
+
+- elementów
+
+- zmiennych opisujących parametry i stany elementów
+
+- interakcji elementów (reguł wzajemnego oddziaływania)
+
+- _ przyjętych założeń
+zasadnicze cechy układu rzeczywistego w modelu nieformalnym
+
+- niekompletny (nie uwzględnia wszystkich możliwych sytuacji)
+
+- _ nielogiczny (zawiera sprzeczne ze sobą reguły interakcji)
+
+- niejednoznaczny (więcej niż jedna możliwość zachowania w danej sytuacji)
+model formalny — po wykryciu braków i usterek
+
+Etapy procesu MAaS:
+1) nieformalny opis modelu i założeń w naturalnym języku
+2) formalny opis - matematyczny i jednoznaczny
+3) program symulacyjny
+4) prezentacja wyników eksperymentu i ich analizy
+5) ocena - zakresu zastosowania modelu, jego zasadności/wierności i kosztów
+przebiegu symulacji
+
+6) odniesienie do innych modeli (przeszłych i przewidywalnych)
+
+—
+
+Rzeczywiste obiekty/procesy/układy
+— kategorie modeli matematycznych:
+- _ ciągłe/dyskretne w czasie
+- _ ciągłe/dyskretne w wartościach chwilowych zmiennych
+- _ deterministyczne/stochastyczne
+-  autonomiczne/nieautonomiczne (czy są wpływy "świata zewnętrznego”)
+- _ stacjonarne/niestacjonarne (czy zmienne w czasie)
+- _ dynamiczne/niedynamiczne (nieinercyjne, bezpamięciowe)
+- _ liniowe/nieliniowe (liniowy - parametry nie zmieniają się podczas zmian stanu układu)
+
+Sformalizowany model - sposoby krótkiego i precyzyjnego opisu
+-  materia/zespół wielkości - zbiory pobudzeń, zakłóceń, stanów wewn. i reakcji wyjść
+-  materia/zespół odwzorowań, transformacji - funkcje określające reakcję na
+pobudzenie
+- podstawa czasu T (ciągła <rzeczywiste>/dyskretna <naturalne - całkowite dodatnie>)
+Formalizmy i konwencje opisu odpowiednie do klas modeli, np:
+- dyskretnych w czasie
+-  odyskretnych zdarzeniach
+- równań różniczkowych
+Równania różnicowe - sieć elementów nieinercyjnych i opóźnień
+Równania różniczkowe - sieć elementów nieinercyjnych i integratorów

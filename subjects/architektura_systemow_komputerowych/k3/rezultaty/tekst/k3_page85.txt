@@ -1,0 +1,44 @@
+4.5. Układy sterowania 75
+
+operację. W każdym algorytmie kolejność wykonywania działań może być bezwarunkowa
+lub warunkowa. Jeśli jest bezwarunkowa, to działania te są wykonywane sekwencyjnie, tj.
+kolejno jedno po drugim. Po wykonaniu jednego działania musi zostać wskazane następne.
+Jednym ze sposobów realizacji tego jest wskazanie w słowie mikrooperacji adresu na-
+stępnej mikrooperacji. Najłatwiej jednak następną mikrooperację umieścić w następnej
+komórce pamięci (jeśli jest to możliwe). Dlatego do wejść multipleksera dołączono wyjścia
+z układu następnika oraz wyjścia rejestru RM. Odpowiednie wysterowanie multipleksera
+pozwoli wtedy wybrać następną komórkę pamięci. Jeśli kolejność działań jest warunkowa
+(w algorytmie pojawia się rozgałęzienie), to adres następnej mikrooperacji jest uzależniony
+od spełnienia warunku. Sekwencja warunkowa jest realizowana przez odpowiednie wy-
+sterowanie multipleksera w zależności od warunków zewnętrznych (wejście WAR ZEWN).
+
+Aby zilustrować podany opis, zaprojektowano układ sterujący blokiem ALU, który
+wykona rozkaz mnożenia w kodzie U2. Przedstawiony wcześniej algorytm (por. rozdz. 3)
+trzeba przełożyć na ciąg mikrooperacji. Zgodnie z tym co wcześniej powiedziano, w słowie
+mikrooperacji można wyróżnić trzy części: część adresową wskazującą adres następnej
+mikrooperacji, część sterującą z 11 bitami wysterowania układu z rys. 4.8 oraz część
+określającą źródło następnego mikrorozkazu. W tym przykładzie mamy tylko jeden wa-
+runek zewnętrzny z układu wykonawczego. Jest to najmniej znaczący bit rejestru Q (Q,).
+Załóżmy także tylko jednobitową część wskazującą źródło następnego rozkazu, czyli
+sterowanie multiplekserem. Będzie to bit K wskazujący na moment zakończenia mikro-
+programu. Format słowa mikrooperacji jest przedstawiony na rysunku 4.10.
+
+<image/tabele/k3_page85_table1.png>
+
+Rysunek 4.10. Format słowa mikrooperacji
+
+W tablicy 4.3 przedstawiono ciąg mikrooperacji wraz z komentarzem. Mikrooperacja
+ładowania rejestru Q i mikrooperacje przesuwania mają w polu warunku wpisaną wartość
+Q,, co wskazuje, że następująca po nich mikrooperacja jest warunkowa i zależy od
+wartości najmniej znaczącego bitu rejestru Q. Oznacza to, że multiplekser (por. rys. 4.9)
+musi zostać wysterowany przez Q, tak, aby w zależności od tego bitu nastąpiło
+rozgałęzienie w mikroprogramie. Bit ten jest podawany na jedno z wejść multipleksera,
+a na drugie wejście jest podawany bit K z mikroprogramu. Jeśli Q, i K są równe 00, to na
+wyjściu multipleksera pojawia się zawartość układu następnika. Jeśli Q, i K są równe 10,
+to na wyjściu multipleksera pojawi się część adresowa mikrooperacji. Jeśli natomiast K
+jest równe 1, to na wyjściu multipleksera pojawi się zdekodowana zawartość rejestru RR
+i rozpocznie się nowy mikroprogram.
+
+Mikrooperacja rozpoczynająca mikroprogram znajduje się pod umownym adresem 0.
+Powoduje ona załadowanie odpowiednich wartości do rejestrów A i B. W polu adresowym
+tej mikrooperacji są wartości nieokreślone, ponieważ zawsze po niej jest wykonywana

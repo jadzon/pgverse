@@ -1,0 +1,28 @@
+Czas aktywności etapu (step elapsed time) jest określony przez zmienną ***,7
+typu 7/ME (por. Tab. 2.7). Wartość tej zmiennej pozostaje bez zmian, gdy etap
+przechodzi w stan nieaktywny.
+
+Zakres stosowania nazw etapów, ich wskaźników i czasów aktywności jest lo-
+kalny w ramach elementu oprogramowania, w którym się pojawiają.
+
+Stan początkowy elementu oprogramowania jest określony przez wartości po-
+czątkowe jego zmiennych wewnętrznych i wyjściowych oraz przez zbiór etapów
+początkowych (initial steps), tj. etapów aktywnych w chwili początkowej. Każ-
+da sieć SFC lub jej tekstowy odpowiednik powinny zawierać tylko jeden etap
+początkowy. Etap początkowy zaznacza się jako prostokąt rysowany podwójną
+linią, a w przypadku reprezentacji tekstowej jako konstrukcję ZN/TIAL_STEP ...
+END_STEP.
+
+Tab. 2.42 pokazuje sposoby przedstawienia etapów. Należy zwrócić uwagę na
+to, że zmienne ***.X oraz ***.7 nie mogą być modyfikowane przez program
+użytkownika, ich wartości mogą być tylko odczytywane.
+
+Domyślną wartością początkową dla czasu aktywności etapu jest r40s. Domyślną
+
+wartością początkową dla wskaźnika etapu jest logiczne 0, z wyjątkiem etapu
+początkowego, którego wskaźnik przyjmuje z chwilą inicjacji wartość 7.
+
+<image/tabele/k4_page83_table1.png>
+
+Z OT OO TP POTY TO TZT O TE TYOP ZZOÓZZ ZD YTSZP ZZA PDZY ZA DK WYDZIL PDZ TOZOSZE ZDIZZZOODLOZZOŹIE WZT LA | TÓZODOD.
+2.5 Programowanie w oparciu o graf sekwencji SFC 83

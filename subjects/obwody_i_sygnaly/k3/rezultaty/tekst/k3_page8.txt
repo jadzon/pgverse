@@ -1,0 +1,41 @@
+Przedmowa
+
+Oddajemy do rąk Czytelnika dwa pierwsze tomy trzytomowego podręcznika
+akademickiego poświęconego podstawom teorii obwodów. Mamy nadzieję, że
+tom trzeci ukaże się niebawem, dopełniając całości naszego zamierzenia.
+
+Obowiązkiem autorów jest, jak sądzimy, przedstawienie genezy podręcznika,
+jego koncepcji, a także celu, jaki autorzy chcieli osiągnąć, proponując podręcznik
+o takim właśnie kształcie. Podręczników teorii obwodów napisano bowiem na
+świecie wiele. Autorzy — wieloletni pracownicy Zakładu Teorii Obwodów na
+Wydziale Elektroniki Politechniki Warszawskiej — szczególnie dobrze pamięta-
+ją słowa profesora Czesława Rajskiego, twórcy i pierwszego kierownika tego
+zakładu, zawarte w przedmowie do J ego podręcznika z roku 1971. Brzmiały one
+tak: „Jedną z największych liczb znanych w przyrodzie jest liczba podręczników
+z teorii obwodów. Są one z reguły bardzo dobre, a przeważnie świetne. W tych
+warunkach wydanie jeszcze jednego podręcznika z tego zakresu wymaga
+usprawiedliwienia”.
+
+Mimo żartobliwego tonu tych słów pragniemy potraktować je poważnie,
+także w odniesieniu do naszego podręcznika.
+
+Teoria obwodów (dokładniej, teoria obwodów elektr ycznych) jest podstawową
+dyscypliną wykładaną w uczelniach technicznych na wszystkich kierunkach
+studiów związanych z naukami elektrycznymi. Jest dyscypliną naukową, znaną
+w piśmiennictwie anglojęzycznym pod nazwą circuit theory lub circuits and
+systems. Jej początki wywodzą się z elektrotechniki i przez długie lata była ona
+uprawiana głównie na wydziałach elektrycznych, przeważnie jako część podstaw
+elektrotechniki. Burzliwy rozwój innych dyscyplin należących do nauk elektrycz-
+nych, przede wszystkim elektroniki, ale również telekomunikacji, automatyki,
+informatyki i dyscyplin pokrewnych, spowodował potrzebę specjalizacji w nau-
+kach podstawowych, a także konieczność uwzględniania w nich nowych
+problemów, które pojawiały się w nauce i technice. Teoria obwodów nie była tu
+wyjątkiem; dostosowywana powoli do potrzeb nauk opartych na elektronice
+i wykładana na wydziałach elektroniki stawała się coraz bardziej odległa od
+klasycznej teorii obwodów związanej z elektrotechniką.
+
+Problematyka teorii obwodów jest w ustawicznym stadium rozwoju. Jej
+zakres tematyczny w ostatnich kilkunastu latach znacznie poszerzył się. Jedno-
+cześnie niektóre zagadnienia nabrały już znaczenia historycznego i zostały
+w sposób naturalny wyeliminowane. Proces ten trwa nadal i nic nie zapowiada,
+aby jego tempo miało słabnąć. Przeciwnie, dalszy rozwój mikroelektroniki (dziś

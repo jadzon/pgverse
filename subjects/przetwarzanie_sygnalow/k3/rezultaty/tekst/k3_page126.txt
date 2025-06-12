@@ -1,0 +1,46 @@
+142wzory/k3_page126_formula1.pn
+
+ 
+
+Analiza fourierowska to rodzina metod matematycznych, których podstawą jest rozkład sygna-
+łów na sinusoidy. Do tej rodziny należy też dyskretne przekształcenie Fouriera (DFT — Discrete
+Fourier Transform), w którym operuje się sygnałami przetworzonymi na cyfrowe. Ten roz-
+dział jest pierwszym z czterech poświęconych rzeczywistemu DFT, czyli wersji dyskretnego
+przekształcenia Fouriera, w której do reprezentowania sygnałów wejściowych i wyjściowych
+są stosowane liczby rzeczywiste. Zespolone DFT, metoda bardziej zaawansowana, w której
+stosuje się liczby zespolone, będzie omówiona w rozdziale 31. W tym rozdziale rozpatrzymy
+zależności matematyczne i algorytmy rozkładu Fouriera, który jest sercem DFT.
+
+Rodzina przekształceń Fouriera
+
+Analiza Fouriera wzięła nazwę od swego twórcy, którym był Jean Baptiste Joseph Fourier
+(1768-1830), francuski matematyk i fizyk. Chociaż wielu innych uczonych wniosło znaczny
+wkład w tę dziedzinę, to nazwą przekształcenia uhonorowano Fouriera za jego odkrycia ma-
+tematyczne i wnikliwe spojrzenie na praktyczną przydatność metody. Fourier interesował się
+propagacją ciepła i przedstawił w roku 1807, w Institut de France, artykuł o zastosowaniu si-
+nusoid do wyrażania rozkładów temperatury. Artykuł zawierał kontrowersyjną tezę, że każdy
+ciągły przebieg okresowy może być wyrażony jako suma odpowiednio dobranych fal sinuso-
+idalnych. Wśród recenzentów było dwóch spośród najsławniejszych w historii matematyków
+— Joseph Louis Lagrange (1736-1813) i Pierre Simon de Laplace (1749-1827).
+
+Podczas gdy Laplace i dwóch innych recenzentów głosowali za przyjęciem artykułu, Lagrange
+nieugięcie protestował. Przez prawie 50 lat Lagrange uparcie twierdził, że nie można stosować
+takiego podejścia do wyrażania sygnałów mających ostre naroża, np. nieciągłe zbocza, jak w fali
+prostokątnej. Institut de France uległ prestiżowi Lagrange'a i odrzucił artykuł Fouriera. Dopiero
+po śmierci Lagrange'a, 15 lat później, opublikowano wreszcie pracę Fouriera. Na szczęście
+Fouriera absorbowało także wiele innych zajęć, takich jak działalność polityczna, wyprawa do
+Egiptu z Napoleonem i próby uniknięcia gilotyny po rewolucji francuskiej (dosłownie!).
+
+Kto miał rację? Odpowiedź nie jest całkiem prosta. Lagrange miał słuszność, twierdząc, że
+sumowanie sinusoid nie może utworzyć sygnału mającego ostre naroża. Jednak można uzy-
+skać sygnał bardzo do niego zbliżony. Tak bardzo zbliżony, że różnica między obu sygnałami
+ma zerową energię. W tym sensie Fourier miał rację, chociaż w nauce XVIII wieku niewiele
+jeszcze wiedziano o pojęciu energii. Wspomniane zjawisko nosi teraz nazwę efektu Gibbsa,
+który będzie omówiony w rozdziale 11.
+
+Na rys. 8.1 przedstawiono, jak można rozłożyć sygnał na przebiegi sinusoidalne i kosinuso-
+idalne. Na rys. 8.1 a) mamy przykład sygnału o długości 16 punktów, zawierającego próbki
+o numerach od 0 do 15. Na rys. 8.1 b) pokazano rozkład Fouriera tego sygnału, 9 fal sinuso-
+idalnych i 9 fal kosinusoidalnych, każda o innej częstotliwości i amplitudzie. Chociaż nie jest
+
+<image/figury/k3_page126_figure1.png>

@@ -1,0 +1,30 @@
+Jeżeli f(t) jest oryginałem o wykładniku wzrastania my, to:
+- całka po prawej stronie wzoru (1.1) jest jednostronnie zbieżna w półpłaszczyźnie
+
+Re s > mg,
+— funkcja F(s) określona wzorem (1.1) jest funkcją analityczną w półpłaszczyźnie
+Re s > mę,
+- lim F(s)=0.
+Re s—+
+Funkcję F(s) nazywamy transformatą (obrazem) oryginału /(£), co zapisujemy
+
+<image/wzory/k1_page6_formula1.png>
+
+1.2. Przykłady obliczania transformat
+Przykład 1.1
+
+Obliczyć transformatę funkcji jednostkowej. Funkcję oznaczoną 1(:) lub n(1) okre-
+śloną wzorem
+
+<image/wzory/k1_page6_formula2.png>
+
+nazywamy funkcją jednostkową albo funkcją Heaviside”a. Postać funkcji jednostko-
+wej pokazano na rysunku 1.2.
+
+<image/figury/k1_page6_figure1.png>
+
+Rys. 1.2. Funkcja jednostkowa
+
+Na nadetawie wzarn (1 1) mamv
+
+<image/wzory/k1_page6_formula3.png>

@@ -1,0 +1,43 @@
+Przykład 2.6
+Rozwiązać równanie różniczkowe
+
+<image/wzory/k1_page33_formula1.png>
+z warunkiem początkowym y(0) = 0.
+
+Rozwiązanie
+Stosujemy transformatę Laplace'a do obu stron równania:
+
+| y(t)]= sY (s) — y(0) = sY(s),
+Z(y(0]=Y(s),
+Z46-1(0]= >.
+stąd
+sY(s)+2Y(s)= 6.
+czyli z
+<image/wzory/k1_page33_formula2.png>
+
+Następnie rozkładamy Y(s) na ułamki proste
+
+<image/wzory/k1_page33_formula3.png>
+
+Po sprowadzeniu do wspólnego mianownika porównujemy liczniki lewej i prawej
+
+oteruwwa: wdzasrewrnowam
+
+<image/wzory/k1_page33_formula4.png>
+
+Współczynniki 4 i B wyliczamy, podstawiając kolejno do równania wartości miejsc
+zerowych:
+
+<image/wzory/k1_page33_formula5.png>
+
+Po obliczeniach Y(s) przyjmuje postać
+
+<image/wzory/k1_page33_formula6.png>
+
+Ponieważ y(t) = £"-'[Y(s)], otrzymujemy rozwiązanie równania różniczkowego
+
+w nostaci
+
+<image/wzory/k1_page33_formula7.png>
+
+35

@@ -1,0 +1,15 @@
+w formacie BCD a typami S/N7, /NT lub D/NT zawierającymi liczby całkowite,
+np. wynikiem wykonania /NT_TO_BCD(25) będzie 24001/0_07/0/, a wynikiem
+BCD_TO_INT(240011_0110_1001) będzie liczba 369.
+
+<image/tabele/k4_page52_table2.png>
+
+e Funkcje arytmetyczne (Arithmefic functions)
+
+<image/figury/k4_page52_figure1.png>
+
+<image/tabele/k4_page52_table1.png>
+
+ 
+
+wzory/k4_page52_formula1.pnq

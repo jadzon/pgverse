@@ -1,0 +1,19 @@
+126
+
+<image/figury/k2_page121_figure2.png>
+
+<image/figury/k2_page121_figure3.png>
+
+Rys. 6.25: Przykład zadania klasyfikacji, gdy klasy reprezentowane są przez zbiory nieskoń-
+czone. Wtedy do klasyfikacji trzeba użyć jednej warstwy zamieniającej zbiory w pojedyncze
+punkty (w tym przypadku dwa neurony reprezentowane przez proste r; = (i zę =0),a
+później wystarczają dwie warstwy, czyli łącznie trzy warstwy.
+
+Na rysunku ?? przedstawiono zadanie, gdy klasy reprezentowane są przez zbiory
+nieskończone. Wtedy do klasyfikacji można użyć jednej warstwy zamieniającej zbiory
+w pojedyncze punkty, a później wystarczają dwie warstwy, czyli łącznie trzy war-
+stwy. Aby pierwsza warstwa zamieniła zbiory w punkty, hiperpłaszczyzny reprezen-
+tujące neurony pierwszej warstwy powinny tak podzielić przestrzeń obrazów aby w
+powstałych podobszarach występowały obrazy należące do pojedynczych klas.
+
+imi

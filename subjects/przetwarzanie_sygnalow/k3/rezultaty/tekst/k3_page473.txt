@@ -1,0 +1,56 @@
+510
+
+29. Rozpoczęcie pracy z DSP
+
+Gdy już zdecydujecie, że cyfrowy procesor sygnałowy jest potrzebny do waszego zastoso-
+wania, to powinniście wiedzieć, od czego zacząć. Wielu producentów przyśle wam tanie
+zestawy próbne umożliwiające zdobycie pierwszych doświadczeń z ich produktami. Są to
+świetne narzędzia edukacyjne. Niezależnie od tego, czy jesteście nowicjuszami, czy profe-
+sjonalistami, taki zestaw jest najlepszym sposobem zapoznania się z konkretnym procesorem
+sygnałowym. Na przykład firma Analog Devices dostarcza zestawy EZ- Lite, aby po-
+tencjalnych klientów uczyć pracy z cyfrowymi procesorami sygnałowymi rodziny SHARC?.
+Za niewielką cenę otrzymujecie wszystkie układy i oprogramowanie niezbędne do tego, aby
+zobaczyć DSP w działaniu. Obejmuje to także standardowe oprogramowanie dostarczane
+wraz z zestawem, jak również przykłady aplikacji, do których sami możecie napisać progra-
+my w języku asemblerowym lub C. Przypuśćmy, że kupiliście jeden z tych zestawów Analog
+Devices i bawicie się nim przez kilka dni. Ten rozdział zawiera przegląd tego, co możecie
+znaleźć w takim zestawie i czego możecie się nauczyć.
+
+Rodzina AD$P-2106x
+
+W poprzednim rozdziale omówiliśmy ogólnie działanie rodziny cyfrowych procesorów sygna-
+łowych ADSP-2106x rodziny SHARC. W tablicy 29.1 zestawiono różne procesory należące
+do tej rodziny. Wszystkie te układy mają taką samą architekturę, lecz różne wielkości pamięci
+wewnętrznej w strukturze monolitycznej, a właśnie wielkość pamięci jest czynnikiem oo
+jącym o wyborze procesora do danego zastosowania. Dostęp do pamięci jest na ogół v ł
+gardłem systemów DSP. W procesorach SHARC rozwiązano ten toblat dóiki wadketczcwy m
+w strukturze monolitycznej dużym, dwuwejściowym pamięciom SRAM. Jednak ostatnią rze-
+czą, jaką chcielibyście zrobić, byłoby płacenie za więcej pamięci niż jest potrzebne. Procesory.
+sygnałowe są często stosowane w urządzeniach, w których niskie koszty są bardzo ważne, np.
+w telefonach komórkowych i odtwarzaczach CD. Można więc powiedzieć, że zestaw proceso
+rów w rodzinie SHARC jest podyktowany zarówno technologią, jak i marketingiem.
+SHARC, EZ-KIT, EZ-LAB, MsualDSP, EZ-ICE, logo SHARC, logo Analog Devices i logo
+VisualDSP są zastrzeżonymi znakami towarowymi firmy Analog Devices, Inc.
+Przeglądając tablicę 29.1, zwróćcie uwagę, że nawet tańsze układy mają całkiem dużo pamię
+ci. Na przykład ADSP-21065L ma 544 kilobitów wewnętrznej pamięci SRAM. To wystarcz:
+do zarejestrowania 6-8 sekund sygnału mowy przetworzonego na cyfrowy (8 kilopróbek
+8-bitowych). Wśród najdroższych układów z tej rodziny ADSP-21060 ma 4 megabity pamię-
+ci. Jest to więcej, niż trzeba do zarejestrowania całego obrazu w postaci cyfrowej (512 x 512:
+pikseli, 8 bitów na piksel). Jeśli potrzebujecie jeszcze więcej pamięci, możecie łatwo, do
+każdego z tych układów dodać zewnętrzną pamięć SRAM (lub pamięć wolniejszą).
+Różnice między procesorami rodziny SHARC są nie tylko w pamięciach, lecz również
+w układach wejścia/wyjścia, Układy wyższej klasy, ADSP-21060 oraz ADSP-21062, mają
+po 6 portów Link Port. Są to równoległe połączenia 4-bitowe służące do tworzenia systemć
+wieloprocesorowych i do innych zastosowań wymagających elastycznego, bardzo szybkieg
+wejścia/wyjścia. Układy nieco niższej klasy (ADSP-21061 i ADSP-21065L) nie mają portów
+Link Pont, lecz charakteryzują się większą liczbą kanałów DMA wspomagających działani
+portów szeregowych. Przy oznaczeniach typów tych układów spotkacie też litery L lub M,
+np. ADSP-21060L. To oznacza, że procesor pracuje przy napięciu niższym niż tradycyj
+5,0 V. Na przykład ADSP-21060L pracuje z napięciem zasilającym 3,3 V, a ADSP-21160M
+z napięciem tylko 2,5 V.
+
+W czerwcu 1998 roku firma Analog Devices zaprezentowała drugą generację swych pro:
+cesorów o architekturze SHARC, wprowadzając na rynek ADSP-21160. Charakteryzuje s
+on rdzeniem o architekturze SIMD (pojedyncze rozkazy — wiele danych) pracującym z czę
+stotliwością 100 MHz, magistralą pamięci o rozszerzonym paśmie dającym przep '
+1600 MB/s, dwiema 64-bitowymi magistralami danych i czterema 80-bitowymi akumulata

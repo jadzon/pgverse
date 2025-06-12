@@ -1,0 +1,29 @@
+gnału wyjściowego, a wartości +1024 przyporządkowuje wartość
+maksymalną, to należy wybrać typ kanału o numerze |.
+
+e Parametr OGR określa górną granicę dla parametru XE — wartości przeka-
+zywanej do modułu wyjść analogowych.
+Określenie parametru przy wywołaniu bloku
+OGR KF X, gdzie
+= -32768 + +32767
+
+e Parametr UGR określa dolną granicę dla parametru XE - wartości przeka-
+zywanej do i modułu wyjść analogowych.
+
+yA. page380_formula1.png
+
+Parametr FEH sygnalizuje wystąpienie błędu przy wykonaniu bloku funk-
+cyjnego FB251. Przyjmuje wartość | jeżeli:
+
+« przy wywołaniu podano nieprawidłowy adres modułu analogowego,
+
+« przy wywołaniu podano nieprawidłowy numer kanału,
+
+« przy wywołaniu podano nieprawidłowy typ kanału,
+
+a przy wywołaniu podano UGR=OGR
+
+e Parametr BU przyjmuje wartość |, jeżeli wartość parametru XE przekroczy
+wartości graniczne zadane przez parametry UGR i OGR.
+
+<image/tabele/k4_page380_table1.png>

@@ -1,0 +1,7 @@
+<image/figury/k3_page443_figure2.png>
+
+Rys. 27.15. Przykład zniekształceń spowodowanych kompresją JPEG. Na rys. a) pokazano obraz
+nalny, a na b) i c) obrazy odtworzone przy ałycka kanprodij odpowiodsie, 16:1 106-1:0aly
+
+nik kompresji zastosowany w A ZE
+przez mniej niż 12 bitów

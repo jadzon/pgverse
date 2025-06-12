@@ -1,0 +1,21 @@
+ad. a)
+Model stanowy zdiagonalizowany możemy utworzyć na podstawie transmitancji o pojedynczych
+
+biegunach.
+
+Pr
+<image/wzory/k/_page15_formula1.png>
+
+SMOLUB]S 8|8pOW
+
+Najpierw rozbijamy transmitancję na ułamki proste:
+
+<image/wzory/k7_page15_formula2.png>
+
+Następnie rysujemy schemat symulacyjny i na jego podstawie tworzymy
+model stanowy.
+
+ 
+
+POLITECHNIKA
+GDAŃSKA

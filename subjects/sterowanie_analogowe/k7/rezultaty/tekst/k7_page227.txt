@@ -1,0 +1,42 @@
+Dodatek B
+
+Symulacja układu z podwójnym całkowaniem i przekaźnikiem z histerezą
+
+<image/figury/k/_page227_figure1.png>
+
+Z
+|
+[ma
+|©)
+©
+jeb
+g
+jeb)
+0)
+N
+©
+IN
+n<
+IN
+=
+b
+bana)
+jad)
+N
+|©)
+Ę
+GJ
+
+= x,(l
+dt
+e = u(t)
+
+<image/figury/k/_page227_figure2.png>
+
+dx, = x,(t)
+dx, = u(t)
+
+ 
+
+POLITECHNIKA
+GDANSKA

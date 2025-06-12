@@ -1,0 +1,45 @@
+1.10. Notacja asymptotyczna 13
+
+e g(n) = O(/f(n)), jeżeli istnieje dodatnia stała c > 0 taka, że g(n) < c- f(n)
+dla prawie wszystkich n € N, to znaczy istnieje no, takie, że g(n) < c- f(n) dla
+każdego n > ną. W takim przypadku mówimy, że funkcja g jest O duże od f.
+
+» g(n) = o(f(n)), jeżeli lim» oc $Ęż = 0. W takim przypadku mówimy, że funk-
+cja g jest o małe od f.
+
+e g(n) = Q(f(n)), jeżeli istnieje dodatnia stała c > 0 taka, że g(n) > c: f(n) dla
+prawie wszystkich n € N. W takim przypadku mówimy, że funkcja g jest Omega
+duże od f.
+
+e g(n) = ©(f(n)), jeżeli istnieją dwie dodatnie stałe c; „cz > 0 takie, że c; - f(n) <
+g(n) < ca: f(n) dla prawie wszystkich n € N. W takim przypadku mówimy, że
+funkcja g jest Theta duże od f.
+
+Jeżeli g(n) = O(f(n)), to mówimy, że funkcja f ogranicza z góry funkcję g(n) (z
+dokładnością do stałej), albo, że rząd funkcji g jest nie większy od rzędu funkcji f.
+
+Przykład 1.16
+e Czas działania algorytmu sortowania bąbelkowego jest O(n?).
+e n=O(3n — 2).
+e 3n-2=O(n).
+e n +n* — n=O(n').
+e n* =O(2").
+e n*logn = O(n”).
+
+Będziemy dopuszczać notację asymptotyczną także wobec funkcji, które są dodatnie
+dla prawie wszystkich liczb naturalnych. Na przykład n* — 3n = O(n).
+Jeżeli g(n) = o(f(n)), to mówimy, że g jest niższego rzędu niż f.
+
+Przykład 1.17
+e n* =o(n").
+e n=ol(nlogn).
+e n$ =o(2").
+
+Jeżeli g(n) = ©(f(n)). to gi f są tego samego rzędu, czyli g(n) = O(f(n)) oraz
+f(n) = O(gln)).
+
+Przykład 1.18
+
+e n* =©(n?* +n).
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

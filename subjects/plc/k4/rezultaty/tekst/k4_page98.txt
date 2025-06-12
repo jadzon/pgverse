@@ -1,0 +1,38 @@
+Stan lewej szyny powinien być uważany za ON, o ile nie występuje ona w nie-
+aktywnym etapie grafu SFC (por. 2.5.2). Nie definiuje się stanu dla prawej
+szyny.
+
+Połączenie poziome przedstawia się jako linię poziomą. Połączenie takie prze-
+kazuje stan elementu znajdującego się bezpośrednio po stronie lewej do elementu
+po stronie prawej.
+
+Połączenie pionowe przedstawia się jako linię pionową przecinającą się z jedną
+
+lub więcej liniami poziomymi na każdym końcu. Stan połączenia pionowego
+
+odpowiada sumie logicznej OR dła stanów połączeń poziomych występujących
+
+po lewej stronie połączenia pionowego, tzn.:
+
+* jeżeli wszystkie stany połączeń poziomych po lewej stronie połączenia pio-
+nowego są OFF to stan tego połączenia jest także OFF,
+
+» jeżeli przynajmniej jedno połączenie poziome po lewej stronie połączenia
+pionowego jest w stanie ON to połączenie pionowe jest także w stanie ON.
+Stan połączenia pionowego powinien być przekazany wszystkim dołączonym po
+prawej stronie połączeniom poziomym, natomiast nie może być przekazywany
+
+do jakiegokolwiek elementu po lewej stronie połączenia pionowego.
+
+Styk (contacr) jest elementem przekazującym do połączenia poziomego po pra-
+wej stronie styku stan będący wynikiem mnożenia logicznego AND stanu linii
+łączącej po lewej stronie styku oraz wartości przypisanej mu logicznej zmiennej
+wejściowej, wyjściowej lub pamięciowej. Styk nie modyfikuje wartości skoja-
+rzonej z nim zmiennej. Symbole standardowych styków przedstawiono
+w Tab. 2.51.
+
+<image/tabele/k4_page98_table1.png>
+
+Z Z Z CE KE WE KK NO CRAY SPA ZOE ZZOZ O z
+
+95 Rozdział : 2.Programowanie sterowników PLC

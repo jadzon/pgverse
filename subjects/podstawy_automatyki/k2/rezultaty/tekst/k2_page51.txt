@@ -1,0 +1,45 @@
+100
+
+<image/figury/k2_page51_figure3.png>
+
+e
+
+P
+w
+FP
+
+REKULALOT SIETUJE SIOWIURICII CIERU YCZILYTII (ŁAMIOUCIOWAIIYLII JARO LZlUII
+całkujący), który z kolei powoduje otworzenie lub przymknięcie zaworu dła-
+wiącego przepływ czynnika grzewczego, wymuszony przez pompę o sta-
+łej wydajności. Czynnik grzewczy jest doprowadzany do układu ogrzewa-
+nia podłogowego, a proces ogrzewania zamodelowany został jako obiekt
+
+101
+
+<image/figury/k2_page51_figure1.png>
+
+inercyjny pierwszego rzędu z opóźnieniem transportowym. Zakłada się,
+że maksymalną możliwą do uzyskania temperaturą jest 30*C, a połączoną
+dynamikę siłownika i zaworu reprezentuje transmitancja móór j
+Sygnał u, (t) wyprowadzony został jedynie jako orientacyjna wartość polece-
+nia stopnia otwarcia zaworu.
+
+Druga część ćwiczenia poświęcona jest serwomechanizmowi przekaźni-
+kowemu w układzie bez sprzężenia i ze sprzężeniem tachometrycznym.
+
+10.3.2 Regulacja trójpołożeniowa bez korekcji
+
+Dla zadanych parametrów obiektu regulacji określić wpływ szerokości
+strefy histerezy, strefy nieczułości i wartości temperatury zadanej na oscy-
+lacje wielkości regulowanej.
+
+10.3.3 Układ z korekcją (PD)
+Zbadać wpływ na jakość regulacji i charakter przebiegów przejściowych:
+e wzmocnienia k;,
+e stałej czasowej 75,
+e szerokości strefy histerezy H,
+e szerokości strefy nieczułości B,
+wybierając dla każdego ze zmienianych parametrów trzy wartości.
+
+Następnie dla zadanych wartości 7,4, H oraz B tak dobrać parametry
+sprzężenia zwrotnego, aby uzyskać dobrą jakość regulacji.

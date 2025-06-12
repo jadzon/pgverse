@@ -1,0 +1,47 @@
+sekwencyjnych (w sensie matematycznym) w sposób niezależny od realizacji
+sprzętowej i programowej.
+
+W oparciu o zasady zaproponowane w metodzie Grafcet zdefiniowano w normie
+IEC 1131-3 sposób opisu działania sterownika w postaci grafu sekwencji SFC
+(Sequential Function Chart). Formalizm ten jest podobny do opisu Grafcet i mo-
+że być wykorzystywany przy programowaniu sterownika w jednym ze
+zdefiniowanych w normie języków w celu stworzenia odpowiedniej struktury
+wewnętrznej programu użytkownika.
+
+2.5.2 Graf sekwencji SFC
+
+Element oprogramowania sterownika może być zorganizowany w postaci grafu
+sekwencji SFC (Sequentiał Function Chart), który składa się z wzajemnie sprzę-
+żonych etapów (steps) i przejść (transitions). Z każdym etapem jest skojarzony
+zbiór odpowiednich działań (actions) a każdemu przejściu między etapami towa-
+rzyszy warunek przejścia (transition condition).
+
+Ponieważ wymienione elementy SFC wymagają pamięci dla przechowania in-
+formacji o stanie systemu, jedynymi elementami oprogramowania, które mogą
+być z nich zbudowane są bloki funkcyjne (por. 2.3.3) i programy (por. 2.3.5).
+Jeżeli jakakolwiek część takiego elementu jest programowana przy użyciu SFC,
+to w ten sam sposób powinien być programowany cały element. Jeżeli element
+oprogramowania nie jest zorganizowany w postaci grafu SFC, to powinien być
+traktowany jako pojedyncze działanie wykonywane pod kontrolą jednostki wy-
+wołującej.
+
+Etap określa sytuację, w której zachowanie się elementu oprogramowania
+w odniesieniu do jego wejść i wyjść jest zdefiniowane przez skojarzony z etapem
+zestaw działań. Etap może być aktywny (active) lub nieaktywny (inactive).
+W każdej chwili stan elementu oprogramowania jest określony przez zestaw ak-
+tywnych etapów oraz wartości zmiennych wewnętrznych i wyjściowych tego
+elementu.
+
+Etap jest przedstawiany graficznie jako prostokąt zawierający nazwę etapu lub
+w postaci tekstowej za pomocą konstrukcji STEP ... £ND_STEP. Łączenie kolej-
+nych etapów wykonuje się za pomocą linii pionowych (wejście u góry, wyjście
+na dole) lub odpowiednio, za pomocą zestawu deklaracji TRANSITION ...
+END_TRANSITION.
+
+Aktywność etapu określa wskaźnik etapu (step flag), który jest reprezentowany
+przez zmienną logiczną ***.X, gdzie *** jest nazwą etapu. Przyjmuje on wartość
+1 dla etapu aktywnego i O dla etapu nieaktywnego.
+
+RZESZY OOO OW OPT AOR SRO TOON,
+
+82 Rozdział : 2.Programowanie sterowników PLC

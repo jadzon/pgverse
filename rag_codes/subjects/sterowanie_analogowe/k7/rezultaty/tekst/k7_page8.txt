@@ -1,0 +1,15 @@
+Stan układu- układy wy
+
+Własności macierzy fundamentalnej
+
+<image/wzory/k/_page8_formula1.png>
+
+<image/wzory/k/_page8_formula2.png>
+
+Jeżeli t,=0 to zwykle stosujemy oznac
+
+<image/figury/k/_page8_figure1.png>
+<image/wzory/k/_page8_formula3.png>
+
+POLITECHNIKA
+GDANSKA

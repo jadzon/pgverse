@@ -1,0 +1,3 @@
+<image/wzory/k/_page173_formula1.png>
+
+<image/figury/k/_page173_figure2.png>

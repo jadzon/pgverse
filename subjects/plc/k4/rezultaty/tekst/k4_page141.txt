@@ -1,0 +1,33 @@
+Szczególne znaczenie w automatyce przemysłowej mają układy pomiaru tempe-
+ratury. Najczęściej stosuje się czujniki wykonane z metali jako termoelementy
+w zakresie od —200?C do 2800?C lub termometry oporowe w zakresie od —200?C
+do 800?C. Natomiast półprzewodnikowe czujniki temperatury są stosowane
+w zakresie od —50 *C do 150?C.
+
+<image/figury/k4_page141_figure1.png>
+
+Rys. 3.23 Schemat połączeń przetworników czteroprzewodowych
+z modułem różnicowych wejść prądowych.
+
+Oporowe termometry metaliczne wykorzystują wzrost rezystancji metali wraz ze
+wzrostem temperatury. Rezystancja najczęściej wykorzystywanych metali platy-
+ny i żelazo-niklu zmienia się o ok. 0,4% ze zmianą temperatury o | stopień.
+Czujniki platynowe Pt 100 mają wartość rezystancji równą 100 62 w temp. 0?C.
+Pomiar rezystancji takiego oporowego czujnika temperatury dokonuje się przez
+wymuszenie przepływu niewielkiego, stałego prądu przez czujnik, który nie
+zmienia znacząco jego temperatury. Jeżeli źródło prądu jest znacznie oddalone
+od czujnika, to wynik tego pomiaru zależy od rezystancji przewodów. W takim
+przypadku stosuje się pomiar rezystancji w układzie czteroprzewodowym lub
+znacznie częściej w układzie trójprzewodowym, pokazanym na Rys. 3.24.
+
+Czujniki rezystancyjne łączy się z modułami sterowników oznaczonymi jako
+RTD (Resistive Temperature Detector), które mierzą temperatury z rozdzielczo-
+ścią od 0,5 do 0,1?C, np. za pomocą termometrów rezystancyjnych Pt 10, Pt 100,
+Pt 1000, Ni 100. Czujniki takie podłącza się zazwyczaj bezpośrednio do modułu,
+bez konieczności stosowania jakichkolwiek przetworników, a ponadto można
+ustalić w konfiguracji modułu dane charakterystyki dynamicznej układu pomia-
+rowego.
+
+ 
+
+3.5 Moduły wejść analogowych Al 141

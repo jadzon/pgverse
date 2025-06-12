@@ -1,0 +1,26 @@
+Stabilność
+
+<image/wzory/k/_page40_formula1.png>
+
+Powyższy warunek będzie spełniony, jeśli wszystkie bieguny transmitancji G(s)
+— a więc miejsca zerowe wielomianu mianownika - będą miały ujemne części
+
+rzeczywiste.
+Wielomian mianownika transmitancji będziemy nazywali wielomianem
+
+charakterystycznym układu.
+
+Dla modelu danego transmitancją
+
+SMOUBJS 8|8pOJN
+
+<image/wzory/k7_page40_formula2.png>
+
+Równanie charakterystyczne
+
+<image/wzory/k/_page40_formula3.png>
+
+ 
+
+POLITECHNIKA
+GDANSKA

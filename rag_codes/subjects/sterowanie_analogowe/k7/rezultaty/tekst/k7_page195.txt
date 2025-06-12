@@ -1,0 +1,33 @@
+Dodatek B- wyznaczanie parametrów cyklu granicznego z
+wykorzystaniem arkusza kalkulacyjnego
+<image/wzory/k/_page195_formula1.png>
+
+Następnie w Excelu definiujemy pulsację (kolumna A) oraz amplitudę (kolumna M) oraz
+ustalamy formuły dla P(w), Q(w), Re[-1/J(M)] oraz Im0-1/J(M)]
+
+1
+=
+=
+=
+
+O.
+o)
+o
+
+=
+7
+
+i
+
+cy
+Q
+W
+
+<image/tabele/k/_page195_table1.png>
+
+<image/wzory/k/_page195_formula2.png>
+
+ 
+
+POLITECHNIKA
+GDANSKA

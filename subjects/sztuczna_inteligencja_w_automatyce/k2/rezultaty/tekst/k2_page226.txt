@@ -1,0 +1,53 @@
+231
+
+ogona listy pierwszej z listą drugą Łącznie obie klauzule programu wyrażają definicję
+operacji dołączania list. ami
+
+PRZYKŁAD 9.11
+
+Program 9 odwraca kolejność elementów listy. Wywołajmy program zapytaniem
+odwr([a,b,c,d] ,L).
+
+/* Program 9 */
+
+dolk(A,[],[A]).
+dolk(A,[GI0],[GI0p]):- dolk(A,0,0p).
+
+odwr ( [] ,(]).
+odwr([GI0],Lo):- odwr(0,00) ,dolk(G,00,Lo).
+
+Wywołanie predykatu odwr powoduje wywołanie trzy argumentowego predykatu
+dolk, który dopisuje element do końca listy.
+
+Zauważmy, że klauzule procedury dolk mozna interpretować następująco: do-
+pisanie elememtu na końcu listy pustej tworzy listę jednoelentową zawierającą ten
+element. Gdy lista nie jest pusta dopisanie elementu na koniec listy polega na do-
+daniu głowy listy do ogona, do którego końca dopisano element. am
+
+9.1.7. Programowanie deklaratywne
+
+Chcemy tu zwrócić uwagę na specyficzny dla Prologu sposób pisania lub interpre-
+towania programów. Rozpatrzmy najpierw dwa poniższe przykłady.
+
+PRZYKŁAD 9.12
+
+Program 10 (przedstawiany jako przykład potwierdzenia efektywności i elegancji
+
+Prologu) sprawdza, czy dwie listy mają wspólny element. Wywołajmy go np. zapy-
+taniem: przeciecie([1,2,3,4],[8,7,6,5,4]).
+
+/* Program 10 +*/
+przeciecie(L1,L2) :-element(X,L1) ,element(X,L2).
+
+element (Nazwa, (Nazwa|_]).
+element (Nazwa, [_|Ogon]) :- element (Nazwa,Ogon).
+
+Mechanizm nawracania powoduje, że program sprawdza istnienie wspólnego ele-
+mentu obu list. Patrząc na pierwszą klauzulę programu widać, że stanowi ona defini-
+cję wspólnego elementu, którą można następująco odczytać: jeżeli element X należy
+do listy L1 i należy do listy L2, to listy L1 i L2 mają wspólny element. mua
+
+PRZYKŁAD 9.13
+
+Przyjrzyjmy się działaniu Programu 12 obliczającego permutację zadanej listy. Wy-
+konajmy program np. dla zapytania perm( [a,b,c,d] ,L).

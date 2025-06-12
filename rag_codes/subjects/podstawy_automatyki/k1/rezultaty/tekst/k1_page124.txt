@@ -1,0 +1,29 @@
+Przykład 3.7
+inku 3.9, gdzie:
+
+/k1_page124_formula1.png
+<image/figury/k1_page124_figure4.png>
+
+"j.m awk mW YY mA W
+
+Wykorzystując program MATLAB, wyznaczyć transmitancję zastępczą G, tego
+układu.
+
+Rozwiązanie
+Plik „polaczl.m” przedstawiony jest poniżej.
+
+<image/figury/k1_page124_figure1.png>
+
+Stąd transmitancja zastępcza G,(s) ma postać
+
+<image/wzory/k1_page124_formula2.png>
+
+Przykład 3.8
+_ s © i ku 3.10, gdzie:
+
+f
+<image/figury/k1_page124_figure3.png>
+
+Rys. 3.10. Układ zamknięty
+
+126

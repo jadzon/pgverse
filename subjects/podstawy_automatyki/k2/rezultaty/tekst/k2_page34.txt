@@ -1,0 +1,66 @@
+Zakłada się, że sygnałem wejściowym serwomotoru jest (przy stałym
+prądzie wzbudzenia) napięcie ez(t)[V| zasilające uzwojenia wirnika,
+natomiast sygnałem wyjściowym jest kąt 8(£) obrotu wału.
+
+Przyjęte oznaczenia
+
+<image/wzory/k2_page34_formula3.png>
+
+Indukowana siła elektromotoryczna wirnika ma wartość
+
+<image/wzory/k2_page34_formula4.png>
+
+a napięcie zasilające wirnik
+
+<image/wzory/k2_page34_formula6.png>
+
+czvli na zastosowaniu transformaty Lablace'a
+
+<image/wzory/k2_page34_formula8.png>
+
+Rozwijany moment My/t) jest funkcją strumienia wzbudzenia, w przy-
+padku iednak stałei wartości pradu wzbudzenia może on bvć wvrażony iako
+
+<image/wzory/k2_page34_formula9.png>
+
+l spełniać równanie (z pominięciem tłumienia)
+
+<image/wzory/kzpage34_formula10.png>
+
+cformaty | anlaca'a
+
+<image/wzory/k2_page34_formula11.png>
+
+Transmitancja silnika określona jest więc wzorem
+
+<image/wzory/k2_page34_formula13.png>
+
+<image/wzory/k2_page34_formula1.png>
+
+gdzie
+
+<image/wzory/k2_page34_formula2.png>
+
+W serwomotorze zamodelowanym w ćwiczeniu przyjęto:
+
+<image/wzory/k2_page34_formula5.png>
+
+Zakres zmienności /ł, powoduje, że stałe czasowe 7, oraz Tm przybierają
+wartości z zakresu
+
+<image/wzory/k2_page34_formula7.png>
+
+6.2.6 Serwomotor prądu stałego sterowany prądowo z uwzględnieniem
+nieliniowości
+
+Na rysunku 6.5 zaznaczono miejsce występowania nieliniowości w ser
+womotorze, i tak odpowiednio
+
+e ograniczenie wartości prądu twornika / momentu dynamicznego
+silnika (zamodelowane jako blok nieliniowy z nasyceniem)
+Na schemacie dokonano uproszczenia polegającego na ograniczeniu
+wartości momentu dynamicznego M/y(t), przy czym w rzeczywistości
+ograniczenie to występuje jako ograniczenie prądu twornika 1.(t),
+bez względu na efektywną wartość momentu dynamicznego
+
+<image/wzory/k2_page34_formula12.png>

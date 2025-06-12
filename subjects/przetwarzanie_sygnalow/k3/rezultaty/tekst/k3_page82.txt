@@ -1,0 +1,37 @@
+ry słyszycie, jest sumą obu tych głosów, takich, jakby brzmiały przesyłane indywidualnie.
+Słyszysz Ednę i Berniego, a nie jakiś dziwny twór Ednabernie.
+
+Dobrym przykładem systemu nieaddytywnego jest stopień mieszający (modulator) w nadaj-
+niku radiowym. Są tam dwa sygnały: sygnał foniczny zawierający głos lub muzykę oraz fala
+nośna, która — doprowadzona do anteny — może rozchodzić się w przestrzeni. Oba sygnały
+są sumowane na elemencie o charakterystyce nieliniowej, takim jak np. dioda złączowa pn.
+W rezultacie następuje złączenie sygnałów dające w wyniku trzeci sygnał — zmodulowaną
+falę radiową, zdolną do przenoszenia informacji na duże odległości.
+
+Jak wynika z rys. 5.4, niezmienność względem przesunięcia polega na tym, że przesunięcie
+sygnału wejściowego nie będzie powodowało niczego innego poza identycznym przesunię-
+ciem w sygnale wyjściowym. Ujmując to bardziej formalistycznie, stwierdzamy, że jeśli
+sygnał wejściowy x|n) daje na wyjściu y[n], to sygnał wejściowy x[n + s] powinien dawać
+na wyjściu y[n + s] dla dowolnego sygnału wejściowego i dowolnej stałej s. Proszę zwró-
+RZE Ra za
+w dalszych rozdziałach. Przez dodanie stałej s do zmiennej niezależnej n przebieg może
+być przesunięty w przód lub w tył w kierunku poziomym. Na przykład, gdy s = 2, to sy-
+gnał jest przesunięty w lewo o dwie próbki, a gdy s = —2 — o dwie próbki w prawo.
+Niezmienność względem przesunięcia jest ważną cechą, gdyż oznacza, że właściwości sy-
+gnału nie zmieniają się w funkcji czasu (lub jakiejkolwiek innej zmiennej niezależnej).
+Jeśli jakiś blip na wejściu wywołuje błop na wyjściu, to możemy być pewni, że inny blip
+da na wyjściu identyczny błop. Większość systemów, z którymi się spotykamy, charakte-
+ryzuje się niezmiennością względem przesunięcia. Jest to bardzo korzystne, gdyż trudno
+posługiwać się systemami, których właściwości zmieniają się podczas pracy. Wyobraźmy
+sobie na przykład, że zaprojektowaliśmy filtr cyfrowy kompensujący niekorzystny wpływ
+telefonicznej linii przesyłowej na przesyłany sygnał. Filtr powoduje, że głos brzmi bardziej
+naturalnie i jest łatwiejszy do zrozumienia. Tymczasem z nadejściem zimy, ku naszemu
+zdumieniu, właściwości linii uległy zmianie ze zmianą temperatury. Nasz filtr kompensują-
+cy staje się wówczas niedopasowany i pracuje niezbyt dobrze. Taka sytuacja może wyma-
+gać bardziej wysublimowanego algorytmu, adaptującego się do zmieniających warunków.
+Dlaczego homogeniczność i addytywność mają krytyczne znaczenie dla liniowości, pod-
+czas gdy niezmienność względem przesunięcia ma tylko znaczenie uboczne? Jest tak
+dlatego, gdyż liniowość jest koncepcją bardzo szeroką, obejmującą obszar znacznie
+większy niż tylko sygnały i systemy. Rozważmy przykład farmy sprzedającej pomarań-
+
+<image/figury/k3_page82_figure1.png>

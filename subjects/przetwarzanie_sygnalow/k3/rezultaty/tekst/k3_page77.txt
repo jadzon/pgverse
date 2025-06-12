@@ -1,0 +1,54 @@
+Szybkość wykonywania — triki programowe
+
+garowego. Przy wielkiej liczbie operacji szybkość systemu będzie określana jako jedno
+sumowanie na okres zegarowy, nawet jeśli przeprowadzenie sumowania każdej pary
+liczb wymaga trzech okresów zegarowych. Systemy potokowe są świetne pod wzglę-
+dem szybkości, ale mogą być trudne do programowania. Algorytm powinien dopuszczać
+rozpoczęcie nowego obliczenia nawet gdy wyniki poprzednich obliczeń nie są dostępne
+(ponieważ jeszcze są w systemie potokowym).
+
+Mikroprocesory DSP są bardziej szczegółowo omówione w rozdziałach 28 i 29. Są to
+zadziwiające urządzenia; ich duża moc obliczeniowa i niska cena spowodują wprowa-
+dzenie DSP do wielu zastosowań naukowych i w sprzęcie powszechnego użytku. Jest to
+jedna z tych technik, która ukształtuje XXI wiek.
+
+Szybkość wykonywania — triki programowe
+
+Układy elektroniczne komputera i języki programowania są ważne dla maksymalizacji szyb-
+kości działania, ale nie można ich zmieniać z dnia na dzień, To zaś, jak programujemy,
+można zmieniać w każdym czasie i wpłynie to radykalnie na czas wymagany do realizacji
+programu. Oto trzy sugestie.
+
+Po pierwsze, tam, gdzie to możliwe, stosujcie liczby całkowite zamiast zmiennych
+zmiennoprzecinkowych. Konwencjonalne mikroprocesory, takie jak stosowane w kompu-
+terach osobistych, operują na liczbach całkowitych 10 do 20 razy szybciej niż na zmienno-
+przecinkowych. W systemach z koprocesorem arytmetycznym różnica może być jak 200:1.
+Wyjątkiem jest dzielenie liczb całkowitych, które często przeprowadza się, konwertując
+wartości na zmiennoprzecinkowe. To czyni operację koszmarnie wolną w porównaniu z in-
+nymi obliczeniami na liczbach całkowitych. Szczegóły podano w tablicy 4.6.
+
+Po drugie, unikajcie używania funkcji takich, jak sin(x), log(x), y * itd. Te funkcje prze-
+stępne są obliczane jako szeregi dodawań, odejmowań i mnożeń. Na przykład szereg potę-
+gowy Macla"=-=- *-*-—*
+
+<image/tabele/k3_page77_table1.png>
+
+Wzór 4.3. Rozwinięcia trzech funkcji przestępnych w szeregi potęgowe MacLaurina. W ten wiaśnie
+sposób komputery obliczają funkcje tego typu i dlatego trwa to tak dlugo
+
+Długości tych rozwinięć są wprawdzie nieskończone, lecz kolejne wyrazy stają się szybko
+tak małe, że mogą być pominięte. Na przykład:
+
+sin(1) = 1 — 0,166666 + 0,008333 — 0,000198 + 0,000002 — ...
+
+Obliczanie tych funkcji wymaga czasu 10-krotnie dłuższego niż proste dodawanie lub mnoże-
+nie (patrz tablica 4.6). Można skorzystać z kilku trików, aby ominąć te obliczenia. Na przykład
+monazastosowawzory7xxxsinxxgdyxjestbardzomaesinxsinx
+gdy już znamy jedną z wartości i chcemy określić drugą itd. W większości języków jest poda-
+wanych tylko kilka funkcji przestępnych, a inne programista powinien wyprowadzić z zależ-
+ności podanych w tablicy 4.7. Takie obliczenia są oczywiście nawet jeszcze wolniejsze.
+Inną możliwością jest wcześniejsze obliczenie tych „powolnych” funkcji i zapisanie ich warto-
+ści w tablicy przeglądowej (LUT — Look Up Table). Wyobraźmy sobie na przykład 8-bitowy
+system akwizycji danych stosowany do ciągłego monitorowania napięcia na rezystorze. Jeśli
+interesującym nas parametrem jest moc wydzielana w rezystorze, to zmierzone napięcie można
+wykorzystać do obliczenia mocy według wzoru: P = U”/R. Jest jednak szybsza altematywa.

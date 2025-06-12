@@ -1,0 +1,31 @@
+Rozdział 1
+
+Teoria liczb
+
+1.1 Dzielenie całkowitoliczbowe
+
+Zacznijmy od przypomnienia szkolnego algorytmu dzielenia liczb naturalnych. Podziel-
+my 1743 przez 12.
+
+<image/figury/k2_page118_figure1.png>
+
+W wwniku dzielenia atrzvmaliśmv ilara7 145 i rmezta I iczhv ta <nałniaia mwnąnie
+
+<image/wzory/k2_page118_formula1.png>
+
+i reszta jest mniejsza od dzielnika. Podobnie mozemy postąpic dla dowolnych liczb natu-
+ralnych a i b pod warunkiem, że b ź 0.
+
+Twierdzenie 1.1 Dla dowolnych liczb naturalnych a oraz b > 0 istnieje dokładnie jedna
+para liczb naturalnych q i r spełniających warunki:
+
+ea=bqtr
+e0<r<b
+q nazywa się ilorazem całkowitoliczbowym a przez b, a r nazywa się resztą z dzielenia
+
+Zauważmy, że iloraz q jest zaokrągleniem w dół normalnego ilorazu q = [a/b|. Iloraz
+całkowitoliczbowy liczb a i b będziemy oznaczać przez
+
+<image/wzory/k2_page118_formula2.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

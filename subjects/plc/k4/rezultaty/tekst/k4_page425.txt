@@ -1,0 +1,31 @@
+rzory/k4_page425_formula1.png
+
+Układy regulacji trójpołożeniowej (On-off control) stosowane są, gdy element
+wykonawczy nie jest sterowany w sposób proporcjonalny do sygnału błędu lecz
+za pomocą sygnałów dwustanowych. Układy regulacji trójpołożeniowej
+z wykorzystaniem algorytmu PID występują głównie w zadaniach regułacji
+w obiegach oleju, pary, wody, kondensatu lub wodoru w instalacjach energe-
+tycznych. Organami wykonawczymi są w nich siłowniki sterowane dwustano-
+wymi wyjściami: zamykaj CL i otwieraj OP, a ich położenie określa sygnał
+analogowy z pozycjonera zaworu lub klapy regulacyjnej. Schemat blokowy ta-
+kiego układu regulacji trójpołożeniowej pokazano na Rys. 6.9, natomiast projekt
+obwodów wejściowych i wyjściowych sterownika dla tego typu napędu przed-
+stawiono w rozdziale /.
+
+<image/figury/k4_page425_figure1.png>
+
+Wielkościami wejściowymi bloku PID są: wielkość regulowana PV (Process Va-
+riable) oraz jej wartość zadana SP (Set Point). Wielkość wyjściowa regulatora
+CV (Control Variable) jest odejmowana od wielkości z pozycjonera, zaś wynik
+tego odejmowania E podawany jest na element trójpołożeniowy ze strefą nie-
+czułości i histerezą. Wartości progowe tego elementu oznaczono odpowiednio
+jako A i B dla zamykania zaworu oraz C i D dla otwierania zaworu (por. Rys.
+8.10).
+
+Wyd. 8.7] - Wyd. 8.75 pokazują przykładowy program dla sterownika GE Fanuc
+realizujący zadanie regulacji trójpołożeniowej dla stabilizacji poziomu w zbior-
+niku kondensatu. Wielkością regulowaną (PV) jest zmienna o nazwie L-0/M,
+
+ 
+
+8.5 Regulacja trójpołożeniowa PID 425

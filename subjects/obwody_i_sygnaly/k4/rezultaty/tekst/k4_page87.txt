@@ -1,0 +1,43 @@
+1.4. Warunek quasi-stacjonarności i jego konsekwencie 89
+
+<image/figury/k4_page87_figure1.png>
+
+Mówimy zatem, że warunek quasi-stacjonarności jest spełniony, jeśli wymiar
+| jest dużo mniejszy od ćwiartki (najkrótszej) długościfali 1 określonej zależnością
+(1.4-11) oraz, że warunek quasi-stacjonarności nie jest spełniony, jeśli wymiar |
+staje się porównywalny z ćwiartką (najkrótszej) długości fali 2.
+
+Uwaga. W powyższym sformułowaniu użyliśmy zwrotu: „najkrótsza długość fali”. Chodzi
+o to, że w rozpatrywanym obwodzie prąd nie musi mieć (i na ogół nie ma) postaci pojedynczego
+sygnału sinosoidalnego (1.4-8). Częściej będzie to zbiór sygnałów sinusoidalnych o częstotliwościach
+zawartych w pewnych granicach f,,, £( < fu, (czyli o pewnym widmie częstotliwości). Wówczas,
+zgodnie ze wzorem (1.4-11):
+
+ry/k4_page87_formula1.png (14-14)
+i nierówność (1.4-12) musi być rozumiana jako:
+A min
+NEF2 (14-15)
+
+F. Konsekwencje energetyczne, Wobec związku (1.4-4) spełnienie równoś-
+
+ci (1.4-7) może być uzyskane formalnie w przypadku granicznym, gdy c + o.
+Otrzymuje się wówczas model oddziaływań natychmiastowych (synchronizm
+zmian przyczyny i skutku), z pominięciem zjawisk falowych. Przyjęcie warunku
+quasi-stacjonarności oznacza zatem całkowite pominięcie zjawiska propagacji
+fali elektromagnetycznej, a więc również promieniowania energii.
+
+Przy spełnieniu warunku quasi-stacjonarności cała energia dostarczona do
+obwodu jest związana z tym obwodem (por. p.A oraz p. 1.5.1-B).
+
+Wynika stąd również wniosek przeciwny: obwód, który promieniuje energię
+w przestrzeń nie może spełniać warunku quasi-stacjonarności.
+
+G. Poleelektryczne kondensatora. Rozumowanie analogiczne do podane-
+
+go w p. E można przeprowadzić również dla pola elektrycznego kondensatora
+przy zmiennym w czasie ładunku q. Zależności typu:
+
+vzory/k4_page87_formula2.png (1.4-16)
+lub:
+
+/zory/k4_page87_formula3.png (1.4-17)

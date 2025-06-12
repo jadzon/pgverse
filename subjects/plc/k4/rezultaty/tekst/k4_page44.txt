@@ -1,0 +1,55 @@
+Zmiennymi wiełoelementowymi są tablice i struktury. Tablica jest zbiorem
+elementów tego samego typu, do których dostęp uzyskuje się za pomocą jednego
+lub więcej indeksów umieszczonych w nawiasach kwadratowych i oddzielonych
+przecinkami. Indeks musi być wyrażeniem, którego wartość odpowiada jednemu
+z typów całkowitych (pozycje od 2 do 9 w Tab. 2.7). Poniżej przedstawiono przy-
+kład adresowania elementu z siódmego wiersza i kolumny określonej przez
+wartość zmiennej %MBó dła dwuwymiarowej tablicy /VPUT_TAB
+
+<image/wzory/k4_page44_formula1.png>
+
+Zmienną strukturalną jest zmienna deklarowana jako struktura zawierająca
+elementy różnych typów. Kolejne elementy reprezentowane są przez identyfikato-
+ry oddzielone kropkami. Poniżej przedstawiono przykład przyporządkowania
+wartości S/NGLE_ENDED do elementu S/GNAL_TYPE oraz wartości
+BIPOLAR_I0V do RANGE stanowiącego element piątego składnika elementu
+CHANNEL zmiennej o nazwie MODULE_5_CONFIG zadeklarowanej jako typ
+ANAŁOG_16_INPUT_CONFIG przedstawiony w Tab. 2.8 :
+
+<image/wzory/k4_page44_formula2.png>
+
+Z chwilą „wystartowania” elementu konfiguracji (por. 2.4) każda ze zmiennych
+
+stowarzyszonych z takim elementem lub przypisanym mu programem może
+
+przyjąć jedną z następujących wartości początkowych:
+
+« wartość jaką posiadała przed „zatrzymaniem” danego elementu konfiguracji
+(retained value),
+
+e _ wartość zadeklarowaną przez użytkownika,
+
+e wartość domyślną zdefiniowaną przez typ do jakiego należy zmienna.
+
+Użytkownik może zadeklarować, że zmienna powinna posiadać pamięć stanu
+(retentive variable) za pomocą kwalifikatora RETAIN (por. Tab. 2.12) pod wa-
+runkiem, że własność taką zapewnia zastosowany sprzęt.
+
+Nadawanie wartości początkowych zmiennym zachowywanym (retentive varia-
+
+bles) podlega następującym regułom:
+
+* w przypadku „gorącego restartu” (warm restart) wartości początkowe tych
+zmiennych powinny być równe ich wartościom zachowanym w pamięci,
+
+e w przypadku „restartu zimnego” (cold restart) wartości początkowe
+powinny być równe wartościom zadeklarowanym przez użytkownika,
+a w przypadku braku takiej deklaracji wartościom domyślnym (por. 2.2.3).
+
+Zmiennym nie zapamiętywanym nadaje się wartości początkowe tak jak przy
+zimnym restarcie, a zmiennym reprezentującym wejścia sterownika wartości
+zależne od zastosowanego sprzętu.
+
+SRC
+
+44 Rozdział : 2.Programowanie sterowników PLC

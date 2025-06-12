@@ -1,0 +1,34 @@
+<image/wzory/k4_page29_formula1.png>
+
+ 
+
+Z punktu widzenia użytkownika możliwość programowania sterowników PLC jest
+najbardziej interesującym elementem systemu sterowania realizowanego za ich
+pomocą, gdyż to właśnie w ten sposób wprowadza się do systemu odpowiedni
+algorytm sterowania. Przez lata rozwoju sterowników programowalnych produ-
+cenci wprowadzali różne metody programowania sterowników PLC.
+Programowanie sterownika PLC odbywa się z reguły za pomocą programatora
+klawiaturowego lub komputera osobistego PC wyposażonego w odpowiednie
+oprogramowanie. Drugi sposób jest obecnie wykorzystywany znacznie częściej ze
+względu na jego wygodę oraz powszechność użytkowania PC. Komunikacja pro-
+gramatora z CPU sterownika odbywa się zwykle z użyciem łącza szeregowego.
+Wśród języków programowania dla sterowników PLC największą popularność
+w kręgach inżynierów zyskał język schematów drabinkowych ze wzgłędu na jego
+podobieństwo do sposobu projektowania klasycznych systemów sterowania sty-
+kowo-przekaźnikowego. Często także do opisu algorytmu sterowania
+wykorzystuje się metodę grafów sekwencji. Jednak poszczególne rozwiązania
+proponowane przez różnych producentów sterowników i oprogramowania do
+nich różniły się między sobą, co dla projektantów i użytkowników takich syste-
+mów stanowiło dużą niedogodność i powodowało konieczność ciągłego
+dostosowywania się do innych wymagań. W związku z coraz powszechniejszym
+stosowaniem sterowników PLC powstała konieczność ich standaryzacji,
+a w szczególności metod programowania. Doświadczenia zebrane przez produ-
+centów i użytkowników zaowocowały wydaniem w 1993 r przez Międzynarodową
+Komisję Elektroniki normy IEC 1131 „Programmable Controllers". W rozdziale
+tym przy przedstawianiu pojęć podstawowych z zakresu programowania sterow-
+ników PLC oraz przy szczegółowym omawianiu poszczególnych języków
+programowania oparto się właśnie na definicjach i zaleceniach wprowadzonych
+w trzeciej części tej normy, tj. IEC 1131-3.
+
+poncz ye OO ZZO W OOO ZZ RA DOLICZYC OOO DRODZE TY DZY ĄCE TAAŻDY TOZZOZZDDDDDŃ,
+Rozdział : 2.Programowanie sterowników PLC 29

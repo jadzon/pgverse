@@ -1,0 +1,56 @@
+Algorytm od strony wyjścia
+
+wana przez pętlę wewnętrzną, to wiersz 240) można by zapisać: Y[J%] = X[40] * H[J%]. Po
+drugie, przeskalowany impuls jest przesuwany o 40 próbek w prawo przez dodanie tej licz-
+by do indeksu zastosowanego w sygnale wyjściowym. Ta druga operacja powoduje zmianę
+wiersza 240 na: Y[40 + J%] = X[40] * H[J%]. Po trzecie, matryca Y[ ] powinna gromadzić
+(syntetyzować) wszystkie sygnały wynikające z każdej próbki w sygnale wejściowym. Tak
+więc nowa informacja musi być dodana do informacji już zgromadzonej w matrycy. Z tego
+wynika ostatnia instrukcja: Y[40 + J%] = Y[40 + J%] + X[40] * H[J%]. Przeanalizujmy to
+dokładnie; jest to bardzo zagmatwane, ale także bardzo ważne.
+
+Algorytm od strony wyjścia
+
+Pierwszy punkt widzenia przy rozpatrywaniu splotu polega na przeanalizowaniu, jak każda
+próbka sygnału wejściowego wpływa na wiele próbek w sygnale wyjściowym. Przy dru-
+gim punkcie widzenia odwracamy tę sytuację, rozpatrując indywidualne próbki w sygnale
+wyjściowym i wyszukując punkty w sygnale wejściowym, które wniosły wkład do tych pró-
+bek na wyjściu. Jest to ważne zarówno pod względem matematycznym, jak i praktycznym.
+Załóżmy, że mamy dany jakiś sygnał wejściowy i jakąś odpowiedź impulsową i chcemy
+znaleźć splot tych dwóch sygnałów. Najprostszą metodą byłoby napisanie programu, który
+ptlobejmowabysygnawyjciowyobliczajcjednprbkwkadymcykluptli.wzory
+są zapisane w postaci: y[n] - pewna kombinacja innych zmiennych. To znaczy, że próbka
+n w sygnale wyjściowym jest równa jakiejś kombinacji wielu wartości w sygnale wejścio-
+wym i w odpowiedzi impulsowej. Potrzebna jest więc wiedza o tym, jak każda próbka w sy-
+gnale wyjściowym może być obliczona niezależnie od wszystkich innych próbek w sygnale
+wyjściowym. Takiej informacji dostarcza algorytm od strony wyjścia.
+
+Na przykładzie rozważmy, jaki wpływ na jeden punkt w sygnale wyjściowym ma wiele punk-
+tów w sygnale wejściowym. Jako przykład weźmy punkt y[6] na rys. 6.5. Ten punkt jest równy
+sumie wszystkich punktów numer 6 w dziewięciu składowych wyjściowych przedstawionych
+na rys. 6.6. Przyjrzyjmy się teraz dokładniej tym dziewięciu składowym wyjściowym i ustal-
+my, która z nich może mieć wpływ na yf6]. To znaczy, że trzeba sprawdzić, które z tych dzie-
+więciu sygnałów zawierają niezerowe próbki na pozycji numer 6. Pięć spośród składowych
+wyjściowych ma na tej pozycji dodane zera (znaczniki w kształcie rombów), można je więc
+zignorować. Tylko cztery ze składowych wyjściowych mogą mieć niezerowe wartości na
+szóstej pozycji. Są to składowe wyjściowe utworzone z próbek wejściowych x[3], x[4], x[5]
+ix[6]. Przez sumowanie próbek numer 6 z każdej z tych składowych wyjściowych uzyskuje się
+y(6] = x[3]h[3] + x[4]h[2] + x[5]h[1] + x[6]h[0]. Tak więc cztery próbki sygnału wejściowe-
+go są mnożone przez cztery próbki w odpowiedzi impulsowej i iloczyny są sumowane.
+
+Na rys. 6.8 przedstawiono algorytm od strony wyjścia jako tzw. maszynę splotową, sieć
+działań, według której jest realizowana operacja splotu. Przyjmijmy, że sygnały wejściowy
+x(n] i wyjściowy y|n] są takie, jak właśnie omawiane. Maszyna spłotowa (czyli wszystko
+co znajduje się w ramce zaznaczonej linią przerywaną) może się poruszać w lewo lub
+w prawo, zależnie od potrzeb. Maszyna splotowa jest umieszczana w taki sposób, aby jej
+wyjście było ustawione na wprost próbki wyjściowej, która jest właśnie obliczana. Cztery
+próbki z sygnału wejściowego wchodzą na wejścia maszyny splotowej. Wartości tych pró-
+bek są mnożone przez wskazane próbki w odpowiedzi impulsowej i iloczyny są sumo-
+wane. W ten sposób uzyskuje się wartość sygnału wyjściowego, który wpada na swoje
+właściwe miejsce. Jako przykład pokazano obliczanie y[6] na podstawie czterech próbek
+wejściowych: x[3], x[4], x[5] i x[6].
+
+W celu obliczenia y[7] maszyna splotowa przesuwa się o jedną próbkę w prawo. Wtedy inny
+zestaw czterech próbek wchodzi do maszyny splotowej, a więc x[4], x[5], xf6], [7] i wartość
+y[7) wpada na swoje miejsce. Ta procedura jest powtarzana dopóty, dopóki nie zostaną obli-
+czone wszystkie, przewidziane do wyznaczenia, punkty sygnału wyjściowego.

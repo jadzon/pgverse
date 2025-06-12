@@ -1,0 +1,56 @@
+ZZA
+
+196
+
+ 
+
+ 
+
+l
+wzory/k3_page178_formula1.pi
+
+   
+   
+    
+    
+     
+  
+ 
+ 
+
+to zadanie, podano, że te punkty reprezentują dyskretną falę kosinusoidalną. Musimy więc
+znaleźć częstotliwość i przesunięcie fazy (/, 0) takie, żeby zależność x[n] = cos(2xf/N + 6)
+odpowiadała danym próbkom. Nie trzeba wiele czasu, aby dojść do rozwiązania przedsta-
+wionego na rys. 10.11 b), tzn. f = 3 oraz © = —x/4.
+
+Jeśli zakończymy w tym miejscu naszą analizę, to uzyskamy tylko 1/3 rozwiązania problemu.
+Są bowiem dwa inne rozwiązania, które pominęliśmy. Jak pokazano na rys. 10.11 c), drugim
+rozwiązaniem jest f = —3 oraz © = n/4. Nawet jeśli pojęcie ujemnej częstotliwości obraża
+
+postawionego problemu. Każda sinusoida o częstotliwości dodatniej może być alternatywnie
+wyrażona jako sinusoida o częstotliwości ujemnej. Dotyczy to zarówno sygnałów ciągłych,
+jak i dyskretnych.
+
+Trzecie rozwiązanie nie daje jednej odpowiedzi, gdyż jest to raczej rodzina nieskończonej
+liczby rozwiązań. Sinusoida o f = 35 i © = —x/4 (rys. 10.11 d) przechodzi przez wszystkie
+punkty dyskretne, jest więc poprawnym rozwiązaniem. Nieco mylący może być fakt, że mię-
+dzy próbkami występują oscylacje, lecz nie dyskwalifikuje to prawidłowości tego rozwiąza-
+nia. Również rozwiązania f = £29, f = +35, f = +61 oraz f = +67 są rozwiązaniami o wielu
+oscylacjach między punktami.
+
+Ź SEE RE
+
+|
+ę
+Wartość próbki
+
+  
+
+Mammam= -—
+
+,"
+a
+
+ 
+
+<image/figury/k3_page17/8_figure1.png>

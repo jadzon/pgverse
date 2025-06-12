@@ -1,0 +1,18 @@
+1.7. Źródła 125
+
+4. Postępując analogicznie możemy przekształcić połączenie szeregowe
+n źródeł prądowych o wydajnościach prądowych j, i oporach wewnętrznych
+R, do postaci równoważnego źródła prądowego (rys. 1.7-9) o parametrach
+(szczegóły pomijamy):
+
+<image/wzory/k3_page123_formula1.png>
+
+R=YR (1.7-21)
+
+<image/figury/k3_page123_figure1.png>
+
+Przykład 1.7-3. Korzystając ze wzorów (1.7-20) i (1.7-21) obliczymy parametry źródła prą-
+dowego równoważnego połączeniu szeregowemu trzech źródeł prądowych o stałych wydajnościach
+prądowych (rys. 1.7-10).
+
+<image/figury/k3_page123_figure2.png>

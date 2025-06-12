@@ -1,0 +1,27 @@
+Wartość średnia i odchylenie standardowe 25
+
+stosuje się instrukcji wejścia/wyjścia itd. Potraktujcie te programy jako alternatywny sposób
+zrozumienia wzorów używanych w DSP. Jeśli nie zrozumiecie jednego, to może któryś inny
+okaże się pomocny. W języku BASIC znak % na końcu nazwy zmiennej oznacza, że jest to
+liczba całkowita. Wszystkie inne zmienne są zmiennoprzecinkowe. Rodzaje tych zmiennych
+omówiono szczegółowo w rozdziale 4.
+
+Opisana metoda obliczania wartości średniej i odchylenia standardowego nadaje się do wie-
+lu zastosowań; ma jednak dwa ograniczenia. Po pierwsze, jeśli wartość średnia jest znacz-
+nie większa niż odchylenie standardowe, to we wzorze 2.2 mamy odejmowanie dwóch
+liczb o wartościach bardzo zbliżonych do siebie. W obliczeniach może to prowadzić do
+zbyt dużych błędów zaokrąglania. Tą kwestią zajmiemy się szczegółowo w rozdziale 4. Po
+drugie, często trzeba ponownie obliczać wartość średnią i odchylenie standardowe w miarę
+pobierania nowych próbek i dodawania ich do sygnału. Ten rodzaj obliczeń będziemy na-
+zywać statystyką bieżącą. Gdy metodę opisaną wzorami 2.1 i 2.2 chcemy zastosować do
+statystyki bieżącej, to w każdym nowym obliczeniu musimy uwzględniać wszystkie próbki.
+Jest to bardzo nieefektywne ze względu na możliwości obliczeniowe i pamięć komputera.
+
+ttrudnomonapokonaprzeksztacajcwzory2.1i2.2wceluuzyskaniainnegowzoru
+
+<image/wzory/k3_page15_formula1.png>
+<image/figury/k3_page15_figure2.png>
+
+Wzór 2.3. Obliczenie odchylenia standardowego przy użyciu statystyki bieżącej. Ten wzór daje taki sam
+
+<image/wzory/k3_page15_formula2.png>

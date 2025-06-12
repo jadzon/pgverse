@@ -1,0 +1,95 @@
+Nie popełnijcie błędu, myśląc, że są one nieważne! Te próbki są małe pod względem w: i
+
+  
+ 
+  
+ 
+  
+ 
+  
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+   
+  
+ 
+ 
+  
+ 
+  
+  
+   
+   
+ 
+  
+ 
+   
+   
+   
+  
+ 
+ 
+   
+    
+
+16. Filtry okienkowane funkcją sine
+
+Nie obawiajcie się tego wzoru! Na podstawie dotychczasowych rozważań powinniście być
+w stanie rozróżnić trzy składniki: funkcję sinc, przesunięcie M/2 oraz okno Blackmana.
+Chcąc uzyskać wzmocnienie filtru równe jedności przy częstotliwości zero, trzeba tak dobrać
+stałą K, aby suma wszystkich próbek była równa jedności. W praktyce można zignoro
+stałą K podczas obliczania odpowiedzi impulsowej i potem znormalizować wszystkie próbki
+według potrzeby. W programie podanym w tablicy 16.1 pokazano, jak to zrobić. Proszę też
+zauważyć, jak prowadzone są obliczenia pośrodku funkcji sinc, przy i = M/2 obejmujące
+dzielenie przez zero.
+
+Wzór 16.4, choć długi, jest łatwy w użyciu. Po prostu wprowadźcie go do komputera i m
+żecie o nim zapomnieć. Niech komputer prowadzi obliczenia. Bardzo źle byście postąp
+próbując robić obliczenia według tego wzoru samodzielnie.
+
+Sprecyzujmy dokładniej, gdzie odpowiedź impulsowa według wzoru 16.4 jest umieszcze:
+na w matrycy w waszym komputerze. Jako przykład wybierzmy M = 100. Pamiętajmy,
+że M musi być liczbą parzystą. Pierwszy punkt odpowiedzi impulsowej ma lokalize
+cję O w matrycy, a ostatni — lokalizację 100. Wynika stąd, że cały sygnał ma długość
+101 punktów. Środek symetrii jest w punkcie 50, tj. M/2. 50 punktów na lewo od punktu
+numer 50 jest symetrycznych w stosunku do 50 punktów leżących na prawo. Punkt 0 ma
+więc taką samą wartość jak punkt 100, a punkt 49 jak punkt 51. Jeśli trzeba mieć jakąś
+określoną liczbę punktów w odpowiedzi impulsowej, np. w celu wykonania FFT, to v
+starczy po prostu dodać zera do jednego lub drugiego końca. Na przykład mając M = 100
+można utworzyć próbki od 101 do 127, równe zero, uzyskując odpowiedź impulsow.
+o długości 128 punktów.
+
+Na rys. 16.4 podano przykłady odpowiedzi impulsowych filtrów okienkowanych funk
+since oraz wynikających z nich odpowiedzi skokowych. Próbki na początku i na końc
+odpowiedzi impulsowych są tak małe, że nie można ich nawet zobaczyć na wykresach.
+
+tości, lecz wspólnie mogą mieć znaczny wpływ na działanie filtru. Między innymi dlategć
+w realizacji filtrów okienkowanych funkcją sinc stosuje się zapis zmiennoprzecinkowy.
+Zapis w liczbach całkowitych zwykle nie ma wystarczającego zakresu dynamicznego, ak
+uchwycić wielkie zmiany wartości występujące w odpowiedzi impulsowej filtru. Jak
+okienkowany funkcją sinc działa w dziedzinie czasu? Okropnie! Jego odpowiedź skokowa
+ma przerzut i zafalowania; nie jest to filtr odpowiedni do sygnałów o informacji zakodc
+wanej w dziedzinie czasu.
+
+Przykłady filtrów okienkowanych funkcją sinc
+
+Elektroencefalogram (EEG) jest wynikiem pomiaru potencjałów prądów czynnościowych
+mózgu. Są one wykrywane jako miliwoltowe sygnały na elektrodach przymocowanych ć
+
+powierzchni głowy. Każda komórka nerwowa w mózgu wytwarza małe impulsy elektryczne,
+Elektroencefalogram jest łącznym wynikiem wielkiej liczby tych impulsów generowanych
+w pewien (miejmy nadzieję) skoordynowany sposób. Chociaż zależność między myślenie
+a tą elektryczną koordynacją jest bardzo mało zrozumiała, to jednak różne częstotliwość
+w EEG mogą być identyfikowane z określonymi stanami psychicznymi. Kiedy zamkniesz
+oczy i wypoczywasz, dominującym przebiegiem w EEG będzie wolna oscyłacja o częste
+tliwości między 7 i 12 Hz. Ten przebieg jest nazywany rytmem alfa i wiąże się z uczucie
+zadowolenia i zmniejszonym poziomem uwagi. Otwarcie oczu i rozglądanie się wokół pe
+woduje zmianę przebiegu EEG i pojawienie się w nim rytmu beta © częstotliwości od If
+do 20 Hz. Inne przebiegi i częstotliwości obserwuje się u dzieci, inne we śnię — zależnie
+od głębokości snu, a jeszcze inne w przypadkach nieprawidłowej pracy mózgu, takich ja
+padaczka.

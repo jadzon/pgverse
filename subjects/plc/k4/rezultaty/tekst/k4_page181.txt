@@ -1,0 +1,36 @@
+5. Konstrukcja szczebla musi być poprawnie zagnieżdżona z logicznego punktu
+widzenia - nie może zawierać odgałęzień mających początek lub koniec we-
+wnątrz innej gałęzi.
+
+6. W szczeblu zawierającym funkcję lub blok funkcyjny nie mogą wystąpić
+rozgałęzienia rozpoczynające się od linii pionowej, z wyjątkiem prowadzą-
+cych bezpośrednio do cewek, a po prawej stronie bloku nie mogą wystąpić
+żadne styki.
+
+7. Każda funkcja i blok funkcyjny posiadają wejście zezwolenie (enable), które
+na schemacie jest zawsze zaznaczone jako wejście górne. Funkcja lub blok
+funkcyjny wykonywane są tylko w tym cyklu sterownika, w którym do tego
+wejścia dopływa prąd. Jeżeli mają być one wykonywane w każdym cyklu
+sterownika, to wejścia tego nie należy łączyć z lewą szyną prądową, lecz
+użyć styku z przypisaną zmienną ALW_ON (por. Tab. 4.4).
+
+8. Funkcje posiadają zwykle wyjście umożliwiające przekazanie prądu do ele-
+mentów szczebla znajdujących się na prawo od funkcji. Wyjście to na
+schemacie funkcji znajduje się z prawej strony u góry i zaznaczane jest jako
+ok. W zależności od rodzaju funkcji, prąd na wyjściu ok może pojawić się
+albo w każdym cyklu sterownika, w którym funkcja jest aktywizowana (prąd
+na wejściu zezwolenie), albo tylko wtedy, gdy funkcja została wykonana
+prawidłowo.
+
+Tekst programu w języku schematów drabinkowych tworzonego za pomocą pa-
+kietu LOGICMASTER 90 zapisywany jest w programatorze do pliku w kartotece
+(folder) o nazwie takiej samej jak nazwa programu. W trakcie pisania programu
+jest on kompilowany szczebel po szczeblu na język maszynowy, zrozumiały dla
+jednostki centralnej sterownika. W tekście programu, oprócz szczebli tworzących
+właściwą część programu sterującego, występują także deklaracje zmiennych
+(Variable Declarations) umożliwiające nadanie zmiennym w programie nazw
+symbolicznych (por. 4.2) oraz deklaracje bloków programowych (Block Decla-
+rations), na które może zostać podzielony program (por. 4.11.1).
+
+TYWPTT TYT TY TE TY TYTON PYT EEEE YTY PEZET W SPY" YTEOWYPTRTY TRZ WYDZ WYW NOZNA TCTPTOWYTYTTRWTYTYZEE DCR.
+4.] Wprowadzenie 181

@@ -1,0 +1,7 @@
+<image/tabele/k4_page498_table1.png>
+
+<image/wzory/k4_page498_formula1.png>
+
+<image/figury/k4_page498_figure1.png>
+
+498 Rozdział : 8.Programy przykładowe

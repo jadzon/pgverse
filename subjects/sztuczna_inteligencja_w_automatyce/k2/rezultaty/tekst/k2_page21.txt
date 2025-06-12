@@ -1,0 +1,32 @@
+<image/figury/k2_page21_figure1.png>
+
+Rys. 3.7: Układanka 3 x 3. Drzewo stanów uzyskane metodą szukania heurystycznego dla
+4 będącego liczbą kroków od węzła startowego do danego, a h będącego liczbą klocków nie
+znajdujących się na właściwych pozycjach (z książki [?])
+
+3.8.2. Dowód dopuszczalności algorytmu A*
+
+Lemat
+
+Jeżeli h(n) < h(n), a P oznacza ścieżkę optymalną (ciąg optymalny), to na każdym
+etapie działania algorytmu istnieje na liście O węzeł n' z P oraz f(n') < f(s), gdzie
+f(s) jest minimalnym kosztem całej drogi (kosztem otymalnym).
+
+Dowód
+
+Przypuśćmy. że n' jest pierwszym, z ciągu P, węzłem na O. Z zasady działania
+algorytmu przynajmniej jeden z węzłów z P musi być na O. Najpierw jest to s, a
+później jeden z jego potomków.
+
+Na to żeby pokazać, że f(n') < f(s) należy pokazać, że g(n') = g(n'). Na to
+żeby g(n') = g(n') potrzeba i wystarcza aby na liście Z były wszystkie węzły z P,
+od węzła s do węzła bezpośrednio poprzedzającego n'.
+
+Jeżeli na Z nie ma jakiegoś węzła m z P. poprzedzającego n', to węzeł ten:
+
+1. jest na O,
+2. nie jest na O.
+Gdy zachodzi:
+1. to węzeł m będzie pierwszym z P na O zamiast n',
+
+2. to pewien węzeł z P poprzedzający m będzie na O i n' nie będzie pierwszym.

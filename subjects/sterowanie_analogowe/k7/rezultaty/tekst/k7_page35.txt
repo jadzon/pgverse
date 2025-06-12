@@ -1,0 +1,32 @@
+Diagonalizacja - Matlab
+
+<image/wzory/k7_page35_formula1.png>
+
+<image/figury/k/_page35_figure1.png>
+
+<image/figury/k/_page35_figure2.png>
+
+POLITECHNIKA
+GDAŃSKA
+
+ 
+
+ 
+
+SMOUBJ]S 8|8poW
+
+  
+
+ul
+
+x1 2.07e-17 -0.5
+x2 1.436 1.436
+x3 -1.436 1.436
+c=
+GL x2
+yl 2 0.6963
+y2 0 0.6963
+D =
+ul uż
+yl 0 0
+y2 0 0

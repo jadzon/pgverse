@@ -1,0 +1,22 @@
+52 3. Podstawy techniki cyfrowej
+
+001110 : 0011 = 100
+0011
+00001
+LL
+000010
+0011
+000010
+
+ 
+
+Rysunek 3.48. Dziclenic dwóch liczb binarnych
+numeru kroku. W naszym przykładzie w pierwszym kroku aktualną wartość dzielnej
+stanowią 4 jej najbardziej znaczące bity. Jeżeli dzielnik jest mniejszy lub równy tej
+
+wartości, to do ilorazu, na odpowiednią pozycję, jest wpisywana 1 i dokonuje się
+odejmowania. Jeżeli natomiast dzielnik jest większy, to do ilorazu jest wpisywane 0
+
+ry/k3_page62_figure2.png /k3_page62_figure1.pr
+
+Rysunek 3.49. Algorytm dzielenia liczł

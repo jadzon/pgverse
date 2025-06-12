@@ -1,0 +1,56 @@
+Metodyka przekształcenia Laplace'a 563
+
+W środkowej kolumnie na rys. 32.5 przedstawiono odpowiedź impulsową pasmowozaporo-
+wego filtru RLC (tzw. filtru wycinającego lub typu notch), o którym była mowa w rozdzia-
+le 30. Zawiera ona impuls dla r = 0, po którym następuje sinusoida tłumiona wykładniczo. Jak
+pokazano na rysunkach od 32.5 a) do 32.5 e), przeprowadzamy przebadanie tej odpowiedzi
+impulsowej różnymi sinusoidami tłumionymi wykładniczo. Każdą z tych sinusoid charakte-
+ryzują dwa parametry — ©, która określa częstotliwość sinusoidy, oraz 6, określająca szyb-
+kość tłumienia. A więc każdy użyty do przebadania przebieg odpowiada innemu położeniu na
+płaszczyźnie zmiennej zespolonej s (rys. 32.4). Przebadanie odpowiedzi impulsowej polega na
+mnożeniu jej przez przebiegi użyte do tego celu i następnie całkowaniu uzyskanego wyniku
+w granicach od £ = — do r = +, To działanie przedstawiono na rysunku w prawej kołum-
+nie. Naszym celem jest znalezienie takich kombinacji 6 i w, które dokładnie kasują badaną
+odpowiedź impulsową. Takie skasowanie może nastąpić dwoma sposobami — powierzchnia
+pod krzywą może być albo zero, albo prawie nieskończona. Wszystkie inne wyniki nie są
+interesujące i można je pominąć. Te położenia na płaszczyźnie zmiennej zespolonej s, które
+dają kasowanie do zera, są nazywane zerami systemu. Te zaś położenia, które dają kasowanie
+typu „prawie nieskończoność”, są nazywane biegunami. Bieguny i zera są analogiczne do gór
+i dolin w naszej opowieści o pociągu i obrazują teren „wokół” odpowiedzi impulsowej.
+
+Na początku rozważmy, co się dzieje, gdy amplituda przebiegów użytych do przebadania
+zmniejsza się w funkcji czasu, jak na rys. 32.5 a). Ma to miejsce, gdy 6 > 0 (prawa połówka
+płaszczyzny zmiennej zespolonej s). Ponieważ zarówno odpowiedź impulsowa, jak i przebieg
+próbkujący stają się coraz mniejsze z upływem czasu, więc taką samą właściwość będzie miał
+ich iloczyn. Gdy iloczyn dwóch przebiegów zostaje scałkowany w granicach od minus do
+plus nieskończoności, to wynikiem będzie jakaś liczba, która nie jest szczególnie interesują-
+ca. Zmniejszający się przebieg służący do przebadania nie może, w szczególności, skasować
+zmniejszającej się odpowiedzi impulsowej. Z tego wynika, że system stabilny nie będzie miał
+żadnych biegunów, jeśli o > 0. Wszystkie bieguny dla systemu stabilnego są więc zlokalizo-
+wane w lewej połówce płaszczyzny s. Jeśli w prawej połówce znajdują się bieguny, to znaczy,
+że system jest niestabilny (tj. odpowiedź impulsowa wzrasta w funkcji czasu).
+
+Na rys. 32.5 b) pokazano jeden z takich przypadków szczególnych, jakich szukamy. Gdy ten
+przebieg zostaje pomnożony przez odpowiedź impulsową, uzyskana całka wyniku mnożenia
+ma wartość zero. Wynika to z faktu, że obszar pod wykresem nad osią x (pochodzący od
+funkcji impulsowej delta) jest dokładnie równy obszarowi pod wykresem (od wyprostowanej
+sinusoidy). Wartości 6 i w dające kasowanie tego rodzaju są nazywane zerem systemu. Zera
+na wykresie płaszczyzny s na rys. 32.4 oznaczono małymi kółkami.
+
+Na rys. 32.5 c) przedstawiono następne przebadanie. Tu stosujemy sinusoidę o amplitudzie
+rosnącej z czasem wykładniczo, lecz wolniej niż zmniejsza się amplituda odpowiedzi impul-
+sowej w funkcji czasu, Iloczyn tych dwóch przebiegów też ma amplitudę zmniejszającą się
+w funkcji czasu. Podobnie jak na rys. 32.5 a), całka tego iloczynu jest jakąś nieinteresującą
+nas liczbą rzeczywistą. Nie zachodzi tu bowiem żaden rodzaj dokładnego kasowania.
+Odstępując nieco od kolejności rysunków, spójrzcie na rys. 32.5 e). Jest to przebadanie
+przebiegiem o amplitudzie wzrastającej szybciej niż zmniejsza się amplituda odpowie-
+dzi impulsowej. Amplituda sygnału uzyskanego w wyniku pomnożenia tych przebiegów
+wzrasta w funkcji czasu. To znaczy, że powierzchnia pod krzywą wzrasta w funkcji cza-
+su i całkowita powierzchnia od £ = —» do t = + jest nieokreślona. W języku matema-
+tycznym mówi się, że całka nie jest zbieżna. Tak więc nie wszystkie powierzchnie na
+płaszczyźnie zmiennej zespolonej s mają wartość skończoną. Część płaszczyzny, w której
+całka ma określoną wartość, jest nazywana obszarem zbieżności. W niektórych metodach
+matematycznych ważna jest informacja, które części płaszczyzny zmiennej zespolonej s są
+w granicach obszaru zbieżności. Ta informacja nie jest wszakże konieczna do zastosowań,
+które omawiamy w tej książce. W naszych rozważaniach interesujące są tylko kwestie
+dokładnego kasowania.

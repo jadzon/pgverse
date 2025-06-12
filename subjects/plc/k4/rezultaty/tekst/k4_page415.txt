@@ -1,0 +1,14 @@
+<image/tabele/k4_page415_table3.png>
+
+Wyd. 8.54 Uruchomienie silnika w wybranym kierunku przy połączeniu w gwiazdę
+(rozruch)
+
+<image/tabele/k4_page415_table1.png>
+
+<image/wzory/k4_page415_formula1.png>
+
+<image/tabele/k4_page415_table2.png>
+
+Wyd. 8.56 Zabezpieczenie przed przeciążeniem
+
+8.3. Sterowanie napędem dwukierunkowym 415

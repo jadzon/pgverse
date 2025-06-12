@@ -1,0 +1,38 @@
+Przykład 3.3 (do samodzielnego rozwiązania)
+Rozwiązać równanie różniczkowe, wykorzystując funkcję ode23
+
+<image/wzory/k1_page11/_formula1.png>
+
+dla warunku początkowego y(0) =0, »(0)=15.
+
+Wykreślić przebieg funkcji y(/) otrzymanej w wyniku symulacji i porównać go
+z rozwiązaniem analitycznym: y(t) = Je”?! sin St.
+
+3.2. Rozkład transformaty F(s) na ułamki proste
+
+Rozkładu transformaty F(s) na ułamki proste można dokonać za pomocą funkcji
+residue, która jest wywoływana w postaci
+
+<image/wzory/k1_page11/_formula2.png>
+Znaczenie parametrów:
+r — residua
+p — bieguny transmitancji
+k — wyraz wolny
+L, M — licznik i mianownik transmitancji
+
+W przypadku biegunów jednokrotnych funkcja ta dokonuje następującego roz-
+kładu
+
+<image/wzory/k1_page11/_formula3.png>
+
+Jeżeli w rozkładzie wystąpią bieguny wielokrotne (m-krotne), to odpowiedni
+fragment rozkładu jest następujący:
+
+<image/wzory/k1_page11/_formula4.png>
+Przykład 3.4
+Stosując przekształcenie Laplace'a dla podanego wcześniej równania różniczko-
+wego postaci: X+3x+2x=0, dla x(0)=0, x(0)=2, otrzymujemy
+
+<image/wzory/k1_page117_formula5.png>
+
+119

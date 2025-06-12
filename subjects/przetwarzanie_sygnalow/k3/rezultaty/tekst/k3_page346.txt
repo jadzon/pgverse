@@ -1,0 +1,35 @@
+Przekształcenia skali szarości 377
+
+<image/figury/k3_page346_figure1.png>
+
+Przekształcenie skali szarości wynikające z opisanej metody pokazano na rys. 23.14 c) na
+wykresie z napisem ręczne. Tę krzywą wyznaczono, obliczając sumę bieżącą (tj. całkę dys-
+kretną) krzywej z rys. 23.14 b) i następnie normalizując ją w taki sposób, aby z prawej
+strony wykres miał wartość 255. Dlaczego trzeba obliczać całkę, aby wyznaczyć żądaną
+krzywą? Pomyślmy o tym w następujący sposób. Kontrast przy jakiejś konkretnej wartości
+piksela jest równy nachyleniu krzywej wyjście/wejście. A więc chcemy. żeby krzywa na rys.
+23.14 b) był pochodną (nachyleniem) krzywej z rys. 23.14 c). Z tego wynika, że krzywa na
+rys. 23.14 c) musi być całką krzywej z rys. 23.14 b).
+
+Przepuszczając obraz z rys. 23.13 a) przez takie, ręcznie określone przekształcenie skali sza-
+rości, uzyskujemy obraz pokazany na rys. 23.13 b). Tło stało się jaśniejsze, maskownica sil-
+nika ciemniejsza i oba te obiekty uzyskały lepszy kontrast. Te ulepszenia osiągnięto kosztem
+kontrastu postaci ludzkiej, uzyskując mniej szczegółowy obraz intruza (choć nie może już
+być dużo gorszy niż na obrazie oryginalnym). |
+
+Przekształcenia skali szarości mogą w znacznym stopniu poprawić widoczność obrazu.
+Problem w tym, że metoda wymaga bardzo wielu prób i błędów. Sposobem automatyzacji
+tego procesu jest wyrównywanie histogramu. Zauważcie, że histogram na rys. 23.14 a)
+i krzywa ważona kontrastu mają taki sam kształt ogólny. W metodzie wyrównywania histo-
+gramu stosuje się bezpośrednio histogram jako krzywą ważoną kontrastu, eliminując koniecz-
+ność oceny człowieka. A zatem wykres wyjście/wejście jest wyznaczany przez całkowanie
+i normalizację histogramu, a nie przez ręcznie generowaną krzywą. W rezultacie uzyskuje się
+większy kontrast dla tych wartości, które występują w największej liczbie pikseli.
+Wyrównywanie histogramu jest interesującą procedurą matematyczną, gdyż maksymalizuje
+entropię obrazu, a więc miarę tego, ile informacji jest przesyłanych w ustałonej liczbie bitów.
+Wadą wyrównywania histogramu jest pomylenie zwykłej liczby pikseli o pewnej wartości
+z ważnością pikseli o tej wartości. Na przykład maskownica silnika ciężarówki i postać in-
+truza są najistotniejszymi cechami obrazu na rys. 23.13. Mimo to wyrównywanie histogramu
+powoduje prawie zupełne pominięcie tych obiektów, gdyż zawierają one stosunkowo mało
+pikseli. Wyrównywanie histogramu jest szybkie i łatwe. Miejcie na uwadze, że jeśli nie dzia-
+ła ono dobrze, to krzywa generowana ręcznie przypuszczalnie zadziała lepiej.

@@ -1,0 +1,24 @@
+<image/tabele/k4_page58_table1.png>
+
+Blok funkcyjny (function block), w przeciwieństwie do funkcji (por. 2.3.1)
+z chwilą wykonania może dostarczać na wyjściu jedną lub wiele wartości. Blok
+posiada wewnętrzne zmienne zawierające pewną informację o stanie bloku
+(jest więc „elementem dynamicznym”). Wszystkie wartości zmiennych wyjścio-
+wych oraz konieczne wartości zmiennych wewnętrznych są przechowywane
+pomiędzy kolejnymi chwilami wykonania bloku funkcyjnego, stąd wywołanie
+bloku z tymi samymi argumentami wejściowymi niekoniecznie musi prowadzić
+do tych samych wartości wyjściowych. W programie bloki funkcyjne mogą być
+wykorzystywane wielokrotnie (nazywane jest to ukonkretnieniem — ang. instan-
+ce), a każda taka „kopia” bloku musi zawierać swoją nazwę oraz strukturę
+danych zawierających wyjście i wewnętrzne zmienne bloku.
+
+Przykład przedstawienia bloku w programie w postaci graficznej i tekstowej po-
+kazano w Tab. 2.28. Graficznie blok funkcyjny przedstawia się jako prostokąt
+o wymiarach zależnych od liczby wejść, wyjść lub innych wyświetlanych infor-
+macji. Wewnątrz bloku umieszcza się jego nazwę oraz nazwy parametrów
+formalnych a nad blokiem nazwę tej „kopii” (w przykładzie: FF75). Tekstowo
+kopię bloku rozpoczyna się od deklaracji nazwy bloku poprzez użycie konstruk-
+cji VAR...END_VAR, podobnie jak dla danych strukturalnych (por. 2.2.2).
+
+a o OŚ O O O GE EO EO OOO EO ECCO AO OLO GEDN
+58 Rozdział : 2. Programowanie sterowników PLC

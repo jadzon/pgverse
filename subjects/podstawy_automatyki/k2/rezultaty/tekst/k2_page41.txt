@@ -1,0 +1,81 @@
+| »
+
+| 8.2.3 Optymalne nastawy regulatora
+
+Zakładając, że regulator występujący w układzie jest typu P oraz obie-
+rając pewien wskaźnik jakości regulacji /(t) (na przykład jako J(t) = /,(t)
+lub J(t) = /z(t)), można analitycznie uzyskać optymalną wartość wzmoc-
+nienia kp. na podstawie wyrażenia
+
+<image/wzory/k2_page41_formula1.png>
+
+Przykładowo można postawić warunek
+
+<image/wzory/k2_page41_formula2.png>
+
+| przyjmując, że znana jest analityczna postać zależności wiążącej e(£)
+| z gęstością widmową sygnału wyjściowego (uzależnioną z kolei od gęstości
+widmowej sygnału referencyjnego, zakłócającego oraz transmitancji widmo-
+wych układu zamkniętego i zakłóceniowej).
+Wyznaczona w taki sposób optymalna (minimalizująca zadany wskaźnik
+J(t)) wartość wzmocnienia nie ma charakteru uniwersalnego, co znaczy,
+że odnosi się ona jedynie do przypadku wystąpienia konkretnego sygnału
+| referencyjnego, konkretnych sygnałów zakłócających oraz konkretnej dyna-
+miki obiektu sterowania.
+
+8.3 Przebieg ćwiczenia
+
+8.3.1  Rozpatrywany układ regulacji
+
+Jak pokazano na rysunku 8.3, w rozpatrywanym przypadku pominięto
+zakłócenia pomiarowe, w związku z czym uchyb regulacji staje się błędem
+nadążania.
+
+<image/figury/k2_page41_figure1.png>
+
+w. .
+a
+
+81
+
+W celu uzyskania prostej metody poszukiwania najlepszych nastaw
+względem parametrów regulatora wybrano regulator typu P. Zespół napędu
+został zamodelowany jako układ całkujący, natomiast dynamika obiektu jako
+układ drugiego rzędu z opóźnieniem transportowym.
+
+8.3.2 Układ nadążny bez zakłóceń
+
+Określić wpływ wartości wzmocnienia regulatora na jakość śledzenia syg-
+nału referencyjnego przy wymuszeniu:
+
+e falą trójkątną,
+e sinusoidą,
+e falą prostokątną,
+
+wybierając dla zmienianego parametru trzy wartości.
+
+8.3.3 Analiza parametryczna układu nadążnego bez zakłóceń
+
+Uzyskać w zakresie k„ odpowiadającym stabilnej pracy układu
+charakterystyki l;(ty) = fl(kp), b(t„) = flkp), gdzie £, jest arbitralnie
+obranym horyzontem symulacji przy wymuszeniach:
+
+e falą trójkątną,
+
+e sinusoidą,
+
+e falą prostokątną.
+
+8.34 Układ nadążny z zakłóceniami
+
+Określić wpływ wartości wzmocnienia regulatora na jakość śledzenia
+(w tym na zdolność eliminacji zakłóceń) sygnału referencyjnego przy
+wymuszeniu:
+
+e falą trójkątną,
+
+e sinusoidą,
+
+e falą prostokątną,
+
+wybierając dla zmienianego parametru trzy wartości

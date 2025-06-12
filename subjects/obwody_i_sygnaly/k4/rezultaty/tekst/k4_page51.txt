@@ -1,0 +1,39 @@
+1.3. Elementy nieliniowe 51
+
+1.1.
+
+<image/figury/k4_page51_figure3.png>
+
+mówiąc, p > 0, jeśli punkt (i/) na charakterystyce oddala się od początku
+układu współrzędnych (rys. 1.3-9a),orazp < O,jeślipunktten zbliża się do
+początku układu współrzędnych (rys. 1.3-9b).
+
+Oznacza to, że indukcyjność może zarówno pobierać energię z otoczenia
+(wówczas p > 0), jak i ją do otoczenia oddawać (wówczas p < 0).
+
+Przyjmijmy, że za stan wyjściowy będziemy uważać stan, w którym i = 0
+A W = 0(tzw. stan spoczynku), któremu odpowiada początek układu współ-
+rzędnych. Aby ruch punktu (i,/) (tj. ruch punktu pracy) mógł odbywać się jak na
+rys. 1.3-9b (p < 0), najpierw punkt ten musi oddalić się od początku układu
+współrzędnych (p > O).
+
+<image/figury/k4_page51_figure1.png>
+
+Rys. 1.3-9
+
+Oznacza to, że indukc yjność może oddawać do otoczenia tylko tę energię, którą
+uprzednio z otoczenia pobrała.
+
+Oznacza to także, że indukcyjność jest elementem zdolnym do gromadzenia
+energii. Energia gromadzona (magazynowana) przez indukcyjność jest energią pola
+magnetycznego.
+
+Przeprowadźmy teraz następujące rozumowanie. Rozpatrzmy ciąg chwil
+tę <ty <tą i przyjmijmy, ŻE Wo = V(to), W, = V(t,) oraz Wz = V(tz),
+przy czym niech: Y, > Wo, Wa = Wo. Oznacza to (rys. 1.3-10a), że w przedziale
+czasu £ ty, t, ) punkt pracy porusza się na charakterystyce od położenia A, do A,
+(p > 0), zaś w przedziale czasu (ty, tę >) z powrotem wraca do położenia Ag
+(p<0). Obliczmy energię w(to, t2) pobraną przez indukcyjność. Zgodnie
+z zależnością (1.3-12) możemy napisać:
+
+<image/wzory/k4_page51_formula1.png>

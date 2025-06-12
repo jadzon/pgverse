@@ -1,0 +1,45 @@
+1.21. Problemy 33
+
+1.21 Problemy
+
+1.21.1 Największy wspólny dzielnik
+
+Udowodnij, że NW D(a,b) jest najmniejszą dodatnią liczbą d, dla której istnieje z i y
+całkowite, takie że ra + yb = d.
+
+Udowodnij, że każda liczba postaci za+ yb, dla z i y całkowitych, jest wielokrotnością
+NW DQ(a, b), i na odwrót, każda wielokrotność NW D(a, b) jest postaci za + yb, dla jakiś
+z i y całkowitych.
+
+Udowodnij, że poniższy algorytm poprawnie oblicza największy wspólny dzielnik
+NW DQa,b), jeżeli a > b > 0:
+
+var a,b,p,q,r,:integer;
+begin
+readln(a,b);
+p:=a;q:=b;
+while q >0 do
+begin
+r:=p mod q;
+p:=q; q:=r
+end;
+writeln('NwD(',a,',',b,')=",p)
+end.
+
+Zmodyfikuj powyższy program, tak aby oprócz NW D(a,b), obliczał także współ-
+czynniki z i y, takie że az + yb= NW D(a,b).
+
+1.21.2 Najmniejsza wspólna wielokrotność
+Niech NW/'W (a, b) oznacza najmniejszą wspólną wielokrotność liczb a i b.
+Udowodnij, że NW'W (a,b) dzieli każdą inną wspólną wielokrotność liczb a i b.
+Pokaż, że NW'W (a, b) - NW D(a,b) = a-b
+1.21.3 Liczby względnie pierwsze
+Udowodnij, że jeżeli m jest względnie pierwsze z a i b, to m jest względnie pierwsze z
+iloczynem tych liczb ab.
+
+Jako wniosek udowodnij, że jeżeli m jest względnie pierwsze z każdą z liczb m; ,.... me,
+to m jest względnie pierwsze z iloczynem tych liczb
+
+<image/wzory/k2_page148_formula1.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

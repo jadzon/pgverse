@@ -1,0 +1,29 @@
+Rozdział 2
+
+Filozofia sztucznej inteligencji
+
+W rozdziale tym naszkicowane są podstawowe pytania i problemy filozofii sztucz-
+nej inteligencji dotyczące możliwości budowy maszyn posiadających świadomość. W
+drugiej części rozdziału nakreślona jest historia rozwoju idei budowy inteligentnych
+maszyn w oderwaniu od problemu posiadania przez nie świadomości. Okładki kilku
+wybranych książek o filozofii sztucznej inteligencji przedstawiono na rys. ??.
+
+2.1. Filozofia sztucznej inteligencji
+
+Jako dyscyplina naukowa sztuczna inteligencja jest bardzo młoda, ale podstawowe
+problemy filozoficzne leżące u jej podstaw budziły zainteresowanie przez wiele wie-
+ków. Chodzi tu o pytania czym jest myślenie, czucie i świadomość, jaki jest związek
+umysłu z ciałem i czy możliwa jest budowa urządzenia, które by posiadało cechy
+umysłu człowieka.
+
+Kartezjusz w XVII wieku jako jeden z pierwszych myślicieli uważał, że funkcjo-
+nowanie ciała człowieka powinno dać się wyjaśnić mechanistycznie, tzn. że człowiek
+jest złożoną maszyną, której działanie daje się opisać przy pomocy zasad fizyki i
+
+<image/figury/k2_page6_figure2.png>
+
+Rys. 2.1: Okładki przykładowych książek o filozofii sztucznej inteligencji: (a) książka Searla
+twórcy koncepcji „chińskiego pokoju” [?]. (b) zbiór klasycznych artykułów [?] i (c) zbiór
+esejów Lema |?] o filozofii sztucznej inteligencji
+
+11

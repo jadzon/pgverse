@@ -1,0 +1,34 @@
+14. Wprowadzenie do filtrów cyfrowych
+
+w rozdziale 12. Rozpoczynając od odpowiedzi impulsowej filtru o długości N próbek, ob-
+licza się — za pomocą FFT — widmo częstotliwościowe składające się z N punktów części
+rzeczywistej i N punktów części urojonej. Użyteczną informację zawierają tylko próbki od 0
+do N/2 części rzeczywistej i urojonej FFT. Pozostałe punkty są duplikatami (częstotliwości
+ujemne) i można je pominąć. Ponieważ części rzeczywista i urojona są trudne do zrozumie-
+nia, więc zwykle są przetwarzane do współrzędnych biegunowych, jak to opisano w roz:
+dziale 8, W ten sposób uzyskuje się moduł i fazę sygnału, obejmujące próbki od 0 do N/2
+(tzn. N/2 + 1 próbek w każdym sygnale). Na przykład odpowiedź impulsowa 256-punktowa
+da odpowiedź częstotliwościową obejmującą punkty od 0 do 128. Próbka zero reprezentuje
+składową stałą (DC), czyli częstotliwość zero. Próbka 128 reprezentuje częstotliwość równą
+połowie częstotliwości próbkowania. Pamiętajmy, że żadne częstotliwości większe od poło-
+wy częstotliwości próbkowania nie powinny się pojawiać w spróbkowanych danych.
+Liczba próbek użyta do reprezentowania odpowiedzi impulsowej może być dowolnie duża.
+kóz na przykład, że chcemy wyznaczyć odpowiedź częstotliwościową filtru o odpo-
+wiedzi impulsowej zawierającej 80 punktów. Ponieważ FFT można stosować tylko do sy-
+gnałów o długości będącej potęgą dwóch, więc trzeba do sygnału dodać 48 zer, aby uzyskać
+długość 128 próbek. Takie dopełnianie zerami nie zmienia odpowiedzi impulsowej. Aby
+zrozumieć, dlaczego tak jest, pomyślcie, co dzieje się z tymi dodanymi zerami, gdy sygnał
+wejściowy jest splatany z odpowiedzią impulsową systemu. Dodane zera po prostu znikają
+podczas operacji splotu i nie mają wpływu na uzyskany wynik.
+Idąc o krok dalej, można dodać wiełe zer do odpowiedzi impulsowej, aby że
+powiedzmy, 256, 512 lub 1024 punktów. Ważne jest to, że dłuższa odpowiedź in
+powoduje w odpowiedzi częstotliwościowej gęściejsze rozmieszenie punktów danych. T
+znaczy, że więcej próbek jest rozmieszczonych między częstotliwościami zerową i równą
+O RSE RYPRCE AEY YZ RATY esl
+dopełniona nieskończoną liczbą zer, wówczas punkty danych w odpowiedzi częstotliwościc
+wej są nieskończenie blisko siebie, tzn. tworzą linię ciągłą. Inaczej mówiąc, odpowiedź czę:
+stotliwościowa filtru jest rzeczywiście sygnałem ciągłym od częstotliwości zero do połowy
+częstotliwości próbkowania. Wynik DFT jest spróbkowaniem tej linii ciągłej. Jaką długość
+odpowiedzi impulsowej powinno się stosować, obliczając odpowiedź częstotliwościową fil:
+
+<image/figury/k3_page236_figure1.png>

@@ -1,0 +1,23 @@
+<image/figury/k4_page313_figure1.png>
+
+Blok zawiera trzy człony regulatora PID. W środku schematu pokazano część
+proporcjonalną ze wzmocnieniem 100/PB.
+
+U góry schematu umieszczono część różniczkującą rozszerzoną o element filtru-
+jący wielkość regulowaną PV.
+
+W dolnej części schematu zaprezentowano człon całkujący. Oblicza on przyrost
+składowej całkowej jako różnicę wartości sygnału wyjściowego bloku PID2
+i wartości składowej całkowej poprzedniego cyklu obliczeń. W bloku tym umoż-
+liwia się ograniczenie składowej całkowej. Jest to mechanizm, który pozwala na
+wyłączenie całkowania uchybów regulacji przekraczających zadane wartości,
+a tym samym skrócenie czasu regulacji.
+
+Do wyjścia regulatora można dodać stałą wartość (bias), co bywa pomocne przy
+dopasowywaniu zakresów przetworników modułów wyjść analogowych do ele-
+mentów wykonawczych lub może być wykorzystane do sterowania ze sprzęże-
+niem w przód (feedforward control).
+
+m A M A A MM
+
+wzory/k4_page313_formula1.pn

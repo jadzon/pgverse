@@ -1,0 +1,40 @@
+1.7. Wartość oczekiwana, średnia 19
+
+Przykład 1.41 Przypuśćmy, że mamy informację, że w jakiejś grupie studenckiej połowa
+studentów otrzymała ocenę 5 z matematyki dyskretnej, jedna trzecia otrzymała ocenę 4,
+a jedna szósta ocenę 3. Jaka jest średnia ocena w tej grupie? Przyjmujemy, że grupa jest
+przestrzenią losową, a zmienna losowa „X jest oceną studenta. Wtedy wartość oczekiwana
+zmien”
+
+<image/wzory/k2_page78_formula1.png>
+jest średnią oceną w tej grupie.
+Wniosek 1.42 Dla każdej zmiennej losowej X istnieje zdarzenie elementarne w € Q
+takie, że P(w) > 0 oraz X (w) > E(X).
+Podobnie istnieje zdarzenie w € takie, że P(w) > 0 oraz X (w) < E(X).
+Dowód: Udowodnimy tylko pierwszą część twierdzenia, drugą można udowodnić w po-
+dobny sposób.
+
+Przypuśćmy, że dla każdegow € 0? z dodatnim prawdopodobieństwem mamy X (w) <
+E(X). Ale to prowadzi do sprzeczności
+
+<image/wzory/k2_page/8_formula2.png>
+o
+W przypadku klasycznej definicji wniosek 1.42 opisuje prosty fakt, że zawsze istnieje
+przynajmniej jedna wartość mniejsza od lub równa wartości średniej oraz wartość większa
+od lub równa średniej.
+W poniższym twierdzeniu zebrano podstawowe własności wartości oczekiwanej.
+Twierdzenie 1.43 a) E(X+Y)=E(X)+E(Y).
+b) Jeżeli a jest liczbą rzeczywistą,to E(a-X)=a-E(X).
+c) Jeżeli zmienne X i Y są niezależne, to E(X:Y)=E(X):E(Y).
+d) Jeżeli X > 0, b E(X) >0.
+Dowód:
+a)
+<image/wzory/k2_page7/8_formula3.png>
+b)
+<image/wzory/k2_page78_formula4.png>
+
+c)
+
+<image/wzory/k2_page7/8_formula5.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

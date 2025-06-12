@@ -1,0 +1,12 @@
+<image/tabele/k4_page480_table1.png>
+
+Wyd. 8.159 Trzecia faza sterowania (chłodzenie) — otwarcie zaworów przepływu me-
+dium chłodzącego aż do spadku temperatury do wartości początkowej reakcji
+(ustawienie markera 001 14)
+
+<image/figury/k4_page480_figure1.png>
+
+Wyd. 8.160 Czwarta faza sterowania (opróżnianie) — otwarcie zaworu odpływu pro-
+duktu reakcji aż do opróżnienia reaktora
+
+480 Rozdział : 8. Programy przykładowe

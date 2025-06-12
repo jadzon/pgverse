@@ -1,0 +1,34 @@
+Typowe odpowiedzi impulsowe 129
+
+sobą punktów. Dlatego każda próbka w sygnale wyjściowym jest średnią ważoną wielu są-
+siadujących punktów w sygnale wejściowym. Takie uśredniania wygładza sygnał, a więc
+usuwa z niego składowe o dużych częstotliwościach. Jak to pokazano na przykładzie funk-
+cji sinc (rys. 7.4 c), niektóre odpowiedzi częstotliwościowe filtrów zawierają kilka próbek
+o wartościach ujemnych. Podobnie jak w elektronice analogowej, dolnoprzepustowe filtry
+SZER PROWAA OE WA KROWA PONSA
+
+rh pat pda, AŚ A Zd pa gab Tpoą
+Jak to przedstawiono na rys. 7.4 a), c), niektóre odpowiedzi impulsowe filtrów teoretycznie roz-
+ciągają się aż do nieskończoności, nie schodząc do wartości zero. W praktyce ogony odpowiedzi
+impulsowej są obcinane po pewnej liczbie próbek, tak aby odpowiedź mogła być wyrażona skoń-
+czoną liczbą punktów. Bo jakby inaczej dało się taką odpowiedź zarejestrować w komputerze?
+
+Na rys. 7.5 przedstawiono trzy typowe odpowiedzi impulsowe filtrów górnoprzepusto-
+wych, utworzone z odpowiadających im odpowiedzi impulsowych filtrów dolnoprzepu-
+stowych z rys. 7.4. Jest to metoda często stosowana przy projektowaniu filtrów. Najpierw
+obmyśla się filtr dolnoprzepustowy i potem przekształca go w filtr wymagany — górnoprze-
+pustowy, pasmowoprzepustowy, pasmozaporowy itd. Aby zrozumieć przekształcenie filtru
+dolnoprzepustowego w górnoprzepustowy, przypomnijmy sobie, że odpowiedź impulsowa
+w postaci funkcji delta przepuszcza cały sygnał, podczas gdy dolnoprzepustowa odpowiedź
+impulsowa przepuszcza tylko składowe małoczęstotliwościowe. W wyniku superpozycji
+
+<image/figury/k3_page114_figure1figury/k3_page114_figure2.png>
+
+<image/figury/k3_page114_figure3.png>
+
+   
+ 
+
+i. 7.5. Typowe odpowiedzi impulsowe filtrów górnoprzepustowych. $ą one utworzone przez odjęcie odpowiednich
+impulsowych filtrów dolnoprzepustowych (z rys. 7.4) od funkcji delta. Charakterystyczną cechą wyróżnia-
+odpowiedzi impulsowe filtrów górnoprzepustowych jest szpilkowy wyskok otoczony przez wiele sąsiednich próbek

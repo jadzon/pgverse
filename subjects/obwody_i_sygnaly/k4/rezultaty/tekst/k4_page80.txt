@@ -1,0 +1,32 @@
+80 1. Pojęcia podstawowe — elementy
+
+dwóch rodzajów oporów ujemnych zwanych, podobnie jak ich charakterystyki,
+oporami ujemnymi typu N i oporami ujemnymi typu S.
+
+<image/figury/k4_page80_figure1.png>
+
+E. Przykłady.
+
+Przykład 1.3-20. Punkt pracy A diody tunelowej o charakterystyce pokazanej na rys. 1.3-4c
+(przykład 1.3-1) ma współrzędne U = 200 mV, / = 2 mA. Wyznaczymy opór dynamiczny diody
+w punkcie A.
+
+Ponieważ nie dysponujemy opisem analitycznym charakterystyki diody tunelowej, a jedynie jej
+wykresem, opór dynamiczny wyznaczamy graficznie, prowadząc styczną do charakterystyki
+w punkcie A (rys. 1.3-38). Styczna ta przecina osie układu współrzędnych u, i w punktach:
+
+<image/wzory/k4_page80_formula1.png>
+
+Dioda tunelowa jest oporem uzależnionym napięciowo opisanym charakterystyką i = Qz(u),
+a więc opór dynamiczny jest w tym przypadku interpretowany jako Feta R Wenńlnzunnit: eboli iaet
+
+1 mV
+równyk=— = | Q, zatem:
+1 mA
+
+<image/wzory/k4_page80_formula3.png>
+
+figury/k4_page80_figu
+akwwzory/k4_page80_for
+
+Rys. 1.3-38

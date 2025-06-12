@@ -1,0 +1,69 @@
+542
+
+  
+ 
+    
+   
+  
+ 
+    
+  
+  
+   
+  
+
+31. Zespolone przekształcenie Fouriera
+
+Liczby zespolone, choć zasadniczo niezwiązane ze światem rzeczywistym, mogą być stoso-
+wane do rozwiązywania zagadnień naukowych i technicznych. Są w zasadzie dwa sposoby
+wykorzystania liczb zespolonych w problemach naukowo-technicznych. Pierwszy to zastę-
+powanie parametrów Świata rzeczywistego liczbami zespolonymi, jak to omówiono w po-
+przednim rozdziale. W drugiej metodzie, znacznie elegantszej i skuteczniejszej, liczby zespo-
+lone czyni się matematycznie równoważnymi problemom fizycznym. Takie podejście pro-
+wadzi do zespolonego przekształcenia Fouriera, które jest bardziej wysublimowaną wersją
+rzeczywistego przekształcenia Fouriera opisanego w rozdziale 8. Zespolone przekształcenie
+Fouriera, samo w sobie bardzo ważne, jest także ważnym krokiem na drodze ku skuteczniej-
+szym metodom zespolonym — przekształceniu Lapłace'a i przekształceniu Z. Te przekształ-
+cenia zespolone są podstawą teoretycznego DSP.
+
+Rzeczywiste DFT
+
+Wszystkie cztery przekształcenia z rodziny transformat Fouriera (DFT, DTFT, przekształcenie
+Fouriera i szereg Fouriera) mogą być wykonywane zarówno na liczbach rzeczywistych, jak
+i na zespolonych. Jako przykładem posłużymy się DFT, gdyż to przekształcenie jest przede
+wszystkim związane z DSP. Przed wejściem w matematykę liczb zespolonych przyjrzyjmy się
+przekształceniu DFT ze szczególnym zwróceniem uwagi na te sprawy, które są matematycz-
+nie kłopotliwe. W rozdziale 8 zdefiniowaliśmy wersję rzeczywistą dyskretnego przekształce-
+nia Fouriera zgodnie z równaniami:
+
+<image/wzory/k3_page503_formula1.png>
+
+<image/wzory/k3_page503_formula2.png>
+ZOŁ Z OCZNE. — obliczanie charakterystyki
+
+ke
+
+od0don/2.stotesamewzorycowzory8.4ztrnicedotransformatyprostejwprowadzono
+czynnik 2/N
+
+Zgodnie z wzorami 31.1 sygnał x[n] złożony z N próbek w dziedzinie czasu jest rozkła-
+dany na (N/2) + I fal kosinusoidalnych i (N/2) + 1 fal sinusoidalnych, o częstotliwościach
+określonych indeksem k. Wartości fal kosinusoidalnych są zawarte w Re X[k], a sinuso-
+idalnychwimxk.tewzorydziaajnazasadziekorelacjiposzczeglnychfalkosi
+nusoidalnych i sinusoidalnych z sygnałem w dziedzinie czasu. Mimo użytych nazw część
+rzeczywista i część urojona, nie ma w tych wzorach żadnych liczb zespolonych. Nigdzie
+nie widać j! Do wzorów włączono też czynnik normalizujący 2/N. Pamiętajcie, że może
+on być umieszczony albo przed równaniem analizy, albo syntezy, lub też wprowadzony
+jako oddzielna operacja (jak to podano we wzorze 8.3). Te równania powinny być wam
+dobrze znane z poprzednich rozdziałów. Jeśli ich już nie pamiętacie, to wróćcie do tamtych
+analiz i uporządkujcie swoją wiedzę na ten temat przed kontynuowaniem tych rozważań.
+Jeśli nie rozumiecie rzeczywistego DFT, to nigdy nie będziecie w stanie zrozumieć DFT
+zespolonego.
+
+Chociaż w rzeczywistym DFT stosuje się tylko liczby rzeczywiste, to metoda zastępowa-
+nia umożliwia reprezentację widm w dziedzinie częstotliwości przez liczby zespolone. Jak
+sugerują nazwy matryc, Re X[k] staje się częścią rzeczywistą zespolonego widma często-
+tliwościowego, a Im X[k] — jego częścią urojoną. Inaczej mówiąc, dopisujemy j do każdej
+wartości w części urojonej i wynik dodajemy do części rzeczywistej. Nie pomyłlcie się
+jednak i nie sądźcie, że macie do czynienia z „zespolonym DFT”. Jest to nic więcej, jak
+rzeczywiste DSP z zespolonym zastępowaniem.

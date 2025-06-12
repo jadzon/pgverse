@@ -1,0 +1,62 @@
+23. Tworzenie i wyświetlanie ob.
+
+  
+
+ 
+
+Rys. 23.16. Interpolacja subpikselowa. Interpolacja subpikselowa stużąca do odksztatcania obrazu jest
+zwykle wykonywana przy użyciu interpolacji dwuliniowej. Dwie wartości pośrednie są obliczane przez
+
+interpolację liniową w kierunku poziomym. Następnie wartość końcowa jest obliczana przez interpolację
+liniową w kierunku pionowym między dwiema wartościami pośrednimi. Jak pokazano na tró aro
+ilustracji b) ta procedura określa wszystkie wartości między czterema znanymi pikselami w każdym
+z narożników
+
+ 
+   
+  
+ 
+  
+  
+ 
+   
+ 
+   
+   
+  
+ 
+  
+ 
+ 
+  
+  
+ 
+ 
+  
+
+Jedną z technik stosowanych w odkształcania obrazu jest interpolacja si
+Załóżmy na przykład, że opracowaliście układ równań, które przekształcają adres wie
+sza i kolumny w obrazie odkształconym na adres pochodzenia w obrazie oryginalnym.
+Rozważcie, co się może zdarzyć, gdy spróbujecie znaleźć wartość piksela w wierszu 10 i ko:
+lumnie 20 w obrazie odkształconym. Wstawiacie informację: wiersz = 10, kołumna = 20 66
+waszych równań i w zamian uzyskujemy: wiersz pochodzenia = 20,2, kolumna pochodze:
+nia = 14,5. Przypuszczalnie zastosowaliście obliczenia zmiennoprzecinkowe i dlatego adresy
+pochodzenia nie są liczbami całkowitymi. W tej sytuacji najłatwiejszą metodą jest zastos
+wanie algorytmu najbliższego sąsiedztwa, który po prostu zaokrągla adresy do najbliższe
+liczby całkowitej. To jest proste, lecz może wytwarzać ziarnistość na krańcach obiektów,
+gdzie piksele mogą wyglądać na trochę niewłaściwie umieszczone.
+
+Interpolacja dwuliniowa wymaga wprawdzie trochę więcej wysiłku, lecz daje zn
+lepsze obrazy. Działanie tej metody zilustrowano na rys. 23.16. Znacie wartości cztere
+pikseli wokół adresu ułamkowego, tj. wartości pikseli w wierszach 20 i 21 oraz w kolum
+nach 14 i 15. W tym przykładzie założymy, że wartości pikseli są 91, 210, 162 i 95. Trzeba
+wykonać interpolację między tymi czterema wartościami. Robi się to w dwóch krokach. ,
+pierwsze, przeprowadza się interpolację w kierunku poziomym, między kolumnami 14 i [5
+To daje dwie wartości pośrednie; 150,5 w wierszu 20 oraz 128,5 w wierszu 21. Po drugie,
+przeprowadza się interpolację między tymi wartościami pośrednimi w kierunku piona
+To daje interpolowaną dwuliniowo wartość piksela równą 139,55, która jest następnie prze
+kazywana do odkształcanego obrazu. Dlaczego interpolujemy najpierw w kierunku pozie
+mym a następnie w pionowym, zamiast odwrotnie? To nie ma znaczenia; końcowy wynik nk
+zależy od kolejności tych interpolacji.
+
+26 Zdaniem tłumacza powinna to być wartość 146,1.

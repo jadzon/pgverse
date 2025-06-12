@@ -1,0 +1,37 @@
+<image/tabele/k4_page269_table1.png>
+
+Wyd. 4.41 Instrukcja przesyłania danych z użyciem maski MVM
+
+Operacje kopiowania i wypełniania tablic danych realizują następujące instrukcje:
+
+e COP Kopiowania zawartości jednego pliku danych do
+| (COPy file) drugiego. Parametrami do wywołania tej in-
+strukcji są :
+
+początkowy adres pliku źródłowego,
+początkowy adres pliku przeznaczenia,
+
+długość kopiowanego bloku. (Wyd. 4.42).
+e FLL Wpisanie stałej wartości liczbowej do wielu ele-
+(FiLL File) mentów pliku. Parametrami wywołania instruk-
+cji są:
+
+wartość którą zostanie wypełniony plik lub adres
+
+spod którego pobrana zostanie ta wartość,
+
+adres początku pliku docelowego,
+
+liczba wypełnianych kolejno elementów. (Wyd. 4.43).
+
+<image/tabele/k4_page269_table2.png>
+
+Wyd. 4.42 Instrukcja kopiowania COP
+
+<image/tabele/k4_page269_table3.png>
+
+Wyd. 4.43 Instrukcja wypełniania pliku F LL
+
+ 
+
+5.9 Funkcje na tablicach danych 269

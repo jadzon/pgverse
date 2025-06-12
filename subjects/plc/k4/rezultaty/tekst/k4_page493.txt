@@ -1,0 +1,12 @@
+<image/tabele/k4_page493_table2.png>
+
+Wyd. 8.181 Blok FB2 - Faza Grzanie i stabilizacja — Zamknięcie zaworu AV2
+i zakończenie fazy.
+
+<image/figury/k4_page493_figure1.png>
+
+<image/tabele/k4_page493_table1.png>
+
+<image/wzory/k4_page493_formula1.png>
+
+8.8 Sterowanie sekwencyjne procesem wsadowym 493

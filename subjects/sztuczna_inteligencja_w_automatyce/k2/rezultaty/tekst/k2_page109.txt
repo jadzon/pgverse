@@ -1,0 +1,25 @@
+114
+
+<image/figury/k2_page109_figure3.png>
+
+6.4.6. Algorytmy roju
+
+Omówione tu będą algorytmy poszukiwania ekstremum funkcji nazywane algoryt-
+mami roju (ang. PSO — particle swarm optimization). W algorytmach tych podobnie
+jak w algorytmach ewolucyjnych ekstremum funkcji jest poszukiwane przez popula-
+cję punktów.
+
+Metoda roju została zaproponowana przez Kennedy'ego i Eberhardta w roku
+1995 (patrz rys. ??). Tak jak algorytmy ewolucyjne naśladują podstawowe operacje
+ewolucji biologicznej, tak metody roju naśladują zachowanie się jednostek w spo-
+łecznościach. Jednostka wybiera algorytm swojego postępowania jako wypadkową
+swojego dotychczas najlepszego postępowania, postępowania jednostki w populacji
+odnoszącej największe sukcesy oraz pewnej swojej dynamiki zmian.
+
+W metodzie roju populacja punktów (cząstek) przemieszcza się w przestrzeni. W
+każdym kroku iteracyjnym cząstka przemieszcza się w kierunku określonym przez
+trzy wektory: wektor wskazujący najlepsze dotychczasowe położenie cząstki, tzn.
+takie w którym wartość funkcji była najmniejsza, wektor wskazujący najlepsze do-
+tychczasowe położenie cząstek sąsiednich i chwilowy wektor swojej prędkości. W
+zależności od definicji sąsiedztwa cząstek wyróżnia się dwa podstawowe warianty
+metod: metoda najlepszy globalnie oraz metoda najlepszy lokalnie.

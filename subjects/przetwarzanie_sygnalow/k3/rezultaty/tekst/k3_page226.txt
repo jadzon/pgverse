@@ -1,0 +1,62 @@
+Szereg Fouriera 247
+
+ 
+
+się od minus do plus nieskończoności. W rozdziale 11 wykazano, że sygnały okresowe mają
+„widmo częstotliwościowe złożone z harmonicznych. Jeśli na przykład przebieg w dziedzi-
+nie czasu powtarza się z częstotliwością 1000 Hz (okres 1 ms), to widmo częstotliwościo-
+we będzie zawierało pierwszą harmoniczną 1000 Hz, drugą 2000 Hz, trzecią 3000 Hz itd.
+Pierwsza harmoniczna, a więc częstotliwość, z jaką powtarza się sygnał w dziedzinie czasu,
+nosi nazwę częstotliwości podstawowej. Można więc widmo częstotliwościowe rozpatry-
+wać dwoma sposobami: 1) widmo częstotliwościowe jest ciągłe, lecz równe zero dla wszyst-
+kich częstotliwości oprócz harmonicznych, lub 2) widmo częstotliwościowe jest dyskretne,
+lecz określone tylko dla częstotliwości harmonicznych. Innymi słowy, częstotliwości między
+harmonicznymi można traktować jako mające wartość zero lub po prostu jako nieistniejące.
+Ważne jest to, że nie wnoszą one swego udziału do tworzenia sygnału w dziedzinie czasu.
+Równanie syntezy szeregu Fouriera daje ciągły sygnał okresowy o częstotliwości podsta-
+wowej f przez sumowanie przeskalowanych fal sinusoidalnych i kosinusoidalnych o czę-
+stotliwościach /, 2/, 3/, 4f, itd. Amplitudy fal kosinusoidalnych są zawarte we współczyn-
+nikach: ay, a>, a3, ay, itd., a sinusoidalnych w: b,, b, b;, by, itd. Współczynniki a i b
+są więc, odpowiednio, rzeczywistymi i urojonymi częściami widma częstotliwościowego.
+Dodatkowo stosuje się współczynnik ag, aby zachować składową stałą przebiegu w dzie-
+dzinie czasu. Można ten współczynnik traktować jako amplitudę fali kosinusoidalnej o czę-
+stotliwości zero (wartość stałą). Czasem współczynnik ag jest grupowany razem z innymi
+współczynnikami a, lecz często jest traktowany jako zupełnie oddzielny, gdyż wymaga
+specjalnych obliczeń. Nie jest potrzebny współczynnik bę, gdyż fala sinusoidalna dla czę-
+stotliwości zero ma wartość stałą równą zero. Równanie syntezy ma postać:
+
+<image/wzory/k3_page226_formula1.png>
+
+Wzór 13.4. Szereg Fouriera, równanie syntezy. Każdy sygna! okresowy x(t) może być odtworzony z fal
+częstotliwościach będących wielokrotnościami częstotliwości
+
+W zapisie równań analizy dla szeregu Fouriera używa się zwykle okresu przebiegu, oznacza-
+nego 7, zamiast częstotliwości podstawowej / (przy czym f = 1/T). Ponieważ sygnał w dzie-
+dzinie czasu jest okresowy, więc korelację fal sinusoidalnych i kosinusoidalnych można wy-
+znaczyć tylko na podstawie jednego okresu, tj. od —7/2 do 7/2, od O do 7, od -7 do O itd.
+Wybór różnych granic całkowania zmienia trochę tok obliczeń, lecz rezultat końcowy jest
+zawsze taki sam. Równania analizy dla szeregu Fouriera mają postać:
+r/2
+a, = f x(1)dt
+
+Tra
+r,2
+Aż | z(t)cos| 7 Ja
+To, T
+
+<image/wzory/k3_page226_formula2.png>
+
+Wzór 13.5. Szereg Fouriera, równania analizy. W tych wzorach x(t) jest sygnałem w dziedzinie
+czasu podlegającym rozkładowi, a, jest składową statą, współczynniki a, i b, zawierają amplitudy
+fal kosinusoidalnych i sinusoidalnych, a T jest okresem sygnału, czyli odwrotnością częstotliwości
+
+Na rys. 13.11 podano przykład obliczania szeregu Fouriera z wykorzystaniem powyższych
+równań analizy. Analizowanym sygnałem w dziedzinie czasu jest ciąg impulsów, czyli fala
+prostokątna o niejednakowych czasach trwania stanu wysokiego i niskiego. Jeden okres
+tego przebiegu, od —7/2 do 7/2, można opisać wzorami:
+
+x(1)=A dla -k/2stsk/2
+
+x(1)=0 we wszystkich innych przypadkach
+
+o RRIOSZ KI zo wy moe

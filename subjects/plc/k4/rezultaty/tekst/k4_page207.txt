@@ -1,0 +1,39 @@
+Na Wyd. 4.23 pokazano przykład wykorzystania funkcji rotacji bitów w lewo dla
+ciągu 32 bitów (parametr LEN jest równy 2) z rejestrów %R107 i %R102 o licz-
+bę pozycji określoną przez wartość zmiennej W_LEWO. Pokazano także
+przykładową zawartość tych rejestrów przed i po wykonaniu operacji rotacji przy
+założeniu, że W_LEWO ma wartość 4.
+
+Kolejną grupę operacji bitowych stanowią funkcje nadawania wartości zada-
+nym bitom w ciągach słów:
+
+*  BIT_SET (B/7 SET) - ustaw wartość | dla wybranych bitów w ciągu;
+
+e  BIT_CLR (8/7 CLeaR) - zeruj zadane bity w ciągu.
+
+Argumentami wejściowymi tych funkcji są: adres pierwszego słowa (wejście
+IN), oraz numer bitu w słowie (w zakresie od 7 do 76), który należy ustawić lub
+wyzerować (wejście BIT). Funkcje te przenoszą prąd na wyjście ok zawsze gdy
+są aktywne.
+
+Przykłady wykorzystania funkcji BIT_SET do załączenia wyjść %Q12 i %Q28
+(bit /2 w dwóch kolejnych słowach składających się ze zmiennych binarnych od
+%Q1 do %Q16 oraz od %Q017 do %Q32) oraz funkcji BIT_CLR do wyzerowa-
+nia w rejestrze %R8 bitu o numerze określonym przez zmienną NR_ZER
+pokazano na Wyd. 4.24. Funkcje te wykonywane są w cyklu sterownika, w któ-
+rym zmienna %/5 przyjmuje wartość /.
+
+<image/figury/k4_page207_figure1.png>
+
+Wyd. 4.24 Przykład użycia instrukcji BIT _SET i BIT CLR
+
+Do operacji na poszczególnych bitach należą także funkcje testowania:
+
+e  BIT_TEST (8/7 TEST) - sprawdź wartość zadanego bitu w ciągu słów;
+
+« BIT_POS (B/7 POSition) - znajdź pozycję pierwszego niezerowego bitu
+w ciągu słów;
+
+ 
+
+4.8 Funkcje na ciągach bitów 207

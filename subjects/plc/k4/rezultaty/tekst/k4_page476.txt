@@ -1,0 +1,12 @@
+<image/figury/k4_page47/6_figure1.png>
+
+Wyd. 8.151 Program główny - sterowanie wyborem bloków programowych — aulo-
+matyczny wybór fazy sterowania na podstawie wartości w rejestrze licznika faz
+
+<image/tabele/k4_page476_table1.png>
+
+Wyd. 8.152 Inicjacja rejestrów dla potrzeb regulacji PID i dopasowania do zakresu
+sygnałów wyjściowych
+
+EWA TU ANAT 1 ALE DPS TY TZT PZPR POKO — YDP ORT WODR TA > OTB TK LOOK ET CO PA RTZ EOT OWJOPOWOPRPARERPRRZYĘ ZY
+476 Rozdział : 8.Programy przykładowe

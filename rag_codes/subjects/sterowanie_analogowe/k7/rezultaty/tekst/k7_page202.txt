@@ -1,0 +1,16 @@
+Trajektoria fazowa — przykład 1 (liniowy)
+
+ 
+
+Charakter przebiegu wyjściowego (niegasnące drgania sinusoidalne) wynika
+bezpośrednio z położenia biegunów transmitancji rozważanego obiektu —
+znajdują się one na osi urojonej.
+
+<image/wzory/k/_page202_formula1.png>
+
+[am0ZEJ] AuzAZOZSEŁd Epo]SIN
+
+ 
+
+POLITECHNIKA
+GDANSKA

@@ -1,0 +1,13 @@
+<image/tabele/k4_page435_table1.png>
+
+Wyd. 8.92 Realizacja elementu trójpołoż eniowego wypracowującego sygnał otwieraj,
+stój, zamykaj dla siłownika zaworu
+
+<image/figury/k4_page435_figure1.png>
+
+Wyd. 8.93 Sterowanie wejściem siłownika — zamykanie
+
+<image/figury/k4_page435_figure2.png>
+Wyd. 8.94 Sterowanie wejściem siłownika — otwieranie
+
+wzoryv/k4_pade435_formula1.pna

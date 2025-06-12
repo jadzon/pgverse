@@ -1,0 +1,34 @@
+186
+<image/figury/k2_page181_figure1.png>
+
+<image/wzory/k2_page181_formula1.png>
+
+Początkowa alokacja zasobu ry dla N-tej działalności daje przychód całkowity
+wynoszący
+
+<image/wzory/k2_page181_formula2.png>
+
+dla N = 2,3%,..:; z > 0, przy czym fy(z) = gy(z).
+
+<image/wzory/k2_page181_formula3.png>
+
+dla N =2,3,..., z > 0, przy czym fy(z) = gy(z).
+
+Kolejne kroki algorytmu
+wzorv/k? naaea181 formula nna
+wzorv/k2 baae181 formula5.bna
+<image/wzory/k2_page181_formula6.png>
+
+<image/wzory/k2_page181_formula7.png>
+
+6.10.7. Uczenie ze wzmocnieniem
+
+Inną koncepcją rozwiązywania problemu optymalizacji wieloetapowych procesów de-
+cyzyjnych jest uczenie ze wzmocnieniem. Tu omówimy, wynikający z tej koncepcji,
+jeden z najważniejszych algorytmów, zwany metodą różnic czasowych (ang. tem-
+poral difference — TD), a ściślej podstawowy jej wariant nazywający się metodą
+()-learning.
+
+W metodzie ()-learning korzysta się z pojęcia wartości lub użyteczności pary
+stan-akcja (ang. value, utility), (0(s,a). Użyteczność (0(s,a) jest średnią sumą na-
+gród uzyskanych w czasie procesu decyzyjnego, gdy w stanie s podjęto akcję a, a

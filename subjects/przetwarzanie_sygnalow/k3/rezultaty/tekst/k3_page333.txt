@@ -1,0 +1,28 @@
+23. Tworzenie i wyświetlanie obrazi
+
+<image/figury/k3_page333_figure1.png>
+
+Rys. 23.3. Budowa elektronicznego aparatu fotograficznego. Ogniskowanie osiąga się przez przest
+soczewki w kierunku do i od czujnika obrazowego. Ilość światła dochodzącego do czujnika jest regu-
+lowana przestoną - mechanicznym urządzeniem zmieniającym efektywną średnicę soczewki. Obecnie
+w aparatach i kamerach najczęściej stosowanym czujnikiem obrazowym jest CCD, dwywymiarowa ma.
+tryca elementów świattoczutych
+
+Wzajemne oddziaływanie parametrów systemów optycznych może następować na wit
+czasem niespodziewanych sposobów. Zastanówmy się, na przykład, jak ilość światła i cz
+łość czujnika światła wpływają na ostrość uzyskanego obrazu. Średnica źrenicy (lub prz
+słony) i czas ekspozycji są tak dobierane, żeby do czujnika światła trafiała właściwa ik
+światła z oglądanego widoku. Jeśli dochodzi zbyt dużo światła, to średnica źrenicy moż
+zostać zmniejszona, powodując zwiększenie głębi ostrości (zakresu odległości od ap:
+przy której obiekt pozostaje w ognisku). Większa głębia ostrości zapewnia ostrzejszy obrą
+w sytuacji, gdy obiekty znajdują się w różnych odległościach od aparatu. Ponadta abfin
+
+<image/figury/k3_page333_figure2.png>
+
+Rys. 23.4. Budowa ludzkiego oka. Oko ma kształt kuli o średnicy ok. 3 cm, wypełnionej ptynem i osto
+tej twardą powioką zewnętrzną zwaną twardówką. Ogniskowanie światta następuje głównie w wypaktj
+rogówce tworzącej statą soczewkę z przodu oka. Regulowane ogniskowanie następuje w wyniku zi
+
+nia mięśni akomodacyjnych na soczewkę wewnątrz oka. Ilość światła wchodzącego do oka
+jest regulowana przez źrenicę będącą okrągtym otworem tęczówki utworzonej
+z Tylna półkula oka zawiera siatkówkę, która jest

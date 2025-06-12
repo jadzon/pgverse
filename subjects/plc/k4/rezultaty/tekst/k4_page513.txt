@@ -1,0 +1,36 @@
+ory/k4_page513_formula1.png KEK]
+
+Wartości parametrów regulatora można uzyskać na podstawie badania układu
+zamkniętego przy czystym działaniu proporcjonalnym regulatora. Jest to tzw.
+eksperyment Zieglera-Nicholsa.
+
+Czas całkowania (7;) nastawia się na maksymalną, a czas różniczkowania (75) na
+zero lub wartość najmniejszą z możliwych. Następnie zwiększa się stopniowo
+wzmocnienie K, regulatora doprowadzając układ regulacji do granicy stabilności,
+tzn. gdy pojawią się w nim drgania niegasnące. Wartość wzmocnienia, przy któ-
+rej utrzymują się ciągłe drgania o stałej amplitudzie nosi nazwę wzmocnienia
+krytycznego K;,,. Okres drgań przy wzmocnieniu krytycznym nazywa się okre-
+sem krytycznym 7;,.
+
+Na Rys. B.] pokazano zmiany
+układzie regulacji w miarę w:
+wzmocnienia regulatora do
+krytycznego.
+
+Nastawy regulatora wg Ziegl
+podano w Tab. B.1. W przy
+rodzajów procesów nastawy
+stosunek zanikania drgań ol
+drgań zbliżony do okresu kry
+
+figure 1
+
+<image/figury/k4_page513_figure2.png>
+
+kładzie
+
+I CZUMAL JE ZI Upa cjonalnej
+
+ 
+
+Dodatek B. Dobór optymalnych nastaw dla regulatora PID 513

@@ -1,0 +1,55 @@
+<image/tabele/k4_page403_table1.png>
+
+Panel dydaktyczny do sterowania napędem dwukierunkowym jest sprzężony z
+silnikiem trójfazowym i stanowi panel operatorski. Znajduje się na nim sześć
+przycisków, które należy oprogramować tak, aby umożliwiały odpowiednie ste-
+rowanie załączaniem i wyłączaniem silnika.
+
+W cełu uruchomienia silnika konieczne jest, by jego moment rozruchowy był
+większy od momentu hamującego. W tym przypadku silnik zwiększa swoją
+prędkość wirowania, aż do chwili wystąpienia równowagi między momentami:
+obrotowym i hamującym. Przy rozruchu silników trójfazowych prąd rozruchu
+jest znacznie większy od prądu znamionowego, natomiast moment rozruchowy
+jest stosunkowo mały. W celu wyeliminowania tych niekorzystnych zjawisk sto-
+suje się specjalne procedury rozruchu tego typu silników. Najczęściej stosowana
+jest tzw. metoda przełączenia gwiazda - trójkąt W początkowej fazie rozruch
+uzwojenia stojana łączone są w gwiazdę, dzięki czemu prąd rozruchu w stojanie
+i wirniku zmniejsza się 43 razy, ale jednocześnie występuje trzykrotne zmniej-
+szenie momentu rozruchowego. Z tego względu rozruch silnika powinien być
+przeprowadzany bez obciążenia lub ze znacznie zmniejszonym obciążeniem. Po
+osiągnięciu przez silnik odpowiednich obrotów następuje przełączenie uzwojeń
+stojana na połączenie w trójkąt.
+
+Rys. 8.7 przedstawia schemat połączeń trójfazowego silnika asynchronicznego
+umożliwiający załączanie silnika w obu kierunkach z przełączeniem gwiazda -
+trójkąt.
+
+Sterowanie realizowane jest za pomocą sześciu przycisków znajdujących się na
+panelu dydaktycznym:
+
+SR - rozruch silnika - kierunek wirowania w prawo;
+
+ŚL - rozruch silnika - kierunek wirowania w lewo;
+
+ST - zatrzymanie silnika;
+
+UB - symulacja czujnika przeciążenia silnika;
+
+L - symulacja wyłącznika krańcowego dla ruchu w lewo;
+
+R - symulacja wyłącznika krańcowego dla ruchu w prawo.
+
+Uzwojenia stojana silnika są podłączane do sieci za pomocą czterech przekaźni-
+ków:
+
+KI - wirowanie w prawo;
+
+K2 - wirowanie w lewo;
+
+K3 - połączenie uzwojeń stojana w gwiazdę;
+
+K4 - połączenie uzwojeń stojana w trójkąt.
+
+ 
+
+8.3. Sterowanie napędem dwukierunkowym 403

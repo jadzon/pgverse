@@ -1,0 +1,38 @@
+Rozdział 5
+
+Wnioskowanie w warunkach
+niepewności
+
+Przypuśćmy, że projektujemy system ekspertowy przeprowadzający analizę działa-
+nia sklepów. Moglibyśmy napisać regułę:
+
+<image/wzory/k2_page68_formula1.png>
+
+Ale reguła ta jest błedna ponieważ nie zawsze małe zyski są wynikiem zbyt małego
+zainwestowanego kapitału. Czasami małe zyski są wynikiem złej lokalizacji sklepu
+lub złego doboru towarów. Możemy więc napisać
+
+<image/wzory/k2_page68_formula2.png>
+
+Ale może być jeszcze wiele innych przyczyn małych zysków jak np. niewłaściwy
+personel, czy niewłaściwe godziny otwarcia; praktycznie przyczyn może być bardzo
+dużo. Odwrócenie kierunku implikacji:
+
+<image/wzory/k2_page68_formula3.png>
+
+też jest błędne ponieważ za mały kapitał niekoniecznie może prowadzić do małych
+zysków. Jedynym rozwiązaniem jest wypisanie wszystkich możliwych diagnoz pro-
+wadzących do symptomu małych zysków.
+
+W większości zadań o dużym znaczeniu praktycznym pojawiają się podobne
+trudności. W szczególności w problemach diagnostyki medycznej i technicznej opi-
+sanie rzeczywistości w języku rachunku predykatów jest często bardzo trudne lub
+niemożliwe do wykonania.
+
+Aby rozwiązywać zadania wnioskowania w sytuacjach niedeterministycznych po-
+czątkowo postępowano nieformalnie np. przyporządkowując wyrażeniom predykato-
+wym liczby wskazujące wiarygodność wyrażeń, a następnie w procesie wnioskowania
+takie liczby nadawano kolejnym wnioskom jako iloczyn wiarygodności wyrażeń, z
+których wnioski te wynikały (system ekspertowy MYCIN). Później w latach 60. za-
+proponowano wnioskowanie rozmyte, a od połowy lat 90. nastąpił powrót do metod
+probabilistycznych (sieci bayesowskie).

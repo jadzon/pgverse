@@ -1,0 +1,33 @@
+52 1. Pojęcia podstawowe — elementy
+
+<image/figury/k4_page52_figure1.png>
+
+Dokonując zamiany zmiennej całkowania (z t na W) i uwzględniając przyjęte
+granice całkowania względem W otrzymujemy:
+
+<image/wzory/k4_page52_formula1.png>
+
+przy czym energia pobierana w przedziale czasu Ć tg, ty >:
+
+<image/wzory/k4_page52_formula2.png>
+
+Oznacza to, że energia w(ty, t,) została przez indukcyjność zmagazyno-
+wana podczas ruchu punktu pracy od Ag do A; , a następnie w całości zwrócona
+do otoczenia przy ruchu powrotnym od A, do 4.
+
+Energia w(ty, t,) jest zatem równa przyrostowi Aw, energii magazynowa-
+nej przez indukcyjność:
+
+<image/wzory/k4_page52_formula3.png>
+
+Wyrażenie (1.3-13) ma prostą interpretację geometryczną, bowiem całka
+w nim występująca jest miarą pola zaznaczonego na rys. 1.3-10a.
+
+Załóżmy teraz, że w chwili tę indukcyjność jest w stanie spoczynku, tzn.
+i(ty) 50 A v(t) = 0. Punkt pracy w chwili t, znajduje się zatem w począt-
+ku układu współrzędnych, zaś energia w, gromadzona przez indukcyjność jest
+równa zeru. Przyjmijmy, że w chwili bieżącej t > tg: W = v(t). Energia w;
+magazynowana przez indukcyjność w chwili t jest równa energii pobranej
+w przedziale czasu (ty, t >, a zatem:
+
+<image/wzory/k4_page52_formula4.png>

@@ -1,0 +1,19 @@
+<image/tabele/k4_page410_table3.png>
+
+Wyd. 8.41 Deklaracja wyjść binarnych sterownika i sygnałów pomocniczych
+
+<image/tabele/k4_page410_table2.png>
+
+Wyd. 8.42 Deklaracja wejść binarnych sterownika
+
+<image/tabele/k4_page410_table4.png>
+
+Wyd. 8.43 Deklaracja wyjść analogowych i rejestrów pomocniczych.
+
+<image/tabele/k4_page410_table1.png>
+
+Wyd. 8.44 Przerzutniki SR dla wyboru kierunku wirowania
+
+ 
+
+41 0 Rozdział : 8.Programy przykładowe

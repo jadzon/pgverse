@@ -1,0 +1,41 @@
+<image/figury/k2_page40.figury/k2_page40_figure3.png>
+
+Rys. 3.22: Dwie sytuacje kiedy znalezienie odpowiedniego ruchu wymaga analizy gry na
+dużą liczbę kroków w przód, podczas gdy nawet początkujący szachista łatwo znajduje
+rozwiązanie. (a) Seria szachów przez czarne przesuwa nieuniknione uzyskanie hetmana
+przez białe poza „horyzont* metody szukania, (b) białym wystarcza wylącznie dowolne
+poruszanie się królem, podczas gdy ulegnięcie „pokusie” zbicia czarnej wieży prowadzi białe
+do przegranej
+
+Każdy węzeł wyposażony jest w RAM 1GB i dysk 4GB. Maszyny szukające zdolne
+są do przeglądania 2 do 2.5 miliona pozycji szachowych na sekundę. Cała struk-
+tura pozwalała na uzyskanie średnich szybkości przeglądania wynoszących 1, 2 x 10*
+pozycji szachowych na sekundę.
+
+Przy konstrukcji funkcji oceniającej zastosowano uczenie z nauczycielem (patrz
+rozdział 4). Polegało ono na automatycznym wyznaczaniu wag w funkcji oceniającej.
+Algorytm uczenia modyfikował wagi w taki sposób aby wyznaczany najlepszy ruch
+był zgodny z ruchem w przykładowych partiach szachowych granych przez wybit-
+nych szachistów. Ogólnie, na wartość funkcji oceniającej mogło mieć wpływ około
+8000 cech pozycji szachowych.
+
+Innym sposobem uczenia była modyfikacja wag na podstawie różnicy pomię-
+dzy wartością funkcji oceniającej dany stan a wartością oceny tego stanu uzyskaną
+metodą minimax po przeanalizowaniu grafu na dużą głębokość.
+
+Inną wprowadzoną innowacją było zwiększanie głębokości szukania dla tych po-
+zycji z których istnieje pojedynczy wyraźnie lepszy od innych ruch.
+
+W pażdzierniku 2002 odbył się kolejny prestiżowy mecz szachowy pomiędzy czło-
+wiekiem i komputerem. Poniżej przytoczony jest komentarz o tym meczu napisany
+przez polskiego arcymistrza szachowego zamieszczony w dzienniku „Rzeczpospolita”
+23 października 2002r.
+
+„Elektroniczni bracia. W Bahrajnie odbył się wielokrotnie przekładany mecz mię-
+dzy zawodowym mistrzem świata Rosjaninem Władimirem Kramnikiem i najlep-
+szym obecnie komputerowym programem szachowym „Deep Fritz”, zainstalowanym
+na potężnym zespole multiprocesorowym. Ten pojedynek stanowił w pewnym sen-
+sie rewanż za mecz Garriego Kasparowa z superkomputerem „Deep Blue” sprzed
+pięciu lat, który ówczesny mistrz świata przegrał. Rewanż się nie udał — mimo po-
+nadrocznego przygotowania Kramnik musiał się zadowolić remisem 4:4. Teoretycznie
+wiadomo, jak należy grać z komputerami. „Elektroniczni bracia” zdecydowanie gó-

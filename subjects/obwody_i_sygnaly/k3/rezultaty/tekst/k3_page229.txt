@@ -1,0 +1,20 @@
+Zadania do rozdziału 2
+
+Zadanie 2.1. Dla układów przedstawionych na rys. Z-2.1a-c zapisać równania elementów i równania
+wynikające z praw Kirchhoffa, a następnie — po wyeliminowaniu napięć — zapisać równania
+sieciowe układów względem prądów w poszczególnych elementach.
+
+ 
+
+Odp.:
+j = ir + ie
+a) | di,  d?i, die ię
+ldr di 2dr C
+
+zory/k3_page229_formula1.png
+
+Nzory/k3_page229_formula2.png
+
+Zadanie 2.2. Na rys. Z-2.2 pokazany jest schemat zastępczy filtru aktywnego Sallena-Kceya. Zapisać
+równania Kirchhoffa dla tego filtru względem napięć ua;, uce;, u, a następnie wyznaczyć równanie
+wiążące napięcie u z siłą elektromotoryczną e.

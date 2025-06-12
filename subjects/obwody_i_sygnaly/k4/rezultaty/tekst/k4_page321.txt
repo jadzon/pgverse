@@ -1,0 +1,36 @@
+<image/wzory/k4_page321_formula1.png>
+
+47 FGlomontv inorrvino w ahwadarh nradn ctaloan 323
+
+e3.png
+
+<image/figury/k4_page321_figure2.png>
+
+E. Dalsze zagadnienia. Rozważania przeprowadzone w tym punkcie
+ograniczyliśmy do układów rezystancyjnych (liniowych i nieliniowych) ze
+wzmacniaczami operacyjnymi. Przyjmowaliśmy idealny model WO określony
+zależnościami (3.6-6) i (3.6-7), wykorzystując głównie zakres pracy liniowej. Nie
+rozważaliśmy ogólnych metod analizy układów powyższej klasy, poprzestając na
+analizie, przez przegląd, prostych przykładów.
+
+Postępując podobnie i przyjmując te same założenia (model liniowy WO),
+omówimy w rozdziale 4 (p. 4.4.6-F) układy z WO, w których będą występować
+także elementy inercyjne.
+
+3.7. ELEMENTY INERCYJNE W OBWODACH
+PRĄDU STAŁEGO
+
+A. Rozpływ prądów i rozkład napięć. Dotychczas rozpatrywaliśmy ob-
+wody prądu stałego zawierające elementy rezystancyjne (bezinercyjne). Roz-
+ważymy obecnie krótko problemy, jakie pojawiają się w analizie obwodów prądu
+stałego, jeżeli dopuścimy występowanie w nich elementów inercyjnych, tzn.
+indukcyjności, pojemności i indukcyjności sprzężonych, a także elementów
+indukcyjnych i pojemnościowych.
+
+Załóżmy, że rozpatrywany obwód zawierający elementy inercyjne znajduje
+się w stanie ustalonym przy pobudzeniach stałych. Oznacza to, że wszystkie
+prądy i napięcia w układzie są stałe w przedziale czasu (— ©, + 0). Ze stałości
+prądów i napięć wynika także stałość skojarzeń magnetycznych i ładunków
+elektrycznych w elementach inercyjnych. Stąd z kolei wynika, że napięcia na
+indukcyjnościach i prądy w pojemnościach są w obwodach prądu stałego równe
+zeru — por. p. 1.3.4-E i p. 1.8.1-F.

@@ -1,0 +1,64 @@
+Odczytując w powyższy sposób amplitudę sygnału wyjściowego oraz jego
+przesunięcie fazowe dla zakresu zmian pulsacji wymuszenia () € w < ©,
+można wykreślić charakterystykę amplitudowo-fazową
+
+3.24  Logarytmiczne charakterystyki modułu i fazy
+
+Logarytmiczną charakterystyką modułu (amplitudową) nazywa się w ykres
+dumndziestu loearvtmów dziesietnych z modułu transmitancji widmowej
+
+<image/wzory/k2_page14_formula2.png>
+
+jako funkcję pulsacji w, natomiast logarytmiczną charakterystyką fazową —
+wykres argumentu (fazy) transmitancji widmowej
+
+<image/wzory/k2_page14_formula5.png>
+
+również jako funkcję logarytmu pulsacji log(w
+
+Logarytmiczne charakterystyki amplitudowa i fazowa (nazywane wykre-
+sami Bodego) dają łącznie identyczną informację o obiekcie jak wykres
+Nyquista
+
+3.2.5 Omówienie charakterystyk częstotliwościowych liniowych członów
+dynamicznych
+
+e CZŁON PROPORCJONALNY
+
+Transmitancja widmowa i jej składowe określone są wzorami:
+
+<image/wzory/k2_page14_formula3.png>
+
+natomiast wykresy Bodego mają postać:
+
+<image/wzory/k2_page14_formula8.png>
+
+e CZŁON INERCYJNY PIERWSZEGO RZĘDU
+
+Transmitancja widmowa i jej składowe określone są wzorami:
+
+<image/wzory/k2_page14_formula1.png>
+
+natomiast wykresy Bodego mają postać:
+
+<image/wzory/k2_page14_formula4.png>
+
+e CZŁON INERCYJNY DRUGIEGO RZĘDU
+
+Transmitancja widmowa i jej składowe określone są wzorami (7; ź 12):
+
+<image/wzory/k2_page14_formula6.png>
+
+natomiast wykresy Bodego mają postać:
+
+<image/wzory/k2_page14_formula7.png>
+
+Postać transmitancji widmowej jest słuszna przy założeniu, że dwa
+szeregowo połączone obiekty inercyjne pierwszego rzędu o stałych
+czasowych 7; oraz T; wzajemnie siebie nie obciążają
+
+e CZŁON INERCYJNY N-TEGO RZĘDU
+
+Transmitancja widmowa określona jest wzorem:
+
+<image/wzory/k2_page14_formula9.png>

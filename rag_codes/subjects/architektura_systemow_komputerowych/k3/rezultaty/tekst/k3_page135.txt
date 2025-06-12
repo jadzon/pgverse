@@ -1,0 +1,40 @@
+6.4. Sterowniki urządzeń zewnętrznych 125
+
+że przerwanie obsłużono oraz wartość sygnału ACK, co wskazuje na zakończenie trans-
+misji. Cały układ jest wówczas przygotowany do powtórzenia opisanego cyklu transmisji.
+
+Na rysunku 6.6 pokazano połączenie sterownika z urządzeniem wyjściowym. W tym
+przypadku urządzenie zewnętrzne jest odbiornikiem. Przebiegi czasowe rozpatrzono od
+momentu kiedy procesor zapisał bajt do rejestru buforowego sterownika. W tym celu
+założono, że już wcześniej sterownik zgłosił przerwanie. W czasie obsługi tego przerwania
+procesor wykonuje rozkaz OUT wysyłając na magistralę adresową numer tego sterownika,
+a na magistralę danych przesyłany bajt. Wraz z bajtem danych procesor wysłał na magist-
+ralę sterującą strob zapisu WR. Zapis tej informacji do rejestru buforowego sterownika
+powoduje zmianę stanu na linii przerwania INT, co wskazuje na to, że przerwanie już
+obsłużono. Wówczas sterownik wysyła do urządzenia wyjściowego zawartość rejestru
+buforowego (zapisany bajt) wraz ze strobem STB. Urządzenie odczytuje bajt i zmienia
+stan linii ACK, aby nie dopuścić do przesłań dalszych bajtów. Gdy urządzenie jest gotowe
+
+figury/k3_page135_figure3.pn
+=? z : AI je135_figure2.pr
+
+pi zesy1ania ziiaRu
+
+do przyjęcia następnego bajtu, to wysyła potwierdzenie tego faktu sygnałem ACK.
+Sterownik odbierając ten sygnał ponownie zgłasza przerwanie do procesora, który wy-
+konując podprogram obsługi ponownie zapisze rejestr buforowy sterownika.
+
+Przedstawione tryby pracy z sygnałami STB i ACK noszą nazwę transmisji z potwier-
+dzeniem (ang. handshaking). Typowym przykładem takiego łącza jest standardowe łącze
+drukarki zwane łączem typu Centronics. Sterownik takiego łącza przesyła bajt wraz
+z sygnałem strobu STB. Jeżeli pamięć buforowa drukarki, o pojemności równej przykła-
+dowo liczbie znaków w drukowanym wierszu, nie jest zapełniona, to po 6 is sterownik
+wysyła do procesora ponownie sygnał potwierdzenia ACK i czeka na dalszą transmisję.
+Jeżeli natomiast bufor zapełniono, to drukarka wysyła wysoki (aktywny) poziom na
+specjalne wyjście BUSY, blokując dalsze transmisje. Łącze to jest wyposażane jeszcze
+w dodatkowe sygnały sterujące. Jednym z nich jest wyjściowy sygnał sterownika RESET
+ustawiający stan początkowy drukarki. W łączu są także sygnały wejściowe sterownika,
+jak np. sygnał PAPER OUT (zgłoszenie braku papieru) i sygnał ERROR (sygnał zgłoszenia
+powstałego błędu). Innym typowym łączem jest łącze stosowane dla przyrządów
+pomiarowych współpracujących z komputerem, które opracowano w firmie Hewilet-
+-Packard i znane jest pod nazwą HPIB (ang. Hewllet-Packard Interface Bus) lub jako

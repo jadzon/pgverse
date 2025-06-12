@@ -1,0 +1,27 @@
+Rozdział 1
+
+Grafy skierowane
+
+W tym rozdziale zajmiemy się algorytmami wyszukiwania najkrótszej drogi w grafach
+skierowanych. Każdej krawędzi przypiszemy długość (wagę) i algorytmy będą szukać
+drogi, dla której suma długości krawędzi jest najmniejsza.
+
+1.1 Grafy skierowane
+
+Definicja 1.1 Graf skierowany (zorientowany) to dowolna para G = (V, E), ze skończo-
+nym zbiorem wierzchołków V i zbiorem krawędzi ECV xV.
+
+<image/figury/k2_page212_figure1.png>
+
+W grafie skierowanym krawędź e = (u,v) jest skierowana od wierzchołka u do wierz-
+chołka v. Wierzchołek u nazywamy początkiem krawędzi, a wierzchołek v końcem. Na
+rysunkach krawędzie skierowane będziemy przedstawiać jako strzałki. Droga w grafie
+skierowanym jest to ciąg wierzchołków vg, v; ,. . . „vy, taki, że dla każdegoi, 1 <i<k,
+wierzchołki v;_;, v, są połączone krawędzią, czyli (v;_;,v;) € E. Drogę tg,t;,...,V
+nazywamy cyklem jeżeli vo = vx, oraz wszystkie wierzchołki v;,...,vx Są różne. Na
+przykład ciąg wierzchołków a, b, e,d, a jest cyklem w grafie z rysunku 1.1. Dla grafów
+skierowanych dopuszczamy cykl złożony z dwóch wierzchołków, na przykład ciąg a, d, a
+stanowi cykl w grafie z rysunku 1.1. Krawędź typu (u, u), w której początek i koniec
+pokrywają się, nazywamy pętlą. Można przyjąć, że pętla jest cyklem długości jeden.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

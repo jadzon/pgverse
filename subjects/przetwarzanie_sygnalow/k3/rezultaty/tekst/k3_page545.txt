@@ -1,0 +1,21 @@
+586 33. Przekształcenie Z
+
+sane w: AŻ[0], A2[1], A2[2]. A2[3] ..., a licznik funkcji przenoszenia systemu uzyskanego
+w wyniku połączenia w: A3[0], A3[1], A3[2], A3[3] ... Zasada programu polega na wyraża-
+niu wielomianów i operowaniu nimi z odniesieniem tylko do ich współczynników. Powstaje
+pytanie, jak obliczyć A[3], wiedząc, że A[1], A[2] i A[3] wyrażają wielomiany. Odpowiedź
+jest znana — przy mnożeniu wielomianów trzeba ich współczynniki poddać operacji spłotu.
+Można to wyrazić wzorem: AI[ ] * A2[ ] = A3[ |]. Stosując standardowy algorytm splotu,
+można więc wyznaczyć funkcję przenoszenia stopni połączonych w kaskadę przez poddanie
+splotowi dwóch matryc liczników oraz dwóch matryc mianowników.
+Nieco bardziej skomplikowana jest procedura równoległego łączenia stopni. Według zasad
+algebry ułamki są dodawane według wzoru:
+Ponieważ każda funkcja przenoszenia ma postać ułamka (stosunku dwóch wielomianów),
+więc przy równoległym łączeniu stopni trzeba pomnożyć przez siebie mianowniki funkcji
+przenoszenia, a licznik obliczyć jako sumę iloczynów liczników i mianowników wziętych
+przemiennie z obu ułamków. Z tego wynika, że mianownik funkcji przenoszenia oblicza się
+Tablica 33.1. Kaskadowe i równolegte tączenie stopni. Ten program tączy kaskadowo lub równolegle współczynniki
+rekursywne stopni. Współczynniki rekursywne obu fączonych ze sobą stopni wprowadza się do programu w matrycach:
+dy a PY w w matrycach A3[ ] i B3[ ] uzyskuje się współczynniki rekursywne
+
+<image/tabele/k3_page545_table1.png>

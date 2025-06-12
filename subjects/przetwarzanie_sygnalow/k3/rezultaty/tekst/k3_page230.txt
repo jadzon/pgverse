@@ -1,0 +1,95 @@
+252
+
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+  
+  
+ 
+  
+  
+ 
+ 
+ 
+  
+  
+  
+ 
+  
+ 
+ 
+  
+ 
+ 
+ 
+  
+  
+ 
+  
+ 
+ 
+  
+ 
+  
+ 
+ 
+  
+
+14. Wprowadzenie do filtrów cyfrowych
+
+Dwoma celami stosowania filtrów cyfrowych, ogólnie biorąc, są: rozdzielanie sygnałów wys
+jących razem oraz odtwarzanie sygnałów, które zostały w jakiś sposób zniekształcone. Filtry ar
+gowe (elektroniczne) mogą być stosowane do tych samych celów, jednak przy użyciu filtrów cyfr
+wych uzyskuje się znacznie lepsze wyniki. W następnych siedmiu rozdziałach opisano najpopuł:
+niejsze filtry cyfrowe i porównano ich właściwości, Ten rozdział ma charakter wstępny. Omówiono
+w nim parametry, które będą miały istotne znaczenie przy rozpatrywaniu różnych rodzajów filtrów.
+
+Podstawowe informacje o filtrach
+
+Filtry cyfrowe są bardzo ważnym działem DSP. W istocie, to właśnie ich doskonałe ć
+jest jedną z głównych przyczyn, dla których DSP stało się tak popularne. Jak już wspomnia-
+no, filtry mają dwa zastosowania: rozdzielanie sygnałów i ich odtwarzanie. Rozdzielanie
+gnałów jest konieczne, gdy jakiś sygnał został zanieczyszczony zakłóceniami, szumem lub
+innymi sygnałami. Wyobraźmy sobie na przykład urządzenie elektrokardiograficzne (EKG)
+do badań funkcjonowania serca dziecka będącego jeszcze w łonie matki. Podstawowy sygnał
+będzie zakłócony przez oddychanie i tętno matki. Można więc zastosować filtr, aby rozdzie-
+lić te sygnały i prawidłowo je indywidualnie przeanalizować.
+Odtworzenie sygnału stosuje się, gdy został on w jakiś sposób zniekształcony. Na przykład
+nagranie sygnału fonicznego wykonane przy użyciu aparatury słabej jakości można odfi
+trować i uzyskać nagranie bardziej zbliżone do dźwięku oryginalnego. Innym przykładem
+jest usuwanie rozmazań w obrazie uzyskanym przy użyciu niewłaściwie zogniskowanych
+soczewek lub trzęsącej się kamery.
+Te kłopoty można usuwać, stosując filtry zarówno analogowe, jak i cyfrowe. Które są lepsze?
+Filtry analogowe są tanie, szybkie i mają szeroki zakres dynamiczny tak amplitudy, jak i częste
+tliwości. Filtr cyfrowe zaś znacznie górują nad analogowymi doskonałą jakością swego działa
+nia. Na przykład cyfrowy filtr dolnoprzepustowy przedstawiony w rozdziale 16 ma wzmocnienie
+1 £ 0,0002 w zakresie od 0 do 1000 Hz i wzmocnienie poniżej 0,0002 dla częstotliwości powyże
+1001 Hz. Cały więc ten skok charakterystyki następuje w obszarze tylko 1 Hz. Nie spodziewaj
+się takich właściwości w układzie ze wzmacniaczem operacyjnym. Filtry cyfrowe mogą dział:
+o tysiące razy lepiej niż analogowe. To powoduje zasadniczą różnicę w podejściu do agadnie
+filtracji. Przy projektowaniu filtrów analogowych chodzi przede wszystkim o poradzenie sobie
+z ograniczeniami elektroniki, takimi jak dokładność i stabilność rezystorów i kondensatorów.
+Filtry cyfrowe zaś są tak dobre, że samo działanie filtru jest często ignorowane. Nacisk kładzie
+się na ograniczenia sygnałów i zagadnienia teoretyczne dotyczące ich przetwarzania.
+W DSP przyjmuje się zwykle, że sygnały wejściowe i wyjściowe filtrów są sygnałami w dzie-
+dzinie czasu. Wynika to z faktu, że sygnały są zazwyczaj tworzone przez próbkowanie w re-
+gularnych odstępach czasu. Lecz nie jest to jedyny możliwy sposób prowadzenia próbkowania.
+Drugą często spotykaną metodą jest próbkowanie przestrzenne. Wyobraźmy sobie na przykład
+jednoczesne odczyty z matrycy czujników odkształcenia wmontowanych w odstępach co 1 cm
+wzdłuż skrzydła samołotu. Jest możliwych jeszcze wiele innych dziedzin próbkowania, jednak
+najczęściej stosuje się próbkowanie w dziedzinie czasu lub przestrzeni. Gdy spotykacie w DSP
+pojęcie dziedzina czasu, to pamiętajcie, że może się ono odnosić do próbek pobieranych w funkcji”
+czasu albo może być ogólnym odniesieniem do każdej dziedziny, w której próbki są pobierane.
+Każdy filtr liniowy (rys. 14.1) charakteryzuje się odpowiedziami: impulsową, skokową
+i częstotliwościową. Każda z tych odpowiedzi zawiera pełną, lecz w różnych formach, in-
+formację o filtrze. Jeśli jedna z odpowiedzi jest znana, to dwie inne są też określone i mogą
+być bezpośrednio obliczone. Wszystkie te trzy charakterystyki są istotne, gdyż opisują, jak
+filtr będzie reagował w różnych okolicznościach.
+Najbardziej bezpośrednim sposobem realizacji filtru cyfrowego jest wykośósy spłotu sy-
+gnału wejściowego z odpowiedzią impulsową filtru cyfrowego. Wszystkie możliwe filtry
+cyfrowe mogą być realizowane w ten sposób. (To powinno być dla was oczywiste. Jeśli nie

@@ -1,0 +1,15 @@
+<image/tabele/k4_page134_table1.png>
+
+Tab. 3.10 Zestawienie parametrów technicznych
+przykładowego modułu MDL742
+
+<image/figury/k4_page134_figure1.png>
+
+L—_—_——J
+
+Rys. 3.16 Schemat obwodu wewnętrzne go i układu połączeń zewnętrznych
+modułu wyjść prądu stałego MDL 742
+
+ 
+
+134 Rozdział: 3. Sprzęt sterowników PLC

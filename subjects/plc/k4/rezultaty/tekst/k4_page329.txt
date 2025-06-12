@@ -1,0 +1,33 @@
+2. Sprawdzenie czy marker F' 2.2 ma wartość 0. Wyznaczenie sumy wyniku
+tego sprawdzenia z wynikiem poprzedniego sprawdzenia.
+
+3. Sprawdzenie czy wejście / 3.5 ma wartość 1. Wyznaczenie sumy wyniku
+tego sprawdzenia z wynikiem poprzednich operacji.
+
+4. Wartość wyjścia Q 4.5 jest równa wynikowi wykonanych operacji.
+
+Wyjście Q 4.5 zostanie załączone (będzie miało wartość logiczną 1) jeżeli wej-
+ście 7 2./ lub wejście / 3.5 będzie miało wartość 1 lub marker F 2.2 będzie miał
+wartość 0. Omówiony zestaw instrukcji odpowiada więc następującej funkcji
+logic.
+
+<image/wzory/k4_page329_formula1.png>
+Odnosząc się do rownoważnego schematu drabinkowego można powiedzieć, że
+w przypadku łączenia równoległego styków operator O odpowiada stykowi
+zwiernemu, zaś operator ON stykowi rozwiernemu.
+
+<image/tabele/k4_page329_table1.png>
+
+Procesor przetwarza powyższy ciąg instrukcji zgodnie z regułami obowiązują-
+cymi w algebrze Boole'a. W pierwszej kolejności wykonywane są instrukcje za-
+wierające operatory iloczynu. Następnie wykonywana jest suma logiczna wyni-
+ków iloczynów.
+
+Przedstawiony ciąg instrukcji złożony z operatorów iloczynu i sumy w zapisie
+algebry Boole'a ma następującą postać:
+
+Q35=I2.IANDI2.20RI2.3ANDI2.4 ORF 1.1
+
+ 
+
+7.4 Funkcje logiczne 329

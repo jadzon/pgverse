@@ -1,0 +1,27 @@
+<image/figury/k4_page195_figure2.png>
+
+Rys. 4.3 Przykładowe przebiegi czasowe dla programu z Wyd. 4.11
+e UPCTR (UP CounTeR) - licznik dodający;
+
+Licznik dodający służy do zliczania liczby zdarzeń polegających na zmianie sta-
+nu obwodu podłączonego do wejścia zezwolenie z OFF na ON. Za każdym
+razem gdy wystąpi takie zdarzenie, zawartość licznika (wartość bieżąca CV) jest
+zwiększana o /. Zakres zliczania wynosi 32767, przy czym w chwili, gdy war-
+tość bieżąca CV osiągnie wartość zadaną PV (lub ją przekroczy), na wyjściu
+licznika pojawi się prąd. Pojawienie się prądu na wejściu zerującym R (Reset)
+zeruje zawartość licznika, a jego wyjście powraca do stanu OFF.
+
+Na Wyd. 4.12 przedstawiono przykład wykorzystania licznika dodającego. Każda
+zmiana stanu wejścia %// z OFF na ON powoduje zwiększenie zawartości licz-
+nika przechowywanej w rejestrze %R100. Po zliczeniu /00 takich zdarzeń
+następuje wzbudzenie cewki wewnętrznej %M]0, a zarazem wyzerowanie licz-
+nika w następnym cyklu sterownika dzięki użyciu styku %MIO na wejściu
+zerującym.
+
+<image/figury/k4_page195_figure1.png>
+
+Wyd. 4.12 Przykład wykorzystania licznika dodającego
+
+ 
+
+4.5 Czasomierze i licznik 195

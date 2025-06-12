@@ -1,0 +1,52 @@
+f—- -— «H-0 —- m mmmAT kim sem) mm m
+
+<image/wzory/k2_page45_formula3.png>
+
+Rys. 9.7: Przebiegi sygnału ze sprzężenia zwrotnego e; (£), sygnału sterującego u(t)
+1 jego wartości średniej Tr(t)
+
+<image/figury/k2_page45_figure2.png>
+
+Rys. 9.8: Schemat blokowy układu regulacji dwustawnej z korekcją (PID)
+Przy założeniu, że przekaźnik można traktować jako element o bardzo
+
+dużym wzmocnieniu k,, transmitancja układu otwartego po zamknięciu
+wewnętrznej pętli sprzężenia zwrotnego jest określona wzorem
+
+<image/wzory/k2_page45_formula4.png>
+
+Dla k, — 0 przyjmuje on postać
+
+<image/wzory/k2_page45_formula5.png>
+
+icz dana tz
+
+89
+
+<image/wzory/k2_page45_formula1.png>
+
+a dynamikę regulatora można w przybliżeniu opisać jako
+
+<image/wzory/k2_page45_formula2.png>
+
+gdzie kp = za 1 =] + M4, 7% m rĘ:, a regulator odznacza się
+interakcją nastaw. FP
+
+Przykładowe przebiegi w strukturze z korekcją PID pokazano na rysunku
+9.9. Sposób przybliżonego wyznaczania parametrów regulatora jest analo-
+
+giczny jak z korekcją PD
+
+<image/figury/k2_page45_figure1.png>
+
+Rys. 9.9: Przebiegi sygnału ze sprzężenia zwrotnego e; (£), sygnału sterującego u(t)
+i jego wartości średniej ii(£)
+
+Charakterystycznymi parametrami w przejściowym procesie regulacji jest
+przeregulowanie, uchyb ustalony, a także amplituda, częstotliwość oraz war-
+tość średnia oscylacji w stanie ustalonym.
+
+Z uwagi na fakt, że okres pomiędzy przełączeniami w układach
+z korekcją dynamiczną jest znacznie krótszy od stałej czasowej obiektu
+regulacji, można powiedzieć, że układ sterowany jest wartością średnią syg-
+nału sterującego, a co za tym idzie - w przybliżeniu sygnał ten jest ciągły.

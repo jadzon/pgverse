@@ -1,0 +1,28 @@
+Jak szybkie są cyfrowe procesory sygnałowe? 505
+
+w nim 352 x 288 pikseli, z trzema kolorami na piksel i 30 ramkami na sekundę, co daje
+przepływność 9,1 miliona próbek na sekundę. W obszarze bardzo dobrej jakości mamy zaś
+HDTV (telewizja wysokiej jakości), w której stosuje się 1920 x 1080 pikseli, z 3 kolorami
+na piksel i 30 ramkami na sekundę. Taki sygnał wymaga przepływności ponad 186 milio-
+nów próbek na sekundę. Takie przepływności danych przekraczają możliwości pojedynczego
+procesora sygnałowego rodziny SHARC (rys. 28.11). Są też inne zastosowania, które też
+wymagają tak dużych przepływności danych, np. radar, sonar i różne aplikacje wojskowe
+takie, jak zdalne sterowanie pociskami.
+
+Do wykonywania tak trudnych zadań można łączyć kilka procesorów w jeden system. Jest
+to tzw. wieloprocesorowość lub przetwarzanie równoległe. Procesory rodziny SHARC pro-
+jektowano z uwzględnieniem tego rodzaju wieloprocesorowości i wyposażono je w specjalne
+właściwości ułatwiające w maksymalnym stopniu taki rodzaj pracy. Na przykład do połącze-
+nia ze sobą zewnętrznych magistrał wielu procesorów SHARC nie są wymagane żadne ze-
+wnętrzne układy logiczne. Wszystkie układy służące do tego celu są już zawarte w proceso-
+rach. Alternatywą jest zastosowanie portów Łink Port (4 bity, równoległe) do łączenia wielu
+procesorów w różnych konfiguracjach. Typowe sposoby łączenia procesorów sygnałowych
+SHARC w systemy wieloprocesorowe przedstawiono na rys. 28.12. Na rys. 28.12 a) algo-
+rytm podzielono na kolejne etapy, przy czym każdy procesor wykonuje jeden z kroków me-
+todą „linii montażowej”. Na rys. 28.12 b) procesory współdziałają za pośrednictwem wspól-
+nej pamięci ogólnej dostępnej przez magistralę równoległą (tj. przez port zewnętrzny). Inny
+sposób łączenia dużej liczby procesorów w jeden system pokazano na rys. 28.13. System
+jest „oczkiem siatki” 2D lub 3D. Każda z przedstawionych konfiguracji ma względne zalety
+i wady w odniesieniu do określonego zastosowania.
+
+<image/figury/k3_page469_figure1.png>

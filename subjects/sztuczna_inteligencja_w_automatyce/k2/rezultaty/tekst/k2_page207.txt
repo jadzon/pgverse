@@ -1,0 +1,53 @@
+212
+
+zderzenia sprężystego zachowana jest zarówno energia kinetyczna, jak i pęd cząste-
+czek. Podczas zderzenia niesprężystego prędkości zderzających się cząsteczek stają
+się równe. Wtedy zachowany jest jedynie łączny pęd cząsteczek. Powstający przy
+tym deficyt energii kinetycznej zrekompensowany zostaje emisją fotonu.
+
+Fotony są obiektami nietrwałymi przenoszącymi energie. Powstają w trakcie re-
+akcji rozpraszających energię: zderzeń niesprężystych cząsteczek, tworzenia wiązań
+pomiędzy cząsteczkami i spontanicznej redukcji energii wewnętrznej cząsteczki. Ma-
+gazynują one energie tracone przez cząsteczki, dzięki czemu energia całkowita śro-
+dowiska podczas symulacji pozostaje stała. Fotony są modelowane jako punkty o
+zerowej masie, poruszające się z ustaloną prędkością.
+
+Fotony mogą zderzać się z cząsteczkami. Podobnie jak w przypadku zderzeń
+cząsteczek, zderzenia fotonu z cząsteczką mogą być zarówno sprężyste jak i niesprę-
+żyste. Zderzenia sprężyste zmieniają jedynie kierunek fotonu, natomiast zderzenia
+niesprężyste prowadzą do jednej z następujących reakcji: odbicie cząsteczki uderzo-
+nej przez foton od cząsteczki sąsiedniej (znajdującej się w odległości nie większej
+niż pewna ustalona wartość), utworzenie wiązania pomiędzy uderzoną cząsteczką a
+cząsteczką sąsiednią, zerwanie wiązania pomiędzy cząsteczką trafioną a dowolną czą-
+steczką związaną, absorpcja fotonu (konwersja energii fotonu w energię wewnętrzną
+cząsteczki).
+
+Wszystkie wymienione reakcje muszą zachowywać całkowitą energię: jeżeli foton
+ma zbyt małą energię do zainicjowania reakcji, reakcja nie zachodzi. W przypadku
+gdy energia fotonu jest większa niż zużyta na przeprowadzenie reakcji lub reak-
+cja oddaje energię, to po zakończeniu reakcji wygenerowany zostaje foton o energii
+zapewniającej stałość energii systemu.
+
+Powyżej opisane właściwości środowiska pozwalają, poprzez ustawienie zerowego
+prawdopodobieństwa zderzeń niesprężystych, na przeprowadzenie symulacji proce-
+sów zgodnych z mechaniką klasyczną — jest to wtedy równoważne prostej dynamice
+molekularnej. Z kolei ustawiając niezerowe prawdopodobieństwo zderzeń niespręży-
+stych, w środowisku pojawią się fotony, co w konsekwencji prowadzi do powstawania
+różnych złożonych kompleksów cząsteczek na skutek losowego tworzenia i zrywania
+wiązań.
+
+8.4.2. Oddziaływania funkcyjne
+
+Poza omówionymi powyżej interakcjami wynikajacymi ze zderzeń cząsteczek pomię-
+dzy sobą jak i zderzeń cząsteczek z fotonami, w środowisku zachodzą oddziaływania
+innego rodzaju. Poszczególne kompleksy są zdolne do rozpoznawania specyficznych
+struktur cząsteczek znajdujących się w ich otoczeniu (okrąg o zdefiniowanym pro-
+mieniu) oraz selektywnego tworzenia i rozrywania wiązań pomiędzy cząsteczkami.
+Funkcja realizowana przez kompleks zakodowana jest przez typy i rozmieszczenie
+cząsteczek w kompleksie.
+
+Funkcje kompleksów wyrażone są w opisanym poniżej języku, o strukturze zbli-
+żonej do języka Prolog. Występują w nim wyłącznie następujące predykaty wbudo-
+wane: program, search, action, structure, exists, bind, unbind, move, not. Predykaty
+program, search, action, structure służą do organizowania struktury programu. Nato-
+miast funkcje rozpoznawania struktur i realizacje zmian w środowisku pełnią pre-

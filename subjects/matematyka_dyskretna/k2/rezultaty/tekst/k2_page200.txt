@@ -1,0 +1,42 @@
+22 Rozdział 1. Grafy (nieskierowane)
+
+Inaczej niż dla cyklu lub drogi Eulera nie jest znane żadne proste kryterium rozstrzy-
+gania, czy dany graf posiada drogę lub cykl Hamiltona. Nie jest także znany żaden al-
+gorytm wyszukiwania drogi lub cyklu Hamiltona działający w czasie wielomianowym.
+Naiwnym sposobem szukania drogi Hamiltona jest sprawdzanie wszystkich możliwych
+dróg w grafie, ale algorytm ten jest bardzo czasochłonny, bo mamy około n! możliwych
+dróg w grafie z n wierzchołkami.
+
+Innym algorytmem szukania drogi Hamiltona jest tak zwane wyszukiwanie z nawro-
+tami. Mówiąc w skrócie szukanie z nawrotami idzie pierwszą możliwą ścieżką tak daleko
+jak to tylko możliwe okładając kolejne odwiedzane węzły na stos. W momencie, gdy al-
+gorytrm utknie w ślepej uliczce, to cofa się o jeden krok i próbuje innej drogi. Załóżmy,
+że wierzchołki grafu są uporządkowane na przykład według alfabetu lub są kolejnymi
+liczbami naturalnymi V = 41,...,n)
+
+Algorytm z nawrotami wyszukiwania drogi Hamiltona
+
+Dane wejściowe: graf G = (V, E) oraz wierzchołek początkowy v € V..
+
+Dane wyjściowe: droga Hamiltona zaczynająca się od v, lub informacja, że takiej drogi
+nie ma.
+
+e włóż v na STOS
+
+e powtarzaj aż do skutku:
+
+o jeżeli u jest wierzchołkiem na wierzchu STOSU, to szukamy wierzchołka
+w o najniższym możliwie numerze połączonego z u krawędzią i nie występujący
+na STOSIE. Jeżeli w poprzedniej iteracji zdjęto ze STOSU wierzchołek z, to w
+powinien być większy od z.
+
+o Jeżeli takie w znajdziemy, to wkładamy je na STOS. Jeżeli wierzchołki na
+STOSIE tworzą już drogę Hamiltona, to koniec algorytmu.
+
+o Jeżeli takiego w nie znajdziemy, to zdejmujemy u ze STOSU.
+
+Przykład 1.37 Prześledźmy działanie algorytmu na przykładzie grafu z rysunku 1.1. Po-
+niższa tabela zawiera: odwiedzany wierzchołek, oraz stan STOSU po każdym kolejnym
+kroku (szukanie rozpoczynamy od wierzchołka d).
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

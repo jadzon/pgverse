@@ -1,0 +1,50 @@
+228 2. Pojęcia podstawowe — układy
+
+ 
+
+Jeśli warunki (2.2-13) nie są spełnione dla danego układ
+nie może powstać stan ustalony, nie jest bowiem możliwe
+Jeśli natomiast warunki typu (2.2-13) są spełnione pr
+rozpatrywanego układu, to rozwiązania ustalone (składo
+wyznaczone jako rozwiązania w przedziale (— ©, + ©), te
+pobudzenia (por. p. A).
+
+D. Przypadek układu bezinercyjnego. Jeśli rozpatry
+dem bezinercyjnym, to jego równania sieciowe są w
+algebraicznymi. Rozważania przedstawione w p. B i Cdot;
+rwnarniczkowychniemajzatemzastosowaniadcwzory/k4_page228_
+nych, w których nie może wystąpić stan nieustalony.
+
+W układzie bezinercyjnym każdy stan ma cechy
+
+(p. 2.2.1-F). Stan ustalony w układzie bezinercyjnym może
+jako stan wymuszony przy pobudzaniu stałym, sinusoida
+
+E. Przykłady.
+
+Przykład 2.2-2. Rozważmy ponownie układ z przykładu 2.2-1. Ro
+niejednorodnego (2.2-3) w całej dziedzinie (— co, +0) ma postać:
+
+<image/wzory/k4_page228_formula1.png>
+
+gdzie i, = Ae""" jest rozwiązaniem ogólnym równania jednorodnego,
+
+szczególnym równania niejednorodnego oraz x = 2R/L Ponieważ i,» 0, gdy t+ +00, zatem
+w układzie wystąpi stan ustalony.
+Poszukiwane rozwiązanie dla t e (0, - co) uzyskamy uwzględniając warunek początkowy i (0):
+
+vzory/k4_page228_formula3.png
+
+1
+Wynika stąd, że A = = — 1 mA i tym samym:
+
+<image/wzory/k4_page228_formula4.png>
+
+Porównując otrzymane wyniki ze wzorem (2.2-6) widzimy, że rozwiązanie całkowite można
+z jednej strony zapisać jako sumę składowej wymuszonej i swobodnej, z drugiej zaś jako sumę
+składowej przejściowej i ustalonej:
+
+<image/wzory/k4_page228_formula5.png>
+
+1) Jak zobaczymy w tomie II (p. 6.3.3-D), stosując odpowiednie przejście graniczne jest możliwe
+również poprawne o enie stanu ustalonego w układzie pasywnym bezstratnym.

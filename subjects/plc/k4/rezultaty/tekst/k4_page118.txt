@@ -1,0 +1,68 @@
+*ntralne CPU dla sterowni-
+
+iuc serii 90-70, które należą
+
+sterowników PLC, są ofe-
+
+wielu różnych modelach.
+
+»ele/k4_page118_table2.png = "ii przejawiają się w
+
+— = h procesorów, liczbie wejść
+
+Hkości pamięci dla progra-
+
+nika oraz możliwościach w
+
+undancyjnych zastosowań.
+
+Modele CPU 73X i 77X są oparte na
+
+jednostkach 16-bitowych; modele 78X, 9/X i 92X są 32-bitowe. Jednostki cen-
+
+tralne CPU modeli 78X są wymagane w modułowym systemie potrójnego
+
+rezerwowania, inaczej redundancji TMR (Triple Modular Redundancy), bazują-
+
+cym na sterownikowej sieci obiektowej firmy GE Fanuc o nazwie Genius.
+
+System taki może korzystać z trzech czujników wejściowych (tego samego sy-
+
+gnału), których stany są przekazywane przez odrębne sieciowe magistrale, by
+
+następnie programowo ustalać sterowanie jako wynik głosowania „dwa z trzech”
+
+Triplex (2v3). Systemy takie klasyfikuje się według wymagań stawianych dla
+
+systemów w klasach bezpieczeństwa Fail Safe. Sterowanie jest również przeka-
+
+zywane tymi samymi magistralami do bloków wyjść, których obciążenie stanowi
+
+element wykonawczy połączony w takim układzie. Zapewnia to dużą pewność
+
+załączenia będącego wynikiem sumy logicznej dwóch wyjść. Z kolei wyłączenie
+
+w tym układzie jest realizowane jako wynik iloczynu logicznego dwóch wyjść.
+
+Systemy takie klasyfikuje się według wymagań stawianych w klasach systemów
+
+dopuszczających błędy Fault Tolerant. Układ potrójnej redundancji przedstawia
+
+Rys. 3.2.
+
+Liczba wejść i wyjść analogowych dla jednostek centralnych CPU modeli 77X
+
+nie może przekroczyć 2 048, a przykładowo dla CPU 925 liczba ta nie może być
+większa od 12 228.
+
+<image/tabele/k4_page118_table1.png>
+
+* dla zadań programowanych w języku €
+Tab. 3.2 Podstawowe dane wybranych CPU sterowników
+GE Fanuc serii 90-30 i 90-70
+
+     
+
+Rozdział : 3. Sprzęt sterowników PLC
+
+118

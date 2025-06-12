@@ -1,0 +1,57 @@
+4.6. Przykładowa lista rozkazów 77
+
+argumentowe. Dlatego rozkazy te muszą wskazywać trzy operandy: dwa dla dwóch argu-
+mentów operacji i jeden dla wyniku. Zatem każdy taki rozkaz musi specyfikować trzy
+adresy. Ponieważ takie rozwiązanie zmuszałoby do wydłużania instrukcji, a co za tym
+idzie programów, to zmierza się do zmniejszania liczby adresów operandów. Można
+przyjąć wtedy, że jeden z argumentów jest zawsze przechowywany w tym samym miejscu.
+np. w akumulatorze i tam też przesyłany jest wynik operacji. W takim przypadku specy-
+fikacji wymaga tylko jeden operand. Zagadnienie to opisano także przy omawianiu rozka-
+zów sterujących pracą procesora.
+
+Następne 4 podane rozkazy są jednoargumentowe i dlatego każdy z nich specyfikuje
+jedynie dwa adresy operandów. Wszystkie podane rozkazy powodują odpowiednie
+ustawianie bitów w rejestrze znaczników na wyjściu ALU (por. podrozdz. 4.1). Argu-
+mentami takich rozkazów mogą być liczby stałopozycyjne i zmiennopozycyjne.
+
+ROZKAZY OPERACJI LOGICZNYCH
+AND — conjuction — iloczyn;
+
+OR — disjunction — suma;
+EXOR— exclusive-OR — suma mod 2;
+NOT — complement — negacja.
+
+Pierwsze trzy rozkazy są dwuargumentowe i tylko ostatni rozkaz jest jednoargumen-
+towy. Argumenty tych rozkazów mogą być adresowane na różne sposoby. Wykonanie
+omawianych rozkazów także powoduje odpowiednie ustawienie znaczników.
+
+ROZKAZY PRZESUWANIA
+
+SHL — shift left — przesuwanie zawartości rejestru w lewo (na najmniej znaczącą
+pozycję wpisywane jest 0, a na najbardziej znaczącą pozycję jest zapisywany
+znacznik przeniesienia).
+
+SHR — shift right — przesuwanie zawartości rejestru w prawo (na najbardziej
+znaczącą pozycję wpisywane jest 0, a na najmniej znaczącą pozycję jest za-
+pisywany znacznik przeniesienia).
+
+SAL — shift arithmetic left — przesuwanie arytmetyczne w lewo (jak SHL), czyli
+mnożenie przez 2 z zachowaniem bitu znaku.
+
+SAR — shift arithmelic right — przesuwanie arytmetyczne w prawo, czyli dzielenie
+przez 2 (najbardziej znaczący bit jest pozostawiany a najmniej znaczący jest
+zapisywany na pozycję znacznika przeniesienia).
+
+ROL — rotate lefi — przesuwanie cykliczne w lewo (najbardziej znaczący bit jest
+zapisywany na najmniej znaczącą pozycję oraz na pozycję znacznika przenie-
+sienia).
+
+ROR — rotate right — przesuwanie cykliczne w prawo (najmniej znaczący bit jest
+zapisywany na najbardziej znaczącą pozycję i na pozycję znacznika prze-
+niesienia).
+
+RCL — rotate lefi with extend — przesuwanie cykliczne w lewo rejestru wydłu-
+żonego o znacznik przeniesienia.
+
+RCR — rotate right with extend — przesuwanie cykliczne w prawo rejestru wydłu-
+żonego o znacznik przeniesienia.

@@ -1,0 +1,28 @@
+2.9. Zadania do samodzielnego rozwiązania
+
+Zadanie 2.1
+Znaleźć transformatę F(s) sygnału pokazanego na rysunku 2.35.
+
+<image/figury/k1_page97/_figure1.png>
+
+Zadanie 2.2
+Znaleźć oryginał funkcji /(t) dla transformaty
+
+<image/wzory/k1_page9/_formula1.png>
+
+Zadanie 2.3
+Znaleźć oryginał funkcji /(t) dla transformaty
+
+S
+F(s)z——,
+s” —7s+6
+
+Zadanie 2.4
+Znaleźć oryginał funkcji y(f) dla podanych transformat:
+a) metodą splotu funkcji
+<image/wzory/k1_page9/_formula2.png>
+b) metodą rozkładu na ułamki proste
+
+<image/wzory/k1_page9/_formula3.png>
+
+99

@@ -1,0 +1,27 @@
+ZŁE
+
+W normie /EC 1/31-3 zadanie (task) jest definiowane jako element kontrolujący
+wykonanie. Wywołuje ono, okresowo lub na wystąpienie narastającego zbocza
+określonej zmiennej logicznej, zbiór elementów oprogramowania (program or-
+ganization units) zawierającego programy i bloki funkcyjne, których
+ukonkretnienia (instances) są wyszczególnione w deklaracji programów.
+
+<image/tabele/k4_page71_table1.png>
+
+<image/wzory/k4_page71_formula1.png>
+
+Zadania i ich kojarzenie (association) z elementami oprogramowania może być
+przedstawione graficznie (por. Tab. 2.37 i Tab. 2.38) lub tekstowo (por. Tab.
+2.35, pozycje 5a — 6b) jako część zasobów w ramach konfiguracji. Zadanie jest
+bezpośrednio uruchamiane (enabled) lub unieruchamiane (disabled) przez stowa-
+rzyszony z nim zasób zgodnie z mechanizmami opisanymi w punkcie 2.1.1.
+Sterowanie elementami oprogramowania przez uruchomione zadania podlega
+następującym regułom:
+
+1. Skojarzone elementy oprogramowania powinny być uszeregowane (schedu-
+ledy w kolejce do wykonania na każde wystąpienie zbocza narastającego na
+wejściu S/NGLE.
+
+ 
+
+2.4 Elementy konfiguracji 71

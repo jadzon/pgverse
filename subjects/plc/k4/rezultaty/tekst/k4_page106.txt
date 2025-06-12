@@ -1,0 +1,16 @@
+<image/tabele/k4_page106_table2.png>
+
+Kolejność wykonywania obwodów może być zmieniona w przypadku użycia
+elementów sterujących wykonywaniem programu, które przedstawiono
+w Tab. 2.57.
+
+i/k4_page106_formula1.png
+
+<image/tabele/k4_page106_table1.png>
+
+Wyjścia bloków funkcyjnych nie powinny być łączone razem, w szczególności
+realizacja sumy logicznej OR na drodze równoległego łączenia elementów
+w węzeł (wired-OR), jak to miało miejsce w języku LD, jest tu niedopuszczalna.
+Zamiast tego należy użyć jawnie funkcji logicznej OR, jak pokazuje Rys. 2.78.
+
+106 Rozdział : 2.Programowanie sterowników PLC

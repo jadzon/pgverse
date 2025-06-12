@@ -1,0 +1,24 @@
+158
+
+6.7. Uczenie drzew decyzyjnych
+
+Uczenie drzew decyzyjnych należy do metod uczenia, w których uzyskiwana wiedza
+wyrażona jest w postaci jawnej — a ponadto typowe metody uczenia drzew decyzyj-
+nych są jednorazowe (nie są iteracyjne).
+
+Drzewo decyzyjne jest systemem, który na podstawie podanych danych generuje
+konkluzje będącą decyzją typu tak/ńie. Celem uczenia jest uzyskanie drzewa de-
+cyzyjnego na podstawie zadanej pewnej liczby przykładów zawierających wartości
+atrybutów danych i odpowiadające im decyzje. Drzewa decyzyjne generujące odpo-
+wiedzi tak/ńie są specyficznym zapisem funkcji logicznych. W poniższym przykładzie
+zostaną przedstawione podstawowe zasady uczenia drzew decyzyjnych.
+
+PRZYKŁAD 6.12
+
+Na rys. ?? przedstawiono przykład drzewa decyzyjnego generującego sygnał alarmu
+w pewnym urządzeniu w zależności od wartości czterech parametrów: występowania
+wycieku substancji chłodzącej (1;), temperatury < T (z2), częstotliwości drgań w
+punkcie pomiarowym A > F (z3) oraz częstotliwości drgań w punkcie pomiarowym
+B > F (14).
+
+<image/figury/k2_page153_figure1.png>

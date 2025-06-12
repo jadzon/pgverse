@@ -1,0 +1,15 @@
+<image/tabele/k4_page467_table1.png>
+
+Wyd. 8.134 Podprogram FAZA 4 (opróżnianie) — zamknięcie zaworów dopływu
+czynników reakcji oraz przepływu mediów chłodzącego i grzewczego, otwarcie
+zaworu odpływu produkiu reakcji z jednoczesną kontrolą poziomu w zbiorniku,
+
+koniec opróżniania reaktora i zamknięcie zaworu odpływu produktu
+
+<image/figury/k4_page467_figure1.png>
+
+m 2 W m M 0 m M
+
+ 
+
+8.8 Sterowanie sekwencyjne procesem wsadowym 467

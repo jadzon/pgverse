@@ -1,0 +1,14 @@
+<image/figury/k2_page15_figure1.png>
+
+3.5. _ Metoda równomiernych kosztów
+
+W sytuacjach gdy oprócz znalezienia węzła końcowego należy wyznaczyć najtańszą
+drogę jego osiągnięcia (od węzła startowego s) stosuje się metodę równomiernych
+kosztów nazywaną też algorytmem Dijkstry. Przy jej stosowaniu wykorzystuje się
+funkcję g(n) oznaczającą znaleziony dotychczas koszt najtańszej drogi od węzła s
+do węzła n (koszt estymowany) (g(n) oznacza nieznany w czasie działania metody
+koszt minimalny). Na rys. ?? przedstawiona jest sieć działań metody.
+
+Typowymi zadaniami, przy których rozwiązaniu można stosować metodę rów-
+nomiernych kosztów są zadania poszukiwania najkrótszej drogi pomiędzy węzłami
+grafu (np. drogi łączącej dwa miasta) oraz zadania planowania akcji. Metoda za-

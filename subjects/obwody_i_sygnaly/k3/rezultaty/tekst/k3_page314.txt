@@ -1,0 +1,46 @@
+314 3. Obwody prądu stałego
+
+powszechnie w wielu układach elektronicznych realizujących różnorodne zada-
+nia. Wzmacniacze operacyjne rozpatrywane jako elementy obwodu wykazują
+specyficzne właściwości. W konsekwencji, metody analizy obwodów ze wzmac-
+niaczami operacyjnymi cechuje pewna odrębność, wymagająca dodatkowego
+omówienia. W tym punkcie, ograniczając się do obwodów rezystancyjnych,
+postaramy się pokazać na prostych przykładach specyfikę analizy obwodów ze
+wzmacniaczami operacyjnymi.
+
+Właściwości rzeczywistych wzmacniaczy operacyjnych bardzo istotnie zależą
+od warunków ich pracy. Stąd też w praktyce stosuje się różne modele
+obwodowe wzmacniaczy operacyjnych. Ograniczymy się do takich modeli,
+które opisują wzmacniacz operacyjny jako element rezystancyjny.
+
+A. O wzmacniaczu operacyjnym — ogólnie. O wzmacniaczu operacyjnym
+(skrót: WO lub OA”) wspomnieliśmy już w p. 1.7.2-C (rys. 1.7-22 i równania
+(1.7-28)). Wprowadziliśmy wówczas model idealnego wzmacniacza operacyjnego
+w postaci ŹNSN o wzmocnieniu A dążącym do nieskończoności (A + + ©).
+Jak już wspominaliśmy w przypisie na str. 131, założenie nieskończenie dużego
+wzmocnienia (tj. nieskończenie dużej wartości współczynnika A w równaniu:
+u; = Au;) pociąga za sobą konieczność przyjęcia warunku: u, = 0. W prze-
+ciwnym bowiem przypadku napięcie u, na wyjściu wzmacniacza operacyjnego
+byłoby nieskończenie duże, co z oczywistych względów jest niemożliwe.
+
+Przyjęcie takiego modelu WO jest jednak możliwe tylko przy dość ostrych
+ograniczeniach, o których poprzednio nie wspominaliśmy. Zagadnieniem tym
+zajmiemy się więc teraz bardziej szczegółowo.
+
+B. Model WO. Rozpatrzmy różnicowy wzmacniacz operacyjny”) przed-
+
+stawiony schematycznie na rys. 3.6-1. Jest to element, w którym wyróżniamy
+cztery zaciski: dwa zaciski wejściowe oznaczone „+ (tzw. wejście nieod-
+
+<image/figury/k3_page314_figure1.png>
+
+1) OA — skrót angielskiej nazwy: operational amplifier; stosowany jest także skrót OPAM.
+
+3) Z uwagi na zalety i zastosowania wzmacniacze operacyjne są produkowane z reguły jako
+wzmacniacze różnicowe, tzn. jako wzmacniacze o dwóch zaciskach wejściowych: „+ i „—”.
+Napięcie wejściowe u, jest wówczas różnicą napięć obu zacisków.
+
+Innymi wzmacniaczami operacyjnymi niż różnicowe zajmować się nie będziemy. Z tego względu
+w dalszych rozważaniach przymiotnik „różnicowy” będziemy opuszczać.
+
+n

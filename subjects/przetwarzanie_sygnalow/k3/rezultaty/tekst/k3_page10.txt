@@ -1,0 +1,60 @@
+Przetwarzanie obrazów 19
+
+ 
+
+ 
+
+i narządy mogą pozostać ukryte. Na przykład fragmenty serca mogą być niewidoczne za
+żebrami. Po drugie, nie zawsze da się odróżnić tkanki podobne do siebie. Na przykład
+można odróżnić kości od tkanek miękkich, ale trudno — nowotwór od wątroby. Po trze-
+cie, obrazy rentgenowskie pokazują anatomię, budowę organizmu, a nie fizjologię, czyli
+jego funkcjonowanie. Obraz rentgenowski człowieka żywego jest dokładnie taki sam jak
+martwego! Po czwarte, naświetlanie promieniowaniem X może spowodować raka, dlatego
+powinno być stosowane oszczędnie i tylko w uzasadnionych przypadkach.
+
+Problem nakładających się tkanek i narządów rozwiązano w roku 1971, wprowadzając pierw-
+szy tomograf komputerowy (najpierw nazywany CAT — komputerowy tomograf, lub ska-
+ner, osiowy — Computed Axial Tomography). Tomografia komputerowa (CT) jest klasycznym
+przykładem cyfrowego przetwarzania sygnałów. Promieniowanie X z wielu kierunków prze-
+chodzi przez badaną część ciała pacjenta. Zamiast prostego tworzenia obrazów na podstawie
+promieni X, odebrane sygnały są przetwarzane do postaci danych cyfrowych i gromadzone
+w komputerze. Następnie wykorzystuje się tę informację do obliczeń dających obrazy będą-
+ce przekrojami przez badany fragment ciała. Na takich obrazach jest uwidocznionych dużo
+więcej szczegółów niż w konwencjonalnym badaniu rentgenowskim, dzięki czemu diagnoza
+i leczenie są znacznie skuteczniejsze. Wpływ tomografii komputerowej na medycynę był
+prawie tak duży, jak pierwsze wprowadzenie badań rentgenowskich. W ciągu kilku lat każdy
+większy szpital na świecie uzyskał dostęp do tomografu komputerowego. W roku 1979 dwaj
+główni twórcy tomografii komputerowej, Godfrey N. Hounsfield i Allan M. Cormack, otrzy-
+mali Nagrodę Nobla w dziedzinie medycyny. 70 jest dobre DSP!
+
+Trzy dalsze wymienione ograniczenia badań rentgenowskich rozwiązano, stosując do pe-
+netracji organizmu rodzaje energii inne niż promieniowanie X, takie jak fale dźwiękowe
+i radiowe. We wszystkich tych metodach kluczową rolę odgrywa DSP. Na przykład w ob-
+razowaniu przy użyciu rezonansu magnetycznego (MRI — Magnetic Resonance Imaging)
+do badania wnętrza ciała człowieka stosuje się pole magnetyczne w połączeniu z falami
+radiowymi. Przy właściwym doborze natężenia i częstotliwości tych pól jądra atomów
+w jakimś obszarze ciała wchodzą w rezonans, zmieniając energię między pewnymi skwan-
+towanymi stanami. Rezonans daje emisję wtórnych fal radiowych wykrywanych przez an-
+tenę umieszczoną w pobliżu ciała pacjenta. Wartość i inne parametry odebranego sygnału
+dostarczają informacji o obszarze, w którym zachodzi rezonans. Dobór pola magnetycz-
+nego umożliwia przesuwanie badanego obszaru rezonansowego wzdłuż ciała, co daje od-
+wzorowanie struktury wewnętrznej. Ta informacja jest zazwyczaj przedstawiana w formie
+obrazów, podobnie jak w tomografii komputerowej. Badanie rezonansem magnetycznym
+nie tylko daje doskonałe rozróżnianie między rozmaitymi rodzajami tkanek miękkich, ale
+dostarcza też informacji o zjawiskach fizjologicznych, np. o przepływie krwi w tętnicach.
+Metoda rezonansu magnetycznego jest nieodłącznie związana z cyfrowym przetwarzaniem
+sygnałów i bez DSP nie może być realizowana.
+
+Badania kosmiczne
+
+Czasem powstaje konieczność uzyskania jak największej ilości informacji z bardzo złego ob-
+razu. Taka potrzeba często zachodzi w przypadku obrazów pochodzących z bezzałogowych
+satelitów i pojazdów kosmicznych. Nikt przecież nie wyśle na Marsa pracownika serwisu,
+aby tam pokręcił dwiema gałkami w kamerze! Przy użyciu DSP można kilkoma sposobami
+poprawić jakość obrazów uzyskiwanych w skrajnie niekorzystnych warunkach. Można do-
+bierać jaskrawość i kontrast, wykrywać kontury, tłumić szum, dobierać ostrość, zmniejszać
+rozmycie wywołane ruchem itd. Można również doprowadzać do właściwej postaci obrazy
+obarczone zniekształceniami przestrzennymi, np. płaskie obrazy kulistej planety. W jedną
+bazę danych można łączyć wiele pojedynczych obrazów, co daje możliwość wyświetlania in-
+formacji w unikatowy sposób, np. w formie sekwencji wideo symulującej lot nad powierzch-
+nią odległej planety.

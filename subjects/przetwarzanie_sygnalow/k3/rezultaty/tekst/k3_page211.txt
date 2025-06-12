@@ -1,0 +1,23 @@
+Porównanie szybkości i dokładności
+
+ 
+
+Stosując taką sama metodykę, można określić czas wykonania programu programu realizującego FFT.
+Czas konieczny do odwrócenia bitów jest pomijalnie mały. W każdym z log> N etapów jest N/2
+
+obliczeń motylkowych. Zatem czas wykonania programu jest w przybliżeniu równy
+
+Czas wykonania =k,,, N log, N
+
+ES ówna obliczania FFT. Czas konieczny do obliczenia DFT przy użyciu FFT
+
+p awpiakrazshipey paw otowaycwazyckiik Ly
+
+o kppr jest równy ok. 10 as w systemie Pentium 100 MHz. Obliczenie
+
+FFT wymaga więc ok. 70 ms, czyli 70 Hs na jeden punkt. Jest to ponad
+ocozam niż w przypadku DFT obliczanego metodą korelacji!
+
+<image/figury/k3_page211_figure2.png>
+
+<image/figury/k3_page211_figure1.png>

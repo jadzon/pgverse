@@ -1,0 +1,11 @@
+<image/figury/k4_page26_figure1.png>
+
+<image/figury/k4_page26_figure2.png>
+
+Rys. 1.13 Schemat połączeń zasilacza 24VDC dla obwodów wejściowych i wyjścio-
+wych. Oznaczenia: WG- wyłącznik główny, B2- bezpiecznik topikowy,
+WI, W2-wyłączniki przeciążeniowe termiczne, L+,M - wyjścia zasilacza 24VDC
+
+ 
+
+26 Rozdział : 1. Wprowadzenie i podstawy

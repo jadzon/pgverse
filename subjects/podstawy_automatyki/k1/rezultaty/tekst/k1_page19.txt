@@ -1,0 +1,36 @@
+Metoda residuów
+Jeżeli funkcja F(s) jest funkcją analityczną w otoczeniu punktu s =, to znaczy
+dla |s|e R i ma rozwinięcie Laurenta postaci
+
+<image/wzory/k1_page19_formula1.png>
+
+wtedy funkcja F(s) jest transformatą oryginału postaci
+
+<image/wzory/k1_page19_formula2.png>
+<image/zwzory/k1_page19_formula3.png>
+
+Przykład 1.12
+
+Jeżeli transformata F(s) jest funkcją wymiemą, czyli F(s) = L(s)/ M (5), L(s) i M(s)
+są wielomianami, a stopień wielomianu Z(s) jest mniejszy od stopnia wielomianu M(s)
+oraz miejsca zerowe mianownika sg, S;, ..., s, są jednokrotne, to oryginał możemy wyli-
+czyć ze wzoru
+
+<image/wzory/k1_page19_formula4.png>
+
+Przykład 1.13
+
+, : s? +6
+Obliczyć oryginał transformaty F(s) =
+
+s(s -N(s + 2)(s —3)
+Funkcja F(s) ma bieguny jednokrotne w punktach sy = 0, s, = 1, S+= —2, Sz= 3.
+Zatem na podstawie wzoru (1.26) funkcja F(s) jest transformatą oryginału
+
+<image/wzory/k1_page19_formula5.png>
+
+Natomiast jeżeli transformata F(s) = L(s)/M(s) jest funkcją wymierną, która ma
+bieguny s,, o krotności a, oraz stopień wielomianu Z(s) jest mniejszy od stopnia wielo-
+mianu M(s), to oryginał możemy obliczyć ze wzoru
+
+<image/wzory/k1_page19_formula6.png>

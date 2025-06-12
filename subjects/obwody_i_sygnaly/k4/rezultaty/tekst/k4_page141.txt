@@ -1,0 +1,45 @@
+18. Sprzężenie magnetyczne 143
+
+uzwojeń przy przyjętych zwrotach wielkości zaciskowych, tj. prądów i napięć
+(por. przykłady w p. G). Informacja o wzajemnym usytuowaniu uzwojeń
+w przestrzeni jest jednak trudna do bezpośredniego zapisania w języku teorii
+obwodów. Korzysta się więc, jeśli zachodzi potrzeba, z pojęcia zacisków
+jednoimiennych, których położenie pozwala na ustalenie znaku M.
+
+Zaciskami jednoimiennymi (tys. 1.8-5) nazywamy parę zacisków spełniających
+następujące warunki:
+
+<image/figury/k4_page141_figure1.png>
+
+— jeden z zacisków jednoimiennych jest zaciskiem jednego z uzwojeń, drugi
+zacisk jednoimienny jest zaciskiem drugiego uzwojenia;
+
+— jeśli strzałki prądów i;,ią są postawione jednakowo względem zacisków
+jednoimiennych (tzn. oba prądy wpływają przez zaciski jednoimienne lub oba
+z nich wypływają), to przy dodatnich wartościach i;,i; skojarzenia magnetycz-
+ne pochodzące od strumienia własnego uzwojenia i od strumienia wzajemnego
+mają te same znaki; całkowite skojarzenie magnetyczne każdego z uzwojeń jest
+wówczas (co do wartości bezwzględnej) większe niż gdyby pochodziło tylko
+od strumienia własnego.
+
+Zaciski jednoimienne oznaczamy na schemacie dowolnym symbolem gra-
+ficznym (rys. 1.8-5 i 1.8-6).
+
+Postaramy się teraz wyjaśnić, w jaki sposób korzystamy z pojęcia zacisków
+jednoimiennych dla ustalenia znaku M. Przyjmijmy, iż zaciski jednoimienne są
+położone tak, jak to zaznaczono na rys. 1.8-5a. Obie strzałki prądów są
+postawione jednakowo względem zacisków jednoimiennych (oba prądy
+„wpływają” przez zaciski jednuimienne). Oznacza to, że przy i, > 0, i, > O oba
+składniki w równaniach (1.8-16) faktycznie dodają się, a więc w układzie z rys.
+1.8-5a mamy:
+
+/k4_page141_formula1.png (1.8-33)
+
+ 
+
+Zauważmy również, że jeśli zaciskami jednoimiennymi są zaciski zaznaczone
+na rys. 1.8-5a, to zaciskami jednoimiennymi są również zaciski zaznaczone na
+rys. 1.8-5b. Oba oznaczenia (rys. 1.8-5a,b) są zatem równoważne.
+
+Rozważmy teraz układ z rys. 1.8-6a. Przy tak położonych zaciskach
+jednoimiennych strzałki prądów są postawione przeciwnie względem za-

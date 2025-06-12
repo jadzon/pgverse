@@ -1,0 +1,30 @@
+Jak działa FFT 225
+
+ 
+
+<image/figury/k3_page205_figure1.png>
+
+Rys. 12.5. Sieć przepływu sygnatów w syntezie FFT. Przedstawiono tu sposób fączenia ze sobą dwóch
+4-punktowych widm celu utworzenia
+
+częstotliwościowych w pojedynczego, 8-punktowego widma często-
+OE ZZOZ
+
+W celu dopasowania do siebie sumowanych widm, rozrzedzanie zerami sygnałów w dzie-
+dzinie czasu wykonuje się dwoma nieco różniącymi się sposobami. W jednym sygnale ze-
+rami są punkty nieparzyste, podczas gdy w drugim są nimi punkty parzyste. Tak więc jeden
+z sygnałów w dziedzinie czasu (OeOf0gOh na rys. 12.4) jest przesunięty w prawo o jedną
+próbkę. Takie przesunięcie w dziedzinie czasu odpowiada pomnożeniu widma przez si-
+nusoidę. Aby to zrozumieć, przypomnijcie sobie, że przesunięcie w dziedzinie czasu jest
+równoważne splotowi sygnału z przesuniętą funkcją delta. Powoduje to mnożenie widma
+sygnału przez widmo przesuniętej funkcji delta. Widmo przesuniętej funkcji delta jest si-
+nusoidą (patrz rys. 11.2).
+
+Na rys. 12.5 przedstawiono sieć przepływu sygnałów, obrazującą łączenie dwóch widm
+4-punktowych w pojedyncze widmo 8-punktowe. Aby jeszcze bardziej uprościć ten problem,
+zwróćcie uwage na fakt. że rvs. 12.5 iest utworzony przez wielokrotne nowtarzanie nodsta-
+
+<image/figury/k3_page205_figure2.png>
+
+Rys. dawcy sej Jest to podstawowy element obliczeniowy w FFT, który dwa punkty zespolone
+przetwarza na dwa inne punkty zespolone

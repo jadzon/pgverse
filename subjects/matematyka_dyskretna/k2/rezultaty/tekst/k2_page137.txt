@@ -1,0 +1,51 @@
+22 Rozdział 1. Teoria liczb
+
+Każda z liczb od 0 do 5 = 2: 3 — 1 ma inny zestaw reszt oraz dla każdej pary reszt
+(a; „az), spełniających warunek 0 < a; < 2,0 < aą <3, istnieje liczba a, taka że:
+
+<image/wzory/k2_page137_formula1.png>
+
+Oczywiście 6 ma takie same resztv iak 0:
+
+<image/wzory/k2_page137_formula2.png>
+
+i ogólnie. ieżeli dwie liczbv ai b móżniasie o wielokmtność liczbw 6 = 2.3. czyli:
+
+<image/wzory/k2_page137_formula3.png>
+
+dla jakiegoś całkowitego k, to
+
+<image/wzory/k2_page137_formula4.png>
+
+Z tego widać, że sposób chińskich generałów, z liczbami 2 i 3, liczy żołnierzy z dokładnością
+do pięciu.
+
+Sytuacja jest inna, jeżeli m; i ma nie są względnie pierwsze. Jeżeli, na przykład,
+m; = 41 mą = 6, to wśród liczb od 0 do 23 = 4: 6 — 1 istnieją takie, które mają takie
+same reszty, na przykład 1 i 13:
+
+<image/wzory/k2_page13/7_formula5.png>
+
+Ponadto nie istnieje taka liczba a. dla którei:
+
+<image/wzory/k2_page13/7_formula6.png>
+
+Rzeczywiście, z pierwszej równości wynika, ze a powinno być nieparzyste, a z drugiej,
+że parzyste.
+
+Jeżeli jednak m; i ma są względnie pierwsze, to każda z liczb od 0 do m; - m2 — 1 ma
+inny zestaw reszt oraz dla każdej pary reszt (a; ,a»), spełniających warunek 0 < a; <
+my, 0 < a2 < ma, istnieje liczba a, taka że:
+
+<image/wzory/k2_page137_formula7.png>
+
+zachodzi bowiem poniższe twierdzenie.
+Twierdzenie 1.41 (chińskie twierdzenie o resztach) Niech
+
+<image/wzory/k2_page137_formula8.png>
+będą dodatnimi liczbami względnie pierwszymi, to znaczy dla kazdej pary l <i<j<r
+mamy NW D(m;, m;) = 1, oraz niech
+
+<image/wzory/k2_page137_formula9.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,59 @@
+26 Rozdział 1. Rachunek prawdopodobieństwa
+
+111 Rozkład dwumianowy — Bernoulliego
+
+Przypuśćmy, że mamy serię n niezależnych doświadczeń i w każdym doświadczeniu dwa
+możliwe wyniki: sukces z prawdopodobieństwem p i porażka z prawdopodobieństwem
+q = 1 — p. Niech X będzie zmienną losową równą liczbie sukcesów w tej serii. Zmienna
+losowa .X posiada rozkład dwumianowy (Bemouliego) z parametrami n i p.
+
+Dla uproszczenia rozważań załóżmy, że n = 4. Prawdopodobieństwo zdarzenia, że
+wystąpi sukces, porażka, sukces i porażka wynosi p: q: p- 4, ponieważ wyniki doświad-
+czeń są niezależne. Dokładnie dwa sukcesy w serii czterech doświadczeń będziemy mieli,
+jeżeli wystąpi jeden z ciągów, w których na dwóch pozycjach występują sukcesy:
+
+(sukces, sukces, porażka, porażka),
+
+(sukces, porażka, sukces, porażka),
+
+(sukces, porażka, porażka, sukces),
+
+(porażka, sukces, sukces, porażka),
+
+(porażka, sukces, porażka, sukces),
+
+(porażka, porażka, sukces, sukces).
+
+Takich ciągów jest (2) = 6, bo na tyle sposobów można wybrać dwie pozycje, na których
+będą sukcesy. Każdy z tych ciągów ma takie samo prawdopodobieństwo równe ppqq. I
+ponieważ te ciągi są zdarzeniami wykluczającymi się, prawdopodobieństwo, że wystąpi
+któryś z nich wernaci
+
+<image/wzory/k2_page85_formula1.png>
+
+Podobnie dla dowolnego 0 < k < 4, prawdopodobieństwo, że w serii czterech doświad-
+czeń wypadnie k sukcesów wynosi
+
+<image/wzory/k2_page85_formula2.png>
+
+W podobny sposób można uzasadnić, że dla dowolnego n rozkład dwumianowy z para-
+metrar”* mi ammo nacłoń
+
+<image/wzory/k2_page85_formula3.png>
+
+Twierdzenie 1.58 Wartość oczekiwana E(.X ) zmiennej losowej „X mającej rozkład dwu-
+mianowy o parametrach n i p wynosi np.
+
+Dow
+
+<image/wzory/k2_page85_formula4.png>
+
+ZE WZuru 196 wia iuGiiiy
+
+<image/wzory/k2_page85_formula5.png>
+
+Zróżniczkujmy tą funkcję
+
+<image/wzory/k2_page85_formula6.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

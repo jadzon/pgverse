@@ -1,0 +1,12 @@
+20 Rozdział 1. Arytmetyka
+
+(b) Rozłożenie odważników przy ważeniu ciężaru W odpowiada przedstawieniu W w
+postaci
+
+<image/wzory/k2_page35_formula1.png>
+gdzie d, € £—1,0,1). Aby przedstawić ciężar W w postaci (1.5), najpierw przedstawia-
+
+my liczbę W + (3* — 1)/2 w systemie trójkowym: W + (3* — 1)/2 = (€k-1 ...€1€0)3.
+a następnie od każdej cyfry odejmujemy jedynkę: d, = e; — 1.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

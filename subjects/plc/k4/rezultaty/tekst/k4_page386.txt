@@ -1,0 +1,24 @@
+<image/figury/k4_page386_figure1.png>
+
+Wyd. 8.1 Program sterowania silnikiem o napędzie gwiazda-trójkąt
+
+8.1.2 Rozruch rozpędzające go się silnika
+
+ 
+
+Na Rys. 8.3 pokazano przykład układu zasilania dla rozpędzającego się silnika
+zawierający kilka grup rezystancji. Należy zaprojektować schemat stykowy ob-
+wodu sterowania i napisać program dla sterownika, który będzie realizował jego
+funkcje.
+
+W rozwiązaniu podanym na Rys. 8.4 zakłada się, że po naciśnięciu przycisku
+startu SI przekaźnik KI włącza silnik, którego napięcie zasilania jest pomniej-
+szane o spadki napięcia na rezystancjach R7 - R3 i z tego powodu jego prędkość
+wirowania jest mniejsza. Następnie przekaźniki czasowe, w kolejności od K7C
+do KŚC, zwierają odpowiednio styczniki od K4 do K2, bocznikując w obwodzie
+zasilania grupy oporników od R3 do RI, co powoduje wzrost napięcia zasilania
+silnika.
+
+ 
+
+386 Rozdział : 8.Programy przykładowe

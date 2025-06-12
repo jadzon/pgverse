@@ -1,0 +1,67 @@
+Równoważność matematyczna 543
+
+ 
+
+Rzeczywiste DSP, chociaż przydatne do wielu zastosowań w nauce i technice, jest jednak
+niewygodne matematycznie z trzech względów. Po pierwsze, można w nim korzystać z liczb
+zespolonych, tylko stosując zastępowanie. Dla matematyków jest to niedogodne; oni chcie-
+liby móc powiedzieć: to jest równe tamtemu, a nie to reprezentuje tamto. Wyobraźmy sobie,
+dla przykładu, że mamy stwierdzenie matematyczne: A jest równe B. Z tego od razu wyni-
+kają niezliczone konsekwencje: 5A = 5B, I + A = | + B, A/x = B/x itd, A teraz przypuśćmy,
+że mamy stwierdzenie: A reprezentuje B. Wtedy, bez jakichś dodatkowych informacji, nie
+wiemy absolutnie nic! Gdy dwie wielkości są równe, to takie stwierdzenie uprawnia nas do
+korzystania z czterech tysięcy lat wiedzy matematycznej. Jeśli zaś te wielkości tylko repre-
+zentują siebie nawzajem, to musimy od podstaw tworzyć nowe definicje. Gdy, na przykład,
+sinusoidy są reprezentowane przez liczby zespolone, to zezwalamy na dodawanie i odejmo-
+wanie, ale zakazujemy mnożenia i dzielenia.
+
+Drugą słabą stroną rzeczywistego przekształcenia Fouriera jest część widmao częstotliwościach
+ujemnych. Jak pamiętacie z rozdziału 10, fale sinusoidalne i kosinusoidalne można opi-
+sywać jako mające częstotliwość dodatnią lub ujemną. Ponieważ obie te części widma są
+identyczne, więc w rzeczywistym przekształceniu Fouriera pomija się częstotliwości ujemne.
+Bywają jednak takie zastosowania, w których ujemne częstotliwości są ważne. Ma to miejsce
+wówczas, gdy składowe o ujemnych częstotliwościach są zmuszane do przesunięcia się do
+części widma o częstotliwościach dodatnich. Można by powiedzieć, że duch przyjmuje wów-
+czas ludzką postać. Takie zjawisko następuje np. w przypadku aliasingu, splocie kołowym
+i modulacji amplitudy. Ponieważ w rzeczywistym przekształceniu Fouriera nie stosuje się
+częstotliwości ujemnych, więc możliwości pokonania wymienionych probłemów są w tym
+przekształceniu bardzo ograniczone.
+
+Trzecią niedogodnością rzeczywistego przekształcenia Fouriera jest specjałne operowa-
+nie Re X[0] i Re X[N/2] — pierwszymi i ostatnim punktem w widmie częstotliwościowym.
+Załóżmy, że mamy N-punktowy sygnał x[n]. Wykonanie przekształcenia DFT daje widmo
+częstotliwościowe zawarte w Re X[k] i Im X[k], gdzie k zmienia się od © do N/2. To nie
+są jednak wartości, mogące służyć do odtworzenia przebiegu w dziedzinie czasu. Próbki
+Re X[0] i Re X[N/2] wzeba najpierw podzielić przez 2. (Dla przypomnienia wróćcie do pod-
+rozdziału 8.3). Taką operację dzielenia łatwo się wykonuje w programie komputerowym,
+lecz jest ona niewygodna przy operowaniu wzorami.
+
+Zespolone przekształcenie Fouriera jest eleganckim rozwiązaniem tych problemów. Liczby zespo-
+lone w sposób naturalny są związane z częstotliwościami ujemnymi. Zobaczmy, jak to działa.
+
+Równoważność matematyczna
+
+Pierwszym naszym krokiem jest przedstawienie, w jaki sposób można fale sinusoidalne i ko-
+sinusoidalne zapisać przy użyciu wzorów zawierających liczby zespolone. Podstawą jest za-
+leżność Eulera, podana w poprzednim rozdziale:
+
+e” =cos(x)+ jsin(x)
+Wzór 31.2. Zależność Eulera
+Na pierwszy rzut oka nie wydaje się, aby ten wzór był bardzo pomocny; jedno wyrażenie
+zespolone jest równe drugiemu wyrażeniu zespolonemu. Niemniej jednak, po niewielkich
+operacjach algebraicznych, można tę zależność przekształcić w dwie inne:
+
+e" +e” e"-e*
+2
+
+ 
+
+ 
+
+cos(x)= sin(x)=
+
+Wzór 31.3. Zależności Eulera dla sinusa i kosinusa
+
+Uzyskany wynik jest niezwykle ważny. Daje on bowiem sposób zapisu załeżności między zwy-
+kłymi sinusoidami a liczbami zespolonymi. Chociaż załeżności 31.3 mają postać standardowych
+tożsamości, to do dalszych rozważań będą one użyteczniejsze po zamianie niektórych wyrazów:

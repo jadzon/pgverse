@@ -1,0 +1,18 @@
+Transformacja stanu - diagonalizacja
+
+Jeśli macierz A ma wielokrotne wartości własne, to nie można zastosować
+przedstawionej procedury diagonalizacyjnej. Wtedy zalecana jest inna forma
+diagonalizacji: tzw. kanoniczna forma Jordana
+
+SMOUBJS 8|8pOJN
+
+<image/wzory/k7_page32_formula1.png>
+
++
+
+<image/wzory/k/_page32_formula2.png>
+
+ 
+
+POLITECHNIKA
+GDANSKA

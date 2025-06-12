@@ -1,0 +1,18 @@
+" Na rys. 8.8 zilustrowano zastosowanie metody korelacyjnej do obliczania /m X[3]. Na
+
+rys. 8.8 a) i 8.8 b) przedstawiono dwa przykłady sygnałów w dziedzinie czasu zwanych,
+
+odpowiednio, x1[ ] i x2[ ]. Pierwszy sygnał, x[1], jest złożony tylko z fali sinusoidalnej, któ-
+
+rej trzy pełne okresy mieszczą się między punktami O i 63. Przeciwnie sygnał xf2], złożony
+- zkilku fal sinusoidalnych i kosinusoidalnych, z których żadna nie wykonuje trzech pełnych
+-_ okresów między punktami 0 i 63. Z tych dwóch sygnałów można wywnioskować, co powi-
+nien realizować algorytm do obliczania Im X[3]. Po wprowadzeniu do niego x1[ ] algorytm
+-_ powinien wygenerować wartość 32 — amplitudę fali sinusoidalnej występującej w sygnale
+(zmodyfikowaną przez współczynniki skalowania z wzorów 8.3). Gdy do algorytmu będzie
+
+" oC deco kaw ró Góscionia SAGA. wskazu-
+
+jąc, że ta właśnie fala sinusoidalna nie występuje w sygnale.
+
+<image/figury/k3_page141_figure1.png>

@@ -1,0 +1,40 @@
+218 2. Pojęcia podstawowe — układy
+
+<image/wzory/k3_page218_formula1.png>
+
+i jest ujemny, jeśli:
+
+<image/wzory/k3_page218_formula2.png>
+
+   
+
+W pierwszym przypadku opór R, a więc również rozpatrywany dwójnik z rys. 2.1-33a, są
+dwójnikami pasywnymi, w drugim przypadku — dwójnikami aktywnymi.
+
+Widzimy zatem, że to czy dwójnik z rys. 2.1-33a jest pasywny czy aktywny zależyod wartości
+współczynnika r źródła sterowanego. Jest to sytuacja typowa, z którą będziemy spotykać się często
+w analizie układów ze źródłami sterowanymi.
+
+Przykład 2.1-42. Rozpatrzmy przykład czwórnika z rys. 2.1-34 zawierającego opór ujemny.
+Jego równania mają postać:
+
+<image/wzory/k3_page218_formula3.png>
+Moc chwilowa pobierana przez czwórnik wyraża się zatem wzorem:
+
+<image/wzory/k3_page218_formula4.png>
+
+który można przepisać w postaci formy kwadratowej:
+
+<image/wzory/k3_page218_formula5.png>
+
+<image/figury/k3_page218_figure1.png>
+
+Wyrażenie (2.1-85) przybiera wartości nieujemne, jeśli macierz:
+
+<image/wzory/k3_page218_formula6.png>
+
+jest dodatnio półokreślona (por. [11], str. 48 oraz tom III). Prowadzi to do warunków:
+
+<image/wzory/k3_page218_formula7.png>
+
+równoważnych warunkowi:

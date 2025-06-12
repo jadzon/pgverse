@@ -1,0 +1,35 @@
+1.7. Źródła 131
+
+tach zastępczych) wszystkich niemal przyrządów półprzewodnikowych, a także
+lamp elektronowych. Podamy kilka przykładów, nie wnikając w szczegóły
+działania poszczególnych przyrządów.
+
+Przykład 1.7-4. Najprostszy schemat zastępczy tranzystora bipolarnego (rys. 1.7-21a) pracu-
+jącego w tzw. układzie WB (o wspólnej bazie) jest przedstawiony na rys. 1.7-21b. Występują w nim
+opory: Rz — opór bazy, Rz — opór emitera, Rę — opór kolektora oraz źródło prądowe sterowane
+prądem emitera, przy czym a, jest tzw. współczynnikiem wzmocnienia prądowego tranzystora.
+
+a)
+lę Ę
+
+<image/figury/k3_page129_figure1.png>
+6
+
+Przyklad 1.7-5. Jednym z bardzo rozpowszechnionych układów scalonych jest różnicowy
+wzmacniacz operacyjny (rys. 1.7-22a), który w przypadku idealnym jest określony równaniami:
+
+<image/wzory/k3_page129_formula1.png>
+
+Najprostszy schemat zastępczy (rys. 1.7-22b) sprowadza się zatem do źródła napięciowego
+sterowanego napięciem o bardzo dużym (teoretycznie nieskończenie wielkim) współczynniku
+wzmocnienia A”.
+
+<image/figury/k3_page129_figure2.png>
+
+Przykład 1.7-6. Popularna lampa elektronowa, trioda (rys. 1.7-23a), pracująca bez prądu
+siatki (i, = 0), ma najprostszy schemat zastępczy przedstawiony na rys. 1.7-23b, w którym
+występuje źródło prądowe sterowane napięciem u,, tj. napięciem między siatką a katodą; S,
+oznacza tzw. nachylenie charakterystyki lampy, zaś r, jest oporem anodowym.
+
+V Założenie A +0 przy skończonym u, powoduje konieczność przyjmowania, że u, — 0.
+Analizą obwodów ze wzmacniaczami operacyjnymi zajmiemy się w p. 3.6 i 4.4.6-F.

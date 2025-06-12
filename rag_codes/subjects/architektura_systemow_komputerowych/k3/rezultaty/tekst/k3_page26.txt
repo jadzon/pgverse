@@ -1,0 +1,46 @@
+16 3. Podstawy techniki cyfrowej
+
+możliwość separacji pomiędzy wyjściem bramki i jej obciążeniem. Oznacza to, że na
+wyjściu tych bramek, obok stanu zera logicznego lub stanu jedynki logicznej, może
+pojawić się tzw. stan trzeci, tj. stan, w którym wyjście bramki przedstawia sobą wysoką
+impedancję (ang. high impedance). Wówczas wyjście bramki jest elektrycznie odseparo-
+wane od obciążenia. Praktycznie oznacza to odłączenie bramki od pozostałej części układu.
+Wykorzystanie bramek do projektowania układów kombinacyjnych pokazane zostanie na
+przykładzie.
+
+Rozpatrzmy teraz proces projektowania na przykładzie jednobitowego sumatora.
+Niech będą dane dwie liczby A i B przedstawione w naturalnym kodzie binarnym — NKB
+(por. podrozdz. 3.2): A= Ż a, 2' oraz B= Ż b, 2.
+
+1 1
+
+Jak znaleźć ich sumę arytmetyczną? Podobnie jak w przypadku dodawania wielo-
+pozycyjnych liczb dziesiętnych na papierze, tak i w tym przypadku dodaje się do siebie
+poszczególne pozycje poczynając od najmniej znaczących i uwzględniając ewentualne
+przeniesienie z mniej znaczącej pozycji. Zatem operacja jednopozycyjnego dodawania
+(dodawania dwóch bitów wraz z przeniesieniem) polega na wyliczeniu wartości dwóch
+funkcji. Pierwsza z nich jest to funkcja y, będąca binarnym wynikiem dodawania i druga
+funkcja c,,,, będąca wartością przeniesienia na następną pozycję. Obie te funkcje są
+funkcjami trzech zmiennych: wartości danej pozycji pierwszej liczby a,, wartości danej
+pozycji drugiej liczby b, i wartości przeniesienia z poprzedniej pozycji c,.
+
+<image/tabele/k3_page26_table1.png>
+
+Działanie sumatora zilustrowano w tablicy 3.1, która jest tabelą prawdy (por. Doda-
+tek A) dla funkcji wyniku i funkcji przeniesienia.
+
+Na rysunku 3.3 przedstawiono mapy Karnaugha (por. Dodatek A) dla obu wymienio-
+nych funkcji. Dalej podano tzw. postać alternatywną funkcji y, (postać sumy iloczynów
+więc znak L mennn=n +:+mi misawa m Inmiassaa)
+
+<image/wzory/k3_page26_formula1.png>
+
+którą MOŻLu acunzuwuu a pusiutą uniauu SAlauająt EBU DIĘ 4 O ULaIiCA. UziciowEjJsCiOwEej
+bramki sumy logicznej, czterech trzywejściowych bramek iloczynów logicznych i trzech
+inwerterów. Natomiast można zauważyć. że funkcie te można nrzedstawić także w nostaci:
+
+<image/..wzory/k3_page26_formula2.png>
+
+--—j zmzama .j. www taacwiiA [Wi PRAW NSTPYMWEE MAGIEM K4/KNZAM,
+
+Do reali

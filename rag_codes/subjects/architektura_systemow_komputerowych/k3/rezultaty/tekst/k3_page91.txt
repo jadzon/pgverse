@@ -1,0 +1,27 @@
+4.7. Tryby adresowania 8]
+
+4.7. TRYBY ADRESOWANIA
+
+Jak już wcześniej powiedziano argumenty operacji mogą znajdować się w kodzie pro-
+gramu, w rejestrach procesora lub w pamięci. W zależności od miejsca, gdzie znajdują się
+argumenty, stosuje się odpowiednie rozkazy, które występują w różnych odmianach.
+Mówimy, że są to rozkazy o różnych trybach adresowania (ang. addressing mode).
+
+<image/figury/k3_page91_figure1.png>
+
+Rysunek 4.12. Proste tryby adresowania argumentów
+
+Jeżeli argument znajduje się w rozkazie, to tryb adresowania nazywa się trybem
+natychmiastowym (ang. immediate mode). Postać takiego rozkazu przedstawiono na ry-
+sunku 4.12a. Jeżeli argument znajduje się w rejestrze, to tryb adresowania nazywa się
+trybem rejestrowym (ang. register mode), a jego postać pokazano na rysunku 4.12b.
+Można zauważyć, że rozkaz zawiera numer rejestru procesora, w którym przechowywany
+jest argument operacji. W trzecim przypadku, jeżeli argument rozkazu znajduje się w pa-
+mięci, to tryby adresowania mogą być różne, w zależności od tego, gdzie znajduje się jego
+adres. Adres, podobnie jak sam argument, może być w kodzie programu (w rozkazie),
+w rejestrze procesora i w pamięci. Jeśli adres argumentu jest w rozkazie, to tryb adre-
+sowania jest nazywany trybem bezpośrednim (ang. direct mode). Postać takiego rozkazu
+i uproszczoną mapę pamięci przedstawiono na rysunku 4.12c. Jeśli adres znajduje się
+w rejestrze, to tryb taki nazywany jest trybem rejestrowym pośrednim (ang. register
+indirect mode), a postać rozkazu i mapa pamięci jest pokazana na rysunku 4.12d. Jeśli zaś
+adres jest w pamięci, to tryb ten nazywa się trybem adresowaniem pośrednim

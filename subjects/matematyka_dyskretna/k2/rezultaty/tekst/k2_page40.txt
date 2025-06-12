@@ -1,0 +1,46 @@
+1.3. Ciągi bez powtórzeń 5
+Z powyższego wynika, że funkcji ze zbioru A w zbiór B jest tyle samo co ciągów długości
+k =|A| z elementami ze zbioru B. Udowodniliśmy więc poniższe twierdzenie.
+
+Twierdzenie 1.4 Jeżeli zbiór A zawiera k elementów, a zbiór B zawiera n elementów, to
+liczba funkcji ze zbioru A w zbiór B wynosi n*.
+
+1.3 Ciągi bez powtórzeń
+
+Policzmy teraz, ile jest ciągów bez powtórzeń, czyli ciągów różnowartościowych. Jeżeli
+elementy bierzemy ze zbioru trzyelementowego
+
+<image/wzory/k2_page40_formula1.png>
+to możemy utworzyć trzy ciągi jednoelementowe:
+(1, (2), (3),
+
+sześć różnowartościowych ciągów dwuelementowych:
+
+<image/wzory/k2_page40_formula2.png>
+
+oraz sześć ciągów trójelementowych:
+
+<image/wzory/k2_page40_formula3.png>
+
+Nie ma, oczywiście, dłuższych ciągów różnowartościowych utworzonych z elementów
+zbioru f1, 2,3).
+
+Twierdzenie 1.5 Jeżeli elementy wybieramy ze zbioru n-elementowego A, to liczba ciągów
+k-elementowych bez powtórzeń, które można wybrać z tego zbioru, wynosi:
+
+<image/wzory/k2_page40_formula4.png>
+
+W tym wyrażeniu mamy iloczyn k kolejnych liczb, poczynając od (n — k + 1), a kończąc
+na n.
+
+Dowód. Jeżeli budujemy ciąg bez powtórzeń, to na pierwszy element ciągu możemy wy-
+brać każdy z n elementów zbioru A, na drugą pozycję w ciągu możemy wybrać już tylko
+jeden z n — 1 elementów (wszystkie poza tym, który został wybrany na pierwszy element
+ciągu) i tak dalej, na każdą kolejną pozycję mamy o jeden element do wyboru mniej. O
+
+Zauważmy, że jeżeli k > n, to: n(n — 1)... (n — k +1) = 0, co jest zgodne z tym, że
+
+w takim przypadku nie można utworzyć żadnego k-elementowego ciągu bez powtórzeń
+z elementami ze zbioru A.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

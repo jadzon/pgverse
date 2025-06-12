@@ -1,0 +1,38 @@
+obu instrukcji jest ta sama etykieta. Każdej instrukcji MCR musi odpowiadać
+dokładnie jedna stowarzyszona z nią instrukcja ENDMCR.
+
+W przykładzie na Wyd. 4.39 przyjęcie przez %// wartości / oznacza, że następne
+dwa szczeble programu po instrukcji MCR z etykietą SKOK, a przed instrukcją
+ENDMCR oznaczoną tą samą etykietą, będą wykonywane bez dopływu prądu.
+W tej sytuacji, jeżeli obie zmienne %/2 i %/3 byłyby równe 7, to wyjście %Q]/
+i tak byłoby wyłączone, a wyjście %Q2 nie zmieniłoby swego stanu.
+
+<image/tabele/k4_page224_table1.png>
+
+Wyd. 4.39 Przykład użycia pary instrukcji sprzężonych MCR i ENDMCR
+
+Zakres działania pary instrukcji MCR i ENDMCR nie może pokrywać się z
+zakresem żadnej innej pary takich instrukcji oraz pary instrukcji JUMP
+i LABEL, czyli jest to para instrukcji nie zagnieżdżonych (non-nested). Za-
+gnieżdżanie, a więc wykorzystywanie w programie sytuacji, gdy jedna para
+instrukcji warunkowego wykonania obejmuje inną parę, jest możliwe przy wyko-
+rzystaniu pary instrukcji zagnieżdżonych  (nested): MCRN i ENDMCRN,
+których poza tym używa się tak samo jak instrukcji MCR i ENDMCR.
+
+W celu realizacji skoków umożliwiających ominięcie fragmentów programu lub
+wykonywanie pętli wprowadzono instrukcję skoku JUMP, oznaczaną na sche-
+macie drabinkowym znakami >> oraz instrukcję LABEL definiującą miejsce, od
+którego należy kontynuować wykonywanie programu. Parametrem obu instrukcji
+jest nazwa (etykieta) określająca ich wzajemne powiązanie.
+
+Na Wyd. 4.40 pokazano przykład wykorzystania instrukcji JUMP do realizacji
+pętli, w której w każdym cyklu sterownika do rejestru %R2 zostanie wpisana
+wartość zmiennej %A// podniesiona do potęgi o wykładniku określonym przez
+zawartość %R3. Dla uproszczenia programu założono, że wartości odpowiednich
+zmiennych są na tyle małe, iż nie spowodują przepełnienia (overflow) w trakcie
+wykonywania operacji mnożenia. Szczebel drabinki przed pętlą służy do usta-
+wienia warunków początkowych dla pętli.
+
+ 
+
+224 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

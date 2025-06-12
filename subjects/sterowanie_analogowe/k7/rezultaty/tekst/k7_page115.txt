@@ -1,0 +1,19 @@
+Obserwator stanu i jego zastosowanie
+
+<image/wzory/k7_page115_formula2.png>
+który chcemy uzyskać
+
+<image/wzory/k/_page115_formula1.png>
+
+A*- macierz A nowego obserwatora L — wzmocnienie układu
+
+<image/wzory/k/_page115_formula3.png>
+
+<image/wzory/k/_page115_formula4.png>
+
+POLITECHNIKA
+GDANSKA
+
+ 
+
+SMOLUB]S 8|8pOW

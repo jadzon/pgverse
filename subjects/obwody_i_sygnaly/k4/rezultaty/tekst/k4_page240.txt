@@ -1,0 +1,36 @@
+Rozdział 3
+
+OBWODY PRĄDU STAŁEGO
+
+Pierwsze dwa rozdziały książki poświęciliśmy omówieniu podstawowych
+pojęć i praw teorii obwodów. Przedstawiliśmy w nich także zasady tworzenia
+opisu układu (obwodu, sieci). Przy założeniu, że znana jest topologia układu, jego
+opis wynika z równań elementów tworzących ten układ oraz z praw Kirchhoffa:
+prądowego i napięciowego.
+
+W rozdziałach tych uwypukliliśmy zatem warstwę pojęciowo — opisową
+teorii obwodów. Ponadto wprowadziliśmy główne linie podziału elementów
+i układów wynikające z przyjęcia różnorodnych kryteriów podziału, a tym
+samym wyróżniliśmy zasadnicze klasy układów.
+
+Nie zajmowaliśmy się natomiast, jak dotąd, analizą układów, tj. metodami
+obliczania prądów i napięć w układzie oraz badaniem jego właściwości.
+Począwszy od tego rozdziału ciężar rozważań zostanie przesunięty w stronę
+bardziej techniczną, a główny nacisk będzie położony na metodykę i podstawowe
+narzędzia analizy układów. Inaczej mówiąc, będziemy omawiać metody roz-
+wiązywania równań opisujących układ.
+
+3.1. WPROWADZENIE
+
+A. Charakterystyka metod analizy. Metody analizy stosowane w teorii
+obwodów nie mają charakteru uniwersalnego, a ich dobór w sposób istotny
+zależy od kategorii analizowanego układu, od typu występujących w nim
+sygnałów pobudzających oraz od rodzaju rozważanego zagadnienia.
+
+Na przykład inne metody są stosowane w analizie układów liniowych i inne
+w analizie układów nieliniowych; innymi metodami są analizowane układy
+skupione, a jeszcze innymi układy o parametrach rozłożonych itd. Rodzaj
+stosowanych metod analizy zależy także w dużym stopniu od typu pobudzeń
+występujących w układzie, a więc od tego czy w układzie występuje stan ustalony
+przy pobudzeniach stałych, sinusoidalnych lub okresowych, określonych w prze-
+dziale (—co, +00), czy też występuje w nim stan wywołany przez dowolne

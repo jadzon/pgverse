@@ -1,0 +1,46 @@
+66 4. Procesory
+
+ 
+
+Czas trwania fazy pobrania rozkazu zależy od rodzaju procesora i rodzaju rozkazu.
+Jeśli procesor jest 8-bitowy (mikroprocesor) i rozkaz zawiera 8-bitowy kod operacyjny
+rozkazu i 16-bitowy adres argumentu, to faza pobrania rozkazu składa się z 3 cykli
+maszynowych odczytu pamięci. Pierwszy cykl jest cyklem odczytu kodu operacyjnego
+(faza pobrania rozkazu), drugi jest cyklem odczytu jednego bajtu adresu i trzeci jest
+odczytem drugiego bajtu adresu. Jeśli procesor (i rozkaz) jest 32-bitowy, to zarówno kod
+operacyjny, jak i adres argumentu można odczytać z pamięci w jednym cyklu maszyno-
+wym. Pobranie argumentu może być zatem jednocyklowe lub wielocyklowe. Często argu-
+ment ma długość równą długości słowa w pamięci i wówczas pobranie odbywa się
+w jednym cyklu. Ale czasem można spotkać argumenty o znacznej długości. Na przykład
+w 16-bitowych mikrokomputerach stosowane są nawet 80-bitowe argumenty (argumenty
+operacji zmiennopozycyjnych). Argument o takiej długości, w mikroprocesorach 16-
+-bitowych, jest pobierany w 5 cyklach odczytu pamięci.
+
+Aby zilustrować podany opis rozpatrzono sposób wykonania programu dodawania
+dwóch stałopozycyjnych liczb 16-bitowych w komputerze 16-bitowym. Kod rozkazowy
+ma długość 12 bitów, a adres jest 20-bitowy. Założono, że komórka pamięci zawiera 16 bi-
+tów. Pozwala to na umieszczenie zarówno kodu rozkazowego, jak i adresu w 2 komórkach
+pamięci (razem 32 bity). Założono ponadto, że:
+
+— adres pierwszego rozkazu programu wynosi 300,
+
+— argumenty operacji znajdują się w komórkach pamięci o numerach ADR1 = 841
+
+i ADR2=915,
+— wynik operacji ma znaleźć się w komórce pamięci o adresie ADR2.
+
+Na rysunku 4.4a pokazano ułożenie programu w pamięci, czyli tzw. mapę pamięci.
+Program składa się z 4 rozkazów:
+
+— rozkazu odczytu pierwszego argumentu i zapisania go do rejestru A,
+
+— rozkazu odczytu drugiego argumentu i zapisania go do rejestru B,
+
+— rozkazu dodania obu argumentów,
+
+— rozkazu przesłania wyniku do pamięci.
+
+bele/k3_page76_
+<image/tabele/k3_page7/6_table2.png>
+
+Rysunek 4.4. Mapa pamięci (a) i zawartości rejestrów procesora (b) dla przykładowego programu

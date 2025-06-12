@@ -1,0 +1,44 @@
+7.5.1 Realizacja przerzutnika SR i RS przez samopodtrzymanie
+
+ 
+
+Istnieje możliwość zaprogramowania obydwu omówionych powyżej przerzutni-
+ków bez wykorzystania operatorów S$ i R. Uzyskuje się to przez podtrzymanie,
+które otrzymuje się w wyniku zastosowania "sprzężenia zwrotnego” od ustawia-
+nego argumentu.
+
+Realizacja przerzutnika SR przez podtrzymanie
+
+<image/tabele/k4_page332_table2.png>
+
+W przypadku, gdy wejście / 7.7 ma wartość 1, to niezałeżnie od wartości wejścia
+17.2 i poprzedniego stanu wyjścia Q 4.0, wyjście to jest ustawiane (dominuje
+wejście ustawiające). W przypadku, gdy wartość wejścia / 7.7 zmieni się z | na
+0, wyjście Q 4.0 będzie nadal miało wartość 1 dzięki podtrzymaniu (instruk-
+cja 3). Jeżeli wejście / 7./ ma wartość 0 i wejście / 7.2 ma wartość 1, to wyjście
+Q 4.0 zostaje wyzerowane (przyjmuje wartość O).
+
+Realizacja przerzutnika RS przez podtrzymanie
+
+<image/tabele/k4_page332_table1.png>
+
+W przypadku, gdy wejście / 7.2 ma wartość |, to niezależnie od wartości wejścia
+17.1 i poprzedniego stanu wyjścia Q 4.0, wyjście to jest zerowane (dominuje
+wejście zerujące). Jeżeli wejście / 7.2 ma wartość O i wejście / 7.7 ma wartość |,
+to wyjście Q 4.0 zostaje ustawione (przyjmuje wartość 1). W przypadku, gdy
+wartość wejścia / 7./ zmieni się z | na 0, wyjście © 4.0 będzie nadal miało stan
+I dzięki podtrzymaniu (instrukcja 3). Wyjście Q 4.0 pozostanie ustawione, aż do
+momentu pojawienia się wartości I na wejściu zerującym / 7.2.
+
+ 
+     
+
+zu" vr c
+
+   
+
+ETEZYTO ZEN SYYOZEZ
+
+Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5
+
+332

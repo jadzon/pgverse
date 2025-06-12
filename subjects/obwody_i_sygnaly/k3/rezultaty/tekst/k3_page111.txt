@@ -1,0 +1,36 @@
+1.6. Elementy niestacjonarne. Elementy SLS 113
+
+<image/wzory/k3_page111_formula1.png>
+
+Uwzględniając zależność (1.6-15) w wyrażeniu (1.6-14) możemy napisać:
+
+<image/wzory/k3_page111_formula2.png>
+
+5)
+lub ostatecznie:
+<image/wzory/k3_page111_formula3.png>
+gdzie oznaczono:
+rzory/k3_page111_formula4.png (1.6-18)
+<image/wzory/k3_page111_formula5.png>
+
+Wielkość (1.6-19) nazywamy energią pompowania. Wzór (1.6-17) można
+przepisać w postaci:
+
+<image/wzory/k3_page111_formula6.png>
+
+Wynika stąd, że przyrost energii gromadzonej w polu magnetycznym indukcyj-
+ności niestacjonarnej w przedziale czasu Ćtę,t) jest sumą energii pobranej
+z obwodu oraz energii pompowania.
+
+Przypomnijmy, że w przypadku indukcyjności stacjonarnej przyrost energii
+gromadzonej w polu magnetycznym jest równy energii pobranej z obwodu
+(z otoczenia) — por. wzór (1.3-13). Energia pompowania jest wówczas równa
+zeru (L = const; L(t) = 0).
+
+Z równości (1.6-20), po zróżniczkowaniu obu stron względem £, otrzymujemy
+zależność dla mocy:
+
+dw
+P+Pz m3: (1.6-21)
+
+gdzie:

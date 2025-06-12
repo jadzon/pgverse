@@ -1,0 +1,31 @@
+1.4. Warunek quasi-stacjonarności i jego konsekwencje 87
+
+<image/wzory/k3_page85_formula1.png>
+
+a zatem również całkowite natężenia pola magnetycznego H w dowolnym
+punkcie P i w dowolnej ustalonej chwili t zależy od wartości prądu i w tej
+samej chwili t, tzn.:
+
+rzory/k3_page85_formula2.png (1.4-3)
+
+W konsekwencji strumień © i strumień skojarzony W w chwili t również
+zależą tylko od wartości prądu i w chwili t. Fakt ten został wyrażony w p. 1.2.2.
+poprzez równanie (1.2-18) oraz w p. 1.3.4 poprzez odpowiednie równanie (1.3-25).
+Rozważmy teraz sytuację bardziej realną, uwzględniającą mechanizm roz-
+chadzenia sie zahnrzeń elektromagnetycznych ze skończoną prędkością c,
+4-1). Częściowe natężenie pola AH w punkcie P iwchwi-
+
+$ od prądu i elementu Al w chwili t — r wcześniejszej
+
+ry/k8_page85_formula5.png (1.4-4)
+ia przez falę odcinka o długości r (rys. 1.4-1), tzn.:
+
+<image/wzory/k3_page85_formula6.png>
+
+je85_formula3.png 3_page85_figure1.png
+
+dległości punktu P od różnych elementów przewodnika,
+»ola magnetycznego H(t) będzie zależeć od wartości prądu
+łu Ct — Tyęz; Ć — Tmin >» gdzie:
+
+<image/wzory/k3_page85_formula4.png>

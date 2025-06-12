@@ -1,0 +1,5 @@
+<image/wzory/k3_page221_formula1.png>
+
+<image/figury/k3_page221_figure1.png>
+
+<image/figury/k3_page221_figure2.png>

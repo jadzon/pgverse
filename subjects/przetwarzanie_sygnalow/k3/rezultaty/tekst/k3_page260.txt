@@ -1,0 +1,26 @@
+16. Filtry okienkowane funkcją sine
+
+ 
+
+<image/figury/k3_page260_figure1.png>
+
+Rys. 16.7. Niewiarygodnie dobre właściwości filtru okienkowanego funkcją sinc. Na rys. a) pokazano odpowiedź często-
+tliwościową filtru okienkowanego funkcją sinc o zwiększonym tłumieniu w paśmie zaporowym. Osiągnięto to przez wyko-
+nanie spłotu odpowiedzi impułsowej filtru okienkowanego funkcją sinc z samą sobą. Na rys. b) przedstawiono zaś bardzo
+szybkie opadanie charakterystyki w 32 001-punktowym filtrze okienkowanym funkcją sinc
+
+Najsilniejszym ograniczeniem filtrów okienkowanych funkcją sinc jest czas wykonania. Może
+on się stać niedopuszczalnie długi, jeśli odpowiedź impulsowa zawiera bardzo wiele punktów
+i stosuje się algorytm ze standardowym splotem. Bardzo szybki algorytm do tego filtru (ze
+splotem FFT) podano w rozdziale 18. Filtry rekursywne (rozdział 19) też dają dobre rozdzie-
+lanie częstotliwości i są rozsądną alternatywą filtrów okienkowanych funkcją sinc.
+
+Czy filtr okienkowany funkcją sinc jest optymalny do rozdzielania częstotliwości? Nie,
+lepsze mogą być filtry o odpowiedziach impulsowych opracowanych przy użyciu bardziej
+skomplikowanych metod. Bądźcie jednak ostrożni! Zanim zdecydujecie się zastosować le
+bardzo matematyczne metody, dobrze się zastanówcie, co chcecie osiągnąć. Filtry okien-
+kowane funkcją sinc mogą zapewnić parametry o każdym poziomie, jakiego mogliby:
+ście wymagać. Tym, co mogą dać metody bardziej skomplikowane, jest nieco krótsza
+odpowiedź impulsowa przy określonych parametrach. To z kolei może powodować nieco
+większą szybkość działania. Lecz ostrzegam, że możecie niewiele zyskać w zamian za
+włożony wysiłek.

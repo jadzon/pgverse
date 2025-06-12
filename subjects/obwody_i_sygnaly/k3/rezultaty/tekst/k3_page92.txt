@@ -1,0 +1,44 @@
+92 1. Pojęcia podstawowe — elementy
+
+K. Niespełnienie warunku quasi-stacjonarności. W niektórych przypad-
+kach szczególnych, mimo niespełnienia warunku quasi-stacjonarności, można
+posługiwać się pojęciem obwodu elektrycznego i elementów tego obwodu.
+Obwody takie i ich elementy, zwane odpowiednio obwodami o parametrach
+rozłożonych i elementami rozłożonymi (patrz tom IIN), mają następujące właś-
+ciwości:
+
+— w opisie obwodu (elementu) występują zmienne przestrzenne; w szcze-
+gólności, wielkości u, i, W, q związane z elementem zależą nie tylko od czasu,
+ale i od punktu w przestrzeni (na płaszczyźnie, na osi);
+
+— nie jest możliwe pomijanie dwóch spośród trzech stałych y, i,e charak-
+teryzujących ośrodek, a tym samym związanie elementu z jedną tylko cechą
+fizyczną, z pominięciem pozostałych; w szczególności, przy su 4 0, w elemencie
+występuje fala elektromagnetyczna.
+
+Jak wspominaliśmy w p. 1.2.4-D, elementami rozłożonymi i obwodami
+o parametrach rozłożonych w tym tomie zajmować się nie będziemy.
+
+1.5. PRAWA KIRCHHOFFA I ŁĄCZENIE ELEMENTÓW
+
+Konsekwencją warunku quasi-stacjonarności (p. 1.4) oraz właściwości wyni-
+kających wprost z definicji elementów skupionych (p. 1.2 i 1.3) są prawa
+Kirchhoffa stanowiące warunki, które muszą być spełnione przez dowolne
+połączenia elementów skupionych. Są to zatem warunki, które są spełnione przez
+każdy układ skupiony, tj. układ zbudowany z elementów skupionych.
+
+15.1. Prawa Kirchhoffa i zasada Tellegena
+
+A. PPK i NPK. Prądowe prawo Kirchhoffa (PPK, I prawo Kirchhoffa)
+orzeka, że w każdym węźle, tj. punkcie połączenia elementów (rys. 1.5-1a), suma
+prądów dopływających jest w każdej chwili równa zeru:
+
+vzory/k3_page92_formula1.png (1.5-1)
+
+Równanie (1.5-1) jest również słuszne w odniesieniu do dowolnego obszaru
+zamkniętego zawierającego elementy skupione (rys. 1.5-1b)”. Również w tym
+przypadku suma prądów dopływających do takiego obszaru jest w każdej chwili
+równa zeru.
+
+"Na rys.1.5-1 i 1.5-2, podobniejak na rys. 1.5-3,1.54 i 1.5-5, prostokątami zostały oznaczone
+dowolne elementy skupione dwuzaciskowe.

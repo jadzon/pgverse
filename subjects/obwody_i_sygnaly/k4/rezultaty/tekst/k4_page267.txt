@@ -1,0 +1,49 @@
+33. Metody analizy obwodów liniowych prądu stałego 269
+
+Dla każdego obwodu sieci musi być spełnione NPK. Liczba obwodów w sieci
+zawierającej w węzłów i g gałęzi zależy od struktury połączeń i dla różnych
+struktur może być różna. Na podstawie znajomości liczby węzłów i liczby gałęzi
+sieci nie można więc z góry przesądzić, ile obwodów da się w niej wyróżnić”.
+
+Załóżmy, że dla wszystkich obwodów sieci zapisaliśmy równania wynikające
+z NPK i wiążące ze sobą napięcia gałęziowe. Wśród tych równań część będzie
+kombinacjami liniowymi pozostałych (por. przykład 1.5-1). W III tomie książki
+wykażemy, że w zbiorze wszystkich równań wynikających z NPK można
+wyróżnić (na różne sposoby) jedynie n = g — (w — 1) równań niezależnych
+o tej właściwości, że każde napięcie gałęziowe U;, k = 1,...,g, występuje co
+najmniej raz w którymś z tych równań. Tym samym dla sieci o w węzłach
+i g gałęziach możemy zapisać n = g — (w — 1) niezależnych równań wynika-
+jących z NPK z g niewiadomymi U;,...,U,. Równania te nazywamy napię-
+ciowymi równaniami równowagi sieci. Pozostałe równania wynikające z NPK są
+kombinacjami liniowymi tych równań.
+
+Zbiór obwodów, dla których można zapisać n = g — (w — 1) napięciowych
+równań równowagi, nazywamy zbiorem obwodów niezależnych. Można wyka-
+zać (formalny dowód będzie podany w tomie III), że dla sieci spełniającej warunki
+sformułowane w p. B zbiorem obwodów niezależnych jest zbiór jej oczek (por.
+przykład 1.5-1). Szczególny charakter tego zbioru polega m.in. na tym, że oczka
+w takiej sieci można wyróżnić bez trudu przez jej przegląd. Z tego względu jako
+zbiór obwodów niezależnych będziemy dalej przyjmować zbiór oczek”.
+
+Reasumując, dla sieci o w węzłachi g gałęziach możemy zapisać g równań
+równowagi sieci z 2g niewiadomymi 1,,...,1,, Uy,...,U„: w— 1 równań
+prądowych dla węzłów (z wyjątkiem węzła odniesienia) z niewiadomymi
+I4,...,I„oraz n = g—(w — 1) równań napięciowych dla oczek z niewiadomy-
+
+mi Uy,...,U;,.
+
+Przykład 3.3-10. Rozważmy sieć przedstawioną na rys. 3.3-18 (por. przykład 1.5-1), speł-
+niającą wszystkie dotychczas przyjęte założenia. Sieć zawiera g = 6 gałęzi (onumerachk = 1,...,6),
+w m 4 węzły (oznaczone A, B, C, D) oraz n = 3 oczka (oznaczone a, b, c). Przyjmując strzałki
+prądów i napięć oraz kierunki obiegów oczek jak na rysunku i zakładając, że węzłem odniesienia jest
+węzeł D, a zbiorem obwodów niezależnych zbiór oczek , możemy zapisać dla tej sieci następujące
+równania równowagi:
+
+<image/wzory/k4_page267_formula1.png>
+
+(3.3-9)
+
+1) Na przykład w sieci z przykładu 1.5-1 można wyróżnić 7 obwodów.
+2 Ponieważ równania wynikające z NPK dla obwodów nie będących oczkami są kombinacjami
+ac równań dla oczek, zatem, jeśli NPK jest spełnione dla oczek, to jest także spełnione dla
+j sieci.

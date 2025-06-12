@@ -1,0 +1,49 @@
+187
+
+następnie postępowano optymalnie. Wartość użyteczności wynosi
+
+<image/wzory/k2_page182_formula1.png>
+
+gdzie: n jest bieżącym numerem stanu, N jest numerem ostatniego stanu, r(Sn. a)
+oznacza nagrodę powstałą na skutek akcji a, podjętej gdy system znajdował się
+w stanie s„, MaX zaj r(s;,a;) jest sumą nagród za przyszłe sterowania według
+najlepszej polityki r, zaś € jest operatorem uśredniania po możliwych czynnikach
+losowych.
+
+Znajomość wartości użyteczności dla każdego stanu i każdej akcji jest równo-
+ważna znajomości optymalnej polityki, bowiem optymalna polityka polega na wy-
+konaniu w danym stanie akcji maksymalizującej użyteczność.
+
+Wyznaczenia wartości użyteczności odbywa się metodą Q-learning. Algorytm ten
+opiera się na zasadzie, że w każdym etapie procesu uczenia błędy estymacji wartości
+() stanów osiąganych później są mniejsze od błędów estymacji wartości () stanów
+osiąganych wcześniej.
+
+Na początku działania algorytmu zadaje się początkowe wartości (), kierując
+się heurystyczną wiedzą o problemie, a w przypadku braku takiej wiedzy, wartości
+ustala się losowo. Następnie wielokrotnie przebiega się całą sekwencję stanów. W
+czasie każdego przeskoku ze stanu do stanu wartości () koryguje się zgodnie z zasadą
+
+<image/wzory/k2_page182_formula2.png>
+
+gdzie s, jest stanem bieżącym, s„+; stanem następnym, zaś a jest wspolczynni-
+kiem z przedziału (0,1). Dzięki temu, w wyniku wielokrotnego powtarzania procesu
+decyzyjnego, wartości (,(s, a) zbiegają się do wartości prawdziwych.
+
+Po zakończeniu uczenia postępowanie polega na podejmowaniu w stanie s akcji
+a zapewniającej maksymalną wartość (9(s,a).
+
+PRZYKŁAD 6.21
+
+Omówimy tu przykład zastosowania metody ((-learning. Będziemy poszukiwali opty-
+malnej polityki poruszania się agenta w środowisku przedstawionym na rysunku ??.
+Agent początkowo znajduje się w kratce oznaczonej jako „start” i ma osiągnąć kratkę
+„cel” uzyskując maksymalną sumę nagród. Agent może poruszać się przeskakując z
+kratki w której się znajduje do jednej z kratek przylegających bokiem. Agent wcho-
+dząc do kratki uzyskuje nagrodę/karę równą liczbie wpisanej w kratkę. Agent wy-
+konujący ruch powodujący przekroczenie granic świata pozostaje w kratce w której
+się znajdował otrzymując nagrodę /karę odpowiednią za wejście do tej kratki.
+Środowisko w którym porusza się agent nie jest deterministyczne. Agent podej-
+muje akcję skoku w danym kierunku, zaś efekt jego akcji jest częściowo losowy. Z
+prawdopodobieństwem 0,75 skoczy w wybranym kierunku, z prawdopodobieństwem
+0,1 skoczy w lewo od zamierzonego kierunku, z prawdopodobieństwem 0,1 skoczy w

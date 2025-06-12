@@ -1,0 +1,29 @@
+Pozycjonowanie biegunów w oparciu o sprzężenie od stanu
+
+Transmitancja obiektu:
+<image/wzory/k/_page75_formula1.png>
+
+Transmitancja układu ze sprzężeniem:
+
+<image/wzory/k7_page75_formula2.png>
+
+Model stanowy układu ze sprzężeniem:
+
+<image/wzory/k/_page7/5_formula3.png>
+
+POLITECHNIKA
+GDAŃSKA
+
+a
+O
+
+of
+(OJ
+D
+
+=
+5
+=
+O
+=
+o

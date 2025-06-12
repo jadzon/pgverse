@@ -1,0 +1,49 @@
+15. Prawa Kirchhoffa i łączenie elementów 95
+
+m—— —NNRL>—MoL M Z Z Z WZ A Z Z. . R M ZZ
+
+oznacza moc chwilową pobieraną przez ten element (przy założeniu standardo-
+«ego strzałkowania jak na rys. 1.5-3 — por. p. 1.1-G).
+
+Zasada Tellegena orzeka, iż w każdym układzie skupionym suma mocy
+chwilowych pobieranych przez wszystkie elementy układu jest w każdej chwili
+równa zeru:
+
+ory/k3_page93_formula1.png (1.5-5)
+
+1 Równanie (1.5-5) ma również charakter tożsamości ze względu na czas, tzn.:
+
+izory/k3_page93_formula2.png (1.5-6)
+
+Zasada Tellegena, zapisana w postaci (1.5-5)", wyraża zasadę zachowania
+mocy w odniesieniu do układu skupionego. Jest ona bezpośrednią konsekwencją
+przyjęcia warunku quasi-stacjonarności i wyraża w innej formie tę samą treść, co
+konkluzja sformułowana w p. 1.4-F.
+
+Ze wzoru (1.5-5) wynika, że (z wyjątkiem stanu spoczynku kiedy wszystkie
+p, = 0)w każdej chwili w układzie niektóre elementy faktycznie pobierają moc
+
+> 0), inne ją oddają p, < 0), oraz że suma mocy pobieranych przez elementy
+ukladu skupionego jest w "każdej chwili równa sumie mocy oddawanych przez
+pozostałe elementy układu.
+
+Taki sam wniosek można oczywiście sformułować w odniesieniu do energii
+pobranych i oddanych przez elementy układu skupionego w dowolnym prze-
+
+U
+
+<image/wzory/k3_page93_formula3.png>
+
+Oznacza to, że w dowolnym przedziale czasu Ct, ty) suma energii pobranych
+przez elementy układu skupionego jest równa sumie energii oddanych przez
+pozostałe elementy układu. Zasada Tellegena wyraża zatem także zasadę
+zachowania energii w odniesieniu do układu skupionego.
+
+C. Wzajemne relacje. Warto zwrócić uwagę na fakt, że wymienione trzy
+prawa rządzące układami skupionymi: PPK, NPK i zasada Tellegena nie są od
+siebie niezależne. Można wykazać (zrobimy to w tomie III), że każde z nich
+można uważać za wniosek wynikający z dwóch pozostałych.
+
++
+
+V W tomie III podamy również ogólniejsze sformułowania zasady Tellegena.

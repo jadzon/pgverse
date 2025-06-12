@@ -1,0 +1,48 @@
+Zadania do rozdziału 1 159
+
+ 
+
+Zadanie 1.5. Podać warunki konieczne i dostateczne, aby wielomian:
+
+<image/wzory/k3_page157_formula1.png>
+
+określał w przedziale (— co, + o) charakterystykę:
+a) oporu nieliniowego,
+b) oporu nieliniowego nieuzależnionego.
+
+<image/wzory/k3_page157_formula2.png>
+
+Zadanie 1.6. Obliczyć wart oś pradu stałego, dla której moc pobierana przez opór nieliniowy Ry
+> charakterystyce u = aie"*', a = 20, b = 2A7%, jest maksymalna.
+
+Odp.: Ię = LA lub ly = —1A
+
+Zadanie 1.7. Opór nieliniowy z przykładu 1.3-2g jest tzw. symetrycznym ogranicznikiem prądu.
+Zakładając, że U, = 1V, I, = 1lA oraz że napięcie na oporze ma postać
+« = 2sin10*:£[V], te (—0, +00), wyznaczyć graficznie przebieg prądu i płynącego przez opór
+. obliczyć energię pobraną przez niego w czasie jednego okresu T' sygnału napięcia.
+
+»ry/k3_page157_formula3.png
+
+Zadanie 1.8. Charakterystyka indukcyjności nieliniowej jest dla i>0 opisana funkcją
+/ = 3i2 +4j3, przy czym prąd i jest wyrażony w amperach, zaś strumień skojarzony y w
+*eberach. Obliczyć o ile zmieni się energia gromadzona w tej indukcyjności, jeżeli jej prąd zmaleje od
+,=lA do I, = OSA.
+
+Odp.: Energia zmaleje o wartość Aw = 1,25]
+
+Zadanie 1.9. Wykazać, że równości:
+
+ry/k3_page157_formula4.png
+
+zachodzą w każdym punkcie charakterystyki indukcyjności lub, odpowiednio, pojemności wtedy
+tylko wtedy, kiedy indukcyjność lub pojemność są elementami liniowymi (w,, wę są koenergiami,
+por. przykłady 1.3-11 i 1.3-12 oraz rys. 1.3-22 i 1.3-23).
+
+Zadanie 1.10. Dane są trzy pojemności:
+a) nieliniowa Cx, 0 charakterystyce z przykładu 1.3-6a i parametrze a = 107*C:V"3;
+b) nieliniowa C„, o charakterystyce z przykładu 1.3-6c i parametrach C, = 2uF,
+
+ry/k3_page157_formula5.png
+c) liniowa C = 1 uF.
+Jbliczyć energie zgromadzone w tych pojemnościach w punkcie pracy u = 1 V.

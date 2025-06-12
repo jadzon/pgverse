@@ -1,0 +1,17 @@
+3.2. Kody binarne i arytmetyka 49
+
+igury/k3_page59_figure2.png png
+
+figury/k3_page59_figure3.pn
+
+do zawartości rejestru RH. Zatem omawiany algorytm ma o jeden krok więcej niż wynosi
+liczba bitów, co powoduje pewne zwolnienie operacji mnożenia. Aby tego uniknąć
+wystarczy zauważyć, że odejmowanie mnożnika w ostatnim kroku można zastąpić jego
+odjęciem w kroku poprzednim, a następnie przesunięciem wyniku w prawo. Wynika to
+z faktu, że jeśli po trzecim kroku algorytmu w rejestrze R była wartość W, to w czwartym
+kroku, po dodaniu mnożnika M i przesunięciu, otrzymywaliśmy wartość 1/2(W+M).
+Następnie odejmowaliśmy M otrzymując 1/2(W-M). Zatem jeśli w trzecim kroku odjęto
+mnożnik i wynik przesunięto w prawo, to otrzymamy ten sam rezultat. Na rysunku 3.44b
+
+przedstawiono tak zmodyfikowany algorytm. Sieci działań obu algorytmów pokazano na
+rysunku 3.45.

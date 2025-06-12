@@ -1,0 +1,43 @@
+ory/ka_pageż04_formuka png
+
+Grupa operacji na ciągach bitów obejmuje funkcje logiczne takie jak negacja,
+mnożenie i dodawanie logiczne, przesuwanie i rotacja dla ciągów bitów, testo-
+wanie wartości bitów, a także ich zerowanie i ustawianie. Zasadniczo operacje te
+wykonywane są na danych typu WORD. Część z nich może być wykonywana
+również na ciągach słów o dopuszczalnej długości do 256 słów. Wtedy parame-
+trem funkcji jest LEN (ŁENgrh), określający liczbę słów, dla których należy
+wykonać tę operację.
+
+Do funkcji realizujących operacje logiczne na kolejnych parach odpowiadających
+sobie bitów argumentów (bitwise Boolean functions) należą:
+
+e AND-iloczyn logiczny;
+Jeżeli kolejny bit w argumencie pierwszym oraz odpowiadający mu bit w ar-
+gumencie drugim są równe /, to na odpowiadającej im pozycji w słowie
+wynikowym ustaw wartość /.
+
+e OR -suma logiczna;
+Na kolejnej pozycji w słowie wynikowym ustaw wartość bitu równą /, jeżeli
+w przynajmniej jednym z argumentów na odpowiedniej pozycji wystąpiła
+wartość 7.
+
+e XOR - suma logiczna modulo 2;
+Na kolejnej pozycji w słowie wynikowym ustaw wartość bitu równą / tylko
+wtedy, gdy w obu argumentach funkcji bity na odpowiednich pozycjach mają
+różne wartości.
+
+e NOT - negacja;
+W słowie wynikowym na kolejnych pozycjach ustaw bity na wartościach
+przeciwnych do odpowiadających im bitów argumentu.
+
+Funkcja NOT posiada jeden argument, pozostałe funkcje dwa argumenty, które
+mogą być tylko typu WORD. Funkcje te przekazują prąd na wyjście ok w każ-
+dym cyklu sterownika, w którym są aktywne.
+
+Na Wyd. 4.20 pokazano wykorzystanie funkcji AND do tworzenia maski umoż-
+liwiającej przepuszczenie tylko zadanych bitów argumentu oraz zerowanie
+pozostałych bitów. W tym przypadku, jeżeli zmienna %// przyjmie wartość /, to
+do rejestru %R] zostanie przepisana wartość z rejestru wejścia analogowego
+
+OPETE TT TATE PATTY EE TYT ET TTP TTE PTE TT YTY TY 0] PETE TT CT PRZE CYT TTWCAETECPRROZPCEZYRCTOE WOICZRNACZO WCZK CZA CZREWEOWY
+204 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

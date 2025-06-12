@@ -1,0 +1,36 @@
+40 3. Podstawy techniki cyfrowej
+
+oznaczonych 000 i 100 są umieszczone redakcyjne znaki sterujące, których znaczenia
+tutaj podawać nie będziemy.
+
+3.2.2. STAŁOPOZYCYJNA REPREZENTACJA LICZB
+
+W poprzednim podrozdziale przedstawiono kody binarne, które znalazły zastosowanie
+przy projektowaniu układów logicznych i do reprezentacji liczb naturalnych. Natomiast do
+reprezentacji liczb całkowitych stosowane są trzy inne kody, a mianowicie:
+
+— zapis znak-moduł,
+
+— zapis Ul,
+
+— zapis U2.
+
+Kody te są nazywane zapisami stałopozycyjnymi (ang. integer) od umieszczenia przecinka
+w stałej pozycji. Do przedstawiania zaś liczb ułamkowych stosowany jest zapis zmienno-
+-pozycyjny (ang. //oaling-poinr). W tym podrozdziale omówione będą kolejno te zapisy.
+
+Zapis znak-moduł ZM (ang. sign-magnitude) utworzono przez dodanie jednego bitu
+do zapisu NKB. Bit ten, dodawany przed najbardziej znaczącą pozycją słowa, jest bitem
+znaku. Wartość tego bitu równa 0 oznacza liczbę dodatnią, a 1 liczbę ujemną. Dalsze bity
+w zapisie NKB oznaczają moduł tej liczby. Zakres prezentowanych liczb jest różny
+w zależności od długości słowa. Dla słów 16-bitowych można przedstawiać liczby z za-
+kresu —2' +1 <A<+2'—1 ponieważ największą liczbą zakodowaną na 15 bitach jest
+2'*—]. W zapisie znak-moduł występują dwie reprezentacje zera. Jest to zarówno słowo
+000000...00, jak i słowo 100000...00.
+
+Drugim zapisem stosowanym dla liczb całkowitych jest zapis uzupełnień do 1, tzw. U1
+(ang. /s complement). W zapisie tym najbardziej znaczący bit jest także bitem znaku
+(0 — liczba dodatnia i | — liczba ujemna), ale w zależności od jego wartości dalsze bity
+zapisu mają różne znaczenie. Jeśli bit znaku jest O (liczba dodatnia), to dalsze bity są
+
+<image/tabele/k3_page50_table1.png>

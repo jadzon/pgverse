@@ -1,0 +1,39 @@
+2. Architektura klasycznych komputerów 9
+Z
+
+wykonujący operacje na argumentach z dwóch rejestrów A i B. Cykl pracy procesora
+rozpoczyna się od wysłania do pamięci adresu rozkazu. Adres ten znajduje się w rejestrze
+LR zwanym licznikiem rozkazów. Odczytywany z pamięci rozkaz zostaje przesłany do
+rejestru rozkazów RR. Zawartość tego rejestru jest dekodowana i blok ALU zostaje
+odpowiednio wysterowany do wykonania danej operacji. Zarówno rozkazy procesora jak
+i argumenty tych rozkazów są przedstawiane w komputerze w postaci słów binarnych,
+tj. kodowane w zapisie dwójkowym. Słowo binarne jest to ciąg uporządkowanych bitów
+czyli cyfr dwójkowych. Długość tego ciągu może być różna, choć w komputerach
+najczęściej jest wielokrotnością liczby 8 (słowo 8-bitowe nazywane jest z angielskiego
+bajtem — ang. byte) i wynosi najczęściej 8, 16, 32 i 64. Mówi się wówczas o komputerach
+8-, 16-, 32- czy 64-bitowych w zależności od tego jak długimi słowami operują. Długość
+słowa procesora narzuca także wielkość rejestrów (rejestry A i B są zwykle takiej samej
+długości), a ponadto stanowi pewien wskaźnik dokładności obliczeniowej. Zwiększenie
+dokładności wymaga posługiwania się słowami dłuższymi. Dlatego często w komputerach
+o niewielkiej długości słowa, np. w mikroprocesorach 8-bitowych, istnieje możliwość
+reprezentacji liczb dwoma lub więcej słowami.
+
+ry/k3_page19_figure2.png age 19_figure1.png
+
+Rysunek 2.3. Struktura pamięci o pojemności n słów 8-bitowych
+
+Na rysunku 2.3 pokazano strukturę pamięci 8-bitowej o liczbie słów równej n. Pamięć
+jest podzielona na komórki, w których są przechowywane pojedyncze słowa (bajty).
+Każda komórka ma swój adres i podanie tego adresu na wejście adresowe pamięci umoż-
+liwia dostęp do danej komórki, czyli odczyt lub zapis. W zależności od sygnału O/Z
+pamięć jest odczytywana lub zapisywana. Wielkość takiej pamięci nazywana jest pojem-
+nością pamięci i jest oznaczana przez nx8 (liczba pamiętanych słów przez długość słowa).
+W jednym cyklu pracy takiej pamięci można odczytać lub zapisać tylko słowo 8-bitowe.
+W przypadku gdy długość rozkazu lub argumentu jest większa, to jest on zapisywany
+w dwóch (lub więcej) komórkach pamięci.
+
+Rozpatrzmy teraz prosty program napisany na trzy różne sposoby. Na rysunku 2.4
+przedstawiono ten program w językach trzech różnych poziomów. Na rysunku 2.4a przed-
+stawiono program i jego przykładowe ułożenie w pamięci komputera. Jest to postać
+
+2 — Podstawy budowy i działania komputerów

@@ -1,0 +1,29 @@
+W twierdzeniu o różniczkowaniu oryginału zakładamy, że dla £ > O istnieje najwyż-
+sza występująca pochodna i ma ona swój obraz (transformatę). Wynika stąd, że wszyst-
+kie niższe pochodne mają również swoje obrazy:
+
+<image/wzory/k1_page12_formula1.png>
+1700,)
+
+Uwaga. Wartości początkowe zostały oznaczone nie przez /(0), f (90), "— lecz
+przez /(0.), f (040.), ... CO Oznacza, że nie chodzi tu o wartości w punkcie 0, lecz
+o wartości graniczne funkcji, gdy £ dąży do zera z prawej strony. Inaczej można po-
+wiedzieć, że są to wartości, od których funkcje zaczynają się zmieniać w sposób ciągły
+w prawo.
+
+Przykład 1.6
+Znaleźć transformatę wyrażenia
+
+<image/wzory/k1_page12_formula2.png>
+
+przy następujących warunkach początkowych:
+
+<image/wzory/k1_page12_formula3.png>
+
+Oznaczając transformatę funkcji x(/) przez X(s), otrzymujemy na podstawie (1.12):
+<1_page12_formula4.png %-*6-3
+<image/ry/k1_pagewzory/k1_page12_formula6.png>
+
+Na podstawie liniowości przekształcenia Laplace'a otrzymujemy
+
+<image/wzory/k1_page12_formula7.png>

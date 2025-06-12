@@ -1,0 +1,50 @@
+1. Wprowadzenie 3
+
+Technologia wykorzystująca układy scalone umożliwiła nie tylko znaczne zmniejszenie
+gabarytów komputerów, zmniejszenie poboru mocy, zwiększenie niezawodności, ale
+i znaczne zwiększenie długości produkowanych serii. Niektóre typy komputerów wytwa-
+rzano w setkach sztuk rocznie, co wówczas było zawrotną wielkością. Taka długość serii
+umożliwiła znaczne obniżenie ceny, aż do ok. 10 tysięcy dolarów za sztukę. Takie kom-
+putery zaczęto nazywać minikomputerami.
+
+Coraz powszechniej jako pamięci operacyjne zaczęto stosować pamięci półprzewod-
+nikowe, a jako pamięci pomocnicze — pamięci dyskowe. Konsolę operatorską budowano
+w postaci tzw. terminala, czyli urządzenia składającego się ze specjalnej klawiatury i moni-
+tora ekranowego wykonanego z użyciem lampy telewizyjnej. Wkrótce potem powstały
+komputery umożliwiające pracę wielodostępną z wielu terminali jednocześnie. Nastąpił
+także rozwój języków programowania wyższego rzędu i ich translatorów. Komputery
+zaczęły stawać się systemami złożonymi z dwóch nierozerwalnych elementów: sprzętu
+(ang. hardware) i oprogramowania (ang. sofiware). W skład oprogramowania firmowego
+weszły programy tworzące tzw. system operacyjny, którego funkcją stało się zarządzanie
+pracą komputera, a w szczególności optymalizacja wykorzystania poszczególnych jego
+elementów. Umożliwiał on także jednoczesne wykonywanie wielu programów, czyli tzw.
+pracę wieloprogramową. Oprogramowanie firmowe zawierało także translatory (tzw. kom-
+pilatory i interpretery) języków wysokiego poziomu jak: Algol, Fortran, Cobol i inne.
+
+Czwarta generacja komputerów powstała w połowie lat siedemdziesiątych po wpro-
+wadzeniu do masowej produkcji układów scalonych wielkiej i bardzo wielkiej skali inte-
+gracji, tj. układów LSI (ang. łarge scale integration) i układów VLSI (ang. very large
+scale integration). Wówczas rozpoczęła się era mikrokomputerów. Przedrostek mikro
+oznacza fakt, że cały procesor komputera scalono w jednej obudowie. Ale oprócz mikro-
+komputerów, w tym samym czasie powstały także superkomputery, czyli duże i drogie
+komputery o bardzo wielkiej mocy obliczeniowej. Natomiast serie produkcyjne mikro-
+komputerów wydłużyły się do setek tysięcy sztuk i ich cena spadła do ok. tysiąca dolarów.
+Taki komputer mógł stać się narzędziem osobistym. Pamięci operacyjne dało się złożyć
+z kilku układów scalonych. Pamięci dyskowe o dużych pojemnościach miały wielkość
+książki. Jako pamięci zewnętrzne rozpowszechniły się pamięci na dyskach elastycznych
+(ang. floppy disk), tzw. dyskietkach. Rozpoczął się także okres bardzo dynamicznego
+rozwoju przemysłu produkującego oprogramowanie. Powstawały zarówno systemy opera-
+cyjne (DOS, VRMX, UNIX itd.), języki programowania (C, MODULA, PASCAL itd.),
+jak i oprogramowanie dla konkretnych zastosowań (systemy wspomagające projektowanie
+CAD/CAM, edytory tekstów, oprogramowanie biurowe itd.). Podobnie w superkompu-
+terach zastosowano technologie, które pozwoliły na osiągnięcie bardzo dużych szybkości
+działania i pamiętania bardzo wielkiej ilości informacji. Komputery te produkowane
+w stosunkowo niewielkiej liczbie sztuk, są drogie, choć cenę rekompensują bardzo dobre
+parametry funkcjonalne i techniczne.
+
+W połowie lat osiemdziesiątych rozpoczęła się era piątej generacji. Rozwój technik
+komputerowych przebiegał w kilku kierunkach. Jednym z nich było poszukiwanie nowych
+architektur, jak na przykład komputery RISC (ang. reduced instruction set computers),
+architektury potokowe czy systemy wieloprocesorowe. Innym ważnym kierunkiem rozwoju
+informatyki jest budowanie dużych systemów komputerowych, jak np. superkomputerów
+czy też lokalnych lub rozległych sieci komputerowych. Jeszcze innym kierunkiem był

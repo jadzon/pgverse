@@ -1,0 +1,26 @@
+Zamieniając miejscami węzły sumacyjne 2 i 3, otrzymujemy rysunek 2.10b.
+
+<image/figury/k1_page57/_figure2.png>
+
+Rys. 2.10b. Przekształcony schemat blokowy układu
+
+stosujcpodstawowewzoryalgebryschematwblokowychotrzymujemy
+<image/wzory/k1_page57/_formula1.png>
+
+G,(s)= (połączenie ze sprzężeniem zwrotnym),
+
+=
+1--H,(5)
+
+<image/figury/k1_page5/_figure3.png>
+
+Innym sposobem rozwiązania zadania jest przesunięcie węzła sumacyjnego 3
+przed człon o transmitancji H;(s), jak pokazano to na rysunku 2.10c.
+
+-
+
+<image/figury/k1_page57/_figure1.png>
+
+Rys. 2.10c. Przekształcony schemat blokowy układu
+
+59

@@ -1,0 +1,35 @@
+1.4. Przeszukiwanie drzew binamych 11
+
+- Jeżeli vw0 £ T oraz v1l £ T, to zdejmij ostatni element ze stosu i przejdź do
+ojca wierzchołka v.
+
+o Jeżeli ostatnią operacją na stosie było zdjęcie 0 to:
+- Jeżeli vl € 7, to przejdź do v1 i włóż 1 nastos,
+
+- Jeżeli vl £ 7, to zdejmij ostatni element ze stosu i przejdź do ojca wierz-
+chołka v.
+
+o Jeżeli ostatnią operacją na stosie było zdjęcie 1 to: zdejmij ostatni element ze stosu
+i przejdź do ojca wierzchołka v.
+
+Przykład 1.8 Poniższa tabela pokazuje jaki wierzchołek jest odwiedzany i jaka jest za-
+
+wartość stosu po każdej kolejnej iteracji pętli drugiego algorytmu, gdy przeszukiwane jest
+drzewo z rysunku 1.1.
+
+<image/tabele/k2_page173_table1.png>
+
+Zauważmy, że etykiety na stosie złączone razem tworzą nazwę aktualnie odwiedzanego
+wierzchołka.
+
+14.2 Przeszukiwanie drzewa wszerz
+
+Następny algorytm przeszukiwania drzew używa kolejki jako pomocniczej struktury da-
+nych.
+
+Algorytm przeszukiwania wszerz.
+Dane wejściowe: drzewo 7'.
+
+e odwiedzamy korzeń drzewa A i wkładamy go do KOLEJKI.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,50 @@
+1. Pojęcia podstawowe — elementy
+
+i tego równania jest u = U =1V, zatem:
+
+<image/wzory/k3_page76_formula2.png>
+
+opisany charakterystyką I = g, (u), a więc we współrzędnych u, i, łatwiej
+ywzewodność dynamiczną:
+
+<image/wzory/k3_page7/6_formula3.png>
+
+1
+m -Q,
+4
+
+Przez opór nieliniowy Ry o charakterystyce jak w przykładzie 1.3-2b
+V*A7"* płynieprąd i = 20 + 1,Scoswt[mA], te(—«, + 0). Wyzna-
+a na tym oporze.
+
+= [+ Ai (por. wzór (1.3-43)), gdzie I = 20 mA, Ai = 1 Scosot [mA].
+„każdej chwili z, zatem możemy zastosować analizę małosygnałową, której
+
+B. Składową stałą U napięcia u obliczamy z zależności:
+
+3g9e76_formula1.png
+
+rzory/k3_page76_formula4.png
+
+: zależności (1.3-45):
+
+<image/wzory/k3_page76_formula5.png>
+
+aego i oporu dynamicznego dla prądu I = 20 mA są:
+<image/wzory/k3_page7/6_formula6.png>
+
+<image/wzory/k3_page76_formula7.png>
+
+stąd U m 8 V oraz Au % 1,8coswt [V]. Ostatecznie otrzymujemy w przybliżeniu:
+
+<image/wzory/k3_page76_formula8.png>
+Przykład 1.3-18. Wartość prądu w punkcie pracy indukcyjności nieliniowej L„ z przykładu
+
+13-4d wynosi I = 1 mA. Przyjmując wartości parametrów charakterystyki: 7, = 1 uWb,
+
+« = 10% A”', obliczymy indukcyjności statyczną L, i dynamiczną L,,, w punkcie pracy induk-
+
+cyjności Ly:
+
+<image/wzory/k3_page7/6_formula9.png>
+<image/wzory/k3_page76_formula10.png>

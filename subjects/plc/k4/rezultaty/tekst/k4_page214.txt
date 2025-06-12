@@ -1,0 +1,43 @@
+są: numer bieżącego kroku, długość sekwencji LEN (liczba bitów z zakresu od /
+do 256) oraz poprzedni stan wejścia zezwolenie i status wyjścia ok.
+
+Jeżeli na wejściu R (Reset) występuje brak prądu, to generator sekwencji jest
+uruchamiany tylko wtedy, gdy wystąpiła zmiana stanu wejścia aktywizującego
+z OFF na ON. W przypadku gdy wejście R jest w stanie ON, to bez względu na
+stan wejścia zezwolenie, numer bieżącego kroku jest ustawiany na wartość
+podaną na wejściu STEP, a wszystkie bity w tablicy są zerowane, z wyjątkiem
+bitu o numerze określonym przez numer bieżącego kroku.
+
+Aktywizacja bloku (wejście R w stanie OFF, na wejściu zezwolenie zmiana
+
+stanu z OFF na ON) powoduje wyzerowanie bitu określonego przez numer kro-
+
+ku. Następnie numer bieżącego kroku jest zwiększany o / gdy do wejścia DIR
+
+(DlRection) dopływa prąd lub zmniejszany o / gdy brak jest prądu na wejściu
+
+DIR, przy czym:
+
+e jeżeli w trakcie inkrementacji numer kroku przekroczył wartość określoną
+przez LEN, to ustawiany jest z powrotem na /;
+
+e jeżeli w czasie dekrementacji numer kroku osiągnął wartość O, to ustawiany
+jest na wartość LEN.
+
+Na Wyd. 4.31 przedstawiono przykład wykorzystania bloku funkcyjnego
+BITSEQ do generacji sekwencji polegającej na kolejnym załączaniu i wyłącza-
+niu wyjść binarnych od %Q1 do %Q/6.
+
+<image/figury/k4_page214_figure1.png>
+
+Wyd. 4.3] Przykład użycia bloku funkcyjnego BITSEQ
+
+Jeżeli zmienna ZERUJ przyjmuje wartość /, to następuje ustawienie warunków
+początkowych generatora sekwencji — krok ustawiony jest na wartość 5, wyjście
+%0Q5 jest załączone, a pozostałe wyjścia wyłączone. Jeżeli zmienna ZERUJ
+przyjmie wartość O, to w cyklu sterownika, w którym na wejściu zezwolenie
+pojawi się prąd (zmienna KOLEJNY przyjmie wartość 1), wyjście %Q5 zostanie
+
+   
+
+214 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

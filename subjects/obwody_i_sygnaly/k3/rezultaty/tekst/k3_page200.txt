@@ -1,0 +1,36 @@
+mą
+
+200 2. Pojęcia podstawowe — układy
+
+mają postać dualną (np. układy z rys. 2.1-18a,b i ich równania podane
+w przykładzie 2.1-23). Układy U i U” stają się dualne przy odpowiednim doborze
+wartości elementów, zgodnie z zasadami przedstawionymi w p. A.
+
+<image/tabele/k3_page200_table1.png>
+
+2.1.7. Zasada superpozycji i zasada kompensacji
+
+Przedstawiamy teraz dwie — ważne w teorii i w praktyce — zasady dotyczące
+sieci skupionych, słuszne przy założeniu, że w rozpatrywanej sieci wszystkie
+prądy i napięcia są jednoznacznie określone przy danych pobudzeniach, tzn. przy
+założeniu, że równania sieciowe mają jednoznaczne rozwiązania. Będą to zasada
+superpozycji i zasada kompensacji.
+
+Zasada superpozycji wiąże się ściśle z definicją układu liniowego (w
+konwencji „wejście-wyjście” - por. p. 2.1.5-H), a tym samym z podziałem układów
+na liniowe i nieliniowe. Ma ona duże znaczenie praktyczne i jest szeroko
+wykorzystywana w analizie układów liniowych.
+
+Także zasada kompensacji odgrywa istotną rolę w analizie układów
+— zarówno liniowych, jak i nieliniowych. Oparte są na niej m. in. ważne
+twierdzenia Thevenina i Nortona (por. p. 3.3.3 i p. 4.4.4). Zasada kompensacji
+jest wykorzystywana również w miernictwie elektrycznym.
+
+A. Sformułowanie zasady superpozycji. Rozważmy dowolną sieć skupioną
+i załóżmy, że działa w niej n źródeł niezależnych, np. m źródeł napięciowych
+i n — m źródeł prądowych (0 < m <n). Sieć taką możemy przedstawić w po-
+staci n-wrotnika, na którego zaciskach występują wszystkie działające w sieci
+idealne źródła niezależne (rys. 2.1-20). Możemy zatem przyjąć, że wielowrotnik
+z rys. 2.1-20 jest bezźródłow y. Odpowiada to, ściśle biorąc, założeniu, że
+rozważana sieć zawiera, oprócz wyłączonych na zaciski wielowrotnika idealnych
+źródeł niezależnych, tylko elementy bezźródłowe.

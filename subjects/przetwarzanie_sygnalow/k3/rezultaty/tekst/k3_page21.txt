@@ -1,0 +1,25 @@
+Histogram, pmf, pdf 31
+
+<image/tabele/k3_page21_table1.png>
+
+jest 0,03, czyli w przybliżeniu | szansa na 34. A jakie jest prawdopodobieństwo, że losowo
+próbka będzie miała wartość większą niż 150? Sumowanie wartości wykresu pmf
+dla: 151, 152, 153, ... 255 daje wynik równy 0,0122, czyli w przybliżeniu 1 szansa na 82.
+A zatem można się spodziewać, że sygnał będzie przyjmował wartość większą niż 150 śred-
+nio co w 82. punkcie próbkowania. Jakie jest prawdopodobieństwo, że wartość każdej próbki
+będzie się mieściła w granicach między 0 i 255? Sumując wszystkie wartości wykresu pmf,
+uzyskujemy prawdopodobieństwo równe 1,00, czyli pewność zajścia takiego zdarzenia.
+Histogramy i wykresy pmf można stosować tylko do danych dyskretnych, takich jak przetworzo-
+przechowywany
+
+cyfrowy
+
+0 i 255 mV jest przetwarzane na liczby od 0 do 255. Wykres pmf tego sygnału jest punktowo
+przedstawiono na rys. 2.5 b). Podobnie wykres pdf tego sygnału przedstawiono linią ciągłą na
+rys. 2.5 c), co wskazuje na to, że sygnał może przyjmować w sposób ciągły wartości z pewnego
+zakresu, jak np. napięcie w układzie elektronicznym.
+
+Wartości na osi pionowej wykresu pdf są wyrażone w jednostkach gęstości prawdopodo-
+bieństwa, a nie w jednostkach prawdopodobieństwa. Na przykład wartość pdf 0,03 dla 120,5
+nie oznacza, że napięcie 120,5 mV pojawia się w ciągu 3% czasu. W istocie, prawdopodo-
+bieństwo, że sygnał ciągły będzie miał wartość dokładnie 120,5 mV, jest nieskończenie małe.

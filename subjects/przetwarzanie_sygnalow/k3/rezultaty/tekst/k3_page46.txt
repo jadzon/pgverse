@@ -1,0 +1,18 @@
+Filtry anałogowe w przetwarzaniu danych
+
+<image/wzory/k3_page46_formula1.png>
+
+<image/figury/k3_page46_figure1.png>
+
+trem dolnoprzepustowym, który można konfigurować jako każdy z trzech podstawowych ty-
+pów filtru, W tablicy 3.1 podano informacje umożliwiające wybór odpowiednich rezystorów
+i kondensatorów. Na przykład projektując 2-biegunowy, 1 kHz filtr Butterwortha znajduje-
+my w tablicy 3.1 współczynniki k, = 0,1592 i k, = 0,586. W sposób dowolny wybierając
+R, = 10 kQ oraz € = 0,01 HF (typowe wartości w układach ze wzmacniaczami operacyjnymi),
+
++FREYZR EO AF W
+
+<image/figury/k3_page46_figure3.png>
+
+z tablicy 3.1, barwe earth na 10 KQ.1 0,01 uf) i następnie obliczyć R i R, z wzorów
+podanych na rysunku. Wielkość !, jest częstotliwością odcięcia filtru (w Hz)

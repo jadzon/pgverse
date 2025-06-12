@@ -1,0 +1,29 @@
+2.1. Wielowrotniki i sieci 199
+
+identyczne z równaniem (względem napięcia u) układu dualnego z rys. 2.1-18b. Równania
+te mają taką samą postać oraz współczynniki o takich samych wartościach liczbowych.
+
+Przykład 2.1-24. Rozpytrzmy czwórnik U przedstawiony na rys. 2.1-19a oraz czwórnik
+dualny U' (rys. 2.1-19b), przy czym: G'[S] = R[Q], L'[H] = C[F],C'[F] = L[H]. Napiszmy
+równania sieciowe obu układów:
+
+ 
+
+<image/figury/k4_page197_figure1.png>
+
+<image/wzory/k4_page197_formula1.png>
+
+<image/wzory/k4_page197_formula2.png>
+
+C. Odpowiedniości w układach dualnych. W tablicy 2.1-1 zestawiono
+elementy, wielkości i pojęcia odpowiadające sobie w układach dualnych.
+
+W rozdziałach 3 i 4 poznamy inne odpowiadające sobie wielkości dualne,
+a także dalsze przykłady dualnych układów SLS.
+
+W praktyce pojęcie dualności można rozumieć także nieco szerzej niż to
+przedstawiliśmy w p. A i B. Rozważmy raz jeszcze układ U zbudowany tylko
+z dwójników (dla uproszczenia załóżmy, że jest to układ SLS) oraz układ U”
+zbudowany dokładnie tak samo, jak układ U' (por. p. B), ale bez zachowania
+zależności liczbowych pomiędzy elementami układów U i U”. Możemy
+wówczas powiedzieć, że układy U i U” mają strukturę dualną, zaś ich równania

@@ -1,0 +1,41 @@
+13
+
+<image/figury/k2_page8_figure2.png>
+
+Rys. 2.2: Okładki książek Penrosa [?, ?] — twórcy oryginalnej hipotezy o niemożności mo-
+delowania procesów umysłowych przez komputer
+
+miejscu docelowym odtworzenie go na podstawie tej informacji (teleportacja). Po-
+wstaje pytanie czy nowo utworzony osobnik będzie miał tą samą świadomość? A co
+się stanie jeżeli nie zniszczono jednocześnie oryginału?
+
+Kiedyś idee mechanistyczne, a współcześnie idee silnej SI spowodowały postawie-
+nie pytania o takie atrybuty umysłu człowieka, które odróżniałyby go od realizacji
+mechanicznych czy komputerowych. Do takich atrybutów zalicza sie intencjonal-
+ność czyli cechę zjawisk psychicznych polegająca na kierowaniu się ich ku jakiemuś
+przedmiotowi lub cechę świadomości kierującej się na przedmiot, konstytuującej sens
+przez „zdawanie sobie z czegoś sprawy” |?, ?]. Myślenie, wiara, pożądanie i inne tego
+rodzaju odczucia uważa się za podobne do siebie w tym znaczeniu, że można powie-
+dzieć że obejmują obiekt lub kierują się ku obiektowi, w sposób zasadniczo różny
+od oddziaływań spotykanych w świecie nieożywionym i ten sposób zwracania się
+nazywa się intencjonalnym. Podkreśla się, że obiekty zainteresowania intencjonal-
+nego mogą nawet nie istnieć. Przeciwnicy poglądu o możliwości budowy sztucznego
+umysłu uważają, że intencjonalność nie jest możliwa do sztucznego odtworzenia.
+
+Niezależnie od rozstrzygnięć dyskusji filozoficznych czy możliwa jest kompute-
+rowa realizacja umysłu, wciąż wielkie trudności napotyka komputerowa realizacja
+takich atrybutów inteligencji jak adaptowanie się do nowych warunków, rozwiązy-
+wanie nowych zadań czy działalność twórcza.
+
+Rozważając w swoich książkach problemy modelowania komputerowego umysłu
+Roger Penrose [?, ?] wyróżnia cztery stanowiska, które można zająć w tej sprawie:
+
+A Myślenie zawsze polega na obliczeniach, a w szczególności świadome doznania
+powstają wskutek realizacji odpowiedniego procesu obliczeniowego.
+
+B Świadomość jest cechą fizyczną działającego mózgu; wprawdzie wszystkie fi-
+zyczne procesy można symulować obliczeniowo, symulacjom obliczeniowym
+nie towarzyszy jednak świadomość.
+
+C Odpowiednie procesy fizyczne w mózgu powodują powstanie świadomości, ale
+tych procesów nie można nawet symulować obliczeniowo.

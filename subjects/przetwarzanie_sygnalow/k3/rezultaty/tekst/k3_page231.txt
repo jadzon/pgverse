@@ -1,0 +1,22 @@
+Podstawowe informacje o filtrach
+
+ 
+
+<image/figury/k3_page231_figure1.png>
+
+nadają jej czasem specjalną nazwę: jądro filtru (filter kernel).
+Jest jeszcze inny sposób realizacji filtrów cyfrowych, zwany rekursją. Podczas realizacji filtru
+
+rekursywne są rozszerzeniem tej metody, z wartości poprzednio obliczo-
+nych z wyjścia, oprócz punktów pobranych z wejścia. Zamiast zastosowania impul-
+sowej filtru, filtr rekursywny się zbi Ta metoda
+
+W celu znalezienia odpowiedzi rekursywnego trzeba po prostu wprowadzić
+impuls i zobaczyć, co się uzyska na wyjściu. Odpowiedzi impulsowe filtrów rekursywnych
+składają się z sinusoid o amplitudzie się wykładniczo. Z tego w zasadzie wyni-
+
+filtry są
+sowej NOI (//R — Infinite Impulse Response), a filtry realizowane metodą spłotu są nazywane
+filtrami o skończonej odpowiedzi impulsowej SOI (FIR — Finite Impulse Response).
+O ia ROEE PRO NA
+jest impuls jednostkowy. Podobnie odpowiedź skokowa jest sygnałem na wyjściu, gdy na

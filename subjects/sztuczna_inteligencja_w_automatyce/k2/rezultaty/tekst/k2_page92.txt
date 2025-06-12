@@ -1,0 +1,57 @@
+97
+
+jest znany i wyznaczanie parametrów w odbywa się na drodze uczenia, w trakcie
+którego wykorzystywane są podane systemowi przykładowe sygnały x i d.
+
+6.1. Rodzaje uczenia i struktury uczące się
+
+Ze względu na charakter posiadanych przykładowych danych wyróżnia się trzy ro-
+dzaje uczenia.
+
+W pierwszym przypadku dysponujemy parami: sygnał wejściowy x; i poprawna
+odpowiedź d,. Uczenie takie nazywa się uczeniem z nadzorem (z nauczycielem) (ang.
+supervised).
+
+Przy uczeniu z krytykiem nie dysponujemy parami uczącymi natomiast dla każ-
+dej pary: sygnału wejściowego x; i odpowiedzi systemu uczącego się y, = f(x;,w).
+otrzymujemy ocenę odpowiedzi. Ocena pochodzi od środowiska, w którym działa
+system uczący się i na ogół nie jest znana jej analityczna zależność od sygnałów x
+iy. Uczenie z krytykiem ma miejsce w tzw. wieloctapowych procesach decyzyjnych
+(procesach decyzyjnych Markowa), W procesach tych, system podejmuje ciąg decy-
+zji, po każdej decyzji otrzymywana jest jej ocena, bez wskazania poprawnej decyzji,
+a kryterium jakości całego procesu jest suma wszystkich ocen.
+
+W czasie uczenia bez nadzoru dysponujemy tylko sygnałami wejściowymi x, nie
+znamy związanych z nimi poprawnych odpowiedzi, ani nie znamy błędu podejmując
+jakąś decyzję. Uczenie to nazywa się czasami samoorganizacją i zazwyczaj polega
+na znajdywaniu centrów skupisk (klastrów) sygnałów wejściowych.
+
+Funkcje odwzorowujące y = f(x,w) mogą być dowolnymi funkcjami zawierają-
+cymi parametry w. Na ogół jednak, funkcje te tworzone są jako pewne struktury
+składane ze standardowych prostych funkcji. Typowymi strukturami są sieci neuro-
+nowe, systemy rozmyte, drzewa decyzyjne lub sieci bayesowskie.
+
+W trakcie uczenia, w systemie uczącym się tworzy się wiedza. Może to być wiedza
+niejawna, przechowywana w postaci parametrów np. wag sieci neuronowej. System
+z takimi parametrami przejawia oczekiwane, optymalne działanie, można więc mó-
+wić o uczeniu się działania. Drugą postacią uzyskiwanej wiedzy jest wiedza jawna,
+zrozumiała dla człowieka, wyrażona np. w postaci zbioru faktów i reguł lub drzewa
+decyzyjnego.
+
+Wyodrębnioną grupą problemów rozwiązywanych metodami uczenia są zada-
+nia wydobywania (odkrywania) wiedzy z baz danych. Na podstawie przeglądania
+danych, w procesie uczenia tworzy się wiedzę regułową o relacjach zachodzących
+pomiędzy danymi.
+
+Jeszcze innym podziałem metod uczenia jest podział na metody iteracyjne wy-
+magające wielokrotnego podawania danych uczących, w czasie których system stop-
+niowo poprawia swoje działanie i metody jednorazowe, w których na podstawie
+danych uczących wyznaczane są parametry systemu w jednorazowym procesie obli-
+czeniowym.
+
+Jedną z podstawowych pożądanych własności systemu uczącego się jest genera-
+lizacja, czyli zdolność nauczonego systemu do poprawnego działania dla sygnałów
+wejściowych różnych od stosowanych w procesie uczenia.
+
+Reasumując problemy uczenia z obserwacji można podzielić na rodzaje uczenia,
+algorytmy uczenia oraz struktury uczące się, co ilustruje rys. ??. Elementy tego

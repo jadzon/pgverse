@@ -1,0 +1,38 @@
+130 7. Właściwości spłotu
+
+odpowiedź impulsowa filtru, będąca różnicą funkcji delta i odpowiedzi dolnoprzepusto-
+wej, będzie przepuszczać różnicę całego sygnału i składowych małoczęstotliwościowych.
+A więc powstaje w ten sposób filtr górnoprzepustowy. Jak to pokazano na rys. 7.5, funkcja
+delta jest zwykle dodawana w środku symetrii odpowiedzi impulsowej albo przy próbce 0,
+jeśli odpowiedź nie jest symetryczna. Filtry górnoprzepustowe mają zerowe wzmocnienie
+przy częstotliwości zero (dla przebiegu stałego), co uzyskuje się przez uczynienie sumy
+wszystkich punktów w odpowiedzi filtru równą zeru.
+
+Sygnały przyczynowe i nieprzyczynowe
+
+Wyobraźmy sobie prosty układ elektroniki analogowej. Jeśli na jego wejście wprowadzimy
+krótki impuls, to na wyjściu zobaczymy odpowiedź układu. Jest to przykład zasady przyczyny
+i skutku, obowiązującej w naszym Wszechświecie. Jedną rzecz wiemy na pewno: każdy skutek
+musi nastąpić po jego przyczynie. Porównajmy to z działaniem systemu DSP, które zamienia
+sygnał wejściowy na wyjściowy, a oba te sygnały są gromadzone w pamięci komputera. Jeśli
+takie działanie jest naśladownictwem świata rzeczywistego, to musi zachować tę samą zasadę
+przyczynowości, jaka obowiązuje w świecie rzeczywistym. Na przykład wartość próbki numer 8
+w sygnale wejściowym może w sygnale wyjściowym wpływać tylko na próbki o numerze 8 lub
+większym. Systemy działające zgodnie z tą zasadą nazywamy przyczynowymi. Przetwarzanie
+cyfrowe, oczywiście, niekoniecznie musi działać w ten sposób. Ponieważ zarówno sygnał wej-
+ściowy, jak i wyjściowy są zestawami liczb pamiętanymi w komputerze, więc każda wartość
+sygnału wejściowego może mieć wpływ na każdą wartość sygnału wyjściowego.
+
+<image/figury/k3_page115_figurefigury/k8_page115_figure2.png>
+
+ 
+
+ 
+
+ 
+
+WEZ TT 1
+ui
+12201 b?
+Numner próbki
+Rys. 7.6. Przykłady sygnałów impulsowa lub każdy inny sygnał jest określany jako przy

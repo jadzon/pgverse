@@ -1,0 +1,40 @@
+60 3. Przetwarzanie analogowo-cyfrowe i cyfrowo-analogowe
+
+Skala logarytmiczna Skala liniowa
+
+ 
+
+     
+  
+
+Ndz Ę |
+
+<image/iwermotfigury/k3_page49_figure3.png>
+se MAGIĘ
+
+0 1 2 W d i
+
+  
+  
+
+ 
+
+i
+|
+
+ 
+      
+
+ESS
+i i i I
+ac e== OPM) SRS kad "M
+[- et
+ROSSA OD 0 < RZZEŁZ bo o
+| Aro" ES | mr
+0,001 |-------- ==
+i 02mm ken On —
+0,0001 ł o
+0 1 2 3 4 5 0 1 2 3 4 :
+Częstotliwość [Hz] Częstotliwość [Hz]
+Rys. 3.11. Odpowiedź częstotliwościowa filtrów trzech Rys. 3.12. Odpowiedź częstotliwościowa filtrów trzech
+, przedstawiona w skali loga- , przedstawiona w skali linio-

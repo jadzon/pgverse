@@ -1,0 +1,36 @@
+%A116, w celu znalezienia elementów zerowych. Za każdym razem, gdy speł-
+nione są warunki aktywacji funkcji (zmienna %// przyjmuje wartość /) należy
+wykonać przeszukiwanie rozpoczynając od elementu tablicy, którego numer
+określa zawartość rejestru %R/. Działanie tej funkcji zostanie zilustrowane na
+następującym przykładzie.
+
+Niech kolejne elementy w tablicy wejść analogowych mają następujące wartości:
+20, 1010, 10, O, 85, 60, 55, 200, O, 680, 400, 350, 1, 99,0, 12, a w rejestrze %R1
+jest liczba 6. W pierwszym cyklu sterownika, w którym spełniony jest warunek
+aktywacji funkcji, przeszukiwanie rozpocznie się od zmiennej %4A/7 (na wejściu
+AR jest %A/7/, a na wejściu NX jest %R/, którego zawartość wynosi 6) i zakoń-
+czy na %A/9, która spełnia warunek. Wyjście FD przejdzie w stan ON, a do
+rejestru %R1 zostanie wpisana wartość 9.
+
+W następnym cyklu przeszukiwanie rozpocznie się więc od elementu /0 tablicy
+i zakończy na elemencie 75, który spełnia warunek. Teraz %R1 przyjmie wartość
+15, a w kolejnym cyklu przeszukiwanie tablicy rozpocznie się od %A/16, który
+jest ostatnim elementem tablicy. Ponieważ nie spełnia on warunku, to na wyjściu
+FD wystąpi brak prądu, a zmienna %R/ przyjmie wartość O.
+
+Kolejne przeszukiwanie tablicy wejść analogowych rozpocznie się więc od
+%AI1, a zakończy na %A/4, które spełnia warunek, itd.
+
+Gdyby zmienna %A//6 przyjęła także wartość zerową, to w cyklu, w którym
+przegląd tablicy kończyłby się na niej, w rejestrze %R/ ustawiona byłaby war-
+tość 16, czyli spoza dopuszczalnego zakresu, więc w kolejnym cyklu
+przeglądanie byłoby rozpoczęte od %A/] (wejście NX przyjmuje w takiej sytu-
+acji wartość domyślną zero).
+
+<image/figury/k4_page220_figure1.png>
+
+Wyd. 4.35 Przykład zastosowania funkcj i przeszukiwania ŚRCH_EQ
+
+ 
+
+220 Rozdział: 4. Język LD dla sterowników GE Fanuc 90-30

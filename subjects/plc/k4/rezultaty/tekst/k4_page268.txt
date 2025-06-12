@@ -1,0 +1,26 @@
+zory/k4_page268_formula1.png NIĄ
+
+Operacje przesłania danych pomiędzy tablicami danych realizują następujące
+
+instrukcje :
+e MOV przesyłania danych określonych przez
+(MOVe) zmienną źródła i zmienną przeznaczenia.
+Zródłem może być element w pliku danych
+bądź wartość liczbowa. (Wyd. 4.40),
+* MVM przesyłania danych określonych przez
+
+(Masked MoVe) _ zmienną maskowanego źródła oraz zmienną
+przeznaczenia. W tym wypadku źródłem
+może być tylko zmienna z pliku danych. (Wyd. 4.41).
+
+<image/tabele/k4_page268_table2.png>
+
+Wyd. 4.40 Instrukcja przesyłania danych MOV
+
+<image/tabele/k4_page268_table1.png>
+
+ 
+
+ 
+
+268 Rozdział : 5. Język schematów drabinkowych dla SLC 500

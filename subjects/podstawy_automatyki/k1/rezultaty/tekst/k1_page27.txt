@@ -1,0 +1,27 @@
+2. Przykłady zadań z rozwiązaniami
+
+2.1. Wykorzystanie przekształcenia Laplace'a
+
+Przykład 2.1
+Wyznaczyć transformatę Laplace'a funkcji
+
+vzory/k1_page27_formula1.png
+
+Rozwiązanie , .
+: e" +e 7”
+Wykorzystując wzór Eulera cos(£) =
+
+ 
+
+oraz znajomość transformaty funk-
+cji wykładniczej .£ (eu |- z: możemy wyznaczyć F(s)
+
+<image/wzory/k1_page27_formula2.png>
+
+Przykład 2.2
+Dana jest transformata H(s)
+
+<image/wzory/k1_page2/_formula3.png>
+Wyznaczyć jej oryginał, stosując twierdzenie o splocie.
+
+29

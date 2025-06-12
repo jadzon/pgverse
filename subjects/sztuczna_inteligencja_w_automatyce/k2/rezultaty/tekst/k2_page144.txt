@@ -1,0 +1,44 @@
+149
+
+<image/figury/k2_page144_figure2.png>
+
+(m
+
+,
+nazywany przesłuchem i będący iloczynem składowej s;” | i sumy z wyrażenia (??).
+(") < 1, to składowa s(”” jest stabilna. Wyznaczymy
+(m*)
+
+Łatwo zauważyć, że gdy c
+, a następnie na jego podstawie różne wie|-
+kości określające pojemność sieci. Parametr c/”” jest iloczynem zmiennej losowej
+s;ń i sumy n(p — 1) © np zmiennych losowych przyjmujących wartości ż£1 z praw-
+dopodobieństwem P = 1/2. Z rachunku prawdopodobieństwa wiadomo, że suma
+dwuwartościowych zmiennych losowych ma rozkład dwumianowy, który w naszym
+przypadku przybiera postać
+
+teraz rozkład prawdopodobieństwa c
+
+<image/wzory/k2_page144_formula1.png>
+
+Dla dużych wartości np rozkład ten zbliża się do rozkładu normalnego o wariancji
+a? = p/n (patrz np. Feller (1968), str. 162)
+
+<image/wzory/k2_page144_formula2.png>
+
+Rozkład ten przedstawiono na rys. ??. Na podstawie rozkładu (??) można znaleźć
+prawdopodobieństwo niestabilności pojedynczej składowej, równe prawdopodobień-
+stwu tego, że c > 1:
+
+<image/wzory/k2_page144_formula3.png>
+gdzie funkcia
+
+<image/wzory/k2_page144_formula4.png>
+
+nazywa się całką prawdopodobieństwa i jej wartości są podawane w tablicach.
+Korzystając ze wzoru (??) można na podstawie danego prawdopodobieństwa nie-
+stabilności obliczyć stosunek p/n. Przykładowo dla Pr(c > 1) = 0,001 otrzymujemy
+p/n = 0, 105, a dla Pr(c > 1) = 0,1 mamy p/n=0,61.
+Obliczone prawdopodobieństwo niestabilności jednej składowej wskazuje tylko
+niestabilność początkową, natomiast nie daje informacji, czy początkowa niestabil-
+ność nie pociągnie za sobą w kolejnych krokach przełączenia innych składowych.

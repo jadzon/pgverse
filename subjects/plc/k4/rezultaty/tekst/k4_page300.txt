@@ -1,0 +1,15 @@
+Wyd. 6.21 prezentuje funkcję ERLOG, która służy do informowaniu o błędach
+jakie wystąpiły w trakcie korzystania z funkcji EMTH.
+
+Podobnie jak we wszystkich funkcjach EMTH, zarezerwowano dla niej aż 6 reje-
+strów, lecz w tym przypadku wykorzystywany jest tylko jeden - 4x+2 ze środ-
+kowego węzła (czyli w przykładzie jest nim rejestr 40505). Na 16 bitach tego
+rejestru zapisane są następujące informacje:
+
+<image/tabele/k4_page300_table1.png>
+
+     
+
+300 ,
+
+Rozdział : 6 Programowanie sterowników AEG SCHNEIDER Modicon

@@ -1,0 +1,11 @@
+<image/figury/k2_page60_figure1.png>
+tabele/k2_p
+
+<image/tabele/k2_page60_table1.png>
+
+<image/wzory/k2_page60_formula1.png>
+
+<image/wzory/k2_page60_formula2.png>
+Na rysunku ?? przedstawiono przebieg dowodu, że smok znajduje się w kwadracie
+
+(3,1).

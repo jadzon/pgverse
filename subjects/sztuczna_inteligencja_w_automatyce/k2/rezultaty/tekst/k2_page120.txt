@@ -1,0 +1,29 @@
+<image/afigury/k2_page120_figure2.png>
+
+Rys. 6.22: Przykłady obszarów decyzyjnych w przypadku dwóch klas: (a) obszary liniowo
+separowalne i (b) nie separowalne liniowo
+
+<image/figury/k2_page120_figure1.png>
+
+Rys. 6.23: Pojedynczy neuron: (a) sygnały wejściowe i wyjściowe oraz (b) interpretacja
+geometryczna. Hiperpłaszczyzna wyc; + wore +... WyTy * Wy +1 = (0 reprezentuje zbiór sy-
+gnałów wejściowych x, dla których odpowiedź neuronu ma wartość zero. Hiperplaszczyzna
+dzieli przestrzeń x na dwie części: na część dla których odpowiedzi neuronu są dodatnie
+i część gdzie są ujemne. Wektor wag [wy wą -*:- wy]' jest prostopadły do hiperpłasz-
+czyzny, a jego zwrot wskazuje tę część przestrzeni x, dla której odpowiedzi neuronu są
+dodatnie
+
+Stąd widać, że pojedynczy neuron może przeprowadzać klasyfikację obrazów na-
+leżących do dwóch klas separowalnych liniowo. W przypadku liczby klas większej od
+dwóch separowalność liniowa jest warunkiem koniecznym przeprowadzenia klasyfi-
+kacji przez sieć jednowarstwową.
+
+Gdy klasy nie są separowalne liniowo, to klasyfikację można przeprowadzić przy
+pomocy sieci o dwu lub więcej warstwach.
+
+PRZYKŁAD 6.5
+
+Na rysunku przedstawiono ?? sieć dwuwarstwową klasyfikującą obrazy w przypadku
+gdy klasy nie są separowalne liniowo (zadanie XOR). Jak widać z rysunku obrazy na-
+leżące do dwóch klas początkowo nie separowalne liniowo po przejściu przez pierwszą
+warstwę stają się liniowo separowalne.

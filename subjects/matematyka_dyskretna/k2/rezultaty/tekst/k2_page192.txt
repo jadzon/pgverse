@@ -1,0 +1,48 @@
+14 Rozdział 1. Grafy (nieskierowane)
+
+Pokażemy teraz, że algorytm jest poprawny, czyli że tak utworzony graf 7 jest drze-
+wem. Zauważmy, że jeżeli wierzchołek u (poza początkowym) jest wkładany na stos,
+to do T' dokładana jest krawędź łącząca u z wierzchołkiem znajdującym się na stosie
+pod nim. Dlatego w każdym momencie wierzchołki na stosie stanowią drogę w 7, łączy
+ona wierzchołek początkowy z aktualnie odwiedzanym wierzchołkiem. Ponieważ graf
+jest spójny, to algorytm odwiedzi wszystkie wierzchołki grafu G i 7' jest grafem spój-
+nym. Z każdą krawędzią z T możemy związać wierzchołek, który jest wkładany na stos
+w momencie jej powstania. Ponieważ, każdy wierzchołek jest wkładany na stos tylko
+raz, mamy w 7 n — 1 krawędzi (z początkowym wierzchołkiem nie jest związana żadna
+krawędź). Tak więc 7' jest spójny, zawiera wszystkie wierzchołki grafu G i man — 1
+krawędzi, jest więc drzewem spinającym.
+
+Podobnie można przerobić algorytm przeszukiwania grafu wszerz. Mówiąc w skrócie
+do drzewa należą te krawędzie, którymi przeszedł algorytm przeszukując graf.
+
+1.7 Fundamentalny zbiór cykli
+
+Niech G będzie spójnym grafem, a 7 jego drzewem spinającym. Krawędzie drzewa
+będziemy nazywali gałęziami, a krawędzie nie należące do drzewa 7 cięciwami.
+
+Z twierdzenia 1.14 wynika, że dodanie dowolnej cięciwy e do drzewa 7 utworzy cykl.
+Oznaczmy ten cykl przez C, (oczywiście e € C,). Zbiór tak utworzonych cykli stanowi
+fundamentalny zbiór cykli. Jak za chwilę pokażemy, każdy inny cykl w grafie jest różnicą
+symetryczną cykli fundamentalnych. W tym podrozdziale cykle będziemy traktować jako
+zbiory krawędzi.
+
+Przykład 1.24 Rozpatrzmy graf z rysunku 1.7 i jego drzewo spinające z rysunku 1.8.
+W tym przypadku gałęziami są krawędzie: f, = fa,b), f» = tb,c), fs = (e,d),
+h = (c,g). fs = (/.9). fe = (b,e), a cięciwami krawędzie € = (a,c), e? =
+fa,d), eg = łb,f)j,e4 = (a,e). Fundamentalny zbiór cykli zawiera cykle: C,, =
+461. 1.72) a abca, Ce = tea, f1,f2, f3) — abeda, Ce: — tes, fa, fa, fs) a bcgfb,
+CC, = les, fi, fe) = abea,
+
+Zbiór krawędzi C grafu nazywamy pseudocyklem, jeżeli każdy wierzchołek grafu
+(V,C) jest parzystego stopnia. Przykładami pseudocykli są cykle i zbiór pusty.
+Lemat 1.25 Różnica symetryczna dowolnej liczby pseudocykli jest pseudocyklem.
+Dowód: Wystarczy pokazać, że różnica symetryczna C; 6 C» dwóch pseudocykli C;,
+C jest pseudocyklem. Dla dowolnego wierzchołka v € V zbiór krawędzi przyległych
+do v w C; © C» jest różnicą symetryczną krawędzi przyległych do v w C; iw C>.A
+
+ponieważ są to zbiory parzystej mocy, więc ich różnica symetryczna też jest parzystej
+mocy. Rzeczywiście dla dowolnych dwóch zbiorów A i B mamy
+
+<image/wzory/k2_page192_formula1.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

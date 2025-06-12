@@ -1,0 +1,41 @@
+30 Rozdział 1. Rachunek prawdopodobieństwa
+
+16. Udowodnij, że jeżeli zdarzenia A i B są niezależne, to niezależne są także A i B'
+oraz A'iB'.
+
+17. Zmienna losowa .Y posiada rozkład:
+
+ 
+
+ _|LTTZTS LT L5]
+PX = z) |[1/2 [1/4 1/8 1/6 [176]
+
+Oblicz P(X parzyste), P(X < 3).
+Oblicz wartość oczekiwaną E X, wariancję V ar(.X ) oraz P(X > EX).
+
+18. Zmienna X;(z) = z mod 5 jest określona na przestrzeni (1,...,30) z jednostaj-
+nym rozkładem. Podaj jej rozkład, wartość oczekiwaną oraz P(X < 3).
+
+19. Podaj rozkład częstości występowania liter w zdaniu:
+*Podzbiory przestrzeni zdarzeń losowych nazywamy zdarzeniami”.
+
+20. Łączny rozkład zmiennych losowych X i Y przedstawiony jest w tabeli.
+Y
+[0 [1/8] 1/4 | 1/8 |
+KS|RYCH RYCH YCH
+Oblicz rozkłady zmiennych X,Y,Z=X+Y,W=2X-Y.
+Oblicz EX, EY, Var(X), Var(Y ), E(X + Y), Var(X + Y).
+Czy zmienne X i Y są niezależne?
+Oblicz prawdopodobieństwa P(X = Y), P(X <Y').
+21. Łączny rozkład zmiennych losowych „X i Y przedstawiony jest w tabeli.
+Y
+X TO] 1/6 [1/12 |
+flip [af fr
+Czy można tak dobrać liczby p, q i r, aby zmienne X i Y były niezależne?
+
+22. W dwóch tabelach przedstawiono łączny rozkład zmiennych X, Y i Z. Pierwsza
+tabela zawiera wartości f(z, y, 0), a druga wartości f(z,y. 1).
+
+<image/tabele/k2_page89_table1.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

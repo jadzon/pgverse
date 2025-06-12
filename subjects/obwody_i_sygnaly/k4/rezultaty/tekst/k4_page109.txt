@@ -1,0 +1,31 @@
+1.6. Elementy niestacjonarne. Elementy SLS 111
+
+Analogiczną interpretację można odnieść do pojemności niestacjonarnej
+o równaniach (1.6-6), dla której:
+
+<image/wzory/k4_page109_formula1.png>
+
+D. Energia gromadzona i energia pompowania. Można wykazać (por.
+Dodatek 3), że energia gromadzona w polu magnetycznym indukcyjności
+niestacjonarnej o równaniach (1.6-5) oraz energia gromadzona w polu elektrycz-
+nym pojemności niestacjonarnej o równaniach (1.6-6) wyrażają się tymi samymi
+wzorami, co w przypadku stacjonarnym, tzn.:
+
+<image/wzory/k4_page109_formula2.png>
+
+<image/wzory/k4_page109_formula3.png>
+
+Rozpatrzmy indukcyjność i jej charakterystyki odpowiadające chwilom t;
+i t, (rys. 1.6-3). Załóżmy, że dla t, £ t St, skojarzenie magnetyczne v(t)
+nie ulega zmianie. Czynnik W? we wzorze (1.6-11) jest zatem stały. Energia
+gromadzona w indukcyjności ulegnie jednak zmianie, zmienia się bowiem
+wartość L(t), a więc i położenie charakterystyki. W sytuacji przedstawionej na
+rys. 1.6-3 energia ta zwiększyła się, mimo iż moc chwilowa pobierana przez
+element z obwodu była w tym czasie równa zeru. Istotnie, wobec założenia
+W = const, mamy:
+
+<image/wzory/k4_page109_formula4.png>
+
+<image/figury/k4_page109_figure1.png>
+
+Rys. 1.6-3

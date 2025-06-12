@@ -1,0 +1,11 @@
+<image/figury/k2_page180_figure1.png>
+
+przy warw '
+
+arzamellz) namoń1Q0) farmi:ln1 nnm
+<image/wzory/k2_page180_formula2.png>
+
+Wprowadzamy ciąg funkcji fy(z), N = 1.2,..., a > 0 zdefiniowanych następu-
+jąco:
+
+<image/wzory/k2_page180_formula3.png>

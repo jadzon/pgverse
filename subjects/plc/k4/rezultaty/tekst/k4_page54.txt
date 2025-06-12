@@ -1,0 +1,19 @@
+<image/figury/k4_page54_figure2.png>
+
+<image/tabele/k4_page54_table2.png>
+
+Tab. 2.23 Standardowe funkcje przesuwania bitów
+
+<image/figury/k4_page54_figure1.png>
+
+<image/figury/k4_page54_figure3.png>
+
+Tab. 2.24 Standardowe funkcje logiczne
+
+Symbol % może być używany jako operator mnożenia logicznego w językach
+tekstowych.
+
+Dopuszcza się także używanie graficznego symbolu negacji (por. Tab. 2.14)
+zamiast funkcji NOT.
+
+vNzory/k4_page54_formula1.png

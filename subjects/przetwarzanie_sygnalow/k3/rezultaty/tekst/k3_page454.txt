@@ -1,0 +1,29 @@
+490 28. Cyfrowe procesory sygnałowe
+
+bikwadratowych. Stopnie wielokrotne, aby pracowały z dużą szybkością, wymagają wielo-
+krotnych buforów cyklicznych. Generatory adresów w procesorach SHARC są zaprojekto-
+wane również w taki sposób, aby skutecznie można było realizować szybkie przekształce-
+nie Fouriera. W tym rodzaju pracy generatory adresów są tak skonfigurowane, aby dawały
+adresy z odwracaniem bitowym do buforów cyklicznych, co jest niezbędną częścią algo-
+rytmu FFT. Ponadto obfitość buforów cyklicznych znacznie upraszcza pisanie programów
+dla DSP — zarówno programiście — człowiekowi, jak i kompilatorom języków wysokiego
+poziomu, takich jak C.
+Rejestry danych CPU są wykorzystywane w taki sam sposób, jak w tradycyjnych mikropro-
+cesorach. W procesorze sygnałowym ADSP-2106x SHARC jest 16 rejestrów ogólnego prze-
+znaczenia, każdy 40-bitowy. Mogą one przechowywać dane przy obliczeniach pośrednich,
+przygotowywać dane dla procesora matematycznego, służyć jako bufor do przesyłania da-
+
+dodatkowe układy rejestrów do wykonywania wielu z tych funkcji.
+
+Układy przetwarzania matematycznego można podzielić na trzy sekcje — układ mnożący.
+jednostkę arytmetyczno-logiczną (ALU - Arithmetic Logic Unit) oraz szybki rejestr prze-
+suwający (typu barrel shifter). Układ mnożący pobiera wartości z dwóch rejestrów, wy:
+mnaża je i umieszcza wynik w jeszcze innym rejestrze. Jednostka arytmetyczno-
+
+<image/figury/k3_page454_figure1.png>
+
+Rys. 28.5. Typowa architektura procesora DSP. Cyfrowe procesory sygnatowe są zaprojektowane do
+procesora sygnałowego
+
+Porównajcie
+objęte pętlą mogą być wykonane w jednym okresie zegarowym

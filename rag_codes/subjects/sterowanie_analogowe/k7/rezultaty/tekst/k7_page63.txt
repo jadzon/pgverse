@@ -1,0 +1,21 @@
+Sterowalność
+
+Trajektoria stanu w odpowiedzi na zadane pobudzenie dana jest wzorem:
+
+<image/wzory/k/_page63_formula1.png>
+
+SMOUBJS 8|8pOJN
+
+Sygnał sterujący, przeprowadzający stan układu od wartości początkowej x(0)
+do wartości końcowej x(t,)=x, można wyznaczyć następująco:
+
+<image/wzory/k/_page63_formula2.png>
+
+Gdzie W _(t) jest nazywany gramianem sterowalności i dany jest wzorem:
+
+<image/wzory/k/_page63_formula3.png>
+
+ 
+
+POLITECHNIKA
+GDANSKA

@@ -1,0 +1,26 @@
+<image/wzory/k1_page8_formula1.png>
+
+gdzie a;, a» są dowolnymi liczbami.
+Ta właściwość jest ogólna dla każdego liniowego przekształcenia całkowego.
+
+PRZEKSZTAŁCENIA LINIOWE
+W tej części przedstawiono operacje liniowe przekształcenia argumentu w orygina-
+
+le ara7 w transformacie
+
+<image/figury/k1_page8_figure1.png>
+<image/wzory/k1_page8_formula2.png>
+
+Odpowiadające funkcjom obrazy krzywych zostaną w określonym stosunku ści-
+śnięte lub rozciągnięte.
+
+Przykład 1.3
+Znając transformatę funkcji sinz, obliczyć transformatę sina.
+
+<image/wzory/k1_page8_formula3.png>
+
+%|sin Qt ] =
+
+ 
+
+s? +02

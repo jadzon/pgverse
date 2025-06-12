@@ -1,0 +1,53 @@
+124 7. Właściwości splotu
+e
+
+Właściwości systemu liniowego są w pełni określone przez jego odpowiedź impulsową, zgodnie
+z matematyczną operacją spłotu. Jest to podstawą wielu metod przetwarzania sygnałów. A oto
+przykłady. Filtry cyfrowe tworzy się, projektując właściwe odpowiedzi impulsowe. Samoloty
+nieprzyjacielskie są wykrywane radarem przez analizę zmierzonych odpowiedzi impulsowych.
+Tłumienie echa w rozmowach telefonicznych na dużych odległościach realizuje się, tworząc
+odpowiedź impulsową, która przeciwdziała odpowiedzi impulsowej pogłosu. Tę listę można by
+ciągnąć dalej. Ten rozdział poświęcono właściwościom i zastosowaniu splotu w kilku dziedzi-
+nach. Po pierwsze, omówiono kilka najczęściej spotykanych rodzajów odpowiedzi impulsowej.
+Po drugie, opisano metody postępowania z kaskadowymi i równoległymi połączeniami syste-
+mów liniowych. Po trzecie, wprowadzono metodę korełacji. Po czwarte, poruszono nieprzy-
+jemny problem związany ze splotem; czas obliczeń może stać się niedopuszczalnie długi przy
+użyciu konwencjonalnych algorytmów i komputerów.
+
+Typowe odpowiedzi impulsowe
+
+Funkcja delta
+Najprostszą odpowiedzią impulsową jest po prostu funkcja delta, którą przedstawiono na
+rys. 7.1 a). Taka odpowiedź impulsowa oznacza, że impuls na wejściu wytwarza na wyjściu
+taki sam impuls. A zatem wszyszkie sygnały przechodzą przez system niezmienione. Poddanie
+jakiegokolwiek sygnału splotowi z funkcją delta daje w rezultacie dokładnie taki sam sygnał.
+Można to zapisać matematycznie:
+xn] * Ś[n] = x[n]
+Wzór 7.1. Funkcja delta jest tożsama ze splotem. Każdy sygnał poddany spłotowi z funkcją delta
+pozostaje niezmieniony
+Ta właściwość powoduje, że funkcja delta jest elementem neutralnym (identity) dla splotu.
+Jest to analogiczne do zera będącego elementem neutralnym dla dodawania (a + O = a) oraz
+do jedności, która jest elementem neutralnym dla mnożenia (a x | = a). Na pierwszy rzut
+oka system tego rodzaju może wydawać się trywialny i nieinteresujący. Nic podobnego! Takie
+systemy świetnie się nadają do gromadzenia danych, łączności i pomiarów. W wielu zasto-
+sowaniach DSP mamy do czynienia z systemami przekazującymi informacje bez ich zmiany
+i pogorszenia parametrów.
+Na rys. 7.1 b) przedstawiono niewielką modyfikację funkcji delta jako odpowiedzi impulsowej.
+Jeśli amplituda funkcji delta zostaje zwiększona lub zmniejszona, to uzyskuje się, odpowiednio,
+system wzmacniacza lub tłumika. Wyrażając to wzorem, uzyskujemy wzmacnianie, jeśli k jest
+większe od 1, a tłumienie, jeśli k jest mniejsze od 1:
+x|n] * kó[n] = kxin]
+Wzór 7.2. System wzmacniający lub tlumiący ma jako odpowiedź impułsową przeskałowaną funkcję
+delta. W tym wzorze k określa wzmacnianie lub tłumienie
+Odpowiedź impulsowa przedstawiona na rys. 7.1 c) jest funkcją delta z przesunięciem.
+Uzyskuje się wówczas system wprowadzający identyczne przesunięcie między sygnałem
+wejściowym i wyjściowym. Można to nazwać opóźnieniem lub wyprzedzeniem sygnału,
+zależnie od kierunku przesunięcia. Wyraźmy przesunięcie parametrem s. Wtedy możemy na-
+pisać równanie:
+x[n] * 5[n + s] = x[n + s]
+Wzór 7.3. Względne przesunięcie między sygnałami wejściowym i wyjściowym wynika z odpowiedzi
+impulsowej będącej przesuniętą funkcją delta. Zmienna s w tym równaniu określa wartość przesunięcia
+W nauce i technice jest mnóstwo przypadków przesunięcia jednej wersji sygnału w stosunku
+do innej. Jako przykład weźmy sygnał radiowy nadawany z odległej sondy kosmicznej oraz
+sygnał odbierany na Ziemi. Czas propagacji fal radiowych powoduje opóźnienie sygnału
+odbieranego w stosunku do nadawanego. W biologii sygnały elektryczne w sąsiadujących

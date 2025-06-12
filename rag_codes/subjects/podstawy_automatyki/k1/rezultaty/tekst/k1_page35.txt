@@ -1,0 +1,33 @@
+Po obliczeniach:
+
+<image/igury/k1_wzory/k1_page35_formula1.png>
+
+a Y(s) przyjmuje zatem postać
+
+<image/wzory/k1_page35_formula2.png>
+
+Ponieważ
+
+<image/wzory/k1_page35_formula3.png>
+
+otrzymujemy rozwiązanie równania różniczkowego w postaci
+
+<image/wzory/k1_page35_formula4.png>
+
+Przykład 2.8
+Rozwiązać równanie różniczkowe
+
+<image/wzory/k1_page35_formula5.png>
+z warunkami początkowymi y(0)=0, y(0)=15.
+
+Rozwiązanie
+Metoda I
+Stosujemy transformatę Laplace'a do obu stron równania:
+
+uzoru/k1 nanao3dR formula png
+
+1a
+
+<image/wzory/k1_page35_formula8.png>
+
+37

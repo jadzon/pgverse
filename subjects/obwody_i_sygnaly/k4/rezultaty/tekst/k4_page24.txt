@@ -1,0 +1,38 @@
+24 1. Pojęcia podstawowe — elementy
+
+<image/figury/k4_page24_figure1.png>
+
+ 
+
+Wykres mocy p jest pokazany na rys. 1.1-6. Jak widać, moc pobierana przez element jest w tym
+przypadku funkcją okresową o okresie dwukrotnie mniejszym niż okres sygnałów zaciskowych.
+Tr." 3
+W przedziałach (i +k 2 4 T+k | ke«%, moc jest pobierana przez element (na wykresie
+. | T TT .
+oznaczono to znakiem +), zaś w przedziałach 8 +k z 4 — — , ke%, moc jest oddawana
+przez element (znak — na wykresie).
+
+Energia pobrana w przedziale czasu o długości okresu sygnałów zaciskowych jest określona
+wzorem:
+
+<image/wzory/k4_page24_formula1.png>
+
+Na przykład, dla danych liczbowych 7, = 10 mA, U, = 4 Vi wo = 2x10? rad/s (T=1 ms),
+wartość tej energii wynosi 10,/2 p.
+
+1.2. PODSTAWOWE MODELE ZJAWISK W OBWODZIE
+
+Jak już wspomnieliśmy, elementy są modelami zjawisk lub cech fizycznych
+związanych z obwodem elektrycznym. Podstawowymi elementami w teorii
+obwodów są: opory, indukcyjności i pojemności.
+
+Przedstawimy krótko rozważania pozwalające na ustalenie modeli obwo-
+dowych zasadniczych zjawisk związanych z przepływem prądu w obwodzie
+elektrycznym i prowadzące tym samym do zdefiniowania wymienionych wyżej
+trzech podstawowych elementów obwodu. Rozważania te będą miały charakter
+przybliżony, a ich celem jest stworzenie modeli jak najprostszych.
+
+Pojęcia podstawowych elementów obwodu wywodzi się z praw fizyki,
+a ściślej z praw rządzących zjawiskami elektromagnetycznymi. Zakładamy, że
+prawa te są znane Czytelnikowi ze szkoły średniej lub z kursu fizyki i nie
+będziemy ich tu szczegółowo omawiać. Tok naszych wywodów będzie niekiedy

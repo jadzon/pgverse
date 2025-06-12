@@ -1,0 +1,51 @@
+119
+
+Sąsiedztwa cząstek nie są tworzone według odległości geometrycznych, mogą być
+tworzone np. według numerów cząstek lub przypadkowo. Raz ustalone sąsiedztwa
+pozostają niezmienione w całym czasie działania algorytmu, niezależnie od aktual-
+nego położenia cząstek.
+
+Wartości początkowe
+
+Położenia początkowe cząstek wybiera się najczęściej z rozkładu równomiernego,
+(U(0, 1)), w przestrzeni poszukiwań.
+Prędkości "
+
+<image/wzory/k2_page114_formula1.png>
+
+Początkowe najlepsze pozycje osobiste
+
+<image/wzory/k2_page114_formula2.png>
+
+Ograniczenie prędkości
+
+Podczas działania algorytmu PSO prędkości cząstek szybko wzrastają do bardzo
+dużych wartości, szczególnie cząstek odległych od najlepszych globalnych lub oso-
+bistych pozycji. W krokach iteracyjnych poprawki pozycji są coraz większe i cząstki
+wychodzą poza obszar poszukiwań. Aby temu zapobiec ogranicza się prędkości czą-
+stek.
+
+Jednym ze sposobów ograniczenia jest przyjęcie zasady:
+
+<image/wzory/k2_page114_formula3.png>
+
+gdzie Var, Oznacza maksymalną dopuszczalną prędkość w kierunku j. Zazwyczaj
+przyjmuje
+
+<image/wzory/k2_page114_formula4.png>
+
+gdzie Wmarj ANd Wpiny SĄ granicami obszaru poszukiwań w kierunku j, a 6 € (0,1]
+jest stałą dobieraną w zależności od problemu.
+
+Maksymalna prędkość może zostać zmniejszona, gdy w ciągu 7 kolejnych kroków
+nie poprawiła się pozycja najlepsza globalnie
+
+<image/wzory/k2_page114_formula5.png>
+
+gdzie 8 € (0,1] jest stałą lub zmienianym parametrem.
+W innym postępowaniu prędkość może być tłumiona w każdym kroku zgodnie
+ze zmodyfikowanym wzorem (??)
+
+<image/wzory/k2_page114_formula6.png>
+
+gdzie a jest stałym parametrem.

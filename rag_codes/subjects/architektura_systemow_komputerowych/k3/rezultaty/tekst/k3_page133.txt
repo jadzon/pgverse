@@ -1,0 +1,43 @@
+6.4. Sterowniki urządzeń zewnętrznych 123
+
+<image/figury/k3_page133_figure1.png>
+
+Rysunek 6.4. Struktura sterownika urządzenia zewnętrznego
+
+systemową komputera, a więc służą do współpracy z procesorem. Sterownik jest dołączony
+do magistrali adresowej (linie te są wejściami sterownika), do magistrali danych i do 4
+linii magistrali sterującej (stroby odczytu i zapisu oraz sygnały zgłoszenia przerwania
+ipotwierdzenia jego przyjęcia). Sygnały z prawej jego strony stanowią łącze z urzą-
+dzeniem zewnętrznym. Są to linie przesyłania danych i dwie linie sterujące tym prze-
+syłaniem. Ponieważ zwykle w systemie komputerowym pracuje wiele sterowników, to
+każdemu z nich przypisany jest adres. Jeżeli sterownik zawiera dużą liczbę rejestrów,
+to przypisuje się mu więcej niż jeden adres. W szczególności każdemu rejestrowi
+przypisuje się inny adres. Istnieją dwa sposoby umieszczania sterowników urządzeń
+w przestrzeni adresowej. Pierwszy sposób zakłada wspólną przestrzeń adresową z pa-
+mięcią, a drugi zakłada rozdzielenie tych obszarów. W pierwszym przypadku procesor,
+wysyłając adres, wysyła na magistralę sterującą te same sygnały strobów odczytu i zapisu
+jak dla pamięci. Dostęp do urządzeń zewnętrznych następuje tymi samymi rozkazami co
+dostęp do pamięci. W drugim przypadku procesor wraz z adresem wysyła sygnały
+strobujące przeznaczone wyłącznie do urządzeń zewnętrznych. Stroby te powstają tylko
+w czasie wykonywania rozkazów wejścia-wyjścia (IN i OUT) i tylko one zapewniają
+dostęp do urządzeń zewnętrznych.
+
+W łączu sterownika z urządzeniem zewnętrznym wyróżnić można linie danych i linie
+sterujące. Na rysunku 6.4 pokazano wiele linii danych (najczęściej jest ich 8) i wtedy
+mówi się, że transmisja informacji do/z urządzenia zewnętrznego zachodzi równolegle,
+a sterownik nazywamy sterownikiem łącza równoległego. Jeśli jest jedna linia danych, to
+mówi się, że transmisja zachodzi szeregowo, a sterownik nazywamy sterownikiem łącza
+szeregowego. Linie danych mogą być jednokierunkowe lub dwukierunkowe. W przypadku
+łącza jednokierunkowego urządzenie może być albo odbiornikiem (urządzenie wyjściowe)
+lub nadajnikiem (urządzenie wejściowe). W przypadku linii dwukierunkowych łącza mogą
+być dwojakiego rodzaju: łącze dupleksowe, gdy transmisja w obu kierunkach może
+zachodzić równocześnie, lub łącze półdupleksowe, gdy transmisja w obu kierunkach jest
+rozdzielona w czasie. W następnym podrozdziale przedstawiono typowe sterowniki łączy
+równoległego i szeregowego. Przy omawianiu tych ostatnich przedstawiono łącza duple-
+ksowe i półdupleksowe. Typowy sterownik jest wykorzystywany do współpracy z typowy-
+mi urządzeniami zewnętrznymi wyposażonymi w standardowe łącze. Zwykle są to proste
+urządzenia znakowe, jak np. drukarka. Natomiast są urządzenia, które wymagają specjalnej
+obsługi i muszą pracować z magistralą poprzez sterownik specjalnie dla nich zaprojek-
+towany. Przykładowym takim urządzeniem jest pamięć dyskowa. W niniejszej książce nie
+będą omawiane sterowniki specjalizowane, natomiast przedstawiono budowę typowych
+sterowników.

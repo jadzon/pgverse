@@ -1,0 +1,31 @@
+25. Specjalne techniki obraza
+
+<image/figury/k3_page395_figure1.png>
+
+Fourierowska rekonstrukcja obrazu tomografii komputerowej wymaga cez rzec
+kroków. Po pierwsze, przeprowadza się jednowymiarowe deg
+widoku. > wady jezykow r an miarowegi
+częstotliwościowego widma obrazu, jak to wynika z twierdzenia Fouriera o przekroja
+Ponieważ widma widoków są rozmieszczane promieniowo, a prawidłowe widmo obr
+jest rozmieszczone prostokątnie, więc do wykonania konwersji jest konieczna proce
+interpolacyjna. Po trzecie, wykonuje się odwrotne przekształcenie FFT widma obrazu dl
+uzyskania obrazu zrekonstruowanego.
+
+Konwersja „promieniowe na prostokątne” jest też kluczem do zrozumienia filtro
+projekcji wstecznej. Rozmieszczenie promieniowe jest widmem obrazu rzutowane
+wstecznie, podczas gdy rozmieszczenie prostokątne jest widmem obrazu prawidłoweg
+Jeśli porównamy jeden mały obszar widma promieniowego z odpowiadającym mu obsz
+rem siatki prostokątnej, to stwierdzimy, że wartości próbek są identyczne. Mają one j
+nak różne gęstości próbkowania. W widmie prawidłowym punkty są rozmieszczone ró
+nomiernie, jak to przedstawiono przez jednakowe odstępy w siatce prostokątnej. Widm
+rzutowane wstecz ma zaś większą gęstość próbkowania w pobliżu środka z powod
+promienistego rozmieszczenia. Można by powiedzieć, że odległości między szprych:
+koła są najmniejsze w pobliżu piasty. Ten fakt nie ma żadnego wpływu na rekonstrukc
+fourierowską, gdyż interpolację wykonuje się na podstawie wartości najbliższych pik
+li-sąsiadów, a nie ich gęstości.
+W projekcji wstecznej filtracja likwiduje tę nierówną gęstość próbkowania. W szczególne
+odpowiedź częstotliwościowa filtru musi być odwrotnością gęstości próbkowania. Poni
+rzutowane wstecznie widmo ma gęstość ///, więc właściwy filtr powinien mieć odpowie
+częstotliwościową H[/] = f. Tę odpowiedź częstotliwościową pokazano na rys. 25.19.
+Następnie wyznacza się odpowiedź impulsową filtru przez wykonanie odwrotnego pr
+kształcenia Fouriera (rys. 25.19 b). Odpowiedź impulsowa jest opisana wzorami:

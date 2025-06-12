@@ -1,0 +1,28 @@
+Dokładność liczb 79
+
+ 
+
+ 
+
+<image/figury/k3_page67_figure1.png>
+
+Program przedstawiony w tablicy 4.1 ilustruje, jakie problemy w DSP powoduje błąd za-
+okrąglenia (błąd kwantyzacji w obliczeniach matematycznych). W pętli programowej dwie
+liczby losowe są dodawane do zmiennej zmiennoprzecinkowej X i potem od niej odejmowa-
+ne. W idealnym przypadku nic się nie powinno zdarzyć. W zaokrąglenia
+w każdej operacji matematycznej powoduje stopniowe dryfowanie wartości X od jej wartości
+początkowej. Ten dryf może przyjmować jedną z dwóch form, zależnie od sposobu sumowa-
+nia się błędów. Jeśli błędy zaokrąglenia są, losowo, dodatnie i ujemne, to wartość zmiennej
+będzie losowo wzrastać i się zmniejszać. Jeśli błędy są w głównej mierze jednego znaku, to
+wartość zmiennej będzie dryfować szybciej i bardziej równomiernie.
+
+Tab. 4.1. Program ilustrujący w przypadku stosowania liczb
+ustawia wartość X na 1,000000 i następnie pętlę, która
+w nie powinna wykonywać Podczas każdej pętli są do X dodawane
+
+przypadku idealnym
+dwie liczby losowe A i B, które są znowu następnie odejmowane. Zakumułowany biąd tych dodawań
+i odejmowań powoduje, że X odbiega od swojej początkowej wartości. Jak pokazano na rys. 4.4, bląd
+może być łosowy lub addytywny.
+
+<image/tabele/k3_page67_table1.png>

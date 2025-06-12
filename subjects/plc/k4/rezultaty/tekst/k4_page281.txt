@@ -1,0 +1,25 @@
+<image/wzory/k4_page281_formula1.png>
+
+Do programowania sterowników Modicon można posłużyć się programem Mod-
+soft [1] pracującym w środowisku MS-DOS lub oprogramowaniem dla środowi -
+ska Windows o nazwie Concept. Modsoft umożliwia programowanie tych sterow-
+ników w oparciu o schemat drabinkowy nazywany Ladder Logic (LL). Program
+Concept daje większe możliwości wyboru sposobu programowania dysponując,
+oprócz języka schematu drabinkowego - dla rozróżnienia nazwanego Ladder
+Diagram (LD) - modułami do programowania w językach SFC, FBD, STi IL.
+Concept posiada także narzędzia do programowania w języku 'C" ('C" Tool
+Kit). W rozdziale zaprezentowano podstawową metodę programowania sterow-
+ników dostępną w obu wersjach oprogramowania narzędziowego, czyli język
+schematów drabinkowych. Wszystkie przykłady napisano i uruchomiono przy
+użyciu programu Modsofi. W rozdziałe 8 natomiast czytelnik może znaleźć kilka
+przykładowych programów realizujących zarówno zadania sterowania logiczne-
+go jak i typowe zadania regulacji, takie jak regulacja PID, trójpołożeniowa,
+z korekcją itp.
+
+<image/figury/k4_page281_figure1.png>
+
+Rys. 6.1 Sterownik Modicon 984-A145 Compact.
+
+ 
+
+281

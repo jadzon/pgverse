@@ -1,0 +1,27 @@
+1 Wstęp
+
+Tematyka poruszona w niniejszym skrypcie w dużej części odpowiada
+zakresowi wykładu Podstawy automatyki prowadzonego na Wydziale
+Elektrycznym na kierunku automatyka i robotyka; obejmuje ona układy
+liniowe, nieliniowe oraz impulsowe. Wszystkie rozdziały mają taką samą
+strukturę: sformułowanie celu ćwiczenia, przedstawienie podstawowych
+wiadomości niezbędnych do jego wykonania oraz omówienie przebiegu
+ćwiczenia wraz z zawartością sprawozdania.
+
+Materiał zawarty w skrypcie może być użyteczny także dla studentów
+innych kierunków (między innymi elektrotechniki czy fizyki technicznej),
+może on również stanowić pomoc dla studentów innych wydziałów.
+
+Pragnę wyrazić serdeczne podziękowania Panu Profesorowi dr. hab. inż.
+K. Rumatowskiemu za wnikliwą recenzję treści skryptu oraz Panu
+Profesorowi dr. hab. inż. A. Kasińskiemu za uwagi dotyczące nowego
+programu ćwiczeń laboratoryjnych.
+
+Osobne podziękowania chciałbym skierować do Pana Profesora dr. hab.
+inż. A. Królikowskiego za zachęcenie do pisania w KTpXu.
+
+Wyrażam nadzieję, że niniejszy skrypt będzie pomocny w zapoznawaniu
+się z podstawami automatyki oraz zapewni studentom możliwość
+symulacyjnego sprawdzenia zdobytej na wykładach wiedzy.
+
+Autor

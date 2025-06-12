@@ -1,0 +1,45 @@
+28 Rozdział 1. Rachunek prawdopodobieństwa
+
+<image/wzory/k2_page87_formula1.png>
+
+Skorzystamy teraz z nierówności 1 + z < e”
+wzorv/ko nana8R7 formula? nna
+
+<image/wzory/k2_page87_formula3.png>
+Prawdopodobienstwo to jest mniejsze od 1/2 wtedy gdy (x—1)* > 2n In2, ato zachodzi
+wtedy gdy k > 1 + V2ln2/m. Dlan = 365, zachodzi to dla k > 24.
+Tak więc jeśli w pokoju znajdują się co najmniej 24 osoby, to z prawdopodobieństwem
+większym od 1/2 dwie spośród nich mają urodziny w tym samym dniu.
+
+1.14 Zadania
+
+1. Zaproponuj przestrzeń zdarzeń elementamych dla losowania dwóch kul z umy
+zawierającej 3 kule białe i 4 czame. Przedstaw zdarzenie, że wylosowano:
+
+a) dwie kule białe, b) kule w różnych kolorach.
+2. Zaproponuj przestrzeń zdarzeń elementamych dla ustawienia czterech liter a, b, ci
+d w ciąg.
+Przedstaw zdarzenie, że
+a) a i b stoją obok siebie;
+b) a i b są rozdzielone jedną literą.
+3. Zaproponuj przestrzeń zdarzeń elementamych dla następujących doświadczeń:
+a) Losowanie karty z talii 52 kart.
+b) Losowanie 13 kart z talii 52 kart.
+c) Wypełnienie kuponu totolotka.
+d) Wypełnienie kuponu totalizatora piłkarskiego.
+
+—
+
+„ A, BiC są zdarzeniami. Zapisać za pomocą działań na zbiorach zdarzenia:
+a) zachodzą wszystkie trzy zdarzenia;
+b) zachodzi dokładnie jedno ze zdarzeń A, B lubC;
+c) zachodzą dokładnie dwa ze zdarzeń A, B, C;
+d) zachodzą co najmniej dwa spośród zdarzeń 4, B, C..
+„ Cyfry 0,.. .,9 ustawiono losowo. Jakie jest prawdopodobieństwo,
+a) że 1 i 2 stoją obok siebie;
+b) że pomiędzy 1 i 2 stoją dwie cyfry;
+c) że0, 1 i 2 stoją obok siebie.
+
+UT
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

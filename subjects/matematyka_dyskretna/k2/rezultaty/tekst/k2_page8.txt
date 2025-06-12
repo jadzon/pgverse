@@ -1,0 +1,42 @@
+8 Rozdział 1. Oznaczenia
+
+Zbiór zbiorów nazywamy czasami rodziną zbiorów. Na przykład .4 = Ay, A>, A3, Ax)
+jest rodziną zawierającą cztery zbiory A; , Az, Az i 4, są to elementy zbioru .A. Możemy
+też zapisać A = (A; |1 <i < 4).
+
+Możemy sumować zbiory z rodziny. Suma
+
+<image/wzory/k2_page8_formula1.png>
+
+zawiera te elementy, które należą do któregoś ze zbiorów A;, A>, ... „Az, Czyli
+
+<image/wzory/k2_page8_formula2.png>
+
+Inaczej możemy to zapisać:
+
+<image/wzory/k2_page8_formula3.png>
+Będzier”" toż wiurać zaniew
+
+<image/wzory/k2_page8_formula4.png>
+na oznaczenie sumy wszystkich zbiorów A;, których indeksy należą do zbioru 7. Zacho-
+dzi wte””
+
+<image/wzory/k2_page8_formula5.png>
+
+Zbiór indeksów sumowania może być określony za pomocą warunku.
+
+<image/wzory/k2_page8_formula6.png>
+
+Możemy też brać przekroje zbiorów z rodziny. Przekrój
+
+<image/wzory/k2_page8_formula7.png>
+
+zawiera te elementy, które należą do wszystkich zbiorów A;, Aa, ... „Az, Czyli
+
+<image/wzory/k2_page8_formula8.png>
+
+Inaczej możemy to zapisać:
+
+<image/wzory/k2_page8_formula9.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

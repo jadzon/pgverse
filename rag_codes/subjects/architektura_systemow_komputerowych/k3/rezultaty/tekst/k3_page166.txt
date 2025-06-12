@@ -1,0 +1,44 @@
+MECHANIZMY PRZYSPIESZAJĄCE
+- PRACĘ KOMPUTERÓW
+
+ 
+
+8.1. KLASYFIKACJA KOMPUTERÓW
+
+W poprzednich rozdziałach przedstawiono architekturę komputerów opartą na modelu
+von Neumana. Model ten zakłada, że komputer wykonuje program, umieszczony w jego
+pamięci operujący na danych, które także znajdują się w pamięci. Taka koncepcja stała się
+niewystarczająca, gdy użytkownicy zaczęli wymagać coraz większych szybkości działania.
+Zwiększanie szybkości działania osiągano często w wyniku zastosowania nowych techno-
+logii: czy to elektronicznych (technologie układów scalonych), czy mechanicznych (kons-
+trukcje pamięci dyskowych). Ale równie ważną drogą zwiększania szybkości działania
+jest poszukiwanie nowych rozwiązań w architekturze komputerów.
+
+Jednym z takich rozwiązań jest tzw. technika potokowa (ang. pipelining) omówiona w
+dalszej części rozdziału. Metoda ta polega na tym, że pewne zadanie wykonywane przez
+komputer (np. rozkaz) jest tak zdekomponowane, że poszczególne bloki komputera mogą,
+w tym samym czasie, operować na różnych danych, a więc pracować jednocześnie.
+Przykładowo, w czasie gdy jeden blok wykonuje rozkaz o numerze k, to inny blok w tym
+samym czasie może wyliczać adres argumentu następnego k+1 rozkazu, a jeszcze inny
+wykonywać cykl pobrania k+2 rozkazu. Zwiększenie szybkości pracy komputera można
+uzyskać przez wprowadzenie zwielokrotnienia zarówno ciągu danych jak i instrukcji.
+Oznacza to, że w tym samym czasie różne bloki systemu operują na różnych danych
+iwykonują różne zadania. Takie rozwiązania są stosowane w systemach wieloproceso-
+rowych i równoległych. Opisane obserwacje doprowadziły Flynna w roku 1966 do pewnej
+klasyfikacji komputerów i podziału ich na cztery klasy:
+l) komputery z pojedynczym ciągiem instrukcji (ang. single instruction stream)
+i pojedynczym ciągiem danych (ang. single data stream) — SISD,
+2) komputery z pojedynczym ciągiem instrukcji i z wielokrotnym ciągiem danych
+(ang. multiple data stream) — SIMD,
+3) komputery z wielokrotnym ciągiem instrukcji (ang. multiple instruction stream)
+i pojedynczym ciągiem danych — MISD,
+4) komputery z wielokrotnym ciągiem instrukcji i wielokrotnym ciągiem da-
+nych — MIMD.
+
+Klasyfikacja ta (rys. 8.1), choć elegancka, upraszcza stan faktyczny, gdyż np. w rzeczy-
+wistości nie istnieją praktyczne realizacje systemów typu MISD. Natomiast projektowane
+coraz to nowe architektury wymuszają inne kryteria klasyfikacji.
+
+Inny podział systemów komputerowych zaproponował Treleaven i Lima w roku 1984,
+w którym pojęcie instrukcji zastąpiono pojęciem bloku obliczeniowego. Blokiem oblicze-
+niowym nazwali oni wykonywaną operację wraz z jej argumentami i wynikami. Wykony-

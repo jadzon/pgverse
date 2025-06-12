@@ -1,0 +1,38 @@
+10. Właściwości przekształcenia Fouriera
+
+ 
+
+Gdy przebieg w dziedzinie czasu jest przesuwany w prawo, charakterystyka fazowa pozo-
+staje linią prostą, lecz następuje zmniejszenie jej nachylenia. Przesuwanie w lewo powoduje
+zwiększenie nachylenia. Jest to ważna właściwość, którą z tego podrozdziału należy zapamię-
+tać: przesunięcie w dziedzinie czasu odpowiada zmianie nachylenia charakterystyki fazy.
+Na rys. 10.3 b), f) przedstawiono szczególny przypadek, gdy faza jest całkowicie zerowa.
+Taka sytuacja ma miejsce, gdy sygnał w dziedzinie czasu jest symetryczny wokół próbki
+zero. Na pierwszy rzut taka symetria na rys. 10.3 b) nie jest oczywista. Może się wyda-
+wać, że mamy tu raczej symetrię wokół próbki 256 (tj. N/2). Przypomnijmy sobie jednak, że
+w przekształceniu DFT dziedzina czasu jest widziana jako kołowa, z próbką zero inherentnie
+dołączoną do próbki N — 1. Każdy sygnał symetryczny wokół próbki zero jest również syme-
+tryczny wokół próbki N/2 i vice versa. Jeśli stosuje się te przekształcenia z grupy transformat.
+Fouriera, które nie traktują sygnałów w dziedzinie czasu jako okresowych (jak np. DTFT), to.
+symetria musi być wokół próbki zero, aby wytworzyć fazę zerową. |
+Rysunki 10.3 d), h) mają charakter nieco zagadkowy. Najpierw wyobraźmy sobie, że prze-
+bieg na rys. 10.3 d) powstał w wyniku przesunięcia nieco w prawo przebiegu z rys. 10.3 c).
+To znaczy, że charakterystyka fazowa na rys. 10.3 h) powinna mieć nachylenie trochę bar-
+dziej ujemne niż na rys. 10.3 g). Ta charakterystyka jest wykresem 1. Następnie wyobraźmy
+sobie, że przebieg na rys. 10.3 d) utworzono, rozpoczynając od przebiegu na rys. 10.3 a).
+i przesuwając go w lewo. W tym przypadku charakterystyka fazowa powinna mieć nachy-
+lenie nieco bardziej dodatnie niż na rys. 10.3 e), co zilustrowano wykresem 2. Wreszcie
+zauważmy, że przebieg na rys. 10.3 d) jest symetryczny wokół próbki N/2, więc powinien:
+mieć fazę zero, jak na wykresie 3. Która z tych trzech charakterystyk fazowych jest popraw-
+na? Wszystkie są poprawne, zależnie od potraktowania niejednoznaczności fazowej x i 2a
+(omówionej w rozdziale 8). Na przykład każda próbka na wykresie 2 różni się od odpowia-
+dającej jej próbki na wykresie 1 o całkowitą wielokrotność 2x, co czyni je równymi sobie.
+Aby powiązać charakterystykę z wykresu 3 z wykresami 1 i 2, trzeba też wziąć pod uwagę
+niejednoznaczności m.
+
+W celu zrozumienia omówionego przebiegu charakterystyk fazowych wyobraźmy sobie przesu-
+nięcie przebiegu o jedną próbkę w prawo. Z tego wynika, że również wszystkie sinusoidy
+
+jako zmianę fazy, to staje się ono proporcjonałne do częstotliwości przesuwanej sinusoidy.
+
+<image/figury/k3_page170_figure1.png>

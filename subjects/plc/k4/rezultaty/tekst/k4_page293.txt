@@ -1,0 +1,32 @@
+<image/wzory/k4_page293_formula1.png>
+
+Instrukcje arytmetyczne podwójnej precyzji, a więc wykonywane na liczbach 32-
+bitowych, realizowane są przy użyciu funkcji EMTH o kodach od I do 4 oraz
+funkcji z rozszerzonej biblioteki instrukcji DMTH o kodach od 1 do 4 (odpo-
+wiednio: dodawanie, odejmowanie, mnożenie, dzielenie).
+
+<image/figury/k4_page293_figure1.png>
+
+Wyd. 6.13 Przykład zastosowania funkcj i matematycznych 32-bitowych: dodawanie,
+odejmowanie i mnożenie liczb 32-bitowych.
+
+W przykładzie z Wyd. 6./3, wyzwolenie wejścia 10001 spowoduje dodanie licz-
+by całkowitej 32-bitowej zapisanej w rejestrach 40281 i 40282 do liczby całko-
+witej 32-bitowej zapisanej w rejestrach 40283 i 40284. Wynik operacji zapisany
+zostanie w rejestrach 40286 i 40287. Jednocześnie, gdy wystąpi przekroczenie
+zakresu, w rejestrze 40285 pojawi się 1. Również rejestr 40288 jest zajmowany
+przez ten blok, lecz w tym przypadku nie jest on używany. Ogółem funkcja
+ADDDP zajmuje zatem 7 rejestrów.
+
+Jeżeli operacja dodawania nie przebiegnie prawidłowo (np. ze względu na prze-
+kroczenie zakresu), wyzwolone zostanie wyjście 00291. W przypadku prawidło-
+wego zakończenia operacji dodawania nastąpi przejście do kolejnej operacji, jaką
+jest odejmowanie liczb 32-bitowych SUBDP. Wtedy od liczby całkowitej zapi-
+sanej w rejestrach 40289 i 40290 odjęta zostanie liczba całkowita zapisana
+w rejestrach 40291 i40292. Wynik bezwzględny różnicy zostanie zapisany
+w rejestrach 40293 i 40294. Rejestr 40295 zawiera informację o zakresie prze-
+twarzanych liczb. Jego zawartość wynosi 0 jeśli obie liczby są z odpowiedniego
+
+"ZY"
+
+6.5 Funkcje arytmetyczne 293

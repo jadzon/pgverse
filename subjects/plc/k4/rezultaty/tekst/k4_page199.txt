@@ -1,0 +1,27 @@
+Jeżeli wszystkie operacje zostaną wykonane prawidłowo, to zmienna %Q]
+przyjmie wartość /.
+
+Należy zwrócić uwagę na to, że w prezentowanym przykładzie dodawanie oraz
+mnożenie wykonywane są na danych typu D/NT , więc zmienna o nazwie SUMA
+powinna zajmować 32 bity pamięci (np. dwa rejestry).
+
+Przykład z Wyd. 4.15 pokazuje z kolei sposób wykorzystania funkcji SQR7T we
+fragmencie programu do korekcji wartości przepływu (zmienna %R1987) od
+temperatury i ciśnienia w każdym cyklu sterownika. Fragment ten realizuje
+przetwarzanie zgodnie z zależnością:
+
+<image/wzory/k4_page199_formula1.png>
+
+<image/figury/k4_page199_figure1.png>
+
+Wyd. 4.15 Przykład wykorzystania funkcji SQRT
+
+W sterownikach PLC, w których CPU udostępniają zmiennoprzecinkowe opera-
+cje matematyczne (np. CPU 352), wszystkie powyższe funkcje mogą być
+wykorzystywane także dla liczb rzeczywistych (REAŁ), a ponadto dostępne są
+funkcje trygonometryczne, logarytmiczne, potęgowe itp. (por. Tab. 4.10 na koń-
+cu rozdziału).
+
+ 
+
+4.6 Funkcje arytmetyczne 199

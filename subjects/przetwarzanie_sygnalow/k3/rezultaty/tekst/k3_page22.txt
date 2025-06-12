@@ -1,0 +1,33 @@
+32 2. Statystyka, rachunek prawdopodobieństwa i szumy
+
+ 
+
+<image/figury/k3_page22_figure2.figury/k3_page22_figure3.png>
+
+<image/figury/k3_page22_figure1.png>
+
+Rys. 2.5. Załeżność między histogramem (a), funkcją masy prawdopodobieństwa pmi (b) i funkcją gęstości prawdo-
+podobieństwa pdł (c). Histogram jest obliczany na podstawie skończonej liczby próbek. Wykres pml opisuje proces
+
+okoliczności pojawiający się w tym przykładzie. Wartości na osiach pionowych tych trzech wykresów są określone
+prak: a) - ow wsio w isłogranie równą Suckia próóck w sygnale, b) - sumę wóriości w pol równą jodu, c)
+- powierzchnię pod krzywą pdf równą jeden
+
+Jest tak, gdyż istnieje nieskończenie wiele możliwych wartości, między które sygnał musi
+podzielić swój czas: 120,49997; 120,49998; 120,49999 itd. Szansa, żeby sygnał miał właśnie
+wartość dokładnie 120,50000, jest doprawdy bardzo niewielka!
+
+W celu obliczenia prawdopodobieństwa trzeba gęstość prawdopodobieństwa pomnożyć przez
+zakres wartości. Na przykład prawdopodobieństwo, że sygnał w każdej danej chwili ma wartość
+między 120.i 121, jest równe: (121-120) x 0,03 = 0,03. Prawdopodobieństwo, że wartość sygnału
+mieści się między 120,4 i 120,5 jest: (120,5-120,4) x 0,03 = 0,003 itd. Jeśli gęstość prawdopo-
+dobieństwa nie jest stała w interesującym nas zakresie, to iloczyn przekształca się w całkę pdf
+w danym zakresie, a więc powierzchnię pod wykresem pdf między określonymi wartościami.
+Ponieważ sygnał zawsze musi mieć jakąś wartość, więc całkowita powierzchnia pod wykresem,
+czyli całka od —0 do +, będzie zawsze równa 1. Jest to analogiczne z faktem, że suma wszyst-
+kich wartości pmy jest równa | oraz że suma wszystkich wartości histogramu jest równa N.
+Histogram, pmf i pdf są pojęciami do siebie podobnymi. Matematycy je ściśle rozróżniają,
+lecz przez wielu naukowców i inżynierów są często stosowane wymiennie (a zatem błędnie).
+Na rys. 2.6 przedstawiono trzy przebiegi ciągłe i ich gęstości prawdopodobieństwa (pdf).
+Gdyby to były sygnały dyskretne, a więc mające numery próbek na osi poziomej, to zastoso-
+walibyśmy wykresy masy prawdopodobieństwa (pmf).

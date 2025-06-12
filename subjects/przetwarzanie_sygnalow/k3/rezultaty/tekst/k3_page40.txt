@@ -1,0 +1,62 @@
+Twierdzenie o próbkowaniu 51
+
+ 
+
+ 
+
+Aliasing podczas próbkowania może, podobnie jak częstotliwość, zmienić także fazę. Na przy-
+kład spójrzmy znowu na sygnał z aliasingiem na rys. 3.3 d). Sygnał z aliasingiem jest odwrócony
+w stosunku do oryginalnego sygnału analogowego; jeden jest sinusoidą, a drugi jej odwróceniem.
+Tak więc aliasing spowodował zmianę częstotliwości oraz przesunięcie fazy o 1807. Są możliwe
+pospać ala prady wa 180? (odwrócenie). Zerowe przesunięcie
+fazy zachodzi dla częstotliwości przebiegu analogowego od ( do 0,5; od 1,0 do 1,5; od 2,0 do 2,5
+itd. Odwrócenie fazy następuje dla częstotliwości przebiegu analogowego: od 0,5 do 1,0; od 1,5
+do 2,0; od 2,5 do 3,0 itd.
+
+Teraz zagłębimy się w bardziej szczegółową analizę próbkowania i powstawania aliasingu.
+Naszym głównym celem jest zrozumieniem, co dzieje się z informacją, gdy sygnał podlega
+przetwarzaniu z postaci ciągłej w dyskretną. Problem polega na tym, że mamy do czynienia
+z dwiema bardzo różnymi rzeczami — przebiegiem ciągłym i matrycą liczb. Takie porównanie
+jak „jabłek z pomarańczami”, czyni analizę bardzo trudną. Rozwiązaniem jest wprowadzenie
+teoretycznej koncepcji zwanej ciągiem impulsów (impulse train).
+
+Na rys. 3.5 a) przedstawiono pewien przykład sygnału analogowego. Na rys. 3.5 c) jest po-
+kazany sygnał spróbkowany przy użyciu ciągu impulsów, Ciąg impulsów jest sygnałem cią-
+głym złożonym z ciągu wąskich szpilek (impulsów), które w chwilach próbkowania są iden-
+tyczne z sygnałem oryginalnym. Każdy impuls jest nieskończenie wąski; tę koncepcję omó-
+wimy w rozdziale 13. Między próbkowaniami wartość przebiegu jest zerowa. Pamiętajmy, że
+ciąg impulsów jest pojęciem teoretycznym, a nie przebiegiem, który może istnieć w układach
+elektronicznych. Ponieważ zarówno przebieg oryginalny, jak i ciąg impulsów są przebiegami
+ciągłymi, więc między nimi możemy już robić porównanie jak „jabłek z jabłkami”.
+
+Teraz powinniśmy rozpatrzyć zależność między ciągiem impulsów i sygnałem dyskretnym
+(matryca liczb). Jest to łatwe; pod względem zawartości informacji te sygnały są identyczne.
+Jeśli jeden z tych sygnałów jest znany, to w łatwy sposób można obliczyć drugi. Można
+o nich pomyśleć jako o dwóch końcach mostu przerzuconego między światem analogowym
+i cyfrowym. Stąd wynika, że osiągniemy nasz główny cel, jeśli zrozumiemy konsekwencje
+zamiany przebiegu z rys. 3.5 a) na przebieg z rys. 3.5 c).
+
+Trzy przebiegi ciągłe przedstawiono w lewej kolumnie rys. 3.5. Odpowiadające im widma czę-
+stotliwościowe pokazano w kolumnie prawej. Takie podejście jest znane w elektronice: każdy
+przebieg można przedstawić jako złożony z sinusoid o różnych amplitudach i częstotliwościach.
+Dziedzinę częstotliwości omówimy szczegółowo w dalszych rozdziałach. (Być może będziecie
+chcieli wrócić do tych rozważań po lepszym zapoznaniu się z widmami częstotliwościowymi).
+Na rys. 3.5 a) przedstawiono sygnał analogowy, który chcemy próbkować. Jak wynika z wid-
+ma częstotliwościowego tego sygnału (rys. 3.5 b), zawiera on tylko składowe częstotliwości
+z zakresu między 0 i 0,33f,, gdzie f, jest częstotliwością próbkowania, jaką zamierzamy
+zastosować. Może to być np. sygnał mowy odfiltrowany w celu usunięcia wszystkich często-
+tliwości powyżej 3,3 kHz. Odpowiednio, f, powinna być 10 kHz (10 000 próbek/s), to jest
+naszą zamierzona częstotliwość próbkowania.
+
+Próbkowanie sygnału z rys. 3.5 a) ciągiem impulsów daje sygnał przedstawiony na rys. 3.5 c)
+o widmie częstotliwościowym pokazanym na rys. 3.5 d). To widmo jest powiełonym wid-
+mem sygnału oryginalnego. Przy każdej wielokrotności częstotliwości próbkowania f,, 2f,,
+3f,, 4f,, itd. powstaje kopia widma, a po lewej stronie — odwrócona kopia widma. Kopia
+nazywa się górną wstęgą boczną, a kopia odwrócona — dolną wstęgą boczną. Próbkowanie
+spowodowało powstanie nowych częstotliwości. Czy jest to próbkowanie prawidłowe? Tak,
+ponieważ sygnał z rys. 3.5 c) może być z powrotem przetworzony na sygnał z rys. 3.5 a)
+przez usunięcie wszystkich częstotliwości większych od 0,5f,. A zatem filtr dolnoprzepusto-
+wy przetworzy ciąg impulsów (rys. 3.5 © ) z powrotem w sygnał analogowy (rys. 3.5 a).
+
+Jeśli znacie już podstawy DSP, to podamy teraz bardziej techniczne wyjaśnienie przyczyn
+powielania widma. (Pomińcie ten fragment, jeśli jesteście nowicjuszami w dziedzinie DSP).

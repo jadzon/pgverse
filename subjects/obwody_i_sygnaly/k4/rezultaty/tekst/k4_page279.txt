@@ -1,0 +1,50 @@
+33. Metody analizy obwodów liniowych prądu stalego 281
+Napięcia gałęziowe obliczamy ze związków (3.3-21):
+
+<image/wzory/k4_page279_formula1.png>
+
+Prądy gałęziowe obliczamy z równań gałęziowych (3.3-20):
+
+<image/wzory/k4_page279_formula2.png>
+
+Dane liczbowe w przykładzie 3.3-13 zostały dobrane tak, aby zachować równoważność gałęzi
+sieci analizowanych w przykładach 3.3-12 i 3.3-13, w obu przypadkach otrzymaliśmy zatem
+identyczne wyniki liczbowe.
+
+H. Sieci ze źródłami idealnymi. Jeśli prześledzimy uważnie raz jeszcze
+wszystkie etapy metody prądów obwodowych, dojdziemy do oczywistego
+wniosku, że pozostaje ona słuszna bez jakichkolwiek zmian, gdy w sieci
+występują idealne źródła napięciowe. Podobnie, metoda napięć węzłowych nie
+ulega zmianom, jeżeli w sieci występują idealne źródła prądowe. Nie można
+natomiast, bez dodatkowych modyfikacji, stosować metody prądów obwodo-
+wych, gdy w sieci występują idealne źródła prądowe, oraz metody napięć
+węzłowych, gdy występują w niej idealne źródła napięciowe. W tomie III
+przedstawimy uogólnienia obu metod sieciowych na przypadki nie rozpatrzone
+w tym rozdziale, m.in. na przypadek sieci ze źródłami sterowanymi, a także na
+przypadki wyżej wymienione.
+
+I. Porównanie metod. Jeżeli, tak jak założyliśmy, w sieci występują tylko
+źródła rzeczywiste, to do analizy sieci można zastosować obie omówione metody
+sieciowe. Pojawia się przy tym problem wyboru metody. Podstawowym
+kryterium wyboru jest złożoność obliczeniowa metody. W praktyce wybieramy
+z reguły tę metodę, która jest prostsza pod względem obliczeniowym. Ponieważ
+najbardziej pracochłonnym krokiem w obu metodach jest obliczanie macierzy
+odwrotnej do macierzy oporów obwodowych R, (metoda prądów obwodo-
+wych) lub macierzy odwrotnej do macierzy przewodności węzłowych G,, (meto-
+da napięć węzłowych), więc o wyborze metody powinno decydować porównanie
+rzędów obu macierzy. Rząd macierzy R, jest równy n = g — (w — 1), zaś rząd
+macierzy G,„ jest równy w — 1. Wnioski są zatem oczywiste:
+
+— jeśli n < w — 1, korzystniejsza z obliczeniowego punktu widzenia jest
+metoda prądów obwodowych;
+
+— jeśli n > w — 1, korzystniejsza z obliczeniowego punktu widzenia jest
+metoda napięć węzłowych;
+
+— jeśli n = w — 1, obie metody są pod względem obliczeniowym równo-
+ważne; o wyborze metody mogą w takim przypadku decydować inne względy
+(początkowa struktura gałęzi, struktura danych liczbowych, rodzaj zadania
+analizy).
+
+Dla sieci analizowanej w przykładach 3.3-12 i 3.3-13 mieliśmy
+n=w—l =3, obie metody miały więc podobną złożoność obliczeniową.

@@ -1,0 +1,8 @@
+<image/figury/k4_page148_figure1.png>
+
+<image/figury/k4_page148_figure2.png>
+
+Tab. 3.13 Zestawienie parametrów technicznych
+przykładowego modułu ALG392
+
+148 Rozdział : 3. Sprzęt sterowników PLC

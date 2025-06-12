@@ -1,0 +1,50 @@
+H.aA — m mm AOVT" £ _ --——. „I na —
+
+>ry/ka_page185_formula2.png |
+
+Podstawowymi elementami występującymi w schemacie drabinkowym są prze-
+kaźniki (relays) składające się ze styków i cewek.
+
+ 
+
+Styki (contacts) są używane do sterowania przebiegiem realizacji programu w
+obrębie danego obwodu logicznego przedstawionego w formie szczebla drabinki
+(rung of ladder) przez testowanie wartości przypisanych im zmiennych binar-
+nych.
+
+W przypadku styku zwiernego, zwanego też normalnie otwartym (normally
+open), wartość logiczna O przypisanej mu zmiennej binarnej określa stan styku
+jako rozwarty (OFF), natomiast styk jest zwarty (ON), jeżeli przypisana mu
+zmienna ma wartość /. Stan styku rozwiernego, zwanego też normalnie za-
+mkniętym (normally closed), jest określony w sposób przeciwny - wartość 0
+zmiennej binarnej oznacza, że styk jest zwarty.
+
+Jeżeli połączenia szeregowe lub równoległe styków stanowią obwód bez prze-
+rwy, to wykonywanie programu sterującego będzie kontynuowane w danym
+obwodzie, zapewniony jest bowiem przepływ prądu. Rozwarcie styku, które
+powoduje przerwę w obwodzie, oznacza przejście do następnej linii programu, tj.
+sprawdzanie następnego obwodu zapisanego w formie szczebla drabinki.
+
+Cewki (coils) przekaźników używane są w celu zmiany wartości przypisanych
+im zmiennych binarnych. Warunek wzbudzenia cewki określony jest przez
+funkcję logiczną odpowiadającą obwodowi poprzedzającemu cewkę. Cewki
+przyjmują zawsze prawe skrajne położenie w linii programu. Warunek wzbudze-
+nia oraz typ wybranej cewki określają wartość przypisanej jej zmiennej binarnej.
+
+Zestawienie wszystkich rodzajów styków i cewek dostępnych w programowaniu
+sterowników GE Fanuc serii 90-30 przedstawiono w Tab. 4.8 na końcu rozdziału.
+
+Zmiennym binarnym wymienionym w Tab. 4.2 można przyporządkować dowol-
+ną liczbę styków oraz jedną cewkę. Wyjątek stanowią zmienne odpowiadające
+wejściom dwustanowym (%/), którym można przyporządkować tylko styki.
+Podkreśla się jeszcze raz, że zmiana wartości zmiennych binarnych przypisanych
+stykom może nastąpić tylko po zmianie stanu cewek, które przypisano tym sa-
+mym zmiennym lub w wyniku wykonania operacji binarnych na tych zmiennych.
+Może być ona również efektem celowego zabiegu programisty zwanego forso-
+waniem wartości zmiennych, przy czym skutek forsowania jest dominujący.
+Takie wymuszone z zewnątrz zmiany wartości polegają na chwilowym przełą-
+czeniu na wartość przeciwną (rransition) lub na przełączeniu trwałym z blokadą
+
+ 
+
+4.3 Funkcje przekaźnikowe 185

@@ -1,0 +1,20 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 18
+6. Schemat blokowy układów SPLD standardu GAL16V8 oraz funkcje jego bloków.
+« _ Narys. nie zaznaczono układu ochrony danych przed odczytem.
+
++ Matryca połączeń logicznych składa się:
+
+O
+
+o
+
+z programowalnej macierzy typu AND array z ustalonymi połączeniami do bramek typu OR.
+
+Pole logicznych połączeń jest zorganizowane jako 16 komplementamych linii wejściowych (z
+sygnałami i ich negacjami) krzyżujących się z 64 liniami typu „product term”.
+
+Na każdym skrzyżowaniu linii znajduje się komórka typu E*PROM, która w zależności od
+zaprogramowania zwiera lub rozwiera linię poziomą od pionowej.
+
+figury/k8_p
+<image/figury/k8_page16_figure2.png>

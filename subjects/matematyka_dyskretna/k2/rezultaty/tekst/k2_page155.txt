@@ -1,0 +1,46 @@
+6 Rozdział 1. Rekurencja
+
+Podobnie można definiować inne funkcje ze zbioru liczb naturalnych w zbiór liczb natu-
+ralnych. Definicja taka zawiera przepis, jak policzyć wartość funkcji dla wartości początkowych,
+oraz drugi przepis, jak wyliczyć wartość dla argumentu n za pomocą wartości funkcji dla
+mniejszych argumentów.
+
+1.4 Funkcja (ciąg) Fibonacciego
+Następnym przykładem rekurencyjnego definiowania funkcji jest funkcja Fibonacciego,
+
+określona równaniami:
+
+<image/wzory/k2_page155_formula1.png>
+Kolejne wartości funkcji Fibonacciego to:
+
+<image/wzory/k2_page155_formula2.png>
+
+Udowodnimy teraz przez indukcję, że
+
+<image/wzory/k2_page155_formula3.png>
+
+gdzie 6 = (1 + v5)/2 = 1,61803 orz y = (1 — V5)/2 m —0,61803
+
+Równość (1.1) zachodzi dlan = 0 in = 1. Załóżmy teraz, że zachodzi dla wszystkich
+argumentów mniejszych od n. Zauważmy, że 6 oraz +» są rozwiązaniami równania x* —
+1r—1=0,mamy więcę+ 1=6g* omzy+1=v> atakżeg””! +6"? = 6" oraz
+p”! + 777 = w”. Łatwo teraz można pokazać, że F(n) = F(n — 1) + F(n — 2) =
+(6” — 97)/Y5.
+
+Ponieważ || < 1, mamy 9” /y5 < 1/V5 < 1/2, więc wartość F(n) jest równa
+6" /4/6 po zaokrągleniu do najbliższej liczby naturalnej i funkcja Fibonacciego rośnie
+wykładniczo.
+
+15 Funkcja Ackermanna
+
+Funkcja A ckermanna określona jest, dla liczb naturalnych i, ; > 1, następującymi rów-
+naniami:
+
+<image/wzory/k2_page155_formula4.png>
+
+Funkcja A ckermanna jest przykładem funkcji mającej dość prostą definicję, ale jest prak-
+tycznie nieobliczalna z tego powodu, że jej wartości szybko rosną. Na przykład:
+
+<image/wzory/k2_page155_formula5.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

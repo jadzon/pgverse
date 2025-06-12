@@ -1,0 +1,25 @@
+Filtry pokrewne filtrom o średniej kroczącej 269
+
+- drugiego. Przypomnijcie sobie, że dobre działanie w dziedzinie czasu skutkuje złym działaniem
+"w dziedzinie częstotliwości i vice versa. Podsumowując, trzeba stwierdzić, że filtr o średniej
+kn i jest wyjąt ioł ił ładzaj (działanie w. dziedzini (uz
+wyjątkowo złym filtrem dolnoprzepustowym (działanie w dziedzinie częstotliwości).
+
+Filtry pokrewne filtrom o średniej kroczącej
+
+| W świecie idealnym projektanci filtrów mieliby do czynienia tylko z informacjami zakodowa-
+| nym w dziedzinie czasu ub w dziedzinie częstotliwości, lecz nigdy z mieszaniną tych dwóch
+dziedzin w tym samym sygnale. Niestety istnieją jednak niektóre zastosowania, w których
+obie dziedziny są jednakowe ważne. Do tej trudnej kategorii należą na przykład sygnały tele-
+wizyjne. Informacja wizyjna jest kodowana w dziedzinie czasu, to znaczy, że kształt przebiegu
+postępuje się z nim zgodnie z jego rozkładem częstotliwościowym. Istotne jest więc całko-
+wite pasmo częstotliwości, sposób sumowania fal nośnych dźwięku i koloru, eliminacja i od-
+twarzanie składowej stałej itd. Innym przykładem mogą być zakłócenia elektromagnetyczne,
+które są najlepiej zrozumiałe w dziedzinie częstotliwości, mimo że informacja sygnałowa jest
+zakodowana w dziedzinie czasu. Na przykład sygnał monitora temperatury w eksperymencie
+naukowym może być zakłócony sygnałem 50 Hz z sieci energetycznej, 30 kHz z zasilacza
+impulsowego lub 1320 kHz z lokalnej stacji radiowej AM. Filtry pokrewne filtrom o średniej
+kroczącej mają lepsze właściwości w dziedzinie częstotliwości i mogą być przydatne w zasto-
+sowaniach związanych jednocześnie z obu dziedzinami — czasu i częstotliwości.
+
+<image/figury/k3_page246_figure1.png>

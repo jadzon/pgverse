@@ -1,0 +1,48 @@
+ory/k4_page302_formula1.png KGGGGM|
+
+Liczba operacji bitowych dostępnych w sterownikach Modicon jest bardzo bo-
+gata. Podstawowymi funkcjami są oczywiście AND, OR oraz XOR, najczęściej
+wykorzystywane w układach logicznych. Parametrami każdego bloku są adresy
+początków obu obszarów podlegających przetwarzaniu oraz długość obszaru
+wyrażona w słowach (16 bitów), która może się mieścić w granicach od I do
+100.
+
+W celu wykonania operacji odwrócenia bitów można posłużyć się instrukcją
+COMP. Parametrami bloku COMP są również adres początku obszaru źródło-
+wego i docelowego oraz długość obszaru (od 1 do 100 słów).
+
+Instrukcja CMPR dokonuje porównania bitów dwóch obszarów pamięci, których
+adresy początkowe i długość są parametrami wywołania funkcji, zaś wynik po-
+równania podawany jest na wyjście tego bloku funkcyjnego. Porównywanie wy-
+konywane jest w takt cykli zegarowych sterownika tak, że w trakcie jednego
+cyklu porównywane są tylko dwa bity. W wypadku, gdy mają one różne warto-
+ści, na jednym z wyjść pojawia się stan wysoki, a na drugim odzwierciedlony jest
+stan aktualnie porównywanego bitu źródłowego.
+
+Wśród standardowych instrukcji dostępnych w sterownikach Modicon występują
+również dwa bloki funkcyjne umożliwiające sprawdzanie i modyfikowanie bitu
+w dowolnym obszarze pamięci. Instrukcja SENS sprawdza i informuje o stanie
+dowolnego bitu. Instrukcja MBIT umożliwia ustawienie dowolnego bitu w stan
+niski lub wysoki. Wyd. 6.24 przedstawia sposób korzystania z obu funkcji. Ich
+parametrami są:
+
+l. wskaźnik do aktualnie sprawdzanej lub modyfikowanej wartości, którym
+może być:
+«a wartość stała z zakresu 1..999 w sterownikach 16-bitowych, lub
+1..9600 w sterownikach 24-bitow; ch - w przykładzie: 40005 i £0010,
+u rejestr wejściowy (3x), w którym może znajdować się wartość
+zzakresu (1.4080 w sterownikach 16-bitowych, lub  1..9600
+w sterownikach 24-bitowych,
+= rejestr wewnętrzny (4x), w którym może znajdować się wartość
+zzakresu 1.4080 w sterownikach 16-bitowych, lub 1..9600
+w sterownikach 24-bitowych.
+
+2. początkowe słowo lub rejestr w sprawdzanym obszarze, w postaci:
+s rejestru wyjściowego (0x),
+u rejestr wewnętrzny (4x) — w przykładzie: 40001 i 40020.
+
+     
+
+Rozdział : 6 Programowanie sterowników AEG SCHNEIDER Modicon
+
+302.

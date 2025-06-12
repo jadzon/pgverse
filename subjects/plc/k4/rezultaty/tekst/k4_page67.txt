@@ -1,0 +1,23 @@
+ory/k4_page67_formula1.png KEKEEEMM|
+
+Jak wspomniano w punkcie 2.1.3, na konfigurację (configuration) składają się
+zasoby (resources), definiowane w ramach zasobów zadania (tasks), zmienne
+globalne (g/obal variables) i ścieżki dostępu (access paths).
+
+Rys. 2.10 pokazuje prosty przykład konfiguracji o nazwie CELL_/, obejmującej
+zasoby STATION_] i STATION_2. W ramach zasobu STATION _] realizowane są
+zadania SŁOW_I oraz FAST_I/. Zadanie SLOW_/ kontroluje wykonywanie pro-
+gramu P/ oraz bloku funkcyjnego FB/ będącego elementem programu P2.
+Zestaw deklaracji dla odpowiadających temu przykładowi bloków funkcyjnych
+oraz programów przedstawiono w Tab. 2.34. Przykład ten będzie w dalszym
+ciągu służył za punkt odniesienia dla omawiania elementów konfiguracji.
+
+<image/figury/k4_page67_figure1.png>
+
+<image/wzory/k4_page67_formula2.png>
+
+Rys. 2.10 Graficzny przykład konfiguracji
+
+ 
+
+2.4 Elementy konfiguracji 67

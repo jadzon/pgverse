@@ -1,0 +1,26 @@
+11, Pary transformat Fouriera
+
+W sygnale okresowym o częstotliwości / jedynymi częstotliwościami sinusoid tworzących sy-
+gnał są całkowite wielokrotności /, tj. /, 2/, 3/, 4f itd. Te częstotliwości nazywamy harmonicz-
+nymi. Pierwszą harmoniczną jest /, drugą 2/, trzecią 3/ i tak dalej. Pierwsza harmoniczna
+ma też specjalną nazwę, jest to częstotliwość podstawowa. Przykłady podano na rys. 11.7. Na
+rys. 11.7 a) przedstawiono czystą falę sinusoidalną, a na rys. 11.7 b) — jej transformatę DFT,
+która jest pojedynczym pikiem. Na rys. 11.7 c) fala sinusoidalna ma zniekształcone wierzchołki,
+a na rys. 11.7 d) pokazano, jak takie zniekształcenie wpływa na reprezentację sygnału w dzie-
+dzinie częstotliwości. Ponieważ przebieg zniekształcony jest okresowy i ma częstotliwość taką
+samą, jak oryginalna fala sinusoidalna, więc przebieg w dziedzinie częstotliwości zawiera pik
+przebiegu oryginalnego oraz harmoniczne. Harmoniczne mogą mieć różne amplitudy, na ogół
+zmniejszające się w miarę wzrostu częstotliwości. Tak jak dla każdego sygnału, ostre zbocza są
+reprezentowane przez większe częstotliwości. Rozważmy na przykład zwykłą bramkę logiczną
+TTL generującą falę prostokątną 1 kHz. Czas narastania zboczy jest równy kilka nanosekund,
+co daje harmoniczne do prawie 100 MHz — dziesięciotysięczna harmoniczna!
+
+Na rys. 11.7 e) zilustrowano subtelności analizy harmonicznych. Jeśli sygnał jest symetrycz-
+ny wokół osi poziomej, a więc górne garbki są odbiciem lustrzanym dolnych, to wszystkie
+parzyste harmoniczne mają wartość zero. Sygnał zawiera wtedy harmoniczną podstawową,
+trzecią, piątą itd. (rys. 11.7 f).
+Wszystkie okresowe sygnały ciągłe mogą być reprezentowane przez sumowanie harmonicznych
+tak jak to opisano. W przypadku dyskretnych sygnałów okresowych następuje złamanie tej prostej
+zależności. Jak się zapewne domyślacie, problemem jest tu aliasing. Na rys. 11.8 a) przedstawie
+
+figury/k3_page197_figure1.pnfigury/k3_page197_figure2.pn

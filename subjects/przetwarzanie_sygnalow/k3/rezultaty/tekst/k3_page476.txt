@@ -1,0 +1,29 @@
+Przykład projektowania — filtr SOI do sygnałów fonicznych 513
+
+Przykład projektowania — filtr SOI do sygnałów
+fonicznych
+
+Gdy już trochę poeksperymentujecie z wcześniej napisanymi programami, dostarczonymi z ze-
+stawem, będziecie chcieli je zmodyfikować, aby zdobyć nowe doświadczenia w programowa-
+niu. Programy można pisać albo w asemblerze, albo w języku C. Zestaw EZ-KIT Lite zawiera
+narzędzia programowe dla obu tych języków. W dalszej części tego rozdziału przyjrzymy się
+zaawansowanym metodom programowania, takim jak symulacja, debugowanie i praca ze zinte-
+growanym środowiskiem tworzenia aplikacji. Na razie skoncentrujemy uwagę na najłatwiejszym
+sposobie uruchomienia programu. Będziemy więc posuwać się do przodu małymi krokami.
+Ponieważ kod źródłowy jest w ASCII, więc standardowy edytor tekstu jest wszystkim, co
+niezbędne do wprowadzania zmian w istniejących plikach lub do tworzenia całkiem nowych
+programów. W tablicy 29.2 podano przykład programu filtru SOI napisanego w asemblerze.
+Choć, jak na razie, jest to jedyny potrzebny wam program, to miejcie na uwadze, że są
+jeszcze inne pliki niezbędne do stworzenia pełnego programu. Obejmują one „plik opisu ar-
+chitektury” (określający konfigurację układową i alokację pamięci), ustawienie tablicy wek-
+torów przerwań oraz podprogram inicjalizacji kodera-dekodera. W końcu będziecie musieli
+zrozumieć działanie tych części programu, lecz teraz po prostu skopiujecie je z programów
+napisanych wcześniej.
+
+<image/figury/k3_page47/6_figure1.png>
+
+ 
+
+Rys. 29.2. Przykład filtru SOI. Na rys. a) pokazano odpowiedź częstotliwościową bardzo wyspecjalizowane-
+go filtru. Odpowiadająca jej odpowiedź impulsowa filtru jest przedstawiona na rys. b). Ten filtr zaprojekto-
+wano w rozdziale 17, aby wykazać, że w filtrach cyfrowych SOI można uzyskać w zasadzie każdą odpowiedź

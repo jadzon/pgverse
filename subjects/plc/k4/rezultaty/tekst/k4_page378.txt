@@ -1,0 +1,33 @@
+<image/figury/k4_page37/8_figure1.png>
+
+7.16.5 Przekazanie wartości do wyjść CET CWA CU) ZEL
+
+ 
+
+Blok funkcyjny FB251 przekazuje wartość analogową do analogowego modułu
+wyjściowego. W Tab. 7.18 przedstawiono parametry wywołania bloku.
+
+Opis parametrów wywołania bloku funkcyjnego FB2S1:
+
+e Parametr XE zawiera wartość analogową w przedziale od UGR do OGR
+przekazywaną do analogowego modułu wyjściowego. Blok funkcyjny
+FB25] normalizuje wartość XE w sposób liniowy w stosunku do górnej i
+dolnej granicy w zależności od typu jaki został wybrany dla danego kanału:
+
+a Dla kanału typu O
+
+<image/wzory/k4_page3/8_formula1.png>
+
+a [Dla kanału typu I
+
+<image/wzory/k4_page3/8_formula2.png>
+
+gdzie xa jest wartością wysyłaną do analogowego modułu wyjściowe-
+
+go.
+
+ 
+
+m 0 AE
+
+378 Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5

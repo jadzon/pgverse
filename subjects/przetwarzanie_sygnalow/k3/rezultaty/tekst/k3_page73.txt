@@ -1,0 +1,60 @@
+Szybkość wykonywania — sprzęt 85
+
+ 
+
+ 
+
+Większość profesjonalnych programistów obraża się, słysząc propozycję użycia asemblera i śmie-
+je się z sugestii zastosowania BASIC-a. Ich rozumowanie jest całkiem proste. Asembler i BASIC
+zniechęcają do stosowania dobrych praktyk w programowaniu. Dobry program powinien być
+EEE act
+z dobrze zdefiniowanych podprogramów) i łatwo zrozumiały (wyposażony w wiele komenta-
+rzy i opisowe nazwy zmiennych). Słaba struktura asemblera i BASIC-a utrudnia spełnienie tych
+wymagań. Wiąże się to też z faktem, że osoby chętnie stosujące asembler i BASIC często mają
+niewiele doświadczenia w zakresie prawidłowej struktury oprogramowania i dokumentacji.
+Zwolennicy asemblera odpowiadają na ten atak własną repliką. Przypuśćmy, że piszecie
+w języku C, a wasz konkurent pisze ten sam program w asemblerze. Pierwsze wrażenie
+końcowego użytkownika będzie takie, że wasz program to rupieć, gdyż jest dwa razy wol-
+niejszy. Nikt przecież nie będzie sugerował, żeby pisać w asemblerze bardzo duże programy,
+lecz tylko części programu wymagające bardzo szybkiego wykonywania. Na przykład wiele
+funkcji w bibliotekach oprogramowania DSP jest napisanych w asemblerze i potem dostęp-
+nych z większych programów napisanych w C. Nawet najwierniejsi puryści oprogramowania
+będą używać asemblera, o ile tylko nie muszą go napisać.
+
+Szybkość wykonywania — sprzęt
+
+Moc obliczeniowa komputerów wzrasta tak gwałtownie, że każda książka na ten temat staje
+się przestarzała, zanim zostanie opublikowana. To jest koszmarny sen autorów! Oryginalny
+IBM PC wprowadzono na rynek w roku 1981. Jego podstawą był mikroprocesor 8088 z ze-
+garem 4,77 MHz i z 8-bitową magistralą danych. Potem nastąpiły kolejne generacje kom-
+puterów osobistych wprowadzane co 3-4 lata: 8088>80286»8038680486>80586 (Pentium).
+W każdym z tych nowych systemów szybkość obliczeń wzrastała o czynnik pięć w stosun-
+ku do rozwiązania poprzedniego. Do roku 1996 częstotliwość zegara wzrosła do 200 MHz,
+a magistralę rozszerzono do 32 bitów. Wraz z innymi udoskonaleniami dało to wzrost mocy
+obliczeniowej blisko tysiąckrotny w ciągu 15 lat! W ciągu następnych 15 lat należy oczeki-
+wać dalszego wzrostu o czynnik 1000*.
+
+Jedynym źródłem uzyskania aktualnych informacji w tej gwałtownie zmieniającej się dzie-
+dzinie są bezpośredni producenci, którzy publikują reklamy, karty katalogowe, listy cenowe
+itp. Zapomnijcie o szukaniu takich informacji w książkach, sięgajcie do czasopism i nawet
+do pism codziennych. Bierzcie pod uwagę, że podstawowa szybkość obliczeniowa będzie
+się co najmniej podwajała co dwa lata. Nie wystarczy tylko poznawanie aktualnego stanu
+rozwoju techniki komputerowej. Trzeba śledzić ten rozwój i przewidywać jego dalszy trend.
+Mając to na uwadze, możemy teraz przejść do omówienia, w jaki sposób szybkość działa-
+nia jest ograniczana przez komputer. Komputery są zbudowane z wielu podsystemów, więc
+czas wykonywania zadań zależy od dwóch podstawowych czynników: 1) szybkości działa-
+nia poszczególnych podsystemów, 2) czasu koniecznego do przesyłania danych między tymi
+blokami. Na rys. 4.5 przedstawiono uproszczony schemat najważniejszych, ograniczających
+szybkość działania, bloków typowego komputera osobistego. Jednostka centralna (CPU) jest
+sercem systemu. Jak już poprzednio powiedziano, WI ZE OE EG WANIE NE
+dy o długości 32 bitów (w komputerach obecnej generacji)”. W CPU są też układy cyfrowe
+potrzebne do operacji podstawowych, takich jak przesuwanie zawartości bitów i arytmetyka
+stałoprzecinkowa.
+
+$_ Obecnie (rok 2006) standardowym procesorem stosowanym w popularnych komputerach PC jest 32-
+-bitowy Pentium 4 produkowany przez firmę Intel oraz jego odpowiedniki produkowane przez firmy
+AMD-Athlon i Sempron. Komputery do zastosowań profesjonalnych są wyposażane w 64-bitowe
+procesory Itanium, Xeon, Athlon 64 i Opteron. Ich wewnętrzna częstotliwość taktowania dochodzi do
+5 GHz (przyp. tłum.).
+
+9. Także obecnie — w roku 2006 (przyp. tłum.).

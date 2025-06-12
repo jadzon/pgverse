@@ -1,0 +1,44 @@
+1. Pojęcia podstawowe — elementy
+
+ło prądowe (rys. 1.7-3b) jest elementem skupionym o rów-
+
+<image/wzory/k3_page120_formula2.png>
+
+daną funkcją czasu określającą wydajność prądową źródła,
+
+vewnętrznym (G, jest przewodnością wewnętrzną) źródła,
+
+/padku granicznym, gdy G,„ = 0(R„ = ©), otrzymujemy
+je120_formula1.png >we.
+
+iło prądowe można oczywiście traktować jako połączenie
+
+o źródła prądowego i oporu R.
+
+yjęto tę samą konwencję strzałkowania, co na rys. 1.7-1.
+
+l
+="B—=O
+
+igury/k3_page120_figure1.png
+
+D. Równoważność źródeł. W przypadku źródeł rzeczywistych pojawia się
+problem ich równoważności.
+
+Zapiszmy równania (1.7-6) i (1.7-7) w postaci:
+
+<image/wzory/k3_page120_formula3.png>
+
+gdzie R„ oznacza opór wewnętrzny źródła napięciowego, natomiast Ry, —
+opór wewnętrzny źródła prądowego. Rozwiązując drugie z równań (1.7-8)
+względem napięcia u oraz porównując je z pierwszym równaniem (1.7-8)
+zauważamy, że równania te (względem zmiennych i, u) będą identyczne wtedy
+i tylko wtedy, gdy:
+
+<image/wzory/k3_page120_formula4.png>
+
+ 
+
+na
+1ź
+sa

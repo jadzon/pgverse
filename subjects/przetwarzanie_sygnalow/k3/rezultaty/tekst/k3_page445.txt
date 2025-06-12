@@ -1,0 +1,22 @@
+27. Kompresja danyc
+
+w MPEG koduje się kolejne ramki jako kodowane predykcyjnie, czyli obrazy typu P. T
+więc w obrazie typu P są zawarte tylko te piksele, które uległy zmianie po obrazie typu I.
+Chociaż te dwa typy kompresji są podstawą MPEG, to jednak aktualna implementacja tej
+kompresji jest znacznie bardziej skomplikowana niż tu opisana. Na przykład obraz 1) p
+P może być odniesiony do obrazu typu I, który został przesunięty ze względu na ruch ot
+tów w sekwencji obrazowej. Są też obrazy kodowane predykcyjnie dwukierunkowo, c:
+obrazy typu B. A ZE: jak i przyszłego obra
+aw SSE zmieniają się stopnia
+podczas wielu ramek. Pojedyncze ramki mogą też być nie po kolei zapisywane w d:
+skomprymowanych, aby ułatwić właściwe uszeregowanie obrazów typu I, P i B. Dc
+barwy i dźwięku jeszcze bardziej komplikuje taką kompresję.
+
+Największe zniekształcenia związane z MPEG występują wówczas, gdy duże segme
+obrazu szybko się zmieniają. W rezultacie jest potrzebny spory pakiet informacji, aby mi
+dążyć za gwałtownie zmieniającymi się scenami. Jeśli bitowa przepływność danych je
+ustalona, to występuje tzw. efekt blokowy — pojawianie się wyraźnych fałszywych krawę ed
+w miejscach podziału obrazu na segmenty. Można zminimalizować to zjawisko w sieciac
+przesyłających jednocześnie wiele kanałów wideo. takich jak telewizja kabłowa. Nagle pt
+
+<image/figury/k3_page445_figure1.png>

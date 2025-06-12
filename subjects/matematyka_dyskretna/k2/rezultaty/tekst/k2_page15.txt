@@ -1,0 +1,40 @@
+»
+
+©
+
+1
+
+—
+
+1.11. Zadania 15
+
+Niech A = f1,2,3,4), B = 41,2,3). Wypisz elementy A x B, B x A oraz
+
+<image/wzory/k2_page15_formula1.png>
+
+. Niech 7 = f1,2,3,4,5) będzie zbiorem indeksów. Dla każdego i € I określamy
+
+zbórC, = (reN|1<r <3%0 orz ż dzieli z). Oblicz (J,., C, oraz (),e, C;.
+
+. Uporządkuj następujący zbiór słów [Fragment wiersza Ptasie radio Juliana Tu-
+
+wima] według porządku leksykograficznego i kanonicznego: słowik, wróbeł, kos,
+jaskółka, kogut, dzięcioł, gil, kukułka, szczygieł, sowa, kruk, czubatka, drozd, siko-
+ra i dzierłatka, kaczka, gąska, jemiołuszka, dudek, trznadel, pośmieciuszka, wilga,
+zięba, bocian, szpak.
+
+. Udowodnij wzór (1.1) na sumę ciągu arytmetycznego.
+10.
+
+Udowodnij wzór (1.2) na sumę ciągu geometrycznego.
+
+. Udowodnij wzór (1.3).
+12.
+13.
+14.
+
+Udowodnij wzór (1.4).
+Udowodnij lemat 1.19,
+Udowodnij zależności z przykładów 1.16, 1.17, 1.18,
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

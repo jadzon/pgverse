@@ -1,0 +1,16 @@
+54 3. Przetwarzanie analogowo-cyfrowe i cyfrowo-analogowe
+don zc a RAZA OC io EE
+
+<image/figury/k3_page43_figure1.png>
+
+Rys. 3.6. Analiza przetwarzania cyfrowo-analogowego. Na rys. a) dane cyfrowe są przetworzone w ciąg impulsów,
+rego wina przedstawiono na ya) Dane daj sygnał darzy (ya. ) w wynik zastosowania
+częstotliwości powyżej potowy
+
+filtru dolnoprzepustowego częstotliwości próbkowania (proszę
+rysunki b) i g). Jednak w większości elektronicznych przetworników c/a uzyskuje się nie ciąg impulsów, lecz przebieg
+z pamiętaniem rzędu ciągu impulsów
+
+pamiętaniem
+w sygnał odtworzony, trzeba filtrem analogowym usunąć wszystkie częstotliwości powyżej częstotliwości Nyquista oraz
+dokonać korekty ze wzgłędu na funkcję sinc, jak to przedstawiono na rys. e)

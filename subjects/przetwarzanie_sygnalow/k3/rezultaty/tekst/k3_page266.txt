@@ -1,0 +1,41 @@
+<image/figury/k3_page266_figure1.png>
+
+się każdego kwantu promieniowania gamma jest impulsem, więc impuls wyjściowy z detekto-
+ra (tj. jednostronny przebieg wykładniczy) jest odpowiedzią impulsową systemu.
+
+Na rys. 17.4 a) pokazano impulsy wytwarzane przez detektor w odpowiedzi na kwanty pro-
+mieniowania gamma przychodzące w sposób losowy. Informacją, jaką chcemy wydobyć
+z tego sygnału wyjściowego, jest amplituda każdego z impulsów, proporcjonalna do energii
+
+czyć informacji medycznej o pacjencie, umożliwić określenie wieku odległej galaktyki, wy-
+kryć bombę w bagażu lotniczym itd.
+Wszystko byłoby łatwe, gdyby były wykrywane tylko pojedyncze kwanty gamma. Tak jed-
+nak zazwyczaj nie jest. Często dwa lub więcej impulsów może nakładać się na siebie (rys.
+17.4 a), przesuwając mierzoną amplitudę. Jednym z rozwiązań tej trudności jest w wyj-
+ściowego sygnału detektora, powodujący ich zwężenie, co ogranicza ich nakładanie. W ide-
+alnym przypadku chcielibyśmy, aby każdy impuls był zbliżony do impulsu oryginalnego. Jak
+się można spodziewać, nie jest to możliwe i musimy zadowolić się impulsami o skończonej
+szerokości, lecz znacznie krótszymi niż impuls wykrywany (rys. 17.4 b).
+Chociaż sygnał z detektora zawiera informację zakodowaną w dziedzinie czasu, to większa
+część analizy musi być wykonywana w dziedzinie częstotliwości, w której ten problem jest
+łatwiej zrozumiały. Na rys. 17.5 a) przedstawiono powstający w detektorze sygnał, który już
+poznaliśmy. Na rys. 17.5 c) zaś mamy impuls, jaki chcielibyśmy uzyskać. Też go już pozna-
+liśmy. Ten żądany impuls wybrano w sposób dowolny tak, aby miał kształt okna Blackmana
+i szerokość równą ok. 1/3 impulsu oryginalnego. Naszym celem jest znalezienie takiej odpo-
+wiedzi impulsowej filtru (rys. 17.5 e), która spleciona z sygnałem z rys. 17.5 a), daje sygnał po-
+kazany na rys. 17.5 c). Można to wyrazić tak: jeśli a * e = c , to znajdźmy e mając dane ai c.
+Gdyby te sygnały były ze sobą połączone, zamiast splotu, operacją dodawania lub mnożenia, to
+rozwiązanie byłoby proste: odejmowanie jest stosowane jako odwrotność dodawania, a dzielenie
+— mnożenia. Splot jest czymś innym, nie istnieje żadna prosta operacja, którą by można określić
+jako odwrotną w stosunku do splotu, czyli jako rozplot. Splot jest operacją zbyt skomplikowaną,
+aby rozplot można było wykonać przez proste operowanie sygnałami w dziedzinie czasu.
+Ten problem jest, na szczęście, znacznie prostszy w dziedzinie częstotliwości. Przypomnijcie
+sobie, że spłot w jednej dziedzinie jest równoważny mnożeniu w drugiej. Odnosząc się znowu
+do sygnału z rys. 17.5, mamy zagadnienie: jeśli b x f = d, to znajdźmy /, mając dane b i d. Jest
+to problem łatwy do rozwiązania: odpowiedź częstotliwościowa (rys. 17.5 f) jest widmem czę-
+
+ 
+
+Z O O DODĘ NIC ZO POZO WO TCZ DRZE OPOL NOCE POZ RCPERWEEZA
+
+CEJ

@@ -1,0 +1,28 @@
+Prezentację języków programowania dla sterowników PLC rozpoczyna język
+schematów drabinkowych LD dla sterowników popularnej serii 90-30, stanowią-
+cej podstawową grupę modeli większej rodziny sterowników serii 90
+produkowanych przez amerykańsko-japońską firmę GE Fanuc Automation. Język
+ten jest stosunkowo bliski normie IEC 1131-3, chociaż spotyka się w nim pewne
+odstępstwa. Jest to zresztą zrozumiałe, gdyż powstał on znacznie wcześniej niż
+norma. W rozdziale podano tylko ogólne zasady tworzenia programu drabinko-
+wego oraz opisy podstawowych elementów tego języka, z pominięciem
+szczegółów technicznych, po które trzeba sięgnąć do odpowiednich instrukcji
+sterowników serii 90-30. Wraz z szybkim rozwojem i wprowadzaniem do użytko-
+wania coraz to nowszych konstrukcji rozwijają się także narzędzia programowe,
+brak jest więc możliwości omówienia wszystkich najnowszych rozwiązań w pod-
+ręczniku zawierającym tylko pewne ogólne informacje o sterownikach
+programowalnych. Przykładowo, pojawienie się procesorów realizujących ope-
+racje zmiennoprzecinkowe (CPU 352) umożliwiło wprowadzenie także funkcji
+arytmetycznych dla zmiennych typu REAL. Celem tego rozdziału jest więc raczej
+omówienie reguł użycia języka i pokazanie jego możliwości oraz prezentacja
+typowych, najczęściej używanych elementów języka. Zakłada się przy tym, że
+czytelnik zapoznał się już z podstawami z zakresu budowy i zasady działania
+sterowników PLC oraz ich programowania. W rozdziale 8 przedstawiono kilka
+przykładowych programów realizujących zarówno zadania sterowania logiczne-
+go jak i typowe zadania regulacji, takie jak regulacja PID, trójpołożeniowa,
+zkorekcją itp. Na końcu rozdziału zebrano w tablicach wszystkie instrukcje
+i funkcje, które są obecnie dostępne w języku LD dla serii 90-30.
+
+ 
+
+Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30 179

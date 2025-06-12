@@ -1,0 +1,37 @@
+___ 33. Metody analizy obwodów liniowych prądu stałego 259
+
+<image/wzory/k4_page257_formula1.png>
+
+Metodę analizy układów, w której wykorzystuje się zastępcze źródło
+napięciowe (tj. źródło Thevenina), nazywamy metodą źródła napięciowego
+lub metodą Thevenina. Z przeprowadzonych rozważań wynika, że w celu
+obliczenia metodą Thevenina prądu I (napięcia U) w wyróżnionym oporze Ry
+występującym między zaciskami AB liniowego układu rezystancyjnego (rys.
+3.3-4a), należy:
+
+1. obliczyć napięcie rozwarcia U, na rozwartych zaciskach AB tego
+układu (rys. 3.3-6a) i przyjąć Er = U,;
+
+2. obliczyć opór zastępczy Rqy = R„,5 bezźródłowego dwójnika AB (rys.
+3.3-6b); |
+
+3.zeschematuzastpczegorys.3.37obliczyszukanwielkowzory
+(3.3-5)).
+
+Przykład 3.3-6. Stosując metodę Thevenina wyznaczymy prąd I płynący przez przekątną
+układu mostkowego z rys. 3.3-8a.
+
+<image/figury/k4_page257_figure1.png>
+<image/wzory/k4_page257_formula2.png>
+
+Rys. 3.3-8
+
+W celu obliczenia siły elektromotorycznej E,. źródła zastępczego rozwieramy zaciski AB (rys.
+3.3-8b) i obliczamy napięcie na zaciskach rozwartych. Prądy płynące przez poszczególne opory są
+
+E
+jednakowe i równe a Z napięciowego prawa Kirchhoffa otrzymujemy zatem:
+
+zory/k4_page257_formula3.png
+
+Opór zastępczy R. obliczamy ze schematu z rys. 3.3-8c:

@@ -1,0 +1,42 @@
+Zadania do rozdziału 1 161
+
+Zadanie 1.16. Podać przykłady charakterystyk oporów nieliniowych, dla których w pewnym
+przedziale: Ry, = 0, Ry, = », Ry, < 0.
+
+Zadanie 1.17. Wykazać, że jeżeli charakterystyka u = f,(i) oporu nieliniowego jest symetrycz-
+na, to funkcje Rz(i) i R„„(i) są parzystymi funkcjami zmiennej i.
+
+Zadanie 1.18. Wyznaczyć zakres zmian oporu statycznego R,, elementu nieliniowego o charak-
+terystyce i = au”, a = 1 mA/V3, przy zmianach napięcia w zakresie u e (0,1 V, 1 V).
+
+Odp.: R. e (1 kQ, 100 kQ)
+Zadanie 1.19. Sprawdzić, że dla oporu nieliniowego z zad. 1.18 zachodzi równość:
+/k4_page159_formula1.png
+
+w każdym punkcie charakterystyki (u s 0).
+
+Zadanie 1.20. Obliczyć opór statyczny i opór dynamiczny elementu nieliniowego o charakterys-
+tyce:
+
+<image/wzory/k4_page159_formula2.png>
+
+w punktach pracy charakterystyki, dla których I = 2mA.
+
+1
+On: „= MQ I R = lub Rz=R„="1kQ
+Zadanie 1.21. Charakterystyka oporu nieliniowego ma postać:
+
+<image/wzory/k4_page159_formula3.png>
+
+Wyznaczyć zależność R,„(i) oporu dynamicznego od prądu i oraz obliczyć jego wartość dla
+i=0Q.
+
+<image/wzory/k4_page159_formula4.png>
+
+Zadanie 1.22. Indukcyjność nieliniowa jest opisana równaniem:
+
+<image/wzory/k4_page159_formula5.png>
+
+Obliczyć indukcyjności statyczną i dynamiczną w punkcie pracy, w którym i = 1 mA.
+
+Odp.: I, = 1uH, Ly, = 15SuH

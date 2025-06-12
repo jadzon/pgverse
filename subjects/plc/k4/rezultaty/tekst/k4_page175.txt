@@ -1,0 +1,39 @@
+Rozproszenie systemów sterowania obniża koszty okablowania, a ponadto stwa-
+rza możliwość lokalnej diagnostyki, zapewniając tym samym obniżenie kosztów
+wykrywania i usuwania awarii.
+
+Jednocześnie dzięki zawansowanej sieciowej diagnostyce zapewniona jest kon-
+trola statusów wszystkich elementów sieci oraz obwodów  wejściowo-
+wyjściowych. Możliwe jest również rozproszenie obliczeń przez stosowanie lo-
+kalnych procesorów dla systemu Field Control.
+
+Rys. 3.48 przedstawia przykładową sieciową strukturę dwuwarstwowego syste-
+mu sterowania. W warstwie obiektowej zastosowano sieć sterownikową Genius
+do której włączone są sterowniki i moduły Field Control, natomiast w warstwie
+sterowania nadrzędnego sieć Ethernet łączy sterowniki pracujące w poszczegól-
+nych liniach produkcyjnych z serwerem systemu sterowania nadrzędnego
+SCADA. Z kolei zasoby tego serwera są udostępnione dla stacji operatorskich
+w sieci Ethernet o topologii gwiazdy z potrzebnymi koncentratorami (Hub)
+w takiej sieci.
+
+<image/wzory/k4_page17/5_formula1.png>
+
+<image/tabele/k4_page17/5_table1.png>
+
+Elementy sieci mają zapewniony do niej dostęp zgodnie z niedeterministycz-
+ną, równoprawną regułą dostępu. Jest to reguła wielodostępu przez
+rozpoznawanie nośnej i wykrywanie kolizji CSMA/CD.
+
+W przypadku sterowników GE Fanuc moduły Ethernet realizują protokół SRTP
+(Service Request Transfer Protocol), który jest wersją protokołu SNP wbudowa-
+ną do powszechnie stosowanego w sieciach komputerowych protokołu Ethernet
+TCP/IP (Transfer Control Protocol I Internet Protocol). Funkcje odczytu i zapisu
+mogą operować na paczkach danych zawierających 2 048 bajtów. Zastosowanie
+ekranowanych kabli koncentrycznych /0Base5 (10 Mb/s, o średnicy 5 mm i re-
+zystancji falowej 50 62) lub /OBase2 (10 Mb/s, o średnicy 2 mm i rezystancji
+falowej 50 62) umożliwia budowę sieci magistralowych (Bus Topology) z jed-
+nym wspólnym uziemieniem.
+
+ 
+
+3.9 Moduł komunikacyjny 175

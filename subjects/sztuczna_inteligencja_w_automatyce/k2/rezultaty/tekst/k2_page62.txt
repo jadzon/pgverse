@@ -1,0 +1,52 @@
+Struktury agentów
+Rozróżnia się trzy podstawowe struktury agentów:
+
+e agent refleksowy (bezinercyjny) (ang. reflex) — działa bezpośrednio, wyłącznie
+
+na podstawie percepcji,
+
+e z modelem świata (ang. model-based) — ma wbudowany model świata i przed
+podjęciem decyzji przeprowadza wnioskowanie korzystając z tego modelu.
+
+e ukierunkowany na osiągnięcie celu (ang. goal-based) — formułuje cele i usiłuje
+je osiągnąć: zwykle wykorzystuje także model świata.
+
+Działania refieksowe mają szereg niedogodności. W przypadku świata smoka agent
+nie może korzystać z wcześniej zaobserwowanych faktów, ponieważ ich nie pamięta.
+Może wpaść w nieskończone pętle, np. ponownie dochodząc do miejsca, w ktorym
+już był.
+
+Wewnętrzny model świata może być przechowywany poprzez pamiętanie wszyst-
+kich dotychczasowych percepcji, lub co jest równoważne, a znacznie bardziej efek-
+tywne, poprzez pamiętanie stanu. Przykładem obu sposobów przechowywnia modelu
+jest zadanie poszukiwania klucza przez człowieka: może on go znaleźć na podsta-
+wie pamiętania stanu otoczenia lub poprzez przeglądanie zapisów pamięci czynności
+dokonywanych wcześniej.
+
+Zmienność świata w czasie (chociażby poprzez zmienność położenia agenta) po-
+woduje konieczność aktualizacji modelu świata, a także pamiętania niektórych po-
+przednich jego parametrów aby móc wnioskować o trendach.
+
+4.1.8. Własności logik
+
+Monotoniczność
+
+Logikę nazywamy monotoniczną, jeżeli wnioski wynikające z bazy wiedzy B; wyni-
+kają także z bazy By U Ba, czyli
+
+<image/wzory/k2_page62_formula1.png>
+Logiki wyższego rzędu
+
+Logiki wyższego rzędu pozwalają dodatkowo na kwantyfikacje po relacjach (predy-
+katach) jak i funkcjach.
+Np. w logice wyższego rzędu można napisać wyrażenie
+
+<image/wzory/k2_page62_formula2.png>
+
+oznaczające, że wszystkie obiekty są równe wtedy i tylko wtedy, gdy wszystkie ich
+własności są równe, lub wyrażenie
+
+<image/wzory/k2_page62_formula3.png>
+
+oznaczające, że dwie funkcje są równe wtedy i tylko wtedy, gdy mają takie same
+wartości dla wszystkich argumentów.

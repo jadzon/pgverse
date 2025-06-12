@@ -1,0 +1,35 @@
+CH
+to
+
+(YX )(ZY )kocha(X,Y') może wyrażać zdanie (fakt): „Każdy kogoś
+, kocha”
+Wyrażenia:
+
+<image/wzory/k2_page47_formula1.png>
+
+przedstawiają zdanie (regułę): „Dziecko (jakiejś osoby) jest (jej) potomkiem i poto-
+mek dziecka (jakiejś osoby) jest potomkiem (tej osoby)” co jest rekurencyjną definicją
+bycia potomkiem.
+
+Podobnie, przedstawiona na rysunku ?? scena ze „Świata bloków” może być opi-
+sana następującymi wyrażeniami:
+
+<image/wzory/k2_page47_formula2.png>
+
+«arzonuullz0) narmoaA7 formula? nnm
+
+sarzamillz) mnarmanA7 oaormiuilnA nnm
+
+<image/wzory/k2_page47_formula5.png>
+
+<image/figury/k2_page47_figure1.png>
+
+W rachunku predykatów często wykorzystuje się poniższe formuły, które są za-
+wsze prawdziwe
+
+<image/wzory/k2_page47_formula6.png>
+W rachunku predykatów stosuje się terminologie:
+atom predykat
+literał atom lub atom zanegowany
+
+term argumenty atomu (predykatu)

@@ -1,0 +1,34 @@
+1.8. Sprzężenie magnetyczne 145
+
+<=wojenia są nawinięte na wspólny rdzeń w sposób pokazany na rys. 1.8-7a i rys. 1.8-8a, to ustalenie
+=cisków jednoimiennych nie nastręcza żadnych trudności (zaciski te oznaczono symbolami * *). Na
+7. 1.8-7b,c oraz na rys. 1.8-8b,c zaznaczono strzałki prądów i,,i, oraz pokazano zwroty strumieni
+”.. 0, (por.p. A) przy dodatnich wartościach prądów. Wynikają stąd wprost wnioski co do znaku
+-. Odpowiednie znaki są zaznaczone na rysunkach.
+
+Kwestiami związanymi z ustaleniem położenia zacisków jednoimiennych na podstawie geometrii
+=wojeń nie będziemy się więcej zajmować.
+
+a) b) rl
+
+<image/figury/k3_page143_figure1.png>
+
+F. Przypadek prądów stałych. Z równań (1.8-16) oraz (1.8-17) wynika
+"prost, że jeśli oba prądy płynące przez indukcyjności sprzężone są stałe:
+, = Ją = Const, i; = I, = const, to oba napięcia są równe zeru:
+*, 2 uz = 0. Tak więc, podobnie jak pojedyncza indukcyjność (p. 1.3.4-E),
+rownież indukcyjności sprzężone stanowią dla prądu stałego zwarcie na obu
+rarach zacisków.
+
+Zwracamy jednak uwagę, że energia gromadzona w polu magnetycznym,
+"kreślona wzorem (1.8-30), zależy od wartości prądów. Jest ona zatem, ogólnie
+”ecz biorąc, różna od zera niezależnie od tego, czy prądy i,,i, są zmienne, czy
+"ałe w czasie.
+
+G. Przykłady.
+
+Przykład 1.8-1. Wyznaczymy indukcyjność L połączenia szeregowego dwóch indukcyjności
+"rężonych Ly i L, (tys. 1.8-9a)",
+
+') Indukcyjność tę nazywamy często indukcyjnością zastępczą, tzn. indukcyjnością równo-
+*-żną rozpatrywanemu układowi indukcyjności sprzężonych (rys. 1.8-9b) — por. p. 1.5.2-1.

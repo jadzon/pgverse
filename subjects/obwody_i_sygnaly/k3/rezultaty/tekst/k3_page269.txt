@@ -1,0 +1,29 @@
+33. Metody analizy obwodów liniowych prądu stałego 271
+
+ 
+
+Dla obu typów gałęzi prąd gałęziowy I, można wyrazić w zależności od
+napięcia gałęziowego U, lub odwrotnie. Równania gałęziowe dadzą się zatem
+rozwiązać i względem napięć i względem prądów gałęziowych. Wyznaczającz g
+równań gałęziowych napięcia gałęziowe U, względem prądów gałęziowych /,,
+k =l,..., g, i uwzględniając je w równaniach oczek, otrzymamy układ g
+równań (w — 1 równań dla węzłówi n równań dla oczek), w których zmiennymi
+są już tylko prądy gałęziowe I;, ..., I„. Analogicznie, wyznaczając z równań
+gałęziowych prądy gałęziowe I, względem napięć gałęziowych U,,k = 1,...,g,
+ieliminując z równań dla węzłów prądy gałęziowe, otrzymamy układ g równań,
+w których zmiennymi są już tylko napięcia gałęziowe U;,..., U,.
+
+Wyznaczenie rozpływu prądów (rozkładu napięć) w sieci spełniającej przyjęte
+warunki sprowadza się zatem do rozwiązania układu g niezależnych równań
+z g niewiadomymi.
+
+Przyklad 3.3-11. Załóżmy, że w sieci z przykładu 3.3-10 poszczególne gałęzie mają strukturę
+jak na rys. 3.3-20.
+
+<image/figury/k3_page269_figure1.png>
+
+Równania gałęziowe dla tej sieci mają zatem postać:
+
+'/k3_page269_formula1.png
+
+y/k3_page269_figure2.png (33-12)

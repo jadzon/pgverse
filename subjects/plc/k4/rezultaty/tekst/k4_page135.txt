@@ -1,0 +1,32 @@
+<image/wzory/k4_page135_formula1.png>
+
+W aplikacjach krytycznych obwody wejściowe wymagają kontroli ich ciągłości.
+Dla takiej kontroli obwodów lub inaczej monitorowania linii sygnałowych, wy-
+korzystuje się moduły dyskretnych wejść z trójstanowymi progami napięciowymi
+różnymi dla typów źródło i ujście (Rys. 3.17 i Rys. 3.18). Moduł taki rozróżnia
+trzy zakresy napięć, które uzyskuje się w obwodach wejściowych przez dołącze-
+nie równoległe rezystancji do zwiernego styku czujnika lub szeregowe
+dołączenie diody Zenera do styku rozwiernego. Dla przykładu, jeśli obwód po-
+kazany na rysunku ze stykiem zwiernym nie jest uszkodzony, to płynie w nim
+prąd również wtedy, gdy styk jest rozwarty, z tym, że napięcie wejściowe po-
+winno pochodzić z podanego zakresu OFF.
+
+W szczególnie odpowiedzialnych zastosowaniach projektuje się podłączenie
+czujnika pomiarowego do dwóch lub trzech modułów wejściowych (Rys. 3./9)
+lub też, jeżeli jest to możliwe, powiela się czujniki obiektowe, jak pokazano na
+Rys. 3.20. Układy redundancyjne modułów wyjściowych przedstawia Rys. 3.27.
+Oprócz modułów bez redundancji stosuje się także dla zapewnienia niezawodno-
+ści załączanie jako wynik sumy logicznej w układzie 7 modułów typu źródło.
+Wyłączanie zaś realizuje się jako wynik iloczynu logicznego w układzie / mo-
+dułów źródło i ujście. Najbardziej wyrafinowanym jest układ H, w którym dwa
+moduły lub jeden (w przypadku awarii sieci lub modułu) zapewniają zasilanie
+obciążenia i £ odobnie dwa lub jeden moduł typu ujście powinny zapewnić połą-
+czenie z masą układu. W układzie H można zrealizować warunki załączenia
+i wyłączenia układów T'i 7.
+
+<image/tabele/k4_page135_table1.png>
+
+Rys. 3.17 Zakresy napięciowe dla dwu i trójstanowych modułów wejść typu źródło
+
+EEK PZPETOZBEZCYWETOPĘ TRO OWE OWE POT WCEZOEPEETE TO TEE TT WPEDZTESETAPCZCE EDO ET EE TY ET CEE CEE IOCYE OWE. TPP WC EBAY CET YTY ECTY "TWP WRNPCCWZEOTCTTYTTIE.
+3.4 Moduły wyjść dyskretnych DO 135

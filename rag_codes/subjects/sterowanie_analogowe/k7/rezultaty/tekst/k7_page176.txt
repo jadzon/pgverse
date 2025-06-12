@@ -1,0 +1,27 @@
+Parametry cyklu granicznego
+
+ 
+
+Zauważmy że w układzie wystąpił cykl graniczny o amplitudzie 8B/r i pulsacji w,=1.
+Na wyjściu układu nieliniowego wystąpiła fala prostokątna o amplitudzie B i tej samej
+pulsacji.
+
+O dokładności metody funkcji opisującej decyduje człon liniowy. Metoda jest tym
+dokładniejsza im bardziej ttumione są wyższe harmoniczne.
+
+zej=jlacJ(e(oR=JOY ILE
+
+W rozważanym przypadku 2 harmoniczna układu jest zerowa więc sprawdzimy
+wzmocnienie układu dla 3 harmonicznej
+
+<image/wzory/k/_page176_formula1.png>
+
+<image/wzory/k/_page176_formula2.png>
+
+Zatem 3 harmoniczna wzmacniana jest 15 razy słabiej niż pulsacja
+podstawowa
+
+ 
+
+POLITECHNIKA
+GDANSKA

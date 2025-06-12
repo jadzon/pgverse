@@ -1,0 +1,38 @@
+zmieniać się zgodnie z zadaną krzywą (Rys. 8.17) aż do osiągnięcia tem-
+peratury zadanej 7-,, a następnie powinna być stabilizowana przez okre-
+ślony czas £,. Ogrzewanie i stabilizację temperatury w reaktorze należy
+zrealizować z wykorzystaniem regulatora PID o nastawach dobranych
+metodą odpowiedzi skokowej dla reguł Zieglera — Nicholsa.
+
+W fazie tej powinno pracować również mieszadło.
+
+3. Chłodzenie produktu.
+Po upłynięciu zadanego czasu stabilizacji temperatury należy zamknąć
+zawory na przepływie medium grzewczego oraz otworzyć zawory V3
+i V4 na przepływie medium chłodzącego. Faza chłodzenia powinna koń-
+czyć się z chwilą osiągnięcia przez produkt temperatury jaką miał przed
+podgrzaniem.
+
+4. Opróżnianie reaktora.
+Opróżnianie reaktora odbywa się przez otwarcie zaworu analogowego
+AVI.
+
+<image/figury/k4_page447_figure1.png>
+
+Rys. 8.17 Przebieg czasowy poziomu i temperatury w reaktorze
+
+Należy przewidzieć możliwość pracy systemu w jednym z trzech trybów:
+
+praca krokowa - kolejne fazy procesu wykonywane są przez uaktywnienie od-
+powiedniego wejścia I1 - 14;
+
+pojedynczy cykl - w przypadku gdy uaktywnione jest wejście 15 wszystkie czte-
+ry fazy zostaną wykonane raz w odpowiedniej kolejności;
+
+praca automatyczna - w przypadku gdy uaktywnione jest wejście 16 wszystkie
+fazy procesu wykonywane są po kolei w cyklu zamkniętym (po zakończeniu
+opróżniania program automatycznie przechodzi do fazy napełniania).
+
+ 
+
+8.8 Sterowanie sekwencyjne procesem wsadowym 447

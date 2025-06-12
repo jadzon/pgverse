@@ -1,0 +1,36 @@
+<image/figury/k3_page374_figure1.png>
+
+Przez całą treść tej książki przewija się podstawowa teza, że sygnały trzeba rozważać w tej
+dziedzinie, w której jest zakodowana ich informacja. Na przykład wszelkie operacje z sygna-
+łami audio powinno się prowadzić w dziedzinie częstotliwości, a z sygnałami obrazowymi
+— w dziedzinie przestrzeni. Mimo to, jeden ze sposobów pomiaru rozdzielczości obrazu pole-
+ga na rozpatrzeniu odpowiedzi impulsowej. To wprawdzie przeczy podstawowej filozofii tej
+książki, jest jednak metodą często stosowaną, którą należy poznać.
+
+Przeprowadzenie dwuwymiarowego przekształcenia Fouriera funkcji PSF daje dwuwymia-
+rową odpowiedź częstotliwościową. Jeśli PSF ma symetrię kołową, to odpowiedź częstotli-
+wościowa też będzie miała taką symetrię. W tym przypadku pełna informacja o odpowiedzi
+częstotliwościowej jest zawarta w profilu PSF. Tak więc po wyznaczeniu odpowiedzi czę-
+stotliwościowej metodą FFT potrzebne są tylko kolumny od 0 do N/2 w wierszu 0. Taka
+prezentacja odpowiedzi częstotliwościowej jest nazywana funkcją przenoszenia modula-
+cji MTF (Modulation Transfer Function). Na rys. 25.1 b) przedstawiono funkcje MTF dla
+trzech funkcji PSF przedstawionych na rys. 25.1 a). W przypadku, gdy PSF nie jest kołowo
+symetryczna, informację zawiera cała dwuwymiarowa odpowiedź częstotliwościowa. Na
+ogół jednak wystarczy znać krzywe MTF w kierunku poziomym i pionowym (tj. kolumny
+od 0 do N/2 w wierszu O oraz wiersze od 0 do N/2 w kolumnie 0). Zauważcie, że ta procedu-
+ra wyodrębniania wiersza lub kolumny z dwuwymiarowego widma częstotliwościowego nie
+jest równoważna z wykonywaniem jednowymiarowego przekształcenia FFT profilów poka-
+zanych na rys. 25.1 a). Wkrótce powrócimy do tej kwestii. Jak wynika z rys. 25.1, podobne
+wartości FWHM nie odpowiadają podobnym krzywym MTF.
+
+Na rys. 25.2 pokazano podziałkę z parami linii (line pair gauge), urządzenie służące do
+pomiaru rozdzielczości obrazu przy użyciu MTF. Podziałki z parami linii mają różną postać,
+zależnie od konkretnego zastosowania. Na przykład wzór czarno-biały pokazany na tym ry-
+sunku może być bezpośrednio stosowany do testowania kamer wideo. W rentgenowskich
+systemach obrazowych żeberka podziałki mogą być wykonane z ołowiu, z umieszczonym
+między nimi materiałem przepuszczającym promieniowanie rentgenowskie. Główna wła-
+ściwość tej podziałki polega na tym, że odstępy między liniami zmniejszają się w jednym
+kierunku. Gdy pobiera się obraz takiej podziałki z parami linii, to linie na końcu o gęstym
+rozmieszczeniu będą rozmyte, a na drugim końcu — wyraźne. Gdzieś pośrodku linie będą
+ledwo rozróżnialne. Obserwator, patrząc na obraz, identyfikuje to miejsce na podziałce i na
+kalibrowanej skali odczytuje odpowiadającą mu rozdzielczość.

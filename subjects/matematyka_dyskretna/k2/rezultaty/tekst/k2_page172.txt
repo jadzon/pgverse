@@ -1,0 +1,27 @@
+10 Rozdział 1. Struktury danych
+
+<image/tabele/k2_page172_table1.png>
+
+W metodzie przeszukiwania w głąb po każdym kroku algorytmu wierzchołki znajdujące
+się na stosie tworzą ścieżkę od wierzchołka wejściowego do wierzchołka aktualnie od-
+wiedzanego. Zauważmy, że nazwa każdego wierzchołka na stosie jest prefiksem (przed-
+rostkiem) nazwy następnego wierzchołka. Dlatego wystarczy przechowywać ostatnie bity
+wierzchołków na stosie. Nie jest też konieczne zaznaczanie, które wierzchołki były już
+odwiedzone, wystarczy zauważyć, że:
+e jeżeli przyszliśmy do wierzchołka z od jego ojca, to żaden z synów z nie był jeszcze
+odwiedzany,
+e jeżeli przyszliśmy do wierzchołka z od lewego syna 20 (po zdjęciu 0 ze stosu), to
+odwiedzony był tylko lewy syn,
+e jeżeli przyszliśmy do wierzchołka z od prawego syna r1 (po zdjęciu 1 ze stosu), to
+odwiedzeni już byli obaj synowie.
+Oto prostsza wersja algorytmu przeszukiwania w głąb:
+Algorytm przeszukiwania drzewa w głąb (druga wersja).
+Dane wejściowe: drzewo 7.
+e odwiedzamy korzeń A i wkładamy go na STOS,
+e dopóki STOS nie jest pusty, powtarzamy:
+o Jeżeli v jest aktualnie odwiedzanym wierzchołkiem i
+o Jeżeli ostatnią operacją na stosi było włożenie nowego elementu, to:
+- Jeżeli v0 € 7, to przejdź do v0 i włóż O nastos,
+- Jeżeli v0 g 7 alev1 € 7, to przejdź do v1 i włóż 1 na stos,
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

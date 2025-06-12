@@ -1,0 +1,25 @@
+-1.16.4 Odczytanie JSC wejść analogowych — FB250
+
+ 
+
+Blok funkcyjny FB250 odczytuje wartość analogową z analogowego modułu
+wejściowego. W Tab. 7.17 przedstawiono parametry wywołania bloku.
+
+Opis parametrów wywołania bloku funkcyjnego FB250:
+
+e Parametr BG określa adres modułu wejść analogowych (złącze na płycie
+łączeniowej sterownika, w którym moduł jest zainstalowany), z którego jest
+odczytywana wielkość analogowa.
+
+Określenie parametru przy wywołaniu bloku
+BG KF X, gdzie X = 128 + 224.
+
+<image/tabele/k4_page37/5_table1.png>
+
+e Parametr KNKT określa numer kanału, z którego ma być odczytana wiel-
+kość analogowa z modułu wejść analogowych oraz rodzaj kanału.
+Określenie parametru przy wywołaniu bloku
+
+PE ZA w py M M WY OO EA 2 ZE A 2 A O W NN 1302 KAR ZM
+
+7.16 Wybrane zintegrowane bloki specjalne 2.2

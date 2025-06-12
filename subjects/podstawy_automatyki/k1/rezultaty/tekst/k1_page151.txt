@@ -1,0 +1,38 @@
+6. Przykład analizy
+silnika elektrycznego prądu stałego
+z magnesem trwałym
+
+6.1. Wstęp
+
+Silniki elektryczne prądu stałego są bardzo często stosowanymi elementami wyko-
+nawczymi w układach regulacji.
+
+Podstawowymi zaletami tych silników są:
+— duży moment obrotowy,
+— dobra sprawność,
+— małe wymiary.
+
+Wadami są natomiast:
+—  iskrzenie (zakłócenia przemysłowe),
+— zużywanie się szczotek komutatora.
+
+W ciągu ostatnich kilkudziesięciu lat wprowadzono na rynek szereg silników
+o specjalnej konstrukcji, charakteryzujących się bardzo dobrymi właściwościami dyna-
+micznymi.
+
+Schematycznie budowę silnika prądu stałego z magnesem trwałym przedstawiono
+na rysunku 6.1. Moment obrotowy w silnikach elektrycznych powstaje na skutek od-
+działywania między zewnętrznym polem magnetycznym a polem magnetycznym po-
+wstającym wokół przewodnika, przez który płynie prąd. W silnikach prądu stałego
+małej mocy zewnętrzne pole magnetyczne wytwarzane jest zazwyczaj przez mag-
+nesy trwałe, umieszczone w nieruchomej obudowie silnika zwanej stojanem. Znajdu-
+jący się w polu magnetycznym stojana wirnik zawiera uzwojenia składające się z wie-
+lu ramek przewodów połączonych z komutatorem. Zazwyczaj uzwojenia te nawinięte
+są na rdzeniu z materiału ferromagnetycznego. W wyniku współdziałania strumienia
+stojana i prądu przepływającego w uzwojeniach wirnika powstaje wspomniany wcze-
+śniej moment obrotowy. Aby moment obrotowy działający na wirnik był maksymalny,
+wektory strumienia magnetycznego stojana i wirnika powinny być względem siebie
+prostopadłe. Zapewnia to komutator, który przełącza kolejne ramki uzwojenia wirni-
+ka, powodując odpowiednie zmiany kierunku przepływającego prądu. Napięcie zasila-
+
+153

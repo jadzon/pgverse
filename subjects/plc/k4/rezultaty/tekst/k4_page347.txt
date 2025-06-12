@@ -1,0 +1,54 @@
+ry/k4_page347_formula1.png NE)
+
+Operacje arytmetyczne można programować przy użyciu następujących operato-
+rów:
+
+e +F(+G) - dodawanie
+
+e -F(-G) -odejmowanie
+
+e xF(xG) - mnożenie
+
+e :F(:G) -dzielenie
+
+Schematycznie realizację operacji porównania można przedstawić następująco:
+
+<image/tabele/k4_page347_table1.png>
+
+W przypadku użycia operatora z literą F zawartości obu akumulatorów trakto-
+wane są jako liczby stałoprzecinkowe, natomiast w przypadku operatora z literą
+G jako liczby zmiennoprzecinkowe. Realizacja operacji arytmetycznych jest nie-
+zależna od wyniku poprzedzających je operacji logicznych i nie wpływa na
+zmianę tego wyniku. Operator arytmetyczny wykonuje odpowiednią operację
+matematyczną na wartościach znajdujących się w akumulatorze 2 i akumulato-
+rze 1. Wynik wykonanej operacji arytmetycznej jest umieszczany w akumulato-
+rze |, zaś zawartość akumulatora 2 nie ulega zmianie.
+
+I.L Iw10 ; wprowadzenie zawartości /W/0 do akumulatora |
+
+2L Iw12 ; wprowadzenie zawartości /W72 do akumulatora |;
+IWIO zostaje przesunięte do akumulatora 2
+
+3. -F ; wykonanie odejmowania
+
+4. T FWS ; przekazanie wyniku do słowa markerów FW5
+
+Powyższy ciąg instrukcji realizuje różnicę zawartości słów wejściowych /W/O
+17/WI2 (<IW10>-<IW12>). Wynik wykonanej operacji arytmetycznej jest
+umieszczany w akumulatorze 1. Ostatnia instrukcja realizuje przekazanie za-
+wartości akumulatora 1 do słowa markerów FW.
+
+<image/wzory/k4_page347_formula2.png>
+
+Załóżmy, że chcemy zrealizować następująca funkcję matematyczną:
+<FW2> : (<IW1> * <FW1> + <QW1>)
+i wynik zapamiętać w słowie danych DW.
+Użyta w przykładzie (Rys. 7.17) instrukcja TAK powoduje zamianę zawartości
+akumulatorów. Jest to operator systemowy i może być stosowany jedynie w blo-
+
+kach funkcyjnych. W przypadku, gdy istnieje potrzeba zaprogramowania podob-
+nych działań w innych typach bloków należy wynik działania
+
+EE TREO WREN TYTTPTAT ZOT YTOZIZP YDP Z ODZÓÓÓOÓOOTOOAOAOOODOC OOOO TOW NYDO OOOO OZRLONCE OZ ODRECO TAE NZ TA TOOZAG SZA ZEW AOZEDCG IE WNZUGZO KIKA,
+
+7.9 Funkcje arytmetyczne 347

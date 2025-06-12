@@ -1,0 +1,34 @@
+wartości (override), przy czym możliwość przełączenia trwałego dotyczy tylko
+zmiennych typu %/, %Q, %M i %G.
+
+W dalszej części będą używane skrótowe określenia typu styk %I1, cewka %0Q2,
+z pominięciem sformułowania „przypisana zmienna binarna”, o ile nie będzie to
+prowadzić do niejednoznaczności. Podobnie będzie w przypadku używania nazw
+symbolicznych.
+
+Na Wyd. 4.1 pokazano przykłady najprostszych obwodów schematu drabinkowe-
+go realizujących następujące funkcje logiczne:
+
+a m "+
+
+k4_page1 86_formula 1.png
+
+© %04:= %ll.
+
+<image/tabele/k4_page186_table1.png>
+
+Wyd. 4.1 Proste przykłady sterowania za pomocą styków
+
+Warto zwrócić uwagę na drugi szczebel w przykładzie, w którym wykorzystano
+cewkę z zapamiętaniem stanu (retentive coil) oraz szczeble, w których użyto
+cewek negujących.
+
+Styki mogą być połączone szeregowo (realizując funkcję logicznego iloczynu -
+AND) lub równolegle (logiczna suma - OR).
+
+Wyd. 4.2 prezentuje obwody realizujące następujące funkcje logiczne:
+e %Q1:= %I1 AND %12 AND NOT %l3;
+e %Q2:= (%ll OR %I2 ORNOT %l3) AND %l4.
+
+TECT ITTOKTZYTE EPRZPRKEWCEZ ROFWZZ KR" O PEZYCY RE OWE OT WYCE PY TOWY "PEOZET TYT A ZEE OO TOTJE PTY EOT OTYCH PET CUTTWTTEPPPTTZ ORCO ZORY
+186 Rozdział :4. Język LD dła sterowników GE Fanuc 90-30

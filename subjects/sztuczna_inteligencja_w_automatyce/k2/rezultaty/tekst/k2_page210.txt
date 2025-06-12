@@ -1,0 +1,40 @@
+<image/figury/k2_page210_figure1.png>
+
+Rys. 8.21: Program z tablicy ?? zakodowany w kompleksie cząsteczek.
+
+8.4.4. [Interpreter
+
+Programy zakodowane w strukturach cząsteczek są wykonywane przez specjalizo-
+wany uproszczony interpreter Prologu. Bezpośrednio przed wykonaniem interpreter
+tworzy listę faktów o cząsteczkach widzianych przez program.
+
+Jeżeli cześć rozpoznająca strukturę i część wykonawcza programu powiodły się
+oraz bilans energii przemian jest dodatni interpreter zmienia odpowiednio stan śro-
+dowiska i wykonanie się kończy. W przeciwnym wypadku wszystkie kierunki poziome
+zostają przesunięte o kąt 45” i program wykonany zostaje ponownie, aż do zakoń-
+czenia się sukcesem lub wyczerpania wszystkich kierunków.
+
+8.4.5. Etapy symulacji
+
+Symulacja środowiska jest realizowana w epokach. Każda epoka składa się z trzech
+faz. W pierwszej fazie realizowany jest ruch i zderzenia cząsteczek. W fazie dru-
+giej ruch i zderzenia fotonów z cząsteczkami, zaś w fazie trzeciej wykonywane są
+programy kompleksów. Kompleksy wybierane są w losowej kolejności, a w czasie
+wykonania programu jednego kompleksu przemiany pozostałej części systemu są
+zatrzymane — tylko jedna funkcja może być realizowana w danej chwili czasu.
+
+8.4.6. Przykładowa symulacja
+
+Ilustracją potencjalnych możliwości środowiska może być prosty system, w którym
+zbiór kilku typów programów umieszczonych wśród losowo rozłożonych cząsteczek
+dwóch typów może skonstruować regularną strukturę, „śnieżynkę” |?]|. Programy
+działały po kolei — stan powstającej struktury pozostawionej przez jeden program
+był rozpoznawany i rozbudowywany przez następny program, itd. Ewolucję systemu
+w wybranych epokach symulacji przedstawiono na rys. ??. Bardziej szczegółowe
+opisy podobnych symulacji można znaleźć na stronie [?].
+
+8.4.7. Przewidywane symulacje
+
+Omówione środowisko może modelować różnorodne procesy samoorganizacji i sa-
+momodyfikacji bez potrzeby jawnego określania jakości powstających struktur, jak
+to ma miejsce przy modelowaniu procesów rozwoju korzystając z algorytmów gene-

@@ -1,0 +1,75 @@
+—
+—
++
+
+e CZŁON OPÓŹNIAJĄCY (Z OPÓŹNIENIEM TRANSPORTOWYM)
+Transmitancje dyskretne wyznaczone odpowiednio: przekształceniem
+skokowo-inwariantnym, metodą Tustina i przekształceniem 6, przy za-
+
+| łożeniu że 7% jest całkowitą krotnością 7p, określone są wzorami:
+
+ 
+
+<image/wzory/k2_page57_formula1.png>
+
+11.3 Przebieg ćwiczenia
+|
+
+11.3.1 Wpływ szybkości próbkowania na odpowiedź czasową
+
+Dla zadanych parametrów k oraz 7' obiektu inercyjnego pierwszego rzędu
+kreślić wpływ szybkości próbkowania fp = TE na jakość odwzorowania
+(epoaczi skokowej układu ciągłego przez jego odpowiedniki c yskretne,
+| pacz przekształceniem skokowo-inwariantnym, Tustina oraz 0.
+
+1.3.2 Analiza stabilności układu impulsowego
+
+W układzie pokazanym na rysunku 11.6 określić wpływ parametrów
+obiektu (k, T) oraz szybkości próbkowania fp = TE na stabilność układu
+mkniętego (na wartość krytyczną wzmocnienia kp). Na podstawie
+wykresu linii pierwiastkowych układów impulsowych, w których część
+ciągłą  zdyskretyzowano przekształceniem skokowo-inwariantnym,
+Hook oraz 6, wyciągnąć wnioski co do przydatności wymienionych metod
+o określania stabilności układu ciągłego z regulatorem impulsowym.
+
+<image/figury/k2_page57_figure1.png>
+
+113
+
+11.3.3 Wpływ wartości parametrów na odpowiedź czasową
+Zapoznać się z wpływem podanych niżej parametrów przy wymuszeniu:
+a) skokiem jednostkowym u(n7p) = 1,
+b) impulsem Diraca u(n7p) = 6(0)
+na odpowiedź skokową obiektów:
+e proporcjonalnego (zmienne k),
+e inercyjnego pierwszego rzędu (zmienne k oraz 7),
+e inercyjnego drugiego rzędu (zmienne 4 oraz 7),
+e inercyjnego n-tego rzędu (zmienne k, 7' oraz n),
+
+e oscylacyjnego (przy k = 1 zmienne w,, oraz £),
+
+całkującego idealnego (zmienne £),
+e całkującego rzeczywistego (zmienne k oraz T),
+e różniczkującego rzeczywistego (zmienne k oraz 7')
+
+dyskretyzowanych przekształceniem skokowo-inwariantnym, w ybierając dla
+każdego ze zmienianych parametrów trzy wartości, przy stałym okresie prób-
+kowania /p = 15.
+
+11.3.4 Analityczne wyznaczanie transmitancji dyskretnej
+
+Dla obiektu o zadanych parametrach, zadanego [jp oraz zadanej metody
+przekształcenia G(s) — G(z) wyprowadzić postać transmitancji dyskretnej.
+
+11.3.5 Sprawozdanie
+Sprawozdanie powinno zawierać:
+
+- przebiegi czasowe wraz z opisem wpływu szybkości próbkowania fp
+na dynamikę obiektu zdyskretyzowanego (polecenie 11.3.1);
+
+- określenie dla zadanego obiektu i fp (polecenie 11.3.2) metodą linii
+pierwiastkowych dla przekształcenia skokowo-inwariantnego krytycz-
+nej wartości wzmocnienia kp regulatora typu P. Zamieścić odpowiedź
+skokową dla kpyry: WFAZ Z wnioskami dotyczącymi przydatności po-
+szczególnych modeli dyskretnych do analizy stabilności układu dyskret-
+nego;

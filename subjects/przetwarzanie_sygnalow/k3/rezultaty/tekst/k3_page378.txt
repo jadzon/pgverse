@@ -1,0 +1,34 @@
+Rozdzielczość przestrzenna
+
+ 
+
+<image/figuwzory/k3_page378_formula1.png>
+
+W tym przykładzie, gdzie linie przecięcia są pionowe, każdy punkt w zintegrowanym profilu
+jest wyznaczany przez sumowanie wszystkich wartości pikseli w każdej kolumnie. To kore-
+sponduje z funkcją LSF takiej linii, która w obrazie jest pionowa. Funkcję LSF linii, która
+w obrazie jest pozioma, wyznacza się przez sumowanie wszystkich wartości pikseli w każdym
+wierszu. Dla obrazów ciągłych koncepcja jest taka sama, lecz sumy są zamieniane całkami.
+
+Jak pokazano w tym przykładzie, funkcję LSF można obliczyć bezpośrednio z PSF. Jednak PSF
+nie zawsze może być obliczone z LSF. Przyczyna jest w tym, że PSF zawiera informacje o roz-
+dzielczości przestrzennej we wszystkich kierunkach, podczas gdy LSF jest ograniczona do tylko
+jednego, szczególnego kierunku. System ma tylko jedną funkcję PSF, lecz nieskończoną liczbę
+funkcji LSF, jedną dla każdego kąta. Weźmy jako przykład system, który ma funkcję PSF o kształ-
+cie podłużnym. To powoduje, że inna będzie rozdzielczość przestrzenna w kierunku poziomym,
+a inna w pionowym, a więc inna będzie funkcja LSF w tych kierunkach. Mierząc LSF dla jednej
+wartości kąta, nie uzyskuje się informacji wystarczającej do obliczenia pełnej funkcji PSF, poza
+
+W praktyce, w większości systemów obrazowych funkcje LSF i PSF nie różnią się od siebie
+w sposób zasadniczy. Często można spotkać zastosowanie jednej funkcji jako aproksymacji
+drugiej. Tym bardziej usprawiedliwione jest więc stwierdzenie, że w dwóch często spotyka-
+nych przypadkach te funkcje są identyczne: prostokątna funkcja PSF ma prostokątną LSF
+(o takiej samej szerokości) oraz gaussowska PSF ma gaussowską LSF (o takim samym od-
+chyłeniu standardowym).
+
+Przedstawione koncepcje można podsumować przez umiejętność odpowiedzi na dwa py-
+tania: jak oszacować wyspecyfikowaną wartość rozdzielczości oraz jak samemu zmierzyć
+rozdzielczość. Przypuśćmy, że natknęliście się na ogłoszenie o treści: „Ten system rozróżnia
+40 par linii na milimetr”. Zinterpretowalibyście to następująco: „Sinusoida o 40 podwójnych
+liniach na milimetr będzie miała amplitudę zredukowaną do 3-10% prawdziwej wartości
+i na obrazie będzie ledwo widzialna”. Powinniście też od razu przeliczyć w pamięci, że 40

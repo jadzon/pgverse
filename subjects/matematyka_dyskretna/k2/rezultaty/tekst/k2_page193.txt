@@ -1,0 +1,46 @@
+1.7. Fundamentalny zbiór cykli 15
+Weźmy teraz dowolny cykl (lub pseudocykl) € grafu G i utwórzmy różnicę
+
+<image/wzory/k2_page193_formula1.png>
+
+Jest to różnica symetryczna cykli fundamentalnych utworzonych z cięciw wchodzących
+do C Paksżamv 3a
+
+<image/wzory/k2_page193_formula2.png>
+
+W tym reln mzważm zhińr
+
+<image/wzory/k2_page193_formula3.png>
+
+Na podstawie lematu 1.25, zbiór ten jest pseudocyklem. Z drugiej strony D nie zawie-
+ra żadnych cięciw, ponieważ każda cięciwa e albo nie należy do żadnego składnika tej
+różnicy, jeżeli e £ C, albo należy do dokładnie dwóch: do C i do C,. Zatem zbiór D
+jest podzbiorem drzewa 7, i jest pusty, bo inaczej musiałby zawierać wierzchołki stopnia
+jeden, co jest sprzeczne z faktem, że D jest pseudocyklem. Zatem
+
+<image/wzory/k2_page193_formula4.png>
+Udowodniliśmy zatem następujące:
+
+Twierdzenie 1.26 Każdy cykl (pseudocykl) jest różnicą pewnej liczby cykli fundamental-
+nych.
+
+Przykład 1.27 (Kontynuacja przykładu 1.24) Cykl (e;,e2, fa) = acda jest różnicą
+symetryczną cykli C;, i C,,. Rzeczywiście
+
+<image/wzory/k2_page193_formula5.png>
+
+Cykl (e; , f4, fs,€3, f6,€4) = acgfbea jest różnicą symetryczną cykli C,,, C,, 1 Ce,.
+Rzeczywiście
+
+<image/wzory/k2_page193_formula6.png>
+Lemat 1.28 Jeżeli graf G jest spójny oraz posiada n wierzchołków i m krawędzi, to ma
+m — n + 1 cykli fundamentalnych.
+Dowód: Wynika, to z faktu, że drzewo spinające ma n — 1 krawędzi o
+
+Jeżeli graf nie jest spójny, to każdą składową spójności możemy traktowć osobno.
+Niech Gy, Ga, ... , G, będą składowymi spójności grafu G i niech składowa G; ma n,
+wierzchołków i m, krawędzi. Dla każdej składowej G; mamy drzewo spinające 7; z n, — 1
+krawędziami oraz m; — n, + 1 cykli fundamentalnych. Niech zbiór cykli fundamentalnych
+całego grafu będzie sumą cykli fundamentalnych składowych. Każdy cykl w grafie należy
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

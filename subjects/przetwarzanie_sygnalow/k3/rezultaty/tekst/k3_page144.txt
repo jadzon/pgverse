@@ -1,0 +1,58 @@
+160
+
+8. Dyskretne przekształcenie Fouriera
+
+odpowiada jednej sinusoidzie w dziedzinie czasu. W wyniku dualizmu stwierdzenie odwrotne
+też jest słuszne; pojedynczy punkt w dziedzinie czasu odpowiada jednej sinusoidzie w dziedzinie
+częstotliwości. A oto inny przykład. Splot w dziedzinie czasu odpowiada mnożeniu w dziedzinie
+częstotliwości. W wyniku dualizmu słuszne jest też stwierdzenie odwrotne: splot w dziedzinie
+częstotliwości odpowiada mnożeniu w dziedzinie czasu. Te i inne wzajemne zależności wynika-
+jące z dualizmu będą bardziej szczegółowo rozpatrzone w rozdziałach 10 i 11.
+
+Zapis we współrzędnych biegunowych
+
+W dotychczasowych rozważaniach mieliśmy w dziedzinie częstotliwości grupę amplitud fal
+kosinusoidlanych i sinusoidalnych (z niewielkimi modyfikacjami wynikającymi ze skalowa-
+nia). Jest to zapis we współrzędnych prostokątnych. Alternatywą jest wyrażenie sygnałów
+w dziedzinie częstotliwości w postaci biegunowej. W tym zapisie Re X[ |] i /m X[ |] są za-
+stępowane dwiema innymi matrycami nazwanymi Moduł X (Magnitude X), zapisywany we
+wzorach jako Mag X| ] oraz Faza X (Phase X) zapisywana jako Phase X| ]'*. Moduł i faza
+ściśle zastępują części rzeczywistą i urojoną. Na przykład wartości Mag X[0] i Phase X[0] są
+obliczane przy wykorzystaniu tylko Re X[0] i /m X[0]. Podobnie Mag [14] i Phase X[14] są
+obliczane w z wykorzystaniem tylko Re X[14] i Im X[14] i tak dalej. W celu zrozumienia takiej
+konwersji rozważmy, co się dzieje w przypadku sumowaniu fal kosinusoidalnej i sinusoidalnej
+o tej samej częstotliwości. Wynikiem sumowania jest kosinusoida o tej samej częstotliwości,
+lecz o innej amolitudzie i innvm przesunieciu fazv. Można to wvrazić równaniem:
+
+<image/wzory/k3_page144_formula1.png>
+Wzór 8.5. Sumowanie fal kosinusoidalnej i sinusoidalnej daje w wyniku falę kosinusoidalną o innej
+amplitudzie i przesunięciu fazy. Informacja zawarta w A i B jest przenoszona do dwóch innych
+zmiennych M i ©
+Ważne jest, że w tym procesie konwersji żadna informacja nie jest tracona; mając daną jedną
+reprezentację sygnału, można obliczyć drugą. A więc informacja zawarta w amplitudach A i B jest
+też zawarta w zmiennych M i 0. Chociaż równanie 8.5 dotyczy fal sinusoidalnych i kosinusoidal-
+
+nych, to jest ono zgodne z podobnymi równaniami dotyczącymi prostych wektorów. Na rys. 8.9
+
+pokazano reprezentację wektorową, w której dwie zmienne A i B mogą być widziane we współ
+rzędnych prostokątnych, podczas gdy M i © są parametrami we współrzędnych biegunowych.
+We współrzędnych biegunowych Mag X[ ] wyraża amplitudę fali kosinusoidalnej (M we wzo-
+rach 8.5 i na rys. 8.9), a faza Phase X| | wyraża kąt fazowy fali kosinusoidalnej (8 we wzorze
+8.5inarys.8.9.poniszewzorysudokonwersjisygnauwdziedzinieczstotliwocize
+współrzędnych prostokątnych na biegunowe i vice versa:
+
+<image/wzory/k3_page144_formula2.png>
+
+<image/wzory/k3_page144_formula3.png>
+
+Wzór 8.6. Konwersja ze współrzędnych prostokątnych na biegunowe. Reprezentacja sygnału w dziedzi-
+nie częstotliwości we Re X [k] i Im X [K] jest przekształcana na reprezen-
+tację we współrzednuch hieaunowvch Maa X [kl i Phase X [kl
+
+<image/wzory/k3_page144_formula4.png>
+Im X |k|=Mag X |k jsin( Phase X |k |)
+Wzór 8.7. Konwersja ze współrzędnych biegunowych na prostokątne. Dwie matryce Mag X[k]
+i Phase X [k] są przekształcane na Re X [k] i Im X [k]
+
+i4 W tłumaczeniu zachowano angielskie symbole Mag X[ ] i Phase X| ] ze wzgłędu na ich zastosowanie
+w przykładach programów komputerowych (przyp. tłum.).

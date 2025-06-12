@@ -1,0 +1,36 @@
+<image/figury/k4_page187/_figure2.png>
+
+Wyd. 4.2 Przykłady łączenia szeregowe go i równoległego styków.
+
+Przypomina się, że działania wykonywane są w następującej kolejności: najpierw
+iloczyn (AND) a potem suma logiczna (OR), a więc przy zapisie analitycznym
+funkcji logicznej realizowanej przez obwód konieczne jest użycie nawiasów
+wymuszających wykonanie najpierw sumowania dla elementów obwodu połą-
+czonych równolegle, jeżeli przed lub za nimi występują elementy połączone
+szeregowo. Podobnie nawiasów należy użyć przy opisie funkcji realizowanej
+przez obwód w języku instrukcji /Ł.
+
+Styki własne przekaźnika mogą być wykorzystywane do podtrzymania (samo-
+podtrzymania) jego załączenia (tzw. zatrzask - latch) w przypadku zaniku prze-
+pływu prądu przez styki występujące w obwodzie wzbudzenia cewki
+przekaźnika. Obwody przedstawione na Wyd. 4.3 realizują następujące funkcje
+logiczne:
+
+e %Q1:
+e %Q2:
+
+(START OR %Q1) AND NOT STOP,
+START OR (%Q2 AND NOT STOP).
+
+<image/figury/k4_page187_figure1.png>
+
+Wyd. 4.3 Przykłady obwodów sterowania z podtrzymaniem
+
+W obu obwodach schematu drabinkowego zwarcie styku przypisanego do
+zmiennej o symbolicznej nazwie START (przy jednocześnie zwartym styku roz-
+wiernym STOP) spowoduje wzbudzenie cewek %Q/ i %Q2. Jeżeli rozwarcie
+styku START spowoduje zanik prądu, to mimo tego cewki te pozostaną nadal
+
+ 
+
+4.3 Funkcje przekaźnikowe 187

@@ -1,0 +1,51 @@
+1.10. Rozkład zero-jedynkowy 25
+
+Przykład 1.55 Zmienna losowa Z z przykładu 1.26a z funkcją gęstości:
+
+<image/wzory/k2_page84_formula1.png>
+ma wartość oczekiwaną E(Z) =
+
+Wsnsi- aoi rowe na Imarwseni W oe waoloknzi am ind aonynickaosrerow serem ai
+
+<image/wzory/k2_page84_formula2.png>
+
+Ale i na ouwiut
+Lemat 1.56 Jeżeli Var(/X) = 0, to zmienna losowa „X posiada rozkład jednopunktowy.
+
+Dowód Ponieważ Var(X) = E((X — mx)?) = 0, to z lematu 1.54 wynika, że 1 =
+P(X-mx=0)=P(X =mx). o
+
+Wniosek 1.57 Niech r;,..., z4 będą dowolnymi liczbami rzeczywistymi i niech
+
+<image/wzory/k2_page84_formula3.png>
+Wtedy
+<image/wzory/k2_page84_formula4.png>
+
+przy czym równość zachodzi wtedy i tylko wtedy, gdy z, = m dla każdego i.
+
+Dowód: Niech (? = f1,..., k) będzie przestrzenią z jednostajnym rozkładem prawdo-
+
+podobieństwa i niech X będzie zmienną losową określoną wzorem X (1) = z,. Wtedy m
+
+jest wartością oczekiwaną zmiennej X, a
+<image/wzory/k2_page84_formula5.png>
+
+jej wariancją, która jest nieujemna i równa zeru tylko dla rozkładu jednopunktowego. ©
+
+1.10 Rozkład zero-jedynkowy
+
+Zmienna losowa .X ma rozkład zero-jedynkowy, jeżeli prawdopodobieństwo jest skupio-
+ne tylko w dwóch punktach 0 i 1. Gęstość rozkładu prawdopodobieństwa ma wtedy postać
+
+<image/wzory/k2_page84_formula6.png>
+
+dla pewnych dodałnich p q spełniających warunek p+q=1.
+Wn nrn nrerolriewywa wrwiewynna W aareryara
+
+<image/wzory/k2_page84_formula7.png>
+
+a war
+
+<image/wzory/k2_page84_formula8.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

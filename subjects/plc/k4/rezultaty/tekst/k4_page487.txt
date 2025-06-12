@@ -1,0 +1,17 @@
+<image/figury/k4_page487_figure1.png>
+
+—
+
+ 
+
+Wyd. 8.167 Blok PB3 - Faza Napełnianie — odczytanie aktualnego poziomu w reakto-
+rze i wartości zadanej poziomu
+
+<image/tabele/k4_page487_table2.png>
+
+Wyd. 8.168 Blok PB3 - Faza Napełnianie — obliczenie strefy nieczułości dla kontroli
+poziomu w reaktorze
+
+yy m a ewy ww w O + 0 ——_<g 40 | go] M O 9 VA
+
+8.8 Sterowanie sekwencyjne procesem wsadowym 487

@@ -1,0 +1,23 @@
+Ma ono następujące współczynniki:
+
+<image/wzory/k1_page/8_formula1.png>
+
+Z pierwszego warunku kryterium stabilności Hurwitza wynika, że:
+
+<image/wzory/k1_page7/8_formula2.png>
+
+Z drugiego warunku kryterium stabilności Hurwitza wyznacznik zapisujemy jako
+
+<image/wzory/k1_page/8_formula3.png>
+
+Sprawdzamy podwyznaczniki:
+
+figury/k
+<image/wzory/k1_page/8_formula4.png>
+
+Obszar stabilności (rys. 2.23) układu regulacji na płaszczyźnie parametrów 7, K,
+określają więc nierówności:
+
+<image/wzory/k1_page/8_formula5.png>
+
+80

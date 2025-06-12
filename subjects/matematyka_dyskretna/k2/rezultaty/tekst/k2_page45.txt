@@ -1,0 +1,47 @@
+10 Rozdział 1. Kombinatoryka
+
+W n-tym wierszu (wiersze numerowane są od n = 0) znajdują się symbole Newtona:
+
+<image/wzory/k2_page45_formula1.png>
+
+Na skraju znajdują się jedynki, ponieważ (5) = (,) = 1. k-ty element w n-tym wierszu
+dlal <k<n—1 jest sumą dwóch elementów stojących bezpośrednio nad nim:
+
+<image/wzory/k2_page45_formula2.png>
+
+Jeżeli 0 < k < n, to symbol Newtona można też obliczyć ze wzoru:
+
+<image/wzory/k2_page45_formula3.png>
+lub
+
+<image/wzory/k2_page45_formula4.png>
+
+Oto uzasadnienie wzoru (??): Aby wybrać podzbiór k-elementowy ze zbioru f1,...,n),
+wybieramy k-elementowy ciąg bez powtórzeń i bierzemy do podzbioru elementy tego
+ciągu ignorując ich kolejność. Ponieważ każdemu k-elementowemu podzbiorowi odpo-
+wiada k! ciągów o tych samych elementach, więc podzbiorów jest k! razy mniej niż
+k-elementowych ciągów bez powtórzeń. Wzór (??) wynika teraz z twierdzenia ??, a
+wzór (??) bezpośrednio ze wzoru (??).
+
+Wzór (??) pozwala wyprowadzić oszacowania na wartość symbolu Newtona, dla 1 <
+k<n:
+
+<image/wzory/k2_page45_formula5.png>
+
+Ponieważ, jak łatwo sprawdzić z=+ > + dla każdego 1 < i < k — 1. Korzystając
+
+k-i
+z nierówności k! > ($)* wyprowadzonej ze wzoru Stirlinga (??), otrzymujemy góme
+ograniczenie:
+
+<image/wzory/k2_page45_formula6.png>
+1.7 Dwumian Newtona
+
+Symbole Newtona występują w znanym twierdzeniu Newtona.
+
+Twierdzenie 1.9 (dwumian Newtona) Dla każdej liczby rzeczywistej t oraz liczby cał-
+kowitei n > A zachodzi:
+
+<image/wzory/k2_page45_formula7.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

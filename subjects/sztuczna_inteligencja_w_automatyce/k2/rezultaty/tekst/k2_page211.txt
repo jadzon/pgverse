@@ -1,0 +1,29 @@
+216
+
+<image/figury/k2_page211_figure2.png>
+
+Rys. 8.22: Proces tworzenia się „Śnieżynek” po 10, 270, 1670 i 4500 krokach symulacji [?].
+
+tycznych. Jakość jest bezpośrednio weryfikowana przez reguły działania środowiska,
+jego „fizykę”.
+
+Przewidywane jest użycie środowiska w dwóch kierunkach. Po pierwsze w mo-
+delowaniu systemów samoreprodukujących się. Różne strategie reprodukcji mogą
+być porównywane — ich dynamika i rywalizacja i ewolucja. Po drugie, przewidywane
+jest modelowanie ewolucji systemu rozpoczynając od przypadkowo rozmieszczonych
+cząsteczek i oczekując na powstające struktury i wyłaniające się ich funkcje.
+
+Dalszy rozwój środowiska będzie się odbywał w kierunku zwiększania złożoności
+oddziaływań elementarnych cząstek systemu, co powinno ułatwić samoistne powsta-
+wanie bardziej złożonych struktur, przy jednoczesnym utrzymywaniu zasady braku
+zewnetrznej ingerencji w środowisko.
+
+8.5. Samoreprodukcja — von Neumann
+
+Rozważając ogólnie proces samoreprodukcji von Neumann pokazał |?|], że istnienie
+maszyny samoreprodukującej się wynika logicznie z przyjętego istnienia maszyny
+zwanej uniwersalnym konstruktorem. Uniwersalny konstruktor, oznaczony przez A,
+potrafi na podstawie opisu d(X ) maszyny X skonstruować maszynę X. Jeżeli pod-
+stawimy X = 4, to uniwersalny konstruktor A na podstawie opisu d(A) skonstruuje
+
+A (patrz rys. a). Ale nie jest to jeszcze pełny proces samoreprodukcji, ponieważ

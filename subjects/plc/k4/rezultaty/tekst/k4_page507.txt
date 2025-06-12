@@ -1,0 +1,61 @@
+czasomierz załączający z opóźnieniem (on-delay timer) — blok funkcyjny.
+który opóźnia zbocze narastające wejścia logicznego przez określony czas:
+czasomierz wyłączający z opóźnieniem (0/f-delay timer) — blok funkcyjny,
+który opóźnia zbocze opadające wejścia logicznego przez określony czas;
+dana prosta (single data element) — element danych zawierający jedną
+wartość:
+
+dana zachowywana (retentive data) — dana przechowywana w ten sposób,
+że jej wartość pozostaje niezmieniona po wyłączeniu i ponownym załączeniu
+zasilania;
+
+deklaracja (declaration) — mechanizm definiujący element języka, zwykle
+zawiera dołączony identyfikator elementu języka i określenie atrybutów
+takich jak typy danych i algorytm:
+
+działanie (action) — zmienna logiczna lub zbiór operacji do wykonania
+skojarzone z etapem w grafie SFC;
+
+element kontrolujący wykonanie (execution control element) — element
+języka kontrolujący kolejność wykonywania programu;
+
+element oprogramowania (program organization unit) — funkcja, blok
+funkcyjny lub program;
+
+element z nazwą (named element) — element struktury, który posiada skoja-
+rzony z nim identyfikator:
+
+etap (step) — miejsce w grafie SFC, w którym zachowanie się elementu
+oprogramowania w odniesieniu do jego wejść i wyjść podlega zbiorowi
+reguł zdefiniowanych przez skojarzone z etapem działanie;
+
+etykieta (/abel) — konstrukcja języka zawierająca identyfikator. wprowa-
+dzająca nazwę dla instrukcji, obwodu lub grupy obwodów;
+
+funkcja (function) — element oprogramowania, który po wykonaniu dostar-
+cza jeden element danych (który może składać się z wielu wartości, np.
+tablica lub struktura) i którego wywołanie może być użyte w językach
+tekstowych w postaci operandu w wyrażeniu;
+
+identyfikator (identifier) — kombinacja liter, cyfr i znaków podkreślenia,
+zaczynająca się od litery, stanowiąca nazwę elementu języka:
+
+indeksowanie (subscripting) — mechanizm odwoływania się do elementów
+tablicy za pomocą jednego lub więcej wyrażeń, których wyznaczenie określa
+pozycję elementu w tablicy;
+
+komentarz (comment) — element języka umożliwiający włączenie do pro-
+gramu tekstu nie mającego wpływu na wykonanie tego programu:
+kompilacja (compile) — tłumaczenie elementu oprogramowania lub wyka-
+zu typów danych na ich odpowiednik w języku maszynowym lub w formie
+pośredniej:
+
+konfiguracja (configuration) — element języka, który reprezentuje system
+sterowników programowalnych;
+
+liczba całkowita (integer literal) — bezpośrednie przedstawienie danej typu
+SINT, INT, DINI, LINT, BOOL, BYTE, WORD, DWORD lub ŁWORD;
+
+ 
+
+Dodatek A. Definicje wybranych pojęć według normy IEC 1131-3 507

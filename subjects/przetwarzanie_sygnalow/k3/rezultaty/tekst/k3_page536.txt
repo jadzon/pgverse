@@ -1,0 +1,56 @@
+Właściwości dziedziny z 577
+
+x|n], to parametry G i © nadal mogą przybierać ciągły zakres wartości. Drugim krokiem jest
+zapisanie wyrazu wykładniczego w innej formie. Sygnał wykładniczy może być wyrażony
+matematycznie iednvm z dwóch snosohów:
+
+<image/wzory/k3_page536_formula1.png>
+
+powyzszewzoryuajnizywwykiauniczrys.20.17.vypiciwszymiwyraeniuszyb
+kość opadania sygnału jest określona współczynnikiem tłumienia o. Jeśli ten współczynnik
+6 jest dodatni, to wartość przebiegu się zmniejsza w miarę wzrostu numeru próbki n. Krzywa
+jest zaś rosnąca, gdy 6 jest ujemny. Jeśli 6 jest równy dokładnie zero, to sygnał będzie miał
+stałą wartość równą jeden.
+W drugim wyrażeniu zastosowano parametr r określający opadanie przebiegu. Przebieg ma-
+lejejelir1awzrastagdyr1.sygnamawartostagdyr1.tedwawzoryspo
+prostu dwoma sposobami wyrażania tej samej rzeczy. Można przechodzić z jednego sposobu
+do drugiego, korzystając z zależności:
+
+r"a[e0] se*0.6=
+
+gdzie: o=ln(r)
+
+yln] = 7%, a = 0.105
+lub
+yn] =r", r=LI
+
+ 
+
+5
+o
+zo
+a
+
+Gismy
+
+y([n]=e *",o
+
+<image/_figury/k3_page536_figure1.png>
+
+lub
+yfn]j=r", r
+
+(e Rosnący| ————
+se eee oto
+=
+y(n) =e %,o= -0,095  2- Poe
+= ! I .
+lub = i l PJ
+yfn]=r", r=0,9 ! nes"Roge RESSNPOSZR
+Liluu i I
+0--—— A]
+10 4 o m 10
+n
+
+Rys. 33.1. Sygnaty wykładnicze. Przebiegi wyktadnicze można wyrażać matematycznie w dwóch różnych
+postaciach. W przeksztatceniu Laplace'a slosuje się jedną postać, a w przeksztatceniu Z — drugą

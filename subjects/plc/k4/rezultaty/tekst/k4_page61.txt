@@ -1,0 +1,28 @@
+Ciało bloku semafora przedstawiono w języku S7. Blok ten jest przewidywany
+głównie w celu kontroli dostępu do zasobów systemu operacyjnego, stąd dwie
+pierwsze instrukcje tego bloku są nieprzerywalne (non-interruptible). W progra-
+mie użytkownika blok ten powinien być tak użyty, by tylko jednostka, która
+ustawiła semafor (poprzez wejście CLAIM) mogła go zwolnić (RELEASE).
+
+<image/tabele/k4_page61_table1.png>
+
+e Elementy detekcji zbocza (Edge detection)
+
+Standardowe bloki funkcyjne umożliwiające detekcję zbocza opada ącego (fal-
+ling edge) lub narastającego (rising edge) sygnału przedstawiono w Tab. 2.31.
+Zachowanie obu bloków podlega następującym regułom:
+
+I. Wyjście Q bloku R_TR/G jest równe logicznej / od jednego wy wołania blo-
+ku do następnego wywołania w sytuacji, gdy nastąpiła zmiana vejścia CLK
+z wartości O na / i powinno wrócić do wartości O przy następny: « wywołaniu
+bloku.
+
+Wyjście © bloku F_TRIG jest równe logicznej / od jednego w' wołania blo-
+ku do następnego wywołania w sytuacji, gdy nastąpiła zmiana wejścia CLK
+z wartości / na 0 i powinno wrócić do wartości O przy następnyr» wywołaniu
+bloku.
+
+ro
+
+OZZIE ZZ ZZOZ ZSZ ZEDO ZARZ ZZ OO ZO POAZZYZOTĄ.
+2.3 Elementy oprogramowan 61

@@ -1,0 +1,29 @@
+4.5. Układy sterowania 73
+
+wejścia sterujące układu ALU. Do tego celu stosuje się specjalne układy sterujące, które są
+złożonymi automatami sekwencyjnymi. Przy projektowaniu układów sterujących, które
+mają wymuszać odpowiednie pobudzenia układów wykonawczych, projektant napotyka
+się między innymi na trudności:
+— dla wymaganej liczby wykonywanych rozkazów automaty sterujące mają dużą
+liczbę stanów;
+— wymagane jest zapewnienie synchronizacji pracy układu sterowania i układu
+wykonawczego, tj. konieczność uwzględnienia, podczas projektowania układu
+logicznego, czasu wykonywania poszczególnych operacji.
+
+Aby przezwyciężyć te trudności poszukiwano od dawna efektywnych metod projektowania
+układów sterujących. W zasadzie spotyka się dwa typy układów sterowania: generatory
+sekwencji budowane ze standardowych układów logicznych oraz tzw. układy mikro-
+programowane. W niniejszym podrozdziale przedstawiono koncepcję układów mikropro-
+gramowanych. Jest to dawna (1951 r.) koncepcja podana przez Wilkesa, ale dopiero
+możliwości stworzone przez technologię LSI pozwoliły praktycznie ją zastosować.
+Koncepcja ta polega na wykorzystaniu pamięci wraz z odpowiednim układem adresowania
+do realizacji automatu sekwencyjnego. Takie układy sterujące pracują według algorytmów
+podanych w poprzednim rozdziale, a ich opis jest zwykle dany w postaci sieci działań.
+W niniejszym podrozdziale przedstawiono takie automaty, podano ich strukturę, sposób
+opisu i metody realizacji.
+
+<image/figury/k3_page83_figure1.png>
+
+Rysunek 4.9. Struktura układu sterowania
+
+6 — Podstawy budowy i działania komputerów

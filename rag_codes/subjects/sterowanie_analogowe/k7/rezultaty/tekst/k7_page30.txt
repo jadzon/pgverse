@@ -1,0 +1,35 @@
+Transformacja stanu - diagonalizacja
+
+Przeanalizujmy układ autonomiczny
+
+<image/wzory/k/_page30_formula2.png>
+
+z
+O
+
+Q
+0
+o
+
+2
+
++
+p
+mo
+O
+=
+0
+
+<image/wzory/k7/_page30_formula3.png>
+
+Załóżmy, że wartości własne macierzy A są pojedyncze i dokonajmy jej
+diagonalizacji zgodnie z procedurą z poprzednich slajdów A =
+
+Wtedy uzyskamy:
+
+<image/wzory/k/_page30_formula4.png>
+
+ 
+
+POLITECHNIKA
+GDANSKA

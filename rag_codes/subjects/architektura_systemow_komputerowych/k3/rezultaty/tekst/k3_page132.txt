@@ -1,0 +1,48 @@
+122 6. Urządzenia zewnętrzne
+
+DP, tj. układu wyszukiwania najbardziej znaczącej jedynki w słowie wejściowym. Załóżmy,
+że priorytety rosną wraz ze wzrostem indeksów wejść I.. Oznacza to, że najwyższy
+priorytet ma urządzenie, które wysyła sygnał żądania przerwania I,. Na wyjściu układu
+DP pojawia się słowo w kodzie „1 z 8”, przy czym 1 pojawia się na pozycji odpowiadającej
+zgłoszonemu przerwaniu o najwyższym priorytecie. Jeśli na wejściu I, jest I, to i na
+wyjściu najbardziej znaczącym jest 1. Jeśli zaś na wejściu I, jest 0, to na wyjściu naj-
+bardziej znaczącym jest 0, a wartości na dalszych pozycjach zależą od stanu na pozostałych
+wejściach. Wyjściowe słowo układu DP jest podawane na wejścia kodera, na którego
+wyjściach pojawia się słowo w kodzie NKB, określające numer urządzenia żądającego
+przerwania o najwyższym priorytecie. Jednocześnie pojawia się sygnał wyjściowy INT,
+który jest podawany na odpowiednie wejście procesora. Wielopoziomowy system przerwań
+jest realizowany w tym układzie przez procesor, który może wysłać sygnał INTA w róż-
+nych momentach. Jeżeli zostanie on wysłany po zakończeniu programu obsługi przerwania,
+to system pracuje jako jednopoziomowy, gdyż przerzutnika nie wyzerowano i tym samym
+nie pojawi się ponowny sygnał INT. Jeśli natomiast INTA wysłano natychmiast po
+odebraniu zgłoszenia przerwania, to system pracuje jako wielopoziomowy, gdyż sygnał
+INT może powstać w czasie obsługi przerwania o niższym priorytecie.
+
+Na rysunku 6.3. pokazano także układ maskowania. Słowo maskujące jest zapisywane
+do rejestru maski, którego zawartość steruje wejściami dekodera priorytetowego poprzez
+bramki iloczynów w taki sposób, że zamaskowanie danego wejścia polega na wpisaniu 0
+na daną pozycję rejestru maski.
+
+W obu omówionych przypadkach układ przerwań wysyła poprzez magistralę danych
+numer (adres) takiego urządzenia, które ma najwyższy priorytet spośród tych, które żądają
+przerwania. Procesor po odczycie tego numeru zamienia go na adres rozkazu skoku do
+podprogramu umieszczonego właśnie w tym miejscu pamięci. Pod tym adresem znajduje
+się początek programu obsługi tego przerwania. Każdemu urządzeniu pracującemu poprzez
+przerwania odpowiada jeden program obsługi umieszczony w odpowiednim miejscu w pa-
+mięci. Zamiana numeru urządzenia na odpowiedni adres może zostać dokonana przez
+specjalny program lub przez umieszczoną w pamięci tablicę. W niektórych systemach
+rozbudowuje się sterowniki urządzeń tak, aby one przesyłały do procesora już gotowy
+adres programu. W takim przypadku sterownik jest wyposażony w rejestr, który prze-
+chowuje ten adres. Często zdarza się, że w systemie musi istnieć możliwość zmiany
+konfiguracji, a więc i zmiany adresów początków programów. Wówczas należy zmienić
+zawartość rejestru przechowującego adres. Początkowa jego zawartość jest zapisywana
+w czasie inicjalizacji pracy, tj. np. po włączeniu napięć zasilania, a następnie procesor
+może zapisać do rejestru nową jego zawartość. Powoduje to, że sterownik musi być tak
+zaprojektowany, aby jego rejestry mogły być zarówno odczytywane jak i zapisywane
+przez procesor.
+
+6.4. STEROWNIKI URZĄDZEŃ ZEWNĘTRZNYCH
+6.4.1. RODZAJE STEROWNIKÓW
+
+Na rysunku 6.4 pokazano typową strukturę sterownika i zbiór jego sygnałów wejściowych
+i wyjściowych. Sygnały znajdujące się z lewej jego strony stanowią łącze z magistralą

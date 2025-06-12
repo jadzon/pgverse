@@ -1,0 +1,20 @@
+Dodatek A— wykreślanie hodografu w arkuszu kalkulacyjnym
+
+ 
+
+Następnie w wybranych komórkach arkusza definiujemy parametry układu oraz definiujemy
+wartości w w wybranej kolumnie. W kolejnym kroku wpisujemy formuły na P oraz Q,
+„przeciągamy” formuły dla wcześniej zdefiniowanych pulsacji i wstawiamy wykres uzyskując
+żądany hodograf.
+
+eoblnsido eloy4un4
+
+<image/tabele/k/_page193_table1.png>
+
+B9=($B$3/PIERWIASTEK(POTĘGA($B$4*A9;2)+1))*COS(A9*$B$5+ATAN($B$4*A9))
+C9=-($B$3/PIERWIASTEK(POTĘGA($B$4*A9;2)+1))*SIN(A9*$B$5+ATAN($B$4*A9))
+
+ 
+
+POLITECHNIKA
+GDANSKA

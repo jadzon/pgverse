@@ -1,0 +1,37 @@
+ę - anie liniami prostymi o nagłych zmianach, jak w filtrze o średniej kroczącej. Dwie ostatnie
+zalety dają na ogół ograniczone korzyści, choć można spotkać zastosowania, gdzie te zalety
+są rzeczywiście korzystne.
+
+EE EA ZEN DOŃ
+względem tłumienia
+
+sposobem pomiaru
+
+skokowej. Jeśli czas narastania jest mierzony od 0 do 100% amplitudy skoku, to najlepszy
+z możliwych jest filtr o średniej kroczącej, jak to już podano poprzednio. Natomiast przy
+pomiarze od 10 do 90% amplitudy filtr z oknem Blackmana okazuje się lepszy niż filtr ze
+średnią kroczącą. Są to jednak tylko teoretyczne dyskusje; traktujcie ten parametr jako jed-
+nakowy w obu filtrach.
+Największa różnica między omawianymi filtrami wiąże się z szybkością działania. Przy
+użyciu algorytmu rekursywnego (opisanego dalej) filtr o średniej kroczącej przeleci przez
+wasz komputer z szybkością błyskawicy. Jest to rzeczywiście najszybszy dostępny filtr cy-
+frowy. Wielokrotne przejścia przez filtr ze średnią kroczącą będą oczywiście odpowiednio
+wolniejsze, lecz taki filtr jest też bardzo szybki. Natomiast filtry gaussowski i Blackmana
+
+są irytująco powolne, gdyż trzeba w nich używać splotu. Chodzi tu o czynnik równy
+10-krotności liczby punktów w odpowiedzi impulsowej filtru (gdyż mnożenie jest ok. 10
+
+razy wolniejsze od dodawania). Można więc przewidywać, że 100-punktowy filtr gaussow-
+eki hadzie 1000 razv wolnieiszv niż filtr a średniei kraczacei z wvkarzvstaniem rekursii.
+
+<image/figury/k3_page248_figure1.png>
+
+<image/wzory/k3_page248_formula1.png>
+
+jednego obliczenia jest wykorzystywany do dalszych obliczeń. (Nazwa „rekursywny” ma
+
+ 
+
+ 
+
+OK 2

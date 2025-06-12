@@ -1,0 +1,41 @@
+zB OCE dwupołożeniowa
+
+ 
+
+Z obiektami sterowanymi dwupołożeniowo mamy do czynienia najczęściej
+w ogrzewnictwie, chłodnictwie, suszarnictwie oraz klimatyzacji. Funkcją regu-
+latora w takim układzie sterowania jest modulacja szerokości impulsu fali pro-
+stokątnej załączającej i wyłączającej grzałki, wentylatory lub inne urządzenie
+wykonawcze.
+
+8.4.1 Regulacja dwupołożeniowa z inercyjno — podatnym
+
+____ sprzężeniem zwrotnym.
+
+naa 2. mm
+
+a ZE
+
+ 
+
+W celu wprowadzenia do regulatora dwupołożeniowego członu różniczkującego
+obejmuje się go dodatnim inercyjnym sprzężeniem zwrotnym uzyskując charak-
+terystykę regulatora PD. Dla usunięcia jego błędów statycznych dodaje się ujem-
+ne |inercyjne sprzężenie zwrotne o znacznie większej stałej czasowej.
+Wprowadzenie dodatkowego członu inercyjnego o dużej stałej czasowej daje
+możliwość „gromadzenia” informacji o poprzednich wartościach sygnału steru-
+jącego, a więc daje taki efekt jak wprowadzenie części całkującej / do regulatora.
+Tak więc regulator składa się z dwóch członów inercyjnych o różnych stałych
+czasowych załączonych przeciwsobnie do układu regulacji dwupołożeniowej.
+Schemat obwodu regulacji przedstawiono na Rys. 8.8. Parametrami takiego ukła-
+du są: stała histerezy przekaźnika, wzmocnienie i stała czasowa | inercji,
+wzmocnienie | stała czasowa 2 inercji, okres próbkowania.
+
+<image/figury/k4_page417_figure1.png>
+
+Rys. 8.8 Schemat obwodu regulacji dw upołożeniowej z inercyjno -- podatnym sprzę-
+żeniem zwromym
+
+ 
+
+8.4 Regulacja dwupołożeniowa 417

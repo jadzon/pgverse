@@ -1,0 +1,31 @@
+15. Prawa Kirchhoffa i łączenie elementów 105
+
+zeregowe pojemności. Analogiczne rozumowanie można
+łączenia szeregowego n pojemności (rys. 1.5-13) okreś-
+postaci (1.3-20), tzn.:
+
+<image/wzory/k3_page103_formula2.png>
+
+e103_formula1.png
+
+/k3_page103_figure1.png
+
+owym w elementach łączonych występuje ten sam prąd i,
+
+<image/wzory/k3_page103_formula3.png>
+
+gdzie qy, qą, ..., q„ — ładunki poszczególnych pojemności. Rozumując iden-
+tycznie jak w p. F, dochodzimy do wniosku, że:
+
+<image/wzory/k3_page103_formula4.png>
+
+Przy połączeniu szeregowym ładunki pojemności są jednakowe.
+W wyniku połączenia szeregowego pojemności o równaniach (1.5-47)
+otrzymujemy:
+
+<image/wzory/k3_page103_formula5.png>
+Równanie to określa charakterystykę nowego elementu (rys. 1.5-13):
+<image/wzory/k3_page103_formula6.png>
+gdzie:
+
+Pe(4) = > Pc,(a) (1.5-52)

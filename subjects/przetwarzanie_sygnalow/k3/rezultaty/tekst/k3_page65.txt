@@ -1,0 +1,55 @@
+Zapis zmiennoprzecinkowy (liczby rzeczywiste) 77
+
+W inny sposób można napisać: M = 1 + mp2”! + my27? + myg2” ... Jeśli bity od 0 do 22
+mają wszystkie wartość zero, to M przyjmuje wartość 1. Jeśli wszystkie te bity mają wartość
+jeden, to M jest bardzo bliskie 2, tzn. 2 — 2.
+
+Przy użyciu tego sposobu kodowania największa możliwa reprezentowana liczba jest:
+=(2- 2-3) x 2128 = +6,8 x 107. Podobnie, najmniejsza liczba jest: £1,0 x 27177 =+5,9 x 107*.
+Norma IEEE nieco ogranicza ten zakres liczb, aby zwolnić niektóre sekwencje bitów i przy-
+znać im specjalne znaczenia. Najmniejsza i największa liczby dopuszczalne w normie są,
+odpowiednio: ż3,4 x 10*$ oraz +1,2 x 107*%. Zwolnione sekwencje bitów są przeznaczone
+dla trzech liczb klasy specjalnej: 1) +0, gdy wszystkie bity mantysy i wykładnika mają
+wartość zero, 2) żeo, gdy wszystkie bity mantysy mają wartość zero, a wszystkie bity wy-
+kładnika — jeden, 3) grupa bardzo małych, nienormalizowanych liczb między +1,2 x 1035
+i £1,4 x 107%, Są to liczby o mniejszej dokładności, uzyskane przez rezygnację z wymogu,
+żeby pierwsza cyfra mantysy była 1. Oprócz tych trzech klas specjalnych są jeszcze se-
+kwencje bitów, którym nie przedzielono znaczenia, zwykle nazywane NAN (Not A Number,
+nie liczba).
+
+W normie IEEE o zapisie z podwójną dokładnością po prostu dodano więcej bitów za-
+równo do mantysy, jak i do wykładnika. Z 64 bitów stosowanych do zapisu liczby o po-
+dwójnej dokładności, bity od 0 do 51 tworzą mantysę, od 52 do 62 — wykładnik, a bit 63
+jest bitem znaku. Jak poprzednio, mantysa mieści się w zakresie od 1 do prawie 2, tj.
+M = 1 + ms, 27! + msg 2? + myg 27... Jedenaście bitów wykładnika tworzy liczbę między
+0 a 2047, z przesunięciem 1023, co daje wykładniki od 27! do 219%, W tym zapisie naj-
+mniejsza i największa możliwe liczby to +1,8 x 107% i +2,2 x 107*%, Są to liczby niewiary-
+godnie duże i małe! Niewiele jest zastosowań, w których pojedyncza dokładność nie byłaby
+wystarczająca, a przypuszczalnie nigdy nie spotkacie się z takim przypadkiem, w którym
+podwójna dokładność ograniczałaby wasze zamierzenia.
+
+<image/wzory/k3_page65_formula1.png>
+
+Przykład 1
+
+rk 11000000000000000000000 |
+
+| +1,75x27 7 « +1,316554 x 10
+
+wa cy 0,75
+
+ 
+
+| -1,376 x207 = -5,500000 |
+
+ 
+
+Rys. 4.2. Format zapisu
+
+doktadności. Stowo 32-bitowe jest podzielone na
+
+zmiennoprzecinkowego o pojedynczej
+trzy osobne grupy bitów: bit znaku, wyktadnik i mantysę. We wzorach 4.1 i 4.2 podano, jak na podstawie tych grup
+bitów można znaleźć liczby przez nie reprezentowane. MS$8 i LSB oznaczają, odpowiednio, najbardziej i najmniej
+
+znaczący bit

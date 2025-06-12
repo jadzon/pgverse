@@ -1,0 +1,24 @@
+210
+
+<image/figury/k2_page205_figure2.png>
+
+<image/figury/k2_page205_figure3.png>
+
+Rys. 8.18: A huge swarm of red-billed queleas returns to the communal roost at dusk,
+Okavango Delta, Botswana.
+
+8.4. Przykładowe środowisko modelowania indywi-
+duowego — DigiHive
+
+Opisane zostanie tutaj środowisko dla modelowania indywiduowego rozwijane na
+Wydziale ETI Politechniki Gdańskiej [?, ?, ?, ?]. Środowisko to ukierunkowane jest
+na modelowanie systemów, których zachowanie się jest w istotny sposób związane
+z ruchem i wzajemnym oddziaływaniem swoich elementów. W szczególności umoż-
+liwia modelowanie systemów złożonych, przejawiających się występowaniem w nich
+procesów wzrostu, samoreprodukcji, samoorganizacji i samomodyfikacji. Środowisko
+jest nastawione na modelowanie i wykrywanie podstawowych ogólnych własności
+systemów złożonych z wielu elementów, a w mniejszym stopniu na modelowanie
+konkretnych procesów fizycznych, chemicznych czy biologicznych.
+
+W środowisku tym zdefiniowanym w przestrzeni dwuwymiarowej poruszają się
+i zderzają cząsteczki. Na skutek zderzeń cząsteczki mogą losowo łączyć się w kom-

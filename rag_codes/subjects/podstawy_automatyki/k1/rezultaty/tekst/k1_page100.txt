@@ -1,0 +1,26 @@
+Zadanie 2.10
+
+Przedstawić modele układów pokazanych na rysunkach 2.40a i b w postaci rów-
+nań stanu i równania wyjść.
+
+<image/figury/k1_page100_figure2.png>
+
+Rys. 2.40. Modele układów z zadania 2.10
+
+Zadanie 2.11
+Napisać równanie stanu i równanie wyjścia elementu opisanego równaniem
+
+<image/wzory/k1_page100_formula1.png>
+
+gdzie 7, k — stałe.
+
+Zadanie 2.12
+
+Napisać równania stanu i równanie wyjścia dla układu o schemacie blokowym jak
+na rysunku 2.41.
+
+<image/figury/k1_page100_figure1.png>
+
+Rys. 2.41. Schemat blokowy układu
+
+102

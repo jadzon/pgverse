@@ -1,0 +1,35 @@
+163
+
+<image/wzory/k2_page158_formula1.png>
+
+s; powinno zostać wybrane jako korzeń drzewa
+
+PRZYKŁAD 6.14
+W tablicy ?? podany jest zestaw danych uczących. Wyznaczyć korzeń i i pozostałe
+węzły drzewa decyzyjnego wybierając atrybuty o najmniejszej entropii.
+
+Na podstawie wzoru (??) mamy:
+
+<image/wzory/k2_page158_formula2.png>
+i następnie
+
+<image/wzory/k2_page158_formula3.png>
+Podstawiając otrzymane wyniki do wzoru (??) mamy:
+
+<image/wzory/k2_page158_formula4.png>
+
+i następnie E(D4) = 0.9080, E(D3) = 0.7414, E(D4) = 0.9080, E(D;) = 0.8720.
+Stąd widać, że należy wybrać atrybut r3, ponieważ poddrzewo decyzyjne z korze-
+niem «3 posiada najmniejszą entropie.
+
+Przyjmując, że korzeniem drzewa jest atrybut «13, w drugim etapie należy dla każ-
+dej krawędzi wychodzącej z węzła z3, tzn dla każdej wartości atrybutu rz wyznaczyć
+nowy atrybut spośród pozostałych atrybutów.
+
+Drugi etap dla 13 = O:
+
+<image/wzory/k2_page158_formula5.png>
+
+i następnie
+
+<image/wzory/k2_page158_formula6.png>

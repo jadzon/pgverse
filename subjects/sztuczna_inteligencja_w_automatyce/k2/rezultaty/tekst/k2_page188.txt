@@ -1,0 +1,16 @@
+193
+
+przez liczbę gier). Jak widać, spośród badanych, zastosowanie metod e-zachłanna i
+softmax przynosi największe wygrane i średnie wygrane zbliżają się do możliwych
+maksymalnych, tzn. takich, które uzyskuje się przy znajomości automatów przyno-
+szących największe średnie wygrane. Otrzymane wyniki są dosyć oczywiste ponie-
+waż tylko te metody przynoszą stałe zwiększanie wiedzy o najlepszych automatach.
+Oczywiście wiedzę taką zwiększa także metoda czysto losowa ale metoda ta z tej
+wiedzy nie korzysta.
+
+Na rys, ?7b przedstawiono liczby zestawów automatów, w których nie znale-
+ziono jeszcze najlepszego automatu w funkcji liczby gier. Ciekawe jest, że najmniej
+nie znalezionych najlepszych automatów uzyskuje metoda softmax, wyniki zastoso-
+wania tej metody są lepsze niż metody czysto losowej. Rezultat można uzasadnić
+tym, że metoda softmax stopniowo zwiększa częstość gier na automatach dotychczas
+lepszych, powodując w ten sposób zwiększanie szans znalezienia najlepszego.

@@ -1,0 +1,45 @@
+308 3. Obwody prądu stałego
+
+Nzory/k4_page308_formula1.png
+Moce tracone w źródłach wynoszą:
+
+<image/wzory/k4_page308_formula2.png>
+
+zaś moce oddawane przez źródła:
+
+<image/wzory/k4_page308_formula3.png>
+
+Wynikają stąd następujące wartości sprawności źródeł:
+
+<image/wzory/k4_page308_formula4.png>
+
+B. Warunek dopasowania dla źródła napięciowego. Omówimy obecnie
+bardzo ważne zagadnienie dopasowania obciążenia (odbiornika) do źródła lub,
+jak często mówimy, dopasowania energetycznego, lub — jeszcze inaczej — dopa-
+sowania ze względu na maksimum mocy”.
+
+Rozważmy raz jeszcze rzeczywiste źródło napięciowe współpracujące z ob-
+ciążeniem (rys. 3.5-7a). Załóżmy, że parametry źródła napięciowego E iR„>0
+są ustalone. Przy tym założeniu formułujemy następujące pytanie: jaka powinna
+być wartość oporu obciążenia R> 0, aby w obciążeniu tym wydzieliła się
+maksymalna moc P = P,„,.,? Innymi słowy, poszukujemy takiej wartości R, przy
+której rzeczywiste źródło napięciowe o zadanych parametrach E, R, oddaje do
+obciążenia możliwie największą moc. Będziemy w takim przypadku mówili, że
+obciążenie jest dopasowane do źródła.
+
+W tym celu uzależnimy moc P wydzieloną w obciążeniu od oporu R.
+Ponieważ prąd w obwodzie:
+
+vzory/k4_page308_formula5.png
+
+zatem:
+
+<image/wzory/k4_page308_formula6.png>
+
+Zagadnienie sprowadza się więc do znalezienia takiej wartości oporu R, dla
+której funkcja (3.5-19) osiąga maksimum. Obliczając pochodną tej funkcji
+względem zmiennej R i przyrównując ją do zera, otrzymujemy równanie:
+
+1) Możliwe jest również posługiwanie się po prostu terminem „dopasowanie”. Jak zobaczymy
+w tomie III często zachodzi jednak potrzeba stosowania pełniejszych nazw, termin „dopasowanie” jest
+bowiem także używany w innym znaczeniu (np. dopasowanie falowe).

@@ -1,0 +1,18 @@
+3. Ochrona przez zastosowanie bardzo niskiego napięcia FELYV,
+
+W wyniku istniejących potrzeb technologicznych, w niektórych obwodach jest
+stosowane bardzo niskie napięcie o wartościach nie przekraczających wartości
+napięć zakresu I. Jest to tak zwane napięcie funkcjonalne FELV. W układach
+FELV nie stawia się specjalnych wymagań co do sposobów wykonania źródeł
+zasilania. Możliwe jest stosowanie m.in. transformatorów obniżających w zwy-
+kłym wykonaniu lub autotransformatorów.
+
+W urządzeniach tych nie ma zadawalającego zabezpieczenia przed przeniesie-
+niem się napięcia wyższego na stronę niższą.
+
+Układy FELYV nie mogą być zatem uznane za układy równie bezpieczne jak
+SEŁY lub PELV i raczej nie należy ich stosować w systemach sterowania.
+
+ 
+
+160 Rozdział :3. Sprzęt sterowników PLC

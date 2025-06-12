@@ -1,0 +1,70 @@
+| a
+
+==
+
+| e moment tarcia (suchego i lepkiego)
+
+Stanowi on, pomijając zależność od kąta obrotu, sumę momentu
+tarcia suchego (Coulomba) M,,(t) i momentu tarcia lepkiego
+(wiskotycznego) M,,(t), gdzie
+
+<image/wzory/k2_page35_formula1.png>
+
+e moment tarcia statycznego (zamodelowany jako blok nieliniowy ze stretą
+nięczułości)
+Jest to moment, jaki musi być pokonany w chwili rozruchu.
+Matematycznie można ująć go jako następującą modyfikację momentu
+dynamicznego:
+
+<image/kwzory/k2_page35_formula2.png>
+
+e luz
+
+Zakłada się, że luz A6|”| występuje na przekładni mechanicznej,
+czyli poza częścią mechaniczną samego silnika. W związku z powyż-
+szym indukowana siła elektromotoryczna wirnika em(t) jest propor-
+cjonalna do prędkości „idealnej”.
+
+Stosownie do wymienionych nieliniowości rzeczywisty moment
+dynamiczny dany jest jako
+
+<image/wzory/k2_page35_formula3.png>
+
+6.2.7  Trajektoria fazowa
+
+[rajektorią fazową sygnału r(t) w przedziale czasu t; < t <€ te nazywa
+się wykres sporządzony w prostokątnej siatce współrzędnych, przy odkłada-
+niu na osi odciętych wartości x(t), a na osi rzędnych wartości — = ż(t)
+| | dla każdej chwili czasowej t, € t <€ tą. Trajektoria fazowa w górnej pół-
+
+płaszczyźnie jest strzałkowana w prawo, w dolnej półpłaszczyźnie — w lewo,
+a oś odciętych przecinana jest przez nią zawsze pod kątem prostym.
+
+| Punkty na trajektorii odpowiadające stanowi ustalonemu leżą wyłącznie na
+osi odciętych.
+
+<image/figury/k2_page35_figure1.png>
+
+6.3 Przebieg ćwiczenia
+
+6.3.1 Wpływ wartości parametrów na odpowiedź skokową serwomecha-
+nizmu liniowego bez korekcji
+
+Określić wpływ na odpowiedź skokową:
+e wzmocnienia regulatora kp.
+e stałej czasowej obiektu 7.
+
+wybierając dla kazdego ze zmienianych parametrów trzy wartości.
+Dla zadanych: k, oraz T dobrać na podstawie symulacji wzmocnienie
+
+regulatora kp, zapewniające krótki czas regulacji oraz małe przeregulowa-
+nie.
+
+6.3.2 Wpływ wartości parametrów na odpowiedź skokową serwomecha-
+nizmu liniowego z korekcją
+Określić wpływ na odpowiedź skokową:
+e wzmocnienia regulatora kp,
+e stałej czasowej obiektu 7,
+e wzmocnienia prądnicy tachometrycznej ky,
+
+wybierając dla każdego ze zmienianych parametrów trzy wartości.

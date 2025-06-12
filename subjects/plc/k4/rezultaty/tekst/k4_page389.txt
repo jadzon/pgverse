@@ -1,0 +1,36 @@
+p R p ł
+8.2 Sterowanie urządzeniem do sortowania drewna |
+
+Rak
+
+_8.2.1 Opis urządzenia —
+
+ 
+
+Schemat ideowy urządzenia do sortowania drewna przedstawia Rys. 8.5. Przeno-
+Śnik taśmowy transportuje kłody drewna, których długości oznaczono jako krót-
+kie, średnie lub długie. Pomiar długości wykonywany jest za pomocą układu
+trzech fotokomórek, oznaczonych na schemacie jako B/, B2 i BJ. Przysłonięcie
+przez drewno strumienia świetlnego generuje w czujniku sygnał odpowiadający
+logicznej jedynce.
+
+Jeżeli na przenośniku znajduje się kłoda krótka, to po osiągnięciu przez nią
+czujnika końca oznaczonego jako B7 powinien zadziałać wypychacz 1, który
+umieści ją w komorze 1. W przypadku gdy transportowana jest kłoda Średnia, to
+po dotarciu jej do czujnika końca kłody B$ powinien zostać włączony wypy-
+chacz 2 umożliwiający przesunięcie jej do komory 2. Kłody długie przechodzą
+do dalszej obróbki. Wypychacze włączane są za pomocą sygnałów Q/ i Q2,
+z których każdy powinien trwać do chwili wprowadzenia kłody do odpowiedniej
+komory.
+
+Wprowadzenie następnej kłody drewna na taśmociąg możliwe jest tylko wtedy
+gdy poprzednia opuści go, co jest sygnalizowane przez jedną z fotokomórek
+oznaczonych na schemacie jako B4, BS i Bó.
+
+<image/figury/k4_page389_figure1.png>
+
+Rys. 8.5 Schemat ideowy urządzenia do sortowania drewna
+
+ 
+
+8.2 Sterowanie urządzeniem do sortowania drewna 389

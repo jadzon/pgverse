@@ -1,0 +1,48 @@
+Dla podwyższenia niezawodności systemów sterownikowych wielu producentów
+wprowadziło sprzętowe i programowe rozwiązania redundancyjna (redundancy
+solutions). Polegają one na podwojeniu, a nawet potrojeniu elementów systemu
+sterownikowego oraz na zapewnieniu komunikacji pomiędzy tymi elementami
+w celu realizacji funkcji kontroli poprawności działania i programowej koordy-
+nacji automatycznej podmiany elementu lub programu błędnie działającego.
+
+Rozwiązania takie stosuje się w warstwie obiektowej wprowadzając rezerwowe
+czujniki oraz elementy do wysterowania organów wykonawczych.
+
+Podobnie w warstwie komunikacji stosuje się rezerwowe moduły komunikacyjne
+oraz okablowanie sieciowe uzupełnione odpowiednim oprogramowaniem za-
+pewniającym ciągłe podstawowe połączenia sieciowe lub, w razie potrzeby, re-
+zerwowe.
+
+W warstwie sterownikowej w rozwiązaniach redundancyjnych pracują co naj-
+mniej dwie jednostki centralne, między którymi zapewnia się wymianę danych
+pomiarowych w każdym cyklu programowym. W systemach z gorącą rezerwą
+jednostki centralnej CPU (Hot Standby CPU Redundancy) zapewnia się wymia-
+nę i porównanie obrazu procesu oraz realizację jednakowych programów aplika-
+cyjnych, a następnie porównanie wyników obliczeń i sprawdzenie ich zgodności,
+po czym przekazuje się te obliczone sterowania przez moduły komunikacyjne
+i wyjściowe do organów wykonawczych.
+
+W aplikacjach krytycznych wprowadza się systemy ESD (Emergency Shutdown
+System) zapewniające bezpieczne zamykanie awaryjnych cykli produkcyjnych.
+Systemy takie zazwyczaj są z potrójną rezerwacją, tzn. występują w nim trzy
+jednostki centralne podłączone przez potrojone magistrale komunikacyjne do
+odalonych bloków wejść i wyjść. Systemy te wykorzystują zainstalowane opro-
+gramowanie, które przeprowadza głosowanie np. „dwa z trzech”, którego wyni-
+kiem są odpowiednie i pewne wartości sygnałów sterujących.
+
+Ponadto w latach dziewięćdziesiątych nastąpiło gwałtowne powiększenie asor-
+tymentu tzw. modułów inteligentnych (/ntelligent Modules), wyposażonych we
+własne układy mikroprocesorowe, które realizują nieraz bardzo złożone algoryt-
+my przetwarzania sygnałów i procedury sterowania oraz komunikacji. Najszerzej
+stosowane są moduły szybkich liczników i moduły pozycjonowania osi napędów,
+które przystosowane są do współpracy ze sprzężonymi z tymi osiami przetworni-
+kami obrotowo-impulsowymi i układami sterowania napędów przez przetworni-
+ce częstotliwości źródeł zasilania. Moduły inteligentne są niejednokrotnie
+złożonymi, dedykowanymi układami sterowania, które jednak w prosty sposób
+można włączyć do magistrali sterowników lub ich sieci komunikacyjnych.
+Dla przykładu są to moduły systemów ważenia i dozowania, mierników elek-
+trycznych z rozbudowanymi algorytmami obróbki sygnałów pomiarowych itp.
+
+ 
+
+1.1 Rys historyczny 7

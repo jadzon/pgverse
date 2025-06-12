@@ -1,0 +1,56 @@
+442
+
+26. Sieci neuronowe (i
+
+Dokładny kształt sigmoidy nie jest istotny; ważne, że jest to łagodny próg. Przypomnij!
+że prosty próg daje wartość jeden, gdy x > 0 i wartość zero, gdy x <0. Sigmoida realiz
+taką samą podstawową funkcję progową, lecz jest też różniczkowalna, jak to pokazano |
+rys. 26.7 b). Wprawdzie ta pochodna nie jest stosowana w sieci przepływu (rys. 25.5), le
+jest najważniejszym elementem w poszukiwaniu właściwych wag. Wkrótce więcej o $
+powiemy. Zaletą sigmoidy jest możliwość obliczania jej pochodnej w skrócony sposób:
+
+<image/wzory/k3_page408_formula1.png>
+Wzór 26.2. Pierwsza pochodna sigmoidy. Oblicza się ją korzystając z wartości samej sigmoidy
+Na przykład jeśli x = 0, to s(x) = 0,5 (ze wzoru 26.1) i pierwszą pochodną oblicza się jal
+s'(») = 0,5(1 — 0,5) = 0,25. Nie jest to jakiś pomysł o zasadniczym znaczeniu, a tylko
+upraszczający obliczenia algebraiczne.
+Czy sieć neuronowa miałaby większą elastyczność działania, gdyby sigmoidę m
+było przesunąć w lewo lub w prawo, środkując ją na jakiejś wartości innej niż x =
+Odpowiedź brzmi „tak”, w większości sieci neuronowych jest to możliwe. Można te
+two zrealizować, wprowadzając do warstwy wejściowej dodatkowy węzeł, którego w
+ście ma zawsze wartość jeden. Ta wartość wejściowa przemnażana przez wagi w
+ukrytej daje pewną polaryzację (przesunięcie o składową stałą). Ten dodatkowy
+nazywamy polaryzującym. Jest on traktowany tak samo, jak pozostałe węzły, z tym ty
+że na wejściu ma wartość stałą.
+Czy można zrealizować sieć neuronową bez sigmoidy lub podobnej nieliniowości? Aby «
+powiedzieć na to pytanie, spójrzmy na trójwarstwową sieć na rys. 26.5. Gdyby nie b
+sigmoidy, to trzy warstwy zzedukowałyby się do dwóch. Innymi słowy, sumowania i
+warstw ukrytej i wyjściowej mogłyby zostać połączone w pojedynczą warstwę, a więc
+stałaby się tylko dwuwarstwowa.
+
+Dlaczego to działa?
+
+Wagi są niezbędne do tego, aby sieć neuronowa mogła spełnić wyznaczone jej zad:
+Określa się ich wartości stosując algorytm uczący się wraz z przykładami pokazujący
+jak system powinien działać. Takie przykłady, powiedzmy w systemie sonaru, są zawę
+w bazie danych w postaci kilkuset (lub więcej) z 1000 próbkowanych segmentów. Niek
+z przykładowych segmentów dotyczyłyby łodzi podwodnych, inne — wielorybów, jes
+inne — szumu losowego itd. W algorytmach uczących się te przykłady są wykorzystywa
+obliczania zestawu wag odpowiednich do przewidywanego zadania. Pojęcie uczenie się.
+trenowanie) jest szeroko stosowane w dziedzinie sieci neuronowych do opisania tego pm
+su; jednak lepszym opisem mogłoby być: określanie optymalnego zestawu wag na podsta
+statystyki przykładów. Niezależnie od użytej nazwy metody, uzyskane w jej wyniku w.
+dla człowieka, w istocie, zupełnie niezrozumiałe. W niektórych rzadkich przypadkach mo
+w nich zauważyć jakieś prawidłowości, lecz na ogół są to liczby losowe. W sieciach £
+ronowych, w których zastosowano te wagi, można zaobserwować prawidłowe zależ
+między wyjściem a wejściem, lecz trudno pojąć, dlaczego te właśnie wagi dobrze dzi
+Te tajemnicze właściwości sieci neuronowych zniechęcają do nich wielu naukowców
+żynierów. Pamiętacie te wszystkie filmy science fiction o zdegenerowanych kompule
+zdobywających władzę nad światem?
+
+Mimo to, ciągle słyszy się obrońców sieci neuronowych głoszących stwierdzenia, takie
+sieci neuronowe są łatwo zrozumiałe. Aby zbadać prawdziwość takiego stwierdzenia, wi
+żemy najpierw, że jest możliwy wybór wag sieci neuronowej tradycyjnymi metodami
+Następnie pokażemy, że algorytmy uczące się dają rozwiązania lepsze niż metody trać
+Wprawdzie to nie wyjaśnia, dlaczego dobrze działa jakiś określony zestaw wag, lecz w
+dza zaufanie do metody.

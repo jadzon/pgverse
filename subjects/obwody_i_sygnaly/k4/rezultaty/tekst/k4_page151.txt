@@ -1,0 +1,34 @@
+18. Sprzężenie magnetyczne 153
+
+y/k4_page151_formula1.png (1.8-52)
+Wynika stąd, że przy sprzężeniu całkowitym (M? = Ly L>) zależność między
+napięciami u, i u, w układzie indukcyjności sprzężonych jest taka sama jak
+w transformatorze idealnym o przekładni p określonej wzorem (1.8-49).
+Energia w, gromadzona w polu magnetycznym indukcyjności sprzężonych
+jest określona zależnością (1.8-30). Przy założeniu (1.8-48), że sprzężenie jest
+całkowite, można ją wyrazić następująco:
+
+<image/wzory/k4_page151_formula2.png>
+
+Pozostaje do rostrzygnięcia kwestia, w jaki sposób można uzyskać drugie
+równanie (1.8-46) transformatora idealnego, tj. równość:
+
+»ry/k4_page151_formula3.png (1.8-54)
+Jest to możliwe w wyniku następującego przejścia granicznego. Załóżmy, że:
+<image/wzory/k4_page151_formula4.png>
+ale tak, że:
+
+<image/wzory/k4_page151_formula5.png>
+
+oraz uwzględnijmy, że przy przejściu granicznym (1.8-55) skojarzenia magne-
+tycznewwamuszpozostaskoczone.wwczaspor.wzory1.851
+
+<image/wzory/k4_page151_formula6.png>
+
+a więc w granicy otrzymujemy równość (1.8-54).
+Z zależności (1.8-53) wynika ponadto, że przy powyższym przejściu granicz-
+nym:
+
+wy >0 (1.8-58)
+
+Podsumujmy uzyskane rezultaty.

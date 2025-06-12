@@ -1,0 +1,28 @@
+Algorytm od strony wyjścia
+
+ 
+
+<image/figury/k3_page107_figure1.png>
+
+położenie maszyny kodowej. W programach komputerowych realizujących splot, pętla pro-
+
+kodowej. Gdy j zmienia się od 0 do M — 1, każda próbka w odpowiedzi impulsowej k(j] jest
+mnożona przez odpowiednią próbkę z sygnału wejściowego x|i - j]|. Wszystkie te iloczyny
+są sumowane, dając wartość obliczanej próbki wyjściowej. Proszę analizować wzór (6.1) aż
+eo cze” BIK O 0 IŚ Z tego wzoru
+korzysta się w bardzo wielu zagadnieniach DS
+
+Oznaczenie n w wyrażeniu y[n] = x[n]  oidiGć jest to po prostu znak-wypeł-
+niacz wskazujący, że jakaś zmienna jest indeksem w matrycy. Czasem ten wzór zapisuje się
+w postaci: y| ] = x[ ] * hf ], aby uniknąć wprowadzania nic nieznaczącego symbolu.
+
+W tablicy 6.2 zamieszczono program do realizacji splotu przy użyciu algorytmu od strony
+wyjścia, z bezpośrednim wykorzystaniem wzoru 6.1. Ten program daje taki sam sygnał wyj-
+
+każdą próbkę w sygnale wejściowym (wiersz 220 w tablicy 6.1), a w algorytmie od strony
+wyjścia — w sygnale wyjściowym (wiersz 180 w tablicy 6.2).
+
+A oto szczegóły działania tego programu. Pętla POR-NEXT w wierszach od 180 do 250
+przechodzi przez każdą próbkę sygnału wyjściowego, z użyciem 1% jako indeksu. Dla każdej
+
+<image/tabele/k3_page107_table1.png>

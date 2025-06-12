@@ -1,0 +1,40 @@
+Rozdział 1
+
+Rachunek prawdopodobieństwa
+
+11 Zdarzenia
+
+Podstawowym pojęciem rachunku prawdopodobieństwa jest przestrzeń zdarzeń elemen-
+tarnych, którą najczęściej będziemy oznaczać przez 0. W tej książce ograniczymy się do
+przypadków, gdy 0 jest zbiorem skończonym. Dzięki temu będziemy mogli ograniczyć
+się to prostych rozważań.
+
+Elementy przestrzeni (? nazywamy zdarzeniami elementamymi.
+
+Przestrzeń zdarzeń często związana jest z jakimś eksperymentem losowym (probabi-
+listycznym).
+
+Przykład 1.1 a) Przypuśćmy, że rzucamy monetą. Przestrzeń zdarzeń elementarnych
+może być wtedy określona jako Q = (O, R), gdzie O oznacza wypadnięcie orła, a
+R reszki.
+
+b) W przypadku rzutu dwoma (rozróżnialnymi) monetami przestrzeń zdarzeń elemen-
+tarnych może być określona jako 0. = (00,O0R, RO, RR), gdzie OO oznacza, że
+wypadły dwa orły; OR, że na pierwszej monecie wypadł orzeł, a na drugiej reszka;
+RO, że na pierwszej reszka, a na drugiej orzeł; a RR, że na obu monetach wypadły
+reszki.
+
+c) Przypuśćmy, że mamy urnę z sześcioma ponumerowanymi kulami, i że kule o nu-
+merach 1 i 2 są białe, a kule o numerach 3,4,5 i 6 są czarne. Przestrzeń zdarzeń
+elementarnych może być zdefiniowana jako 0 = f1b, 2b, 3c,4c,5c,6c).
+
+d) Przy rzucie kostką 0? = (1,2,3,4,5,6).
+
+e) Przy rzucie dwiema (rozróżnialnymi) kostkami (2 = f(i,j) | 1 < i,j < 6). Zda-
+rzenie (i, j) odpowiada wynikowi, gdzie na pierwszej kostce wypadło : oczek, a na
+drugiej ;.
+
+f) Przy rzucie monetą i kostką (2 = (O1, O2, O3, 04,05, 06, RL, R2, R3, RA, R5, R6);
+na przykład 06 opisuje wynik, gdzie ną monecie wypadł orzeł, a na kostce 6 oczek.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

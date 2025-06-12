@@ -1,0 +1,15 @@
+<image/figury/k1_page142_figure1.png>
+
+5.3. Otwarty układ sterowania hydraulicznego
+
+Na rysunku 5.2 przedstawiono układ sterowania hydraulicznego w obwodzie
+otwartym. Sygnał wejściowy nastawia położenie zaworu, który z kolei kieruje ciecz
+znajdującą się pod ciśnieniem poprzez otwór przelotowy do jednej końcówki siłowni-
+ka. Tłok połączony jest z elementem regulowanym tak, by jego położenie przyjąć moż-
+na za wartość wyjściową.
+
+<image/figury/k1_page142_figure2.png>
+
+Rys. 5.2. Otwarty układ sterowania hydraulicznego
+
+144

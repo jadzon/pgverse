@@ -1,0 +1,30 @@
+Przykład 1.5
+Obliczyć transformatę ciągu impulsów z rysunku 1.5.
+
+<image/figury/k1_page11_figure1.png>
+
+Z przykładu 1.4 wiemy, że F7(s) = z es], więc na podstawie wzoru (1.11)
+otrzymujemy
+
+<image/wzory/k1_page11_formula1.png>
+
+RÓŻNICZKOWANIE
+
+Jest jedną z najważniejszych właściwości przekształcenia Laplace'a, umożliwiają-
+cą algebraizację równań różniczkowych — właściwością dotyczącą transformat pochod-
+nych funkcji.
+
+Twierdzenie o różniczkowaniu oryginału
+
+Jeżeli dla /”(f) jako oryginału istnieje obraz, to również istnieje obraz dla /(1). Od-
+wrotne twierdzenie nie jest prawdziwe. Na przykład mamy
+
+<image/wzory/k1_page11_formula2.png>
+
+ale pochodna
+
+<image/wzory/k1_page11_formula3.png>
+
+nie jest funkcją transformowalną, gdyż nie jest całkowalna w otoczeniu punktu £ = 0.
+
+14

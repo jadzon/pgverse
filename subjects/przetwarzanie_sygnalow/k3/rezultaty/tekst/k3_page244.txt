@@ -1,0 +1,41 @@
+fi
+
+Tłumienie szumu a odpowiedź skokowa 267
+
+uśrednianiu symetrycznym M musi być liczbą nieparzystą. Programowanie jest nieco łatwiej-
+
+- sze, gdy punkty znajdują się tylko z jednej strony; jednak powstaje wtedy pewne względne
+
+przesunięcie między sygnałami wejściowymi i wyjściowymi.
+
+Trzeba mieć na uwadze, że filtr o średniej kroczącej jest splotem, w którym zastosowano
+bardzo prostą odpowiedź impulsową filtru. Na przykład filtr 5-punktowy ma odpowiedź im-
+pulsową: ... 0, O, 1/5, 1/5, 1/5, 1/5, 1/5, 0, 0 ... A zatem filtr o średniej kroczącej jest splotem
+sygnału wejściowego z impulsem prostokątnym o powierzchni jeden. W tablicy 15.1 podano
+program realizujący filtr o średniej kroczącej.
+
+Tłumienie szumu a odpowiedź skokowa
+
+Wielu naukowców i inżynierów ma poczucie winy, stosując filtr o średniej kroczącej. Ze
+względu na swoją prostotę, jest on często pierwszym, próbnym rozwiązaniem postawionego
+problemu. Nawet gdy problem został już w ten sposób całkowicie rozwiązany, ciągle ma
+się uczucie, że powinno się zrobić jeszcze coś więcej. Jest to raczej śmieszna sytuacja. Filtr
+o średniej kroczącej jest bowiem nie tylko dobry w wielu aplikacjach, lecz wręcz optymalny
+do tak podstawowego zastosowania, jakim jest stłumienie białego szumu losowego z utrzy-
+maniem jak najbardziej stromej odpowiedzi skokowej.
+
+<image/wzory/k3_page244_formula1.png>
+
+   
+ 
+
+    
+
+Wartość
+o
+i
+'
+i
+mazazmmmdjjazzzazzzmzajzazza
+
+png

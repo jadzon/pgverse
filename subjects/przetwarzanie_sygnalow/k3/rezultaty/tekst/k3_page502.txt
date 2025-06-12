@@ -1,0 +1,14 @@
+30. Liczby zespolone
+
+ 
+
+<image/figury/k3_page502_figure1.png>
+
+W końcu przekształcamy to na współrzędne biegunowe i wykonujemy wykres (rys. 30.7):
+
+<image/wzory/k3_page502_formula1.png>
+
+W tych przykładach istotną do zapamiętania rzeczą jest sposób, w jaki zastępowanie umoż-
+liwia reprezentację problemów świata rzeczywistego przez liczby zespolone. W następnym
+rozdziale zajmiemy się trudniejszym sposobem stosowania liczb zespolonych w nauce i tech-
+nice — równoważnością matematyczną.

@@ -1,0 +1,51 @@
+86
+
+Proces wnioskowania rozmytego omówimy na poniższym przykładzie.
+PRZYKŁAD 5.8
+Przyjmijmy, że dane są następujące reguły:
+
+reguła 1: jeżeli wysokość jest duża, to siła jest mała
+reguła 2: jeżeli wysokość jest mała i prędkość jest mała, to siła jest mała
+reguła 3: jeżeli wysokość jest mała i prędkość jest duża, to siła jest duża
+
+oraz funkcje przynależności zbiorów rozmytych występujących w regułach:
+
+0 gdy r < 80
+<image/wzory/k2_page81_formula1.png>
+gdy z
+= -s)0
+
+gdy z < 50
+sio —1 gdy50<z
+
+<image/wzory/k2_page81_formula2.png>
+
+gdzie oznaczenia i zakresy zmiennych zestawione są poniżej
+
+<image/tabele/k2_page81_table1.png>
+
+Omawiany system mogłby np. dotyczyć sterowania lądującym pojemnikiem w
+polu grawitacyjnym. Zadaniem jest wyznaczanie wartości siły na podstawie zada-
+nych wartości wysokości i prędkości. W przykładzie obliczymy siłę dla wartości wy-
+sokości i prędkości odpowiednio 100m i 12m/s.
+
+Rozmywanie
+
+W etapie rozmywania (fuzyfikacji) liczbom wejściowym przyporządkowane z0-
+stają wartości funkcji przynależności. W omawianym przykładzie sprowadza się to
+do wyznaczenia następujących wartości:
+
+<image/wzory/k2_page81_formula3.png>
+
+Operacje rozmyte
+Na etapie operacji rozmytych przeprowadzane są operacje logiczne na przesłan-
+
+kach występujących w regułach. W omawianym przykładzie odpowiada to wyzna-
+czaniu wartości rozmytych iloczynów logicznych przesłanek. Wartości tych iloczynów
+dla wszystkich reguł wynoszą:
+
+reguła 1: minfwd(100) = 0. 25] = 0,25
+
+reguła 2: min(wm(100) = 0, 375,pm(12) = 0,4| = 0,375
+
+reguła 3: min(wm(100) = 0.375,pd(12) = 0,6) = 0,375

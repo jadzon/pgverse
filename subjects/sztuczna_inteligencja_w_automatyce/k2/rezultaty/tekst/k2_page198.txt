@@ -1,0 +1,30 @@
+203
+
+<image/figury/k2_page198_figure1.png>
+
+Modele matematyczno”fizyczne — maszyny analogowe
+
+W modelowaniu matematyczno-fizycznym tworzy się model matematyczny bada-
+nego procesu (najczęściej w postaci równań różniczkowych). Następnie budujemy
+się układ fizyczny (model) opisany identycznymi równaniami jak układ badany. Ob-
+serwując zachowanie modelu uzyskuje się wiedzę o zachowaniu badanego układu.
+W takim modelowaniu, najczęściej stosowanym ukladem fizycznym jest układ elek-
+tryczny zestawiany z oporności, indukcyjności, pojemności, elementów nieliniowych
+i wzmacniaczy. Zestawiając odpowiednio te elementy można w łatwy sposób uzyskać
+obwód elektryczny opisany zadanym równaniem różniczkowym.
+
+Tego typu modelowania były bardzo popularne do lat 70. ubiegłego wieku. Pro-
+dukowano uniwersalne zestawy elementów z wyprowadzonymi końcówkami na spe-
+cjalnych panelach. Zestawy takie nazywały się maszynami (komputerami) analogo-
+wymi i przez wiele lat skutecznie rywalizowały z maszynami cyfrowymi w dziedzi-
+nie uzyskiwania rozwiązań równań różniczkowych. Dopiero pojawienie się tanich i
+szybkich maszyn cyfrowych wyparło tą technikę. Na rys. ?? przedstawiono okładkę
+czasopisma Radio-Electronics z roku 1959 ze zdjęciem ilustrującym programowanie
+maszyny analogowej oraz podstawowy obwód maszyny analogowej, układ całkujący.
+
+Na rysunku ?? przedstawiono układ elektryczny modelujący układ mechaniczny
+masy i spręzyny w przypadku występowaniu tarcia.
+Modele matematyczno-komputerowe — symulatory
+
+W modelowaniu matematyczno komputerowym tworzy się model matematyczny mo-
+delowanego procesu, a następnie symuluje się jego zachowanie poprzez numeryczne

@@ -1,0 +1,50 @@
+4 Rozdział 1. Poprawność programów
+
+naturalnych, a danymi wyjściowymi są pojedyncze liczby naturalne. W algorytmie sor-
+tującym danymi wejściowymi i wyjściowymi są ciągi liczb. Zeby określić „co program
+robi” definiuje się warunki: jeden warunek mówi, jakie powinny być dane wejściowe, a
+drugi warunek określa, jakie powinny być dane wyjściowe.
+
+Problem algorytmiczny możemy więc zdefiniować przez podanie:
+
+e zbioru danych wejściowych X,
+
+e zbioru danych wyjściowych Y,
+
+e predykatu (funkcji zdaniowej) *, który określa warunki początkowe; *(z) przyj-
+muje wartość prawda, jeżeli dane wejściowe x są poprawnie zbudowane,
+
+e predykatu W, który określa relację pomiędzy danymi wyjściowymi i wejściowymi;
+Y(r,y) ma wartość prawda, jeżeli dane wyjściowe y są prawidłową odpowiedzią
+algorytmu na dane wejściowe r.
+
+W przykładzie algorytmu Euklidesa:
+e dane wejściowe to pary liczb naturalnych X =NxN,
+e dane wyjściowe to zbiór liczb naturalnych Y =
+e warunek początkowy *(a,b) = (a > 0 and b > 0),
+e relacja W(a, b, d) określa, że d jest największym wspólnym dzielnikiem liczb a i b.
+
+Zadanie algorytmiczne sortowania może być zdefiniowane w następujący sposób (dla
+prostoty zakładamy, że sortujemy ciągi różnowartościowe):
+
+e X iY to zbiory wszystkich ciągów długości n,
+e warunek $(x) mówi, że ciad jest różnowartościowy:
+
+<image/wzory/k2_page225_formula1.png>
+
+e warunek W(z, y) określa, że ciąg y jest rosnący i zawiera dokładnie te same ele-
+mentv co ciaa z:
+
+<image/wzory/k2_page225_formula2.png>
+
+Takiego typu warunki nazywają się specyfikacją algorytmu lub programu. Jednym
+słowem, specyfikacja mówi nam, co program ma robić. Program działa poprawnie, jeżeli
+dla każdych danych wejściowych z, spełniających warunek wejściowy *%(x), daje wynik
+y, który spełnia warunek wyjściowy YP(z,y).
+
+Zwykle dowód poprawności programu rozbija się na dwa poddowody. Osobno dowo-
+dzi się poprawności przy założeniu, że program zawsze się zatrzyma, a osobno dowodzi
+się, że program zatrzymuje się dla każdych poprawnie zbudowanych danych wejścio-
+wych.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

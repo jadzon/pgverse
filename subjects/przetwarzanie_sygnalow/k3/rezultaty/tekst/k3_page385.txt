@@ -1,0 +1,51 @@
+418
+
+25. Specjalne techniki obrazć
+
+to szum o rozkładzie Poissona zdominuje system. Jeśli zaś ten stopień charakteryzuje
+większą liczbą cząstek, to będzie przeważał szum przedwzmacniacza. Zgodnie z tym więk
+szość układów CCD projektuje się z pełną pojemnością studni od 100 000 do 1 000
+elektronów, minimalizując szum Poissona.
+
+Morfologiczne przetwarzanie obrazu
+
+Identyfikacja obiektów na obrazie może być zadaniem bardzo trudnym. Jednym ze sposoł
+uproszczenia tego problemu jest zamiana obrazu ze skalą szarości na obraz binarny, w ki
+rym każdy piksel może mieć wartość tylko O lub 1. Techniki stosowane do przetwarzania 0
+razów binarnych noszą nazwy: analiza błoków (błob), analiza spójności oraz morfologie
+przetwarzanie obrazu (od greckiego słowa morphe oznaczającego kształt lub fom
+Matematyczną podstawą przetwarzania morfologicznego jest teoria mnogości, jednak rzad
+jest konieczny taki poziom rozważań teoretycznych. Większość algorytmów morfologiczni
+to proste operacje logiczne realizowane ad hoc. Innymi słowy, każde zastosowanie wym
+rozwiązania wykonywanego na konkretne zamówienie, metodą prób i błędów. Więcej w 4
+na ogół sztuki niż nauki. Korzysta się raczej z całego mnóstwa różnych sztuczek niż ze sta
+dardowych algorytmów i formalnych reguł matematycznych. Oto kilka przykładów.
+Przykład obrazu binarnego pokazano na rys. 25.10 a). Może to być np. zdjęty w pode:
+wieni obraz nieprzyjacielskiego czołgu, asteroida na zdjęciu kosmicznym lub guz na ob
+rentgenowskim. Każdy piksel tła jest obrazowany jako biały, a każdy piksel obiektu — ji
+czamy. Niejednokrotnie obrazy binarne są tworzone przez wprowadzenie pewnego progu
+obrazów o skali szarości. Wtedy piksele o wartościach większych od progu są ustawiane
+wartość 1, a poniżej progu — na wartość O. Przed operacją progową obraz o skali szarości
+zazwyczaj przetwarzany metodami liniowymi. Na przykład stosując spłaszczanie oświek
+(opisane w rozdziale 24), można często poprawić jakość początkowego obrazu binarnegc
+Na rys. 25.10 b), c) pokazano zmiany obrazu w wyniku dwóch najbardziej znanych oper
+morfologicznych — erozji i dylatacji. W operacji erozji każdy piksel obiektu, który sty
+się z piksełem tła, jest zamieniany na piksel tła. W operacji dylatacji zaś każdy piksel
+stykający się z pikselem obiektu jest zamieniany na piksel obiektu. Erozja zmniejsza ob
+i może rozdzielić jeden obiekt na kilka. Dylatacja powiększa obiekt i może połączyć k
+obiektów w jeden.
+
+  
+  
+ 
+ 
+   
+ 
+  
+ 
+ 
+  
+
+<image/wzory/k3_page385_formula1.png>
+
+<image/figury/k3_page385_figure1.png>

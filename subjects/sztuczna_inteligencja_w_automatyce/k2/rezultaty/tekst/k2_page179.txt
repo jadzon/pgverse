@@ -1,0 +1,31 @@
+184
+
+<image/figury/k2_page179_figure1.png>
+
+Rys. 6.83: Sygnał wyjściowy sieci neuronowej w funkcji kąta i prędkości kątowej wahadła
+przy przyjęciu zerowego położenia wózka i zerowej prędkości wózka
+
+doprowadzające wózek z wahadłem do położenia zerowego ze stanu początkowego
+[00 5 0]'. Następuje przy tym zaburzenie równowagi wahadła i chwilowe zwięk-
+szenie wartości kryterium (pogorszenie jakości) po to aby efekt końcowy był lepszy.
+Jest to typowy test poprawności działania wieloetapowych procesów decyzyjnych.
+
+6.10.6. Programowanie dynamiczne
+
+W przypadku znajomości rozkładów prawdopodobieństw czynników losowych opty-
+malizację wieloetapowego procesu decyzyjnego można przeprowadzić stosując me-
+tody rachunku wariacyjnego. Jednak ze względu na od dawna znane trudności uzy-
+skiwania użytecznych rozwiązań w przypadku systemów nieliniowych lub dyskret-
+nych jedną z konstruktywnych metod jest programowanie dynamiczne Bellmana
+(Bellman, Dreyfus 1960). Rozwiązuje ona zadania poszukiwania ekstremum funkcji
+wielu zmiennych przy istnieniu ograniczeń stosując tzw. zasadę optymalności:
+
+Zasada optymalności
+
+Polityka optymalna ma tę własność, że niezależnie od początkowego stanu
+ti pierwszej decyzji pozostałe decyżje muszą stanowić politykę optymalną
+że względu na stan wynikający ż pierwszej decyzji.
+
+Obliczenie maksimum funkcji N zmiennych:
+
+<image/wzory/k2_page179_formula1.png>

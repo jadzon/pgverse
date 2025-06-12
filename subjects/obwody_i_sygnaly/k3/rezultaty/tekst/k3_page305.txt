@@ -1,0 +1,35 @@
+3.5. Moce w obwodach prądu stalego 307
+
+<image/figury/k3_page305_figure1.png>
+
+Rozważmy z kolei rzeczywiste źródło prądowe o wydajności prądowej J
+i przewodności wewnętrznej G,, obciążone dwójnikiem o przewodności G (rys.
+3.5-7b). Załóżmy, żesymbole P i P,, mają takie samo znaczenie jak w przypad-
+ku źródła napięciowego, zaś P, jest mocą oddawaną przez idealne źródło
+prądowe do obwodu. Zgodnie z zasadą Tellegena:
+
+ory/k8_page305_formula1.png (3.5-16)
+
+Sprawnością rzeczywistego źródła prądowego nazywamy stosunek:
+
+y/k3_page305_formula2.png (3.5-17)
+
+Uwzględniając równość (3.5-16) we wzorze definicyjnym (3.5-17), sprawność
+źródła prądowego możemy przedstawić w postaci:
+
+<image/wzory/k3_page305_formula3.png>
+
+Wykres sprawności źródła prądowego w funkcji stosunku G/G, jest iden-
+tyczny jak dla źródła napięciowego (rys. 3.5-9). W tym przypadku sprawność jest
+tym większa, im większa jest przewodność obciążenia G w porównaniu
+z przewodnością wewnętrzną źródła G,„ (im mniejszy jest opór obciążenia
+R = 1/G w porównaniu z oporem wewnętrznym źródła R, = 1/G,,.
+
+Przykład 3.5-8. Przyjmijmy następujące wartości liczbowe parametrów obwodu z rys.
+3.5-7a: E = 24V, R, = 4kQ, R = 8kQ oraz parametrów obwodu z rys. 3.5-7b:J = 6mA,
+1 1
+G, = 4 mS, G = = Są to więc źródła równoważne, obciążone dwójnikiem o tym samym oporze
+
+R =8 kQ. Prąd I, napięcie U oraz moc P są zatem w obu obwodach jednakowe i równe:
+
+<image/wzory/k3_page305_formula4.png>

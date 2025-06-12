@@ -1,0 +1,50 @@
+1.5. Najkrótsza droga w grafach acyklicznych 9
+
+W kolejnej iteracji wybieramy wierzchołek u € 7, dla którego D[u| jest najmniejsza. Po-
+każemy, że wartość Dfu| jest już ostateczna, czyli jest równa długości najkrótszej spośród
+wszystkich dróg z s do u. Przypuśćmy, że istnieje krótsza droga i niech y będzie takim
+wierzchołkiem, że droga z y do u zawiera tylko wierzchołki z T' i wierzchołek przed y
+nie należy do 7. Mamy y 4 u, bo inaczej mielibyśmy sprzeczność z założeniem induk-
+cyjnym, że D[u] zawiera długość najkrótszej spośród dróg, z których przedostatni wierz-
+chołek nie jest z 7. Zauważmy, że droga z s do y ma długość równą aktualnej wartości
+Dfy|. Z drugiej strony ponieważ długości są nieujemne mamy
+
+<image/wzory/k2_page218_formula1.png>
+
+sprzeczność z zasadą wyboru u.
+
+Dlatego u może być usunięty z 7'. Następnie algorytm sprawdza dla każdego v € 7,
+czy istnieje jakaś droga z s do v, w której wierzchołek u jest przedostani i która jest krót-
+sza od aktualnej wartości Dfu). Zauważmy, że dotychczasowa wartość D[v) zawierała
+długość najkrótszej drogi do v, w których przedostatnim wierzchołkiem był jakiś wierz-
+chołek z V — T różny od u. Dlatego po tym sprawdzeniu będzie spełniony warunek (b).
+
+Czas działania algorytmu Dijkstry jest O(n?), ponieważ mamy tylko podwójne za-
+gnieżdżenie pętli i liczba iteracji obu jest ograniczona przez n.
+
+1.5 Najkrótsza droga w grafach acyklicznych
+
+Inny przypadek, kiedy można szybciej niż w czasie O(n*) policzyć długości najkrótszych
+dróg do wszystkich wierzchołków w grafie, zachodzi wtedy, gdy w grafie nie ma cykli.
+Najpierw pokażemy, że w grafie acyklicznym można tak ponumerować wierzchołki tak,
+każda krawędź prowadziła od wierzchołka z niższym numerem do wierzchołka z wyż-
+szym numerem.
+
+Lemat 1.7 W każdym skierowanym grafie G = (V,E) bez cykli istnieje wierzchołek, do
+którego nie wchodzą żadne krawędzie.
+
+Dowód: Weźmy dowolny wierzchołek v;. Jeżeli nie wchodzi do niego, żadna krawędź,
+to koniec, znaleźliśmy. Jeżeli wchodzi, to niech va będzie wierzchołkiem, z którego pro-
+wadzi krawędź do v;. Albo v> jest dobry, albo prowadzi do niego krawędź od jakiegoś
+wierzchołka vz itd. Ponieważ zbiór wierzchołków jest skończony i nie ma w nim cy-
+
+klu, więc ten ciąg musi się kiedyś skończyć i dojdziemy do wierzchołka, do którego nie
+prowadzą żadne krawędzie. o
+Lemat 1.8 W skierowanym grafie acyklicznym G = (V,E) można tak ponumerować
+wierzchołki, aby każda krawędź prowadziła od wierzchołka z niższym numerem do wierz-
+chołka z wyższym numerem, czyli istnieje wzajemnie jednoznaczna funkcja h : V +
+£1,...,(V|) taka, że jeżeli (u,v) € E, to h(u) < h(v).
+
+Dowód:
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

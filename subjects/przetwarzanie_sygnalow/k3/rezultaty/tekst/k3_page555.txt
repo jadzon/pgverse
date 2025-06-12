@@ -1,0 +1,33 @@
+<image/tabele/k3_page555_table1.png>
+
+Wzór 33.14. Zmiana częstotliwości odcięcia filtru dolnoprzepustowego na górnoprzepustowy. To
+podstawienie zamienia filtr wazy wypoc zone a dzi
+
+takjakpoprzedniomonawyprowadziwzoryprojektowedotyczcesekcjibikwadrato
+wej.okazujesietewzorysidentycznezwzorami33.14zdwiematylkozmianami.
+Wartość k jest inna (zgodnie ze wzorem 33.14), a dwa współczynniki a; i b, mają odwrotne
+znaki. Obliczenia według tych wzorów są wykonywane w wierszach od 1330 do 1410;
+w wyniku uzyskuje się częstotliwość odcięcia i możliwość wyboru odpowiedzi dolno- lub
+górnoprzepustowej.
+
+To, co najlepsze i najgorsze w DSP
+
+Pisząc tę książkę, przyjęto proste założenie: większość metod DSP można zastosować
+i zrozumieć z użyciem minimalnego aparatu matematycznego. Zamierzeniem autora jest
+dostarczenie naukowcom i inżynierom narzędzi do rozwiązywania problemów z dziedziny
+DSP występujących w ich pracach badawczych i projektowych.
+
+W ostatnich czterech rozdziałach ukazano drugą stronę medału, a więc takie metody DSP,
+które można zrozumieć, tylko korzystając z zaawansowanej matematyki. Jako przykład weź-
+my opisaną w tym rozdziałe analizę filtru Czebyszewa-Butterwortha. Jest ona tym, co naj-
+lepsze w DSP — szeregiem eleganckich operacji matematycznych prowadzących do opty-
+malnego rozwiązania. Istnieją też jednak najgorsze strony DSP — metody projektowania tak
+skomplikowane, że większość naukowców i inżynierów szuka jakiejś alternatywy.
+
+A jakie jest twoje, Czytelniku, miejsce w tej problematyce DSP? To zależy od tego, kim je-
+steś i do czego chcesz zastosować DSP. Informacje zawarte w czterech ostatnich rozdziałach
+stanowią teoretyczne podstawy przetwarzania sygnałów. Jeśli masz zamiar specjalizować się
+w DSP, to musisz doskonale zrozumieć te podstawy matematyczne. Natomiast specjaliści
+z innych dziedzin nauki i techniki powinni tylko wiedzieć, jak się stosuje DSP, a nie muszą
+znać jego uzasadnień matematycznych. Dla tej grupy czytelników materiał teoretyczny jest
+bardziej tłem niż tematem głównym.

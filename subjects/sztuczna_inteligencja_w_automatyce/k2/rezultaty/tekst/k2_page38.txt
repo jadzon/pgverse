@@ -1,0 +1,10 @@
+<image/figury/k2_page38_figure1.png>
+
+Rys. 3.20: Ocena wartości węzła startowego grafu metodą a — 8. Na jego wartość wpływają
+wyłącznie wartości zaczernionych węzłów w ostatniej warstwie (z książki |?])
+
+uzyskania hetmana. Jeżeli czarne rozpoczną szachowanie białego króla, to mogą
+przez szereg ruchów powstrzymać białe od zdobycia hetmana ale po określonej licz-
+bie posunięć białe go uzyskają po odpowiedniej grze. Problemem jest to, że odpo-
+wiednia w tym przypadku gra białych może nie być znaleziona, jeżeli rozwiązanie
+znajduje się poza maksymalną głębokością szukania.

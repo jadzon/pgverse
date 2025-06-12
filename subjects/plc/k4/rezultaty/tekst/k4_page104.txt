@@ -1,0 +1,29 @@
+Oprócz wspomnianych wyżej elementów języka IL, używane są także zdefinio-
+wane w normie i opisane w tym rozdziale elementy wspólne dla różnych
+języków programowania, a w szczególności elementy tworzące wewnętrzną
+= programu, takie jak:
+
+TYPE...END_TYPE;
+
+VAR...END_VAR;
+
+VAR_INPUT...END_VAR;
+
+VAR_OUTPUT...END_VAR;
+
+VAR_IN_OUT...END_VAR;
+
+VAR_EXTERNAL...END_VAR;
+
+FUNCTION...END_FUNCTION;
+FUNCTION_BLOCK...END_FUNCTION_BLOCK;
+PROGRAM...END_PROGRAM;
+
+STEP...END_STEP,;
+
+TRANSITION...END_TRANSITION;
+
+ACTION...END_ACTION.
+
+RER D CZ ZR ZZ OKZKcz ZZRRZZZOZWZZZCZZOORZZZZO ZOZ ZZ ZOO OOZ ZZOZ
+104 Rozdział: 2 Programowanie sterowników PLC

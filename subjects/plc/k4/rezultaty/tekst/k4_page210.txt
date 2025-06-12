@@ -1,0 +1,40 @@
+Parametrem funkcji jest LEN (LENgrh) określający liczbę przemieszczanych
+danych typu zdefiniowanego w nazwie funkcji. Parametr ten musi być z zakresu
+od / do 256, z wyjątkiem sytuacji gdy dla funkcji MOVE_BIT na wejściu poda-
+no wartość stałą. W tym przypadku LEN musi zawierać się między / a /6. Na
+wejściu IN podaje się adres argumentu, który ma być przesłany na wyjście Q.
+Podanie na wejście IN wartości stałej (constant) umożliwia wykorzystanie funk-
+cji do ustawienia warunku początkowego dla zmiennej określonej przez Q. Jeżeli
+LEN jest większe niż /, to wartość ta będzie wprowadzona do kolejnych komó-
+rek pamięci określonego typu, poczynając od adresu podanego na wyjściu Q,
+a kończąc na adresie o LEN —] większym.
+
+Na Wyd. 4.27 pokazano przykład wykorzystania funkcji MOVE_BIT do załą-
+czenia/wyłączenia kolejnych wyjść dwustanowych od %Q1 do %Q/6,
+odpowiednio do zawartości kolejnych bitów w rejestrze %R1. Funkcja jest reali-
+zowana w cyklu sterownika, w którym wejście %// jest załączone.
+
+<image/figury/k4_page210_figure1.png>
+
+Wyd. 4.27 Przykład wykorzystania funkcji MOVE dla danych typu BIT
+
+Funkcji BLKMOYV używa się przede wszystkim do ustawiania warunków po-
+czątkowych. Może ona być wykonywana dla danych typu /N7 lub WORD. Jako
+argumenty wejściowe funkcji (wejścia IN1 do IN7) podaje się siedem wartości
+stałych (constant value), które będą umieszczone w kolejnych komórkach pamię-
+ci, poczynając od podanego na wyjściu Q adresu pierwszego elementu
+docelowego. Argument wyjściowy nie może być bezpośrednio wprowadzany na
+wejście innej funkcji.
+
+W przykładzie z Wyd. 4.28 funkcja BLKMYV, uruchamiana tylko w pierwszym
+cyklu sterownika (styk FS7T_SCN w obwodzie wejścia zezwolenie), umożliwia
+ustawienie zadanych wartości początkowych w rejestrach od %R26 do %R32.
+
+Funkcja BLKCLR, operująca tylko na danych typu WORD, umożliwia z kolei
+wyzerowanie zadanej tablicy danych. Jako argument wejściowy podaje się adres
+pierwszego słowa (wejście IN), od którego należy rozpocząć zerowanie. Para-
+metrem funkcji jest liczba słów (parametr LEN) z zakresu od / do 256.
+
+ 
+
+210 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

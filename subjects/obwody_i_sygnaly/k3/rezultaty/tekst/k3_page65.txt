@@ -1,0 +1,43 @@
+1.3. Elementy nieliniowe 65
+
+<image/wzory/k3_page65_formula1.png>
+
+Wielkość W, jest niekiedy nazywana koenergią. Sposób ten jest szczególnie dogodny, gdy
+indukcyjność jest opisana prostą funkcją W = f, (i), a pojawiają się komplikacje z wyznaczeniem
+funkcji odwrotnej i = o, (%).
+
+W rozważanym przypadku mamy:
+
+<image/wzory/k3_page65_formula2.png>
+
+1
+W punkcie pracy indukcyjności, w którym prąd jest równy 1 A energia przyjmuje wartość 4 J.
+
+Przykład 1.3-12. Rozważmy dwie pojemności nieliniowe C », i C y o charakterystykach (por.
+przykłady 1.3-6b,c):
+
+<image/wzory/k3_page65_formula3.png>
+
+Wyznaczymy energie gromadzone w tych pojemnościach, a następnie obliczymy ich wartości
+w punkcie pracy, w którym napięcie na pojemnościach jest równe u = U = 1V.
+
+Podobnie jak dla indukcyjności nieliniowej, energię gromadzoną w pojemności nieliniowej
+można wyznaczyć trzema sposobami. Wybór sposobu obliczeń zależy od typu charakterystyki, jaką
+dysponujemy.
+
+W przypadku pojemności Cx; znana jest charakterystyka q = fc(u), dla której trudno jest
+wyznaczyć charakterystykę odwrotną u = ©,e(q). Energię obliczamy zatem ze wzoru:
+
+<image/wzory/k3_page65_formula4.png>
+
+lub ze wzoru:
+
+<image/wzory/k3_page65_formula5.png>
+
+gdzie wę = [qdu' jest koenergią (rys. 1.3-23).
+o
+
+W przypadku pojemności Cx> jest znana charakterystyka u = oe(q), energię obliczamy zatem
+bezpośrednio ze wzoru (1.3-22):
+
+<image/wzory/k3_page65_formula6.png>

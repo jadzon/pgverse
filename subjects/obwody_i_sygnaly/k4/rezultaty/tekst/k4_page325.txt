@@ -1,0 +1,10 @@
+pe ZE KACZE ER
+3.7. Elementy inercyjne w obwodach prądu stałego 327
+
+Należy także podkreślić, że nawet jeśli układ nieliniowy z elementami
+inercyjnymi może osiągnąć stan ustalony przy pobudzeniach stałych, to
+w ogólnym przypadku prądy i napięcia nie muszą w nim być jednoznacznie
+określone, a ich wartości mogą zależeć od sposobu pobudzania układu.
+Powodem niejednoznaczności mogą być nieliniowości elementów (por. p.
+3.4.2-E). W trakcie analizy układów nieliniowych należy mieć zatem na uwadze
+także i ten aspekt.

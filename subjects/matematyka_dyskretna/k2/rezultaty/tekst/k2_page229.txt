@@ -1,0 +1,45 @@
+8 Rozdział 1. Poprawność programów
+
+Dowód poprawności programu polega teraz na dowodzie tych samych czterech impli-
+kacji, które znajdują się w podrozdziale 10.5.
+
+Aby udowodnić, że program zawsze się zatrzyma, wystarczy jako licznik przyjąć
+zmienną x, która przyjmuje wartości nieujemne i zmniejsza swoją wartość przy każdym
+kolejnym odwiedzeniu punktu C.
+
+117 Czekery
+
+W przypadku gdy udowodnimy, że jakiś program działa poprawnie, wówczas mamy pew-
+ność, że dla każdych danych wejściowych uzyskany wynik będzie dobry. Inną metodą
+sprawdzania, że program działa poprawnie, są czekery. Zamiast dowodzić, że program
+zawsze zadziała dobrze, czekery sprawdzają, czy zadziałał on dobrze w konkretnych przy-
+padkach. Do zadania algorytmicznego projektowane są dwa programy. Program główny
+P, który rozwiązuje zadanie, oraz program C, zwany czekerem lub weryfikatorem, który
+po każdym zadziałaniu programu P sprawdza, czy odpowiedź programu P jest popraw-
+na. Zakłada się przy tym, że działanie czekera jest dużo prostsze niż działanie programu
+P. W dodatku program P może być traktowany jak czama skrzynka, gdzie nie mamy
+wglądu w to, jak program P działa, tylko dostajemy ostateczne odpowiedzi. Przyjrzyjmy
+się pomysłowi czekerów na przykładach.
+
+Weźmy znowu algorytm Euklidesa, ale teraz wygodniej jest wziąć wersję, gdzie pro-
+gram ? bierze parę liczb a i b i zwraca trzy liczby: d = NW D(a,b) oraz z i y, takie że
+az +by = d. Zeby sprawdzić, czy program P dobrze obliczył dane wyjściowe, wystarczy
+sprawdzić, czy d dzieli a i b, oraz czy
+
+<image/wzory/k2_page229_formula1.png>
+Inny przykład to czeker dla programu obliczającego zaokrąglenie w górę pierwiastka
+kwadratowego z liczby naturalnej n. Przykład takiego programu przedstawiono w roz-
+dziale 3.5. Jeżeli program główny P oblicza dla wartości wejściowej n wartość wyjściową
+y, to zadanie czekera polega na sprawdzeniu dwóch rzeczy, czy
+
+<image/wzory/k2_page229_formula2.png>
+
+<image/owzory/k2_page229_formula3.png>
+
+1.8 Zadania
+
+1. Udowodnij poprawność programu (przedstawionego w podrozdziale 6.6), który dla
+danych liczb a, b > 0 oblicza NW D(a, b) oraz liczby całkowite z, y spełniające
+równość ra +yb= NW D(a,b).
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

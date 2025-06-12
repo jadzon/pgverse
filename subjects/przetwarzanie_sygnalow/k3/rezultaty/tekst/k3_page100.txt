@@ -1,0 +1,21 @@
+114
+
+6. Splot
+
+<image/figury/k3_page100_figure2.png>
+
+Rys. 6.5. Przykład problemu 9-punktowy sygnał wejściowy spleciony z 4-punkto-
+wą impulsową daje 12-punktowy sygnał wyjściowy. Każdy punkt sygnału wejściowego
+wkład do sygnału wyjściowego i przesuniętej odpowiedzi impulsowej. Te 9
+
+Przyjrzyjmy się bardziej szczegółowo kilku z tych dziewięciu sygnałów. Zacznijmy od prób-
+ki numer 4, a więc x[4] w sygnale wejściowym. Ta próbka ma wartość 1,4. Gdy sygnał zosta-
+je rozłożony, próbka przekształca się w impuls wyrażony jako 1,46[n — 4]. Po przejściu przez
+system uzyskuje się składową wyjściową 1,4h[n — 4]. Ten sygnał przedstawiono w środkowej
+ramce wśród 9 sygnałów na rys. 6.6. Zauważmy, że jest to odpowiedź impulsowa h[n] po-
+mnożona przez 1,4 i przesunięta o 4 próbki w prawo. Zera wprowadzono do próbek od 0 do
+3 oraz od 8 do 11 jako znaki-wypełniacze. Na rys. 6.6, dla jasności oznaczono kwadratami
+punkty danych pochodzące od przeskałowanej i przesuniętej odpowiedzi impulsowej, rom-
+bami zaś — dodane zera.
+
+<image/figury/k3_page100_figure1.png>

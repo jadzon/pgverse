@@ -1,0 +1,63 @@
+2. Statystyka, rachunek prawdopodobieństwa i szumy
+
+ 
+
+0 a wartością o dwa odchylenia standardowe mniejszą od wartości średniej, w każdym losowo
+wybranym czasie. Podobnie, wartość ©(1) = 0,8413 oznacza, że jest szansa 84,13% na znalezie-
+nie się wartości sygnału, w losowo wybranej chwili, między —0 i wartością o jedno odchylenie
+standardowe większej od średniej. W celu obliczenia prawdopodobieństwa, że sygnał znajduje się
+między dwiema wartościami, trzeba odjąć od siebie odpowiednie liczby odczytane z tablicy ©(x).
+Na przykład prawdopodobieństwo, że wartość sygnału, w jakimś losowo wybranym czasie, bę-
+dzie w zakresie między wartością o dwa odchylenia standardowe mniejszą od Średniej a wartością
+o jedno odchylenie większą od średniej, jest dane jako: D(1) — D(-2) = 0,8185, czyli 81,85%.
+
+W tej metodzie próbki pobrane z sygnału o rozkładzie normalnym będą w 68% czasu mieścić
+się w granicach ż1o wokół średniej. Będą się znajdowały w granicach +26 od średniej przez
+95% czasu i w granicach +36 przez ok. 99,75% czasu. Prawdopodobieństwo, że sygnał ma
+wartość różniącą się od średniej o więcej niż 10 odchyleń standardowych, jest tak małe, że
+można oczekiwać pojawienia się takiej wartości tylko w ciągu kilku mikrosekund od począt-
+ku Wszechświata, czyli od 10 miliardów lat!
+
+Wzór 2.8 można też wykorzystać do wyrażenia funkcji masy prawdopodobieństwa sygnałów
+dyskretnych o rozkładzie normalnym. W tym przypadku x jest jednym ze skwantyzowanych
+poziomów przyjmowanych przez sygnał, np. jedną z 4096 wartości binarnych z wyjścia prze-
+twornika analogowo-cyfrowego. Pomińmy czynnik IZ który jest stosowany tylko po
+to, aby całkowita powierzchnia pod krzywą gęstości prawdopodobieństwa (pdf) była równa
+jedności. Zamiast tego trzeba włączyć jakiś czynnik niezbędny do uczynienia sumy wszyst-
+kich wartość pmf równą jedności. W większości przypadków osiąga się to przez utworzenie
+krzywej bez martwienia się © znormalizowanie, sumując wszystkie nieznormalizowane war-
+tości i następnie dzieląc wszystkie wartości przez tę sumę.
+
+    
+   
+ 
+
+Generacja szumu cyfrowego
+
+Szum losowy jest tematem ważnym zarówno w elektronice, jak i w DSP. Na przykład okre-
+śla on, jak mały sygnał może być mierzony przez przyrząd pomiarowy, na jaką odległość
+system radiowy może utrzymywać łączność i jaka dawka promieniowania jest wymagana
+do wytworzenia obrazu rentgenowskiego. W DSP jest często konieczne generowanie sy-
+gnałów przypominających różne rodzaje szumu losowego. Jest to potrzebne do testowania
+algorytmów, które muszą pracować w obecności szumu.
+
+Sercem systemu wytwarzającego szum cyfrowy jest generator liczb losowych. Większość
+języków programowania ma taki generator jako funkcję standardową. W BASIC-u instrukcja
+X = RND ładuje zmienną X za każdym razem z nową liczbą losową. Każda liczba losowa
+ma wartość pomiędzy 0 i 1, z jednakowym prawdopodobieństwem występowania wszystkich
+wartości znajdujących się między tymi wartościami skrajnymi. Na rys. 2.10 przedstawiono
+sygnał utworzony przez pobranie 128 próbek z tego typu generatora liczb losowych. Średnia
+wartość procesu, który był źródłemtegosygnału, jestrówna0, 5,odchyłeniestandardowe 1//12=0,29
+a rozkład między 0 i 1 jest równomierny.
+
+Algorytmy powinny być testowane przy użyciu danych tego samego rodzaju, jak przy zwy-
+kłej pracy. To wywołuje konieczność generacji szumu cyfrowego o gaussowskim rozkładzie
+gęstości prawdopodobieństwa (pdf). Są dwa sposoby wytwarzania takich sygnałów w gene-
+ratorze liczb losowych. Rys. 2.10 ilustruje pierwszą metodę. Na rys. 2.10 b) przedstawio-
+no sygnał, w którym każdą próbkę uzyskano przez sumowanie dwóch liczb losowych, tj.
+X = RND + RND. Suma może zmieniać się w granicach od 0 do 2, gdyż każda z próbek zmie-
+nia się od 0 do 1. Wartość średnia jest teraz równa |, a odchylenie standardowe 1/46 (pa-
+miętajmy, że przy sumowaniu niezależnych sygnałów losowych wariancje też się sumują).
+Jak pokazano na rysunku, rozkład gęstości prawdopodobieństwa zmienił się z równomiernego
+na trójkątny. A więc sygnał dłużej ma wartość znajdującą się w pobliżu jedności, a krócej
+— w pobliżu wartości zero lub dwa.

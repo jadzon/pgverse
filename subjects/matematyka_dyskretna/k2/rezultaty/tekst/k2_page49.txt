@@ -1,0 +1,22 @@
+14 Rozdział 1. Kombinatoryka
+
+Rysunek 1.1: Diagram Venna
+
+<image/figury/k2_page49_figure1.png>
+
+studentów uprawia jeden z dwóch sportów, a 30 = 100 — 70 nie uprawia ani koszykówki,
+ani pływania. Na rysunku 1.1 zilustrowano ten przykład. Jest to tak zwany diagram Venna
+
+Przypuśćmy teraz, że są także studenci grający w szachy. Grających w szachy jest
+55. Takich, którzy grają w koszykówkę i szachy, jest 32, takich, którzy grają w szachy
+i pływają, jest 35, a takich, którzy uprawiają wszystkie trzy sporty, jest 20. To zadanie
+też można rozwiązać za pomocą diagramu Venna (rysunek 1.2). Na przykład, 8 studen-
+tów uprawia koszykówkę i pływanie, ale nie gra w szachy, a 22 studentów nie uprawia
+żadnego sportu.
+
+Zasada włączania i wyłączania pozwala rozwiązywać tego typu zadania bez diagra-
+mów Venna.
+
+Niech X będzie naszym uniwersum, A;,... ,.A„ jego podzbiorami. Dla każdego
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

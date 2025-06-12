@@ -1,0 +1,30 @@
+33
+
+1. Zadanie zarobienia dużej ilości pieniędzy — dobry przykład problemu dającego
+się przedstawić w postaci grafu AND/OR
+
+to
+
+Wieże z Hanoi (patrz rys. ??)
+
+<image/wzory/k2_page28_formula1.png>
+
+3. Gry (np. szachy, warcaby, gra w podział liczb — patrz przykład ??)
+4. Dowodzenie twierdzeń
+
+. Całkowanie symboliczne (patrz rys. ??)
+
+GT
+
+<image/figury/k2_page28_figure1.png>
+
+3.9.2. Rodzaje węzłów
+
+Będziemy dalej rozpatrywać grafy AND/OR jednorodne, to znaczy takie, których
+węzły niekońcowe są albo AND albo OR, natomiast nie są jednocześnie węzłami
+AND i OR (za wyjątkiem węzłów mających pojedyncze krawędzie potomne). Graf
+niejednorodny (zawierający węzły, będące jednocześnie węzłami AND i OR) może
+zawsze zostać zamieniony na graf jednorodny, poprzez wprowadzenie dodatkowych
+węzłow.
+
+W jednorodnym grafie AND/OR istnieją następujące typy węzłów:

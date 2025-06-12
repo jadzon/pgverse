@@ -1,0 +1,41 @@
+3.5. Moce w obwodach prądu stałego 303
+
+P. — moc ładowania (pobieraną przez akumulator na zwiększenie jego energii chemicznej).
+Sprawdźmy także bilans mocy.
+
+<image/figury/k3_page301_figure1.png>
+
+Rys. 3.5-6
+
+Przede wszystkim obliczymy prąd płynący w układzie (prąd ładowania):
+
+:ory/k3_page301_formula1.png
+
+Poszczególne moce wynoszą zatem:
+
+zory/k3_page301_formula2.png png
+
+Bilans mocy:
+— całkowita moc pobierana przez opory:
+
+<image/wzory/k3_page301_formula3.png>
+
+— całkowita moc oddawana przez źródła:
+
+vzory/k3_page30 1_formula4.png
+
+Moc oddawana przez źródło 11 V (przez akumulator) jest ujemna (por. usytuowanie strzałek siły
+elektromotoryczneji prądu dla źródła idealnego 11 V), a więc w rzeczywistości źródło to pobiera moc.
+
+Przykład 3.5-6. Sprawdzimy bilans mocy w sieci z rys. 3.3-20 rozpatrywanej w przykładach
+3.3-11 i 3.3-12.
+Zgodnie z wynikami obliczeń z przykładu 3.3-12, całkowita moc pobierana przez opory R;,..., R;
+wynosi:
+
+<image/wzory/k3_page301_formula5.png>
+
+zaś całkowita moc oddawana przez źródła E,, E, i E,:
+
+<image/wzory/k3_page301_formula6.png>
+
+Zatem P' = P”,

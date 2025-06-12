@@ -1,0 +1,44 @@
+59
+
+7. Eliminacja kwantyfikatorów uniwersalnych:
+
+Wszystkie zmienne w wpz są kwantyfikowane uniwersalnie. Ponieważ kolejność
+kwantyfikatorów uniwersalnych nie ma znaczenia, to nie piszemy ich jawnie.
+Mamy
+
+<image/wzory/k2_page54_formula1.png>
+
+8. Eliminacja symboli koniunkcji:
+
+Wypisujemy wyrażenia rozdzielone symbolem koniunkcji — otrzymujemy wy-
+rażenie początkowe doprowadzone do postaci klauzul.
+
+<image/wzory/k2_page54_formula2.png>
+
+Unifikacja
+
+Unifikacja jest procesem sprawdzania czy dwa wyrażenia mogą stać się identyczne
+po zastosowaniu odpowiednich podstawień za swoje zmienne — jest to bardzo ważny
+proces pozwalający dokonywać rezolucji dwóch klauzul.
+
+PRZYKŁAD 4.7
+
+Rozpatrzmy proces unifikacji dwóch literałów
+
+<image/wzory/k2_page54_formula3.png>
+
+Przeglądając wyrażenia od strony lewej do prawej poszukując termów lub części ter-
+mów, które są różne i znajdując podstawienia $ zrównujące je, kolejno otrzymujemy
+
+wzorv/k2 baae54 formula4.ona
+
+uarzome/lz0 namoR/A formula nnm
+arzamilIz) narmoaBA farma nnm
+arzowulz nanmoRA formiuila7 nnm
+
+uarzoanzlz0 namoR/A formula nnm
+
+<image/wzory/k2_page54_formula9.png>
+PRZYKŁAD 4.8
+
+<image/wzory/k2_page54_formula10.png>

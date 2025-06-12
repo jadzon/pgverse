@@ -1,0 +1,20 @@
+pewnia znalezienie rozwiązania optymalnego.
+
+<image/figury/k2_page17_figure1.png>
+
+3.6. Modyfikacje wymagane przy szukaniu
+na grafach
+
+W metodzie szukania wszerz należy tylko stwierdzić, czy nowo wygenerowany stan
+jest już na listach OTWARTE lub ZAMKNIĘTE. Jeżeli tak, to nie potrzeba go
+umieszczać ponownie na liście OTWARTE.
+
+W metodzie szukania w głąb i w metodzie z nawracaniem należy modyfikować
+zapamiętywane głębokości węzłów, gdy okazuje się, że istnieje do nich krótsza droga:
+w takim przypadku węzły znajdujące się na liście ZAMKNIĘTE należy przenieść na
+listę OTWARTE.
+
+W metodzie równomiernych kosztów postępuje się następująco:
+
+1. Jeżeli nowo wygenerowany węzeł jest już na liście OTWARTE, nie potrzebuje
+być do niej dopisany, ale należy mu przypisać mniejszą z wartości kryterium

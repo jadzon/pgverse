@@ -1,0 +1,43 @@
+15. Filtry o zasadzie średniej kroczącej
+
+ 
+
+Na rys. 15.1 podano przykład takiego działania filtru. Sygnał na rys. 15.1 'a) jest impulsem
+ukrytym w szumie losowym. Na rysunkach 15.1 a), b) jest widoczne, jak wygładzające dzia-
+łanie filtru o średniej kroczącej zmniejsza amplitudę szumu losowego (to dobrze), lecz rów:
+nież pogarsza stromość zboczy impulsu (to źle). Ze wszystkich możliwych filtrów liniowych,
+które mogłyby być użyte, właśnie filtr o średniej kroczącej daje najmniejszy szum przy okre-
+ślonej stromości zboczy. Wielkość tłumienia szumu jest równa pierwiastkowi kwadratowema
+z liczby punktów podlegających uśrednianiu. Filtr 100-punktowy o średniej kroczącej daje
+na przykład stłumienie szumu o czynnik 10.
+
+Aby zrozumieć dlaczego metoda średniej kroczącej jest najlepszym rozwiązaniem, przyj:
+mijmy, że chcemy zaprojektować filtr o ustalonej stromości zboczy. Załóżmy na przykład,
+że ustaliliśmy stromość zboczy w taki sposób, aby zbocze narastające odpowiedzi skoko-
+wej zawierało jedenaście punktów. Z tego wynika, że odpowiedź impulsowa filtru powi
+mieć jedenaście punktów. Trzeba postawić pytanie dotyczące optymalizacji: jak wybrać
+jedenaście wartości w odpowiedzi impulsowej filtru, aby zminimalizować szum w sygnale
+wyjściowym? Ponieważ szum, który chcemy zredukować, ma charakter losowy, więc ża
+den punkt na wejściu nie jest szczególny, każdy jest tak zaszumiony, jak punkt sąsiedni.
+Zatem zupełnie bezużyteczne jest preferencyjne traktowanie któregokolwiek z punktów
+wejściowych przez nadanie mu większego współczynnika w odpowiedzi impulsowej fil-
+tru. W dalszej części tego rozdziału wykażemy, że inne filtry są w zasadzie równie dobre.
+Żaden jednak nie jest łepszy od prostego filtru o średniej kroczącej.
+
+Odpowiedź częstotliwościowa
+
+Na rys. 15.2 przedstawiono odpowiedź częstotliwościową filtru o średniej kroczącej. Jest
+ona opisana matematycznie transformatą Fouriera impulsu prostokątnego, jak to przedsta-
+wiono w rozdziale 11:
+
+<image/wzory/k3_page245_formula1.png>
+Wzór 15.2. Odpowiedź częstotliwościowa M-punktowego filtru o średniej kroczącej. Częstotliwość I
+zmienia się od 0 do 0,5. Dla f = 0 trzeba zastosować H[f] = 1
+Opadanie charakterystyki jest bardzo wolne, a tłumienie w paśmie zaporowym bardzo marne.
+Jasne jest, że filtr o średniej kroczącej nie może rozdzielać jednego pasma częstotliwości od
+
+<image/figury/k3_page245_figure1.png>
+
+Rys. 15.2. Odpowiedź częstotliwościowa filtru o średniej kroczącej. Ten filtr jest bardzo marnym filtrem
+dolnoprzepustowym ze względu na wolne opadanie charakterystyki w paśmie przejściowym i stabe tlu-
+mienie w paśmie zaporowym. Krzywe na wykresie wyznaczono na podstawie wzoru 15.2

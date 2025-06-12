@@ -1,0 +1,15 @@
+50 1. Pojęcia podstawowe — elementy
+
+nego YW. Zgodnie z zależnością (1.3-11), każdej dopuszczalnej”) wartości
+skojarzenia magnetycznego W odpowiada również dokładnie jedna wartość
+prądu i. Przyjęliśmy zatem, że charakterystyka indukcyjności jest wzajemnie
+jednoznaczna (w przeciwieństwie do oporu, por. p. 1.3.1).
+
+<image/figury/k4_page50_figure1.png>
+
+B. Indukcyjności liniowe i nieliniowe. Indukcyjność jest liniowa, jeśli jej
+charakterystyka jest linią prostą i jest nieliniowa w pozostałych przypadkach.
+Indukcyjność liniowa (rys. 1.3-8a) jest opisywana równaniami (1.2-23), a jej
+charakterystyka we współrzędnych i, jest linią prostą o współczynniku kie-
+
+<image/figury/k4_page50_figure3.png>

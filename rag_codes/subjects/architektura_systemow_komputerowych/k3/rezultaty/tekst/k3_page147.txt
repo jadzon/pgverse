@@ -1,0 +1,34 @@
+6.6. Bezpośrednia transmisja do pamięci 137
+
+wykonywania programu i przesłań pomiędzy pamięcią i urządzeniem zewnętrznym. Po
+zakończonej transmisji sterownik DMA zwalnia magistralę i przekazuje sterowanie pro-
+cesorowi.
+
+Istnieją rozwiązania sterowników DMA umożliwiające przesłanie zawartości jakiegoś
+obszaru pamięci do innego obszaru za pomocą mechanizmu DMA. W takim przypadku
+sterowanie magistralą jest trudniejsze, gdyż trzeba dokonywać dwukrotnego adresowania.
+Najpierw trzeba przesłać adres źródłowej komórki pamięci i strob odczytu, a następnie
+przesłać adres docelowej komórki pamięci i strob zapisu.
+
+Trudniejszy problem powstaje, gdy w systemie komputerowym ma pracować duża
+liczba urządzeń zewnętrznych. Do wspomagania pracy procesora w komunikacji z urzą-
+dzeniami stosuje się wówczas specjalny układ zwany kanałem wejścia-wyjścia. Jeżeli
+w systemie komputerowym ma pracować wiele urządzeń zewnętrznych, to praca tych
+urządzeń przez przerwania lub przez DMA obniża efektywność obliczeniową komputera,
+ponieważ efektywny czas pracy procesora jest zmniejszany. Fakt ten odgrywa znaczącą
+rolę zwłaszcza w tzw. systemach wielodostępnych, gdzie wielu użytkowników jednocześnie
+korzysta z komputera. Właśnie w takich systemach jest wiele urządzeń znakowych (termi-
+nali), które współpracują z procesorem poprzez przerwania i wiele szybkich urządzeń
+(dyski), które pracują przez system DMA. Rozwiązaniem tego problemu jest zgrupowanie
+urządzeń zewnętrznych w dwie grupy: oddzielnie wolnych urządzeń znakowych
+i oddzielnie urządzeń szybkich transmitujących dane blokowo. Każdą z tych grup podłącza
+się do wspólnego dla nich sterownika. Takie rozbudowane sterowniki nazywają się kanała-
+mi i dzieli się je na dwa rodzaje: kanał multiplekserowy dla urządzeń znakowych i kanał
+selektorowy dla urządzeń szybkich.
+
+Kanał multiplekserowy może być kanałem n-wejściowym, gdzie n jest liczbą urządzeń
+współpracujących z kanałem. Każde urządzenie może współpracować z kanałem z inną
+szybkością. Zadaniem kanału jest utworzenie ciągu znaków z wszystkich urządzeń i prze-
+słanie ich do komputera. Załóżmy, że trzy urządzenia A, B i C wysyłają trzy ciągi znaków
+
+<image/gury/k3_page14figury/k3_page147_figure3.png>

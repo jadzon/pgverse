@@ -1,0 +1,36 @@
+Jednobiegunowe filtry rekursywne 311
+
+CC |
+
+<image/figury/k3_page284_figure2.png>
+
+]
+
+Mi
+
+Jednobiegunowy filtr dolnoprzepustowy. Rekursywne filtry cyfrowe mogą być naśladownictwem filtrów Ą
+
+osogowych złożowych z rezystorów I kondensatorów. Jak pokazano w tym przykładzie, jednobie- M
+
+ganowy filtr rekursywny w odpowiedzi na funkcję skokową na wejściu, podobnie jak elektroniczny filtr RC, daje na ji
+wyjściu przebieg tagodnie narastający
+
+<image/figury/k3_page284_figure1.png>
+
+gd masę rez, "2
+woo ogan BĘ LÓD 0 A 0 1 M0 m zyj GwjRŹ) WRZE
+
+z
+i
+i
+A
+gł
+i
+1
+
+.
++
+,
+.
+I
+,

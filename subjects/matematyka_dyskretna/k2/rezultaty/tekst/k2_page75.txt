@@ -1,0 +1,50 @@
+16 Rozdział 1. Rachunek prawdopodobieństwa
+
+1.6 Niezależność zmiennych losowych
+
+Definicja 1.32 Zmienny losowe X i Y' są niezależne jeżeli dla każdej pary liczb z, y
+
+<image/owzory/k2_page75_formula1.png>
+<image/wzory/k2_page75_formula2.png>
+
+gdzie jyy Oznacza gęstosc rozktaau tącznego, jx gęstosc zmiennej A, a jy gęstość
+zmiennej Y.
+
+lub in;
+
+Przykład 1.33 Zmienne losowe X; i X> z przykładu 1.28a są niezależne, natomiast
+zmienne X i .X3 z przykładu 1.28b nie są niezależne.
+
+Oczywiście może być więcej zmiennych losowych określonych na jednej przestrzeni
+
+Dla trzech zmiennych losowych „X, Y, Z łączny rozkład prawdopodobieństwa, zdefinio-
+wany
+
+<image/_wzory/k2_page75_formula3.png>
+
+Mamy nrzv nwm
+
+<image/wzory/k2_page75_formula4.png>
+<image/wzory/k2_page75_formula5.png>
+<image/wzory/k2_page75_formula6.png>
+
+oraz na nrzvkład
+
+<image/wzory/k2_page7/5_formula7.png>
+
+W ogólnym przypadku n zmiennych losowych .X;,...,2 X„ ich łączny rozkład prawdo-
+podobieństwa określony jest jako
+
+<image/wzory/k2_page7/5_formula8.png>
+
+Podobnie jak poprzednio łatwo można pokazać, że
+
+<image/wzory/k2_page75_formula9.png>
+
+Definicja 1.34 Zmienne losowe X, Y, Z są niezależne jeżeli dla każdej trójki liczb z yi
+
+<image/_wzory/k2_page75_formula10.png>
+
+Podobnie mamy w przypadku n zmiennych losowych
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

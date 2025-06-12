@@ -1,0 +1,52 @@
+Telewizyjne sygnały wideo 311
+
+stępują parzyste lub nieparzyste linie sygnału wizyjnego. Każda linia trwa 63,5 us, w tym 10,2 ps
+dla impulsu synchronizacji poziomej, oddzielającego linię poprzednią od następnej. Napięcie ana-
+logowe w granicach każdej linii wyraża poziom skali szarości obrazu. Większe wartości napięcia
+odpowiadają jaśniejszemu obrazowi. Dlatego impulsy synchronizacji znajdują się poza obszarem
+czerni. Mówi się potocznie, że impulsy synchronizacji są czarniejsze niż czerń.
+Układy stosowane do przetwarzania analogowo-cyfrowego sygnałów wideo noszą w termi-
+nologii angielskiej nazwę frame grabber. Mają zwykle formę karty z układem elektronicz-
+nym, wstawianej do komputera i połączonej z kamerą kablem koncentrycznym. Wykonując
+instrukcję programu, układ czeka na rozpoczęcie następnego obrazu, sygnalizowane impul-
+sami synchronizacji pionowej. Podczas kolejnych dwóch półobrazów każda linia wideo jest
+wielokrotnie próbkowana, typowo 512, 640 lub 720 próbek na linię, 8 bitów na próbkę. Te
+próbki są gromadzone w pamięci jako jeden wiersz obrazu cyfrowego.
+Taki sposób zbierania obrazu cyfrowego jest przyczyną ważnej różnicy między kierunka-
+mi poziomym i pionowym na obrazie. Każdy wiersz na obrazie cyfrowym odpowiada jed-
+nej linii w sygnale wizyjnym, a więc jednemu szeregowi studni w układzie CCD. Niestety
+z kolumnami sprawa nie jest tak prosta. W CCD każdy szereg zawiera od ok. 400 do 800
+studni (a więc tyleż kolumn), zależnie od typu zastosowanego układu. Gdy szereg studni jest
+odczytywany z układu CCD, to uzyskana linia sygnału wizyjnego jest filtrowana, dając wy-
+gładzony sygnał analogowy, taki jak na rys. 23.9. Innymi słowy, sygnał wizyjny nie zależy
+od liczby kolumn w CCD. Rozdzielczość w kierunku poziomym jest ograniczona szybkością
+zmian sygnału analogowego. Ta szybkość w telewizji kolorowej odpowiada 3,2 MHz, z cze-
+go wynika czas narastania ok.100 ns, tj. ok. 1/500 linii wideo trwającej 53,2 s.
+Sygnał wizyjny, podczas digitalizacji w układzie frame rabber, jest z powrotem przetwarzany
+na kolumny. Jednak te kolumny w obrazie cyfrowym nie mają żadnego związku z kolumnami
+w CCD. Liczba kolumn w obrazie cyfrowym zależy wyłącznie od liczby próbek pobranych
+z każdej linii sygnału wizyjnego. Na przykład CCD może mieć 800 studni w wierszu, a zdi-
+gitalizowany obraz — tylko 512 pikseli (czyli kolumn) na wiersz.
+Liczba kolumn w obrazie cyfrowym jest ważna jeszcze z jednej przyczyny. Standardowy ob-
+raz telewizyjny ma współczynnik kształtu obrazu 4:3, tj. szerokość obrazu jest nieco więk-
+sza od jego wysokości. Filmy kinowe mają obraz szerszy, współczynnik kształtu jest 25:9.
+Układy CCD w zastosowaniach naukowych mają często współczynnik kształtu 1;1, a więc
+obraz jest kwadratowy. W każdym razie współczynnik kształtu w układzie CCD jest usta-
+lony przez ustawienie elektrod i nie może być zmieniany. Jednak stosunek kształtu obrazu
+cyfrowego zależy od liczby próbek na linię. Jest to problemem, gdy obraz jest wyświetlany
+na monitorze lub drukowany. Jeśli współczynnik kształtu nie jest odpowiednio zachowany,
+to obraz jest ściśnięty w pionie lub w poziomie.
+Opisany tu 525-liniowy sygnał telewizyjny jest nazywany sygnałem NTSC (National
+Television Systems Committee); jest to standard zdefiniowany w roku 1954. Ten system
+obowiązuje w USA i Japonii. W Europie są dwa inne standardy TV zwane PAŁ (Phase
+Alternation by Line) oraz SECAM (Sequential Chrominance And Memory). Podstawowa
+koncepcja jest taka sama, jak w NTSC, lecz liczba linii jest inna. Zarówno PAL, jak i SECAM
+charakteryzują się 25 ramkami (z wybieraniem międzyliniowym) na sekundę i 625 liniami na
+ramkę. Podobnie jak w NTSC, niektóre z tych linii występują podczas synchronizacji piono-
+wej i w rezultacie tylko ok. 576 linii niesie informacje obrazowe. Inne, mniej istotne różnice
+dotyczą sposobu dodawania do sygnału informacji o barwie i dźwięku.
+Najprostszym sposobem transmisji telewizji kolorowej byłoby przesyłanie trzech oddziel-
+nych sygnałów analogowych, po jednym dla każdej z trzech barw, które wykrywa ludzkie
+oko: czerwonej, zielonej i niebieskiej. Niestety, historyczny rozwój telewizji uniemożli-
+wił takie proste rozwiązanie. Sygnał telewizji kolorowej musiał bowiem być opracowa-
+ny w taki sposób, aby umożliwiał dalsze korzystanie z istniejących odbiorników telewizji

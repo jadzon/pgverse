@@ -1,0 +1,40 @@
+mm w" ame=
+
+<image/wzory/k4_page323_formula1.png>
+
+Energia gromadzona w indukcyjnościach sprzężonych występujących w ob-
+wodzie prądu stałego jest określona wzorem (por. wzór (1.8-30)):
+
+<image/wzory/k4_page323_formula2.png>
+
+Przykład 3.7-2. W układzie prądu stałego pokazanym na rys. 3.7-2a obliczymy energie: Wc
+gromadzoną w pojemności nieliniowej Cy, W, gromadzoną w elemencie indukcyjnym Ł, oraz Wy
+gromadzoną w indukcyjnościach sprzężonych. Charakterystyka oporu nieliniowego R, jest opisa-
+narównaniem u m ai|i|, « = 1V/A?, charakterystyka pojemności nieliniowej C, równaniem
+
+1
+q = Buluj, = E mC/V?, a charakterystyka elementu indukcyjnego L, jest przedstawiona
+na rys. 3.7-2b. Wartości pozostałych elementów wynoszą: J=3A, E=9V, R=4Q,
+L, = LL = 4mH, ku —— m—
+
+<image/figury/k4_page323_figure1.png>
+
+W celu obliczenia prądów i napięć w elementach inercyjnych wystarczy rozważyć układ z rys.
+3.7-3a. Zamieniając źródło prądowe na napięciowe otrzymujemy prosty obwód (rys. 3.7-3b), dla
+którego można napisać równanie:
+
+<image/wzory/k4_page323_formula3.png>
+Po podstawieniu danych otrzymujemy równanie:
+
+<image/wzory/k4_page323_formula4.png>
+
+gdzie prąd I jest wyrażony w amperach.
+
+Jeżeli I < 0, równanie to przyjmuje postać I? — 27 + 3 = 0, a więc w tym przypadku brak jest
+rozwiązań rzeczywistych. Jeśli I > 0, równanie przyjmuje postać 1? + 27 — 3 = 0, skąd dostajemy
+I=lA
+
+Możemy już teraz bez trudu obliczyć interesujące nas wielkości: 1, pol,"=I=lA,
+
+1
+U, = E-aljl=8V orz I, =>(/+1)=2A.

@@ -1,0 +1,37 @@
+8 Rozdział 1. Grafy skierowane
+
+Podobnie jak w poprzednim algorytmie na początku macierz D[u] zawiera długość
+krawędzi (s, u), a jeżeli takiej krawędzi nie ma, to Dfu] = oo. Zbiór 7 zawiera wierz-
+chołki, dla których nie jest jeszcze wyliczona dokładna odległość od s. Poniżej pokaże-
+my, że dlav € V, D[v| zawiera długość najkrótszej spośród dróg, której przedostatni
+wierzchołek należy do V — 7. Następnie w każdej iteracji zewnętrznej pętli bierzemy
+wierzchołek u € T, który leży najbliżej od s. Jak się za chwile okaże ten wierzchołek ma
+już prawidłową wartość Dfu] i dlatego jest on usuwany z 7. Teraz korygujemy wartości
+Dlv) dla pozostałych wierzchołków z T' uwzględniając drogi, w których wierzchołek u
+jest przedostatni.
+
+Przykład 1.6 Rysunek 1.3 przedstawia graf z dodatnimi długościami krawędzi. Poniż-
+
+sza tabela ilustruje działanie algorytmu Dijkstry. Pokazuje jak w kolejnych iteracjach
+zewnętrznej pętli wybrano wierzchołek u oraz jak przedstawiają się zbiór 7' i macierz D.
+
+<image/tabele/k2_page217_table1.png>
+
+Rysunek 1.3: Graf z dodatnimi długościami krawędzi
+
+<image/iwzory/k2_page217_formula1.png>
+
+Aby udowodnić poprawność tego algorytmu, pokażemy przez indukcję, że po każdej ite-
+racji pętli mamy
+(a) dla każdego wierzchołka v € V — T, D[v] zawiera ostateczną długość minimalnej
+drogi z s do v.
+
+(b) dla każdego wierzchołka v € T, D[v| zawiera długość minimalnej spośród wszyst-
+kich dróg z s do v, w których przedostatni wierzchołek należy do V — 7
+
+Przed pierwszą pętlą tylko s € V — T, a dla każdego innego wierzchołka v € T,
+
+Div] = w(s,v). Warunki (a) i (b) są więc spełnione, Ponieważ w najkrótszej drodze do v
+nie ma pętli, więc drogi, w których s jest przedostatni składają się tylko z jednej krawędzi.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

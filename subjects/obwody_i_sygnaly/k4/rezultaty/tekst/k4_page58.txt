@@ -1,0 +1,37 @@
+58 s 1. Pojęcia podstawowe — elementy
+
+>2.pn
+<image/wzory/k4_page58_formula1.png>
+
+Wzór (1.3-22)" wyraża całkowitą energię gromadzoną (magazynowaną) w polu
+elektrycznym pojemności w chwili bieżącej t, w której punkt pracy A ma
+współrzędne: u(t), q(t) (rys. 1.3-16a). Energia ta, pobrana z otoczenia podczas
+ruchu punktu pracy od początku układu współrzędnych do położenia A, może
+być w całości oddana do otoczenia. Oznacza to, że pojemność jest elementem
+bezstratnym.
+
+ 
+
+<image/figury/k4_page58_figure1.png>
+
+Rys. 1.3-16
+
+Wzór (1.3-22) ma prostą interpretację geometryczną: wartość energii we
+gromadzonej w pojemności jest miarą pola ograniczonego charakterystyką, osią
+q oraz odcinkiem q = const (rys. 1.3-16a). Jest rzeczą oczywistą, że zawsze:
+
+|
+|
+
+<image/wzory/k4_page58_formula2.png>
+| D. Energia gromadzona w pojemności liniowej. Dla pojemności liniowej
+otrzymujemy, zgodnie ze wzorem (1.3-22) (por. także rys. 1.3-16b):
+
+<image/wzory/k4_page58_formula3.png>
+
+E. Inercyjność pojemności. Podobnie jak indukcyjność, pojemność (linio-
+wą lub nieliniową) zaliczamy do elementów inercyjnych zdolnych do groma-
+dzenia energii. Równanie pojemności wiążące prąd i z napięciem u jest rów-
+naniemrniczkowympor.wzory1.317i1.318atakep.1.3.2e.
+
+V Por. przypis na str. 53.

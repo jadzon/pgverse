@@ -1,0 +1,43 @@
+Projektowanie filtru 323
+
+ 
+
+on zafałowania charakterystyki tak w paśmie przepustowym, jak i zaporowym. Filtry eliptyczne
+dają najszybsze opadanie charakterystyki przy danej liczbie biegunów, lecz ich projektowanie
+jest znacznie trudniejsze. Nie będziemy tu rozważać filtrów eliptycznych, lecz trzeba wiedzieć,
+że bywają one czasem rozwiązaniem najchętniej wybieranym przez profesjonalnych projektan-
+tów zarówno w elektronice analogowej, jak i w DSP. Jeśli jest wam potrzebny filtr o takim
+poziomie właściwości, kupcie pakiet oprogramowania do projektowania filtrów cyfrowych.
+
+Projektowanie filtru
+
+Przystępując do projektowania filtru Czebyszewa trzeba wybrać cztery parametry: 1) odpo-
+wiedź dolno- lub górnoprzepustową, 2) częstotliwość odcięcia, 3) procentową wartość za-
+falowań w paśmie przepustowym, 4) liczbę biegunów. A co to jest biegun? Są na to dwie
+odpowiedzi. Jeśli jedna wam się nie spodoba, to może druga wam się przyda.
+
+Odpowiedź 1: Przekształcenie Laplace'a i przekształcenie Z są matematycznymi sposobami
+rozkładu odpowiedzi impulsowej na sinusoidy i opadające przebiegi wykładnicze. Jest to
+wykonywane przez wyrażenie charakterystyki systemu jako jednego wielomianu zespolone-
+go podzielonego przez inny wielomian zespolony. Pierwiastki licznika takiego ilorazu noszą
+nazwę zer, a pierwiastki mianownika — biegunów. Zera i bieguny mogą być liczbami ze-
+społonymi, dlatego przyjęto mówić, że mają „jakieś położenie” na płaszczyźnie zespolonej.
+Systemy rozbudowane mają więcej zer i biegunów niż systemy proste. Filtry rekursywne
+projektuje się, wybierając najpierw położenia zer i biegunów i wyznaczając następnie właści-
+we wartości współczynników rekursywnych (lub podzespołów analogowych). Na przykład
+filtry Butterwortha mają bieguny leżące na okręgu na płaszczyźnie zespolonej, a w filtrze
+Czebyszewa leżą one na elipsie. Ta kwestia jest tematem rozdziałów 32 i 33.
+
+<image/figury/k3_page295_figurefigury/k3_page295_figure2.png>
+
+     
+
+za. o s
+
+05
+
+s |
+8--—-
+
+Rys. 20.2. Odpowiedzi częstotliwościowe Czebyszewa. Na rys. a), b) pokazano odpowiedzi częstotliwościowe dolnoprzepu-
+słowych filtrów Czebyszewa o załałowaniach 0,5%, a na rys. c), d) takie odpowiedzi liltru górnoprzepustowego

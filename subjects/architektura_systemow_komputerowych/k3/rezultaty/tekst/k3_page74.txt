@@ -1,0 +1,55 @@
+64 4. Procesory
+
+000
+
+długimi słowami można zarówno kod operacyjny, jak i argument, umieścić w jednym
+słowie. W takim przypadku układ sterowania ma za zadanie tylko rozróżnienie właściwych
+pozycji tego słowa. W komputerach operujących bardzo krótkimi słowami, np. 8-bitowymi,
+zarówno długość słowa kodu operacyjnego, jak i argumentu może przekraczać długość
+słowa komputerowego. Wówczas zadaniem układu sterowania jest przeprowadzenie wielo-
+krotnego odczytu pamięci i skompletowanie zarówno rozkazu, jak i argumentu.
+
+Jeśli argument znajduje się w rejestrach, to zaledwie kilka bitów wystarczy, aby
+wskazać odpowiedni rejestr. Jeśli przykładowo rejestrów jest 16, to do wskazania numeru
+rejestru wystarczą 4 bity i często kod operacyjny zawiera już ten numer. Rozkazy takie
+mogą mieć niewielką długość.
+
+Jeśli argument jest w pamięci, to jego adres może znajdować się w:
+1) kodzie programu,
+
+2) rejestrze procesora,
+
+3) pamięci.
+
+Jeśli adres argumentu znajduje się w kodzie programu, to układ sterowania wymusza
+odczytywanie następnego słowa (lub następnych słów) z pamięci i umieszcza je w rejestrze
+adresowym, aby umożliwić odczyt samego argumentu. Jeśli adres argumentu znajduje się
+rejestrze, to układ sterowania musi umożliwić przepisanie zawartości tego rejestru do
+rejestru adresowego. Jeśli adres argumentu jest w pamięci, to procesor musi najpierw
+dokonać odczytu komórek pamięci, w których znajduje się adres, a następnie umieścić go
+w rejestrze adresowym i dokonać odczytu samego argumentu.
+
+W rzeczywistości jest jeszcze więcej sposobów wykonania danego rozkazu, a szcze-
+gólnie adresowania argumentów operacji. Sposoby te dokładniej przedstawiono w pod-
+rozdz. 4.7. Tutaj należy zauważyć, że w zależności od miejsca, gdzie znajdują się argu-
+menty rozkazu, czas jego wykonania będzie różny. Najszybciej wykonywane są rozkazy
+z argumentami w rejestrach, gdyż czas pobrania argumentu jest najkrótszy. Po odczytaniu
+rozkazu nie trzeba sięgać do pamięci celem odczytania argumentów. Jeśli argument znaj-
+duje się w programie, to znaczy, że wraz z odczytaniem rozkazu z kodu programu
+procesor musi odczytać stamtąd argument. Jeśli słowo maszynowe (słowo komputerowe)
+jest dostatecznie długie, to argument może być odczytywany jednocześnie z kodem rozka-
+zowym. Natomiast jeśli jest ono krótkie, jak w przypadku mikrokomputerów, to argument
+jest zwykle zapisany w następnej (lub następnych), po kodzie rozkazu, komórce pamięci.
+Taki rozkaz będzie wykonywany dłużej, gdyż wymaga dwóch (lub więcej) dostępów do
+pamięci.
+
+Jeśli argument znajduje się w komórce pamięci, to rozkaz wymaga różnej liczby
+dostępów do pamięci w zależności od tego, gdzie znajduje się adres argumentu. Jeśli adres
+jest w rejestrze, to czas wykonania rozkazu będzie krótszy niż w przypadku, gdy ad-
+res znajduje się w kodzie programu. W tym drugim przypadku najpierw trzeba odczytać
+adres a dopiero potem argument. Najdłużej trwa zwykle wykonanie rozkazu z argumentem
+w pamięci, gdy jego adres też znajduje się w pamięci. W takim przypadku potrzebne są
+cykle dostępu do pamięci dla odczytania adresu, a następnie cykl odczytania samego
+argumentu. Jak widać z opisu czas trwania wykonania pojedynczego rozkazu zależy od
+zastosowanego trybu adresowania. W następnym podrozdziale przedstawiono różne cykle
+wykonania rozkazów.

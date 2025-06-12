@@ -1,0 +1,30 @@
+Stabilność
+
+Dla modelu danego równaniem różniczkowym
+
+<image/wzory/k/_page41_formula1.png>
+
+a
+o
+
+of
+(OJ
+o
+
+=
+0
+=
+O
+=
+o
+
+<image/wzory/k/_page41_formula2.png>
+
+Równanie charakterystyczne
+
+<image/wzory/k7_page41_formula3.png>
+
+ 
+
+POLITECHNIKA
+GDAŃSKA

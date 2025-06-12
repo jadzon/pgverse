@@ -1,0 +1,54 @@
+System liczb zespolonych 529
+
+ 
+
+kład liczba zespolona !=1 + /-1,04Ijest najpierw przekształcana do postaci 1=1+/1,041/-1
+i następnie do postaci końcowej £ = 1 + 1,02 /-1. Część rzeczywista tej liczby zespolonej jest
+więc równa 1, a urojona | 024-1. Taki sposób zapisu daje możliwość nadania specjalnego
+symbolu abstrakcyjnemu czynnikowi +/-1 . Matematycy przez długi czas stosowali symbol
+i na oznaczenie /-1. Inżynierowie elektrycy zaś stosują symbol j, ponieważ i jest stosowane
+jako oznaczenie prądu elektrycznego. W DSP są stosowane oba te symbole. W tej książce
+przyjęto konwencję inżynierów elektryków, a więc symbol j.
+Na przykład wszystkie następujące liczby są liczbami zespolonymi: | + 2y, 1 — 2, —1 + 2,
+3,14159 + 2,7183, (4/3) + (19/2) itd. Wszystkie zwykłe liczby, takie jak 2: 6,34 oraz —1,414
+można traktować jako liczby zespolone z częścią urojoną równą zero, tj. 2 + Oj, 6.34 + Oy,
+oraz —1,414 + Oj.
+Liczby rzeczywiste mogą być opisywane ich położeniami na osi liczbowej, liczby zespolone
+zaś są reprezentowane położeniami na płaszczyźnie dwuwymiarowej zwanej płaszczyzną
+zespoloną. OŚ pozioma tej płaszczyzny (rys. 30.1) jest osią rzeczywistą liczb zespolonych,
+a pionowa — osią urojoną. Ponieważ liczby rzeczywiste są takimi liczbami zespolonymi, któ-
+re mają część urojoną równą zero, więc oś liczb rzeczywistych jest tym samym, co oś x na
+płaszczyźnie zespolonej.
+We wzorach matematycznych liczba zespolona jest wyrażana jako jedna zmienna, mimo że
+składa się z dwóch części. Na przykład trzy liczby zmienne z rys. 30.1 można zapisać jako:
+
+A=2+6j
+
+B=-—4 — 1,5;
+
+C=3-71
+gdzie A, B, € są zmiennymi zespolonymi. To ilustruje zarówno istotną zaletę, jak i istot-
+ną wadę stosowania liczb zespolonych. Zaletą jest możliwość uproszczonego zapisu dwóch
+wartości jednym symbolem. Wadą jest konieczność pamiętania, które zmienne są zespolone,
+a które są zwykłymi liczbami.
+W matematycznym zapisie rozdzielającym liczbę zespoloną na jej część rzeczywistą i uro-
+joną stosuje się operatory Re( ) i Im( ). Dla wyżej podanych przykładów liczb zespolonych
+mamy więc:
+
+<image/wzory/k3_page491_formula1.png>
+Zwróćcie uwagę, że argument operatora matematycznego /m( ) nie zawiera j. Na przykład
+Im(3 + 4j) jest równe 4, a nie 4.
+W dziedzinie liczb zespolonych obowiązują takie same zasady algebraiczne, jak dla zwy-
+kłych liczb, z potraktowaniem wielkości j jako pewnej stałej. Na przykład działania dodawa-
+nia, odejmowania. mnożenia i dzielenia sa opisane równaniami:
+
+<image/wzory/k3_page491_formula2.png>
+
+Wzór 30.1. wuwwuesusneu swa awoprwiwiwy wee
+„ „Azory/k3_ page491_formula3.png
+(a+bj) (c+dj)=(ac-bd)+ j(bc+ad)
+Wzór 30.3. Mnożenie liczb zespolonych
+
+<image/wzory/k3_page491_formula4.png>
+
+Wzór 30.4. Dzielenie liczb zespołonych

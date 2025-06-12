@@ -1,0 +1,5 @@
+<image/tabele/k3_page64_table1.png>
+
+<image/figury/k3_page64_figure1.png>
+
+Rysunek 3.52. Algorytm dzielenia liczb w kodach Ul i U2

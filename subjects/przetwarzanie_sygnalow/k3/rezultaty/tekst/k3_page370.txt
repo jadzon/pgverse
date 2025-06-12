@@ -1,0 +1,23 @@
+24. Liniowe przetwarzanie ob
+
+ 
+
+<image/figury/k3_page370_figure1.png>
+
+stosujemy w tym przykładzie (rys. 24.13 a). W widzeniu od strony wejścia nie ma ż
+obrócenia PSF; jest ona po prosu przesunięta.
+
+Spłot obrazowy widziany od strony wyjścia przedstawiono na rys. 24.15. Każdy pi
+sel w obrazie wyjściowym, taki jak pokazany na rysunku w położeniu [r, c], otrzy j
+udziały od wielu pikseli z obrazu wejściowego. Funkcja PSF jest obracana o 180” wo:
+kół piksela (0, 0] i następnie przesuwana w taki sposób, żeby piksel [0, 0] w PSF
+ustawiony zgodnie z pikselem [r, c] w obrazie wejściowym. Jeśli w PSF są użyte tylka
+
+a ad mazsaii fe al w nhrazie
+
+<image/wzory/k3_page370_formula1.png>
+
+<image/figury/k3_page37/0_figure3.png>
+
+Rys. 24.15. Splot obrazowy widziany od strony wyjścia. Każdy piksel w sygnale wyjściowym jest równy
+sumie pikseli w obróconej PSF przemnożonych przez odpowiadające im piksełe w obrazie wejściowym

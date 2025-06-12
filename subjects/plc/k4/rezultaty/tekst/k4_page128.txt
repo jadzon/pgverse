@@ -1,0 +1,13 @@
+<image/tabele/k4_page128_table1.png>
+
+Tab. 3.7 Zestawienie parametrów technicznych
+przykładowego modułu MDL 646
+
+<image/figury/k4_page128_figure1.png>
+
+Rys. 3.10 Schemat obwodu wewnętrznego i układu połączeń zewnętrznych modułu
+wejść prądu stałego MDL 646 (24Volt DC Positive/Negative Input Module)
+
+ 
+
+128 Rozdział: 3. Sprzęt sterowników PLC

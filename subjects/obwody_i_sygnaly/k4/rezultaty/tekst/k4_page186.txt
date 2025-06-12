@@ -1,0 +1,56 @@
+186
+
+nn A Z TA zz
+
+O tym, do jakiej z wymienionych kategorii zalic
+wnioskować:
+
+— znając równania sieciowe układu (R);
+
+— wiedząc, z jakich elementów układ jest zbudowany
+Zaczniemy od cechy skupioności układu.
+
+(R) Układ jest skupiony, jeśli jego równania sieciow
+w postaci równań różniczkowych zwyczajnych i/lub ró
+w których występują tylko funkcje jednej zmiennej — czas
+
+Układy inne niż skupione (układy rozłożone) nie dadzą
+równań względem tylko jednej zmiennej — czasu t.
+konieczność wprowadzenia zmiennych przestrzennych (p
+1.4-K) i, w konsekwencji, równania różniczkowe opisu
+rwnaniamiczstkowymi.wzory/k4_page186_
+
+(E) Układ zbudowany tylko z elementów lub podukk
+układem skupionym.
+
+Uwaga. Przedstawiona w tym punkcie definicja (R) układu skupi
+wszystkich właściwości elementów skupionych oraz do wszystkich ty
+wiązaliśmy ze znaczeniem słowa „skupiony” (por. p. 1.2.4-C oraz p. 1.4
+
+Jak już wspomnieliśmy w p. 2.1.1, równania sieciowe układu uwzglęć
+elementów oraz równania połączeń wynikające z praw Kirchhoffa
+wyrażające prawa Kirchhoffa obowiązujące w układzie skupionym
+algebraicznymi, liniowymi, o stałych współczynnikach, a występując
+i napięcia) są funkcjami jednej zmiennej — czasu t — por. np. równe
+wyłącznie ze struktury połączeń elementów i nie zależą od rodzaju łąc
+równań elementów decydują zatem o tym, do jakiej kategorii należą 1
+Właściwość ta wiąże się ściśle z podanymi wyżej definicjami (R) i
+i stanowi podstawę dla sformułowań zawartych w p. B, dotyczących ukłz
+nych.
+Przykład 2.1-15. Wszystkie układy rozważane w przykładach 2.1
+z elementów skupionych, a ich równania sieciowe są równaniami różnicz
+równaniami algebraicznymi. Są to zatem układy skupione.
+
+B. Układy liniowe i stacjonarne. Rozważmy z kolei cechy liniowości
+i stacjonarności układu. Podobnie jak w p. A charakterystykę klas układów
+liniowych i stacjonarnych omówimy na podstawie obu przedstawionych wyżej
+sposobów wnioskowania (R) oraz (E). Będziemy przy tym zakładać, że roz-
+ważane układy są układami skupionymi.
+
+Przed slormulowaniem odpowiednich konkluzji dotyczących układów linio-
+wych i stacjonarnych konieczne jest jednak wyjaśnienie niektórych kwestii
+dotyczących źródeł niezależnych. Źródła niezależne (wystarczy tu rozważyć
+tylko źródła idealne) są elementami skupionymi. W podanych w p. A sfor-
+mulowaniach dotyczących cechy skupioności układu nie zachodziła zatem
+potrzeba wyodrębniania w zbiorze elementów źródeł niezależnych. Inaczej
+wygląda sprawa w przypadku liniowości i stacjonarności.

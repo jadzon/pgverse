@@ -1,0 +1,38 @@
+Buforowanie cykliczne 485
+
+<image/figury/k3_page449_figure2.png>
+figury/k3_pe
+
+W przypadku przetwarzania w czasie rzeczywistym sygnał wyjściowy jest wytwarzany
+w tym samym czasie, gdy jest pobierany sygnał wejściowy. Jest to niezbędne na przykład
+w łączności telefonicznej, aparatach słuchowych i radarze. W tych zastosowaniach informa-
+cja musi być dostępna natychmiast, choć może być nieco opóźniona. Na przykład opóźnienie
+o 10 ms w rozmowie telefonicznej pozostanie niezauważone zarówno przez mówiącego, jak
+
+czywistym następuje pobranie próbki, wykonanie algorytmu i wyprowadzenie próbki, i tak
+wielokrotnie. Może być też pobranie grupy próbek, wykonanie algorytmu i wyprowadzenie
+grupy próbek. To jest właśnie świat cyfrowych procesorów sygnałowych.
+
+Wróćcie teraz do rys. 28.2 i wyobraźcie sobie, że jest to filtr SOI realizowany w czasie rze-
+czywistym. Aby obliczyć próbkę wyjściową, musimy mieć dostęp do pewnej liczby ostatnich
+poprzednich próbek wejściowych. Przypuśćmy, że w filtrze stosujemy osiem współczynni-
+ków ag, a;, ... a7. To znaczy, że musimy znać wartości ostatnich ośmiu próbek sygnału wej-
+ściowego xln], x[n — 1]. ... x[n — 7]. Te osiem próbek trzeba przechowywać w pamięci i ciągle
+uaktualniać w miarę pobierania nowych próbek. Jaki jest najlepszy sposób operowania tymi
+zapamiętanymi próbkami? Odpowiedź brzmi — buforowanie cykliczne.
+
+Na rys. 28.3 przedstawiono 8-próbkowy bufor cykliczny. Umieściliśmy ten bufor w ośmiu
+kolejnych adresach w pamięci od 20 041 do 20 048. Na rys. 28.3 a) pokazano, w jaki spo-
+sób osiem próbek wejściowych może być zapamiętanych w jakiejś określonej chwili, na
+rys. 28.3 b) zaś przedstawiono zmiany, jakie nastąpiły po pobraniu następnej próbki. Zasada
+buforowania cyklicznego polega na tym, że koniec matrycy liniowej jest dołączony do jej
+początku; lokacja pamięci 20 041 jest widziana jako sąsiednia z 20 048, tak samo jak 20 044
+jest sąsiednią z 20 045. Śledzi się działanie pamięci za pomocą wskaźnika (zmiennej, któ-
+rej wartość jest zawarta w adresie) pokazującego, gdzie znajduje się najnowsza próbka. Na
+przykład na rys. 28.3 a) wskaźnik pokazuje adres 2044, a na rys. 28.3 b) — adres 2045. Nowo
+pobrana próbka zastępuje najstarszą próbkę w matrycy i wskaźnik jest przesuwany o jeden
+adres w przód. Bufory cykliczne są użyteczne, gdyż przy pobraniu nowej próbki wystarczy
+zmienić tylko jedną wartość. Do posługiwania się buforem cyklicznym są konieczne cztery
+parametry. Po pierwsze, musi być wskaźnik pokazujący początek bufora cyklicznego w pa-
+mięci (w tym przykładzie 20 041). Po drugie, potrzebny jest wskaźnik pokazujący koniec
+matrycy (na przykład 20 048) lub zmienna zawierająca długość matrycy (np. 8). Po trzecie,

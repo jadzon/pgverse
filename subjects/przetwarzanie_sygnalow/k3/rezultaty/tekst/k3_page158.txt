@@ -1,0 +1,58 @@
+Odpowiedź częstotliwościowa systemów
+
+Okazuje się, że pożądany kształt okna o płaskim wierzchołku jest zgodny z kształtem odpo-
+wiedzi impulsowej (tzw. jądro) filtru dolnoprzepustowego. Teoretyczne przyczyny tego faktu
+rozważymy w dalszych rozdziałach. Na razie podajemy praktyczne wskazówki o stosowaniu
+"tej metody. W rozdziale 16 znajdziecie omówienie filtru dolnoprzepustowego zwanego fil-
+trem z okienkowaniem funkcją sinc. Wzór 16.4 opisuje, jak tworzyć odpowiedź impulsową
+(którą chcemy zastosować jako okno), a na rys. 16.4 a) pokazano typowy kształt tej krzywej.
+Aby móc skorzystać z tego wzoru, musimy znać wartości dwóch parametrów: M i f.. Oblicza
+się je z zależności: M = N — 2 oraz f. = s/N, gdzie N jest długością zastosowanego przekształ-
+cenia DFT, a s — liczbą próbek, które mają znaleźć się na płaskiej części piku (zwykle od
+3 do 5). W tablicy 16.1 podano program do obliczania odpowiedzi impulsowej filtru (czyli
+naszego okna). Program zawiera dwa istotne elementy — stałą normalizacyjną K i sposób
+uniknięcia błędu dzielenia przez zero w próbce środkowej. Stosując tę metodę, trzeba pamię-
+tać, że stała wartość równa jedności w dziedzinie czasu wytworzy pik o amplitudzie jeden
+w dziedzinie częstotliwości. Jednak sinusoida o amplitudzie jeden w dziedzinie czasu wy-
+tworzy pik widmowy o amplitudzie tylko jedna druga (1/2). To zagadnienie jest omówione
+w poprzednim rozdziale, w podrozdziale: Synteza, obliczanie odwrotnej transformaty DFT.
+
+Odpowiedź częstotliwościowa systemów
+
+W dziedzinie czasu systemy są analizowane przy użyciu splotu. Podobne analizy można prze-
+prowadzać w dziedzinie częstotliwości. Każdy sygnał wejściowy może, przy użyciu prze-
+kształcenia Fouriera, być przedstawiony jako grupa fal kosinusoidalnych, każda o określonej
+amplitudzie i przesunięciu fazowym. Można też stosować przekształcenie DFT do przedsta-
+wienia sygnału wyjściowego w podobnej postaci. Wynika stąd, że każdy system liniowy może
+być całkowicie opisany przez zmiany amplitudy i fazy, jakie wywołuje w przechodzących
+przezeń falach kosinusoidalnych. Ta informacja jest nazywana odpowiedzią częstotliwościo-
+wą. Ponieważ zarówno odpowiedź impulsowa, jak i odpowiedź częstotliwościowa zawierają
+pełną informację o systemie, więc musi być odpowiedniość jeden do jednego między obiema
+tymi charakterystykami. Mając daną jedną z odpowiedzi, można obliczyć drugą. Zależność
+między odpowiedzią impulsową i odpowiedzią częstotliwościową jest jedną z podstaw prze-
+twarzania sygnałów. Odpowiedź częstofliwościowa systemu jest przekształceniem Fouriera
+odpowiedzi impulsowej tego systemu. Te zależności są zilustrowane na rys. 9.6.
+
+Utrzymując zasady przyjęte w DSP, odpowiedzi impulsowe oznacza się małymi literami,
+a odpowiadające im odpowiedzi częstotliwościowe — dużymi. Jako że h[ ] jest powszech-
+nie stosowanym oznaczeniem odpowiedzi impulsowej, więc [ ] stosuje się do odpowiedzi
+częstotliwościowej. W dziedzinie czasu systemy są opisywane przez splot x(n] * hln] = y(n].
+W dziedzinie częstotliwości widmo wejściowe jest mnożone przez odpowiedź częstotliwo-
+ściową, dając w wyniku widmo wyjściowe, zgodnie z zależnością: X[f] x H[f] = YJ]. A za-
+tem spłot w dziedzinie czasu odpowiada mnożeniu w dziedzinie częstotliwości.
+
+Na rys. 9.7 przedstawiono przykład zastosowania DFT do przetworzenia odpowiedzi impul-
+sowej systemu na jego odpowiedź częstotliwościową. Na rys. 9.7 a) pokazano odpowiedź
+impulsową systemu. Oglądanie tej krzywej nie daje najmniejszego nawet pojęcia o tym, jak
+działa system. Wykonanie 64-punktowego przekształcenia DFT tej odpowiedzi impulsowej
+daje odpowiedź częstotliwościową systemu, przedstawioną na rys. 9.6 b). Teraz funkcja tego
+systemu staje się oczywista: przepuszcza on częstotliwości między 0,2 i 0,3 i odrzuca wszyst-
+kie pozostałe. Jest to więc filtr pasmowoprzepustowy. Może też zbadać fazę odpowiedzi czę-
+stotliwościowej, jednak charakterystyka fazowa jest trudniejsza do interpretacji i mniej inte-
+resująca. Będzie o niej mowa w dalszych rozdziałach.
+
+Charakterystyka na rys. 9.7 b) jest bardzo poszarpana z powodu małej liczby próbek wyzna-
+czających krzywą. Tę sytuację można poprawić przez dopełnianie odpowiedzi impulsowej
+zerami, przed przekształceniem DFT. Na przykład wprowadzenie zer w taki sposób, aby
+wydłużyć odpowiedź impulsową do 512 próbek (rys. 9.7 c), daje charakterystykę częstotli-
+wościową o dużej rozdzielczości (rys. 9.7 d).

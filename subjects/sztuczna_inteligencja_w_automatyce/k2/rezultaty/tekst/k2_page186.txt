@@ -1,0 +1,41 @@
+191
+
+<image/figury/k2_page186_figure2.png>
+
+średnią wygranej na tym automacie można estymować znanym wzorem
+
+<image/wzory/k2_page186_formula1.png>
+
+Spośród wielu możliwych najczęściej rozważa się następujące strategie prowa-
+dzenia gier:
+
+e zachłanna — wybór akcji o największej chwilowej wartości średniej
+
+e c-zachłanna — z prawdopodobieństwem 1 — e wybór akcji o największej chwi-
+lowej wartości średniej, w przeciwnym razie losowy wybór akcji
+
+e „softmać” — wybór akcji a, z prawdopodobieństwem
+
+<image/wzory/k2_page186_formula2.png>
+
+gdzie 7 jest parametrem zmniejszającym się po każdej akcji.
+
+Na rysunku ?? pokazano rozkłady prawdopodobieństwa wyboru akcji p(a,) dla
+przykładowych wartości V (a;) i dla kilku wartości współczynnika 7. Jak widać
+dla dużych wartości współczynnika (r = 100) prawdopodobieństwa wyboru
+akcji są prawie identyczne, natomiast dla małych wartości (r = 0,1) prawdo-
+podobieństwo wyboru akcji o maksymalnej wartości średniej (V(a;) = 6) jest
+bliskie 1, a pozostałych akcji bliskie 0.
+
+e losowa — za każdym razem losowy wybór automatu.
+
+Rozważając problem znalezienia najlepszej strategii napotykamy się na dwie
+skrajne strategie, losową i zachłanną. Nazywa się je eksploracją i eksploatacją.
+Pierwsza z nich stale bada nowe możliwości, zaś druga tylko eksploatuje dotych-
+czas zdobytą wiedzę. Najlepsze są strategie mieszane eksploatujące i od czasu do
+czasu eksplorujące (strategie e-zachłanne i „softmax”).
+
+W celu porównania kilku strategii przeprowadzono eksperyment symulacyjny. W
+eksperymencie przyjęto następujące dane:
+
+e |liczba automatów w zestawie, n = 10,

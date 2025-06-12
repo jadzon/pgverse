@@ -1,0 +1,65 @@
+Inne pary transformat
+
+ 
+
+waszego programu. Ważną kwestią, którą należy zapamiętać, jest uwzględnienie w programie
+specjalnej obsługi wartości x = 0 przy obliczaniu funkcji sin(v)/x.
+
+Podstawową cechą funkcji sin(x)/x jest położenie przejść przez zero. Takie przejścia wy-
+stępują przy częstotliwościach, przy których całkowita liczba okresów sinusoidy mieści się
+w sposób parzysty w impulsie prostokątnym. Jeśli, na przykład, impuls prostokątny ma sze-
+rokość 20 punktów, to pierwsze zero w dziedzinie częstotliwości jest przy częstotliwości, dla
+której jeden okres mieści się dokładnie w 20 punktach. Drugie zero jest przy częstotliwości
+dającej dwa pełen okresy w 20 punktach itd. Można to zrozumieć, przypominając sobie spo-
+sób obliczania DFT metodą korelacji. Amplitudę składowej częstotliwościowej wyznacza się,
+mnożąc sygnał w dziedzinie czasu przez sinusoidę i dodając uzyskane w ten sposób próbki.
+Jest to takie same działanie, jak dodawanie próbek sinusoidy mieszczących się w granicach
+impulsu prostokątnego, w przypadku gdy przebieg w dziedzinie czasu jest takim impulsem
+o amplitudzie jednostkowej. Jeśli to sumowanie odbywa się w granicach całkowitej liczby
+okresów sinusoidy, to wynikiem będzie zero.
+
+Funkcja sin(x)/x jest szeroko stosowana w DSP, bo tworzy parę transformat Fouriera z bar-
+dzo prostym przebiegiem, jakim jest impuls prostokątny. Tę funkcję stosuje się na przykład
+w analizie widmowej, omówionej w rozdziale 9. Rozważmy analizę nieskończenie długiego
+sygnału dyskretnego. Przekształcenie DFT można stosować tylko do sygnałów o skończonej
+długości, dlatego trzeba wybrać N próbek reprezentujących dłuższy sygnał. Rzecz polega
+na tym, że „wybranie N próbek z dłuższego sygnału” jest tym samym, co pomnożeniem
+dłuższego sygnału przez impuls prostokątny. Jedynki w impulsie prostokątnym zachowują
+odpowiadające im próbki, zera zaś je eliminują. Jaki ma to wpływ na widmo częstotliwościo-
+we sygnału? Mnożenie przebiegu w dziedzinie czasu przez impuls prostokątny odpowiada
+w dziedzinie częstotliwości spłotowi z funkcją sin(x)/x. Ogranicza to rozdzielczość widma
+częstotliwościowego, jak to poprzednio przedstawiono na rys. 9.5 a).
+
+Inne pary transformat
+
+Na rysunkach 11.5 a), b) przedstawiono wyżej omówioną dualność: impuls prostokątny w dziedzi-
+nie częstotliwości odpowiada funkcji sin(x)/x (plus aliasing) w dziedzinie czasu. Uwzględniając
+wpływ aliasingu, można sygnał w dziedzinie czasu zapisać jako:
+"| -1/2)/N)
+
+«|-]- sin(x4/ N)
+SIA ia W dziedzinie częstotliwości impuls ma
+amplitudę równą jedności i zawiera próbki od numeru 0 do M — 1. Parametr N jest długością DFT a x[i]
+jest sygnałem w dziedzinie czasu przy czym i zmienia się od 0 do N — 1. Aby uniknąć dzielenia przez zero,
+zastosowano x[0] = (2M — 1)/N
+
+W celu wyelimi ja Z ago ós BÓ ożmy, że w dziedzini
+tliwości jest próbkowany z tak krótkim okresem próbkowania, że przemienia się w krzywą ciągłą.
+To powoduje, że przebieg w dziedzinie czasu staje się nieskończenie długi i nieokresowy. Trzeba tu
+zastosować przekształcenie DTFT, dające w wyniku sygnał w dziedzinie czasu wyrażony wzorem:
+
+<image/wzory/k3_page192_formula1.png>
+
+Wzór 11.4. Odwrotne przekształcenie DTFT impulsu prostokątnego. W dziedzinie częstotliwości impuls
+ma amplitudę równą jedności i obejmuje zakres od 0 do częstotliwości granicznej (, o wartości między
+010,5. Sygnatem w dziedzinie czasu jest x[i] przy czym i zmienia się od 0 do N — 1. "aby uniknąć
+dzielenia przez zero zastosowano x[0] = 21,
+
+Ten wzór jest bardzo ważny w DSP, gdyż impuls prostokątny jest w dziedzinie częstotliwości ide-
+alnym filtrem dolnoprzepustowym. Zatem funkcja typu sin(xy/x występująca w tym równaniu jest
+odpowiedzią impulsową idealnego filtru dolnoprzepustowego. Jest to podstawą bardzo użytecznej
+klasy filtrów zwanych filtrami okienkowanymi funkcją sin(x%/x, które będą opisane w rozdziale 15.
+
+ 
+
+-_—

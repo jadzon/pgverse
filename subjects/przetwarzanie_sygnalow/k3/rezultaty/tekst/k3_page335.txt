@@ -1,0 +1,39 @@
+23. Tworzenie i wyświetlanie obraz
+
+<image/figury/k3_page335_figure1.png>
+
+Jest to szum statystyczny, występujący we wszyskich obrazach o małej ilości świata
+w noktowizorach wojskowych. Wrócimy do tego tematu w rozdziale 25. Ponieważ p
+nie wykrywają barw, więc widzenie przy słabym oświetleniu jest czarno-białe.
+
+Receptory czopkowe są wyspecjalizowane w rozróżnianiu barw, lecz działają tylko przy
+starczająco dobrym oświetleniu. W oku są trzy rodzaje czopków — tzw. „czerwone”, „ziek
+ne” lub „niebieskie”, a więc najczulsze na te właśnie barwy. Czopki każdego z tych rodzajć
+zawierają inny fotopigment, czyli związek chemiczny absorbujący inną długość fali świ
+nej. Na rys. 23.6 przedstawiono zakresy długości fal świetlnych, na jakie reagują receptor
+tych trzech rodzajów. Jest to tzw. kodowanie RGB określające, w jaki sposób info
+
+o barwie opuszcza oko przez nerw wzrokowy. Ludzka percepcja barw komplikuje się w wy
+niku przetwarzania sygnałów wzrokowych na dolnych poziomach mózgu. Kodowanie RG
+przechodzi w inną formę kodowania, w którym barwy są klasyfikowane jako: czerwona /
+zielona, niebieska łub żółta i jasna lub ciemna.
+
+Kodowanie RGB jest ważnym ograniczeniem ludzkiego widzenia; długości fali świetln
+występujące w otoczeniu są zaliczane tylko do trzech szerokich kategorii. Natomiast specj.
+lizowane aparaty fotograficzne są w stanie dzielić widmo światła na setki lub tysiące inc
+dualnych barw. Takie rozróżnienie barw może służyć np. do klasyfikacji komórek na zdro
+lub rakowe, do zrozumienia zjawisk fizycznych na odległej gwieździe lub do wy ni
+maskujących się żołnierzy ukrytych w lesie. Dlaczego oko jest tak ograniczone pod wzgłę:
+dem wykrywania barw? Widocznie wszystkie ludzkie istoty do przetrwania potrzebują zne
+leźć czerwone jabłko wśród zielonych liści rysujące się na tle niebieskiego nieba.
+
+Czopki i pręciki mają szerokość ok. 3 um i są gęsto Ścieśnione na całej powierzchni siatków-
+ki 3 x 3 cm. Siatkówka jest więc złożona z matrycy ok. 10 000 x 10 000 = 100 milionć
+receptorów. Nerw wzrokowy zaś ma tylko ok. miliona włókien nerwowych, które mogą by
+dołączone do tych komórek receptorowych. Każde włókno nerwu wzrokowego jest da
+czone — przez warstwę pośrednią — do średnio ok. 100 receptorów światła. Ponadto, w celi
+lepszego skonsolidowania informacji, warstwa pośrednia wzbogaca obraz przez zaostrzer
+krawędzi i stłumienie składowej, która w oglądanym widoku pochodzi od oświetlenia bezpe
+średniego. To biologiczne przetwarzanie obrazu będzie omówione w następnym rozdziałe.
+Dokładnie pośrodku siatkówki znajduje się tzw. płamka żółta służąca do widzenia o bardz
+dużej rozdzielczości (patrz rys. 23.4). Plamka żółta pod kilkoma względami różni się od reszt

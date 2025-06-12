@@ -1,0 +1,44 @@
+Do oznaczania i łatwiejszego identyfikowania typów wejść i wyjść przyjęto spe-
+cjalny sposób numerowania sygnałów. I tak :
+
+0x
+
+1x
+
+3x
+
+4x
+
+6x
+
+284 Rozdział : 6 Programowanie sterowników AEG SCHNEIDER Modicon
+
+oznacza wyjście dyskretne (lub cewkę). Może być zastosowane do bezpo-
+średniego sterowania fizycznym sygnałem wyjściowym sterownika lub sta-
+nowić cewkę wewnętrzną (marker). Ustawienie sygnału 0x może być wyko-
+nane tylko raz w programie, zaś odczytywanie jego stanu może się odbywać
+wielokrotnie. Przykładowo: zmienne 00001..00016 są wejściami, natomiast
+zmienne 00017..01536 są zmiennymi wewnętrznymi, czyli tzw. markerami.
+oznacza wejście dyskretne. Stan wejść jest kontrolowany przez moduł wej-
+Ściowy. Na przykład zmienne 10001..10016 stanowią wejścia dyskretne.
+oznacza rejestry wejściowe. Rejestry te zawierają wartości numeryczne po-
+chodzące ze źródeł zewnętrznych takich jak moduły wejść analogowych, mo-
+dułu szybkiego licznika i inne. Rejestry 3X mogą zawierać 16 kolejnych wejść
+dyskretnych w kodzie BCD. Dla przykładu zmienne 30001..30004 stanowią
+wejścia analogowe.
+
+oznacza rejestry wyjściowe, które mogą być wykorzystywane do przechowy-
+wania wartości analogowych w pamięci sterownika lub do przesyłania warto-
+ści analogowych do modułu wyjściowego. Na przykład zmienne
+40001..40002 są wyjściami analogowymi, a następne rejestry 40003..41872
+pełnią funkcje pomocnicze (przechowywanie wartości i wyników obliczeń).
+wykorzystywane do przechowywania informacji binarnej w obszarze pamięci
+zewnętrznej (dostępne tylko w sterownikach serii 984B).
+
+<image/figury/k4_page284_figure1.png>
+
+Rys. 6.4 Przykładowy ekran programu Modsofft.
+
+ 
+
+—— — a

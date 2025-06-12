@@ -1,0 +1,50 @@
+1.3. Relacja kongruencji 5
+
+1.3 Relacja kongruencji
+
+Niech m będzie dowolną liczbą naturalną m + 0. Powiemy, że dwie liczby całkowite a i
+
+b są równoważne (lub przystają) modulo m, jeżeli
+<image/wzory/k2_page120_formula1.png>
+
+Będ: |
+<image/wzory/k2_page120_formula2.png>
+
+Przykład 1.5 1= 4 (mod3), 3=0 (mod3), -1=2 (mod3), -1=—7
+(mod 3).
+
+Jeżeli a i b są dodatnie, to a = b (mod m) wtedy i tylko wtedy, gdy a i b mają takie
+same reszty z dzielenia przez m.
+
+Lemat 1.6 Relacja przystawania modulo jest relacją równoważności, czyli spełnia następujące
+trzy warunki:
+
+e zwrotność, dla każdego a zachodzi a=a (mod m),
+e symetrię, dla każdego aib, jeżeli a=b (modm), to b=a (mod m),
+
+- wmowonohadniańó Ala bażdaen 1
+
+<image/wzory/k2_page120formula3.png>
+
+Dowód. Udowodnimy tylko przechodniość relacji. Jeżeli m|(a —b) oraz mib=cu
+to mi((a — b) + (b—c)), czyli m|(a — c).
+
+Ponadto relacja modulo jest zgodna z dodawaniem, odejmowaniem i mnożeniem.
+Twierdzenie 1.7 Jeżeli a=b (modm) oraz c=d (modm), to:
+
+a+c=b+d (modm), a-c=b=d (modm)  ac=bd (mod m).
+Dowód. Z założenia mamy:
+
+<image/wzory/k2_page120_formula4.png>
+
+z tego zaś łatwo wynika, że m dzieli:
+<image/wzory/k2_page120_formula5.png>
+
+czyli zachodzi teza twierdzenia. o
+
+Przykład 1.8 Twierdzenie 1.7 może być użyte do obliczania reszty z dzielenia Jeżeli chce-
+
+my policzyć na przykład
+1999 mod 3,
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

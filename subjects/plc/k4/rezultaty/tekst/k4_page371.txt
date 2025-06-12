@@ -1,0 +1,25 @@
+TI = TA/TN BGUG - Dolne ograniczenia wyjścia
+
+TD = TVW/TA PV - Wielkość regulowana
+STEU - Słowo sterujące Z - Zakłócenie
+Y - wielkość wyjściowa regulatora bez ograniczenia (algorytm pozycyjny)
+
+dY  - wielkość wyjściowa regulatora bez ograniczenia (alg. prędkościowy)
+YA  - wyjście regulatora po przejściu przez ogranicznik (alg. pozycyjny)
+dYA - wyjście regulatora po przejściu przez ogranicznik (alg. prędkościowy)
+
+wzory/k4_page371_formula1.pi
+<image/tabele/k4_page371_table1.png>
+
+Doprowadzając do regulatora sygnał Z, można zrealizować kompensację od
+wielkości zakłócającej. Przy pomocy pierwszego bitu słowa sterującego
+(DW11.1) do części różniczkującej regulatora można doprowadzić albo sygnał E
+(błąd regulacji) albo sygnał EZ. Przy zadaniu stabilizacji można sygnał EZ połą-
+czyć z sygnałem PV (wielkość regulowana) i doprowadzić do części różniczku-
+jącej zamiast błędu regulacji (DW!1.1=1). Zabezpieczamy się w ten sposób
+przed wystąpieniem "uderzenia" na wyjściu regulatora, które może spowodować
+część różniczkująca po skokowej zmianie wartości zadanej. Sygnał YH i dYH
+
+a. |; z a O M MY BY 0 A NAA M A R R M 1 M m mmm ma m m
+
+7.16 Wybrane zintegrowane bloki specjalne 371

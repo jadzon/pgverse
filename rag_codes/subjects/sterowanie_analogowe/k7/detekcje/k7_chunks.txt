@@ -1,0 +1,602 @@
+Stan układu Stanem układu w dowolnej chwili czasu t, jest ta informacja, która razem ze znajomością sygnału wejściowego dla t>=t, jednoznacznie wyznacza zachowanie się układu (a więc również jego sygnał wyjściowy) dla każdego t>=t, W poniższym przykładzie zmienną stanu może być napięcie na kondensatorze, gdyż jego znajomość w chwili t, oraz znajomość zmian napięcia na wejściu układu dla t>=0 pozwoli nam na określenie napięcia na kondensatorze dla t>=0 SMOLUB]S 8|8pOW
+
+SB; POLITECHNIKA GDANSKA Stan układu — układ autonomiczny, pierwszego rzędu Dla układu autonomicznego u(t)=0, przy niezerowych warunkach początkowych u,(ty) przebieg napięcia wyjściowego możemy łatwo wyznaczyć:
+
+R u(t | C - | y = uc(t)
+
+d p — „al —e =ae dt POLITECHNIKA GDANSKA a O of (OJ D = 5 = O = o Stan układu — układ pierwszego rzędu, nieautonomiczny Dla układu nieautonomicznego, przy niezerowym napięciu u,(t,) przebieg napięcia wyjściowego możemy łatwo wyznaczyć korzystając ze splotu:
+
+Aby sprawdzić poprawność rozwiązania należy skorzystać z Twierdzenie Leibniza o różniczkowaniu pod znakiem całki:
+
+POLITECHNIKA GDANSKA a e of 0. 0 A m =Ź O = 0 Stan układu — układ pierwszego rzędu, nieautonomiczny Rozwiązanie możemy również znaleźć korzystając z transformaty Laplace'a:
+
+SMOLUB]S 8|8pOW | l sX(s)-x(0')=aX(s)+bU(s) gdzie: a= "+6 p= << x(t) =u_(t) t,=0"
+
+x(0 )=u_(0')
+
+= rozwiązanie swobodne rozwiązanie wymuszone (wynika z własności układu (wynika z własności układu i warunków początkowych) i pobudzenia) POLITECHNIKA GDANSKA Stan układu — układy wyższych rzędów Liniowy, stacjonarny układ MIMO możemy opisać za pomocą tzw. równań stanu. Zakładamy, że opisujemy układ rzędu n o m wejściach i p wyjściach
+
+SMOLUB]S 8|8pOW
+
+u(t) — wektor wymuszenia (m x 1) y(t) — wektory wyjścia (p x 1) x(t) — wektor stanu (n x 1) Rozmiary macierzy opisujących proces A — macierz procesu (n x n) B — macierz wejścia (n x m) C — macierz wyjścia (p x n) D — macierz transmisyjna (p x m) POLITECHNIKA GDANSKA Stan układu- układy wyższych rzędów, jednorodne Trajektoria stanu układu wyższego rzędu
+
+w L macierz fundamentalna macierz tranzycji stanu
+
+POLITECHNIKA GDANSKA a O of (OJ D = 5 = O = o Stan układu- układy wy Własności macierzy fundamentalnej
+
+Jeżeli t,=0 to zwykle stosujemy oznac
+
+POLITECHNIKA GDANSKA Stan układu- układy wyższych rzędów Trajektoria stanu dla układu niejednorodnego:
+
+lo Trajektoria wyjściowa układu niejednorodnego:
+
+Aby sprawdzić poprawność rozwiązania należy ponownie skorzystać z Twierdzenie Leibniza o różniczkowaniu pod znakiem całki:
+
+POLITECHNIKA GDANSKA SMOLUB]S 8|8pOW Stan układu- układy wyższych rzędów, jednorodne Rozwiązanie z zastosowaniem przekształcenia Laplace 'a:
+
+POLITECHNIKA GDANSKA SMOUBJS 8|8pOJN Stan układu Przykład: znaleźć odpowiedź skokową systemu opisanego równaniami stanu przy założeniu zerowvch warunków poczatkowvch a o of (OJ D = 0 = O = o
+
+uup.
+
+POLITECHNIKA GDAŃSKA
+
+W nowoczesnej teorii sterowania stosujemy opis układu za pomocą n równań różniczkowych 1. rzędu. Równania te nazywamy równaniami stanu. Podstawowym problemem jest wybór zmiennych stanu. Zmienne stanu wybieramy w następujący sposób: 1. Jeżeli struktura rzeczywistego układu jest dostępna, to opis stanowy wynika bezpośrednio z tej struktury
+
+SMOLUB]S 8|8pOW
+
+POLITECHNIKA GDAŃSKA
+
+ad. a) Model stanowy zdiagonalizowany możemy utworzyć na podstawie transmitancji o pojedynczych biegunach. Pr
+
+SMOLUB]S 8|8pOW Najpierw rozbijamy transmitancję na ułamki proste:
+
+Następnie rysujemy schemat symulacyjny i na jego podstawie tworzymy model stanowy. POLITECHNIKA GDAŃSKA
+
+Postać kanoniczna sterowalna W rezultacie dla transmitancji:
+
+uzyskujemy model stanowy:
+
+POLITECHNIKA GDANSKA a e of 0. 0 A m =Ź O = 0 Postać kanoniczna sterowalna Przedstawiona postać modelu stanowego nosi nazwę postaci kanonicznej sterowalnej. W ogólnym przypadku można ją przedstawić jako:
+
+POLITECHNIKA GDANSKA SMOUBJS 8|8pOJN Postać kanoniczna obserwowalna Inna forma realizacji może być przedstawiona za pomocą tzw. dualnych zmiennych fazowych. Nosi ona nazwę postaci kanonicznej obserwowalnej.
+
+POLITECHNIKA GDANSKA SMOUBJS 8|8pOJN
+
+Stan układu Przykład: napisać równania stanu dla układu RLC przedstawionego na schemacie. Przyjąć że sygnałem wejściowym jest napięcie u(t), a wyjściowym u£(t). Następnie, korzystając z Matlaba, wykreślić trajektorię sygnału wyjściowego, prądu cewki i napięcia na kondensatorze przy założeniu: R=100Q , L=10mH, C=2uF, uc(0+)=5V, iL(0+)=50mA, u(t)=10*1(t)V u(t) |
+
+SMOUBJS 8|8pOJN iL(t) > Ważna uwaga: R » jako zmienne stanu w układach 2 ()=ucft) | RLC wygodnie jest przyjąć napięcia na kondensatorach i prądy cewek
+
+POLITECHNIKA GDANSKA Stan układu y(t) 12 10 5 8 6 4 0.5 1 1.5 2 x,(0=i, () 0.14 0.12 0.1 c = 0.08 0.06 0.04 0 0.5 1 1.5 2 2.5 xz(t=ugft) 12 10 > 8 6 4 0 0.5 1 1.5 2 2.5 t [ms] POLITECHNIKA GDAŃSKA
+
+clear all; close all; clc; A= [0 -1/L; 1/C -1/(R*C)]; B = [1/L ; 0]; Cz [0 1); Ds=0; t=0:0.000001:0.003; x0 = [0.05; 5]; [Y,T,X]=lsim(sys,1l0*ones(size(t)),t,x0); figure; subplot (1,3,1); plot (1000*T,Y); title('y(t)'); ylabel('[V]'); xlabel('t [ms]'); axis([0,2.5,4,12]); subplot(1,3,2); plot(1000*T,X(:,1)); title('x_1(t)=i_(L](t)'); ylabel('[A)'); xlabel('t [ms]'); axis([0,2.5,0.04,0.14)]); subplot (1,3,3); plot(1000*T,X(:,2)); title('x 2(t)=u (C)(t)'); xlabel('t [ms]'); ylabel('[V]'); axis([0,2.5,4,12]); UTONMATYKI SMOUBJ]S 8|8poW Al Stan układu Innym sposobem do uzyskania modelu stanowego będzie napisanie równania różniczkowego oraz skorzystanie z fazowych zmiennych stanu. Dla naszego przykładu będzie to:
+
+SMOUBJS 8|8pOJN Wprowadzamy oznaczenia: x, (£) =u,(t), x1(t)=x,(t), u(t) = u,(t) Wtedy:
+
+Stan układu Jak widzimy uzyskaliśmy inne równania stanu dla tego samego układu
+
+a e of 0 o A m mo O = o)
+
+POLITECHNIKA GDAŃSKA
+
+Transformacja stanu Związki pomiędzy realizacjami =
+
+wzanyii: „pageźć lormua8.png z(i) — „nowy wektor stanu” : OO e e z(t()=P'APz(t)+P Bu(t)
+
+„Nowy” model stanowy: Ą -]
+
+gdzie: B — P"B
+
+C=CP POLITECHNIKA GDANSKA
+
+Transformacja stanu - diagonalizacja W przypadku, gdy A nie ma wielokrotnych wartości własnych można znaleźć takie przekształcenie P, że odpowiadająca mu A jest diagonalna, z wartościami własnymi na głównej przekątnej. Takie przekształcenie nazywamy diagonalizacją. Procedura: 1. Znajdujemy wartości własne macierzy A, czyli pierwiastki równania: SMOUBJS 8|8poJN
+
+2. Znajdujemy wektory własne vi dla każdej wartości własnej A,
+
+3. Tworzymy macierz przekształcenia P z wektorów własnych
+
+POLITECHNIKA GDANSKA Transformacja stanu - diagonalizacja W wyniku przekształcenia uzyskujemy: SMOLUB]S 8|8pOW
+
+figury/k Równania stają się odsprzężone, dana zmienna stanu nie zależy od innej zmiennej stanu. POLITECHNIKA GDANSKA Transformacja stanu - diagonalizacja Przeanalizujmy układ autonomiczny
+
+z O Q 0 o 2 + p mo O = 0
+
+Załóżmy, że wartości własne macierzy A są pojedyncze i dokonajmy jej diagonalizacji zgodnie z procedurą z poprzednich slajdów A = Wtedy uzyskamy:
+
+POLITECHNIKA GDANSKA Transformacja stanu - diagonalizacja A=PAP"
+
+( 4, 3 |
+
+POLITECHNIKA GDAŃSKA a o of (OJ o = 0 = O = o Transformacja stanu - diagonalizacja Jeśli macierz A ma wielokrotne wartości własne, to nie można zastosować przedstawionej procedury diagonalizacyjnej. Wtedy zalecana jest inna forma diagonalizacji: tzw. kanoniczna forma Jordana SMOUBJS 8|8pOJN
+
++
+
+POLITECHNIKA GDANSKA Transformacja stanu - diagonalizacja Klatka Jordana, w przypadku gdyby wartość własna wynosiła —a i była trzykrotna wyglądałaby następująco:
+
+gdzie k,, k, i k,; są współczynnikami z rozbicia transmitancji na ułamki proste POLITECHNIKA GDANSKA
+
+| z =" — + |
+
+Diagonalizacja - Matlab
+
+POLITECHNIKA GDAŃSKA SMOUBJ]S 8|8poW ul x1 2.07e-17 -0.5 x2 1.436 1.436 x3 -1.436 1.436 c= GL x2 yl 2 0.6963 y2 0 0.6963 D = ul uż yl 0 0 y2 0 0 Związek pomiędzy modelem stanowym i transmitancją Powiązanie transmitancji z modelem stanowym (układ MIMO)
+
+SMOUBJS 8|8pOJN
+
+POLITECHNIKA GDANSKA
+
+Stabilność Układ jest stabilny w sensie BIBO (z ang. bounded input, bounded output), jeżeli każdy ograniczony sygnał wejściowy wywołuje ograniczony sygnał wyjściowy AŻ gi LŚ
+
+jeżeli sygnał wejściowy jest ograniczony: |u()|<M = to:
+
+stąd sygnał wyjściowy będzie ograniczony, gdy odpowiedź impulsowa spełni warunek:
+
+POLITECHNIKA GDANSKA SMOUBJS 8|8pOJN Stabilność
+
+Powyższy warunek będzie spełniony, jeśli wszystkie bieguny transmitancji G(s) — a więc miejsca zerowe wielomianu mianownika - będą miały ujemne części rzeczywiste. Wielomian mianownika transmitancji będziemy nazywali wielomianem charakterystycznym układu. Dla modelu danego transmitancją SMOUBJS 8|8pOJN
+
+Równanie charakterystyczne
+
+POLITECHNIKA GDANSKA Stabilność Dla modelu danego równaniem różniczkowym
+
+a o of (OJ o = 0 = O = o
+
+Równanie charakterystyczne
+
+POLITECHNIKA GDAŃSKA Stabilność
+
+Równanie charakterystyczne
+
+POLITECHNIKA GDAŃSKA a o of (OJ o = 0 = O = o
+
+Stabilność Rozważmy typowy schemat układu sterowania ze sprzężeniem zwrotnym: SMOUBJS 8|8pOJN
+
+Totalna (wewnętrzna) stabilność tego układu wymaga, aby wszystkie występujące w nim sygnały były ograniczone, jeśli sygnały wejściowe są ograniczone. Wszystkie występujące w układzie transmitancje muszą więc być stabilne w sensie BIBO. POLITECHNIKA GDANSKA
+
+gury/k7.
+
+Stabilność Przykład: l CES| I Nastąpiło uproszczenie j(S)z———=—— bieguna w p. s=1 — układ S=| s=] śs=l nie jest wewnętrznie zory/k/_page47/_formula1.png stabilny
+
+POLITECHNIKA GDAŃSKA SMOLUB]S 8|8pOW
+
+Stabilność Wyznaczmy transmitancję systemu danego równaniami stanu:
+
+a O of (OJ D = 5 = O = o
+
+Zauważmy: model transmitancyjny w tym przypadku ma rząd niższy niż model stanowy! Dlaczego? Jakie są tego konsekwencje? POLITECHNIKA GDANSKA Stabilność
+
+POLITECHNIKA GDAŃSKA Jdpowiedź skokowa układu wygenerowana v Matlabie
+
+SMOLUB]S 8|8pOW Stabilność Niech dany będzie pewien autonomiczny układ:
+
+Mówimy, że układ ten jest asymptotycznie stabilny, gdy dla dowolnego warunku początkowego zachodzi:
+
+Dokonajmy diagonalizacji
+
+POLITECHNIKA GDANSKA a O of (OJ D = 5 = O = o Stabilność Dla indywidualnej zmiennej stanu zachodzi
+
+SMOUBJS 8|8poJN Jeżeli dla każdej wartości własnej zachodzi warunek:
+
+to wszystkie mody będą dążyły do zera. Zbieżność wektora z(t) pociąga za sobą zbieżność wektora x(t). Warunkiem asymptotycznej stabilności jest to, aby wszystkie wartości własne macierzy A leżały w lewej półpłaszczyźnie UWAGA: Warunkiem wystarczającym BIBO stabilności jest stabilność asymptotyczna. Że stabilności BIBO nie wynika stabilność asymptotyczna. Al POLITECHNIKA GDANSKA
+
+Stabilność Jak widzimy, wartości własne macierzy A wynoszą 1 i -2 czyli układ nie jest stabilny asymptotycznie. Po diagonalizacji widzimy, że mod związany z wartością własną 1 nie jest podłączony do wyjścia więc nawet kiedy zmienna stanu dozna „wybuchu”, to na wyjściu nie zobaczymy jego efektu. SMOUBJS 8|8pOJN W przypadku modelu transmitancyjnego możemy uzyskać postać:
+
+Jak widzimy, z postaci tej wynika, że w relacji wejście-wyjście obiekt jest stabilny (BIBO stabilny). Stąd możemy wyciągnąć wniosek, że model stanowy ujawnia nam cechy układu, które mogą zostać niewykryte w oparciu o analizę modelu transmitancyjnego. POLITECHNIKA GDANSKA Sterowalność Rozważmy liniowy układ dynamiczny opisany równaniami stanu
+
+SMOUBJS 8|8pOJN Stan x, układu nazywa się sterowalnym, jeżeli dla każdego skończonego czasu ż,>0 istnieje sterowanie u(t), £<4, przeprowadzające ten stan ze stanu początkowego x(0)= x, do stanu x(£,)=0. Układ nazywa się całkowicie sterowalnym, jeżeli każdy stan tego układu jest sterowalny. Konsekwencją sterowalności jest to, że dla układu całkowicie sterowalnego, dla dowolnych dwóch stanów x, i x, istnieje sterowanie u(t), które przeprowadzi stan układu ze stanu początkowego x(0)=x, do stanu x(£,)=X;,. POLITECHNIKA GDANSKA
+
+Sterowalność Układ n-tego rzędu opisany równaniami:
+
+jest całkowicie sterowalny, gdy jego macierz sterowalności Kalmana:
+
+ma pełny rząd tzn.:
+
+Wynika stąd, że aby układ był całkowicie sterowalny, w macierzy P. musi się znaleźć n niezależnych kolumn. POLITECHNIKA GDANSKA SMOUBJS 8|8pOJN
+
+Sterowalność Przykład: Sprawdzić sterowalność układu: SMOLUB]S 8|8pOW
+
+POLITECHNIKA GDAŃSKA Sterowalność Przykład: Sprawdzić sterowalność układu z wykorzystaniem pakietu Matlab:
+
+SMOUBJ]S 8|8poW
+
+% wyznaczenie macierzy sterowalności Pc=ctrb (A,B) % wyznaczenie rzędu % macierzy sterowalności rank (PC) rząd macierzy sterowalności wynosi 3 więc układ jest sterowalny POLITECHNIKA GDANSKA Sterowalność Przykład: Sprawdzić sterowalność układu danego w postaci kanonicznej sterowalnej: SMOLUB]S 8|8pOW
+
+Wynik: Nzory/k7_page62_formula3.png Wniosek: układ dany w postaci kanonicznej sterowalnej jest zawsze sterowalny POLITECHNIKA GDANSKA Sterowalność Trajektoria stanu w odpowiedzi na zadane pobudzenie dana jest wzorem:
+
+SMOUBJS 8|8pOJN Sygnał sterujący, przeprowadzający stan układu od wartości początkowej x(0) do wartości końcowej x(t,)=x, można wyznaczyć następująco:
+
+Gdzie W _(t) jest nazywany gramianem sterowalności i dany jest wzorem:
+
+POLITECHNIKA GDANSKA Obserwowalność Rozważmy liniowy układ dynamiczny opisany równaniami stanu
+
+SMOUBJS 8|8pOJN Stan x(0) układu nazywa się obserwowalnym, jeżeli można go określić znając przebieg sygnału wyjściowego y(t) oraz sterującego u(t) w przedziale (O, £,) dla każdego £,>0 Układ nazywa się całkowicie obserwowalnym jeżeli każdy stan tego układu jest obserwowalny. POLITECHNIKA GDANSKA Obserwowalność Układ n-tego rzędu opisany równaniami:
+
+a e of 0. 0 A m =Ź O = 0
+
+VVyllika >blqu, ZE ady UNMdU yt LAIROWILIE DLICTOWdlIly, W IIIALICIZLY E HiuSl się znaleźć n niezależnych wierszy. POLITECHNIKA GDANSKA
+
+Obserwowalność Przykład: 3 Sprawdzić obserwowalność układu danego w postaci kanonicznej 3 ckaszsaznsalszh a [02 wj = je ę
+
+Wynik: Nzory/k7_page67_formula2.png Wniosek: układ dany w postaci kanonicznej obserwowalnej jest zawsze obserwowe POLITECHNIKA GDANSKA Kompensacja zer i biegunów transmitancji a sterowalność/obserwowalność Przykład:
+
+Jeśli b1=0 (lub c1=0) to mod związany z wartością własną 1 staje się niesterowalny (nieobserwowalny). Podobnie dzieje się z modem związanym z wartością własną -2 gdy b2=0 (lub c2=0). Przykład ten pokazuje, że utrata sterowalności bądź obserwowalności prowadzi do uproszczeń w transmitancji i odwrotnie. POLITECHNIKA GDANSKA SMOUBJS 8|8poJN Transformacja modelu stanowego do postaci kanonicznej sterowalnej Zakładamy, że układ dany modelem stanowym posiada jedno wejście oraz, że jest on sterowalny:
+
+W tym przypadku macierz sterowalności P. będzie kwadratowa oraz odwracalna (jej wyznacznik będzie różny od zera). Macierz transformacji będzie dana wzorem: SMOUBJS 8|8poJN
+
+POLITECHNIKA GDAŃSKA Transformacja modelu stan kanonicznej sterowalnej Dokonując przekształcenia:
+
+Nzory/k/_page70_formula2.png
+
+Uzyskamy model stanowy w post
+
+POLITECHNIKA GDANSKA
+
+Pozycjonowanie biegunów w oparciu o sprzężenie od stanu Niech dany będzie obiekt opisany równaniami:
+
+utwórzmy sygnał wejściowy obiektu zgodnie z przepisem: u(t) =-Kx(ż) +r(t) gdzie r(t) to sygnał sterujący natomiast K jest macierzą wzmocnień. W rezultacie uzyskamy równanie opisujące działanie układu ze sprzężeniem: SMOUBJS 8|8poJN
+
+oraz jego wielomian charakterystyczny:
+
+Uwaga: dla obiektu n-tego rzędu o m wejściach macierz K będzie miała m wierszy i n kolumn. Dla układu o jednym wejściu macierz K będzie wektorem wierszowym lementach. Al POLITECHNIKA GDANSKA
+
+lyury/K/_pdye/So_iiyguie i.png
+
+Pozycjonowanie biegunów w oparciu o sprzężenie od stanu Wyznaczanie macierzy wzmocnień dla obiektu o jednym wejściu opisanego modelem stanowym w postaci kanonicznej sterowalnej. Jeśli obiekt dany jest w postaci kanonicznej sterowalnej: SMOUBJS 8|8poJN
+
+oraz wymagany wielomian charakterystyczny układu ze sprzężeniem:
+
+to wektor wzmocnień sprzężenia można wyznaczyć ze wzoru:
+
+POLITECHNIKA GDANSKA Pozycjonowanie biegunów w oparciu o sprzężenie od stanu Transmitancja obiektu:
+
+Transmitancja układu ze sprzężeniem:
+
+Model stanowy układu ze sprzężeniem:
+
+POLITECHNIKA GDAŃSKA a O of (OJ D = 5 = O = o w HATECAR 94/51TEGOW p BGBAUTONATYKH Pozycjonowanie biegunów w oparciu o sprzężenie od stanu Przykład: Dla danego układu określić wartości wzmocnień w układzie ze sprzężeniem od stanu, zapewniające bieguny -4, -4 i -5. Wyznaczyć transmitancję układu ze sprzężeniem oraz narysować jego schemat SMOUBJS 8|8poJN
+
+Rozwiązanie:
+
+Odp.
+
+POLITECHNIKA GDANSKA
+
+w HATECAR 94/51TEGOW p BGBAUTONATYKH Pozycjonowanie biegunów w oparciu o sprzężenie od stanu Przykład: Sprawdzić, dla jakich wartości b, i b, możliwe jest dowolne pozycjonowanie biegunów za pomocą sprzężenia od stanu dla danego układu SMOUBJS 8|8poJN
+
+Wielomian charakterystyczny A-BK:
+
+Żądany wielomian charakterystyczny:
+
+POLITECHNIKA GDANSKA
+
+w MATEOAR 9/5 1EMOWG © GAUTONATYK Pozycjonowanie biegunów w oparciu o sprzężenie od stanu Przykład: Dla danego układu zaprojektować układ sterowania ze sprzężeniem od stanu zapewniający bieguny s1=-1 i s2=-2 SMOUBJS 8|8poJN
+
+Rozwiązanie 1. Sprawdzamy sterowalność pary A, B
+
+2. Obliczamy wyznacznik macierzy (sl-A+BK) jako funkcję nieznanych współczynników wzmocnienia (elementów macierzy K)
+
+POLITECHNIKA GDANSKA Pozycjonowanie biegunów w oparciu o sprzężenie od stanu 3. Przyrównujemy współczynniki uzyskanego wyznacznika do współczynników żądanego wielomianu charakterystycznego. W rezultacie uzyskujemy układ równań, z którego wyznaczamy elementy macierzy wzmocnień.
+
+SMOUBJS 8|8pOJN
+
+Odpowiedź:
+
+POLITECHNIKA GDAŃSKA
+
+Pozycjonowanie biegunów w oparciu o sprzężenie od stanu Pozycjonowanie biegunów metodą Ackermana (tylko układy z jednym wejściem) Jeśli układ jest sterowalny, a żądany wielomian charakterystyczny układu ze sprzężeniem jest postaci:
+
+SMOUBJS 8|8poJN to wektor wzmocnień zapewniający uzyskanie wielomianu żądanego możemy obliczyć ze wzoru:
+
+gdzie:
+
+Dla układów sterowalnych o jednym wejściu macierz sterowalności jest kwadratowa, a jej wyznacznik jest niezerowy więc możemy skorzystać z powyższego wzoru POLITECHNIKA GDAŃSKA w HATECAR 94/51TEGOW p BGBAUTONATYKH Pozycjonowanie biegunów w oparciu o sprzężenie od stanu Przykład
+
+.% y <= 44496 Y 1 ki MAL IMŻE I 1ELLAL nz 44- Y 114441 aoig W saisiraka ks 1 ILAL Js aw J;y* ŻE IMEI 1 ILAŁ MI LAŁ obliczyć wartość odpowiedzi skokowej w stanie ustalonym. -
+
+Ra Al Pozycjonowanie biegunów w oparciu o sprzężenie od stanu
+
+Schemat POLITECHNIKA GDANSKA Ampitude © © $ R © " Time (seconds) | |mmm GKSA SMOLUB]S 8|8pOW Pozycjonowanie biegunów w oparciu o sprzężenie od stanu Przykład (jak poprzedni, Matlab) Korzystając z Matlaba wyznaczyć wektor wzmocnień od stanu zapewniający
+
+SMOUBJS 8|8pOJN Wyznaczyć transmitancię uzyskanego układu oraz wykreślić odpowiedź
+
+POLITECHNIKA GDANSKA
+
+Pozycjonowanie biegunów w oparciu o sprzężenie od stanu Przykład Dla danego obiektu inercyjnego wyznaczyć wzmocnienie zapewniające dziesięciokrotne zmniejszenie stałej czasowej
+
+SMOUBJS 8|8poJN Rozwiązanie: Transmitancja obiektu wynosi:
+
+czyli obiekt ma biegun w punkcie s=-0,5, któremu odpowiada stała czasowa 2sek. Żądamy, aby układ był dziesięciokrotnie szybszy więc stała czasowa układu po objęciu sprzężeniem powinna wynieść 0,2sek co odpowiada wielomianowi charakterystycznemu: A, =s+5
+
+POLITECHNIKA GDANSKA Pozycjonowanie biegunów w oparciu o sprzężenie od stanu Schemat: 2
+
+SMOUBJS 8|8pOJN Transmitancia i odnoawiedzi skokowe:
+
+Układ ze sprzężeniem
+
+) YU), POLITECHNIKA GDANSKA
+
+Pozycjonowanie biegunów — problem nadążania Wyznaczmy trajektorię stanu układu
+
+W stanie ustalonym, przy stałym sygnale zadanym r(t)=r.. mamy:
+
+Stąd, aby dla stałej wartości zadanej uchyb był zerowy musi być spełniony warunek:
+
+POLITECHNIKA GDANSKA SMOUBJS 8|8pOJN
+
+Pozycjonowanie biegunów — problem nadążania ŚREĘ Aby zapewnić zerowy uchyb położeniowy, do układu ze sprzężeniem od stanu należy dodać dodatkowy układ całkujący. W przypadku układu SISO uzyskamy układ sterowania o następującej strukturze: SMOUBJS 8|8pOJN
+
+Wykorzystując koncepcję wprowadzenia dodatkowego integratora wprowadzamy nową zmienną stanu x;(£)
+
+A
+
+POLITECHNIKA GDANSKA
+
+— - — — . —
+
+Problem śledzenia wartości zadanej Dla układu pokazanego na schemacie zaprojektować układ ze sprzężeniem od stanu zapewniający zerowy uchyb ustalony odpowiedzi skokowej. Wymagane bieguny regulatora s,,,=-5. Podać transmitancję układu zamkniętego. Korzystając z Matlaba wykreślić odpowiedź skokową układu. Zbudować schemat symulacyjny układu zamkniętego w Simulinku i wykreślić jego odpowiedź na sygnał prostokątny o amplitudzie 1V i okresie 5sek. Dane układu: R,=20Q, R,=4Q, C=0.1F; L=0.5H. SMOUBJS 8|8pOJN
+
+POLITECHNIKA GDANSKA Problem śledzenia wartości zadanej Roz
+
+a o of O D = 0 = O = o
+
+Sprawdzamy możliwość zastosowania sprzężenia U „(s 20 G(s )=—"— Ua(5) )_ U,(s) s*+6,5s+30 Wyznaczone
+
+rank(P.)=2 Warunki spełnione! POLITECHNIKA GDANSKA
+
+Problem śledzenia wartości zadanej Model stanowy po uwzględnieniu sprzężenia:
+
+Wielomian charakterystyczny:
+
+Wielomian charakterystyczny żądany:
+
+Po porównaniu współczynników wielomianów i rozwiązaniu otrzymanego układu równań uzyskujemy: k, =4,25[V / 4]
+
+k, =—6,25[V /V] POLITECHNIKA GDANSKA z O Q 0 o 2 + p mo O = 0 | fi k7 106 fi 2.
+
+Obserwator stanu i jego zastosowanie Zakładamy, że mamy parametry modelu(A, B, C, D). Znajomość parametrów umożliwia symulowanie obiektu, zatem obserwator możemy utożsamić z układem symulującym obiekt. Symulacja ma przebiegać w ten sposób, aby stan obiektu i modelu były identyczne. Warunki początkowe powinny być takie same. SMOLUB]S 8|8pOW
+
+Poprawka korygująca błąd gdy nie ma takich samych warunków początkowych Ra Al zory/k/_page112_formula1.png
+
+—_/ Aa A =
+
+PR R m m ca a smd m ao mdłsamamac Z mmm mmm Km m mm m m m a mm >= fiouirv/k7 naae114 fianira1 nna
+
+punkcie S;ą = —2 + ZJ. Sprawdź, czy jest rozwiązanie.
+
+POLITECHNIKA GDAŃSKA — Obserwator stanu i jego zastosowanie
+
+który chcemy uzyskać
+
+A*- macierz A nowego obserwatora L — wzmocnienie układu
+
+POLITECHNIKA GDANSKA SMOLUB]S 8|8pOW
+
+Obserwator stanu i jego zastosowanie Przykład (jak poprzedni, Matlab) Korzystając z Matlaba wyznaczyć wektor wzmocnień obserwatora stanu ga - = * 12 SMOLUB]S 8|8pOW
+
+POLITECHNIKA GDAŃSKA
+
+Obserwator stanu i jego zastosowanie
+
+POLITECHNIKA GDANSKA a o of (OJ D = 0 = O = o
+
+fiaurv/k/ Daae123 fiaure2.0na
+
+Obserwator stanu i jego zastosowanie Wynik sterowania ze sprzężeniem od obserwowanego stanu dla układu dwucałkującego. Warunki początkowe obiektu [1, 0]; warunki początkowe obserwatora [0,0] m DUEJS 8|j8poW figury/k/_page125_figure1.pn
+
+plik: dwucalk obserwator regulator.slx POLITECHNIKA GDANSKA
+
+Obserwator stanu i jego zastosowanie Przykład Dla danego równaniem różniczkowym obiektu zaprojektować regulator ze sprzężeniem od obserwowanego stanu. Biegun układu z regulatorem S,=-2, biegun obserwatora s„=-5. Narysować schemat otrzymanego układu i wyznaczyć jego transmitancję. SMOUBJS 8|8poJN
+
+Macierz sterowalności: Pc=[-1] <-układ sterowalny Macierz obserwowalności: Po=[3] <-układ obserwowalny
+
+POLITECHNIKA GDAŃSKA firnuiru/u7 nańa100 finiira1 nnn
+
+Problem śledzenia wartości zadanej
+
+vvjHMiuUvvuuLiiliy liuwvvy vvuiLUI ULUIIU UMIIIIIUVVYGI ry vv i IAMDtyY|PSUJĄWY JHUDUL. tałym, wymaganym położeniem (wartości
+
+u(t) =-Kz*(t) z*'(t) = Az(t) + Bu(t) + L(y(t) - Cz(t) — x,) POLITECHNIKA Hf GDANSKA
+
+Obserwator stanu i jego zastosowanie Obserwator dla układu dwóch zbiorników
+
+Żądany wielomian charakterystyczny obserwatora:
+
+POLITECHNIKA GDANSKA a o of (OJ D = 0 = O = o
+
+ry/k/_page136_formula1.png y/k/_page136_formula2.png k=2N/m b=0,5N /(m/ s) c=2N/(m/s) POLITECHNIKA GDAŃSKA — Obserwator stanu i jego zastosowanie Rozwiązanie: SMOLUB]S 8|8pOW
+
+POLITECHNIKA GDAŃSKA Obserwator stanu i jego zastosowanie
+
+POLITECHNIKA GDAŃSKA a e of 0. o A m =Ź O = 0 Obserwator stanu i jego zastosowanie Wielomian charakterystyczny obserwatora
+
+Żądany wielomian charakterystyczny obserwatora
+
+Po porównaniu współczynników wielomianów i rozwiązaniu układu równań uzyskamy wektor wzmocnień obserwatora:
+
+POLITECHNIKA GDANSKA SMOUBJS 8|8pOJN
+
+ng
+
+Histereza W przypadku zależności z histerezą mamy do czynienia z niejednoznacznością zależności wyjścia od sygnału wejściowego. Sygnał wyjściowy w chwili t zależy nie tylko od sygnału wejściowego w chwili t ale również od charakteru zmian tego sygnału w okresie poprzedzającym. Dlatego też ściśle rzecz biorąc charakterystyki takich elementów nieliniowych nie są funkcjami lecz funkcjonałami (czyli „funkcjami od funkcji”)
+
+POLITECHNIKA GDANSKA eMmoluljsiu ApEłĄN) Histereza Dowodzi się że człon nieliniowy o charakterystyce niejednoznacznej można zastąpić równoważnym mu układem nieliniowym w którym człon o charakterystyce jednoznacznej obejmuje pętla bezinercyjnego sprzężenia zwrotnego figury/k7
+
+POLITECHNIKA GDANSKA
+
+Założenia Sygnał na wyjściu układu nielinioweg
+
+POLITECHNIKA GDAŃSKA figure2.png |--U Definicja Funkcją opisującą statycznego członu nieliniowego nazywać będziemy wielkość J(M) określaną jako stosunek amplitudy zespolonej pierwszej harmonicznej odpowiedzi u(t) wymuszonej sygnałem sinusoidalnym e(t)= M sin (wt) w stanie ustalonym, do wartości zespolonej tego wymuszenia
+
+eoblnsido eloy4un4
+
+Funkcja opisująca jest więc odpowiednikiem transmitancji widmowej członu liniowego. Zauważmy że w odróżnieniu od transmitancji widmowej członu liniowego funkcja opisująca układu nieliniowego nie zależy od pulsacji wymuszenia lecz zależy od jego amplitudy eż A[ GDAŃSKA
+
+Przykład 1
+
+WEJŚCIE : POLITECHNIKA GDAŃSKA D ni = = > Q © |©) jc 0) [= Aa O © Przykład 2 Wyznacz funkcję opisującą układu o następującej charakterystyce f(e)
+
+TI = = = O. © (e, k-2 7 i © Q W
+
+POLITECHNIKA GDAŃSKA Przykład 2 Wyznacz funkcję opisującą układu o następującej charakterystyce „ fle)
+
+POLITECHNIKA GDAŃSKA mi = = = Q. o) o = 7 i cy Q W » AJ
+
+Zadania — rysowanie wykresu funkcji opisującej Zadanie: Wykreślić funkcje J(M) i 1/J(M) dla przekaźnika ze strefą nieczułości
+
+POLITECHNIKA GDANSKA mi = = = Q. o) o = 7 i cy Q W Zadania — rysowanie wykres'' kasza malawi waxi Wykresy dla B=1 i a=1 e-1 R!
+
+POLITECHNIKA GDANSKA Zadania — rysowanie wykresu funkcji opisu Skrypt matlabowy — rysowanie wvkresów
+
+POLITECHNIKA L"LI GDANSKA Zadania — rysowanie wykresu funkcji opisującej Skrypt matlabowy — rozwiązanie „symhaliczne” eoblnsido eloy4un4
+
+ans = Xfrac(44, BI, a”2)(M*44, Xpiv, Msqrt(l - Nfrac(a*2])[M*2))) - Xfrac(f44, BV, Nsqrt(l - Nfracfa*2)(M*2)))1M*24, Xpi] POLITECHNIKA GDAŃSKA ;8_figure1.pn
+
+TEODORA WSTEMOW Wykresy funkcji opisujących - wzmacniacz ze strefą nieczułości Zadanie: Korzystając z dostępnego oprogramowania wykreślić funkcje J(M) i 1/J(M) wzmacniacza ze strefą nieczułości. Wyznaczyć wartości funkcji w nieskończoności i dla M=a
+
+eoblnsido eloy4un4
+
+wzory/k/_page169_formula2. POLITECHNIKA GDANSKA Wykresy funkcji opisujący " figury/k/_page170_figure1 POLITECHNIKA GDANSKA
+
+Parametry cyklu granicznego Zadanie Metodą funkcji opisującej określić czy w układzie wystąpią drgania oraz określić ich amplitude i pulsację Y(s)
+
+Jim)=ś$= aM
+
+POLITECHNIKA GDANSKA eoblnsido eloy4un4 AJ Parametry cyklu granicznego Zauważmy że w układzie wystąpił cykl graniczny o amplitudzie 8B/r i pulsacji w,=1. Na wyjściu układu nieliniowego wystąpiła fala prostokątna o amplitudzie B i tej samej pulsacji. O dokładności metody funkcji opisującej decyduje człon liniowy. Metoda jest tym dokładniejsza im bardziej ttumione są wyższe harmoniczne. zej=jlacJ(e(oR=JOY ILE W rozważanym przypadku 2 harmoniczna układu jest zerowa więc sprawdzimy wzmocnienie układu dla 3 harmonicznej
+
+Zatem 3 harmoniczna wzmacniana jest 15 razy słabiej niż pulsacja podstawowa POLITECHNIKA GDANSKA Zadania - wyznaczanie parametrów cyklu granicznego Zadanie: Metodą funkcji opisującej sprawdzić występowanie drgań w układzie pokazanym na schemacie. Jeśli drgania wystąpią określić ich amplitudę i pulsację. Wykonać symulacje układu w Simulinku. eoblnsido eloy4un4
+
+Rozwiązanie: Wyznaczamy przebieg funkcji -1/J(M) i badamy punkt jej przecięcia z funkcją G(jw) na płaszczyźnie zespolonej
+
+ŚW z |Sf POLITECHNIKA i | GDANSKA Zadanie - wyznaczanie parametrów cyklu granicznego
+
+ni — = e) Q. © |©) D, 0) (>| Aa O ©
+
+a: "Al Zadanie - wyznaczanie parametrów cyklu granicznego Rozwiązanie w Simulinku dla a=1 i B=Z
+
+eoblnsido eloy4un4
+
+POLITECHNIKA 3 a | GDAŃSKA Zadania - wyznaczanie parametrów cyklu granicznego | mt
+
+| l-=-|| RI "Al Zadania - wyznaczanie parametrów cyklu granicznego Zadanie: Metodą funkcji opisującej sprawdzić występowanie drgań w układzie pokazanym na schemacie. Jeśli drgania wystąpią określić ich amplitudę i pulsację. Wykonać symulacje układu w Simulinku. eoblnsido eloy4un4
+
+Rozwiązanie: Wyznaczamy przebieg funkcji -1/J(M) i badamy punkt jej przecięcia z funkcją G(jw) na płaszczyźnie zespolonej.
+
+Ra * Al Zadanie - wyznaczanie parametrów cyklu granicznego Jak widzimy gdy wartość M maleje punkt roboczy nrzacinm/a cia na zawnątrz wykresu Nyquista co powoduje nplitudy — układ jest stabilny. 'w ( M<1) żaden sygnał nie przechodzi wy i układ jest stabilny. Dla nieco v wzmocnienie jest małe i układ jest la większych sygnałów wzmocnienie fig taje być stabilny. Jeżeli k <0,5 to id zawsze będzie stabilny
+
+eoblnsido eloy4un4 .page 182_figure1.png IE Al Zadanie - wyznaczanie parametrów cyklu granicznego Di Przeprowadźmy symulacje układu dla k=2
+
+eoblnsido eloy4un4
+
+POLITECHNIKA GDAŃSKA Zadanie - wyznaczanie parametrów cyklu granicznego Wpływ wartości sygnału zadającego TI = = = O. © (e, k-2 7 i © Q W
+
+Rozważany układ, w zależności od wartości zmiany sygnału zadającego może się zdestabilizować! SB « AJ GDAŃSKA Zadanie - wyznaczanie parametrów cyklu granicznego Minbuur warunków naczatkoawuch eoblnsido eloy4un4
+
+Rozważany układ, w zależności od warunków początkowych może być stabilny lub niestabilny >OLITECHNIKA 3 s | GDANSKA Zadanie - wyznaczanie parametrów cyklu granicznego Wpływ szybkości zmian sygnału zadającego eoblnsido eloy4un4
+
+Rozważany układ, w zależności od szybkości zmian sygnału zadającego może być stabilny lub niestabilny POLITECHNIKA i | GDANSKA
+
+Projektowanie w oparciu o funkcję opisującą Zastosujmy korektor proporcjonalny:
+
+Dla układu bez korektora:
+
+Dla układu z korektorem:
+
+POLITECHNIKA GDANSKA 1 = = = O. o) o = 7 i cy Q W Projektowanie w oparciu o funk Załóżmy, że chcemy uzyskać dwukrotny zapas Ł
+
+POLITECHNIKA GDANSKA
+
+Projektowanie w oparciu o funkcję opisującą Symulacje układu z korektorem — układ stabilny niezależnie od warunków początkowych oraz wartości i szybkości zmiany sygnału zadającego.
+
+POLITECHNIKA SKA eoblnsido eloy4un4 " AJ Noc GRS5SA © BRUTONATYH Dodatek A— wykreślanie hodografu w arkuszu kalkulacyjnym Zadanie: Dla układu inercyjnego z opóźnieniem transportowym wykreślić charakterystykę Nyquista (hodograf*). Założyć k=10, T=3; t=0,5
+
+W pierwszym kroku transmitancję widmową rozbijamy na część rzeczywistą i urojoną: eoblnsido eloy4un4
+
+*hodograf [gr. hodós 'droga', graphó 'piszę'], krzywa zakreślana przez koniec wektora (odkładanego od tego samego punktu) pewnej wielkości wektorowej zmieniającej się wraz z parametrem t (np. czasem, pulsacją); SB = A[ GDAŃSKA Dodatek A— wykreślanie hodografu w arkuszu kalkulacyjnym Następnie w wybranych komórkach arkusza definiujemy parametry układu oraz definiujemy wartości w w wybranej kolumnie. W kolejnym kroku wpisujemy formuły na P oraz Q, „przeciągamy” formuły dla wcześniej zdefiniowanych pulsacji i wstawiamy wykres uzyskując żądany hodograf. eoblnsido eloy4un4
+
+B9=($B$3/PIERWIASTEK(POTĘGA($B$4*A9;2)+1))*COS(A9*$B$5+ATAN($B$4*A9)) C9=-($B$3/PIERWIASTEK(POTĘGA($B$4*A9;2)+1))*SIN(A9*$B$5+ATAN($B$4*A9)) POLITECHNIKA GDANSKA Dodatek B- wyznaczanie parametrów cyklu granicznego z wykorzystaniem arkusza kalkulacyjnego Zadanie: Dla układu pokazanego na schemacie, korzystając z Excela, wyznaczyć parametry cyklu
+
+Rozwiązanie: Wyznaczamy przebieg funkcji -1/J(M) i badamy punkt jej przecięcia z funkcją G(jw) na płaszczyźnie zespolonej
+
+>OLITECHNIKA - i | GDAŃSKA Dodatek B- wyznaczanie parametrów cyklu granicznego z wykorzystaniem arkusza kalkulacyjnego
+
+Następnie w Excelu definiujemy pulsację (kolumna A) oraz amplitudę (kolumna M) oraz ustalamy formuły dla P(w), Q(w), Re[-1/J(M)] oraz Im0-1/J(M)] 1 = = = O. o) o = 7 i cy Q W
+
+POLITECHNIKA GDANSKA
+
+ig
+
+,7_figure1.png Płaszczyzna fazowa Przestrzeń fazowa — jest to n wymiarowa przestrzeń której elementami są wektory o składowych będącymi pochodnymi względem czasu pierwszej składowej. Metoda przestrzeni fazowej jest metodą geometryczną. Każdemu stanowi odpowiada punkt w tej przestrzeni. W przypadku układów 2 rzędu metoda ta jest wygodna gdyż trajektorie fazowe wykreślamy na płaszczyźnie. Zakładamy że model systemu jest w następującej postaci: [am0ZEJ] AuzAZOZSEŁd Epo]SIN
+
+Dokonajmy przekształcenia:
+
+POLITECHNIKA GDANSKA
+
+'_figure1.png
+
+Trajektoria fazowa — przykład 1 (liniowy) Charakter przebiegu wyjściowego (niegasnące drgania sinusoidalne) wynika bezpośrednio z położenia biegunów transmitancji rozważanego obiektu — znajdują się one na osi urojonej.
+
+[am0ZEJ] AuzAZOZSEŁd Epo]SIN POLITECHNIKA GDANSKA Trajektoria fazowa — przykład 2 (liniowy) Wykreślić przebieg trajektorii fazowej dla masy zawieszonej na sprężynie. Założyć m=l1kg, k=1N/m oraz siłę oporu ruchu proporcjonalną do prędkości b=0,4N/(m/s) | zerowe pobudzenie /(1)=0N. Jako zmienne stanu przyjąć odchylenie od punktu równowagi (x,) i prędkość (x,). Warunki początkowe: x, =2m, x,=0m/S.
+
+[A ) b /k [am0ZEJ] AuzAZOZSEŁd Epo]SIN X 14)
+
+POLITECHNIKA GDANSKA Trajektoria fazowa — przykład 2 (liniowy Trajektorie możemy wygenerować korzystając :
+
+POLITECHNIKA GDANSKA
+
+Trajektoria fazowa — przykład ? (liniawv?) *. tomm orca Sprawdźmy jeszcze dwa przy! układ niestabilny b=-0,2
+
+figury Trajektoria fazowa — przykład 3 (liniowy, stałe pobudzenie)
+
+Załóżmy, że pobudzenie jest stałowartościowe. Rozważmy dwa przypadki (B>0): " u(t) =-B
+
+Wartości stałych C, i C, wyznaczymy znając warunki początkowe >OLITECHNIKA i | GDAŃSKA Trajektoria fazowa — przykład 3 (liniowy, stałe pobudzenie) Na rysunku przedstawiono przebieg trajektorii fazowych dla różnych warunków początkowych i pobudzenia dodatniego (u(t)=/, krzywe niebieskie) oraz ujemnego (u(t)=-/, krzywe czerwone)
+
+Trajektoria fazowa — przykład 4 (układ z przekaźnikiem) Narysować trajektorie fazowe dla układu pokazanego na schemacie (8=/, r()=0, x,(0)=2, x>(t)=0). Wykreślić przebieg sygnału wyjściowego układu.
+
+[am0ZEJ] AuzAZOZSEŁd Epo]SIN Rozwiązanie: Zauważmy, że dla t=0* ruch układu będzie opisywała trajektoria (parabola) typu drugiego (e(0)<0 więc u(t)<0). Po uwzględnieniu warunku początkowego trajektoria ta dana jest równaniem: zory/k/_page208_formula1.png Przełączenie nastąpi, gdy uchyb będzie zerowy (wtedy x,=0, x,=-2 ). POLITECHNIKA GDANSKA rzory/k/_page209_formula1.png
+
+Trajektoria fazowa — przykład 5a (sprzężenie prędkościowe) Narysować trajektorie fazowe dla układu pokazanego na schemacie (8=/, r()=0, x,(0)=-10, x>(t)=0, a=0,5). Wykreślić przebieg sygnału wyjściowego układu.
+
+[am0ZEJ] AuzAZOZSEŁd Epo]SIN Uwaga: tego typu dodatkowe sprzężenie nosi nazwę sprzężenia prędkościowego (jeśli sygnał x,(t) ma sens położenia, to na wyjściu bloku o transmitancji as uzyskamy sygnał ax>(t) proporcjonalny do prędkości). POLITECHNIKA GDANSKA * Trajektoria fazowa — przykład 5a (sprzężenie prędkościowe) HATEOAR 94/5TEROWU AUTONATYKH Zauważmy, że układ możemy również przedstawić w takiej postaci:
+
+[am0ZEJ] AuzAZOZSEŁd Epo]SIN Rozwiązanie: Zmieniły się warunki przełączenia w porównaniu do poprzedniego przykładu:
+
+Równania parabol pozostają takie same jak poprzednio, zmieniają się jedynie wartości stałych oraz punkty przełączeń. POLITECHNIKA GDANSKA *.. Trajektoria fazowa — przykład 5a (sprzeżenie bredkościowe) mi
+
+_figury/k/_page213_figure1.pr 73 POLITECHNIKA GDANSKA +ORAR Y/51EMOU IeTr"Y =S||
+
+Trajektoria fazowa — ruch poślizgowy Rozważmy małe nachylenie linii przełączeń. Stan układu osiągnąwszy punkt P2 na linii przełączeń nie może jej opuścić. Punkt P2 jest to taki punkt w którym nachylenie trajektorii typu 2 jest równe nachyleniu linii przełączeń, Punkt P2 oznacza stan nierównowagi. Linia przełączeń nabiera teraz cech trajektorii stanu. Aby przeanalizować zachowanie układu, załóżmy że przekaźnik nie jest idealny, lecz występuje w nim pewna bardzo mała histereza. W takim przypadku będziemy mieli do czynienia z dwoma liniami przełączeń. Ruch poślizgowy — są to drgania o dużej częstotliwości i bardzo małej amplitudzie. Częstotliwość drgań rośnie wraz ze zmniejszaniem się histerezy a amplituda maleje [am0ZEJ] AuzAZOZSEŁd Epo]SIN
+
+POLITECHNIKA GDANSKA Trajektoria fazowa - przykład "' © " —" Wykonać symulacje dla tego samec figury/k/_page216_figure1 POLITECHNIKA GDANSKA
+
+Trajektoria fazowa — przykład 5c (ruch poślizgowy) Wykonać symulacje dla tego samego układu zakładając a=2.5 i szerokość histarazv nrzakaźnika 05
+
+[am0ZEJ] AuzAZOZSEŁd Epo]SIN POLITECHNIKA GDANSKA Uchyb w ruchu poślizgowym Analiza uchybu w ruchu poślizgowym vzory/k7_page218_formula1.png Z równania linii przełączeń mamy:
+
+[am0ZEJ] AuzAZOZSEŁd Epo]SIN vzory/k7_page218_formula3.png Jak widzimy uchyb aperiodycznie maleje do 0 w ruchu poślizgowym. Zauważmy że w ruchu poślizgowym na wejściu członu nieliniowego mamy 0 a na wyjściu mamy drgania o amplitudzie „B”. Z tego wynika że układ nieliniowy działa jak wzmacniacz o nieskończonym wzmocnieniu. POLITECHNIKA GDANSKA Trajektoria fazowa — przykład 6 (ruch poślizgowy) Znaleźć obszar z którego po dojściu do linii komutacji stan układu będzie poruszał się wzdłuż tej linii (3=/, a=2)
+
+a | [ma |©) © jeb) g jeb) [02 N © IN n< IN = b bana) Jab) N |©) = CJ AWB 9 | >OLITECHNIKA i | GDAŃSKA Trajektoria fazowa — przykład 7 (ruch poślizgowy) Wyznaczyć transmitancję zastępczą układu pokazanego na schemacie przy założeniu, że działa on w „trybie” ruchu poślizgowego
+
+[am0ZEJ] AuzAZOZSEŁd Epo]SIN Odpowiedź:
+
+Wniosek: W przykładzie w ruchu transmitancja układu zamkniętego nie zależy od parametrów obiektu POLITECHNIKA GDANSKA
+
+Trajektoria fazowa — przykład 8 (ruch poślizgowy) Przeanalizować działanie układu pokazanego na rysunku. Wykonać symulacje dla dwóch zestawów danych:
+
+POLITECHNIKA GDANSKA a |») [ma |©) © jeb) g jeb) [02 N PO IN n< IN = b bana) Jab) N |e) = CJ
+
+Dodatek A Symulacja układu z podwójnym c figury/k7_pa
+
+dt : w = u(t) figury/k7_ dX u(t)dt ba: = x,(t)dt POLITECHNIKA GDANSKA Dodatek B Symulacja układu z podwójnym całkowaniem i przekaźnikiem z histerezą
+
+Z | [ma |©) © jeb g jeb) 0) N © IN n< IN = b bana) jad) N |©) Ę GJ = x,(l dt e = u(t)
+
+dx, = x,(t) dx, = u(t) POLITECHNIKA GDANSKA Zadanie Wyznaczyć przebieg sygnału wyjściowego dla układu z podwójnym całkowaniem i przekaźnikiem ze strefą nieczułości. r(t)=0, a=4; B=2; x1(0)=0; x2(0)=1. Wykreślić trajektorie fazowe korzystając z symulacji.
+
+[am0ZEJ] AuzAZOZSEŁd Epo]SIN POLITECHNIKA GDANSKA
+
+Dodatek C Symulacja układu z podwójnym całkowaniem, przekaźnikiem i sprzężeniem prędkościowym
+
+[3MOZEJ AuZAZOZSEŁd EpoOJS IN
+
+KW SJE | >OLITECHNIKA i | GDAŃSKA firuinu/lz7 nańo721 finuira1 nnm
+

@@ -1,0 +1,41 @@
+288 3. Obwody prądu stałego
+
+Przykład 3.42. W układzie pokazanym na rys. 3.4-7a występują trzy opory nieliniowe Ry.
+1
+Ry, I Ry;. Charakterystyka oporu Ry; ma postać i = au”, a= g mA”, natomiast charak-
+
+terystyki oporów Ry, i Ryą (z założenia symetrycznych) są podane w tablicy zawierającej wyniki
+pomiarów:
+
+<image/figury/k3_page288_figure1.png>
+
+Wartości siły elektromotorycznej E i oporu liniowego R wynoszą E =8V, R = 0,5kQ. Nale-
+ży wyznaczyć wszystkie prądy i napięcia w układzie.
+
+<image/figury/k3_page288_figure2.png>
+
+Pełna analiza jest przedstawiona na rys. 3.4-8. Charakterystyki poszczególnych oporów
+nieliniowych Ry;, Ry. Ry Odpowiadają, kolejno, krzywym a, b, c, zaś charakterystyka oporu
+liniowego R — prostej d. W pierwszym kroku wyznaczamy charakterytykę łączną połączenia
+szeregowego oporu liniowego R i oporu nieliniowego Ry; (krzywa e). Następnie wyznaczamy
+charakterystykę łączną równoległego połączenia oporu Ry. i elementu o charakterystyce e (krzy-
+wa f). Dalsze postępowanie sprowadza się do analizy układu pokazanego na rys. 3.4-7b, w którym
+przez Ry oznaczono element zastępczy o charakterystyce f.
+
+Prąd I, w tym układzie można wyznaczyć konstruując charakterystykę łączną połączenia
+szeregowego oporów Ry, i Ry, co wymaga jednak sporządzenia jeszcze jednej charakterystyki
+elementu zastępczego (zsumowania krzywych a i f dla różnych, ustalonych wartości I, tj. dla
+różnych rzędnych). Wartość prądu 7, wyznaczymy w sposób nieco prostszy i polegający, podobnie
+jak w metodzie prostej oporu, na graficznym rozwiązaniu równania układu z rys. 3.4-7b zapisanego
+w postaci:
+
+<image/wzory/k3_page288_formula1.png>
+
+gdzie u, = f, (i,) jestcharakterystyką oporu Ry,,zaśu = fa (i,) — charakterystyką oporu zastęp-
+czego Ry. Wykresom obu stron tego równania, sporządzonym w układzie współrzędnych u, i,
+odpowiadają na rys. 3.4-8 krzywe: ( (funkcja f,(i,)) oraz g (funkcja E — f, (1,)). Punkt przecięcia
+się krzywych fi g (punkt 4) jest zarazem punktem pracy oporu R,. Jego współrzędne są równe
+wartościom: prądu 1, = 6,1 mA oraz napięcia U, = 5 V. Jednocześnie wyznaczamy napięcie na
+oporze Ry,: U, = E — U; = 3V. Nietrudno już teraz znaleźć punkty pracy pozostałych oporów:
+punkt B — oporu Ry, punkt € — oporu Ry; oraz punkt D — oporu R. Odczytując współrzędne
+tych punktów znajdujemy pozostałe prądy i napięcia:

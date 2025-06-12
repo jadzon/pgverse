@@ -1,0 +1,38 @@
+90 5. Pamięci
+
+<image/figury/k3_page100_figure2.png>
+
+Rysunek 5.4. Pamięć typu 3D: a) matryca i b) układy współpracy
+
+Na rysunku 5.4a pokazano matrycę 16 elementów z dwoma wejściami wybierania,
+przy czym zaznaczono połączenia tylko końcówek wybierania. Końcówki danych są
+zwarte dla wszystkich elementów, co powoduje, że matryca tworzy pamięć 16 słów
+jednobitowych. Aby wybrać dane słowo trzeba wybrać jeden z wierszy i jedną z kolumn.
+Można to zrobić za pomocą dwóch 2-wejściowych dekoderów. Na rysunku 5.4b pokazano
+organizację pamięci o pojemności 16 x 4. Każdy „płat” pamięci jest matrycą 4 x 4, jak na
+rysunku 5.4a. Końcówki danych (wejścia i wyjścia danych wszystkich elementów na
+jednym płacie są zwarte) są dołączone do wejść wzmacniaczy odczytu i wyjść wzmac-
+niaczy zapisu. Elementy pamięci wraz z dwoma dekoderami wejściowymi tworzą dekoder
+matrycowy (por. rozdz. 3). Rozwiązanie to znacznie upraszcza budowę pamięci. Przy-
+kładowo dla pamięci o pojemności 64 K trzeba zastosować dwa dekodery 8-wejściowe
+o 2* wyjściach. Jest to prostsze rozwiązanie niż dla pamięci typu 2D o takiej samej po-
+jemności. Tam dekoder wymagał 2'* bramek, podczas gdy dla pamięci 3D trzeba 2”
+bramek. Ponadto bramki dekodera 2D są 16-wejściowe, a bramki dekodera 3D są tylko
+8-wejściowe. Ten zysk został okupiony wydłużeniem czasu dekodowania, ponieważ są
+dwa stopnie dekodowania. Pewnym kompromisowym rozwiązaniem jest pamięć ty-
+pu 2%D.
+
+Zasada pracy pamięci 2/4D polega na tym, że w matrycy stosuje się elementy z jedną
+końcówką wybierania, tak jak w pamięci typu 2D, ale odczytu lub zapisu dokonuje się
+tylko z wybranych kolumn. Niech będzie dana matryca jak na rysunku 5.3a, która pracuje
+w układzie jak na rysunku 5.5a. Linie kolumn tej matrycy są multipleksowane (w roz-
+dziale 3 nie był omawiany układ dwukierunkowego multipleksera, ale elektroniczna jego
+realizacja jest łatwa). Multiplekser taki jest sterowany dwoma sygnałami adresowymi.
+W czasie cyklu pracy pamięci jest wybrany tylko jeden wiersz, ale także tylko jeden
+z elementów tego wiersza jest dołączany do końcówki danych (wejścia wzmacniacza
+odczytu albo wyjścia wzmacniacza zapisu). Wyboru kolumny dokonują sygnały na wejś-
+ciach sterujących multipleksera, czyli wejściach A, i A,. W ten sposób układ z rysunku 5.5a
+stanowi pamięć o pojemności 16 słów jednobitowych.
+
+W ogólnym przypadku, aby zbudować pamięć o pojemności 2” słów 2”-bitowych,
+tworzy się matrycę kwadratową o Vk wierszach i Vk kolumnach, gdzie k = 2"x 2”. Jest to

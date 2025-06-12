@@ -1,0 +1,27 @@
+26 3. Podstawy techniki cyfrowej
+
+Natomiast sygnał na wyjściu GS wskazuje na dwa przypadki. Pierwszy (GS=1) wska-
+zuje, że stany wejść informacyjnych są zerami lub na wejściu E jest 0 i drugi (GS=0), że
+na co najmniej jednym wejściu jest 1.
+
+<image/figury/k3_page36_figure4.png>
+
+<image/figury/k3_page36_figure1.png>
+
+<image/figury/k3_page36_figure2.png>
+
+Rysunek 3.20. Konwerter kodu Graya na kod NKB
+
+Podobnie zależność określająca kod NKB na podstawie kodu Graya pozwala na
+zbudowanie układu iteracyjnego jak na rysunku 3.20.
+
+Innym często stosowanym konwerterem kodu jest konwerter stosowany do wyświet-
+lania cyfr dziesiętnych. W takim przypadku kodem wejściowym jest 4-bitowy kod NKB
+a kodem wyjściowym kod siedmiosegmentowy (nazwa ta pochodzi od często przyjętego
+sposobu wyświetlania cyfr). Kod siedmiosegmentowy to kod służący do wysterowania
+siedmiu świecących „kresek” ułożonych jak na rysunku 3.21a. W zależności od stanu na
+
+t| g Jb b [ ||
+"8 D1e3456 IBARGLdEF
+
+Rysunek 3.21. Zasada wyświetlania siedmioscgmentowcego

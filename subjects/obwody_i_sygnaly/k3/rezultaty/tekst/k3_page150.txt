@@ -1,0 +1,37 @@
+1. Pojęcia podstawowe — elementy
+
+ykładów wynika, że indukcyjność zastępcza elementu dwuzaciskowego
+ści sprzężone jest w ogólnym przypadku zależna od znaku M, a więc od
+śmiennych.
+
+rznaczymy energię w, zgromadzoną w polu magnetycznym indukcyjnoś-
+tcych w układzie z rys. 1.8-14. Obliczenia przeprowadzimy dla dwóch
+
+acisków jednoimiennych jak na rys. 1.8-14;
+jscami zacisków jednej z indukcyjności.
+ge150_formula1.png jest całkowite, tzn. k = 1.
+
+y/k3_page150_figure1.png
+
+ 
+
+p.E, znak indukcyjności wzajemnej M w]
+sA Z W A UIIGWGŁ R m i, więc M = L. Uwzględniając tę równość
+
+E E
+uwzględniając w nim, że I, = 22 oraz I, = R otrzymujemy:
+
+<image/wzory/k3_page150_formula3.png>
+
+W przypadku b) mamy M = — L<0, zatem energia w, jest rów
+
+<image/wzory/k3_page150_formula4.png>
+
+H. Wielowrotowe indukcyjności sprzężone. Pojęc
+żonych (rys. 1.8-3) moża uogólnić na przypadek n ind
+rys.1.815.rwnaniaukaduzrys.1.815mowzory/k3_page150_fo
+(1.8-18), przy czym:
+
+<image/wzory/k3_page150_formula5.png>
+
+<image/wzory/k3_page150_formula6.png>

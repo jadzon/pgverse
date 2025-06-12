@@ -1,0 +1,39 @@
+2.2. Rozwiązania równań układów SLS 229
+
+ 
+
+Przykład 2.2-3. Załóżmy z kolei, że w układzie z przykładu 2.2-1 wydajność prądowa jest
+dla te<0, +«0) sinusoidalna j = 4coszt, gdzie u = 2R/L=2*10* 1/s oraz że warunek
+początkowy w indukcyjności jest zerowy, tzn. i(0) = 0. Rozwiązanie ogólne równania niejednorod-
+nego dla t e (—0, +00) ma w tym przypadku postać:
+
+rzory/k4_page227_formula1.png
+
+Rozwiązanie dla te (0, + co) otrzymamy wyznaczając stałą A z warunku i(0) = 0:
+
+<image/wzory/k4_page227_formula2.png>
+
+Wynika stąd, że A = — 1 mA, a więc dla t e (0, +00) mamy:
+
+<image/wzory/k4_page227_formula3.png>
+
+Składowe przejściowa i ustalona są, odpowiednio, równe:
+
+<image/wzory/k4_page227_formula4.png>
+
+gdzie « = 2: 10% 1/s.
+
+Przykład 2.2-4. Rozważmy z kolei układ (rys. 2.2-2), w którym działa dla t e (0, + 0) stałe
+źródło napięciowe o sile elektromotorycznej e = E > 0. Wyznaczymy napięcie ue na pojemności
+C przy założeniu, że jego wartość w chwili £t = O jest równa zeru, a wartość parametru x wynosi
+a m3,
+
+<image/figury/k4_page227_figure1.png>
+
+Układ opisują równania sieciowe:
+
+<image/wzory/k4_page227_formula5.png>
+
+Po eliminacji prądów otrzymujemy następujące równania różniczkowe:
+
+vzory/k4_page227_formula6.png

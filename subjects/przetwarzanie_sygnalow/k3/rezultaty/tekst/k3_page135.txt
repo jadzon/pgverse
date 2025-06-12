@@ -1,0 +1,22 @@
+151
+
+Funkcje bazowe DFT
+
+ 
+
+ 
+
+<image/figury/k3_page135_figure_1.png>
+
+ 
+
+funkcje bazowe 17 dyskretnych
+przebiegów przedstawiono na ry-
+rysunkach tylko po to, aby czytelnicy
+
+i
+|
+|
+
+sunku. Są to sygnały dyskretne; linie ciągłe poprowadzono na tych
+mogli tatwiej wzrokowo prześledzić przebiegi

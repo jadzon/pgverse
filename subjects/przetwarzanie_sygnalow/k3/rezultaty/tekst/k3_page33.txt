@@ -1,0 +1,57 @@
+3. Przetwarzanie analogowo-cyfrowe i cyfrowo-analogowe
+
+Sygnały występujące w badaniach i w technice są w większości sygnałami ciągłymi: na-
+tężenie światła zmieniające się z odległością, napięcie zmieniające się w funkcji czasu,
+szybkość reakcji chemicznej zależna od temperatury itd. Przetwarzanie analogowo-cyfrowe
+(ADC - Anałog-to-Digital Conversion) i cyfrowo-analogowe (DAC — Digital-to-Analog
+Conversion) to procesy, dzięki którym komputery cyfrowe mogą operować takimi po-
+wszechnie spotykanymi sygnałami. Informacja cyfrowa różni się od swego analogowego
+odpowiednika pod dwoma ważnymi względami: jest spróbkowana i skwantyzowana. Obie
+te właściwości decydują o tym, ile informacji może zawierać sygnał cyfrowy. Ten rozdział
+poświęcono zarządzaniu informacją: zrozumieniu, jaką informację należy utrzymać i na
+utratę jakiej można sobie pozwolić. To z kolei decyduje o wyborze częstotliwości próbko-
+wania, liczby bitów i typu filtracji analogowej — wymaganych do przechodzenia z dziedziny
+analogowej do cyfrowej i odwrotnie.
+
+Kwantyzacja
+
+Najpierw trochę spraw oczywistych. Jak wiadomo, w języku angielskim używa się określe-
+nia digital computer, a nie digit computer. Przetwarzana informacja jest nazywana digital
+data, a nie digit data. Dlaczego więc przetwarzanie analogowo-cyfrowe jest po angielsku
+określane słowami digitize i digitization, a nie digitalize i digitalization? Odpowiedź jest
+zaskakująca. Gdy w elektronice zaczęto rozwijać technikę cyfrową, wiele dogodnych nazw
+było już, sto lat wcześniej, zaanektowanych przez nauki medyczne. Słowa digitalize i digita-
+lization oznaczają podawanie chorym ziołowego środka pobudzającego pracę serca o nazwie
+digitalis (po polsku naparstnica)*.
+
+Na rys. 3.1 przedstawiono przebiegi elektryczne w typowym przetworniku analogowo-cy-
+frowym. Przebieg a) jest sygnałem, który ma być przetworzony. Jak wynika z opisu osi
+współrzędnych, jest to sygnał napięciowy zmieniający się w funkcji czasu. Dla uproszcze-
+nia załóżmy, że sygnał może się zmieniać od 0 do 4,095 V, co odpowiada liczbom od 0 do
+4095 uzyskiwanym na wyjściu 12-bitowego digitalizatora. Proszę zauważyć, że schemat
+blokowy podzielono na dwie sekcje: układ próbkująco-pamiętający (S/H — Sample-and-
+Hołd) i przetwornik analogowo-cyfrowy (ADC — Analog-to-Digital Converter). Jak już
+zapewne wiecie z wykładów elektroniki, układ próbkująco-pamiętający jest niezbędny do
+utrzymania, podczas przetwarzania, ustalonej wartości sygnału na wejściu przetwornika
+a/c. Jednak nie z tego powodu pokazano na rysunku ten układ — podział digitalizacji na
+dwa etapy daje ważny model teoretyczny ułatwiający zrozumienie tego procesu. Fakt, że
+taki podział można przedstawić w postaci dwóch układów elektronicznych, jest po prostu
+szczęśliwym zbiegiem okoliczności.
+
+Analizując różnice między przebiegami 3.1 a) i b) widzimy, że sygnał na wyjściu układu
+próbkująco-pamiętającego może się zmieniać tylko w pewnych chwilach powtarzających się
+okresowo. W tych chwilach ten sygnał staje się identyczny z wartością chwilową sygnału
+wejściowego. Zmiany sygnału wejściowego pojawiające się w międzyczasie są całkowicie
+ignorowane. Zatem próbkowanie zamienia zmienną niezależną (w tym przypadku jest nią
+czas) z ciągłej na dyskretną.
+
+Jak wynika z różnic między przebiegami na rys. 3.1 b), c), przetwornik a/c daje liczbę cał-
+kowitą o wartości od 0 do 4095 dla każdego płaskiego obszaru przebiegu b). To wprowadza
+pewien błąd, gdyż każde plateau może wyrażać dowolną wartość napięcia z zakresu między
+0 i 4,095 V. Na przykład zarówno napięcie 2,56000 V, jak i 2,56001 V będą przetwarzane na
+liczbę 2560. Tak więc kwantyzacja przetwarza zmienną zależną (w tym przypadku jest nią
+napięcie) z ciągłej na dyskretną.
+
+a
+*_ Ta uwaga dotyczy terminologii angielskiej, po polsku używa się określeń: digitalizacja lub dyskrety-
+zacja (przyp. tłum.).

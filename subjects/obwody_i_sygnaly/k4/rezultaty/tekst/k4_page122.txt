@@ -1,0 +1,31 @@
+122 1. Pojęcia podstawowe — elementy
+
+Przykład 1.7-1. Dane jest rzeczywiste źródło napięciowe (rys. 1.7-3a) o stałej sile elektro-
+motorycznej e = E = 10 V ioporze wewnętrznym R, = 2000. Zg
+równoważne źródło prądowe (rys. 1.7-3b) ma ten sam opór wewnętr.
+wydajność prądową j = J = E/R, = 50 mA.
+E. Połączenia źródeł rzeczywistych. Rozważymy
+związane z łączeniem źródeł rzeczywistych.
+
+1. Połączenie szeregowe n źródeł napięciowych (r
+
+tromotorycznych e, i oporach wewnętrznych R, jes
+p. 1.5.2-I) źródłu napięciowemu (rys. 1.7-5) o sile elektrc
+
+zory/k4_page122_formula2.png
+
+oraz oporze wewnętrznym:
+
+<image/vzory/k4_page122_formula3.png>
+
+YT-.—Z0-m 24m moe m mam zz da mom m mamom mono aw Hz
+
+(1.
+
+figury/k4_page122_figure
+
+2. Połączenie równoległe n źródeł prądowych (rys. 1.7-6) o wydajnoś-
+ciach prądowych j, i przewodnościach wewnętrznych G, jest równoważne
+źródłu prądowemu (rys. 1.7-6) o wydajności prądowej:
+
+zory/k4_page122_formula4.png (1.7-13)

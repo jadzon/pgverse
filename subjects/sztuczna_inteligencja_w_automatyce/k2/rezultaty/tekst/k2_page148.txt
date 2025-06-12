@@ -1,0 +1,47 @@
+6.5.10. Hybrydowy algorytm uczenia
+
+Na podstawie wzorów (??) do (7?) mamy
+
+<image/wzory/k2_page148_formula1.png>
+
+Z powyższego wzoru widać, że wyjście systemu Sugeno z jest zależne liniowo od
+parametrów konsekwencji p, 4, r. Ponieważ Ty i Ty, zależą od funkcji przynależności
+j4, a te z kolei zależą nieliniowo od parametrów przesłanek (np. parametrów a, b, c w
+przypadku uogólnionej funkcji dzwonowej), to tym samym wyjście z jest nieliniowo
+zależne od parametrów przesłanek.
+
+Liniowa zależność wyjścia od jednych parametrów i nieliniowa od innych, suge-
+ruje zastosowanie różnych algorytmów do poszczególnych grup parametrów. Metodę
+najmniejszych kwadratów dla parametrów wpływających liniowo i metodę gradien-
+tową dla parametrów wpływających nieliniowo.
+
+Algorytm uczenia systemu rozmytego
+
+W uczącym się systemie rozmytym mamy dwa rodzaje parametrów:
+
+zbiór parametrów przesłanek (nieliniowo wpływających na wynik) (a, b, c),
+zbiór parametrów konsekwencji (wpływających liniowo na wynik) (p, q, r)
+
+Każdy cykl nauki podzielony jest na dwa etapy. W etapie pierwszym parame-
+try konsekwencji są wyznaczane metodą najmniejszych kwadratów, a w etapie dru-
+gim parametry przesłanek są wyznaczane metodą gradientową (metodą propagacji
+wstecznej).
+
+Kroki algorytmu
+
+1 Parametry przesłanek są ustalone i obliczenia w systemie są wykonywane przez
+warstwy od 1 do 4, po kolei dla wszystkich danych wejściowych i na tej podstawie
+tworzone są równania regresji.
+
+2 Parametry konsekwencji obliczane są metodą najmniejszych kwadratów.
+
+3 Przy ustalonych wartościach wszystkich parametrów obliczana jest odpowiedź
+sieci dla wszystkich danych wejściowych.
+
+4 Obliczany jest błąd jako suma kwadratów różnie pomiędzy wyjściami systemu i
+oczekiwanymi odpowiedziami dla wszystkich danych wejściowych.
+
+5 Wykonywany jest jeden cykl metody propagacji wstecznej wyznaczający nowe
+wartości parametrów przesłanek.
+
+6 Przejście do kroku 1.

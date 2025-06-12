@@ -1,0 +1,39 @@
+Morfologiczne przetwarzanie obrazu
+
+Jak to przedstawiono na rys. 25.10) d), otwarcie jest definiowane jako erozja, po której nastąpiła
+dylatacja. Na rys. 25.10 e) pokazano operację odwrotną, zwaną zamknięciem, złożoną z dylatacji
+i następującej po niej erozji. Z. podanych na rysunkach przykładów wynika, że operacja otwarcia
+usuwa małe wyspy i wąskie nitki złożone z pikseli obiektowych. Operacja zamknięcia zaś usuwa
+wyspy i cienkie włókna złożone z pikseli tła. Te metody są przydatne do przetwarzania zaszumio-
+
+nych obrazów, gdzie niektóre piksele mają błędną wartość binarmą. Może być z góry wiadome, że
+na przykład obiekt nie zawiera żadnej „dziury” lub że jego granice muszą być gładkie.
+
+Na rys. 25.11 podano przykład przetwarzania morfologicznego. Na rys. 25.11 a) pokazano
+binarny obraz linii papilarnych. Są opracowane algorytmy do analizy wzoru tych linii, umoż-
+liwiające porównanie ich zgodności z odpowiednimi wzorcami w bazie danych. Jako jeden
+z kroków w realizacji tych algorytmów często stosuje się operację zwaną szkieletowaniem
+(skeletonization). Upraszcza ona obraz dzięki usunięciu nadmiarowych pikseli, czyli przez
+zamianę pikseli z czarnych na białe. To powoduje zamianę każdego grzbietu
+w linię o szerokości tylko jednego piksela.
+
+W tablicach 25.1 i 25.2 podano program operacji szkieletowania. Chociaż obraz linii papilarnych
+jest binarny, to jest on jednak rejestrowany w pamięci, w której każdy piksel może mieć wartość
+zmieniającą się od © do 255. Czarny piksel jest oznaczony jako 0, a biały jako 255. Algorytm
+w tablicy 25.1 składa się z 6 iteracji, które wprowadzają stopniową erozję grzbietów
+
+cającą je w cienkie linie. Liczba iteracji jest dobierana metodą prób i błędów. Alternatywą może
+być wstrzymanie programu, gdy iteracja nie wprowadza już żadnych zmian.
+
+Podczas iteracji każdy piksel w obrazie jest szacowany w celu stwierdzenia, czy nadaje się
+do usunięcia. Piksel musi spełnić pewien zestaw kryteriów, aby mógł być zamieniony z czar-
+nego na biały. W wierszach od 200 do 240 zapisano pętlę biegnącą przez wszystkie pikse-
+le, a w tablicy 25.2 podano podprogram realizujący oszacowanie. Jeśli rozpatrywany piksel
+jest nieusuwalny, to podprogram nie podejmuje żadnego działania. Jeśli piksel powinien być
+usunięty, to podprogram zmienia jego wartość z 0 na 1. Ten piksel pozostaje jeszcze czarny
+i zostaje zamieniony na biały po zakończeniu iteracji. Po oszacowaniu wszystkich pikseli,
+instrukcje zapisane w wierszach 260-300 zamieniają wartości zaznaczonych pikseli z | na
+255. W wyniku tego dwustopniowego procesu grube grzbiety ulegają erozji jednakowo ze
+wszystkich kierunków, a nie na zasadzie zgodnej ze skanowaniem wierszy i kolumn.
+
+<image/tabele/k3_page386_table1.png>

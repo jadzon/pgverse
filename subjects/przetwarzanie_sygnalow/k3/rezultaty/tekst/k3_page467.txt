@@ -1,0 +1,32 @@
+Jak szybkie są cyfrowe procesory sygnałowe? 503
+
+400 okresów zegara. Jak już powiedziano poprzednio, jakiś naddatek jest niezbędny do osią-
+gnięcia skuteczności tych pętli (zainicjowanie pierwszej pętli i zakończenie ostatniej), lecz
+ten naddatek jest pomijalnie mały, jeśli liczba pętli jest tak duża. Aby obliczyć przepływność
+filtru, możemy podzielić częstotliwość zegarową procesorów SHARC (obecnie 40 MHz)
+przez liczbę okresów zegara wymaganych na jedną próbkę. To nam daje maksymalną bitową
+przepływność danych w filtrze SOI równą ok. 100k do 1.6 Mpróbek/s. Trudno o obliczenie
+prostsze od tego! Wartości przepływności filtru SOI zaznaczono na rys. 28.11.
+Te obliczenia są łatwe także dla filtrów rekursywnych. Typowe filtry NOI mają od ok. 5 do
+17 współczynników. Ponieważ te pętle są względnie krótkie, więc dodamy jakąś nadwyżkę,
+powiedzmy 3 okresy na próbkę. Stąd wynika, że na jedną próbkę przetwarzanych danych są
+potrzebne od 8 do 20 okresów. Przy częstotliwości zegara 40 MHz uzyskuje się maksymalną
+przepływność od 1,8 M do 3,1 Mpróbek/s. Te wartości dla filtru NOI też podano na rys. 28.11.
+też sky owe yo zy pny w których korzysta się z przekształ-
+Fouriera. Podprogramy FFT są prawie zawsze dostarczane przez producenta procesora
+u zakesoścć Są to procedury wysoce zoptymalizowane, napisane w języku asemblera. Z da-
+nych katalogowych procesora sygnałowego SHARC ADSP-21062 wynika, że 1024-próbko-
+we zespolone przekształcenie FFT wymaga 18 221 okresów zegarowych, czyli ok. 0,46 ms
+przy 40 MHz. W celu obliczenia przepływności łatwiej jest uwzględniać, że potrzebnych jest
+17,8 okresów zegarowych/próbkę. Ta wartość, obliczona dla jednej próbki, niewiele się zmie-
+nia dla dłuższych lub krótszych FFT. Na przykład 256-próbkowe FFT wymaga ok. 14,2 okre-
+sów zegarowych na próbkę, a 4096-próbkowe FFT — 21,4 okresów zegarowych na próbkę.
+Rzeczywiste przekształcenia FFT mogą być wykonywane 40% szybciej niż zespolone. Z tego
+wynika, że wszystkie procedury FFT zajmują w przybliżeniu od 10 do 22 okresów zegaro-
+wych na próbkę, co odpowiada przepływności ok. 1,8 M do 3,3 Mpróbek/s.
+Splot FFT jest szybkim sposobem realizacji filtrów SOI. W typowym przypadku z wejścia
+jest pobierany segment 512 próbek, dopełniony 512 zerami i przetwarzany na widmo czę-
+stotliwościowe przez 1024-punktowe FFT. Po wymnożeniu tego widma przez żądaną odpo-
+wiedź częstotliwościową stosuje się 1024-punktowe odwrotne przekształcenie FFT, aby po-
+
+<image/figury/k3_page467_figure1.png>

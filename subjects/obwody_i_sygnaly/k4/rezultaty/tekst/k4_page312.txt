@@ -1,0 +1,39 @@
+312 3. Obwody prądu stalego
+
+elementów układu: E=4V, R,=2 kQ, Ry = 3 kQ, R; =1 kQ. Znajdziemy taką
+wartość oporu R;, dla której moc wydzielana w obciążeniu jest maksymalna.
+Warunek dopasowania (3.5-20) jest spełniony, gdy:
+
+<image/wzory/k4_page312_formula1.png>
+
+Stąd obliczamy opór R;:
+
+<image/wzory/k4_page312_formula2.png>
+
+Maksymalna moc wydzielana wówczas w obciążeniu:
+
+<image/wzory/k4_page312_formula3.png>
+
+<image/figury/k4_page312_figure1.png>
+
+Przykład 3.5-10. Rzeczywiste źródło prądowe o parametrach J, G, jest obciążone żyrato-
+rem, do którego zacisków wtórnych dołączono przewodność G (rys. 3.5-12). Obliczymy wartość
+stałej żyracji 7, przy której obciążenie jest dopasowane do źródła oraz moc Pę wydzielaną wówczas
+w przewodności G.
+
+Z równań żyratora: U; = —rl;, U, =rI, (por. p. 1.7.2-F, rys. 1.7-25a) wynika, że
+przewodność zastępczą G,z dwójnika AB można zapisać w postaci:
+
+<image/wzory/k4_page312_formula4.png>
+
+Zatem, zgodnie z warunkiem dopasowania: G,5 = G„, mamy:
+
+ory/k4_page312_formula5.png
+
+1
+Ponieważ przy dopasowaniu prąd w obciążeniu I, = — J, wobec tego z drugiego równania
+żyratora otrzymujemy: >
+
+vzory/k4_page312_formula6.png
+
+p

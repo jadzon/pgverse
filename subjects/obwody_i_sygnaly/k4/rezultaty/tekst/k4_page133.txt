@@ -1,0 +1,33 @@
+1.8. Sprzężenie magnetyczne 135
+
+W dalszym tekście źródłami sterowanymi o nieliniowych zależnościach typu (1.7-35) zajmować się
+== będziemy. Źródła sterowane © zależnościach liniowych typu (1.7-34) mają określone znaczenie
+* obwodach prądu sinusoidalnie zmiennego (por. zad. 4.7 i 4.8).
+
+8. SPRZĘŻENIE MAGNETYCZNE
+
+Indukcyjność reprezentująca pole magnetyczne, a w szczególności zdolność
+10 gromadzenia energii w tym polu, była rozpatrywana dotychczas (p. 1.2.2
+' 1.3.2) jako element dwuzaciskowy (rys. 1.2-6 i 1.3-6a). W wielu jednak
+?rzypadkach pola magnetycznego oraz jego oddziaływania na obwód elektrycz-
+zy mie da się modelować tylko w postaci elementu dwuzaciskowego. Ma to
+miejsce wówczas, gdy różne cewki występujące w obwodzie mają przynajmniej
+zzęściowo wspólne pole magnetyczne lub, inaczej, gdy są sprzężone magnetycz-
+«ie. W takim przypadku model obwodowy zjawisk magnetycznych jest elemen-
+=m o co najmniej dwóch parach zacisków (por. p. 1.7.2-D i E).
+
+Popularnym urządzeniem, w którym wykorzystuje się sprzężenie magne-
+czne, jest transformator (rys. 1.8-1).
+
+<image/figury/k4_page133_figure1.png>
+
+Rys. 1.8-1
+
+Rozważania nad modelem obwodowym sprzężenia magnetycznego ograni-
+szymy do przypadku modelu liniowego i stacjonarnego.
+
+18.1. Indukcyjności sprzężone
+A. Model wspólnego pola magnetycznego. Rozważmy dwie cewki I i II
+
+odpowiednio o z; izą zwojach oraz o indukcyjnościach Ly i Ls. Na rys. 1.8-2
+sewki te są przedstawione dla uproszczenia w postaci pojedynczych zwojów.

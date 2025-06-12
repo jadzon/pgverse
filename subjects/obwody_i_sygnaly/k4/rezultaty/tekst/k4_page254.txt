@@ -1,0 +1,55 @@
+254 3. Obwody prądu stałego
+
+Inaczej przedstawia się sytuacja, jeżeli w tym samym układzie należy znaleźć prąd I, (przy
+założeniu, że prąd I, jest nieznany). Początek analizy jest identyczny, tzn. układ przekształcamy
+w układ z rys. 3.3-2b. Dalsza zamiana źródeł nie prowadzi już jednak do celu. Po przekształceniu
+źródła napięciowego E na źródło prądowe „gubimy” bowiem prąd sterujący I,. Prądu I, nie
+można więc w tym przypadku wyznaczyć stosując do końca metodę zamiany źródeł. Metoda ta
+umożliwia jedynie początkowe uproszczenie układu. Prąd I, można oczywiście obliczyć drogą
+pośrednią, wyznaczając np. najpierw prąd 71,, bądź też zapisując dla układu z rys. 3.3-2b równania
+sieciowe i rozwiązując je względem niewiadomej I,. Proponujemy Czytelnikowi sprawdzenie, że
+
+E
+
+I, a —,
+w” SR
+
+3.3.2. Metoda superpozycji
+
+Inną metodą ułatwiającą obliczenie prądu (napięcia) w wyróżnionej gałęzi
+układu liniowego, w którym występują co najmniej dwa źródła niezależne, jest
+metoda superpozycji. W przeciwieństwie do metody zamiany źródeł metoda ta
+może być także wykorzystana w analizie układów o strukturze mostkowej.
+
+Metoda superpozycji wywodzi się z zasady superpozycji omówionej w p.
+2.1.7. Przypomnijmy tę zasadę w nieco zmienionym sformułowaniu.
+
+Prąd (napięcie) w wyróżnionej gałęzi układu liniowego, w którym występuje
+kilka źródeł niezależnych, może być obliczony jako suma prądów (napięć)
+wywołanych w tej gałęzi przez każde z tych źródeł działających osobno, tzn. przy
+zastąpieniu wszystkich pozostałych niezależnych źródeł napięciowych zwarciami
+i niezależnych źródeł prądowych rozwarciami.
+
+Podkreślmy, że wszystkie występujące w układzie źródła sterowane należy
+pozostawić bez zmian.
+
+W praktyce metoda superpozycji sprowadza się do analizy kilku podukładów
+rozpatrywanego układu, w każdym z których działa jedno ze źródeł niezależnych
+(lub grupa źródeł niezależnych), a pozostałe są usunięte. Po usunięciu tych źródeł
+otrzymujemy z reguły układ znacznie prostszy (np. z układu o strukturze most-
+kowej powstaje układ o strukturze szeregowo — równoległej), co umożliwia częs-
+to zastosowanie w jego analizie metody zamiany źródeł lub wzorów na dzielniki.
+
+Metodę superpozycji zilustrowaliśmy już wcześniej przykładami 2.1-25
+i 2.1-26. Rozważymy jeszcze jeden charakterystyczny przykład zastosowania tej
+metody w analizie układu mostkowego.
+
+Przykład 3.3-3. W układzie pokazanym na rys. 3.3-3 działają trzy źródła niezależne: napię-
+ciowe o siłach elektromotorycznych E, = 45 Vi E, = 30 V oraz prądowe o wydajności
+prądowej J = 30mA. Wartości oporów wynoszą: R, = 6kQ,R, = 2kQ,R, = 4kQ,R, = 12kQ.
+Szukanym prądem jest prąd I w oporze R,.
+
+Prąd I jest sumą prądów /'”,1) oraz I? płynących przez opór R, w układach z rys. 3.3-3b,
+c, d. Z rys. 3.3-3b otrzymujemy wprost:
+
+<image/wzory/k4_page254_formula1.png>

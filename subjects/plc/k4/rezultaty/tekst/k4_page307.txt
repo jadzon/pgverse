@@ -1,0 +1,38 @@
+zawartość rejestru 40375 zostaje skopiowana do rejestru 40377, a zawartość reje-
+stru licznika 40376 osiągnie wartość 5 odpowiadającą zadeklarowanej długości
+tablicy. Wyzwolone wówczas zostanie wyjście 00136 sygnalizujące zakończenie
+operacji przenoszenia zawartości tablicy do rejestru.
+
+<image/tabele/k4_page307_table2.png>
+
+Wyd. 6.28 Przepisanie zawartości tablicy do rejestru.
+
+Jeśli w trakcie wyzwalania wejścia przepisującego 10001 wejście 10002 byłoby
+w stanie wysokim, nastąpiłoby przepisanie odpowiedniego elementu tablicy do
+rejestru 40377 lecz zawartość licznika nie uległaby zmianie. Oznaczałoby to, że
+w następnym kroku kopiowany będzie ten sam element tablicy. Wejście 10003
+służy do ustawiania rejestru licznika na zero.
+
+<image/tabele/k4_page307_table1.png>
+
+Wyd. 6.29 Kopiowanie zawartości tablicy do innej tablicy.
+
+Wyd. 6.29 prezentuje przykłady wykorzystania instrukcji T—T. Pierwsze wy-
+zwolenie wejścia 10001 spowoduje przeniesienie zawartości rejestru wejściowe-
+go 30001 do rejestru 40381 oraz ustawienie zawartości rejestru licznika na war-
+tość 1. Kolejne wyzwałania wejścia 10001 spowodują przepisanie zawartości
+rejestru 30002 do 40382 oraz 30003 do 40384. W tym czasie zawartości rejestru
+licznika będzie się zwiększała. W trzecim kroku w rejestrze 40380 pojawi się
+wartość 3 zgodna z zadeklarowaną długością tablicy w wyniku czego operacja
+przenoszenia zostanie zakończona a na wyjściu 00137 pojawi się stan wysoki.
+
+Podobnie jak w poprzednim przykładzie, wyzwolenie wejścia 10002 spowoduje
+zablokowanie licznika operacji, zaś wejście 10003 służy do jego zerowania.
+
+mn W AE TAA GM RY wyłam
+
+ 
+
+ 
+
+6.8 Funkcje na tablicach danych 307

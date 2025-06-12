@@ -1,0 +1,53 @@
+240
+
+[16] Fikes R.E., Nillsson, N.J: (1971) STRIPS: a new approach to the application of
+theorem proving to problem solving”, Artificial Intelligence, Vol. 2 p. 189-208.
+
+[17] Franchi S., Guzeldere G., (1995)(ed.), Construction of the Mind: Artificial In-
+telligence and the Humanities, Stanford Humanities Review. v.4. issue 2, 1995,
+internet: http:/ /shr.stanford.edu/shreview /4-2/toc.htm.
+
+[18] Goldberg D.E., (1995), Algorytmy genetyczne i ich zastosowania, WNT, War-
+SZawA.
+
+[19] Gray P., (1984), Logic, algebra and Databases, Ellis Horwood, Chichester.
+
+[20] Gurba K., (1995), Sztuczna inteligencja z naturalnymi ograniczeniami, Znak, t.
+XLVII, nr 9, z. 484, wrzesień, Kraków.
+
+[21] Heckerman D., Wellman M.P., (1995), Bayesian networks, Communications of
+the ACM, vol. 38, No. 3, p. 27-30, March 1995
+
+[22] Hippe Z., (1993), Zastosowanie metod sztucznej inteligencji w chemii, PWN,
+Warszawa.
+
+[23] Hsu F., Anantharaman T, Campbell M., Nowatzyk A., (1990), A Grandmaster
+Chess Machine, Scientific American, October 1990.
+
+[24] Jang J-S.R., Sun C-T., Mizutani E., (1997), Neuro-Fuzzy and Soft Computing,
+Prentice Hall, Upper Saddle River.
+
+[25] Jędruch W., Barski M., Experiments with a universe for molecular modelling
+of biological processes, BioSystems, v. 24, pp. 99-117, 1990.
+
+[26] Jędruch W. and Sampson J., 1987, A universe for molecular modelling of self-
+replication, Biosystems 20, 329-340.
+
+[27] Jędruch W., (1989), Turbo Prolog, Wyd. Pol. Gd.
+
+[28] Jędruch W., (1997), Środowisko programowe dla modelowania cząsteczkowego
+systemów złożonych, Zeszyty Naukowe Politechniki Gdańskiej — monografie,
+Elektronika, Nr 84, Gdańsk.
+
+[29] Jędruch W., Sienkiewicz R., Inteligencja zespołowa, w: (Kowalczuk Z., Wisz-
+niewski B., red.) Inteligentne wydobywanie informacji w celach diagnostycz-
+nych, Pomorskie Wydawnictwo Naukowo Techniczne, Gdańsk, 2007, s. 413-432
+
+[30] Johnston J., (2008) The Allure of Machininic Life, Cybernetics, Artificial Life,
+and the New AI, A Bradford Book, The MIT Press, Cambridge, MA.
+
+[31] Kennedy J., Eberhardt R.C.: Śwarm intelligence, Morgan Kaufmann Publi-
+shers, San Francisco, 2001.
+
+[32] Knitter S.: Badanie dynamiki systemów samoreprodukujących się w sztucznym
+środowisku. (Praca dyplomowa), WETTI, Pol. Gdańska, Gdańsk 2006.

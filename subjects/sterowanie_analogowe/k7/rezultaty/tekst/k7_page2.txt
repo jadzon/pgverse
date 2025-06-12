@@ -1,0 +1,25 @@
+Stan układu
+
+ 
+
+Stanem układu w dowolnej chwili czasu t, jest ta informacja, która razem ze znajomością
+sygnału wejściowego dla t>=t, jednoznacznie wyznacza zachowanie się układu (a więc również
+
+jego sygnał wyjściowy) dla każdego t>=t,
+
+W poniższym przykładzie zmienną stanu może być napięcie na kondensatorze, gdyż jego
+znajomość w chwili t, oraz znajomość zmian napięcia na wejściu układu dla t>=0 pozwoli nam
+na określenie napięcia na kondensatorze dla t>=0
+
+SMOLUB]S 8|8pOW
+
+<image/figury/k/_page2_figure1.png>
+
+<image/wzory/k/_page2_formula1.png>
+
+<image/wzory/k/_page2_formula2.png>
+
+SB;
+
+POLITECHNIKA
+GDANSKA

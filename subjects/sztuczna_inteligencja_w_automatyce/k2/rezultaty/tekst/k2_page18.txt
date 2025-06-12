@@ -1,0 +1,50 @@
+23
+
+9. W przypadku zmiany wartości kryterium należy uaktualnić wskaźnik wska-
+zujący najtańszą drogę.
+
+2. Jeżeli nowo wygenerowany węzeł jest już na liście ZAMKNIĘTE, to możnaby
+przypuszczać, że jego wartość g mogła by być mniejsza niż do tej pory. Tak
+jednak nie jest. Poniżej pokazano, że gdy algorytm równomiernych kosztów
+umieszcza węzeł na liście ZAMKNIĘTE, to najmniejsza wartość g została już
+znaleziona, czyli 4 = g.
+
+Lemat
+Na każdym etapie działania algorytmu równomiernych kosztów istnieje na liście O
+węzeł n* z P oraz g(n') = g(n'), gdzie P oznacza ścieżkę rozwiązania (od węzła
+startowego do rozwiązania).
+Dowód
+Przypuśćmy, że n' jest pierwszym z ciągu ?? węzłem znajdującym się na O. Z zasady
+działania algorytmu przynajmniej jeden z węzłów z P. musi być na O. Najpierw jest
+to s, a później jeden z jego potomków.
+
+Na to żeby g(n') = g(n') potrzeba i wystarcza aby na liście Z były wszystkie
+węzły z P, od węzła s do węzła bezpośrednio poprzedzającego n'.
+
+Jeżeli na Z nie ma jakiegoś węzła m z P poprzedzającego n', to węzeł ten:
+
+1. jest na O,
+2. nie jest na O.
+Gdy zachodzi:
+1. to węzeł m będzie pierwszym z ?* na O zamiast n',
+2. to pewien węzeł z P poprzedzający m będzie na O i n' nie będzie pierwszym.
+
+Ponieważ przypadki 1) i 2) przeczą temu, że n' jest pierwszym z P na liście O, to
+na Z muszą być wszystkie węzły poprzedzające n'. Wobec tego g(n') = g(n')
+
+PRZYKŁAD 3.1
+
+Na rys. ?? przedstawiono przykład zastosowania metody równomiernych kosztów
+do znalezienia najkrótszej drogi łączącej dwa węzły grafu.
+|
+
+3.7. Inne metody
+
+3.7.1. Metody spełniania warunków
+
+Jedna z często stosowanych, oczywistych odmian metod szukania nazywa się metodą
+spełniania warunków (ang. constraint satisfaction search). Polega ona na generacji
+tylko takich stanów następnych, które spełniają dodatkowe warunki nałożone na
+rozwiązanie zadania, a nie na generacji wszystkich możliwych stanów następnych.
+Typowym zadaniem rozwiązywanym tą metodą jest zadanie o rozmieszczeniu
+8 figur hetmanów na szachownicy — należy je tak rozmieścić aby sie wzjemnie nie

@@ -1,0 +1,59 @@
+i 30. Liczby zespolone
+
+Liczby zespolone są rozszerzeniem zwykłych liczb stosowanych w codziennej matematyce.
+Mają one unikatową właściwość reprezentowania dwóch zmiennych i operowania nimi jako
+pojedynczą wielkością. To w bardzo naturalny sposób świetnie pasuje do analizy Fouriera,
+w której sygnał w dziedzinie częstotliwości składa się z dwóch sygnałów — części rzeczy-
+wistej i części urojonej. Liczby zespolone dają uproszczenie wzorów stosowanych w DSP
+i umożliwiają stosowanie metod, które są bardzo trudne lub niemożliwe do realizacji przy
+użyciu tylko liczb rzeczywistych. Na przykład szybkie przekształcenie Fouriera jest oparte
+na liczbach zespolonych. Niestety metody na liczbach zespolonych są trudniejsze pod wzglę-
+dem matematycznym. Dlatego trzeba sporo nauki i praktyki, aby można efektywnie z nich
+korzystać. Wielu naukowców i inżynierów uważa, że metody na liczbach zespolonych są
+granicą dzielącą DSP traktowane jako narzędzie od DSP traktowanego jako dziedzina kariery
+zawodowej. W tym rozdziale zajmiemy się matematyką liczb zespolonych i podstawowymi
+sposobami stosowania ich w nauce i technice. W następnych trzech rozdziałach omówimy
+trzy ważne techniki, w których korzysta się z liczb zespolonych: zespołone przekształcenie
+Fouriera, przekształcenie Laplace'a oraz przekształcenie Z. Te przekształcenia zespolone są
+sercem teoretycznego DSP. Przygotujcie się, teraz nachodzi matematyka!
+
+System liczb zespolonych
+
+Jako ilustrację liczb zespolonych wyobraźmy sobie dziecko podrzucające w górę piłkę. Przypuśćmy
+na przykład, że piłka została podrzucona prosto w górę z prędkością 9,8 m/s. W sekundę po opusz-
+czeniu dłoni dziecka piłka osiągnęła wysokość 4,9 m i przyśpieszenie ziemskie (9,8 m/s*) zre-
+dukowało jej prędkość do zera. Następnie piłka ruchem przyśpieszonym spada ku ziemi, aby po
+2 sekundach od chwili wyrzucenie zostać złapaną przez dziecko. Z podstawowych załeżności fi-
+zyczy wydlła: 2: wyaskość pokoteia paki w danin OWIES WON
+
+hs +vt
+
+gdzie h jest wysokością ponad powierzchnię Ziemi (w metrach), g — przyśpieszeniem ziem-
+skim (9,8 m/s*), v — prędkością początkową (w naszym przykładzie 9,8 m/s) a t — czasem
+(w sekundach).
+
+Teraz przyjmijmy, że chcemy wiedzieć kiedy piłka przekroczy pewną określoną wysokość.
+Wstawiając znane wartości i przekształcając powyższy wzór, uzyskujemy:
+
+telż 1-25
+4,9
+
+Na wysokości na przykład 3 metrów piłka jest dwukrotnie, dla t = 0,38 s (przy wznoszeniu)
+oraz t = 1,62 s (przy opadaniu).
+
+dopkizadajemysensownepytaniadoptypowyszewzorydajsensowneodpowiedzi.
+A co się stanie, gdy zadamy nierozsądne pytania? Na przykład: po jakim czasie piłka osią-
+gnie wysokość 10 metrów? To pytanie nie ma żadnej odpowiedzi w dziedzinie rzeczywistej,
+gdyż piłka nigdy nie osiągnie tej wysokości. Niemniej jednak wstawienie wartości h = 10 m
+do powyższego wzoru daje dwie odpowiedzi: t=1+/-1,041 oraz t=1--1,041. Oba te
+rozwiązania zawierają pierwiastek kwadratowy z liczby ujemnej, a więc coś nieistniejącego
+w znanym nam świecie. Tę niezwykłą właściwość równań wielomianowych jako pierwszy
+zastosował włoski matematyk Girolamo Cardano (1501-1576). Dwa stulecie później wielki
+matematyk niemiecki Carl Friedrich Gauss (1777-1855) wprowadził pojęcie liczb zespoło-
+nych i utworzył drogę do współczesnego zrozumienia tej dziedziny.
+
+Każda liczba zespolona jest sumą dwóch składowych: części rzeczywistej oraz części urojo-
+nej. Część rzeczywista jest liczbą rzeczywistą, jedną z tych zwykłych liczb, o których wszy=
+scy uczyliśmy się od dzieciństwa. Część urojona jest liczbą urojoną, czyli pierwiastki
+kwadratowym z liczby ujemnej. W celu znormalizowania zapisu wyraża się liczbę
+jako liczbę rzeczywistą pomnożoną przez pierwiastek kwadratowy z minus jeden. Na

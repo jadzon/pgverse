@@ -1,0 +1,5 @@
+Wyłączniki różnicowoprądowe nie powinny być stosowane w sieciach 7N-C.
+
+<image/figury/k4_page152_figure1.png>
+
+152 Rozdział : 3. Sprzęt sterowników PLC

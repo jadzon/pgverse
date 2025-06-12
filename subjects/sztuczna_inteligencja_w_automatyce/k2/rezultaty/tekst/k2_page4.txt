@@ -1,0 +1,49 @@
+1.2.2. Obszary zastosowań
+
+Metody sztucznej inteligencji (przedstawione w środkowej kolumnie na rys. ??),
+mają różnorodne i coraz częstsze zastosowania. Typowe z nich wymieniono poniżej:
+
+Rozwiązywanie zadań, gry. planowanie i dowodzenie twierdzeń — Szachy, warcaby,
+otello, itp. Planowanie akcji. Zadania ekonomiczne, transportowe, wojskowe.
+
+Rozpoznawanie obrazów — Rozpoznawanie obiektów na podstawie obrazów gra-
+ficznych, dźwieków i innych sygnałów czasowych. Rozpoznawanie pisma druko-
+wanego (OCR) i ręcznego, Rozpoznawanie dźwięków np. dźwieków tłuczonego
+szkła, czy wystrałów na tle normalnych dźwięków ulicy. Rozpoznawanie ludzi
+na podstawie linii papilarnych, tęczówek lub fotografii twarzy, Diagnostyka me-
+dyczna i techniczna. Przykład: odczytywanie numerów rejestracyjnych samocho-
+dów czy czytanie napisów z występujących na zdjeciach scen ulicznych. Analiza
+scen — zamiana obrazu graficznego na opis formalny.
+
+Sterowanie wieloetapowymi procesami — Uzyskiwane na drodze uczenia ze wzmoc-
+nieniem optymalne sterowania. Np. sterowanie zespołem wind minimalizujące
+średni czas oczekiwania.
+
+Systemy ekspertowe — Systemy doradcze. Diagnostyka oparta o wnioskowanie.
+Wydobywanie wiedzy z danych doswiadczalnych.
+
+Przetwarzanie języka naturalnego — Klasyfikacja tekstów. Tłumaczenia. Stresz-
+czenia. Interfejs z komputerem (chatboty). Programowanie w języku natural-
+nym. Inteligentne wyszukiwanie informacji np. w Internecie, W różnych zada-
+niach przetwarzania języka naturalnego wystepuje takie samo zadanie ogólne:
+zamiana wypowiedzi słownej na opis w języku formalnym.
+
+Robotyka. Mogą tu być wykorzystywane wszystkie powyżej wymienione zasto-
+sowania. Przykład: automatyczne prowadzenie pojazdu terenowego (projekty re-
+alizowane), robot kroczący, rozpoznający obrazy i porozumiewający się w języku
+naturalnym (projekty w pełni jeszcze nie realizowane).
+
+1.2.3. Charakterystyczne narzędzia i metody
+
+Pomimo postępującego rozdzielania się SI na poszczególne kierunki można wciąż
+wyróżnić wspólne narzędzia i metody:
+
+Metody szukania.
+
+Reprezentacje wiedzy i automatyczne wnioskowanie (w tym wiedzy pełnej oraz
+niepełnej lub mającej charakter losowy).
+
+Metody uczenia i struktury uczące się.
+
+Języki Lisp, Prolog, Clips —— do przedstawiania idei i prototypowania, ale także
+do budowy rzeczywistych systemów.

@@ -1,0 +1,21 @@
+8.8.4 Realizacja dla sterownika AEG Modicon 984 Compact
+
+ 
+
+A145 |
+
+O ze rwa lk a
+
+Tab. 8.13 przedstawia zestawienie wejść i wyjść sterownika AEG Modicon po-
+łączonych z odpowiednimi wyjściami i wejściami panelu symułującego reaktor.
+
+<image/tabele/k4_page469_table2.png>
+
+<image/tabele/k4_page469_table1.png>
+
+Ze względu na inny zakres napięć wejściowych modułu wejść anałogowych ste-
+rownika (-19.99 .. +19.99V) niż podawany z przetworników pomiarowych
+
+mP YZ YE DAE R M Z A 0 Az M >+ > r— mm — m 2 W AM 0 A OM | A 1 NA
+
+8.8 Sterowanie sekwencyjne procesem wsadowym 469

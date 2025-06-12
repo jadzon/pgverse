@@ -1,0 +1,25 @@
+<image/tabele/k4_page393_table4.png>
+
+Wyd. 8.8 Zerowanie markerów długośc i po opuszczeniu taśmociągu przez kłodę
+
+<image/tabele/k4_page393_table2.png>
+Wyd. 8.9 Sygnalizacja zezwolenia na wprowadzenie następnej kłody w pracy ręcznej
+
+<image/tabele/k4_page393_table3.png>
+
+Wyd. 8.10 Zezwolenie na wprowadzenie następnej kłody w pracy ręcznej
+
+8.2.3 Realizacja dla sterownika
+
+SACD mA ną ZANA
+
+ 
+
+Tab. 8.4 przedstawia zestawienie połączeń wejść i wyjść dwustanowych sterow-
+nika Modicon z odpowiednimi wyjściami i wejściami panelu dydaktycznego, dla
+którego napisano przykładowy program realizujący opisane wyżej zadanie ste-
+rowania.
+
+<image/tabele/k4_page393_table1.png>
+
+8.2 Sterowanie urządzeniem do sortowania drewna 393

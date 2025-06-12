@@ -1,0 +1,44 @@
+1AQ s. waziaolhoaGudlzaccdk= ,
+
+  
+  
+   
+   
+  
+  
+  
+  
+  
+  
+
+fiaurv/k3 naae148_figure3.png
+<image/wzory/k3_page148_formula1.png>
+
+Widzimy, że w tym przypadku indukcyjność zastępcza L nie zależy od znaku M, nie jest za
+istotne położenie zacisków jednoimiennych w układzie z rys. 1.8-11a.
+
+Przykład 1.8-3. Przedstawione wyżej przykłady wskazują na celowość doprowadzenia
+patrywanych indukcyjności sprzężonych do układu standardowego i oznaczeń z rys. 1.8-3. Po
+to bowiem na posługiwanie się wprost równaniami (1.8-16) i (1.8-17), a także, w razie potrzeby,
+łatwe określenie znaku M. W niektórych przypadkach dogodnie jest również stosować sch
+zastępczy indukcyjności sprzężonych przedstawiony na rys. 1.8-12. Można sprawdzić (pozostawi
+
+<image/figury/k3_page148_figure1.png>
+
+Rys. 1.8-12
+to Czytelnikowi), że równania układu z rys. 1.8-12 są identyczne z równaniami (1.8-22) u
+z rys. 1.8-3. Układy te są zatem równoważne (por. p. 1.5.2-I oraz p. 2.1.3-D)".
+
+Zwracamy jednak uwagę, iż schemat zastępczy z rys. 1.8-12 nie zawsze ma sens fizyczny. Ma
+miejsce tylko w przypadku, gdy M > 0. Przy M < 0 w układzie z rys. 1.8-12 występuje induk
+ność ujemna, która nie ma sensu fizycznego. Niemniej, schematem zastępczym z rys. 1.8-12 moż
+posługiwać się formalnie dla celów obliczeniowych, niezależnie od znaku M.
+
+Przykład 1.8-4. Wyznaczymy indukcyjność zastępczą L połączenia równoległego dw
+
+<image/figury/k3_page148_figure2.png>
+
+3) Znaczenia zdań: „układy z rys. 18-3 i 1.8-12 są równoważne” oraz „na rys. 1.8-
+rzedstawiono schemat zastępczy indukcyjności sprzężonych z rys. 1.8-3” są, w zasadzie, iden
+Drogie sformułowanie sugeruje jednak dodatkowo, że to układ z rys. 1.8-3 będziemy zastępo
+układem z rys. 1.8-12, a nie odwrotnie.

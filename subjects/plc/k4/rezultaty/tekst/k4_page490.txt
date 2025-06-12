@@ -1,0 +1,21 @@
+<image/tabele/k4_page490_table3.png>
+
+Wyd. 8.173 Blok PBS - Faza Opróżnianie — Zamknięcie zaworu spustowego po
+opróżnieniu reaktora
+
+<image/tabele/k4_page490_table1.png>
+
+Wyd. 8.174 Ustawienie okresu przerwań dla bloku OB13
+
+ 
+
+<image/figury/k4_page490_figure1.png>
+
+ 
+
+Wyd. 8.175 Blok FB2 - Faza Grzanie i stabilizacja — Odczytanie aktualnej tempera-
+tury w reaktorze
+
+<image/tabele/k4_page490_table2.png>
+
+490 Rozdział : 8.Programy przykładowe

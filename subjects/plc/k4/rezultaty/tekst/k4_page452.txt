@@ -1,0 +1,18 @@
+<image/figury/k4_page452_figure1.png>
+
+Wyd. 8.106 Podprogram PULPIT — ustawienie markerów dla poszczególnych faz
+w zależności od trybu pracy
+
+<image/tabele/k4_page452_table1.png>
+
+Wyd. 8.107 Podprogram FAZA_1 (napełnianie) -- zamknięcie zaworów przepływu
+mediów chłodzących i ogrzewających oraz wyłączenie mieszalnika
+
+<image/figury/k4_page452_figure2.png>
+
+Wyd. 8.108 Podprogram FAZA_1 (napełnianie) — zamknięcie zaworów dopływu me-
+dium ogrzewającego
+
+ 
+
+452 Rozdział : 8.Programy przykładowe

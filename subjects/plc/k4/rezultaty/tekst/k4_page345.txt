@@ -1,0 +1,22 @@
+<image/figury/k4_page345_figure1.png>
+
+RYS. /.12 NOIEJNOŚĆ DroOŚramowaunia UCZNIKa
+
+W prowadzenie (odczytanie) bieżącej wartości licznika
+
+Bieżąca wartość licznika znajduje się w słowie licznika i jest zakodowana w ko-
+dzie dwójkowym. Może być wprowadzona do akumulatora przy pomocy instruk-
+cji:
+
+L Chr
+gdzie nr jest liczbą określającą numer licznika, którego bieżący wartość zostanie
+wprowadzona. Znajdująca się w akumulatorze wartość licznika może być dalej
+przetwarzana. Istnieje również możliwość wprowadzenia bieżącej wartości licz-
+nika w kodzie BCD. Należy się wówczas posłużyć instrukcją:
+
+LC Chr
+Bieżąca wartość licznika wprowadzona w kodzie BCD może być dalej przetwa-
+rzana, np. przekazana do wyjść, do których jest podłączony wyświetlacz cyfro-
+wy.
+
+<image/tabele/k4_page345_table1.png>

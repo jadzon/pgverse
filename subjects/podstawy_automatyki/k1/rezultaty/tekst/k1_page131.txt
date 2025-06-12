@@ -1,0 +1,34 @@
+3.7. Symulacja układów dynamicznych
+
+Symulację liniowego modelu układu dynamicznego, opisanego transmitancją lub
+równaniem stanu, można zrealizować za pomocą funkcji /sim, wykorzystując jedno
+z poniższych wywołań tej funkcji:
+
+y/k1_page131_formula1.png
+
+lub
+
+y/k1_page131_formula2.png
+
+gdzie Y i X — wektory wyjść i stanów.
+Parametry wywołania funkcji /sim:
+t — wektor czasu
+
+u — zapisane wierszowo wektory sterowań
+x0 — warunki początkowe.
+
+Przykład 3.15
+
+Napisać funkcję symulującą działanie układu regulacji przedstawionego na rysun-
+ku 3.16, przy prostokątnej zmianie sygnału wartości zadanej w.
+
+<image/figury/k1_page131_figure1.png>
+
+Należy przyjąć, że: K,=4,k,=1,T=2.
+Rozwiązanie
+Obliczamy transmitancję układu zamkniętego
+
+<image/wzory/k1_page131_formula3.png>
+Do rozwiązania używamy funkcji /sim.
+
+133

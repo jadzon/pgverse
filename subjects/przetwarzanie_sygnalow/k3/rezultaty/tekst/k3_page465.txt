@@ -1,0 +1,61 @@
+Język C a język asemblera 501
+
+Jest jeszcze pewien sposób, w którym możecie wyzyskać najlepsze cechy programowa-
+nia zarówno w języku C, jak i w asemblerze. Napiszcie program w C, a potem zastosuj-
+cie asembler do krytycznych fragmentów, które muszą być wykonywane bardzo szybko.
+Jest to jedna z przyczyn, dla której program C jest tak popularny w nauce i w technice.
+Działa jak język wysokiego poziomu, lecz daje też możliwość bezpośredniego operowa-
+nia częścią układową, jeśli jest taka potrzeba. Nawet jeśli macie zamiar programować
+tylko w języku C, to przypuszczalnie będziecie potrzebować jakichś wiadomości na te-
+mat architektury procesora sygnałowego i zestawu instrukcji asemblera. Spójrzcie, na
+przykład, znowu na wiersze 002 i 003 w tablicy 28.2, w programie obliczania iloczynu
+skalarnego w języku C. Tam „dm” oznacza, że x| ] ma być zapisane do pamięci danych,
+podczas gdy „pm” wskazuje, że y[ ] będzie umieszczone w pamięci programu. Chociaż
+program jest napisany w języku wysokiego poziomu, to jednak dla uzyskania najlepsze-
+go działania systemu jest niezbędna podstawowa wiedza o rozwiązaniach układowych
+procesora.
+
+Który język jest najlepszy do waszego zastosowania? Wybór zależy od tego, co jest dla was
+ważniejsze. Jeśli potrzebujecie elastyczności oraz szybkiego opracowania programu, to wy-
+bierzcie język C. Natomiast jeśli chcecie osiągnąć możliwie jak najlepsze działanie systemu,
+to zastosujcie asembler. Przy tym wyborze nie unikniecie kompromisów, jak to zilustrowano
+na rys. 28.10. Oto kilka kwestii, które powinniście uwzględnić.
+
+Jak skomplikowany jest program? Jeśli jest długi i skomplikowany, to będziecie przy-
+puszczalnie chcieli zastosować język C. Jeśli zaś jest krótki i prosty, to asembler może się
+okazać dobrym wyborem.
+
+* Czy nalegacie na uzyskanie maksymalnej szybkości procesora sygnałowego. Jeśli tak, to
+asembler wyciśnie z procesora „ostatnie soki”. W zastosowaniach o mniejszych wymaga-
+niach asembler nie ma szczególnych zalet i możecie rozważyć zastosowanie C.
+
+* [lu programistów będzie pracować razem? Jeśli projekt jest na tyle duży, że wymaga wię-
+cej niż jednego programisty, to skłaniajcie się raczej ku językowi C i zastosujcie wbudo-
+wany asembler tylko w segmentach krytycznych pod względem szybkości wykonania.
+
+* Co jest ważniejsze — koszt produktu czy koszt opracowania” Jeśli koszt produktu, wybierz-
+
+cie asembler, a jeśli opracowania — wybierzcie C.
+
+Jakie jest wasze przygotowanie w dziedzinie programowania? Jeśli macie doświadczenie
+
+w asemblerach (na innych mikroprocesorach), to wybierzcie asembler do waszego DSP.
+
+Jeśli wasze poprzednie prace były w języku C, zdecydujcie się na C.
+
+* Zastosowanie którego programu sugeruje producent cyfrowego procesora sygnałowego?
+
+Ten ostatni punkt jest bardzo ważny. Przypuśćmy, że pytacie producenta procesora DSP, jaki
+język macie zastosować, a tam wam mówią: „Możecie stosować albo język C, albo asembler,
+ale my rekomendujemy C”. Powinniście skorzystać z tej rady. To, co oni naprawdę powie-
+dzieli, brzmi: „Nasz procesor jest tak trudny do programowania w asemblerze, że będziecie
+potrzebować 6 miesięcy ćwiczeń, aby móc napisać program”. Z drugiej jednak strony, niektó-
+re procesory sygnałowe są łatwe do programowania w asemblerze. Do tej kategorii zaliczają
+się na przykład układy firmy Analog Devices. Zapytajcie zresztą o to ich inżynierów, oni są
+z tego bardzo dumni.
+
+Jednym z najlepszych sposobów podejmowania decyzji o układach i oprogramowaniu DSP
+jest konsultacja z inżynierami, którzy już je stosowali. Spytajcie producenta o referencje firm
+stosujących wyroby tego producenta lub poszukajcie w Internecie ludzi, do których mogliby-
+ście wysłać listy pocztą elektroniczną. Nie wahajcie się — inżynierowie bardzo lubią wyrażać
+swoje opinie o wyrobach, które stosują. Będą się czuli wyróżnieni, że się do nich zwracacie.

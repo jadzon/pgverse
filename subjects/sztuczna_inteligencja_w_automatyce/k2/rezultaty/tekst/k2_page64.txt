@@ -1,0 +1,31 @@
+69
+
+<image/figury/k2_page64_figure2.png>
+
+Rys. 4.13: Przykład niekończącego się wnioskowania
+
+4.2. Obiekt atrybut wartość
+
+Oprócz języka logiki pierwszego rzedu, stosowane są reprezentacje o mniejszej sile
+ekspresji ale bardziej efektywne obliczeniowo. Najstarszym sposobem reprezentacji
+są tróki obiekt-atrybut-wartość (ang. Object Attribute Value triples (O A V)).
+
+Na przykład reguła systemu MYCIN: „II the site of the culture is blood, and the
+morphology of the organism is rod, and the Gram stain of the organism is Gram-
+neg, and the patient is a compromised host, then there is suggestive evidence (0.6)
+that the identity of the organism is Pseudomonas aeuroginosas” składa się z trójek
+(O-A-V) przedstawionych na rys. ??
+
+<image/figury/k2_page64_figure1.png>
+
+4.3. Sieci semantyczne
+
+Sieci semantyczne są bardziej elastycznym sposobem reprezentacji wiedzy niż trójki
+(O A V). Składają się z węzłów i krawędzi z etykietami.
+
+Węzły mogą oznaczać następujące kategorie (patrz przykład sieci semantycznej
+przedstawiony na rys. ??):
+
+1. Obiekty. W następującym przykładzie Anna Rzepecka, Jan Kowalski i Kazimierz
+Bielecki są obiektami fizycznymi. Obiekty abstrakcyjne także są umieszczane w
+węzłach. 40 jest obiektem abstrakcyjnym.

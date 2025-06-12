@@ -1,0 +1,27 @@
+8 Rozdział 1. Rekurencja
+
+W takiej sytuacje pozostałe elementy tego drugiego ciąqu przenosimy do ciąqu C::
+
+<image/wzory/k2_page157_formula1.png>
+Liczba porównań potrzebna do scalenia ciągów nie jest większa od sumy długości tych
+ciągów.
+Algorytm merge-sort (inaczej — sortowanie przez scalanie), który sortuje ciąg S,
+można rekurencyjnie opisać tak (rysunek 8.3):
+merge-sort($):
+e jeżeli S ma tylko jeden element, to koniec,
+e jeżeli S ma więcej elementów, to:
+o dzielimy ciąg S na połowy S; i S2,
+o merge-sort(5, ),
+o merge-sort(S>),
+o łączymy 5, 1 S>.
+
+Rysunek 1.3: Schemat działania algorytmu merge-sort dla ciągu 3, 7, 5, 2, 6, 1, 8, 4
+
+<image/figury/k2_page157_figure1.png>
+
+Algorytm merge-sort jest przykładem algorytmu typu „dzieł i zwyciężaj”, którego
+ogólny schemat wygląda tak:
+
+e jeżeli problem jest małego rozmiaru, to rozwiązujemy go bezpośrednio,
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

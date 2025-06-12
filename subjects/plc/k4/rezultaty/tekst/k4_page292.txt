@@ -1,0 +1,27 @@
+Po wykonaniu operacji mnożenia następuje podzielenie zawartości rejestrów
+40069 i 40070 przez liczbę 9, a wynik tej operacji zapisany zostaje do rejestrów
+40071 (wynik) i 40072 (reszta):
+
+<image/tabele/k4_page292_table1.png>
+
+<image/tabele/k4_page292_table2.png>
+
+Wyd. 6.12 Realizacja przeliczenia tempe ratury ze skali Fahrenheita na skałę Celsju-
+sza zgodnie ze wzorem ?C = (”F-32)*53/9.
+
+Jeżeli wynik odejmowania byłby zerowy (00149 = I logiczna), to będzie on
+przepisywany do rejestru wynikowego 40071. O zakończeniu przeliczania poin-
+formuje stan wysoki na wyjściu 00151, a o znaku wyniku sygnał na wyjściu
+00150 ( I — ujemny, O — dodatni lub zerowy).
+
+292
+
+   
+
+WZT =
+
+z zę T"YPETZWWYPT
+
+ 
+
+Rozdział : 6 Programowanie sterowników AEG SCHNEIDER Modicon

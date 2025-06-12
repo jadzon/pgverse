@@ -1,0 +1,41 @@
+18 Rozdział 1. Rachunek prawdopodobieństwa
+a ponieważ X i Y są niezależne
+
+<image/wzory/k2_page77_formula1.png>
+
+ale
+
+<image/wzory/k2_page77_formula2.png>
+
+oraz
+
+<image/wzory/k2_page77_formula3.png>
+
+Teza twierdzenia wynika z prostego faktu, że
+
+<image/wzory/k2_page77_formula4.png>
+
+1.7 Wartość oczekiwana, średnia
+
+Definicja 1.38 Wartość oczekiwana (średnia) zniennej losowej X to liczba
+
+<image/wzory/k2_page77_formula5.png>
+
+Przykład 1.39 Dla zmiennej losowej .X3 z przykładu 1.24 wartość oczekiwana wynosi
+
+<image/wzory/k2_page77_formula6.png>
+Jeżeli zmienna posiada jednostajny rozkład prawdopodobieństwa, to jej wartość ocze-
+kiwana jest zwykłą średnią arytmetyczną jej wartości.
+<image/wzory/k2_page77_formula7.png>
+W ogólnym przypadku wartość oczekiwana jest nazywana średnią ważoną.
+Lema* 140
+<image/wzory/k2_page77_formula8.png>
+
+Dowód Jeżeli pogrupujemy wyrazy sumy )”
+X, to otrzymamy
+
+„eq A (w) * P(w) według wartości zmiennej
+
+<image/wzory/k2_page77_formula9.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

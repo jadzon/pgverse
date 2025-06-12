@@ -1,0 +1,15 @@
+<image/tabele/k4_page396_table2.png>
+
+<image/wzory/k4_page396_formula1.png>
+
+Zapalanie lampki zezwolenia na start odbywa się przy | cyklu programowym
+oraz przy opuszczaniu przez kłodę taśmociągu. Lampka jest gaszona. gdy na ta-
+śmociągu pojawi się kłoda.
+
+<image/tabele/k4_page396_table1.png>
+
+<image/wzory/k4_page396_formula2.png>
+
+ 
+
+396 Rozdział : 8. Programy przykładowe

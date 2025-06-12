@@ -1,0 +1,58 @@
+227
+
+Wykonanie programu — nawracanie
+
+Omówienie przebiegu wykonania programu stanie się proste, jeżeli wprowadzimy
+pojęcie spełniania predykatu.
+
+Pojedynczy predykat nazywamy spełnionym, jeżeli:
+
+(a)  unifikuje się z jakimkolwiek faktem lub
+
+(b)  unifikuje się z nagłówkiem jakiejkolwiek reguły i spełniony jest ciąg predykatów
+po prawej stronie nagłówka dla zmiennych ukonkretnionych podczas unifikacji
+nagłówka.
+
+Ciąg predykatów nazywamy spełnionym, jeżeli:
+
+(a) spełniony jest każdy predykat w ciągu i
+
+(b) sprawdzenie spełnienia poszczególnych predykatów przebiegało w kolejności
+ich występowania w ciągu, a zmienne ukonkretniane w trakcie sprawdzania
+przekazywane były pozostałym, niesprawdzonym jeszcze predykatom.
+
+Predykat nazywamy niespełnionym, jeżeli nie unifikuje się z żadnym faktem pro-
+gramu i nie unifikuje się z żadnym nagłówkiem reguły lub unifikuje się z nagłówkiem
+reguły i nie spełniony jest którykolwiek z predykatów jej prawej strony.
+
+Korzystając z wprowadzonych definicji można powiedzieć, że wykonanie pro-
+gramu w Prologu polega na sprawdzeniu spełnienia ciągu predykatów występujących
+w zapytaniu i ponadto na podaniu w odpowiedzi wszystkich wartości zmiennych,
+które powodują takie spełnienie.
+
+W przypadku niespełnienia któregokolwiek z predykatów program cofa się do pre-
+dykatu poprzednio sprawdzanego, przywraca wszystkim zmiennym stan, jaki miały
+przed sprawdzeniem spełnienia tego predykatu i stara się wykazać na nowo jego speł-
+nienie poprzez unifikację z dalszymi klauzulami programu (uzyskując w ten sposób
+inne ukonkretnienia zmiennych mogące spowodować, tym razem, spełnienie następ-
+nego predykatu). Jeżeli predykat nie daje się na nowo zunifikować, to następuje nowe
+cofnięcie się i postępowanie się powtarza. Jeżeli poprzez kolejne sprawdzania, speł-
+nienie zapytania zostanie ostatecznie wykazane, to Prolog drukuje odpowiedź yes,
+(jeżeli argumentami zapytania były wyłącznie obiekty), lub podaje wartość zmien-
+nych (gdy argumentami zapytania były zmienne). Jeśli jednak w procesie cofania
+się program dojdzie do pierwszego predykatu zapytania i wszystkie możliwości jego
+unifikacji się wyczerpią bez wykazania spełnienia zapytania, to proces poszukiwa-
+nia rozwiązania kończy się z wynikiem negatywnym i system wysyła odpowiedź no.
+Omówiony mechanizm cofania się nosi nazwę nawracania lub nawrotu (ang. back-
+tracking) i jest podstawowym mechanizmem Prologu. Po wykazaniu spełnienia da-
+nego zapytania Prolog nie poprzestaje na tym, lecz kontynuując proces nawracania,
+znajduje wszystkie rozwiązania (tak jak gdyby spełnienie nie zostało wykazane).
+
+PRZYKŁAD 9.6
+
+Rozpatrzmy działanie programu 5 dla zapytania:
+
+p(X), p(Y), p(Z), X<>Y, X<>Z, Y<>Z
+/* Program 5 */
+
+pla). p(b). plc). p(d).

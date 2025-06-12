@@ -1,0 +1,37 @@
+24 Rozdział 1. Grafy (nieskierowane)
+
+W tym algorytmie próbujemy kolejnym wierzchołkom przypisać pierwszy z rzędu
+kolori pokolorowane wierzchołki umieszczamy na stosie. Jak zabmiemy w ślepą uliczkę,
+to cofamy się do poprzedniego wierzchołka na stosie i próbujemy następnego koloru.
+
+Przykład 1.39 Zastosujmy powyżwszy algorytm do grafu z rysunku 1.12, aby znaleźć
+kolorowanie trzema kolorami £1,2,3). Najpierw każdy wierzchołek dostaje kolor 0, co
+oznacza, że nie jest jeszcze pokolorowany.
+
+<image/figury/k2_page202_figure2.png>
+
+ju fajbfcfdjef t |
+Lelu) [12 ]1J2]3]0]
+
+an
+
+<image/wzory/k2_page202_formula1.png>
+
+Teraz dtyoryun nit MOŻE PUKULULUWAĆ WIETZLNOIKA [, DU JESŁ UN pUtĄCZUNY Z a, a, €, które
+są pokolorowane kolorami 1, 2, 3. Dlateqo /f jest zdjęte ze stosu:
+
+<image/wzory/k2_page202_formula2.png>
+Teraz zdejmujemy wierzchołek e, bo nie można mu przypisać wyższego koloru, i podsta-
+<image/wzory/k2_page202_formula3.png>
+
+Teraz zuuemainy KOtUr a Nd C(Q) = 5, a Następnie KUlOrUJELMYy cte) := 2 i wKtaualny f na
+stos.
+
+<image/tabele/k2_page202_table1.png>
+
+STOS = abedef.
+W tym momencie pokolorowanie / nie jest możliwe, więc zdejmujemy qo ze stosu
+
+<image/wzory/k2_page202_formula4.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

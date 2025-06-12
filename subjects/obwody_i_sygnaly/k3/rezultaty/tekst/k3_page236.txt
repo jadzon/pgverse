@@ -1,0 +1,15 @@
+236” 2Pojęcia podstawowe — układy
+Odp.: i, = (0, i, =j
+
+Zadanie 2.16. Znaleźć siłę elektromotoryczną E,ą. źródła kompensującego, jakie należy dołączyć
+do zacisków 22' układu z rys. Z-2.16a, aby prądy i napięcia w układach z rys. Z-2.16a i b były takie
+
+samce.
+
+ 
+
+<image/figury/k3_page236_figure4.png>
+
+<image/figury/k3_page236_figure1.png>
+
+Zadanie 2.19. Znaleźć dwójniki równoważne dwójnikom z rys. Z-2.19a, b dla r,g € BŁ*.

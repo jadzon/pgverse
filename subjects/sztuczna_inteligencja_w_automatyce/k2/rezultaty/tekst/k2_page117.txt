@@ -1,0 +1,20 @@
+(a)
+
+<image/figury/k2_page117_figure2.png>
+
+(b)
+
+Rys. 6.19: Podstawowe struktury sieci neuronowych: (a) sieć warstwowa bez sprzężeń zwrot-
+nych i (b) sieć ze sprzężeniami zwrotnymi
+
+układów zależą wyłącznie od aktualnych sygnałów wejściowych i reagują na zmianę
+sygnałów wejściowych z opóźnieniem wynikającym z opóźnień wnoszonych przez
+
+czas reakcji poszczególnych neuronów. Przykładowa funkcja realizowana przez sieć
+warstwową przedstawiona jest na rys. ??.
+
+<image/figury/k2_page117_figure1.png>
+
+Rys. 6.20: Przykładowa funkcja realizowana przez dwuwejściową warstwową sieć neuronową
+
+Sieci ze sprzężeniami zwrotnymi są nieliniowymi układami dynamicznymi. Wpro-

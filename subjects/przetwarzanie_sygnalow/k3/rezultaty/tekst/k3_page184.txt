@@ -1,0 +1,60 @@
+10. Właściwości przekształcenia Fouriera
+
+Na rys. 10.14 a) przedstawiono sygnał foniczny ze składową stałą, dzięki której sygnał
+zawsze ma wartość dodatnią. Jego widmo (rys. 10.14 b) zawiera częstotliwości od 300 Hz
+do 3 kHz, a więc zakres niezbędny do łączności głosowej oraz szpilkę reprezentującą
+składową stałą. Wszystkie inne częstotliwości usunięto przez filtrację analogową. Na ry-
+sunkach 10.14 c), d) przedstawiono falę nośną, czystą sinusoidę o częstotliwości znacz-
+nie większej niż sygnału fonicznego. W dziedzinie czasu modulacja jest mnożeniem sy-
+gnału fonicznego przez falę nośną. W wyniku mnożenia powstaje przebieg oscylacyjny
+(rys. K).14 e) o chwilowej wartości amplitudy proporcjonalnej do oryginalnego sygnału
+fonicznęgo. Mówi się więc, że obwiednia przebiegu nośnego jest równa sygnałowi mo-
+dulującemu. Uzyskany sygnał może być doprowadzony do anteny, przetworzony na fale
+radiowe a potem wykryty przez antenę odbiorczą. W rezultacie, w układach elektronicz-
+nych odbiornika radiowego uzyskuje się sygnał identyczny z przebiegiem z rys. 10.14 e).
+Następnie w detektorze, czyli demodulatorze przebieg zmodulowany jest z powrotem
+przetwarzany w sygnał foniczny, zgodny z sygnałem na rys. 10.14 a). |
+Ponieważ sygnały w dziedzinie czasu są mnożone, więc odpowiadające im widma często-
+tliwościowe są ze sobą spłatane. Tak więc przebieg na rys. 10.14 f) jest wyznaczany jako
+spłot przebiegów na rysunkach 10.14 b), d). Widmo fali nośnej jest przesuniętą funkcją delta,
+dlatego widmo sygnału zmodulowanego jest równe widmu sygnału fonicznego przesunięte-
+mu do częstotliwości fali nośnej. W rezultacie widmo sygnału zmodulowanego składa się
+z trzech części: fali nośnej, wstęgi bocznej górnej i wstęgi bocznej dolnej. |
+Ta zawartość widma odpowiada trzem częściom oryginalnego sygnału fonicznego: skła-
+dowej stałej, częstotliwościom dodatnim od 0,3 do 3 kHz i ujemnym od —0,3 do -3 kHz.
+Chociaż częstotliwości ujemne w oryginalnym sygnale fonicznym są czymś nieuchwyt-
+nym i abstrakcyjnym, to wynikające z nich częstotliwości dolnej wstęgi bocznej są jak
+najbardziej rzeczywiste. Widma przyjmują ludzką postać!
+
+Tego rodzaju analizy są treścią życia specjalistów z dziedziny telekomunikacji. Rozpatrzmy
+na przykład widmo częstotliwościowe transmitowanego sygnału telewizyjnego. Standardowy
+sygnał TV ma widmo od składowej stałej do 6 MHz. Stosując metodę przesuwania częstotli-
+wości, układa się obok siebie 82 takie kanały o szerokości 6 MHz. Na przykład kanał 3 zaj-
+muje pasmo od 60 do 66 MHz, kanał 4 — od 66 do 72 MHz, a kanał 83 od 884 do 890 MHz
+itd. W odbiorniku telewizyjnym następuje przesuwanie wybranego kanału z powrotem do pa-
+sma od 0 do 6 MHz, aby można było wyświetlić obraz na ekranie. Jest to multipleksowanie
+
+częstotliwości.
+
+     
+
+w dziedzinie
+
+Dyskretne w czasie przekształcenie Fouriera
+
+Dyskretne w czasie przekształcenie Fouriera (DTFT — Discrete Time Fourier Transform)
+jest jednym z rodziny przekształceń fourierowskich i jest przeznaczone do nieokreso-
+wych sygnałów dyskretnych. Najlepszym sposobem zrozumienia DTFT jest rozważenie
+jego związku z DFT. Na początku załóżmy, że zebraliśmy sygnał o N próbkach i chce-
+my znaleźć jego widmo częstotliwościowe. Stosując DFT, można rozłożyć sygnał na
+N/2 + 1 fal sinusoidalnych i kosinusoidalnych o częstotliwościach równomiernie roz-
+mieszczonych w zakresie od 0 do połowy częstotliwości próbkowania. Jak to wynika
+z rozważań w poprzednim rozdziale, dopełnianie zerami sygnału w dziedzinie czasu
+wydłuża okres, a w dziedzinie częstotliwości zwęża odstępy między próbkami. Gdy
+N dąży do nieskończoności, sygnał w dziedzinie czasu staje się nieokresowy, a w dzie-
+dzinie częstotliwości staje się sygnałem ciągłym. To jest właśnie DTFT, przekształcenie
+Fouriera określające zależność między sygnałem nieokresowym, dyskretnym w dziedzi-
+nie czasu a okresowym widmem ciągłym w dziedzinie częstotliwości. ;
+
+Matematyczne zależności DTFT można zrozumieć, wychodząc z syntezy i analizy WZO-
+rwopisujcychdftwzory8.28.3i84izakadajcendydonieskoczonoci

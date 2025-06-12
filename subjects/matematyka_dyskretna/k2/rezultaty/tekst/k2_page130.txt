@@ -1,0 +1,50 @@
+1.10. Elementy odwracalne 15
+
+Udowodnimy teraz, że rozkład liczby na czynniki pierwsze jest jednoznaczny, z dokładnością
+do kolejności czynników.
+
+Twierdzenie 1.27 Każdą liczbę naturalną n > I można w dokładnie jeden sposób przed-
+
+<image/wzory/k2_page130_formula1.png>
+
+gdzie u; są uvuduniuu utwaiu uatuiainyiii, JĄ SQ Utyaiu pieca wszynu Viaź ŁawulOdzi
+
+PL <P2<... Pr.
+
+Dowód. Twierdzenie 1.24 orzeka, że liczba ma rozkład na czynniki pierwsze. Trzeba
+pokazać, że jest to rozkład jednoznaczny. n = 2 jako liczba pierwsza ma jednoznaczny
+rozkład. Przynnśćmw. Że n iest naimnieisza liczha z dwoma różnvmi mzkładami:
+
+<image/wzory/k2_page130_formula2.png>
+
+Wtedy z jednej strony p, nie może występować po prawej stronie równania (1.1), bo n/p;
+byłoby mniejszą liczbą z niejednoznacznym rozkładem. Z drugiej strony p; dzieli prawą
+stronę, a więc, z lematu 1.26 występuje po prawej stronie. Mamy więc sprzecznoś. 0
+
+Lemat 1.28 Jeżeli a i b są względnie pierwsze, to ich rozkłady są rozłączne, to znaczy
+mają rozłączny zbiór liczb pierwszych występujących w ich rozkładach.
+
+1.10 Elementy odwracalne
+
+Definicja 1.29 Element a € Z, jest odwracalny, jeżeli istnieje b € Z. takie, że
+<image/wzory/k2_page130_formula3.png>
+b nazywamy elementem odwrotnym do a i oznaczamy przez a”*.
+
+Przykład 1.30 3 jest odwracalna w Zsbo3-3= 1 (mod 8). Oprócz 3 w Zs odwra-
+calne są także 1,517.
+
+Lemat 1.31 Liczba a € Z,, jest odwracalna wtedy i tylko wtedy, gdy NW D(a,m) = 1.
+Dowód. |eżeli NW D(a. m) = 1, to istnieja liczby całkowite r i v, takie że:
+
+<image/wzory/k2_page130_formula4.png>
+
+a wiec m dzieli ar — 1. CZYLI:
+
+<image/wzory/k2_page130_formula5.png>
+Teraz wystarczy przyjąć za a”* taką liczbę z przedziału od 1 do m — 1, która przystaje
+do z modulo m.
+Z druaiei stronv ieżeli istnieie element a”! odwrotny do a to
+
+<image/wzory/k2_page130_formula6.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

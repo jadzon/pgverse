@@ -1,0 +1,21 @@
+Architektura sieci neuronowych
+
+Węzły w sieci wejściowej są pasywne, co znaczy, że nie modyfikują danych. Odbierają poje-
+dynczą wartość na wejściu i powielają tę wartość na swych wielokrotnych wyjściach. Węzły
+w warstwach ukrytej i wyjściowej zaś są aktywne. To znaczy, że modyfikują dane, jak to
+przedstawiono na rys. 26.6. Zmienne X1,, X1>, ... X1,; zawierają dane, które mają być oce-
+niane (rys. 26.5). Mogą to być np. wartości pikseli z jakiegoś obrazu, próbki sygnału fonicz-
+nego, ceny akcji na giełdzie w kolejnych dniach. Mogą to też być dane wyjściowe uzyskane
+z jakiegoś algorytmu, takie jak klasyfikatory z omówionego przykładu wykrywania raka:
+średnica, jaskrawość, ostrość krawędzi itd.
+
+Każda wartość z warstwy wejściowej jest powielana i wysyłana do wszystkich węzłów ukry-
+tych. Jest to struktura zwana całkowicie połączoną. Wartości wchodzące do węzła ukrytego
+są mnożone przez wagi (rys. 26.6) będące zestawem ustalonych z góry liczb zarejestrowa-
+nych w programie. Wejścia ważone są następnie sumowane, dając w rezultacie jedną licz-
+bę. Na rysunku sumowanie zaznaczono symbolem Z. Przed opuszczeniem węzła ta liczba
+jest poddawana nieliniowej funkcji matematycznej zwanej sigmoidą. Wykres tej funkcji ma
+kształt litery S$, co ogranicza sygnał wyjściowy z węzła. Sygnał wejściowy sigmoidy jest
+wartością między — i +ee, a wyjściowy może mieścić się tylko w granicach od 0 do 1.
+
+<image/figury/k3_page405_figure1.png>

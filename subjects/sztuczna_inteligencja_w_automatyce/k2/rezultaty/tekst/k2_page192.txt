@@ -1,0 +1,53 @@
+197
+
+7.4.  Neuronowy system ekspertowy
+
+Jednym z obiecujących zastosowań sieci neuronowych są oparte na nich systemy
+ekspertowe. Najczęściej służą do diagnostyki i sterowania. Reprezentacja wiedzy w
+neuronowym systemie ekspertowym ma zupełnie inny charakter niż w dotychczas
+omawianych systemach regułowych — jest zawarta w wagach i strukturze nauczonej
+sieci.
+
+PRZYKŁAD 7.1
+
+Przykład neuronowego systemu ekspertowego diagnozy chorób skóry przedstawiono
+na rys. ??. System ten o nazwie DESKNET zaprojektowany został głównie w celu
+wspomagania nauczania studentów medycyny Zbudowano go w postaci sieci neuro-
+nowej o strukturze 96-20-10 zawierającej ciągłe neurony unipolarne.
+
+Sygnałami wejściowymi sieci były między innymi następujące symptomy i ich
+parametry: umiejscowienie, rozmieszczenie, kształt, liczba uszkodzeń, obecność ak-
+tywnych granic, liczba złuszczeń, wysokość brodawek, barwa, zmiana pigmentacji,
+swędzenie, krostowatość, limfadenopatia skóropochodna, zgrubienia na dłoniach, wy-
+niki badań mikroskopowych, obecność wykwitu pierwotnego oraz wyniki KOH przy
+teście mikologicznym. Ponadto na wejście sieci podawano czas trwania objawów
+chorobowych, rozróżniając dnie i tygodnie.
+
+System miał łącznie 97 wejść, w tym jedno wejście z sygnałem stałym, oraz 10
+wyjść. Sygnały wejściowe przyjmowały trzy wartości: 0, 1 i 0,5 reprezentujące odpo-
+wiednio: występowanie poszczególnych symptomów, ich niewystępowanie oraz brak
+danych o symptomie. Sygnały wyjściowe poszczególnych neuronów w warstwie wyj-
+ściowej przedstawiają w reprezentacji lokalnej następujące 10 schorzeń: łuszczyca,
+łupież mieszkowy czerwony, liszaj płaski, łupież różowy, łupież pstry, grzybica skóry,
+chłoniak z komórek T, wtórna kiła, przewlekłe kontaktowe zapalenie skóry oraz za-
+palenie łojotokowe skóry.
+
+Dane uczące pochodziły od 250 pacjentów. Sieć nauczano standardową metodą
+propagacji wstecznej. Jakość nauczonej sieci była testowana za pomocą danych nie
+używanych w procesie uczenia, zebranych od 99 pacjentów. Poprawną diagnozę
+otrzymano w 70% przypadków. Wyłączając łuszczycę, uzyskano dokładność ponad
+80%. Pacjenci z łuszczycą diagnozowani byli poprawnie tylko w 30%. Jednak jak
+stwierdzają lekarze, objawy łuszczycy często są podobne do innych chorób typu
+grudkowo-złuszczającego, a tym samym trudne do diagnozy nawet dla lekarza spe-
+cjalisty.
+
+Jednym z istotnych wymagań jest zdolność systemu ekspertowego do przedsta-
+wiania łańcucha wnioskowania prowadzącego do wytworzonej przez niego konkluzji.
+W systemach regułowych, w których wnioskowanie polega na wykazaniu spełnia-
+nia warunków w określonych regułach jeżeli — ło spośród istniejących w systemie,
+przedstawienie łańcucha wnioskowania prowadzącego do danej konkluzji jest moż-
+liwe do realizacji. Systemy neuronowe dochodzą do konkluzji na drodze wielu złożo-
+nych, nieliniowych i równoległych transformacji i wpływ na konkluzję mają wszystkie
+neurony. W związku z tym odtworzenie w nich i wyrażenie w postaci werbalnej łań-
+cucha wnioskowania, wskazującego wpływ indywidualnego wejścia lub grupy wejść
+na ostateczną konkluzję, jest bardzo trudne. Oczywiście, można badać eksperymen-

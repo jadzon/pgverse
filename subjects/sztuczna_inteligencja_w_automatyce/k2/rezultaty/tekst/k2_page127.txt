@@ -1,0 +1,42 @@
+błąd sieci dla jednego wektora wejściowego x, 1 = 1,2,..., p, wynosi
+
+<image/wzory/k2_page127_formula1.png>
+
+gdzie d; i z, oznaczają odpowiednio pożądane i aktualne sygnały wyjściowe, gdy na
+wejście podano obraz x,, zaś błąd łączny dla wszystkich wektorów uczących wynosi
+
+<image/wzory/k2_page127_formula2.png>
+
+Uczenie polega na zastosowaniu metody najszybszego spadku do znalezienia wag
+V, W minimalizujących funkcję E(V,W) daną wzorem (??). Ponieważ funkcja
+(?7) jest sumą składników, obliczenie jej gradientu sprowadza się do obliczenia i
+zsumowania gradientów funkcji £;,(V, W) danej wzorem (??). Mamy więc
+
+<image/wzory/k2_page127_formula3.png>
+
+Możliwe i realizowane są dwa rodzaje postępowania. W jednym z nich, będącym
+zwykłą metodą gradientową, korekcja wektorów wag następuje po obliczeniu gra-
+dientu funkcji (??) (po podaniu wszystkich wektorów uczących). W drugim, korekcja
+wag następuje po każdorazowym podaniu wektora uczącego i obliczeniu gradientu
+funkcji (72).
+
+Przeprowadzając korekcje wag po każdorazowym podaniu wektora uczącego w
+kierunkumalejcegogradientuotrzymujemyoglnewzorynakorekcjwagwwar
+stwie pierwszej i drugiej
+
+<image/wzory/k2_page127_formula4.png>
+
+gdzie 7 jest stałym współczynnikiem, błąd E jest zdefiniowany wzorem (??) zaś
+indeks pominięto dla uproszczenia zapisu.
+
+Ponieważ błąd E zależy od wartości wagi wy; tylko poprzez funkcję nety = wży,
+oraz od wartości wagi v;, tylko poprzez funkcję net; = v;x, to stosując wzór na
+pochodne cząstkowe funkcji złożonej możemy napisać
+
+<image/wzory/k2_page127_formula5.png>
+<image/wzory/k2_page12/_formula6.png>
+
+Ujemna pochodna błędu po wielkości net; (net,) nazywa się sygnałem błędu delta
+generowanym przez k-ty (j-ty) neuron i jest zdefiniowana następująco
+
+<image/wzory/k2_page127_formula7.png>

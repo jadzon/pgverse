@@ -1,0 +1,31 @@
+Zaawansowane narzędzia programowe 525
+
+ŚĆ
+
+<image/tabele/k3_page488_table1.png>
+
+1. Kod parametrów użytkownika (profilowy) do identyfikacji „wąskich gardeł”
+2. Oglądanie zmieszanych listingów C i asemblera
+3. Stworzenie żądanego okna rejestrów
+
+Rys. 29.8. Ekran debugowania Visual DSP. Jest to zwykły interfejs tak do symulacji, jak i do emulacji. Może pokazy-
+wać program w języku C przeplatany uzyskanym kodem asemblera, śledzić wykonywanie instrukcji, sprawdzać reje-
+stry (sprzętowe i programowe oraz pamięci), śledzić funkcjonowanie magistral i realizować wiele innych zadań
+
+A oto kilka podstawowych cech VisualDSP, z których wynika, dlaczego zintegrowane środowisko
+tworzenia aplikacji jest tak ważne dla szybkiego opracowania programu. Edytor jest wyspecja-
+lizowany w tworzeniu programów w języku C, w asemblerze i w mieszance obu tych języków.
+instrukcji w różnych kolorach. Można też edytować więcej niż jeden plik za jednym razem. Jest to
+bardzo dogodne, gdyż docelowy program jest tworzony przez łączenie razem kilku plików.
+
+Na rys. 29.8 pokazano przykład ekranu z debugera Visual DSP. Jest to interfejs do dwóch
+różnych typów narzędzi: symulatorów i emulatorów. Symulatory testują program w ra-
+mach komputera osobistego; obecność DSP nie jest konieczna. Jest to zwykle pierwszy,
+po napisaniu programu, etap debugowania. Symulator naśladuje architekturę i działanie
+części układowej DSP, włącznie ze strumieniami danych wejściowych, przerwaniami
+i innymi operacjami we/wy. Emulatory (takie jak Analog Devices EZ-ICE") sprawdzają
+działanie programu na istniejącej części układowej DSP. Program emulatora (na waszym
+komputerze osobistym) musi więc być zdolny do monitorowania sygnałów elektrycz-
+nych wewnątrz DSP. Aby to umożliwić, procesory SHARC mają testowy port dostępu
+IEEE 1140.1 JTAG, który umożliwia urządzeniu zewnętrznemu śledzenie wewnętrznych
+funkcji procesora.

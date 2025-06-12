@@ -1,0 +1,10 @@
+<image/tabele/k4_page385_table1.png>
+
+Rys. 8.2 Schemat stykowy obwodu sterowania silnikiem
+w układzie zasilania gwiazda — trójkąt
+
+<image/tabele/k4_page385_table2.png>
+
+<image/tabele/k4_page385_table3.png>
+
+8.1 Przykłady sterowania silnikiem 385

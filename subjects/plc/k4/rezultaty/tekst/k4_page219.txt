@@ -1,0 +1,42 @@
+Wyjścia funkcji stanowią:
+
+e FD (FounD) - znaleziono w tablicy element spełniający wymagania;
+
+e NX (output iNdeX) - numer pierwszego elementu tablicy, który spełnił wy-
+magania.
+
+Parametrem funkcji jest LEN (LENgrh) określający liczbę elementów tablicy.
+
+Przeglądanie tablicy rozpoczyna się od komórki pamięci o adresie określonym
+przez sumę wejścia AR i wejścia NX. Aby rozpocząć przeszukiwanie od począt-
+ku tablicy, na wejściu NX należy podać zero. Jeżeli wartość tego wejścia jest
+spoza dopuszczalnego zakresu (mniejsza od zera lub większa od LEN-1), to
+przyjmowana jest dla niego wartość domyślna równa zero.
+
+Przeglądanie jest kontynuowane aż do chwili, gdy zostanie znaleziony element
+tablicy spełniający warunek poszukiwań lub do osiągnięcia ostatniego elementu
+tablicy. Jeżeli taki element został znaleziony, to na wyjściu FD pojawia się prąd,
+a na wyjściu NX indeks znalezionego elementu tablicy (numer elementu wzglę-
+dem początku tablicy).
+
+Jeżeli osiągnięty został ostatni element tablicy (bieżący indeks jest równy adre-
+sowi początkowemu tablicy AR plus długość tablicy LEN) i nie znaleziono
+elementu spełniającego warunek, to wyjście FD przechodzi w stan OFF, a na
+wyjściu NX jest zero.
+
+Na Wyd. 4.34 pokazano przykład wykorzystania funkcji SRCH_GT do znalezie-
+nia numeru pierwszego rejestru, którego zawartość jest większa od 700. Numer
+ten należy wpisać do wyjścia %AQ]. Jeżeli żaden z rejestrów od %R/ do %R8
+nie spełnia warunku, to zmienna %AQ]1 przyjmie wartość zero. Funkcja jest wy-
+konywana w cyklach sterownika, w których zmienna %/ ma wartość /.
+
+<image/figury/k4_page219_figure1.png>
+
+Wyd. 4.34 Przykład zastosowania funkcj i przeszukiwania SRCH_GT.
+
+Z kolei przykład na Wyd. 4.35 pokazuje sposób wykorzystania funkcji
+SRCH_EQ do przeglądania tablicy szesnastu wejść analogowych, od %A7/ do
+
+ 
+
+4.9 Operacje na tablicach danych 219

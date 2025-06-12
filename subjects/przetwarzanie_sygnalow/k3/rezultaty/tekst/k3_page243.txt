@@ -1,0 +1,38 @@
+15. Filtry o zasadzie średniej kroczącej
+
+Filtry z wykorzystaniem metody średniej kroczącej są najpopularniejszymi filtrami w DSP,
+przede wszystkim dlatego, że wśród filtrów cyfrowych są one najłatwiejsze do zrozumienia
+i stosowania. Mimo swej prostoty, filtr o średniej kroczącej jest optymalny do często wystę-
+pującego zadania, jakim jest zredukowanie szumu losowego z zachowaniem stromej odpo-
+wiedzi skokowej. To powoduje, że do sygnałów zakodowanych w dziedzinie czasu ten wła-
+
+nieco lepiej w dziedzinie częstotliwości, kosztem dłuższego czasu obliczeń
+
+Realizacja przez splot
+
+Jak sama nazwa wskazuje, filtr o średniej kroczącej działa na zasadzie uśredniania pewnej
+
+liczby punktów sygnału wejściowego w celu uzyskania jednego punktu w sygnale wyjścio-
+
+wym. Tę operację można zapisać wzorem:
+<image/wzory/k3_page243_formula1.png>
+
+Wzór 15.1. Wzór opisujący działanie filtru o średniej kroczącej. W tym wzorze x[ ] jest sygnałem
+wejściowym, y[ ] — sygnatem wyjściowym, M — liczbą punktów stosowanych w średniej kroczącej. W tym
+wzorze są wykorzystywane punkty tylko po jednej stronie wtaśnie obliczanej próbki wyjściowej
+
+gdzie xf ] jest sygnałem wejściowym, y| ] — sygnałem wyjściowym, M — liczbą punktów
+
+w średniej. Na przykład w 5-punktowym filtrze o średniej kroczącej punkt 80 w sygnale
+
+wyjściowym oblicza się następująco:
+<image/wzory/k3_page243_formula2.png>
+
+Alternatywnie grupę punktów z sygnału wejściowego można wybrać symetrycznie wokół
+punktu w) se... -.
+
+<image/wzory/k3_page243_formula8.png>
+
+Odpowiada to zmianie sumowania we wzorze 15.1 z: j= 0 do M- 1 na j=-(M- 1/2 wo
+
+<image/figury/k3_page243_figure1.png>

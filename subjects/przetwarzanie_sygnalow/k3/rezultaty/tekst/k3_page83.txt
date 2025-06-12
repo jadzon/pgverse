@@ -1,0 +1,41 @@
+5. Systemy liniowe
+
+ 
+
+cze po 2 USD za skrzynkę i jabłka po 5 USD za skrzynkę. Jeśli farmer sprzedaje tylko
+pomarańcze, uzyskuje wtedy 20 USD za 10 skrzynek i 40 USD za 20 skrzynek, a więc
+cała wymiana ma charakter homogeniczny. Jeśli sprzeda on 20 skrzynek pomarańcz i 10
+skrzynek jabłek, to otrzyma: 20 x 2 USD + 10 x 5 USD = 90 USD. Jest to taka sama
+kwota, jak w przypadku, gdyby pomarańcze i jabłka były sprzedane oddzielnie, a więc
+transakcja jest addyrywna. Będąc zarówno homegeniczną, jak i addytywną, ta sprzedaż
+towarów jest procesem liniowym. Ponieważ jednak w tym procesie nie ma żadnych sy-
+gnałów, więc nie mamy tu do czynienia z systemem i niezmienność względem przesu-
+nięcia nie ma żadnego sensu. Niezmienność względem przesunięcia można uważać za
+dodatkowy aspekt liniowości, wymagany w przypadku sygnałów i systemów.
+
+Liniowość statyczna i wierność odtwarzania sinusoidy
+
+Homogeniczność, addytywność i niezmienność względem przesunięcia są ważnymi wła-
+ściwościami, gdyż stanowią matematyczną podstawę definiowania systemów liniowych.
+Niestety, same te cechy nie dają naukowcom i inżynierom intuicyjnego wyczucia, czym są
+systemy liniowe. Często pomocą mogą być liniowość statyczna i wierność odtwarzania
+sinusoidy. Nie są to właściwości szczególnie ważne z punktu widzenia matematycznego,
+lecz odnoszą się do ludzkiego sposobu myślenia o systemach liniowych. Należy poświęcić
+szczególną uwagę temu podrozdziałowi.
+
+Liniowość statyczna określa, jak system liniowy reaguje na sygnały niezmieniające się, np.
+stałoprądowe (DC) lub statyczne. Odpowiedź statyczna systemu liniowego jest bardzo prosta:
+sygnał wyjściowy jest sygnałem wejściowym pomnożonym przez pewną stałą. A więc wykres
+wartości wyjściowych w funkcji wszystkich możliwych wartości wejściowych jest linią prostą
+przechodzącą przez środek układu współrzędnych. Takie odpowiedzi przedstawiono na rys.
+5.5 dla dwóch często spotykanych systemów liniowych: prawa Ohma dla rezystorów i prawa
+Hooke'a dla sprężyn. Dla porównania na rys. 5.6 przedstawiono charakterystyki statyczne
+dwóch systemów nieliniowych: diody złączowej pn i właściwości magnetycznych żelaza.
+Wszystkie systemy liniowe mają właściwość liniowości statycznej. Stwierdzenie odwrotne
+też zwykle jest prawdziwe, lecz nie zawsze. Bywają systemy, które wykazują liniowość
+statyczną, lecz nie są liniowe w odniesieniu do sygnałów zmieniających się. Jednak ko-
+rzystając tylko z liniowości statycznej, można w pełni zrozumieć dużą klasę systemów.
+W tych systemach nie ma znaczenia, czy sygnał wejściowy jest statyczny, czy się zmienia.
+Są to tak zwane systemy bezpamięciowe (memoryless), gdyż wyjście zależy tylko od ak-
+
+<image/figury/k3_page83_figure1.png>

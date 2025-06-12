@@ -1,0 +1,178 @@
+201
+
+       
+      
+
+- modulacji. Jedna z prostszych nosi nazwę modulacji amplitudy. Na rys. 10.14 przedsta-
+wiono przykład funkcjonowania modulacji amplitudy zarówno w dziedzinie czasu, jak i czę-
+głównie w elektronice analogowej. Jednak, jeśli trzeba, to cała ta procedura może być prze-
+
+stotliwości. W tym przykładzie użyto sygnałów ciągłych, gdyż ta modulacja jest stosowana
+prowadzona również w postaci dyskretnej (pieśń przyszłości! ).
+
+Łączność radiowa jest dziedziną wyjątkowo dobrze rozwiniętą. Opracowano wiele metod
+
+Mnożenie sygnałów (modulacja amplitudy)
+
+NG Lan
+i i
+|
+i ;
+'
+1 :
+|
+|
+zasnajonzesanejonananani
+i
+ł
+1
+ł
+i
+Pona
+i
+'
+ł
+i
+
+--14-—-
+
+4-1
+
+pam mm m mm m m m m fp m m m mm
+'
+'
+IJ
+|
+
+p---—-
+
+mon
+
+mna
+
+"||" |; a A w m
+
+4-mnAnnzna
+
+4
+34+---
+2
+
+1
+
+I
+i
+
+  
+
+ 
+    
+
+POTC
+
+1
+
+|
+WOSJSZYDĄSOCEE
+
+  
+
+i
+
+t
+Boce
+
+s
+
+  
+
+ 
+
+je)
+e
+—
+-
+0 kod= l
+Z
+O
+d—
+
+page 183
+
+   
+         
+
+i
+i
+ł
+i
+5
+
+|
+|
+ią
+
+ 
+
+MEZA
+
+       
+
+—
+
+| oe
+a
+pozna
+Pa
+Dz
+
+—
+a
+
+Tron
+
+NAN rowe
+
+    
+
+i
+i
+i
+0,6
+Czas [ms]
+
+s. 10.14. Modulacja amplitudy. W dziedzinie czasu modulację amplitudy realizuje się przez mnożenie sygnalu fo-
+
+MLUKUNI
+
+|
+
+|
+|
+
+TM
+
+k
+
+0,4
+
+Aj m m m m m w m m w
+|. ||| | "m m A a A mf
+
+ 
+   
+
+e
+|
+0.0
+
+utworzenia sygnału zmodulowanego (rys. e). Ponieważ mnożenie
+
+nego (rys. a) przez fale nośną (rys. Cc) w celu
+
+ 
+
+częstotliwości, więc widmo sygnatu zmodulowanego jest widmem
+
+czasu odpowiada spłotowi w dziedzinie
+lonicznego przesuniętym do częstotliwości nośnej

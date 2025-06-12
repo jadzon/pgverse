@@ -1,0 +1,31 @@
+80
+
+X xY i posiada funkcję przynależności
+
+<image/wzory/k2_page75_formula1.png>
+
+PRZYKŁAD 5.4
+Przyjmijmy definicję podzioru średniego wzrostu jak w przykładzie ?? i ponadto
+przyjmijmy, że mamy podzbiór rozmyty zielonooki określony trapezową funkcją przy-
+należności, gdzie przestrzenią podzbioru średniego wzrostu jest wzrost w cm, a prze-
+strzenią podzbioru zielonooki jest długość fali światła w nm (kolor zielony — 530nm).
+Na tej podstawie dla przykładowych podzbiorów: średniego wzrostu t zielonooki,
+średniego wzrostu lub zielonookii średniego wzrostu i nie zielonooki można wyznaczyć
+dwuargumentowe funkcje przynależności stosując odpowiednio operacje iloczynu,
+sumy, i iloczynu zbioru i zbioru zanegowanego. Otrzymane rezultaty przedstawione
+są na rys. ??
+
+<image/figury/k2_page75_figure2.png>
+
+<image/figury/k2_page/b_rigure1.png>
+
+Rys. 5.7: Funkcje przynależności podzbiorów: (a) średniego wzrostu t zielonooki, (b) śred-
+
+niego wzrostu lub zielonooki i (c) średniego wzrostu i nie zielonooki
+
+Definiuje się także poniższe operacje algebraiczne:
+Definicja 5.8 Koncentracja zbioru
+
+Koncentracją zbioru rozmytego A jest zbiór CON(A) o funkcji przynależności
+
+<image/wzory/k2_page75_formula2.png>

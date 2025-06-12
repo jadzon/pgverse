@@ -1,0 +1,43 @@
+5.1. WPROWADZENIE
+
+Najważniejszymi parametrami specyfikowanymi dla pamięci są:
+l) pojemność,
+2) szybkość,
+3) koszt,
+4) pobór mocy.
+
+Pojemność pamięci (ang. capacity) określa ilość informacji jaką można w niej prze-
+chowywać. Mierzy się ją w jednostkach informacji takich jak: bity, bajty lub słowa.
+Pamięć jest podzielona na pewne fragmenty tak, aby różnym fragmentom odpowiadały
+różne adresy. W zależności od typu pamięci fragmenty te mogą mieć różną wielkość.
+W pamięci głównej (operacyjnej) komputera fragmenty odpowiadają zwykle długości
+słowa komputerowego i nazywane są komórkami. W mikrokomputerach stosuje się pamięci
+o długości słowa 8 lub 16 bitów. W większych komputerach długość słowa pamięci
+głównej osiąga 32 lub 64 bity.
+
+Pojemność pamięci operacyjnych określa się podając liczbę słów i długość słowa.
+Liczbę słów podaje się używając przedrostków odpowiadających odpowiednim
+mnożnikom jak np.: Kilo- (mnożnik 2' = 1024), Mega- (mnożnik 2) lub Giga- (mnoż-
+nik 2*9). Przykładowo pojemność pamięci może wynosić 512K x 64, co oznacza, że jest to
+2!” słów 64-bitowych. W przypadku gdy słowo ma długość 8 bitów pojemność pamięci
+jest podawana w bajtach. Wówczas np. 128 KB oznacza 2'” bajtów.
+
+W pamięciach masowych komputerów, których pojemności są większe od pojemności
+pamięci głównej, adresowanymi fragmentami nie są słowa, lecz zwykle większe obszary
+pamięci. Na przykład w pamięciach dyskowych fragmentem takim jest tzw. sektor, którego
+pojemność to zwykle setki a nawet tysiące słów. Żądanie dostępu do pamięci i podanie
+odpowiedniego adresu jej fragmentu pozwala na zapisanie lub odczytanie całego bloku
+słów.
+
+Szybkość pracy pamięci jest parametrem wskazującym na to, jak często procesor lub
+inne urządzenie może korzystać z niej. Jest ona określana kilkoma parametrami. Są to:
+
+— czas dostępu (ang. access lime),
+
+— czas cyklu (ang. cycle time),
+
+— szybkość transmisji (ang. transfer speed).
+
+Czas dostępu jest to czas jaki upływa od momentu zażądania informacji z pamięci do
+momentu, w którym ta informacja ukaże się na wyjściu pamięci. Dla pamięci operacyjnych
+czas ten wynosi od 20 ns do 200 ns.

@@ -1,0 +1,43 @@
+Tomografia komputerowa
+
+ 
+
+Problem rozwiązano na początku lat 70. wprowadzając technikę zwaną tomografią kompu-
+terową (CT — Computer Tomography). Ta tomografia zrewolucjonizowała medyczne metody
+rentgenowskie dzięki swym bezprecedensowym możliwościom wizualizacji anatomicznej
+budowy ciała. Na rys. 25.13 przedstawiono typowy obraz medyczny uzyskany metodą to-
+mografii komputerowej. Początkowo tomografia komputerowa była wprowadzona na rynek
+pod nazwą komputerowa tomografia osiowa lub skaner CAT (Computer Axial Tomography
+Scanner). W środowisku medycznym zarzucono już stosowanie tych nazw, lecz ciągle można
+je jeszcze usłyszeć w języku potocznym.
+
+Na rys. 25.14 | przedstawiono prostą geometrię pozyskiwania w tomografii komputerowej wi-
+doku przekroju przechodzącego przez środek głowy. Wąska wiązka promieniowania rentge-
+nowskiego przechodzi od źródła do detektora promieniowania. Wartość zmierzona w detek-
+
+torze jest więc zależna od całkowitej ilości substancji znajdującej się gdziekolwiek na drodze
+wiązki. Substancje takie, jak kości lub zęby pochłaniają więcej promieniowania rentgenow-
+skiego, co powoduje, że w detektorze uzyskuje się sygnał mniejszy niż w przypadku tkanek
+miękkich i tłuszczu. Jak to widać na rysunku, zespół źródła i detektora są przesuwane, aby
+zarejestrować widok pod pewnym określonym kątem. Na rysunku pokazano tylko jeden po-
+brany widok; pełne skanowanie obejmuje od 300 do 1000 widoków pobranych przy obrocie
+o przyrostach od 0,3” do 1,07. Takie skanowanie realizuje się, montując źródło i detektor na
+obrotowej dźwigni poruszającej się wokół pacjenta. Najważniejszą cechą zbierania danych
+w tomografii komputerowej jest to, że promienie rentgenowskie przechodzą tylko przez wła-
+śnie badany poprzeczny wycinek ciała. Inaczej jest w tomografii klasycznej, gdzie promie-
+nie Roentgena przechodzą przez struktury, które próbujemy wytłumić w końcowym obrazie.
+W tomografii komputerowej nie dopuszcza się do tego, aby informacja z nieistotnych dla
+badania miejsc w ogóle się dostawała do zbieranych danych.
+
+Przed rekonstrukcją obrazu trzeba na ogół wykonać kilka etapów przetwarzania wstępnego.
+Na przykład wynik każdego pomiaru promieniowania rentgenowskiego powinien zostać zło-
+garytmowany, gdyż natężenie tego promieniowania przy przechodzeniu przez jakiś materiał
+zmniejsza się wykładniczo. Zlogarytmowanie daje sygnał zależny liniowo od właściwości
+mierzonego materiału. Inne etapy przetwarzania wstępnego służą do kompensacji polichro-
+matyczności stosowanego promieniowania (mającego więcej niż jedną energię) oraz detek-
+
+torów wieloelementowych (w przeciwieństwie do pojedynczego elementu na rys. 25.14).
+Chociaż te operacje są istotne w całej metodzie, nie są jednak związane z algorytmem rekon-
+strukcyjnym i nie będziemy więcej o nich mówić.
+
+<image/figury/k3_page390_figure2.png>

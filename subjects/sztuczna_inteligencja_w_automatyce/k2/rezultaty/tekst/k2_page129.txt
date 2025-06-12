@@ -1,0 +1,49 @@
+134
+Dla funkcji unipolarnej mamy
+
+<image/wzory/k2_page129_formula1.png>
+
+Przedstawiona metoda nauki sieci wielowarstwowej nazywa się metodą propagacji
+wstecznej. Jest ona uniwersalnym algorytmem nauki sieci wielowarstwowych i jej od-
+krycie stanowiło początek nowego etapu rozwoju badań nad sieciami neuronowymi.
+Nazwa metody wynika z kolejności obliczania sygnałów błędu 6, które przebiega w
+odwrotnym kierunku niż przechodzenie sygnałów przez sieć, to znaczy od warstwy
+wyjściowej poprzez warstwy ukryte w kierunku wejść.
+
+Podsumowanie metody propagacji wstecznej błędu
+
+Dane jest p par uczących
+
+<image/wzory/k2_page129_formula2.png>
+
+gdzie x, ma rozmiar (7 x 1), d, ma rozmiar (K x 1),a zy = —1,dlai = 1,2,..., p.
+Wektor y; o rozmiarach (J x 1) jest wektorem wyjściowym warstwy ukrytej, a
+Uy = —l, dla ti = 1,2,..., p. Wektor z o rozmiarach (K x 1) jest wyjściem war-
+stwy wyjściowej. Parametr q oznacza numer cyklu nauki a / oznacza numer kroku
+wewnątrz cyklu nauki.
+
+Krok 1 Wybór 7 > O, Eu. > 0.
+
+Krok 2 Wybór elementów macierzy wag W i V jako niewielkich liczb losowych.
+Macierz W ma rozmiar (K x J), macierz V ma rozmiar (J x 7).
+
+Krok 3 Ustawienie wartości początkowych liczników oraz zerowanie błędu
+
+<image/wzory/k2_page129_formula3.png>
+
+Krok 4 Podanie obrazu na wejście (obrazy mogą być podawane w kolejności loso-
+wej) i obliczenie sygnału wyjściowego
+
+wzorv/k? naae129 formiila4 nna
+<image/wzory/k2_page129_formula5.png>
+
+gdzie v, jest j-tym wierszem V
+
+<image/wzory/k2_page129_formula6.png>
+
+gdzie w;, jest k-tym wierszem W, zaś funkcja aktywacji /f(-) jest dana wzorem
+(?7) — neuron bipolarny lub wzorem (??) — neuron unipolarny.
+
+Krok 5 Uaktualnienie błędu:
+
+<image/wzory/k2_page129_formula7.png>

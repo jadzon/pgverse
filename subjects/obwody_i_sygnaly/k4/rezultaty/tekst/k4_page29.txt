@@ -1,0 +1,12 @@
+1.2. Podstawowe modele zjawisk w obwodzie 29
+
+<image/figury/k4_page29_figure1.png>
+
+1.2.2. Indukcyjność
+
+A. Podstawowe zależności. Rozważmy obszar magnetyka w postaci
+walca kołowego (rdzenia) o długości I i polu przekroju poprzecznego S (rys.
+1.2-5a). Na rdzeń nawinięte jest uzwojenie o z zwojach. Opór tego uzwojenia
+pomijamy. Uzwojenie wraz z rdzeniem stanowi cewkę (solenoid, zwojnicę).
+
+<image/figury/k4_page29_figure2.png>

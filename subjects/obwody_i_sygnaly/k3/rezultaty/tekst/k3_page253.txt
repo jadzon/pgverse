@@ -1,0 +1,41 @@
+33. Metody analizy obwodów liniowych prądu stałego 255
+
+nr 2 —— e. Z Z W 0 W
+
+<image/figury/k3_page253_figure1.png>
+
+Prąd I% obliczymy wyznaczając z dzielnika napięciowego napięcie na posen równoległym
+oporów R, i R, i dzieląc je następnie przez opór R,: [=
+
+<image/wzory/k3_page253_formula1.png>
+
+Prąd I*% obliczamy z dzielnika prądowego:
+
+ko" y
+v
+
+<image/wzory/k3_page253_formula2.png>
+
+Ostatecznie otrzymujemy:
+Nzory/k3_page253_formula3.png
+
+3.3.3. Metody źródeł zastępczych
+
+W punkcie 3.2.1 stwierdziliśmy, że każdy liniowy rezystancyjny dwójnik
+bezźródłowy (rys. 3.2-1) możemy zastąpić równoważnym jednoelementowym
+dwójnikiem oporowym o oporze R,g równym oporowi zastępczemu tego
+dwójnika. Pokażemy obecnie, że koncepcję równoważności dwójników można
+rozszerzyć na liniowe rezystancyjne dwójniki źródłowe i że można ją
+wykorzystać do obliczania prądu lub napięcia w wyróżnionej gałęzi układu.
+
+A. Zastępcze źródło napięciowe. Rozważmy liniowy rezystancyjny układ
+źródłowy i załóżmy, że poszukiwany jest prąd I w wyróżnionej gałęzi tego
+układu o zaciskach AB. Dla uproszczenia przyjmiemy, że w gałęzi tej występuje
+opór R, (rys. 3.3-4a).
+
+Wykażemy, że dwójnik AB, do którego zacisków jest dołączony opór R, (rys.
+3.3-4b), można zastąpić prostym równoważnym dwójnikiem o parametrach E;
+i Rz, pokazanym na rys. 3.3-4c'”). Dowód będzie zawierać zarazem sposób
+wyznaczania tych parametrów.
+
+U Wykluczamy tu przypadek idealnego źródła prądowego.

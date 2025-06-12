@@ -1,0 +1,42 @@
+144
+
+1. Pojęcia podstawowe — elementy
+
+<image/figury/k4_page144_figure1.png>
+
+cisków jednoimiennych (prąd i, „wpływa”, prąd i, „wypływa”). Zamieńmy
+teraz zwrot prądu i», tzn. wprowadźmy prąd i; (rys. 1.8-6b) równy:
+
+zory/k4_page144_formula1.png (1.8-34)
+Nadal obowiązują równania (1.8-16):
+
+<image/wzory/k4_page144_formula2.png>
+
+które można również przepisać w postaci:
+
+<image/wzory/k4_page144_formula4.png>
+
+n pozostają, oczywiście, równania napięciowe (1.8-17).
+
+ich z rys. 1.8-6b strzałki prądów i,, iz są postawione
+m zacisków jednoimiennych, a więc w równaniach (1.8-36)
+oba składniki winny mieć ten sam znak. Oznacza to, że
+3-6a mamy:
+
+zory/k4_page 144_formula5.png (1.8-37)
+
+je 144_formula3.png
+
+przypadku układów z rys. 1.8-5a,b, można zauważyć, iż
+jednoimiennych zaznaczone na rys. 1.8-6c jest równoważne
+vionemu na rys. 1.8-6a.
+ści sprzężonych (rys. 1.8-3) opisanych równaniami (1.8-16)
+sm dwa istotnie różne położenia zacisków jednoimiennych:
+js. 1.8-5 a,b, przy którym M > 0, oraz przedstawione na
+viadające wartości M < 0.
+
+owodów nie interesuje nas, w zasadzie, odpowiedź na pytanie, dlaczego
+ołożone tak, a nie inaczej. Jak już wspominaliśmy, rostrzygnięcie tej kwestii
+jemnego usytuowania uzwojeń w przestrzeni”. Na przykład, jeżeli oba
+
+nia zacisków jednoimiennych jest możliwe także w drodze odpowiedniego

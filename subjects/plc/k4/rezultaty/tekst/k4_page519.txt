@@ -1,0 +1,21 @@
+Oznaczenia cyfrowe punktów PA powinny być kolejnymi liczbami, poczynając
+
+od 1, oznaczającymi :
+
+a) numery kolejne punktów PA niezależnie od ich oznaczenia literowego,
+
+b) numery kolejne punktów PA w każdej grupie punktów PA pogrupowanych
+wg tego samego oznaczenia wielkości mierzonej lub sterowanej.
+
+Punkty PA z wielomiejscowym pobieraniem sygnału dopuszcza się oznaczać
+kolejnymi liczbami od 1 do n, umieszczając je za kolejnym numerem danego
+punktu PA oraz oddzielając je kropką.
+
+<image/figury/k4_page519_figure2.png>
+
+<image/figury/k4_pageb19_rigure1.png>
+
+Rys. €.1 Przykład oznaczenia punktu automatyki PA
+
+POR WOT TEZY YTY TOZOZÓE TOO ZOO OOOO OOOO TO OZ OZ TEE ZE TYDZ PÓZ DPDÓO TD ZOZ ZOZODOOĄ.
+Dodatek C. Oznaczenie punktów automatyki 519

@@ -1,0 +1,25 @@
+e w obrębie segmentu wykonywane są kolejno poszczególne instrukcje jedna
+po drugiej lub w kolejności wynikającej z instrukcji skoku.
+
+Dla sterowników Simatic charakterystyczny jest brak obszaru pamięci przezna-
+czonego na aktualny stan wejść i wyjść analogowych. W związku z powyższym,
+jeżeli w trakcie wykonania programu występuje odwołanie do stanu wejścia
+analogowego to musi on być odczytany bezpośrednio z odpowiedniego modułu
+wejściowego. Jeżeli w trakcie wykonania programu zostanie wyznaczony nowy
+stan wyjścia analogowego to w celu uaktualnienia jego stanu należy wyznaczoną
+wartość przekazać do odpowiedniego modułu wyjściowego. Stan wejść dwusta-
+nowych jest uaktualniany w pamięci sterownika przez system operacyjny na po-
+czątku każdego cyklu pracy. Stan wyjść dwustanowych jest przekazywany z pa-
+mięci sterownika do modułów wyjściowych na końcu każdego cyklu pracy.
+Wszystkie przykłady napisano i uruchamiano przy użyciu programu lLLAD-
+DER 90.
+
+<image/figury/k4_page319_figure1.png>
+
+Rys. 7.3 Sterownik SIMATIC S7-300
+
+     
+
+- 319
+
+7.1 Wprowadzenie

@@ -1,0 +1,41 @@
+1.6. Algorytm sortowania przez scalanie 7
+
+<image/wzory/k2_page156_formula1.png>
+
+i ogó!nio
+
+<image/wzory/k2_page156_formula2.png>
+
+1.6 Algorytm sortowania przez scalanie
+Zajmijmy się teraz pewnym prostym rekurencyjnym algorytem sortowania ciągu. Dla
+prostoty załóżmy, że długość ciągu jest potęgą dwójki.
+Algorytm sortowania
+e jeżeli ciąg ma długość jeden, to jest już posortowany,
+e jeżeli ciąg jest dłuższy, to:
+o dzielimy go na połowy,
+o sortujemy te połowy,
+o łączymy posortowane połowy w jeden posortowany ciąg.
+Istota pomysłu polega na tym, że można szybko połączyć dwa posortowane ciągi w jeden
+
+posortowany ciąg. Algorytm łączenia wyjaśnijmy na przykładzie. Przypuśćmy, że mamy
+dwa
+
+<image/wzory/k2_page156_formula3.png>
+
+i że cncemy je połączyc w posortowany ciąg U. Na początku ciąg C' jest pusty. Usta-
+wiamy dwa wskaźniki po jednym na początku każdego ciągu (wskazane elementy będą
+oznaczone daszkiem):
+
+<image/wzory/k2_page156_formula4.png>
+
+Porównujemy wskazane elementy. Mniejszy z porównanych elementów przepisujemy na
+ciąg © i przesuwamy wskaźnik w tym ciągu, z którego był wzięty element do ciągu C.
+W wyniku otrzymamy:
+
+<image/wzory/k2_page156_formula5.png>
+Powtarzamy ten proces tak długo, aż w jednym z ciągów ostatni element zostanie zabrany
+do ciągu C.
+
+<image/wzory/k2_page156_formula6.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

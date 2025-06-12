@@ -1,0 +1,23 @@
+Na Wyd. 4.9 pokazano przykład wykorzystania czasomierza, a Rys. 4.1 przed-
+stawia odpowiednie przebiegi czasowe.
+
+<image/figury/k4_page192_figure1.png>
+
+<image/figury/k4_page192_figure2.png>
+
+Zmiana wartości zmiennej %/7 z O na / w chwili A uruchamia zliczanie czasu.
+W chwili B (tj. 5 s później) wartość bieżąca CV (zawartość rejestru %R100)
+osiąga wartość zadaną PV (zawartość rejestru %R/10/) i na wyjściu czasomierza
+pojawia się prąd powodujący wzbudzenie cewki %Q/, przy czym wartość CV
+jest nadal uaktualniana. W chwili € prąd na wejściu czasomierza zanika, co po-
+woduje zatrzymanie zliczania czasu i wyzerowanie wartości bieżącej oraz
+przyjęcie przez zmienną %Q]/ wartości O (wyjście czasomierza przechodzi w stan
+OFF). W chwili D następuje ponowny dopływ prądu do czasomierza i kolejne
+rozpoczęcie odmierzania czasu. W chwili E, zanim wartość bieżąca CV osią-
+gnęła wartość zadaną PV, zmienna %// przyjmuje wartość O, co powoduje
+zerowanie CV, a wyjście czasomierza pozostaje w stanie OFF (cewka %Q] nie
+wzbudzona).
+
+ 
+
+192 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

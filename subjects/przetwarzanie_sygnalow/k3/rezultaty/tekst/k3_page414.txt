@@ -1,0 +1,42 @@
+26. Sieci neuronowe (i więc
+
+Aby taka procedura iteracyjna działała, musi być jakiś pojedynczy parametr opisujący, jak «
+brze w danym momencie działa system. Tę rolę w programie wypełnia zmienna ESUM (en
+sum — suma błędów). Pierwszą czynnością wewnątrz pętli iteracyjnej jest ustawienie zmie:
+ESUM na zero (wiersz 290), aby mogła być ona użyta jako akumulator. Na końcu każdę
+iteracji wartość ESUM jest przekazywana do monitora wizyjnego (wiersz 380), aby operatć
+wiedział, czy jest jakiś postęp w realizacji programu. Wartość ESUM najpierw staje się ć
+i zmniejsza się stopniowo w miarę trenowania sieci w rozpoznawaniu celów. Na rys. 26.9 po
+dano przykłady zmniejszania się wartości ESUM wraz z przebiegającym procesem iteracji.
+Podczas każdej iteracji ocenia się wszystkie 260 obrazów zawartych w zestawie trenuj
+w pętli FOR-NEXT, wiersze 310-360. Do wyszukiwania obrazów z bazy danych zawierając
+przykłady stosuje się podprogram 1000. Ponieważ szczegóły podprogramu nie są tu dła r
+szczególnie interesujące, więc opiszemy tylko parametry wprowadzane do podprogramu i uzy:
+skiwane z niego. Do podprogramu 1000 wchodzi się z parametrem LETTER% o wartościach
+między 1 i 260. Po powrocie, wartości węzłów wejściowych od X1[1] do X1[100] zawie!
+wartości pikseli obrazu w bazie danych odpowiadającego LETTER%. Wartość węzła polary
+jącego X1[101] zawsze powraca ze stałą wartością jeden. Z podprogramu 1000 uzyskuje się też
+inny parametr, CORRECT. waka RZ KO a YO ery.
+A zatem, jeśli litera w obrazie jest samogłoską, to parametr CORRECT powróci z podprogramu
+z wartością jeden; a z wartością zero, jeśli litera w obrazie nie jest samogłoską. |
+Gdy opracowywany obraz zostanie już zapisany do matrycy od XI[1] do X1[100]. podpra
+gram 2000 przepuszcza dane przez aktualnie istniejącą sieć neuronową w celu uzyskania
+wartości węzła wyjściowego X3. Innymi słowy, podprogram 2000 jest taki sam, jak program
+w tablicy 26.1, z tą różnicą, że liczby węzłów w warstwach są różne. Ten podprogram obli:
+cza też, jak dobrze aktualnie istniejąca sieć określa, czy litera jest, czy nie jest poszukiwan
+celem. W wierszu 2210 zmienna ELET (error-letter — błąd litery) jest obliczana jako różnica
+między wartością wyjściową aktualnie generowaną X3 a pożądaną wartością CORRECT. To
+daje wartości ELET z zakresu od —1 do 1. Na podstawie wszystkich 260 wartości ELET uzy:
+skuje się (wiersz 340) wartość ESUM, całkowity błąd kwadratowy sieci dla całego ze:
+trenującego.
+
+W wierszu 2220 pokazano opcję, która jest często włączana do obliczeń w celu przydzie:
+lania różnego stopnia ważności błędom dla obiektów będących lub niebędących celem
+Przypomnijcie sobie na przykład omawiany wcześniej w tym rozdziale system wykrywani
+raka oraz konsekwencje wynikające z błędów typu „fałszywie pozytywny” w porć
+
+<image/figury/k3_page414_figure1.png>
+
+Rys. 26.9. Zbieżność sieci neuronowej. Na wykresach pokazano, jak biąd sieci neuronowej (wartość —
+ESUM) zmniejsza się w miarę procesu iteracji. Przedstawiono wyniki trzech prób, z których każda zaczy:
+na się od innej początkowej wartości wagi

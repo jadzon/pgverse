@@ -1,0 +1,41 @@
+w kasecie / w celu wykonania zadania (task) numer /. Wystąpienie błędu sygna-
+lizowane będzie przez zmienną %M/01.
+
+<image/tabele/k4_page217_table2.png>
+
+Wyd. 4.32 Przykład użycia funkcji COMMREQ
+
+<image/tabele/k4_page217_table1.png>
+
+Grupę funkcji tablicowych otwiera funkcja ARRAY_MOVE, która umożliwia
+skopiowanie określonej liczby elementów tablicy źródłowej do tablicy docelowej
+dla określonego typu danych (/NT, DINT, BIT, BYTE lub WORD).
+
+Na wejściu funkcji podaje się:
+
+e adres tablicy źródłowej (wejście SR - SoukRce);
+
+e - numer elementu tablicy, od którego należy rozpocząć kopiowanie (wejście
+SNX - Source iNdeX) oraz. numer pierwszego elementu tablicy docelowej, do
+którego należy zacząć kopiowanie (wejście DNX - Destination iNdeX);
+
+e  |iczbę elementów, które należy skopiować (wejście N).
+
+Indeksowanie elementów tablicy zaczyna się od liczby /. Parametr LEN określa
+całkowity wymiar tablicy danego typu. Na wyjściu DS (DeSfinatrion) podaje się
+adres tablicy docelowej.
+
+Jeżeli funkcja jest aktywna, to na wyjściu ok pojawia się prąd, o ile nie wystą-
+piło przekroczenie zakresu tablicy, tzn. spełnione są warunki, że N+SNX-1 oraz
+N+DNX-1 są nie większe niż LEN.
+
+Przykład z Wyd. 4.33 pokazuje sposób wykorzystania funkcji dla danych typu
+WORD w celu skopiowania zawartości sześciu (wejście N) kolejnych wejść
+analogowych %A/ (wejście SR), poczynając od wejścia, którego numer określo-
+ny jest przez zawartość rejestru %R100 (wejście SNX), do kolejnych rejestrów
+poczynając od adresu 200 (wyjście DS) powiększonego o zawartość rejestru
+%R100 (wejście DNX). Przykładowo, jeżeli zawartość rejestru %R100 wynosi 8,
+
+ 
+
+4.9 Operacje na tablicach danych 217

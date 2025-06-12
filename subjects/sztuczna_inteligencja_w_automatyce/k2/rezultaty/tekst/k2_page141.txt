@@ -1,0 +1,46 @@
+146
+
+<image/figury/k2_page141_figure1.png>
+
+Rys. 6.43: Schemat pamięci dynamicznej (rekurencyjnej). Przedstawione na rysunku neu-
+rony są dyskretne i bipolarne
+
+gdzie 0,, oznacza funkcję delta Kroneckera.
+
+Proces odczytu
+
+Zmianę wartości ż-tej składowej stanu autoasocjacyjnej pamięci Hopfielda można
+wyrazić wzorem
+
+<image/wzory/k2_page141_formula1.png>
+
+Na tej podstawie pamięć dynamiczna odczytywana jest według następującego algo-
+rytmu zwanego odczytem asynchronicznym:
+
+1. Ustawienie stanu początkowego v() = x.
+
+.
+
+Ustawienie liczb 1, 2,...,n w losowej kolejności a;,02,..., An.
+
+ad
+
+Dla ż od 1 do n wykonanie
+
+<image/wzory/k2_page141_formula2.png>
+
+4. Jeżeliv, =vqa,i=1,2,...,n (czyli w danym cyklu nie było zmian), to zakoń-
+czenie procesu odczytu i uznanie sygnałów v4,v5,...,v,, za sygnały wyjściowe;
+w przeciwnym razie przejście do 2.
+
+Bardzo użyteczną wielkością charakterystyczną stanu pamięci autoasocjacyjnej
+Hopfielda jest funkcja
+
+<image/wzory/k2_page141_formula3.png>
+
+zwana funkcją energii. Asynchroniczne uaktualnianie stanu podczas odczytu po-
+woduje (co można łatwo wykazać), że wartość funkcji energii maleje przy każdej
+zmianie stanu, a minimalne przyrosty energii sieci w kolejnych zmianach stanu są
+ustalone (są krotnością liczby 1 dla macierzy wag obliczonych według wzoru (??)).
+Można także pokazać, że jeżeli ze stanem, w którym sieć się znajduje sąsiadują stany
+o mniejszej wartości funkcji energii, to sieć na pewno przejdzie do jednego z tych

@@ -1,0 +1,17 @@
+<image/tabele/k4_page394_table1.png>
+
+Tekst programu w języku ŁD realizującego algorytm sterowania panelem poka-
+zują Wyd. 8.1/-Wyd. 8.19. W programie uwzględniono dodatkowo ograniczenie
+na dopuszczalny czas włączenia wypychaczy, który nie powinien przekraczać 5s.
+
+<image/tabele/k4_page394_table2.png>
+
+Wyd. 8.11 Deklaracja wyjść binarnych sterownika i sygnałów pomocniczych
+
+<image/tabele/k4_page394_table3.png>
+
+Wyd. 8.12 Deklaracja wejść binarnych sterownika
+
+ 
+
+394 Rozdział : 8.Programy przykładowe

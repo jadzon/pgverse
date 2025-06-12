@@ -1,0 +1,14 @@
+1. Rozległość zastosowań i głębia problematyki DSP
+
+Komercyjne urządzenia obrazowe
+
+Duża ilość informacji zawarta w obrazach jest problemem w urządzeniach masowo sprze-
+dawanych klientom. Urządzenia komercyjne (oferowane na rynku) powinny być tanie, co
+raczej nie idzie w parze z wymogami dużych pamięci i dużych szybkości przesyłania da-
+nych. Jednym z rozwiązań tego dylematu jest kompresja obrazu. Obraz, podobnie jak sygnał
+głosowy, zawiera dużą ilość informacji nadmiarowych. Dlatego dane obrazowe można prze-
+twarzać przy użyciu algorytmów zmniejszających liczbę bitów informacji niezbędnych do
+reprezentowania obrazu, Do kompresji nadają się zwłaszcza obrazy telewizyjne i inne obrazy
+ruchome, gdyż większość informacji w kolejnych ramkach pozostaje taka sama. Dostępnymi
+na rynku urządzeniami, w których wykorzystano tę metodę, są na przykład: telefony wideo,
+programy komputerowe do wyświetlania obrazów ruchomych oraz telewizja cyfrowa.

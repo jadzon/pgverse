@@ -1,0 +1,42 @@
+Aby sprawdzić poprawność rozwiązania, wyznaczymy G(s) na podstawie wyli
+
+czonych macierzy A. Bi C. noshuoniac sie wzorem:
+
+<image/wzory/k1_page52_formula1.png>
+<image/wzory/k1_page52_formula2.png>
+
+<image/wzory/k1_page52_formula3.png>
+
+<image/wzory/k1_page52_formula4.png>
+
+l
+
+l
+G=l 0 Ek .|E]-t | 37 |
+|s+z) 0 s |LT 0
+T
+
+ 
+
+hb | —
+
+ 
+
+ 
+
+T
+S+= ,
+z T
+
+<image/wzory/k1_page52_formula5.png>
+
+Jak widać otrzymaliśmy pierwotną transmitancję G(s).
+Przykład 2.16
+
+Wyznaczyć różne postacie modeli matematycznych (równanie różniczkowe, trans-
+mitancja, równania stanu) dla obwodu elektrycznego LR; pokazanego na rysunku 2.8
+
+<image/figury/k1_page52_figure1.png>
+
+Rys. 2.8. Obwód elektryczny LR jako przykład obiektu
+54

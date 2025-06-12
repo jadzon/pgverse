@@ -1,0 +1,33 @@
+352
+
+22. Przetwarzanie sygnałów fonicznych
+
+przez wiele najbliższych lat. Będziecie bardzo rozczarowani, jeśli oczekujecie, że w tym pod-
+rozdziale znajdziecie opisy budowy układów syntezy i rozpoznawania mowy. Przedstawimy
+tu tylko krótkie wprowadzenie do typowych rozwiązań problemu. Na początku trzeba podkre-
+ślić, że większość dostępnych na rynku urządzeń wytwarzających głos brzmiący jak ludzki nie
+syntezuje go, lecz po prostu odtwarza nagrany cyfrowo fragment głosu. Ta metoda daje bardzo
+dobrą jakość dźwięku, lecz jest ograniczona do wcześniej nagranych słów i zwrotów.
+Podstawą prawie wszystkich metod syntezy i rozpoznawania mowy jest model ludzkiej
+mowy przedstawiony na rys. 22.8. Większość dźwięków tworzących mowę ludzką można
+zakwalifikować jako głoski dźwięczne lub bezdźwięczne. Głoski dźwięczne powstają, gdy
+powietrze jest wypychane z płuc przez struny głosowe i dalej przez usta i/lub przez nos.
+Struny głosowe są dwiema fałdami tkanki umieszczonymi na drodze przypływu powietrza,
+zaraz za jabłkiem Adama. W odpowiedzi na zmieniające się napięcie mięśni struny głosowe
+drgają z częstotliwością od 50 do 1000 Hz, dając w rezultacie okresowe wydmuchy powie-
+trza do gardła. Przykładem głosek dźwięcznych są samogłoski. Na rys. 22.8 głoski dźwięcz-
+ne są reprezentowane przez generator ciągu impulsów z regulowaną wysokością tonu (tj.
+częstotliwością podstawową przebiegu, czyli częstotliwością tonu krtaniowego).
+
+Głoski bezdźwięczne (np. trące) są tworzone jako szum losowy, a nie w wyniku drgań strun
+głosowych. Powstają one, gdy przepływ powietrza jest prawie zablokowany przez język,
+wargi i/lub zęby. Wywołuje to turbulencje powietrza w okolicy przewężenia. Głoski trące
+(ricative) to (w języku angielskim) m.in. s, f, sh, z, v oraz th. W modelu na rys. 22.8 głoski
+trące są reprezentowane przez generator szumu.
+
+Oba te źródła głosek są modyfikowane przez wnęki akustyczne (komory rezonujące) tworzo-
+
+sowe są nazywane częstotliwościami formantowymi lub formantami. Zmieniając wzajemne
+ustawienie języka i warg, można zmieniać zarówno amplitudę, jak i częstotliwości formantów.
+
+<image/figury/k3_page322_figure1.png>

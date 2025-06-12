@@ -1,0 +1,35 @@
+1.6. Drzewa spinające 13
+
+Jeżeli graf G nie jest spójny, to nie ma drzewa spinającego. Z drugiej strony.
+Twierdzenie 1.22 Każdy graf spójny zawiera jako podgraf drzewo spinające.
+
+Jako dowód przedstawimy algorytmy konstruowania drzewa spinającego. W tym celu
+lekko przerobimy algorytm przeszukiwania grafów w głąb.
+
+Algorytm konstruowania drzewa spinającego przy przeszukiwania grafu w głąb.
+Dane wejściowe: graf G = (V, E) oraz wierzchołek początkowy tą € V;
+Dane wyjściowe: drzewo spinające T = (V, Er).
+e na początku drzewo spinające nie zawiera żadnych krawędzi: Eq := 0
+e odwiedzamy v, i wkładamy go na STOS; zaznaczamy vy jako wierzchołek odwie-
+dzony,
+e dopóki STOS nie jest pusty, powtarzamy:
+
+o jeżeli v jest wierzchołkiem na wierzchu STOSU, to sprawdzamy, czy istnieje
+wierzchołek u, który jest połączony krawędzią z wierzchołkiem v i nie był jeszcze
+odwiedzony,
+
+o jeżeli takie u się znajdzie, to odwiedzamy u, wkładamy go na wierzch STO-
+SU i zaznaczamy jako wierzchołek odwiedzony, krawędź fv, u) dodajemy do drze-
+wa spinającego:
+
+o jeżeli takiego u nie ma, to zdejmujemy v ze STOSU i cofamy się do wierz-
+chołka będącego pod spodem.
+
+Rysunek 1.8: Drzewo spinające dla grafu z rysunku 1.7
+
+<image/figury/k2_page191_figure1.png>
+
+Przykład 1.23 Rysunek 1.8 przedstawia drzewo spinające utworzone przez powyższy al-
+gorytm dla grafu z rysunku 1.7
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,54 @@
+//k4_page276_formula1.png KEK |
+
+Instrukcja regulatora PID (Proportional Integral Derivative) może być używana
+w trybie czasowym lub w trybie periodycznych przerwań czasowych sterowa-
+nych przez funkcje S77 (Selectabłe Timed Interapts). W trybie czasowym, in-
+strukcja oblicza i uaktualnia wyjście w określonych okresach czasu. W trybie S7/
+instrukcja powinna być umieszczona w podprogramie przerwań $7/. W tym
+przypadku wyjście jest obliczane za każdym razem gdy wykonywany jest ten
+podprogram. Odstępy czasowe $77 i okres obliczania bloku P/D muszą być od-
+powiednio dobrane do dynamiki regulowanego obiektu, bo od tego między in-
+nymi zależy poprawne działania algorytmu P/D.
+
+Równanie regulatora P/D podane w dokumentacji oprogramowania APS _ jest
+nastę”"''"77'
+
+<image/wzory/k4_page27/6_formula2.png>
+Faktyczme program Dioku 144) MOZE DyC reanzowany po przeksztatceniu tego
+równania na równanie różnicowe. Po takim przekształceniu całkę w przybliżeniu
+oblicza się przez sumowanie, a pochodną przybliża się wyrażeniem w funkcji
+przyrostu uchybu i czasu w jakim ten przyrost nastąpił. Tym czasem jest okres
+„powtórek” obliczenia i uaktualnienia wyjścia regulatora. Stąd czas całkowania
+podaje się w jednostce: min/powtórkę (minutes per reapel).
+
+<image/tabele/k4_page276_table1.png>
+
+Blok funkcyjny P/D wprowadzony do programu przedstawia się następująco:
+
+  
+
+PID
+PID
+Control Block N10:0
+Process Uariable Ni0:28
+Control Uariable N10:Z29
+Control Block Length 23
+
+ 
+  
+
+  
+ 
+       
+   
+
+W bloku tym należy wprowadzić następujące adresy:
+e obszaru roboczego Control Block,
+
+e zmiennej procesowej PV (Process Variable)
+
+e zmiennej sterującej CV (Control Variable).
+
+ 
+
+276 Rozdział : 5. Język schematów drabinkowych dla SLC 500

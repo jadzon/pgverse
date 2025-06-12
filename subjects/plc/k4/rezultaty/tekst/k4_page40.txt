@@ -1,0 +1,45 @@
+Użytkownik może także definiować własne typy danych (tzw. typy pochodne),
+które deklaruje się przez użycie konstrukcji TYPE... END_TYPE. Przykłady ta-
+kich deklaracji podano w Tab. 2.8. Zdefiniowane typy mogą być następnie
+wykorzystywane w deklaracjach zmiennych używanych w programie. Jako typy
+danych pochodnych (derived data types) użytkownik może deklarować:
+
+typ wyliczeniowy (enumerated data type),
+
+Jest to uporządkowany i skończony zbiór wartości oznaczonych dowolnie
+wybranymi przez programistę identyfikatorami. Dana może przyjmować tyl-
+ko wartości określone w deklaracji typu (umieszczone w nawiasach), jak
+pokazuje przykład drugi w tabeli, gdzie zmienna typu
+ANALOG_SIGNAL_TYPE (SYGNAŁ ANALOGOWY) może przyjmować
+tylko dwie wartości: SINGLE_ENDED (JEDNOKOŃCÓWKOWY) lub
+DIFFERENTIAL (RÓŻNICOWY).
+
+typ okrojony (subrange data type),
+
+Zakres zmienności wartości może być ograniczony. Dana może przyjmować
+tylko wartości z zadeklarowanego w nawiasach zakresu. Dla przykładu trze-
+ciego w Tab. 2.8 dana typu ANALOG_DATA jest typu INT o zakresie
+ograniczonym do przedziału od —4095 do 4095.
+
+tablicę danych określonego typu (array data type),
+
+<image/tabele/k4_page40_table1.png>
+
+typ strukturalny (structured data type),
+
+Typ strukturalny jest używany do opisu złożonych struktur danych zawiera-
+jących dane różnych typów. Definiuje się go przez podanie typów
+składowych i metody strukturalizacji przy użyciu konstrukcji STRUCT ...
+END_STRUCT. Dla przykładu piątego w Tab. 2.8 dana typu
+ANALOG_CHANNEL_CONFIGURATION powinna zawierać następujące
+elementy:
+
+« RANGE (ZAKRES) typu ANALOG_SIGNAL_RANGE,
+
+"  MIN_SCALE oraz MAX_SCALE — dane typu ANALOG_DATA,
+
+ 
+
+40
+
+Rozdział : 2.Programowanie sterowników PLC

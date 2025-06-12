@@ -1,0 +1,16 @@
+natomiast G-/4M oznacza wielkość wyjściową z pozycjonera. W programie
+uwzględniono możliwość ręcznego sterowania zaworem za pomocą przycisków
+zamykania i otwierania z zapewnieniem bezuderzeniowego powrotu do sterowa-
+nia automatycznego.
+
+<image/tabele/k4_page426_table2.png>
+
+Rys. 8.10 Charakterystyka elementu trójpołożeniowego
+
+<image/tabele/k4_page426_table1.png>
+
+Wyd. 8.70 Deklaracja zmiennych
+
+ 
+
+426 Rozdział : 8.Programy przykładowe

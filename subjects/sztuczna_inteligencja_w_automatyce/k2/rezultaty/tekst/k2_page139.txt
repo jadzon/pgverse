@@ -1,0 +1,28 @@
+144
+
+<image/figury/k2_page139_figure2.png>
+
+Rys. 6.40: Sieć specjalna. Wagi sieci są równe oczekiwanym odpowiedziom
+
+<image/figury/k2_page139_figure1.png>
+
+Rys. 6.41: Zastososowanie specjalnej sieci radialnej z rys. ?? do aproksymacji funkcji
+
+wektorze wejściowym x nazywa się odczytem.
+Jeśli sieć przechowuje p asocjacji o postaci
+
+<image/wzory/k2_page139_formula1.png>
+
+to pamięć nazywa się heteroasocjacyjną. Podczas odczytu odwzorowuje ona wektory
+ze zbioru (x, PPL. s sj xP) na wektory wyjściowe ze zbioru | PŁ PAL i yP |.
+Jeżeli natomiast asocjacje są postaci
+
+<image/wzory/k2_page139_formula2.png>
+
+to pamięć nazywa się autoasocjacyjną. Podczas odczytu odwzorowuje wektory ze
+zbioru +x1),x2),,.., xP); w siebie.
+
+Inną ważną cechą pamięci jest charakter jej odpowiedzi na zakłócone wzorcowe
+wektory wejściowe x. W sieciach progowych mamy x + A + y. gdzie A jest nie-
+wielkim błędem. W sieciach interpolacyjnych x + A %y +9, gdzie |n| + 0, gdy
+|A| > 0.

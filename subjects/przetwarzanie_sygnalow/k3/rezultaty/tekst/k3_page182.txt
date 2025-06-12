@@ -1,0 +1,54 @@
+10. Właściwości przekształcenia Fouriera
+
+Gdy sygnał jest zakodowany w dziedzinie częstotliwości, pomijamy przebieg w dziedzi-
+nie czasu i koncentrujemy uwagę na widmie częstotliwościowym. Jak powiedziano w po-
+przednim rozdziale, próbkowanie widma częstotliwościowego w mniejszych odstępach
+(czyli więcej próbek między częstotliwościami 0 i 0,5) można uzyskać przez dopełnianie
+zerami sygnału w dziedzinie czasu, przed poddaniem go przetwarzaniu DFT. Dualność
+powoduje, że stwierdzenie odwrotne też jest słuszne. Jeśli chcemy zrealizować prób-
+kowanie w mniejszych odstępach w dziedzinie czasu (interpolacja), to trzeba dopełnić
+widmo częstotliwościowe zerami, przed wykonaniem odwrotnego przekształcenia DFT.
+Powiedzmy, że chcemy interpolować sygnał o 50 próbkach na sygnał o 400 próbkach.
+Można to zrobić w następujący sposób: 1) Bierzemy 50 próbek i dodajemy zera, aby
+utworzyć sygnał o długości 64 próbek. 2) Przeprowadzamy 64-punktowe przekształcenie
+DFT w celu wyznaczenia widma częstotliwościowego, które będzie zawierać 33-punkto-
+wą część rzeczywistą i 33-punktową część urojoną. 3) Dopełniamy prawą stronę widma
+częstotliwościowego (zarówno część rzeczywistą, jak i urojoną) 224 zerami, aby widmo
+uzyskało długość 257 punktów. 4) Wykonujemy 512-punktowe odwrotne przekształcenie
+Fouriera, aby przenieść dane z powrotem do dziedziny czasu. W rezultacie uzyskujemy
+sygnał złożony z 512 próbek, który jest wersją sygnału o 64 próbkach o większej roz-
+dzielczości. Pierwsze 400 próbek tego sygnału jest interpolowaną wersją oryginalnego
+sygnału o 50 próbkach.
+
+Najbardziej istotną właściwością metody jest to, że sygnał interpołowany zawiera dokładnie
+te same częstotliwości, co sygnał oryginalny. Może on dobrze pasować albo nie pasować do
+dziedziny czasu. Na przykład na rysunkach 10.13 a), b) przedstawiono 50-próbkowy sygnał
+interpolowany w 400-próbkowy przy użyciu omawianej metody. Ta interpołacja jest gładkim
+dopasowaniem między punktami oryginalnymi, tak jakby zastosowano procedurę dopasowa-
+nia krzywej. Na rysunkach 10.13 c), d) zaś przedstawiono inny przykład, gdzie w dziedzi=
+nie czasu powstaje bałagan. Zjawiska oscylacyjne pokazane na rys. 10.13 d) powstają m
+zboczach oraz przy innych nieciągłościach sygnału. Dotyczy to także nieciągłości między
+próbkami O i N — 1, ponieważ przebiegi w dziedzinie czasu traktuje się jako kołowe. Przerzuł
+przy nieciągłościach jest nazywany efektem Gibbsa i będzie omówiony w rozdziale 11. Inną
+metodę interpolacji w dziedzinie częstotliwości przedstawiono w rozdziale 3. Polega ona na
+dodawaniu zer między próbkami w dziedzinie czasu i filtracji dolnoprzepustowej.
+
+Mnożenie sygnałów (modulacja amplitudy)
+
+Spłot w jednej dziedzinie odpowiada mnożeniu w drugiej. Jest to ważna cecha przeksział-
+cenia Fouriera. Jedną część tego stwierdzenia omówiono w poprzednim rozdziale: sygna
+w dziedzinie czasu mogą być splatane ze sobą przez mnożenie ich widm częstotliwości
+wych. Modulacja amplitudy jest przykładem sytuacji odwrotnej — mnożenie w dziedzinie
+czasu odpowiada splotowi w dziedzinie częstotliwości. Modulacja amplitudy jest, ponadto,
+świetnym przykładem wprowadzenia nieuchwytnych częstotliwości ujemnych do codziem
+nych zagadnień naukowych i problemów inżynierskich. j
+Sygnały foniczne świetnie nadają się do porozumiewania na krótkie odległości; gdy mów h
+my, ktoś z drugiej strony pokoju nas słyszy. Natomiast częstotliwości radiowe bardzo dobrz
+rozprzestrzeniają się na duże odległości. Jeśli, na przykład, wprowadzimy do anteny nadaw-
+czej 100-woltowy sygnał sinusoidalny o częstotliwości I MHz, to powstająca fala radiowa
+może być odebrana w sąsiednim pokoju, w sąsiednim Kraju i nawet na sąsiedniej płanecie.
+Modulacja jest procesem łączenia dwóch sygnałów w celu utworzenia trzeciego, mają cego
+pożądane właściwości obu sygnałów. Taka operacja zawsze wymaga procesów ni ch
+takich, jak mnożenie; nie można po prostu dodać obu sygnałów do siebie. W łączności rar
+diowej modulacja daje sygnały radiowe, które mogą rozchodzić się na duże odległości ora
+przenosić sygnały foniczne i inne informacje.

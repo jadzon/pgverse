@@ -1,0 +1,52 @@
+vzory/k4_pa
+
+„jo ;
+
+ge209_formula1.png
+
+  
+
+ 
+
+Dużą grupę funkcji wykorzystywanych w schematach drabinkowych stanowią
+funkcje operujące na tablicach danych (wektorach, macierzach). Umożliwiają
+one ustawianie warunków początkowych w tablicach, przemieszczanie danych
+między tablicami, przeszukiwanie tablic, a także komunikację między progra-
+mem a modułami inteligentnymi (programowalny koprocesor, moduły
+komunikacyjne itp.).
+
+W sterownikach GE Fanuc serii 90-30 wyróżnione zostały dwie grupy takich
+
+funkcji: funkcje przesyłania danych (Data Move Functions) i funkcje tablicowe
+(Table Functions).
+
+<image/tabele/k4_page209_table1.png>
+
+Do pierwszej grupy funkcji i bloków funkcyjnych realizujących przemieszczanie
+danych w pamięci zalicza się :
+
+e MQOYVE-kopiuj dane bit po bicie z jednego miejsca pamięci do drugiego;
+
+« 'BLKMOYV (BLockK MOVe) - kopiuj blok 7 zadanych wartości do tablicy
+w pamięci;
+
+*  BLKCLR (BlocK CLeaR) - zeruj zawartość tablicy danych;
+e  SHFR (SHIFt Register) - przesuń dane w tablicy o jedną pozycję;
+e  BITSEQ (B/T SEQuencer) - .generuj sekwencję bitów;
+
+e  COMMREQ (COMMunication REQuest) — prześlij blok słów zawierający
+polecenia dla inteligentnego modułu.
+
+Funkcje te (z wyj. COMMREQ) przekazują prąd z wejścia zezwolenie na wyjście
+ok w każdym cyklu sterownika, w którym są aktywizowane.
+
+Funkcja MOVE może być wykonana dla danych typu B/T, INT lub WORD,
+
+a nazwa typu danych jest dodawana do nazwy funkcji. Argumenty wejściowe
+
+i wyjściowe funkcji mogą być różnego typu, ponieważ kopiowanie odbywa się
+
+bit po bicie.
+
+EYE EERSTE TOTO TY IEEE A A EE UTT A TE YET CE ROC CET" Y ZOP WJTTYKIEOZTZ W RYRYT TPP ZCCYWT TRZE
+4.9 Operacje na tablicach danych 209

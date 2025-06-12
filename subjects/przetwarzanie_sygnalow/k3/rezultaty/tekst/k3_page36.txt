@@ -1,0 +1,38 @@
+Twierdzenie o próbkowaniu 47
+
+ 
+
+<image/figury/k3_page36_figure2.ifigury/k3_page36_figure3.png>
+
+<image/figury/k3_page36_figure1.png>
+
+   
+
+s. 32 Wyjaśnienie techniki ditheringu. Na rys. a) pokazano, jak sygnat analogowy zmieniający się o mniej niż
+1/: sady zycwcyj  wzszeyppzc oC procesu digitalizacji. Dithering poprawia tę sytu-
+
+odchyleniu standardowym 2/3 LSB. Dodany
+mi poziomami kwantyzacji (rys. c), co daje więcej informacji o sygnale oryginalnym
+
+Aby zrozumieć korzyść wynikającą z tej techniki, wyobraźmy sobie, że sygnał wejściowy jest
+napięciem stałym równym 3,0001 V, co odpowiada wartości cyfrowej znajdującej się na 1/10
+przedziału między poziomami 3000 i 3001. Bez ditheringu pobranie 10 000 próbek tego sygnału
+dałoby 10 000 identycznych liczb, wszystkie o wartości 3000. Powtórzmy ten eksperyment my-
+ślowy, dodając niewielki szum ditheringu. Wartości 10 000 próbek będą teraz oscylowały między
+dwoma (lub więcej) poziomami, przy czym ok. 90% próbek będzie miało wartość 3000, a 10%
+wartość 3001. Obliczając średnią 10 000 wyników, uzyskuje się wartość bliską 3000,1. Chociaż
+pojedynczy pomiar ma inherentne ograniczenie +1/2L$B, to statystyka dużej liczby próbek daje
+znaczna poprawę. Mamy więc dziwną sytuację: dodanie szumu dostarcza więcej informacji.
+Myj ore Nr ara . z wykorzystaniem komputera do generacji
+liczb losowych przekazywanych następnie do przetwomika a/c wytwarzającego dodawany szum.
+Po digitalizacji komputer może odejmować te liczby od sygnału cyfrowego z zastosowaniem aryt-
+się
+
+możliwą metodą jest wykorzystanie do ditheringu szumu już obecnego w sygnale analogowym.
+Twierdzenie o próbkowaniu
+
+Definicja prawidłowego próbkowania jest bardzo prosta. Załóżmy, że w jakiś sposób próbkuje-
+my sygnał ciągły. Jeśli z pobranych próbek możemy dokładnie odtworzyć sygnał analogowy, to
+znaczy, że próbkowanie było prawidłowe. Nawet jeśli spróbkowane dane wydają się być mylące
+lub niekompletne, to kluczowa informacja została jednak uchwycona, jeśli odwrócenie procesu
+jest możliwe.

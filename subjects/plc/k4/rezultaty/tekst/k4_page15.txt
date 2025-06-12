@@ -1,0 +1,29 @@
+instrukcje: LD %Q1 i OR %l1 realizują sumę logiczną objętą potrzebnym tutaj
+nawiasem oznaczonym w programie za pomocą instrukcji AND BLK. Nawias
+jest potrzebny, bowiem całe wyrażenie logiczne reprezentuje następujący iloczyn
+przed enma'
+
+<image/wzory/k4_page15_formula1.png>
+Instrukcja noczynu iogicznego ANU NUI %QGyzL realzuje iloczyn poprzedniej
+wartości bitu procesora z wynikiem sprawdzenia zera logicznego dla zmiennej
+%Q2. Ostatnia instrukcja OUT %Q1 podstawia uzyskany w bicie procesora wy-
+nik całego ciągu operacji logicznych do zmiennej wyjściowej %Q01.
+
+<image/figury/k4_page15_figure1.png>
+
+Rys. 1.5 Schemat połączeń obwodów wyjściowych z modułem wyjść dwustanowych
+
+Wartości zmiennych wyjściowych przekazywane są do elementów wykonaw-
+czych za pośrednictwem modułów wyjść dwustanowych. Schemat połączenia ta-
+kiego modułu z obwodami wyjściowymi pokazano na Rys. /.5. Moduł ten
+zamienia wartości zmiennych logicznych %Q01 .. %Q4 obliczonych przez ste-
+rownik na sygnały prądu stałego. Wszystkie obwody zasilane są ze wspólnego
+źródła prądu stałego o napięciu 24V.
+
+ 
+
+IEPĘ ZY YNY WWE II W MY
+
+ 
+
+1.2 Pojęcia podstawowe 15

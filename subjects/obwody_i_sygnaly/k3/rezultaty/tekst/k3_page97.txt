@@ -1,0 +1,19 @@
+15. Prawa Kirchhoffa i łączenie elementów 99
+
+mia równoległego otrzymujemy:
+
+<image/wzory/k3_page97_formula2.png>
+charakterystykę nowego elementu (tys. 1.5-8) :
+:ory/k3_page97_formula3.png (1.5-18)
+je97_formula1.png
+<image/wzory/k3_page97/_formula4.png>
+
+gury/k3_page97_figure1.png
+
+Połączenie równoległe oporów nieuzależnionych lub uzależnionych napięciowo
+jest oporem nieuzależnionym lub uzależnionym napięciowo o charakterystyce
+określonej wzorami (1.5-18) i (1.5-19). Na rys. 1.5-9 pokazano konstrukcję
+charakterystyki (1.5-19), tzw. charakterystyki łącznej połączenia równoległego
+dwóch oporów.
+
+<image/figury/k3_page97_figure3.png>

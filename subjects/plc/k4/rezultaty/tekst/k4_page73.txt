@@ -1,0 +1,54 @@
+szym priorytetem, to wykonywanie powinno rozpocząć się od elementu
+
+o najdłuższym czasie oczekiwania.
+
+b) 'W przypadku szeregowania z wywłaszczaniem (preemptive scheduling),
+gdy element oprogramowania jest uszeregowany w kolejce, to może on
+przerwać (interrupt) wykonywanie elementu oprogramowania o niższym
+priorytecie w tym zasobie, tzn. wykonanie elementu o niższym priorytecie
+będzie zawieszone aż zakończy się wykonanie elementu o priorytecie wyż-
+szym. Element oprogramowania nie powinien przerywać wykonywania
+elementów o tym samym lub wyższym priorytecie.
+
+Uwaga- W zależności od priorytetów, element oprogramowania może nie
+być wykonany w chwili, w której jest uszeregowany. Jednak w
+przykładach z Tab. 2.40, wszystkie elementy oprogramowania
+spełniają dotyczące ich ograniczenia czasowe, tzn. ich wykona-
+nie jest zakończone zanim wystąpi ich ponowne szeregowanie
+w kolejkę do wykonania. Producent powinien dostarczać infor-
+macji umożliwiających użytkownikowi określenie, czy wszystkie
+ograniczenia czasowe mogą być spełnione w proponowanej kon-
+figuracji.
+
+4. Program, który nie jest skojarzony z zadaniem, powinien mieć najniższy
+priorytet. Program taki powinien być uszeregowany w kolejce do wykonania
+od razu po starcie zasobu, a po jego wykonaniu ponownie uszeregowany
+w kolejce.
+
+5. Jeśli ukonkretnienie bloku funkcyjnego jest skojarzone z zadaniem, to
+jego wykonanie powinno odbywać się wyłącznie pod kontrolą zadania, nie-
+zależnie od reguł wykonywania programu określonych w elemencie
+oprogramowania, w którym ten blok funkcyjny występuje.
+
+6. Ukonkretnienie bloku funkcyjnego nie skojarzonego bezpośrednio z zada-
+niem podlega wykonaniu zgodnie z regułami języka, w którym został
+napisany zawierający je element oprogramowania (który sam w sobie może
+być pod kontrolą zadania).
+
+7. Wykonywanie bloków funkcyjnych w ramach programu jest synchronizo-
+wane w celu zapewnienia właściwej współbieżności w dostępie do danych,
+zgodnie z następującymi zasadami:
+
+a) Jeśli na wejściu bloku funkcyjnego występuje więcej niż jedno wyjście
+z innego bloku funkcyjnego, to z chwilą rozpoczęcia wykonywania bloku
+wszystkie te wejścia powinny stanowić wynik tego samego wykonania
+(a nie różnych wykonań) bloku źródłowego.
+
+b) Jeśli wyjście bloku funkcyjnego stanowi wejście do dwóch lub więcej blo-
+ków funkcyjnych, które są bezpośrednio lub w sposób ukryty skojarzone
+z zadaniem, to wszystkie wejścia bloków docelowych w chwili rozpoczęcia
+wykonania powinny reprezentować wynik tego samego wykonania bloku
+źródłowego.
+
+A O TY TJ TOTO PWSYTYN TO STEE UOT BĘ ZORĄZAIĘ A TO RZ ZE ZR POJĘTY PW KO TCZZ DOTS OOPLZNZOOY | ZZ AWÓ NY ODPO
+2.4 Elementy konfiguracji 73

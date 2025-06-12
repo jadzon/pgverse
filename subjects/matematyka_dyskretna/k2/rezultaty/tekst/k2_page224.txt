@@ -1,0 +1,35 @@
+Rozdział 1
+Poprawność programów
+
+Jeżeli projektujemy algorytmy lub piszemy programy, to ważne jest pytanie, czy nasz al-
+gorytm lub program jest poprawny, czy nie zawiera błędów. Konkretniej, możemy spytać,
+czy nasz program jest napisany zgodnie z regułami języka programowania i czy liczy to,
+co chcemy.
+
+1.1 Poprawność syntaktyczna
+
+Jeżeli program jest napisany zgodnie z regułami języka programowania, to mówimy, że
+jest poprawny pod względem syntaktycznym, a wykroczenia przeciwko składni języka
+nazywają się błędami syntaktycznymi. Przykładami takich błędów w języku Pascal są:
+użycie zmiennej, która wcześniej nie została zadeklarowana, lub postawienie średnika
+przed słowem else w instrukcji warunkowej.
+
+Poprawność syntaktyczna nie jest wielkim problemem. Języki programowania mają
+bardzo ścisłe reguły składni, określające, jak budować poprawne programy, i konstrukto-
+rzy tych języków zadbali o to, aby można było łatwo wykryć błędy syntaktyczne. Istnie-
+ją kompilatory, które automatycznie sprawdzają poprawność syntaktyczną programów.
+Kompilatory niektórych języków są dość skomplikowanymi programami i oprócz komu-
+nikatu o błędzie dają także wskazówki, jak błąd usunąć.
+
+1.2 Poprawność semantyczna
+
+Dużo poważniejszym problemem jest poprawność semantyczna, czyli stwierdzenie, czy
+program lub algorytm liczy to, co powinien. Problem zaczyna się już wówczas, gdy spy-
+tamy, co to znaczy „liczy to, co powinien”.
+
+Zajmiemy się teraz jednym z możliwych podejść do problemu poprawności. Program
+przekształca dane wejściowe w dane wyjściowe i dlatego możemy go traktować jak funk-
+cję ze zbioru danych wejściowych w zbiór danych wyjściowych. Na przykład dla algo-
+rytmu Euklidesa (porównaj rozdział o teorii liczb) danymi wejściowymi są pary liczb
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

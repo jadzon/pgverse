@@ -1,0 +1,110 @@
+28. Cyfrowe procesory sygnałowe
+
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+   
+
+wrócić do dziedziny czasu. Uzyskane 1024 punkty są łączone z sąsiednimi przetworzonymi
+segmentami metodą nakładania z dodawaniem (ovelap-add). To daje 512 punktów sygnału
+wyjściowego.
+
+Ile zajmuje to okresów zegarowych? Każdy segment 512-próbkowy wymaga dwóch 1024-punk-
+towych przekształceń FFT z jeszcze pewnym niewielkim naddatkiem. Jest to w przybliżeniu
+o czynnik 5 więcej niż dla pojedynczego FFT 512-punktowego. Ponieważ rzeczywiste FFT
+zajmuje około 12 okresów zegarowych na próbkę, więc splot FFT może być przeprowadzany
+w ciągu ok. 60 okresów zegarowych na próbkę. W procesorze 2106x SHARC, 40 MHz jest to
+równoważne przepływności 660 kpróbek/s.
+
+Zauważcie, że jest to mniej więcej tyle samo, co dla filtru SOI o 60 współczynnikach reali-
+zowanego przez konwencjonalny splot. Innymi słowy, jeśli filtr SOI ma mniej niż 60 współ-
+czynników, to może być realizowany szybciej przez splot standardowy. Jeśli zaś ma więcej
+niż 60 współczynników, to splot FFT jest szybszy. Podstawowa zaleta splotu FFT polega na
+tym, że czas wykonania wzrasta tylko logarytmicznie w funkcji liczby współczynników. Na
+przykład 4096-punktowa odpowiedź impulsowa filtru wymaga tylko o ok. 30% dłuższego
+czasu wykonania niż 512-punktowa.
+
+Splot FFT może też być stosowany do problemów dwuwymiarowych, takich jak przetwarza-
+nie obrazów. Przyjmijmy na przykład, że w dziedzinie częstotliwości chcemy przetwarzać —
+obraz 800 x 600 pikseli. Najpierw dopełnijmy obraz zerami, aby miał rozmiar 1024 x 1024.
+Następnie oblicza się dwuwymiarowe widmo częstotliwościowe przez wyznaczanie FFT
+każdego wiersza, po czym — FFT każdej wynikającej z tego kolumny. Po przemnożeniu tego
+widma 1024 x 1024 przez żądaną odpowiedź częstotliwościową wykonuje się dwuwymia-
+rowe, odwrotne przekształcenie FFT. Tę operację przeprowadza się przez wyznaczanie od-
+wrotnego FFT każdego wiersza i następnie każdej powstałej w rezultacie kolumny. Przez
+zsumowanie liczb okresów zegarowych i podzielenie przez liczbę próbek obliczamy, że cała
+procedura zajmuje z grubsza 150 okresów zegarowych na piksel. Dla ADSP-2106, 40 MHz
+jest to równoważne przepływności danych ok. 260k próbek/s.
+
+Patrząc na porównanie tych trzech różnych metod na rys. 28.11, możemy zrobić ważne spo-
+strzeżenie. Prawie wszystkie metody DSP do swojej realizacji wymagają od 4 do 400 in-
+strukcji (czyli okresów zegarowych w rodzinie cyfrowych procesorów sygnałowych SHARO).
+W przypadku procesorów SHARC o częstotliwości zegarowej 40 MHz możemy od razu wy-
+wnioskować, że ich przepływność danych będzie się mieścić w granicach od 100k do 10M
+próbek/s, w zależności od stopnia złożoności algorytmu.
+
+Teraz, gdy już rozumiemy, jak szybko procesor DSP może przetwarzać sygnały, spójrzmy
+na tę kwestię z innej strony — jaka szybkość przetwarzania danych jest nam potrzebna? To
+załeży, oczywiście, od zastosowania. Przyjrzyjmy się dwom najpowszechniejszym — prze-
+twarzaniu sygnałów audio i wideo.
+
+Dla sygnałów fonicznych wymagana bitowa przepływność danych zależy od żądanej jakości
+odtwarzanego sygnału. W dolnym obszarze jakości mamy telefoniczny sygnał mowy, wy-
+magający wychwycenia zakresu częstotliwości od ok. 100 Hz do 3,2 kHz. Z tego wynika
+niezbędna częstotliwość próbkowania ok. 8k próbek/s. Natomiast muzyka o dużej wierności
+odtwarzania musi zawierać pełny zakres częstotliwości odbierany przez ludzkie ucho, więc
+od 20 Hz do 20 kHz. Często stosuje się częstotliwość próbkowania 44,1 kHz zarówno dla
+kanału lewego, jak i prawego, dające próbkowanie pełnego sygnału hi-fi z częstotliwością
+88,2 kpróbek/s. Jak procesory sygnałowe rodziny SHARC spełniają te wymagania? Jak po-
+kazano na rys. 28.11, te procesory mogą z łatwością przetwarzać sygnały foniczne o wyso-
+kiej wierności lub przetwarzać kilkadziesiąt sygnałów głosowych jednocześnie.
+
+Sygnały wizyjne to zupełnie inna historia. One wymagają przepływności bitowej ok. żysiąc-
+
+krotnie większej niż sygnały audio. Dobrym przykładem sygnału wizyjnego niskiej jakości
+jest sygnał według standardu CIF (Common Interface Format) do wideofonów. Stosuje się

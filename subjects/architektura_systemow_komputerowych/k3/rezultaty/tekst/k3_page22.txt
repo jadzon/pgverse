@@ -1,0 +1,32 @@
+12 2. Architektura klasycznych komputerów
+
+kazu. Zdekodowana zawartość przedostatniego bajtu naszego programu wskaże, że jest to
+rozkaz OUT. Jest to rozkaz wysłania zawartości rejestru A do urządzenia wyjściowego
+(drukarki), którego adres jest podany w następnym bajcie rozkazu. Zawartość licznika
+rozkazów zostanie zwiększona o | i adres ten zostanie odczytany. Nastąpi ostatnia faza, tj.
+wykonanie rozkazu i zawartość rejestru A zostanie wysłana do drukarki.
+
+<image/figury/k3_page22_figure1.png>
+
+<image/figury/k3_page22_figure2.png>
+
+Na rysunku 2.5a pokazano symbolicznie sekwencję czynności komputera w czasie
+wykonywania pierwszego rozkazu programu, a na rysunku 2.5b drugiego rozkazu.
+Całkowity czas wykonywania instrukcji jest nazywany cyklem instrukcyjnym (rozkazo-
+wym). Każdy dostęp do pamięci jest nazywany cyklem maszynowym. Z rysunku 2.5
+widać, że cykle instrukcyjne mogą być różnej długości i składają się z różnej liczby cykli
+maszynowych. Cykl instrukcyjny pokazany na rysunku 2.5a składa się z dwóch cykli
+maszynowych, a cykl instrukcyjny z rysunku 2.5b z czterech. Czynności procesora, które
+nie wymagają dostępu do pamięci (dekodowanie rozkazu i wykonywanie rozkazu) trwają
+krócej. Niekiedy wykonywane są one w czasie cyklu maszynowego, gdyż angażują inne
+bloki procesora niż potrzebne do współpracy z pamięcią. Faza pobrania pierwszej instrukcji
+składa się z fazy pobrania kodu rozkazu i fazy pobrania argumentu, tj. z dwóch odwołań
+do pamięci. Faza pobrania drugiej instrukcji składa się z 4 odwołań do pamięci. Z po-
+równania wykresów z rysunków 2.5a i 2.5b wynika, przy założeniu, iż czas dekodowania
+rozkazu i czas wykonania rozkazu jest znacznie mniejszy od czasu cyklu pamięci (założe-
+nie to jest w większości rzeczywistych przypadków prawdziwe), że cykl instrukcyjny
+rozkazu drugiego będzie ok. 2 razy dłuższy niż cykl instrukcyjny rozkazu pierwszego.
+
+Opisany program operował słowami 8-bitowymi. Przykładowy procesor komputera
+osobistego IBM PC operuje także słowami 16-bitowymi. Wówczas można zmniejszyć
+liczbę cykli maszynowych w cyklu instrukcyjnym, a tym samym przyspieszyć działania

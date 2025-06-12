@@ -1,0 +1,42 @@
+3.2. Liniowe obwody rezystancyjne prądu stałego |
+
+zory/k4_page245_formula1.png
+E-
+zory/k4_page245_formula2.png
+L
+
+zory/k4_page245_formula3.png
+
+(3.2-6)
+
+(3.2-7)
+
+(3.2-8)
+
+określające wartości R,, Rz i Ręelementów trójnika z rys. 3.2-7b równoważne-
+go trójnikowi z rys. 3.2-7a, w zależności od wartości R;,R. i Rzelementów tego
+trójnika.
+
+Związki odwrotne otrzymamy bez trudu, jeżeli następującą sumę iloczynów:
+
+<image/wzory/k4_page245_formula4.png>
+
+podzielimy kolejno stronami przez równania (3.2-8), (3.2-7) i (3.2-6). Związki te
+przyjmują postać:
+
+<image/wzory/k4_page245_formula5.png>
+IJ
+<image/wzory/k4_page245_formula6.png>
+|
+<image/wzory/k4_page245_formula7.png>
+
+Zastosowanie przekształcenia trójkąt — gwiazda i przekształcenia odwrotne-
+go gwiazda — trójkąt do obliczania oporów dwójników o strukturze mostkowej
+zilustrujemy na następujących przykładach.
+
+Przykład 3.2-3. Jeżeli trójkąt występujący w dwójniku mostkowym z przykładu 3.2-1b
+
+utworzony przez opory R;, R; i R. przekształcimy w gwiazdę, to otrzymamy dwójnik o strukturze
+szeregowo — równoległej (rys. 3.2-8), w którym opory R;, R. i Rs są równe:
+
+<image/figury/k4_page245_figure1.png>

@@ -1,0 +1,36 @@
+82
+
+Analogicznie zbiór rozmyty o funkcji przynależności przedstawionej na rys. ??
+reprezentuje relację rozmytą znajdowania się punktu wewnątrz koła jednostkowego.
+
+<image/figury/k2_page77_figure1.png>
+
+Rys. 5.9: Funkcja przynależności relacji rozmytej: punkt o współrzędnych r.y znajduje się
+wewnątrz koła jednostkowego
+
+Złożenie relacji
+
+Złożenie relacji klasycznych (nie rozmytych):
+Niech A, B i C będą trzema zbiorami. Dana jest relacja R od A do B i relacja S
+z B do C, wtedy złożeniem R o S relacji R. i S jest relacja od A do C zdefiniowana
+jako:
+a(R o S)c 4 istnieje pewne b € B takie, że aRb i bSe
+
+Na przykład, jeżeli R jest relacją „bycia matką” i S jest relacją „żonaty z”, wtedy
+R o jest relacją „bycia teściową”.
+
+Definicja 5.10 Złożenie relacji rozmytych
+Niech A, B i C będą trzema zbiorami rozmytymi. Dana jest relacja R od Ado Bi
+
+relacja S z B do C, wtedy złożenie max-min RoS relacji R i S jest relacją rozmytą
+od A do © zdefiniowaną natępująco:
+
+<image/wzory/k2_page77_formula1.png>
+
+PRZYKŁAD 5.7
+
+KY
+
+<image/wzory/k2_page77_formula2.png>
+
+gdzie przestrzeniami są X = 1, 2,3,4), Y = fa,b,c), Z = (a,8,%,6,e)

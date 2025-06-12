@@ -1,0 +1,45 @@
+e długość bloku (liczba słów):
+Długość bloku określa liczbę przesyłanych słów (minimum 2, maksimum
+128), przy czym pierwsze przesyłane słowo występuje pod adresem okre-
+ślonym przez wejście IN i powiększonym o 6.
+
+e tryb pracy WA/T/ NO WAIT;
+W przypadku oczekiwania na odpowiedź modułu najmniej znaczący bit re-
+jestru o adresie określonym przez /N + / przyjmuje wartość /, w trybie NO
+WAIT bit ten przyjmuje wartość O.
+
+e rodzaj pamięci, która zawiera wskaźnik stanu modułu (Status Pointer Memo-
+ry);
+Rejestr o adresie określonym przez /N + 2 zawiera liczbę określającą rodzaj
+pamięci, w której przechowywany jest wskaźnik stanu modułu, np. liczba 8
+oznacza pamięć zmiennych rejestrowych, /0 to pamięć wejść analogowych,
+itp.
+
+e adres wskaźnika stanu modułu w pamięci (Status Pointer Offset);
+Jest to liczba określająca przesunięcie względem pierwszego adresu okre-
+ślonego rodzaju pamięci, np. jeżeli pod adresem określonym przez /N + 2
+znajduje się liczba 8 (zmienne rejestrowe), a pod adresem /N + 3 jest liczba
+256, to wskaźnik stanu modułu z którym CPU nawiązuje komunikację jest
+przechowywany w rejestrze %R257.
+
+e dopuszczalny czas oczekiwania CPU na odpowiedź modułu (/dle Timeout);
+Ten element bloku danych jest wykorzystywany tylko w trybie pracy WA/T
+i określa on (w dziesiątych częściach milisekundy) maksymalny czas ocze-
+kiwania CPU na odpowiedź modułu po wysłaniu żądania komunikacji.
+
+e maksymalny czas na komunikację (Maximum Communication Time);
+Jest to maksymalny czas (podany w dziesiątych częściach milisekundy)
+przeznaczony na komunikację z modułem.
+
+e blok danych sterujących (data block);
+Zawiera informacje dla modułu dotyczące zlecanego zadania. Błok może
+obejmować od 2 do /28 słów.
+
+Na Wyd. 4.32 pokazano przykład użycia funkcji COMMREQ w programie. Jeśli
+zmienna %M 100 przyjmie wartość 7, to blok danych rozpoczynający się od reje-
+stru %R106 (%R100 na wejściu IN) o długości określonej przez zawartość
+rejestru %RŁ00 zostanie wysłany do modułu umieszczonego w gnieździe 4
+
+ 
+
+216 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

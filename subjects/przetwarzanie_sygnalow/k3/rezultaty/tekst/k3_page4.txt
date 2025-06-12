@@ -1,0 +1,22 @@
+<image/figury/k3_page4_figure2.png>
+figury/k3_page4
+
+przeznaczone dla wąskiego kręgu czyteików o ej specjalizacji. Tego rodzaju szczegółowe
+rozważania matematyczne są potrzebne prowadzącym badania badania w zakresie DSP do zrozumienia
+zagadnienia.
+
+teoretycznych implikacji tego
+
+Przy pisaniu tej książki przyjęto podstawowe założenie, że większości zagadnień praktycz-
+nych DSP można się nauczyć i stosować je bez tradycyjnej bariery tworzonej przez szczegó-
+łową matematykę i teorię. Cyfrowe przetwarzanie sygnałów. Praktyczny poradnik dla inży-
+nierów i naukowców napisano dla tych, którzy traktują DSP jako narzędzie, a nie nową drogę
+kariery zawodowej.
+
+W dalszej części tego rozdziału będą przedstawione dziedziny, w których DSP spowodowało
+
+interdyscyplinarny, wykorzystując rozwiązania techniczne z wiełu pokrewnych ze sobą dziedzin.
+Jak wynika z rys. 1.2, granice między DSP i innymi dziedzinami nie są ostre i wyraźnie określo-
+
+ne, lecz raczej rozmyte i zachodzące na siebie. Jeśli chcecie specjalizować się w DSP, to pamię-
+tajcie o tych pokrewnych dziedzinach, które też będziecie musieli poznać. j

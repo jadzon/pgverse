@@ -1,0 +1,49 @@
+1.2. Prawdopodobieństwo 5
+
+1.2 Prawdopodobieństwo
+
+Definicja 1.4 Prawdopodobieństwo, lub rozkład prawdopodobieństwa, jest funkcją określoną
+na zbiorze zdarzeń (w naszym przypadku na zbiorze wszystkich podzbiorów (2). Każde-
+mu zdarzeniu A € 02 przypisujemy liczbę rzeczywistą 7”(4A), jego prawdopodobieństwo.
+Funkcja ta musi spełniać warunki:
+Aksjomaty prawdopodobieństwa
+
+A1) P(A) > 0, dla każdego A C Q,
+
+A2) P(N)=1,
+
+A3) Jeżeli zdarzenia A i B są rozłączne, to P(A UB) = P(A) + P(B).
+
+Zbiór zdarzeń elementamych 0? wraz z określonym na nim prawdopodobieństwem będziemy
+nazywać przestrzenią probabilistyczną. W przypadku, gdy przestrzeń zdarzeń elemen-
+tamych jest zbiorem skończonym, wystarczy określić prawdopodobieństwa dla zdarzeń
+elementamych. Muszą być tylko spełnione dwa warunki:
+
+A4) P(w) > 0, dla każdegow € Q,
+A5) „en P(v) =1,
+Prawdopodobieństwo dowolnego zdarzenia jest wtedy równe
+
+<image/wzory/k2_page64_formula1.png>
+
+Łatwo można sprawdzić, że tak zdefiniowane prawdopodobieństwo spełnia aksjomaty
+definicji 1.4.
+
+W przypadku, gdy przestrzeń zdarzeń elementamych jest zbiorem wszystkich moż-
+liwych wyników jakiegoś eksperymentu, najczęściej przyjmuje się, że funkcja prawdo-
+podobieństwa przypisuje, każdemu zdarzeniu elementamemu taką samą wartość. Mamy
+wtedy do czynienia z klasyczną definicją prawdopodobieństwa. W tej książce będziemy
+najczęściej używać klasycznej definicji, a w razie odstępstwa od tej umowy, będziemy to
+specjalnie zaznaczać.
+
+Definicja 1.5 Rozkład prawdopodobieństwa, w którym każde zdarzenie elementarne w €
+Q, ma takie samo prawdopodobieństwo
+
+<image/wzory/k2_page64_formula2.png>
+nazywamy rozkładem jednostajnym.
+
+Przykład 1.6 a) Dla rzutu dwoma monetami (przykład 1.1b możemy określić praw-
+dopodobieństwo wedłua klasycznej definicji: mamy wtedy
+
+<image/wzory/k2_page64_formula3.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

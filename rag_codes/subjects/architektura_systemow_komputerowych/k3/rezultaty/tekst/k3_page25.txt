@@ -1,0 +1,39 @@
+3.1. Układy cyfrowe 15
+
+ 
+
+w różnych technologiach, tzn. stosując różne rozwiązania układu elektronicznego. Obecnie
+jedną z najpowszechniej stosowanych jest technologia CMOS, która charakteryzuje się
+bardzo małą mocą pobieraną ze źródła zasilania i dużą szybkością działania.
+
+<image/figury/k3figury/k3_page25_figure4.png>
+
+Na rysunku 3.1 pokazano oznaczenia graficzne sześciu bramek najczęściej stosowa-
+nych w technice cyfrowej. Przedstawiono trzywejściowe bramki sumy (na wyjściu bramki
+jest O wtedy i tylko wtedy, gdy na wszystkich wejściach są 0) i iloczynu (na wyjściu jest 1
+wtedy i tylko wtedy, gdy na wszystkich wejściach są 1), czterowejściowe bramki NOR (na
+wyjściu jest I wtedy i tylko wtedy, gdy na wszystkich wejściach są 0) i NAND (na wyjściu
+jest 0 wtedy i tylko wtedy, gdy na wszystkich wejściach są 1), dwuwejściową bramkę
+sumy modulo 2 lub inaczej EXOR (na wyjściu jest 1, gdy sygnały wejściowe mają różne
+wartości) i jednowejściową bramkę inwertera NOT (na wyjściu jest przeciwna wartość niż
+na wejściu). Nazwy niektórych bramek pochodzą od angielskich skrótów:
+
+— NOR — not or (nie lub) czyli negacja sumy logicznej,
+
+— NAND — not and (nie i) czyli negacja iloczynu logicznego,
+
+— EXOR — exclusive or (suma wyłączająca).
+
+Celem uproszczenia niektórych rozwiązań, często stosuje się bramki specjalne, które
+można połączyć w sposób prostszy niż to wynika z działania logicznego bramki. Na
+rysunku 3.2a pokazano połączenie dwóch bramek iloczynów logicznych, które jest nie-
+dozwolone, gdy wykorzystuje się bramki standardowe. Ale połączenie takie może mieć
+miejsce, jeżeli są to tzw. bramki typu OC, tj. bramki z otwartym kolektorem (ang. open
+collector). Połączenie wyjść obu bramek z rezystorem realizuje funkcję sumy logicznej,
+tzw. sumy na drucie (ang. wire-or). Na rysunku 3.2b pokazano równoważny układ standar-
+dowy. Innym rodzajem bramek specjalnych są tzw. bramki trójstanowe (ang. three-state).
+Można je stosować w podobny sposób jak bramki typu OC, ale ich dodatkową zaletą jest
+
+z b
+
+<image///k8_page25_figurfigury/k3_page25_figure5.png>

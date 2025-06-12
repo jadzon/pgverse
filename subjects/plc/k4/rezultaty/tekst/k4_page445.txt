@@ -1,0 +1,54 @@
+<image/wzory/k4_page445_formula1.png>
+
+Jednym z często realizowanych zadań w przemyśle jest sterowanie sekwencyjne
+procesem wsadowym w reaktorze chemicznym. Zaprezentowany zostanie tu
+przykład sterowania dla panelu dydaktycznego umożliwiającego symulację sta-
+tycznych i dynamicznych własności procesu zachodzącego w reaktorze. Zadanie
+polega na opracowaniu programu realizującego sterowanie kolejnymi fazami
+procesu oraz stabilizacji temperatury w reaktorze przy użyciu regulatora PID.
+
+<image/tabele/k4_page445_table1.png>
+
+Wewnątrz reaktora (por. Rys. 8.76) znajdują się następujące elementy:
+
+e czujnik pomiaru aktualnego poziomu czynników znajdujących się w reakto-
+rze dający sygnał wyjściowy panelu oznaczony symbolem A//.
+
+e czujnik pomiaru aktualnej wartości temperatury czynników znajdujących się
+w reaktorze dający sygnał wyjściowy panelu oznaczony symbolem A/2.
+
+e Mieszadło wprawiane w ruch przez silnik M załączany sygnałem Q6.
+
+Doprowadzenie czynników do reaktora odbywa się przy pomocy dwóch zawo-
+
+rów dwupołożeniowych:
+
+e zawór V1 (sygnał sterujący Q/) - doprowadzenie czynnika A oznaczonego
+na schemacie jako PA;
+
+e zawór V2 (sygnał sterujący Q2) - doprowadzenie czynnika B oznaczonego
+jako PB.
+
+Temperatura czynników jest stała i wynosi 5'C.
+
+Odprowadzenie produktu końcowego (oznaczenie PC) odbywa się przez otwar-
+cie zaworu AVI (sygnał sterujący AQ/). Jest to zawór analogowy umożliwiający
+płynną (ciągłą) zmianę przepływu odprowadzanego produktu końcowego. Aktu-
+alny stan otwarcia zaworu AVI jest obrazowany przy pomocy wyświetlacza
+słupkowego.
+
+Reaktor chemiczny otoczony jest płaszczem umożliwiającym ogrzewanie lub
+chłodzenie czynników znajdujących się w reaktorze poprzez włączenie układu
+doprowadzającego do płaszcza odpowiednio czynnik grzewczy lub chłodzący.
+Przepływ medium grzewczego (oznaczonego na schemacie symbolem H) odby-
+wa się tylko i wyłącznie, gdy otwarte są jednocześnie zawór analogowy AV2 na
+dopływie (sygnał sterujący AQ2) i zawór dwupołożeniowy VS na odpływie (sy-
+gnał sterujący Q5). Zawór AV2 umożliwia płynną (ciągłą) regulację ilości me-
+dium grzewczego H przepływającego przez płaszcz reaktora. Zakłada się, że jest
+on elementem proporcjonalnym, tj. bez inercji i opóźnienia.
+
+Przepływ medium chłodzącego C odbywa się tylko i wyłącznie, gdy otwarte są
+
+| 0 yy e m MA M M 0 0 00 0 TA R BYDOOTABE 9 KĘ YNY MM MAE AE PA W PA 0 0
+
+8.8 Sterowanie sekwencyjne procesem wsadowym 445

@@ -1,0 +1,47 @@
+1.5. Drzewa poszukiwań binamych 13
+
+Istnieją jeszcze dwie inne pokrewne metody przeszukiwania drzew binamych: inorder
+i preorder:
+
+Przeszukiwanie inorder. A by przeszukać (pod)drzewo mające swój korzeń w wierzchoł-
+ku z:
+
+e przeszukujemy jego lewe poddrzewo (z korzeniem w z0),
+e odwiedzamy wierzchołek r (korzeń drzewa),
+e przeszukujemy jego prawe poddrzewo (z korzeniem w 11).
+
+Przeszukiwanie preorder. Aby przeszukać (pod)drzewo mające swój korzeń w wierz-
+chołku z:
+
+e odwiedzamy wierzchołek r (korzeń drzewa),
+e przeszukujemy jego lewe poddrzewo (z korzeniem w 20),
+e przeszukujemy jego prawe poddrzewo (z korzeniem w z1).
+Przykład 1.10 Jeżeli przeszukamy drzewo z rysunku 1.4 metodą inorder, to etykiety utworzą
+
+<image/_.wzory/k2_page175_formula1.png>
+
+czyli wyraŻenie w PPUSIACI INIIXOWEJ, AlE DEZ NAWIASUW. FCZESZUKANIE WYO SAiMeJU UrZEWA
+
+meto
+
+<image/wzory/k2_page175_formula2.png>
+Jest to rak zwana postac prenxowa wyrazenia. Łnak operacji występuje w niej przed ar-
+gumentami. Podobne jak w postaci postfixowej, postać prefixowa da się jednoznacznie
+rozkładać i nie wymaga nawiasów.
+
+1.5 Drzewa poszukiwań binarnych
+
+Drzewa są podstawową strukturą przy budowie dużych baz danych. Jedą z najprostszych
+takich struktur są drzewa poszukiwań binamych. Aby utworzyć drzewo poszukiwań bi-
+namych, zaczynamy od pustego drzewa, a następnie wstawiamy po kolei elementy, któ-
+re mają być przechowywane w drzewie. Wstawiane elementy powinny być z jakiegoś
+uporządkowanego zbioru. Poniżej przedstawiamy algorytmu wstawiania elementów do
+drzewa. W (x) oznacza wartość przechowywaną w wierzchołku z. Pamiętajmy, że 7;
+oznacza poddrzewo o korzeniu w wierzchołku r.
+
+Algorytm wstawiania elementu do drzewa poszukiwań binarnych.
+Aby wstawić element e do drzewa 7; :
+
+e jeżeli drzewo 7, jest puste, to W (x) := e (wstaw e do korzenia z),
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

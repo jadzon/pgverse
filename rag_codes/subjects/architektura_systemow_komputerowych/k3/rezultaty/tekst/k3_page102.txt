@@ -1,0 +1,43 @@
+9 5. Pamięci
+
+<image/figury/k3_page102_figure1.png>
+
+Drugie sygnalizowane zagadnienie dotyczy pamięci stałych ROM. Najczęściej używa-
+nymi pamięciami ROM są układy PROM (ang. programmable ROM). Zawartość takiego
+układu jest jednokrotnie zapisywana (programowana) przez użytkownika i w czasie eks-
+ploatacji systemu jest tylko odczytywana. Matryce tych pamięci zawierają proste elementy
+półprzewodnikowe (np. tranzystor). Pamięci są budowane w postaci układu scalonego
+w technologii HMOS lub CHMOS. Pojemności takich układów sięgają jednego miliona
+bitów, a najczęściej przyjętą długością słowa jest bajt. Czas dostępu takich pamięci waha
+się od 100 ns do 200 ns, ale istnieją także szybsze, choć droższe, pamięci do specjalnych
+zastosowań. Pobierany prąd zasilania układu scalonego pamięci PROM waha się od
+50 mA do 150 mA, co w przypadku projektowania dużych bloków pamięci może dać
+znaczną moc. Dlatego często pamięci wyposaża się w mechanizm pozwalający na tzw. stan
+wyłączenia (ang. standby power). Polega to na wprowadzeniu możliwości ustawienia
+takiego stanu układu, że gdy chwilowo on nie pracuje (nie ma cyklu odczytu ani zapisu),
+to wówczas pobiera znacznie zmniejszoną moc. Spada ona nawet 100-krotnie w stosunku
+do mocy pobieranej w czasie pracy. Taki tryb pracy wprowadza się także w pamięciach
+zapisywalnych.
+
+W komputerowych systemach prototypowych stosuje się pamięci stałe z możliwością
+wymazania zawartości i ponownego zapisania. Stosowane są dwa rodzaje pamięci wy-
+mazywalnych: pamięci kasowane promieniowaniem ultrafioletowym UVEPROM i pamięci
+kasowane elektrycznie EEPROM (E*PROM). Proces wymazywania zawartości jest długo-
+trwały (rzędu milisekund).
+
+Wadą pamięci półprzewodnikowych RAM jest to, że jest ona ulotna, tj. jej zawartość
+jest tracona po wyłączeniu napięcia zasilania. Aby pamięć operacyjna (lub jej część) była
+nieulotna (ang. non-vołlatile) wyposaża się ją w układ bateryjny podtrzymujący napięcie
+po wyłączeniu napięcia głównego. Innym rozwiązaniem może być zastosowanie
+tzw. pamięci NVRAM. Jest to taka pamięć półprzewodnikowa, w której w jednej obudowie
+scalono pamięci RAM i EEPROM. W „normalnym” trybie pracy pracuje tylko pamięć
+RAM, a pod wpływem odpowiedniego sygnału zewnętrznego zawartość tej pamięci jest
+przepisywana do pamięci EEPROM.
+
+Druga klasyfikacja pamięci dotyczy pamięci półprzewodnikowych RAM. Pamięci te
+można podzielić na dwie podstawowe grupy: pamięci statyczne SRAM (ang. static
+memory) i pamięci dynamiczne DRAM (ang. dynamic memory). Pamięci statyczne są to
+szybkie pamięci, ale o stosunkowo niewielkiej pojemności i dużym poborze mocy.
+Elementami takich pamięci są przerzutniki. Duży pobór mocy powoduje trudności ze
+zbudowaniem pamięci operacyjnej o dużej pojemności. Dlatego pamięci statyczne są
+stosowane tam, gdzie nie jest wymagana duża pojemność, a jedynie duża szybkość pracy.

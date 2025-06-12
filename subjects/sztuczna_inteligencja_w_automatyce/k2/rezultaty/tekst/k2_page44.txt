@@ -1,0 +1,29 @@
+Rozdział 4
+
+Reprezentacja wiedzy i wnioskowanie
+
+Metody reprezentacji wiedzy i automatycznego wnioskowanie są ważnym działem
+informatyki intensywnie obecnie rozwijanym. Dział ten, łącznie ze zbliżonymi tema-
+tycznie metodami przetwarzania języka naturalnego można zaliczyć też do dziedziny
+sztucznej inteligencji. W rozdziale omówione zostaną podstawowe sposoby reprezen-
+tacji wiedzy: język logiki pierwszego rzędu i logika opisowaa.
+
+4.1. Logika pierwszego rzędu
+
+Logika pierwszrgo rzędu zwana też rachunkiem predykatów jest językiem formalnym,
+w którym można przedstawić opis pewnej rzeczywistości (w postaci faktów i reguł) i
+przeprowadzać w nim wnioskowanie. Rachunek predykatów jest rozszerzeniem alge-
+bry Boole'a poprzez wprowadzenie zmiennych i kwantyfikatorów. Stworzony został
+na przełomie XIX i XX wieku — badania nad nim rozpoczęli Ch. S. Peirce, G. Frege,
+B. Russel. Ważnym okresem w rozwoju rachunku predykatów były lata 30., w któ-
+rych badano zagadnienia pełności i rozstrzygalności systemów wnioskowania (Gódel,
+Herbrand, Skolem, Tarski). W 1965 A. Robinson podał algorytm dowodu oparty o
+rezolucję. Duży wkład w rozwój logiki matematycznej wnieśli też uczeni polscy w
+
+<image/figury/k2_page44_figure1.png>
+
+Rys. 4.1: Okładka znanej monografii opisującej metody reprezentacji wiedzy i wnioskowania
+
+7]
+
+49

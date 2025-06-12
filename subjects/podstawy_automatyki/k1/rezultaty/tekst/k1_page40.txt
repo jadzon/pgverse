@@ -1,0 +1,35 @@
+Po przekształceniu otrzymujemy
+
+<image/wzory/k1_page40_formula1.png>
+
+Pamiętając, że v= . po podstawieniu otrzymujemy
+
+<image/wzory/k1_page40_formula2.png>
+
+Ostatecznie, jeżeli podstawimy F, (t,x) = cos "| lg z +28 otrzymamy dwa
+równania w postaci: d
+
+<image/figurwzory/k1_page40_formula3.png>
+
+Ciało nie wykonuje ruchu w kierunku osi Y, lecz dla porządku napiszemy poniższe
+zależności.
+
+Suma sił działających w kierunku osi Y wynosi
+
+<image/wzory/k1_page40_formula4.png>
+dzie:
+j F, =mg — siła ciężkości,
+Fy — siła reakcji podłoża równoważąca siłę ciężkości BL.
+Stąd równanie różniczkowe ma postać
+
+<image/wzory/k1_page40_formula5.png>
+
+Przykład 2.10
+
+Wyznaczyć transmitancję oraz równania stanu dla układu mechanicznego składa-
+jącego się z masy, sprężyny, tłumika oraz bezmasowego wózka, przedstawionego na
+
+rysunku 2.2. Przemieszczenie u(/) wózka jest wielkością wejściową, natomiast prze-
+mieszczenie masy y(ż) jest wielkością wyjściową.
+
+42

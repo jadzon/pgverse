@@ -1,0 +1,64 @@
+134
+
+Elementy dwuwrotowe rezystancyjne i indukcyjne odgrywają w teorii obwodów istotną rolę. S;
+one bowiem modelami takich zjawisk i właściwości, których nie da się przedstawić w postaci moc
+dwuzaciskowego”. Przydatność pojęcia elementu wielowrotowego (n > 2) jest natomia
+ograniczona. Znacznie większe znaczenie ma pojęcie układu wielowrotowego (tzw. wielo
+nika), o którym będzie mowa w p. 2.1.2
+
+F. Żyrator. Ważnym — w teorii i w praktyce — dwuwrotowym elemen
+tem rezystancyjnym SLS jest żyrator (rys. 1.7-25a) opisany równaniami:
+
+<image/wzory/k3_page134_formula1.png>
+
+gdzie parametr r jest nazywany stałą żyracji”.
+
+<image/figury/k3_page134_figure1.png>
+
+ge 134_formula2.png
+
+Nzory/k3_page134_formula3.png
+
+1. Pojęcia podstawowe — elementy
+
+, uważać za kombinację dwóch ŹNSP (rys. 1.7-25b) lub dwóch
+$c). Jak nietrudno sprawdzić, równania (1.7-33) żyratore
+yw z rys. 1.7-25b,c są identyczne.
+
+'sterowań. Wprowadzone w p. A źródła sterowane charakteryzują się
+toryczna lub wydajność prądowa jest proporcjonalna do sygnału
+vnania (1.7-24)-(1.7-27). W praktyce, np. przy modelowaniu przyrządć
+z zastosowaniem analizy komputerowej (por. np. [4], str. 112), a także
+, zachodzi niekiedy potrzeba rozważania źródeł sterowanych o bardziej
+:*żnościach siły elcktromotorycznej (lub wydajności prądowej) od sygnału
+
+na rozważać źródło napięciowe, którego siła elektromotoryczna jest określon
+„ ogólniejszą od równania (1.7-24), np.:
+
+maa 102/172 nasje 1 34_figure2.png
+
+owrotowe clementy pojemnościowe nie odgrywają natomiast praktycznie
+w związku z tym rozpatrywane.
+« 1.7-25a określa tzw. kierunek żyracji żyratora. Zwrot strzałki przyjęty m
+itni kierunek żyracji (r > 0). Przy przeciwnym zwrocie kierunek żyracji jest
+
+    
+   
+   
+  
+  
+   
+     
+   
+  
+  
+  
+
+A
+
+BNDBZMZ
+
+a
+
+0!
+=

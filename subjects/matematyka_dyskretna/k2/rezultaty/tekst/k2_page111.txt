@@ -1,0 +1,48 @@
+20 Rozdział 1. Funkcje boolowskie
+
+Funkcja Par jest addytywna, to znaczy:
+
+<image/wzory/k2_page111_formula1.png>
+co wynika z faktu, że operacja © jest łączna i przemienna.
+Par(z) jest równa 1, jeżeli liczba jedynek w ciągu z jest nieparzysta, oraz jest równa
+0, jeżeli w ciągu z liczba jedynek jest parzysta. Jeżeli będziemy utożsamiać wektor z ze
+zbiorem, to Par(z) jest równe parzystości mocy zbioru r.
+
+Twierdzenie 1.3 Par(x) = 1 dla dokładnie połowy wejść. To znaczy:
+
+<image/wzory/k2_page111_formula2.png>
+Pierwszy dowód. Twierdzenie wynika z faktu, że dokładnie połowa podzbiorów zbioru
+£1,2,...„n) jest nieparzystej mocy.
+Drugi dowód. Weźmy wektor:
+
+<image/wzory/k2_page111_formula3.png>
+
+który ma jedynkę tylko na pierwszej współrzędnej. Zdefiniujemy teraz funkcję h:
+
+<image/wzory/k2_page111_formula4.png>
+
+Funkcja h łączy elementy ze zbioru f0, 1)” w pary, ponieważ jeżeli h(z) = y, to hfy) =
+z. Rzeczywiście:
+
+<image/wzory/k2_page111_formula5.png>
+
+Ponadto:
+
+<image/wzory/k2_page111_formula6.png>
+
+a stąd wynika, że dla każdej pary z, y = h(x) dokładnie jedna z dwóch liczb Par(z),
+Par(y) jest jedynką, czyli dla dokładnie połowy x € f0,13”, Par(z)=0 o
+
+1.7 Zabezpieczanie danych
+
+Funkcja Par jest wykorzystywana do kontmli, czy dane nie zostały przekłamane podczas
+przesyłania lub przechowywania. Przypuśćmy, że Małgosia chce przesłać Jasiowi wiado-
+mość zx € 0,1)” i chce choć trochę zabezpieczyć 1 przed przekłamaniem. Wtedy Mał-
+gosia wysyła 1 razem z bitem Par(zx) — jego podpisem. Przypuśćmy teraz, że Jaś dostał
+wiadomość y z podpisem Par(z). Dla prostoty zakładamy, że podpis Par(z) nie został
+przekłamany, na przykład Małgosia i Jas mogą się umówić, że przesyłają sobie tylko ta-
+kie wiadomości z, dla których Par(x) = 0. Aby sprawdzić, czy wiadomość nie została
+przekłamana, Jaś oblicza Par(y) i porównuje go z Par(z). Jeżeli Par(x) £ Par(y), to
+Jaś ma pewność, że x ź y. Jeżeli Par(r) = Par(y), to Jaś przyjmuje, że z = y, choć
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

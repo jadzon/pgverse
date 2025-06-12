@@ -1,0 +1,25 @@
+W sterownikach Simatic S5 występuje grupa zmiennych reprezentująca dane
+systemowe, takie jak informacje o błędach działania, aktualnym czasie, czasie
+trwania cyklu, czy jest to pierwszy cykl pracy sterownika itd. Zmienne te mogą
+być wykorzystywane w programie sterującym. Można się odwoływać do poje-
+dynczego bitu tych zmiennych lub do słowa. Niektóre z nich mogą być tylko od-
+czytywane, wartości innych można modyfikować wpływając na pracę sterowni-
+ka. Jak to zostało przedstawione w Tab. 7.2 występuje stosunkowo duża swobo-
+da w odwoływaniu się do różnych obszarów pamięci. W większości przypadków
+można się odwoływać do pojedynczego bitu, bajtu, słowa lub podwójnego słowa
+danego obszaru pamięci. Iłustruje to Rys. 7.5.
+
+<image/figury/k4_page325_figure1.png>
+
+Zmienne zachowywane (retentive variables) to zmienne, których wartości są
+przechowywane w pamięci z podtrzymaniem bateryjnym po zatrzymaniu lub
+wyłączeniu sterownika, co umożliwia ich wykorzystanie po ponownym urucho-
+mieniu go. Zmiennymi takimi mogą być markery, czasomierze i liczniki. W
+przypadku, gdy przełącznik pamiętania stanu na jednostce centralnej sterownika
+jest ustawiony w położeniu NR (nonretentive), żadna ze zmiennych nie będzie
+zachowywana. Jeżeli przełącznik ten jest ustawiony w położeniu RE (retentive),
+to domyślnie połowa markerów, czasomierzy i liczników będzie zachowywana.
+
+ 
+
+7.3 Metody programowania, typy danych i zmiennych 325

@@ -1,0 +1,46 @@
+1.5. Podzbiory 7
+
+Dwie permutacje n-elementowe można składać tak, jak składa się funkcje. Złożenie m; o
+x2 permutacji m: i z» określone jest wzorem:
+
+<image/wzory/k2_page42_formula1.png>
+
+Na przykład:
+
+<image/wzory/k2_page42_formula2.png>
+Zbiór wszystkich permutacji na zbiorze
+
+<image/wzory/k2_page42_formula3.png>
+z działaniem złożenia ma następujące własności:
+
+e Złożenie permutacji jest łaczne. To znaczy, dla każdych trzech pemutacii m, o.o:
+
+<image/wzory/k2_page42_formula4.png>
+e Wśród permutacji istnieje identyczność id, czyli permutacja, która każdemu x z
+dziedziny przypisuje wartość id(x) = z. Identyczność jest elementem neutralnym
+składania permutacii. ponieważ dla każdei permutacii r:
+
+<image/wzory/k2_page42_formula5.png>
+e Dla każdej permutacji w istnieje permutacja odwrotna (funkcja odwrotna) x”"!,
+Spe
+<image/wzory/k2_page42_formula6.png>
+
+Powyższe zależności oznaczają, że zbiór wszystkich permutacji na zbiorze (1,...,n) z
+działaniem składania permutacji stanowi grupę.
+
+1.5  Podzbiory
+
+Policzmy teraz, ile podzbiorów ma skończony zbiór n-elementowy. Jeżeli zbiór składa
+się z t
+<image/wzory/k2_page42_formula7.png>
+
+to moZzeiuy 1atwv wYJISAU WSŁYJUMIE JEUU PUUŁNIULY:
+
+<image/wzory/k2_page42_formula8.png>
+Tych podzbiorów jest osiem. Każdy zbiór trzyelementowy posiada osiem podzbiorów,
+ponieważ nie ma znaczenia, jak nazywają się elementy zbioru. Zbiór pusty ma tylko jeden
+podzbiór: zbiór pusty. Jeżeli zbiór zawiera jeden element fa), to ma dwa podzbiory:
+
+<image/wzory/k2_page42_formula9.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,32 @@
+2) Człon elementarny o transmitancji G(s)= ZA |
++
+
+Transmitancja widmowa: G(jo) = ——,
+Tjo + 1
+
+fimiim:/l21 moarmońn7E firiura0) nnm
+
+<image/wzory/k1_page/5_formula1.png>
+
+«dla 7202 <<l:0< >: L(0) = -20log1 =",
+
+moduł:
+
+«dla 720? >>1:02 > : L(w) = -20log 7 — 20log w;
+faza: p(w) = -arctg w7;
+dla T= 2 (rys. 2.20):
+
+dla o<>:L(0)=0.
+
+.dla wz ż : L(w) =-20log 2 — 20log w,
+p(w) = —arctg 20.
+
+<image/figury/k1_page7/5_figure1.png>
+
+puisacja |rad/sj
+
+Rys. 2.20. Charakterystyki logarytmiczne modułu (a) i fazy (b) dla elementu o transmitancji G(s) = am
+: Ts+l
+(-—— charakterystyki składowe, === charakterystyka wypadkowa)
+
+77

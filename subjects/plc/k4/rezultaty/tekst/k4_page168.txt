@@ -1,0 +1,50 @@
+Odbiornik musi mieć impedancję wejściową nie mniejszą niż 12 k Q. Jego pa-
+rametry elektryczne określa progowe napięcie jego wejścia, które wynosi
+200 mV dla napięć wspólnych od —7 V do +12 V oraz charakterystyka napięcio-
+wo-prądowa obwodu wejściowego.
+
+Transmisja danych w omawianych łączach może być asynchroniczną transmisją
+znakową lub transmisją synchroniczną.
+
+W transmisji asynchronicznej przesyła się za pomocą pojedynczej linii danych
+pojedyncze znaki w określonym formacie. Linia w stanie spoczynkowym znaj-
+duje się na poziomie logicznej jedynki. Pierwszy znak jest bitem startu
+o wartości zera logicznego, a następne bity stanowią znak w kodzie ASCII, po-
+cząwszy od bitu najmniej znaczącego LSB, a po nich występuje bit parzystości,
+tj. bit kontrolny zawartości bitów znaku, a na końcu 1 lub 2 bity stopu o wartości
+1. Przesyłanie bitów w ramach znaku jest synchronizowane taktowaniem nadaj-
+nika, zaś znaki przesyłane są asynchronicznie.
+
+Natomiast w transmisji synchronicznej przesyła się ramki danych (frame) ze
+znacznikami początku i końca, które umożliwiają synchronizację po stronie od-
+biorczej. Odbiór danych w takiej transmisji wymaga rozpoznawania bitów,
+tj. synchronizacji bitowej i łączenia bitów w znaki, tj. synchronizacji znakowej.
+Zadania przedstawione powyżej obejmują zadania warstwy połączeń fizycznych
+(phisical layer).
+
+W warstwie łączenia danych (data link layer) zadanie komunikacji polega na
+nawiązaniu i zaniechaniu połączeń komunikacyjnych, transferze danych oraz
+detekcji błędów. Zadanie to realizuje się według protokołu określonego komuni-
+kacyjnego.
+
+Przykładem popularnego protokołu komunikacyjnego jest MODBUS, który prze-
+syłane znaki w transmisji asynchronicznej organizuje w ramki w trybie ASCII
+albo w trybie RTU.
+
+W trybie ASC77 każdy bajt kodowany jest w formacje heksadecymalnym i prze-
+syłany jako dwa znaki AŚCI/ (0..9, A..F). W trybie tym wprowadza się w ramce
+5 początkowych znaków, w tym znak początku (:), 2 znaki zawierające adres
+i dwa znaki określające funkcje (odczytu, zapisu, ustawiania), po czym następuje
+ciąg znaków danych. Ramka kończy się dodatkowymi 2 znakami kontroli części
+informacyjnej ramki, które koduje się według algorytmu LRC (Łongitudinal Re-
+dundancy Check) oraz znakami CR i LF.
+
+W trybie RTU transmisja rozpoczyna się ciszą na łączu trwającą co najmniej
+przez czas odpowiadający przesłaniu 3,5 znaków, po czym wysyła się 8 bitowy
+adres i kod funkcji. Dalej mamy dane jako ciąg 8 bitowych liczb w zakresie od
+16400 do 16FF (o I zank mniej niż w trybie ASCII). Ramka kończy się 16 bi-
+towym słowem kontrolnym obliczanym według algorytmu CRC (Cyclical
+
+ 
+
+168 Rozdział : 3. Sprzęt sterowników PLC

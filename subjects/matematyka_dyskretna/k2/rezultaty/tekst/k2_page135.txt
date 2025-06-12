@@ -1,0 +1,51 @@
+20 Rozdział 1. Teoria liczb
+
+A oto program w języku Pascal, który szyfruje teksty zapisane za pomocą 26 liter alfabetu
+łacińskiego:
+
+var
+t:string;
+a,b,i,m:integer;
+begin
+writeln('podaj klucz');
+write('a=');
+readln(a);
+write('b=');
+readln(b);
+writeln('podaj tekst do zaszyfrowania');
+readln(t);
+for i:=l to length(t) do
+begin
+m:=((ord(t[i]) -97)*a+b)mod(26)+97;
+write(chr(m))
+end
+end.
+
+Komentarz. Zmienna t jest typu string, czyli łańcuch. Taką zmienną można traktować
+jak tablicę z indeksami od 1 do Length(t) i z wartościami typu char (znak). Zmienne
+typu char są przechowywane w jednym bajcie i mogą zawierać jeden znak. Listę znaków
+wraz z odpowiadającymi im numerami (od 0 do 255) zawiera tak zwany kod ASCII. Małe
+U alfabetu łacińskiego mają tam numery od 97 — a, do 122 — z.
+
+<image/wzory/k2_page135_formula1.png>
+
+4. mmakaŁk SRMAAŁ J | ada adu dł GRADE Y Wr akkaŁA 4 <ARZÓŁ ""u=jv yv xa 4oGBŁARANAINYJ |. kakiokkkióśA ko
+tl ij, dla i od 1 |do length ( t), zawierają poszczególne znaki naszego tekstu.
+Funkcja ord przypisuje znakom ich numery w kodzie AŚCII, a funkcja chr działa
+na odwrót, przypisuje znak numerowi. Pętla for, dla każdego znaku tekstu t po kolei,
+wylic
+
+<image/.wzory/k2_page135_formula2.png>
+<image/wzory/k2_page135_formula3.png>
+
+Ka A AA EA PEER A BT A AE
+
+Szyfry liniowe są bardzo starym wynalazkiem. W prostszej wersji z a = 1 sto-
+sował je już Juliusz Cezar. Ich wadą jest to, że bardzo łatwo dają się łamać. Czasami
+wystarcza odgadnąć, jak zaszyfrowano dwie litery. Można to zrobić analizując częstości
+występowania liter w zaszyfrowanym tekście.
+
+Przykład 1.40 (kontynuacja przykładu 1.39) W naszym drugim zaszyfrowanym tekście
+litera e występuje cztery razy, a litery pi u po trzy razy. Może to nam pomóc w odgadnięciu,
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

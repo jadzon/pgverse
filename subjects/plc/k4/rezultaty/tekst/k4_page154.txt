@@ -1,0 +1,25 @@
+<image/figury/k4_page154_figure1.png>
+
+W sieciach typu /T ochrona przed dotykiem pośrednim jest realizowana przez
+zastosowanie HEGZKZENIA do kontroli stanu izolacji, wyłączników różnicowoprą-
+dowy” ' LJ nami 24/34/3344 7474/%
+
+<image/figury/k4_page154_figure2.png>
+
+Rys. 3.32 Ochrona przed dotykiem pośrednim w sieci IT
+dla prądu przemiennego i stałego.
+
+W II klasie ochronności ochronę przed porażeniem zapewnia się przez zastoso-
+wanie podwójnej lub wzmocnionej izolacji części czynnych, której zniszczenie
+jest mało prawdopodobne. Urządzenia II klasy ochronności powinny mieć izola-
+cję części czynnych wykonaną w taki sposób, aby uszkodzenie jej tak, że wystąpi
+zagrożenie porażeniowe było bardzo mało prawdopodobne. Urządzenia tej klasy
+powinny być tak wzmocnione lub wykonane, aby zapewnić stopień bezpieczeń-
+stwa nie mniejszy niż urządzenia o izołacji podwójnej, bądź powinny posiadać
+izolację podwójną. Natomiast w przypadku urządzeń elektrycznych o częściach
+czynnych z izolacją tylko podstawową, wymagana jest osłona obudową izolacyj-
+ną o odpowiedniej wytrzymałości elektrycznej, mechanicznej i termicznej
+
+ 
+
+154 Rozdział : 3. Sprzęt sterowników PLC

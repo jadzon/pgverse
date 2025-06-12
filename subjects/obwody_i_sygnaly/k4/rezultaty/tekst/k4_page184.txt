@@ -1,0 +1,41 @@
+184 | 2. Pojęcia podstawowe — układy
+
+W pierwszym ujęciu, zgodnie z definicją podaną w p. £
+łowy, jeżeli jego równania zaciskowe są spełnione przez we.
+
+Rozpatrując bezźródłowość z drugiego punktu widzer
+łować następującą właściwość.
+
+Układ zbudowany tylko z elementów lub podukładów!
+bezźródłowy.
+
+Uwaga. Właściwość ta wynika z następującego prostego rozumowa
+z praw Kirchhoffa są jednorodne względem występujących w nich prądów
+elementy (podukłady), z których zbudowany jest układ są bezźródłowe, to
+przy zerowych prądach i napięciach. Oznacza to, że wszystkie równania :
+przyjmie się, że wszystkie prądy i napięcia elementów są równe zeru.
+równania zaciskowe są spełnione przez stan zaciskowy (2.1-26), a więc i
+
+C. Układy zawierające elementy źródłowe. Wyjaśni
+kwestia, czy układ, który zawiera w swej strukturze elemen:
+układem bezźródłowym. Intuicja, a także praktyka, suger
+tywną. Proponujemy jednak rozważenie kilku prostych p
+
+Dwa idealne źródła napięciowe połączone szeregowo,
+przeciwnie skierowanych siłach elektromotorycznych (rys. :
+się nawzajem stanowiąc zwarcie. Układ, który zawier
+kompensujących się (i nie zawiera innych elementów źródł
+bezźródłowym.
+
+figury/k4_page184_figure
+
+Na rysunku 2.1-11b przedstawiono dwójnik będący szeregowym połącze-
+niem idealnego prostownika, oporu R i idealnego źródła napięciowego o stałej
+sile elektromotorycznej E > 0. Jest to zatem dwójnik rezystancyjny, którego
+
+1) Słowo „podukład” oznacza tu układ, który wchodzi w skład rozpatrywanego układu. Na
+przykład, czwórnik z rys. 1.8-18 jest zbudowany z trzech dwójników i jednego czwórnika.
+
+ 
+
+wzory/k4_page184_

@@ -1,0 +1,43 @@
+<image/wzory/k3_page61_formula1.png>
+
+kowania do 192 kHz. Przy częstotliwości próbkowania 100 kHz modulator delta pracuje
+z częstotliwością zegarową 6,4 MHz. Dolnoprzepustowy filtr cyfrowy jest 246-puntowym
+filrem o skończonej odpowiedzi impulsowej (SOI), taki jak opisany w rozdziale 16. Filtr
+usuwa w danych cyfrowych wszystkie częstotliwości powyżej 50 kHz, a więc powyżej
+połowy częstotliwości próbkowania. Można na to spojrzeć jako na tworzenie sygnału cy-
+frowego z częstotliwością 6,4 MHz, w którym każda próbka jest reprezentowana przez
+16 bitów. Ten sygnał podlega następnie decymacji od 64 MHz do 100 kHz, wykonywanej
+przez usuwanie każdych 63 z 64 próbek. W rzeczywistości, wewnątrz tego układu dzieje
+się znacznie więcej, niż tu w skrócie opisaliśmy.
+
+Przetworniki delta-sigma mogą być również używane do przetwarzania cyfrowo-analogo-
+wego sygnałów głosowych i innych fonicznych. Sygnał cyfrowy jest pobierany z pamięci
+i przetwarzany na strumień zer i jedynek z modulacją delta. Jak już wspomniano, taki
+sygnał jednobitowy można łatwo przekształcić w zrekonstruowany sygnał analogowy,
+stosując prosty dolnoprzepustowy filtr analogowy. Tak jak przy filtrze antyaliasingowym,
+zwykle jest wymagany tyłko prosty układ RC, gdyż większość filtracji wykonują filtry
+cyfrowe o bardzo dobrych parametrach.
+
+Przetworniki a/c delta-sigma mają kilka cech, które ograniczają ich zastosowanie do spe-
+cyficznych zastosowań. Na przykład trudne jest multipleksowanie wejść tych przetworni-
+ków. Po przełączeniu wejścia od jednego sygnału do innego, właściwe działanie ustala się
+dopiero, gdy filtr cyfrowy oczyści się z danych poprzedniego sygnału. Przetworniki delta-
+-sigma są ograniczone jeszcze pod innym względem: nigdy nie wiadomo dokładnie, kiedy
+każda próbka jest pobierana. Każda pobrana próbka jest bowiem składnikiem informacji
+jednobitowej pobranej z pewnego segmentu sygnału wejściowego. Nie jest to problemem
+w przypadku sygnałów kodowanych w dziedzinie częstotliwości, takich jak sygnały fo-
+niczne, lecz jest poważnym ograniczeniem dla sygnałów kodowanych w dziedzinie cza-
+su. W celu zrozumienia kształtu przebiegu sygnału, trzeba często dokładnie znać chwi-
+lę, w której została pobrana każda z próbek. I na koniec trzeba podkreślić, że większość
+układów delta-sigma jest specjalnie zaprojektowanych do zastosowań audio i zgodnie
+z tymi wymaganiami są definiowane parametry układów. Na przykład w 16-bitowym prze-
+tworniku a/c stosowanym do sygnałów głosowych każda próbka niekoniecznie musi mieć
+16-bitową dokładność. Znacznie bardziej prawdopodobne jest stwierdzenie producenta, że
+sygnały głosowe mogą być przetwarzane na cyfrowe z 16-bitowym zakresem dynamicz-
+nym. Nie oczekujmy od tego układu uzyskania pełnych 16 bitów użytecznej informacji do
+akwizycji danych ogólnego przeznaczenia,
+
+Powyższe wyjaśnienie działania i przykłady są wstępem do jednobitowych przetworników
+a/c i c/a. Trzeba podkreślić, że są to jedynie uproszczone opisy skomplikowanych systemów
+DSP i techniki układów scalonych. Nie możemy się spodziewać, aby wytwórcy zdradzili
+konkurentom sekrety swych opracowań, a więc nie powiedzą tego także Wam.

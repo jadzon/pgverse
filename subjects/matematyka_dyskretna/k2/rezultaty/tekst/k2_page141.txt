@@ -1,0 +1,46 @@
+26 Rozdział 1. Teoria liczb
+
+Dowód:
+a) Zauważmy że, wśród liczb 0,...,p* względnie pierwsze z p* nie są te, które są po-
+dzielne przez p, jest ich p” /p = p?*”' czyli
+
+<image/wzory/k2_page141_formula1.png>
+
+b) Najpierw zauważmy, ze dla dowolnej liczby z, 0 < z < mn
+
+<image/wzory/k2_page141_formula2.png>
+
+wtedy i tylko wtedy gdy
+
+<image/wzory/k2_page141_formula3.png>
+
+a to zachodzi wtedy i tylko wtedy gdy reszty r, = z mod m OMaZ r, = z modn
+spełniają warunki
+
+<image/wzory/k2_page141_formula4.png>
+Par reszt (ry. r„) spełniających warunek (1.7) jest $(m)-6(n), az chińskiego twierdzenia
+o resztach każdej liczbie r, 0 < r < mn odpowiada dokładnie jedna para reszt, i na
+odwrót każdej parze reszt odpowiada jedna liczba. Tak więc liczb względnie pierwszych
+z mn jest $(m) : ó(n). o
+
+1.16 Szybkie potęgowanie
+
+Teraz zastanowimy się jak można potęgować, czyli jak obliczyć a* mod n dla a € Z,
+oraz k € N. Pierwszy nasuwający się algorytm potęgowania polega na k krotnym mno-
+żeniu przez a:
+y:=l;
+for i:=0 to k do y:=y*a mod n
+W kryptografii oblicza się potęgi z wykładnikami posiadającymi po kilkaset bitów. Do
+takich zastosowań powyższy algorytm jest nieprzydatny (wymaga on ;: mnożeń).
+Pokażemy teraz jak można potęgować dużo szybciej. Zauważmy, że
+
+<image/wzory/k2_page141_formula5.png>
+<image/wzory/k2_page141_formula6.png>
+
+Dlatego, aby obliczyć potęgę o wykładniku, który jest potęgą dwójki k = 2" należy
+wykonać
+
+y:=a;
+for i:=1 to j do y:=y*y mod n
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,50 @@
+6 Rozdział 1. Teoria liczb
+
+to pytamy, która z trzech liczb f0,1,2) przystaje do 1999 modulo 3. Zróbmy najpierw
+kilka prostych obserwacji. Po pierwsze:
+
+<image/wzory/k2_page121_formula1.png>
+bo 3/(10 — 1). Z twierdzenia 1.7 wynika, że każda potęga liczby dziesięć przystaje do 1
+modi
+
+<image/wzory/k2_page121_formula2.png>
+
+dla kazaeqo k. mamy teraz:
+
+<image/wzory/k2_page121_formula3.png>
+
+Podobnie, dla dowolnej liczby z, jeżeli zapiszemy x w postaci dziesiętnej:
+
+<image/wzory/k2_page121_formula4.png>
+
+to
+
+<image/wzory/k2_page121_formula5.png>
+
+czyli z ma takie same reszty moauio 4 co suma cyir w zapisie aziesiętnym.
+
+Przykład 1.9 Aby przekonać się, że
+<image/wzory/k2_page121_formula6.png>
+wystarczy zauważyć, że liczba 2002 jest parzysta, więc także wynik mnożenia powinien
+byż parzysty. Mówiąc inaczej 2002 = 0 (mod 2) oraz 1999 = 1 (mod 2), więc na
+
+podstawie twierdzenia 1.7 mamy 2002 : 1999 = (0 (mod 2), a liczba 4001999 przystaje
+do jedynki modulo 2. Podobnie możemy się przekonać, że
+
+<image/wzory/k2_page121_formula7.png>
+wystarczy zauważyć, że w iloczynie 2002 - 1999 ostatnią cyfrą powinno być 8 a nie 6.
+Inaczej 2002 = 2 (mod 10) oraz 1999 = 9 (mod 10), więc na podstawie twierdze-
+nia 1.7 mamy 2002 - 1999 = 8 (mod 10), a liczba 4001996 przystaje do 6 modulo
+10.
+
+1.4 Klasy abstrakcji
+
+Dla relacji przystawania modulo m definiujemy klasy abstrakcji. Dla dowolnej liczby
+całkowitej z, klasę abstrakcji elementu z definiujemy w następujący sposób:
+
+<image/wzory/k2_page121_formula8.png>
+
+Innymi słowy, klasa abstrakcji liczby z to zbiór wszystkich liczb z nią równoważnych.
+Przykład 1.10 Dla m = 3 mamy trzy klasy abstrakcji
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

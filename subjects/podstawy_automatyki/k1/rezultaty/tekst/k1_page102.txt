@@ -1,0 +1,25 @@
+Zadanie 2.16
+Wyznaczyć transmitancję zastępczą dla układu przedstawionego na rysunku 2.45.
+
+<image/figury/k1_page102_figure2.png>
+
+Rys. 2.45. Schemat blokowy układu
+
+Zadanie 2.17
+Wyznaczyć transmitancję zastępczą dla układu przedstawionego na rysunku 2.46.
+
+<image/figury/k1_page102_figure1.png>
+
+Zadanie 2.18
+
+Narysować schemat blokowy i obliczyć transmitancję zastępczą układu pokazane-
+go na rysunku 2.47.
+
+.
+
+<image/figury/k1_page102_figure3.png>
+
+:ynnik tłumienia
+i dźwigni
+
+Rys. 2.47. Schemat układu mechanicznego

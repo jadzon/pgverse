@@ -1,0 +1,37 @@
+1.9. Cykle i drogi Eulera 19
+
+e Powtarzamy, aż do wyczerpania krawędzi:
+
+o Jeżeli z bierzącego wierzchołka v nie odchodzi żadna krawędź, to koniec
+algorytmu.
+
+o Jeżeli z bierzącego wierzchołka v odchodzi tylko jedna krawędź, to prze-
+chodzimy wzdłuż tej krawędzi do następnego wierzchołka, usuwamy tą krawędź i
+wierzchołek v z grafu.
+
+o Jeżeli z v odchodzi więcej niż jedna krawędź, to wybieramy tą krawędź, któ-
+rej usunięcie nie rozspójnia grafu; przechodzimy wzdłuż tej krawędzi do następnego
+wierzchołka, usuwamy tą krawędź z grafu.
+
+<image/figury/k2_page197_figure1.png>
+
+Przykład 1.34 W grafie z rysunku 1.10 wszystkie wierzchołki są parzystego stopnia. Prze-
+śledźmy, jak działa powyższy algorytm. Zaczynamy od wierzchołka a i przyjmijmy, że w
+razie wyboru algorytm wybierze krawędź do wierzchołka z wcześniejszą (według alfabe-
+tu) literą. Tak więc a przejdzie do b potem do ci do d. Rysunek 1.11 przedstawia nasz graf
+po tych trzech krokach, usunięciu odwiedzanych krawędzi i wierzchołka c (z którego nie
+odchodzą już żadne krawędzie).
+
+Teraz algorytm nie może wybrać krawędzi fd, a) ponieważ usunięcie tej krawędzi roz-
+spójni graf. Zamiast tego algorytm powinien wybrać krawędź fd,e) i przejść do wierz-
+chołka e, a potem do f. Teraz znowu nie powinien iść do g tylko do h, a potem już bez
+problemów do końca cyklu Eulera: b, i, f, g, d,a.
+
+Pokażemy teraz poprawność tego algorytmu. Przypuśćmy, że po kilku krokach je-
+steśmy w wierzchołku v, z którego odchodzi kilka krawędzi. Pokażemy, że wśród tych
+krawędzi co najwyżej jedna jest zła (jej usunięcie może rozspójnić graf). Z przebiegu
+algorytmu wynika, że graf w aktualnej postaci (po usunięciu być może jakiś krawędzi
+lub wierzchołków) jest nadal spójny i co najwyżej dwa wierzchołki w nim są nieparzy-
+stego stopnia v i ty (co zachodzi jeżeli v 4 vg). Więc posiada on drogę Eulera. Idźmy
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

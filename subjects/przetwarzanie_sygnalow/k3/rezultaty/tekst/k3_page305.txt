@@ -1,0 +1,57 @@
+21 Porównanie filtrów
+
+do cyfrowych. Pierwszą zaletą jest szybkość; układy cyfrowe są wolne, a analogowe szybkie.
+Na przykład komputer osobisty może filtrować dane z częstotliwością ok. 10 000 próbek/s przy
+użyciu splotu FFT. Nawet proste wzmacniacze operacyjne mogą działać przy częstotliwościach
+od 100 kHz do 1 MHz, a zatem od 10 do 100 razy szybciej niż system cyfrowy!
+
+Drugą zaletą, charakterystyczną dla układów analogowych, jest zakres dynamiczny. Ten
+parametr występuje w dwóch aspektach. Pierwszy to zakres dynamiczny amplitudy bę-
+dący stosunkiem największego sygnału przechodzącego przez system do szumu wystę
+pującego w systemie. Na przykład 12-bitowy przetwornik a/c ma poziom maksymalny
+(nasycenie) 4095 i wartość skuteczną szumu kwantyzacji równą 0,29 cyfry (LSB), a więc
+zakres dynamiczny wynosi ok. 14 000. Standardowy wzmacniacz operacyjny zaś ma na-
+pięcie nasycenia ok. 20 V i szum wewnętrzny ok. 2 uV, co daje zakres dynamiczny ok.
+dziesięć milionów. Tak jak poprzednio, pojedynczy wzmacniacz operacyjny nokautuje pod
+tym względem system cyfrowy.
+
+Drugim aspektem omawianego parametru jest zakres dynamiczny częstotliwości. Łatwo
+można zaprojektować układ ze wzmacniaczem operacyjnym, działający w zakresie często-
+tliwości od 0,01 Hz do 100 kHz (siedem dekad). Gdyby w systemie cyfrowym próbować
+pracować w takim zakresie, to komputer wkrótce zapchałby się danymi. Na przykład przy
+próbkowaniu z częstotliwością 200 kHz trzeba zarejestrować aż 20 milionów punktów,
+aby uchwycić pełny okres przebiegu o częstotliwości 0,01 Hz. Zapewne zauważyliście.
+że odpowiedzi częstotliwościowe filtrów cyfrowych wykreśla się w skali liniowej, filtrów
+analogowych zaś — zwykle w skali logarytmicznej. Filtry cyfrowe wymagają bowiem ska-
+li liniowej, aby można było pokazać w szczegółach ich wyjątkowe działanie filtrujące,
+a w filtrach analogowych konieczna jest skala logarytmiczna, aby objąć ich olbrzymi za-
+kres dynamiczny.
+
+Pojedynek 2: Filtr okienkowany funkcją sinc
+przeciw filtrowi Czebyszewa
+
+Zarówno filtry okienkowane funkcją sinc, jak i filtry Czebyszewa są projektowane pod ką-
+tem jak najlepszego rozdzielania pasm częstotliwości. Filtr okienkowany funkcją sinc jest
+filtrem o skończonej odpowiedzi impulsowej (SOI) implementowanym przez spłor, a filtr
+Czebyszewa — filtrem o nieskończonej odpowiedzi impulsowej (NOI) realizowanym przez
+rekursję. Który filtr cyfrowy jest najlepszy w dziedzinie częstotliwości? Niech rozstrzygnie
+o tym bezpośrednie starcie.
+
+Pretendentem ze strony filtrów rekursywnych jest 6-biegunowy, dolnoprzepustowy filtr o za-
+falowaniach odpowiedzi 0,5%. Porównanie utrudnia fakt, że odpowiedź częstotliwościowa
+filtru Czebyszewa zmienia się przy zmianach częstotliwości odcięcia. Przyjmiemy częstotli-
+wość odcięcia równą 0,2 i wybierzemy 51-punktową odpowiedź impulsową filtru okienko-
+wanego funkcją sinc. Przy takim doborze parametrów oba filtry mają jednakową szybkość
+opadania od 90% do 10%, jak to przedstawiono na rys. 21.2 a).
+
+I teraz zaczyna się wymiana ciosów. Filtr rekursywny ma zafałowania 0,5% w paśmie prze-
+pustowym, a odpowiedź filtru okienkowanego funkcją sinc jest płaska. Jednak możemy ia-
+two ustawić zafalowania filtru rekursywnego na 0%, jeśli jest taka potrzeba. Nie przyznaje-
+my więc punktu żadnemu filtrowi. Z rys. 21.2 b) wynika, że filtr okienkowany funkcją sinc
+ma znacznie lepsze tłumienie w paśmie zaporowym niż filtr Czebyszewa. Jeden punkt dla
+filtru okienkowanego sinc.
+
+Odpowiedzi skokowe obu filtrów przedstawiono na rys. 21.3. Obie są niekorzystne, jak tego
+można było się spodziewać po filtrach przeznaczonych do dziedziny. częstotliwości. Filr
+rekursywny ma nieliniową fazę, lecz to można skorygować przez filtrację dwukierunkową.
+Ponieważ odpowiedzi skokowe obu filtrów są tak złe, więc uznajemy remis.

@@ -1,0 +1,31 @@
+Na podstawie tych definicji możemy napisać:
+
+<image/wzory/k1_page44_formula1.png>
+X2(5) .;
+U(s)-X;(5) s
+X;(s)_ 1
+
+X,(5) s+1
+
+ 
+
+rav
+
+Nzory/k1_page44_formula2.png
+
+Po przekształceniu możemy napisać:
+
+wzorv/k1 baae44 formula3.ona
+
+wzorv/k1 pade44 formula4.pna
+
+wzorv/k1 0aae44 formula5.ong
+Nzory/k1_page44_formula6.png
+
+Po zastosowaniu odwrotnej transformacji Laplace'a dla powyższych czterech
+
+<image/figury/k1_page44_figure1.png>
+
+Układ równań w przestrzeni stanu możemy zapisać zatem w postaci:
+
+<image/wzory/k1_page44_formula7.png>

@@ -1,0 +1,39 @@
+Słuch ludzki 341
+
+ 
+
+<image/figury/k3_page311_figure1.png>
+
+W ludzkim słyszeniu występuje też jeszcze inny mechanizm kodowania, zwany teorią cza-
+su (volley priciple). Komórki nerwowe przesyłają informacje przez wytwarzanie krótkich im-
+pulsów elektrycznych, zwanych potencjałami czynnościowymi. Komórka nerwowa na błonie
+podstawnej może kodować informację foniczną, wytwarzając potencjał czynnościowy w odpo-
+wiedzi na każdy okres drgań. Na przykład fala dźwiękowa 200 Hz może być odbierana przez
+neuron generujący 200 potencjałów czynnościowych na sekundę. Taki mechanizm działania
+dotyczy tylko częstotliwości poniżej ok, 500 Hz, a więc maksymalnej częstotliwości, z jaką
+neurony mogą generować potencjały czynnościowe. Ucho ludzkie pokonuje tę trudność przez
+umożliwienie realizacji każdego takiego pojedynczego zadania na przemian przez kilka komó-
+rek nerwowych. Na przykład ton 3000 Hz może być odbierany przez dziesięć komórek nerwo-
+jr oo. oe oko obrad
+czasu wić zyoa oda pdg! taj bz Hg alto noo TRAWA
+W tablicy 22.1 przedstawiono zależność między natężeniem dźwięku a odczuwalną głośno-
+ścią. Przyjęto wyrażać natężenie dźwięku w skali logarytmicznej w decybelach. W tej skali
+0 dB jest falą dźwiękową o gęstości mocy 107!$ W/cm?, jest to w przybliżeniu najniższy
+poziom natężenia dźwięku wykrywany przez ludzkie ucho. Normalna mowa ma ok. 60 dB,
+a bolesne uszkodzenie ucha następuje przy poziomie ok. 140 dB.
+
+Różnica w natężeniu najgłośniejszego i najcichszego dźwięku, słyszalnego ludzkim uchem,
+wynosi ok. 120 dB, co pod względem amplitudy daje stosunek jeden do miliona. Słuchacze
+mogą odczuć zmianę głośności, gdy poziom natężenia dźwięku zmienia się o ok. I dB (12%
+zmiany amplitudy). Tak więc jest odczuwanych tylko ok. 120 poziomów natężenia dźwięku
+— od najcichszego szeptu do najgłośniejszego grzmotu. Czułość ucha jest zadziwiająca, przy
+słyszeniu bardzo słabych dźwięków bębenek w uchu drga z amplitudą mniejszą od średnicy
+pojedynczej cząsteczki!
+
+Percepcja głośności zależy od poziomu natężenia dźwięku ze współczynnikiem proporcjonalności
+ZZ
+
+śliwej muzyki u sąsiadów. Powiedzmy, że starannie pokryjecie 99% waszych ścian materiałem
+
+18 Na błonie podstawnej znajduje się ok. 28 000 zewnętrznych i ok. 3500 wewnętrznych komórek rzęsa-
+tych różniących się morfologicznie i funkcją przy odbiorze dźwięku (przyp. tłum.).

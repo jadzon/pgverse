@@ -1,0 +1,22 @@
+<image/figury/k1_page85_figure1.png>
+
+Rys. 2.26. Wykres charakterystyki amplitudowo-fazowej układu otwartego
+
+Z wykresu widać, że charakterystyka amplitudowo-fazowa układu otwartego nie
+obejmuje punktu (-1,j0), a zatem układ po zamknięciu pętli sprzężenia zwrotnego jest
+stabilny.
+
+Przykład 2.29
+
+Zbadać stabilność układu pokazanego na rysunku 2.27, stosując kryterium Mi-
+chajłowa.
+
+<image/figury/k1_page85_figure2.png>
+
+Rys. 2.27. Schemat blokowy układu
+
+Transmitancja zastępcza układu zamkniętego wynosi
+
+<image/wzory/k1_page85_formula1.png>
+
+87

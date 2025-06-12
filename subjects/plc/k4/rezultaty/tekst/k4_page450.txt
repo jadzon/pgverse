@@ -1,0 +1,11 @@
+<image/tabele/k4_page450_table2.png>
+
+Wyd. 8.102 Deklaracja zmiennych
+
+<image/tabele/k4_page450_table1.png>
+
+Wyd. 8.103 Deklaracja bloków programowych
+
+<image/figury/k4_page450_figure1.png>
+
+450 Rozdział : 8.Programy przykładowe

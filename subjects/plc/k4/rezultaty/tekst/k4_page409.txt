@@ -1,0 +1,12 @@
+<image/tabele/k4_page409_table3.png>
+
+Wyd. 8.40 Wyłączenie silnika przyciskiem STOP lub w przypadku przeciążenia
+
+<image/tabele/k4_page409_table2.png>
+
+<image/tabele/k4_page409_table1.png>
+
+Tekst programu w języku ZD realizującego algorytm sterowania silnikiem poka-
+zuje Wyd. 8.41-Wyd. 8.50.
+
+8.3. Sterowanie napędem dwukierunkowym 409

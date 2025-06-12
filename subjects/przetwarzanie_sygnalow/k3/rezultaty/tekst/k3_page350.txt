@@ -1,0 +1,53 @@
+24. Liniowe przetwarzanie obrazć
+
+Podstawą liniowego przetwarzania obrazów są te same dwie metody, które stosuje się w kon-
+wencjonalnym DSP — spłot i analiza Fouriera. Ważniejszą z nich jest metoda splotu, gdyż
+obrazy mają informację zakodowaną raczej w dziedzinie przestrzeni niż w dziedzinie często-
+tliwości. Filtracja liniowa może ulepszać obrazy kilkoma sposobami, przez: wyostrzanie k
+wędzi obiektów, tłumienie szumu losowego, korekcję nierównego oświetlenia, rozplot ko
+gujący obrazy rozmyte, poruszone itd. Te procedury są przeprowadzane przez splatanie ob
+oryginalnego z właściwą odpowiedzią impulsową filtru. W ten sposób uzyskuje się ptzeliki
+wany obraz. W realizacji splotu obrazowego poważną trudnością jest konieczność wykonani i
+ogromnej liczby obliczeń, z czego wynikają bardzo długie, niemożliwe do zaakceptowanić
+czasy wykonania. W tym rozdziale przedstawiono metody projektowania odpowiedzi impelh
+sowych filtrów dla różnych zadań związanych z przetwarzaniem obrazów. Opisano też dwie
+ważne techniki skracające czas wykonania: splot przez rozłączność oraz splot FFT.
+
+Splot obrazowy działa w ten sam sposób, jak splot jednowymiarowy. Na przykład, na obrazy
+można patrzeć jak na sumowanie impulsów, tj. przeskalowanych i przesuniętych funkcji del-
+ta. Również systemy liniowe są chdrakteryzowane ich odpowiedziami na impulsy, czyli prze:
+odpowiedzi impulsowe. Jak można się było spodziewać, obraz uzyskany na wyjściu systemu
+jest równy spłotowi obrazu wejściowego i odpowiedzi impulsowej systemu.
+Dwuwymiarowa funkcja delta jest obrazem złożonym z samych zer, oprócz jednego piksela
+znajdującego się w wierszu = 0, kolumnie = 0, który ma wartość jeden. Załóżmy na razie,
+że indeksy wierszy i kolumn mogą mieć wartości zarówno dodatnie, jak i ujemne, tak więc
+ta jedynka jest umieszczona pośrodku ogromnego morza zer. Gdy funkcja delta przechodzi
+przez system liniowy, pojedynczy punkt niezerowy będzie zamieniony na jakiś inny obraz
+dwuwymiarowy. Ponieważ jedyną rzeczą, jaka się może zdarzyć punktowi, jest jego rozcią-
+gnięcie się, więc ta odpowiedź impulsowa jest często w żargonie specjalistów w dziedzinie
+przetwarzania obrazów nazywana funkcją rozmycia punktu PSF (Point Spread Function).
+Doskonałym przykładem tych koncepcji jest ludzkie oko. Jak napisano w poprzednim roz-
+dziale, pierwsza warstwa siatkówki przetwarza obraz wyrażony jakimś rozkładem światła na.
+obraz będący pewnym rozkładem w impulsach nerwowych. W drugiej warstwie siatkówki
+następuje przetwarzanie tego obrazu neuralnego i przekazanie go do trzeciej warstwy — tkan-
+ki tworzącej nerw wzrokowy. Wyobraźmy sobie, że obraz rzutowany na siatkówkę jest bar-
+dzo małą plamką świetlną pośrodku ciemnego tła. A więc do oka jest wprowadzany impuls.
+Przy założeniu, że system jest liniowy, przetwarzanie obrazu następujące w siatkówce może
+być określone przez sprawdzenie obrazu pojawiającego się na nerwie wzrokowym. Innymi
+słowy, chcemy wyznaczyć funkcję rozmycia punktu tego przetwarzania. Do założenia doty-
+czącego liniowości oka wrócimy jeszcze w dalszej części tego rozdziału.
+
+Ten eksperyment naszkicowano na rys. 24.1. W siatkówkę trafia impuls świetlny (rys. 24.1 a),
+dając obraz pojawiający się na nerwie wzrokowym. Środkowa warstwa oka przepuszcza jasny
+impuls szpilkowy, lecz wytwarza kolisty obraz ciemniejszy. Oko realizuje to przez proces zwany
+wzbranianiem bocznym (/aterał inhibition). Jeśli jest pobudzana komórka nerwowa w warstwie
+środkowej, to zmniejsza ona możliwość pobudzenia innych komórek znajdujących się w naj-
+bliższym sąsiedztwie. Gdy oko widzi cały obraz, każdy punkt w obrazie wnosi
+i przesunięta wersję odpowiedzi impulsowej do obrazu pojawiającego się na nerwie wzroko-
+wym. Innymi słowy, obraz wzrokowy podlega spłotowi z funkcją rozmycia punktu (PSF) oka,
+dając obraz neuronowy przekazywany do mózgu. Nasuwa się oczywiste pytanie — jak splatanie
+obrazu wzrokowego z PSF poprawia zdolność oka do rozumienia świata?
+
+Ludzie i zwierzęta korzystają ze wzroku do identyfikacji pobliskich obiektów, takich jak wro-
+gowie, pożywienie i przyjaciele. Identyfikacja jest realizowana przez rozróżnianie poszczegół-
+nych obszarów obrazu na podstawie różnic jaskrawości i barwy. Pierwszym krokiem w rozpo-

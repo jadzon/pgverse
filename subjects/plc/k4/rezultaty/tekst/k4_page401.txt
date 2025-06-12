@@ -1,0 +1,15 @@
+<image/tabele/k4_page401_table1.png>
+<image/wzory/k4_page401_formula1.png>
+<image/tabele/k4_page401_table4.png>
+
+Wyd. 8.28 Zamknięcie wypychaczy
+
+<image/tabele/k4_page401_table2.png>
+
+Wyd. 8.29 Wyzerowanie markerów F1.0, FL.] i F1.2
+
+<image/tabele/k4_page401_table3.png>
+
+Wyd. 8.30 Wyzerowanie wyjścia zezwolenie i zgaszenie lampki zezwolenie
+
+8.2 Sterowanie urządzeniem do sortowania drewna 401

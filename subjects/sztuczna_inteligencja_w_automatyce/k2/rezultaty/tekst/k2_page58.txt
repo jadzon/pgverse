@@ -1,0 +1,50 @@
+63
+
+innej unifikacji R(W'). Tym razem otrzymujemy
+
+<image/wzory/k2_page58_formula1.png>
+
+W ten sposób wykazaliśmy, że wpz (3Z)A(Z) wynika z klauzul (2)-(7) i zachodzi
+to dla Z =c.
+Biorąc pod uwagę, że:
+
+e Klauzule (1)-(7) są klauzulami Horna.
+
+e Klauzule Horna można przedstawić w poniższej postaci
+
+<image/wzory/k2_page58_formula2.png>
+
+e Przyjęto ustaloną strategię kolejności prób wyznaczania rezolwent polegającą
+na poszukiwaniu atomów unifikujących się z pierwszym literałem (w kolejności
+występowania w klauzuli) ostatnio otrzymanej klauzuli, a w przypadku nie-
+powodzenia cofanie się do poprzedniej klauzuli i próba ponownego znalezienia
+unifikacji jej pierwszego literału.
+
+widać, że klauzule (2)-(7) przedstawione w przykładzie są równoważne klauzulom
+programu w PROLOG'u oraz strategia wnioskowania jest identyczna z realizowaną
+w PROLOG'u. Wynika stąd, że wykonywanie programu w PROLOG'u jest równo-
+ważne wnioskowaniu w rachunku predykatów przy zastosowaniu reguły rezolucji i
+strategii wnioskowania w tył. ma
+
+4.1.7. Przykład zastosowania logiki pierwszego rzędu — świat
+smoka
+
+Często podawanym przykładem zastosowania metod logicznych jest wnioskowanie
+w tzw. świecie smoka (ang. wumpus world).
+
+Opis świata smoka
+
+System (jaskinia) składa sie z siatki kwadratów ograniczonych ścianami. W kwa-
+dracie może znajdować się agent (posłaniec) lub obiekty, którymi mogą być smok,
+dziura lub złoto. W stanie początkowym agent zajmuje kwadrat o współrzędnych
+(1,1). Celem agenta jest odnalezienie złota, powrót do kwadratu (1.1) i wyjście z
+systemu. Przykład systemu przedstawiono na rysunku ??.
+
+Podczas działania systemu agent odbiera następujące sygnały, podejmuje nastę-
+pujące akcje i ma następujące cele:
+
+e W kwadracie zawierającym smoka i w kwadratach przylegających bokami agent
+czuje zapach.
+e W kwadratach przylegających bokami do dziury agent czuje powiew wiatru.
+
+e W kwadracie zawierającym złoto agent zauważa blask.

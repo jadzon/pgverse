@@ -1,0 +1,57 @@
+B.3. Alpha 191
+
+ 
+
+Układ sterowania zawiera blok pobierania i dekodowania rozkazów, licznik rozkazów PC,
+bufor translacji adresów i sterowanie potokiem rozkazów. Procesor generuje 64-bitowy
+adres (taka jest pojemność licznika rozkazów). Fizyczna przestrzeń adresowa wynosi
+256 TB (adres 48-bitowy) i jest podzielona na 4 równe obszary. Adres wirtualny wy-
+korzystuje 43 bity, co pozwala na adresowanie 8 TB. Pamięć jest stronicowana i adres
+wirtualny jest zamieniany na adres fizyczny poprzez tablice stron. Każda strona pamięci
+może mieć zastrzeżony dostęp. Struktura przetwarzania jest zorganizowana potokowo.
+Potoki sterowania, instrukcji stałopozycyjnych i odwołań do pamięci są 7-stopniowe,
+a potok operacji zmiennopozycyjnych jest 10-stopniowy. W każdym cyklu maszynowym
+procesor wykonuje jednocześnie dwie instrukcje. Podobnie jak Pentium procesor Alpha
+jest wyposażony w układ przewidywania adresów skoków. Jest on wykorzystywany dla
+rozkazów skoków „w tył”. Specjalny bit w rejestrze stanu informuje o tym, czy następna
+po danym rozkazie instrukcja skoku o danym adresie była już wykonywana.
+
+Blok ALU dla operacji stałopozycyjnych zawiera sumator, multiplikator i układ szyb-
+kiego przesuwania. Blok ten współpracuje z 32 rejestrami 32-bitowymi, w których prze-
+chowywane są argumenty stałopozycyjne. Blok ALU dla operacji zmiennopozycyjnych
+zawiera sumator, multiplikator i układ dzielenia. Blok ten współpracuje z 32 rejestrami
+32-bitowymi, w których przechowywane są argumenty zmiennopozycyjne.
+
+Blok współpracy z pamięcią składa się z 4 części:
+
+— bufora translacji danych, który na podstawie zawartego w rozkazie przemieszcze-
+nia generuje efektywny adres rozkazu zamieniany następnie na adres fizyczny,
+
+— układu odczytu i zapisu pamięci, który odpowiada za potokowanie rozkazów
+przesłań pomiędzy pamięcią operacyjną i pamięcią kieszeniową,
+
+— bufora zapisu umożliwiającego przyspieszanie zapisu do pamięci przez tworzenie
+32-bajtowych bloków odpowiadających blokom w pamięci kieszeniowej,
+
+— wewnętrznych rejestrów procesora.
+
+Pamięć kieszeniowa jest podzielona na dwie części: jedna dla rozkazów i druga dla
+danych. Każda z tych pamięci ma pojemność 8 KB. Dla odwzorowania zawartości pamięci
+kieszeniowej i pamięci operacyjnej zastosowano metodę bezpośrednią, a dla aktualizacji
+zawartości obu pamięci metodę zapisu bezpośredniego.
+
+Sterownik pamięci zapewnia poprawność łącza pomiędzy procesorem i dynamiczną
+pamięcią operacyjną, a także pamięcią VRAM (videoRAM), która służy do współpracy
+procesora z monitorem graficznym. Podobną rolę w stosunku do urządzeń zewnętrznych
+pełni sterownik urządzeń we/wy.
+
+Procesor jest wyposażony w szeregowe łącze pamięci ROM, które służy do załado-
+wania systemu w czasie inicjalizacji pracy lub do celów diagnostycznych. Diagnostykę
+zapewniają układy BIST (ang. build-in self test) służące do samotestowania układu.
+
+Ciekawym rozwiązaniem jest wprowadzenie zbioru procedur zwanych uprzywilejo-
+wanymi kodami bibliotecznymi (ang. privilleged architecture library code — PALcode).
+Projektanci procesora zdecydowali się na takie rozwiązanie ponieważ zbyt droga okazała
+się realizacja sprzętowa niektórych funkcji, jak np. wywoływanie powtarzających się
+długich ciągów rozkazów. Funkcje kodu PAL są wywoływane sprzętowo lub za pomocą
+specjalnego rozkazu CALL_PAL.

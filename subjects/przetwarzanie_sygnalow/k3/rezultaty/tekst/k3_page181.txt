@@ -1,0 +1,26 @@
+Kompresja i ekspansja, przetwarzanie o wielu częstotliwościach próbkowania
+
+- lnne podejście do tej procedury polega na utrzymaniu takiego samego oryginalnego prze-
+*biegu ciągłego i na ponownym próbkowaniu go z inną częstotliwością. Spójrzmy na przy-
+kład z rys. 10.13 a), a więc na dyskretny przebieg gaussowski złożony z 50 próbek. Na
+rys. 10. 13 b) ten sam przebieg jest wyrażony przez 400 próbek. Zmianę między rysunka-
+mi 10.13 a) i 10.13 b) można rozpatrywać jednym z dwóch sposobów: 1) utrzymanie sta-
+łej częstotliwości próbkowania i poddanie przebiegu oryginalnego ekspansji rozszerza-
+jącej go 8-krotnie, 2) utrzymanie niezmienionego przebiegu oryginalnego i zwiększenie
+częstotliwości próbkowania o czynnik 8. Sposób ze zmianą częstotliwości próbkowania
+nazywa się metodą © wielu częstotliwościach próbkowania (multirate techniques). Jeśli
+liczba próbek jest zwiększana, to mamy interpolację, a jeśli do reprezentowania sygnału
+wykorzystuje się mniejsza liczbę próbek, jest to decymacja. W rozdziale 3 opisano sto-
+sowanie metody o wielu częstotliwościach próbkowania w przetwornikach a/c i c/a.
+
+I tu pojawia się problem. Jeśli mamy dowolny sygnał dyskretny, to skąd wiemy, jaki jest prze-
+bieg oryginalny? Zależy to od dziedziny, w której jest zakodowana informacji — dziedziny cza-
+su lub częstotliwości. Dla sygnałów zakodowanych w dziedzinie czasu chcemy, aby oryginal-
+
+możemy 5
+Metodą bardziej zaawansowaną jest zastosowanie algorytmów dopasowania krzywej, takich
+jak funkcja składana lub dopasowanie wielomianowe. Nie ma żadnego jednego „poprawne-
+go” rozwiązania tego problemu. Takie podejście jest oparte na minimalizacji nieregularności
+w przebiegu w dziedzinie czasu z całkowitym pominięciem dziedziny częstotliwości.
+
+<image/figury/k3_page181_figure1.png>

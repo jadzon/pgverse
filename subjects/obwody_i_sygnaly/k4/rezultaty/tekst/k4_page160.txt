@@ -1,0 +1,48 @@
+1EN 1. Pojęcia podstawowe — elementy
+
+<image/wzory/k4_page160_formula2.png>
+
+charakterystyki Fz(u,f) = 0 elementów rezystancyjnych. Które z ni
+
+  
+   
+   
+   
+  
+  
+ 
+
+iry/k4_page160_figure2.png
+
+równania F,(i,y) = 0 i Fe(u,q) = 0 są przykładami równań elem
+age 160_formula1.png *" Pm óczo ©). nie będących indukcyjnością i pojemnością:
+
+<image/wzory/k4_page160_formula3.png>
+
+tyki tych elementów.
+
+największa wartość energii, jaką może zgromadzić element indukcyjny
+
+spoczynku elementu indukcyjnego o charakterystycei = o, (4) (nie
+od strumienia) nazywamy każdą wartość strumienia w, taką, że:
+
+<image/wzory/k4_page160_formula4.png>
+
+Ponieważ w(yy) = 0, wyrażenie powyższe określa energię zgromadzoną w elemenci
+
+indukcyjnym dla dowolnego występującego w nim strumienia yw. Należy:
+
+a) wykazać, że jedynym punktem spoczynku indukcyjności (liniowej lub nieliniowej) j
+punkt yy = 0;
+
+b) znaleźć punkty spoczynku złącza Josephsona (por. przykład 1.3-15).
+
+Odp.: a) Wniosek wynika wprost z definicji indukcyjności (p. 1.3.2-A);
+
+<image/wzory/k4_page160_formula5.png>
+
+Zadanie 1.15. Przez analogię do zad. 1.14 zdefiniować pojęcie punktu spoczynku elementu
+pojemnościowego o charakterystyce u = e(q) i znaleźć punkt spoczynku diody pojemnościowej
+z przykładu 1.3-14.
+
+Odp.: q, = —Co9:

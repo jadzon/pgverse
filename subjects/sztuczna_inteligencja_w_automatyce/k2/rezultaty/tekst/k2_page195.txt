@@ -1,0 +1,15 @@
+200
+
+PRZYKŁAD 8.2
+
+Układ masa-sprężyna z tarciem
+
+<image/wzory/k2_page195_formula1.png>
+Na rys. ?? przedstawiono rozwiązanie powyższych równań ruchu. imi
+PRZYKŁAD 8.3
+
+System drapieżnik ofiara (równania Lotki-Volterry)
+
+<image/wzory/k2_page195_formula2.png>
+
+<image/figury/k2_page195_figure1.png>

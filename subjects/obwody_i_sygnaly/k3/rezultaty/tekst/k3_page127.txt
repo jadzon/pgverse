@@ -1,0 +1,33 @@
+1.7. Źródła 129
+
+Rozróżniamy cztery typy źródeł sterowanych:
+
+Źródło napięciowe sterowane napięciem (ŹNSN; rys. 1.7-18a) jest źródłem
+napięciowym, którego siła elektromotoryczna jest proporcjonalna do napięcia
+na innej parze zacisków:
+
+zory/k3_page127_formula1.png (1.7-24)
+Źródło prądowe sterowane prądem (ŹPSP; rys 1.7-18b) jest źródłem prądo-
+
+wym, którego wydajność prądowa jest proporcjonalna do prądu na innej parze
+zacisków:
+
+j=cij,  aeż (1.7-25)
+Źródło napięciowe sterowane prądem (ŹNSP; rys. 1.7-18c) jest źródłem
+napięciowym, którego siła elektromotoryczna jest proporcjonalna do prądu na
+
+innej parze zacisków:
+
+:ory/k3_page127_formula2.png (1.7-26)
+Źródło prądowe sterowane napięciem (ŹPSN; rys. 1.7-18d) jest źródłem
+prądowym, którego wydajność prądowa jest proporcjonalna do napięcia na
+
+innej parze zacisków:
+
+= gu, ge% (1.7-27)
+
+Dla odróżnienia źródeł sterowanych od źródeł niezależnych (autonomicz-
+nych) źródła sterowane będziemy oznaczać na schematach symbolami graficz-
+nymi, które wprowadziliśmy na rys. 1.7-18.
+
+<image/figury/k3_page127_figure1.png>

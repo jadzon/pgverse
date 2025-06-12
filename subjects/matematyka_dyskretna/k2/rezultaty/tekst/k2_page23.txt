@@ -1,0 +1,40 @@
+8 Rozdział 1. Arytmetyka
+
+Aby pomnożyć dwie liczby, mnożymy pierwszą liczbę przez poszczególne cyfry dru-
+qiej liczby, a wyniki podpisujemy pod spodem odpowiednio przesunięte względem siebie.
+Każdy kolejny wynik jest przesunięty o jedną kolumnę w lewo. Następnie sumujemy te
+iloczyny.
+
+Przykład 1.7 Oto przykład mnożenia liczb 10101 i 101:
+
+<image/wzory/k2_page23_formula1.png>
+
+Zauważmy, że pomnożenie liczby w postaci dwójkowej przez 2 oznacza dopisanie
+jednego zera na końcu liczby. Podobnie pomnożenie liczby przez :-tą potęgę 2 oznacza
+dopisanie na końcu liczby + zer.
+
+Przykład 1.8 1101101 pomnożone przez 1000 daje wynik 1101101000.
+Również dzielenie wykonuje się podobnie jak w systemie dziesiętnym. Na przykład:
+
+<image/tabele/k2_page23_table1.png>
+
+Jeżeli liczba jest podzielna przez 2, to ma w postaci binarnej zero na końcu, a jeżeli dzieli
+się przez i-tą potęgę dwójki, to ma na końcu ś zer. Podzielenie liczby przez 2 oznacza
+skreślenie w jej postaci binamej jednego zera z końca.
+
+Przykład 1.9 1010011000 podzielone przez 2 daje 101001100.
+
+1.6 Zamiana systemu
+
+Zastanówmy się teraz, jak przechodzić od jednego sposobu przedstawiania liczby do dru-
+giego. Ponieważ będziemy używać różnych systemów zapisu liczb, więc zapis w systemie
+z baze
+
+<image/wzory/k2_page23_formula2.png>
+
+bauuży ŁOŁY YLIUWOM Ł UOYJU ŁUJADU, |OŁC1 SŁIC SZAŁ WOWĄMIYWUYWA, JENICUYJU DY Gui U uzy-
+
+wamy. Przedyskutujmy to na przykładach. A by przedstawić liczbę
+(110101)2
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

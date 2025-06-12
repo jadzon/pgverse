@@ -1,0 +1,57 @@
+19. Filtry rekursywne
+
+Filtry rekursywne są skutecznym sposobem uzyskania długiej odpowiedzi impulsowej bez
+konieczności wykonywania długiego splotu. Te filtry działają bardzo szybko, lecz ich par
+rametry i łatwość przystosowania do wymagań są gorsze niż w innych filtrach cyfrowych.
+Filtry rekursywne są też nazywane filtrami o nieskończonej odpowiedzi impulsowej NOI
+(IIR — Infinite Impulse Response), gdyż ich odpowiedź impulsowa składa się z opadających
+funkcji wykładniczych. To odróżnia te filtry od filtrów cyfrowych realizowanych przez
+splot i nazywanych filtrami o skończonej odpowiedzi impulsowej SOI (FIR — Finite Imp
+Response). Ten rozdział jest wprowadzeniem do filtrów rekursywnych wyjaśniającym, jak
+działają te filtry i jak można je projektować w prosty sposób. Bardziej zaawansowane meto-
+dy projektowania będą omówione w rozdziałach 20, 26 i 33.
+
+Metoda rekursywna
+
+Zaczynając rozważanie filtrów rekursywnych, wyobraźcie sobie, że chcecie wydobyć infor-
+mację z jakiegoś sygnału x( ]. Wasza potrzeba uzyskania tej informacji jest tak wielka, że
+zatrudniacie starego profesora matematyki, żeby dla was przetwarzał dane. Zadaniem profe-
+sora jest odfiltrować x| ], aby uzyskać y| ], które — jak oczekujecie — zawiera interesującą
+was informację. Profesor zaczyna swoją pracę od obliczenia każdego punktu w y( ] według
+pewnego algorytmu, który profesor ma szczegółowo zapisany w swoim, ponad miarę roz-
+winiętym, mózgu. W trakcie realizacji zadania następują wyjątkowo niefortunne zdarzenia.
+Profesor zaczyna coś pleść o analitycznych osobliwościach lub transformacjach fraktalnych
+i innych demonach rodem z koszmarnego, matematycznego snu. Staje się jasne, że profesor
+doznał pomieszania zmysłów. Patrzycie z niepokojem, jak kilku ludzi w białych fartuchach
+zabiera profesora wraz z waszym algorytmem.
+
+Gorączkowo przeszukujecie notatki profesora, aby znaleźć algorytm, który stosował.
+Stwierdzacie, że zdążył ukończyć obliczenia punktów od y[0] do y[27] i właśnie miał zacząć
+obliczanie punktu y[28]. Jak pokazano na rys. 19.1, przyjmujemy wartość zmiennej równą
+n do reprezentowania punktu, który jest aktualnie obliczany. To znaczy, że y[n] jest próbką
+28 w sygnale wyjściowym, y[n — 1] — próbką 27, y[n — 2] — próbką 26 itd. Podobnie x[n] jest
+punktem 28 w sygnale wejściowym, x|n — 1] — punktem 27 itd. Aby zrozumieć zastosowany
+algorytm, postawcie sobie pytanie: „Jaka informacja była dostępna profesorowi do obliczania
+y(n] — próbki aktualnie obliczanej?.”
+
+Najbardziej oczywistym źródłem informacji jest sygnał wejściowy, to znaczy wartości x[n|,
+xn - 1], x[n—- 2], ... Profesor mógł wymnażać każdy punkt sygnału wejściowego przez pe-
+wien współczynnik i sumować uzvskane iloczvny:
+
+<image/wzory/k3_page281_formula1.png>
+Łatwo ruzpoznacie, 26 Jest w me uuicgu, jan piusty spirm, przy tzysa Współczynniki
+ag, Ay, Ay, ... tworzą w tym splocie odpowiedź impulsową. Jeśli to było wszystko, co ro-
+bił profesor, to nie byłoby już niczego do dodania ani w tej historii, ani w tym rozdziale.
+Profesor miał jednak dostęp także do drugiego źródła informacji — do poprzednio obliczo-
+nych wartości sygnału, a więc y[n — 1], yfn — 2], y[n — 3], ... Przy wykorzystaniu tych dodat-
+kowych informacji algorytm przyjmuje postać:
+
+<image/wzory/k3_page281_formula2.png>
+
+Wzór 19.1. Wzór rekursywny, w którym xf ] jest sygnatem wejściowym, y[ ] - wyjściowym, a, b
+
+- współczynnikami
+
+Można więc powiedzieć, że każdy punkt w sygnale wyjściowym jest wyznaczany przez
+wymnażanie wartości sygnału wejściowego przez współczynniki „a” oraz wymnażanie po-
+przednio obliczonych wartości sygnału wyjściowego przez współczynniki „b” i następnie

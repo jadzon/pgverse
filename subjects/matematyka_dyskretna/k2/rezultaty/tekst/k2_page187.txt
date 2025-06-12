@@ -1,0 +1,50 @@
+1.4. Przeszukiwanie grafów 9
+
+Załóżmy teraz, że twierdzenie zachodzi dla każdego drzewa mającego mniej niż n
+wierzchołków i niech drzewo G ma n wierzchołków. W G istnieje wierzchołek v stopnia
+d(v) = 1. Rzeczywiście, weźmy drogę prostą w G o maksymalnej długości vy „v2,... „Vk.
+Wierzchołek v; jest w grafie połączony tylko z va, bo inaczej mielibyśmy cykl lub dłuższą
+drogę prostą. Usuńmy teraz z grafu G wierzchołek v i prowadzącą do niego krawędź.
+Otrzymany graf jest spójny i acykliczny ma n — 1 wierzchołków i z założenia mać
+
+nego n — 2 krawędzi, czyli w grafie G było n — 1 krawędzi.
+
+Twierdzenie 1.16 Niech G będzie grafem z n wierzchołkami, wtedy następujące trzy wa-
+runki są równoważne:
+
+(a) Graf G jest drzewem.
+(b) G jest acykliczny i posiada n — 1 krawędzi.
+(c) G jest spójny i posiada n — 1 krawędzi.
+
+Dowód: Na podstawie lematu 1.15 z (a) wynika (b) i (c).
+
+(b) > (a) G jest acykliczny, przypuśćmy, że nie jest drzewem. Wtedy na podstawie
+twierdzenia 1.14 można do niego dodać jakąś krawędź nie psując acykliczności. Jeże-
+li tak powstały graf nie jest drzewem, to dodajemy kolejne krawędzie, aż dojdziemy do
+acyklicznego grafu, w którym już żadnej krawędzi nie można dodać bez dodania cyklu.
+Tak powstały graf jest drzewem, ma n wierzchołków i więcej niż n — 1 krawędzi. Doszli-
+śmy więc do sprzeczności z lematem 1.15.
+
+(c) > (a) G jest spójny, przypuśćmy, że nie jest drzewem. Wtedy na podstawie twier-
+dzenia 1.14 można z niego usunąć jakąś krawędź nie psując spójności. Jeżeli tak powstały
+graf nie jest drzewem, to usuwamy kolejne krawędzie, aż dojdziemy do spójnego grafu,
+z którego już żadnej krawędzi nie można usunąć bez popsucia spójności. Tak powstały
+graf jest drzewem, ma n wierzchołków i mniej niż n — 1 krawędzi. Doszliśmy więc ©
+sprzeczności z lematem 1.15.
+
+Z powyższego dowodu wynika, że spójny graf z n wierzchołkami nie może mieć
+mniej niż n — 1 krawędzi, czyli drzewo to spójny graf z minimalną liczbą krawędzi.
+Podobnie, jeżeli graf ma n wierzchołków i jest acykliczny, to nie może mieć więcej niż
+n — 1 krawędzi, czyli drzewa to grafy acykliczne z maksymalną liczbą krawędzi.
+Przykład 1.17 W drzewie z rysunku 1.6 nie można usunąć żadnej krawędzi bez rospój-
+nienia grafu. Nie można też dodać żadnej krawędzi tak, aby nie powstał cykl. W grafie z
+rysunku 1.1 można usunąć krawędź fa, b) i graf nadal będzie spójny. Do grafu z rysun-
+ku 1.5 można dodać krawędź £a,b) i nie powstanie żaden cykl.
+
+1.4 Przeszukiwanie grafów
+
+W rozdziale o strukturach danych zaprezentowano algorytmy przeszukiwania drzew w
+głąb i wszerz. Po niewielkich modyfikacjach algorytmy te można zastosować do przeszu-
+kiwania grafów.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

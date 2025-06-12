@@ -1,0 +1,23 @@
+<image/figury/k2_page19_figure1.png>
+
+Rys. 3.6: Przykład zastosowanie metody Dijkstry do wyznaczenia minimalnej drogi łączą-
+cej dwa węzły grafu (od węzła A do węzła J). W tablicy pokazano kolejność umieszczania
+i usuwania węzłow z list OTWARTE i ZAMKNIĘTE. Linią pogrubioną zaznaczono naj-
+krótszą drogę
+
+biły. Stosowanie tej metody rozpoczyna się od postawienia pierwszego hetmana, a
+następnie kolejni hetmani stawiani są tylko na te pola, na których nie są bici przez
+figuryjupostawione.
+
+3.7.2. Metody dwukierunkowe
+
+W niektórych zadań można zastosować metode dwukierunkową polegającą na gene-
+rowaniu stanów następnych idąc od stanu początkowego i jednocześnie generowaniu
+stanów wcześniejszych idąc od stanu końcowego. Metoda się kończy, gdy w obu
+procedurach uzyska się identyczny stan.
+
+3.8. Metody heurystyczne
+
+W wielu zadaniach można wykorzystać dodatkowe informacje o nich redukując w
+ten sposób liczbę generowanych węzłów grafu. Metody wykorzystujące przy szukaniu
+dodatkowe informacje noszą nazwę metod szukania heurystycznego.

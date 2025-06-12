@@ -1,0 +1,41 @@
+1.2. Podstawowe modele zjawisk w obwodzie 33
+
+<image/figury/k3_page33_figure1.png>
+ory/k3_page33_formula1.png
+
+Uwaga. We wzorze (1.2-25) występuje całka nieoznaczona (funkcja pierwotna). Wynika stąd,
+że w ogólnym przypadku znajomość napięcia u na indukcyjności pozwala na określenie prądu
+i jedynie z dokładnością do stałej wartości. W wielu jednak zagadnieniach z dodat-
+
+wynikać, jaka powinna być wartość tej stałej.
+apisać także w postaci:
+
+Nzory/k3_page33_formula3.png (12-26)
+
+jako funkcja górnej granicy całkowania, zaś i(t,) jest wartością prądu
+ili tę.
+
+;ć jako model pola magnetycznego. Indukcyjność jest ele-
+n pole magnetyczne związane z obwodem elektrycznym,
+
+iolność do gromadzenia energii w polu magnetycznym.
+nić szczegółowiej w p. 1.3.2-C.
+
+Rozpatrzymy kilka przykładów ilustrujących różne przy-
+e33_formula2.PpNg zzteżności (1.2-24) — (1.2-26) do wyznaczania związków
+»ięciem na indukcyjności.
+znaczymy napięcie na indukcyjności L (rys. 1.2-6), przy założeniu, że
+i w następujących przypadkach:
+
+<image/wzory/k3_page33_formula4.png>
+
+ści (1.2-24). Otrzymujemy odpowiednio:
+napięcie na indukcyjności, przez którą płynie prąd stały, jest równe zeru.
+
+<image/wzory/k3_page33_formula5.png>
+
+Napięcie na indukcyjności, przez którą płynie prąd sinusoidalnie zmienny o pulsacji w, jest
+przebiegiem również sinusoidalnie zmiennym o tej samej pulsacji. Amplituda napięcia U, jest równa
+amplitudzie prądu I„ pomnożonej przez czynnik wł, a faza początkowa napięcia jest większa
+o x/2 od fazy początkowej prądu (mówimy, że napięcie na indukcyjności wyprzedza w fazie prąd o kąt
+x/2 lub że prąd opóźnia się w fazie w stosunku do napięcia o kąt n/2).

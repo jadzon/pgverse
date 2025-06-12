@@ -1,0 +1,37 @@
+<image/figury/k3_page403_figure1.png>
+
+Każdy trójkąt na rysunku wyraża pojedyncze pojawienie się celu (pacjenta z rakiem), zazna
+czone w miejscu zgodnym z wartościami dwóch parametrów tego celu. Każdy kwadrat zaś
+wyraża pojedyncze pojawienie się obiektu niebędącego celem (pacjenta niemającego raka).
+Jak wynika z pokazanych obok każdej osi wykresów funkcji pdf, rozkłady obu
+
+dla obiektów będących i niebędących celem w znacznym stopniu zachodzą na siebie. Tak
+więc każdy parametr, potraktowany oddzielnie, jest kiepskim wskaźnikiem prognozy raka.
+Powiązanie obu parametrów prostymi funkcjami logicznymi daje tylko niewielka poprawę.
+Jest to fakt szczególnie interesujący, gdyż oba parametry zawierają informację mogącą do-
+skonale oddzielić obiekty będące celem od tych, które nim nie są. Robi się to, wykreślając
+linię ukośną między obiema grupami, w sposób pokazany na rysunku.
+
+Układ współrzędnych tego rodzaju jest w języku specjalistów nazywany przestrzenią pa-
+rametryczną. Na przykład płaszczyznę dwuwymiarową w tym przykładzie można nazwać
+przestrzenią średnica-jaskrawość. Chodzi tu o to, żeby obiekty będące celem zajmowały
+jeden obszar przestrzeni parametrycznej, a obiekty niebędące celem — drugi. Oddzielenie
+obu obszarów może być tak nieskomplikowane jak linia prosta lub tak skomplikowane jak
+zamknięte obszary o nieregularnych granicach. Następny stopień złożoności przedstawiono
+na rys. 26.4. Jest to przestrzeń trójparametryczna o osiach współrzędnych x, y oraz z. W ten
+sposób może być przedstawiony system wykrywania raka mierzący średnicę, jaskrawość
+i jakiś trzeci parametr, powiedzmy ostrość krawędzi. Tak samo jak w przypadku przestrzeni
+dwuwymiarowej obiekty należące do grupy celów i grupy obiektów niebędących celami po-
+winny zajmować oddzielne obszary przestrzeni, co umożliwia ich rozdzielenie. W przestrze-
+ni trójwymiarowej obszary są rozdzielane płaszczyznami i zakrzywionymi powierzchniami.
+Pojęcie hiperprzestrzeni (wokół, ponad lub za normalną przestrzenią) jest często stosowane
+do opisu przestrzeni parametrycznych o więcej niż trzech wymiarach. Matematycznie hiper-
+przestrzenie nie różnią się od przestrzeni jedno-, dwu- i trójwymiarowych; w praktyce nie
+można ich jednak obrazować w formie graficznej w naszym trójwymiarowym świecie.
+Próg dobrany do zadania jednoparametrycznego nie może (na ogół) być klasyfikowany jako
+właściwy lub niewłaściwy. Każda wartość progu daje bowiem inną kombinację
+przypadków fałszywie-pozytywnych i fałszywie-negatywnych, tj. jakiś punkt na krzywej ROC.
+Jest to po prostu kwestia kompromisu liczby jednych i drugich przypadków, nie ma tu odpo-
+wiedzi bezwzględnie poprawnej. Z drugiej strony, w przestrzeniach parametrycznych o dwóch
+lub więcej parametrach mogą występować zdecydowanie nieprawidłowe podziały między
+obszarami. Wyobraźmy sobie na przykład wzrastającą liczbę punktów danych na rys. 26.3,

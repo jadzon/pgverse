@@ -1,0 +1,30 @@
+22. Przetwarzanie sygnałów fonicznych
+
+<image/fiwzory/k3_page318_formula1.png>
+
+Z ZE. powierzchni płyty są wyttoczone zagłębienia o wymia-
+wok odrawoyck roeaakjca ra JG. ole ta woo pk kok (ROMA
+bitów/mm? Głębokość zagłębienia wynosi 0,16 um
+
+i to nie bez powodu. Jedną z właściwości światła jest niemożność jego zogniskowania do
+rozmiarów mniejszych od połowy długości fali, czyli ok. 0,3 um. Ponieważ zarówno układy
+scalone, jak i płyty laserowe są tworzone metodami optycznymi, więc nieostrość światła
+poniżej 0,3 um ogranicza minimalne rozmiary.
+
+Na rys. 22.6 przedstawiono schemat blokowy typowego odtwarzacza płyt kompaktowych.
+Bitowa przepływność danych w sygnale wynosi ok. 4,3 milionów bitów/s, co odpowiada
+1 bitowi na 0,28 um długości ścieżki. Pozostaje to jednak w konflikcie ze specyficzną geo-
+metrią CD. Każde zagłębienie nie powinno być krótsze niż 0,8 um i nie dłuższe niż 3,5 um.
+Inaczej mówiąc, każdy binarny stan jeden musi być częścią grupy od 3 do 13 jedynek. Daje
+to zaletę zmniejszenia stopy błędów powstających podczas pracy głowicy optycznej. Jak jed-
+nak dostosować dane cyfrowe do takiego dziwnego pogrupowania?
+
+Odpowiedzią jest sposób kodowania, zwany modulacją osiem-do-czternastu (EFM - Eighi-
+to-Fourteen Modulation)”*. Zamiast bezpośredniej rejestracji bajtu danych na płycie, prze-
+puszcza się 8 bitów przez tablicę przeglądową dającą w wyniku 14 bitów. Są one odpowied-
+nio grupowane i zapisywane na płycie kompaktowej. Podczas odtwarzania wartości binarne
+
+<image/wzory/k3_page318_formula2.png>
+
+33 Modulacja EFM jest też nazywana kodowaniem kanałowym. Informacja pły jed zapisywana
+w postaci bitów kanałowych (przyp. tum.).

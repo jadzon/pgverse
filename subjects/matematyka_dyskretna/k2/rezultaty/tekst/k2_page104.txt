@@ -1,0 +1,38 @@
+1.4. Sieci boolowskie 13
+
+Rysunek 1.3: Sieci funkcji progowych dwóch zmiennych
+
+<image/figury/k2_page104_figure1.png>
+
+Przypuśćmy, że mamy już sieci funkcji progowych n zmiennych. Za ich pomocą
+możemy skonstruować funkcje progowe n + 1 zmiennych (rysunek 1.4). Zrobimy to
+posługując się następującymi zależnościami:
+
+<image/wzory/k2_page104_formula1.png>
+
+Jeżeli I < k < n, to:
+
+<image/wzory/k2_page104_formula2.png>
+Jeżeli zestawimy równolegle sieci funkcji progowych, tak jak zrobiono to na rysun-
+ku 1.5, to otrzymamy sieć sortującą. Sieć ta bierze na wejściu ciąq czterech bitów:
+
+<image/wzory/k2_page104_formula3.png>
+
+i zwraca na wyjściu te same bity w porządku nierosnącym:
+
+<image/wzory/k2_page104_formula4.png>
+Na przykład gdy na wejściu będzie ciąg (0, 1,0, 1), wówczas na wyjściu pojawi się ciąg
+(1,1,0,0).
+
+14.3 Sumator
+
+Zastanówmy się teraz, jak skonstruować sumator, czyli sieć, która będzie dodawać dwie
+liczby n-bitowe:
+
+<image/wzory/k2_page104_formula5.png>
+
+i da w wyniku n + 1 bitów sumy:
+
+<image/wzory/k2_page104_formula6.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

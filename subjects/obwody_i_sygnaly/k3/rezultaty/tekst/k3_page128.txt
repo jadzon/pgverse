@@ -1,0 +1,34 @@
+128 1. Pojęcia podstawowe — elementy
+
+Podobnie, równanie źródła prądowego z rys. 1.7-15b ma, zgodnie z za-
+leżnością ogólną (1.7-7), postać:
+
+<image/wzory/k3_page128_formula1.png>
+
+Źródło prądowe o stałej wydajności prądowej jest zatem również elementem
+rezystancyjnym liniowym (p. 1.3.4-G) o równaniu (1.7-23) i charakterystyce
+przedstawionej na rys. 1.7-16b.
+
+W przypadku równoważności tych źródeł, tj. gdy E = R„J, prosta z rys.
+1.7-16a jest identyczna z prostą z rys. 1.7-16b.
+
+H. Charakterystyki idealnych źródeł stałych. W przypadku stałych źródeł
+idealnych, tj. przy R, = 0 dla źródła napięciowego oraz G,„ = 1/R, = O dla
+źródła prądowego, równania (1.7-22) i (1.7-23) przybierają odpowiednio
+postać:
+
+<image/wzory/k3_page128_formula2.png>
+
+Są to równania prostych w płaszczyźnie i, u lub, odpowiednio, płaszczyźnie
+u, i przedstawionych na rys. 1.7-17. Stałe źródła idealne można zatem również
+uważać za przypadki szczególne elementów rezystancyjnych.
+
+<image/figury/k3_page128_figure1.png>
+
+A. Rodzaje źródeł sterowanych. Ważną kategorią elementów występują-
+cych w obwodach elektronicznych są źródła sterowane. Istota źródła sterowane-
+go polega na tym, że jego siła elektromotoryczna lub wydajność prądowa zależy
+od sygnału sterującego, tj. napięcia lub prądu występującego na innej
+parze zacisków w obwodzie. Źródło sterowane jest zatem elementem o wyróż-
+nionych czterech zaciskach, dokładniej — o dwóch parach zacisków (por. p.
+2.1.2-D).

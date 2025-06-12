@@ -1,0 +1,51 @@
+Źródła niezależne są elementami szczególnego rodzaju. Wielkości je charak-
+ieryzujące — siły elektromotoryczne i wydajności prądowe — pełnią w układzie
+rolę pobudzeń. Ich działanie powoduje, że w układzie (a więc w pozostałych
+elementach, z jakich jest zbudowany układ) powstają prądy i napięcia spełniające
+prawa Kirchhoffa i równania elementów. Jak już zaznaczyliśmy w p. A, to,
+Jakiego rodzaju są równania tych elementów (lub inaczej, jakiego rodzaju są to
+elementy), decyduje o tym, do jakiej kategorii należy układ i jego równania
+sieciowe, niezależnie od rodzaju pobudzeń (a więc niezależnie od tego, czy i jakie
+zródła niezależne zawiera układ). Prowadzi to do następujących sformułowań:
+
+(E) Układ skupiony zbudowany tylko z idealnych źródeł niezależnych oraz
+elementów lub podukładów liniowych jest układem liniowym.
+
+(E) Układ skupiony zbudowany tylko z idealnych źródeł niezależnych oraz
+elementów lub podukładów stacjonarnych jest układem stacjonarnym.
+
+Przypominamy, że w rozdziale 1 omówiliśmy podział elementów na liniowe
+i nieliniowe oraz na stacjonarne i niestacjonarne, wyodrębniliśmy także cechy
+wyróżniające wymienione kategorie elementów. W szczególności przypomina-
+my, że równania wiążące ze sobą prąd i napięcie (lub prądy i napięcia) elementu
+liniowego są liniowe, a w przypadku elementu stacjonarnego — nie występuje
+w nich w postaci jawnej czas t. Stwarza to możliwości następującego scharak-
+teryzowania układów liniowych i układów stacjonarnych na podstawie ich
+równań sieciowych:
+
+(R) Układ skupiony jest liniowy, jeśli jego równania sieciowe są równaniami
+liniowymi.
+
+(R) Układ skupiony jest stacjonarny, jeśli w jego równaniach sieciowych nie
+występuje w postaci jawnej czas t.
+
+Uwaga. Dla uniknięcia niejasności postaramy się nieco szerzej objaśnić znaczenie niektórych
+użytych wyżej sformułowań.
+
+Mówimy o równaniach liniowych nie precyzując ich rodzaju. W przypadku elementów i układów
+skupionych mogą być to równania algebraiczne, równania różniczkowe zwyczajne lub równania
+różniczkowo-całkowe (tzn. zawierające także całki prądów lub napięć). Zakładamy przy tym
+milcząco, że równania różniczkowo-całkowe dadzą się sprowadzić do postaci równań różniczkowych
+zwyczajnych, choć nie zawsze jest to celowe lub konieczne (szczegóły pomijamy, por. przykład 2.1-5).
+We wszystkich wymienionych przypadkach wiadomo z matematyki, jakie równania zaliczamy do
+równań liniowych.
+
+O układzie stacjonamym mówimy, że w jego równaniach sieciowych nie występuje w postaci
+jawnej czas t. Jest to konsekwencją faktu, że w opisie zaciskowym elementów stacjonarnych czas t
+nie występuje w postaci jawnej (w przeciwieństwie do elementów niestacjonarnych, por. p. 1.6.1-A).
+W rozumowaniu tym, jak już zaznaczyliśmy uprzednio, nie bierzemy pod uwagę źródeł niezależnych.
+Oznacza to, że w równaniach sieciowych układów stacjonarnych jawna zależność od czasu t
+może pojawić się tylko w zapisie zmiennych w czasie sił elektromotorycznych e = e(t)
+ilub wydajności prądowych j == j(1). Układ z rys. 2.1-1a jest układem stacjonarnym niezależnie od
+tego, czy w równaniach (2.1-1) występuje tylko symbol siły elektromotorycznej e, czy też
+wprowadzilibyśmy do tych równań np. zapis: e = E„sinot.

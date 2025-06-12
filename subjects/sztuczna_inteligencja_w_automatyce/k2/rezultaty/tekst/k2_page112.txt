@@ -1,0 +1,20 @@
+<image/figury/k2_page112_figure1.png>
+
+Najlepsza pozycja globalna obliczana jest z wzoru
+
+<image/wzory/k2_page112_formula1.png>
+
+gdzie n, jest całkowitą liczbą cząstek.
+W niektórych wariantach metody pozycja najlepsza globalnie wyznaczana jest
+spośród najlepszych pozycji w aktualnym roju.
+
+<image/wzory/k2_page112_formula2.png>
+
+Wariant „najlepszy lokalnie”
+
+W wariancie najlepszy lokalnie (ang. local best) każdej cząstce przypisuje się pewne
+inne cząstki, które nazywane są sąsiednimi. Teraz, zamiast pozycji najlepszej global-
+nie y(t), bierze się pozycję najlepszą lokalnie y;(t), tzn. najlepszą pozycję osobistą
+spośród cząstek sąsiednich. Czyli mamy
+
+<image/wzory/k2_page112_formula3.png>

@@ -1,0 +1,45 @@
+Rozdział 7
+
+Systemy ekspertowe
+
+System ekspertowy jest systemem komputerowym pełniącym rolę eksperta lub roz-
+wiązującym zadania wymagające profesjonalnej ekspertyzy.
+
+Inna definicja — za system ekspertowy uważa się system komputerowy posiada-
+jący wiedzę pobraną od eksperta i przechowywaną w formie umożliwiającej dostar-
+czenie przez system inteligentnej porady lub podjęcie inteligentnej decyzji. Pożądana
+dodatkową cechą (przez wielu uważanych za podstawową) jest zdolność systemu do
+przedstawienia, na żądanie, drogi rozumowania w sposób zrozumiały dla użytkow-
+nika.
+
+Rozróżnia się systemy ekspertowe współpracujące i komunikujące się z człowie-
+kiem (systemy doradcze i diagnostyczne) i systemy sterujące złożonym procesami
+(np. platforma wiertnicza 500 sygnałów analogowych i 2500 cyfrowych, Hubble Space
+Telescope — 6000 czujników). Te ostatnie przyjęto nazywać systemami ekspertowymi,
+gdy okazało się, że system sterujący złożonymi procesami musi zawierać bazę wiedzy
+i przeprowadzać wnioskowanie i jego struktura nie różni się od systemów eksperto-
+wych współpracujących z człowiekiem.
+
+7.1. Historia
+
+MYCIN (połowa lat 70-tych, Stanford) podaje diagnozę i sposoby lecze-
+nia bakteryjnych infekcji krwi i zapalenia opon mózgowych. Za-
+wiera ponad 500 reguł. Budowa systemu zajęła ponad 50 osobo
+lat.
+
+DENDRAL (połowa lat 60-tych, Stanford) wyznacza opis strukturalny zło-
+żonych organicznych związków chemicznych na podstawie ich
+spektrogramów masowych i innych danych.
+
+MACSYMA (rozpoczęcie budowy: 1969, MIT) rozwiązywanie zadań mate-
+matycznych poprzez przekształcenia symboliczne. Obecnie za-
+wiera ponad 300000 linii kodu w języku LISP. 100 osobo lat.
+
+PROSPECTOR - (późne lata 70-te, Stanford) na podstawie danych sejsmicznych
+i innych generuje wnioski dotyczące obecności złóż rud mineral-
+nych.
+
+XCON - (1979, Digital Equipment Corporation i Carnegie Mellon Uni-
+versity). Firma DEC miała problemy przy konfiguracji kom-
+
+195

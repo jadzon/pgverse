@@ -1,0 +1,40 @@
+przetwarzanie z próbkowaniem selektywnym ustawia wartość parametru
+TBIT na | do chwili zakończenia tego typu przetwarzania.
+
+Parametr XA zawiera znormalizowaną wartość analogową w przedziale od
+UGR do OGR odczytaną z modułu analogowego. Blok funkcyjny FB250
+normalizuje odczytaną wartość analogową w sposób liniowy w stosunku do
+górnej i dolnej granicy, w zależności od typu jaki został wybrany dla danego
+kanału:
+
+a Dla kanału tvbu 3
+
+<image/wzory/k4_page377_formula1.png>
+
+a  [)la kanału tvpu 4
+
+<image/wzory/k4_page377_formula2.png>
+
+a [la kanału tvnu 516
+
+<image/wzory/k4_page377_formula3.png>
+gdzie xe jest wartością odczytaną z modułu analogowego.
+
+Parametr FB sygnalizuje wystąpienie błędu przy wykonaniu bloku funkcyj-
+nego FB250. Przyjmuje wartość | jeżeli:
+
+a przy wywołaniu podano nieprawidłowy adres modułu analogowego,
+
+« przy wywołaniu podano nieprawidłowy numer kanału,
+
+s przy wywołaniu podano nieprawidłowy typ kanału,
+
+« nastąpiło przerwanie przewodu.
+
+Parametr BU przyjmuje wartość | gdy odczytana wartość analogowa prze-
+kroczy zakres znamionowy.
+
+Parametr TBIT przyjmuje wartość | w czasie przetwarzania, któregoś z ka-
+nałów z próbkowaniem selektywnym.
+
+<image/tabele/k4_page377_table1.png>

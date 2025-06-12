@@ -1,0 +1,9 @@
+<image/tabele/k4_page97_table1.png>
+
+<image/tabele/k4_page97_table2.png>
+
+Elementy obwodu mogą być łączone poziomo lub pionowo. Stan elementów
+łączących oznacza się jako ON lub OFF, odpowiednio do wartości logicznych /
+1 0. Określenie stan połączeń jest synonimem do określenia przepływ prądu.
+
+2.6 Język schematów drabinkowych LD 97

@@ -1,0 +1,45 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 15
+
+« układy dopasowujące i kontrolery interfejsów szeregowych — RS232, RS485, Ethemet, CAN, USB i
+bezprzewodowych IrDA, Bluetooth, Wi-Fi, IEEE 802.15.4.
+
+« magistrale równoległe — równoległe porty we/wy, opcjonalnie magistrale danych i adresowe, służą
+przeważnie do komunikacji wewnątrz mse.
+
+„ _ mikrointerfejsy szeregowe — SPI, I*C, UART, JTAG, 1-Wire. Służą do komunikacji wewnątrz mse,
+ale też i z jego otoczeniem.
+
+2. Definicja rozproszonego systemu elektronicznego wraz z podziałem na warstwy
+logiczne.
+
+Definicja:
+
+Rozproszony mikrosystem elektroniczny (w skrócie mikrosystem (ms)) można zdefiniować jako
+zestaw układów elektronicznych stanowiących funkcjonalną, integralną część urządzenia lub samo
+urządzenie, które komunikują się między sobą za pomocą dedykowanych mikrointerfejsów. Przeważnie
+komunikacja mikrosystemu z otoczeniem odbywa się również za pomocą dedykowanych interfejsów
+szeregowych przewodowych, jak również bezprzewodowych radiowych i na podczerwień.
+
+W mikrosystemie możemy wyróżnić dwie warstwy:
+« sprzętową — płytka drukowana (printed board) z umieszczonymi na niej układami scalonymi,
+
+« programową — czyli oprogramowanie dla mikrokontrolera realizujące zadane przez nas algorytmy,
+zapisane w pamięci programu FLASH mikrokontrolera lub zewnętrznej pamięci FLASH oraz zapis
+konfiguracji połączeń i realizowanych funkcji w programowalnych układach logicznych (PLD).
+
+3. Podstawowe zastosowania układów buforów magistrali 8-bitowej w systemach mk.
+
++ Zwiększenie liczby linii sterujących mk przez podłączenie buforów do portu mk. Wówczas można
+sekwencyjnie ustawiać 8*N _ linii wyjściowych (zapamiętywać je na N buforach np. z
+nieodwracającymi rejestrami zatrzaskowymi 74HC573) lub sekwencyjnie czytać 8*M linii
+wejściowych (np. z M nieodwracających buforów typu 74HC541).
+
+« Zwiększenie wydajności prądowej linii wyjściowych. Linie wyjściowe układów scalonych buforów
+mają zdecydowanie większe wydajności prądowe niż linie mk, zatem nadają się do ich buforowania.
+
+4. Schemat logiczny, znaczenie linii, przebiegi czasowe cyklów odczytu i zapisu
+asynchronicznej pamięci SRAM o dostępie równoległym i pojemności np. 512 KB.
+
+(uwaga — pamiętamy o tym, o czym była mowa na wykładzie)
+
+<image/wzory/k8_page13_formula1.png>

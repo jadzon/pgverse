@@ -1,0 +1,42 @@
+174 9. Zastosowania DFT
+
+miejsca pobrania próbek w stosunku do położenia pików i wgłębień. Jeśli fala sinusoidalna jest
+dokładnie zgodna z funkcją bazową, to próbki następują dokładnie we wgłębieniach, elimi
+jąc ogony. Jeśli fala sinusoidalna mieści się między dwiema funkcjami bazowymi, to próbki
+następują gdzieś między pikami i wgłębieniami, dając w rezultacie ogony różnych kształtów.
+
+W ten sposób dochodzimy do okna o płaskim wierzchołku, przedstawionego na rys. 9.5 dl.
+W niektórych zastosowaniach jest konieczny bardzo dokładny pomiar amplitudy piku wić-
+
+   
+   
+   
+ 
+
+żadnej gwarancji, że próbka będzie miała miejsce dokładnie w szczycie piku. Jest więcej
+niż prawdopodobne, że najbliższa próbka będzie nieco przesunięta w stosunku do szczytu,
+dając wartość mniejszą niż prawdziwa amplituda. Rozwiązaniem tej kwestii jest zastosowa:
+nie okna wytwarzającego plik widmowy o płaskim wierzchołku, dzięki czemu jest pewne, ż
+jedna lub więcej próbek będzie miała zawsze prawidłową wartość piku. Karą za to, jak wi
+na rys. 9.5 d), jest bardzo duża szerokość głównego listka powodująca słabą rozdzie
+częstotliwościową.
+
+<image/figury/k3_page157_figure1.figury/k3_page157_figure2.png>
+
+ 
+  
+
+  
+  
+   
+
+PA
+„FL
+
+ 
+
+listków bocznych może ułec zmniejszeniu kosztem rozszerzenia listka głównego. Okno prostokątne
+węższy listek gtówny, lecz największe listki boczne. Okna Hamminga (rys. b) i Blackmana (rys. c) dają mniejsze listki
+boczne kosztem szerszego listka głównego. Okno o płaskim wierzchotku (rys. d) jest stosowane wówczas, gdy
+ne pd wy Ra CO
+nalnie węższe

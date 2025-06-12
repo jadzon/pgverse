@@ -1,0 +1,36 @@
+Zmiana objętości oleju pod tłokiem siłownika wynosi
+
+izory/k1_page61_formula1.png
+
+Natężenie przepływu Q oleju przez rurkę strumieniową i przewody zasilające
+można zapisać jako
+
+Q=oqiv.
+
+porwnujcwzoryotrzymujemy
+
+vzory/k1_page61_formula2.png
+
+Oznaczając 7, = =. otrzymujemy
+v
+
+rzory/k1_page61_formula3.png
+
+Stosując przekształcenie Laplace'a
+
+<image/wzory/k1_page61_formula4.png>
+
+wyznaczamy transmitancję operatorową siłownika
+
+<image/wzory/k1_page61_formula5.png>
+
+Z równania równowagi przesunięć dla rurki strumieniowej wynika, że
+
+<image/wzory/k1_page61_formula6.png>
+
+Stosując przekształcenie Laplace'a, wyznaczamy transmitancję operatorową rurki
+strumieniowej
+
+<image/wzory/k1_page61_formula7.png>
+
+a 63

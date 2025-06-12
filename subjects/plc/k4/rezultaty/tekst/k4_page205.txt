@@ -1,0 +1,37 @@
+%AII, przy czym 6 najmniej znaczących bitów zostanie wyzerowanych (maska
+
+<image/figury/k4_page205_figure2.png>
+
+ 
+
+Wyd. 4.20 Przykład wykorzystania funkcji AND do tworzenia maski
+
+Wyd. 4.2] prezentuje przykład wykorzystania funkcji XOR do cyklicznej zmiany
+stanów na wyjściach od %Q1 do %Q]I6. Efekt ten uzyskano dzięki użyciu słowa
+zawierającego same jedynki (/64FFFF) jako pierwszego argumentu, podczas
+gdy drugi z argumentów stanowi jednocześnie wyjście funkcji. Zmiana stanów
+występuje w każdym cyklu sterownika, w którym %// = /.
+
+<image/figury/k4_page205_figure1.png>
+
+Wyd. 4.21 Przykład wykorzystania funkcji XOR do generacji cyklicznych zmian
+wyjść
+
+Funkcjami przesuwania i rotacji dla łańcuchów bitów są:
+
+SHL (SHift Left) - przesuń bity w lewo;
+
+SHR (SHift Right) - przesuń bity w prawo;
+
+ROL (ROtate Left) - przesuń cyklicznie bity w lewo;
+ROR (ROtate Right) - przesuń cyklicznie bity w prawo.
+
+Operacje przesuwania bitów służą do przesunięcia wszystkich bitów w słowie
+(lub ciągu do 256 słów) w zadanym kierunku, przy czym adres słowa (pierwsze-
+go słowa dla ciągu) wprowadza się na wejście IN. Podaje się także liczbę
+przesuwanych bitów (wejście N) oraz wartość wsuwanego bitu (wejście B1) na
+pozycję najmniej znaczącą dla przesuwania w lewo, najbardziej znaczącą dla
+przesuwania w prawo. Na wyjściu Q otrzymuje się kopię argumentu z przesu-
+
+WRECZ TY ZYCERZADTC OPAT ATA TEE CU TTE JE POTYSETECE" BJ W OTYLIA WE I TT 7 ROP TZPWTT KC WOEEZTTTEETZCEWPAZNJY CPE CEA POPE" TOCEEMZ F-POC)
+4.8 Funkcje na ciągach bitów 205

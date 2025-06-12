@@ -1,0 +1,45 @@
+28. Cyfrowe procesory sygnało
+
+ 
+
+h Arrhitalt:wa hanwariryka (rtwia namiar
+
+<image/wzory/k3_page452_formula1.png>
+
+c. Architektura super harwardzka (dwie pamięci, podręczna pamięć instrukcji, sterownik
+
+<image/wzory/k3_page452_formula2.png>
+
+IIgury/K5_pdye+02_iyguiez.priy
+
+Rys. 28.4. Architektura mikroprocesorów. W architekturze von Neumanna stosuje się jedną pamięć
+
+ 
+ 
+ 
+  
+ 
+  
+  
+  
+ 
+  
+ 
+ 
+  
+
+Najpierw zastanówmy się, jak podręczna pamięć instrukcji ulepsza działanie systemu
+chitekturze harwardzkiej. Niekorzystną cechą podstawowej struktury harwardzkiej jest
+że magistrala pamięci danych jest bardziej zajęta niż magistrala pamięci programu. Po
+mnożenie dwóch liczb dwie wartości binarne (dwie liczby) muszą być przesłane mag
+pamięci danych, a tylko jedna (instrukcja programu) — magistralą pamięci poj 0
+poprawić tę sytuację, zaczynamy od przemieszczenia części „danych” do pamięci p
+Możemy umieścić na przykład współczynniki filtru w pamięci programu, pozostawi
+gnał wejściowy w pamięci danych. Na miekki WGÓAGOÓ A dż) da
+wtómymi”. Na pierwszy rzut oka wydaje się, że to nie poprawia sytuacji; musimy
+przesłać jedną wartość magistralą pamięci danych (próbkę sygnału wejściowego), lecz
+(instrukcję programu i współczynnik) — magistralą pamięci programu. Tak więc, w za%
+gdybyśmy wykonywali instrukcje wybrane losowo, to sytuacja wcale by się nie polep
+Jednak większość czasu wykonania algorytmów DSP zajmują pętle, takie jak in
+w tablicy 28.1. Z tęger ponad a AECZNEG AN WORA OSS ©
+z pamięci programu do jednostki centralnej. W architekturze superharwardzkiej 0

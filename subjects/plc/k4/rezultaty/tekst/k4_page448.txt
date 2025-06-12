@@ -1,0 +1,23 @@
+„8.8.2 Program dla sterownika GE Fanuc 90-30 ____-
+
+Tab. 8.11 przedstawia zestawienie wejść i wyjść sterownika GE Fanuc serii 90-
+30 połączonych z odpowiednimi wyjściami i wejściami panelu symulującego re-
+aktor.
+
+<image/tabele/k4_page448_table1.png>
+
+Zakresy napięć dla modułów wejść i wyjść analogowych odpowiadają odbiera-
+nym z czujników pomiarowych lub podawanym na elementy wykonawcze sy-
+gnałom napięciowym z zakresu 0 .. 10 V. Z.nienne w sterowniku odpowiadające
+temu zakresowi należą do przedziału od 0 .. 32000. Sposób realizacji układu re-
+gulacji przedstawia Rys. 8.18.
+
+Program realizujący zadanie sterowania pokazano na Wyd. 8.107 - Wyd. 8.128.
+Ze względu na dużą złożoność program został podzielony na podprogramy (su-
+broutines). Podprogram /NI_]/ ustawia w pierwszym cyklu sterownika wartości
+domyślne dla niektórych zmiennych. Podprogram PULPIT ustawia markery dla
+realizacji poszczególnych faz procesu w zależności od wybranego trybu pracy.
+Sterowanie poszczególnymi fazami procesu jest realizowane przez podprogramy
+
+DOODEPZEDE NADT 100000 1 3 019). O) KAJŁPOCIOWZKO W KOZACKI 1 WOZAE I LONE M JAZ O O DOJEDZIE OBIE BC RC OOO TE DICEBEK_CROOĄJI
+448 Rozdział : 8.Programy przykładowe

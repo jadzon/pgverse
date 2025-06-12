@@ -1,0 +1,27 @@
+36
+
+<image/figury/k2_page31_figure1.png>
+
+function GENERACJA _WĘZŁA(w: węzeł): węzeł;
+
+(funkcja generuje jeden węzeł potomny węzła w wzdłuż niewykorzystanej krawędzi);
+
+procedure OZNACZENIE _KRAWĘDZI(a,b: węzeł);
+( procedura zaznacza krawędź ab jako wykorzystaną)
+procedure ZMIANA _ETYKIET(G: graf, w: węzeł);
+(procedura modyfikuje etykiety wezłów grafu (zgodnie z zasadami podanymi powy-
+żej) w zależności od etykiety węzła w);
+procedure USUWANIE _WĘZŁÓW _GRAFU(G: graf);
+( procedura usuwa z grafu G wszystkie węzły mające etykiety N);
+function TEST(w: węzeł, W: własność): Boolean;
+(funkcja zwraca wartość TRUE, gdy węzeł w ma własność W lub wartość FALSE w
+przeciwnym przypadku);
+W trakcie wykonywania algorytmu badanym węzłom w nadawane są etykiety
+przechowywane w tablicy E(w). Etykiety nadawane są zgodnie z zasadą:
+ty
+<image/wzory/k2_page31_formula1.png>
+ry -P g - p g wiązywalności węzła
+
+Algorytm szukania z powracaniem (Bole, Cytowski 1989):
+
+procedure POWRACANIE_NA_AND_OR(p: węzeł początkowy;

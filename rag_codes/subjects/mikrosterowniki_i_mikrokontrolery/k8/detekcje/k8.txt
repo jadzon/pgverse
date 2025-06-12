@@ -1,0 +1,1021 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z ? 3
+
+I. Zagadnienia elementarne i ich treści obowiązujące do pierwszego
+
+kolokwium z części „Mikrokontrolery”:
+
+1. Definicja mikrokontrolera (w skrócie: mk), dwie najważniejsze cechy jego
+
+jednostki centralnej.
+
+Mk można zdefiniować następująco:
+
+układ cyfrowy z wyspecjalizowanym mikroprocesorem i niezbędnymi do jego samodzielnej pracy
+urządzeniami zawartymi w jednym układzie scalonym (dzięki którym nie wymaga urządzeń
+zewnętrznych, takich jak np. kontrolery magistral, przerwań, generatory sygnałów taktujących
+mikroprocesor, itp.),
+
+jest zdolny do autonomicznej pracy, tzn. w najprostszych zastosowaniach nie wymaga przyłączenia
+zewnętrznych układów pomocniczych (peryferyjnych),
+
+został zaprojektowany do pracy w systemach kontrolno-pomiarowych oraz komunikacyjnych,
+stąd posiada rozbudowany system komunikacji z otoczeniem,
+
+z reguły pracuje w czasie rzeczywistym.
+
+Cechy jednostki centralnej:
+
+szerokość szyny danych. Może być ona 8-bitowa, 16-bitowa lub 32-bitowa.
+
+częstotliwość sygnału taktującego (zegarowego). Jej wartość powinna być jak najmniejsza,
+ponieważ pobór mocy przez mikrokontroler proporcjonalny jest do częstotliwości sygnału
+zegarowego, ale jednocześnie na tyle duża, aby zapewnić wymaganą minimalną prędkość
+przetwarzania danych przez jednostkę centralną.
+
+2. Uszczegółowiona budowa mk oraz funkcje realizowane przez jego bloki.
+(dokładniejsze informacje na temat poszczególnych bloków mk znajdują się w Tomie I materiałów do
+wykładu)
+
+<image/figury/k8_page1_figure1.png>
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 4
+« Jednostka centralna (dokładniej zawarty w niej mikroprocesor) realizuje program zawarty w
+pamięci programu (typu FLASH).
+»* Zmienne programu przechowywane są w pamięci danych SRAM.
+
+„ _ Jednostka centralna jak i pozostałe wewnętrzne bloki mk są taktowane sygnałem zegarowym (clock),
+generowanym i rozprowadzanym przez system zegarowy. Częstotliwość sygnału zegarowego może
+być stabilizowana np. zewnętrznym oscylatorem kwarcowym.
+
+. W stan początkowy mk wprowadzany jest sygnałem RESET generowanym przez układ resetu.
+
+. Układy peryferyjne umożliwiają odczyt sygnałów wejściowych cyfrowych, jak i również
+analogowych (przetworniki A/C) oraz generację sygnałów wyjściowych stosowanych do sterowania
+układami mse. Komunikacja z otoczeniem mk odbywa się za pośrednictwem linii portów we/wy.
+
+3. Budowa mikroprocesora z punktu widzenia programisty. Funkcje jego bloków i
+
+ 
+
+rejestrów wewnętrznych.
+
+<image/figury/k8_page2_figure1.png>
+
+« rejestr rozkazów IR (ang. Instruction Register) — przechowywany jest w nim kod aktualnie
+wykonywanego rozkazu. Kody rozkazów pobierane są do rejestru rozkazów z pamięci programu.
+
+« układ sterujący — w tym bloku znajduje się dekoder rozkazów służący do dekodowania rozkazu
+zawartego w rejestrze rozkazów. Na tej podstawie układ sterowania wytwarza wewnętrzne i/lub
+zewnętrzne sygnały sterujące (na magistrali sterującej) realizujące dany rozkaz.
+
+« ALU (uniwersalna jednostka arytmetyczno logiczna) — wykonująca wszelkie operacje arytmetyczne i
+logiczne. Rodzaj wykonywanych operacji zależy od wewnętrznych sygnałów wytwarzanych przez
+układ sterujący.
+
++ rejestry dostępne programowo:
+
+. rejestr flagowy (statusowy) — zawierający dodatkowe cechy wyniku wykonywanej operacji,
+potrzebne do podjęcia decyzji o dalszym sposobie przetwarzania informacji. Cechami tymi mogą
+być np. znak wyniku, przekroczenia zakresu wyniku lub parzystości lub nieparzystości wyniku.
+Wystąpienie określonego wyniku sygnalizowane jest ustawieniem lub wyzerowaniem określonego
+bitu zwanego znacznikiem lub flagą w tym rejestrze.
+
+„ licznik rozkazów PC (ang. Program Counter)- rejestr mikroprocesorowy zawierający adres
+komórki pamięci programu, w której przechowywany jest kod rozkazu przeznaczony do wykonania
+jako następny. Czyli po wczytaniu kolejnego kodu rozkazu zawartość licznika rozkazów powinna
+zostać zmieniona tak, aby wskazywał on na kolejny rozkaz przeznaczony do wczytania do
+mikroprocesora.
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 5
+
+wskaźnik stosu — rejestr zawierający adres ostatniej zapełnionej komórki stosu (wierzchołka stosu
+— specjalnego rodzaju pamięci zwanego stosem (jest on umieszczony w pamięci danych), z którego
+odczyt wektorów informacji cyfrowej możliwy jest wyłącznie w kolejności odwrotnej do kolejności
+ich wpisywania).
+
+rejestry robocze (uniwersalne) lub ogólnego przeznaczenia GPR (ang. General Purpose
+Registers) — pewny zestaw rejestrów ogólnego przeznaczenia. Mają przechowywać argumenty
+wykonanych operacji i wyniki. Np. dla procesorów AVR są to rejestry r0 do r31, dla mk rodziny
+PIC jest to rejestr W , (Work register) a dla MCS8051 rejestrA (Accumulator).
+
+4. Cechy architektury harwardzkiej procesorów rdzeniowych mk.
+
+Opiera się na użyciu dwóch oddzielnych szyn dla danych i rozkazów, dzięki czemu w trakcie
+pobierania argumentów wykonywanej właśnie instrukcji można równocześnie zacząć pobieranie
+następnego słowa rozkazowego (pre-fetch). Skraca to cykl rozkazowy i zwiększa szybkość pracy.
+
+Obszary adresowe pamięci danych i programu (wewnętrznych i czasami zewnętrznych) są
+rozdzielone. Pociąga to za sobą niejednoznaczność adresów, ponieważ pod tym samym adresem jc
+widzi pamięć RAM i FLASH. W tym przypadku stosuje się inne rozkazy dla pamięci programu i inne
+dla pamięci danych.
+
+magistrala danych i rozkazów mają różną szerokość (długość słowa). Wadą tego rozwiązania jest
+utrudniony przepływ danych z pamięci programu do obszaru pamięci operacyjnej, co uniemożliwia
+
+stosowanie jednej z podstawowych technik programistycznych (look-up tables).
+
+5. Cechy architektury Von-Neumanna procesorów rdzeniowych mk.
+
+Jednolita przestrzeń adresowa, w której wszystkie pamięci, rejestry i układy we/wy są umieszczone
+w jednej, wspólnej przestrzeni adresowej. W architekturze tej zakłada się, że podział przestrzeni
+adresowej na pamięć programu, pamięć danych oraz obszar we/wy jest czysto umowny i zależy
+wyłącznie od rozmieszczenia tych elementów w obszarze adresowym podczas projektowania systemu.
+
+Mk ma jedną szynę danych wspólną dla danych i programu. Dzięki temu programowanie jest
+ułatwione, gdyż dostęp do danych, programu i urządzeń we/wy odbywa się przy użyciu
+zunifikowanych rozkazów wykorzystujących te same tryby adresowania. Tworzenie tablic stałych,
+tablicy wektorów, itp. w pamięci FLASH nie stanowi problemu.
+
+W tym rozwiązaniu wykonanie instrukcji wymaga kilku przesłań danych (najpierw bajt z kodem
+rozkazu, a po nim bajty z argumentami) po magistrali danych, co czyni tę architekturę zdecydowanie
+wolniejszą od harwardzkiej.
+
+6. Funkcje i typy pamięci zaimplementowanych w mk.
+
+Podział ze względu na pełnione funkcje:
+
+pamięć programu (zawierająca kod programu, tablice stałych, wektor resetu i przerwań), w
+
+technologii ROM, EPROM lub FLASH
+
+pamięć danych (przechowująca zmienne),
+
+stos sprzętowy (obsługi przerwań i wywołań funkcji odkładają na niego bieżącą wartość licznika
+rozkazów i po zakończeniu działania „zdejmują” ją),
+
+pamięć EEPROM (przechowuje zmienne lub tablice stałych, które po wyłączeniu zasilania nie mogą
+ulec skasowaniu).
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 6
+
+Podział pamięci programu ze względu na technologie wykonania:
+
+ROM (Read Only Memory) — programowanie zawartości pamięci następuje w procesie
+produkcyjnym i nie może być przeprowadzone przez użytkownika.
+
+EPROM (Erasable Programmable ROM) — pamięci z możliwością kasowanie dotychczasowej
+zawartości promieniami ultrafioletowymi i prowadzania nowej zawartości za pomocą zewnętrznego
+programatora. Umieszczane są w obudowach z okienkiem kwarcowym w celu umożliwienia
+kasowania.
+
+FLASH (Bulk Erasable Non-Volatile Memory) — pamięci z możliwością kasowanie zawartości i
+programowania bezpośrednio w systemie mikroprocesorowym.
+
+7. Warstwowy model mk zamkniętego.
+
+<image/figury/k8_page4_figure1.png>
+
+8. Przeznaczenia sygnału RESET i źródła sygnału RESET w mk.
+
+Sygnał RESET służy do:
+Inicjalizacji pracy mk, czyli wprowadzenia go w stan początkowy.
+
+Inicjalizacja polega najczęściej na ustawieniu licznika rozkazów na początek kodu programu (do
+licznika rozkazów wpisywany jest wektor resetu).
+
+Urządzenia we/wy i rejestry sterujące są ustawiane w tryb standardowy (spoczynku).
+
+Uniwersalne końcówki we/wy są ustawione jako wejścia o wysokiej impedancji, aby minimalnie
+wpływać na otoczenie mk (w dokumentacji każdego mk znajduje się informacja o stanie wszystkich
+rejestrów i portów po resecie mk).
+
+Ponadto, służy on do wprowadzenia mk w tryb programowania lub testowania.
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 7
+Możemy wyróżnić następujące źródła resetu:
++ reset po włączeniu zasilania,
++. reset wywołany zewnętrznym sygnałem RESET,
+
+» reset programowy wywołany przez wykonanie instrukcji RESET lub ustawienie odpowiedniego
+bita,
+
+« reset wywołany przez układ watchdog,
+
+« reset wywołany przez układy nadzorujące poprawność pracy mk (np. od układu wykrywającego
+spadek napięcia zasilania LVD (Low Voltage Detector) w ST72215G, BOR (Brown-out Reset) w
+PIC18F452).
+
+9. Budowa i zasada działania linii portów równoległych.
+
+(obsługa portów równoległych znajduje się w Tomie I materiałów do wykładu oraz w dokumentacjach do
+poszczególnych mikrokontrolerów)
+
+<image/figury/k8_page5_figure1.png>
+
+— Czytanie danych (pobieranie) podawanych z zewnątrz na wyprowadzenia portu, przez ten port polega
+na doprowadzeniu chwilowych stanów napięć na tych wyprowadzeniach (tzn. istniejących w
+momencie operacji czytania) do wewnętrznej szyny danych układu. Jest to realizowane przez
+uaktywnienie trójstanowego bufora sygnałem „czytanie”.
+
+- Natomiast operacja wpisania (wprowadzenia) danej do portu powoduje, że chwilowy stan
+wewnętrznej szyny danych zostaje zapamiętany w elementach zapamiętujących poszczególnych linii
+(najczęściej są nimi przerzutniki typu D) i wystawiany na wyprowadzeniach portu za pośrednictwem
+aktywnego bufora trójstanowego. Stan wyprowadzeń portu pozostaje niezmienny, dopóki nie nastąpi
+kolejna operacja wpisania do portu.
+
+— Linia portu równoległego jest linią wejściową, gdy bufor trójstanowy jest w stanie wysokiej
+impedancji. Uaktywnienie bufora trójstanowego sygnałem „kierunek”, ustawia linię jako wyjściową.
+Wówczas „I” na wyjściu przerzutnika odpowiada stan wysoki (około Vcc — napięcie zasilania mk) na
+wyprowadzeniu portu, a „O” stan niski (około O V).
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 8
+
+10. Właściwości układów peryferyjnych mk.
+
+Są programowalne - zadania przekazywane są im do wykonania odpowiednimi rozkazami,
+dokładniej mówiąc przez ustawienie odpowiednich bitów w rejestrach konfiguracyjnych
+(sterujących), przez wpisanie danych do rejestrów danych.
+
+Charakteryzują się dużym stopniem autonomii w stosunku do procesora rdzeniowego. Przekazane
+im zadania wykonywane są samodzielnie, bez zaangażowania czasu procesora.
+
+Od strony procesora układy we/wy programowane są za pośrednictwem magistrali wewnętrznej.
+
+Układom tym zazwyczaj przypisane są:
+
+. rejestry robocze (czyli rejestry danych zawierające wyniki ich działania),
+
+» rejestry konfiguracyjne/sterujące służące do konfiguracji i sterowania urządzeniem
+peryferyjnym,
+
+„ rejestry statusu zawierające aktualny stan urządzenia: flagi przerwań, komunikaty o błędach, itp.
+
+O zakończeniu wykonywania zadań procesor informowany jest ustawieniem odpowiedniego bitu w
+
+rejestrze stanu urządzenia (najczęściej flagi przerwania) lub wysłaniem sygnału żądania przerwania
+
+o ile jest ono odblokowane.
+
+11. Schematyczna budowa układu czasowego w mk oraz jego zasada pracy w dwóch
+
+podstawowych konfiguracjach.
+
+(dokładniejsze informacje na temat układów czasowych (licznikowych) mk oraz ich przykłady znajdują się
+w Tomie I materiałów do wykładu)
+
+<image/figury/k8_page6_figure1.png>
+
+jako właściwe układy czasowe (timers) — Są wtedy taktowane wewnętrznym sygnałem zegarowym
+przeznaczonym do taktowania jc. Timery wykorzystywane są w programie użytkownika jako wzorce
+czasu.
+
+« jako liczniki (counters) — Są one wtedy taktowane zewnętrznymi sygnałami doprowadzanymi
+
+poprzez linie wejściowe portów i wykorzystywane w programie użytkownika np. jako liczniki zmian
+poziomów sygnałów zewnętrznych
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 9
+
+12. Budowa, zasada działania i typowe parametry wewnętrznego przetwornika A/C
+
+w mk.
+
+(dokładniejszy opis przetworników A/C znajduje się w Tomie I materiałów do wykładu oraz w
+dokumentacjach do poszczególnych mikrokontrolerów)
+
+<image/figury/k8_page7_figure1.png>
+
+Typowe parametry przetworników A/C w mk:
+
+długość słowa (najczęściej 10 bitów),
+
+czas konwersji (typowo od kilku do kilkunastu s),
+
+rozdzielczość (zwykle I LSB — 5 mV przy zakresie 5V dla długości słowa 10 bitów),
+błąd całkowity (około 2 LSB).
+
+Aby dokonać pomiaru napięcia należy wykonać następujące kroki:
+
+wybrać źródło referencyjne: zewnętrze na pinie AREF, napięcie zasilania mk Vcc lub z
+wewnętrznych bloków napięć referencyjnych,
+
+ustalić sposób justowania wyniku konwersji w lewo lub w prawo,
+
+wybrać kanał konwersji, i ewentualnie wzmocnienie kanału dla trybu różnicowego,
+ustawić podział sygnału zegarowego taktującego konwersją,
+
+ewentualnie odblokować przerwanie od zakończenia konwersji,
+
+włączyć przetwornik A/C,
+
+uruchomić konwersję ustawiając odpowiedni bit w rej. sterującym A/C — dla programowego trybu
+wyzwalania przetwomika A/C,
+
+konwersja kończy się ustawieniem flagi przerwania, co generuje przerwanie, wynik konwersji
+znajduje się w parze rej. danych przetwornika A/C.
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 10
+
+13. Sterowanie oraz sposób odczytu i zapisu danych do wewnętrznej pamięci
+
+EEPROM.
+
+Rejestry służące do obsługi pamięci EEPROM:
+
+rejestr sterujący, w którym uruchamia się procedurę odczytu lub zapisu do pamięci,
+
+rejestr danych przechowujący daną, która ma być wpisana pod adres wskazywany przez rejestry
+adresu lub zawiera daną odczytaną spod wybranego adresu,
+
+jeden lub dwa rejestry adresu zawierajce adres komórki pamięci EEPROM, na której będzie
+wykonana operacja zapisu lub odczytu.
+
+Generalnie odczyt z pamięci EEPROM przebiega według następującej procedury:
+do rejestrów adresu wpisuje się adres bajtu w pamięci EEPROM, spod którego chcemy pobrać daną,
+ustawiamy bit uruchamiający proces odczytu w rejestrze sterującym,
+
+czekamy, aż ustawi się flaga informująca o zakończeniu odczytu (najczęściej wyzerowanie bita
+uruchamiającego proces odczytu),
+
+w rejestrze danych znajduje się już nasza dana.
+
+Zapis danej do pamięci najczęściej przebiega według następującej procedury:
+
+czekamy aż zakończy się poprzedni cykl zapisu (zapis trwa około od 2ms do 4ms), testując flagę
+informującą o zakończeniu zapisu (najczęściej wyzerowanie bita uruchamiającego proces zapisu).
+
+do rejestrów adresu wpisuje się adres bajtu w pamięci EEPROM, do którego chcemy wpisać daną,
+do rejestru danych wprowadzamy naszą daną,
+
+odblokowujemy zapis do pamięci EEPROM ustawiając odpowiedni bit lub wykonując odpowiednią
+sekwencję wpisów do rejestrów sterujących (warto przedtem zablokować wszystkie przerwania),
+
+ustawiamy bit uruchamiający proces zapisu do EEPROM,
+
+14. Schematyczna budowa sterownika komunikacji szeregowej w mk oraz
+
+realizowane przez niego funkcje.
+
+<image/figury/k8_page8_figure1.png>
+
+Mikrosterowniki i mikrosystemy rozproszone — Z ? 11
+Dwie podstawowe funkcje układu:
+
+« Funkcję nadajnika (transmiter ) — wysyłanie zawartości określonego rejestru, tzw. bufora
+nadajnika, w postaci szeregowej poprzez określone wyprowadzenia portu. Oznacza to, że na wyjściu
+linii portu pojawia się ciąg binarny odpowiadający zawartości wysyłanego rejestru.
+
+„ W funkcji odbiornika (receiver) sterownik komunikacji szeregowej potrafi przetworzyć ciąg binarny
+doprowadzony do wejścia określonej linii portu na zawartość rejestru, zwanego buforem odbiornika.
+
+15. Format danych dla standardu UART, budowa kontrolera interfejsu UART oraz
+ogólna jego obsługa.
+
+(pełny opis interfejsu UART znajduje się w Tomie I materiałów do wykładu oraz w dokumentacjach do
+poszczególnych mikrokontrolerów)
+
+<image/wzory/k8_page9_formula1.png>
+
+nyury/RnO_JaYCY_IIYUICZ.]JI IY
+
+<image/figury/k8_page9_figure1.png>
+
+Mikrosterowniki i mikrosystemy rozproszone — Z ? 12
+
+16. Przebiegi czasowe interfejsu SPI.
+(uwaga na właściwą fazę sygnału zegarowego zgodną z zadanym pytaniem na kolokwium, aby nie
+popełnić błędu kardynalnego)
+
+<image/figury/k8_page10_figure1.png>
+
+<image/figury/k8_page10_figure2.png>
+
+17. Pojęcie rodziny mk. Modyfikacje członków rodziny mk.
+Rodzina mk — zbiór mk oparty na tym samym procesorze rdzeniowym, czyli układów o różnych
+parametrach, ale zachowujących między sobą kompatybilność programową, tzn. posiadają tą samą jc,
+czyli tą samą listę instrukcji.
+Modyfikacje członków danej rodziny mikrokontrolerów:
+« na poziomie jc, dotyczy ona zmiany:
+
+— rozmiaru pamięci programu,
+
+— rozmiaru pamięci danych RAM,
+
+- maksymalnej szybkości pracy.
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 13
+
+« na poziomie urządzeń peryferyjnych. Modyfikacje w tej warstwie stanowią podstawowy wyróżnik
+danego typu mk. Użytkownik otrzymuje do dyspozycji całą, niekiedy dość liczną rodzinę mk
+różniących się kombinacjami wbudowanych w układ scalony układami we/wy.
+
+« na poziomie warstwy zacisków zewnętrznych i typu obudowy. Dotyczy głównie parametrów
+elektrycznych zacisków mk oraz stosowanego typu obudowy mk.
+
+18. Definicja programowania zagnieżdżonego i cechy programów zagnieżdżonych.
+Definicja:
+
+Tworzenie oprogramowania dla mse opartych na mk (i nie tylko) i ukierunkowanych na zadania
+pomiarowo-sterujące oraz komunikacyjne określa się w literaturze mianem programowania
+zagnieżdżonego (embeded programming).
+
+Cechy programów zagnieżdżonych:
+
+» Program jednoznacznie ustala funkcję mse, tzn. użytkownik ma możliwość zmiany funkcji systemu
+zazwyczaj tylko w niewielkim zakresie przewidzianym przez program użytkowy. Ta właśnie cecha
+określana jest jako „zagnieżdżenie” programu.
+
++ Działanie programu musi spełniać określone wymagania czasowe dotyczące przekraczania
+maksymalnego czasu reakcji na określone zdarzenia zewnętrzne oraz realizacji określonych zadań
+programowych w nieprzekraczalnym czasie. Ta cecha określana jest jako praca programu w „czasie
+rzeczywistym”.
+
+. Są to programy działające na specyficznych zasobach sprzętowych warunkowanych
+ukierunkowaniem budowy sprzętowej mse na konkretne zadanie.
+
+19. Metody uruchamiania programów napisanych na mk.
+
+« metoda prób i błędów - polega na wielokrotnym programowaniu mk i za każdym razem obserwacji
+działania programu w mse i jego korekcji na podstawie tych obserwacji, aż do uzyskania
+prawidłowego działania mk,
+
+« zastosowanie monitorów programowych (monitors) i programów śledzących (debuggers) — są
+najczęściej stosowane.
+
+- Monitory są instalowane w pamięci programu mk i kontrolują wykonywanie właściwego
+programu użytkowego oraz komunikują się z systemem rozwojowym poprzez złącze szeregowe.
+
+- — Natomiast debugery pracują w przyłączonych do systemu komputerach PC,
+
+« zastosowanie emulatora sprzętowego mk (ICE — in-circuit emulators) — polega to na umieszczeniu,
+na czas uruchamiania programu, w podstawce na mk sondy połączonej ze specjalnym układem
+sprzętowym, który emuluje działanie mk. Emulator wiernie odtwarza wszystkie właściwości mk
+łącznie z jego wszystkimi układami peryferyjnymi oraz pamięcią,
+
+. wykorzystanie specjalnych zasobów wewnętrznych mk — niektóre mk zwłaszcza 32-bitowe
+posiadają specjalne zasoby sprzętowe przeznaczone do wspierania procesu uruchomiania programu.
+Zasoby te oferują w przybliżeniu wszystkie te możliwości co emulator sprzętowy, między innymi
+ustawienie pułapek oraz pracę krokową. Zasoby te komunikują się przez dedykowane wyprowadzenia
+mk. Są one dostępne wyłącznie na etapie uruchamiania programu, zatem nie są wykorzystywane
+przez normalny program użytkowy.
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 14
+
+II. Zagadnienia elementarne i ich treści obowiązujące do drugiego kolokwium z
+części „Mikrosystemy”:
+
+1. Schemat blokowy mikrosystemu elektronicznego oraz funkcje jego bloków.
+(dokładniejsze informacje na temat poszczególnych bloków mk znajdują się w Tomie I (mikrokontroler)
+oraz w Tomie I/ materiałów do wykładu)
+
+Mikrosystem elektroniczny (wbudowany)
+
+<image/figury/k8_page12_figure1.png>
+
+. W skład mse mogą również wchodzić: logika programowalna, układy peryferyjne (przetworniki
+A/C, C/A, pamięci szeregowe EEPROM, itd.), wśród których można wyróżnić układy dopasowujące
+sygnały elektryczne do danego standardu interfejsu (np. MAX232AC) i kontrolery interfejsów
+szeregowych (np. Ethernetu, CAN, USB, IrDA), jak i równoległych.
+
+Komunikacja wewnątrz mse odbywa się za pomocą magistral równoległych lub mikrointerfejsów
+szeregowych. Mse komunikuje się z otoczeniem przeważnie za pomocą interfejsów szeregowych.
+
+W skrajnym przypadku mse może składać się wyłącznie z mikrokontrolera (w skrócie: mk).
+
+Składowe mikrosystemu elektronicznego:
+
+„  mikrokontroler(y) — najważniejszy element mse nadzorujący pracą wszystkich układów wchodzących
+w jego skład. Mikrokontroler steruje pracą mse za pośrednictwem magistral równoległych oraz
+interfejsów (mikrointerfejsów) szeregowych.
+
+« pamięć RAM — opcjonalnie w zależności od typu mk. Przechowuje zmienne programu mk.
+
+« pamięć FLASH — opcjonalnie w zależności od typu mk. Przechowuje kod programu mk.
+
+« logika programowalna — (SPLD, CPLD lub FPGA) realizująca przeważnie funkcje kombinacyjne
+(zastępująca konwencjonalne układy TTL) oraz wspomagająca mk w sterowaniu mse.
+
+« układy peryferyjne z mikrointerfejsem szeregowym (w skrócie: mis) — np. przetwomiki A/C, C/A,
+pamięci EEPROM, itd.
+
+« bufory - głównymi zadaniami są zwiększenie wydajności prądowej linii sterujących oraz separacja
+układów dołączonych do magistrali systemu.
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 15
+
+« układy dopasowujące i kontrolery interfejsów szeregowych — RS232, RS485, Ethemet, CAN, USB i
+bezprzewodowych IrDA, Bluetooth, Wi-Fi, IEEE 802.15.4.
+
+« magistrale równoległe — równoległe porty we/wy, opcjonalnie magistrale danych i adresowe, służą
+przeważnie do komunikacji wewnątrz mse.
+
+„ _ mikrointerfejsy szeregowe — SPI, I*C, UART, JTAG, 1-Wire. Służą do komunikacji wewnątrz mse,
+ale też i z jego otoczeniem.
+
+2. Definicja rozproszonego systemu elektronicznego wraz z podziałem na warstwy
+logiczne.
+
+Definicja:
+
+Rozproszony mikrosystem elektroniczny (w skrócie mikrosystem (ms)) można zdefiniować jako
+zestaw układów elektronicznych stanowiących funkcjonalną, integralną część urządzenia lub samo
+urządzenie, które komunikują się między sobą za pomocą dedykowanych mikrointerfejsów. Przeważnie
+komunikacja mikrosystemu z otoczeniem odbywa się również za pomocą dedykowanych interfejsów
+szeregowych przewodowych, jak również bezprzewodowych radiowych i na podczerwień.
+
+W mikrosystemie możemy wyróżnić dwie warstwy:
+« sprzętową — płytka drukowana (printed board) z umieszczonymi na niej układami scalonymi,
+
+« programową — czyli oprogramowanie dla mikrokontrolera realizujące zadane przez nas algorytmy,
+zapisane w pamięci programu FLASH mikrokontrolera lub zewnętrznej pamięci FLASH oraz zapis
+konfiguracji połączeń i realizowanych funkcji w programowalnych układach logicznych (PLD).
+
+3. Podstawowe zastosowania układów buforów magistrali 8-bitowej w systemach mk.
+
++ Zwiększenie liczby linii sterujących mk przez podłączenie buforów do portu mk. Wówczas można
+sekwencyjnie ustawiać 8*N _ linii wyjściowych (zapamiętywać je na N buforach np. z
+nieodwracającymi rejestrami zatrzaskowymi 74HC573) lub sekwencyjnie czytać 8*M linii
+wejściowych (np. z M nieodwracających buforów typu 74HC541).
+
+« Zwiększenie wydajności prądowej linii wyjściowych. Linie wyjściowe układów scalonych buforów
+mają zdecydowanie większe wydajności prądowe niż linie mk, zatem nadają się do ich buforowania.
+
+4. Schemat logiczny, znaczenie linii, przebiegi czasowe cyklów odczytu i zapisu
+asynchronicznej pamięci SRAM o dostępie równoległym i pojemności np. 512 KB.
+
+(uwaga — pamiętamy o tym, o czym była mowa na wykładzie)
+
+<image/wzory/k8_page13_formula1.png>
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 16
+Znaczenie linii sterujących pamięcią asynchroniczną SRAM:
+„ - Linia C$ służy do uaktywnienia układu. Stan niski na tej linii aktywuje układ do transmisji.
+„ Linia QE jest wykorzystywana w trakcie czytania danej, niski poziom na tej linii uaktywnia bufory
+
+wyjściowe pamięci.
+
+„ Niski poziom na linii WE uaktywnia bufory wejściowe i dezaktywuje wyjściowe (niezależnie od
+stanu na linii OE), czyli służy do wprowadzenia danej do pamięci
+
++ za pośrednictwem dwukierunkowych linii 1/01 — I/Os,
+« pod adres wskazany przez linie Ao — A 18.
+
+Uwaga: Chwile, w których sygnały CS, OE, czy WE mogą przyjmować dowolny stan (.„0” lub „I”)
+zostały zaznaczone na przebiegach czasowych jako szare pola między linią reprezentującą stan
+niski a linią reprezentującą stan wysoki.
+
+<image/tabele/k8_page14_table2.png>
+
+Przebiegi czasowe cyklu odczytu danych z pamięci (zmiana adresu)
+
+<image/tabele/k8_page14_table1.png>
+
+<image/tabele/k8_page14_table3.png>
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 17
+
+<image/figury/k8_page15_figure1.png>
+
+5. Schemat logiczny, znaczenie linii pamięci FLASH typu NOR o dostępie
+
+równoległym i pojemności np. 1 MB.
+
+<image/figury/k8_page15_figure2.png>
+
+Znaczenie linii pamięci FLASH z interfejsem standardowym:
+
+A0 — An — (n+1)-bitowa magistrala adresowa (dla Am29F080B n = 19), wystawiany jest na niej n-
+bitowy adres komórki do odczytu lub zapisu,
+
+DQO0 - DQ7 - 8-bitowa dwukierunkowa magistrala danych służąca do wprowadzania i
+wyprowadzania danych spod adresów ustawianych na magistrali adresowej,
+
+CEż- (Chip Enable) wybór (aktywacja) układu poziomem niskim,
+
+WE+ — (Write Enable) niski poziom na tej linii powoduje zapis bajta pod wskazany adres (ale nie
+zapis bajta do pamięci FLASH — to wymaga uruchomienia procedury programowania),
+
+OE — (Output Enable) niski poziom na tej linii powoduje wystawienie na magistrali danych danej
+spod wskazanego adresu,
+
+RESET — sprzętowy reset wprowadzający pamięć w tryb odczytu, aktywny stanem niskim,
+
+RY/BYŁ — wyjście służące do sprawdzania czy pamięć zakończyła wewnętrzne algorytmy
+kasowania/programowania, stan wysoki oznacza gotowość na przyjęcie kolejnych poleceń, stan niski
+informuje, że pamięć jest zajęta (niegotowa), bo jest w trakcie wykonywania wewnętrznych operacji.
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 18
+6. Schemat blokowy układów SPLD standardu GAL16V8 oraz funkcje jego bloków.
+« _ Narys. nie zaznaczono układu ochrony danych przed odczytem.
+
++ Matryca połączeń logicznych składa się:
+
+O
+
+o
+
+z programowalnej macierzy typu AND array z ustalonymi połączeniami do bramek typu OR.
+
+Pole logicznych połączeń jest zorganizowane jako 16 komplementamych linii wejściowych (z
+sygnałami i ich negacjami) krzyżujących się z 64 liniami typu „product term”.
+
+Na każdym skrzyżowaniu linii znajduje się komórka typu E*PROM, która w zależności od
+zaprogramowania zwiera lub rozwiera linię poziomą od pionowej.
+
+figury/k8_p
+<image/figury/k8_page16_figure2.png>
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 19
+
+7. Tryby pracy układów SPLD standardu GALI6V8 oraz ich ograniczenia
+projektowe.
+
+. W trybie rejestrowym piny 1 i 11 są stale skonfigurowane odpowiednio jako zegar CLK i wejście
+OE. Nie mogą być one dedykowanymi wejściami.
+
+. W trybie złożonym piny I i 11 stają się dedykowanymi wejściami i używają ścieżek sprzężenia
+zwrotnego (feedback paths) odpowiednio pinów 19 i 12. Z tego powodu piny 19 i 12 nie mają opcji
+sprzężenia w tym trybie, są wyłącznie wyjściami.
+
+« W trybie prostym wszystkie ścieżki sprzężenia zwrotnego pinów wyjściowych są poprowadzone
+przez przyległe piny. Z tego powodu dwa wewnętrzne piny (15 i 16) nie mają opcji sprzężenia
+zwrotnego i są zawsze skonfigurowane jako dedykowane kombinacyjne wyjścia.
+
+8. Schemat blokowy architektury układów CPLD np. XC9500 oraz funkcje bloków
+zamieszczonych na tym schemacie.
+
+JT/
+
+<image/figury/k8_page17_figure1.png>
+
+Architektura układów rodziny XC9500
+
+« JTAG pozwala nie tylko na testowanie zgodnie ze standardem IEEE 1149.1, ale również i
+programowanie układów zamontowanych już w systemie.
+
+„ Bloki IOB między innymi buforują sygnały wejściowe i wyjściowe z układu oraz zapewniają
+odpowiednie parametry elektryczne zacisków.
+
+. Każdy blok funkcyjny składa się z 18 niezależnych makrokomórek, z których każda może
+realizować funkcję kombinacyjną bądź rejestrową.
+
+. ' Matryca przełączająca dostarcza sygnały z bloków IOB i FB do wejść bloków FB. Za pomocą
+matrycy użytkownik wybiera sygnały, które mają dochodzić do danego bloku FB. Dodatkowo
+realizuje ona iloczyn logiczny na drucie co zwiększa funkcjonalność całego układu.
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 20
+
+9. Metody zapisu i odczytu danych oraz techniki adresowania układów peryferyjnych
+z interfejsem SPI.
+Metody zapisu i odczytu danych:
+« W przypadku prostych układów (o jednym typie danych i niezależnym sygnale zapisu danych)
+możliwe jest przepełnienie zawartości odbiorczego rejestru szeregowego. Zatem w układzie po
+
+przesłaniu do niego dowolnej liczby bitów zostaje zapamiętane tylko N ostatnich bitów (N — długość
+danych dla danego układu) w rejestrze odbiorczym.
+
+« Przy bardziej złożonych układach wprowadza się do formatu danych bit startu. Czyli układ pomija
+kolejno przychodzące bity dopóki nie pojawi się pierwsza jedynka będąca bitem startu. Po niej dane
+są ważne.
+
+. Słowa sterujące są krotnością 8 bitów. Liczba wysyłanych bajtów zależy od typu rozkazu.
+
+Techniki adresowania układów peryferyjnych:
+
+«  Wydzieleniu jednej linii adresującej układ (CS- chip select). W prowadzenie tej linii w stan aktywny
+(najczęściej niski) jest jednoznaczne z zaadresowaniem układu do udziału w transmisji.
+
+.  Zawarciu adresu w przesyłanym ciągu danych. Gdy układ odbiorczy stwierdzi zgodność adresu, to
+odbiera dane zawarte po adresie. Np. stosuje się tę technikę w układach składających się z wielu
+niezależnie programowanych bloków, z których każdy ma swój własny adres.
+
+<image/figury/k8_page18_figure1.png>
+
+Wszystkie układy peryferyjne z interfejsem SPI składają się z
+
+. bloku interfejsu SPI służącego do komunikacji z układem (wysyłanie i odbiór danych, wysyłanie
+rozkazów i odbiór danych statusowych):
+
+. Rejestru szeregowego. do którego w takt sygnału zegarowego CLK są na linii wejście danych
+SDI szeregowo bit po bicie wprowadzane dane (najczęściej 8-bitowe — czyli bajty). Dane z układu
+szeregowo są wystawiane na linii wyjście danych SDO. Transmisja odbywa się, gdy na linii
+wyboru układu CS jest stan aktywny (najczęściej stan niski).
+
+„ Układ kontrolny steruje interfejsem SPI za pośrednictwem linii C$ oraz podłączonych do niego
+cyfrowych sygnałów sterujących, których występowanie (liczba i pełnione funkcje) zależą od
+zastosowania układu (warstwy aplikacji). Zarządza również komunikacją między rejestrem
+szeregowym a blokiem aplikacji.
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 21
+„ bloku warstwy aplikacji realizującej zadania zgodne z przeznaczeniem układu.
+Znaczenie linii:
+CS — wybór układu do transmisji (aktywny poziomem niskim). Gdy CS jest w stanie niskim można do
+
+układu wprowadzać rozkazy oraz dane i wyprowadzać dane oraz zawartość rejestrów statusu.
+Układ zaczyna wykonywać wprowadzony rozkaz, gdy na CS pojawi się zbocze narastające.
+
+SDO — szeregowe wyjście danych służące do wyprowadzania danych oraz zawartości rejestru statusu.
+SDI — szeregowe wejście danych przeznaczone do wprowadzania rozkazów i danych do układu.
+CLK - zegar taktujący transmisją szeregową.
+
+analogowe linie we-wy — dostarczają sygnały analogowe do/z bloku warstwy aplikacji.
+
+cyfrowe sygnały sterujące — dodatkowe sygnały sterujące zależne od aplikacji (np. sygnał przerwania
+INT, wstrzymania transmisji HOLD, itp.)
+
+11. Schemat blokowy pamięci o dostępie szeregowym z interfejsem SPI, znaczenie
+linii i funkcje jej bloków.
+
+<image/figury/k8_page19_figure1.png>
+
+Pamięć szeregowa składa się z
+
+„ - bloku interfejsu SPI służącego do komunikacji z otoczeniem,
+
+« rejestru statusu służącego do konfiguracji pamięci oraz zawierającego jej stan,
+
+„ układu kontrolnego pamięci kontrolującego jej pracę i realizującego wbudowane algorytmy
+programowania i odczytu danych,
+
+« bloków obsługi pamięci składających się z układów obsługujących dostęp do matrycy pamięci, dla
+pamięci EEPROM i FLASH z bloków generujących napięcia potrzebne do programowania i
+kasowania pamięci oraz z układów wykrywających spadek napięcia zasilania,
+
+. matrycy pamięci składającej się z komórek pamięci danego typu (w danej technologii)
+zorganizowanych w wiersze i kolumny.
+
+Znaczenie linii dla szeregowych pamięci:
+
+CS — wybór układu do transmisji (aktywny poziomem niskim). Gdy CS jest w stanie niskim można do
+pamięci wprowadzać rozkazy oraz dane i wyprowadzać dane oraz zawartość rejestru statusu.
+Pamięć zaczyna wykonywać wprowadzony rozkaz, gdy na CS pojawi się zbocze narastające.
+
+SO — szeregowe wyjście danych służące do wyprowadzania danych oraz zawartości rejestru statusu.
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 22
+SI — szeregowe wejście danych przeznaczone do wprowadzania rozkazów i danych do pamięci.
+SCK - zegar taktujący transmisją szeregową (najczęściej polaryzacja *0* i faza *0').
+WP — „write protect” — gdy na tej linii jest stan aktywny (stan niski) i jest ustawiony odpowiedni bit w
+rejestrze statusu, to nie można modyfikować zawartości rejestru statusu.
+
+HOLD — aktywny stanem niskim. Linia służy do wstrzymania (zamrożenia) transmisji szeregowej w
+dowolnym momencie i wprowadzenia linii SO w stan wysokiej impedancji.
+
+12. Uogólniony schemat blokowy N-bitowych K-kanałowych przetworników A/C
+wyposażonych w interfejs SPI, funkcje poszczególnych bloków przetwornika A/C.
+
+<image/figury/k8_page20_figure1.png>
+
+Przetworniki A/C z interfejsem SPI składają się z następujących części:
+
++. Części cyfrowej składającej się z:
+
+„ - Bloku interfejsu SPI zapewniającego komunikację między przetwornikiem A/C a otoczeniem. i dla
+przetworników SAR uruchamiającego przetwarzanie analogowo-Cyfrowe w takt sygnału
+zegarowego na linii SCLK.
+
+„ Układu kontrolnego sterującego wyborem źródła napięcia referencyjnego, kanału przetwarzania
+oraz zwłaszcza dla przetworników Z - A ustawianiem parametrów konwersji A/C.
+
++ Części analogowej, w której skład wchodzą:
+» Dla przetworników wielokanałowych multiplekser analogowy służący do wyboru kanału, z
+którego będzie pobierane napięcie do przetwarzania A/C.
+„ Układ próbkująco-pamiętający (S$£H) zapamiętujący stan napięcia mierzonego i utrzymujący
+niezmienną jego wartość przez cały czas konwersji A/C.
+. Blok przetwarzania A/C — właściwy blok dokonujący konwersji napięcia mierzonego na kod
+cyfrowy bazując na metodzie SAR lub metodzie Z - A.
+
+„ Układ napięcia referencyjnego dostarczający za pośrednictwem bufora napięcia referencyjnego
+dla bloku przetwarzania A/C. Napięcie referencyjne może pochodzić z zewnątrz — wówczas
+podawane jest na pin REFin lub może być wytwarzane przez wewnętrzne źródło referencyjne
+(typowo 2,5 V).
+
+Mikrosterowniki i mikrosystemy rozproszone — Z ? 23
+
+13. Schemat blokowy układu cyfrowego czujnika temperatury z interfejsem SPI (np.
+AD7814), funkcje poszczególnych jego bloków, znaczenie linii układu, przebiegi
+czasowe interfejsu SPI.
+
+<image/figury/k8_page21_figure2.png>
+
+<image/figury/k8_page21_figure1.png>
+
+DIN - Wejście danych szeregowych dla danych do rejestru kontrolnego. Dane są wprowadzane do
+rejestru kontrolnego na narastające zbocze sygnału zegarowego SCLK.
+
+SC LK — Wejście zegara interfejsu szeregowego. Zegar wykorzystywany jest do wyprowadzania danych z
+rejestru zawierającego wartość zmierzonej temperatury oraz do zapisywania danych do rejestru
+kontrolnego
+
+CS — Wejście wyboru układu. Urządzenie jest wybrane, gdy jest podany na nie stan niski. Wejście SCLK
+jest wyłączone, gdy podany jest stan wysoki na tym pinie.
+
+DOUT - Wyjście danych szeregowych zawierających zmierzoną temperaturę. Na opadające zbocza
+sygnału zegarowego SCLK wystawiane są bity rejestru z wartością temperatury.
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 24
+
+14. Ogólny schemat przetwornika cyfrowo-analogowego (C/A), funkcje
+poszczególnych bloków układu.
+
+<image/figury/k8_page22_figure1.png>
+
+Każdy przetwornik C/A sterowany interfejsem szeregowym składa się z części:
+« cyfrowej zawierającej:
+
+„ - blok interfejsu SPI służący do wprowadzania danych konfiguracyjnych i danych do przetworzenia
+na wartość analogową. Dane te są wprowadzane na wejściu DIN w takt sygnału zegarowego
+SCLK, gdy na linii wyboru układu CS jest stan aktywny (najczęściej stan niski) adresujący układ
+do transmisji.
+
+« - układ kontrolny sterujący kanałem przetwarzania kod-napięcie. Układ ten ma możliwość
+wprowadzenie przetwornika w tryb obniżonego poboru mocy lub zmiany parametrów bufora
+wyjściowego (np. wzmocnienia, impedancji wyjściowej).
+
+« analogowej, w której skład może wchodzić wiele kanałów przetwarzania kod-napięcie (np. 1, 2, 4,
+8, 16 kanałów). Pojedynczy kanał przetwarzania kod-napięcie składa się z:
+
+« Rejestru DAC, który zawiera N-bitową (gdzie: N — rozdzielczość przetwornika C/A) daną
+przetwarzaną na wartość napięcia. Kod ten bezpośrednio steruje kluczami drabinki R-2R.
+
+„ « Drabinki R-2R będącej siecią rezystorów o wartości R i 2R. Drabinka konwertuje kod cyfrowy na
+wartość prądu.
+
++ - Bufora wyjściowego konwertującego prąd wypływający z drabinki R-2R na odpowiadającą mu
+wartość napięcia oraz zapewniającego odpowiednią wydajność i impedancję wyjściową.
+
+Mikrosterowniki i mikrosystemy rozproszone — Z ? 25
+
+15. Schemat blokowy układu potencjometru cyfrowego sterowanego interfejsem SPI
+(np. AD5260), znaczenie linii układu, przebiegi czasowe interfejsu SPI.
+
+<image/figury/k8_page23_figure2.png>
+
+Schemat blokowy układu AD5260 firmy Analog Devices przedstawiciela potencjometrów cyfrowych
+sterowanych interfejsem SPI
+
+<image/figury/k8_page23_figure1.png>
+
+A - Końcówka A potencjometru.
+
+W —- Suwak.
+
+B — Końcówka B potencjometru.
+
+SHDN - Aktywny stanem niskim. Rozwarcie końcówki A.
+CLK - Wejście zegarowe aktywne zboczem narastającym.
+SDI - Wejście szeregowe interfejsu SPI.
+
+CS — Wybór układu, aktywny stanem niskim. Kiedy stan na linii CS jest wysoki, dane mogą być
+ładowane do rejestru RDAC.
+
+PR — Aktywny stanem niskim. Ustawia rezystor na połowę jego wartości, poprzez wpisanie do rej.
+RDAC wartości 80H.
+
+VL — Zasilanie „logiki” układu.
+SDO - Wyjście szeregowe typu otwarty dren, Wymaga zewnętrznego rezystora pull-up.
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 26
+
+16. Przyczyny stosowania zewnętrznych kontrolerów interfejsów szeregowych np.
+USB, CAN, Ethernet, czy radiowych układów nadawczo-odbiorczych na 2,4 GHz.
+
+Zewnętrzne kontrolery interfejsów szeregowych stosuje się wówczas gdy:
+. Wybrany przez nas mk ich nie posiada.
+
+« Nie chcemy używać mk w nie wyposażonych, ponieważ mk te są zazwyczaj bardzo rozbudowane,
+co za tym idzie i droższe (mają większą moc obliczeniową aby obsługiwać wbudowane interfejsy i
+przy okazji są wyposażone w wiele urządzeń peryferyjnych często zbędnych dla naszej aplikacji).
+
++ Zastosowanie zewnętrznych kontrolerów interfejsów szeregowych pozwala na „rozproszenie mocy
+obliczeniowej” w systemie, tzn. mk wykonuje swoje zadania przewidziane programem, a wymiana
+danych z kontrolerem interfejsu szeregowego odbywa się poprzez interfejs SPI. Kontroler ten często
+realizuje prawie cały stos obsługi danego protokołu (np. stosy protokołów CAN, USB czy warstwę
+fizyczną Ethernet protokołów TCP/IP) odciążając w ten sposób jednostkę centralną mk.
+
++. Często producenci kontrolerów szeregowych dostarczają gotowe sterowniki dla systemów
+
+operacyjnych (np. sterowniki urządzeń USB dla Windows XP, Windows 7, Linux) współpracujące z
+ich kontrolerami.
+
+17. Schemat blokowy kontrolerów interfejsów szeregowych sterowanych interfejsem
+SPI, funkcje poszczególnych ich bloków, znaczenie linii układów.
+
+<image/figury/k8_page24_figure1.png>
+
+Składa się on z następujących bloków:
+
+„ Blok interfejsu SPI — obsługuje on interfejs SPI służący do komunikacji między mk a kontrolerem.
+Za jego pomocą transmitowane są dane do buforów wejściowo-wyjściowych. Ponadto zawiera on
+rejestry kontrolne i statusowe służące do konfiguracji i sterowania układem kontrolera.
+
++ Bufory danych wejściowych i wyjściowych — są niezbędne, gdy interfejs odbiera i wysyła dane
+blokami (np. ramka ethemetowa, ramka CAN).
+
+„ Kontroler interfejsu szeregowego — właściwy blok sterujący danym interfejsem szeregowym.
+Kontroluje on dwukierunkowym przepływem danych, dokonuje ich analizy zgodnie ze
+zdefiniowanym stosem protokołów (np. oblicza i sprawdza sumę kontrolną pakietu danych), steruje
+układem nadawczo odbiorczym.
+
+« Układ nadawczo-odbiorczy — odbiera i wysyła dane, konwertuje je na odpowiednie sygnały
+elektryczne zgodnie ze specyfikacją danego protokołu.
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 27
+
+Znaczenie linii układu interfejsu szeregowego:
+
+. SI - szeregowe wejście danych interfejsu SPI dla danych wysyłanych i danych konfiguracyjnych,
+
++. SO — szeregowe wyjście danych interfejsu SPI służące do odbioru danych z interfejsu szeregowego i
+odczytu danych statusu układu,
+
++ SCK -zegar taktujący transmisję szeregową interfejsu SPI,
+
+». CS - wejście wyboru układu uaktywniające interfejs SPI do udziału w transmisji,
+
+»  RST — wejście resetu układu — aktywny stan na tej linii wprowadza kontroler w stan początkowy,
+
++ INT — linia przerwania zewnętrznego informująca o tym, iż kontroler żąda od mk obsługi,
+
+« LINIE INTERFEJSU SZEREGOWEGO - linie służące do transmisji danych. Ich liczba i funkcje
+zależne są od typu danego interfejsu szeregowego.
+
+18. Schemat blokowy mikroserwera TCP/IP bazującego na kontrolerze Ethernet (np.
+ENC28J60) sterowanym interfejsem SPI, funkcje poszczególnych bloków
+mikroserwera TCP/IP.
+
+<image/figury/k8_page25_figure1.png>
+
+Funkcje bloków mikroserwera TCP/IP:
+
+. Mk (MCU) steruje kontrolerem Ethernet za pomocą interfejsu SPI.. Linią danych wyjściowych
+SDO przesyła się słowa sterujące, dane do wysłania najczęściej w postaci gotowego datagramu IP, a
+za pomocą linii danych wejściowych SDI odczytuje się odebrany datagram IP i dane statusowe. Mk
+programowo obsługuje stos TCP/IP, czyli realizuje najczęściej protokoły: Ethernet (składanie i
+analiza ramki ethernetowej), IP, ARP, TCP, UDP oraz protokoły warstwy aplikacji takie jak serwer
+HTTP, klient POP3, klient SMTP, itd.
+
+« Kontroler Ethernet w pełni sprzętowo realizuje obsługę sieci Ethernet. Uzupełnia ramki
+
+ethernetowe o preambułe i sumę kontrolną, koduje/dekoduje dane kodem Manchester, zapewnia
+odpowiednie poziomy sygnałów dla standardu 1OBASE-T.
+
++ Transformator separujący ma za zadanie galwanicznie odizolować mikroserwer od sieci Ethemet
+oraz, o ile jest to wymagane, uformować przebieg trapezoidalny z prostokątnego podawanego na
+różnicowym wyjściu TPIN, TPOUT.
+
+„ Do gniazda RJ-45 wpinamy kabel standardu 10BaseT łączący mikroserwer z siecią Internet.
+
+Mikrosterowniki i mikrosystemy rozproszone — Z ? 28
+
+19. Schemat blokowy bezprzewodowego systemu elektronicznego bazującego na
+kontrolerze ZigBee (np. AT86RF230), główne cechy standardu ZigBee.
+
+<image/figury/k8_page26_figure2.png>
+
+Bezprzewodowy system elektroniczny bazujący na kontrolerze ZigBee AT86RF230
+
+Główne cechy standardu ZigBee:
+
+. wykorzystywanie pasm 868/915 MHz i 2.4 GHz,
+
+. automatyczna rekonfiguracja sieci (self-healing),
+
+» praca w różnych topologiach: mesh (siatka), gwiazda, drzewo,
+» bardzo mały pobór mocy (kilka lat na jednej baterii),
+
+. globalna implementacja,
+
+» możliwość obsługi dużej liczby urządzeń.
+
+20. Schemat blokowy układów MEMS sterowanych interfejsem SPI, funkcje
+poszczególnych bloków układów, znaczenie linii układów.
+
+<image/figury/k8_page26_figure1.png>
+
+Mikrosterowniki i mikrosystemy rozproszone — Z? 29
+Składa się on z następujących bloków:
+
+„ Blok interfejsu SPI — obsługuje on interfejs SPI służący do komunikacji między mk a układem
+MEMS. Za jego pomocą transmitowane są dane do rejestrów konfiguracyjnych, a czytane dane z
+rejestrów statusu i rejestrów danych. Ponadto zawiera on rejestry kontrolne i statusowe, jak i rejestry
+danych
+
+« Czujnik mechatroniczny — właściwy blok układu MEMS przetwarzający daną wielkość fizyczną, do
+jakiej pomiaru jest ten układ przeznaczony, na wielkość elektryczną (najczęściej napięcie).
+
+« Blok kondycjonowania i przetwarzania sygnałów — przetwarza on sygnał elektryczny (np.
+wzmacnia, jak to jest konieczne — konwertuje na napięcie, filtruje) do postaci mierzalnej przez
+zawarty w nim przetwomik A/C, po czym konwertuje go na wartość cyfrową.
+
+« Blok kalibracji i cyfrowej obróbki danych — ze względu na nieliniowe zależności między
+wielkością fizyczną a przetworzonym na postać cyfrową sygnałem elektrycznym układ ten np.
+dokonuje kalibracji i przeskalowania wartości cyfrowej uzyskanej z poprzedniego bloku tak, aby
+reprezentowała ona rzeczywistą wielkość fizyczną.
+
++ Blok realizujący dodatkowe funkcje cyfrowe — odbiera i wysyła dane, konwertuje je na
+odpowiednie sygnały elektryczne zgodnie ze specyfikacją danego protokołu.
+
+Znaczenie linii układu:
++. SI — szeregowe wejście danych interfejsu SPI dla danych konfiguracyjnych,
+
++ SO — szeregowe wyjście danych interfejsu SPI służące do odbioru danych i odczytu danych statusu
+układu,
+
++. SCK -zegar taktujący transmisję szeregową interfejsu SPI.
++.  CS$- wejście wyboru układu uaktywniające interfejs SPI do udziału w transmisji,
+
+« LINIE CYFROWE — linie cyfrowe realizujące dodatkowe funkcje np. wyjście przerwania, wejście
+resetu, sygnały alarmowe, itp. Ich liczba i funkcje zależne są od specyfiki danego układu.
+
+„  Vref — napięcie referencyjne dla wewnętrznego przetwornika A/C.

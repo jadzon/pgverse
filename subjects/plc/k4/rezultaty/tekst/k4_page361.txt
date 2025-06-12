@@ -1,0 +1,29 @@
+JZ = skok przy zerze,
+
+JN==_skok gdy nie ma zera,
+
+JP = skok przy znaku plus,
+
+JM=<_skok przy znaku minus,
+
+JO = skok przy przepełnieniu.
+
+Argumentem wszystkich powyższych operatorów jest etykieta określająca miej-
+sce, do którego ma zostać wykonany skok. Skok można wykonać zarówno
+w przód (w kierunku przetwarzania programu) jak i wstecz. Może się on odby-
+wać jedynie w obrębie jednego bloku. Wykonanie instrukcji JU=, JC= jest takie
+samo jak ich odpowiedników należących do instrukcji podstawowych z tym, że
+w tym przypadku występuje warunkowy lub bezwarunkowy skok do odpowied-
+niej etykiety (a nie do bloku).
+
+Przukład
+
+dy stan licznika C5 > 40
+
+/k4_page361_figure2.png
+
+<image/figury/k4_page361_figure1.png>
+
+Rys. 7.27 Schemat blokowy wykonania programu
+
+wzarv/k4 naae361 faormula1.r

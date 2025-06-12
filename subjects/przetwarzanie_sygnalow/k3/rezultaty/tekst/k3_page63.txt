@@ -1,0 +1,39 @@
+Zapis stałoprzecinkowy (liczby całkowite)
+
+czony przykład podano w tablicy na rys. 4.1 (z użyciem tylko 4 bitów). Konwersja między
+sekwencją bitów a liczbą reprezentowaną przez tę sekwencję polega po prostu na zamianie
+podstawy 2 (kod binarny) na podstawę 10 (kod dziesiętny). Wadą tego zapisu jest brak moż-
+liwości reprezentacji liczb ujemnych.
+
+Zapis binarny przesunięty (offset binary) jest podobny do zapisu liczb całkowitych bez
+znaku, z tą różnicą, że wartości dziesiętne są przesunięte, co umożliwia zapis także liczb
+NASTAPI DEO PROT ATE FOO KAYA
+o siedem, co daje 16 sekwencji bitów reprezentujących liczby od -7 do 8. W ten sam sposób
+w zapisie 16-bitowym przesunięcie 32 767 daje zakres od -32 767 do 32 768. Zapis binarny
+
+dziedziną zastosowania zapisu binarnego przesuniętego są przetworniki a/c i c/a. Na przykład
+zakres napięcia wejściowego od -5 V do 5 V może być odwzorowany przez liczby od O do
+4095 przy przetwarzaniu 12-bitowym.
+
+Zapis znak-moduł jest innym prostym sposobem reprezentacji ujemnych liczb całkowitych.
+Pierwszy bit z lewej strony jest nazywany bitem znaku i zawiera zero dla liczb dodatnich
+i jeden dla ujemnych. Pozostałe bity są standardową binarną reprezentacją bezwzględnych
+wartości liczb. W ten sposób traci się jedną sekwencję bitów, gdyż są dwie reprezentacje
+zera, 0000 (zero dodatnie) i 1000 (zero ujemne). Zapis 16-bitowy znak-moduł daje repre-
+zentację liczb od —32 767 do 32 767.
+
+Te trzy wymienione sposoby zapisu są koncepcyjnie proste, lecz trudne do realizacji układo-
+wej. Pamiętajmy, że gdy wyrażenie A = B + C jest wprowadzane do programu komputero-
+wego, to jakiś inżynier musi wymyślić, jak utworzyć sekwencję bitów reprezentującą B, po-
+łączyć go z sekwencją bitów wyrażającą C, aby uzyskać sekwencję bitów reprezentującą A.
+Zapis uzupełnienia do 2 jest szczególnie lubiany przez inżynierów specjalizujących się w ukła-
+dach elektronicznych. W komputerach liczby całkowite są zwykle reprezentowane w tym za-
+PEER ENER
+
+reprezentowane przez ich biname równoważniki (0 = 0000, 1 = 0001, 2 = 0010,
+
+dziesiętne są
+3 = 0011 itd.). Przypomnijmy sobie teraz, że te cztery bity są zapisywane w rejestrze złożonym
+z 4 przerzutników. Jeśli znowu zaczniemy od 0000 i rozpoczniemy odejmowanie, to układy cy-
+
+<image/tabele/k3_page63_table1.png>

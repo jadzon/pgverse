@@ -1,0 +1,13 @@
+Liczbę zmiennych zachowywanych można zmieniać ustawiając odpowiednie
+bity słowa systemowego RS$/20, osobno dla markerów, czasomierzy i liczników,
+por. Rys. 7.6.
+
+<image/tabele/k4_page326_table2.png>
+
+Rys. 7.6 Bity słowa systemowego RS120 ustawiające pamięć stanu zmiennych
+
+Format danych dla sterowników serii Simatic S5 przedstawiono w Tab. 7.3.
+
+<image/tabele/k4_page326_table1.png>
+
+Tab. 7.3 Format danych

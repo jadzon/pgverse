@@ -1,0 +1,53 @@
+230
+
+<image/wzory/k2_page225_formula1.png>
+
+W programie dwukrotnie występuje standardowy predykat równości: N1=N-1
+oraz Res = N*X. Pierwszy z nich jest spełniony przy równości obu stron wyrażenia
+(znak - oznacza odejmowanie), przy czym jeżeli zmienna N1 jest wolna a zmienna N
+związana, to N1 zostaje związana z liczbą zapewniającą spełnienie predykatu. Ana-
+logicznie zdefiniowany jest drugi predykat, gdzie znak * oznacza mnożenie. |
+
+Poniżej przedstawionych jest kilka typowych programów rekurencyjnych operu-
+jących na listach.
+
+PRZYKŁAD 9.9
+
+Rozpatrzmy działanie programu sprawdzającego, czy dany obiekt jest elementem
+listy.
+
+/* Program 7 */
+
+element (Nazwa, ([Nazwa|_]).
+element (Nazwa, [_|Ogon]) :- element (Nazwa ,Ogon).
+
+Pierwsza klauzula programu stwierdza, że obiekt jest elementem listy, jeżeli jest
+jej głową, zaś druga klauzula stwierdza, że obiekt jest elementem listy, jeżeli jest
+elementem jej ogona. Klauzula druga powoduje rekurencyjne przęglądanie listy, jeżeli
+niespełniona jest klauzula pierwsza. Obydwie klauzule są niespełnione, jeżeli lista
+jest pustą.
+
+Wykonajując program dla zapytania element (1, [4,3,4,2,8,1,5]) otrzymu-
+jemy odpowiedż yes. Wykonując go z zapytaniem element (X,[1,2,3,4]) otrzy-
+muejmy 4 rozwiązania: X=1, X=b, X=c, X=d. Te ostatnie rozwiązania otrzymujemy
+dzięki procesowi nawracania, w którym zmienna X wiąże się z kolejnymi elementami
+listy. Taki sposób wywołania stanowi interesujący i często wykorzystywany „efekt
+uboczny” działania tego programu. |
+
+PRZYKŁAD 9.10
+
+Rozpatrzmy program dołączajacy listę (pierwszy argument predykatu dolacz_liste)
+do listy (drugi argument), tworząc nową listę (trzeci argument).
+
+/* Program 8 */
+
+dolacz_liste([] ,L,L).
+dolacz_liste([XIL1], Lista2, [XIL3]) :-
+dolacz_liste(Li,Lista2,L3).
+
+Na zapytanie dolacz_liste( [osa,komar] , [czerwony ,czarny] ,X). program od-
+powiada X=[osa,komar,czerwony ,czarny].
+
+Zauważmy, że klauzulom programu można przypisać interpretację: Połaczenie
+dwu list, gdy pierwsza lista jest pusta daje listę drugą, zaś gdy lista pierwsza nie
+jest pusta połączenie list polega na dopisaniu głowy listy pierwszej do połączenia

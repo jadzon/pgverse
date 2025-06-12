@@ -1,0 +1,35 @@
+Względna liczba jedynek i zer na wyjściu jest teraz zależna od poziomu napięcia wejścio-
+wego, a nie od nachylenia jego zmian, jak to było w układzie poprzednio omówionym.
+Można na przykład utworzyć 12-bitowy przetwornik a/c, wprowadzając sygnał wyjścio-
+wy do licznika i wyznaczając liczbę jedynek w 4096 okresach zegarowych. Liczba 4095
+będzie odpowiadała maksymalnemu dodatniemu napięciu wejściowemu. Liczba 0 będzie
+zaś odpowiadała maksymalnemu wejściowemu napięciu ujemnemu, a 2048 - napięciu
+wejściowemu równemu zero. Można teraz wyjaśnić pochodzenie nazwy metody delta-
+-sigma: modulacja delta, po której następuje sumowanie (sigma).
+
+Jedynki i zera generowane na wyjściu tego typu modułlatora delta można łatwo prze-
+kształcić w sygnał analogowy. Do tego celu wystarczy analogowy filtr dolnoprzepusto-
+wy, którym może być prosty, pojedynczy obwód RC. Następuje w nim uśrednianie wy-
+sokich i niskich stanów napięciowych odpowiadających stanom logicznym 0 i 1, dając
+w wyniku poprawne napięcie analogowe. Załóżmy na przykład, że stany I i © są wyra-
+żane napięciami 5 V i O V. Jeśli w strumieniu danych jest 80% jedynek a 20% zer, to na
+wyjściu filtru dolnoprzepustowego będzie napięcie 4 V.
+
+Ta metoda przekształcania jednobitowego strumienia danych z powrotem w przebieg ory-
+ginalny jest z kilku przyczyn bardzo ważna. Po pierwsze, wynika z niej zgrabny sposób
+zastąpienia licznika w przetworniku a/c delta-sigma. Zamiast prostego zliczania impulsów
+z modulatora delta, sygnał binarny jest przepuszczany przez cyfrowy filtr dolnoprzepusto-
+wy i następnie poddawany decymacji w celu zredukowania częstotliwości próbkowania.
+Ta procedura może się zacząć na przykład od zamiany na 12-bitowe próbki każdego zera
+i jedynki w strumieniu cyfrowym. Jedynki stają się próbkami o wartości 4095, a zera
+— o wartości 0. Taki sygnał, poddany dolnoprzepustowej filtracji cyfrowej, daje cyfrową
+wersję sygnału oryginalnego, podobnie jak dolnoprzepustowy filtr analogowy dałby re-
+konstrukcję analogową. Decymacja redukuje następnie częstotliwość próbkowania przez
+odrzucenie większości próbek. W rezultacie uzyskuje się sygnał cyfrowy równoważny
+uzyskiwanemu przez bezpośrednie próbkowanie przebiegu oryginalnego.
+
+Ta metoda jest stosowana w wielu dostępnych na rynku przetwornikach a/c służących do
+digitalizacji głosu i innych sygnałów fonicznych. Przykładem takiego 16-bitowego prze-
+twornika a/c jest układ ADC16071 firmy National Semiconductor o częstotliwości prób-
+
+<image/figury/k3_page60_figure1.png>

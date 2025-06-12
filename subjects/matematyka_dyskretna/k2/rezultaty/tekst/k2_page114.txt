@@ -1,0 +1,58 @@
+10.
+11.
+
+12.
+
+13.
+14.
+
+1.9. Problemy 23
+
+„ Udowodnij, że wszystkie funkcje boolowskie dwóch zmiennych można przedsta-
+
+wić za pomocą jednego operatora nand (lub nor).
+
+„ Ile funkcji / : B? — B spełnia równanie rf(z,y) = yf(z,y).
+
+. Funkcja f : B3 — B przyjmuje wartość 1 tylko dla wektorów (1,0,0), (0,1,0)
+
+oraz (0,0, 1). Przedstaw funkcję f w postaciach normalnych (dysjunkcyjnej i ko-
+niunkcyjnej).
+
+. Narysuj sieć boolowską dla funkcji z poprzedniego zadania.
+. Zaprojektuj sieć odejmującą od siebie dwie liczby w postaci dwójkowej.
+
+Zaprojektuj sieć, która mnoży dwie liczby dwubitowe.
+
+Opisz schemat sumatora dla liczb n-bitowych, którego głębokość jest proporcjo-
+nalna do log n.
+
+Oblicz wartość wyrażeń x or y, x andy, not x, x xor y:
+
+a) jeżeli zmienne x i y są typu shortint i przyjmują wartości: x=6, y=-3,
+b) jeżeli zmienne x i y są typu byte i przyjmują wartości: x=6, y=3.
+Dany jest wektor z = (0, 1, 1). Dla jakich wektorów r € B*, Par,(zx) = 1?
+
+Dane są dwa wektory: z = (0,1,0) oraz y = (0,0,1). Dla jakich wektorów r €
+B3, Par,(z) £ Par,(y).
+
+1.9 Problemy
+
+1.9.1 System one-pad
+
+System „one-pad” może być stosowany do ciągów liter alfabetu łacińskiego. W tedy utoż-
+samiamy litery z liczbami od 0 do 25 i zamiast operacji 6 stosujemy:
+
+<image/wzory/k2_page114_formula1.png>
+
+czyli resztę z dzielenia (x + k) przez 26. Jak wygląda wtedy operacja deszyfrowania?
+Pokaż, że system one-pad z literami jest równie bezpieczny jak system z dwoma cyframi
+
+0i1.
+
+1.9.2 Zabezpieczanie
+
+Zaproponuj zmiany w systemie podpisów opisanym pod koniec rozdziału, tak aby praw-
+dopodobieństwo wykrycia błędu zwiększyć do 0.75.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,54 @@
+Analiza systemów rekursywnych 581
+
+ 
+
+Dodatnie wykładniki potęg są często łatwiejsze w stosowaniu, a są wymagane w niektórych meto-
+dach przekształcenia Z. Dlaczego nie zapisać wzoru 33.3, stosując dodatnie wykładniki i całkiem
+zapomnieć o ujemnych? Nie możemy tego zrobić. Tę sztuczkę z pomnożeniem licznika i mianow-
+nika przez z w najwyższej potędze (jak z* w omawianym przykładzie) możemy zastosować tylko
+wówczas, gdy jest już znana liczba współczynników rekursywnych. Wzór 33.3 zaś jest zapisany
+dla dowolnej liczby współczynników. Prawdą jest, że w DSP są rutynowo stosowane zarówno
+wykładniki dodatnie, jak i ujemne i musicie wiedzieć, jak przechodzić od jednych do drugich.
+Funkcja przenoszenia systemu rekursywnego jest użyteczna, gdyż można nią operować takimi
+sposobami, których nie da się zastosować do współczynników rekursywnych. To obejmuje takie
+zadania, jak kaskadowe i równoległe łączenie stopni w jeden system, projektowanie filtrów przez
+określenie położeń biegunów i zer, przekształcanie filtrów analogowych w cyfrowe itd. Te operacje
+realizuje się przez działania algebraiczne wykonywane w dziedzinie z — takie, jak mnożenie, doda-
+wanie i rozkładanie na czynniki. Po wykonaniu tych operacji nadaje się funkcji przenoszenia po-
+stać taką, jak we wzorze 33.3, co umożliwia określenie nowych współczynników rekursywnych.
+Ważną cechą dziedziny s, podobnie jak dziedziny z, jest możliwość wyrażenie funkcji przeno-
+szenia przez bieguny i zera. Jest to druga ogólna postać funkcji przenoszenia w dziedzinie z:
+
+<image/wzory/k3_page540_formula1.png>
+
+Wzór 33.4. Funkcja przenoszenia wyrażona przez bieguny i zera
+
+Każdy z biegunów (p;, p», p3, ...) i każde z zer (zy, zj, Z3 ...) Są liczbami zespolonymi. Aby
+przejść od wzoru 33.4 do 33.3, trzeba wykonać wymnożenie i gromadzenie wyrazów podob-
+nych. Wymaga to wprawdzie żmudnych operacji algebraicznych, ale w swej istocie są one
+proste i łatwe do zapisania w formie procedury komputerowej. Przechodzenie z wzoru 33.3 do
+334 jest trudniejsze, gdyż wymaga rozkładania wielomianów na czynniki. Jak to rozważano
+w rozdziale 32, równanie kwadratowe można wykorzystać do rozkładania na czynniki, jeśli
+funkcja przenoszenia jest rzędu drugiego lub mniejszego (tzn. nie ma potęg z większych niż z?).
+W przypadku systemów rzędu wyższego niż drugi nie mogą — ogólnie biorąc — być stosowane
+metody algebraiczne; trzeba korzystać z metod numerycznych. Taka potrzeba, na szczęście,
+rzadko się pojawia; projektowanie filtrów cyfrowych zaczyna się od rozmieszczenia biegunów
+i zer (wzór 33.4) i kończy na współczynnikach rekursywnych (wzór 33.3), a nie odwrotnie.
+Tak jak wszystkie liczby zespolone, położenia zer i biegunów mogą być wyrażane bądź we
+współrzędnych prostokątnych, bądź w biegunowych. Zaletą zapisu biegunowego jest lepsza
+zgodność z naturalną organizacją płaszczyzny z. Natomiast zapis we współrzędnych pro-
+stokątnych jest na ogół preferowany w operacjach matematycznych. Łatwiej jest bowiem
+operować wyrażeniem 6 + j© niż re **.
+
+Jak przykład zastosowania wzorów 33.3 i 33.4 zaprojektujemy filtr pasmowozaporowy.
+Projektowanie będzie się składać z następujących kroków: 1) określenie rozmieszczenia bie-
+gunów i zer na płaszczyźnie z; 2) zapisanie funkcji przenoszenia w postaci zgodnej z wzorem
+33.4; 3) przekształcenie funkcji przenoszenia do postaci według wzoru 33.3 oraz 4) odczy-
+tanie z tego wzoru współczynników rekursywnych koniecznych do implementacji filtru. Na
+rys. 33.3 przedstawiono przykład, z którego będziemy korzystać — filtr pasmowozaporowy
+utworzony z dwóch biegunów i dwóch zer o położeniach:
+
+<image/tabele/k3_page540_table1.png>
+
+W celu zrozumienia, dlaczego jest to filtr pasmowozaporowy, porównajcie to rozmiesz-
+czenie biegunów i zer z rys. 32.6 obrazującym filtr pasmowozaporowy na płaszczyźnie s.

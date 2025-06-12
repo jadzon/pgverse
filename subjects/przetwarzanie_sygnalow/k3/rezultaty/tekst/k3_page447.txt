@@ -1,0 +1,44 @@
+Czym cyfrowe procesory sygnałowe różnią się od innych mikroprocesorów 483
+
+<image/figury/k3_page447_figure1.png>
+
+się, czy dwa sąsiednie zapisy są ustawione w kolejności alfabetycznej (IF A> B THEN...).
+Po drugie, jeśli te dwa zapisy nie są w kolejności alfabetycznej, to trzeba je przesunąć, aby
+tak było (A 2* B). Jeśli ten dwukrokowy proces jest powtarzany wiele razy na wszystkich
+sąsiadujących parach, to lista w końcu stanie się alfabetyczna.
+
+Jako inny przykład, rozpatrzmy drukowanie dokumentu z procesora tekstu. Komputer w spo-
+sób ciągły testuje urządzenie wejściowe (myszkę lub klawiaturę), sprawdzając, czy nie po-
+jawi się kod oznaczający „drukuj dokument”. Po wykryciu tego kodu program przenosi
+dane z pamięci komputera do drukarki. Mamy tu znowu te same dwie operacje podstawowe
+— przenoszenie danych i sprawdzanie nierówności. W zastosowaniach tego rodzaju operacje
+matematyczne są stosowane od czasu do czasu, lecz niezbyt często i nie mają znaczącego
+wpływu na całkowity czas wykonania programu.
+
+Natomiast szybkość wykonywania większości algorytmów DSP jest ograniczona prawie cał-
+kowicie przez wymaganą liczbę mnożeń i dodawań. Na przykład na rys. 28.2 przedstawiono
+implementację filtru cyfrowego SOI, a więc najczęściej spotykaną technikę DSP. Przy zasto-
+sowaniu zapisu standardowego sygnał wejściowy jest oznaczany jako x( ]. a wyjściowy jako
+y( ]. Naszym zadaniem jest obliczenie próbki w sygnale wyjściowym o położeniu n, tj. y[n].
+Filtr SOI wykonuje to obliczenie, przemnażając odpowiednie próbki sygnału wejściowego
+przez grupę współczynników oznaczonych jako: ag, ay, a>, az, ... i następnie sumując uzy-
+skane iloczyny. Sygnał wyjściowy y[n] można więc wyrazić wzorem:
+
+yln] = agx(n] + ayxln — 1] + azx(n — 2] + azxdn — 3] + a,x[n — 4] +...
+
+Jest to po prostu stwierdzenie, że sygnał wejściowy został poddany spłotowi z odpowiedzią
+impulsową filtru składającą się Z: ag, a;, a>, a3, ... Zależnie od zastosowania odpowiedź im-
+pulsowa filtru może zawierać tylko kilka współczynników albo nawet kilka tysięcy. W tym
+algorytmie główny wpływ na czas wykonania mają operacje matematyczne, choć są tu też
+operacje przesuwania danych i szacowania nierówności, używane na przykład do utrzymy-
+wania rezultatów pośrednich i do pętli sterowania.
+
+Procesor DSP, prócz tego że powinien wykonywać operacje matematyczne bardzo szybko,
+to musi mieć przewidywalny czas wykonania algorytmu. Powiedzmy, że dajecie waszemu
+komputerowi zadanie np. przekształcenia jakiegoś dokumentu z jednej postaci w inną. Wtedy
+nie ma znaczenia, czy przetwarzanie trwa dziesięć milisekund, czy dziesięć sekund. Po prostu
+czekacie, aż zadanie będzie wykonane i wtedy możecie zadać komputerowi następną pracę.
+Natomiast DSP stosuje się głównie w takich aplikacjach, gdzie przetwarzanie jest ciągłe, nie-
+mające ani początku, ani końca. Powiedzmy, że inżynier projektuje system DSP dla sygnału
+fonicznego, np. do aparatów słuchowych. Jeśli sygnał cyfrowy jest pobierany z szybkością
+20 000 próbek/s, to DSP musi być w stanie utrzymać przepływność 20 000 próbek/s. Są jednak

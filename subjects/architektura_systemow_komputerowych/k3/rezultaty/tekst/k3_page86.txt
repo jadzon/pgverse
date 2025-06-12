@@ -1,0 +1,55 @@
+76 4. Procesory
+
+ 
+
+mikrooperacja spod adresu 1 (ładowanie mnożnika do rejestru Q). W czasie wykonywania
+tej operacji jest badany warunek, i w zależności od wartości q na wyjściu multipleksera,
+pojawia się albo adres 2 z układu następnika (gdy q= 1 i następną operacją jest dodawanie),
+albo adres 3 z pola adresowego mikrorozkazu (gdy q = 0 i następną operacją jest następne
+przesuwanie). Czynności te powtarzają się jeszcze 7 razy, aż do ostatniego kroku, czyli
+warunkowego odejmowania. W czasie wykonywania mikrooperacji określonej przez
+mikrorozkaz spod adresu 15 jest badany warunek i albo wybierany jest adres następny
+(q= 1 i następną operacją jest odejmowanie), albo wybierany jest adres z części adresowej
+mikrooperacji i wybierany jest adres 18 (q= 0 i następuje koniec mikroprogramu).
+
+Przykładowy mikroprogram zajmuje pamięć stałą o pojemności 18 słów 17-bitowych
+i realizuje tylko jeden rozkaz. W przykładzie wystarczy zastosować pamięć o pojemności
+32 słowa, więc adresowaną 5 bitami. Można zauważyć, że ten mikroprogram można
+napisać inaczej. Ponieważ znana jest z góry liczba kroków a w każdym kroku pojawiają
+się dwa mikrorozkazy (przesuwanie i dodawanie), to można zastosować pętlę rozkazów.
+Rzeczywiste układy sterujące zawierają wiele mikroprogramów, po jednym dla każdego
+rozkazu. Pojemności pamięci stałej układów sterujących wynoszą tysiące słów, niekiedy
+ponad 100-bitowych.
+
+4.6. PRZYKŁADOWA LISTA ROZKAZÓW
+
+Typowy zbiór rozkazów prostego procesora składa się z 4 grup rozkazów:
+l) rozkazów arytmetyczno-logicznych;
+2) rozkazów przesłań (pomiędzy procesorem i pamięcią lub procesorem i urządzenia-
+mi zewnętrznymi);
+3) rozkazów sterujących wykonywaniem programu;
+4) rozkazów sterujących pracą procesora.
+
+Dalej przedstawiono przykładowe rozkazy z podanych czterech grup. Skrótowe nazwy
+rozkazów, zwane mnemonikami podano w języku angielskim, gdyż są one powszechnie
+zaakceptowane. Jako przykładowe mnemoniki przyjęto stosowane w popularnych kompu-
+terach IBM PC.
+
+4,6.1. ROZKAZY ARYTMETYCZNO-LOGICZNE
+
+ROZKAZY ARYTMETYCZNE
+
+ADD — addition — dodawanie;
+
+SUB — subtraction — odejmowanie;
+MUL — multiplication — mnożenie;
+DIV — division — dzielenie;
+
+ABS — absolute — wartość bezwzględna liczby;
+NEG — negate — zmiana znaku liczby;
+
+INC — increment — zwiększenie wartości o jeden;
+DEC — decrement — zmniejszenie wartości o jeden.
+
+Zgodnie z tym co powiedziano w poprzednich podrozdziałach argumenty oraz wyniki
+działania rozkazu nazywać będziemy operandami. Pierwsze 4 rozkazy tej grupy są dwu-

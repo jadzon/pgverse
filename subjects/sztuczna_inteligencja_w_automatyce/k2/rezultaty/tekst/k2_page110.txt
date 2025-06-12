@@ -1,0 +1,28 @@
+<image/figury/k2_page110_figure2.png>
+0_figure1.png
+
+Wariant „najlepszy globalnie”
+
+W wariancie najlepszy globalnie (ang. global best) położenie cząstki w kroku itera-
+cyjnym ł + 1 zmienia się według wzoru
+
+<image/wzory/k2_page110_formula1.png>
+
+gdzie w;(t) oznacza pozycję cząstki 4 w kroku ł, a v,(ł + 1) oznacza prędkość cząstki
+obliczaną według wzoru
+
+<image/wzory/k2_page110_formula2.png>
+
+gdzie c; i cą są dodatnimi stałymi, r;(£) and ro(£) są macierzami diagonalnymi o loso-
+wych elementach wybranych z rozkładu równomiernego w przedziale [0,1], y;(t) jest
+najlepszą dotychczasową pozycją cząstki (najlepszą osobistą (ang. personal best))
+spośród wszystkich pozycji osiąganych od pierwszego kroku, a Y(£) jest najlepszą po-
+zycją spośród najlepszych osobistych pozycji wszystkich cząstek (najlepszą globalną
+(ang. global best)).
+
+W literaturze dotyczącej algorytmów roju powyższe składowe nazywane są na-
+stępująco:
+
+e poprzednia prędkość cząstki, v, — składową momentu lub inercji,
+
+e czr;(t)[y;(t) — x;(t)| — składową kognitywną,

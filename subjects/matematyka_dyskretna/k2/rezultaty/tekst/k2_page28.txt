@@ -1,0 +1,35 @@
+1.10. System szesnastkowy 13
+
+1.10 System szesnastkowy
+
+W informatyce używa się też systemu szesnastkowego, gdzie podstawą jest liczba 16. Do
+systemu szesnastkowego potrzebujemy szesnastu cyfr. Zwykle używa się następujących
+„cyfr
+
+<image/wzory/k2_page28_formula1.png>
+
+W ponizszej tabel! zestawiono cytry systemu szesnastkowego z odpowiadającymi 1m licz-
+bami w systemie dwójkowym i dziesiętnym.
+
+<image/tabele/k2_page28_table1.png>
+
+W języku Pascal liczby w systemie szesnastkowym poprzedza się znakiem dolara $, a w
+języku € znakami Or.
+
+Przykład 1.16 Zapis $.A1 oznacza liczbę w systemie szesnastkowym, która w systemie
+dziesiętnym ma postać $A1 = 10 - 16 + 1 = (161)0
+
+Dzięki temu, że 16 jest potęgą dwójki, prosta jest zamiana postaci liczby z systemu dwój-
+kowego na szesnastkowy, i na odwrót. Przy zamianie z systemu szesnastkowego na dwój-
+kowy wystarczy zamieniać kolejne cyfry przedstawienia na grupy odpowiednich czterech
+bitów według powyższej tabeli.
+
+Przykład 1.17 Liczba, która w systemie szesnastkowym wygląda tak $.A91 w systemie
+dwójkowym ma postać 1010|1001|0001.
+
+Przy zamianie z postaci dwójkowej na postać szesnastkową postępujemy odwrotnie. Za-
+stępujemy grupy po cztery bity pojedynczymi cyframi.
+
+Przykład 1.18 (1110/0011|1011|0000)ą = $E3B0.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

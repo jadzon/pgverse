@@ -1,0 +1,22 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z ? 23
+
+13. Schemat blokowy układu cyfrowego czujnika temperatury z interfejsem SPI (np.
+AD7814), funkcje poszczególnych jego bloków, znaczenie linii układu, przebiegi
+czasowe interfejsu SPI.
+
+<image/figury/k8_page21_figure2.png>
+
+<image/figury/k8_page21_figure1.png>
+
+DIN - Wejście danych szeregowych dla danych do rejestru kontrolnego. Dane są wprowadzane do
+rejestru kontrolnego na narastające zbocze sygnału zegarowego SCLK.
+
+SC LK — Wejście zegara interfejsu szeregowego. Zegar wykorzystywany jest do wyprowadzania danych z
+rejestru zawierającego wartość zmierzonej temperatury oraz do zapisywania danych do rejestru
+kontrolnego
+
+CS — Wejście wyboru układu. Urządzenie jest wybrane, gdy jest podany na nie stan niski. Wejście SCLK
+jest wyłączone, gdy podany jest stan wysoki na tym pinie.
+
+DOUT - Wyjście danych szeregowych zawierających zmierzoną temperaturę. Na opadające zbocza
+sygnału zegarowego SCLK wystawiane są bity rejestru z wartością temperatury.

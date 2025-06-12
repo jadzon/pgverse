@@ -1,0 +1,21 @@
+<image/figury/k2_page199_figure5.png>
+
+Rys. 8.8: Programowanie maszyny analogowej, a obok układ całkujący
+
+<image/wzory/k2_page199_formula1.png>
+
+Rys. 8.9: Układ elektryczny równoważny układowi masy i sprężyny
+
+rozwiązywanie opisujących go równań w komputerze. Sam opis matematyczny często
+od razu powstaje jako program komputerowy. Symulatory komputerowe złożonych
+obiektów czy procesów wsparte często przez urządzenia mechaniczne symulujące
+ruch obiektów (np kabiny pilota samolotu) stanowią bardzo ważne zastosowania
+informatyki w wielu dziedzinach techniki i nauki.
+
+Na rys. ?? przedstawiono widok ekranu symulatora panelu sterowania silnika
+okrętowego (Szkoła Morska w Gdyni) i jeden z ekranów popularnego symulatora
+lotu firmy Microsoft.
+
+<image/figury/k2_figury/k2_page199_figure4.png>
+
+Rys. 8.10: Symulator silnika okrętowego i symulator lotu

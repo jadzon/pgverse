@@ -1,0 +1,28 @@
+Filtry górnoprzepustowe, pasmowoprzepustowe i pasmowozaporowe 263
+
+Aby ta metoda była skuteczna, składowe małoczęstotliwościowe wychodzące z filtru dolnoprzepu-
++ stowego muszą mieć taką sama fazę, jak składowe małoczęstotliwościowe z systemu wszechprze-
+- pustowego. W innym razie nie mogłoby nastąpić pełne odejmowanie. Stąd wynikają dwa ograni-
+czenia metody: 1) oryginalna odpowiedź impulsowa musi się charakteryzować symetrią lewo-pra-
+wostronną (tj. p WE RW OI YZ
+Drugą metodą zamiany filtru dolnoprzepustowego na górnoprzepustowy jest odwrotna inwersja
+widmowa (rys. 14.7). Tak jak poprzednio, odpowiedź impulsowa filtru dolnoprzepustowego (rys.
+Ta) tej odpowiedź zjaciościewą fazowa śś ryc. 14.16): Gpowbi częnediwo-
+ściowa filtru gómoprzepustowego (rys. 14.7 c) jest tworzona przez zmianę znaku co drugiej prób-
+ki na rys. 14.7 a). Jak pokazano na rys. 14.7 d), ta operacja powoduje lewo-prawostronne odwróce-
+nie odpowiedzi częstotliwościowej: ( staje się 0,5 a 0,5 staje się 0. Jeśli na przykład
+
+odcięcia filtru dolnoprzepustowego jest 0,15, to uzyskanego górnoprzepustowego będzie 0,35.
+Zmiana znaku co drugiej próbki jest równoważna pomnożeniu odpowiedzi impulsowej filtru przez
+GRO jak stwierdzono w rozdziale 10, jest przesunięcie
+w dziedzinie częstotliwości o 0,5. Spójrzcie na rys. 14.7 b) i wyobraźcie sobie ujemne częstotli-
+wości między -0,5 i 0 będące lustrzanym odbiciem częstotliwości między O i 0,5. Częstotliwości
+pojawiające się na rys. 14.7 d) są ujemnymi częstotliwościami z rys. 14.7 b) przesuniętymi o 0,5.
+Na koniec, na rysunkach 14.8 i 14.9 pokazano, jak można łączyć ze sobą odpowiedzi czę-
+
+meta prow ym nc e sesr-czzyykin
+modli orki hi (i
+
+Wszystkie te metody funkcjonują bardzo dobrze, bez większych
+
+<image/figury/k3_page241_figure1.png>

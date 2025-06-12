@@ -1,0 +1,36 @@
+14 Rozdział 1. Rachunek prawdopodobieństwa
+
+b) Niech Y oznacza sumę wartości oczek w rzucie dwoma kostkami, przykład 1.22e.
+Gęstość rozkładu prawdopodobieństwa zmiennej losowej Y przedstawia następująca
+tabela:
+
+<image/wzory/k2_page7/3_formula1.png>
+
+Mając funkcję gęstości rozkładu zmiennej X możemy określać prawdopodobieństwa
+zdarzeń opisywanych za pomocą zmiennej X.
+
+Przykład 1.27 a) Dla zmiennej losowej X; z przykładu 1.24. mamy
+
+<image/wzory/k2_page73_formula2.png>
+pamiętajmy, że zdarzenia .X3 = 0 oraz .X3 = 1 są rozłączne.
+b) Dla zmiennej Y z przykładu 1.26b mamy
+<image/wzory/k2_page73_formula3.png>
+W przypadku dwóch zmiennych losowych X i Y określonych na tej samej przestrzeni
+
+zdarzeń elementamych (» mamy tak zwany łączny rozkład prawdopodobieństwa, którego
+gęstość jest określona jako
+
+<image/wzory/k2_page73_formula4.png>
+
+(X=z i Y =y)jest innym zapisem zdarzenia (X = r) 1 (Y =y).
+
+Przykład 1.28 a) Łączny rozkład zmiennych losowych X; i X2, z przykładu 1.22b
+jest przedstawiony w tabeli
+
+<image/wzory/k2_page73_formula5.png>
+
+ficuiru/k? naaa73 fiatnra1 nna
+
+<image/figury/k2_page73_figure2.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

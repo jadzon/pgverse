@@ -1,0 +1,15 @@
+Zadanie - wyznaczanie parametrów cyklu granicznego
+
+ 
+
+Wpływ szybkości zmian sygnału zadającego
+
+eoblnsido eloy4un4
+
+<image/figury/k7_page186_figure1.prfigury/k/_page186_figure2.png>
+
+Rozważany układ, w zależności od szybkości zmian sygnału zadającego może być stabilny lub
+niestabilny
+
+POLITECHNIKA i |
+GDANSKA

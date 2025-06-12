@@ -1,0 +1,60 @@
+148
+
+ 
+
+8. Dyskretne przekształcenie Fouriera
+
+W standardowym zapisie DSP używa się małych liter do wyrażania sygnałów w dziedzinie
+czasu, takich jak x[ ], y( ] i zl ]. Odpowiadające im duże litery są stosowane do wyrażania
+tych sygnałów w dziedzinie częstotliwości, a więc X[ ], Y[ ] i Z[ ]. Jako ilustrację tej zasa-
+dy przyjmujmy, że N-punktowy sygnał w dziedzinie czasu jest zawarty w x( ]. Ten sygnał
+w dziedzinie częstotliwości jest nazwany X[ ] i składa się z dwóch części, z których każda
+zawiera zestaw N/2 + 1 próbek. Jest to część rzeczywista X| |. zapisywana jako Re X[ |
+i część urojona X| |. zapisywana jako Im X| |. Część Re [X] wyraża wartości fali kosinuso-
+idalnej, a Im [X] — sinusoidalnej (pomijamy na razie kwestię czynników skalujących). Sygnał
+w dziedzinie czasu obejmuje zakres od x[0] do x[N — 1]. a w dziedzinie częstotliwości — od
+Re X[0] do Re X[N/2] oraz od Im X[0] do Im X[N/2]. Dokładnie przestudiujcie te zapisy, mają
+one bardzo istotne znaczenie dla zrozumienia wzorów w DSP. Niektóre języki komputerowe
+nie rozróżniają, niestety, małych i dużych liter, pozostawiając indywidualnym programistom
+kwestię oznaczenia zmiennych. W programach w tej książce zastosowano matrycę XX[ |
+do przechowywania sygnału w dziedzinie czasu oraz matryce REXI |] i IMX[ |] — do sygnału
+w dziedzinie częstotliwości.
+
+Nazwy część rzeczywista i część urojona pochodzą z zespolonego przekształcenia DFT, gdzie
+są stosowane do rozróżnienia liczb rzeczywistych i urojonych. Zadne takie komplikacje nie
+są konieczne w rzeczywistym przekształceniu DFT. Zanim dojdziemy do rozdziału 31, przyj-
+mijcie po prostu, że „część rzeczywista” wyraża wartości fali kosinusoidalnej, podczas gdy
+„część urojona” — fali sinusoidałnej. Niech te sugestywne nazwy was nie zmyłą, wszystko
+tutaj jest wyrażane w liczbach rzeczywistych.
+
+Nie dajcie się też zmylić długością sygnałów w dziedzinie częstotliwości. W publikacjach
+o DSP często spotyka się stwierdzenia, takie jak: „Przekształcenie DFT zamienia N-punktowy
+sygnał w dziedzinie czasu w N-punktowy sygnał w dziedzinie częstotliwości”. To stwierdze-
+nie odnosi się do zespolonego przekształcenia DFT, gdzie każdy „punkt” jest liczbą zespo-
+loną (złożoną z części rzeczywistej i urojonej). Na razie skoncentrujmy uwagę na rzeczywi-
+stym przekształceniu DFT; trudna matematyka pojawi się później.
+
+Zmienna niezależna w dziedzinie częstotliwości
+
+Na rys. 8.4 przedstawiono przykład DFT z N= 128. Sygnał w dziedzinie czasu jest zawarty
+w matrycy x[0] do x[127]. Sygnały w dziedzinie częstotliwości umieszczono w dwóch ma-
+trycach: Re X[0] do Re X[64] i Im X[0] do Im X[64]. Zauważmy, że 128 punktów w dziedzi-
+nie czasu odpowiada 65 punktom w każdym z sygnałów w dziedzinie częstotliwości, Z in-
+deksami zmieniającymi się od 0 do 64. Z tego wynika, że N punktom w dziedzinie czasu
+odpowiada N/2 + | punktów w dziedzinie częstotliwości (a nie N/2 punktów). Zapominanie
+o tym dodatkowym jednym punkcie jest często spotykanym błędem w programach DFT.
+Oś pozioma w dziedzinie częstotliwości może być wyskalowana jednym z czterech różnych
+sposobów; wszystkie są często spotykane w DSP. W pierwszej metodzie oś pozioma jest
+wyskalowana od 0 do 64, zgodnie z numeracją próbek w matrycach od 0 do N/2. Gdy stosuje
+się takie wyskalowanie, indeks w dziedzinie częstotliwości jest liczbą całkowitą, np. Re X[i]
+i Im XIk), gdzie k zmienia się od © do N/2 w krokach co jeden. Programiści lubią tę metodę.
+gdyż jest tu zgodność z pisaniem programu, gdzie stosują indeksy w celu adresowania mar
+trycy. Takie wyskalowanie zastosowano na rys. 8.4 b).
+
+W drugiej metodzie, stosowanej na rys. 8.4 c), oś pozioma jest wyskalowana w ułam-
+kach częstotliwości próbkowania. To oznacza, że wartości wzdłuż osi poziomej zawsze
+zmieniają się od O do 0,5, gdyż dane dyskretne mogą zawierać częstotliwości tylko od 0
+(prąd stały) do połowy częstotliwości próbkowania. Indeksem stosowanym w tym zapisie
+jest f, częstotliwość. Część rzeczywista i urojona są zapisywane jako Re X[/] i Im X[), gdzie
+f przyjmuje N/2 + 1 wartości rozmieszczonych w równych odstępach między 0 a 0,5. Aby
+przejść od poprzedniego zapisu (K) do drugiego (/), trzeba podzielić wartości skalowania osi

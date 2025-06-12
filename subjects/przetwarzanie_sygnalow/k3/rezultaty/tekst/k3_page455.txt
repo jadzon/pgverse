@@ -1,0 +1,57 @@
+DSP stałoprzecinkowe a DSP zmiennoprzecinkowe 491
+
+wykonuje dodawanie, odejmowanie, wyznaczanie wartości bezwzględnej, operacje logiczne
+(AND, OR; XOR, NOT), konwersję między formatami stało- i zmiennoprzecinkowym i po-
+dobne funkcje. W rejestrze przesuwającym są wykonywane elementarne operacje binarne,
+takie jak przesuwanie, obracanie, wydzielanie i przenoszenie segmentów itd. Stwarzającą
+wielkie możliwości cechą rodziny procesorów SHARC jest równoległy dostęp do układu
+mnożącego i do ALU. W ciągu jednego okresu zegarowego dane z rejestrów (0-7 mogą być
+przekazane do układu mnożącego, dane z rejestrów 8-15 - do ALU i oba uzyskane wyniki
+przekazane z powrotem do jednego z 16 rejestrów.
+
+Rozszerzeniem pierwotnej architektury SHARC jest w rodzinie ADSP-2116x SHARC moż-
+liwość pracy typu SIMD (pojedyncza instrukcja — wiele danych, Single Instruction Mułtipie
+Data), jak w ADSP-TS101. Mówiąc w skrócie, operacja SIMD daje możliwość realizacji
+w procesorze DSP tej samej instrukcji jednocześnie z dwoma zestawami danych.
+
+O ile w rodzinie 2106x był tylko jeden element procesorowy, to 2116x oraz TSI01 zawie-
+rają po dwa takie elementy — PE x i PE y w procesorze 2116x i po prostu X i Y w TS101.
+PE X działa w sposób konwencjonalny i gdy jest w trybie pracy SIMD, te same instruk-
+cje są wykonywane na danych w PE x (w rejestrze plik od RO do R15) oraz na danych
+w PE y (w rejestrze plik od SO do $15). Dalszym wzbogaceniem procesora jest operacja
+MIMD — wiele instrukcji — wiele danych (Mulripie Instructions Multiple Data). Umożliwia
+ona układom komputera wykonywanie różnych operacji na różnych fragmentach danych
+w tym samym okresie zegara. Ta operacja jest dostępna w procesorze sygnałowym ADSP-
+T$101 TigerSHARC firmy Analog Devices.
+
+W architekturze DSP Blackfin”M, o dużej szybkości działania i dużych możliwościach, blo-
+ki komputera są tak zaprojektowane, żeby zmaksymalizować liczbę operacji matematycz-
+nych, które mogą być wykonane w jednym okresie zegara. Sercem procesora o architekturze
+Blackfin jest jednostka arytmetyczna danych (data arithmetic unit) zawierająca dwa 16-
+-bitowe akumulatory układu mnożącego (MAC — Multiplier Accumulator), dwie 40-bitowe
+jednostki arytmetyczno-logiczne (ALU), cztery 8-bitowe wizyjne ALU i pojedynczy 40-bito-
+wy szybki rejestr przesuwający. W tej architekturze 8-, 16- i 32-bitowe słowa danych mogą
+być przetwarzane w prosty sposób z maksymalną wydajnością.
+
+Porównując te różne techniki dochodzimy do ciekawego spostrzeżenia. W prawie wszystkich
+technikach DSP jest wymagane wykonanie od 4 do 400 instrukcji (impulsów zegarowych
+w procesorach rodziny SHARC). Co do drugiej generacji procesorów sygnałowych SHARC
+ADSP2116x pracujących z częstotliwością 100 MHz możemy od razu wyciągnąć wniosek,
+że jego przepływność danych będzie od 250k do 25M próbek na sekundę, zależnie do stopnia
+skomplikowania algorytmu. W procesorze ADSP-TS101, 250 MHz przepływność zaś będzie
+między 625k i 62,5M próbek na sekundę, też zależnie od skomplikowania algorytmu. W tych
+wartościach przepływności nie wzięto pod uwagę korzyści wynikających z zastosowania try-
+bu SIMD skracającego czas przetwarzania o połowę, podwajając przepływność danych.
+
+<image/wzory/k3_page455_formula1.png>
+
+Cyfrowe procesory sygnałowe można podzielić na dwie kategorie: stałoprzecinkowe
+i zmiennoprzecinkowe. Taki podział dotyczy formatu stosowanego do przechowywania
+liczb w urządzeniu i operowania nimi. W stałoprzecinkowych DSP każda liczba jest zwykle
+reprezentowana przez co najmniej 16 bitów, chociaż bywają też stosowane inne długości
+reprezentowanych liczb. Na przykład firma Motorola produkuje rodzinę 24-bitowych stało-
+przecinkowych procesorów sygnałowych. Istnieją cztery często stosowane sposoby reprezen-
+towania liczb przez tych 2!$ = 65 536 możliwych ustawień. W przypadku reprezentowania
+liczb całkowitych bez znaku zapisana liczba może przyjmować wartości od 0 do 65 535.
+W metodzie reprezentowania liczby całkowitej ze znakiem stosuje się zapis uzupełnienia
+do dwóch, aby uzyskać zakres obejmujący także liczby ujemne od -32 768 do 32 767. Przy

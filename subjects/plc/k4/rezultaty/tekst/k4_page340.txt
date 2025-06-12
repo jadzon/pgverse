@@ -1,0 +1,34 @@
+Nzory/k4_page340_formula1.png |IRMRANSE
+
+Czasomierz odmierza zaprogramowany czas, gdy wynik warunku uruchomienia
+czasomierza zmieni wartość z 0 na 1 (zbocze narastające). Testowanie czasu na
+wartość | daje wynik 1, gdy:
+
+warunek uruchomienia czasomierza jest spełniony i
+zaprogramowany czas upłynął i
+warunek zerowania czasomierza nie jest spełniony.
+
+*nia czasomierza
+'OŚCI czasu
+ienia czasomierza załączającego
+
+'k4_page340_table1.0NQ  czasomierza
+
+a czasomierza
+
+Czasomierz zostanie uruchomiony i zacznie odliczać czas t=300x0.1s=30s
+w chwili, gdy wejście / 7.0 zmieni wartość z 0 na | a na wejściu 7 7.7 jest war-
+tość 0. Wyjście Q 4.0 przyjmie wartość | po upływie 30s. Jeśli wejście 7 7.0
+przyjmie wartość 0, to wyjście Q 4.0 przyjmie również wartość 0. Gdy stan wej-
+ścia I 7.] zmieni się z O na 1, to wartość czasu zostanie wyzerowana niezależnie
+od stanu wejścia 7 7.0, natomiast wyjście Q 4.0 przyjmie wartość 0. W przypad-
+ku, gdy wejście 7 7.7 ma wartość 1, to zmiana stanu wejścia I 7.0 z O na 1 nie
+spowoduje uruchomienia czasomierza.
+
+<image/figury/k4_page340_figure1.png>
+
+Rys. 7.12 Diagram pracy czasomierza załączającego z opóźnieniem
+
+ 
+
+340 Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5

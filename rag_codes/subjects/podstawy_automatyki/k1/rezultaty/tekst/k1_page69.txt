@@ -1,0 +1,34 @@
+Dla K=2i T=4 wykres charakterystyki amplitudowo-fazowej dla elementu cał-
+kującego rzeczywistego przedstawia rysunek 2.17.
+
+Charakterystyka logarytmiczna modułu (amplitudowo-częstotliwościowa)
+
+Obliczamy moduł M(w):
+
+<image/wzory/k1_page69_formula1.png>
+
+<image/wzory/k1_page69_formula2.png>
+
+<image/wzory/k1_page69_formula3.png>
+
+Moduł wygodniej jest przedstawić w decybelach — wyliczamy Z(w)
+
+<image/wzory/k1_page69_formula4.png>
+<image/wzory/k1_page69_formula5.png>
+
+Charakterystykę logarytmiczną modułu, przy odpowiednich założeniach, można
+aproksymować odcinkami linii prostych.
+Cały zakres pulsacji dzielimy na dwa przedziały dla:
+
+<image/wzory/k1_page69_formula6.png>
+
+<image/wzory/k1_page69_formula7.png>
+
+— pulsacja sprzęgająca, inaczej pulsacja załamania przybliżonej
+charakterystyki amplitudowo-częstotliwościowej
+
+l
+dzie 06. =—
+gdzie W; T
+
+71

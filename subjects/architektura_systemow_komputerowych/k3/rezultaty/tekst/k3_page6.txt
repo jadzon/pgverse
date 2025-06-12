@@ -1,0 +1,54 @@
+Opiniodawca:
+prof. dr hab. inż. Wiesław Traczyk
+
+Projekt okładki:
+Cezary Stępień
+
+Redaktor merytoryczny:
+mgr inż. Elżbieta Gawin
+
+Redaktor techniczny:
+Jadwiga Majewska
+
+Korekta:
+Alina Podmiotko
+
+Przygotowanie do druku:
+ARKATRONIC SA
+
+681.32-181.48
+
+W książce przedstawiono budowę i działanie klasycznych komputerów. Omówiono
+ich bloki (procesory, pamięci i zasady ich współpracy z urządzeniami zewnętrz-
+nymi), współpracę pomiędzy nimi oraz funkcje oprogramowania. Na końcu książki
+omówiono także współczesne mechanizmy stosowane w nowoczesnych kompute-
+rach dla przyspieszenia ich pracy.
+
+Książka jest przeznaczona dla studentów kierunków informatycznych wyższych uczelni
+technicznych i uniwersytetów oraz uczelni nietechnicznych.
+
+ISBN 83-206-1196-2
+© Copyright by Wydawnictwa Komunikacji i Łączności sp. Z 0.0. Warszawa 1996, 1997
+
+Wydawnictwa Komunikacji i Łączności sp. Z 0.0.
+ul. Kazimierzowska 52, 02-546 Warszawa, tel. (0-22) 49-27-51, fax (0-22) 49-23-22
+Warszawa 1997. Wydanie 2
+
+Wydawnictwa Komunikacji i Łączności sp. Z 0.0.
+
+ul. Kazimierzowska 52, 02-546 Warszawa
+
+tel. (0-22) 49-27-51; fax (0-22) 49-23-22
+
+Dział handlowy (0-22) 49-23-45
+
+Prowadzimy sprzedaż wysyłkową książek
+
+Księgarnia firmowa w siedzibie wydawnictwa
+
+te. (0-22) 49-20-32, czynna pon.—pt. 10.00—18.00
+
+Warszawa 1997. Wydanie 2
+
+Drukarnia Wydawnicza im. W. L. Anczyca S.A. w Krakowie
+Druk z gotowych diapozytywów. Zam. 5443/97

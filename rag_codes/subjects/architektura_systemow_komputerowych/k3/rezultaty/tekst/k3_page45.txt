@@ -1,0 +1,30 @@
+3.1. Układy cyfrowe 35
+
+<image/figury/k3_page45_figure3.png>
+
+Rysunek 3.35. Kaskadowc połączenie liczników
+
+Na rysunku 3.35 pokazano sposób łączenia trzech 4-bitowych liczników celem zwięk-
+szenia jego okresu do 4096 stanów. W układzie występuje pełny synchronizm z prze-
+biegiem zegarowym, gdyż wszystkie przerzutniki wszystkich liczników zmieniają swoje
+stany jednocześnie. Pozwala to na prawidłowe dekodowanie tych stanów, bez szkodliwego
+zjawiska hazardu.
+
+<image/figury/k3_page45_figure1.png>
+
+Rysunek 3.36. Licznik o okresie 11
+
+Często występuje problem projektowania liczników nie tylko o różnych okresach,
+ale i o różnych sekwencjach stanów. Rozpatrzmy działanie układu z rysunku 3.36. W tym
+układzie licznik po osiągnięciu stanu 1111 generuje sygnał TC, który jest podawany na
+wejście LD, co ma spowodować załadowanie do licznika nowej zawartości. Zatem w cza-
+sie następnego impulsu zegarowego do licznika zostanie wpisana wartość z jego wejść.
+W naszym przykładzie będzie to stan 1010 (dziesiętnie 5). Okres takiego licznika wynosi
+16-5 = 11, a sekwencja stanów przebiega od 1010 do 1111.
+
+Przedstawione teraz będzie działanie układu z rysunku 3.37. W tym przypadku licznik
+jest zerowany, gdy pojawi się na jego wyjściach stan 1101. Jego sekwencja stanów
+
+<image/figury/k3_page45_figure2.png>
+
+Rysunek 3.37. Licznik o okresie 14

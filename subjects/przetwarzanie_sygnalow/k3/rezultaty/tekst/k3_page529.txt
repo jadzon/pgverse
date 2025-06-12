@@ -1,0 +1,25 @@
+Znaczenie zer i biegunów 569
+
+<image/figury/k3_page529_figure1.png>
+
+Wzór 32.3 opisuje również, jak wielokrotne bieguny i zera współdziałają w tworzeniu sygna-
+łu w dziedzinie s. Jak pamiętacie, odejmując dwie liczby zespolone, uzyskuje się odległość
+między nimi na płaszczyźnie zmiennej zespolonej. Na przykład (s — z9) jest odległością mię-
+dzy dowolnym położeniem s i zerem znajdującym się w położeniu zy. A zatem wzór 32.3
+SAO BEKA kady położone ELORAR RZEC PC
+nia od wszystkich zer, podzielonemu przez iłoczyn odległości od wszystkich biegunów.
+
+Ni AS © aks wikt Gw ród GG BRAL WIKI sA IE
+mieszczenie zer i biegunów umożliwia głębsze zrozumienie odpowiedzi częstotliwościowej
+systemu. Odpowiedź częstotliwościową tworzą wartości funkcji przenoszenia H(S) znajdują-
+ce się wzdłuż osi urojonej, oznaczone ciemną linią na obrazie topograficznym na rys. 32.7.
+Wyobraźmy sobie naszą mrówkę wyruszającą z początku układu współrzędnych i posuwającą
+się wzdłuż osi liczb urojonych. W pobliżu początku układu współrzędnych odległość do zer
+jest w przybliżeniu równa odległości do biegunów. Z tego powodu licznik i mianownik we
+wzorze 32.3 są sobie równe, dając odpowiedź częstotliwościową równą 1 przy małych czę-
+stotliwościach. Taka sytuacja nie zmienia się w sposób znaczący, dopóki mrówka nie dotrze
+a EE oki ADA Pay: denied do pok A AGA apa godka
+uzyskując wartość zero, gdy mrówka jest w położeniu zera. Gdy mrówka minie już parę bie-
+gun-zero, wartość H(s) znowu wraca do jedności. Stosując taki rodzaj obrazowania, można
+zauważyć, że szerokość wcięcia (pasma zaporowego) na charakterystyce zależy od odległości
+między zerem a biegunem.

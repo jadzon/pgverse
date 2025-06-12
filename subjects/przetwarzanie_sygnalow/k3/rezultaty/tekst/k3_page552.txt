@@ -1,0 +1,20 @@
+Projektowanie filtru Czebyszewa-Buiterwortha 593
+
+<image/figury/k3_page552_figure2.png>
+
+<image/wzory/k3_page552_formula1.png>
+
+<image/figury/k3_page552_figure3.png>
+
+<image/wzory/k3_page552_formula2.png>
+
+tewzorydajniedozwoloneoperacjedlapr230ipr0.abymczastosowatenpro
+gram do obliczania filtrów Butterwortha (tzn. zerowe zafalowania, PR = 0), należy pominąć
+
+te wiersze programu, gdzie występuje PR = 0 (wiersz 1120).
+
+Konwersja sygnału ciągłego na dyskretny
+
+Najczęściej stosowaną metodą konwersji rozmieszczenia biegunów i zer z dziedziny s do
+dziedziny z jest przekształcenie biliniowe. Jest to matematyczna metoda odwzorowania kon-
+foremnego (wiernokątnego), gdzie jedna płaszczyzna zespolona jest algebraicznie zniekształ-

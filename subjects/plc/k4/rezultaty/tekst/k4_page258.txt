@@ -1,0 +1,49 @@
+ory/k4_page258_formula1.png SAD
+
+Operacje arytmetyczne. są najczęściej wykonywane na słowach 16 bitowych.
+Sterowniki PLC 5 oraz SLC 500 z procesorem powyżej 5/02 umożliwiają rów-
+nież działania 32 bitowe.
+
+Z operacjami arytmetycznymi oraz z funkcjami porównania są związane ele-
+menty pliku statusowego $2:0, $2:13 oraz $2:14.
+Bit S2:0/0 (Carry C)
+jest ustawiany na 1 jeżeli w wyniku wykonania działania zostanie wygenero-
+wanie przeniesienie.
+Bit $2:0/7 (oVerflow V)
+jest ustawiany na 1 jeżeli w wyniku operacji matematycznej nastąpiło prze-
+pełnienie. Wynik działania przyjmuje wtedy wartość -32768 lub 32767.
+W przeciwnym razie ma wartość 0.
+Bit S2:0/2 (Zero Z)
+wykrywa wartość zerową uzyskaną w wyniku działania matematycznego. Bit
+ten jest wówczas ustawiany na 1.
+Bit $2:0/3 (Sign S)
+przyjmuje wartość 1, jeżeli w wyniku operacji matematycznej uzyskano licz-
+bę ujemną.
+Wynik zmian bitów słowa S$2:0 dla poszczególnych operacji został przedstawio-
+ny w tabelkach umieszczonych pod opisem każdej funkcji arytmetycznej.
+Słowo $2:13 i $2:14 (Math Register) zawierają odpowiednio młodszą i starszą
+część 32 bitowej wartości używanej podczas 32 bitowego mnożenia i dzielenia.
+W rejestrze tym zawarta jest również reszta z dzielenia po wykonaniu instrukcji
+DIV i DDV. Rejestr zawiera także cztery cyfry w kodzie BCD podczas wyko-
+nywania instrukcji FRD i TOD.
+Podstawowe operacje arytmetyczne realizują instrukcje:
+e CLR (CleaR) zerowanie wybranego elementu pliku. Bity
+statusowe C, V, $ są ustawiane na 0, a bit Z
+
+przyjmuje wartość 1 (Wyd. 4.18)
+e ADD(ADD) dodawanie dwóch słów 16 bitowych (Wyd. 4.19),
+e SUB (SUBtract) odejmowanie dwóch słów 16 bitowych (Wyd. 4.20),
+e MUL(MULiiply) mnożenie dwóch słów 16 bitowych. (Wyd. 4.21),
+e DIV (D/Vide) dzielenie dwóch słów 16 bitowych. (Wyd. 4.22),
+e  NEG (NEGate) zmiana znaku wybranego elementu pliku
+
+danych. (Wyd. 4.23),
+e DDYV dzielenie 32 bitowe. W przypadku stosowa-
+
+(Double DiVide) nia tej instrukcji zawartość rejestrów S2:13
+i S2:14 jest dzielona przez wartość podaną
+jako parametr podczas wywołania instrukcji. (Wyd. 4.24).
+
+ 
+
+258 Rozdział : 5. Język schematów drabinkowych dla SLC 500

@@ -1,0 +1,32 @@
+ry/k4_page288_formula1.png KEK
+
+Sterownik dysponuje trzema rodzajami elementów czasowych (UCTR). Mierzą
+one czas w sekundach (T1.0), dziesiętnych sekundy (T0.1) lub w setnych sekun-
+dy (T.01). Wybór czasomierza o mniejszej podstawie czasu zapewnia większą
+dokładność pomiaru. Nie można jednak przekroczyć dopuszczalnego zakresu
+wartości zliczonego czasu. Zasada działania wszystkich układów czasowych jest
+identyczna. Jak pokazano na Wyd. 6.7, posiadają one po dwa wejścia i dwa wyj-
+ścia. Stan wysoki na wejściu dolnym (w przykładzie są to odpowiednio zanego-
+wane wejścia 00001, 00002 i 00003) uaktywnia układ czasowy. Jeżeli w tym
+czasie na górnym wejściu układu występuje stan wysoki, to następuje zliczanie
+czasu. Sprowadzenie tego wejścia do stanu niskiego zatrzyma zliczanie.
+
+Każdy z układów czasowych wykorzystuje jeden rejestr (4x), w którym wpisana
+Jest aktualna wartość zliczonego czasu - akumulator (w przykładzie są to rejestry
+40053, 40052 i 40051). Pojawienie się stanu niskiego na wejściu uaktywniają-
+cym powoduje wyzerowanie stanu tego rejestru.
+
+<image/tabele/k4_page288_table1.png>
+
+Wyd. 6.7 Przykład zastosowania układów czasowych i liczników do programowej
+realizacji zegara .
+
+Wartość zadana może pochodzić z obszaru wejść analogowych (3x), z rejestrów
+(4x) lub może być liczbą stałą z zakresu - jak w omawianych niżej licznikach
+(w przykładzie wpisano stałe o wartościach 40060, 0060 i 440024). Podobnie jak
+w licznikach, porównanie wartości zadanej z aktualnym stanem akumulatora
+widoczne jest na istniejących dwóch wyjściach binarnych, z których jedno znaj-
+
+ 
+
+288 Rozdział : 6 Programowanie sterowników AEG SCHNEIDER Modicon

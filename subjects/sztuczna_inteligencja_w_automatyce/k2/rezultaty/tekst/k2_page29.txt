@@ -1,0 +1,22 @@
+<image/figury/k2_page29_figure1.png>
+
+e węzły końcowe spełniające kryterium celu (wygrywające),
+e węzły niekońcowe typu OR lub AND,
+e węzły końcowe nie spełniające kryterium celu (przegrywające).
+
+W czasie poszukiwania rozwiązania węzłom nadaje się etykiety: „rozwiązywalny* lub
+„nierozwiązywalny* według następujących zasad:
+
+ 
+
+e węzły wygrywające są rozwiązywalne.
+
+e węzeł niekońcowy typu OR jest rozwiązywalny wtedy i tylko wtedy, gdy przy-
+najmniej jeden z jego potomków jest rozwiązywalny.
+
+e węzeł niekońcowy typu AND jest rozwiązywalny wtedy i tylko wtedy, gdy
+wszystkie jego potomki są rozwiązywalne.
+
+Węzły nierozwiązywalne
+
+e węzły przegrywające są nierozwiązywalne.

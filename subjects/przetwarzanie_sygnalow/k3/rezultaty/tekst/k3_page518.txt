@@ -1,0 +1,17 @@
+32. Przekształcenie Laplace'a
+
+<image/figury/k3_page518_figure1.png>
+
+     
+
+powierzchnietopograficznenarys.32.3swykresamipowyszychrwna.tewzorys
+dość długie, a ich matematyczne wyprowadzenie jest bardzo żmudne. To prowadzi do kwe-
+stii praktycznej — skąd mamy pewność, czy nie zrobiliśmy błędu w obliczeniach, stosując
+algebrę liczb zespolonych? Sprawdzianem jest zweryfikowanie, czy te równania redukują się
+do transformaty Fouriera wzdłuż osi y. Robi się to, wstawiając w równaniach 6 równe zero
+i je upraszczając:
+
+<image/wzory/k3_page518_formula1.png>
+
+Są to, jak pokazano na rys. 32.3, prawidłowe sygnały w dziedzinie częstotliwości, takie same jak
+wyznaczone przez bezpośrednie obliczenie transformaty Fouriera przebiegu w dziedzinie czasu.

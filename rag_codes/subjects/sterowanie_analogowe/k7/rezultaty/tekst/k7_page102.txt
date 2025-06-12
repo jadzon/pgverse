@@ -1,0 +1,20 @@
+Problem śledzenia wartości zadanej
+
+ 
+
+Dla układu pokazanego na schemacie zaprojektować układ ze sprzężeniem od
+stanu zapewniający zerowy uchyb ustalony odpowiedzi skokowej. Wymagane
+bieguny regulatora s,,,=-5. Podać transmitancję układu zamkniętego.
+Korzystając z Matlaba wykreślić odpowiedź skokową układu. Zbudować
+schemat symulacyjny układu zamkniętego w Simulinku i wykreślić jego
+odpowiedź na sygnał prostokątny o amplitudzie 1V i okresie 5sek. Dane układu:
+R,=20Q, R,=4Q, C=0.1F; L=0.5H.
+
+SMOUBJS 8|8pOJN
+
+<image/figury/k/_page102_figure1.png>
+
+ 
+
+POLITECHNIKA
+GDANSKA

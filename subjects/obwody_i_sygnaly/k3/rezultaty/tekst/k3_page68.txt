@@ -1,0 +1,33 @@
+68 1. Pojęcia podstawowe — elementy
+
+H. Prostownik idealny. Ważnym przykładem nieliniowego elementu rezy-
+stancyjnego jest prostownik idealny (rys. 1.3-25a) opisany równaniami:
+
+<image/figury/k3_page68_figure2.png>
+
+Charakterystyka prostownika idealnego jest przedstawiona na rys. 1.3-25b.
+
+Prostownik idealny jest modelem efektu prostowania. Prostownik idealny
+albo nie przewodzi prądu (stanowi rozwarcie, gdy u < 0) albo przewodzi prąd
+(i wówczas stanowi zwarcie, przy czym i > 0)”.
+
+<image/figury/k3_page68_figure1.png>
+
+Często przyjmuje się równania prostownika w postaci:
+
+<image/wzory/k3_page68_formula1.png>
+
+co odpowiada charakterystyce z rys. 1.3-25c.
+Inny przykład elementu rezystancyjnego, który nie jest oporem, omówiony
+będzie w p. 1.3.6-B.
+
+IL Przykłady. Na zakończenie tego punktu rozpatrzymy jeszcze trzy
+przykłady.
+
+Przykład 1.3-13. Na rys. 1.3-27a, b są przedstawione charakterystyki (wraz z opisującymi je
+równaniami F,(i, u) = 0) niektórych innych elementów rezystancyjnych typu prostownikowego
+
+V Dwa zaciski uważamy za zwarte (rys. 1.3-26a), jeśli Au =0 izarozwarte (rys. 1.3-26b), jeśli
+i
+
+Aim=o.

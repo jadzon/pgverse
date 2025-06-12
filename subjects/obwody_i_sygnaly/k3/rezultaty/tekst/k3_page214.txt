@@ -1,0 +1,43 @@
+214 2. Pojęcia podstawowe — układy
+
+Przykład 2.1-36. Opór ujemny — rys. 1.3-36 i równanie (1.3-53) — jest dwójnikiem akt
+nym. Jeśli w oporze ujemnym występuje niezerowy prąd (lub niezerowe napięcie), to moc pobi
+przez opór ujemny:
+
+<image/wzory/k3_page214_formula1.png>
+
+jest ujemna. Spełniona jest zatem nierówność (2.1-68), a także tożsamość (2.1-64).
+Proponujemy Czytelnikowi wykazanie właściwości ogólniejszej. Każdy element rezystanc
+
+o równaniu (1.3-26), którego charakterystyka przechodzi przez drugą lub czwartą ćwiartkę, j
+
+dwójnikiem aktywnym (por. końcowy akapit z przykładu 21-30)
+
+Przykład 2.1-37. Źródła sterowane (p. 1.7.2) są czwórnikami aktywnymi. Rozważmy
+źródło napięciowe sterowane napięciem (rys. 1.7-20a) i dołączmy do jego zacisków wtórnych dowo
+opór R (rys. 2.1-31). Wówczas przy u, %* 0 moc p pobierana przez czwórnik jest ujemna:
+
+   
+
+<image/figury/k3_page214_figure1.png>
+
+p zz Uyly + ui = — Ri? <0 (2.1-7
+
+Wynika stąd, że:
+
+1
+f pdt' <0
+to
+
+co, wobec spełnienia tożsamości (2.1-64), świadczy o aktywności rozważanego źródła.
+W analogiczny sposób można sprawdzić, iż również źródła sterowane pozostałych typów
+czwórnikami aktywnymi.
+
+Przykład 2.1-38. Na zakończenie rozważmy prosty przykład świadczący o tym, iż e
+aktywny, np. źródło niezależne, nie zawsze musi objawiać swoją aktywność i nie zawsze m
+oddawać energię do otoczenia.
+
+Rozpatrzmy obwód prądu stałego przedstawiony na rys. 2.1-32. Stosując zasadę superpozycji
+wyznaczamy pradv /.. I:
+
+<image/figury/k3_page214_figure2.png>

@@ -1,0 +1,17 @@
+<image/tabele/k2_page24_table1.png>
+
+Tablica 3.2: Przykładowy koszt szukania (liczba przeglądanych węzłów) i efektywny współ-
+czynnik rozgałęzienia przy rozwiązywaniu układanki 3 x 3 dla metody iteracyjnego pogłę-
+biania (IP) i metody A* z dwoma różnymi funkcjami heurystycznymi hy i ką, gdzie hy =
+liczba klocków znajdujących się na niewłaściwej pozycji, hą = suma odległości klocków od
+swoich oczekiwanych pozycji końcowych (suma odległości pionowych i poziomych) (Russel.
+Norvig. 1995)
+
+<image/figury/k2_page24_figure1.png>
+
+Rys. 3.9: Okładka monografii autorów algorytmów meówkowych [?]
+
+Algorytmy te należa do grupy algorytmów naśladujących zachowanie się pro-
+stych organizmów żyjacych w wielkich społecznosciach, W szczególności algorytmy
+mrówkowe naśladują zachowanie mrówek lub termitów poszukujących pożywienia i
+następnie znajdujących najkrótsze drogi do pożywienia.

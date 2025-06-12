@@ -1,0 +1,40 @@
+<image/figury/kfigury/k2_page140_figure2.png>
+
+Pamięci asocjacyjne realizowane są jako statyczne i dynamiczne co przedstawia
+rys. ?7, gdzie pokazano ich schematy blokowe. Pamięci statyczne są sieciami bez
+sprzężeń zwrotnych i ich odczyt następuje po jednorazowym przejściu sygnału od
+wejścia do wyjścia. Pamięci dynamiczne (rekurencyjne) są sieciami ze sprzężeniami
+zwrotnymi i ich odczyt następuje po osiągnięciu przez sieć stanu stabilnego po wie-
+lokrotnym przejściu sygnałów sprzężenia zwrotnego przez warstwy neuronów.
+
+Pamięć statyczna realizuje odwzorowanie
+
+<image/wzory/k2_page140_formula1.png>
+gdzie k oznacza chwilę czasu, a operator My jest układem funkcji nieliniowych. Na-
+leży zauważyć, że sygnał wyjściowy układu w danej chwili zależy tylko od aktualnego
+sygnału wejściowego i nie zależy od sygnału wejściowego w przeszłości.
+Pamięci dynamiczne są układami, w których sygnały wyjściowe w danej chwili
+są zależne od sygnałów wejściowych w przeszłości. Korzystając z koncepcji stanu,
+działanie pamięci dynamicznej można opisać równaniem
+
+<image/wzory/k2_page140_formula2.png>
+
+gdzie v* oznacza stan w chwili k, a Ma jest układem funkcji nieliniowych. Operator
+M; oddziaływuje w bieżącej chwili k na wektor stanu v*, tworząc nowy stan v**”,
+Stan początkowy v” jest zadany poprzez x”, a odczytywaną wartością jest sygnał
+y**' tożsamy ze stanem v**!
+
+W następnych punktach zajmiemy się pamięciami dynamicznymi.
+Architektura pamięci dynamicznej (rekurencyjnej)
+Na rys. ?? przedstawiono schemat pamięci rekurencyjnej. Użyto neurony bipolarne,
+dyskretne (stany i wyjścia są reprezentowane przez sygnały —1 i +1.
+Algorytm zapisu
+
+Przy zapisie do pamięci wektorów wzorcowych st”, m = 1,2,...,p, o składowych
++1, —1, wagi wyznaczane są według następującego algorytmu Hebba:
+
+<image/wzory/k2_page140_formula3.png>
+
+gdzie I jest macierzą jednostkową, lub
+
+<image/wzory/k2_page140_formula4.png>

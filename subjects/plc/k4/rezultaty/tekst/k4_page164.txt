@@ -1,0 +1,19 @@
+<image/figury/k4_page164_figure1.png>
+
+Moduł HSC może pracować jako licznik dodający, odejmujący lub jako licznik
+dodający albo odejmujący w zależności od kierunku wirowania enkodera, który
+rozpoznaje się na podstawie przesunięcia fazowego między dwoma zmieniają-
+cymi się sygnałami podawanymi na wejścia A i B, tj. w zależności od kierunku
+obrotów A Quad B
+
+Możliwe są trzy typy konfiguracji modułu HŚC:
+
+e Typ A - jako cztery jednakowe 16-bitowe liczniki. Każdy z czterech liczni-
+ków może niezależnie zostać zaprogramowany jako dodający lub
+odejmujący. Każdy też posiada 3 wejścia : ustawiające (Preload), zliczające
+(Count Pulse: A input), strobujące (Strobe) oraz jedno wyjście z programo-
+wo ustawianym warunkiem zadziałania (ON/OFF Preset).
+
+" 2. zm, — er m > A W YA A EZ EW M M W W 0 A AN A M W „M WH MN MN
+
+164 Rozdział : 3. Sprzęt sterowników PLC

@@ -1,0 +1,45 @@
+Modelowanie (układ rzeczywisty — model formalny)
+
+Pojęcia/etapy modelowania:
+
+układ rzeczywisty — układ eksperymentalny — model podstawowy — model scalony
+(najbardzie
+
+<image/figury/k1_page4_figure1.png>
+
+Układ rzec
+- nat
+-  sztl 2 . , .
+- _ hybrydowy (transportowy, cyfrowe sterowanie)
+
+Z całości systemu rzeczywistego na podstawie dostępnych pomiarów i obserwacji
+wyodrębniamy segment, który uważamy za jego dostateczną reprezentację, czyli układ
+rzeczywisty.
+
+Reakcja wejścia-wyjścia (przejścia) - zbiór wszystkich trajektorii możliwych do uzyskania
+eksperymentalnie
+— para trajektorii wejście-wyjście:
+
+- _ trajektoria wektorowa wejściowa - przebiegi wszystkich zmiennych wejściowych
+
+- _ trajektoria wektorowa wyjściowa - przebiegi wszystkich zmiennych wyjściowych
+
+Układ eksperymentu opisuje ograniczony zestaw warunków, w których układ rzeczywisty
+będzie obserwowany (eksperyment jest wykonywany)
+e Z każdym układem eksperymentu związany jest podzbiór reakcji wejście-wyjście.
+e Model jest wierny dla danego eksperymentu, jeśli jego pary wejście-wyjście są
+zgodne (przy pewnym kryterium porównawczym ze wszystkimi parami we-wy układu
+w danym układzie eksperymentalnym)
+e Zasadność(wierność) modelu jest ściśle związana z układem eksperymentu i
+kryterium pomiaru zgodności par wejście-wyjście.
+
+Model podstawowy- pozwala uzyskać wszystkie trajektorie wejście-wyjście (całą reakcję)
+układu rzeczywistego, czyli jest zasadny dla wszystkich dopuszczalnych układów
+eksperymentu.
+— Ogólna informacja o mechanizmie reakcji układu rzeczywistego ma (zbyt) wiele
+elementów i/lub (zbyt) wiele interakcji, co oznacza wysoki stopień złożoności, więc
+potrzebna jest redukcja modelu poprzez:
+
+- _ integrację (scalenie) komponentów
+
+- _ uproszczenie interakcji

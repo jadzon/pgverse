@@ -1,0 +1,47 @@
+12 Rozdział 1. Arytmetyka
+
+19 Ułamki
+Przypomnijmy najpierw krótko, jak przedstawia się ułamek w systemie dziesiętnym. Na
+przykład,
+
+0.234
+
+ozn
+
+<image/owzory/k2_page27_formula1.png>
+
+Użylismy kropka do oddziełania częsci całkowitej od ułamkowej. jest to często uzywany
+w informatyce sposób, stosowany między innymi w języku Pascal. Ogólniej, zapis:
+
+<image/wzory/k2_page27_formula2.png>
+
+oznac:
+
+<image/wzory/k2_page27_formula3.png>
+
+którą mozemy tez zapisac w postaci:
+
+<image/wzory/k2_page27_formula4.png>
+
+Podobnie możemy zapisywać ułamki w systemie dwójkowym. Jedyna różnica polega na
+tym, że w systemie binamym podstawą potęg jest dwójka i że używamy tylko dwóch cyfr,
+0i 1. Tak więc w systemie dwójkowym zapis:
+
+<image/wzory/k2_page27_formula5.png>
+
+ozn
+
+<image/owzory/k2_page27_formula6.png>
+
+lub inaczer:
+<image/wzory/k2_page27_formula7.png>
+
+Przykład 1.15
+
+<image/wzory/k2_page27_formula8.png>
+W poniższej tabeli przedstawiono kilka pierwszych ujemnych potęg liczby 2 w systemie
+dwójkowym i dziesiętnym.
+
+<image/tabele/k2_page27_table1.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

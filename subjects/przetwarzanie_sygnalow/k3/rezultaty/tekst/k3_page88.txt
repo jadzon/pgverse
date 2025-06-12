@@ -1,0 +1,25 @@
+Zasada superpozycji — podstawa DSP 101
+
+Zasada superpozycji — podstawa DSP
+
+W przypadku systemów liniowych jedynym sposobem łączenia sygnałów z sobą jest ich ska-
+lowanie (mnożenie sygnałów przez stałe współczynniki) i następujące po nim sumowanie.
+Nie można na przykład mnożyć jednego sygnału przez inny. Przykład przedstawiono na rys.
+5.10. Trzy sygnały xoln], x,ln] i x»[n] są sumowane, dając w wyniku czwarty sygnał x[n]. Taki
+proces łączenia sygnałów ze sobą drogą skalowania i sumowania jest nazywany syntezą.
+Rozkład (czyli dekompozycja) sygnału jest operacją odwrotną do syntezy. Polega na rozdzie-
+leniu sygnału na dwie lub więcej składowych addytywnych. Jest to operacja bardziej skom-
+plikowana niż synteza, jako że jest nieskończenie wiele możliwości rozkładu sygnału.
+Na przykład liczby 15 i 25 mogą, poddane syntezie, dać w wyniku tylko liczbę 40. Liczba 40
+zaś ma wiele możliwości rozkładu: 1 + 39, 2 + 38 lub —30,5 + 60 + 10,5 itd.
+
+Dochodzimy teraz do samego jądra DSP - do zasady superpozycji, która jest drogą do
+zrozumienia sposobów analizy sygnałów i systemów. Rozważmy sygnał oznaczony x(n],
+który po przejściu przez system liniowy daje sygnał wyjściowy y[n]. Jak to przedstawio-
+no na rys. 5.11, sygnał wejściowy może być poddany rozkładowi na jakąś grupę sygna-
+łów prostszych: xo[n], x;[n] i xq[n] itd. Nazwiemy je składowymi sygnału wejściowego.
+Następnie każdą składową oddzielnie przepuszczamy przez system, uzyskując pewien
+zestaw składowych sygnału wyjściowego: ygln], y;[n]. y>[n] itd. Później te składowe
+poddaje się syntezie, otrzymując sygnał wyjściowy y[n].
+
+<image/figury/k3_page88_figure1.png>

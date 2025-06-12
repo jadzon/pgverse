@@ -1,0 +1,11 @@
+<image/figury/k4_page252_figure2.png>
+
+Wyd. 4.6 Kombinacja AND/OR wielu elementów wejściowych z jednym wyjściem..
+
+<image/figury/k4_page252_figure1.png>
+
+Wyd. 4.7 Przykład połączenia jednego wejścia z wieloma wyjściami.
+
+rem W Paa MK w 2
+
+252 Rozdział : 5. Język schematów drabinkowych dla SLC 500

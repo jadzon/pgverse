@@ -1,0 +1,31 @@
+W językach graficznych funkcje reprezentowane są w postaci prostokątów
+o wymiarach zależnych od liczby wejść. Nazwę funkcji lub symbol umieszcza
+się wewnątrz prostokąta a kierunek przetwarzania jest z lewej do prawej (z lewej
+wejścia, z prawej wyjście). Negacja sygnałów logicznych jest oznaczana przez
+kółko, jak pokazano w Tab. 2.14. Wyjście powinno być przedstawione w postaci
+linii pojedynczej, nawet jeśli jest to zmienna wieloelementowa.
+
+tabele/kananaartahlannn
+wzory/k4_page48_formula1.
+
+Jeżeli definicja funkcji zawiera opis parametrów formalnych, to opis taki po-
+winien być także użyty przy wywołaniu funkcji, tak jak pokazano to
+w Tab. 2.15.
+
+<image/tabele/k4_page48_table1.png>
+
+W przypadku języka schematów drabinkowych ŁD wprowadza się do funkcji
+
+dodatkowe wejście logiczne EN (Enable - zezwolenie) oraz wyjście logiczne
+
+ENO (Enable Output). Mogą być one także używane w języku schematów blo-
+
+ków funkcyjnych FBD. Użycie tych zmiennych podlega następującym regułom:
+
+e Jeżeli w trakcie wywołania funkcji na wejściu EN występuje wartość FA/SE
+(0) to operacje definiowane przez ciało funkcji nie będą wykonane a na wyj-
+ściu ENO także pojawia się wartość FALSE (0).
+
+ 
+
+48 Rozdział « 2.Programowanie sterowników PLC

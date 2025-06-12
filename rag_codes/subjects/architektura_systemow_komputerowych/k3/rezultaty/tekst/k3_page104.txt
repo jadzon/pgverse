@@ -1,0 +1,33 @@
+94 5. Pamięci
+
+figury/k3_page104_figure2.c
+figury/k3_.
+
+Wydłuża to czas cyklu pamięci. W czasie zapisu pojawia się strob WE, który ma pojawić
+się nie wcześniej niż po czasie t,s po zmianie adresu, ma trwać co najmniej przez czas t„,,
+i musi skończyć się o czas tyą przed zmianą adresu. Te zależności czasowe określają
+minimalny czas cyklu pamięci.
+
+Innym rodzajem pamięci półprzewodnikowej są pamięci dynamiczne, które wymagają
+bardziej skomplikowanego sterowania, co wynika z zasady działania tych pamięci. Na
+rysunku 5.8a pokazano schemat pamięci dynamicznej firmy Hitachi HM4864 o pojemności
+64K x 1, czasie cyklu 125 ns i poborze prądu zasilania 55 mA, a w stanie nieaktywnym
+3,5 mA. Matryca pamięci składa się 256 wierszy i 256 kolumn i jest pamięcią typu 2%D.
+Z rysunku 5.8a widać, że multipleksowanie kolumn odbywa się z wyjść układów
+wzmacniaczy regeneracji zwanych inaczej rejestrem odświeżania, gdyż układ ten pełni
+obie funkcje. W czasie cyklu odczytu cały wybrany wiersz z matrycy jest przepisywany do
+rejestru odświeżania i po zapisaniu wybranego bitu do bufora wyjściowego, jego cała
+zawartość jest ponownie zapisywana do wybranego wiersza matrycy. W ten sposób
+regeneruje się zawartość tego wiersza. Ponieważ czas odczytu wiersza jest względnie
+długi, więc numer bitu w wierszu (tzw. adres kolumny) jest wykorzystywany później niż
+adres wiersza. Pozwala to na podzielenie adresu na dwie części i podawanie ich
+sekwencyjne. Pierwsza część adresu wybiera odpowiedni wiersz w matrycy, a druga
+odpowiedni bit przez multipleksowanie wyjść wzmacniaczy regeneracji. Umożliwia to
+zmniejszenie liczby końcówek układu scalonego pamięci. Przykładowy układ pamięci ma
+tylko 8 wejść adresowych zamiast 16.
+
+Na rysunku 5.8b pokazano uproszczone przebiegi czasowe podczas cyklu pracy
+pamięci. Pierwsza część adresu (8 bitów — ADR WIER) jest ładowana do rejestru wierszy
+
+w czasie strobu RAS. Po tym jak wybrany wiersz zostanie zapisany do wzmacniaczy
+regeneracji, druga część adresu jest podawana na wejścia sterujące multipleksera w czasie

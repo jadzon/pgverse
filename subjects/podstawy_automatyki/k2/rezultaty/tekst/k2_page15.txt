@@ -1,0 +1,60 @@
+natomiast wykresy Bodego mają postać:
+
+<image/wzory/k2_page15_formula1.png>
+
+Postać transmitancji widmowej jest słuszna przy założeniu, że szere-
+gowo połączone obiekty inercyjne pierwszego rzędu o stałej czasowej
+T wzajemnie siebie nie obciążają
+
+e CZŁON OŚSCYLACYJNY (0 < 6 < 1)
+
+Transmitancja widmowa i jej składowe określone są wzorami:
+
+<image/wzory/k2_page15_formula4.png>
+
+<image/wzory/k2_page15_formula6.png>
+
+Moduł transmitancji widmowej G(7w) osiąga maksimum równe
+
+<image/wzory/k2_page15_formula8.png>
+
+Ala mulsach rezonansowet wWVNosZĄce!
+
+<image/wzory/k2_page15_formula9.png>
+
+i przesunięcia tazowego
+
+<image/wzory/k2_page15_formula11.png>
+
+29
+
+z czego wynika, że w rozpatrywanym zakresie zmian współczynnika
+tłumienia rezonans występuje dla
+
+<image/wzory/k2_page15_formula2.png>
+
+Przecięcie charakterystyki amplitudowo-fazowej z osią urojoną wystę-
+
+k
+»Uie p rw -
+puje przy z |)
+
+w„ w punkcie o współrzędnych (0
+e CZŁON CAŁKUJĄCY IDEALNY
+
+Transmitancja widmowa i jej składowe określone są wzorami:
+
+<image/wzory/k2_page15_formula3.png>
+
+<image/wzory/k2_page15_formula7.png>
+
+e CZŁON CAŁKUJĄCY Z INERCJA
+
+Iransmitancja widmowa i jej składowe określone są wzorami:
+
+| natomiast wykresy Bodego mają postać:
+
+<image/wzory/k2_page15_formula5.png>
+natomiast wykresy Bodego mają postać
+
+<image/wzory/k2_page15_formula10.png>

@@ -1,0 +1,46 @@
+|
+
+7.3.3 Wpływ wartości parametrów regulatora podrzędnego na odpowiedź
+skokową w obecności zakłóceń
+
+Dla regulatora nadrzędnego typu PI oraz zadanej amplitudy zakłóceń
+określić wpływ:
+
+e wzmocnienia regulatora podrzędnego,
+
+e wzmocnienia regulatora nadrzędnego
+na zdolność eliminacji zakłóceń (włączając za każdym razem jedno z za-
+kłóceń), wybierając dla każdego ze zmienianych parametrów trzy wartości.
+
+Symulacja przeprowadzana jest przy zerowej wartości sygnału zadanego,
+zgodnie z zasadą superpozycji.
+
+7.34 Porównanie jakości regulacji układu jednopętlowego z układem
+
+regulacji kaskadowej
+
+Dla obiektu zdekomponowanego na dwie części: G;(s) oraz G>(s)
+porównać jakość regulacji w układzie z regulatorem typu PI (w stosunku do
+wyników symulacji z ćwiczenia 4 z regulatorem PI o parametrach dobranych
+według metody odpowiedzi skokowej Zieglera-Nicholsa).
+
+7.3.5 Sprawozdanie
+
+Sprawozdanie powinno zawierać:
+
+- przebiegi uchybu i trajektorie fazowe wraz z opisem wpływu na jakość
+regulacji poszczególnych parametrów regulatora (polecenie 7.3.1);
+określić: czas regulacji, przeregulowanie, amplitudę oscylacji oraz war-
+tość wskaźnika ISE;
+
+- przebiegi uchybu regulacji dla każdego z trzech typów regulatorów
+o parametrach zapewniających dobrą jakość regulacji (polecenie 7.3.2);
+określić dla każdego z regulatorów: czas regulacji, przeregulowanie,
+amplitudę oscylacji oraz wartość wskaźnika ISE;
+
+- przebiegi uchybu regulacji dla różnych wzmocnień regulatorów
+(polecenie 7.3.3) w przypadku wystąpienia zakłóceń; określić dla każdej
+konfiguracji zmieniane wzmocnienie-włączone zakłócenie: czas regu-
+lacji, przeregulowanie, amplitudę oscylacji oraz wartość wskaźnika ISE;
+
+<image/figury/k2_page39_figure1.png>

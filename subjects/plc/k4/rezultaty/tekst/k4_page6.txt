@@ -1,0 +1,56 @@
+Rodziny sterowników charakteryzują się tym, że poszczególne modele:
+
+e mogą być programowane w tym samym języku przy użyciu tego samego pa-
+kietu programowego,
+
+e posiadają takie same zmienne programowe oraz tę samą strukturę modułów
+I/O (moduły, płyty łączeniowe, drajwery, kable, itp.),
+
+e istnieje możliwość przenoszenia programów między modelami oraz korzy-
+stania z tych samych opcji w każdym modelu.
+
+Koncepcja podobieństwa pozwala wybrać sterownik PLC odpowiedni dla wy-
+
+magań użytkownika przy jednoczesnym zapewnieniu możliwości włączenia go
+
+do większych systemów sterowania.
+
+W latach dziewięćdziesiątych wraz z wykorzystaniem komputerów typu /BM
+PC do programowania sterowników PLC oraz do sporządzania dokumentacji te-
+go oprogramowania znacznie rozwinęły się możliwości programowe i komuni-
+kacyjne sterowników pracujących niejednokrotnie w rozwiniętych sieciowych
+systemach komputerowych. Przyczyną był m.in. dynamiczny rozwój oprogra-
+mowania komputerów PC, a w szczególności oprogramowania do sterowania
+nadrzędnego i zbierania danych SCADA (Supervisory Control and Data Acqu-
+isition) przeznaczonego dla nadrzędnej warstwy sterowania.
+
+Systemy SCADA dopełniają i rozszerzają możliwości sterowników, realizując
+
+m.in. następujące funkcje:
+
+e zbierania i przetwarzania oraz archiwizacji danych pochodzących bezpośred-
+nio z systemów sterownikowych,
+
+e opracowania raportów dotyczących bieżącego stanu, zużycia materiałów oraz
+stanu pracy maszyn i urządzeń,
+
+e wizualizacji w wielu formach graficznych wartości zmiennych procesowych
+(aktualnych i historycznych),
+
+e generowania sygnałów alarmowych związanych z przekroczeniem wartości
+granicznych,
+
+e wypracowywania danych dla warstw sterowania operatywnego produkcją
+i warstwy zarządzania.
+
+Systemy SCADA zapewniły niezawodną komunikację ze sprzętem PLC, możli-
+wość zmian jego oprogramowania w działających systemach sieciowych i dzięki
+temu zakres zastosowań i możliwości systemów sterownikowych wzrosły wielo-
+krotnie. Co więcej, szeroko stosowane w komputerach PC rozwiązania sprzęto-
+we i programowe coraz częściej wprowadza się do systemów sterownikowych,
+czego przejawem jest bardzo szybko rozszerzające się zastosowania systemów
+PC Control, które wykorzystują sprzęt przemysłowych komputerów PC i opro-
+gramowanie stosowane w sterownikach PLC.
+
+EOT PO TO ET ETOOY TT RE WRĘEYCZECYCECTOCZKE WY OOROZOOCZKNE
+6 Rozdział : 1. Wprowadzenie i podstawy

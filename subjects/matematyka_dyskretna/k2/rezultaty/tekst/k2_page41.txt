@@ -1,0 +1,51 @@
+6 Rozdział 1. Kombinatoryka
+
+1.4  Permutacje
+
+Permutacje to ciągi bez powtórzeń długości n, wybierane ze zbioru n-elementowego. Na
+przykład mamv dwie nemutacie dwnelementnwe
+
+<image/wzory/k2_page41_formula1.png>
+
+oraz szesr nermutacn trzvelementnwvch:
+
+<image/wzory/k2_page41_formula2.png>
+
+Zgodnie 7 twiemzeniem 2? liczha nermutacn w zhiorze n-fFlementnwvm wvnosr:
+
+<image/wzory/k2_page41_formula3.png>
+czyli jest rowna nt.
+Funkcja silnia n! określona jest dla n > 0 w następujący sposób:
+
+<image/wzory/k2_page41_formula4.png>
+Dodatkowa nrzvimniemv 0! — 1 Mamv wiac
+
+<image/wzory/k2_page41_formula5.png>
+
+Wartości tunkcii silnia szvhka msna na nrzvkład:
+
+<image/wzory/k2_page41_formula6.png>
+
+Dla przyblizonego obliCzama aim karzycta cia 7a wńrn Shriinna-
+
+<image/wzory/k2_page41_formula7.png>
+
+Dla każdego n zachodzą również następujące oszacowania:
+
+<image/wzory/k2_page41_formula8.png>
+Dowody wzoru Stirlinga oraz powyższych oszacowań wychodzą poza zakres tego podręcznika.
+Czasami używa się innej definicji permutacji. Mianowicie permutacja n-elementowa
+to dowolna funkcja różnowartościowa ze zbioru 41, 2,... „n) na ten sam zbiór. Na ozna-
+czenie permutacji m używa się zapisu:
+
+<image/wzory/k2_page41_formula9.png>
+
+Przył >a 16 Darmułaria.
+
+<image/wzory/k2_page41_formula10.png>
+
+jest funkcia. która przvimuie nastepuiace wartości:
+
+<image/wzory/k2_page41_formula11.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,46 @@
+33. Przekształcenie Z
+
+ 
+
+cana lub odkształcana w inną płaszczyznę zespoloną. Przekształcenie biliniowe zamienia
+H(s) w H(z) i sa
+
+<image/wzory/k3_page553_formula1.png>
+
+Wzór 33.10. Przeksztatcenie biliniowe. To podstawienie odwzorowuje każdy punkt na płaszczyźnie s na
+odpowiadający mu punkt na płaszczyźnie z
+
+Piszemy więc wzór na H(s) i następnie zastępujemy każde s wyrażeniem z wzoru 33.10.
+W większości przypadków stosuje się 7 = 2tg(1/2) = 1,093. W wyniku uzyskuje się odwzo-
+rowanie zakresu częstotliwości od 0 do x radianów/sekundę w dziedzinie s na zakres od ( do
+nieskończoności radianów w dziedzinie z. Nie wchodząc w szczegóły można powiedzieć, że
+przekształcenie biliniowe ma właściwości wymagane do konwersji z dziedziny s w dziedzinę
+z — takie jak np. odwzorowanie linii w okręgi. Oto przykład działania tego przekształce-
+nia. Dla systemu ciągłego o pojedynczej parze biegunów o położeniach p; = 6 + j© oraz
+pa = 6 - jo funkcja przenoszenia w dziedzinie s jest dana wzorem:
+
+<image/wzory/k3_page553_formula2.png>
+
+Przekształcenie biliniowe zamienia tę funkcję w system dyskretny przez zastąpienie każdego
+s wyrażeniem z wzoru 33.10. Powstaje wówczas funkcja przenoszenia w dziedzinie z, też za-
+wierająca dwa bieguny. Jest tu pewna trudność — w wyniku podstawienia uzyskuje się funkcję
+przenoszenia w postaci bardzo nieprzyjaznej:
+
+<image/wzory/k3_page553_formula3.png>
+
+Przeprowadzając długie i żmudne przekształcenia algebraiczne można powyższe wyrażenie do-
+prowadzić do postaci takiej, jak we wzorze 33.3, a współczynniki rekursywne określić jako:
+7”
+a, =—
+
+D
+
+T=nug( 5
+
+D=4-4GT +MT*
+Wzór 33.11. Przeksztatcenie biliniowe dla dwóch biegunów. Para biegunów ma położenie o £ w na
+płaszczyźnie $, a ag, 8;, 3 by, bz są współczynnikami rekursywnymi dla systemu dyskretnego
+zmiennemtidniemajadnegoznaczeniafizycznegodzikinimwzorystajsikrtsze.
+wwierszach12001290powyszewzoryswykorzystanedokonwersjipooeniaparybie
+gunów w dziedzinie s (przechowywanego w zmiennych RP i IP) bezpośrednio na współczyn-
+niki rekursywne przechowywane w zmiennych X0, X1, X2, YI, Y2. Innymi słowy, obliczyłi-

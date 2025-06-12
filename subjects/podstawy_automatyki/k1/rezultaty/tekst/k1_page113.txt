@@ -1,0 +1,34 @@
+Przykład 3.2
+Rozwiązać równanie różniczkowe, wykorzystując przybornik Simulink
+
+<image/wzory/k1_page113_formula1.png>
+
+dla warunku początkowego y(0) = y(0)=0.
+Dokonać archiwizacji otrzymanych wyników.
+Rozwiązanie
+
+Szukając rozwiązania równania w Simulinku, możemy zapisać je w postaci rów-
+nań stanu i równania wyjścia. W tym celu dokonujemy najpierw transformacji Lapla-
+ce'a wspomnianego równania:
+
+<image/wzory/k1_page113_formula2.png>
+<image/wzory/k1_page113_formula3.png>
+
+wyliczając transmitancję G(s) otrzymujemy
+
+<image/wzory/k1_page113_formula4.png>
+
+Na podstawie transmitancji wyliczamy Y(s)
+
+<image/wzory/k1_page113_formula5.png>
+
+Podstawiając
+<image/wzory/k1_page113_formula6.png>
+otrzymujemy
+<image/wzory/k1_page113_formula7/.png>
+
+Wyznaczamy następnie y, stosując odwrotne przekształcenie Laplace'a
+
+<image/wzory/k1_page113_formula8.png>
+
+115

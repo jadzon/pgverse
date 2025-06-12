@@ -1,0 +1,25 @@
+Przekształcając to równanie, otrzymujemy ten sam wynik co poprzednio, czyli:
+
+<image/wzory/k1_page56_formula1.png>
+<image/wzory/k1_page56_formula2.png>
+
+Przykład 2.18
+
+Przekształcić schemat blokowy układu pokazanego na rysunku 2.10 do prostszej
+postaci i wyznaczyć jego transmitancję zastępczą.
+
+a
+
+<image/figury/k1_page56_figure1.png>
+
+Rozwiązanie
+Sposób I
+
+Przesuwamy węzeł sumacyjny 2 za blok o transmitancji H;(s), otrzymując rysu-
+nek 2.10a.
+
+<image/figury/k1_page56_figure2.png>
+
+Rys. 2.10a. Przekształcony schemat blokowy układu
+
+58

@@ -1,0 +1,53 @@
+4.1.2. Interpretacja
+
+Wpz posiadają znaczenie tylko wtedy gdy wchodzącym w nią symbolom nadana
+zostanie jakakolwiek interpretacja.
+
+Definicja 4.1 Przez interpretację rozumiemy dowolny system składający się ż nie-
+pustego zbioru D nazywającego się dziedziną interpretacji t zależności przyporządku-
+Jącej każdemu predykatowi P”, n-wymiarową relację w D, każdej literze funkcyjnej
+f”, n-wymiarową funkcję w D i każdej stałej a, element z D.
+
+Każde wpz bez zmiennych swobodnych przedstawia sobą pewne zdanie twier-
+dzące prawdziwe lub fałszywe. Każde wpz ze zmiennymi swobodnymi przedstawia
+pewną relację (jest predykatem) w dziedzinie interpretacji, która może być spełniona
+lub nie w zależności od wyboru elementów z D.
+
+Interpretacja definiuje semantykę języka predykatów.
+
+PRZYKŁAD 4.3
+
+Rozpatrzmy poniżej podane wpz:
+
+<image/wzory/k2_page48_formula1.png>
+
+Uwaga: w (??) zwrócić uwagę na kolejność: istnieje, że dla każdego.
+Przy interpretacji:
+
+D - zbiór liczb całkowitych dodatnich
+p(X.Y) wyraża relację X <Y
+
+poszczególne wpz przedstawiają:
+
+p(X,Y) relację: X <Y,
+
+(VY )p(X,Y) relację: X jest mniejsze lub równe od każdej liczby całkowitej
+dodatniej (co jest spełnione dla X = 1),
+
+(3XVY )p(X,Y) zdanie (twierdzenie): istnieje liczba, która jest mniejsza od
+
+każdej liczby całkowitej dodatniej (istnieje najmniejsza liczba
+całkowita dodatnia). Twierdzenie to jest prawdziwe.
+
+Zauważmy, że przy dziedzinie interpretacji D będącej zbiorem liczb całkowitych
+twierdzenie (??) jest nieprawdziwe. ama
+
+4.1.3. Wnioskowanie
+
+Wnioskowaniem nazywamy proces stosujący reguły wnioskowania dla uzyskania wpz
+z zadanego zbioru wpz. Wpz otrzymane drogą wnioskowania nazywa się wnioskiem,
+a ciąg zastosowanych reguł wnioskowania tworzy dowód.
+Wyrażer
+<image/wzory/k2_page48_formula2.png>
+
+oznacza, że wpz W jest wnioskiem ze zbioru wpz $ = 45, $2,..., Snł:

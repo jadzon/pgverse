@@ -1,0 +1,9 @@
+<image/wzory/k2_page59_formula1.png>
+
+<image/wzory/k2_page59_formula2.png>
+
+Wskazówka. Skorzystaj z zasady włączania i wyłączania dla zbioru wszystkich funkcji ze
+zbioru f1,...,n) w zbiór £1,...,k). Zbiór A; to funkcje, które nie mają elementu : w
+obrazie.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

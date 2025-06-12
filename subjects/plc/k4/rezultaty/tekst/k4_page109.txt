@@ -1,0 +1,24 @@
+Jeżeli operator posiada dwa operandy, to operand z lewej strony jest obliczany
+najpierw, np. w wyrażeniu SIN(A)*COS(B)
+
+wyrażenie S/N(A) będzie obliczone jako pierwsze, następnie COS(B) a potem
+iloczyn.
+
+Wartości wyrażeń logicznych mogą być obliczane tylko w stopniu koniecznym
+do określenia wyniku końcowego. Np. jeżeli w trakcie obliczania wartości lo-
+gicznej wyrażenia (A>B) % (C<D)
+
+okaże się, że A<=B, to tylko wyrażenie (A>B) będzie sprawdzane, ponieważ
+wynik i tak będzie równy O, bez względu na wynik sprawdzenia wyrażenia
+(C<D).
+
+Operator potęgowania ** powinien działać w ten sposób, by wynik obliczenia
+wyrażenia A **B był taki sam jak wynik wyrażenia EXP(B*LN(A)).
+
+Tab. 2.59 zawiera listę poleceń języka $7. Polecenie należy zakończyć znakiem
+średnika (;).
+
+<image/tabele/k4_page109_table1.png>
+
+RPEECZREKK TTE PYDOZEE PORARCEZ TY RUPTTTJKC.. ZOE RRLY TED NĘ LTE JE TT WIĘC I | UJETOE BITA POTY POLT KUJ EWIE OYTERR"PPTCI PORPRAPRĘ PK" | E) '. | || DEL mopp
+2.9 Język strukturalny ST 109

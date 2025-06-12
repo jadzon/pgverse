@@ -1,0 +1,34 @@
+Zadanie 2.19
+
+Układ jest opisany równaniem g(y)y=u hy, gdzie h — stała. Przeprowadzić
+linearyzację tego równania w punkcie ug oraz wyznaczyć równanie charakterystyki sta-
+tycznej układu.
+
+Zadanie 2.20
+Dokonać linearyzacji równania j? + (1+cos2x)y+ y= sin? x w punkcie xg = 7/4.
+
+Zadanie 2.21
+
+Dla układu opisanego równaniem, w którym u oznacza wejście, a x — wyjście
+
+<image/wzory/k1_page103_formula1.png>
+
+należy wyznaczyć i narysować charakterystykę skokową.
+
+Zadanie 2.22
+
+Dla układu ZR pokazanego na rysunku 2.48 wyznaczyć napięcie w(f) przy założe-
+niu, że u;(£) = E, gdzie E = const.
+
+<image/figury/k1_page103_figure1.png>
+
+Zadanie 2.23
+Dla układu opisanego transmitancją
+
+Nzory/k1_page103_formula2.png
+
+należy wyznaczyć i narysować:
+a) charakterystykę impulsową,
+b) charakterystykę amplitudowo-fazową.
+
+105

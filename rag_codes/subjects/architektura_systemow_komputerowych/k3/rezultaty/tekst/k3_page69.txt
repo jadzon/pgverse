@@ -1,0 +1,35 @@
+3.2. Kody binarne i arytmetyka 59
+ZZ AE
+
+<image/tabele/k3_page69_table1.png>
+
+Jak wynika z podanych przykładów istotnym problemem jest problem dokładności.
+Aby ją zwiększyć stosuje się tzw. bity ochrony (ang. guard bits). Celowość ich użycia
+wyjaśnia przykład:
+
+Niech będą dane dwie liczby dziesiętne A = +1 i B=+4(1 - 2”), które w reprezentacji
+zmiennopozycyjnej mają postać:
+l 0 00000000 1001
+1-2? O IIIIIII1 1000
+Algorytm odejmowania nakazuje wyrównanie wykładników, co daje:
+A 0.100000000 1001
+B 0.011111111 1001
+i wtedy różnica
+A-B 0.000000001 1001
+co po normalizacji daje liczbę 0.100000000-277 = 2%,
+
+<image/figury/k3_page69_figure1.png>
+
+- a . = — | wmjazano swaue INNY WYNIK niż
+poprzednio, ale jak można zauważyć ten ostatni wynik jest poprawny.
+
+Innym problemem rzutującym na dokładność jest problem zaokrąglania. Aby poprawić
+dokładność stosowane są dwie techniki:
+— odrzucanie (ang. truncalion), polegające na ignorowaniu najmniej znaczących
+bitów nie wchodzących do zapisu,
+— zaokrąglanie (ang. rounding) polegające na dodaniu jedynki w przypadku, gdy
+najbardziej znaczący z odrzucanych bitów jest jedynką. Jeśli jest on zerem, to
+wykonuje się odrzucanie.
+
+Odrzucanie jest więc zaokrąglaniem w dół, podczas gdy zaokrąglanie jest zawsze w
+górę.

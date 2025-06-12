@@ -1,0 +1,70 @@
+24. Liniowe przetwarzanie obrazów
+
+Na rys. 24.9 przedstawiono przykład obrazu poddanego przekształceniu Fouriera. Na
+24.9 a) pokazano obraz oryginalny — mikroskopowy widok stopnia wejściowego scalo
+wzmacniacza operacyjnego typu 741, a na rys. 24.9 b) — części rzeczywistą i urojoną widma
+częstotliwościowego obrazu. Ponieważ w dziedzinie częstotliwości mogą występować pikse
+le o wartościach ujemnych, więc wartości skali szarości tych obrazów są przesunięte w taki
+sposób, że wartości ujemne są ciemne, zero jest szare, a wartości dodatnie są jasne. W ot
+razie amplitudy składowe małoczęstotliwościowe są zwykle znacznie większe niż składowe
+o dużych częstotliwościach. To wyjaśnia istnienie bardzo jasnych i bardzo ciemnych piksel
+w czterech rogach obrazu na rys. 24.9 b). Natomiast widma typowych obrazów nie maj
+żadnego dostrzegalnego porządku; ich charakter wydaje się losowy. Oczywiście można sobie
+wymyślać obrazy o dowolnym, pożądanym widmie.
+
+Jak wynika z rys. 24.9 c), widmo obrazu w postaci biegunowej jest tylko trochę łatwiejsze
+do zrozumienia. Moduły składowych małoczęstotliwościowych mają duże wartości dodat-
+nie (białe narożniki), a składowych o dużych częstotliwościach — małe wartości dodatnie
+(czarny środek). Charakterystyka fazy wygląda jednakowo przy małych i dużych częstotli-
+wościach i jest losowo rozłożona między wartościami -x i x radianów.
+Na rys. 24.9 d) przedstawiono alternatywny sposób prezentacji widma obrazu. Ponieważ
+w dziedzinie przestrzeni są zawarte sygnały dyskretne, więc w dziedzinie częstotliwości
+są one okresowe. Innymi słowy, matryce w dziedzinie częstotliwości są powtarzane nie<
+skończoną liczbę razy w lewo, w prawo, w górę i w dół. Jako przykład weźmy ścianę
+wyłożoną kafelkami, w której każdy kafelek ma wymiary N x N (jak na rys. 24.9 c). Na'
+rys. 24.9 d) też jest fragment N x N takiej ściany, lecz obejmuje on fragmenty czterech
+kafelków w taki sposób, że środek obrazu jest punktem styku tych czterech kafelków.
+Tak więc obraz na rys. 24.9 d) jest taki, jak na rys. 24.9 c), z tą wszakże różnicą, że
+został przesunięty w poziomie o N/2 pikseli (w prawo lub w lewo) i w pionie też o N/2
+pikseli (w górę lub w dół) w okresowym widmie częstotliwościowym. W ten sposób
+jasne piksele z czterech narożników obrazu na rys. 24.9 c) są umieszczone obok siebie
+pośrodku obrazu na rys. 24.9 d).
+
+Na rys. 24.10 przedstawiono sposób organizacji dwuwymiarowego widma częstotliwo-
+ściowego (z małymi częstotliwościami umieszczonymi w narożnikach). Wiersz N/2 i ko-
+lumna N/2 dzielą to widmo na cztery ćwiartki. Pod względem części rzeczywistej i mo-
+dułu górna prawa ćwiartka jest lustrzanym odbiciem dolnej lewej, a górna lewa — dolnej
+prawej. Ta symetria jest także zachowana dla części urojonej i fazy, tyle tylko że war:
+tości pikseli będących odbiciem lustrzanym mają odwrócony znak. Zatem każdy punkt
+w widmie częstotliwościowym ma odpowiadający mu punkt umieszczony symetrycznie
+z drugiej strony środka obrazu (wierszu N/2, kolumna N/2). Jeden z tych punktów to czę:
+stotliwość dodatnia, podczas gdy drugi — odpowiadająca jej częstotliwość ujemna, jak to
+omówiono w rozdziale 10 dla sygnałów jednowymiarowych. Matematycznie ta symetna
+wyraża się wzorem:
+
+    
+   
+ 
+  
+  
+  
+ 
+ 
+ 
+ 
+  
+  
+  
+
+<image/wzory/k3_page364_formula1.png>
+
+wzr24.2.symetriawidmadwuwymiarowegowdziedzinieczstotliwoci.wzorymonastosowadaobw
+formatów — zarówno gdy mate częstotliwości są prezentowane w narożnikach, jak i wówczas, gdy w wyniku
+przesunięcia zostaty umieszczone pośrodku. We współrzędnych biegunowych modu! ma symetrię taką
+samą, jak część rzeczywista, faza zaś — taką jak część urojona
+
+W powyższych wzorach uwzględniono okresowość widma częstotliwościowego, które pc
+wtarza się co każde N próbek z indeksami zmieniającymi się od 0 do N - 1. Dlatego X[7
+powinno być interpretowane jako X[7,0], X[N,c] jako X[0,c] oraz X[N,N] jako XT[0,0]. Ta
+symetria powoduje, że cztery punkty są swymi własnymi odpowiednikami. Te punkty maj
+następujące lokalizacje: [0, 0], [0, N/2], [N/2, 0] i [N/2, N/2).

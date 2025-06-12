@@ -1,0 +1,44 @@
+108 1. Pojęcia podstawowe — elementy
+
+1.6. ELEMENTY NIESTACJONARNE. ELEMENTY SL$
+
+Omówimy obecnie podstawowe właściwości elementów niestacjonarnych.
+Umożliwi to zakończenie rozważań dotyczących głównych kryteriów podziału
+elementów i wyodrębnienie bardzo ważnej w praktyce klasy elementów SLS
+(skupionych, liniowych i stacjonarnych).
+
+1.6.1. Elementy niestacjonarne
+
+A. Pojęcie elementu niestacjonarnego. W p. 1.3.4-B wyjaśniliśmy znacze-
+nie pojęcia elementu stacjonarnego, tj. takiego elementu, którego właściwości nie
+zmieniają się w czasie.
+
+Element niestacjonarny charakteryzuje się tym, że jego właściwości (np.
+charakterystyka) są zmienne w czasie. Przyczyny zmian mogą być bardzo
+różne — od najprostszych (np. ruch pokrętła kondensatora obrotowego, ruch
+suwaka potencjometru itp.), do znacznie bardziej złożonych, będących efektem
+skomplikowanych procesów fizycznych. Zmiany takie mogą być zarówno
+zamierzone, jak i niezamierzone. W dalszym ciągu nie będziemy zajmować się
+mechanizmem procesów powodujących niestacjonarne zachowanie się elementu,
+poprzestając na jego opisie obwodowym.
+
+Element jest niestacjonarny, jeśli w jego równaniu występuje w sposób jawny
+
+czas.
+Opór skupiony niestacjonarny jest elementem o równaniu (por. p. 1.3.1):
+
+<image/wzory/k3_page108_formula1.png>
+Indukcyjność skupiona niestacjonarna jest elementem o równaniach (por. p.
+
+1.3.2):
+<image/wzory/k3_page108_formula2.png>
+Pojemność skupiona niestacjonarna jest elementem o równaniach (por. p.
+
+1.3.3):
+<image/wzory/k3_page108_formula3.png>
+
+Czas t jest zatem parametrem równań (1.6-1) — (1.6-3). Zakładamy przy
+tym, że dla każdego ustalonego te (lub dla każdego t z określonego
+przedziału) charakterystyki opisane równaniami (1.6-1) — (1.6-3) spełniają wszy-
+stkie te założenia, które przyjmowaliśmy dla charakterystyk elementów sta-
+cjonarnych w p. 1.3.1 — 1.3.3.

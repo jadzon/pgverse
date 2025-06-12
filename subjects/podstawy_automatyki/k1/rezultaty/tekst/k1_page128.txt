@@ -1,0 +1,28 @@
+Rozwiązanie
+
+Model matematyczny członu ma następującą postać:
+
+<image/wzory/k1_page128_formula1.png>
+
+Po podstawieniu danych otrzymujemy
+
+<image/wzory/k1_page128_formula2.png>
+Powyższe równanie można zapisać w postaci
+<image/wzory/k1_page128_formula3.png>
+
+gdzie X(s)= 1
+s
+
+Stąd
+
+<image/wzory/k1_page128_formula4.png>
+
+<image/wzory/k1_page128_formula5.png>
+
+Wykorzystując powyższe równanie, wyznaczamy odpowiedź skokową układu
+(rys. 3.13) dla założonych warunków początkowych, postępując według algorytmu po-
+danego poniżej.
+
+<image/figury/k1_page128_figure1.png>
+
+130

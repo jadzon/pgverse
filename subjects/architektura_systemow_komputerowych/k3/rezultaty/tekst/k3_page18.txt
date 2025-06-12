@@ -1,0 +1,38 @@
+8 2. Mrchitektura klasycznych komputerów
+
+słowo kodowe wskazujące na rodzaj wykonywanej operacji. Ponieważ jednak dla wielu
+operacji w komputerze należy wskazać także argumenty dla nich, to rozkazy uzupełnione
+muszą zostać wskazaniem miejsca argumentów. Rozkaz wraz z takim uzupełnieniem
+nazywają wtedy instrukcją.
+
+Jak już wcześniej powiedziano argumenty rozkazu mogą być:
+
+1) w pamięci i wówczas rozkaz musi zawierać adres miejsca w pamięci, gdzie one
+się znajdują;
+
+2) w rejestrach procesora i wówczas rozkaz musi wskazywać adres odpowiedniego
+rejestru;
+
+3) w samym rozkazie i wówczas programista umieszcza je w odpowiednio w kodzie
+programu.
+
+W czasie wykonywania programu procesor odczytuje kolejne rozkazy, które następnie
+musi rozpoznać (dekodować). Po zdekodowaniu rozkazu, w zależności od treści tego
+rozkazu, procesor podejmuje odpowiednią akcję. Akcja ta polega na wykonaniu
+odpowiedniej operacji. Między innymi, z treści rozkazu, może wynikać konieczność
+odczytania argumentów dla niego. Jeżeli argument znajduje się w pamięci, to dalsza akcja
+polega na odczytaniu adresu tego argumentu. Jeżeli adres ten programista umieścił w ko-
+dzie programu, to odczytane będzie następne słowo(a) z kodu programu stanowiące ten
+adres. Jeżeli argument znajduje się w rejestrze procesora, to rozkaz musi wskazać, w któ-
+rym z rejestrów procesora znajduje się adres. Po skompletowaniu całej instrukcji procesor
+wykonuje ją, a dalej pobiera następny rozkaz i cała akcja się powtarza. Zanim podany opis
+zostanie zilustrowany przykładem, przedstawione zostaną nieco dokładniej dwa spośród
+trzech bloków komputera: procesor i pamięć.
+
+<image/figury/k3_page18_figure1.png>
+
+Rysunek 2.2. Uproszczony schemat procesora
+
+Na rysunku 2.2 pokazano uproszczony schemat blokowy typowego procesora. Typowa
+organizacja procesora to blok rejestrów (na rys. 2.2 jest ich 4), blok ALU i dekoder kodu
+rozkazowego. Najważniejszym układem procesora jest blok arytmetyczno-logiczny ALU

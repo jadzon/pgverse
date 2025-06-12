@@ -1,0 +1,34 @@
+.ory/k4_page190_formula2.png
+Przerzutniki bistabilne SR i RS zostały w sterownikach GE Fanuc zaliczone do
+funkcji przekaźnikowych (relay functions), ponieważ są one realizowane
+w schemacie drabinkowym za pomocą pary cewek sprzężonych: S (Set — usta-
+wiająca, załączająca) i R (Reset — kasująca, wyłączająca) przypisanych do jednej
+zmiennej binarnej. Cewki te mogą być także z zapamiętaniem stanu (retentive set
+coil, retentive reset coil).
+
+ 
+
+Różnica w działaniu przerzutników SR i RS objawia się tylko wtedy, gdy oba
+wejścia przerzutnika są w stanie ON (do obu dopływa prąd), por. Rozdz. 1.2.1.
+W schemacie drabinkowym różnica w realizacji obu przerzutników polega na
+zmianie kolejności obwodów. Stan obwodu późniejszego w realizacji (niższego
+w schemacie drabinkowym) jest dominujący.
+
+Na Wyd. 4.7 przedstawiono realizację funkcji przerzutnika SR (z dominującym
+wejściem ustawiającym) przy użyciu cewek z zapamiętaniem stanu. Przerzutnik
+ten realizuje tę samą funkcję jak obwód dolny z Wyd. 4.3.
+
+Wyd. 4.8 z kolei pokazuje realizację przerzutnika RS (z dominującym wejściem
+kasującym) realizującego funkcję taką samą jak obwód górny na Wyd. 4.3. Warto
+przypomnieć jeszcze raz, że ze względów bezpieczeństwa preferowane jest sto-
+sowanie właśnie tego rozwiązania.
+
+<image/tabele/k4_page190_table1.png>
+
+Wyd. 4.7 Przykład realizacji przerzutnika SR
+
+<image/tabele/k4_page190_table2.png>
+
+Wyd. 4.8 Przykład realizacji przerzutnika RS
+
+wzory/k4_page190_formula3.pnq

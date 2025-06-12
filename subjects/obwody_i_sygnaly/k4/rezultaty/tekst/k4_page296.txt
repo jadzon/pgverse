@@ -1,0 +1,50 @@
+296 3. Obwody prądu stałego
+—— 222), NMR LL.
+
+Dla dowolnych wartości napięcia U mamy zatem:
+
+<image/wzory/k4_page296_formula1.png>
+
+Omówione w tym punkcie obwody nieliniowe zawierające diody idealne
+znajdują szerokie zastosowanie w układach nieliniowych prądu zmienne Zo,
+których dyskusji będzie poświęcony p. 5.4.2.
+
+E. Jednoznaczność rozwiązań. W dotychczasowy:
+daliśmy, że poszukiwane rozwiązania są jednoznaczne.
+wyznaczaniu charakterystyk łącznych elementów nielinic
+że charakterystyki poszczególnych elementów spełniają
+jednoznaczność rozwiązań. W przypadku połączenia s
+aby charakterystyki łączonych elementów były nieuzale:
+prądowo oraz aby charakterystyka łączna była nieuzależ
+tych warunków są bowiem jednoznacznie określone
+wielkości zaciskowe elementów zarówno przy zadanym
+napięciu na elemencie zastępczym. Podobnie, przy połąc
+jednoznaczności rozwiązań wystarczy, aby charakteryst
+tów były nieuzależnione lub uzależnione napięciowo ora
+łączna była nieuzależniona.
+
+Podane warunki są oczywiście warunkami wystarczaj:
+analizy obwodu nieliniowego i bez trudu można pod
+rozważane w p. D), gdy mimo ich niespełnienia odpowied!
+majednoznacznerozwizanie.woglnymjednakprzypwzory/k4_page296_
+obwodów nieliniowych, dla których nie są spełnione
+warunki, należy postępować bardzo ostrożnie, sprawd
+zagadnienie ma w ogóle rozwiązanie i w jakim zakres
+jednoznaczne”, W przeciwnym przypadku można bowi
+fałszywych wyników.
+
+Rozważmy przykład układu nieliniowego (rys. 3.4-
+częściową ilustracją problemów, które mogą pojawić
+warunki są naruszone. W układzie występuje dioda tunelc
+z rys. 1.3-4c (przykład 1.3-1), opór liniowy R= 124
+elektromotorycznej E = 0,5 V. Załóżmy, że należy wyzi
+diodzie tunelowej.
+
+Wykreślając prostą oporu (prosta a na rys. 3.4-19b)
+ona charakterystykę diody w trzech punktach A, Bi C.
+z tych punktów mogą być punktami pracy diody. Rozważn
+
+Przypuśćmy, że dysponujemy źródłem E o regulowan
+cznej i że zwiększamy stopniowo jej wartośćod E = 0 do
+
+1) Por. zad. 3.24.

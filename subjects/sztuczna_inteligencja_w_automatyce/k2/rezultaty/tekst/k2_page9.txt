@@ -1,0 +1,52 @@
+14
+
+D Świadomości nie można wyjaśnić w żaden fizyczny, obliczeniowy czy inny na-
+ukowy sposób.
+
+Stanowisko A jest zgodne z hipotezą silnej sztucznej inteligencji, zaś stanowisko
+B jest zbieżne z poglądami Searlego.
+
+Penrose opowiada się za stanowiskiem C. Główną linią jego wywodu jest to, że w
+przyrodzie, a tym samym w mózgu, występują procesy, które nie dają się modelować
+przy pomocy uniwersalnej maszyny Turinga (komputera). Jest to pogląd sprzeczny
+z powszechnie uznawaną hipotezą Churcha- Turinga mówiącą, że wszystkie procesy
+fizyczne są obliczalne, a zatem dają się modelować za pomocą maszyny Turinga.
+
+Stanowiska A i B implikują możliwość posiadania przez maszyny inteligencji.
+Przyjmując jedno z tych stanowisk i biorąc pod uwagę wielkie i stale rosnące moce
+obliczeniowe komputerów mozna spodziewać się powstania maszyn o inteligencji
+znacznie przewyższającej inteligencję człowieka i w konsekwencji wyparcie przez
+nie i zmarginalizowanie roli człowieka. Paradoksalnie stanowisko B jest bardziej
+pesymistyczne niż A, bo wynika z niego, że światem rządzić będą automaty nie
+posiadające umysłu (świadomości), gdy z A wynikałoby, że atomaty te posiadałyby
+umysł, a tym samym możnaby powiedzieć, że w pewnym sensie dziedziczyłyby cechy
+człowieka.
+
+2.2. Paradygmaty sztucznej ineligencji
+
+W historii ogólnych poglądów dotyczących budowy systemów inteligentnych, abs-
+trahując od posiadania lub nie posiadania przez nie świadomości, można wyróżnić
+trzy okresy.
+
+W pierwszym okresie, w późnych latach 40. XX wieku, zaczęto budować i ba-
+dać zachowanie się prostych poruszających się robotów wyposażonych w układy
+regulacji pozwalające poszukiwać źródeł światła lub energii, a także układów regu-
+lacji naśladujących podtrzymywanie stabilności organizmów żywych, wytrącanych
+z równowagi przez czynniki zewnętrzne. Urządzenia te nie były jeszcze wyposażone
+w komputery, a posiadały tylko czujniki i elektroniczne układy regulacji z wieloma
+nieliniowymi sprzężeniami zwrotnymi. Dzięki tym sprzężeniom przejawiały złożone,
+nieprzewidywalne zachowania i dostrzegano w ich zachowaniach wiele podobieństwa
+do zachowań zwierząt czy ludzi. Powstały wtedy wielokrotnie opisywane i dyskuto-
+wane konstrukcje jak np. „żółwie” Grey Waltera, czy „homeostat” Ross Ashbyego [?].
+Badaniami nad układami regulacji ze sprzężeniami zwrotnymi i próbami symulacji
+celowych, inteligentnych zachowań zajmowała się dziedzina nazywana cybernetyka.
+
+Badacze zajmujący się cybernetyką w zasadzie nie zauważali przydatności kom-
+puterów i nie stosowali ich w swych modelach. Wśród informatyków i logików zaczęły
+równolegle powstawać inne modele działań inteligentnych tym razem oparte o kom-
+putery. Przełomowym okazały się programy Logic Theorist i następnie General Pro-
+blem Solver przeprowadzające automatyczne wnioskowanie i rozwiązywanie zadań
+poprzez przeszukiwanie heurystyczne, których twórcami byli Newell, Shaw i Simon.
+Wśród tych i innych badaczy zgromadzonych na konferencji w Dartmouth w 1956
+roku (Dartmouth Summer Research Conference on Artificial Intelligence) sformuło-
+wano paradygmat sztucznej inteligencji mówiący że w pełni inteligentne działanie

@@ -1,0 +1,46 @@
+1.7. Źródła 133
+
+wielkości (1.7-29) są związane dwoma równaniami (por. p. 2.1.2-C). Na
+?rzykład pełny opis źródeł sterowanych z rys. 1.7-18 jako elementów czterozacis-
+cowych (lub, ściślej, elementów dwuwrotowych) ma postać:
+
+<image/tabele/k4_page131_table1.png>
+
+E. Elementy wielowrotowe SLS i ich podział. Źródła sterowane o rów-
+=aniach (1.7-30) są przykładami skupionych i stacjonarnych dwuwrotowych
+* ementów rezystancyjnych. Elementy takie są uogólnieniem omówionych w p.
+_.34-G dwuzaciskowych (lub inaczej — jednowrotowych) elementów rezystan-
+cyjnych, zdefiniowanych równaniem (1.3-26).
+
+Rozważmy element o dwóch parach zacisków, którego prądy i napięcia
+zaciskowe są związane równaniami:
+
+zory/k4_page131_formula1.png (1.7-31)
+
+zdzie Fęy, Fęą Są funkcjami ciągłymi wszystkich zmiennych. Równania (1.7-31)
+mogą być zapisane także w postaci jednego równania macierzowego:
+
+'k4_page131_formula2.png (1.7-32)
+
+zdzie Fą = [Fpy, Fę>] jest dwuwymiarową funkcją wektorową dwóch zmien-
+cych wektorowych ż, u, określonych wzorami (1.7-29).
+
+Równania (1.7-31) lub równanie macierzowe (1.7-32) określają skupiony
+. stacjonarny dwuwrotowy element rezystancyjny. Równania (1.7-31) są rów-
+zaniami algebraicznymi, dwuwrotowy element rezystancyjny jest zatem elemen-
+<=m bezinercyjnym (por. p. 1.3.1-E).
+
+Element opisany równaniami (1.7-31) jest liniowy, jeśli oba równania
+1.7-31) są liniowe względem wszystkich zmiennych i jest nieliniowy w pozosta-
+„ch przypadkach.
+
+Wynika stąd, że źródła sterowane o równaniach (1.7-30) są dwuwrotowymi
+* ementami rezystancyjnymi SLS (skupionymi, liniowymi i stacjonarnymi).
+
+Uwaga. W podobny sposób można określić skupiony i stacjonarny wielowrotowy element
+"zystancyjny o n parach zacisków. Element taki można także opisać równaniem macierzowym
+-]-32) z tym, że wektory i, u oraz funkcja wektorowa Fa, mają wówczas wymiar n.
+
+Przez analogię do równań (1.3-27) — (1.3-30) można definiować także (skupione i stacjonarne)
+*'elowrotowe elementy indukcyjne i pojemnościowe. W p. 1.8.1 omówione będą przykłady dwu-
+*rotowego (i n-wrotowego) elementu indukcyjnego SLS.

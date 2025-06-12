@@ -1,0 +1,78 @@
+Splot FFT 305
+
+ 
+
+W tablicy 18.1 podano przykład programu realizującego splot FFT. Program filtruje sygnał
+"złożony z 10 milionów punktów przez splatanie go z 400-punktową odpowiedzią impulsową
+filtru. Jest to wykonywane przez rozdzielenie sygnału wejściowego na 16 000 segmentów
+zawierających po 625 punktów. Gdy każdy z tych segmentów jest spłatany z odpowiedzią
+impulsową, to uzyskuje się segment wyjściowy złożony z 625 + 400 — I = 1024 punktów.
+Są więc stosowane 1024-punktowe przekształcenia FFT. Po zdefiniowaniu i zainicjowaniu
+matryc (wiersze od 130 do 230) pierwszym krokiem jest obliczenie i zarejestrowanie odpo-
+wiedzi impulsowej filtru (wiersze od 250 do 310). Wiersz 260 wywołuje „mityczny” pod-
+program ładujący odpowiedź impulsową do matrycy od XX[0] do XX[399] i ustawiający od
+XX[400] do XX[1023] na wartość zero. Podprogram w wierszu 270 jest przekształceniem
+FFT, przetwarzającym 1024 próbki przechowywane w XX[ ] na 513 próbek przechowywa-
+nych w REX[ ] oraz IMX[ |], a więc na części rzeczywistą i urojoną odpowiedzi częstotliwo-
+ściowej. Te wartości są przekazywane do matryc REFR[ ] oraz IMFR[ ] (skrót od: REal and
+IMaginary Frequency Response), aby mogły być użyte w dalszej części programu.
+
+Pętla FOR-NEXT między wierszami 340 i 580 steruje przetwarzaniem 16 000 segmentów.
+W wierszu 360 podprogram ładuje do macierzy od XX[0] do XX[624] następny segment,
+który ma być przetwarzany oraz ustawia od XX[625] do XX[1023] na wartość zero. W wier-
+szu 370 podprogram FFT zastosowano do znalezienia widma częstotliwościowego tego seg-
+mentu. Część rzeczywista tego widma jest umieszczona w 513 punktach REX[ |], a część
+urojona w 513 punktach IMX[ ]. Wiersze od 390 do 430 zawierają wymnażanie odpowiedzi
+częstotliwościowej segmentu przechowywanej w REX[ ] i IMX[ ] przez odpowiedź często-
+tliwościową filtru przechowywaną w REFR[ ] i IMFR[ ]. Wynik tego mnożenia jest wpisany
+do REX[ ] i IMX[ ] w miejsce danych tam poprzednio przechowywanych. Ponieważ jest
+to teraz widmo częstotliwościowe segmentu wyjściowego, więc można zastosować IFFT,
+aby wyznaczyć segment wyjściowy. Korzysta się przy tym z „mitycznego” podprogramu
+w wierszu 450, który przetwarza 513 punktów przechowywanych w REX[ ] i IMX[ ] na
+1024 punkty zapisane do XX[ ]. które są segmentem wyjściowym.
+
+Wiersze od 470 do 550 obsługują nakładanie się segmentów. Każdy segment wyjściowy jest
+dzielony na dwie sekcje. Pierwsze 625 punktów (od 0 do 624) trzeba połączyć z nałoże-
+niem się poprzedniego segmentu wyjściowego i następnie wpisać do sygnału wyjściowego.
+Ostatnie 399 punktów (625 do 1023) należy zarejestrować, gdyż mogą się one nakładać na
+następny segment wyjściowy.
+
+Aby to zrozumieć, spójrzmy raz jeszcze na rys. 18.1. Próbki od 100 do 199 na rys. 18.1 g)
+trzeba połączyć z nałożeniem od poprzedniego segmentu wyjściowego (rys. 18.1 f) i potem
+powinny być one przeniesione do sygnału wyjściowego (rys. 18.1 i). Próbki od 200 do 299
+na rys. 18.1 g) trzeba zapamiętać, aby można je potem połączyć z następnym segmentem
+wyjściowym (rys. 18.1 h).
+
+Teraz wróćmy do programu. Matryca OLAP| |] jest używana do przechowywania 399 pró-
+bek, które z jednego segmentu nakładają się na następny. W wierszach od 470 do 490 te
+399 wartości z tej matrycy (z poprzedniego segmentu wyjściowego) jest dodawanych do
+właśnie przetwarzanego segmentu wyjściowego, przechowywanego w XX[ |]. „Mityczny”
+podprogram w wierszu 550 dostarcza następnie 625 próbek zawartych w matrycy od XX[0]
+do XX[624] do zbioru obejmującego sygnał wyjściowy. Następnie te 399 próbek z bieżącego
+segmentu wyjściowego, które muszą być przetrzymane do następnego segmentu wyjściowe-
+go, są zapamiętywane w OLAP[ ] w wierszach od 510 do 530. Po przetworzeniu wszyst-
+kich segmentów od 0 do 15999, matryca OLAP| |] będzie zawierać 399 próbek z segmentu
+15 999, które powinny nałożyć się na segment 16 000. Ponieważ segment 16 000 nie ist-
+nieje (lub może być traktowany jako zawierający same zera), więc te 399 próbek wpisuje
+się do sygnału wyjściowego w wierszu 600. To powoduje, że sygnał wyjściowy ma długość
+1600 x 625 + 399 = 10 000 399 punktów. Jest to równe sumie długości sygnału wejściowego
+i długości odpowiedzi impulsowej filtru minus 1.
+
+a
+na own oó ZE W PW |
+77 1 AF «1 wkWEOT? 20 LG zai
+
+seth «e
+
+324711170 EZR ONRR W"
+
+Pr ZDBRE RZY.
+
+SET TEROPZY ZĘ ORDY OPOPANEY O
+ROSPOROA SPY PY PAZORĄ
+
+=.
+
+++” egrm m ">
+
+aLźc

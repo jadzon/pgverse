@@ -1,0 +1,53 @@
+218
+
+11. Pary transformat Fouri
+
+<image/figury/k3_page199_figure2.png>
+
+   
+    
+  
+  
+   
+    
+   
+  
+  
+   
+   
+   
+  
+   
+   
+
+Główną cechą systemu świergotowego jest jego pełna odwracalność. Po przejściu sygnań
+świergotowego przez system antyświergotowy, sygnał znowu zamienia się w impuls. Syste
+antyświergotowy powinien więc mieć moduł równy jedności, a charakterystykę fazową «
+wrotną w stosunku do charakterystyki systemu świergotowego. To oznacza — zgodnie z r
+ważaniami w poprzednim rozdziale — że odpowiedź impulsowa systemu antyświergotowe,
+jest określana przez lewo-prawostronne odwrócenie przebiegu odpowiedzi impulsowej sys
+mu świergotowego. To interesujące, ale do czego może służyć?
+Zastanówmy się, jak działa system radarowy. IZ
+ny kierunkowej. Samolot lub inne obiekty odbijają część tej energii z powrotem do odbiom
+uniskiczóńegć Glikó nadejiki Pokiwnż Mie Ó ORKORĄĘ WY SA PókOKIĄ, | )
+czas upływający między sygnałami nadanym i odebranym jest miarą odległości do przeszkody.
+narzuca na impuls pierwsze wymaganie — powinien on być możliwie jak najkrótszy. Na przykł
+impuls o czasie trwania | us daje wiązkę radiową o długości ok. 300 m. Stąd wynika, że uzyska!
+w systemie informacja o odległości będzie miała w przybliżeniu taką właśnie rozdzielczość. Chc
+uzyskać lepszą rozdzielczość wyznaczania odległości, należy zastosować krótszy impuls.
+Drugi wymóg jest oczywisty. Jeśli chcemy wykrywać obiekty znajdujące się w większej odległość:
+to konieczny jest impuls o większej energii. Niestety, większa energia i krótszy impuls to wymag;
+przeciwstawne. Moc elektryczna konieczna do wygenerowania impulsu jest równa energii ir
+podzielonej przez ego czs wania. Jednoczesne wymaganie zwiększa enegi krótzego c i
+trwania powoduje, że wymagana moc elektryczna staje się poważnym ograniczeniem w syst
+Stopień wyjściowy nadajnika może dysponować tylko taką mocą, aby sam nie uległ zniszczeniu
+Tego ograniczenia można uniknąć, stosując sygnały świergotowe. Impuls, przed dojście
+do stopnia końcowego nadajnika radarowego, jest przepuszczany przez system świergotow
+Zamiast impulsu, ulegającego odbiciu od wykrytego samolotu, stosuje się sygnał świergo
+wy. Po odebraniu echa świergotowego, sygnał jest przepuszczany przez system an
+gotowy, który przetwarza go znowu w impuls. Dzięki temu części systemu, które mier
+odległość, odbierają krótsze impulsy, a układy wymagające większej mocy mają do czynie
+tylko z sygnałami o dłuższym czasie trwania, Takie kształtowanie przebiegów jest pods
+wą częścią nowoczesnych systemów radarowych.
+
+<image/figury/k3_page199_figure1.png>

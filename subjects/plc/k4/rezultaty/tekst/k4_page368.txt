@@ -1,0 +1,13 @@
+Przykład 1
+
+jury/k4_page368figury/k4_page368_figure2.
+
+łaniu bloków funkcyjnych
+
+Przykład 2
+
+<image/figury/k4_page368_figure3.png>
+
+<image/tabele/k4_page368_table1.png>
+
+368 Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5

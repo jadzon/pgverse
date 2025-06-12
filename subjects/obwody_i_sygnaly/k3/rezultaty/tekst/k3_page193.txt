@@ -1,0 +1,48 @@
+2.1. Wielowrotniki i sieci __ 195
+
+Operacja F jest stacjonarna, jeśli:
+
+<image/wzory/k3_page193_formula1.png>
+
+dla każdego x € X i każdego ty € R.
+Zależność ta oznacza, że jeśli F [x(t)] = y(t), to:
+
+<image/wzory/k3_page193_formula2.png>
+
+Operacja F jest bezinercyjna, jeśli:
+
+:'ory/k3_page193_formula3.png (2.1-41)
+dla każdego x € X i każdego t, € R.
+
+Zależność (2.1-41) oznacza, że wartości sygnałów wyjściowych w dowolnej
+chwili ty zależą tylko od wartości sygnałów wejściowych w tej samej chwili.
+W tym ujęciu możemy zatem sformułować następującą konkluzję.
+
+Układ jest liniowy (odpowiednio: stacjonarny, bezinercyjny), jeśli opisująca go
+operacja F jest liniowa (odpowiednio: stacjonarna, bezinercyjna).
+
+Zwracamy jednak raz jeszcze uwagę na to, że ten sam układ może być
+opisywany przez różne operacje F w zależności od tego, jak wybraliśmy sygnały
+wejściowe i sygnały wyjściowe.
+
+Rozważmy np. układ z rys. 2.1-16a (przykład 2.1-19) i wybierzmy jako sygnał
+wejściowy x napięcie u. Jeśli wybierzemy jako sygnał wyjściowy y prąd i, to
+operacja y = F[x] jest liniowa, jest ona bowiem określona wzorem (2.1-33).
+Gdybyśmy jednak jako sygnał wyjściowy wybrali prąd ip, to wobec zależności
+(2.1-32) operacja opisująca układ nie jest liniowa (tzn. jest nieliniowa).
+
+Przeprowadźmy jeszcze następujące rozumowanie. Rozważmy sieć skupioną
+liniową (w sensie definicji podanych w p. A i B), w której działa n źródeł
+niezależnych. Jeśli do wektora pobudzeń włączymy wszystkie n sił elektro-
+motorycznych i/lub wydajności prądowych, to dla dowolnie wybranych jako
+sygnały wyjściowe prądów i/lub napięć powstałych w sieci, operacja opisująca
+układ będzie liniowa (por. zasadę superpozycji, p. 2.1.7). Gdybyśmy jednak jako
+sygnały wejściowe przyjęli tylko część r < n działających w sieci pobudzeń, to
+operacja F nie będzie wówczas liniowa, nie będzie bowiem spełniać zależności
+(2.1-37). Analogiczna sytuacja wystąpiłaby w przypadku wielowrotnika źród-
+łowego, gdybyśmy jako sygnały wejściowe przyjęli tylko pobudzenia dołączone
+z zewnątrz i nie uwzględnili w wektorze sygnałów wejściowych sił elektro-
+motorycznych i/lub wydajności prądowych występujących wewnątrz wielowrot-
+nika. Rozumowanie to dodatkowo uzasadnia celowość szczególnego trak-
+towania źródeł niezależnych w rozważaniach nad klasyfikacją układów (por.
+p. AO).

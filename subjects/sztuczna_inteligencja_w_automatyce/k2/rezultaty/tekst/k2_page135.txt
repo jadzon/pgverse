@@ -1,0 +1,30 @@
+140
+
+<image/figury/k2_page135_figure1.png>
+
+Rys. 6.35: Szereg czasowy przedstawiajacy liczbę drapieżników (do przykładu ??
+
+przewidzieć przebieg pozostałych 400 próbek.
+
+Przyjęto, że rozwiązaniem zadania będzie sieć radialną, która na podstawie ciągu
+czterech kolejnych próbek będzie przewidywała próbkę następną. Na podstawie do-
+stępnych 300 próbek utworzono zbiór uczący w przedstawiony w tablicy ??. Stosując
+ten zbiór wyznaczono wagi pełnej sieci radiałnej. Sieć miała 296 neuronów w war-
+stwie wejściowej, a tym samym zawierała 257 wag.
+
+<image/figury/k2_page135_figure2.png>
+
+Aby na podstawie utworzonej sieci, przewidującej jeden następny element sze-
+regu na podstawie czterech poprzednich elementów, uzyskać przewidywanie całego
+przebiegu zastosowano prostą procedurę. Na podstawie próbek nagz, nag. 1299: 11300
+podanych na wejście sieci uzyskano przewidywaną wartość próbki następnej, f30.
+Następnie na wejście sieci podano próbki nags. 299. 1300. Fłąoo uzyskując próbkę ń301.
+Postępując analogicznie uzyskano predykcję elementów od 301 do 700. Jak widać
+po kilku krokach sieć przewiduje wartości dalsze na podstawie wartości uprzednio
+przez nią przewidzianych.
+
+Uzyskane wyniki przedstawiono na rysunku ??, gdzie dla porównania przedsta-
+wiono także wyniki predykcji uzyskane przez zwykła warstwową sieć neuronową i
+uczący się system rozmyty, omówiony w dalszej części rozdziału. Uzyskane wyniki
+pokazują duże zdolności systemów uczących się do predykcji szeregów czasowych, a
+także, w tym przypadku, podobną jakość zastosowanych systemów. am

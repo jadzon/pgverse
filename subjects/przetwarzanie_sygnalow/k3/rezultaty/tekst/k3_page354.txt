@@ -1,0 +1,54 @@
+24. Liniowe przetwarzanie obra:
+
+Na rys. 24.3 e) przedstawiono dwuwymiarową funkcje sinc. W przetwarzaniu sygnału jedn
+wymiarowego stosuje się okienkowanie funkcją sine w celu rozdzielania pasm częste
+ści. Ponieważ informacja obrazowa nie jest zakodowana w dziedzinie częstotliwości, wł
+funkcja sinc jest rzadko stosowana jako odpowiedź impulsowa filtru obrazu, chociaż j
+przydatna w niektórych zagadnieniach teoretycznych. Funkcja sinc jest trudna w stoso i
+bo amplituda jej „ogonów” maleje bardzo wolno, (jak 1/x), a więc przebieg funkcji musi b
+traktowany jako nieskończenie długi. Natomiast „ogony” funkcji gaussowskiej zmni jsZ
+się bardzo gwałtownie, (jak e *) i mogą być obcięte bez żadnych złych skutków.
+W tych wszystkich odpowiedziach impulsowych filtrów są stosowane ujemne indeksy, dzię
+czemu funkcja PSF może być wypośrodkowana dla wiersza = 0 i kolumny = 0. W jedm
+wymiarowym DSP ujemne indeksy są często eliminowane przez przesuwanie odpow:
+impulsowej w prawo tak dalece, aż wszystkie niezerowe próbki będą miały indeksy dodatni
+To przesunięcie przesuwa też sygnał wyjściowy o taką samą wartość, co zwykle nie ma ista
+nego znaczenia. Natomiast przesunięcie między obrazami wyjściowym a wejściowym ję
+zwykle nie do przyjęcia. Dlatego w przetwarzaniu obrazów są z zasady stosowane indek
+ujemne w odpowiedziach impulsowych filtrów. |
+Trudnością, jaką się napotyka w splocie obrazów, jest bardzo wielka liczba obliczeń. Gdy
+przykład obraz 512 x 512 pikseli jest poddawany splotowi z funkcją PSF 64 x 64 pikseli, to tr
+ba wykonać ponad miliard mnożeń i dodawań (tj. 64 x 64 x 512 x512). Długi czas ONaf
+może uczynić tę metodę nieużyteczną w praktyce. Skrócić ten czas można w trojaki sposób.
+Pierwszym rozwiązaniem jest zastosowanie bardzo małej funkcji PSF, często tylko 3 x
+piksele. Realizuje się to przez pętlę w każdej próbce obrazu wyjściowego, zastosowanie 20
+tymalizowanego programu do mnożenia i sumowania odpowiednich dziewięciu pikseli z «
+razu wyjściowego. Używając funkcji PSF tylko 3 x 3, można wykonać zadziwiająco duń
+przetwarzania, a w każdym razie na tyle dużo, żeby wpłynąć na krawędzie obrazu.
+
+Z drugiego sposobu korzysta się, gdy jest konieczna duża funkcja PSF, lecz jej kształt nie je
+krytyczny. To wymaga odpowiedzi impulsowej, która jest rozłączna (separable). Ta właś i
+wość umożliwia wykonanie splotu obrazu przez szereg operacji jednowymiarowych. W
+sposób można setki razy zwiększyć szybkość wykonywania.
+Trzecim rozwiązaniem jest spłot FFT, stosowany, gdy odpowiedź impulsowa filtru jest du
+i ma specyficzny kształt. Nawet przy poprawie szybkości uzyskanej przez FFT o wysoki
+skuteczności, czasy wykonania będą paskudne. Przyjrzyjmy się szczegółowo tym trzem sp
+sobom i rozważmy przykłady ich zastosowania w przetwarzaniu obrazów.
+
+Modyfikacja krawędzi 3 x 3
+
+Na rys. 24.4 przedstawiono kilka przykładów operacji 3 x 3. Na rys. 24,4 a) pokazać
+obraz uzyskany w lotniskowym, rentgenowskim skanerze bagażu. Gdy ten obraz 20%
+spleciony z funkcją delta 3 x 3 (jedynka w otoczeniu 8 zer), obraz będzie niezmienic
+Chociaż ten fakt sam w sobie nie jest interesujący, to jest on podstawą dla innych odpc
+dzi impulsowych filtrów.
+
+Na rys. 24.4 b) przedstawiono ten obraz spleciony z odpowiedzią impulsową filtru 3 x
+złożoną z jedynki, ujemnej jedynki i z 7 zer. Ta operacja nosi nazwę przesuwanie i oć
+mowanie, gdyż przesuniętą wersję obrazu (odpowiadającego —1) odejmuje się od obra
+oryginalnego (odpowiadającego 1). Takie przetworzenie daje złudzenie optyczne, że niektó
+obiekty są bliżej lub dalej niż tło, tworząc efekt trójwymiarowości lub obrazu wytłaczane
+Mózg interpretuje obrazy tak, jakby światło padało z góry, gdyż to jest normalnie spotyk
+sposób oświetlenia. Jeśli krawędzie obiektu są jasne u góry i ciemne u dołu, obiekt jest pl
+strzegany jako wystający ponad tło. Aby zobaczyć inny interesujący efekt, przekręćcie obr
+do góry nogami i obiekty będą wtedy jakby wepchnięte w tło.

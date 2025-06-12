@@ -1,0 +1,31 @@
+1.10. Drogi i cykle Hamiltona 21
+
+Przykład 1.35 Prześledźmy działanie algorytmu na przykładzie z rysunku 1.10. Poniższa
+tabela zawiera: odwiedzany wierzchołek, stan STOSU oraz stan pliku wyjściowego CE po
+każdym kroku z pierwszych szesnastu kroków.
+
+<image/tabele/k2_page199_table1.png>
+
+adgfibh fedcba.
+
+Z algorytmu wynika, że kolejne wierzchołki na obu stosach są połączone krawędziami
+i że każda krawędź (jako para sąsiednich wierzchołków) pojawia się na STOSIE tylko
+raz. Należy więc tylko pokazać, że wszystkie krawędzie znajdą sie na wyjściu. Jeżeli
+pominięto jakieś krawędzie, to ponieważ graf jest spójny jakaś nieodwiedzona krawędź
+musi przylegać do wierzchołka v, który jest w wynikowym cyklu, ale v jest przekładany
+na wyjście tylko tedy, gdy nie odchodzą od niego już żadne nieodwiedzane krawędzie.
+
+W każdej iteracji algoryt przechodzi jakąś krawędź. Albo wkładając jej koniec na
+STOS, albo przekładając ją na wyjście CE. A ponieważ każda krawędź jest odwiedzana
+dokładnie dwa razy, raz jak jest wkładana na STOS i drugi raz jak jest przekładana na CE,
+więc czas działania algorytmu jest proporcjonalny do liczby krawędzi w grafie.
+
+1.10 Drogi i cykle Hamiltona
+
+Droga Hamiltona to taka droga w grafie, która przechodzi dokładnie raz przez każdy
+wierzchołek grafu. Cykl Hamiltona to zamknięta droga Hamiltona.
+
+Przykład 1.36 Graf z rysunku 1.1 posiada drogę Hamiltona d, a,b,c,g, f,e, ale nie po-
+siada cyklu Hamiltona. Każdy graf pełny K, zn > 3 posiada cykl Hamiltona.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

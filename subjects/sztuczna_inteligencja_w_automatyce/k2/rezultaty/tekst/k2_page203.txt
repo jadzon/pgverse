@@ -1,0 +1,9 @@
+<image/figury/k2_page203_figure2.png>
+
+figury/k2_px
+
+Rys. 8.14: System drapieżnik ofiara modelowany indywiduowo: (a) wykresy liczbności w
+czasie drapieżników (kolor czerwony) i ofiar (kolor zielony). (b) liczebności na płaszczyźnie
+fazowej. Rozkłady cząstek reprezentujących drapiezniki i ofiary (c) w stanie poczatkowym
+symulacji oraz (d) w kroku 1700, (e) w kroku 3207, (f) w kroku 4100, oraz (g) w kroku
+14349

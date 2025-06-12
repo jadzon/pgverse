@@ -1,0 +1,10 @@
+<image/tabele/k4_page488_table2.png>
+
+Wyd. 8.169 Blok PB3 - Faza Napełnianie — Kontrola poziomu i sterowanie zaworami
+VI i V2 doprowadzającymi czynnik A i B
+
+<image/tabele/k4_page488_table1.png>
+
+ 
+
+488 Rozdział : 8.Programy przykładowe

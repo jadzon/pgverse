@@ -1,0 +1,22 @@
+Tablica 27.2. Kod ASCH. Jest to od dawna stosowana norma określająca sposób zapisu liter i liczb w postaci
+AE EE DER liczby zaś od 0
+różnych dziatań kontrolnych. Chociaż to znaki
+
+do 31 są stosowane do zdefiniowano 128 stów kodowych, to
+są zwykle wyrażane jako pełny bajt (8 bitów). Wartości niezdeliniowane (od 128 do 255) są często wykorzystywane
+do liter wzorców nie są to jednak zastosowania
+
+symboli matematycznych i różnych geometrycznych;
+Wiele spośród znaków kontrolnych (od 0 do 31) dotyczy starych sieci
+znajduje zastosowania w technice komputerowej
+
+<image/tabele/k3_page427_table1.png>
+
+Opracowano wiele różnych sposobów kodowania ciągów. Dane wejściowe można, na
+kład, traktować jako indywidualne bajty albo jako grupy bajtów reprezentujące coś
+rozbudowanego, takiego jak liczby zmiennoprzecinkowe. Kodowanie ciągów może być
+stosowane do jednego tylko znaku (jak w powyższym ce z zerem), do kilku
+lub do wszystkich znaków.
+Dobrym przykładem uogólnionej metody ciągów jest Pac, stworzona dla uż
+komputerów Macintosh. Każdy bajt (osiem bitów) z pliku wejściowego jest zastę
+przez dziewięć bitów w pliku skomprymowanym. Dodatkowy, dziewiąty bit jest i

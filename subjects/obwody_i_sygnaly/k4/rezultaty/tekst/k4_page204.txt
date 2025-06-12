@@ -1,0 +1,35 @@
+204 2. Pojęcia podstawowe — układy
+
+ 
+
+<image/figury/k4_page204_figure3.png>
+
+prąd i zaznaczony na rysunku.
+Jeżeli w układzie działa tylko źródło E (źródło j jest zastąpione rozwarciem) wówczas składową
+I prądu i pochodzącą od tego źródła obliczamy na podstawie schematu z rys. 2.1-23a, z którego
+
+ 
+
+E
+wynika, że I = — = 5 mA.
+ynika, R
+
+figury/k4_page204_figure1
+
+Jeżeli w układzie działa tylko źródło j (źródło E jestzastąpionezwan
+my schemat z rys. 2.1-23b, który po połączeniu węzłów górnego i doln
+w innej konfiguracji geometrycznej (rys. 2.1-23c). Z symetrii
+
+ły = ij m —5cos2'10*t [mA].
+ojzewowaotgeeijestsumprdwpowzory/k4_page204_
+<image/wzory/k4_page204_formula2.png>
+
+Przykład 2.1-26. Rozważmy układ przedstawiony na rys. 2.1-24. St
+wyznaczymy prąd i zaznaczony na rysunku.
+Chcąc wyznaczyć prąd i bezpośrednio na podstawie praw Kirchhc
+dość złożony układ równań sieciowych. Zasada superpozycji umożli:
+obliczeń. Problem sprowadza się do wyznaczenia prądów i"), (2) oraz
+
+pokazanych na rys. 2.1-25a,b,c. Z układów tych wynika natychmiast
+
+ry/k4_page204_formula3.png

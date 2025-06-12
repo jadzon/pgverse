@@ -1,0 +1,38 @@
+3. Przetwarzanie analogowo-cyfrowe i cyfrowo-analogowe
+
+<image/figury/k3_page57_figure1.png>
+
+  
+   
+
+Ponieważ sygnał wejściowy staje się wówczas większy od napięcia na kondensatorze, więc
+stan logiczny na wyjściu zmienia się na jeden (rys. 3.17 b). Kondensator zostaje wtedy dołączo-
+ny do iniektora ładunku dodatniego i napięcie na nim wzrasta o niewielką wartość przy każdym
+impulsie zegarowym. Chociaż na rys. 3.17 a), jako przykład, pokazano wzrost o 1 V na jeden
+okres zegarowy, to bardziej typowa jest wartość 1 mV. Taki schodkowy wzrost napięcia na kon-
+densatorze trwa tak długo, aż to napięcie stanie się większe od napięcia wejściowego. Wtedy
+system osiąga równowagę i sygnał wyjściowy oscyluje między stanami zero i jeden, powodu-
+jąc oscylacje napięcia na kondensatorze między wartościami 9 i 10 V. W ten sposób sprzężenie
+zwrotne wymusza, aby napięcie na kondensatorze nadążało w ślad za napięciem wejściowym.
+Jeśli sygnał wejściowy zmienia się bardzo gwałtownie, to napięcie na kondensatorze zmienia
+się ze stałą szybkością, aż do zrównania napięć. Ta stała szybkość zmiany napięcia jest w ter.
+minologii angielskiej nazywana słew rate, przez analogię do podobnych parametrów innych
+urządzeń elektronicznych, jak wzmacniacze operacyjne.
+
+Zajmijmy się teraz właściwościami sygnału wyjściowego z modulacją delta. Gdy wartość
+wejściowego sygnału analogowego wzrasta, to sygnał wyjściowy zawiera więcej jedynek niż
+zer. Jeśli zaś ta wartość maleje, to w sygnale wyjściowym jest więcej zer niż jedynek. Jeśli
+sygnał wejściowy jest stały, to cyfrowy sygnał na wyjściu zmienia się między zerem i jedyn-
+ką, przy czym zer jest tyle samo co jedynek. Uogólniając, można stwierdzić, że względne
+liczba zer w stosunku do jedynek jest wprost proporcjonalna do nachylenia (pochodnej) wej-
+ściowego sygnału analogowego.
+
+Ten układ umożliwia tani sposób przetwarzania sygnału analogowego na szeregowy stru-
+mień jedynek i zer, który można przesyłać lub rejestrować w postaci cyfrowej. Szczególnie
+korzystną właściwością jest, że tu wszystkie bity mają takie samo znaczenie, w odróżnieniu
+od konwencjonalnego formatu szeregowego, gdzie mamy: bit startu, LSB, ..., MSB, bit sto-
+pu. W odbiorniku jest układ identyczny z układem w pętli sprzężenia w części nadawczej.
+Napięcie na kondensatorze w układzie odbiorczym, podobnie jak napięcie na kondensatorze
+w układzie nadawczym, nadąża w ślad za wejściowym napięciem analogowym. A więc
+przebieg napięcia na kondensatorze przedstawiony na rys. 3.17 a) wyraża również przebieg
+sygnału odtworzonego na wyjściu całego systemu.

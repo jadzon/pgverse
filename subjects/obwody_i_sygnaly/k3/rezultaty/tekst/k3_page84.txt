@@ -1,0 +1,49 @@
+84 1. Pojęcia podstawowe — elementy
+
+Z rozważań tych można wysnuć następujący wniosek.
+
+Istnieją elementy rzeczywiste, których właściwości (
+zależą w sposób istotny od charakteru i parametrów przebi.
+i napięcia. Z reguły elementy takie nie reprezentują tylko jedn
+fizycznej i nie dają się, na ogół, prawidłowo modelować
+obwodowego lub połączeń elementów obwodowych.
+
+Elementami takimi nie będziemy się w dalszym tekści
+
+1.4. WARUNEK QUASI-STACJONARNOŚC
+I JEGO KONSEKWENCJE
+
+rozwaaniajakieprzeprowadzilimywp.1.2miaynawzory/k3_page84_f
+modeli obwodowych podstawowych zjawisk związanyc
+trycznym lub, inaczej, określenie podstawowych elementó
+oporów, indukcyjności i pojemności. Zwracaliśmy przy tyn
+iż przejście od równań słusznych dla pól stacjonarnych do
+elementy dla sygnałów zmiennych wymaga określenia war
+jest ono dopuszczalne (w p. 1.2 było ono jedynie formaln:
+
+Warunki, przy których jest możliwe przejście od rów
+i(1.2-30) do równań — odpowiednio — (1.2-6),(1.2-17) i (.
+zasadnicze znaczenie dla poprawności opisu elementó!
+ważanych w p. 1.3. Równania (1.3-1) lub (1.3-2) oraz (1.3-8)
+jak podkreślaliśmy to w p. 1.3.4-C, uogólnieniami rów
+i (1.2-32).
+
+Wspomniane warunki są zatem istotne dla właściweg
+pretacji pojęcia elementu skupionego, o którym była mo'
+zobaczymy, dadzą się one sformułować w postaci tzw. war
+ności, mającego fundamentalne znaczenie dla całej teorii :
+
+A. Rodzaje zmienności pola elektromagnetycznego. w zaieznosci oa cna-
+rakteru zmienności w czasie pola elektromagnetycznego można wyróżnić trzy
+zasadnicze przypadki.
+
+1. Pole stacjonarne (stałe w czasie). Jedną z podstawowych cech charak-
+teryzujących stacjonarne pole elektromagnetyczne jest niezależnośćstałego
+pola magnetycznego H (pola magnetostatycznego) od stałego pola elektrycznego
+E (pola elektrostatycznego) i wynikająca stąd możliwość separacji obu tych
+pól. Dla poszczególnych typów ośrodków dominujące znaczenie ma jedno
+z trzech równań (1.2-41), przy czym dwa pozostałe równania można pominąć.
+
+Do problematyki pól stacjonarnych należą:
+— elektrostatyka: pola E i D = eE w próżni lub w ośrodku dielektrycz-
+nym stanowiącym otoczenie stałych ładunków;

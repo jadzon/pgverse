@@ -1,0 +1,44 @@
+a. a— w M.A „m m ma m W LYT” C= mms I m 1 .—— a ama
+
+Nzory/k4_page125_formula2.png
+
+Moduły wejść dyskretnych to głównie moduły wejść dwustanowych i stosowane
+niezwykle rzadko moduły wejść trójstanowych.
+
+ 
+
+Moduły wejść dwustanowych zamieniają pochodzące z urządzeń sygnały prądu
+stałego lub przemiennego na sygnały logiczne akceptowane przez sterownik.
+W produkowanych obecnie modułach do takiej zamiany wykorzystywany jest
+zazwyczaj przetwornik optyczny, zapewniający tym samym optoizolację między
+obwodami wejściowymi i obwodami magistrali sterownika.
+
+Polaryzacja źródła zasilania obwodów wejściowych prądu stałego zależy od typu
+zastosowanego modułu prądu stałego.
+
+<image/iry/k4_page1figury/k4_page125_figure3.png>
+
+Rys. 3.7 Schematy podłączeń grupy wejść do modułów
+z polaryzacją dodatnią (typu ujście) i polaryzacją ujemną (typu źródło)
+
+Dla najczęściej stosowanych wejściowych modułów dwustanowych typu ujście
+(SINK IN), które nazywa się też modułami o logice dodatniej (positive logic in-
+put) albo modułami ze „wspólnym plusem”, należy stosować polaryzację
+dodatnią.
+
+Dla wejściowych modułów dwustanowych typu źródło (SOURCE IN), które
+nazywa się też modułami o logice ujemnej (negative logic input) albo czasem
+modułami ze „wspólną masą”, należy stosować polaryzację ujemną. Dla więk-
+szęści produkowanych obecnie modułów można dla grupy wejść stosować
+polaryzację dodatnią albo ujemną. Przykładowy schemat obwodu wejściowego
+pokazano na Rys. 3.8. Poza optoizolacją w modułach takich zapewnia się także
+filtrację składowej zmiennej sygnału, która pojawia się w trakcie zwierania
+i rozwierania styków zainstalowanych w czujnikach obiektowych.
+
+Dane z grupy obejmującej 8, 16 lub 32 wejść są umieszczane w buforze danych
+binarnych. Stan poszczególnych bitów takiego bufora jest zwykle sygnalizowany
+diodami typu ZED.
+
+ 
+
+3.3 Moduły wejść dyskretnych DI 125

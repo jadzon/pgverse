@@ -1,0 +1,32 @@
+270 - 3. Obwody prądu stalego
+
+<image/figury/k4_page270_figure1.png>
+
+D. Równania gałęziowe. W pełnym opisie sieciowym każdej sieci, oprócz
+równań równowagi wynikających z prądowego i napięciowego prawa Kirchhof-
+fa, należy jeszcze uwzględnić równania poszczególnych gałęzi. Równania te,
+nazywane równaniami gałęziowymi, wiążą napięcia gałęziowe U, z prądami
+gałęziowymi I,, odpowiednio dla k = 1,..., g.
+
+W dalszym ciągu przyjmiemy, że gałęzie występują w sieci w jednej z dwóch
+postaci przedstawionych na rys. 3.3-19a i b. Zakładać będziemy przy tym,
+że Ry 4 0 (G, %4 ©) oraz G, ź O (R, + co). W szczególnym przypadku
+może zachodzić E, = 0 lub J, = 0 (wówczas w gałęzi występuje tylko opór).
+
+Gałąź z rys. 3.3-19a będziemy nazywać gałęzią o postaci napięciowej. Jej
+równanie ma postać: |
+
+<image/wzory/k4_page270_formula1.png>
+
+Podobnie, gałąź z rys. 3.3-19b będziemy nazywać gałęzią o postaci prądo-
+wej. Równanie gałęziowe ma w tym przypadku postać (R, = 1/G,):
+
+<image/wzory/k4_page270_formula2.png>
+
+a) bl M
+
+<image/wzory/k4_page270_formula3.png>
+
+|
+
+Rys. 3.3-19

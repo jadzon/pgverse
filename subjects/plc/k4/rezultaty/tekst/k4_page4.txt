@@ -1,0 +1,56 @@
+<image/tabele/k4_page4_table1.png>
+
+Historia sterowników programowalnych sięga roku 1968 [35][6]. Wtedy to w
+
+firmie General Motors grupa inżynierów pod kierunkiem Udo Struga rozpoczęła
+
+prace projektowe nad nową generacją sterowników, przyjmując następujące za-
+
+łożenia:
+
+1. Łatwość programowania i przeprogramowania stosownie do zmieniających
+się warunków przemysłowych.
+
+2. Łatwość utrzymania w ruchu produkcyjnym z możliwością napraw przez
+wymianę instalowanych modułów (plug-in modules).
+
+3. Większa niezawodność w warunkach przemysłowych przy mniejszych gaba-
+rytach niż sprzęt przekaźnikowy.
+
+4. Koszty porównywalne ze stosowanymi panelami przekaźnikowymi i szafami
+sterowniczymi.
+
+Sterowniki programowalne, odkąd rozwinęły się na początku lat siedemdzie-
+siątych, stały się integralną częścią automatycznych systemów sterowania.
+Początkowo ich celem było zastąpienie układów przekaźnikowych w urządze-
+niach sterowania sekwencyjnego typu bębnowego lub krzywkowego oraz w in-
+nych podobnych urządzeniach sterowania logicznego. Zostały one od razu
+zaakceptowane w przemyśle samochodowym, a później znalazły też szereg róż-
+nych zastosowań w wielu innych gałęziach przemysłu.
+
+W 1976 roku wprowadzono sterowniki wyposażone w kasety sterowania zdalne-
+go (remote I/O racks), które umożliwiły monitorowanie i uaktualnianie dużej
+liczby punktów wejść/wyjść za pomocą połączeń komunikacyjnych przy odle-
+głościach nawet do kilkuset metrów od jednostki centralnej sterownika PLC.
+
+W 1977 r firma Allen-Bradley Corporation jako pierwsza zastosowała w sterow-
+nikach mikroprocesor 8080 z wykorzystaniem dodatkowego koprocesora dla
+operacji bitowych.
+
+Z początkiem lat osiemdziesiątych wprowadzono w sterownikach inteligentne
+moduły //0, które wyposażone we własne procesory realizowały znacznie bar-
+dziej złożone funkcje obliczeniowe.
+
+Rynek sterowników gwałtownie wzrósł, gdy w 1983 roku w ofercie kilku japoń-
+skich producentów pojawiły się małe sterowniki o sporych możliwościach funk-
+cjonalnych, a przy tym dużo tańsze od oferowanych dotychczas. Przykładowo,
+w tych latach sterownik F40 firmy Mitsubishi posiadał 40 punktów //O (24 wej-
+ścia 24VDC i 16 wyjść 24VDC lub 240 VAC), 16 czasomierzy i liczników
+z pamięcią RAM o pojemności 890 słów dla programu użytkownika.
+
+Już w latach 80 w obrębie sterowników przemysłowych sterowniki PLC zastą-
+piły z powodzeniem przekaźnikowe układy sterowania logicznego, regulatory
+
+ 
+
+4 Rozdział : 1. Wprowadzenie i podstawy

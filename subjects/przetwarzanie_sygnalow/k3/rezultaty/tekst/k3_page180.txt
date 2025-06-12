@@ -1,0 +1,69 @@
+10. Właściwości przekształcenia Fouriera
+
+198
+
+|
+
+ 
+
+e). Gdy sygnał dyskretny jest poddawany kompre-
+
+dyskretnego. Jak pokazano na rys. 10.12 a), sygnał dyskretny jest poddawany kompresji
+
+przez kompresję krzywej ciągłej, z której pochodzą próbki i następnie ponowne próbkowanie
+nowej krzywej ciągłej w celu uzyskania nowego sygnału dyskretnego. Taką samą procedurę
+
+dla ekspansji przedstawiono na rys. 10.12
+sji, zdarzenia w sygnale (takie jak szerokość impulsu) mieszczą się w mniejszej liczbie pró-
+bek. Natomiast zdarzenia w sygnale poddanym ekspansji obejmują większą liczbę próbek.
+
+Drugim zagadnieniem jest ścisłe zdefiniowanie, co znaczy kompresja i ekspansja sygnału
+
+nna n aa
+
+  
+
+A
+
+16--——-
+
+-
+i
+I
+|
+
+zo
+
+ 
+
+  
+
+     
+
+—
+
+|
+
+  
+
+18
+12----j--—-
+
+<image/figury/k3_page180_figure1.png>
+
+  
+ 
+
+ 
+
+ 
+
+      
+
+0,1
+
+nnałamaznon
+
+ponanjnazzcjnaaa
+
+t

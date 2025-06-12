@@ -1,0 +1,45 @@
+30 s | __1. Pojęcia podstawowe — elementy
+
+Załóżmy, że przez uzwojenie płynie prąd stały I (tzw. prąd magnesujący).
+Wytwarza on w obszarze magnetyka pole magnetyczne scharakteryzowane
+wektorem natężenia pola H. Zgodnie z prawem Ampere'a, wartość wektora H
+na osi rdzenia jest określona wzorem:
+
+<image/wzory/k3_page30_formula1.png>
+
+Jego kierunek i zwrot, zaznaczony na rys. 1.2-5a, jest zgodny z tzw. regułą śruby
+prawoskrętnej (regułą korkociąga).
+
+Przyjmijmy, że w całym obszarze magnetyka (rdzenia) natężenie pola
+magnetycznego H jest jednorodne”. Jest ono również stacjonarne wobec
+założenia, że prąd magnesujący I jest stały.
+
+W obszarze rdzenia pole wektora indukcji magnetycznej B jest związane
+z natężeniem pola H zależnością:
+
+<image/wzory/k3_page30_formula2.png>
+gdzie H = moji, jest przenikalnością magnetyczną rdzenia (19 — przenikalność
+magnetyczna próżni, 4, — przenikalność względna magnetyka względem
+próżni).
+
+Strumień magnetyczny © przenikający przez powierzchnię dowolnego
+przekroju poprzecznego rdzenia można zapisać w postaci:
+
+<image/wzory/k3_page30_formula3.png>
+
+bowiem wektor B jest prostopadły do płaszczyzny przekroju. Strumień skoja-
+rzony (skojarzenie magnetyczne) jest wyrażony wzorem:
+
+Y = z0 (1.2-14)
+
+co po uwzględnieniu związków (1.2-11) — (1.2-13) prowadzi do zależności:
+
+<image/wzory/k3_page30_formula4.png>
+gdzie:
+<image/wzory/k3_page30_formula5.png>
+
+jest indukcyjnością rozważanej cewki.
+
+» Pole to byłoby w pełni jednorodne, gdyby rdzeń był nieskończenie długi. W rdzeniu
+o skończonej długości będą występować zniekształcenia (odstępstwa od jednorodności), zwłaszcza na
+końcu rdzenia. Zniekształcenia te pomijamy.

@@ -1,0 +1,37 @@
+Trenowanie sieci neuronowych
+
+nie może nie mieć żadnego praktycznego zastosowania, lecz dobrze ilustruje zdolność sieci
+neuronowych do uczenia się bardzo abstrakcyjnych problemów rozpoznawania obrazu. Przez
+włączenie dziesięciu przykładów każdej litery do zestawu trenującego sieć będzie (można
+mieć nadzieję) się uczyła podstawowych cech rozróżniających obrazy będące celem od tych,
+które nim nie są.
+
+Zastosowana w tym przykładzie sieć neuronowa jest typową siecią z trzema warstwami
+w pełni połączonymi, taka jak pokazano na rys. 26.5 i 26.6. Jest 101 węzłów w warstwie
+wejściowej (100 wartości pikseli oraz węzeł połaryzujący), 10 węzłów w warstwie ukrytej
+i I węzeł w warstwie wyjściowej. Gdy na wejście sieci jest podany obraz 100-pikselowy, to
+chcielibyśmy uzyskać na wyjściu wartość bliską jeden, jeśli jest samogłoska oraz bliską zero,
+gdy jej nie ma. Nie kłopoczcie się tym, że sygnał wejściowy został pobrany jako matryca
+dwuwymiarowa (10 x 10), podczas gdy wejście sieci neuronowej jest matrycą jednowymia-
+rową. To jest wasz sposób rozumienia współzależności między pikselami; sieć neuronowa po
+swojemu wyszuka te zależności.
+
+W tablicy 26.2 podano główny program do obliczania wag sieci neuronowych, a w tablicy
+26.3 — trzy podprogramy wywoływane z programu głównego. W elementach matrycy od
+XI[1] do X1[100] są przechowywane wartości warstwy wejściowej. Dodatkowo, w ele-
+mencie X1[101] jest zawsze przechowywana wartość |, stanowiącą wejście węzła pola-
+ryzującego. Wyjściowe wartości węzłów ukrytych są zawarte w elementach matrycy od
+X2[1) do X2[10]. Zmienna X3 zawiera wartość wyjściową sieci. Wagi warstwy ukrytej
+znajdują się w matrycy WH[ , ]. gdzie pierwszy indeks określa węzeł ukryty (od I do 10),
+a drugi indeks jest węzłem warstwy wejściowej (od I do 101). Wagi warstwy wyjściowej
+są przechowywane w matrycy od WO[1] do WO[10]. Tak więc działanie sieci jest określo-
+ne przez 1020 wartości wag.
+
+<image/tabele/k3_page411_table1.png>
+
+Rys. 26.8. Przyktad obrazu tekstu. Identyfikacja liter w obrazach tekstowych jest jednym z klasycznych
+zadań w dziedzinie rozpoznawania obrazów. W tym przykładzie każda litera jest zawarta w obrazie
+
+o rozmiarze 10 x 10 pikseli o 256 poziomach szarości na piksel. Baza danych zastosowana do tre-
+nowania i testowania tej przyktadowej sieci neuronowej składa się z 50 zestawów 26 dużych liter, co
+daje w sumie 1300 obrazów. Obrazy pokazane na rysunku są częścią tej bazy danych

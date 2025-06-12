@@ -1,0 +1,31 @@
+Rozdział 1
+
+Arytmetyka
+
+1.1 System dziesiętny
+
+Najpowszechniej używanym sposobem przedstawiania liczb naturalnych jest system dzie-
+siętny, gdzie na przykład zapis:
+178
+przedstawia liczbę składającą się z jednej setki, siedmiu dziesiątek i ośmiu jedności. Mo-
+żemy to zapisać w postaci:
+<image/wzory/k2_page18_formula1.png>
+albo i
+<image/wzory/k2_page18_formula2.png>
+Tak więc w systemie dziesięmym kolejne cylry oznaczają wspotczynniki przy kolejnych
+potęgach liczby dziesięć, zaczynając od największej, a kończąc na najmniejszej potędze.
+Mówimy, że liczba dziesięć jest podstawą lub bazą systemu dziesiętnego. W systemie
+dziesiętnym używamy dziesięciu cyfr:
+<image/wzory/k2_page18_formula3.png>
+a zapi
+<image/wzory/k2_page18_formula4.png>
+
+OZNACZA LCZUĘ:
+
+<image/wzory/k2_page18_formula5.png>
+
+którą możemy też zapisać w postaci:
+
+<image/wzory/k2_page18_formula6.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

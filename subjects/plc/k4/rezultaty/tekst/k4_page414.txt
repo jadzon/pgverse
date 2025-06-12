@@ -1,0 +1,11 @@
+<image/tabele/k4_page414_table3.png>
+
+<image/wzory/k4_page414_formula1.png>
+
+<image/tabele/k4_page414_table1.png>
+
+<image/wzory/k4_page414_formula2.png>
+
+<image/tabele/k4_page414_table2.png>
+
+414 Rozdział : 8.Programy przykładowe

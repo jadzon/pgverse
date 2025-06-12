@@ -1,0 +1,17 @@
+120
+
+<image/figury/k2_page115_figure1.png>
+
+6.5. Sztuczne sieci neuronowe
+
+W procesie uczenia wykorzystuje się kilka typowych struktur. Jedną z nich są sztuczne
+sieci neuronowe. Ich uniwersalność spowodowała ich szerokie zastosowania jako sys-
+temów uczących się.
+
+6.5.1. Struktury sieci neuronowych
+
+Sieci neuronowe składają się z dużej liczby wzajemnie połączonych układów zwanych
+sztucznymi neuronami, które realizują proste przekształcenia sygnałów wejściowych
+w wyjściowe.
+
+Sztuczny neuron jest układem statycznym o schemacie blokowym i symbolu

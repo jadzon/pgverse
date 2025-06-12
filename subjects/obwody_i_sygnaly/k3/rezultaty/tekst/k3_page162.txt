@@ -1,0 +1,31 @@
+162 1. Pojęcia podstawowe — elementy
+
+Zadanie 1.23. Wyznaczyć zależność pojemności dynamicznej od ładunku dla pojemności nieli-
+niowych a) i b) z przykładu 1.3-14.
+
+<image/figury/k3_page162_figure3.png>
+Zadanie 1.24. Wyznaczyć i wykreślić funkcję C,„(u) dla diody pojemnościowej z przykładu 1.3-14.
+
+<image/wzory/k3_page162_formula1.png>
+
+1
+
+Zadanie 1.25. Na oporze nieliniowym z przykładu 1.3-2c, a = 2 V'(mA) 2, występuje napięcie
+u = 10 + 0,$coswt [V], te(—0, +00). Posługując się metodą małosygnałową wyznaczyć prąd
+w tym oporze.
+Odp.: i © 25 + 2,$coswt [mA]
+Zadanie 1.26. Na diodzie pojemnościowej z przykładu 1.3-14 o parametrach Q, = 1V, C, =
+
+1
+200 pF, m = 3 występuje napięcie u = —15 + sin 10%: [V]. Posługując się metodą małosygna-
+łową wyznaczyć prąd płynący przez diodę.
+Odp.: i  50cos 10*t [uA]
+
+Zadanie 1.27. Na podstawie praw Kirchhoffa zapiać niezależny układ równań względem prądów
+w poszczególnych elementach obwodu z rys. Z-1.27 przy założeniu, że napięcie u jest znane.
+
+<image/figury/k3_page162_figure1.png>
+
+Odp.: Na przykład:
+
+<image/wzory/k3_page162_formula2.png>

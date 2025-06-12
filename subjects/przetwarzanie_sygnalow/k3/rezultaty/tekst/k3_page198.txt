@@ -1,0 +1,60 @@
+Sygnały świergotowe
+
+no falę sinusoidalną zniekształconą tak samo, jak poprzednio, tzn. na wierzchołkach. Ten przebieg
+-— wygląda na znacznie mniej regularny i gładki niż w poprzednim przykładzie, gdyż sinusoida ma
+znacznie większą częstotliwość, co powoduje, że liczba próbek na okres jest mniejsza. Widmo
+częstotliwościowe tego sygnału pokazano na rys. 11.8 b). Zgodnie z oczekiwaniem, można w nim
+wyróżnić częstotliwość podstawową i harmoniczne. Z tego przykładu wynika, że harmoniczne
+mogą wychodzić poza wartość 0,5 częstotliwości próbkowania i ulegać aliasingowi z częstotliwo-
+ściami gdzieś w obszarze między O i 0,5. Nie można tego dostrzec na rys. 11.8 b), ponieważ am-
+plitudy tych składowych są zbyt małe. Na rys. 11.8 c) przedstawiono widmo częstotliwościowe
+wykreślone w skali logarytmicznej w celu uwypuklenia tych małych amplitud pików ulegających
+aliasingowi. Na pierwszy rzut oka widmo wygląda jak szum losowy. Ale to nie jest taki szum,
+lecz wynik wielu nakładających się częstotliwości harmonicznych, które ulegają aliasingowi.
+Trzeba zrozumieć, że ten przykład dotyczy zniekształcenia sygnału po utworzeniu jego cy-
+frowej reprezentacji. Gdyby takie zniekształcenie nastąpiło w sygnale analogowym, to moż-
+na by usunąć nakładające się częstotliwości filtrem antyaliasingowym przed digitalizacją.
+Aliasing harmonicznych jest problemem tylko wówczas, gdy operacje nieliniowe są wyko-
+nywane bezpośrednio na sygnale dyskretnym. Nawet wtedy amplituda tych harmonicznych
+ulegających aliasingowi jest często wystarczająco mała, aby mogły być pominięte.
+
+Pojęcie harmonicznych jest często użyteczne jeszcze z innego powodu. Wyjaśnia ono, dlaczego
+w przekształceniu DFT przebiegi w dziedzinie czasu i częstotliwości są widziane jako okreso-
+we. W dziedzinie częstotliwości N-punktowe przekształcenie DFT zawiera N/2 + 1 częstotliwo-
+ści rozmieszczonych w jednakowych odstępach. Częstotliwości między tymi próbkami można
+traktować jako mające wartość zerową lub jako nieistniejące. W obu tych przypadkach nie dają
+one swego udziału do syntezy sygnału w dziedzinie czasu. Innymi słowy, dyskretne widmo
+częstotliwościowe zawiera harmoniczne, a nie ciągły zakres częstotliwości. To powoduje, że
+sygnał w dziedzinie czasu powinien być okresowy, o częstotliwości równej najmniejszej czę-
+stotliwości sinusoid w dziedzinie częstotliwości, tzn. o częstotliwości podstawowej. Przy po-
+minięciu składowej stałej, przebieg o najmniejszej częstotliwości reprezentowanej w dziedzinie
+częstotliwości wykonuje pełny okres co N próbek, co w dziedzinie czasu skutkuje przebiegiem
+okresowym o okresie /N. Tak więc jeśli przebieg w jednej dziedzinie jest dyskretny, to w dru-
+giej musi być okresowy i odwrotnie. To dotyczy wszystkich czterech przekształceń z rodziny
+fourierowskiej. Ponieważ w DFT przebiegi w obu dziedzinach są widziane jako dyskretne,
+więc też w obu dziedzinach muszą być traktowane jako okresowe. Próbki w każdej dziedzinie
+reprezentują harmoniczne o okresowości takiej, jak przebiegu w drugiej dziedzinie.
+
+<image/wzory/k3_page198_formula1.png>
+
+ 
+
+Sygnały świergotowe (chirp signals) są pomysłowym sposobem rozwiązania problemu spoty
+kanego w praktyce, w systemach lokacyjnych, takich jak radary i sonary. Na rys. 19 pezedwa-
+wiono odpowiedź częstotliwościową systemu świergotowego. Moduł ma wartość stałą równą
+
+jedności, pęerac adu faza ma rharabtarwotwba narokhoaliarna*
+
+wór rus. p VZOTY/K3_ -page198_ formula2.png
+
+Parametr 0. wprowadza do charakterystyki fazowej liniowe nachylenie, tzn. że po prostu powo-
+duje przesunięcie odpowiedzi impulsowej w lewo lub w prawo, według życzenia. Krzywizna
+charakterystyki fazowej zależy od parametru P. Te dwa parametry trzeba wybrać w taki spo-
+sób, żeby faza przy częstotliwości 0,5 (tj. dla k = N/2) była wielokrotnością 2x. Pamiętajmy,
+że przy wszystkich bezpośrednich operacjach związanych z fazą, powinna ona przy częstotli-
+wościach 0 i 0,5 być równa zeru (lub być wielokrotnością 2x, co na jedno wychodzi).
+
+Na rys. 11.10 pokazano impuls wchodzący do systemu Świergotowego oraz odpowiedź impulsową
+pobudzającą ten system. Odpowiedź impulsowa jest wiązką oscylacyjną, która zaczyna się od małych
+częstotliwości, i wzrastających do dużych w miarę wzrostu czasu. Taki przebieg nazywamy sygnałem
+świergotowym z bardzo prostej przyczyny — odtwarzany w głośniku brzmi jak świergot ptaków.

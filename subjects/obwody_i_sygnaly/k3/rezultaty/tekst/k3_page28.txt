@@ -1,0 +1,42 @@
+28 1. Pojęcia podstawowe — elementy
+
+Sygnały napięcia i prądu można zapisać w przedziale (0, 7) w postaci:
+
+<image/wzory/k3_page28_formula1.png>
+
+Energia pobrana przez opór wynosi zatem:
+
+<image/wzory/k3_page28_formula2.png>
+Po podstawieniu danych liczbowych otrzymujemy:
+
+<image/wzory/k3_page28_formula3.png>
+
+Przykład 1.2-2. Wyznaczymy moc chwilową p i energię chwilową wą pobierane przez opór
+R, jeżeli znany jest sygnał prądu i płynącego przez jego zaciski. Rozpatrzymy trzy przpadki:
+
+<image/iwzory/k3_page28_formula4.png>
+
+gdzie Io, I„, ©, uesł*, sygnały zaś są określone w przedziale (0, +00).
+Zgodnie ze wzorami (1.2-9) i (1.2-10) otrzymujemy dla t > 0:
+
+a) pm Ri? m RIŻ m const
+<image/wzory/k3_page28_formula5.png>
+
+1
+b) p=Rf = RI? cossot = zRIa(! + cos20t)
+
+<image/wzory/k3_page28_formula6.png>
+
+c) p = Ri? = RIże”ż«
+<image/wzory/k3_page28_formula7.png>
+
+Wykresy mocy chwilowej p i energii chwilowej wą są przedstawione na rys. 1.2-4. Jedynie
+w przypadku c) energia wą pobierana przez opór jest ograniczona (moc chwilowa p—0, gdy
+2
+
+RI
+too) i tylko w tym przypadku istnieje skończona wartość energii w. (0,0) = ai Zgodnie
+«
+
+z ogólną właściwością we wszystkich przypadkach energia wą jest niemalejącą funkcją czasu (por.
+wykresy).

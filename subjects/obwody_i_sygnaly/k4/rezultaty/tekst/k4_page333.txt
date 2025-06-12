@@ -1,0 +1,25 @@
+___//0//,, Zadasładorodziała3 ___—_—_—_—_—_—__—_—__ 335
+
+<image/wzory/k4_page333_formula1.png>
+Zadanie 3.24. Dwójnik z rys. Z-3-18 obciążono dwójnikiem pokazanym na rys. Z-3.24a.
+
+Charakterystyka oporu nieliniowego R„ jest wykreślona na rys. Z-3.24b. Obliczyć prąd
+obciążenia I dla R =0,5kQ. Jaki warunek musi spełniać opór R, aby rozwiązanie było
+
+<image/figury/k4_page333_figure2.png>
+
+Zadanie 3.25. Obliczyć prąd I płynący w układzie z rys. Z-3.25 przez opór nieliniowy Ry
+o charakterystyce i = au +bu*. Dane: E=6V, J =12mA, R, =0,5kQ, R, =2kQ,
+R; = 0,6 kQ, - 4 m—€© Ł 1 —AMr3
+
+<image/figury/k4_page333_figure1.png>
+
+Odp.: I = 10 mA
+Zadanie 3.26. W układzie mostkowym przedstawionym na rys. Z-3.26 występuje opór nieliniowy
+R, o charakterystyce i, = au,|u,|, gdzie a = 0,05 mA/V*. Wartości oporów liniowych wyno-
+
+szą: Rą = Ry = 10 kQ,R, = 50kQ. Dlajakiej wartości siły elektromotorycznej E mostek będzie
+w równowadze?
+
+<image/wzory/k4_page333_formula2.png>
+figuryo

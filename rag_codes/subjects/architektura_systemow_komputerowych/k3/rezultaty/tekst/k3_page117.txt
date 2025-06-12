@@ -1,0 +1,36 @@
+5.3. Pamięci z dostępem cyklicznym 107
+ZZOZ ZO Z Z A
+
+<image/figury/k3_page117_figure1.png>
+
+Moment ten powtarza się okresowo i stąd nazwa rodzaju dostępu. Informacja na wejściu
+i wyjściu pamięci jest zwykle w postaci szeregowej. Na rysunku 5.19 pokazano ogólny
+schemat układu pamięci z dostępem cyklicznym. Nośnik informacji, oznaczony na rysunku
+przez PAM, jest sterowany przez generator zegara. W pamięciach dyskowych generatorem
+tym może być jedna ze ścieżek. Daje to dobre wyniki, ponieważ zapewnia właściwą
+synchronizację pamięci i układów z nią współpracujących nawet przy wahaniach obrotów.
+Wówczas sygnał zegarowy jest sygnałem wyjściowym bloku pamięci i dlatego na rysun-
+ku 5.19 połączenie bloku PAM i generatora zegara jest dwukierunkowe. W pamięciach na
+rejestrach przesuwających przebieg zegarowy jest podawany z zewnętrznego układu i jest
+on sygnałem wejściowym. Zegarowe impulsy taktujące są wykorzystywane w dwóch
+celach:
+
+— do wyznaczenia momentu odczytu lub zapisu informacji,
+
+— do zamiany postaci informacji z szeregowej na równoległą lub odwrotnie.
+
+Zakładając, że układ z rysunku 5.19 jest pamięcią buforową można przyjąć, że blok PAM
+jest pamięcią na rejestrach przesuwających. Moment odczytu i zapisu jest wyznaczany na
+podstawie adresu podawanego na wejście rejestru adresowego RA. Zawartość tego rejestru
+jest cały czas porównywana z zawartością licznika słów LS, którego zawartość zmienia się
+co jedno słowo. Ponieważ jeden takt zegara odpowiada czasowi trwania jednego bitu
+idługość licznika bitów LB jest równa długości słowa, to na wyjściu licznika bitów
+pojawia się impuls co jedno słowo. W momencie uzyskania zgodności zawartości rejestru
+RA i zawartości licznika LS można dokonać odczytu lub zapisu. W czasie zapisu słowo
+wejściowe (Dane zapisywane) jest ładowane do rejestru wejściowego, a w czasie odczytu
+zawartość rejestru wyjściowego jest odczytywana (Dane wyjściowe) w czasie strobu
+odczytu.
+
+Inaczej jest zorganizowana pamięć masowa, gdy blok PAM jest pamięcią dyskową.
+Jak podano w rozdz. 2 w pamięciach dyskowych adresowana jest zwykle większa porcja
+informacji niż jedno słowo. Najczęściej jest to blok (przeciętnie 64--4096 słów), który

@@ -1,0 +1,24 @@
+jące komutator doprowadzane jest przez szczotki, wykonane ze specjalnie spreparowa-
+nego węgla. W silnikach tego typu obwodem sterowania jest zawsze obwód wirnika.
+Zmiany napięcia zasilającego obwód sterowania wywołują zmiany momentu obroto-
+
+wego, a tym samym, przy określonym momencie obciążenia wirnika — zmianę prędko-
+ści kątowej wirnika.
+
+<image/figury/k1_page152_figure2.png>
+
+6.2. Model matematyczny silnika
+zapisany w postaci równań różniczkowych
+
+Tworząc model silnika, należy zatem zwrócić uwagę na znalezienie zależności po-
+między napięciem zasilającym silnik (U,) a prędkością kątową silnika (w,). Schemat
+zastępczy silnika prądu stałego, sprowadzonego do obwodu wirnika, pokazano na ry-
+sunku 6.2. Rozważając osobno elektryczne i mechaniczne parametry obwodu wirnika,
+można napisać dwa równania modelujące jego działanie.
+
+<image/figury/k1_page152_figure1.png>
+
+Rys. 6.2. Schemat zastępczy obwodu wirnika silnika prądu stałego
+Opis w tekście
+
+154

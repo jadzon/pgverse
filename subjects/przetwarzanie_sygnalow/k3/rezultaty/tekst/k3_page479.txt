@@ -1,0 +1,47 @@
+29. Rozpoczęcie pracy z DSP
+
+Gdy mamy już napisany program asemblerowy i zaprojektowaną odpowiedź impulsową fil-
+tru, to jesteśmy gotowi do stworzenia programu, który mógłby być wykonywany na pro-
+cesorze sygnałowym SHARC. W tym celu uruchamia się kompilator, asembler i następnie
+program łączący (linker) — trzy programy dostarczane z zestawem EZ-KIT Lite. Kompilator
+przekształca program w języku C na program asemblerowy SHARCĆ. Jeśli piszecie program
+bezpośrednio w asemblerze, jak w tym przykładzie, to ten etap pomijacie. Asembler i pro-
+gram łączący przekształcają program i pliki zewnętrzne (takie jak plik architektury, podpro-
+gramy inicjalizujące koder-dekoder, odpowiedź impulsowa filtru itd.) do końcowej postaci
+plików nadających się do wykonania. Wszystko to zajmuje ok. 30 sekund, a końcowym wy-
+nikiem jest program SHARC na twardym dysku waszego komputera osobistego. Następnie
+program jest wykonywany w komputerze głównym, którym jest EZ-KIT Lite. Po prostu
+kliknij na ten plik, który chcesz uruchomić w DSP, a procesor EZ-KIT Lite „zatroszczy” się
+o resztę, ładując program i rozpoczynając jego wykonywanie.
+
+Tu dochodzimy do dwóch pytań. Po pierwsze, jak przetestujemy nasz filtr audio, aby się upewnić,
+że działa zgodnie z naszym projektem, a po drugie — co to, do licha, jest za firma, która nazywa”
+się Analog Devices, a produkuje cyfrowe procesory sygnałowe?
+
+Pomiary analogowe w systemie DSP
+
+Zapomnijmy na chwiłę, że zajmujemy się tu techniką cyfrową. Spójrzmy na problem z punktu
+widzenia inżyniera specjalizującego się w technice analogowej. Jego nie obchodzi, co znajdu-
+je się wewnątrz EZ-KIT Lite, a tylko to, że zestaw ma analogowe wejście i wyjście. Mógłby
+nawet sięgnąć po tradycyjną w technice analogowej metodę analizy „czarnej skrzynki”, dopro-
+wadzając do wejścia sygnał z generatora i obserwując wyjście na oscyloskopie (rys. 29.3).
+
+I do jakich wniosków dojdzie nasz analogowy guru? Najpierw stwierdzi, że system jest linio-
+wy (przynajmniej w tym stopniu, w jakim to można wykazać za pomocą prostego testu). Jeśli
+na wejście wprowadzimy falę sinusoidalną, to taką falę zaobserwujemy też na wyjściu. Jeśli
+amplituda lub częstotliwość sygnału wejściowego ulega zmianie, to odpowiednią zmianę z0-
+baczymy na wyjściu. Powoli zwiększając częstotliwość sygnału wejściowego, dojdziemy do
+punktu, w którym amplituda wyjściowej fali sinusoidalnej gwałtownie zmniejszy się do zera.
+To następuje nieco poniżej połowy częstotliwości próbkowania w wyniku zadziałania filtru
+antyaliasingowego w przetworniku a/c.
+
+Następnie inżynier, o którym mówimy, zauważy rzecz w świecie analogowym niezwykłą — sys
+tem ma doskonale liniową charakterystykę fazy. Inaczej mówiąc, jest stałe opóźnienie między
+zdarzeniem zachodzącym w sygnale wejściowym a wynikiem tego zdarzenia w sygnale wyj-
+ściowym. Rozważmy na przykład odpowiedź impulsową filtru z rys. 29.2. Ponieważ
+
+symetrii jest na próbce 150, to sygnał wyjściowy będzie opóźniony o 150 próbek w stosunku do
+sygnału wejściowego. Jeśli system próbkuje z częstotliwością na przykład 8 kHz, to żenb
+wyniesie 18,75 ms. Ponadto, niewielkie stałe opóźnienie doda jeszcze przetwornik sigma-delia.
+
+<image/figury/k3_page479_figure1.png>

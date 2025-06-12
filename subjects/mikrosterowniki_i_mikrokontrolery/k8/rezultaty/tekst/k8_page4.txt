@@ -1,0 +1,34 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 6
+
+Podział pamięci programu ze względu na technologie wykonania:
+
+ROM (Read Only Memory) — programowanie zawartości pamięci następuje w procesie
+produkcyjnym i nie może być przeprowadzone przez użytkownika.
+
+EPROM (Erasable Programmable ROM) — pamięci z możliwością kasowanie dotychczasowej
+zawartości promieniami ultrafioletowymi i prowadzania nowej zawartości za pomocą zewnętrznego
+programatora. Umieszczane są w obudowach z okienkiem kwarcowym w celu umożliwienia
+kasowania.
+
+FLASH (Bulk Erasable Non-Volatile Memory) — pamięci z możliwością kasowanie zawartości i
+programowania bezpośrednio w systemie mikroprocesorowym.
+
+7. Warstwowy model mk zamkniętego.
+
+<image/figury/k8_page4_figure1.png>
+
+8. Przeznaczenia sygnału RESET i źródła sygnału RESET w mk.
+
+Sygnał RESET służy do:
+Inicjalizacji pracy mk, czyli wprowadzenia go w stan początkowy.
+
+Inicjalizacja polega najczęściej na ustawieniu licznika rozkazów na początek kodu programu (do
+licznika rozkazów wpisywany jest wektor resetu).
+
+Urządzenia we/wy i rejestry sterujące są ustawiane w tryb standardowy (spoczynku).
+
+Uniwersalne końcówki we/wy są ustawione jako wejścia o wysokiej impedancji, aby minimalnie
+wpływać na otoczenie mk (w dokumentacji każdego mk znajduje się informacja o stanie wszystkich
+rejestrów i portów po resecie mk).
+
+Ponadto, służy on do wprowadzenia mk w tryb programowania lub testowania.

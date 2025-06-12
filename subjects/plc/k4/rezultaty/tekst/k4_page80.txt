@@ -1,0 +1,21 @@
+Drug: czczehe! realiznie równanie:
+
+<image/wzory/k4_page80_formula1.png>
+
+co oznacza, ze zmienna v, przyjmie wartosc / wtedy gdy q,=/, m=/ oraz h,=0,
+a następnie zachowa tę wartość dopóki h,=0 (tj. aż Zbiornik | nie zostanie wy-
+pełniony).
+
+W tym opisie współbieżność może być realizowana (np. może być V,=V+=/)
+nawet jeśli nie jest to bezpośrednio uwidocznione w sposób graficzny. Jednak
+sekwencyjna natura działania tak zaprogramowanego automatu nie jest w pełni
+oczywista. Na przykład niezbędna jest szczegółowa analiza układu, aby móc
+określić co się stanie w sytuacji gdy V,=V,=/ a jednocześnie q,=W>=0. Jest to
+główna wada modelowania automatu za pomocą schematu drabinkowego.
+
+<image/figury/k4_page80_figure1.png>
+
+Rys. 2.13 Schemat drabinkowy
+
+EOT TYT OTO OOOO SOO ZOO ZZOZZPO ODRY DO WZY ZZO ZO PZECRZCZZZZZZIZZ ZO ZZO O OZCOOE RZE OZ DY ZIZI CZY TS ZZ OWY OO OZ OOWO DOZ,
+80 Rozdział : 2.Programowanie sterowników PLC

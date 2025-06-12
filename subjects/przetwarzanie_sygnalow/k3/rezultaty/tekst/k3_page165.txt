@@ -1,0 +1,10 @@
+9. Zastosowania DFT |
+
+182
+A
+
+kołowym można po prostu wyjaśnić jako rozciąganie się sygnału z jednego okresu do następ-
+nego. Gdy się zaś rozważa tylko N-punktowy sygnał w dziedzinie czasu, to dochodzi się do
+dość dziwacznego wniosku. A mianowicie do konkluzji, że spłot w dziedzinie częstotliwości
+działa tak, jakby przebieg w dziedzinie czasu zwijał się w jakiś kołowy pierścień z próbką
+0 umieszczoną obok próbki N — 1.

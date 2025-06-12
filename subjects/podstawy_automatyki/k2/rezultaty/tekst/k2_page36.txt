@@ -1,0 +1,77 @@
+70
+
+Dla zadanych: k,, k, oraz T' dobrać na podstawie symulacji wzmocnienie
+regulatora kp, zapewniające krótki czas regulacji oraz małe przeregulowanie;
+następnie powtórzyć zadanie, zmieniając k, dla zadanej wartości kp.
+
+6.3.3 Badanie serwomechanizmu rzeczywistego - parametry serwomotoru
+
+W ćwiczeniu symulowany jest model układu rzeczywistego z przekład-
+nikiem napięcia w gałęzi sprzężenia tachometrycznego o wzmocnieniu
+0.01 [5] oraz przetwornikiem sygnału uchybu nadążania o wzmocnieniu
+1 [zę]
+
+s serwomotoru © zadanych parametrach momentów tarcia,
+zadanego luzu, ograniczenia momentu oraz liczby obrotów do wykonania
+sprawdzić wpływ wartości elektromechanicznej stałej czasowej i wzmocnie-
+nia regulatora na jakość nadążania (czas regulacji, przeregulowanie,
+uchyb ustalony). Czynność powtórzyć w układzie z korekcją (sprawdzić
+również wpływ zmian wzmocnienia prądnicy tachometrycznej).
+
+6.3.4 Badanie serwomechanizmu rzeczywistego — wpływ nieliniowości
+
+Dla serwomotoru o zadanych parametrach (elektromechanicznej stałej
+czasowej, wzmocnieniu regulatora oraz wzmocnieniu prądnicy) i zadanej
+liczbie obrotów do wykonania sprawdzić wpływ poszczególnych nielinio-
+wości (określając wartości pozostałych parametrów nieliniowości jako
+minimalne dozwolone) na jakość regulacji.
+
+6.3.5 Sprawozdanie
+Sprawozdanie powinno zawierać:
+
+- odpowiedzi skokowe i trajektorie fazowe wraz z opisem wpływu na
+dynamikę obiektu poszczególnych jego parametrów (polecenia 6.3.1,
+6.3.2) i określonymi wartościami wskaźników jakości;
+
+- odpowiedzi skokowe i przebiegi momentu dynamicznego wraz Z Opi-
+sem wpływu zmian parametrów nominalnych serwomotoru rzeczywi-
+stego na jakość regulacji (polecenie 6.3.3);
+
+- odpowiedzi skokowe i przebiegi momentu dynamicznego wraz z opi-
+sem wpływu zmian parametrów tarcia oraz pozostałych nieliniowości
+na jakość regulacji (polecenie 6.3.4).
+
+amm
+
+ZĘ % XL,
+
+7 Regulacja kaskadowa
+
+7.1 Cel ćwiczenia
+
+Ćwiczenie ma na celu zapoznanie się ze sposobem dekompozycji układu
+sterowania na pętle regulacyjne w celu osiągnięcia lepszej jakości regulacji
+między innymi przez znalezienie wartości reagującej na zmiany wymuszenia
+szybciej niż wielkość sterowana.
+
+7.2 Podstawowe wiadomości
+
+7.2.1 Idea regulacji kaskadowej
+
+Zaprojektowanie prostego układu regulacji (z jednym regulatorem) może
+być niewystarczające do spełnienia wymogów jakościowych lub może
+prowadzić do wzrostu stopnia skomplikowania regulatora. W takim
+wypadku tworzy się odpowiednią strukturę układu regulacji: w wyniku
+doprowadzenia dodatkowej wielkości pomocniczej do regulatora powstaje
+kaskada regulatorów, pokazana na rysunku 7.1.
+
+<image/figury/k2_page36_figure1.png>
+
+Regulator Gę(s) nazywa się regulatorem głównym (nadrzędnym),
+a regulator Gę,z(s) - pomocniczym (podrzędnym).
+
+7.2.2 Przyczyny stosowania regulacji kaskadowej
+
+Do przyczyn (lub celów) stosowania układów regulacji kaskadowej,
+czyli wprowadzania wielkości pomocniczych do dodatkowego regulatora,
+zalicza się:

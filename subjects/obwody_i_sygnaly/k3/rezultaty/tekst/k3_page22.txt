@@ -1,0 +1,45 @@
+22 1. Pojęcia podstawowe — elementy
+
+Jeśli wartość całki we wzorze (1.1-5) jest dodatnia, oznacza to, że w prze-
+dziale czasu (ty, t; > element faktycznie pobrał energię z otoczenia. Jeśli
+wartość ta jest ujemna (energia pobierana jest ujemna), świadczy to o tym, iż
+element faktycznie oddał do otoczenia energię równą:
+
+ 
+
+<image/wzory/k3_page22_formula1.png>
+
+W wielu przypadkach rozważamy energię pobraną w przedziale (ty, t), gdzie
+t > to jest chwilą bieżącą. Wówczas w(to,t) jest funkcją górnej granicy całko-
+wania:
+
+ 
+
+<image/wzory/k3_page22_formula2.png>
+
+i dla podkreślenia tego faktu zależność (1.1-6) zapisujemy również w postaci:
+
+<image/wzory/k3_page22_formula3.png>
+
+Oba sposoby zapisu (1.1-6) i (1.1-7) będziemy uważać za równoważne, a wy-
+bór jednego z nich będzie zależeć od kontekstu.
+
+Przez analogię do mocy chwilowej o energii wyrażonej wzorem (1.1-7)
+mówimy często: energia chwilowa. Zachodzi przy tym zależność:
+
+<image/wzory/k3_page22_formula4.png>
+
+tzn. moc chwilowa jest pochodną względem czasu energii chwilowej.
+
+Uwaga. Dla uniknięcia kolizji oznaczeń w przypadku całki jako funkcji górnej granicy
+cakowanianp.wzory1.16i1.17zmienncakowaniaoznaczamyinnymsymbolem.
+Z reguły będzie to symbol przyjęty dla oznaczenia danej wielkości lecz ze znakiem „prim”, np.t£/,x/,u',
+i' itp. Podobnie jak w przypadku całki oznaczonej (1.1-5), jeśli tylko nie będzie to powodować
+niejasności, również w całkach typu (1.1-6) i (1.1-7) będziemy opuszczać argument funkcji podcał-
+kowej i pisać np.:
+
+<image/wzory/k3_page22_formula5.png>
+
+zamiast:
+
+<image/wzory/k3_page22_formula6.png>

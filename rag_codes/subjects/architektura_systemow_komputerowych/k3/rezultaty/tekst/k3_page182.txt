@@ -1,0 +1,51 @@
+DODATEK A
+
+ 
+
+A.1. ALGEBRA BOOLE'A
+
+Algebra Boole'a jest algebrą z trzema operacjami na dwuwartościowych argumentach,
+które przyjmują wartości: 0 i 1. Rezultaty (wyniki) tych operacji są także dwuwartościowe.
+Te trzy operacje, to:
+
+— suma logiczna (suma boolowska, alternatywa),
+
+— iloczyn logiczny (iloczyn boolowski, koniunkcja),
+
+— negacja (inwersja).
+
+Pierwsze dwa działania są dwuargumentowe (lub mogą mieć więcej argumentów), nato-
+miast trzecie działanie jest jednoargumentowe. Działania te spełniają następujące
+aksjomaty:
+
+1) przemienność A:B:
+2) łączność (A:B
+3) rozdzielczość A (B 4
+4) tożsamość A:0= „
+a.wzory/k3_page182_formula
+A:A:
+5) komplementarność A:A:
+nraz dura trur nrawa da Marsnnn:
+
+wzory/k3_pacwzory/k3_page182_formula3.pr
+
+SĄ sv „ 22 Z. „m
+
+mentów jest równy 1, to wynik jest równy 1. Zatem suma logiczna jest równa 0 tylko dla
+przypadku, gdy wszystkie argumenty są równe 0.
+
+Operacja iloczynu logicznego jest zdefiniowana następująco: wynik iloczynu jest
+równy 1, wtedy i tylko wtedy, gdy wszystkie argumenty przyjmują wartość 1.
+
+Operacja negacji jest operacją jednoargumentową i jest zdefiniowana jako zmiana
+wartości argumentu, tj. jeśli argument ma wartość 1, to operacja ta daje w wyniku wartość
+0, a jeśli argument ma wartość 0, to operacja ta daje w wyniku wartość 1.
+
+Działania te można przedstawić za pomocą tzw. tablicy prawdy (pokazanej
+w tabl. D.1). Liczba wierszy w tablicy prawdy jest równa liczbie możliwych kombinacji
+wartości zmiennych wejściowych, tj. dla n zmiennych wynosi ona 27. Funkcja sumy
+logicznej y=A+B przyjmuje wartość 1 w trzech wierszach tabeli prawdy, a więc dla
+trzech kombinacji zmiennych niezależnych. Można ją zapisać jako sumę logiczną wyrażeń
+odpowiać sa
+
+<image/wzory/k3_page182_formula4.png>

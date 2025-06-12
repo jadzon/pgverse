@@ -1,0 +1,24 @@
+262 3. Obwody prądu stalego |
+
+Po uwzględnieniu prądu 1, we wzorze na prąd zwarcia 1, otrzymamy:
+
+<image/wzory/k3_page262_formula1.png>
+
+<image/wzory/k3_page262_formula2.png>
+
+<image/figury/k3_page262_figure3.png>
+
+1. w€LOGa INOTIona. Założmy teraz, że chcemy obliczyć prąd I w ukła-
+dzie z rys. 3.3-4a. Jeżeli przyjmiemy oznaczenie Gy = 1/Rę, to zgodnie z twier-
+dzeniem Nortona układ ten możemy zastąpić układem równoważnym przed-
+stawionym na rys. 3.3-11. Z układu równoważnego wynika, że:
+
+<image/wzory/k3_page262_formula3.png>
+
+<image/figury/k3_page262_figure1.png>
+
+Metodę analizy układów, w której wykorzystuje się zastępcze źródło
+prądowe (tj. źródło Nortona), nazywamy metodą zastępczego źródła prądowego
+lub metodą Nortona. Chcąc obliczyć metodą Nortona prąd I (napięcie U)
+w wyróżnionym oporze R, (przewodności G;) występującym między zacis-
+kami AB liniowego układu rezystancyjnego (rys. 3.3-4a), należy:

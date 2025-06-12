@@ -1,0 +1,45 @@
+<image/wzory/k4_page96_formula.png>
+
+Język schematów drabinkowych LD należy do grupy języków graficznych
+i umożliwia realizację zadania sterowania za pomocą standaryzowanych symboli
+graficznych. Symbole te umieszcza się w obwodach w sposób podobny do
+szczebłi (rungs) w schematach drabinkowych (ladder diagrams) dla przekaźni-
+kowych układów sterowania.
+
+Obwód (network) jest definiowany jako zbiór wzajemnie połączonych elemen-
+tów graficznych. Z obwodem może być skojarzona etykieta (/abeł) posiadająca
+postać nazwy lub liczby dziesiętnej bez znaku zakończonych dwukropkiem. Sto-
+sowanie nazwy etykiety jest lokalne w zakresie elementu organizacyjnego
+oprogramowania, w którym występuje.
+
+Obwód LD ograniczony jest z lewej i prawej strony przez szyny prądowe (po-
+wer rails). Szyny te nie są elementami obwodu. Prawa szyna może być rysowana
+w sposób jawny lub pozostawać w domyśle.
+
+Języki graficzne są używane do przedstawienia przepływu odpowiedniej wielko-
+ści przez kolejne obwody reprezentujące pewną strategię sterowania.
+W przypadku języka ŁD wykonywanie programu polega na „przepływie prądu”
+
+(„power flow”), analogicznie jak w schemacie drabinkowym dla systemu prze-
+
+kaźników elektromechanicznych. Przepływ prądu następuje z lewej strony do
+
+prawej, przy czym obowiązują następujące zasady:
+
+e _ wartość żadnego elementu obwodu nie powinna być wyznaczana dopóki nie
+wyznaczono wartości wszystkich jego wejść,
+
+e wyznaczanie wartości elementu obwodu nie może być zakończone dopóki
+nie wyznaczono wartości dla wszystkich jego wyjść,
+
+e wykonywanie programu dla całego obwodu nie jest zakończone dopóki nie
+wyznaczono wartości wyjść dla wszystkich elementów tego obwodu,
+
+e w ramach elementu oprogramowania napisanego w języku ŁD kolejne ob-
+wody powinny być wyznaczane w kolejności z góry na dół, tak jak pojawiają
+się w schemacie drabinkowym, z wyjątkiem gdy kolejność ta ulega zmianie
+zpowodu wprowadzenia elementów kontrolnych zdefiniowanych
+w Tab. 2.49.
+
+wa Z TOT ZOZ DZY ZZOZ O ZZZZZZOOZZZA
+96 Rozdział : 2.Programowanie sterowników PLC

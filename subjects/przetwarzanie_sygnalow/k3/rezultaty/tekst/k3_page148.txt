@@ -1,0 +1,48 @@
+164
+
+„który minimalizuje różnicę między sąsiednimi próbkami.
+
+8. Dyskretne przekształcenie Fouriera
+
+— rzeczywista i urojona — są ujemne, to trzeba odjąć 180” (lub x radianów) od obliczonej
+fazy. W wierszach 340 i 350 programu w tablicy 8.3 pokazano, jak to jest realizowane. Jeśli
+pominie się tę kwestię, to obliczona wartość fazy będzie się mieścić w granicach od —n/2 do
+n/2, zamiast od —x do n. Dobrze to zapamiętajcie. Jeśli widzicie, że faza mieści się w gra-
+nicach +1,5708, to znaczy, że zapomnieliście skorygować dwuznaczność w obliczeniach
+arcus tangensa.
+
+Niedogodność 4 — faza przy bardzo małych modułach
+Wyobraźmy sobie następującą sytuację. Rozgryzacie właśnie jakiś problem DSP i nagle za-
+uważacie, że część wyników dotyczących fazy jest chyba nie w porządku. Mogą być obar-
+czone szumem, zmieniać się skokowo lub po prostu być błędne. Spędziwszy następną go-
+dzinę na przeszukiwaniu setek wierszy programu komputerowego, znajdujecie odpowiedź.
+Odpowiednie wartości modułu są tak małe, że są ukryte w szumie zaokrąglania. Jeśli moduł
+jest pomijalnie mały, faza nie ma żadnego znaczenia i może przyjmować niezwykłe wartości.
+Przykład przedstawiono na rys. 8.11. Jeśli amplituda sygnału ginie w szumie, to na ogół
+przypuszcza się, że jej wartość jest bardzo mała, a więc bez znaczenia. Co innego z fazą
+Gdy sygnał wyrażony we współrzędnych biegunowych jest obarczony szumem, to wartości
+fazy są liczbami losowymi z zakresu od —£ do m. Niestety, to często wygłąda jak rzeczywisty
+sygnał, a nie jak nonsens, którym w istocie jest. |
+Niedogodność 5 — niejednoznaczność fazy równa 2n |
+Spójrzcie raz jeszcze na rys. 8.10 d) i zauważcie kilka nieciągłości w przedstawionych.
+danych. Za każdym razem, gdy zdaje się, że punkt zejdzie poniżej wartości -3,141592,
+skacze on z powrotem do 3,141592. Jest to wynikiem okresowego charakteru sinuso-
+idy. Na przykład przesunięcie fazy © jest dokładnie takie samo, jak przesunięcie 8 + 21.
+0 + 4a, 0 + 6x itd. Każda sinusoida pozostaje niezmieniona, jeśli do jej fazy doda się
+całkowitą wielokrotność 2x. Wyraźne nieciągłości są wywoływane programem kompu-
+terowym wybierającym swoje ulubione spośród nieskończonej liczby równoważnych
+możliwości. Zawsze jest wybierana najmniejsza możliwa wartość, co utrzymuje fazę
+w granicach od —x do m.
+Często łatwiej jest zrozumieć fazę, jeśli nie ma tych nieciągłości, nawet jeśli to znaczy,
+że faza wykracza powyżej x lub poniżej —x. Jest to nazywane rozwijaniem fazy, k
+przykład pokazano na rys. 8.12. Jak to przedstawiono w tablicy 8.4, do każdej wartości
+fazy jest dodawane lub odejmowane 2x. Wartość dokładna jest określana przez algory
+
+ 
+ 
+   
+ 
+    
+  
+
+<image/figury/k3_page148_figure1.png>

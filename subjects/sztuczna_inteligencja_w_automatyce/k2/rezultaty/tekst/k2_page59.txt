@@ -1,0 +1,37 @@
+<image/figury/k2_page59_figure1.png>
+
+Gdy agent usiłuje przejść przez ściane ograniczającą system, to czuje uderzenie.
+
+Gdy smok zostaje zabity, to wydaje przenikliwy dźwięk, który jest słyszalny w
+każdym kwadracie systemu.
+
+Agent odbiera docierające do niego sygnały w postaci list pięciu symboli. Na
+przykład, jeżeli jest zapach i wiatr ale nie ma blasku, uderzenia i przenikliwego
+dźwięku, agent otrzyma listę: | Zapach, Wiatr, Nic, Nic, Nie |. Agent nie po-
+strzega swojego położenia.
+
+Agent może podjąć następujące akcje: przesunięcie się o jeden kwadrat do przodu,
+obrót w prawo o 90”, obrót w lewo o 90”, chwycenie obiektu znajdującego się
+w tym samym kwadracie, w którym znajduje się agent. Ponadto agent może
+wystrzelić strzałę, która leci wzdłuż lini prostej i albo trafi i zabije smoka, albo
+uderzy w ścianę. Agent ma tylko jedną strzałe, więc tylko jedna akcja strzału
+może mieć jakiś skutek. Wreszcie agent może podjąć akcje wyjścia z jaskini; co
+może być zrealizowane, gdy agent znajduje się w kwadracie (1, 1).
+
+Agent ginie jeżeli wejdzie do kratki zawierającej dziurę lub żywego smoka.
+
+Celem agenta jest znalezienie złota i wyniesienie go z jaskini tak szybko jak to
+jest możliwe. W jednorazowej próbie, za wyniesienie złota z jaskini przyznane
+zostaje 1000 punktów, jedna podjęta akcja kosztuje 1 punkt zaś utrata życia
+przez agenta kosztuje 10000 punktów.
+
+Na rysunkach ?? i ?? przedstawiono pozycję agenta w kolejnych krokach oraz
+
+otrzymywane przez niego sygnały i wyprowadzone wnioski.
+
+Świat smoka — wnioskowanie w rachunku zdań
+
+Wiedza agenta o świecie smoka po trzech ruchach agenta, wyrażona w formalizmie
+rachunku zdań:
+
+<image/wzory/k2_page59_formula1.png>

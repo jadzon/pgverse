@@ -1,0 +1,34 @@
+Moduły wejściowe umożliwiają połączenia obwodów dla przetworników dwu,
+trój i cztero-przewodowych w obwodach wejść analogowych nieizolowanych lub
+izolowanych galwanicznie.
+
+Rys. 3.22 przedstawia schemat podłączeń przetworników dwuprzewodowych do
+modułu wejść prądowych. Przetworniki takie są zasilane ze źródła zewnętrznego
+podobnie jak moduły dwustanowe typu ujście. Dodatkowe elementy obwodów
+prądowych (wyświetlacze, wskaźniki itp.), które nie wprowadzają do układu
+własnego potencjału masy należy włączyć między przetwornikiem a modułem,
+jak pokazano na Rys. 3.22. Tylko w ten sposób spadki napięcia na tych elemen-
+tach nie zmieniają potencjału 24V źródła zasilania przetworników. Należy także
+przestrzec przed często popełnianym błędem (szczególnie w czasie napraw
+przetworników), polegającym na zwieraniu obwodów bez pozostawienia wyma-
+ganego, minimalnego obciążenia dla źródła ich zasilania.
+
+Rys. 3.25 przedstawia schemat połączeń przetworników dwuprzewodowych dla
+przykładowego modułu wejść prądowych ALG 223 (76-Channel Analog Current
+Input Module).
+
+<image/figury/k4_page140_figure1.png>
+
+Rys. 3.22 Schemat połączeń przetworników dwuprzewodowych
+z modułem jednokońcówkowych wejść prądowych..
+
+Na Rys. 3.23 pokazano schemat podłączeń przetworników czteroprzewodowych
+do modułu wejść prądowych. Przetworniki takie są zasilane z zewnętrznego Źró-
+dła ze wspólną masą. Jeżeli grupa obwodów ma wspólną masę, często połączoną
+z masą zasilacza, to dodatkowe elementy w tych obwodach nie powinny być
+włączane między przewody masy, bowiem w takim przypadku zmienia się po-
+tencjał wspólnej masy zasilania i przetworników
+
+ 
+
+140 Rozdział : 3. Sprzęt sterowników PLC

@@ -1,0 +1,30 @@
+<image/tabele/k4_page223_table2.png>
+
+Wyd. 4.37 Przykłady wykorzystania funkcji aktualizacji wejść/wyjść sterownika
+DO_IO.
+
+Program w sterowniku wykonywany jest od pierwszego do ostatniego szczebla
+schematu drabinkowego lub do pierwszej napotkanej instrukcji END. Wprowa-
+dzając więc do programu funkcję zakończenia programu END można zdefiniwać
+chwilowy punkt końcowy dla wykonywanego programu. Szczebie poniżej in-
+strukcji END nie będą wykonywane, co bywa przydatne w czasie uruchamiania
+i testowania programu.
+
+W przykładzie na Wyd. 4.38 wykonanie programu zakończy się sprawdzeniem
+szczebla zakończonego cewką ustawiającą (S) przypisaną zmiennej %Q/. Szcze-
+bel poniżej instrukcji END zakończony cewką kasującą (R) nie będzie już
+wykonywany w cyklu sterownika.
+
+<image/tabele/k4_page223_table1.png>
+
+Wyd. 4.38 Wykorzystanie funkcji END do chwilowego zdefiniowania końca progra-
+mu
+
+Para instrukcji stowarzyszonych MCR (Master Control Relay) i ENDMCR
+umożliwia określenie fragmentu programu wykonywanego warunkowo. Szczeble
+programu w zakresie wyznaczonym przez parę MCR i ENDMCR będą wyko-
+nywane bez dopływu prądu, jeżeli aktywna będzie instrukcja MCR. Parametrem
+
+ 
+
+4.11 Funkcje sterujące 223

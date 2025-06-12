@@ -1,0 +1,13 @@
+<image/figury/k2_page162_figure4.png>
+
+<image/figury/k2_page162_figure3.png>
+
+PRZYKŁAD 6.17
+
+Na rysunku ?? przedstawiono wyniki eksperymentu klasyfikacji, w którym obraz
+wejściowy był wektorem binarnym o 12 składowych. a wynikiem klasyfikacji była
+funkcja boolowska. Klasyfikator, którym była sieć neuronowa, a w drugim przy-
+padku drzewo decyzyjne uczono na zbiorach uczących o różnej liczebności, a następ-
+nie testowano na wszystkich możliwych wektorach wejściowych (4096). Dla każdej
+liczebności przeprowadzono po kilka eksperymentów dla losowo wybranych zbiorach
+wektorów uczących. Liczbę trafnych odpowiedzi przedstawiono na rysunku.

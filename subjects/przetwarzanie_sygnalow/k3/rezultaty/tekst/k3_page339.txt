@@ -1,0 +1,22 @@
+370 23. Tworzenie i wyświetlanie obrazów
+
+<image/figury/k3_page339_figure2.png>
+
+<image/figury/k3_page339_figure1.png>
+
+korzystywane w odbiorniku telewizyjnym do synchronizacji układów odchylania poziomegi
+i pionowego, aby można było wyświetlić obraz. Każda sekunda standardowego sygnału izji
+zawiera 30 pełnych obrazów?5, powszechnie nazywanych ramkami. Specjaliści od telewizji
+powiedzieliby, że każda ramka zawiera 525 linii, które w języku oprogramowania 1 wali-
+byśmy raczej wierszami. Ta liczba linii jest nieco myląca, gdyż tylko 480 do 486 tych nii
+zawiera informacje wideo, pozostałe 39 do 45 linii zarezerwowano dla impulsów s roni
+zacji, aby utrzymać synchronizację działania układów telewizora z sygnałem wideo.
+rac WIO je się wybieranie międzylini Só Ó ad
+każdej ramki, a potem linie parzyste. Grupa linii nieparzystych jest nazywana półobrazem niepa-
+rzystym, a parzystych — półobrazem parzystym. Każda ramka składa się z dwóch pó obrazów,
+więc w sygnale wizyjnym jest nadawanych 60 półobrazów na sekundę. Każdy półobraz 0zpx
+czyna się od dość złożonej serii impulsów synchronizacji pionowej, trwającej 1,3 ms. Potem i
+>
+
+25 Podane informacje dotyczą standardu NTSC obowiązującego w USA. W obowiązującym obecnie
+w Polsce standardzie PAL jest 25 pełnych obrazów na sekundę, a obraz zawiera 625 linii (przyp. tłum.)

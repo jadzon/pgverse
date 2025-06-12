@@ -1,0 +1,15 @@
+<image/figury/k3_page367_figure1.png>
+
+jaki jest najbardziej efektywny sposób stwierdzenia, czy i gdzie na obrazie znajduje się ten
+wzorzec. Jeśli uważnie czytaliście rozdział 6, to wiecie, że rozwiązaniem tego problemu jest
+korelacja (filtr dopasowany) i że może ona być zrealizowana przy użyciu splotu.
+
+Przed przeprowadzeniem splotu trzeba zrobić dwie modyfikacje, aby zamienić docelowy
+obraz w funkcję PSF. Przedstawiono to na rys. 24.12. Na rys. 24.12 a) pokazano sygnał
+docelowy, a więc wzorzec, który próbujemy wykryć. Na rys. 24.12 b) obraz został obrócony
+
+<image/figury/k3_page367_figure3.png>
+
+ryS. aj. Mys. U] UDIUCUNU U 10U , SWY SKUIJUNSUWAU UUWIUGUMIU WYMIAGJĄVO £G DIUU I IIUG WyaUNaU
+Zastosowanie filtru wykrywającego krawędzie daje obraz c), który w tym przykładzie jest za-
+stosowany jako odpowiedź impulsowa filtru

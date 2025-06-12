@@ -1,0 +1,32 @@
+Zadanie 2.30
+
+Wyznaczyć obszar wartości współczynników k i 7, odpowiadający stabilnej pracy
+układu opisanego poniższym równaniem
+
+<image/wzory/k1_page106_formula1.png>
+
+Zadanie 2.31
+
+Na podstawie kryterium Hurwitza podać warunki stabilności asymptotycznej
+układu liniowego trzeciego rzędu.
+
+Zadanie 2.32
+
+Dla 7, = 1 s, 7> = 0,5 s, 7, = 0,3 s wyznaczyć wartość współczynnika wzmocnie-
+nia k, dla którego układ (rys. 2.52) jest stabilny, posługując się kryterium Hurwitza.
+Posługując się kryterium Michajłowa, sprawdzić stabilność układu dla k = 6.5.
+
+<image/figury/k1_page106_figure2.png>
+
+Rys. 2.52. Schemat blokowy układu
+
+Zadanie 2.33
+
+Wyznaczyć obszary wartości współczynników k i 7, odpowiadające stabilnej pra-
+cy układu pokazanego na rysunku 2.53.
+
+<image/figury/k1_page106_figure1.png>
+
+Rys. 2.53. Schemat blokowy układu
+
+108

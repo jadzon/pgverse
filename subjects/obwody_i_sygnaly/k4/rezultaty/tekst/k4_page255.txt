@@ -1,0 +1,41 @@
+3.3. Metody analizy obwodów liniowych prądu stałego 257
+
+Er=U, (3.3-3)
+
+Stała a jest współczynnikiem kierunkowym charakterystyki opisanej równa-
+niem (3.3-1). Jak wynika z rys. 3.3-5 stała ta jest jednocześnie równa oporowi
+
+<image/figury/k4_page255_figure1.png>
+
+pewnego dwójnika o charakterystyce u = ai, przesuniętej równolegle względem
+charakterystyki (3.3-1) do początku układu współrzędnych u, i. Zauważmy, że
+przesunięcie charakterystyki źródłowego dwójnika rezystancyjnego AB z rys.
+3.3-4b nastąpi w wyniku usunięcia w tym dwójniku wszystkich źródeł niezależ-
+nych. Stan zaciskowy u = 0, i = O jest bowiem stanem dopuszczalnym po-
+wstałego w ten sposób dwójnika bezźródłowego. Tak więc stała a jest równa
+oporowi zastępczemu R,» dwójnika bezźródłowego (rys.3.3-6b), powstałego
+w wyniku zastąpienia w dwójniku źródłowym wszystkich niezależnych źródeł
+napięciowych zwarciami oraz wszystkich niezależnych źródeł prądowych roz-
+warciami (źródła sterowane pozostają bez zmian). Tak więc drugi warunek
+równoważności dwójników z rys. 3.3-4b i c ma postać:
+
+k4_page255_formula1.png (3.3-4)
+
+Na podstawie przeprowadzonego rozumowania możemy sformułować waż-
+ne w teorii obwodów twierdzenie, zwane twierdzeniem Thevenina lub twierdze-
+niem o zastępczym źródle napięciowym”.
+
+Dowolny liniowy dwójnik rezystancyjny? (rys. 3.3-4b) możemy zastąpić
+równoważnym rzeczywistym źródłem napięciowym (rys. 3.3-4c) o sile elektro-
+motorycznej Er i oporze wewnętrznym R37, przy czym:
+
+— siła elektromotoryczna E;q jest równa napięciu na rozwartych zaciskach
+dwójnika (równa napięciu rozwarcia U,);
+
+— opór wewnętrzny R; jest równy oporowi zastępczemu R 45 dwójnika
+bezźródłowego (rys. 3.3-6b), otrzymanego w wyniku zastąpienia w rozważanym
+
+1) Używane są także nazwy: „zasada Thevenina” lub „zasada zastępczego źródła napię-
+ciowego”.
+
+2) Z wyjątkiem dwójnika będącego idealnym źródłem prądowym.

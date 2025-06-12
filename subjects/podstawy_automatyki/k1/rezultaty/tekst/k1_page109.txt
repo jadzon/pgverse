@@ -1,0 +1,39 @@
+3. Wykorzystanie pakietu MATLAB/Simulink
+do rozwiązywania zadań
+
+3.1. Wprowadzenie do MATLAB-a
+
+MATLAB to otwarte i interakcyjne środowisko obliczeniowe, integrujące ana-
+lizę numeryczną, działania na macierzach i przetwarzanie sygnałów z grafiką, co bar-
+dzo ułatwia jego wykorzystanie. Podstawową strukturę danych stanowi macierz
+(rzeczywista lub zespolona), której rozmiarów nie potrzeba uprzednio deklarować
+(w przeciwieństwie do innych języków programowania). MATLAB nie wymaga rów-
+nież deklaracji zmiennych, które są dostępne przez nazwę. Jest to język programo-
+wania bardzo wysokiego poziomu, który ma ponad tysiąc standardowych funkcji
+(tzw. m-plików) umożliwiających konkretne zastosowania. W przypadku braku okre-
+ślonej gotowej już funkcji, użytkownik może sam ją napisać, a następnie wstawić do
+biblioteki MATLAB-a. Na tym, między innymi, polega otwartość tego systemu.
+
+Poszerzeniem możliwości MATLAB-a są tzw. przyborniki (toolboxes) będące
+specjalizowanymi funkcjami (m-plikami) przeznaczonymi do rozwiązywania okre-
+ślonych zagadnień z dziedziny teorii regulacji i sterowania (identyfikacja, sterowa-
+nie, predykcja, częstotliwościowa analiza układów, optymalizacja, przetwarzanie
+sygnałów, układy nieliniowe, sieci neuronowe, inne), chemii, matematyki (statystyka,
+obliczenia symboliczne), przetwarzania obrazów (analiza obrazów, zmiana formatu ry-
+sunku) i inne.
+
+Ważnym uzupełnieniem MATLAB-a, szczególnie z punktu widzenia automatyki,
+jest przybornik pod nazwą Simulink, który służy do analizy i syntezy ciągłych, dys-
+kretnych i dyskretno-ciągłych układów dynamicznych. Simulink jest środowiskiem
+graficznym, w którym symulację systemów dynamicznych wykonuje się, opierając się
+na schemacie blokowym budowanym z wykorzystaniem predefiniowanych bloków bi-
+bliotecznych. Dodatkowe przyborniki (np. Real Time Windows Target) umożliwiają
+pracę Simulinka w systemach czasu rzeczywistego.
+
+Zaletą MATLAB-a jest również to, że może pracować na różnych platformach
+sprzętowych i programowych.
+
+Do rozwiązania zadań zamieszczonych w książce potrzebne są, oprócz MATLAB -a,
+przyborniki Simulink oraz Control System.
+
+111

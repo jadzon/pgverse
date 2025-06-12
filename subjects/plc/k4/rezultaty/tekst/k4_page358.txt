@@ -1,0 +1,50 @@
+7.13 GE CENE |
+
+ 
+
+Funkcje konwersji umożliwiają przekształcenie wartości znajdującej się w aku-
+mulatorze | z jednego formatu na inny zależny od rodzaju użytego operatora.
+Do dyspozycji są następujące operatory konwersji :
+
+CFW - tworzy uzupełnienie do jeden 16-bitowej wartość wprowadzonej do
+akumulatora | (każdy bit 16-bitowej liczby zapisanej w akumulatorze | zo-
+staje zanegowany),
+
+CŚW - tworzy uzupełnienie do dwóch 16-bitowej wartość wprowadzonej do
+akumulatora | (każdy bit 16-bitowej liczby zapisanej w akumulatorze I zo-
+staje zanegowany i do otrzymanej liczby zostaje dodane 1),
+
+CSD - tworzy uzupełnienie do dwóch 32-bitowej wartość wprowadzonej do
+akumulatora I,
+
+DEF - przekształca 16-bitową wartość wprowadzoną do akumulatora I
+z kodu BCD na równoważną 16-bitową liczbę w kodzie binarny,
+
+DED - przekształca 32-bitową wartość wprowadzoną do akumulatora I
+z kodu BCD na równoważną liczbę 32-bitową w kodzie binarny,
+
+DUF - przekształca 16-bitową wartość wprowadzoną do akumulatora I
+z kodu binarnego na równoważną 16-bitową liczbę w kodzie BCD,
+
+DUD - przekształca 32-bitową wartość wprowadzoną do akumulatora |
+z kodu binarnego na równoważną 32-bitową liczbę w kodzie BCD,
+
+FDG - przekształca 32-bitową liczbę stałoprzecinkową wprowadzoną do
+akumulatora I na równoważną 32-bitową liczbę zmiennoprzecinkową,
+
+GFD - przekształca 32-bitową liczbę zmiennoprzecinkową wprowadzoną do
+akumulatora | na 32-bitową liczbę stałoprzecinkową (zaokrąglenie do naj-
+bliższej liczby parzystej).
+
+Każdy z przedstawionych operatorów konwersji jest wykonywany niezależnie od
+wyniku poprzedzających go operacji logicznych i nie powoduje zmiany tego wy-
+niku. Wszystkie przedstawione operatory konwersji są operatorami uzupełniają-
+cymi i mogą być programowane jedynie w blokach funkcyjnych. Wartość otrzy-
+mana po wykonaniu operacji konwersji jest umieszczana w akumulatorze |.
+Niezależnie od rodzaju wykonywanej operacji konwersji ustawione zostają trzy
+bity (CC0,CC1,OV) słowa statusowego procesora. Stan tych bitów może być
+sprawdzany przy pomocy odpowiednich instrukcji skoku.
+
+<image/tabele/k4_page358_table1.png>
+
+358 Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S3

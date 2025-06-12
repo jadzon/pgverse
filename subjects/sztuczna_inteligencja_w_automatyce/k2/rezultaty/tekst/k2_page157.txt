@@ -1,0 +1,33 @@
+162
+bieństwa decyzji, gdy wybrano wartość j atrybutu ż wynosi
+
+<image/wzory/k2_page157_formula1.png>
+gdzie D,, oznacza poddrzewo decyzyjne wychodzące z atrybutu ż wzdłuż krawędzi
+j (po wyborze wartości j atrybutu 2).
+Podobnie, entropia rozkładu prawdopodobieństwa decyzji gdy wybrano atrybut
+i jest ważoną sumą entropii dla poszczególnych wartości atrybutów:
+
+<image/wzory/k2_page157_formula2.png>
+
+gdzie D;, jest poddrzewem decyzyjnym o korzeniu będącym atrybutem ż.
+
+Zasada wyboru atrybutu: wybierany jest atrybut, dla którego entropia dana
+wzorem (??) przyjmuje wartość minimalną. Gdy pewna wartość wybranego atry-
+butu jednoznacznie określa wartość funkcji, to wychodząca z tego atrybutu krawędź
+drzewa opisana tą wartością kończy się liściem drzewa decyzyjnego
+
+PRZYKŁAD 6.13
+W poniższym prostym przykładzie pokazano sposób wyboru jednego spośród dwóch
+atrybutów
+
+<image/wzory/k2_page157_formula3.png>
+<image/figury/k2_page157_figure1.png>
+
+<image/wzory/k2_page157_formula4.png>
+
+<image/wzory/k2_page157_formula5.png>
+
+<image/wzory/k2_page157_formula6.png>
+
+<image/tabele/k2_page157_table1.png>
+<image/wzory/k2_page157_formula7.png>

@@ -1,0 +1,30 @@
+10 Rozdział 1. Grafy (nieskierowane)
+
+Algorytm przeszukiwania grafu w głąb.
+Dane wejściowe: graf G = (V, E) oraz wierzchołek początkowy v € V;
+
+e odwiedzamy v i wkładamy go na STOS; zaznaczamy v jako wierzchołek odwie-
+dzony,
+
+e dopóki STOS nie jest pusty, powtarzamy:
+o jeżeli v jest wierzchołkiem na wierzchu STOSU, to sprawdzamy, czy istnieje
+wierzchołek u, który jest połączony krawędzią z wierzchołkiem v i nie był jeszcze
+odwiedzony,
+
+o jeżeli takie u się znajdzie, to odwiedzamy u, wkładamy go na wierzch STO-
+SU i zaznaczamy jako wierzchołek odwiedzony,
+
+o jeżeli takiego u nie ma, to zdejmujemy v ze STOSU i cofamy się do wierz-
+chołka będącego na STOSIE pod spodem.
+
+Rysunek 1.7: Przykład grafu
+
+<image/figury/k2_page188_figure1.png>
+
+Przykład 1.18 Zastosujmy algorytm przeszukiwania w głąb do grafu z rysunku 1.7. Po-
+niższa tabela pokazuje jaki wierzchołek jest odwiedzany i jaka jest zawartość stosu po
+każdej kolejnej iteracji pętli algorytmu (przeszukanie zaczynamy od węzła a). Przyjęto
+zasadę, że jeżeli jest kilka wierzchołków do wyboru, to wybieramy ten, którego nazwa stoi
+wcześniej w alfabecie.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

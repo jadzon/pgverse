@@ -1,0 +1,44 @@
+1.8. Sprzężenie magnetyczne 149
+
+/
+Problem ten można rozwiązać postępując podobnie jak w poprzednich rzykładach, tzn.
+sprowadzając układ z rys. 1.8-13a do standardowego układu indukcyjności sprzężonych z rys. 1.8-3
+
+i przyjmując w równaniach (1.8-16) i (1.8-17) warunki wynikające ze zwarcia górnych i dolnych
+zacisków (rys. 1.8-13b), tzn.:
+
+vzory/k3_page147/_formula1.png
+
+Otrzymujemy wówczas”:
+
+m090147_ormuaz.png
+a stąd:
+
+zory/k3_page147_formula3.png
+
+i, w konsekwencji:
+
+y/k3_page147_formula4.png
+
+Równanie to, w połączeniu z warunkiem i = i, + i, pozwala na wyrażenie obu prądów i;, ią
+poprzez prąd i:
+
+<image/wzory/k3_page14/_formula5.png>
+
+Ostatecznie:
+
+<image/wzory/k3_page14/_formula6.png>
+skąd wynika, że:
+
+»ry/k3_page147_formula7.png (1.8-41)
+
+Jak widzimy, obliczenia są dość złożone. Znacznie prostszym sposobem obliczenia indukcyjności
+zastępczej L jest w tym przypadku skorzystanie ze schematu zastępczego z rys. 1.8-12. Po zwarciu
+górnych zacisków tego schematu otrzymujemy układ przedstawiony na rys. 1.8-13c, dla którego
+możemy natychmiast napisać:
+
+<image/wzory/k3_page14/_formula8.png>
+Warto zwrócić uwagę, że przy sprzężeniu całkowitym: L, L, = M? mamy L= 0.
+
+Z warunku u; = u, wynika, że strumienie Y, i W mogą różnić się tylko o stałą. Dla
+ij, = i, = © mamyjednak W, = W m (, a więcstała ta jest równa zeru (por. przypis na str. 147).

@@ -1,0 +1,53 @@
+1.7. Zabezpieczanie danych 21
+
+w tym przypadku nie może mieć pewności. Zauważmy, że jeżeli z i y różnią się tylko na
+jednym bicie. to r © u ma tvlko iedna iedvnke. wiec:
+
+<image/wzory/k2_page112_formula1.png>
+
+Z dn
+
+<image/wzory/k2_page112_formula2.png>
+<image/wzory/k2_page112_formula3.png>
+
+Tak więc jezen w przesytdnych uanyCn Zostanie ZMIEMONY (przektamany ) jeuen Di, będzie
+można to wykryć porównując Par(z) z Par(y).
+
+Jest to bardzo stary system kontroli danych. Działa on dobrze, jeżeli przekłamania są
+przypadkowe i prawdopodobieństwo przekłamania dwóch bitów jest dużo mniejsze niż
+prawdopodobieństwo przekłamania jednego bitu. Funkcja Par jest jednak zbyt prosta,
+aby zabezpieczyć dane przed złośliwym przekłamywaniem. Wystarczy bowiem zawsze
+przekłamywać parzystą liczbę bitów, aby rzecz się nie wykryła.
+
+Pokażemy teraz bardziej złożony sposób zabezpieczania danych przed przekłama-
+niem. Dla dowolnego wektora r € /0,1)” zdefiniujmy funkcje:
+
+<image/wzory/k2_page112_formula4.png>
+<image/wzory/k2_page112_formula5.png>
+
+Funkcja Par, oblicza parzystość liczby bitów wektora zr, ale liczone są tylko bity na
+pozycjach wyznaczonych przez wektor r, inaczej — Par,(z) to parzystość przekroju r i
+r.
+
+Funkcja Par, jest addytywna:
+
+z
+
+<image/wzory/k2_page112_formula6.png>
+
+Twierdzenie 1.4 Jeżeli z € 40,1)” oraz z 4 0, to dla dokładnie połowy r € (0,1)”
+zachodzi Par,(z) = 0.
+
+Dowód. |eżeli x 4 0, to istnieje wektor s z jedną jedynką, taki że:
+
+<image/wzory/k2_page112_formula7.png>
+Wektor s powinien mieć jedynkę na pozycji, na której x też ma jedynkę. Podobnie jak w
+dowodzie twierdzenia 1.3, możemy teraz określić funkcję:
+
+<image/wzory/k2_page112_formula8.png>
+
+która „zlepia” wektory z 40, 1)” w pary. Ponadto mamy:
+
+<image/wzory/k2_page112_formula9.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

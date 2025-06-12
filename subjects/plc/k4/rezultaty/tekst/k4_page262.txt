@@ -1,0 +1,28 @@
+<image/tabele/k4_page262_table2.png>
+
+Wyd. 4.27 Instrukcja testowania nierówności NEQ
+
+Wyd. 4.28 przedstawia funkcję LES (LESs than), której wyjście przyjmuje war-
+tość 1 w przypadku, gdy pierwsze z dwóch porównywanych wartości słów jest
+mniejsze (A<B). Dla funkcji GRT (GReaTer Than) pierwsza wartość słowa musi
+być większe od drugiego, aby otrzymać wartość 1 (A>B).(Wyd. 4.29)
+
+<image/figury/k4_page262_figure1.png>
+
+Wyd. 4.28 Instrukcja testowania relacji mniejszości LES
+
+<image/tabele/k4_page262_table1.png>
+
+Wyd. 4.29 Instrukcja testowania większości GRT
+
+Funkcje LEQ (Less than or EQqual) (AŚB) i GEQ (Greater than or Equal)
+(A>B) są to połączone funkcje LES i GRT z funkcją EQU. Ich wyjścia przyj-
+mują wartość 1 w przypadku, gdy pierwsza wartość porównywanych słów jest
+mniejsza (większa) lub równa drugiej. Przykłady użycia tych funkcji przedstawia
+Wyd. 4.301 Wyd. 4.31.
+
+ 
+
+     
+
+262 Rozdział : 5. Język schematów drabinkowych dla SLC 500

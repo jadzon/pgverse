@@ -1,0 +1,57 @@
+MPEG 479
+
+ 
+
+W czwartym kroku kodowania JPEG zmodyfikowane widmo jest przetwarzane z matrycy
+8 x 8 na sekwencję liniową. W tym kroku kodowania stosuje się uporządkowanie zygzako-
+wate pokazane na rys. 27.14, umieszczając wszystkie duże częstotliwości razem na końcu
+sekwencji liniowej. W ten sposób zera z elementów usuwanych grupuje się w długie ciągi.
+W piątym kroku te długie ciągi zer poddaje się kompresji metodą kodowania ciągów. W szó-
+stym kroku sekwencja jest kodowana przez kodowanie Huffmana lub arytmetyczne, dając
+końcowy plik skomprymowany.
+
+Uruchamiając program kompresji JPEG, można wybrać wielkość kompresji i wynikające
+z niej pogorszenie jakości obrazu. Na rys. 27.15 pokazano ten rodzaj zniekształcenia obrazu,
+który wynika z dużych współczynników kompresji. Przy przedstawionym na rysunku współ-
+czynniku kompresji 45:1 każda z grup 8 x 8 jest reprezentowana przez tylko ok. 12 bitów.
+Dokładniejsze obejrzenie tego obrazu wykazuje, że sześć funkcji bazowych o najmniejszych
+częstotliwościach jest reprezentowanych do pewnego stopnia.
+
+Dlaczego przekształcenie DCT jest lepsze do kompresji obrazu niż przekształcenie Fouriera?
+Główna przyczyna jest taka, że DCT ma półokresowe funkcje bazowe, tj. S[0,1] i S[1,0].
+Jak pokazano na rys. 27.10, te funkcje delikatnie „nachylają się” od jednej strony matrycy
+ku drugiej. Natomiast najmniejsze częstotliwości w przekształceniu Fouriera tworzą jeden
+pełny okres. Obrazy prawie zawsze zawierają obszary, w których jaskrawość zmienia się
+stopniowo. Stosowanie funkcji bazowej dopasowanej do takiego wzorca bazowego umożli-
+wia lepszą kompresję.
+
+MPEG jest standardem kompresji cyfrowych sekwencji sygnałów wizyjnych takich, jakie
+są stosowane w wideo, w komputerze i w sieciach telewizji cyfrowej. Ponadto, MPEG daje
+również kompresję ścieżki dźwiękowej towarzyszącej sygnałowi wizyjnemu. Nazwa standar-
+du pochodzi od grupy roboczej, która go opracowała: Moving Pictures Experts Group. Jeśli
+uważacie, że JPEG jest skomplikowany, to MPEG jest koszmarem! MPEG po prostu się ku-
+puje; nie próbujcie pisać takiego programu. Przyszłością tej techniki jest kodowanie algoryt-
+mów kompresji i dekompresji bezpośrednio w układach scalonych. Potencjalne możliwości
+MPEG są ogromne. Pomyślcie o tysiącach kanałów wideo przesyłanych do waszych domów
+pojedynczym kablem światłowodowym. Jest to podstawowa technika XXI wieku.
+
+MPEG ma kilka innych ważnych właściwości, oprócz redukowania ilości przesyłanych da-
+nych. Film można odgrywać w przód i w tył, z szybkością normalną lub zwiększoną. Jest
+bezpośredni dostęp do zakodowanych informacji, co znaczy, że każda indywidualna ramka
+w sekwencji może być łatwo wyświetlona jako obraz nieruchomy. Temu również towarzyszy
+możliwość redagowania filmów, polegająca na tym, że krótkie segmenty z filmu można ko-
+dować tylko w odniesieniu do nich samych, a nie do całej sekwencji. Kompresję MPEG za-
+projektowano w taki sposób, żeby była odporna na błędy. Ostatnią rzeczą, jaką chcielibyście
+napotkać podczas kompresji, jest błąd pojedynczego bitu powodujący przerwanie filmu.
+Sposoby użyte w MPEG można podzielić na dwa typy kompresji: wewnątrzramkową i mię-
+dzyramkową. W kompresji wewnątrzramkowej pojedyncze ramki tworzące sekwencję sygna-
+łu wizyjnego są kodowane tak, jakby były zwykłymi obrazami nieruchomymi. Taka kom-
+presja jest wykonywana przy użyciu standardu JPEG, z kilkoma zmianami. W terminologii
+MPEG ramka zakodowana w ten sposób jest nazywana kodowaną wewnętrznie (infra-coded)
+lub obrazem typu IL.
+
+Większość pikseli w sekwencji sygnału wizyjnego niewiele się zmienia między jedną ramką
+a następną. Jeśli kamera się nie porusza, to większość obrazu zajmuje tło, które pozostaje stałe
+w kilkunastu kolejnych ramkach. W standardzie MPEG wykorzystano ten fakt, wprowadza-
+jąc bardzo wysublimowaną postać kodowania delta, w celu dokonania kompresji informacji
+redundancyjnej między ramkami. Po dokonaniu kompresji jednej z ramek jako obrazu typu I,

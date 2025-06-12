@@ -1,0 +1,39 @@
+M.3. Układy sekwencyjne 181
+
+|<
+
+X1 x2 X3
+
+<image/figury/k3_page191_figure2.png>
+
+Rysunek D.9. Realizacja funkcji za pomocą multiplcksera
+
+się na każde wejście sterujące jedną, arbitralnie wybraną zmienną, a na wejścia infor-
+macyjne stałą 0 lub 1, w zależności od wartości jaką dla danej kombinacji zmiennych
+wejściowych przyjmuje funkcja (rys. D.9b). W tym przypadku założono, że wejścia
+informacyjne są ułożone zgodnie z kodem NKB, przy czym najwyżej położone jest
+wejście odpowiadające kombinacji wejściowej 000. Ponadto założono, że wejście sterujące
+leżące po lewej stronie ma najmniejszą wagę i że wagi rosną w kierunku prawej strony.
+
+Rozwiązanie nie będzie tak trywialne, gdy zadana będzie funkcja 4 zmiennych i trzeba
+zrealizować ją za pomocą multipleksera o trzech wejściach sterujących. Niech będzie
+dana funkcja jak na rys. D.9c. Wybierając arbitralnie trójkę zmiennych x,x,x, dla wy-
+sterowania wejść sterujących otrzymamy układ jak na rys. D.9d. Jak można zauważyć,
+w tym przypadku na wejściach informacyjnych nie będą stałe logiczne, ale funkcje tej
+zmiennej, której nie wybrano do trójki zmiennych podawanych na wejścia sterujące. Na
+wejścia multipleksera podawane są 0, 1, x, lub X, w zależności od wartości funkcji dla
+danej kombinacji zmiennych.
+
+A.3. UKŁADY SEKWENCYJNE
+
+Dla kombinacyjnych układów logicznych stan wyjść układu był funkcją jedynie zmiennych
+
+wejściowvch [lkładv takie można anicać alaehraieznie tróika:
+
+<image/wzory/k3_page191_formula1.png>
+
+gdzie X jest zbiorem stanow jakie przyjmują sygnaty wejsciowe, Y jest zbiorem stanów
+jakie przyjmują sygnały wyjściowe, a funkcja A opisuje działanie układu, tj. przy-
+porządkowuje stanom wejściowym (wzbudzeniom układu) odpowiadające im stany
+
+14 — Podstawy budowy i działania komputerów

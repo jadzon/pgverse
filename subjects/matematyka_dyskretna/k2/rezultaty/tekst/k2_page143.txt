@@ -1,0 +1,48 @@
+28 Rozdział 1. Teoria liczb
+
+1.17 Małe twierdzenie Fermata
+Twierdzenie 1.54 (Fermata) Niech a € Z:,, wtedy
+
+<image/wzory/k2_page143_formula1.png>
+pęgisa
+
+<image/wzory/k2_page143_formula2.png>
+
+to bęug wazy snie tieiitnty Łapy JEGCĆU PUMINOŁY lity JE PLŁEŁ U
+
+<image/wzory/k2_page143_formula3.png>
+
+to zgodnie z lematem 1.36 otrzymamy te same elementy tylko w innej kolejności.
+Wymnóżmy teraz elemnty obu ciągów
+
+<image/wzory/k2_page143_formula4.png>
+
+Po pomnożeniu przez odwrotność [[;(7) a; otrzymamy tezę twierdzenia. o
+
+Wniosek 1.55 Jeżeli p jest liczbą pierwszą, to dla każdego a względnie pierwszego z p
+mar
+<image/wzory/k2_page143_formula5.png>
+
+1.18 Szyfry RSA
+
+W szyfrach one-pad opisanych w rozdziale o funkcjach boolowskich klucz do szyfrowa-
+nia jest ten sam co klucz do deszfrowania. W szyfrach liniowych wprawdzie klucze do
+szyfrowania i deszyfrowania są różne, ale jaden łatwo można wyliczyć z drugiego. Takie
+szyfry nazywamy symetrycznymi.
+
+Teraz zapoznamy się ze sposobem szyfrowania, w których klucz do szyfrowania może
+być jawny, nawet ogłaszany publicznie, a klucz do deszyfrowania jest tajny i jest praktycz-
+nie niemożliwe wyliczenie klucza tajnego z klucza jawnego. Sposób ten zaproponowali
+Rivest, Shamir i Adleman. Przypuśćmy, że Alicja chce utworzyć swój klucz. Bierze w
+tym celu dwie duże liczby pierwsze p i q, każda może zawierać po kilkaset bitów. Tworzy
+ich iloczyn n = pq. Funkcja Eulera ó(n) = (p — 1)(q — 1). Następnie Alicja losuje liczbę
+e, która jest względnie pierwsza z $(n). Skoro NW D(e,ó(n)) = 1 to istnieje liczba
+d, taka, że ed = 1 (mod 6(n)). Teraz para (e,n) jest jawnym kluczem Alicji i może
+być publicznie ogłoszona. Para (n, d) jest kluczem prywatnym Alicji, nie powinna go ona
+nikomu zdradzać. Alicja nie powinna też zdradzać rozkładu liczby n na czynniki. Jeżeli
+ktoś zna p i q, to może wyliczyć $(n) oraz d.
+
+Przypuśćmy, że Bob chce przesłać A licji jakąś zaszyfrowaną wiadomość r. Traktuje-
+my tę wiadomość jako liczbę z < n. (Jeżeli wiadomość jest ciągiem znaków, to kodujemy
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

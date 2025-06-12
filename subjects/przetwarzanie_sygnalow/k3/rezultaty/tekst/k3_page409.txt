@@ -1,0 +1,57 @@
+Dlaczego to działa?
+
+Patrząc na sieci neuronowe w sposób bardziej wysublimowany, można powiedzieć, że jest to
+metodą etykietowania różnych obszarów w przestrzeni parametrycznej. Jako przykład roz-
+ważmy system sonaru będący siecią neuronową o 1000 wejść i pojedynczym wyjściu. Przy
+prawidłowym wyborze wag sygnał wyjściowy będzie bliski jeden, jeśli sygnał wejściowy
+jest echem odbitym od łodzi podwodnej i bliski zeru, jeśli jest sygnał wejściowy jest tyl-
+ko szumem. W ten sposób powstaje hiperprzestrzeń parametryczna o 1000 wymiarach. Sieć
+neuronowa jest metodą przypisania jakiejś wartości każdemu położeniu w tej hiperprzestrze-
+ni. Tak więc 1000 wartości wejściowych określa lokalizację w tej hiperprzetrzeni, sygnał zaś
+wyjściowy z sieci — wartość dla tej lokalizacji. To zadanie wykonałaby doskonale tablica
+przeglądowa mająca zarejestrowaną wartość wyjściową dla każdego możliwego adresu wej-
+ściowego. Różnica leży w tym, że sieć neuronowa oblicza wartość dla każdej lokalizacji (ad-
+resu), a nie realizuje wielkiego ponad możliwości zadania zarejestrowania każdej wartości.
+Faktycznie, architektury sieci neuronowych często ocenia się na podstawie tego, jak dobrze
+rozdzielają one hiperprzestrzeń przy danej liczbie wag.
+
+Przy takim podejściu do problemu uzyskuje się również wskazówkę dotyczącą wymaganej
+liczby węzłów w warstwie ukrytej. Przestrzeń parametryczna N-wymiarowa wymaga N liczb
+do opisania lokalizacji. Identyfikacja obszaru w hiperprzestrzeni wymaga 2N wartości
+(tj. wartości minimalnych i maksymalnych na każdej osi, wyznaczających hiperprzestrzenną
+bryłę prostopadłościenną). Te proste obliczenia mogą — na przykład — wykazać, że sieć neu-
+ronowa o 1000 wejść wymaga 2000 wag do odróżnienia jednego obszaru hiperprzestrzeni
+od drugiego. W sieci całkowicie połączonej wymagałoby to dwóch węzłów ukrytych. Liczba
+niezbędnych obszarów zależy od określonego problemu, lecz można oczekiwać, że będzie
+ona znacznie mniejsza niż liczba wymiarów w przestrzeni wieloparametrycznej. Choć jest
+to tylko grube przybliżenie, to wyjaśnia ono ogólnie, dlaczego większość sieci neuronowych
+może działać z warstwą ukrytą stanowiącą od 2 do 3% rozmiaru warstwy wejściowej.
+
+W zupełnie inny sposób można rozumieć sieci neuronowych, korzystając ze stosowanego
+w DSP pojęcia korelacji. Jak stwierdzono w rozdziale 7, korelacja jest optymalnym sposo-
+bem wykrycia, czy dany wzorzec jest zawarty w sygnale. Korelację przeprowadza się przez
+wymnażanie sygnału i poszukiwanego wzorca i następnie sumowanie iloczynów. Czym
+suma jest większa, tym bardziej sygnał jest podobny do wzorca. Spójrzcie teraz na rys. 26.5
+i pomyślcie o każdym ukrytym węźle jako o poszukującym specyficznego wzorca w danych
+wejściowych. To znaczy, że każdy z ukrytych węzłów koreluje dane wejściowe z zestawem
+wag związanych z tym węzłem ukrytym. Jeśli wzorzec jest w danych wejściowych, to suma
+przekazywana do sigmoidy będzie duża, w innym razie — będzie mała.
+
+Działanie sigmoidy jest, z tego punktu widzenia, całkiem interesujące. Wróćcie do rys.
+26.1 d) i zwróćcie uwagę, że krzywa prawdopodobieństwa rozdzielająca dwa rozkłady
+o kształcie dzwonowym przypomina sigmoidę. Gdybyście w sposób najprostszy projekto-
+wali sieć neuronową, moglibyście sygnał wyjściowy każdego ukrytego węzła uczynić rów-
+nym ułamkowemu prawdopodobieństwu tego, czy dany wzorzec jest w danych wejściowych.
+Warstwa wyjściowa powtarza tę operację, powodując, że cała trójwarstwowa struktura staje
+się korelacją korelacji, siecią szukającą wzorców wzorców.
+
+Podstawą konwencjonalnego DSP są dwie metody — spłot oraz analiza Fouriera. To jest
+pocieszające, że sieci neuronowe mogą wykonywać obie te operacje, i jeszcze wiele wię-
+cej. Wyobraźcie sobie sygnał N-próbkowy filtrowany w celu uzyskania innego sygnału
+N-próbkowego. Zgodnie ze splotem rozpatrywanym od strony wyjścia, każda próbka w sy-
+gnale wyjściowym jest sumą ważoną próbek z wejścia. A teraz, weźmy dwuwarstwową sieć
+neuronową o N węzłach w każdej warstwie. Wartość wytwarzana przez każdy z węzłów
+warstwy wyjściowej jest również sumą ważoną wartości wejściowych. Jeśli w każdym węź-
+le sieci wyjściowej zastosowano wagi takie same, jak we wszystkich pozostałych węzłach
+wyjściowych, to sieć będzie realizować splot liniowy. Przekształcenie DFT zaś może być ob-
+liczone przez dwuwarstwową sieć neuronową o N węzłach w każdej warstwie. Każdy węzeł

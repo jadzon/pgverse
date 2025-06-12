@@ -1,0 +1,34 @@
+<image/figury/k3_page44_figure1.png>
+
+Jest to ogólna postać funkcji sin(nx) / (nx), oznaczanej jako sinc lub sinc(x). Funkcja sinc
+jest często stosowana w dziedzinie DSP i omówimy ją szczegółowo w dalszych rozdziałach.
+
+impulsu prostokątnego, tj. przez funkcję sinc. NK 05 Adak ają płaska Wid.
+mo częstotliwościowe ciągu impulsów (widmo „poprawne”), a linią pogrubioną — funkcję
+since. Widmo częstotliwościowe sygnału z pamiętaniem rzędu zerowego jest iloczynem tych
+dwóch krzywych.
+
+Filtr analogowy zastosowany do przetwarzania sygnału z pamiętaniem rzędu zerowego (prze-
+bieg na rys. 3.6 c) na przebieg odtworzony (rys. 3.6 f) powinien wykonać dwa zadania: 1) usu-
+
+Runiesienie wkica wętókiwoścowąć 4 Grób 16) Mołis oniktowić na
+jeden z czterech sposobów: 1) zignorować to i pogodzić się ze skutkami, 2) zaprojektować filtr
+z uwzględnieniem odpowiedzi 1/sinc(x), 3) zastosować pomysłową technikę przetwarzania
+o wielu częstotliwościach próbkowania (mułtirate) opisaną w dalszej części tego rozdziału,
+4) wprowadzić odpowiednią korekcję do oprogramowania przed przetwarzaniem c/a (patrz
+rozdział 24).
+Przed zakończeniem omawiania próbkowania trzeba rozwiać powszechnie przyjmowany mit
+dotyczący porównania sygnałów analogowych z cyfrowymi. Jak wykazano w tym rozdziale,
+ilość informacji przenoszonej w sygnale cyfrowym jest ograniczona dwiema przyczynami. Po
+pierwsze, liczba bitów na próbkę ogranicza rozdzielczość zmiennej zależnej. Małe zmiany war-
+tości sygnału mogą być utracone w szumie kwantyzacji. Po drugie, częstotliwość próbkowania
+ogranicza rozdzielczość zmiennej niezależnej, to znaczy, że zdarzenia znajdujące się blisko sie-
+bie w sygnale analogowym mogą zostać utracone między próbkami. Jest to inny sposób stwier-
+dzenia, że są tracone częstotliwości większe od połowy częstotliwości próbkowania.
+A oto ten mit: „Ponieważ sygnały analogowe mają charakter ciągły, więc mają nieskończenie
+dobrą rozdzielczość zarówno zmiennej niezależnej, jak i zależnej”. To nieprawda! Sygnały
+analogowe są ograniczone z dwóch przyczyn, tych samych co sygnały cyfrowe. A są nimi
+szum i pasmo częstotliwości (największa częstotliwość dopuszczalna w sygnale). Szum w sy-
+gnale analogowym ogranicza możliwość pomiaru wartości przebiegu, podobnie jak szum
+kwantyzacji w sygnale cyfrowym. W sygnale analogowym możliwość rozróżniania zdarzeń
+położonych blisko siebie zależy od największej dopuszczalnej częstotliwości w przebiegu.

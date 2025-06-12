@@ -1,0 +1,44 @@
+276 3. Obwody prądu stalego
+
+— ustalić numerację oczek i kierunek ich obiegu (jednakowy dla wszyst-
+kich oczek);
+
+— zapisać, zgodnie z podanymi regułami, wektor sił elektromotorycznych
+obwodowych E, oraz macierz oporów obwodowych Ró;
+
+— zapisać układ równań obwodowych (3.3-18) i wyznaczyć jego rozwiąza-
+nie względem prądów obwodowych:
+
+<image/wzory/k3_page276_formula1.png>
+
+— obliczyć prądy gałęziowe ze związków analogicznych do związków
+(3.3-15).
+Jeżeli interesuje nas także rozkład napięć w sieci, należy dodatkowo obliczyć
+napięcia gałęziowe z równań gałęziowych (por. równania (3.3-12)).
+
+Przykład 3.3-12. Wyznaczymy metodą prądów obwodowych rozpływ prądów i rozkład
+napięć w sieci z rys. 3.3-20 dla następujących danych: E; = 3V, E; = 15V, Es =5V,
+R, =5kQ, Rzm=1kQ, R;=3kQ, R;=1kQ R;=4kQ, R;=2kQ.
+
+Wektor sił elektromotorycznych obwodowych i macierz oporów obwodowych tej sieci są równe
+(por. równanie (3.3-17)):
+
+ 
+
+<image/wzory/k3_page276_formula2.png>
+
+Po podstawieniu do rozwiązania ogólnego (3.3-19) obliczamy wektor prądów obwodowych:
+
+<image/wzory/k3_page276_formula3.png>
+
+Uwzględniając otrzymane wartości prądów obwodowych w związkach (3.3-15) obliczamy prądy
+gałęziowe:
+
+<image/wzory/k3_page276_formula4.png>
+
+Napięcia gałęziowe obliczamy z równań gałęziowych (3.3-12):
+<image/wzory/k3_page276_formula5.png>
+
+G. Metoda napięć węzłowych. W metodzie napięć węzłowych będziemy
+zakładać, że każda gałąź sieci ma postać prądową (rys. 3.3-19b) lub też została do
+tej postaci sprowadzona. Metodę tę omówimy na tym samym przykładzie z rys.

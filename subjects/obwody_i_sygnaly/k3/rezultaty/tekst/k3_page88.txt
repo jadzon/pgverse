@@ -1,0 +1,33 @@
+1. Pojęcia podstawowe — elementy
+
+complikowany obraz zjawisk otrzymalibyśmy rozpatrując
+ikający pewną powierzchnię. Dla różnych punktów tej
+byłyby bowiem maksymalne i minimalne czasy opóźnień
+odanego rozumowania, decydujące znaczenie dla spełnienia
+icjonarności ma możliwość zastąpienia równania (1.4-5)
+co sprowadza się do przyjęcia równości:
+
+<image/wzory/k3_page88_formula2.png>
+
+. możliwych opóźnień z, występujących w rozpatrywanym
+i-stacjonarny jest zatem prądem dostatecznie wolnozmiennym.
+:9e88_formula 1 „pNJ szar, w którym rozpatrujemy pole magnetyczne, jest ogra-
+y przez I kres górny odległości punktów tego obszaru od
+ika z prądem. O tym, czy równość (1.4-7) jest spełniona, czy
+no prędkość zmian prądu, jak i wartość 1/c maksymalnego
+li w rozważanym obszarze.
+że prąd zmienia się w czasie sinusoidalnie z częstotliwością f,
+
+<image/wzory/k3_page88_formula3.png>
+
+<image/wzory/k3_page88_formula4.png>
+
+równość przybliżona (1.4-7) jest do przyjęcia, jeśli:
+vzory/k3_page88_formula5.png (1.4-9)
+oraz nie może być akceptowana, jeśli:
+vzory/k3_page88_formula6.png (1.4-10)
+Wprowadzając długość fali 2 odpowiadającą częstotliwości f:
+
+zory/k3_page88_formula7.png (1.4-11)
+
+warunki (1.4-9) i (1.4-10) możemy zapisać odpowiednio w postaci:

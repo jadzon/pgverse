@@ -1,0 +1,28 @@
+Natomiast dana typu ANALOG_/6_INPUT_CONFIG zawierać będzie nastę-
+pujące dane:
+« SIGNAL_TYPE typu ANALOG_SIGNAL_TYPE,
+« FILTER PARAMETER typu SINT o zakresie ograniczonym do 0...99,
+« CHANNEL będącą 16  elementową tablicą danych typu
+ANALOG_CHANNEL_CONFIGURATION.
+
+<image/tabele/k4_page41_table1.png>
+
+Tab. 2.8 Przykłady deklaracji typów pochodnych
+
+ 
+
+2.2.3 Wartości początkowe ____
+
+Z chwilą inicjacji danej (przypisaniu jej miejsca w pamięci) przyporządkowywa-
+na jest jej wartość początkowa domyślna (default initial value) lub wartość
+definiowana w deklaracji typu z wykorzystaniem operatora podstawienia „„:=",,
+jak pokazano w Tab. 2.9.
+
+W przypadku przypisywania wartości domyślnej stosuje się następujące zasady:
+
+e Tab. 2.10 przedstawia domyślne wartości początkowe dla danych należą-
+
+cych do typów elementarnych.
+no
+
+2.2 Typy danych i deklaracje zmiennych 41

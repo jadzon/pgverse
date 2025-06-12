@@ -1,0 +1,55 @@
+122 6. Spłot
+
+z tych wartości, w pętli wewnętrznej (wiersze 200 do 230), jest obliczana wartość prób-
+ki wyjściowej Y[I%]. Wartość Y[I%] jest ustawiana na zero w wierszu 190, umożliwiając
+akumulowanie iloczynów wewnątrz maszyny spłotowej. Pętla FOR-NEXT w wierszach od
+200 do 240 jest dokładną implementacją wzoru 6.1. Indeks J% przechodzi kolejno przez
+każdą próbkę w odpowiedzi impulsowej. W wierszu 230 jest wykonywane mnożenie każdej
+próbki w odpowiedzi impulsowej H[]%] przez odpowiednią próbkę w sygnale wejściowym
+X[1% — J%] oraz dodawanie wyniku do akumulatora.
+
+W wierszu 230 próbka pobrana z sygnału wejściowego jest X[1% — J%]. Wiersze 210 i 220
+programu zapobiegają wyjściu poza zdefiniowaną matrycę X[0] do X[80]. Inaczej mówiąc,
+program ignoruje nieokreślone próbki w sygnale wejściowym. Inną możliwością byłoby zde-
+finiowanie matrycy sygnału wejściowego od X[-30] do X[110], dopuszczając, aby 30 zer do-
+pełniało z każdej strony prawdziwe dane. Jako trzecią możliwość można by pętlę w wierszu
+180 zmienić w taki sposób, aby obiegała od 30 do 80, zamiast od 0 do 110. Tak więc pro-
+gram obliczałby tylko te próbki w sygnale wyjściowym, dla których odpowiedź impulsowa
+jest w pełni zanurzona w sygnale wejściowym. Trzeba pamiętać, że zastosowanie jednego
+z trzech podanych rozwiązań jest niezbędne. Jeśli tego nie zrobimy, to program przestanie
+działać, usiłując odczytywać dane spoza zakresu.
+
+Suma wejść ważonych
+
+Właściwości systemu liniowego są w pełni opisane przez jego odpowiedź impulsową. To jest
+podstawą algorytmu od strony wejścia: każdy punkt w sygnale wejściowym wnosi do sygna-
+łu wyjściowego przeskalowaną i przesuniętą wersję odpowiedzi impulsowej. Matematyczne
+konsekwencje tego faktu prowadzą do algorytmu od strony wyjścia: każdy punkt w sygna-
+le wyjściowym otrzymuje wkład z wielu punktów w sygnale wejściowym, mnożony przez
+przesuniętą odpowiedź impulsową. Chociaż to wszystko jest prawdą, to nie w pełni wyja-
+śnia, dlaczego splot jest tak ważny w przetwarzaniu sygnałów.
+
+Spójrzmy raz jeszcze na maszynę spłotową przedstawioną na rys. 6.8 i pomińmy fakt, że
+sygnał w ramce zaznaczonej linią przerywaną jest odpowiedzią impulsową. Pomyślmy o nim
+jako o zestawie współczynników wagowych wbudowanym w sieć działań. Przy takim po-
+dejściu każda próbka w sygnale wyjściowym jest równa sumie wejść ważonych. Na każdą
+próbkę w sygnale wyjściowym ma wpływ pewien obszar próbek w sygnale wejściowym,
+zgodnie w wybranymi współczynnikami wagowymi. Wyobraźmy sobie na przykład, że jest
+10 współczynników wagowych, każdy o wartości 0,1. Wtedy każda próbka w sygnale wyj-
+ściowym jest średnią dziesięciu próbek wejściowych.
+
+Idąc dalej, trzeba stwierdzić, że współczynniki wagowe nie muszą być ograniczone do znaj-
+dujących się po łewej stronie obliczanej próbki wyjściowej. Na przykład na rys. 6.8 przedsta-
+wiono obliczanie y[6] na podstawie x[3], x[4], x[5] i x[6]. Patrząc na maszynę kodową jako
+na sumę wejść ważonych, można wybierać współczynniki wagowe symetrycznie wokół prób-
+ki wyjściowej. Na przykład y[6] może być obliczane na podstawie x[4], x[5], x[6), x[7] i x[8].
+Przy zastosowaniu takiego samego zapisu indeksów jak na rys. 6.8 współczynniki wagowe
+dla tych pięciu wejść znajdowałyby się w h(21: hf1). k[O], h(-1] i h[-2]. A zatem odpowiedź
+impulsowa zgodna z naszym wyborem symetrycznych współczynników wagowych wymaga
+użycia ujemnych indeksów. Do tej kwestii wrócimy w następnym rozdziale.
+
+Pod względem matematycznym koncepcja jest tylko jedna — splot określony wzorem 6.1.
+Jednak w różnych zastosowaniach naukowych i inżynierskich można podchodzić do problemu
+z dwóch różnych kierunków. Czasem chcemy myśleć o systemie w kategoriach jego odpowie-
+dzi impulsowej, a czasem można zrozumieć system jako zestaw współczynników wagowych.
+Trzeba się oswoić z oboma podejściami i z przechodzeniem od jednego do drugiego.

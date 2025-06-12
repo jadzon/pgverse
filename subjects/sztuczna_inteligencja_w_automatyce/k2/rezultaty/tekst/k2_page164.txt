@@ -1,0 +1,25 @@
+169
+
+<image/figury/k2_page164_figure2.png>
+
+Rys. 6.65: Linie proste reprezentujące maszynę y = sgn(wyzy + wara) = sgn(w'x) dla
+różnych wektorów w. Strzałki wskazują z której strony linii odpowiedź maszyny wynosi
++1. Jak widać maszyna ta może rozdzielić 2 punkty
+
+<image/figury/k2_page164_figure1.png>
+
+Z definicji wynika, że by maszyna mogła rozdzielić dany zbiór punktów potrzeba
+aby dla każdej wariacji wartości odpowiedzi dy, dą,...,d, istniał pewien wektor w
+zapewniający bezbłędną klasyfikację. Takich kombinacji jest oczywiście 2”.
+
+PRZYKŁAD 6.18
+
+Łatwo pokazać, że maszyna y = sgn(wycy + wąrą) = sgn(w'x) może rozdzielić 2
+punkty. Reprezentacją geometryczną tej maszyny (zbór punktów dla których od-
+powiedź maszyny jest równa zero) jest linia prosta przechodząca przez początek
+układu współrzędnych. Na rysunku ?? pokazano, że dla każdego możliwego przypo-
+rządkowania klas dwóm punktom można znaleźć wektor w zapewniający bezbłędną
+klasyfikację. Natomiast rysunek ?? pokazuje, że ta sama maszyna nie jest w stanie
+rozdzielić 3 punktów. mu
+
+PRZYKŁAD 6.19

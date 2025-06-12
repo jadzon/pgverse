@@ -1,0 +1,45 @@
+154 1. Pojęcia podstawowe — elementy
+—--LFÓiEmm _ damky
+
+Transformator idealn p można uważać za element graniczny, który otrzymuje się
+z indukcyjności sprzężonych o równaniach (1.8-16) i (1.8-17) przy sprzężeniu
+całkowitym w wyniku przejścia granicznego określonego warunkami (1.8-55)
+i (1.8-56). Jak wynika z granicy (1.8-58), transformator idealny nie jest zdoln y do
+gromadzenia energii.
+
+ 
+
+C. Transformator idealny jako element rezystancyjny SLS. Równania
+(1.8-46) transformatora idealnego są algebraicznymi, liniowymi równaniami
+wiążącymi prądy i napięcia iy,i,, u,, u,. Zatem, zgodnie z definicjami podanymi
+w p. 1.7.2-E, transformator idealn y jest dwuwrotowym elementem rezystancyjnym
+SŚLS (a więc również elementem bezinercyjn y m).
+
+Oznacza to, że transformator idealny nie jest zdolny do gromadzenia energii,
+mimo iż — jak pokazaliśmy w p. B — można go uważać za element graniczny
+układu indukcyjności sprzężonych.
+
+Zwracamy przy tym uwagę, że rozpatrywanie transformatora idealnego jako
+elementu granicznego układu indukcyjności sprzężonych, choć odznacza się
+pewnymi zaletami i ma wyraźną interpretację, nie jest jednak konieczne.
+Transformator idealny można również traktować jako element rezystancyjny
+zdefiniowany równaniami (1.8-46) i abstrahować od jego powiązań z indukcyj-
+nościami sprzężonymi.
+
+D. Zaciski jednoimienne. Równość (1.8-50) wskazuje na to, że pojęcie
+zacisków jednoimiennych można również odnieść do transformatora idealnego.
+W zależności bowiem od tego, czy rozumowanie przedstawione w p. B. dotyczy
+układu z rys. 1.8-5a (M > 0), czy z rys. 1.8-6a (M <0), otrzymujemy transfor-
+mator idealny o p > 0 (rys. 1.8-17a), względnie o p <0 (tys. 1.8-17b). Umiesz-
+czenie zacisków jednoimiennych na rys. 1.8-17 jest zatem sposobem podania
+informacji o znaku przekładni p.
+
+<image/figury/k3_page154_figure1.png>
+
+Transformator idealny o przekładni p > O nazywamy często transformato-
+rem nieodwracającym (w domyśle: znaku napięcia). W przypadku p < 0 mówi-
+my o transformatorze odwracającym (znak napięcia).
+
+Uwaga. Podobnie jak w przypadku indukcyjności sprzężonych (por. p. 1.8.1-B), można
+przyjmować, że przekładnia transformatora idealnego jest zawsze dodatnia: P> 0. Wówczas
+jednak równania (1.8-46) transformatora idealnego musiałyby mieć postać:

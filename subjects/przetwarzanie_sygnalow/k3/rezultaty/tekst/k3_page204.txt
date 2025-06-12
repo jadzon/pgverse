@@ -1,0 +1,21 @@
+<image/figury/k3_page204_figure2.png>
+
+Rys. 12.3. Sortowanie z odwróceniem bitowym w FFT. Rozkład FFT w dziedzinie czasu można wykonać
+przez posortowanie próbek zgodnie z odwróconą kolejnością bitów
+
+towych z użyciem przeplotu. Rozpatrzmy dwa sygnały w dziedzinie czasu, abcd oraz
+
+Sygnał 8-punktowy w dziedzinie czasu może być utworzony w dwóch krokach:
+
+zerami każdego 4-punktowego sygnału, aby uczynić z niego sygnał 8-punktowy i
+
+zsumowanie uzyskanych sygnałów. To znaczy, że sygnał abcd staje się sygnałem
+
+a efgh staje się sygnałem OeOfOg0h. Zemowaje ve śoych moteryya fiata w]
+twarza sygnał aebfcgdh. Jak wynika z rys. 12.4, rozrzedzanie zerami sygnału w
+
+cuiak e teiolaokia widu GtORWAŚIO WORK Zatem w FFT widma częstotliwościowe
+
+są łączone ze sobą przez ich powielanie i następnie sumowanie powielonych widm.
+
+<image/figury/k3_page204_figure1.png>

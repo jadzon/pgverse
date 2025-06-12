@@ -1,0 +1,61 @@
+Przetwarzanie cyfrowo-analogowe 53
+
+ 
+
+ 
+
+W dziedzinie czasu próbkowanie jest realizowane przez mnożenie sygnału oryginalnego
+przez ciąg impulsów szpilkowych o amplitudzie jednostkowej. Widmo częstotliwościowe
+takiego ciągu jest też ciągiem impulsów o amplitudzie jednostkowej ze szpilkami znajdu-
+jącymi się w miejscach wielokrotności częstotliwości próbkowania f,, 2f,, 3f,, 4f,, itd. Przy
+mnożeniu dwóch sygnałów w dziedzinie czasu ich widma częstotliwościowe są poddawane
+operacji splotu. W wyniku tej operacji widmo oryginalne zostaje powielone w miejscu każdej
+szpilki w widmie ciągu impulsów. Traktując sygnał oryginalny jako zawierający zarówno
+częstotliwości dodatnie, jak i ujemne, widzimy przyczynę powstawania wstęg bocznych gór-
+nej i dolnej. Jest to taka sama sytuacja, jak w przypadku modulacji amplitudy omówionej
+w rozdziale 10.
+
+Na rys. 3.5 e) podano przykład próbkowania nieprawidłowego, spowodowanego zbyt małą
+częstotliwością próbkowania. Sygnał analogowy zawiera, jak poprzednio, częstotliwości do
+3,3 kHz, lecz częstotliwość próbkowania zmniejszono do 5 kHz. Zauważmy, że częstotli-
+wości f,, 2f,, 3f,, ... na osi poziomej są rozmieszone gęściej na rys. 3.5 f) niż na rys. 3.5 d).
+Powstająca trudność jest widoczna na rys. 3.5 f) — powielane części widma zachodzą na
+pasmo między zerem i połową częstotliwości próbkowania. Chociaż na rys. 3.5 f) te zacho-
+dzące na siebie częstotliwości przedstawiono jako zachowujące swoją odrębną tożsamość,
+to w praktyce następuje sumowanie powodujące całkowite pogmatwanie. Ponieważ nie ma
+sposobu oddzielenia tych zachodzących na siebie częstotliwości, więc informacja jest tra-
+cona i nie można odtworzyć widma oryginalnego. Takie nakładanie się częstotliwości na-
+stępuje wówczas, gdy sygnał analogowy zawiera składowe o częstotliwościach większych
+od połowy częstotliwości próbkowania. Tak więc udowodniliśmy słuszność twierdzenia
+o próbkowaniu.
+
+Przetwarzanie cyfrowo-analogowe
+
+Teoretycznie najprostszą metodą przetwarzania cyfrowo-analogowego jest pobranie pró-
+bek z pamięci i przetworzenie ich na ciąg impulsów, jak to przedstawiono na rys. 3.6 a).
+Odpowiednie widmo częstotliwościowe pokazano na rys. 3.6 b). Jak już powiedziano,
+można doskonale odtworzyć oryginalny sygnał analogowy, przepuszczając ten ciąg impul-
+sów przez filtr dolnoprzepustowy o częstotliwości odcięcia równej połowie częstotliwości
+próbkowania. Zatem sygnał oryginalny i ciąg impulsów mają identyczne widma często-
+tliwościowe poniżej częstotliwości Nyquista (połowy częstotliwości próbkowania). Przy
+większych częstotliwościach w ciągu impulsów jest zawarte powielenie tej informacji,
+podczas gdy sygnał oryginalny niczego takiego nie zawiera (zakładając, że nie nastąpił
+aliasing).
+
+Ta metoda jest pod względem matematycznym doskonała, ale w praktyce trudno jest
+w układach elektronicznych wygenerować żądane wąskie impulsy. Aby ominąć tę trudność,
+w prawie wszystkich przetwomikach c/a ostatnia wartość próbki jest utrzymywana aż do
+czasu uzyskania następnej próbki. Jest to pamiętanie rzędu zerowego będące w dziedzi-
+nie przetwarzania c/a odpowiednikiem układu próbkująco-pamiętającego w przetworniku
+a/c. (W pamiętaniu zerowego rzędu mamy linie proste między punktami, w drugiego rzędu
+stosuje się parabole itd.). Pamiętanie zerowego rzędu daje przebieg o charakterze schodko-
+wym, przedstawiony na rys. 3.6 ©).
+
+W dziedzinie częstotliwości pamiętanie rzędu zerowego powoduje pomnożenie widma ciągu im-
+pulsów przez przebieg zaznaczony pogrubioną linią na rys. 3.6 d), co można wyrazić wzorem:
+
+<image/wzory/k3_page42_formula1.png>
+
+Wzór 3.1. Ograniczenie amplitudy sygnału przy większych częstolliwościach w rezultacie pamiętania
+rzędu zerowego. Krzywą wyrażoną tym wzorem przedstawiono na rys. 3.6 d). Częstotliwość próbkowania
+jest oznaczona jako 1, Dla f = 0, H(f) = 1

@@ -1,0 +1,30 @@
+A Rozdział 1. Rekurencja
+
+Nietrudno zauważyć, że jeżeli proces przekładania N — 1 krążków jest prawidłowy, to
+cały proces też jest prawidłowy, ponieważ obecność największego krążka na dole palika
+nie przeszkadza w przekładaniu N — 1 mniejszych krążków.
+
+Powyższy algorytm opiszmy teraz za pomocą rekurencyjnej procedury przenieś, któ-
+ra odwołuje się sama do siebie i wypisuje ciąg instrukcji przeniesienia NV krążków z palika
+X napalikY.
+procedura przenieś( /V krążków z X na Y', za pomocą Z):
+
+. jeżeli N=l,to wypisz X<Y,
+
+e jeżeli W > 1, to
+
+o przenieś(V — 1 krążków z X na Z, za pomocąY'),
+o wypisz X + Y,
+o przenieś( N — 1 krążków z Z naY, za pomocą X).
+
+Rysunek 1.1: Schemat działania procedury przenieś dla wież Hanoi z trzema krążkami
+
+<image/figury/k2_page153_figure1.png>
+
+<image/wzory/k2_page153_formula1.png>
+oznacza wywołanie procedury przenieś(/V krążków z X na Y, za pomocą Z). Strzałki
+w dół oznaczają wywołanie procedury, strzałki w górę powroty po wykonaniu procedu-
+ry, a strzałki poziome odpowiadają następstwu instrukcji w ramach jednego wykonania
+procedury.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

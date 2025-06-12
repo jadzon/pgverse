@@ -1,0 +1,58 @@
+Przykład projektowania — filtr SOI do sygnałów fonicznych 515
+
+Jak podano w górnej części tablicy 29.2, trzeba — przed przejściem do głównej części pro-
+gramu = zdefiniować trzy zmienne. Są to: liczba punktów w odpowiedzi impulsowej filtru
+NR_COFEF; bufor cykliczny dline[ ] przechowujący poprzednie próbki sygnału wejściowe-
+go oraz bufor cykliczny przechowujący odpowiedź impulsową filtru coef| ]. Musimy też do-
+starczyć programowi dwie dalsze informacje — częstotliwość próbkowania w układzie kodu-
+jąco-dekodującym oraz nazwę pliku zawierającego odpowiedź impulsową filtru, aby mogła
+być ona wpisana do coef| ]. Wszystkie te kroki są łatwe, każdy z nich to nie więcej niż jeden
+wiersz programu. Nie pokazujemy ich w tym przykładzie, gdyż są zawarte w tych sekcjach
+programu, które dla uproszczenia pomijamy.
+
+Na rys. 29.2 przedstawiono odpowiedź impulsową filtru, która posłuży do przetestowania
+programu. Jest to taki sam filtr, jaki — zgodnie ze szczególnymi wymaganiami — zaprojekto-
+waliśmy w rozdziale 17, Jak pamiętacie, ten filtr miał mieć bardzo nieregularną odpowiedź
+częstotliwościową w celu zwrócenia uwagi na fakt, że w filtrach cyfrowych SOI można uzy-
+skać każdą żądaną odpowiedź częstotliwościową. Tę odpowiedź testowego filtru pokazano
+na rys. 29.2 a), na rys. 29.2 b) zaś — odpowiadającą jej odpowiedź impulsową. Ta 301-
+-punktowa odpowiedź impulsowa filtru jest zapisana jako plik ASCII i jest łączona z innymi
+sekcjami programu podczas tworzenia jednego wykonywalnego programu.
+
+W głównej sekcji programu są wykonywane dwie funkcje. W wierszach od 6 do 13 genera-
+tory adresów danych (DAG) są konfigurowane do zarządzania buforami cyklicznymi dlinef ]
+i coef[ ]. Jak już stwierdzono w poprzednim rozdziale, dla każdego bufora są niezbędne trzy
+parametry: początkowa lokacja bufora w pamięci (bO i b8), długość bufora (10 i 18) oraz
+rozmiar porcji danych gromadzonej w buforze (m0 i m8). Te parametry sterujące buforami
+cyklicznymi są zapisane w rejestrach sprzętowych w generatorach adresów danych, dzięki
+czemu mogą mieć skuteczny dostęp do danych i bardzo efektywnie nimi zarządzać,
+
+Drugim działaniem programu głównego jest pętla typu „kręcenie młynka palcami”, realizo-
+wana w wierszach od 15 do 19. Nie robi ona niczego innego poza czekaniem na przerwanie
+wskazujące, że próbka wejściowa została pobrana. Całe przetwarzanie w tym programie od-
+bywa się na zasadzie próbka po próbce. Za każdym razem, gdy zostaje odczytana próbka
+z wejścia, próbka sygnału wyjściowego jest obliczana i następnie kierowana do kodera-deko-
+dera. Większość algorytmów w dziedzinie czasu, takich jak filtry SOI i NOI, zalicza się do
+tej kategorii. Alternatywą jest przetwarzanie systemem ramka po ramce. wymagane w tech-
+nikach realizowanych w dziedzinie częstotliwości. W metodzie ramka po ramce z wejścia
+jest odczytywana grupa próbek, potem są przeprowadzane obliczenia i grupa próbek jest
+wpisywana do wyjścia.
+
+Podprogram obsługujący przerwanie „próbka gotowa” składa się z trzech sekcji. W pierw-
+szej sekcji (wiersze od 27 do 33) następuje pobranie z kodera-dekodera próbki jako liczby
+stałoprzecinkowej i przetworzenie jej w liczbę zmiennoprzecinkową. W języku asemblera
+SHARC rejestr danych zawierający liczby stałoprzecinkowe jest oznaczany przez „r” (np.
+rO, r8, r15 itd.) i przez „£” (tj. fO, f8, lub f15), jeśli zawiera liczby zmiennoprzecinkowe. Na
+przykład w wierszu 32 liczba stałoprzecinkowa w rejestrze danych O (tj. rO) jest przetwarzana
+na liczbę zmiennoprzecinkową i wpisywana do rejestru danych 0 (tj. f0). To przetworzenie
+jest wykonywane zgodnie ze skalowaniem wyspecyfikowanym przez liczbę stałoprzecinko-
+wą w rejestrze danych 1 (tj. rl). W trzeciej sekcji programu (wiersze od 47 do 53) następuje
+działanie odwrotne — liczba zmiennoprzecinkowa z próbki wyjściowej jest przetwarzana na
+stałoprzecinkową i przesyłana do kodera-dekodera.
+
+Filtr SOI przetwarzający próbki wejściowe na wyjściowe jest zawarty w wierszach od 35
+do 45. Wszystkie obliczenia są przeprowadzane na liczbach zmiennoprzecinkowych, dzięki
+czemu nie trzeba się kłopotać skalowaniem i przepełnieniem. Jak to opisano w poprzednim
+rozdziale, ta sekcja programu jest zoptymalizowana pod kątem wykorzystania możliwości
+wykonywania instrukcji wielokrotnych w jednym okresie zegarowym w cyfrowych proceso-
+rach sygnałowych SHARC.

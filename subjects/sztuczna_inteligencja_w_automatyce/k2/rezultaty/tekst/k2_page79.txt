@@ -1,0 +1,30 @@
+<image/figury/k2_page79_figure1.png>
+
+5.1.4. Wnioskowanie rozmyte
+
+Wnioskowanie nierozmyte przy zastosowaniu reguły odrywania (modus ponens) prze-
+biega według schematu:
+
+przesłanka 1 (fakt): r jest A
+przesłanka 2 (reguła): jeżeli z jest A to y jest B
+konkluzja y jest B
+
+Np. ze zdań: „jeżeli jedzenie jest dobre to napiwek jest wysoki” i „jedzenie jest dobre”
+wynika zdanie „napiwek jest wysoki”.
+
+We wnioskowaniu rozmytym obie przesłanki i konkluzja są zbiorami rozmytymi
+i przebiega ono według schematu:
+
+przesłanka 1 (fakt): z jest A'
+przesłanka 2 (reguła): jeżeli z jest A to y jest B
+konkluzja y jest B”
+
+Np. ze zdań „jeżeli jedzenie jest dobre to napiwek jest wysoki” (przesłanka 2) i
+„jedzenie jest takie sobie” (przesłanka 1) wynika zdanie „napiwek jest nienajwyższy”
+(konkluzja).
+
+Formalnie, we wnioskowaniu rozmytym przyjmuje się, że wynikowy zbiór rozmyty
+B' CY wynika z operacji złożenia zbioru rozmytego A € X i relacji rozmytej
+A>BCXxY (definicja ??). Tak więc
+
+<image/wzory/k2_page79_formula1.png>

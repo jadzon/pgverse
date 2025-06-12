@@ -1,0 +1,18 @@
+Operatory porównania należy traktować jako rezultat logiczny porównania wyni-
+ku bieżącego (z lewej strony operatora) z operandem (z prawej strony operatora).
+Np. instrukcja GT %/WI/I0 da w wyniku logiczną /, jeżeli wynik bieżący jest
+większy niż wartość w /0 słowie wejściowym, w przeciwnym razie wynik lo-
+giczny instrukcji wynosi O.
+
+<image/tabele/k4_page102_table1.png>
+
+Znak * w kolumnie operandu oznacza, że operatory te powinny oddziaływać albo
+na dane określonego typu (typed), albo na pewnego rodzaju (overloaded), nato-
+miast wynik bieżący powinien być tego samego typu co operand (por. 2.2.2).
+
+Operatory S$ i R są wykonywane tylko w przypadku, gdy wynik bieżący jest lo-
+giczną 7.
+
+ 
+
+102 Rozdział : 2.Programowanie sterowników PLC

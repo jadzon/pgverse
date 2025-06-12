@@ -1,0 +1,91 @@
+raz O TNLM 27
+
+ 
+  
+    
+  
+  
+   
+   
+  
+   
+  
+    
+   
+   
+   
+   
+   
+   
+  
+   
+  
+   
+  
+   
+  
+   
+   
+   
+  
+   
+ 
+  
+
+17. Filtry dostosowane do szczególnych wymagań
+
+ 
+
+Następnym krokiem jest wykonanie odwrotnego przekształcenia DFT, aby przenieść filtr
+w dziedzinę czasu. Najszybszym sposobem przeprowadzenia tej operacji jest przekształceni
+sygnału w dziedzinie częstotliwości do współrzędnych prostokątnych i wykonanie następnie
+odwrotnego przekształcenia FFT. W rezultacie uzyska się 1024-próbkowy sygnał zmienia
+jący się od próbki © do 1023, jak pokazano na rys. 17.1 b). Jest to odpowiedź impulsowa
+zgodna z odpowiedzią częstotliwościową, jaką chcemy uzyskać. Nie jest ona jednak odpe
+wiednia do wykorzystania jako odpowiedź impulsowa filtru, o czym zaraz krótko powiemy.
+Podobnie jak to było w rozważaniach w poprzednim rozdziale, ta odpowiedź powinna zostać
+przesunięta, obcięta i okienkowana. W tym przykładzie zaprojektujemy odpowiedź impul-
+sową filtru o M = 40, tj. 41 punktów zmieniających się od próbki © do 40. W tablicy 17.
+podano program komputerowy przetwarzający sygnał z rys. 17.1 b) w odpowiedź impulsową
+filtru pokazaną na rys. 17.1 c. Podobnie jak w filtrze okienkowanym funkcją sinc, punkty
+w pobliżu końca odpowiedzi impulsowej mają wartości tak małe, że na wykresie wyglądają
+jak równe zero. Nie pomylcie się, myśląc, że można je usunąć!
+Ostatnim krokiem jest testowanie odpowiedzi impulsowej filtru. Robi się to, przeprowadza
+jąc DFT (z wykorzystaniem FFT), aby uzyskać faktyczną odpowiedź częstotliwościową, któ
+rą pokazano na rys. 17.1 d). Aby uzyskać lepszą rozdzielczość w dziedzinie częstotliwości,
+trzeba przed wykonaniem FFT dopełnić odpowiedź impulsową filtru zerami. Na przykłać
+stosując całkowitą liczbę próbek równą 1024 (41 w odpowiedzi impulsowej filtru oraz 983
+zer), uzyskuje się w rezultacie 513 próbek między częstotliwościami 0 i 0,5.
+Długość odpowiedzi impulsowej filtru określa, jak dobrze uzyskana odpowiedź częstotliwościo
+wa jest zgodna z żądaną, jak to przedstawiono na rys. 17.2. W oczywisty sposób jest widoczne
+wyjątkowe działanie filtrów cyfrowych SOI. Można w nich bowiem uzyskać każdą dowolną od-
+powiedź częstotliwościową, o ile tylko zastosuje się odpowiednio długą odpowiedź impulsową.
+Opisano pełną metodę projektowania filtru. Jest jednak pewien subtelny problem teore-
+tyczny, który należy wyjaśnić. Dlaczego nie można bezpośrednio zastosować odpowiedz
+impulsowej pokazanej na rys. 17.1 b) jako odpowiedzi filtru? Przecież, jeśli sygnał na rys.
+17.1 a) jest transformatą Fouriera sygnału na rys. 17.1 b), to czy splecenie sygnału wejścio-
+wego z przebiegiem na rys. 17.1 b) nie dałoby odpowiedzi częstotliwościowej dokładnie
+takiej, jak chcemy? Otóż nie i zaraz wyjaśnimy dlaczego.
+
+Przy projektowaniu filtru, który ma spełniać szczególne wymagania, żądana odpowiedź
+częstotliwościowa jest określona wartościami zawartymi w matrycy. Zastanówmy się teraz
+nad pytaniem: jaki jest przebieg odpowiedzi częstotliwościowej pomiędzy poszczególnymi:
+punktami? Dla uproszczenia można sobie wyobrazić dwa przypadki — „dobry” i „zły”.
+W „dobrym” przypadku” odpowiedź częstotliwościowa jest gładką krzywą pomiędzy po--
+szczególnymi próbkami. W „złym” przypadku między próbkami występują duże fluktu-
+acje. Odpowiedź impulsowa na rys. 17.1 b) z pewnością daje „złą” odpowiedź impulsową.
+Można to udowodnić, dopełniając tę odpowiedź dużą liczbą zer i potem wykonując prze-
+kształcenie DFT. Otrzymana w ten sposób odpowiedź częstotliwościowa wykaże działanie
+błędne pomiędzy pierwotnie określonymi próbkami, i będzie wyglądała wręcz okropnie.
+Aby to zrozumieć, wyobraźmy sobie, że wymuszamy żądaną odpowiedź częstotliwościo-
+wą, opisując ją nieskończoną liczbą punktów między 0 i 0,5. W ten sposób tworzymy
+krzywą ciągłą. Następnie stosujemy odwrotne przekształcenie DTFT w celu wyznaczenia
+odpowiedzi impulsowej, która będzie nieskończenie długa. Innymi słowy, „dobra” odpo-
+wiedź częstotliwościowa koresponduje z przebiegiem, który nie może być reprezento-
+wany w komputerze, gdyż jest odpowiedzią impulsową o długości nieskończenie dużej
+Gdy widmo częstotliwościowe wyrażamy przez N/2 + | próbek, tylko /V próbek jest do-
+stępnych w dziedzinie czasu, uniemożliwiając prawidłowe pomieszczenie tam sygnału.
+W rezultacie nieskończenie długa odpowiedź impulsowa zachodzi na N punktów (ulega
+aliasingowi). Gdy następuje taki aliasing, odpowiedź częstotliwościowa zmienia się z „do-
+brej” na „złą”. Na szczęście okienkowanie N-punktowej odpowiedzi impulsowej znacznie
+ogranicza aliasing, dając gładką krzywą między próbkami w dziedzinie częstotliwości.

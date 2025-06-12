@@ -1,0 +1,44 @@
+Faza inicjacji zmiennych może polegać na podtrzymaniu dotychczasowych war-
+tości zmiennych (retained value), na nadaniu im wartości początkowych
+ustalonych przez programistę (initial value) lub wartości domyślnych ustalonych
+dla poszczególnych typów danych (default initial value).
+
+Zatrzymanie zasobu powinno spowodować unieruchomienie wszystkich zadań
+w zasobie, a zatrzymanie konfiguracji powinno spowodować zatrzymanie
+wszystkich jej zasobów.
+
+Programy, zasoby, zmienne globalne, ścieżki dostępu (i odpowiadające im przy-
+wileje dostępu) oraz konfiguracje mogą być ładowane lub usuwane przez funkcje
+zdefiniowane w normie /EC //3/-1. Ładowanie albo usuwanie konfiguracji lub
+zasobów jest równoważne z wykonaniem tych operacji na wszystkich zawartych
+w nich elementach. Natomiast mechanizmy uruchamiania oraz zatrzymywania
+konfiguracji i zasobów przez funkcje komunikacyjne zostały opisane w piątej
+części normy /EC 1131.
+
+ 
+
+2.1.2 Model komunikacji
+
+Wymiana danych między elementami oprogramowania w systemie sterowania
+składającym się ze sterowników PŁC może odbywać się między [9]:
+
+e elementami jednego programu,
+
+e programami w ramach jednej konfiguracji,
+
+e różnymi konfiguracjami.
+
+Na Rys. 2.2 pokazano sposób wymiany danych między dwoma elementami jed-
+nego programu. Wartości zmiennych wewnątrz programu mogą być
+przekazywane wprost poprzez połączenie wyjścia jednego elementu programu
+(tu: FBI) z wejściem innego elementu (tu: FB2). Połączenie to jest wyraźnie
+przedstawione w językach graficznych, natomiast w językach tekstowych jest
+ono domyślne.
+
+<image/figury/k4_page33_figure1.png>
+
+Rys. 2.2 Wymiana danych między elementami programu
+
+ 
+
+2.1 Norma IEC 1131 33

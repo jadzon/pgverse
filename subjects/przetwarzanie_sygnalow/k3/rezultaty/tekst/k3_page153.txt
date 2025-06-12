@@ -1,0 +1,62 @@
+9. Zastosowania DFT
+
+Jest jeszcze druga metoda tłumienia szumu widmowego. Zaczynamy od wykonania przekształ-
+cenia DFT o bardzo dużej liczbie punktów, np. 16 384. Uzyskane widmo ma wysoką roz-
+dzielczość (8193 próbki), lecz jest bardzo zaszumione. Dlatego stosuje się dolnoprzepustowy
+filtr cyfrowy służący do wygładzenia widma. Ten filtr tłumi szum kosztem rozdzielczości. Na
+przykład najprostszy filtr cyfrowy do wytworzenia każdej próbki w widmie odfiltrowanym
+może uśredniać 64 sąsiednie próbki widma oryginałnego. Wykonując odpowiednie obliczenia,
+uzyskuje się mniej więcej taki sam szum i rozdzielczość, jak w pierwszej metodzie z podziałem
+16 384 punktów na 64 segmenty po 256 punktów.
+
+Którą z metod należy stosować? Pierwsza jest łatwiejsza, gdyż nie wymaga filtru cyfrowego.
+Druga ma potencjalne możliwości lepszego działania, ponieważ filtr cyfrowy można tak do-
+brać, aby uzyskać najkorzystniejszy kompromis szumu z rozdzielczością. Jednak to ulepszone
+działanie jest rzadko kiedy warte zachodu, gdyż zarówno szum, jak i rozdzielczość można
+poprawić, wykorzystując więcej danych z sygnału wejściowego. Wyobraźmy sobie na przy-
+kład podział zebranych danych na 10 000 segmentów, po 16 384 próbki w każdym. Uzyskane
+w rezultacie widmo częstotliwościowe ma wysoką rozdzielczość (8193 punkty) i mały szum
+(10 000 uśrednień). A więc problem rozwiązany! Dlatego w tym omówieniu będziemy się
+zajmować tylko metodą z uśrednianiem segmentów.
+
+Na rys. 9.2 przedstawiono przykład widma uzyskanego z mikrofonu podwodnego. To wid-
+mo ilustruje właściwości często występujące w widmach częstotliwościowych zbieranych
+sygnałów. Na chwilę pomińmy ostre piki. W obszarze od 10 do 70 Hz widmo ma dość
+płaski przebieg. Nazywamy to szumem białym z powodu jednakowej zawartości wszyst-
+kich częstotliwości, podobnie jak w świetle białym. Ten szum wynika z szumu w przebiegu
+w dziedzinie czasu, który jest nieskorelłowany między poszczególnymi próbkami. Tak więc
+znajomość wartości szumu w którejkolwiek próbce nie dostarcza żadnej informacji o warto-
+ści szumu w innych próbkach. Szum biały jest generowany na przykład przez losowy ruch
+elektronów w układach elektronicznych. Przykładem szumu białego w życiu codziennym
+może być dźwięk strumienia wody spadającego na podłogę natrysku. Biały szum pokazany
+na rys. 9.2 może pochodzić z jednego z kilku możliwych źródeł, np. z analogowych układów
+elektronicznych lub z samego oceanu.
+
+Powyżej 70 Hz amplituda szumu białego gwałtownie się zmniejsza. Jest to wynikiem wpły-
+
+wu nachylenia charakterystyki filtru antyaliasingowego. Filtr idealny powinien przepuszczać
+
+wszystkie częstotliwości poniżej 80 Hz i obcinać wszystkie częstotliwości powyżej tej gra-
+nicy. Idealne obcinanie nie jest możliwe w praktyce, dlatego należy się spodziewać stopnio-
+
+wego opadania charakterystyki. Jeśli tego zjawiska nie ma, to można oczekiwać wystąpienia
+
+aliasingu.
+
+Poniżej częstotliwości 10 Hz szum gwałtownie się zwiększa z powodu osobliwego zjawiska
+zwanego szumem 1/f . Szum 1/f jest swego rodzaju zagadką. Zmierzono go w wielu różnych
+systemach, takich jak gęstość ruchu na bezpłatnych autostradach i elektroniczny szum w tran-
+zystorach. Prawdopodobnie można by istnienie tego szumu stwierdzić we wszystkich syste-
+mach, gdyby tylko poszukać go przy odpowiednio małych częstotliwościach. Mimo częstego
+występowania szumu typ 1/f, pełne jego wyjaśnienie i stworzenie ogólnej teorii dotychczas
+się naukowcom nie powiodło. Przyczyny powstawania tego szumu mogą być zidentyfiko-
+wane w niektórych specyficznych systemach, co jednak nie wyjaśnia, dlaczego szum 1/f jest
+wszędzie. W często stosowanych układach analogowych i większości systemów fizycznych
+przejście od szumu białego do szumu 1/f następuje w obszarze między 1 i 100 Hz.
+Zajmijmy się teraz ostrymi pikami w wykresie na rys. 9.2. Najprostszym sposobem wyja-
+śnienia piku przy częstotliwości 60 Hz jest wpływ zakłóceń elektromagnetycznych pocho-
+dzących od sieci energetycznej!5. Można się też spodziewać mniejszych pików przy wie-
+lokrotnościach tej częstotliwości (120, 180, 240 Hz itd.), gdyż przebieg napięcia w sieci
+
+PASZ OCSAO EA PROZY ORAORA PZPR BN |"
+15 60 Hz — częstotliwość sieci energetycznej w USA. W Europie obowiązuje 50 Hz (przyp. tłum.).

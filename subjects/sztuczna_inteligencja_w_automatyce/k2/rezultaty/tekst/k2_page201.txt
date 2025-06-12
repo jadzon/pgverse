@@ -1,0 +1,38 @@
+gdzie V;, oznacza wartość gradientu w punkcie r;,.
+Często, w symulacjach przyjmuje się aproksymację energii potencjalnej pomiędzy
+dwoma atomami za pomocą funkcji
+
+<image/fiwzory/k2_page201_formula1.png>
+
+zwanej potencjałem Lennarda- Jonesa, gdzie € i o są stałymi.
+
+<image/figury/k2_page201_figure1.png>
+
+Rys. 8.12: Potencjał Lennarda-Jonesa dla wartości €/kg = 120K i o = 0.34nm (przyjmo-
+wanych dla ciekłego argonu)
+
+Dla wyznaczenia ruchu cząsteczek w polu sił należy rozwiązywać układ równań
+różniczkowych drugiego rzędu
+
+<image/wzory/k2_page201_formula2.png>
+
+gdzie m, jest masą cząsteczki ż, a F;, jest siłą działającą na cząsteczkę. Równania
+powyższe można zastąpić równoważnym układem dwóch równań rzędu pierwszego
+
+<image/wzory/k2_page201_formula3.png>
+
+Tak więc, aby przeprowadzać symulację ruchu N cząsteczek należy rozwiązywać
+układ 3N równań różniczkowych rzędu drugiego lub 6/V równań rzędu pierwszego.
+
+Na rysunku ?? przedstawiono wyniki indywiduowego modelowania systemu drapieżnik-
+ofiara. Punkty na rysunku ??a oznaczają drapieżniki i ofiary. Zetkniecię się dra-
+pieżnika z ofiarą powoduje zamianę ofiary w drapieżnika. Otrzymane liczebności
+drapieżników i ofiar w czasie przedstawione są na rys. ??bc. Porównaj te wyniki z
+rozwiązaniem równania Lotki-Volterry przedstawionym na rys. ??.
+
+Wyniki podobnych symulacji, dla większej liczby cząstek i dłużej trwające przed-
+stawiono na rys. ??. Na wykresach liczebności jednostek w czasie widać wyraźne
+malenie amplitudy oscylacji. Przyczyną tego zmniejeszania się amplitudy jest stop-
+niowa desynchronizacja oscylacji przebiegających w różnych miejscach środowiska
+(płaszczyzny). Innym interesującym zaobserwowanym zjawiskiem jest pojawianie się
+niejednorodności rozkładu cząstek w przestrzeni pokazane na rys. ??c-g.

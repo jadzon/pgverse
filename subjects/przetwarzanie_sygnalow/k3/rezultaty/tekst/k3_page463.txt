@@ -1,0 +1,46 @@
+Język C a język asemblera 499
+
+ 
+
+W tablicy 28.3 podano, dla porównania, program obliczania iloczynu skalarnego napisany
+w języku asemblera dla DSP rodziny SHARC. Języki asemblera dla cyfrowych procesorów
+sygnałowych firmy Analog Devices (zarówno 16-bitowych stałoprzecinkowych, jak i 32-bi-
+towych SHARC) są znane ze swojej prostej, algebro podobnej składni. Omówimy tu tylko
+ogólne ich działanie, nie wchodząc we wszystkie szczegóły. Zauważcie, że w tym programie
+wszystko odnosi się do układów procesora; nie ma tu żadnych zmiennych abstrakcyjnych,
+a tylko rejestry danych i lokacje pamięci.
+
+Każdy średnik w programie reprezentuje okres zegara. Matryce xf ] i y| ] są przechowywa-
+ne w buforach cyklicznych w pamięci głównej. W wierszach 001 i 002 rejestry i4 oraz il2
+wskazują początkowe lokacje tych matryc. Następnie wykonujemy 20 cykli pętli sterowanych
+przez wiersz 004. W formacie tej instrukcji wykorzystano dostępną w procesorach SHARC
+możliwość sterowania pętlą przez zerowanie rejestru (zero-overhead looping). Wszystkie
+zmienne potrzebne do sterowania pętlą są więc przechowywane w układach specjalnych re-
+jestrów działających równolegle z innymi operacjami odbywającymi się wewnątrz procesora.
+W tym przypadku rejestr lcntr (licznik pętli — loop counter) jest załadowany początkową
+wartością 20 zmniejszaną o I po każdym wykonaniu pętli. Pętla się kończy, gdy Icntr osiąga
+wartość zero (wskazaną przez instrukcję Ice — loop counter expired, licznik pętli wyzerowa-
+ny). Pętla obejmuje wiersze od 004 do 008, zgodnie ze sterowaniem przez instrukcję (pc,4).
+A więc pętla kończy się cztery wiersze za bieżącą wartością licznika programu.
+
+Wewnątrz pętli w wierszu 005 następuje ładowanie wartości z x| ] do rejestru danych f2,
+a w wierszu 006 — wartości z y| ] do rejestru danych f4. Symbole „dm” i „pm” wskazują, czy
+te wartości są pobierane przez magistralę pamięci danych („dm”), czy przez magistralę pa-
+mięci programu („pm”). Zmienne i4, mó, il2 oraz ml4 są rejestrami w generatorach danych
+adresowych, które zarządzają buforami cyklicznymi przechowującymi x| ] i y| ]. Dwie war-
+tości, w f2 i f4, są wymnażane w wierszu 007, a iloczyn jest wpisywany do rejestru danych
+f8. W wierszu 008 iloczyn z f8 jest dodawany do akumulatora, czyli rejestru danych f12. Po
+zakończeniu pętli zawartość akumulatora z f12 jest przekazywana do pamięci.
+
+Ten program prawidłowo oblicza iloczyn skalarny, lecz nie wykorzystuje tej właściwości
+procesorów SHARCĆ©, jaką jest ich struktura w wysokim stopniu równoległa. W tablicy 28.4
+podano ten sam program, lecz napisany w formie bardzo zoptymalizowanej, z wieloma ope-
+racjami wykonywanymi równolegle. Najpierw zauważcie, że w wierszu 007 określono wy-
+konywanie tylko 18 pętli, a nie 20. Zwróćcie też uwagę, że ta pętla zawiera tylko jeden
+wiersz (008), w którym jednak zawarto wiele operacji. Chodzi o to, aby uczynić pętlę jak
+najbardziej efektywną; w tym przypadku jeden wiersz może być wykonywany podczas jed-
+nego okresu zegarowego. Aby móc to zrobić, powinniśmy niewielką część kodu programu
+przeznaczyć na „pierwsze załadowanie” rejestrów w pierwszej pętli (wiersze 004 i 005) i na-
+stępną małą część kodu — na zakończenie ostatniej pętli (wiersze 010 i 011).
+
+<image/tabele/k3_page463_table1.png>

@@ -1,0 +1,59 @@
+31. Zespolone przekształcenie Fouriera
+
+ 
+
+<image/wzory/k3_page505_formula1.png>
+
+yy" "—"y"——''
+
+Wzór 31.4. Sinusoidy zapisane jako liczby zespołone. Stosując liczby zespołone, można fale sinusoidalne
+
+i kosinusoidalne zapisać jako sumę przebiegów o częstotliwościach dodatnich i ujemnych
+
+Każde z powyższych wyrażeń jest sumą dwóch przebiegów wykładniczych: jednego zawiera-
+jącego częstotliwości dodatnie (©) i drugiego, który zawiera częstotliwości ujemne (-0). Tak
+więc fale sinusoidalne i kosinusoidalne są zapisane w postaci liczb zespolonych, przy czym
+część widma o częstotliwościach ujemnych jest automatycznie uwzględniana. Częstotliwości
+dodatnie i ujemne są traktowane na równych prawach. Utworzenie pełnego przebiegu wyma-
+ga połowy informacji o częstotliwościach dodatnich i połowy o ujemnych.
+
+Zespolone DFT
+
+Proste, zespolone przekształcenie DFT, zapisane we współrzędnych biegunowych, jest opi-
+sane wzorem: lx | fate
+x[:]|-7 Ż*lr]e Ń
+n=0
+
+Wzór 31.5. Proste, zespolone DFT. Zarówno sygnał w dziedzinie czasu x/n], jak i częstotliwości X[k]
+są matrycami liczb zespolonych, w których k i n zmieniają się od 0 do N - 1. Wzór jest wyrażony we
+współrzędnych biegunowych, najczęściej stosowanych w DSP
+
+Zależność Eulera może też służyć do zapisu transformaty we współrzędnych prostokątnych:
+
+xte]-y$rtr|(es( 5 )-sin( EJ]
+
+Wzór 31.6. Proste, zespolone DFT (we współrzędnych prostokątnych)
+
+Na początek porównajmy ten wzór opisujący zespolone przekształcenie Fouriera z wzorem opisu-
+jcymrzeczywisteprzeksztaceniefourierawzr31.1.napierwszyrzutokaobawzorywydaj
+się identyczne i tyłko niewielkie operacje algebraiczne są niezbędne do przekształcenia wzoru
+316 waj ZI. 1. To odczucie jest jednak mylące. Różnice między oboma wzorami są bardzo
+subtelne i łatwo je przeoczyć, lecz są one niezwykle ważne. Przeanalizujmy je szczegółowo.
+Po pierwsze, rzeczywiste przekształcenie Fouriera transformuje sygnał rzeczywisty w dzie-
+dzinie czasu xfn] na dwa sygnały rzeczywiste w dziedzinie częstotliwości Re X[K] i Imik].
+Przy zastosowaniu metody zastępowania liczbami zespolonymi sygnał w dziedzinie często-
+tliwości może być reprezentowany jedną matrycą zespoloną X[k]. W zespolonym przekształ-
+ceniu Fouriera zarówno x(n), jak i X[k] są matrycami liczb zespolonych. Uwaga praktyczna:
+chociaż sygnał w dziedzinie częstotliwości jest zespolony, nic nas nie zmusza do wykorzysta-
+nia części urojonej. Powiedzmy, że chcemy przetwarzać sygnał rzeczywisty, taki jak szereg
+wyników pomiarów napięcia wykonanych w pewnym czasie. Ta grupa danych staje się czę-
+ścią rzeczywistą sygnału w dziedzinie czasu, podczas gdy część urojona składa się z zer.
+Po drugie, w rzeczywistym przekształceniu Fouriera operuje się tylko częstotliwościami
+dodatnimi. To znaczy indeks w dziedzinie częstotliwości zmienia się tylko od (0 do N/2.
+Zespolone przekształcenie Fouriera obejmuje zaś częstotliwości tak dodatnie, jak i ujemne.
+To znaczy, że k zmienia się od © do N — 1. Częstotliwości między 0 a N/2 są dodatnie, a od
+NI2 do N — 1 ujemne. Pamiętajcie, że widmo częstotliwościowe sygnału dyskretnego jest
+okresowe, co powoduje, że sygnał dla częstotliwości ujemnych między N/2 a N — 1 jest taki
+sam, jak sygnał między —N/2 a 0. Próbki O oraz N/2 rozgraniczają obszary częstotliwości
+ujemnych i dodatnich. Jeśli chcecie odświeżyć swoje wiadomości na ten temat, zajrzyjcie
+ponownie do rozdziałów 10 i 12.

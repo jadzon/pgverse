@@ -1,0 +1,38 @@
+/k4_page359_formula1.png NN]
+
+Wśród instrukcji podstawowych wyróżniamy następujące operatory skoków:
+
+JU  -skok bezwarunkowy do bloku,
+
+JC  -skok warunkowy do bloku,
+
+BE  - koniec bloku,
+
+BEU - bezwarunkowy koniec bloku,
+
+e ' BEC - warunkowy koniec bloku.
+
+Argumentem podstawowych operatorów skoków JU, JC jest nazwa bloku
+(OB nr, PB nr, SBnr, FB nr: nr oznacza numer bloku), natomiast operatory
+BE, BEU, BEC są bezargumentowe.
+
+Podstawowe instrukcje skoku umożliwiają warunkowe lub bezwarunkowe prze-
+kazanie sterowania z jednego bloku do innego (wywołanie lub powrót do jedne-
+go bloku z innego bloku). W przypadku operatora JU następuje bezwarunkowy
+skok do bloku, który jest argumentem tego operatora. W przypadku operatora JC
+skok do wyszczególnionego bloku wystąpi wówczas, gdy wynik poprzedzają-
+cych go operacji logicznych jest równy 1.
+
+ry/k4_page359_figure2.png 3g9e359_figure1.p
+
+Rys. 7.23 Ilustracja wykonanie instrukcji skoku warunkowego i bezwarunkowego
+
+<image/figury/k4_page359_figure3.png>
+
+Rys. 7.24 Wykonanie instrukcji końca bloku.
+Instrukcje zakończenia bloku powodują warunkowe lub bezwarunkowe zakoń-
+
+czenie przetwarzania bloku aktualnie wykonywanego i "powrót" do bloku, z któ-
+rego został on wywołany. Realizacja programu jest dalej kontynuowana w bloku
+
+wzory/k4_paqe359_formula2.p

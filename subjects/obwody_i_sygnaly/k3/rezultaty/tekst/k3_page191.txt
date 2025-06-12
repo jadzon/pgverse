@@ -1,0 +1,49 @@
+2.1. Wielowrotniki i sieci 193
+
+W poprzednich punktach wspominaliśmy o elementach bezinercyjnych, tj.
+takich elementach, których równanie lub równania (wiążące prądy i napięcia
+zaciskowe) są algebraiczne. Elementami bezinercyjnymi są wszystkie dwuzacis-
+kowe lub wielowrotowe elementy rezystancyjne, a więc np. opór (liniowy lub
+nieliniowy, stacjonarny lub niestacjonarny), prostownik idealny (p. 1.3.4-H),
+źródła sterowane (p. 1.7.2-A), żyrator (p. 1.7.2-F) czy transformator idealny (p.
+1.8.2-A). Przykładami układów bezinercyjnych są także: dwójnik z rys. 2.1-3d
+o równaniu (2.1-8) oraz czwórnik o równaniach (2.1-13) przedstawiony na
+rys. 2.1-5C.
+
+Elementy i układy bezinercyjne odznaczają się tym, iż nie są zdolne do
+gromadzenia energii. Elementy zdolne do gromadzenia energii — indukcyjności,
+pojemności i indukcyjności sprzężone — charakteryzują się tym, że ich równania
+(wiążące prądy i napięcia zaciskowe) mają postać związków różniczkowych. Są
+to więc elementy inercyjne.
+
+Na podstawie konkluzji przedstawionych w poprzednich punktach możemy
+sformułować następujący wniosek.
+
+Układ zbudowany tylko z idealnych źródeł niezależnych i elementów lub
+podukładów bezinercyjnych jest układem bezinercyjnym”.
+
+H. Układ w konwencji „wejście-wyjście”. W uzupełnieniu rozważań z p.
+A—G przedstawimy teraz inne podejście do klasyfikacji układów, oparte na
+rozpatrywaniu ich w konwencji „wejście-wyjście”. Konwencja ta, rozpowszech-
+niona w teorii systemów, polega na przypisaniu układowi elektrycznemu roli
+pewnej operacji, która przekształca zbiór sygnałów wejściowych (pobudzeń)
+w zbiór sygnałów wyjściowych (odpowiedzi). Właściwości tak rozumianej operacji
+są w tym ujęciu właściwościami układu. Aby móc je określić, konieczne jest
+przede wszystkim ustalenie zbioru sygnałów wejściowych oraz zbioru sygnałów
+wyjściowych.
+
+Jeśli rozpatrywany układ jest siecią, to do zbioru pobudzeń zaliczymy siły
+elektromotoryczne i wydajności prądowe źródeł niezależnych działających
+w układzie. One to bowiem powodują wystąpienie w pozostałych elementach
+układu prądów i napięć. Jako sygnały wyjściowe możemy przyjąć dowolnie
+wybrane prądy i/lub napięcia wywołane działaniem pobudzeń. Dla ustalenia
+uwagi przyjmujemy, że dziedziną wszystkich rozważanych w tym punkcie
+sygnałów jest cała oś liczbowa (— o, + 0).
+
+Oznaczmy sygnały wejściowe przez x, = x;,(t), k = 1, 2,..., r. Tworzą
+one wektor sygnałów wejściowych:
+
+<image/wzory/k3_page191_formula1.png>
+
+V Przymiotniki: „bezinercyjny” i „rezystancyjny” oznaczają, w zasadzie, to samo i są często
+używane wymiennie.

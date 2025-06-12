@@ -1,0 +1,49 @@
+Model matematyczny
+
+- _ zbiór elementamych operacji opisujących zachowanie modelowanego procesu, który
+jest obliczeniowy i zdolny do wygenerowania pożądanej reakcji
+
+- _ możliwości generacji identycznych z rzeczywistymi reakcji na określone pobudzenie
+
+- operacje zrozumiałe dla środowiska komputerowego (maszyna analogowa, maszyna
+cyfrowa, asembler<język programowania niższego rzędu>, języki programowania
+wyższego rzędu, języki modelowania)
+
+- reakcja modelu (co robi)
+
+- _ struktura modelu (jak to robi)
+- złożoność
+- sekwencyjność
+
+Relacja modelowania (układ rzeczywisty * model matematyczny)
+- _ wiemość i zasadność modelu i reprezentacji układu rzeczywistego
+- _ poziomy zasadności (wierności):
+- replikatywny - odtwarzanie danych
+- predykcyjny - powtarzalna zgodność dla różnych warunków
+- strukturalny - odtwarzanie reakcji i sposobu działania układu rzeczywistego
+
+Relacja symulacji (model matematyczny ** komputer)
+- _ wierność i poprawność komputerowej realizacji operacji wymaganych przez model
+-  nazasadność składają się:
+- metody symulacji
+- dobór języka modelowania
+- charakterystyki środowiska komputerowego
+- dokładność reprezentacji maszynowej liczb i działań
+- prędkość obliczeń
+
+Praktyczne zalety MAS:
+- sprawdzanie hipotez (nieznanych struktur świata rzeczywistego)
+- badania parametryczne modeli
+- optymalizacja działań modeli
+Zalety komputerowego modelowania:
+- powtarzalność
+- _niedestrukcyjność
+Zalety języków M8S:
+- upraszczanie procesów MaS
+- _ szybka interpretacja danych
+- statystyczne i graficzne opracowanie danych
+
+Konstrukcja modelu
+konstrukcja — opis w języku formalnym — zasadny model
+
+model pierwotny > model uproszczony

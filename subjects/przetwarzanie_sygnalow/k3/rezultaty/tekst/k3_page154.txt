@@ -1,0 +1,50 @@
+Analiza widmowa sygnałów
+
+energetycznej nie jest idealną sinusoidą. Często można też spotkać piki zakłócające w zakre-
+sie częstotliwości od 25 do 40 kHz, ulubionym przez projektantów zasilaczy impulsowych.
+Pobliskie stacje radiowe i telewizyjne mogą wytwarzać piki zakłócające w zakresie megaher-
+cowym. Piki przy małych częstotliwościach mogą być wywoływane wibracjami elementów
+systemu przy wstrząsach. Jest to tzw. efekt mikrofonowania, dający piki typowo w zakresie
+od 10 do 100 Hz.
+
+Przejdźmy teraz do sygnałów właściwych. Mamy silny pik przy 13 Hz i słabe przy 26
+i 39 Hz. Zgodnie z rozważaniami w następnym rozdziale, jest to widmo częstotliwościowe
+niesinusoidalnego przebiegu okresowego. Częstotliwość 13 Hz nosi nazwę częstotliwości
+podstawowej, a 26 i 39 Hz to, odpowiednio — druga i trzecia harmoniczna. Można też spo-
+dziewać się znalezienia pików przy dalszych wielokrotnościach 13 Hz, a więc 52; 65; 78 Hz
+itd. Nie widać ich na rys. 9.2, gdyż giną w białym szumie. Sygnał 13 Hz może być gene-
+rowany przez np. trzyskrzydłową śrubę napędową łodzi podwodnej wykonującą 4,33 obr/s.
+Omawiany system jest podstawą sonaru pasywnego identyfikującego dźwięki podwodne na
+podstawie ich częstotliwości i zawartości harmonicznych.
+
+Załóżmy, że piki są położone bardzo blisko siebie, jak to pokazano na rys. 9.3. Są dwa czyn-
+niki ograniczające możliwą do uzyskania rozdzielczość częstotliwościową, a więc minimalną
+odległość pików, przy której nie zlewają się one w jedną całość. Pierwszym czynnikiem jest
+długość (liczba punktów) DFT. Widmo częstotliwościowe wytworzone przez N-punktowe
+przekształcenie DFT zawiera N/2 + 1 próbek równomiernie rozmieszczonych między zerem
+a połową częstotliwości próbkowania. Aby można było rozdzielić dwie bardzo do siebie zbli-
+żone częstotliwości, odstęp między próbkami musi być mniejszy niż odległość między dwoma
+pikami. Na przykład 512-punktowe DFT jest wystarczające do rozdzielenia piku na rys. 9.3,
+podczas gdy 128-punktowe nie wystarcza.
+
+Drugi czynnik ograniczający rozdzielczość jest bardziej subtelnej natury. Wyobraźmy sobie
+sygnał utworzony przez zsumowanie dwóch sinusoid o bardzo niewielkiej różnicy często-
+tliwości. W krótkim fragmencie tego sygnału, powiedzmy w ciągu kilku okresów, prze-
+bieg wygląda bardzo podobnie do pojedynczego przebiegu sinusoidalnego. Im mniej różnią
+się od siebie częstotliwości dwóch przebiegów, tym dłuższy jest fragment przebiegu, po
+którym dopiero można stwierdzić, że jest w nim więcej niż jedna częstotliwość. Inaczej
+mówiąc, długość sygnału ogranicza rozdzielczość częstotliwościową. Ten czynnik ograni-
+czający rozdzielczość różni się od pierwszego, gdyż długość sygnału wejściowego nie musi
+
+ 
+
+<image/figury/k3_page154_figure1.png>
+
+Rys. 9.2. Przykład widma częstotliwościowego. W widmach zbieranych sygnatów pojawiają się elementy
+trzech rodzajów: 1) szum losowy, jak szum biaty i szum 1/t, 2) sygnały zaktócające od sieci energetycz-
+nej, zasilaczy impulsowych, nadajników radiowych i TV, zjawiska mikrofonowania itd., 3) sygnaty wia-
+ściwe, pojawiające się zwykle jako częstotliwość podstawowa i harmoniczne. Na podanym przykładzie
+widma (tylko modutu) jest widocznych kilka z tych elementów
+
+|
+|

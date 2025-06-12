@@ -1,0 +1,31 @@
+294 3. Obwody prądu stalego
+
+Przykład 3.4-5. Wyniki dyskusji przeprowadzonej w przykładach 3.4-3 i 3.4-4 wykorzysta-
+my do analizy układu nieliniowego pokazanego na rys. 3.4-15a. Przyjmiemy tym razem, że
+charakterystyki diod D mają postać jak na rys. 3.4-15b (por. równania (1.3-32), rys. 1.3-25c, a także
+przykład 1.5-3) Zagadnienie polega na wyznaczeniu prądu I w zależności od wartości oporu
+liniowego R, przy następujących parametrach układu: E,=2V, E=4V, Rp=1 kQ,
+Rę = 1 kQ.
+
+<image/figury/k4_page294_figure2.png>
+
+Zaczniemy od wyznaczania charakterystyki dwójnika utworzonego przez obie gałęzie zawierają-
+ce diody (rys. 3.4-16a). Sposób konstrukcji tej charakterystyki jest analogiczny do konstrukcji
+
+<image/figury/k4_page294_figure1.png>
+
+ 
+
+charakterystyki dwójnika z przykładu 3.4-3 (rys. 3.4-11a), z tą różnicą, że w zakresie przewodzenia
+diody mają niezerowy opór R, = 1 kQ. W rezultacie, charakterystyka wykreślona we współrzę-
+dnych u, i ma kształt jak na rys. 3.4-16b. Z kolei wyznaczamy charakterystykę łączną połączenia
+równoległego dwójnika z rys. 3.4-16a i oporu liniowego Ry. Charakterystyka ta jest wykreślona na
+rys. 3.4-17 (krzywa a).
+
+Dalszą analizę przeprowadzimy korzystając z metody prostej oporu. Położenie tej prostej dla
+różnych wartości oporu R jest pokazane na rysunku. Z rysunku tego możemy już odczytać
+ostateczny wynik:
+
+<image/wzory/k4_page294_formula1.png>
+
+gdzie opór R jest wyrażony w kiloomach, a prąd 7 w miliamperach.

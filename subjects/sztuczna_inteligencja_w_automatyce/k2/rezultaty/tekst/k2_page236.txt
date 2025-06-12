@@ -1,0 +1,52 @@
+241
+
+[33] Kosiński R.A., (2002), Sztuczne sieci neuronowe, dynamika nieliniowa i chaos,
+WNT, Warszawa.
+
+[34] Kowalski R., (1989), Logika w rozwiązywaniu zadań, WNT, Warszawa.
+
+[35] Koza J., (1992), Genetic Programming: On the Programming of Computers by
+Means of Natural Selection, MIT Press, Cambridge, Massachusetts.
+
+[36] Koza J., (1994) Genetic Programming Il: Automatic Discovery of Reusable
+Programs (Complex Adaptive Systems), MIT Press, Cambridge, Massachusetts.
+
+[37] Koza J., Bennett F.H.III, Bennett F.H., Keane M., Andre D., (1999) Genetic
+Programming III: Automatic Programming and Automatic Circuit Synthesis,
+Morgan Kaufmann Publishers.
+
+[38] Koza J.R., Keane M.A., Streeter M.J., Mydlowec W., Yu J., Lanza G., Genetic
+Programming IV: Routine Human-Competitive Machine Intelligence, Kluwer
+Academic Publishers, 2003.
+
+[39] Kubale M., (1994), Introduction to computational comlexity, Wydawnictwo Po-
+litechniki gdańskiej, Gdańsk.
+
+[40] Langton C.G. (1989), Artificial life. w: Langton C.G, (wyd.) Artificial life, Pro-
+ceedings of an interdisciplinary workshop on the synthesis and simulation of
+living systems, Los Alamos, New Mexico, September, 1987, Redwood City, Cal.:
+Addison- Wesley.
+
+[41] Lem S., (1996), Tajemnica chińskiego pokoju, Universitas, Kraków.
+[42] Levin R. (1992), Complexity: science on the edge of chaos. Macmillan.
+
+[43] Li H., (1998), An introduction to belief networks, Technical research re-
+port, The Center for Satellite and Hybrid Communication Network, internet:
+http://www.isr.umd.edu/CSHCN/
+
+[44] Ligęza A., Czarkowski D., Marczyński P., Włodarczyk M., (1991), Turbo Prolog
+na IBM PC, Wydawnictwo AGH, Kraków. Warszawa.
+
+[45] LPA, (1990), LPA Prolog Peofessional Compiler, programming reference ma-
+nual, Logic Programming Associates, London.
+
+[46] Malpas J. (1987), Prolog: a relational language and its applications, Prentice-
+Hall, Englewood Cliffs, NJ.
+
+[47] Mettrie La, J.O., (1984), Człowiek-Maszyna, PWN, Warszawa.
+
+[48] Michalewicz Z., (1996), Algorytmy genetyczne + struktury danych = programy
+ewolucyjne, WNT, Warszawa.
+
+[49] Michalski R.S., Kubat M., Bratko I., (1998) Machine Learning 4: Data Mining:
+Methods % Applications, J. Wiley X: Sons, Chichester.

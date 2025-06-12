@@ -1,0 +1,32 @@
+74 1. Pojęcia podstawowe — elementy
+
+<image/wzory/k3_page74_formula1.png>
+
+ 
+
+<image/figury/k3_page74_figure2.png>
+
+Ujidu i UaUaiiia WiCiU 1UCiiliiOWYCI PiŁyiząuÓw pO1przewoanikowycn”*.
+C. Przypadek oporu liniowego. Dla oporu liniowego mamy oczywiście:
+
+<image/wzory/k3_page74_formula2.png>
+
+w każdym punkcie charakterystyki.
+
+D. Indukcyjności i pojemności statyczne i dynamiczne. Podobnie okreś-
+lamy i interpretujemy parametry statyczne i dynamiczne dla indukcyjności
+i pojemności”.
+
+Dla indukcyjności nieliniowej o charakterystyce opisanej równaniem (1.3-8)
+określamy indukcyjność statyczną L,, (rys. 1.3-32) jako:
+
+<image/wzory/k3_page7/4_formula3.png>
+
+oraz indukcyjność dynamiczną lub różniczkową L,,, jako:
+
+<image/wzory/k3_page74_formula4.png>
+
+3) Analizę małosygnałową będziemy omawiać dokładniej w tomie II (p. 5.4.3).
+3) Pojęcia parametrów statycznych i dynamicznych można także uogólnić w odpowiedni
+nog
+sposób na elementy rezystancyjne, indukcyjne i pojemnościowe (por. przypis na str. 282).

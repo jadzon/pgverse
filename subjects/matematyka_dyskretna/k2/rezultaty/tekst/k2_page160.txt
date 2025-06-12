@@ -1,0 +1,29 @@
+1.10. Metoda rekurencji uniwersalnej 11
+
+<image/wzory/k2_page160_formula1.png>
+
+Iterację powtarzamy, aż ostatni składnik będzie zawierał 7'(1), czyli gdy i = logyn.
+Otrzymamy wtedy
+
+<image/wzory/k2_page160_formula2.png>
+
+Skorzystaliśmy tu z równości 3'%5*” = n'%«3 oraz z faktu, że log, 3 < 1in'%:3 =
+o(n).
+Jako drugi przykład rozważmy rekursję
+
+<image/wzory/k2_page160_formula3.png>
+
+Jak będziemy ją rozwijać, to otrzymamy
+
+<image/wzory/k2_page160_formula4.png>
+Dla: = log, n. Otrzymamy wtedy
+
+<image/wzory/k2_page160_formula5.png>
+(1.7)
+
+1.10 Metoda rekurencji uniwersalnej
+Przypuśćmy, że mam" mumania rabinranewina
+
+<image/wzory/k2_page160_formula6.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,47 @@
+__ 21. Wielowrotniki isieci | 171
+
+ 
+
+B. Przykłady. Omówimy teraz przykłady kilku innych dwójników.
+
+Przykład 2.1-2. Rozpatrzmy ponownie układ z rys. 2.1-1a. Można go również traktować jako
+dwójnik (rys. 2.1-1b), do którego zacisków dołączono idealne źródło napięciowe o sile elektro-
+motorycznej e. Równanie tego dwójnika otrzymamy przez eliminację z równań sieciowych (2.1-1)
+prądów „wewnętrznych” i,, i; oraz zmianę oznaczenia: e — u.
+
+Z drugiego i trzeciego równania (2.1-1) po eliminacji prądu i, mamy:
+
+rzory/k3_page169_formula1.png
+
+Różniczkując pierwsze równanie (2.1-1) i mnożąc je stronami przez C dostajemy:
+
+Nzory/k3_page169_formula2.png
+
+co umożliwia wyeliminowanie drugiej pochodnej prądu i,:
+
+<image/wzory/k3_page169_formula3.png>
+
+Różniczkujemy raz jeszcze to równanie, co umożliwia wyeliminowanie z pierwszego równania
+(2.1-1) pierwszej pochodnej prądu i,. Po prostych już przekształceniach otrzymujemy ostatecznie
+równanie:
+
+<image/wzory/k3_page169_formula4.png>
+
+Jest to właśnie poszukiwane równanie dwójnika z rys. 2.1-1b.
+
+Przykład 2.1-3. Dwójnik z rys. 2.1-3a jest połączeniem czterech elementów. Spróbujmy
+wyznaczyć jego równanie, tj. znaleźć związek między wielkościami zaciskowymi: prądem i oraz
+napięciem u. Na podstawie równań elementów i praw Kirchhoffa możemy napisać następujące
+równania”:
+
+<image/wzory/k3_page169_formula5.png>
+Z drugiego i trzeciego równania mamy:
+
+du,
+CHC mi--E
+dt R,
+
+a stąd:
+<image/wzory/k3_page169_formula6.png>
+
+1) Są to odpowiednio przekształcone równania sieciowe układu z rys. 2.1-3a.

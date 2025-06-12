@@ -1,0 +1,22 @@
+wykonuje zespolone
+; dzielenie jednego widma przez drugie. Żądaną odpowiedź impulsową filtru (rys. 17.5 e) można
+ae wota oa parcia WOS często Anja adi
+
+WW "EET
+
+ 
+    
+    
+  
+
+17. Filtry dostosowane do szczególnych wymagań
+
+stotliwościowym żądanego impulsu (rys. 17.5 d) podzielonym przez widmo
+impulsu wykrytego (rys. 17.5 b). Ponieważ impuls wykryty jest więc jego
+faza jest niezerowa. To oznacza, że trzeba zastosować dzielenie zespolone (tzn. moduł i faza
+podzielone przez inny moduł i fazę). W rozdziale 9 wyjaśniono, jak się
+
+do szczególnych wymagań (odwrotne DFT, przesunięcie, obcięcie i przemno.
+żenie przez okno).
+
+<image/figury/k3_page267_figure1.png>

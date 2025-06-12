@@ -1,0 +1,45 @@
+1.2. Podstawowe modele zjawisk w obwodzie 41
+
+5), (1.2-16) i (1.2-31). Cechy te są mierzalne. Mówimy np:
+dityczny o pojemności 10 uF”, „indukcyjność cewki wynosi
+
+indukcyjność, pojemność posługujemy się także jako
+'odowych odpowiednich cech fizycznych, a więc stosujemy
+ntów. Podstawowe elementy: opór, indukcyjność i pojem-
+wane poprzez równania: (1.2-6), (1.2-23) i (1.2-35). Niekie-
+o odróżnienia ich od elementów rzeczywistych nazywamy je
+wymi (por. p. 1.1-E).
+
+: modelu. Każdy z podstawowych elementów — opór,
+
+je41_formula1.png 'mność — jest modelem tylko jednej cechy fizycznej,
+
+ 
+
+stałych. Uwzględnianie w modelu elementu rzeczywistego
+tych odbywa się w teorii obwodów poprzez odpowiednie
+obwodowych reprezentujących daną cechę. Na przykład,
+dniający opór uzwojenia może mieć postać pokazaną na
+; gdy model (inaczej: schemat zastępczy) tej samej cewki,
+ty pojemnościowe (związane np. z tzw. pojemnościami
+- postać pokazaną na rys. 1.2-10b.
+
+iry/k3_page41_figure1.png
+
+Istnieje zawsze problem dokładności modelu lub, inaczej, jego adekwat-
+ności do rzeczywistości, która jest modelowana. Problem ten, niezwykle
+ważny z praktycznego punktu widzenia, leży jednak — w zasadzie — poza
+teorią obwodów, której przedmiotem badań są przyjęte już modele.
+
+C. Elementy skupione. Omówione w p. 1.2.1, 1.2.2 i 1.2.3 podstawowe
+elementy należą do kategorii elementów skupionych. Elementy skupione re-
+prezentują poszczególne cechy obwodu elektrycznego w oderwaniu od ich
+lokalizacji przestrzennej, a także w oderwaniu od innych cech. Możemy
+powiedzieć, że skupiają one niejako wybraną cechą pod postacią elementu.
+Ulokowanie danego elementu skupionego na schemacie (np. rys. 1.2-10) nie ma
+nic wspólnego z lokalizacją w przestrzeni cechy, którą ten element reprezentuje.
+
+Przy tworzeniu modeli elementów skupionych zakładamy, że wszystkie
+rozważane pola wektorowe są jednorodne, a więc nie zależą od zmiennych
+przestrzennych. Konsekwencją tego jest fakt, iż wszystkie wielkości charakte-
+ryzujące elementy skupione, tj. wielkości zaciskowe — prądy i napięcia, a także

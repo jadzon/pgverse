@@ -1,0 +1,41 @@
+20 Rozdział 1. Rachunek prawdopodobieństwa
+Pogrupujmy składniki sumy według wartości zmiennych X iY.
+
+<image/wzory/k2_page79_formula1.png>
+
+<image/wzory/k2_page79_formula2.png>
+
+d) jeżeli dla każdego w, X (w) > 0, to )) eq X (w) - P(w) > 0. o
+Twierdzenie 1.44 Wartość oczekiwana sumy k zmiennych X;,... ,.Xx jest równa
+
+<image/wzory/k2_page79_formula3.png>
+
+Twierdzenie 1.45 Jeżeli zmienne X;,... X» są niezależne, to wartość oczekiwana ich
+iloczynu równa sie
+
+<image/wzory/k2_page79_formula4.png>
+
+Twierdzenie 1.46 (Nierówność Markowa) Jeżeli zmienna losowa .X przyjmuje waretści
+nieujemne, to dla dowolnej liczby rzeczywistej d > 0
+
+<image/wzory/k2_page7/9_formula5.png>
+
+I
+
+<image/wzory/k2_page7/9_formula6.png>
+
+o
+Zauważmy, że nierówność Markowa jest użyteczna tylko kiedy d > E(X). Jeżeli
+bowiem d < E(.X), to mamy trywialne oszacowanie
+
+<image/wzory/k2_page79_formula7.png>
+
+Przykład 1.47 Nierówność Markowa wyraża dość prosty fakt. Przypuśćmy, że X określa
+liczbę pieniędzy posiadaną przez studenta. Jeżeli wartość średnia zmiennej .X wynosi 100
+złotych, to tylko połowa studentów może mieć 200 lub więcej złotych. Przypuśćmy bowiem
+że 0.5 + e część studentów posiada 200 (lub więcej) złotych. Wtedy udział tej bogatej
+części studentów w średniej wynosi co najmniej 200 - (0.5 + e) = 100 + 200 -e > 100,i
+wartość średnia nie może wynosić 100 złotych, jeżeli zmienna X nie przyjmuje wartości
+ujemnych.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

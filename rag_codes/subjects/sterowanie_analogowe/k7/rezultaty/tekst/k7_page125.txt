@@ -1,0 +1,19 @@
+Obserwator stanu i jego zastosowanie
+Wynik sterowania ze sprzężeniem od obserwowanego stanu dla układu
+
+dwucałkującego. Warunki początkowe obiektu [1, 0]; warunki początkowe
+obserwatora [0,0]
+
+m
+
+DUEJS 8|j8poW
+
+figury/k/_page125_figure1.pn
+<image/figury/k/_page125_figure2.png>
+
+plik: dwucalk obserwator regulator.slx
+
+ 
+
+POLITECHNIKA
+GDANSKA

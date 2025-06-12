@@ -1,0 +1,43 @@
+124 6. Urządzenia zewnętrzne
+6.4.2. STEROWNIK STANDARDOWEGO ŁĄCZA RÓWNOLEGŁEGO
+
+Łącze równoległe jest wykorzystywane dla transmisji na niewielkie odległości. Wynika to
+z faktu, że koszt połączeń nadajnika i odbiornika wieloma przewodami jest wysoki, co
+stanowi zasadniczą wadę tego rozwiązania. Zaletą stosowania tego łącza jest jego duża
+szybkość transmisji. Najczęściej projektowane są łącza zawierające 8 linii danych, czyli
+przeznaczone dla transmisji bajtowej. Transmisja pomiędzy urządzeniami nadawczym
+i odbiorczym jest synchronizowana i dlatego łącze zawiera dwie linie przeznaczone dla
+sygnałów sterujących:
+
+— linię strobu przesyłanej informacji STB,
+
+— linię sygnału zezwolenia na transmisję ACK.
+
+Sygnał ACK (ang. acknowledge) jest zwykle generowany przez urządzenie będące odbior-
+nikiem, a STB przez urządzenie będące nadajnikiem. Rozpatrzmy teraz dwa przypadki
+współpracy sterownika z urządzeniami zewnętrznymi. Pierwszy przypadek dotyczyć będzie
+urządzenia wejściowego a drugi urządzenia wyjściowego.
+
+<image/figury/k3_page134_figure2.png>
+ .  L - png
+
+ 
+
+Na rysunku 6.5 pokazano połączenie sterownika z urządzeniem oraz przebiegi czasowe
+na tym łączu i łączu z systemem (sygnały INT i RD). Jeżeli sterownik zezwala na
+transmisję (ACK = 0), to urządzenie wejściowe, które jest nadajnikiem, może wysłać bajt
+wraz ze strobem STB. Sterownik odbiera ten bajt i zapisuje go do swego wewnętrznego
+rejestru potwierdzając ten fakt zmianą stanu sygnału ACK. Jednocześnie zgłasza on do
+procesora sygnał przerwania INT. Procesor po odebraniu sygnału INT musi dokończyć
+cykl wykonania aktualnego rozkazu, w czasie którego przyszło zgłoszenie przerwania,
+a następnie rozpoczyna obsługę tego przerwania. Obsługa rozpoczyna się od wykonania
+rozkazu skoku do miejsca, gdzie znajduje się początek podprogramu obsługi przerwania
+tego urządzenia. Aby wykonać ten rozkaz procesor musi otrzymać od sterownika numer
+urządzenia wejściowego, który jest zamieniany na odpowiedni adres. Dlatego procesor
+wykonuje cykl odczytu wysyłając sygnał INTA, a w tym czasie sterownik wysyła swój
+numer na magistralę danych. Zasadniczym rozkazem podprogramu obsługi takiego
+przerwania jest rozkaz IN (jeżeli adresy urządzeń zewnętrznych znajdują się w obszarze
+pamięci, to dowolny inny rozkaz dotyczący odczytu komórki pamięci). Rozkaz ten
+powoduje, że procesor wysyła na systemową magistralę adresową adres sterownika, a na
+magistralę sterującą strob odczytu RD. W ten sposób odczytana zostanie zawartość rejestru
+buforowego sterownika. Wówczas sterownik zmienia wartość sygnału INT, co wskazuje,

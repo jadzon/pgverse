@@ -1,0 +1,47 @@
+20 Rozdział 1. Kombinatoryka
+
+Dlatego, kiedy w bierzącym zbiorze A = (fa;,...,ax) algorytm znalazł takie ;, że
+a +1 £ A, to znaczy, że algorytm jest w trakcie wypisywania tych podzbiorów, któ-
+re zawierają a;+,.....ax (wszystkie większe od a; + 1), plus jakiś :-podzbiór zbioru
+1,...,a; + 1). Zbiór A jest ostatnim podzbiorem, w którym występują a;44,-: -,ak,
+oraz jakiś :-podzbiór zbioru f1,... „a;), a nie występuje a, + 1. Według opisanej wyżej
+zasady teraz powinny nastąpić podzbiory, które zawierają a, +1 plus jakiś (i — 1)-podzbiór
+zbioru 41...., at, plus elementy a;-,..... a„. Pierwszy z nich to podzbiór
+
+<image/wzory/k2_page55_formula1.png>
+
+I taki element jest wypisywany po zbiorze A.
+
+112.3 Generowanie permutacji
+Algorytm generowania permutacji zbioru 41,....n]:
+e Pierwsza permutacja to a, = i,dlal < i <n.
+
+e Aby wypisać następną po (a;, ... „,a„) permutację:
+o Znajdujemy największe ; spełniające warunek a; < a;
+o jeżeli takiego j nie ma, to bierząca permutacja jest ostatnia,
+o jeżeli takie ; istnieje, to zamieniamy a; z najmniejszym a, takim, że a, >
+a; oraz k > j, a następnie odwracamy porządek elementów a;+4,...,an.
+Alorytm wypisuje permutacje w porządku rosnącym, jeżeli potraktujemy permutacje
+jako liczby zapisane z bazą n + 1, aliczby 1,.... „n jako cyfry w tym systemie.
+Na przykład przypuśćmy, że bierzącą permutacją jest (436521). Algorytm znajduje
+j = Żia; = 3. Wtedy ta permutacja jest ostatnią (największą) permutacją spośród per:
+mutacji zaczynających się od (43...), bo od pozycji trzeciej mamy ciąg malejący (..6521) i
+jest to największy ciąg jaki można utworzyć z elementów 1,2,5,6. Teraz powinny nastąpić
+permutacje zaczynające się od (45....) (czwórki na pierwszym miejscu nie zmieniamy, a
+trójka na drugim miejscu powinna być zamieniona przez następną spośrod liczb stojących
+za nią, czyli przez 5). Pierwszą taką permutacją jest ta, w której pozostałe elementy rosną,
+czyli (451236).
+
+Przykład 1.19 Oto 10 pierwszych permutacji czteroelementowych
+
+1234, 1243, 1324, 1342, 1423, 1432, 2134, 2143, 2314, 2341, 2413, 2431,
+
+1.13 Zadania
+
+1. Ile numerów rejestracyjnych samochodów można utworzyć, jeżeli każdy numer
+składa się z trzech liter i czterech cyfr?
+
+Ile numerów rejestracyjnych można utworzyć, jeżeli będziemy dodatkowo wyma-
+gać, aby każdy numer zaczynał się od spółgłoski?
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

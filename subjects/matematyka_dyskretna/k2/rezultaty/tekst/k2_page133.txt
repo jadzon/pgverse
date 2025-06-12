@@ -1,0 +1,53 @@
+18 Rozdział 1. Teoria liczb
+
+Dow
+
+<image/wzory/k2_page133_formula1.png>
+
+edy 1 wanu « WYCMY, UMUYVY 4MIIICIC A MIAIC ŁC
+
+<image/wzory/k2_page133_formula2.png>
+
+a to zachodzi wtedy i tylko wtedy, adv istnieje k takie, ze
+
+<image/wzory/k2_page133_formula3.png>
+
+czyli wtedy i tvlko wtedy, adv
+<image/wzory/k2_page133_formula4.png>
+
+Przypuśćmy teraz, że 4 dzieli b i mzwiażmv równanie
+
+<image/wzory/k2_page133_formula5.png>
+
+w pierścieniu Z „„, czyli szukamy takich z € f0..... m — 1).że
+
+<image/wzory/k2_page133_formula6.png>
+
+Z lematu 1.37, to równanie jest równoważne równaniu
+
+<image/wzory/k2_page133_formula7.png>
+Ale teraz NW D(a/d,m/d) = 1 i równanie (1.4) ma dokładnie jedno rozwiązanie rg €
+(0,. . . .m/d — 1) takie że
+
+<image/wzory/k2_page133_formula8.png>
+
+Ale równania (1.4) i (1.3) sa spełnione także przez liczbv
+
+<image/wzory/k2_page133_formula9.png>
+
+Są to wszystkie liczby ze zbioru 0,..., ,„m= 1) opi rownania (1.4) i (1.3), czyli
+wszystkie rozwiązania równania (1.2) w pierścieniu Z,
+
+Przykład 1.38 Rozwiażmy równanie
+
+<image/wzory/k2_page133_formula10.png>
+
+Ponieważ NW D(6. 15) = 3. wiec naipierw rozwiazuiemv równanie
+
+<image/wzory/k2_page133_formula11.png>
+
+W ka mamy 27* = 3 więc rozwiązaniem jest zg = 3: 3 = 4. Tak więc rozwiązaniami
+
+<image/wzory/k2_page133_formula12.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

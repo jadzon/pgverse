@@ -1,0 +1,50 @@
+2.1. Wielowrotniki i sieci 215
+
+<image/wzory/k3_page213_formula1.png>
+Przyjmując:
+
+ry/k3_page213_formula2.png
+
+otrzymujemy:
+
+<image/wzory/k3_page213_formula3.png>
+a więc:
+
+zory/k3_page213_formula4.png
+
+Oznacza to, że moc oddawana przez źródło idealne E, jest dodatnia, moc zaś oddawana przez
+źródło idealne E, jest ujemna. Przy tak dobranych warunkach pracy element aktywny E, wykazu-
+je aktywność (moc, a więci energia pobierana jest ujemna), zaś element aktywny E, aktywności
+nie wykazuje (moc i energia pobierana jest dodatnia). Można jednak inaczej dobrać warunki
+pracy tak, aby oba prądy (2.1-71) były dodatnie i moce o d d aw ane przez oba źródła były dodatnie.
+
+E. Źródłowość a aktywność. W przykładzie 2.1-35 stwierdziliśmy, że
+źródła niezależne (idealne lub rzeczywiste) są dwójnikami aktywnymi. Zachodzi
+również właściwość ogólniejsza.
+
+Każdy wielowrotnik źródłowy jest wielowrotnikiem aktywnym.
+
+Właściwość ta jest intuicyjnie oczywista. Jej formalny dowód dla przypadku
+ogólnego pomijamy. Wykazanie tej właściwości w przypadku wielowrotnika
+SLS jest proste, wymaga jednak posłużenia się zasadą źródła zastępczego, o której
+będzie mowa w rozdziałach 3 i 4. Do kwestii tej powrócimy więc jeszcze w p.
+4.5.3-E (przykład 4.5-15).
+
+Z powyższej właściwości wynika także następujący wniosek: każdy wielo-
+wrotnik pasywny jest wielowrotnikiem bezźródłowym.
+
+Zwracamy jednak uwagę, iż wniosek odwrotny nie jest prawdziwy: wielo-
+wrotnik bezźródłowy nie musi być pasywny (np. opór ujemny, por. przykład
+2.1-35).
+
+F. Pasywność i bezstratność elementów a pasywność i bezstratność ukła-
+du. Pozostaje jeszcze do rozpatrzenia kwestia rozstrzygania o pasywności
+układu, jeśli wiadomo z jakich elementów jest on zbudowany. Podobne
+zagadnienie można sformułować w odniesieniu do pojęcia bezstratności układu.
+Można wykazać, że słuszne są następujące właściwości:
+
+Układ zbudowany tylko z elementów lub podukładów pasywnych jest układem
+pasywnym.
+
+Układ zbudowany tylko z elementów lub podukładów bezstratnych jest układem
+bezstratnym.

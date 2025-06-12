@@ -1,0 +1,53 @@
+58 3. Podstawy techniki cyfrowej
+
+Kolejne kroki algorytmu są następujące:
+l) Porównanie wykładników EA =5 i EB = 2 wskazuje na konieczność przesunięcia
+mantysy liczby B o 3 pozycje w prawo.
+2) Wyrównanie wykładników S, = 0.100101001 S„:27*-F%9= 0.000100011.
+3) Obliczenie sumy A+B 0 01001100 1101.
+
+Sprawdzając operację na liczbach dziesiętnych otrzymać można:
+
+<image/wzory/k3_page68_formula1.png>
+
+Sprawdzenie nie potwierdziło prawidłowości obliczeń, gdyż wynik dodawania dziesiętnego
+(20.765625) różni się od obliczonego o 0.015625. Fakt ten staje się oczywisty, gdy
+weźmie się pod uwagę jedynki liczby normalizowanej, które usunięto przy przesuwaniu.
+Ww „ naszym przykładzie usunięto jedynkę o wadze 2 * i ona właśnie spowodowała błąd o
+2*.27=2=0.015625.
+
+Dla algorytmu odejmowania w zapisie zmiennopozycyjnym dwa pierwsze punkty
+algorytmu są takie same jak dla dodawania. Mantysa różnicy A — B = 0.100000110, więc
+normalizacja nie jest potrzebna i otrzymujemy:
+
+(A — B) 0 00000110 1101
+co dziesiętnie wynosi 0.511718752" = 16.375. Natomiast sprawdzając algorytm i odejmu-
+jąc liczby dziesiętne otrzyma się, że A — B = 16.359375. Powstały błąd jest tej samej
+natury co poprzednio, a mianowicie błąd wynikający z usunięcia bitów przy przesuwaniu.
+
+Mnożenie i dzielenie liczb ziennopozycyjnych jest proste i wynika z poniższych
+wzorów:
+
+<image/wzory/k3_page68_formula2.png>
+
+Stosując zapis polaryzowany dla wykładników należy pamiętać, że operacje na nich
+wymagają odpowiednich korekt. Po dodaniu dwóch wykładników (podczas mnożenia)
+należy odjąć współczynnik polaryzacji (100...0). Natomiast po odejmowaniu (podczas
+dzielenia) trzeba go dodać. Niezależnie od tej czynności należy w obu przypadkach
+dokonać normalizacji.
+
+Dla przykładu pomnożono te same liczby co poprzednio:
+1) dA *$ą = 0.010100011100101010 i po zaokrągleniu oraz normalizacji:
+
+BA 1ninńńnit. y-l
+
+<image/wzory/k3_page68_formula3.png>
+
+Dziesiętnie jest to 0.638671875 - = 40. 875, podczas gdy mnożenie dziesiętne daje wynik
+
+40. 89550782 19< DlA snoólzen rel m. AAAA YYY +arowa woryę read rs
+
+<image/wzory/k3_page68_formula4.png>
+
+Dzielenie liczb A przez b zachodzi według schematu:
+l) SĄ: Sg= 1.000011010 co po normalizacji wynosi S,. = 0.100001101-2'.

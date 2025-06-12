@@ -1,0 +1,80 @@
+570
+
+32. Przekształcenie Lapłace 'a
+
+Na rys. 32.8 podsumowano metodykę stosowania przekształcenia Laplace'a. Zaczynamy od
+systemu fizycznego, takiego jak obwód elektryczny. Jeśli chcemy, to metodą symboliczną
+możemy bezpośrednio uzyskać odpowiedź częstotliwościową obwodu, zgodnie z opisem
+w rozdziale 30. Alternatywą jest wykonanie przekształcenia Laplace'a w czterech krokach
+metodą poprzednio omówioną. W wyniku uzyskuje się wyrażenie matematyczne na funkcję
+przenoszenia H(s), które można przedstawić w formie wykresu zer i biegunów. Następnie
+można znaleźć odpowiedź częstotliwościową, wyznaczając przebieg funkcji przenoszenia -
+wzdłuż osi liczb urojonych, a więc zastępując każde s przez jw. Aczkolwiek obie metody
+dają jednakowy wynik, to pośredni wykres zer i biegunów umożliwia zrozumienie, dlaczego
+system zachowuje się tak, a nie inaczej oraz jak to można zmienić.
+
+   
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+   
+   
+    
+  
+
+Projektowanie filtrów w dziedzinie zmiennej
+zespolonej s
+
+Najważniejszym zastosowaniem przekształcenia Laplace'a jest projektowanie systemów bez-
+pośrednio w dziedzinie s. Takie projektowanie obejmuje dwa kroki. Po pierwsze, projektuje
+się system w dziedzinie s, określając liczbę i położenia biegunów i zer. Jest to problem czysto
+matematyczny, a celem jest uzyskanie najlepszej odpowiedzi częstotliwościowej. W drugim
+kroku określa się układ elektroniczny mający taką reprezentacje na płaszczyźnie zmiennej
+zespolonej s. Ta metoda ma w sobie coś ze sztuki, gdyż jest wiele konfiguracji układowych
+charakteryzujących się danym rozmieszczeniem zer i biegunów.
+Jak już poprzednio wspomniano, krok 4 w metodzie przekształcenia Laplace'a jest bardzo
+trudny, jeśli system ma więcej niż dwa bieguny lub dwa zera. Najczęściej stosowanym
+rozwiązaniem jest realizacja wielokrotnych biegunów i zer w kilku kolejnych sekcjach. Na
+przykład filtr 6-biegunowy można zrealizować jako trzy kolejne sekcje, z których każdy ma
+nie więcej niż dwa bieguny i dwa zera. Ponieważ każda z tych sekcji może być wyrażone
+w dziedzinie s jako stosunek wielomianów drugiego stopnia w liczniku i mianowniku, więc
+ta metoda jest nazywana projektowaniem z sekcjami bikwadratowymi.
+Na rys. 32.9 pokazano typowy układ bikwadratowy stosowany w metodzie projektowania
+opisanej w rozdziale 3. Nosi on nazwę układu Sallena-Keya od nazwisk R.P. Sallena i E.L.
+Keya, autorów artykułu, w którym opisali tę metodę w latach 50. XX wieku. Istnieje wpraw-
+dzie kilka odmian układu, ale w najpopularniejszej stosuje się dwa rezystory o jednakowych
+wartościach, dwa kondensatory o jednakowych wartościach i wzmacniacz o wzmocnieniu
+od 1 do 3. Teraz można zastosować niedrogi wzmacniacz operacyjny z odpowiednimi rezy-
+storami w sprzężeniu zwrotnym. W czasach Sallena i Keya takie wzmacniacze oczywiście
+nie były jeszcze dostępne. Wykonując czterokrokową procedurę analizy układu, uzyskuje się
+zależności położenia dwóch biegunów od wartości elementów układu:
+„4-3
+2RC
+REDZI +6A-5
+2RC
+wzr32.4.potoeniabiegunwwukladziesallenakeya.tewzoryopisujzalenopooeniabiegunw
+w i o od wzmocnienia wzmacniacza A, rezystora R i pojemności kondensatora C
+Z powyższych wzorów wynika, że dwa bieguny zawsze leżą gdzieś na okręgu o promieniu
+I/RC. Dokładna lokalizacja na okręgu zależy od wzmocnienia wzmacniacza. Jak pokazano
+na rys. 32.9 a), przy wzmocnieniu 1 oba bieguny znajdują się na osi rzeczywistej. Odpowiedź
+częstotliwościowa takiej konfiguracji jest charakterystyką filtru dolnoprzepustowego o dość
+łagodnym przejściu między pasmem przepustowym a zaporowym. Częstotliwość odcięcia
+—3 dB (0,707) tego układu, oznaczona Gy, jest w tym miejscu, gdzie okrąg przecina się z osią
+urojoną, tj. © = 1/RC.

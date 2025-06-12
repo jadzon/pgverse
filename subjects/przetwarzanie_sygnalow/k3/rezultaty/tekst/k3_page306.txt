@@ -1,0 +1,16 @@
+Pojedynek 2: Filtr okienkowany funkcją sine przeciw filtrowi Czebyszewa 335
+
+<image/figury/k3_page306_figure1.png>
+
+| | r: obowaa oisidwakcawe M okienkowanego funkcją sinc i filtru Czebyszewa. Przedstawiono odpo-
+okienkowanego
+
+Częstotliwość
+trów wynosi 0,2, mierzona dla 0,5 (filtr okienkowany sinc) lub 0,707 wartości maksymalnej (filtr rekursywny)
+
+<image/figury/k3_page306_figure2.png>
+
+O Eeth oakoezaogo kają cą i Owiacenwa Poda ANO skok
+51-punktowego filtru okienkowanego funkcją sinc oraz dla 6-biegunowego rekursywnego filtru Czebyszewa o zalało-
+waniach 0,5%. Oba filtry mają częstotliwość odcięcia 0,2. Filtr okienkowany funkcją sinc ma nieco lepszą odpowiedź
+skokową ze względu na mniejszy przerzut i zerową fazę

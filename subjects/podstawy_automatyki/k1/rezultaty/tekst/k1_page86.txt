@@ -1,0 +1,27 @@
+Podstawiając za G(s) odpowiednie wyrażenie (rys. 2.27), otrzymujemy
+
+<image/wzory/k1_page86_formula1.png>
+Równanie charakterystyczne układu zamkniętego ma postać
+
+<image/wzory/k1_page86_formula2.png>
+
+Podstawiając s = jw, otrzymujemy
+
+<image/wzory/k1_page86_formula3.png>
+
+Po przekształceniach i wyodrębnieniu części rzeczywistej i urojonej N( jw), otrzy-
+mujemy
+
+<image/wzory/k1_page86_formula4.png>
+
+Zatem:
+
+wzory/k1_paqe86_formula5.pnq
+<image/wzory/k1_page86_formula6.png>
+
+Przyrównując P(w) i Q(w) do zera, znajdujemy pulsacje, dla których wykres Mi-
+chajłowa przecina osie rzędnych i odciętych:
+
+<image/wzory/k1_page86_formula7.png>
+
+88

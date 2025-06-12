@@ -1,0 +1,52 @@
+Twierdzenie o całkowaniu obrazu
+
+Operacji różniczkowania obrazu odpowiada pomnożenie oryginału przez £, zaś ope-
+racji całkowania — podzielenie przez £, gdy jako początkowy ustalony punkt całkowania
+s 00
+przyjmujemy s = ©, Zastępując [ przez J otrzymujemy
+
+s
+
+<image/wzory/k1_page15_formula1.png>
+Uczyniliśmy założenie, że /(1)/t posiada obraz, stąd wynika, że również /(t) posiada
+obraz.
+
+Przykład 1.8
+Znaleźć transformatę następującego oryginału
+
+<image/wzory/k1_page15_formula2.png>
+
+na podstawie tabeli transformat Laplace'a (tab. 1.1 na wklejce), wiemy, że transformata
+%(lsin t]=
+
+s? +
+
+ 
+
+p natomiast na podstawie wzoru (1.13) mamy
+
+<image/wzory/k1_page15_formula3.png>
+z; TIgury/K I_page 1b_rigure 1.png
+
+Następnie korzystając z twierdzenia o całkowaniu oryginału, wzór (1.14), otrzy-
+mujemy
+
+<image/wzory/k1_page15_formula4.png>
+
+MNOŻENIE I SPLOT
+
+Załóżmy, że funkcje /,(1) i f(1) są całkowalne w każdym przedziale [0, 7], 7 > 0.
+Splotem funkcji /,(1) i fą(1) w przedziale [0, +0)! nazywamy funkcję o(f) określoną dla
+t 2 0 następująco
+
+<image/wzory/k1_page15_formula5.png>
+
+ 
+
+! Ponieważ zajmiemy się wyłącznie splotem w przedziale (0, +0), będziemy mówić o splocie funk-
+
+cji, nie podając już przedziału.
+KE 5
+p 17
+
+EZ

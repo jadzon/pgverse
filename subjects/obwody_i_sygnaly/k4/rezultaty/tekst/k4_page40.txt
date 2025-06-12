@@ -1,0 +1,46 @@
+==="
+
+40 1. Pojęcia podstawowe — elementy
+
+Przebieg prądu, jaki należy doprowadzić do płytek oscyloskopu jest w
+stałym (falą prostokątną). Jego wykres jest przedstawiony na rys. 1.2-9
+Pola P, i P, zaznaczone na tym rysunku są równe. Oznacza to, ż
+płytkach w pierwszej części okresu, tzn. w przedziale (0,r), jest w
+w przedziale (r,T), całkowicie zwrócony przez płytki. Stąd z kolei v
+dostarczona do płytek w czasie jednego okresu jest równa zeru.
+| przeprowadzając formalne obliczenia:
+
+y/k4_page40_|
+<image/wzory/k4_page40_formula2.png>
+
+<image/wzory/k4_page40_formula3.png>
+
+Przykład 1.2-7. Przez pojemność C płynie prąd i = 1,e7*sina
+dziale (0, +00). Obliczymy jaka powinna być wartość początkowa u(0
+aby dążyło ono do zera dla t + c.
+
+W tym przypadku należy skorzystać ze związku (1.2-38), przyjmując
+
+<image/wzory/k4_page40_formula5.png>
+
+Przeprowadzając całkowanie otrzymamy dla te (0, + ©):
+
+<image/wzory/k4_page40_formula6.png>
+
+Z zależności tej wynika, że u=+0 przy t co wtedy i tylko wtedy, gu
+Wartość ta jest zależna zarówno od parametrów sygnału prądu: I,, z, w, ja
+
+/k4_page40_
+1.2.4. Komentarze i uzupełnienia WEDYKCE PAY
+
+A. Terminologia. Dodatkowego wyjaśnienia wyma;
+terminologiczne.
+
+Nazw: opornik (rezystor), cewka, kondensator używar
+lenia przedmiotów realnych lub — inaczej — fizycznie istni
+cechą opornika jest jego opór, dominującą cechą cewl
+kondensatora — pojemność. Nazwy: opór, indukcyjność, |
+
+_ tu cechy fizyczne elementów rzeczywistych; są one zdefin
+
+M EE zi

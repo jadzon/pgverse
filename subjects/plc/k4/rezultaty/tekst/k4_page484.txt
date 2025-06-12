@@ -1,0 +1,14 @@
+ry/k4_page484_figure1.png able1.png
+
+Wyd. 8.162 Blok organizacyjny OB] — ste rowanie wyborem faz
+
+<image/tabele/k4_page484_table3.png>
+
+PID w fazie grzanie i stabilizacja
+
+<image/tabele/k4_page484_table2.png>
+
+Wyd. 8.164 Bloki startowe OB21 i OB22; w bloku FB] ustawiany jest okres prze-
+rwań dla bloku OB13
+
+484 Rozdział : 8.Programy przykładowe

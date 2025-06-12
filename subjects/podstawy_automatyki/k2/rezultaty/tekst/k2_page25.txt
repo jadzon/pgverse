@@ -1,0 +1,68 @@
+48
+
+<image/figury/k2_page25_figure1.png>
+
+5.2.4 Czas opóźnienia
+
+Czasem opóźnienia tę nazywa się czas wymagany, by przy wymuszeniu
+skokiem jednostkowym odpowiedź y(t) osiągnęła 10% wartości końcowej
+y(00), jak pokazano na rysunku 5.2
+
+5.2.5 Czas regulacji
+
+Czasem regulacji £, 4 nazywa się czas, po upływie którego wartość uchybu
+e(t) spełnia zależność |e(t) — e(oo)| £ A, czyli wartość y(t) różni się o nie
+więcej niż A od wartości końcowej y(oc), jak pokazano na rysunkach 5.2
+oraz 5.3. Najczęściej przyjmuje się A = 0.02 - y(oo), wtedy czas regulacji
+oznacza się jako t, 2%.
+
+5.2.6 Przeregulowanie
+
+Przeregulowaniem = nazywa się stosunek maksymalnego uchybu przej-
+ściowego o znaku przeciwnym do maksymalnego uchybu początkowego do
+wartości maksymalnego uchybu początkowego, jak pokazano na rysunku
+
+cm 1-5 zzz
+
+<image/wzory/k2_page25_formula3.png>
+
+lub, wyrażając przeregulowanie w procentach wartości zadanej
+
+<image/wzory/k2_page25_formula4.png>
+
+ 
+
+49
+
+<image/figury/k2_page25_figure2.png>
+
+5.2.7 Całkowe wskaźniki jakości
+
+Nowoczesne układy sterowania najczęściej wymagają wskaźników jakości
+bardziej wyszukanych niż czas regulacji czy przeregulowanie, za pomocą
+których w dowolnej chwili czasowej można otrzymać liczbową informację
+na temat jakości regulacji
+
+Najprostszym wskaźnikiem jest całka względem czasu z wartości
+bezwzględnej uchybu (IAE — integral of the absolute magnitude of the error),
+
+pówna
+
+<image/wzory/k2_page25_formula1.png>
+
+Wyrażenie określające wskaźnik ./, rośnie z upływem czasu t niezależnie
+od znaku uchybu, natomiast obranie go jako kryterium projektowego
+skutkuje uzyskaniem układu o słabym tłumieniu.
+
+Kolejnym wskaźnikiem jest całka względem czasu z kwadratu uchybu
+(ISE - integral of tlie squared error), równa
+
+<image/wzory/k2_page25_formula2.png>
+
+Wskaźnik Ją, podobnie jak J;, rośnie z upływem czasu niezależnie od
+znaku uchybu, jednak szybciej dla uchybów większych od jedności.
+
+Pozostałe wskaźniki to w kolejności: „/; (ITAE — mtegral of the time multi-
+plied by the absolute value of the error), Ją (ITSE - integral of the time multiplied
+by the squared error), Js (ISTAE — mitegral of the squared time multiplied by the
+absolute value of the error), Ję (ISTSE - integral of the squared time multiplied by

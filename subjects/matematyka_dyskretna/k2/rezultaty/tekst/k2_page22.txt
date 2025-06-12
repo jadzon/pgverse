@@ -1,0 +1,40 @@
+1.5. Operacje arytmetyczne w systemie dwójkowym 7
+
+Przypuśćmy, że chcemy dodać dwie liczby w postaci dwójkowej. Zakładamy tu, że obie
+liczby są tej samej długości. Jeżeli nie są, to krótszą z nich uzupełniamy na początku
+zerami.
+
+Algorytm dodawania. Aby dodać dwie liczby w postaci binamej:
+
+<image/wzory/k2_page22_formula1.png>
+dla kolejnych pozycji i od 0 do r obliczamy bit sumy s; oraz c; — tak zwany bit przenie-
+sienia do następnej pozycji:
+e najpierw obliczamy sg Oraz cp:
+44 i --„AŃRfmmuli - Ian wwsbm 7 dzielenia dg 4 €0 przez 2),
+
+<image/wzory/k2_page22_formula2.png>
+e następnie po kolei, dla kazdego ż od 1 do r, obliczamy:
+8; = (d; + €; + (4-1) mod 2,
+c; = 1, jeżeli co najmniej dwa spośród bitów d;, e, oraz c,_; są jedynkami,
+e na końcu obliczamy najbardziej znaczący bit sumy s,4; = c;.
+
+Wynikiem dodawania jest liczba
+<image/wzory/k2_page22_formula3.png>
+(może się zdarzyć, że s+, = 0).
+
+Przykład 1.5 Dodawanie liczb 10101 i 111 wygląda następująco:
+
+<image/wzory/k2_page22_formula4.png>
+
+Aby odjąć od siebie dwie liczby w systemie dwójkowym, odejmujemy bit po bicie
+od prawej do lewej, a w przypadku gdy trzeba odjąć bit większy od mniejszego, „poży-
+czamy” dwójkę z następnej (w lewo) pozycji (szczegóły algorytmu pozostawiono jako
+ćwiczenie).
+
+Przykład 1.6 Odejmowanie liczb 10101 i 111 wygląda następująco:
+
+10.1 0 1
+- 11 1
+1116
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

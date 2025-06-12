@@ -1,0 +1,34 @@
+<image/wzory/k4_page322_formula1.png>
+
+ 
+
+W przypadku sterowników Simatic S5 zbiór instrukcji procesora dzieli się na
+
+trzy kategorie:
+
+e  |nstrukcje podstawowe dostępne we wszystkich typach bloków.
+
+e  |nstrukcje uzupełniające dostępne wyłącznie w blokach funkcyjnych
+i umożliwiające realizację zaawansowanych zadań programowania.
+
+e  |nstrukcje systemowe również dostępne tylko w blokach funkcyjnych.
+
+Sterowniki Simatic S5 można programować korzystając z języka schematów
+drabinkowych lub języka bloków funkcyjnych. Stosując te języki programowa-
+nia należy jednak pamiętać o tym, iż nie udostępniają on całego zbioru instrukcji
+procesora. Pełny dostęp do wszystkich instrukcji procesora uzyskuje się pisząc
+program w postaci listy instrukcji /L (w niemieckojęzycznej wersji oprogramo-
+wania AWŁ od niem. Anweisungsliste). W odróżnieniu od schematu drabinko-
+wego czy schematu bloków funkcyjnych, gdzie kolejne instrukcje programu two-
+rzy się łącząc pewne symbole graficzne, język listy instrukcji jest zbliżony do
+języka maszynowego (asemblera). Kolejne instrukcje tworzy się w tym przypad-
+ku podając skrótową nazwę operacji i jej argument (ewentualnie argumenty). W
+dalszej części skoncentrujemy się na programowaniu w liście instrukcji.
+
+<image/tabele/k4_page322_table1.png>
+
+Każda instrukcja ma następujący format:
+
+<image/figury/k4_page322_figure1.png>
+
+41m RZ MZ MY 1% a0) =! — A—ódlaaiama hhmokcdioktlnt=| |<luilia

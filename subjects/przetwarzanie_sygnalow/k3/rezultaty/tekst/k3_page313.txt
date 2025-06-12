@@ -1,0 +1,59 @@
+Barwa dźwięku 343
+
+ 
+
+Ludzki słuch może określać Kierunek dochodzenia dźwięku, lecz słabo identyfikuje odle-
+głość do źródła dźwięku. W fali dźwiękowej jest bowiem niewiele wskazówek zawierają-
+cych informacje na ten temat. Ludzki słuch w pewnym stopniu reaguje na dźwięki o dużej
+częstotliwości jako na dochodzące z bliska, a na dźwięki o małych częstotliwościach — jako
+na dochodzące z daleka. Przyczyną takiego odczuwania jest rozpraszanie fal dźwiękowych
+o większych częstotliwościach podczas rozprzestrzeniania się dźwięku na duże odległości.
+Inną, raczej słabą, wskazówką dotyczącą odległości jest zawartość echa w sygnale, jeśli mó-
+wimy o odbiorze na odległościach w skali rozmiarów pokoju. Na przykład dźwięk w dużym
+audytorium zawiera echo o opóźnieniu ok. 100 ms, a w małym pokoju biurowym — typo-
+wo ok. 10 ms. Niektóre żywe organizmy rozwiązały ten problem, stosując sonar aktywny,
+czyli echolokację. Nietoperze i delfiny wydają z siebie mlaśnięcia i piski, które odbijają się
+od pobliskich obiektów. Mierząc czas między wysłanym sygnałem i odebranym echem, te
+zwierzęta mogą lokalizować obiekty z rozdzielczością ok. | cm. Eksperymenty wykazały,
+że niektórzy ludzie, zwłaszcza niewidomi, potrafią też, w niewielkim stopniu, korzystać
+z echolokacji.
+
+Barwa dźwięku
+
+Percepcja ciągłego dźwięku, takiego jak ton instrumentu muzycznego, jest często określana
+trzema subiektywnymi cechami dźwięku: jego głośnością, wysokością i barwą. Głośność
+jest miarą omówionego już poprzednio natężenia fali dźwiękowej. Wysokość dźwięku odpo-
+wiada częstotliwość składowej podstawowej w fali dźwiękowej. Wprawdzie istnieją pewne
+trudno uchwytne zjawiska w odbiorze tych właściwości dźwięku, są one jednak łatwo cha-
+rakteryzowane przez odpowiednie wielkości fizyczne! ?.
+
+Bardziej skomplikowanym problemem jest barwa dźwięku, którą określa się przez
+zawartość harmonicznych w sygnale. Na rys. 22.2 przedstawiono dwa przebiegi, każdy
+utworzony przez zsumowanie fali sinusoidalnej I kHz o amplitudzie jeden z falą sinu-
+soidalną 3 kHz o amplitudzie równej jedna druga. Różnica między oboma przebiegami
+polega na tym, że przy tworzeniu przebiegu na rys. 22 b) sinusoidę o większej częstotli-
+wości przed sumowaniem poddano inwersji. Inaczej to wyrażając: trzecia harmoniczna
+(3 kHz) jest przesunięta w fazie o 180? w stosunku do pierwszej (1 kHz). Mimo tak róż-
+niących się od siebie przebiegów w dziedzinie czasu, te sygnały — jako dźwięk — brzmią
+identycznie, jako że słyszenie jest związane z odbiorem amplitud składowych o różnych
+częstotliwościach, a jest całkiem nieczułe na ich fazę. Kszrałt przebiegu w dziedzinie
+czasu ma tylko pośredni związek ze słyszeniem i zwykle nie jest w ogóle uwzględniany
+w systemach audio.
+
+Nieczułość ucha na fazę można zrozumieć, rozważając, jak dźwięk rozprzestrzenia się w Śro-
+dowisku. Powiedzmy, że słuchacie osoby mówiącej do was w małym pokoju. Do waszych
+uszu dociera, po części, dźwięk bezpośredni, a po części — odbity od ścian, sufitu i podłogi.
+Ponieważ rozprzestrzenianie się dźwięku (takie właściwości jak tłumienie, odbicie i rezo-
+nans) zależy od częstotliwości, więc składowe o różnych częstotliwościach docierają do wa-
+szych uszu różnymi drogami. To powoduje, że względne fazy każdej składowej częstotliwo-
+ściowej zmieniają się, gdy poruszacie się po pokoju. Ucho nie uwzględnia tych zmian fazy,
+dlatego odbieracie głos jako niezmienny, gdy zmieniacie swoje położenie. Z punktu widzenia
+fizyki faza sygnału fonicznego nabiera charakteru losowego w miarę rozprzestrzeniania się
+sygnału w złożonym środowisku. Inaczej mówiąc, ucho jest nieczułe na fazę, gdyż zawiera
+ona mało pożytecznej informacji”.
+
+19 Odpowiednio: natężenie, częstotliwość podstawowa i widmo częstotliwościowe, które są obiektywny-
+mi cechami dźwięku (przyp. tłum.).
+
+20 Badania wskazują jednak na wrażliwość ucha na fazę, która jest różna w zależności od konkretnej
+struktury widmowej dźwięku (przyp. tłum.).

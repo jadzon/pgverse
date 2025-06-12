@@ -1,0 +1,40 @@
+przesuwamy się do kołumny, w której występuje niestabilny stan 2 (w tablicy
+stan taki nie jest objęty kółkiem), z którego z kolei osiągamy nowy stan stabilny
+2. W tym stanie wyjścia V, i V, przyjmują wartość /.
+
+Po zmianie wejść, np. gdy h, stanie się /, układ przechodzi ze stanu 2 przez nie-
+stabilny stan 3 do stanu stabilnego 3. Podobnie w przypadku zmiany wartości
+wejścia h z O na / układ przejdzie poprzez stan niestabilny 4 do stabilnego sta-
+nu 4. W ten sposób można dalej analizować wszystkie możliwe zmiany wejść
+i odpowiednie przejścia do kolejnych stanów układu.
+
+Znak *-* wskazuje na taki wewnętrzny stan automatu, który jest nieosiągalny.
+W Tab. 2.41 podano zestawienie wszystkich stanów automatu, tj. nawet tych,
+które nie mogą być osiągnięte z żadnego stanu wewnętrznego. Przy modelowa-
+niu większych systemów tablice stanów stają się prawie puste, tzn. duża część
+stanów automatu jest nieosiągalna. Taki sposób opisu automatu jest niezwykle
+szczegółowy i jest bardzo użyteczny dla dokładnej analizy działania małych sys-
+temów sterowania. Jednak dla projektowania i analizy dużych systemów staje się
+właściwie bezużyteczny ze względu na to, że liczba kolumn rośnie wykładniczo
+ze wzrostem liczby wejść, np. już tylko dla 20 wejść w tablicy stanów będzie
+więcej niż milion kolumn.
+
+<image/tabele/k4_page7/8_table1.png>
+
+2) Graf stanów
+
+W modełowaniu tym każdy węzeł grafu związany jest ze stanem automatu.
+Dla przykładu, węzeł 2 odpowiada ośmiu stabilnym stanom drugiego wiersza
+z Tab. 2.41. Natomiast łuk grafu jest określony przez zmienną logiczną lub
+funkcję kilku zmiennych. Przejście w grafie pomiędzy węzłami połączonymi
+łukiem następuje wtedy, gdy zmienna lub funkcja przypisana do tego łuku
+przyjmuje wartość /.
+
+W opisie za pomocą grafu stanów informacja o automacie jest bardziej skonden-
+sowana. Zmiany wejść nie powodujące zmiany stanów nie są uwzględniane.
+Pomija się też przejścia do tych samych stanów (self-loops). Dla przykładu, wej-
+Ścia m, h, i b, nie wpływają na przejście ze stanu 3 do innego stanu (5 lub 6)
+
+ 
+
+78 Rozdział : 2.Programowanie sterowników PLC

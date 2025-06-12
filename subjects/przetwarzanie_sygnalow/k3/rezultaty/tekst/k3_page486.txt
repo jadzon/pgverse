@@ -1,0 +1,15 @@
+Zaawansowane narzędzia programowe 523
+
+ 
+
+<image/tabele/k3_page486_table1.png>
+
+<image/figury/k3_page486_figure1.png>
+
+Następnym, zaawansowanym narzędziem programowym, z którego warto korzystać,
+jest zintegrowane środowisko tworzenia aplikacji. Jest to nieco fantazyjne określenie
+oznaczające, że wszystko, co jest potrzebne do programowania i testowania DSP, połą-
+czono w jeden, harmonijnie działający pakiet. Analog Devices dostarcza zintegrowane
+środowisko tworzenia aplikacji w postaci produktu zwanego VisualDSP” pracującego
+pod Windows*%95 i WindowsNTTM, Na rys. 29.7 pokazano przykład ekranu głównego
+zapewniającego „bezszwowy” sposób edycji, budowy i debugowania programów.

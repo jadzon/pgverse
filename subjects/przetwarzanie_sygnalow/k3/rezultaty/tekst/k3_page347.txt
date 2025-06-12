@@ -1,0 +1,41 @@
+23. Tworzenie i wyświetlanie
+
+ 
+
+<image/figury/k3_page347_figure1.figury/k3_page347_figure2.png>
+
+moszostpodjizzecznsponanijzotocn
+
+ 
+  
+   
+  
+  
+   
+  
+  
+  
+  
+   
+
+oznakowaną
+i normalizowany, aby wyznaczyć tablicę przeglądową pokazaną na rys. C)
+
+Odkształcanie obrazów (warping)
+
+Przy fotografowaniu powierzchni planet jednym z problemów jest zniekształcenie spo
+wodowane krzywizną powierzchni sferycznej. Powiedzmy, że stosujemy teleskop do fo
+tografowania kwadratowego obszaru w pobliżu środka powierzchni jakiejś planety (
+23.15 a). Planeta obraca się wokół własnej osi, więc po kilku godzinach będziemy mie
+widok przedstawiony na rys. 23.15 b). Obszar poprzednio sfotografowany wygląda jak
+mocno odkształcony, gdyż jest zakrzywiony w pobliżu horyzontu planety. Każdy z tyć
+dwóch obrazów zawiera pełną informację o obszarze, lecz widzianą z innej perspektywy
+Często wykonuje się fotografię taką, jak na rys. 23.15 a), lecz chciałoby się, żeby ob
+wyglądał jak na rys. 23.15 b) lub vice versa. Na przykład wykonanie mapy powierzch
+planety przez satelitę może wymagać tysięcy zdjęć zrobionych prosto z góry, jak na rys
+23.15 a). Aby wykonać obraz planety wyglądający naturalnie, tak jak obraz Wenus na
+23.1, trzeba każdy obraz odkształcić i umieścić we właściwym miejscu. Jako inny p
+kład rozważmy satelitę meteorologicznego prowadzącego obserwacje huraganu, trwające
+go nie bezpośrednio pod satelitą. Nie pozostaje nic innego, jak pobrać obraz skośnie, jal
+na rys. 23.15 b). Obraz jest potem przetwarzany na taki, jakby był fotografowany pros
+z góry, czyli jak na rys. 23.15 a).

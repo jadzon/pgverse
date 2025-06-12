@@ -1,0 +1,52 @@
+1.8. Wariancja 23
+
+1.8 Wariancja
+
+Definicja 1.50 Wariancją zmiennej losowej X o wartości oczekiwanej E(X) = my
+nazyw
+
+<image/wzory/k2_page82_formula1.png>
+
+Wariancja Var(.X ) jest miarą tego jak bardzo wartości zmiennej .X są oddalone od śred-
+niej. Im większe rozrzucenie wartości tym większa wariancja. W poniższym twierdzeniu
+zebrano podstawowe własności wariancji
+Twierdzenie 1.51 8) Var(X) > 0.
+
+b) Var(X) = E(X*) - mź
+
+c) Var(aX) = a? Var(X).
+
+d) Jeżeli zmienne X i Y są niezależne, to Var(X + Y ) = Var(X) + Var(Y').
+
+e) Jeżeli zmienne X,,...,. X, są parami niezależne, to
+
+<image/wzory/k2_page82_formula2.png>
+
+Dowód
+
+a) wynika z faktu, że zmienna (X — m x)? przyjmuje tylko nieujemne wartości,
+
+b) Var(X) = E((X —mx)”) = E(X? — 2mx X +mX) = E(X?) = 2mxE(X) +
+mĄ = E(X?) — 2m4 + mź = E(X*) - m4
+
+<image/wzory/k2_page82_formula3.png>
+
+poniewaz zmienne Sa niezaiezne. to Z [wiemmzenia 1.4.10
+
+<image/wzory/k2_page82_formula4.png>
+
+Z drugiei stronv
+
+<image/wzory/k2_page82_formula5.png>
+
+po odieciu stronami dwóch ostatnich równości
+
+tarzan: namnQ) fnrmiilnR nnm
+<image/wzory/k2_page82_formula7.png>
+
+Twierdzenie 1.52 (Nierówność Czebyszewa) Dla zmiennej losowej X z wartością oczekiwaną
+E(X) = mx oraz liczby rzeczywistej e > O mamy
+
+<image/wzory/k2_page82_formula8.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

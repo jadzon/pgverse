@@ -1,0 +1,37 @@
+474
+
+27. Kompresja danyc
+
+ 
+
+<image/wzory/k3_page439_formula1.png>
+
+   
+ 
+ 
+ 
+   
+   
+    
+    
+  
+
+Przebadano różne przekształcenia pod względem ich przydatności do kompresji danyc
+a niektóre przekształcenia wymyślono specjalnie do tego celu. Na przykład w przeksziałc
+niu Karhunena-Loevego uzyskuje się najlepszy z możliwych współczynnik kompresji, le
+PPP Ep ania e ed POWAZNE ZCP O 108
+wania, lecz nie daje wystarczającej kompresji. W tej silnej konkurencji różnych p
+
+ceń zwycięzcą jest pokrewne przekształceniu Fouriera dyskretne przekształcenie
+we DCT (Discrete Cosine Transform).
+O ile w przekształceniu Fouriera stosuje się fale sinusoidalne i kosinusoidalne, to w DCT
+stosowane tylko fale kosinusoidalne. Jest kilka wersji przekształcenia DCT, różniących 1
+nieco od siebie pod względem matematycznym. Jako przykład jednej z wersji wyobraźn
+sobie sygnał 129-punktowy, o próbkach od 0 do 128. Teraz zróbmy z niego sygnał 25
+-punktowy powielając próbki od I do 127 i uzupełniając nimi um Wara
+do 130. Mamy więc: 0, 1, 2, ..., 127, 128, 127, ..., 2, 1. Przeprowadziwszy p łoe
+Fouriera tego sygnału 256-7unkiowego, uzyskuje się 129-punktowe widmo tod oś
+we, rozmieszczone od O do 128. Ponieważ wymuszono symetrię sygnału w dziedzinie cza
+więc część urojona widma będzie zawierała same zera, Innymi słowy, zaczęliśmy od
+«punktowego sygnału w dziedzinie czasu, a skończyliśmy na widmie częstotliwości
+o 129 punktach, z których każdy jest amplitudą fali kosinusoidalnej. Voilś, oto DCT! |

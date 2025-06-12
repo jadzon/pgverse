@@ -1,0 +1,17 @@
+<image/wzory/k4_page342_formula1.png>
+
+<image/tabele/k4_page342_table1.png>
+
+W chwili, gdy wejście 7 7.0 zmieni wartość z O na 1, to na wyjściu Q 4.0 pojawi
+się wartość 1. Z chwilą, gdy na wejściu 7 7.0 wystąpi zmiana stanu z 1 na 0, cza-
+somierz zostanie uruchomiony i zacznie odliczać czas t=300x0.1s=30s. Na wyj-
+ściu Q 4.0 pozostanie stan 1 przez następne 30s od chwili pojawienia się zbocza
+opadającego na wejściu / 7.0. Gdy stan wejścia / 7.1 zmieni się z O na I, to
+wartość czasu zostanie wyzerowana, jeżeli czasomierz odlicza czas. Wyjście
+Q 4.0 przyjmie wówczas wartość 0. Jeżeli czasomierz nie odlicza czasu, to zmia-
+ny stanu wejścia zerującego 7 7./ nie mają żadnego wpływu na działanie czaso-
+mierza. Jeżeli na wejściu 7 7.0 nastąpi zmiana stanu z O na | w trakcie odliczania
+czasu, to zostanie on wyzerowany, a sprawdzenie czasomierza na stan 1 daje
+wynik 1.
+
+<image/figury/k4_page342_figure1.png>

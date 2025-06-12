@@ -1,0 +1,26 @@
+Jednocześnie styki tych przekaźników są wykorzystywane do potwierdzenia ich
+stanu załączenia/wyłączenia:
+
+SKI - styk potwierdzający stan przekaźnika K/;
+
+SK2 - styk potwierdzający stan przekaźnika K2;
+
+SK3 - styk potwierdzający stan przekaźnika K3;
+
+$K4 - styk potwierdzający stan przekaźnika K4.
+
+<image/figury/k4_page404_figure1.png>
+
+Rys. 8.7 Schemat połączeń asynchronicznego silnika trójfazowego
+
+Program sterujący załączaniem silnika powinien realizować następujące wyma-
+gania:
+
+1. Rozruch silnika
+
+Po naciśnięciu przycisku SR (wirowanie w prawo) lub SZ (wirowanie w lewo)
+powinien zadziałać przekaźnik K3 (połączenie w gwiazdę), a po 0.2s powinien
+zostać włączony odpowiedni przekaźnik K/ lub K2 w zależności od wybranego
+kierunku ruchu.
+
+404 Rozdział : 8.Programy przykładowe

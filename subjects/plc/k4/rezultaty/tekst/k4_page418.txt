@@ -1,0 +1,14 @@
+Wydruk programu dotyczy regulatora stabilizacji gęstości pulpy (DC10) w za-
+kładzie wzbogacenia rud miedzi prowadzonej w rząpi, w której mierzony jest po-
+ziom (LA). Wielkościami wejściowymi do regulatora jest wartość średnia
+nactnćni /GDETYNIOAGY | mazwiryrmu: 'SREDN12).
+
+'418_formula1.png 1g9e418_table1.png
+
+Wyd. 8.60 Deklaracja zmiennych
+
+<4_page418_figure2.png *-f'gure1.png
+
+nz
+
+41 8 Rozdział : 8.Programy przykładowe

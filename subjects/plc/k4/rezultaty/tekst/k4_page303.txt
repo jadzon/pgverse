@@ -1,0 +1,24 @@
+3. długość obszaru wyrażona w grupach 16-bitowych, jako liczba z zakresu
+1..255 w sterownikach 16-bitowych, lub 1..600 w sterownikach 24-bitowych,
+np. 100 odpowiada długości 1600 bitów (w przykładzie: 40002, czyli 32 bi-
+ty).
+
+<image/tabele/k4_page303_table1.png>
+
+Wyd. 6.24 Bloki MBIT i SENS do ustawiania i kontroli bitów.
+
+Wyd. 6.25 przedstawia przykład wykorzystania bloku SENS oraz bloku STAT do
+odczytu statusu sterownika w części programu logicznego. Informacje o statusie
+sterownika można odczytać i przesłać w obszar wyjść cyfrowych (0x) lub obszar
+rejestrów wewnętrznych (4x) jako tablica statusu. Maksymalna długość, opisują-
+ca w pełni status sterownika Modicon 984 korzystającego z protokołu S901 wy-
+nosi 75 słów, natomiast dla protokołu S908 wynosi ona 277 słów. Jednak nie
+zawsze pełna informacja jest potrzebna. Dlatego tablica statusu podzielona jest
+na części, z których pierwszy blok o długości 11 słów podaje informacje o statu-
+sie samej jednostki centralnej, następne 32 słowa opisują stan modułów wejścio-
+wych i wyjściowych, a ostatnie 32 słowa podają informacje o komunikacji
+(Tab. 2.3).
+
+ 
+
+6.7 Funkcje na ciągach bitów 303

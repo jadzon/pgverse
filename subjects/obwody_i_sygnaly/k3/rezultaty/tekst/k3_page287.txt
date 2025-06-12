@@ -1,0 +1,27 @@
+34. Nieliniowe obwody rezystancyjne prądu stałego 289
+
+I; = 25mA, I; =36mA, U; =32V, Uz=18V
+
+<image/figury/k3_page287_figure1.png>
+
+B. Zagadnienia pokrewne. Mając do dyspozycji charakterystyki łączne
+poszczególnych fragmentów układu (jak na rys. 3.4-8), można rozwiązać
+graficznie rozmaite zagadnienia pokrewne.
+
+Załóżmy, na przykład, że w układzie z rys. 3.4-7a należy znaleźć taką wartość
+siły elektromotorycznej E, dla której prąd I, = 3 mA, przy niezmienionych
+charakterystykach elementów. Można zauważyć, że punkty pracy poszczegól-
+nych elementów układu odpowiadają wówczas punktom 4”, B', C', D' na rys.
+3.4-8. Problem polega teraz na takim przesunięciu równoległym względem osi
+napięć krzywej g, aby przechodziła ona przez punkt 4'. Przecięcie otrzymanej
+po przesunięciu krzywej (krzywa g') z osią napięć wyznacza wartość szukanej
+siły elektromotorycznej E = 6,5 V.
+
+C. Obwody z elementami rezystancyjnymi. Metoda analizy graficznej
+obwodów nieliniowych prądu stałego, zilustrowana w p. A i polegająca na
+wyznaczaniu charakterystyk łącznych kolejnych fragmentów obwodu, może być
+bez trudu rozszerzona na obwody zawierające nieliniowe elementy rezys-
+tancyjne nie będące oporami (por. p. 1.5.2-H i przykład 1.5.3). Spełnione
+muszą być jednak przy tym pewne warunki, narzucone na charakterystyki
+łączonych szeregowo lub równolegle elementów, zapewniające jednoznaczność
+rozwiązań graficznych (por. p. E).

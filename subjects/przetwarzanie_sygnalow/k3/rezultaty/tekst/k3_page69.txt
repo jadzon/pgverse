@@ -1,0 +1,57 @@
+Szybkość wykonania — język programowania
+
+ 
+
+(w tym przykładzie 0). Na końcu każdego cyklu pętli pewna wartość skokowa (0,01 w tym
+przypadku) jest dodawana do indeksu. Wtedy jest podejmowana decyzja: czy jest konieczne
+więcej cykli pętli lub czy pętla jest zakończona. Pętla się kończy, gdy komputer stwierdzi,
+że wartość indeksu jest większa od wartości końcowej (w tym przykładzie 10,0). Jak wynika
+z danych na wyjściu programu, błąd zaokrąglenia w dodawaniach powoduje, że w wartości
+X, podczas wykonywania pętli, jest akumulowana znaczna rozbieżność. Faktycznie, zaku-
+mulowany błąd powstrzymuje wykonanie ostatniego cyklu pętli. Błąd powoduje, że zamiast
+wartości 10,0 w ostatnim cyklu, ostatnia wartość X jest równa 10,000133. Ponieważ wartość
+X jest większa od końcowej, więc komputer stwierdza, że jego praca jest wykonana i pętla
+kończy się przedwcześnie, Brakująca ostatnia wartość jest częstym błędem w wielu progra-
+mach komputerowych.
+
+W programie umieszczonym z prawej strony tablicy do sterowania pętlą zastosowano zmien-
+ną będącą liczbą całkowitą /%. Dodawanie, odejmowanie lub mnożenie dwóch liczb cał-
+kowitych daje zawsze inną liczbę całkowitą. Wynika stąd, że w zapisie stałoprzecinkowym
+w tych operacjach nie ma absolutnie żadnego błędu zaokrąglenia. Liczby całkowite idealnie
+nadają się do pętli sterujących, jak również do użycia jako inne zmienne podlegające wielo-
+krotnym operacjom matematycznym. Tu mamy gwarancję wykonania ostatniego cyklu pętli!
+Zawsze należy stosować liczby całkowite jako indeksy pętli i liczników, jeśli nie ma jakiejś
+silnej motywacji przemawiającej przeciw temu.
+
+będące potęgami dwóch (takie jak np. 1/2, 1/4, 3/8, 27/16) zamiast potęg dziesięciu (takich jak np.
+0,1: 0,6; 1,4; 2,3). Przykładowo lepiej jest zastosować: FOR X = I TO 10 STEP 0,125 zamiast
+FOR X = I TO 10 STEP0,1. Dzięki temu indeks ma zawsze dokładną reprezentację binamą, co re-
+dukuje błąd zaokrąglenia. Na przykład liczba dziesiętna 1,125 może być dokładnie reprezentowana
+w kodzie binamym jako 1,001000000000000000000000 x 27. Liczba dziesiętna 0,1 zaś znajdzie
+się pomiędzy dwiema liczbami zmiennoprzecinkowymi: 1.0999999046 i 1,1000000238 (w kodzie
+binamym są to liczby: 1.00011001100110011001100 x 2? oraz 1,00011001100110011001101 x 20).
+To powoduje, że za każdym razem do programu jest wprowadzany inherentny błąd równy 1,1.
+Warto zapamiętać pożyteczny fakt: w zapisie zmiennoprzecinkowym o pojedynczej dokład-
+ności mamy dokładną reprezentację każdej liczby całkowitej w zakresie +£16,8 milionów
+(ściśle mówiąc +2?*). Powyżej tej wartości odstępy między poziomami są większe od jed-
+ności, co jest przyczyną braku niektórych liczb całkowitych. To umożliwia dodawanie, odej-
+mowanie i mnożenie całkowitych liczb zmiennoprzecinkowych (w zakresie £16,8 milionów)
+bez błędów zaokrąglenia.
+
+Szybkość wykonania — język programowania
+
+Programowanie DSP można z grubsza podzielić na trzy poziomy zaawansowa-
+nia: asemblacja, kompilacja oraz specjalistyczne oprogramowanie aplikacyjne. Aby zro-
+zumieć różnicę między nimi, musimy sięgnąć do podstaw elektroniki cyfrowej. Wszystkie
+mikroprocesory jako jeden z podstawowych elementów zawierają zestaw wewnętrznych
+rejestrów binarnych, czyli grupę przerzutników mogących zapamiętywać szeregi zer i jedy-
+nek. Na przykład procesor 8088, rdzeń oryginalnego IBM PC, ma cziery rejestry ogólnego
+przeznaczenia, z których każdy składa się z 16 bitów. Są one identyfikowane nazwami: AX,
+BX, CX i DX. Jest również dziewięć rejestrów dodatkowych do specjalnych celów. Oto ich
+nazwy: SI, DI, SP, BP, CS, DS, SS, ES i IP. Na przykład IP — wskaźnik instrukcji (instruction
+poinier) śledzi, gdzie w pamięci znajduje się następna instrukcja.
+
+Przypuśćmy, że piszemy program mający zsumować liczby: 1234 i 4321. Gdy zaczyna
+się program, rejestr IP zawiera adres jakiejś sekcji pamięci, w której znajduje się pewna
+sekwencja zer i jedynek, jak to przedstawiono w tablicy 4.3. Chociaż dła większości
+ludzi wydaje się ona nie mieć żadnego sensu, ta sekwencja zer i jedynek zawiera jednak

@@ -1,0 +1,43 @@
+518 29, Rozpoczęcie pracy z DSP
+
+<image/figury/k3_page481_figurefigury/k3_page481_figure3.png>
+
+<image/figury/k3_page481_figure1.png>
+
+   
+  
+ 
+ 
+   
+    
+   
+  
+ 
+  
+
+IW ARA awake WE EA Na rys. a) pokazano od-
+częstotliwościową filtru z użyciem okna Blackmana
+
+powiedź dolnoprzepustowego okienkowanego funkcją sinc,
+
+i 150-punktowej odpowiedzi impulsowej filtru. Na rys. b), BEE
+łowo, rozciągając skalę pionową. Gdy odpowiedź impulsowa filtru jest wyrażona w
+
+py ena ri Aeon naczyn ią Jak wyni-
+
+ka z rys. c), d), odnoszących się do statoprzecinkowej odpowiedzi impulsowej filtru, szum zaokrąglania jest w tym
+przypadku niedoskonatością dominującą
+
+Inne spojrzenie na systemy stało-
+i zmiennoprzecinkowe
+
+W tym ostatnim przykładzie wykorzystamy jedną z głównych cech procesorów sy.
+SHARC, jaką jest zdolność wykonywania obliczeń zmiennoprzecinkowych. Chociaż
+pobierane z kodera-dekodera i do niego przekazywane są w formacie stałoprzecinkowym,
+zadajemy sobie trud przekształcenia ich na format zmiennoprzecinkowy, z którego sk
+my w pośrednim algorytmie filtracji SOI. Zgodnie z rozważaniami z poprzedniego ro
+istnieją dwie przyczyny, dla których jest wskazane przetwarzanie danych przy
+operacji matematycznych zmiennoprzecinkowych: łatwość programowania i lepsze dzi
+algorytmu. Czy to rzeczywiście czyni jakąś różnicę? i
+Dla programisty różnica jest bardzo duża. Program zmiennoprzecinkowy jest znacznie ł
+twiejszy do napisania. Spójrzmy znowu na program asemblerowy w tablicy 29.2. Główna

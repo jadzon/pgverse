@@ -1,0 +1,43 @@
+16 Rozdział 1. Arytmetyka
+
+1.11.3 Inne typy cał kowite
+W języku Pascal, oprócz integer, można używać innych typów całkowitych; są to:
+e shortint, zawiera liczby całkowite z przedziału od —128 do 127,
+e byte, zawiera liczby całkowite z przedziału od 0 do 255,
+e word, zawiera liczby całkowite z przedziału od 0 do 65535,
+e longint, zawiera liczby całkowite z przedziału od — 2147483648 do 2147483647.
+
+Elementy typu byte i shortint przechowywane są w jednym bajcie (osiem bitów) pa-
+mięci, typu word — w dwóch bajtach, a typu longint — w czterech bajtach pamięci.
+Liczby typu shortint i longint mogą być dodatnie lub ujemne i są zapamiętywane w po-
+staci uzupełnieniowej z pierwszym bitem oznaczającym znak (podobnie jak liczby typu
+integer). Elementy typu byte i word mogą być tylko dodatnie i są przechowywane w po-
+staci dwójkowej.
+
+1.12 Wyrażenia arytmetyczne w języku Pascal
+W języku Pascal wyrażeniami arytmetycznymi są stałe liczbowe, na przykład:
+234, —123, 0.123, —23.45,  3.21E—5,
+
+oraz zmienne typów liczbowych (np. integer lub real). Wyrażenia można także budować
+za pomocą operatorów arytmetycznych i nawiasów. Jeżeli U oraz W są dwoma wyrażenia-
+mi arytmetycznymi, to wyrażeniami arytmetycznymi są także:
+
+U+W, U-W, U*W, U/W, (U), U div V, U mod V.
+Gwiazdka * reprezentuje tutaj znak mnożenia, a operacje div oraz mod to iloraz i reszta
+z dzielenia całkowitoliczbowego (są one opisane dokładnie w rozdziale o teorii liczb).
+
+<image/wzory/k2_page31_formula1.png>
+<image/wzory/k2_page31_formula2.png>
+
+Dla | EBE *J a ea, SE vjvyv ZPA a wa w w. vana myg .... J*y wal reguł
+znanych ze szkoły. Najpierw oblicza się wyrażenia w nawiasach, potem mnożenie i dzie-
+lenie (od lewej do prawej), a na końcu dodawanie i odejmowanie (od lewej do prawej).
+
+1.13 Poszukiwania binarne (binary search)
+
+Znana jest gra w dwadzieścia pytań. W tej grze za pomocą dwudziestu pytań, na które
+odpowiedzią może być „tak* lub „nie”, należy odgadnąć pomyślaną przez przeciwnika
+rzecz. Zobaczymy, jak można wykorzystać binamy system zapisu liczb do opracowania
+strategii wygrywającej w tej grze.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

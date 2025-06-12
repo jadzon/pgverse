@@ -1,0 +1,12 @@
+<image/figury/k4_page456_figure3.png>
+
+Wyd. 8.121 Podprogram FAZA_2 (grzanie) — koniec fazy grzania i zamknięcie zawo-
+ru dopływu medium grzewczego
+
+<image/figury/k4_page456_figure2.png>
+
+reakcji
+
+<image/figury/k4_page456_figure1.png>
+
+456 Rozdział : 8.Programy przykładowe

@@ -1,0 +1,39 @@
+Problem śledzenia wartości zadanej
+
+Model stanowy po uwzględnieniu sprzężenia:
+
+<image/wzory/k7/_page105_formula1.png>
+
+Wielomian charakterystyczny:
+<image/wzory/k/_page105_formula2.png>
+Wielomian charakterystyczny żądany:
+
+<image/wzory/k/_page105_formula3.png>
+Po porównaniu współczynników wielomianów i rozwiązaniu
+otrzymanego układu równań uzyskujemy:
+k, =4,25[V / 4]
+<image/k11875v/vwzory/k/_page105_formula4.png>
+k, =—6,25[V /V]
+
+POLITECHNIKA
+GDANSKA
+
+ 
+
+z
+O
+
+Q
+0
+o
+
+2
+
++
+p
+mo
+O
+=
+0
+
+|

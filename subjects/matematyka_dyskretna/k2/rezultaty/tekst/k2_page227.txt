@@ -1,0 +1,39 @@
+6 Rozdział 1. Poprawność programów
+
+Nie ma miejsca w tej książce na rozwijanie teorii dowodzenia poprawności progra-
+mu. Zajmiemy się tylko dwoma przykładami. Pierwszy to algorytm Euklidesa, który był
+przedstawiony w rozdziale z teorii liczb i tam też przedstawiono dowód jego poprawności.
+Teraz tylko sformułujemy go w języku asercji.
+
+1.5 Algorytm Euklidesa jeszcze raz
+
+Oto jeszcze raz algorytm Euklidesa opisany w języku Pascal:
+
+<image/figury/k2_page227_figure1.png>
+
+W programie umieściliśmy trzy punkty kontrolne. Punkt A na początku, zaraz za
+instrukcją readln(a,b). A sercja W „ związana z punktem A orzeka, żea i b to dwie dodatnie
+liczby całkowite.
+
+Punkt B znajduje się na końcu programu, tuż przed instrukcjąwritetln. Asercja * p
+związana z tym punktem orzeka, że p zawiera największy wspólny dzielnik liczb a i b.
+
+Trzeci punkt kontrolny C' jest wewnątrz pętli, tuż przed instrukcją warunkową if.
+Asercja Wc orzeka, że para liczb p i q ma taki sam największy wspólny dzielnik co para
+aib.
+
+Dowodzimy cztery implikacje:
+
+e jeżeli wykonanie programu jest w punkcie 4 i spełniona jest asercja W 4, a następ-
+nie program przejdzie do punktu C, to spełniona będzie asercja *o,
+
+e jeżeli wykonanie programu jest w punkcie C i spełniona jest asercja W ©, a następ-
+nie program ponownie przejdzie do punktu C, to spełniona będzie asercja Wo,
+
+e jeżeli wykonanie programu jest w punkcie C i spełniona jest asercja W ©, a następ-
+nie program przejdzie do punktu B, to spełniona będzie asercja W p,
+
+e jeżeli wykonanie programu jest w punkcie 4 i spełniona jest asercja W 4, a następ-
+nie program przejdzie do punktu B, to spełniona będzie asercja W 5.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

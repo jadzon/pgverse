@@ -1,0 +1,32 @@
+—]
+Gi
+
+Stopień prawdziwości stwierdzenia
+
+<image/wzory/k2_page70_formula1.png>
+
+można określić znajdując uporządkowaną parę, której pierwszym elementem jest z.
+Stopniem prawdziwości stwierdzenia jest drugi element uporządkowanej pary. W
+praktyce, określenia funkcja przynależności i podzbiór rozmyty używane są wymien-
+nie.
+
+Wiele określeń występujących w języku naturalnym wygodnie jest reprezentować
+w postaci zbiorów rozmytych. Ilustrują to poniższe przykłady.
+PRZYKŁAD 5.1
+
+Zbiór „liczb rzeczywistych dużo większych od 1” może być opisany przez funkcję
+przynależności przedstawioną na rysunku ??. |
+
+<image/figury/k2_page70_figure2.png>
+Rys. 5.1: Funkcja przynależności zbioru rozmytego: „liczb rzeczywistych dużo większych od
+1”
+
+PRZYKŁAD 5.2
+Zbiór „liczby kromek chleba zjadanych w czasie typowego śniadania” może być zde-
+finiowany funkcją przynależności przedstawioną na rysunku ??. mu
+
+<image/figury/k2_page70_figure1.png>
+
+Rys. 5.2: Funkcja przynależności zbioru rozmytego: „liczba kromek chleba zjadanych w
+
+czasie typowego śniadania”

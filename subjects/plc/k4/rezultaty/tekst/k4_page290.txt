@@ -1,0 +1,29 @@
+_6.5__ Funkcje arytmetyczne
+
+ 
+
+Lista instrukcji arytmetycznych dostępnych w sterownikach Modicon podzielona
+jest na grupy:
+« Standardowe operacje wykonywane na liczbach pojedynczej precyzji.
+a  [nstrukcje arytmetyczne podwójnej precyzji,
+« Operacje jednoargumentowe wykonywane na liczbach całkowitych
+16-bitowych,
+«  O)peracje zmiennoprzecinkowe i mieszane.
+
+<image/tabele/k4_page290_table1.png>
+
+<image/figury/k4_page290_figure2.png>
+
+ 
+
+Wyd. 6.9 Dodawanie stałych.
+
+<image/figury/k4_page290_figure1.png>
+
+Wyd. 6.10 Dodawanie stałych do zmiennych rejestrowych.
+
+ 
+
+uw”
+
+2900 Rozdział : 6 Programowanie sterowników AEG SCHNEIDER Modicon

@@ -1,0 +1,43 @@
+2.1. Wielowrotniki i sieci _ 205
+
+<image/wzory/k3_page203_formula1.png>
+
+ 
+
+<image/figury/k3_page203_figure1.png>
+a)
+
+b) |
+(2)
+jA) |
+2R
+e, 2R
+©
+
+Rys. 2.1-25
+
+ 
+
+Podane przykłady wskazują, że zastosowanie zasady superpozycji może
+w znacznym stopniu uprościć analizę rozważanego obwodu. Z tego względu
+zasada superpozycji hędzie w dalszych rozdziałach często wykorzystywana jako
+narzędzie analizy obwodów liniowych.
+
+D. Sformułowanie zasady kompensacji. Rozważmy ponownie dowolną
+sieć skupioną omówioną w p. A i przedstawioną na rys. 2.1-20. Zakładamy, że
+przy danych pobudzeniach ey, >,..., €, Jm + 11---,j, Wszystkie prądy i napięcia
+w sieci są jednoznacznie określone. Dotyczy to zatem także prądu i oraz
+napięcia u na dowolnie wybranym dwójniku D sieci (rys. 2.1-20).
+
+Nazwijmy sieć przedstawioną na rys. 2.1-20 siecią pierwotną i rozpatrzmy
+sieć zmodyfikowaną (rys. 2.1-26a), w której wybrany dwójnik D został zastąpiony
+idealnym źródłem napięciowym o sileelektromotorycznej e = u, równej napię-
+ciu u nadwójniku D sieci pierwotnej. Zakładamy, że poza tą zmianą obie sieci
+niczym się nie różnią. Jeśli w tak zmodyfikowanej sieci (rys. 2.1-26a) wszystkie
+prądy i napięcia są również jednoznacznie określone przy danych pobudzeniach
+Ly, 2,111, Em Jm+ 11::*; J„ OTAZ €, tO są One identyczne jak w sieci pierwotnej.
+
+Postępując analogicznie, można rozważać inną sieć zmodyfikowaną utwo-
+rzoną z sieci pierwotnej przez zastąpienie wybranego dwójnika D idealnym
+źródłem prądowym o wydajności prądowej j = i, równej prądowi i dwójnika
+D w sieci pierwotnej (rys. 2.1-26b). Jeśli w tak zmodyfikowanej sieci wszystkie

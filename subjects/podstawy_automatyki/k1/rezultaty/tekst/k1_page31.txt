@@ -1,0 +1,33 @@
+Po sprowadzeniu F(s) do wspólnego mianownika i porównaniu liczników obu
+stron otrzymujemy wyrażenie
+
+<image/wzory/k1_page31_formula1.png>
+Wartości współczynników 4, B i C wyznaczymy dwiema metodami.
+
+Metoda I
+Przekształcamy równanie:
+
+<image/wzory/k1_page31_formula2.png>
+
+Po porównaniu współczynników przy odpowiednich potęgach zmiennej s otrzy-
+mujemy poniższy układ równań
+
+<image/wzory/k1_page31_formula3.png>
+
+Z równania trzeciego obliczamy współczynnik 4:
+1=—24,
+l
+
+A=-——.
+2
+
+Z pierwszego równania wyznaczamy współczynnik B, podstawiamy do drugiego.
+Uwzględniając już obliczoną wartość A, otrzymujemy:
+
+<image/wzory/k1_page31_formula4.png>
+
+Obliczamy współczynnik C
+
+rzory/k1_page31_formula5.png
+
+33

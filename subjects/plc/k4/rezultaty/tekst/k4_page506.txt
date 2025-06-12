@@ -1,0 +1,40 @@
+<image/wzory/k4_page506_formula1.png>
+
+adresowanie hierarchiczne (hierarchicał addressing) — bezpośrednia
+reprezentacja danej jako elementu w hierarchii fizycznej lub logicznej, np.
+określony punkt w module, który jest umieszczony w kasecie, która jest
+umieszczona w szafie, itd.
+
+argument (argument) — synonim do parametr wejściowy lub parametr
+wyjściowy;
+
+bezpośrednia reprezentacja (direct representation) — sposób przedstawie-
+nia zmiennej w programie sterownika PLC, na podstawie którego można
+bezpośrednio określić odpowiadającą jej fizyczną lub logiczną lokalizację
+podaną przez producenta;
+
+blok działania (action block) — element grafu sekwencji SFC, który przetwa-
+rza logiczną zmienną wejściową w celu określenia wartości logicznej zmien-
+nej wyjściowej lub warunku zezwolenia dla działania zgodnie z przyjętym
+algorytmem sterowania;
+
+blok funkcyjny (function block) — element języka zawierający określenie
+struktury danych na wejściu, wyjściu i zmiennych wewnętrznych oraz zbioru
+operacji do wykonania na nich;
+
+blok funkcyjny bistabilny (bistable function block) — blok funkcyjny
+o dwóch stanach stabilnych sterowany przez jedno lub więcej wejść;
+
+ciało (body) — część elementu oprogramowania określająca operacje, które
+mają być wykonane na określonych operandach elementu oprogramowania
+z chwilą jego wywołania (invoke) do wykonania;
+
+ciąg bitów (bit string) — element danych zawierający jeden lub więcej bitów;
+ciąg znaków (character string) - zmienna złożona zawierająca uporządko-
+waną sekwencję znaków;
+
+czas astronomiczny (absolute time) — połączenie godziny dnia i daty;
+
+ 
+
+506 Dodatek A.. Definicje wybranych pojęć według normy IEC 1/31-3

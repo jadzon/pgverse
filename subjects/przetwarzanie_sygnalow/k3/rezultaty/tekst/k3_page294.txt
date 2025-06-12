@@ -1,0 +1,38 @@
+20. Filtry Czebyszew
+
+ 
+   
+ 
+ 
+   
+    
+  
+    
+    
+
+Filtry Czebyszewa są stosowane do rozdzielania pasm częstotliwości. Wprawdzie nie
+nują swym działaniem filtrom okienkowanym funkcją sinc, lecz w wielu zastosowaniach
+
+przez rekursję, a nie przez splot. W projektowaniu tych filtrów korzysta się z opisanej w
+le 33 metody matematycznej zwanej przekształceniem Z. W tym rozdziale zawarto
+konieczne do stosowania filtrów Czebyszewa, bez wchodzenia w labirynt wyższej matematyki.
+
+Odpowiedzi Czebyszewa i Butterwortha
+
+Odpowiedź Czebyszewa jest narzędziem matematycznym służącym do osiągnięcia szybszego
+opadania charakterystyki przez dopuszczenie do zafalowań na odpowiedzi częstotliwościowej.
+Filtry analogowe i cyfrowe, w których zastosowano takie podejście do problemu, nazywamy
+filtrami Czebyszewa. Analogowe filtry Czebyszewa były użyte np. w rozdziale 3 przy prze-
+
+tymi dwoma parametrami. Jeśli zafałowania są ustalone na zero, to mamy filtr o charakterystyce
+maksymalnie płaskiej, zwany też filtrem Butterwortha (od nazwiska $. Butterwortha, brytyj-
+skiego inżyniera, który opisał tę odpowiedź filtru w roku 1930). Dobrym wyborem w filtrach
+cyfrowych są często zafalowania równe 0,5%. Jest to wartość dopasowana do typowej dokład-
+ności układów elektroniki analogowej, przez które przeszedł sygnał.
+
+Omówione w tym rozdziale filtry Czebyszewa są nazywane filtrami typu 1, co znaczy, że zafalo-
+wania odpowiedzi są dopuszczalne tylko w paśmie przepustowym. Natomiast filtry Czebyszewa
+typu 2 mają zafalowania tylko w paśmie zaporowym. Filtry typu 2 są rzadko stosowane i nie bę-
+dziemy ich rozpatrywać. Jest jednak pewne ważne rozwiązanie zwane filtrem eliptycznym. Ma
+
+<image/figury/k3_page294_figure1.png>

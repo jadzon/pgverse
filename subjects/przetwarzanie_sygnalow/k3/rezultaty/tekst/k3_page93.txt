@@ -1,0 +1,36 @@
+5. Systemy liniowe
+
+ 
+
+Rozkład z przeplotem
+
+Jak przedstawiono na rys. 5.15, w rozkładzie z przeplotem sygnał jest rozkładany na dwa
+sygnały składowe — sygnał próbek parzystych oraz sygnał próbek nieparzystych (proszę nie
+mylić z sygnałami o symetrii parzystej i nieparzystej). Aby wyznaczyć sygnał próbek parzy-
+stych, trzeba zacząć od sygnału oryginalnego i ustawić na zero wszystkie próbki o numerach
+parzystych. Jest to proste.
+
+Taki rozkład może na pierwszy rzut oka wydawać się trywialny i nieinteresujący. Ale to tylko
+wrażenie pozorne, gdyż rozkład z przeplotem jest podstawą niezwykle ważnego w DSP algoryt-
+mu — szybkiego przekształcenia Fouriera (FFT). Procedura obliczeń rozkładu Fouriera jest znana
+od kilkuset lat. Niestety jest ona frustrująco powolna. Jej realizacja na współczesnych kompu-
+terach wymaga często minut lub godzin. FFT jest rodziną algorytmów opracowanych w latach
+60. XX wieku w celu zredukowania czasu obliczeń. Zastosowana strategia jest świetnym przy-
+kładem DSP — zredukowanie sygnału do elementamych składowych przez powtarzane Stosowa-
+nie transformacji z przeplotem, obliczenie rozkładu Fouriera poszczególnych składowych oraz
+syntezę wyników dającą końcową odpowiedź. W ten sposób uzyskuje się rewelacyjną poprawę
+szybkości obliczeń — na ogół o czynnik rzędu setek lub tysięcy razy.
+
+Rozkład Fouriera
+
+Rozkład Fouriera ma charakter bardzo matematyczny i wcale nie jest oczywisty. Przykład tej
+metody przedstawiono na rys. 5.16. Każdy sygnał N-punktowy może być rozłożony na N+ 2
+sygnałów, połowa z nich to przebiegi sinusoidalne a połowa kosinusoidalne. Fala kosinusoidalna
+w
+sów w N próbkach, jest to więc sygnał stałoprądowy. Następne składowe kosinusoidalne xc;[n],
+zale) san] za owiewka. 3 (b rak deny dion. ba owal d>
+tyczy też dalszych składowych zarówno kosinusoidalnych, jak i sinusoidalnych. Ponieważ czę-
+stotliwość każdej ze składowych jest ustalona, więc jedynym parametrem zmieniającym się dla
+różnych sygnałów jest ampliruda każdego z przebiegów kosinusoidalnych i sinusoidalnych.
+
+<image/figury/k3_page93_figure1.png>

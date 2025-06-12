@@ -1,0 +1,27 @@
+126 1. Pojęcia podstawowe — elementy
+
+<image/wzory/k3_page126_formula1.png>
+<image/wzory/k3_page126_formula2.png>
+
+Na rys. 1.7-10 użyliśmy stosowanych często w praktyce symboli źródeł prądowych o stałych
+wydajnościach prądowych (por. przypis na str. 127).
+
+F. Połączenia źródeł idealnych. Rozpatrzymy z kolei połączenia źró-
+deł idealnych.
+
+Z rozważań przeprowadzonych w p. E wynika, że zawsze możemy łączyć:
+szeregowo idealne źródła napięciowe i równolegle idealne źródła prądowe.
+Słuszne pozostają, odpowiednio: wzór (1.7-11) dla połączenia szeregowego
+idealnych źródeł napięciowych (rys. 1.7-11) oraz wzór (1.7-13) dla połączenia
+równoległego idealnych źródeł prądowych (rys. 1.7-12).
+
+<image/figury/k38_page126_figure2.png>
+
+Nie jest natomiast możliwe, w ogólnym przypadku, łączenie równoległe
+idealnych źródeł napięciowych oraz łączenie szeregowe idealnych źródeł prą-
+dowych. Połączenia takie mogą bowiem prowadzić do sprzeczności wynika-
+jących z równości definicyjnych (1.7-1) i (1.7-2). Łączenie takie jest możliwe
+tylko w przypadku szczególnym, kiedy wszystkie siły elektromoto-
+ryczne są jednakowe (rys. 1.7-13):
+
+<image/figury/k3_page126_figure1.png>

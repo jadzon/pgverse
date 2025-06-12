@@ -1,0 +1,9 @@
+20 3. Podstawy techniki cyfrowej
+
+<image/figury/k3_page30_figure1.png>
+
+figury/k3_page30_figure2.
+
+<image/tabele/k3_page30_table1.png>
+
+Rysunek 3.10. Komparator czterobitowy

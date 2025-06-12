@@ -1,0 +1,35 @@
+3.8. Badanie stabilności układów automatyki
+
+Układ otwarty w dziedzinie częstotliwości projektujemy tak, by zapewniona była
+jego stabilność po zamknięciu sprzężenia zwrotnego.
+
+Omawiana metoda opiera się na wykorzystaniu kryterium stabilności Nyquista ukła-
+dów stabilnych, według którego po zamknięciu sprzężenia układ pozostanie stabilny, jeśli
+charakterystyka Nyquista mija „z dołu” punkt —1+y0 płaszczyzny zespolonej (rys. 3.18).
+
+<image/figury/k1_page133_figure1.png>
+
+Zwykle od układów regulacji wymagamy by „trzymały się w odpowiedniej odległości
+od punktu —1+;0”. Definiuje się więc zapas stabilności wyrażony np. przez margines
+amplitudy (wzmocnienia) i fazy:
+
+— margines amplitudy: AM =1-M(w_,) oznacza, ile razy trzeba zwiększyć
+wzmocnienie, by układ znalazł się na granicy stabilności;
+
+—_ margines fazy: AQ=q+ (w) ozrtacza, o ile stopni trzeba zwiększyć (w kierunku
+ujemnych wartości) przesunięcie fazy, by układ znalazł się na granicy stabilności.
+
+Rozważając charakterystyki częstotliwościowe (logarytmiczne modułu i fazy),
+kryterium stabilności można sformułować następująco:
+
+Zamknięty układ regulacji jest stabilny wtedy, gdy logarytmiczna charakte-
+rystyka modułu układu otwartego ma wartość ujemną przy pulsacji odpowiadają-
+cej fazie —180 stopni.
+
+Przykład 3.16
+Wykorzystując funkcję margin, wyznaczyć zapas modułu i fazy elementu o trans-
+mitancji
+
+<image/wzory/k1_page133_formula1.png>
+
+135

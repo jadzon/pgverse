@@ -1,0 +1,59 @@
+Szybkość wykonywania — sprzęt 87
+
+ 
+
+ 
+
+towna. Przesyłanie danych między główną pamięcią i jednostką centralną jest na ogół wą-
+skim gardłem ograniczającym szybkość. Jednostka centralna prosi pamięć główną o infor-
+mację binarną zarejestrowaną pod określonym adresem pamięciowym i następnie oczekuje
+na otrzymanie tej informacji. Powszechnie stosowaną metodą ominięcia tej trudności jest
+użycie pamięci podręcznej (cache memory). Jest to niewielka, bardzo szybka pamięć będąca
+buforem między CPU i pamięcią główną. Pamięć podręczna ma, typowo, pojemność, kilku-
+set kilobajtów. Gdy CPU żąda od pamięci głównej dostarczenia danych binarnych z określo-
+nego adresu, to szybkie elektroniczne układy cyfrowe kopiują do pamięci podręcznej pewną
+sekcję pamięci głównej wokół tego adresu. Przy następnym żądaniu przez CPU informacji
+z pamięci jest bardzo prawdopodobne, że ta informacja będzie zawarta w pamięci podręcz-
+nej, dzięki czemu jej pozyskanie będzie bardzo szybkie. Wynika to z faktu, że w programach
+jest tendencja do zwracania się do komórek pamięci będących w najbliższym sąsiedztwie
+tych, z których poprzednio pobrano dane, W typowych zastosowaniach komputerów osobi-
+stych dodanie pamięci podręcznej może kilkakrotnie zwiększyć szybkość działania. Pamięć
+podręczna może znajdować się w tym samym układzie scalonym, co jednostka centralna lub
+może być zewnętrznym układem elektronicznym.
+
+Szybkość, z jaką dane są przesyłane między podsystemami, zależy od liczby dostępnych rów-
+noległych linii danych oraz od maksymalnej szybkości przesyłania sygnałów cyfrowych wzdłuż
+
+nych wiodących przez złącza do innych płytek drukowanych (tj. struktura magistrałowa). Jest więc
+silna motywacja do „upchnięcia” w jednostce centralnej tak dużo elektroniki, ile tylko można.
+Szczególnie nieprzyjemnym problemem związanym z szybkością pracy komputera jest kom-
+patybilność wsteczna. Firma komputerowa, wprowadzając nowy produkt (powiedzmy, kartę
+zbierania danych lub program), chce dla niego znaleźć możliwie jak największy rynek. To
+powoduje, że produkt musi być kompatybilny z większością aktualnie używanych kompute-
+rów, co obejmuje kilka generacji rozwoju technicznego. Takie wymaganie często ogranicza
+działanie sprzętu lub oprogramowania do poziomu odpowiadającego systemom znacznie star-
+szym. Przypuśćmy na przykład, że kupujemy kartę wejścia/wyjścia jako moduł wtykany do
+magistrali osobistego komputera Pentium | GHz. Karta ma 8 linii do wysyłania i odbierania
+danych (jednorazowo jeden bajt). Następnie piszemy program asemblera do bardzo szybkiego
+przesyłania danych między naszym komputerem i jakimś urządzeniem zewnętrznym, takim
+jak eksperyment naukowy lub inny komputer. Ku naszemu zdziwieniu maksymalna przepływ-
+ność danych jest tylko ok. 100 000 bajtów na sekundę, a więc dziesięć tysięcy razy wolniej niż
+częstotliwość zegarowa mikroprocesora! Winowajcą jest magistrala ISA — technika, która jest
+wstecznie kompatybilna z komputerami z wczesnych lat 80.
+
+W tablicy 4.6 zestawiono czasy wykonania operacji w komputerach kilku generacji. Te dane
+trzeba, oczywiście, traktować jako zgrubne przybliżenie. Jeśli chcecie zrozumieć wasz sys-
+tem, to wykonajcie pomiary waszego systemu. To całkiem łatwe, trzeba napisać pętlę pro-
+gramową wykonującą milion razy jakąś operację i sprawdzić na zegarku, ile czasu zajmuje
+realizacja takiej pętli. Pierwsze trzy systemy wymienione w tablicy 4.6, a więc 80286, 80486
+i Pentium, są standardowymi biurkowymi komputerami osobistymi, odpowiednio z lat 1986,
+1993 i 1996. Czwarty to mikroprocesor z 2000 roku specjalnie zaprojektowany do zadań
+DSP - ADSP-TS101 firmy Analog Devices.
+
+Pentium jest szybszy od systemu 80286 z czterech powodów: 1) szybszy zegar, 2) więcej linii
+w magistrali danych, 3) dodanie pamięci podręcznej, 4) bardziej efektywnie zaprojektowane
+układy wewnętrzne, wymagające mniej okresów zegarowych na wykonanie jednej instrukcji.
+Jeśli Pentium było cadillakiem, to ADSP-TS101 można porównać do ferrari: mniej wy-
+gód, lecz oszałamiająca szybkość. Ten układ scalony jest reprezentatywny dla kilku mi-
+kroprocesorów zaprojektowanych specjalnie w taki sposób, aby zmniejszyć czas wykona-
+nia algorytmów DSP. Innymi układami tej kategorii są: TIC55xx firmy Texas Instruments

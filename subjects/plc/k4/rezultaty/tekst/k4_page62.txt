@@ -1,0 +1,22 @@
+<image/tabele/k4_page62_table1.png>
+
+e  Czasomierze (7imers)
+Tab. 2.32 zawiera zestawienie standardowych bloków funkcyjnych wykorzysty-
+
+wanych do załączania/wyłączania z uwzględnieniem uwarunkowań czasowych
+lub do odmierzania czasu.
+
+<image/tabele/k4_page62_table2.png>
+
+Tab. 2.32 Standardowe czasomierze
+Blok funkcyjny TP (Pulse) służy do generacji na wyjściu © impulsu o zadanym
+na wejściu PT (Preset Time) czasie trwania w chwili gdy na wejściu /N wystąpi
+zmiana wartości z O na /. Przykładowe wykresy czasowe sygnałów dla tego blo-
+ku pokazano na Rys. 2.7.
+
+Wyjście Q czasomierza załączającego z opóźnieniem TON (On-dełay) przyjmuje
+wartość 7 z opóźnieniem określonym na wejściu P7 w stosunku do pojawiającej
+się wartości / na wejściu /N i pozostaje w tym stanie dopóki wejście /N nie
+
+PE R CJ
+62 © Razdział : 2.Programowanie sterowników PLC

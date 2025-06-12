@@ -1,0 +1,25 @@
+_jako kołowy, to wydaje się, że części sygnału, które zachodzą na prawo, znowu pojawiają się
+_ po lewej stronie i vice versa. Tak więc części widma zachodzące na sąsiednie okresy przypisu-
+ją się do nowej lokalizacji w dziedzinie czasu (tzw. zjawisko aliasingu). Jeśli w tej lokalizacji
+był już zawarty jakiś istniejący sygnał, to cała ta mieszanina sumuje się, powodując w rezulta-
+cie utratę informacji. Doskonałym przykładem aliasingu tego typu jest omówiony w rozdziale
+9 splot kołowy będący wynikiem mnożenia w dziedzinie częstotliwości.
+Okresowość w dziedzinie częstotliwości przejawia się w dużym stopniu w podobny sposób,
+lecz jest bardziej skomplikowana. Przykład podano na rys. 10.9. Na górnych rysunkach przed-
+stawiono moduł i fazę widma częstotliwościowego, zobrazowane jako składające się z N/2 + 1
+próbek rozmieszczonych między 0 i 0,5 częstotliwości próbkowania. Jest to najprostszy sposób
+zobrazowania widma częstotliwościowego, który jednak nie wyjaśnia wielu właściwości DFT.
+Na dwóch dolnych rysunkach przedstawiono, w jaki sposób w przekształceniu DFT widmo
+częstotliwościowe jest widziane jako okresowe. Podstawową sprawą jest to, że widmo czę-
+stotliwościowe w zakresie częstotliwości od 0 do 0,5 ma odbicie lustrzane dla częstotliwości
+od 0 do -0,5. To lustrzane odbicie przy częstotliwościach ujemnych różni się nieco pod
+względem amplitudy i fazy sygnałów. Zarówno moduł sygnału, jak i jego faza są odwróco-
+ne lewo-prawostronnie, przy czym jednak znak fazy ulega zmianie. Jak pamiętacie, te dwa
+rodzaje symetrii mają swoje nazwy: o module mówi się, że jest sygnałem parzystym (o sy-
+metrii parzystej), podczas gdy faza jest sygnałem nieparzystym (o symetrii nieparzystej).
+Jeśli widmo częstotliwościowe zostaje przetworzone na część rzeczywistą i urojoną, to część
+rzeczywista zawsze będzie parzysta, a część urojona — zawsze nieparzysta.
+
+<image/figury/k3_page175_figure1.png>
+
+<image/wzory/k3_page175_formula1.png>

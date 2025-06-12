@@ -1,0 +1,18 @@
+<image/figury/k4_page14_figure2.png>
+
+<image/figury/k4_page14_figure1.png>
+
+Wyd. 1.1 Program sterowania silnikiem (wersja 1)
+
+Poszczególne szczeble tego programu są zapisane również w języku listy in-
+strukcji. Składa się on z instrukcji języka symbolicznego opisujących czynności,
+które ma wykonać procesor sterownika programowalnego. Pierwsza w omawia-
+nym przykładzie instrukcja LD %I4 (Load) oznacza wprowadzenie do bitu pro-
+cesora wyniku sprawdzenia jedynki logicznej w obwodzie wejściowym, który
+odpowiada zmiennej %/4. Druga instrukcja to iloczyn logiczny AND %/13 po-
+przedniej wartości bitu procesora oraz wyniku sprawdzenia również jedynki lo-
+gicznej obwodu wejściowego odpowiadającego zmiennej %/3. Kolejne
+
+ 
+
+14 Rozdział : 1. Wprowadzenie i podstawy

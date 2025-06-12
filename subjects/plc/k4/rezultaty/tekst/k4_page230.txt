@@ -1,0 +1,17 @@
+Wyjścia bloku stanowią:
+
+e ok - potwierdzenie poprawności działania;
+
+e zmienna sterująca CV (Control Variable) - sygnał wyjściowy wypracowy-
+wany przez blok regulatora PID.
+
+Parametrem bloku funkcyjnego PID jest adres pierwszego z rejestrów roboczych
+
+(address). W Tab. 4.5 przedstawiono zawartość 40 rejestrów konfiguracyjnych
+bloku PID.
+
+<image/tabele/k4_page230_table1.png>
+
+ 
+
+230 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

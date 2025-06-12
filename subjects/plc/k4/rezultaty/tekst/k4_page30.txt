@@ -1,0 +1,52 @@
+<image/tabele/k4_page30_table1.png>
+
+Norma IEC 1131 „Programmable Controllers” składa się z pięciu części:
+
+Informacje ogólne (General Information),
+
+Sprzęt i wymagania testowe (Equipment and Test Requirements),
+Języki programowania (Programing Languages),
+
+Wytyczne użytkownika (User Guidelines),
+
+Wymiana informacji (Messaging Service).
+
+NAWNM
+
+Część trzecia normy, /EC 1131-3, dotyczy języków programowania i stanowi jej
+najważniejszą część. Przede wszystkim dzięki niej ujednolicono koncepcję pro-
+gramowania PLC tak, aby w oparciu o wprowadzone zasady, użytkownik był
+w stanie programować bez większych trudności różne systemy PLC.
+
+IEC 1131-3 definiuje pojęcia podstawowe, zasady ogólne, model programowy
+i model komunikacyjny (wymiana danych między elementami oprogramowania)
+oraz podstawowe typy i struktury danych. Określono w niej dwie grupy języków
+programowania: języki tekstowe i graficzne.
+
+W grupie języków tekstowych zdefiniowane zostały następujące języki:
+
+e Język listy instrukcji 7L (Instruction List), będący odpowiednikiem języka
+typu assembler, którego zbiór instrukcji obejmuje operacje logiczne, aryt-
+metyczne, operacje relacji, jak również funkcje przerzutników, czasomierzy,
+liczników itp.
+
+e Język strukturalny S7 (Structured Text), który jest odpowiednikiem języka
+algorytmicznego wysokiego poziomu, zawierającego struktury programowe
+takie jak:
+
+If...then...else...end_if,
+Case...of...end_case,
+
+While...do...end_while,
+Repeat...end_repeat.
+
+Do grupy języków graficznych opisanych w normie /EC //3/-3 należą:
+
+e Język schematów drabinkowych ŁD (Ladder Diagram), podobny do sty-
+kowych obwodów przekaźnikowych, w którym dopuszcza się użycie także
+funkcji: arytmetycznych, logicznych, porównań i relacji jak również bloków
+funkcyjnych: przerzutników, czasomierzy, liczników, regulatora P/ID czy
+bloków programowych.
+
+PE A O
+30 Rozdział : 2.Programowanie sterowników PLC

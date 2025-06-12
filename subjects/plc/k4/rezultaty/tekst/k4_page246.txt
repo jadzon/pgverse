@@ -1,0 +1,13 @@
+<image/figury/k4_page246_figure1.png>
+
+tahola/eA NnanńaDAR tahlaD Nnnm
+
+<image/figury/k4_page246_figure2.png>
+
+<image/tabele/k4_page246_table1.png>
+
+Rys. 4.1 Format danych w plikach czasomierzy
+
+| 0 0 0 a w a aw w,
+
+246 Rozdział : 5. Język schematów drabinkowych dla SLC 500

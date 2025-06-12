@@ -1,0 +1,36 @@
+34. Nieliniowe obwody rezystancyjne prądu stałego 287
+
+<image/wzory/k4_page285_formula1.png>
+
+gdzie ©, (u) jest charakterystyką oporu nieliniowego Ry we współrzędnych u, i.
+
+I tym razem zalecamy Czytelnikowi samodzielne przeprowadzenie analizy
+obwodu z rys. 3.4-5 (przy przyjęciu tych samych danych liczbowych) za pomocą
+metody prostej przewodności.
+
+<image/figury/k4_page285_figure1.png>
+
+Metoda prostej oporu (prostej przewodności) analizy obwodu z jednym
+elementem nieliniowym, sprowadzonego do postaci jak na rys. 3.4-3c (rys. 3.4-5),
+jest prostsza od metody charakterystyki łącznej omówionej w p. B. Nie wymaga
+ona bowiem dość żmudnej konstrukcji graficznej charakterystyki elementu
+równoważnego połączeniu szeregowemu (równoległemu) oporu liniowego i nie-
+liniowego.
+
+3.4.2. Obwody z kilkoma elementami nieliniowymi
+
+A. Metody graficzne. Jeżeli w obwodzie występuje więcej niż jeden
+element nieliniowy, to tylko w bardzo rzadkich przypadkach możliwe jest
+uzyskanie rozwiązania równań opisujących obwód metodami analitycznymi.
+W szczególności metody analityczne są nieprzydatne, gdy w obwodzie występują
+elementy nieliniowe, których charakterystyki nie dadzą się opisać formułami
+analitycznymi. Są one w takich przypadkach zadawane w formie wykresów lub
+tabel, uzyskanych w wyniku odpowiednich pomiarów elementów rzeczywistych.
+
+Dominujące znaczenie w analizie obwodów z kilkoma elementami nielinio-
+wymi mają, oprócz metod numerycznych, metody graficzne. Sprowadzają się one
+z reguły do wyznaczenia ciągu charakterystyk łącznych elementów równoważ-
+nych połączeniu szeregowemu lub równoległemu innych elementów. Kolejność,
+w jakiej charakterystyki łączne należy konstruować, wynika wprost ze struktury
+obwodu. Ogólne zasady postępowania najdogodniej jest wyjaśnić od razu na
+przykładzie.

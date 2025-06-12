@@ -1,0 +1,55 @@
+Dyskretne w czasie przekształcenie Fouriera
+
+<image/wzory/k3_page185_formula1.png>
+<image/wzory/k3_page185_formula2.png>
+
+Wzór 10.1. Analiza DTFT. W tej zależności x[n] jest sygnatem w dziedzinie czasu z n zmieniającym się od
+0 do N - 1. Widmo częstotliwościowe jest wyrażone przez Re X(w) i Im X(w), przy czym w zawiera się od
+0 do n
+
+<image/wzory/k3_page185_formula3.png>
+
+Wzór 10.2. Synteza DTFT
+
+W powyższych zależnościach jest wiele subtelności. Po pierwsze, sygnał w dziedzinie cza-
+su x[n] jest jeszcze dyskretny i dlatego zawiera nawiasy kwadratowe. Natomiast sygnały
+w dziedzinie częstotliwości Re X(w) i Im X(») są ciągłe i dlatego mają nawiasy okrągłe.
+Ponieważ sygnał w dziedzinie częstotliwości jest ciągły, więc wzór dotyczący syntezy jest
+zapisany jako całka, a nie jako sumowanie.
+
+Było już powiedziane w rozdziale 8, że w przekształceniu DFT w dziedzinie częstotliwości
+częstotliwość jest wyrażana przez jedną z trzech zmiennych: k — indeks zmieniający się od
+0 do N/2, f - ułamek częstotliwości próbkowania zmieniający się od 0 do 0,5 lub © — ułamek
+częstotliwości próbkowania wyrażony w pulsacji i zmieniający się od 0 do x. Widmo DTFT
+jestcigewicmonastosowazarwno/jakio.naogstosujesiponiewawzory
+są wtedy krótsze, bez czynnika 2x. Pamiętajmy, że przy stosowaniu © widmo częstotliwo-
+ściowe obejmuje zakres od 0 do x, co odpowiada zakresowi od 0 do połowy częstotliwości
+próbkowania. Chyba po to, żeby wszystko jeszcze bardziej skomplikować, niektórzy autorzy
+dla częstotliwości w DTFT stosują oznaczenie (2, zamiast ©.
+
+Przy obliczaniu odwrotnej transformaty DFT wartości próbek o numerach 0 i N/2 muszą być
+dzielone przez 2 (wzór 8.3) przed wykonaniem syntezy według wzoru 8.2. Nie jest to koniecz-
+ne w' DTFT. Jak pamiętamy, ta operacja w DFT odnosi się do widma częstotliwościowego
+definiowanego przez gęstość widmową, tj. amplitudę na pasmo jednostkowe. Gdy widmo sta-
+je się ciągłe, specjalne traktowanie skrajnych punktów przestaje obowiązywać. Nadal jednak
+pozostaje konieczność użycia czynnika normalizacyjnego. Czynnik 2/N w DFT (wzór 8.3)
+staje się w DTFT czynnikiem 1/x (wzór 10.2). Niektórzy autorzy umieszczają ten czynnik
+przed wzorem syntezy, a inni — przed wzorem analizy. Przypuśćmy, że zaczynamy od jakie-
+goś sygnału w dziedzinie czasu. Po znalezieniu transformaty Fouriera i następnie po wykona-
+niu odwrotnego przekształcenia Fouriera, spodziewamy się dojść do tego samego sygnału, od
+jakiego rozpoczęliśmy. Zatem powinien gdzieś po drodze pojawić się czynnik 1/x (lub 2/N),
+w przekształceniu prostym albo odwrotnym. Niektórzy au nawet rozdzielają ten czynnik
+między dwoma przekształceniami, umieszczając czynnik 1/ nx przed obu wzorami.
+Przekształcenie DTFT nie może być obliczane w komputerze cyfrowym, gdyż zawiera całko-
+wania i sumowania nieskończone. Jest stosowane głównie w problemach teoretycznych jako
+alternatywa DFT. Przypuśćmy na przykład, że chcemy wyznaczyć odpowiedź częstotliwo-
+ściową systemu na podstawie jego odpowiedzi impulsowej. Jeśli odpowiedź impulsowa jest
+znana jako matryca liczb, uzyskana np. z pomiarów doświadczalnych lub symulacji kompu-
+terowej, to program DFT może być realizowany w komputerze. Otrzymuje się wtedy inną
+matrycę liczb, równomiernie rozmieszczonych między 0 i 0,5 częstotliwości próbkowania.
+W innych przypadkach odpowiedź impulsowa może być znana w postaci wzoru, np. jako
+funkcja sinc (opisana w następnym rozdziale) lub jako zanikająca wykładniczo sinusoida.
+Wtedy DFT jest stosowane do matematycznego obliczenia sygnału w dziedzinie częstotliwo-
+ści w formie innego wzoru wyrażającego całą krzywą ciągłą między 0 i 0,5. Przekształcenie
+DFT też mogłoby być stosowane do tych obliczeń, lecz dałoby wzór wyrażający próbki od-
+powiedzi częstotliwościowej, a nie całą krzywą.

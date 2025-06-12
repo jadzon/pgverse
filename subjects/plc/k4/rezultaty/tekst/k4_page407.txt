@@ -1,0 +1,13 @@
+<image/tabele/k4_page407_table1.png>
+
+Wyd. 8.33 Deklaracja zmiennych
+
+<image/tabele/k4_page407_table3.png>
+
+Wyd. 8.34 Wyzerowanie wyjść sterownika w pierwszym cyklu
+
+<image/tabele/k4_page407_table2.png>
+
+Wyd. 8.35 Wybór kierunku ruchu i start silnika dla połączenia w gwiazdę
+
+8.3. Sterowanie napędem dwukierunkowym 407

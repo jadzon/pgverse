@@ -1,0 +1,35 @@
+5.2. Pamięci operacyjne 103
+
+<image/figury/k3_page113_figure3.png>
+
+Rysunek 5.15. Przypisanie bloków pamięci operacyjnej blokom pamięci kieszeniowej metodą
+bczpośrednią
+
+na rysunku 5.15. Adres pamięci operacyjnej jest 16-bitowy i jest podzielony na trzy
+części:
+
+— 6 bitów etykiety,
+
+— 7 bitów adresu pamięci kieszeniowej,
+
+— 3 bity adresu słowa w bloku.
+
+Procesor porównując odczytaną z pamięci kieszeniowej etykietę z odpowiednią częścią
+adresu pamięci operacyjnej może stwierdzić trafienie lub chybienie. Jeśli nastąpiło chybie-
+nie, to należy dokonać wymiany zawartości tej linii pamięci kieszeniowej. Pamiętany blok
+zostaje zapisany do pamięci operacyjnej, a na jego miejsce wpisuje się blok z poszukiwaną
+etykietą. Wadą tej metody jest to, że każdy blok pamięci operacyjnej ma stałe miejsce
+w pamięci kieszeniowej, co w przypadku częstej wymiany bloków może prowadzić do
+spadku efektywności pracy pamięci.
+
+Metoda skojarzeniowa (ang. ussociałive mapping) dopuszcza przypisanie każdemu
+blokowi dowolnej linii w pamięci kieszeniowej. Sposób odwzorowania jest zilustrowany
+na rysunku 5.16. Metoda ta wymaga wydłużenia etykiety do długości, która pozwoli na
+adresowanie wszystkich bloków w pamięci operacyjnej. W naszym przykładzie ma ona
+długość 13 bitów, a zatem całkowita długość linii pamięci kieszeniowej wynosi 77 bitów.
+W tym przypadku sprawdzenie zawartości pamięci kieszeniowej polega na odczycie
+wszystkich jej linii i sprawdzaniu czy blok z daną etykietą znajduje się w niej czy nie. Taki
+
+figury/k3_pagefgury/k3_page113_figure2.pnt
+
+Rysunek 5.16. Ilustracja metody skojarzeniowej

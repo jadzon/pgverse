@@ -1,0 +1,29 @@
+*  DNCTR (DowN CounTeR) - licznik odejmujący;
+
+Licznik odejmujący służy do odejmowania od wartości początkowej liczby zda-
+rzeń polegających na zmianie stanu obwodu podłączonego do wejścia
+zezwolenie z OFF na ON. Sygnał zerujący (pojawienie się prądu na wejściu R)
+powoduje przepisanie wartości początkowej PV do wartości bieżącej CV.
+Za każdym razem gdy na wejściu zezwolenie wystąpi zmiana stanu z OFF na
+ON, a jednocześnie brak jest sygnału kasującego, to zawartość licznika (wartość
+bieżąca CV) jest zmniejszana o /. Gdy wartość CV jest równa lub mniejsza od
+zera to na wyjściu pojawia się prąd. Zakres zliczania wynosi od 32767 do
+-32768.
+
+Na Wyd. 4.13 przedstawiono przykład wykorzystania licznika odejmującego.
+Każda zmiana stanu wejścia %// z OFF na ON powoduje zmniejszenie zawarto-
+ści licznika przechowywanej w rejestrze %R100. Po zliczeniu 500 takich zdarzeń
+następuje wzbudzenie cewki %M100 a zarazem ponowne ustawienie wartości
+początkowej dla licznika w następnym cyklu sterownika dzięki użyciu styku
+%M 100 na wejściu kasującym. Zmienna systemowa FST_SCN została użyta
+w celu ustawienia wartości początkowej licznika w pierwszym cyklu programu
+sterownika. Przebieg czasowy zawartości rejestru %R/00 będzie więc w tym
+przykładzie schodkowym przebiegiem piłokształtnym.
+
+<image/figury/k4_page196_figure1.png>
+
+Wyd. 4.13 Przykład wykorzystania licznika odejmującego
+
+ 
+
+196 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

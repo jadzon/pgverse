@@ -1,0 +1,52 @@
+460 27. Kompresja danych
+
+Przesyłanie i przechowywanie danych wymaga kosztów, tym większych, im więcej infor
+macji jest przesyłanych i przechowywanych. Mimo to większość danych cyfrowych nić
+jest przechowywana w postaci najbardziej zagęszczonej. Są raczej przechowywane w spe
+sób najdogodniejszy do ich wykorzystania, jak np. tekst ASCII z procesorów tekstu, ka
+dwójkowy — łatwy do operowania w komputerach, indywidualne próbki z systemu zbieranij
+danych itd. Takie, dogodne do zastosowań, metody kodowania wymagają zazwyczaj dw
+razy większej objętości danych niż rzeczywiście konieczna do reprezentowania określon
+
+informacji. Kompresja danych to pojęcie ogólne, obejmujące różne algorytmy i prograr
+
+opracowywane w celu przezwyciężenia tych trudności. Program kompresji jest stosowany di
+przetwarzania danych z formatu dogodnego do zastosowań na format zoptymalizowany pod
+względem gęstości upakowania. Program dekompresji zaś przywraca informacji jej posta
+oryginałną. W tym rozdziale najpierw omówimy pięć metod kompresji danych. Pierwsze trz
+są prostymi sposobami kodowania, zwanymi kodowaniem ciągów (lub kompresją grupową
+run-length coding), kodowaniem Huffmana i kodowaniem delta. Dwie ostatnie metody
+
+procedury bardziej rozbudowane, które stały się standardami komercyjnymi — LZW i JPEG
+
+Sposoby kompresji danych
+
+W tablicy 27.1 przedstawiono dwa sposoby podziału algorytmów kompresji danych na katego
+rie. W części a) tablicy metody sklasyfikowano jako bezstratne albo stratne. W technice bez
+stratnej odtworzony plik danych jest identyczny z oryginalnym. Jest to bezwzględnie koniecz
+dla wielu rodzajów danych, takich jak kody wykonywalne, pliki tekstowe, tablice liczbowi
+itd. W tego typu informacjach nie można sobie pozwolić na niewłaściwe umieszczenie nawe
+pojedynczego bitu. Natomiast pliki danych reprezentujących obrazy lub inne zbierane sygnał
+nie muszą być zachowane w tak doskonałym stanie podczas przesyłania lub przecho i
+Wszystkie pomiary wykonywane w realnym świecie są w sposób nieodłączny obarczone pe
+nym szumem. Jeśli zmiany, jakim jest poddawany sygnał, przypominają niewielki dodatko
+szum, to nie jest to szkodliwe. Metody kompresji, w których dopuszczalne jest takie pogof
+szenie jakości sygnału, są nazywane stratnymi. Takie rozróżnienie jest istotne, gdyż metodi
+stratne dają kompresję znacznie skuteczniejszą niż bezstratne. Im większy jest współczyna
+kompresji, tym więcej jest szumu dodawanego do danych.
+Obrazy przesyłane w ogólnoświatowej sieci komputerowej WWW są świetnym p lade
+znaczenia kompresji danych. Przypuśćmy, że chcemy pobrać cyfrową fotografię kolorow
+przez modem komputera o przepływności 33,6 kbivs. Jeśli obraz nie jest poddany kompre
+(na przykład plik 7/F), to będzie zawierał ok. 600 kB danych. Jeśli poddano go kompre
+przy użyciu jednej z metod bezstratnych (takiej np. jak w formacie G/F), to danych będzi
+mniej więcej o połowę mniej, czyli 300 kB. W przypadku zastosowania kompresji stratr
+(plik JPEG), będzie to ok. 50 kB. Problem w tym, że czasy pobierania dla tych trzech ró
+Tablica 27.1. Klasyfikacja metod kompresji. Metody kompresji danych można dzielić dwoma sposobami. W tablicy
+a) metody podzielono na bezstratne i stratne. W metodach bezstratnych skomprymowane dane są odtwarzane
+dokładnie w takiej samej postaci, jaką miaty dane oryginalne. W metodach stratnych zaś uzyskuje się tylko dane
+przybliżone. W tablicy b) metody sklasyfikowano według kryterium ustalonego lub zmiennego rozmiaru grupy
+pobieranej z pliku oryginałnego i wpisywanej do pliku skomprymowanego
+
+<image/tabele/k3_page425_table1.tabele/k3_page425_table2.png>
+
+a. Metody stratne i bezstratne b. Ustalony lub zmienny rozmiar grupy

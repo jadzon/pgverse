@@ -1,0 +1,66 @@
+Gi
+
+106
+
+Wyznaczenie wartości funkcji F (w).
+
+Wyznaczenie punktu w” = w + Aw, gdzie Aw jest realizacją zmiennej losowej o
+rozkładzie normalnym
+
+<image/wzory/k2_page101_formula1.png>
+
+zaś o jest wariancją (stałą).
+Wyznaczenie wartości funkcji F(w') i AE = E(w') = E(w).
+Gdy AE < 0, to podstawienie w = w
+
+k — k+L. Jeżeli k osiągnęło przyjętą wartość lub E (w) jest mniejsze od założonej
+wartości, to zakończenie obliczeń; w przeciwnym przypadku skok do 3.
+
+6.4.3. Symulowane wyżarzanie
+
+Symulowane wyżarzanie (ang. simulated annealing) jest odmianą metody szukania
+przypadkowego. Nazwa metody pochodzi od analogii jej procesu szukania ekstre-
+mum do procesu chłodzenia metali, w czasie którego, na skutek kontrolowanego,
+powolnego obniżania temperatury energia wewnętrzna układu osiąga minimum glo-
+balne.
+
+LA
+
+6.
+
+I
+.
+
+Minimalizacja funkcji E(w) przebiega w następujących etapach:
+
+Losowy wybór punktu startowego w; przyjęcie współczynnika T = 7,,. nazy-
+wanego temperaturą; przyjęcie licznika iteracji k = 1.
+Wyznaczenie wartości funkcji F (w).
+
+Wyznaczenie punktu w” = w + Aw, gdzie Aw jest realizacją zmiennej losowej o
+rozkładzie normalnym
+
+<image/wzory/k2_page101_formula2.png>
+
+Wyznaczenie wartości funkcji F(w').
+
+Podstawienie w = w” z prawdopodobieństwem danym rozkładem Boltzmanna?
+
+<image/wzory/k2_page101_formula3.png>
+
+gdzie AE = E(w') — E(w), c jest stałą.
+Zmniejszenie temperatury T; zwykle T = qT, gdzie n jest stałą z przedziału
+(0.1).
+
+k<=k+1. Jeżeli k osiągnęło przyjętą wartość, to zakończenie obliczeń: w prze-
+ciwnym przypadku skok do 3.
+
+Przykładowe kroki algorytmów szukania przypadkowego i symulowanego wyża-
+
+rzania przedstawione są na rys. ??.
+
+3
+
+w większości wariantów algorytmu jeżeli AE < O, to przyjmuje się h = 1, tzn., że nowy punkt
+
+jest na pewno akceptowany.

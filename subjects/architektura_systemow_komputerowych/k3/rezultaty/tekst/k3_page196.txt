@@ -1,0 +1,25 @@
+DODATEK B
+
+ 
+
+W niniejszym dodatku pokrótce przedstawiono trzy procesory produkowane przez trzy
+czołowe światowe firmy. Pierwszy opisany procesor (68000 firmy Motorola) będzie przed-
+stawicielem mikroprocesorów, czyli stosunkowo prostych procesorów o niewielkiej mocy
+obliczeniowej, ale stosowany powszechnie w komputerowych systemach pomiarowych
+i w systemach automatyki. Drugim opisanym procesorem będzie mikroprocesor (Pentium
+firmy Intel) stosowany w komputerach osobistych typu IBM PC. Trzeci procesor (Alpha
+firmy DEC) jest procesorem stosowanym w komputerach stosunkowo dużej mocy oblicze-
+niowej produkowanych przez firmę DEC (Digital Equipement Corporation). Przedstawione
+opisy nie stanowią pełnej charakterystyki omawianych procesorów a mają jedynie charak-
+ter poglądowy. Zainteresowanego Czytelnika odsyła się do odpowiedniej literatury, a szcze-
+gólnie do opisów firmowych.
+
+B.1. MOTOROLA 68000
+
+Mikroprocesor M68000 jest pierwszym z serii procesorów 16- i 32-bitowych produkowa-
+nych przez firmę Motorola. Seria ta stanowi następstwo 8-bitowego procesora M6800.
+Mikroprocesor 68000 jest wykonywany jako układ scalony w obudowie z 64 wyprowa-
+
+<image/figury/k3_page196_figure1.png>
+
+Rysunek D.14. Architektura mikroprocesora M68000

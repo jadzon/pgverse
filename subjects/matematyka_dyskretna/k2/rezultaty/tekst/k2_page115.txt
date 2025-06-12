@@ -1,0 +1,12 @@
+24 Rozdział 1. Funkcje boolowskie
+
+1.9.3 Postać normalna
+Udowodnij, że dla każdej funkcji funkcji f : B* — B istnieje dokładnie jeden wektor:
+
+<image/wzory/k2_page115_formula1.png>
+
+taki 30:
+
+<image/wzory/k2_page115_formula2.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,29 @@
+1.6. Zadania 15
+
+Rysunek 1.6: Drzewo dla ciągu: 128,76,106,402,100,46,354,1018,112,28, 396,35
+
+<image/figury/k2_page177_figure1.png>
+
+Algorytm szukania elementu c na drzewie 7..
+Aby stwierdzić, czy element e znajduje się na drzewie 7,:
+
+e jeżeli 7, jest puste, to koniec, elementu e nie ma na drzewie,
+
+e jeżeli 7, nie jest puste, to porównujemy e z wartością W (z):
+o jeżeli e = W (z), to koniec, znaleźliśmy element e na drzewie,
+o jeżeli e < W (z), to szukamy e w lewym poddrzewie 7:6,
+o jeżeli e > W(z), to szukamy e w prawym poddrzewie 72,.
+
+W drzewie poszukiwań binamych czas wyszukiwania lub wstawiania elementu jest
+O(h), gdzie h jest wysokością drzewa. W obu algorytmach tylko raz przechodzimy od
+korzenia w dół do liścia. Najlepiej by było, gdyby wysokość drzewa była rzędu logarytm
+od liczby wierzchołków, ale nie w każdym drzewie poszukiwań binamych tak musi być.
+
+1.6 Zadania
+1. Ile wierzchołków może mieć drzewo biname wysokości h?
+2. Przeszukaj metodą „w głąb” („wszerz”) drzewo z rysunku 1.7.
+
+3. Narysuj drzewo dla wyrażenie 2(a + 3) / (b + 4). Przedstaw to wyrażenie w postaci
+postfixowej i prefixowej.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,20 @@
+OZONE
+
+<image/figury/k3_page547_figure2.png>
+
+Rys. 33.5. Inwersja widmowa. Jest to taka sama procedura, jak odejmowanie sygnału na wyjściu syste-
+mu od sygnału oryginalnego
+
+Dwie sinusoidy będą się wzajemnie kasować tylko wówczas, jeśli mają takie same moduły oraz
+fazy, W rzeczywistości odpowiedź częstotliwościowa takiego systemu złożonego ma moduł /2
+i przesunięcie fazy o —45 stopni. Sygnał wyjściowy — wbrew naszym naiwnym przypuszcze-
+
+niom — nie jest równy zeru, lecz jest większy pod względem amplitudy niż sygnał wejściowy!
+Inwersja widmowa dobrze zadziałała w rozważaniach w rozdziale 14 z powodu specyficzne-
+go rodzaju używanych tam filtrów. Są to filtry zerofazowe. To oznacza, że odpowiedź impul-
+sowa filtru ma symetrię lewo — prawostronną. Jeśli system nie wprowadza żadnego przesu-
+nięcia fazy, to odejmowanie sygnału wyjściowego od wejściowego jest całkowicie uzależnio-
+ne od modułów. Ponieważ mankamentem filtrów rekursywnych jest przesunięcie fazy, więc
+przez inwersję widmową uzyskuje się na ogół niezadowalające właściwości filtrów.
+
+<image/figury/k3_page547_figure1.png>

@@ -1,0 +1,35 @@
+2. Statystyka, rachunek prawdopodobieństwa i szumy
+
+<image/tabele/k3_page16_table1.png>
+
+Uwaga: Pojęcie podprogramu „mitycznego” wyjaśniono przy tablicy 6.1.
+
+W trakcie próbkowania sygnału jest pamiętany bieżący wynik obliczania trzech parame-
+trów: 1/ liczby próbek już przetworzonych, 2/ sumy tych próbek, 3/ sumy kwadratów tych
+próbek (tzn. podnosi się do kwadratu wartość każdej próbki i dodaje wynik do wartości
+skumulowanej). Po przetworzeniu dowolnej liczby próbek można obliczyć wartość średnią
+i odchylenie standardowe, korzystając tylko z bieżącej wartości tych trzech parametrów.
+W tablicy 2.2 zamieszczono program, który w wyżej opisany sposób wyznacza wartość
+średnią i odchylenie standardowe po uwzględnieniu każdej nowej próbki. Ta metoda jest
+stosowana w przenośnych kalkulatorach do określania właściwości statystycznych ciągu
+liczb. Wartości trzech wymienionych parametrów są uaktualniane za każdym razem, gdy
+wprowadzamy nową liczbę i naciskamy przycisk sumowania. W każdej chwili można uzy-
+skać wartość średnią i odchylenie standardowe bez konieczności przeliczania na nowo ca-
+łego ciągu liczb.
+
+Zanim zakończymy omawianie wartości średniej i odchylenia standardowego, powinniśmy
+jeszcze wspomnieć dwie inne wielkości. W niektórych sytuacjach średnia wyraża wartość
+zmierzoną, podczas gdy odchylenie standardowe wyraża szum i inne zakłócenia. W tych
+przypadkach odchylenie standardowe nie jest istotne samo w sobie, lecz tylko w porów-
+naniu ze średnią. Stąd bierze się parametr stosunek sygnału do szumu (SNR - Signal-
+to-Noise Ratio) równy stosunkowi wartości średniej do odchylenia standardowego. Inny
+parametr to współczynnik rozrzutu (CV — Coefficient of Variation). Jest to stosunek od-
+chylenia standardowego do wartości średniej, wyrażony w procentach. Na przykład sygnał
+(lub inna grupa zmierzonych wartości) o współczynniku rozrzutu 2% ma stosunek sygnału
+do szumu równy 50. „Lepsze” dane mają większy stosunek sygnału do szumu a mniejszy
+współczynnik rozrzutu.
+
+Sygnał a proces przezeń reprezentowany
+
+Statystyka jest dziedziną wi służącą do interpretacji danych liczbowych, takich jak pobrane
+sygnały. Prawdopodobieństwo zaś jest stosowane w DSP do zrozumienia procesów wytwarza-

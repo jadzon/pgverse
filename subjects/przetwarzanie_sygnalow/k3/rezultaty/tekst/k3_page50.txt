@@ -1,0 +1,22 @@
+Filtry analogowe w przetwarzaniu danych
+
+się martwić, jakie są wartości składowych o częstotliwościach między 5000 Hz i 6300 Hz,
+ponieważ w wyniku aliasingu nałożą się one na częstotliwości w nieużywanym obszarze 3700
+i 5000 Hz. Aliasingowi do pasma przepustowego filtru mogą ulegać częstotliwości większe od
+6300 Hz, czyli od 1,7 częstotliwości odcięcia filtru równej 3700 Hz. Jak wynika z rys. 3.11 c),
+współczynnik tłumienia 8-biegunowego filtru Czebyszewa przy częstotliwości równej 1,7 czę-
+stotliwości odcięcia wynosi ok. 1300, a więc znacznie więcej niż wymagana wartość 100, od
+której zaczęliśmy naszą analizę. A morał z tej historii jest następujący: W większości syste-
+mów pasmo częstotliwości pomiędzy ok. 0,4 do 0,5 częstotliwości próbkowania jest jałowym,
+bezużytecznym obszarem opadania charakterystyki filtru i nakładania się sygnałów ulegają-
+cych aliasingowi. Jest to bezpośredni skutek ograniczeń filtru analogowego.
+
+Odpowiedź częstotliwościowa idealnego filtru dolnoprzepustowego powinna być płaska w ca-
+bym śni przepaiowm. Chasktewyi zyc Flow na ya 311 prezenją się pod
+
+w paśmie przepustowym ok. 6% (0,5 dB) — dobry kompromis, na ogół dopuszczalny. Wasik
+nym układzie, w filtrze eliptycznym, są tętnienia zarówno w paśmie przepusto-
+
+lepszy kompromis między szybkością opadania i tętnieniami w paśmie przepustowym.
+
+<image/figury/k3_page50_figure1.png>

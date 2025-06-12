@@ -1,0 +1,47 @@
+18 Rozdział 1. Arytmetyka
+
+i pytamy, do której połowy należy szukana liczba. Po drugiej odpowiedzi przedział po-
+szukiwań jest już cztery razy krótszy. Po dwóch kolejnych pytaniach przedział zawęża się
+do jednej liczby. Drugi sposób jest całkowicie równoważny pierwszemu, tutaj też pytamy
+o kolejne bity i otrzymujemy takie same odpowiedzi.
+
+Potrzeba cztery razy kolejno dzielić zbiór na połowy, aby z początkowej długości
+16 przejść na końcu do długości 1. A ile trzeba podziałów, jeżeli na początku mamy
+n = 2% elementów? Po pierwszym podziale nasz zbiór będzie miał długość 2477, po
+drugim 2*-2, a po ś-tym 247%, Jak widać, potrzeba k = loga n kolejnych podziałów, aby
+dojść do 1. Tak więc jeżeli mamy do dyspozycji 20 pytań, to możemy odnaleźć jedną
+spośród 2?? liczb całkowitych z przedziału od 0 do 22? — 1 = 1 048575.
+
+Metodę poszukiwań binamych można zastosować do stwierdzenia, czy jakaś liczba
+naturalna n jest kwadratem (lub jakąś inną ustaloną potęgą) innej liczby naturalnej. Ina-
+czej, czy istnieje liczba naturalna k taka, że k* = n, lub ogólniej, czy istnieje liczba
+naturalna k taka, że k* = n.
+
+Poniżej przedstawiamy taki algorytm. Algorytm ten używa dwoch dodatkowych zmien-
+nych ky i kg, wartości tych zmiennych przybliżają pierwiastek stopnia a z n od dołu i od
+góry. W trakcie wykonywania algorytmy przybliżeniaa te są coraz lepsze
+
+Algorytm sprawdzający, czy dana liczba naturalna n jest potęgą o wykładniku a jakiejś
+liczby naturalnej.
+Dane wejściowe: liczba naturalna n.
+Dane wyjściowe: pierwiastek stopnia a Z n, (liczba naturalna m, taka że m* = n) lub
+informacja, że n nie ma pierwiastka stopnia a.
+e ky:=l1
+e ky:=n
+e Powtarzaj aż do skutku:
+o jeżeli k, — kg < 1, to koniec, n nie ma pierwiastka.
+oj = [2]
+o jeżeli j* = n, to koniec, n jest potęgą j.
+o jeżeli j* > n,tok, :=j
+o jeżeli j” < n, tokg:=j.
+
+114 Zadania
+1. Zwiększ o jeden następujące liczby zapisane w postaci dwójkowej: a) 11010011;
+b) 111111.
+
+2. Porównaj następujące pary liczb: a) 110011, 110100; b) 11010, 1110.
+
+3. Dodaj (odejmij, pomnóż) w postaci dwójkowej następujące pary liczb: a) 110011,
+110100; b) 11010, 1110.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,24 @@
+<image/tabele/k4_page412_table1.png>
+
+Wyd. 8.48 Przerzutnik SR dla zabezpieczenia przed przeciążeniem
+
+Warunkiem ustawienia przeciążenia jest sygnał z wejścia UB przenoszony bez-
+pośrednio (przy pracy w układzie gwiazdy) lub trwający przez założony czas
+CzasUB (przy pracy w układzie trójkąta). Warunkiem zerowania jest zatrzymanie
+silnika.
+
+<image/tabele/k4_page412_table4.png>
+
+Wyd. 8.49 Zatrzymanie silnika po naciśnięciu przycisku STOP lub przy przeciążeniu
+
+<image/tabele/k4_page412_table3.png>
+
+Wyd. 8.50 Ustawienie zmiennej osiągnięcia pozycji krańcowych
+
+<image/tabele/k4_page412_table2.png>
+
+Wyd. 8.51 Przerzutniki SR zmiany kierunku po osiągnięciu pozycji krańcowej
+
+ 
+
+412 Rozdział : 8.Programy przykładowe

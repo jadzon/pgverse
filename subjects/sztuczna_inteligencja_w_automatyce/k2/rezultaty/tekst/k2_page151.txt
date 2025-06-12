@@ -1,0 +1,42 @@
+156
+
+<image/figury/k2_page151_figure1.png>
+
+Wyznaczenie hiperpłaszczyzny decyzyjnej o maksymalnym marginesie w*x = b spro-
+wadza sie do znalezienia minimum wyrażenia
+
+<image/wzory/k2_page151_formula1.png>
+
+przy ograniczeniach
+
+<image/wzory/k2_page151_formula2.png>
+
+Tak sformułowane zadanie można rozwiązać metodami programowania kwadra-
+towego.
+
+Programowanie kwadratowe jest metodą optymalizacji (metodą poszukiwania
+ekstremum| fnnkcii kwadratowei wieln zmiennvch
+
+<image/wzory/k2_page151_formula3.png>
+
+przy ograniczeniach liniowych w postaci
+
+<image/wzory/k2_page151_formula4.png>
+
+Na rysunku ?? zilustrowano działanie metody SVM.
+
+6.6.2. Klasyfikacja dwóch klas nie separowalnych liniowo
+
+W przypadku gdy klasy nie są separowalne liniowo, wektory wejściowe są transfor-
+mowane do przestrzeni o większej liczbie wymiarów, gdzie klasy stają sie liniowo
+separowalne i tam znajdywana jest hiperpłaszczyzna decyzyjna o największym mar-
+ginesie, która następnie jest transformowana do pierwotnej przestrzeni. Na rys. ??
+zilustrowano takie postępowanie.
+
+Czasami w metodzie SVM dopuszcza się separację klas hiperpłaszyzną pomimo,
+że klasy nie są całkowicie separowalne liniowo. W takim przypadku dopuszcza się
+aby pewna niewielka liczna obrazów uczących była błędnie klasyfikowana (ilustracja
+powstałej sytuacji przedstawiona jest na rys ??).
+
+Na rysunku ?? przedstawiono kolejny przykład zastosowania metody SVM, a
+dodatkowo narysowano powierzchnie decyzyjną tworzoną przez sieć neuronową.

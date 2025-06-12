@@ -1,0 +1,43 @@
+196 2. Pojęcia podstawowe — układy -
+
+Na zakończenie rozpatrzymy pojęcie przyczynowości układu, szczegó
+łatwe do sprecyzowania w konwencji „wejście-wyjście”.
+
+Operacja F jest operacją przyczynową, jeśli z równości:
+
+<image/wzory/k3_page196_formula1.png>
+wynika równość:
+
+<image/wzory/k3_page196_formula2.png>
+gdzie:
+
+<image/wzory/k3_page196_formula3.png>
+dla każdych x;, x, € X i każdego t, € %.
+Do charakterystyki układów przyczynowych (tj. opisywanych przyczynos
+operacją F), a także do wielu innych zagadnień związan”"" - -
+układów w konwencji „wejście-wyjście” powrócimy w tc
+
+ 
+
+2.1.6. Wielkości i układy dualne
+
+A. Pojęcie dualności. Zarówno w zagadnieniach tec
+stosowaniach teorii obwodów często posługujemy się
+mówiąc o elementach i układach dualnych, a także o v
+Problem dualności można rozpatrywać z różnych pu
+różnych poziomach ogólności. Koncepcję układów du
+w najprostszej postaci. Bardziej zaawansowane ujęcie z
+oparte na pojęciu grafu dualnego, podamy w tomie III.
+
+Rozpatrzmy dwa dwuzaciskowe elementy skupione I
+ich równania wiążące ze sobą wielkości zaciskowe e
+nazywamy dualnym względem elementu D, jeśli po zamianie
+D wielkości zaciskowych: iu, ul ot ujemy
+zrwnaniemelementud.wynikastdekidsdwzory/k3_page196_1
+elementu D, to także element D jest dualny względem «
+zatem mówić o elementach dualnych D i D'. Mówimy tal
+są wielkościami dualnymi.
+
+figury/k3_page196_figure1
+
+Rys. 2.1-17

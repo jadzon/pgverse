@@ -1,0 +1,32 @@
+—
+
+<image/tabele/k4_page475_table4.png>
+
+Wyd. 8.147 Program główny — wykrywanie zakończenia każdej z faz — wykorzysty-
+wane do sekwencyjnego przechodzenia do kolejnych faz (w pracy automatycznej)
+
+<image/tabele/k4_page475_table1.png>
+
+Wyd. 8.148 Program główny - sterowanie wyborem bloków programowych — ręczny
+wybór fazy sterowania jako kombinacja stanu wejść
+
+<image/tabele/k4_page475_table3.png>
+
+Wyd. 8.149 Program główny — automatyczne uruchomienie fazy pierwszej przy
+przełączeniu z pracy ręcznej na automatyczną lub w trybie pojedynczego cyklu
+
+<image/tabele/k4_page47/75_table2.png>
+
+Wyd. 8.150 Program główny - sterowanie wyborem bloków programowych. Koniec
+każdej fazy powoduje zwiększenie stanu rejestru licznika faz (40130).Dojście do
+fazy 4 sygnalizowanie jest uaktywnieniem markera końca cyklu (k_cyklu)
+
+na
+
+ 
+
+ 
+
+M m ną m m m a
+
+8.8 Sterowanie sekwencyjne procesem wsadowym 475

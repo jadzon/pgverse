@@ -1,0 +1,24 @@
+Projektowanie filtrów w dziedzinie zmiennej zespolonej s 571
+
+<image/figury/k3_page531_figure1.png>
+
+Gdy wzmocnienie wzmacniacza jest zwiększane, bieguny przesuwają się po okręgu, co po-
+woduje także odpowiednią zmianę odpowiedzi częstotliwościowej. Przy wzmocnieniu 1,586
+oba bieguny są rozmieszczone pod kątem 45? (rys. 32.9 b), co powoduje bardziej strome
+przejście na charakterystyce. Zwiększanie wzmocnienia przesuwa bieguny jeszcze bliżej osi
+urojonej, powodując powstanie przerzutu na charakterystyce. Tę sytuację przedstawiono na
+rys. 32.9 c przy wzmocnieniu ustalonym na 2,5. Amplituda przerzutu nadal wzrasta w miarę
+wzrostu wzmocnienia, aż wzmocnienie osiągnie wartość 3. Przy tym wzmocnieniu zacho-
+dzi przypadek szczególny (rys. 32.9 d), gdy bieguny są zlokalizowane bezpośrednio na osi
+urojonej. Odpowiedź częstotliwościowa ma wówczas wartość nieskończenie dużą w punk-
+cie przerzutu. W praktyce oznacza to, że układ stał się generatorem. Dalsze zwiększanie
+wzmocnienia spycha bieguny głębiej w prawą połówkę płaszczyzny zmiennej zespolonej s.
+Jak wspomniano poprzednio, odpowiada to niestabilności systemu (generacji samorzutnej).
+Można zrealizować wiele filtrów różnych rodzajów, stosując układ Sallena-Keya jako człon
+podstawowy. Na przykład dolnoprzepustowy filtr Butterwortha projektuje się, rozmieszcza-
+1 aeeaice tlipaii wooókyczaia wik ii OO OWY 2210). Kabe
+
+dwa bieguny w tej konfiguracji wymagają jednego stopnia Sallena-Keya. Fil Butterwortha
+ma charakterystykę maksymalnie płaską (patrz rozdział 3), tzn. ma najostrzejsze przejście
+między pasmem przepustowym a zaporowym bez przerzułów na odpowiedzi częstotliwościo-
+wej. Im więcej biegunów zastosujemy, tym bardziej strome przejście uzyskamy. Ponieważ

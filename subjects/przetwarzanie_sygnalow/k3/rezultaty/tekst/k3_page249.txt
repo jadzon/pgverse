@@ -1,0 +1,32 @@
+15. Filtry o zasadzie średniej krocząc
+
+jeszcze inne znaczenie, zwłaszcza w technice komputerowej). W rozdziale 19 bardziej szc:
+gółowo omówiono filtry rekursywne różnych rodzajów. Trzeba zdawać sobie sprawę z te
+że filtr rekursywny ze średnią kroczącą bardzo różni się od typowych filtrów rekursywnyc
+W szczególności, większość filtrów rekursywnych ma nieskończenie długą odpowiedź i
+pulsową (NOI) złożoną z sinusośd i przebiegów wykładniczych. Odpowiedź impulsowa" |
+o średniej kroczącej jest zaś impulsem prostokątnym, a więc jest to skończona o ,
+impulsowa (SOI).
+Tea algorytm jest z kilka powodów szybszy od innych filtrów cyfrowych. Po pierwsz,
+maga tylko dwóch obliczeń na jeden punkt, niezależnie od długości odpowiedzi im
+na =.Po doi jodyinyzai <koaioczńy td opiejatni tmodinatyczzynać żę GOJORAJO i
+mowanie, podczas gdy w większości filtrów cyfrowych niezbędne jest czasochłonne mn
+żenie. Po trzecie, schemat indeksowania jest bardzo prosty. Każdy indeks we wzorze |
+jest uzyskiwany przez dodawanie lub odejmowanie stałych o wartościach całkowitych, kić
+mogą być obliczane przed rozpoczęciem filtrowania (tj. p i 4). Po czwarte, cały algo y
+może być zrealizowany przy użyciu liczb całkowitych. Zależnie od zastosowanych rc
+zań sprzętowych, obliczenia na liczbach całkowitych mogą być więcej niż o rząd wielko
+szybsze niż zmiennoprzecinkowe.
+Zadziwiające jest, że w tym algorytmie obliczenia na liczbach całkowitych są nie tylko zyb:
+sze, lecz także lepsze niż przy zapisie zmiennoprzecinkowym. Błędy zaokrąglania w arytme
+tyce zmiennoprzecinkowej mogą bowiem dawać zupełnie nieoczekiwane wyniki, jeśli nie
+zachowa się odpowiednich środków ostrożności. Załóżmy, na przykład, że tą metodą je
+filtrowany sygnał złożony z 10 000 próbek. Ostatnia próbka w filtrowanym sygnale c
+ra skumulowany błąd z 10 000 sumowań i 10 000 odejmowań. To się pojawia na wyj
+jako zmieniające się przesunięcie. W przypadku liczb całkowitych nie ma tej trudności, gdy
+w tej arytmetyce nie występują błędy zaokrąglania. Jeśli musicie jednak w tym gorytm
+zastosować arytmetykę zmiennoprzecinkową, to można do eliminacji wspomnianego p
+nięcia zastosować akumulator o podwójnej dokładności — jak to przedstawiono w p
+podanym w tablicy 15.2.
+
+<image/tabele/k3_page249_table1.png>

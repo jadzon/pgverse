@@ -1,0 +1,19 @@
+Zadania do rozdziału 3 331
+
+<image/figury/k3_page329_figure3.png>
+
+Zadanie 3.12. Korzystając z zasady superpozycji, obliczyć prąd I w układzie z rys. Z-3.12. Dane:
+E = 24V, J, = 1,6 mA, J; = 0,64 mA, R, =R; = R,= 6 kQ, R, m 12 kQ.
+
+Odp: I=0
+
+Zadanie 3.13. W układzie pokazanym na rys. Z-3.13 wyznaczyć prąd I w zależności od
+parametrów obwodu. Należy skorzystać z zasady superpozycji.
+
+<image/figury/k3_page329_figure2.png>
+
+Zadanie 3.14. Dana jest nieskończona sieć oporowa przedstawiona na rys. Z-3.14. Obliczyć opór
+zastępczy dwójnika AB powstałego w wyniku wyróżnienia zacisków AB w sieci. Wskazówka:
+Dołącz do zacisku A jeden zacisk idealnego stałego źródła prądowego o wydajności prądowej J,
+
+<image/figury/k3_page329_figure1.png>

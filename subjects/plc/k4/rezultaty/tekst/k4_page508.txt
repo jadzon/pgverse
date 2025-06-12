@@ -1,0 +1,63 @@
+liczba rzeczywista (reał literal) — przedstawienie danej typu REAL lub
+LREAL,;
+
+licznik (counter function block) — blok funkcyjny, który akumuluje liczbę
+zmian na jednym lub więcej określonych wejściach;
+
+nazwa ukonkretnienia (instance name) — identyfikator skojarzony z okre-
+ślonym ukonkretnieniem;
+
+ogranicznik (delimiter) — znak lub kombinacja znaków użyte do oddzielenia
+elementów języka programowania;
+
+operand (operand) — element języka, na którym wykonywana jest operacja;
+operator (operator) — symbol reprezentujący działanie, które ma być wyko-
+nane w operacji;
+
+opis połączenia (connection descriptor) — ciąg znaków jednoznacznie
+identyfikujący połączenie;
+
+pamięć danych (memory, user data storage) — moduł funkcjonalny, w któ-
+rym program użytkownika przechowuje dane;
+
+parametr wejściowy, wejście (input parameter, input) — parametr dostar-
+czany jako argument do elementu oprogramowania;
+
+parametr wyjściowy, wyjście (output parameter, output) — argument użyty
+w celu zwrócenia wyniku wyznaczenia wartości w elemencie oprogramo-
+wania;
+
+połączenie (connection) — współpraca między dwoma lub więcej ukonkret-
+nieniami komunikacyjnych bloków funkcyjnych w celu wymiany danych
+lub synchronizacji;
+
+powrót (return) — konstrukcja językowa w ramach elementu oprogramo-
+wania, określająca koniec wykonywania sekwencji;
+
+programowanie (program) — projektowanie, pisanie i testowanie progra-
+mów użytkownika;
+
+przejście (transition) — warunek, za pomocą którego realizacja sterowania
+przechodzi w grafie SFC z poprzedniego etapu lub etapów do następnego,
+bezpośrednio połączonego etapu lub etapów;
+
+przepływ prądu (power flow) — symboliczny przepływ prądu elektrycznego
+w schemacie drabinkowym, dla zaznaczenia postępowania w logicznym
+rozwiązywaniu algorytmu;
+
+przypisanie (assignment) — mechanizm przyporządkowania wartości
+do zmiennej lub do zmiennej złożonej;
+
+reprezentacja symboliczna (symbolic representation) — użycie identyfika-
+torów dla nazwania zmiennych;
+
+rodzaj danych (generic data type) — typ danych zawierający w sobie kilka
+typów danych;
+
+schemat bloku funkcyjnego (function block diagram) — jeden lub więcej
+obwodów zawierających graficznie przedstawione funkcje, bloki funkcyjne,
+elementy danych, etykiety i elementy łączące:
+
+ 
+
+508 Dodatek A.. Definicje wybranych pojęć według normy IEC 1131-3

@@ -1,0 +1,29 @@
+.. .— m a w Il.aA m m mam PI LN PR Em simm iż 1-4 .-— m ama
+
+<image/wzory/k4_page161_formula2.png>
+
+Szybki licznik jest oddzielnym modułem włączanym do dowolnego gniazda
+płyty sterownika. Umożliwia on bezpośrednie zliczanie impulsów z częstotliwo-
+ścią do 100 kHz. Moduł ten przeznaczony jest do zastosowań przemysłowych
+przy pomiarach prędkości wirowania silników, pomiarach przepływu, w precy-
+zyjnych układach pozycjonowania itp.
+
+ 
+
+Najczęściej generatorami impulsów zliczanych przez HŚC są przetworniki ob-
+rotowo-impulsowe zwane enkoderami.
+
+Schemat przykładowego układu pozycjonowania w jednej osi z wykorzystaniem
+modułu HSC przedstawia Rys. 3.39.
+
+<image/figury/k4_page161_figure1.png>
+
+z wykorzystaniem przetwornika obrotowo-impulsowego.
+
+Względny pomiar położenia wyznacza moduł HSC, który bezpośrednio zlicza
+impulsy generowane przez przetwornik obrotowo-impulsowy w trakcie prze-
+mieszczania, począwszy od współrzędnej punktu bazowego (Home Position),
+
+ 
+
+3.8 Moduł szybkiego licznika HSC 161

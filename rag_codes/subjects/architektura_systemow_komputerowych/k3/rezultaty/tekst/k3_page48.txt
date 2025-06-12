@@ -1,0 +1,28 @@
+38 3. Podstawy techniki cyfrowej
+ZZ z ORM FAMA OOWĄ
+
+słowa kodowego. Oznaczmy przez Pl, P2 i P3 bity parzystości, przy czym po lewej
+stronie słowa jest bit P1. Bity P, są obliczane według zależności:
+
+<image/wzory/k3_page48_formula1.png>
+
+gdzie © oznacza operację sumy mod 2. Czwartą możliwą kombinację (P4 = D2 6 D3 ©
+D4) pominięto.
+
+Załóżmy teraz, że w omawianym kodzie może powstać przekłamanie tylko na jednej
+pozycji. Jeśli nastąpiło ono na pozycji DI, to wszystkie 3 pozycje Pi będą miały
+nieprawidłową wartość. Jeśli nastąpiło na pozycji D2, to tylko PI i P2 będą miały
+nieprawidłową wartość. Jeśli przekłamanie wystąpi na pozycji D3, to nieprawidłowe będą
+P1 i P3,a jeśli na D4, to P2 i P3. Wszystkie te przypadki zestawiono w tablicy 3.5.
+
+<image/tabele/k3_page48_table2.png>
+
+ 
+
+Rozważania zilustrujmy następującym przykładem. Załóżmy transmisję ciągu binar-
+nego przez kanał informacyjny. Niech na wejściu kanału będzie słowo kodowe 1101
+(DI, D2, D3, D4). Obliczone dla niego słowo korekcyjne to 010 (P1, P2, P3). Załóżmy, że
+w czasie transmisji nastąpiło przekłamanie na bicie D3 i na wyjściu kanału odebrano
+słowo 1111 010. Kontrola słowa bitów parzystości słowa wyjściowego daje negatywny
+
+<image/tabele/k3_page48_table1.png>

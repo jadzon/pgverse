@@ -1,0 +1,38 @@
+190
+
+<image/tabele/k2_page185_table1.png>
+
+algorytm (-learning znajduje optymalną strategie w sytuacjach niedeterministycz-
+nych, gdzie szukanie optymalnej trasy np. metodą Dijkstry nie daje się zastosować.
+
+Dla poszerzenia wiedzy o rozważanym zadaniu zmieniono środowisko na deter-
+ministyczne, to znaczy takie, że akcja w danym kierunku prowadzi do pewnego
+przeskoku w tym kierunku i przeprowadzono ponownie uczenie metodą Q-learning.
+Uzyskane wyniki przedstawiono na rysunku ??. Teraz uzyskana strategia jest jak ła-
+two sprawdzić poprawna. Uzyskane wartości ( są znacznie większe niż w przypadku
+niedeterministycznym, co jest spowodowane unikaniem wchodzenia do kratek przy-
+noszącym duże kary.
+
+6.10.8. Eksploracja — eksploatacja
+
+Omawiając metodę Q-learning nie rozważaliśmy jakie trasy powinien przechodzić
+agent w procesie uczenia aby uczenie było najbardziej efektywne. W przykładzie
+?7 przyjęliśmy, że porusza się losowo. Tutaj rozważymy problem wyboru tras przez
+agenta..
+
+zadanie o n automatach
+
+Aby przybliżyć zagadnienie wyboru tras rozważmy zbliżony problem nazywany za-
+daniem o n automatach do gry (problemem n-rękiego bandyty od (ang. n-armed
+bandit)).
+
+Problem n-rękiego bandyty formułuje się następująco: dany jest zestaw n au-
+tomatów do gry (rys. ??) wydających w każdej grze wygrane będące realizacjami
+zmiennych losowych. Rozkłady prawdopodobieństw wygranych w poszczególnych
+automatach są różne i nieznane. Należy w określonej liczbie gier uzyskać największą
+sumę wypłat.
+
+Przyjmijmy oznaczenia: a;, i = 1,2,...,n— akcja gry na automacie £, r; — wypłata
+przy akcji ż, V(a,), i = 1,2,...,n — wartość średnia wypłaty przy akcji a;.
+
+W trakcie prowadzenia gier, grając k-ty raz na automacie o numerze ż, wartość

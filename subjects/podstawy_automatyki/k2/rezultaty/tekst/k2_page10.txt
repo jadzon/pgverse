@@ -1,0 +1,26 @@
+odpowiedziskokowiimpulsowopisujwzory
+
+<image/wzory/k2_page10_formula1.png>
+
+W przypadku obiektów inercyjnych rzędu drugiego lub wyższych
+
+w praktyce stosuje się ich aproksymację za pomocą obiektu inercyjnego pierw-
+
+szego rzędu z opóźnieniem transportowym o parametrach wyznaczonych na
+podstawie przebiegu charakterystyki skokowej (u(t) = 1(t)).
+
+<image/figury/k2_page10_figure1.png>
+
+Rys. 2.4: Sposób aproksymacji obiektu wyższego rzędu
+Stałe Tp oraz T oznaczają zastępczy czas opóźnienia transportowego
+
+oraz zastępczą stałą czasową. Aproksymacja obiektu wyższego rzędu dana
+"Z
+
+<image/wzory/k2_page10_formula2.png>
+
+ajegoodpowiedziskokowiimpulsowopisujwzory
+
+<image/wzory/k2_page10_formula3.png>
+
+<image/tabele/k2_page10_table1.png>

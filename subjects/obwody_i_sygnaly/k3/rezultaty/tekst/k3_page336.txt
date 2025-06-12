@@ -1,0 +1,31 @@
+336 3. Obwody prądu stałego
+
+figury/k3_page336_figure2
+
+Zadanie 3.28. W układzie stabilizującym napięcie U, na obciąże:
+stosowano diodę Zenera o charakterystyce jak na rys. Z-3.28b.
+
+wzory/k3_page336_
+
+figury/k3_page336_figure
+
+Układ powinien zapewnić stabilizację napięcia U„ na poziomie 5 V
+wejściowego U w zakresie 6—8 V i dopuszczalnych zmianach prądu I
+0—50 mA. Jaką wartość powinien mieć opór R, aby przez diodę płynął
+i było zapewnione prawidłowe działanie układu w całym zakresie dopu
+U i prądu /4? Jaki największy prąd może wówczas płynąć przez dioc
+
+Odp.: R = 200, I, = 0,15A
+
+Zadanie 3.29. Dla wartości siły elektromotorycznej E wyznaczonej v
+wydzielane w poszczególnych oporach układu z rys. Z-3.26.
+
+Odp.: Px, = Pa; = 50mW, Pzą = 10mW, Pz, = 250mW, P;, = 0
+
+Zadanie 3.30. W jakich granicach zmienia się moc oddawana przez źródło w układzie z zad. 3.4
+przy zmianach położenia suwaka potencjometru od punktu A do punktu B?
+
+Odp.: Pe(120 mW, 420 mW)
+
+Zadanie 3.31. Obliczyć moce pobierane przez poszczególne opory i oddawane przez źródła
+w układzie z zad. 3.11. Sprawdzić bilans mocy.

@@ -1,0 +1,17 @@
+tabele/k4_page231_table1.opng
+
+Konfiguracji każdego z wprowadzonych do programu bloków PID można doko-
+
+nać:
+
+e w programie, przez wpisanie odpowiednich wartości do rejestrów za pomocą
+funkcji przesuwania danych (MOVE, BLKMOYV - por. 4.9.1);
+
+e _ przy użyciu programatora, wykorzystując opcję „zoom ” (lupa) w programie
+Logicmaster 90, por. Rys. 4.7.
+
+<image/tabele/k4_page231_table2.png>
+
+Rys. 4.7 Ekran konfiguracyjny bloku PID
+
+4.12 Blok funkcyjny PID 231

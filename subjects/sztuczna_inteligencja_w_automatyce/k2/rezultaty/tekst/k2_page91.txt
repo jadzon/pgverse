@@ -1,0 +1,43 @@
+Rozdział 6
+
+Metody uczenia maszyn
+
+Uczenie się komputerów jest jednym z ważnych sposobów automatycznego pozyski-
+wania wiedzy lub uzyskiwania algorytmów (optymalnych lub suboptymalnych). W
+czasie uczenia systemowi uczącemu się przedstawiane są przykładowe zadania do
+rozwiązania (na jego wejście podawane są obrazy) i ewentualnie poprawne odpowie-
+dzi, a system jednorazowo lub iteracyjnie ulepsza swoje działanie generując coraz
+lepsze rozwiązania (coraz lepiej klasyfikuje obrazy). Takie uczenie, prowadzone na
+podstawie obserwacji przykładowych zadań, nazywa się uczeniem indukcyjnym.
+
+Celem działania systemu uczącego się jest znalezienie maszyny realizującej pewne
+odwzorowanie x — d. Np. x może być wektorem pikseli fotografii przedstawiających
+drzewo, a d € £—1,1) jest sygnałem mówiącym czy fotografia przedstawia drzewo
+liściaste lub iglaste.
+
+Zadanie uczenia sprowadza się do znalezienia funkcji y = f(x,w) realizującej
+możliwie dokładnie to odwzorowanie, gdzie w jest wektorem parametrów. Zazwyczaj
+postać funkcji jest wybrana wcześniej i w trakcie uczenia wyznaczane są wartości
+parametrów w. Przyjęcie konkretnych wartości tych parametrów ostatecznie określa
+funkcję f.
+
+Aby określić jakość odwzorowania y = f(x.w) przyjmuje się zazwyczaj, że wek-
+tory x i sygnały d są realizacjami zmiennych losowych o łącznej gęstości prawdopo-
+dobieństwa p(x, d). W najbardziej ogólnym modelu d jest losowe przy ustalonym x.
+Np. przy przesyłaniu sygnałów w obecności szumów d reprezentuję nadaną wiado-
+mość, a x zaszumioną wiadomość odebraną, na podstawie której należy odtworzyć
+wiadomość nadaną. Przy ustalonym x możemy mieć różne d. Jednak w większo-
+ści zastosowań adekwatny jest model prostszy, w którym d jest deterministyczną
+funkcją x.
+
+Przyjmując jako kryterium błędu systemu, dla pojedynczego sygnału wejścio-
+wego x, kwadrat różnicy pomiędzy wartością oczekiwaną d, a wyjściem systemu y,
+całkowity błąd systemu (zwany też ryzykiem średnim) można wyrazić wzorem
+
+<image/wzory/k2_page91_formula1.png>
+
+gdzie € oznacza operację uśredniania.
+Znając gęstość p(x,d) można wyznaczyć wartość parametrów w minimalizują-
+cych błąd (??). Najczęściej w zastosowaniach praktycznych rozkład ten jednak nie
+
+96

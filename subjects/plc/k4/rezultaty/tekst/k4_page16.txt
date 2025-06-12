@@ -1,0 +1,44 @@
+Polaryzacja źródła zasilania obwodów wyjściowych zależy od typu zastosowa-
+nego modułu wyjść. Najczęściej stosowane są moduły wyjść typu źródło
+(SOURCE OUT) z polaryzacją ujemną (negative output module), znacznie rza-
+dziej typu ujście (SINK OUT) z polaryzacją dodatnią (positive output module).
+W pierwszym przypadku obciążenia obwodów wyjściowych (najczęściej cewek)
+przy rozwartych stykach modułu (przekaźnikowych lub elektronicznych) nie po-
+zostają pod napięciem, szczególnie w czasie zatrzymania sterownika. W wielu
+sytuacjach poprawia to warunki bezpieczeństwa działania takiego układu stero-
+wania. Moduł jest typu źródło, gdyż prąd płynie do obciążenia z punktu wspól-
+nego lub z dodatniego bieguna zasilania. Obciążenie włączone jest między
+ujemnym biegunem zasilania a zaciskami wyjściowymi.
+
+ry/k4_page16_formula2.png EEEE
+
+Podstawowymi elementami pamięci w programach sterownikowych są asyn-
+chroniczne przerzutniki statyczne o wejściach prostych, czyli takie, dla których
+wejścia są aktywne gdy są równe |.
+
+Przerzutnik ma dwa wejścia i dwa wyjścia. Wejściem wpisującym lub ustawiają-
+cym jest wejście S (Set), zaś wejściem zerującym lub kasującym jest wejście
+R (Reset). Wyjściami rozumianymi jako stan pracy jest q i jego negacja q”.
+Wyjście to jest realizowane przez funkcję Q określaną jako stan wzbudzenia
+przerzutnika. Stan pracy q jest stanem poprzednim do Q.
+
+Przerzutnik taki może być z dominującym wejściem zerującym, który oznacza
+się jako przerzutnik RS lub z dominującym wejściem wpisującym oznaczonym
+przez SR. O dominacji mówimy tylko wtedy, gdy S=7 i R=21.
+
+Działanie przerzutnika przedstawia się w postaci funkcji, w formie tablicy
+przejść lub tablicy wzbudzeń. Można też zobrazować jego działanie na wykresie
+czasowym. Poniżej przedstawiono wszystkie te formy prezentacji przerzutników
+RS (Rys. 1.6) i SR (Rys. 1.8). Tablica przejść pokazuje stany następne Q po po-
+jawieniu się na wejściach odpowiednich kombinacji wejść S$ i R, natomiast tabli-
+ca wzbudzeń podaje kombinacje wejść koniecznych do zmiany poszczególnych
+stanów wyjść.
+
+Symbol i w
+
+16_table2.png
+:/k4_page16_table3.png „table
+
+ 
+
+16 Rozdział : 1. Wprowadzenie i podstawy

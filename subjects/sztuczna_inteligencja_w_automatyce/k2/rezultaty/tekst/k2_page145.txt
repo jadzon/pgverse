@@ -1,0 +1,55 @@
+150
+
+Na przykład początkowa niestabilność 1% składowych i przyjmowanie przez nie w
+rezultacie przeciwnych wartości mogłaby być do przyjęcia, natomiast oczywiście nie
+do przyjęcia byłaby początkowa niestabilność powodująca w efekcie kilkudziesięcio-
+procentowy błąd. Z bardziej złożonych analiz wynika, że krytyczną wartością jest
+p/n = 0,138. Dla większych wartości początkowa niewielka liczba niestabilnych
+składowych w kolejnych krokach lawinowo zmienia inne składowe dając ostatecznie
+zupełnie błędny odczyt.
+
+W innej definicji pojemności żąda się, aby z prawdopodobieństwem P, bliskim
+jedności wszystkie wzorce były stabilne, czyli [1 — Pr(c > 1)|”” > P,. Po zastoso-
+waniu słusznego dla dużych np przybliżenia [1 — Pr(c > 1)|”” = — Pr(c > 1)np+ 1
+warunek przybiera postać
+
+<image/wzory/k2_page145_formula1.png>
+
+Dla małych p/n można zastosować rozwinięcie asymptotyczne funkcji błędu:
+
+<image/wzory/k2_page145_formula2.png>
+
+Stosując to rozwinięcie oraz logarytmując obie strony nierówności (??) otrzymujemy
+
+<image/wzory/k2_page145_formula3.png>
+
+lub dla duż"e* »
+
+<image/wzory/k2_page145_formula4.png>
+
+Przybliżonym rozwiązaniem tej nierówności, zbliżającym się ze wzrostem n do roz-
+wiązania dokładnego, jest
+
+<image/wzory/k2_page145_formula5.png>
+
+Gdy liczba zapamiętanych obrazów p spełnia warunek (??), wtedy wszystkie zapa-
+miętane obrazy są stabilne z prawdopodobieństwem bliskim jedności.
+
+sectionSystemy neuronowo rozmyte
+
+Systemy neuronowo-rozmyte (ang. ANFIS od Adaptive Neuro-Fuzzy Inference
+System) są to systemy wnioskowania rozmytego, w których wartości parametrów
+funkcji przynależności dobierane są w procesie uczenia z nauczycielem. Nazwa tych
+systemów bierze się z podobieństwa struktury obliczeń systemu rozmytego do struk-
+tury warstwowej sieci neuronowej i z algorytmu uczenia, którego jeden z etapów jest
+identyczny z metodą propagacji wstecznej.
+
+6.5.9. Struktura systemu ANFIS
+
+Typową strukturą uczącego się systemu rozmytego (ANFIS) jest system Sugeno.
+Rozpatrzmy przykładowy system Sugeno o dwóch wejściach i następujących regu-
+łach:
+
+Jeżeli 1 jest A, i y jest B; to 4 = pyr tqy+ ri
+
+Jeżeli r jest Aa i y jest Ba to żą = ar + qoy tr Ta (6.48)

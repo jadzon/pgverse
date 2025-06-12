@@ -1,0 +1,41 @@
+81
+
+Definicja 5.9 Rozcieńczenie zbioru
+
+Rozcieńczeniem zbioru rozmytego A jest zbiór D/L(A) o funkcji przynależności
+
+<image/wzory/k2_page76_formula1.png>
+
+Powyższe dwie operacje często używa się do tworzenia funkcji przynależności
+zbiorów których definicje słowne zawierają przedrostki bardzo lub dosyć, dość. Np.
+jeżeli zbiór rozmyty określony słowem „gorący” ma funkcje przynależności (:) to
+zbiory „bardzo gorący” i „dość gorący” mogą mieć funkcje przynależności g:(:)? i
+ji(:))?*. Ilustruje to poniższy przykład
+PRZYKŁAD 5.5
+Ludzie i ich wzrost. Niech przestrzeń X będzie zbiorem liczb rzeczywistych w prze-
+dziale (130, 220| reprezentującym wzrost osób wyrażony w cm. Zdefiniujmy kilka
+podzbiorów rozmytych: bardzo niski, niski, średniego wzrostu, wysoki ale nie bardzo
+wysoki, dosyć wysoki, wysoki, bardzo wysoki, które będą odpowiadały odpowiednim
+pojęciom w języku naturalnym. Korzystając z funkcji przynależności zbiorów „niski”,
+„średniego wzrostu”, „wysoki” z przykładu ?? oraz operacji negacji, a także CON i
+DIL uzyskujemy funkcje przynależności przedstawione rysunku ??. mu
+
+<image/figury/k2_page76_figure1.png>
+
+Rys. 5.8: Funkcje przynależności kilku zbiorów rozmytych dotyczących wzrostu
+
+5.1.3. Relacje rozmyte
+
+Relacje w klasycznej teorii zbiorów określa się za pomocą zbioru elementów, par
+elementów, trójek elementów, itd. Zbiory te określaja odpowiednio, relacje unarne
+(jednoczłonowe), binarne i ogólnie n-arne. Podobnie, zbiór rozmyty reprezentuje
+relację rozmytą. Funkcja przynależności relacji rozmytej określa stopień zachodzenia
+relacji.
+
+PRZYKŁAD 5.6
+Nierówność
+
+<image/wzory/k2_page76_formula2.png>
+
+określa relację pomiędzy liczbami z i y spełnianą przez punkty o wpółrzędnych z,y
+znajdujące się w kole o środku w początku układu współrzędnych i promieniu R.

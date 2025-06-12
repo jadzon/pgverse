@@ -1,0 +1,31 @@
+e ONDTR (ON Delay TimeR) - czasomierz załączający z zapamiętaniem;
+
+Czasomierz z zapamiętaniem zlicza czas w wybranych jednostkach (np. 0.1 s,
+0.01 s lub 0.007 s), jeśli do wejścia zezwolenie dopływa prąd i zapamiętuje
+odmierzony czas, gdy prąd zanika. Ponowny dopływ prądu powoduje kontynu-
+ację odmierzania czasu. W każdym cyklu pracy sterownika wartość bieżąca CV
+jest uaktualniana tak, aby odzwierciedlała ona sumaryczny czas dopływu prądu .
+do wejścia zezwolenie. Osiągnięcie lub przekroczenie przez wartość CV warto-
+ści zadanej PV powoduje pojawienie się prądu na wyjściu czasomierza.
+Osiągnięcie przez CV wartości maksymalnej, tj. 32767 jednostek czasu, zatrzy-
+muje odmierzanie czasu. W bloku danych przechowywana jest wówczas wartość
+maksymalna, a wyjście czasomierza pozostaje w stanie ON niezależnie od stanu
+na wejściu zezwolenie. Pojawienie się sygnału kasującego, czyli zmiana stanu
+na wejściu R (Reset) z OFF na ON powoduje wyzerowanie wartości bieżącej CV
+oraz zanik prądu na wyjściu czasomierza (pod warunkiem, że wartość zadana PV
+nie jest zerowa).
+
+<image/figury/k4_page193_figure1.png>
+
+Wyd. 4.10 Przykład wykorzystania czaso mierza nieciągłego
+
+Na Wyd. 4.10 pokazano przykład wykorzystania czasomierza z zapamiętaniem,
+a na Rys. 4.2 odpowiednie wykresy czasowe.
+
+<image/figury/k4_page193_figure2.png>
+
+Rys. 4.2 Przykładowe przebiegi czasowe dla programu z Wyd. 4.10.
+
+ 
+
+4.5 Czasomierze i licznik 193

@@ -1,0 +1,21 @@
+512 29. Rozpoczęcie pracy z DSP
+
+Gio ek Sata. Po więc zain R RAW
+mu z pamięci fłash umieszczonej na płycie drukowanej. Ten program nawiązuje łączność
+USB JTAG z waszym komputerem osobistym. Następnie uruchamiacie na komputerze
+
+spowodować, żeby wasze programy stały się ładowalne, a więc abyście mogli realizować
+aplikacje autonomiczne. Wraz z zestawem EZ-KIT Lite jest dostarczanych kilka wcześniej
+napisanych programów. Na przykład dzięki programowi pasmowoprzepustowemu możecie
+mówić do mikrofonu i słyszeć rezultat uzyskany po przepuszczeniu sygnału przez filtr pa-
+smowoprzepustowy. Te programy są pożyteczne z dwóch przyczyn: 1) umożliwiają szyb-
+kie uruchomienie systemu i wykonanie czegoś interesującego, co na pewno będzie dzia-
+łać, 2) są szablonem do tworzenia waszych własnych programów. Teraz dochodzimy więc
+do następnego tematu — przykładu projektowania z zastosowaniem zestawu EZ-KIT Lite.
+Przykład projektowania zrealizowano, stosując starszy zestaw próbny ADSP-21061 EZ-KIT
+Lite. Jest on jednak programowo kompatybilny z ADSP-21161 EZ-KIT, a lepsze działanie
+
+nowego, szybszego układu ADSP-21161 polega na krótszym okresie wykonywania instruk-
+odnie |
+
+<image/figury/k3_page475_figure1.png>

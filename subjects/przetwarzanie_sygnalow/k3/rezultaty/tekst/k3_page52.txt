@@ -1,0 +1,38 @@
+Wybór filtru antyaliasingowego 63
+
+dopuszczalne. Przerzut zmieniłby jasność na krawędziach obiektów w stosunku do części
+środkowych. Co gorsza, lewa strona obiektu będzie się wydawała jasna, a prawa — ciemna.
+W wielu zastosowaniach kiepska odpowiedź skokowa jest niedopuszczalna. W tych zastoso-
+waniach dominują zalety filtrów Bessela — brak przerzutu i symetryczne zbocza.
+
+Wybór filtru antyaliasingowego
+
+W tablicy 3.2 zestawiono właściwości trzech podstawowych filtrów. Na podstawie tych da-
+nych można stwierdzić, jak w każdym z filtrów jeden parametr jest optymalizowany kosztem
+innych. Filtr Czebyszewa jest zoptymalizowany pod względem stromości opadania charak-
+terystyki, Butterwortha — jej płaskości w paśmie przepustowym, Bessela zaś pod względem
+odpowiedzi skokowej.
+
+Wybór filtru antyaliasingowego prawie całkowicie zależy od jednej kwestii: jak jest repre-
+zentowana informacja w sygnałach, które mamy zamiar przetwarzać. Jest wiele sposobów
+kodowania informacji w przebiegu analogowym, ale tylko dwa sposoby są powszechnie
+stosowane — kodowanie w dziedzinie czasu i kodowanie w dziedzinie częstotliwości.
+Różnica między tymi sposobami ma bardzo istotne znaczenie w DSP i będzie na kartach
+tej książki tematem wielokrotnie powracającym.
+
+W przypadku kodowania w dziedzinie częstotliwości informacja jest zawarta w przebie-
+gach sinusoidalnych, które zsumowane tworzą sygnał. Doskonałym przykładem są sygna-
+ły foniczne, zwane w skrócie sygnałami audio. Gdy człowiek słucha mowy lub muzyki,
+to odbierany dźwięk zależy od częstotliwości w nim występujących, a nie od jakiegoś
+szczególnego kształtu przebiegu. Można to wykazać, przepuszczając sygnał audio przez
+układ zmieniający fazy różnych sinusoid, lecz zachowujący ich częstotliwości i amplitudy.
+
+  
+
+3.2. Parametry trzech podstawowych rodzajów filtrów. Filtr Bessela daje najlepszą odpowiedź skokową; dlatego
+stosowany do sygnałów kodowanych w dziedzinie czasu. Filtry Czebyszewa i Butterwortha skutecznie eliminują
+
+PEWIEN
+Wartości w tablicy są podane w sekundach i hercach, dla częstotliwości odcięcia 1 Hz
+
+<image/tabele/k3_page52_table1.png>

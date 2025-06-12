@@ -1,0 +1,25 @@
+188
+
+<image/figury/k2_page183_figure2.png>
+
+<image/figury/k2_page183_figure1.png>
+
+Rys. 6.87: Przebieg w procesie uczenia wartości użyteczności (0(s.a) stanu s reprezento-
+wanego kratką o współrzędnych (3,1) i akcji a"N,W,S,E
+
+prawo od zamierzonego kierunku i z prawdopodobieństwem 0,05 skoczy w kierunku
+przeciwnym do zamierzonego (rys, ??).
+
+Do wyznaczenia użyteczności () użyto algorytmu ()-learning (??). Przeprowa-
+dzono 6000 przebiegów środowiska od kratki startowej (o współrzędnych 3,1) do
+celu (4,5). W czasie przejścia środowiska kolejne przeskoki wybierano losowo z wy-
+łączeniem cofania się, tzn. skoku w kierunku przeciwnym do poprzedniego skoku.
+
+Na rysunku ?? przedstawiono przebieg w procesie uczenia estymowanej użytecz-
+ności (Q(s,a) dla czterech kierunków a, dla kratki startowej. Widać z niego wyraź-
+nie, od początku, mniejszą użyteczność akcji wyboru kierunku wschodniego (a =E),
+który bezpośrednio prowadzi do uzyskania dużej kary (r = —6). Różnice pomiędzy
+użytecznościami pozostałych kierunków są niewielkie.
+
+Ostateczne wyniki nauki zaprezentowane są w tablicy ??, gdzie przedstawiono
+wartości ()(s, a) dla wszystkich stanów i wszystkich akcji. Z tablicy tej wyznaczono

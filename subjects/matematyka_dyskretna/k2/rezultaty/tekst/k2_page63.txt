@@ -1,0 +1,47 @@
+4 Rozdział 1. Rachunek prawdopodobieństwa
+
+g) W przypadku rzutu n (rozróżnialnymi) monetami przestrzeń zdarzeń elementarnych
+może być określona jako zbiór wszystkich n elementowych ciągów z wartościami O
+lub R.
+
+h) Przypuśćmy, że mamy urnę z dwoma kulami białymi i trzema czarnymi, i że losu-
+jemy dwie kule z tej urny. Oznaczmy te kule przez 1b, 2b, 3c, 4c i 5c. Przestrzenią
+zdarzeń elementarnych może tu być albo zbiór dwuelementowych podzbiorów zbio-
+ru kul, lub zbiór dwuelementowych ciągów bez powtórzeń. Zależy to od tego, czy
+
+będziemy rozpatrywać zdarzenia, w których rozróżniamy wylosowane kule, czy nie
+rozróżniamy.
+
+Można też rozpatrywać przestrzenie zdarzeń nie związane z eksperymentem:
+Przykład 1.2 Przestrzenią zdarzeń elementarnych może być:
+a) Zbiór liter lub słów występujących w jakimś tekście, książce lub liście.
+
+b) Zbiór możliwych haseł potrzebnych do uzyskania dostępu do danych lub systemu.
+Jeżeli zbiór możliwych haseł jest zbyt mały, to łatwo można złamać zabezpieczenia.
+
+c) Zbiór możliwych wyliczeń algorytmu probabilistycznego (algorytmu, który korzysta
+z funkcji losującej).
+
+Dowolny podzbior A € 0 nazywamy zdarzeniem. Pamiętajmy, że rozważamy tyl-
+ko skończone przestrzenie zdarzeń elementranych. W przypadku, gdy © nie jest zbiorem
+skończonym, konieczna jest inna definicja zdarzenia. Cały zbiór0? nazywamy zdarzeniem
+pewnym, a zbiór pusty © zdarzeniem niemożliwym. Zdarzenia rozłączne, A N B =, na-
+zywamy wykluczającymi się. Zdarzenie A” = 0 — A nazywamy zdarzeniem przeciwnym
+do zdarzenia A.
+
+Przykład 1.3 a) W przykładzie 1.1b, z rzutem dwoma monetami, (2 = £00,0R,RO,RR),
+mamy 16 = 2* zdarzeń. Zbiór A = £OO,OR) jest zdarzeniem polegającym na
+tym, że na pierwszej monecie wypadł orzeł.
+
+b) W przykładzie 1.1e, z rzutem dwoma kostkami, mamy 25* zdarzeń. Zbiór ((1, 4), (2,3), (3,2), (4, 1))
+jest zdarzeniem, że suma oczek na obu kostkach wynosi 5.
+
+c) W przykładzie 1.1, z kulami, A = (1b, 2b) oznacza zdarzenie, że wylosowano kulę
+białą.
+
+d) Rzutczteroma monetami, przykład 1.1g zn = 4, zdarzenie, że na pierwszej i trzeciej
+monecie wypadły orły to 40000, OOOR,OROO,ORORY), a zdarzenie, że na
+pierwszej i trzeciej monecie wypadło to samo to
+1£0000,000R,OROO,OROR, RORO, RORR, RRRO, RRRRY.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

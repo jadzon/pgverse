@@ -1,0 +1,41 @@
+1.7. Źródła 121
+
+Równości (1.7-9) stanowią zatem warunki równoważności źródeł o rów-
+naniach (1.7-8). Przy spełnieniu warunków (1.7-9) źródło napięciowe (rys. 1.7-3a)
+i źródło prądowe (rys. 1.7-3b) są równoważne, można je bowiem opisać tym
+samym równaniem (por. p. 1.5.2-I)*..
+
+Na równoważność źródeł można patrzeć również w nieco inny sposób i nadać
+jej wyraźną interpretację obwodową. Rozpatrzmy obwody przedstawione na rys.
+1.7-4a,b, w których R jest dowolnym (ale jednakowym) oporem. Źródła z rys.
+1.7-4a,b są równoważne, jeśli:
+
+<image/wzory/k4_page119_formula1.png>
+
+<image/figury/k4_page119_figure1.png>
+
+Można łatwo sprawdzić (szczegóły pozostawiamy Czytelnikowi), że toż-
+samość (1.7-10) jest spełniona wtedy i tylko wtedy, gdy zachodzą warunki
+równoważności (1.7-9). Oznacza to, że dla obciążenia R jest obojętne, czy jest
+ono zasilane ze źródła napięciowego (rys. 1.7-4a), czy zrównoważnego mu źródła
+prądowego (rys. 1.7-4b). Korzystamy z tego często w praktyce zastępując
+rzeczywiste źródło napięciowe równoważnym mu rzeczywistym źródłem prądo-
+wym lub odwrotnie.
+
+Uwaga. Jeśli źródła są równoważne, tzn. są spełnione zależności (1.7-9), to dla obciążenia
+(opór R na rys. 1.7-4) jest obojętne, czy zasilane jest ono ze źródła napięciowego, czy prądowego.
+Nieco inaczej przedstawia się jednak sprawa, jeśli rozważamy warunki pracy samego źródła.
+
+Straty w samym źródle powinny być, oczywiście, możliwe małe. „Dobre” źródło napięciowe
+powinno mieć zatem opór wewnętrzny R,, możliwie mały (i dużo mniejszy od oporu obciążenia R).
+Podobnie, „dobre” źródło prądowe powinno mieć przewodność wewnętrzną G„ = 1/R, możliwie
+małą (a więc opór R„odpowiednio duży i dużo większy od oporu obciążenia R). Zgodnie z pierwszym
+warunkiem (1.7-9) opory wewnętrzne źródeł równoważnych są jednakowe. Zamiana źródła na źródło
+równoważne może zatem powodować, że np. „dobre” źródło napięciowe zastępujemy „złym” źródłem
+prądowym lub odwrotnie.
+
+Do spraw tu poruszonych będziemy jeszcze powracać w dalszym ciągu.
+
+1) Zwracamy uwagę, iż o źródłach równoważnych można mówić tylko w przypadku źródeł
+rzeczywistych. Źródła idealnego (napięciowego lub prądowego) nie można bowiem nigdy zastąpić
+źródłem równoważnym (odpowiednio: prądowym lub napięciowym).

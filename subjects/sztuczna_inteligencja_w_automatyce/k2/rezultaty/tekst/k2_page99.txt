@@ -1,0 +1,34 @@
+2.
+
+104
+
+<image/figury/k2_page99_figure1.png>
+
+Rys. 6.5: Przykładowe kolejne punkty wyznaczane w metodzie najszybszego spadku
+
+Obliczenie gradientu funkcji EF (w) w punkcie w
+
+<image/wzory/k2_page99_formula1.png>
+
+Wyznaczenie nowego punktu według wzoru
+
+<image/wzory/k2_page99_formula2.png>
+gdzie 7, jest arbitralnie wybraną stałą zwaną współczynnikiem korekcji.
+Wielkość współczynnika korekcji wpływa na długość kroków algorytmu.
+
+Sprawdzenie warunku zatrzymania (numer kroku lub wartość funkcji E(w)).
+Jeżeli warunek nie jest spełniony to skok do kroku 2.
+
+Zakończenie algorytmu.
+
+Przykładowe kroki algorytmu przedstawione są na rys. ??.
+Do metod gradientowych należy też metoda propagacji wstecznej błędu uczenia
+
+sieci neuronowych i metoda doboru funkcji przynależności systemu wnioskowania
+rozmytego.
+
+Gdy nie jest znany przepis funkcji, a funkcja dana jest przez wartości, to można
+
+zastosować przybliżenie
+
+<image/wzory/k2_page99_formula3.png>

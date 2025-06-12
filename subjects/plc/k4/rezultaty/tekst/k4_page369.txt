@@ -1,0 +1,9 @@
+Przykład 3
+
+<image/figury/k4_page369_figure1.png>
+
+<image/tabele/k4_page369_table1.png>
+
+nm
+
+wzory/k4_page369_formula1.pnq

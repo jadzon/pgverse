@@ -1,0 +1,32 @@
+Stabilność
+
+ 
+
+Dla indywidualnej zmiennej stanu zachodzi
+
+<image/wzory/k/_page52_formula1.png>
+
+<image/wzory/k/_page52_formula2.png>
+
+SMOUBJS 8|8poJN
+
+Jeżeli dla każdej wartości własnej zachodzi warunek:
+
+<image/wzory/k/_page52_formula3.png>
+
+to wszystkie mody będą dążyły do zera. Zbieżność wektora z(t) pociąga za
+sobą zbieżność wektora x(t).
+
+Warunkiem asymptotycznej stabilności jest to, aby wszystkie wartości
+własne macierzy A leżały w lewej półpłaszczyźnie
+
+UWAGA:
+Warunkiem wystarczającym BIBO stabilności jest stabilność asymptotyczna.
+Że stabilności BIBO nie wynika stabilność asymptotyczna.
+
+ 
+
+Al
+
+POLITECHNIKA
+GDANSKA

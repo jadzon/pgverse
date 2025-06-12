@@ -1,0 +1,52 @@
+33. Metody analizy obwodów liniowych prądu stalego 275
+
+y/k4_page273_formula1.png (3.3-18)
+
+Występujące w równaniu macierzowym (3.3-18) wektory 7, i E, są nazy-
+wane odpowiednio wektorem prądów obwodowych i wektorem sił elektromoto-
+rycznych obwodowych. Macierz Ro jest nazywana macierzą oporów obwodo-
+wych.
+
+Dla sieci o n oczkach wektory /, i E, mają wymiary n x 1, natomiast
+macierz Ry ma wymiar n X n. Wobec założenia o postaci napięciowej wszyst-
+kich gałęzi sieci, wektor sił elektromotorycznych E, i macierz oporów ob-
+wodowych Ry wykazują pewne charakterystyczne prawidłowości. Umożliwia-
+ją one zapisanie wektora E, imacierzy Ro wprost ze schematu sieci przez jego
+przegląd, bez potrzeby odwoływania się do równań równowagi i równań
+gałęziowych.
+
+Załóżmy, że oczka sieci są ponumerowane i = 1,...,n. Można wówczas
+podać następujące ogólne reguły tworzenia elementów wektora E, i macierzy
+Ry.
+
+1. Siła elektromotoryczna obwodowa Eg; występująca w i-tym wierszu
+wektora E, = [Ey.Ev2...., Eo„]” jest sumą algebraiczną sił elektromotorycz-
+nych występujących w gałęziach należących do i-tego oczka, przy czym
+poszczególne siły elektromotoryczne uwzglęniamy w tej sumie ze znakiem
+dodatnim, jeśli ich strzałki są zgodne z kierunkiem obiegu oczka, i ze
+znakiem u je m n ym, jeśli ich strzałki są przeciwne do kierunku obiegu
+oczka.
+
+2. Macierz oporów obwodowych Ro = [Ry], i,j = 1,...,n, jest ma-
+cierzą symetryczną, przy czym:
+
+— elementy R;, na przekątnej głównej macierzy, nazywane oporami włas-
+nymi obwodowymi (oczkowymi), są zwykłymi sumami oporów wszystkich gałęzi
+należących do i-tego oczka, i = 1,..., n;
+
+— elementy R, = Ry, i j, poza przekątną główną macierzy, nazy-
+wane oporami wzajemnymi obwodowymi (oczkowymi), są oporami gałęzi należą-
+cych jednocześnie do oczek i-tego oraz j-tego, wziętymi ze znakiem minus”;
+w przypadku gdy oczka o numerach i oraz j nie mają wspólnej gałęzi,
+wówczas Ry = 0.
+
+Podsumowując, jeżeli metodę prądów obwodowych stosujemy do wyznacze-
+nia rozpływu prądów w dowolnej n oczkowej sieci zawierającej tylko gałęzie
+o postaci napięciowej, wówczas należy:
+
+— przyjąć strzałki prądów gałęziowych (zarazem kierunki gałęzi): w gałę-
+ziach źródłowych — zgodnie ze strzałkami sił elektromotorycznych, zaś w gałę-
+ziach bezźródłowych — dowolnie;
+
+i Ujemny znak elementów R, leżących poza przekątną główną macierzy R, jest konsekwencją
+przyjęcia jednakowego kierunku obiegu oczek.

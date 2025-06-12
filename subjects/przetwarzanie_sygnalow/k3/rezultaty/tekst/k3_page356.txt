@@ -1,0 +1,58 @@
+24, Liniowe przetwarzanie obrazó
+
+ze splataniem obrazu oryginalnego z funkcją PSF 3 x 3 pokazaną na rys. 24.4 d). Jeśli usta
+wimy k = 0, to PSF staje się funkcją delta i obraz pozostaje bez zmian. Jeśli będzie i
+większa wartość k, to obraz będzie miał wyraźniej zarysowane krawędzie. W obrazie na rys
+24.4 d) zastosowano k = 2, czyli sumowanie w stosunku: dwie części obrazu z rys. 24.4'
+do jednej części obrazu z rys. 24.4 a). Taka operacja jest naśladownictwem zdolności oka
+zaostrzania krawędzi, dzięki której obiekty mogą być łatwiej odróżniane od tła.
+
+Splot z którąkolwiek z tych funkcji PSF może spowodować pojawienie się ujemnych pik |
+w obrazie końcowym. Nawet jeśli program może posługiwać się ujemnymi wartościami pik
+seli, to wyświetlanie obrazu nie powinno z nich korzystać. Najprostszym sposobem omir c
+cia tej trudności jest dodanie pewnego przesunięcia do każdego z obliczonych pikseli, tak i
+w obrazach. Alternatywą jest obcinanie wartości wychodzących poza zakres.
+
+Splot przez roztączność
+
+Jest to metoda szybkiego spłotu, realizowana, gdy funkcja PSF jest rozłączna. PSF jest m
+łączna, jeśli może być rozdzielona na dwa sygnały jednowymiarowe — rzuty pionowy i p
+ziomy. Na rys. 24.5 przedstawiono przykład obrazu rozłącznego — prostopadłościenną funk
+cję PSF. Ściślej mówiąc, wartość każdego piksela w obrazie jest równa odpowiadającemu m
+punktowi w rzucie poziomym pomnożonemu przez odpowiedni punkt w rzucie pionox
+Można to wyrazić wzorem:
+
+x|r,c]=vert|r]xhorz[c]
+
+Wzór 24.1. Rozdzielanie obrazu. Obraz traktuje się jako roztączny, jeśli może zostać rozłożony na rzuty
+pionowy i poziomy
+gdzie xlr,c] jest obrazem dwuwymiarowym, vert[r] i horzfc) są rzutami jednowymi
+wymi. Oczywiście, większość obrazów nie spełnia tego wymagania. Na przykład funkc
+typu „okrągła czapka” nie jest rozłączna, Istnieje jednak nieskończona liczba obrazów 10
+łącznych. Można to zrozumieć, wytwarzając dowolne rzuty poziome i pionowe i znajduj
+odpowiadający im obraz. Przedstawiono to na rys. 24.6 na przykładzie profilów będ:
+dwustronnymi funkcjami wykładniczymi. Następnie z wzoru 24.1 jest wyznaczany obra
+odpowiadający tym profilom. Po wyświetleniu obraz ma kształt romboidu opadającego
+kładniczo w miarę wzrostu odległości od początku układu współrzędnych.
+
+W większości zadań DSP idealna funkcja PSF jest kołowo symetryczna, jak np. funkc
+typu „okrągła czapka”. Chociaż obrazy w postaci cyfrowej są zwykle rejestrowane i prz
+twarzane w prostokątnym formacie wierszy i kolumn, to pożądane jest modyfikowanie «
+razu, który jest jednakowy we wszystkich kierunkach. To rodzi pytanie, czy istnieje funkc
+PSF mająca symetrię kołową i jednocześnie rozłączna. Odpowiedź brzmi — tak, lecz je
+tylko jedna taka funkcja — gaussowska. Jak pokazano na rys. 24.7, dwuwymiarowy obr
+gaussowski ma rzuty, które też są gaussowskie. Obraz i rzuty gaussowskie mają takie 5a
+odchylenia standardowe.
+
+W celu wykonania splotu obrazu z rozłączną odpowiedzią impulsową filtru splatamy ka
+dy wiersz w obrazie z rzutem poziomym, uzyskując obraz pośredni. Następnie spl
+każdą kolumnę tego obrazu pośredniego z rzutem pionowym funkcji PSF, Uzyskany obr
+jest identyczny z bezpośrednim splotem obrazu oryginalnego i odpowiedzi impulsów
+filtru. Gdybyście chcieli poddać splotowi najpierw kolumny, a potem wiersze, to
+będzie taki sam.
+
+Przeprowadzenie splotu obrazu N x N z odpowiedzią impulsową M x M wymaga czasu pf
+porcjonalnego do N?M?. Tak więc każdy piksel w obrazie wyjściowym zależy od wszystk
+pikseli w odpowiedzi impulsowej filtru. Natomiast splot przez rozłączność wymaga
+czasu proporcjonalnego do N?M. Dla odpowiedzi impulsowych filtru o długościach se
+pikseli ta metoda redukuje czas wykonania o czynnik rzędu setek.

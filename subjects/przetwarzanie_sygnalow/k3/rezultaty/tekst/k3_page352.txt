@@ -1,0 +1,58 @@
+24. Liniowe przetwarzanie obrazó
+
+znawaniu obiektu jest więc identyfikacja jego krawędzi, czyli nieciągłości oddzielającej obiek
+od tła. Środkowa warstwa siatkówki wspomaga to zadanie, zaostrzając krawędzie oglądar
+go obrazu. Jako ilustrację takiego działania, na rys. 24.2 przedstawiono obraz, który wolm
+przemienia się z ciemnego w jasny, wytwarzając rozmycia i słabo zaznaczone krawędzie.
+rys. 24.2 a) pokazano profil natężenia światła tego obrazu, czyli profil jaskrawości świ
+padającego na oko, a na rys. 24.2 b) — profil jaskrawości obrazu pojawiającego się na ne
+wzrokowym i przekazywanego do mózgu. Przetwarzanie obrazu w siatkówce powoduje,
+krawędzie między obszarami jasnymi i ciemnymi stają się ostrzejsze, wyraźniej podkreślają
+różnice między dwoma obszarami. |
+Przerzut pojawiający się w odpowiedzi na krawędzie tworzy ciekawe złudzenie optycz
+Wydaje się, że ciemny obszar obok krawędzi jest niezwykle ciemny, a jasny obszar - nie
+zwykle jasny. Wynikające z tego paski jasne i ciemne są nazywane pasmami
+nazwiska Ernsta Macha (1838-1916), austriackiego fizyka, który pierwszy je opisał.
+Podobnie jak w przypadku sygnałów jednowymiarowych, na splot obrazowy można sx
+rzeć w dwojaki sposób — od strony wejścia lub od strony wyjścia. Od strony wejścia
+piksel w obrazie wejściowym ma swój udział w obrazie wyjściowym, w postaci przes
+wanej i przesuniętej wersji funkcji rozmycia punktu. Przy rozpatrywaniu od strony wyj
+na każdy piksel w obrazie wyjściowym ma wpływ grupa pikseli z sygnału wejściowego. Dł
+sygnałów jednowymiarowych ten obszar wpływu jest odpowiedzią impulsową odwróce
+lewo-prawostronnie oraz góra-dół. Ponieważ stosowane w DSP funkcje PSF są w wię
+ści symetryczne wokół osi poziomej i pionowej, więc takie odwrócenie niczego nie zmi
+
+i może być pominięte. W dalszym ciągu tego rozdziału poświęcimy nieco uwagi niesyme
+trycznym funkcjom PSF, przy których trzeba uwzględniać takie odwracanie.
+
+Na rys. 24.3 przedstawiono kilka często spotkanych funkcji PSF. Funkcja typu „okrągła czap
+ka” (pilibox) (rys. 24.3 a) ma okrągły wierzchołek i proste boki. Jeśli, na przykład, soczewk
+aparatu fotograficznego nie jest prawidłowo zogniskowana, to każdy punkt w obrazie będz
+rzutowany jako okrągła plamka na czujniku obrazowym (wróćcie do rys. 23.2 i rozważe
+wpływ ruchu ekranu projekcyjnego w kierunku do i od soczewki). Można powiedzieć,
+funkcja rozmycia punktu typu „okrągła czapka” jest funkcją źle zogniskowanych soc
+Funkcja gaussowska (rys. 24.3 b) jest funkcją PSF systemu obrazowego ograniczonego nx
+doskonałościami losowymi. Na przykład obraz z teleskopu jest rozmyty przez turbulencje
+mosferyczne, co powoduje, że każdy punkt świetlny staje się w końcowym obrazie przeł
+giem gaussowskim. Działanie czujników obrazowych, takich jak CCD i siatkówka, „zda częśń
+ograniczone rozpraszaniem światła i/lub elektronów. Z centralnego twierdzenia gi
+
+wynika, że rozmycie gaussowskie jest spowodowane procesami losowymi tego odj i
+Rozkłady typu „okrągła czapka” i gaussowski są stosowane w przetwarzaniu obrazó
+w taki sposób, jak filtr o zasadzie średniej kroczącej jest stosowany do sygnałów jed
+wymiarowych. Obraz poddany splotowi z tymi funkcjami PSF zrobi się rozmyty i będz
+miał słabiej zarysowane krawędzie. Będzie jednak zawierał mniej szumu losowego.
+funkcje są zwane filtrami wygładzającymi, z racji ich działania w dziedzinie czas
+lub filtrami dolnoprzepustowymi pod względem działania w dziedzinie częstotliwoś
+Prostopadłościenna funkcja PSF (rys. 24.3 c) też może być używana jako filtr
+gładzający, lecz nie ma symetrii kołowej. Dlatego rozmycia będą inne w kierunku f
+przekątnej niż w kierunku poziomym lub pionowym. To może mieć znaczenie lub ni
+w zależnie od zastosowania.
+
+Przeciwieństwem filtru wygładzającego jest filtr zaostrzający krawędzie, czyli filtr gi
+przepustowy. Technika inwersji widmowej, opisana w rozdziale 14, jest stosowana do f
+kształcania jednych filtrów w drugie. Jak pokazano na rys. 24.3 d), odpowiedź impulsa
+filtru zaostrzającego krawędzie jest określana przez wykonanie negacji filtru wygładzające
+
+i dodanie funkcji delta pośrodku. Przykładem filtru tego rodzaju jest przetwarzanie obra
+zachodzące w siatkówce.

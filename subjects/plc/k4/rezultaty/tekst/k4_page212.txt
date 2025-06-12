@@ -1,0 +1,46 @@
+* ST- adres pierwszego elementu tablicy, na której ma być wykonane przesu-
+wanie;
+
+* IN- argument wprowadzony na to wejście (bit łub słowo) jest wprowadzany
+na początek tablicy (pod adres określony na wejściu ST).
+
+Wyjściem funkcji (wyjście Q) jest usuwany z tablicy element o najwyższym
+adresie (adres ST + LEN -1).
+
+Przykład wykorzystania funkcji SHFR we fragmencie programu umożliwiają-
+cym aktualizację co sekundę średniej ruchomej obliczanej dla 60 ostatnich
+wartości (tj. za okres | minuty) zmiennej z rejestru %R/00 przedstawiono na
+
+Wyd. 4.30. Do uruchamiania kolejnych operacji co 1 s wykorzystano zmienną
+
+SEKUNDA, przyjmującą wartość / w takt zmian (na zbocze narastające) warto-
+
+ści zmiennej systemowej 7T_SEC (por. Tab. 4.4). W tablicy WE_RI/
+
+przechowywanych jest 60 ostatnich wartości zmiennej %R/00, wartość bieżąca
+
+w zmiennej WE_R/, a wartość sprzed 60 s pod adresem WE_R/ + 60. Dla za-
+
+bezpieczenia się przed ewentualnym przepełnieniem operacje arytmetyczne
+
+wykonywane są na zmiennych 32 bitowych (tzw. podwójnej precyzji), stąd ko-
+nieczność przygotowania odpowiednich zmiennych:
+
+* WE_DINT (zawarta w rejestrach %R6/ i %R62) odpowiada wartości
+WE_RI, %R62 stanowi część bardziej znaczącą;
+
+*  WY_DINT (rejestry %Ró3 i %R64) odpowiada wartości WY_SUM, która jest
+wartością wyprowadzaną z sumy;
+
+* SUMA (rejestry %R67 i %R68) zawiera sumę ostatnich 60 wartości, obli-
+czoną w ten sposób, że dodaje się do niej różnicę między wartością
+najnowszą a wartością najstarszą (zmienna 32 bitowa WE-WY przechowy-
+wana w rejestrach %R65 i %R66);
+
+« SREDN (rejestry %R69 i %R70) zawiera wartość średnią.
+
+<image/tabele/k4_page212_table1.png>
+
+ 
+
+Ż12 Rozdział :4. Język LD dla sterowników GE Fanuc 90-30

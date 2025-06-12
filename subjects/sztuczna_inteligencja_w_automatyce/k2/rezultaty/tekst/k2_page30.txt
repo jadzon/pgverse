@@ -1,0 +1,53 @@
+e węzeł niekońcowy typu OR jest nierozwiązywalny wtedy i tylko wtedy, gdy
+wszystkie jego potomki są nierozwiązywalne.
+
+e węzeł niekońcowy typu AND jest nierozwiązywalny wtedy i tylko wtedy, gdy
+przynajmniej jeden z jego potomków jest nierozwiązywalny.
+
+Zadaniem metod szukania na grafach AND/OR jest stwierdzenie czy węzeł startowy
+jest rozwiązywalny i pokazanie drogi (dróg) wnioskowania to wykazującej (od węzła
+(węzłów) wygrywającego do startowego). Bardziej formalnie (Bole, Cytowski 1989):
+wyznaczenie rozwiązania w grafie AND/OR oznacza znalezienie grafu rozwiązania
+(podgrafu AND/OR), spełniającego następujące własności:
+
+e zawiera węzeł początkowy,
+e wszystkie jego węzły końcowe są wygrywającymi,
+
+e zawierając krawędź wywodzącą się z węzła AND zawiera wszystkie inne kra-
+wędzie wywodzące się z tego węzła.
+
+Wiele gier dwuosobowych z pełną informacją może być reprezentowane przez
+grafy AND/OR z następującymi po sobie węzłami typu OR i AND.
+
+PRZYKŁAD 3.3
+
+Gra w podział liczb. Grający kolejno rozdzielają jedną z istniejących liczb na dwie
+różne liczby. Grę przegrywa grający, który nie może wykonać ruchu (wszystkie liczby
+są liczbami jeden lub dwa). Gra rozpoczyna się od jednej liczby równej 7. Graf stanów
+gry przedstawiony jest na rys. ??. |
+
+3.9.3. Metoda szukania z powracaniem
+na grafach AND/OR
+
+Do szukania na grafach AND/OR mogą być zastosowane, po odpowiedniej modyfi-
+kacji, wszystkie metody szukania omówione wcześniej.
+
+W poniżej podanym algorytmie szukania z powracaniem wykorzystywane są na-
+stępujące procedury:
+procedure ROZSZERZENIE _LISTY(O: lista, w: węzeł);
+
+(procedura umieszcza węzeł w na początku listy O)
+
+procedure ROZSZERZENIE _ GRAFU(G: graf, w: węzeł);
+
+(procedura umieszcza w grafie G węzeł w);
+
+function WYBÓR _Z_LISTY(O: lista, G: graf): wezeł;
+(funkcja zwraca pierwszy element z listy O należący do G):
+
+procedure USUNIĘCIE _Z_LISTY(a: węzeł, O: lista);
+(procedura usuwa węzeł a z listy O);
+
+function TEST _KRAWĘDZI(a: węzeł): Boolean;
+(funkcja zwraca wartość TRUE, gdy węzeł a ma wykorzystane wszystkie krawędzie
+lub wartość FALSE w przeciwnym przypadku);

@@ -1,0 +1,35 @@
+<image/figiwzory/k1_page22_formula1.png>
+
+Ponieważ t > 0, po wykonaniu Z”! przekształcenia równości (1.37) dla przypadku
+pojedynczych pierwiastków s, otrzymujemy
+
+<image/wzory/k1_page22_formula2.png>
+
+Współczynniki możemy obliczać, sprowadzając prawą stronę wzoru (1.37) do wspól-
+nego mianownika lub ze wzoru ogólnego (1.36), który przybiera postać
+
+<image/wzory/k1_page22_formula3.png>
+
+Często wygodniej jest posługiwać się inną postacią tego wzoru, a mianowicie
+
+<image/wzory/k1_page22_formula4.png>
+
+Przykład 1.15
+
+Dana jest transformata F(s) = z » wyznaczyć oryginał, stosując metodę
+
+(s +1)(s — 1)
+rozkładu na ułamki proste. Na podstawie wzoru (1.33) możemy napisać
+
+<image/wzory/k1_page22_formula5.png>
+
+następnie sprowadzamy wyrażenie do wspólnego mianownika
+
+<image/wzory/k1_page22_formula6.png>
+
+Rozwiązując powyższe równanie, otrzymujemy: 4; = —1/8, A, = 1/8, Av = —1/4,
+A; = 1/2. Na podstawie przykładu 1.2, oryginał /(1) możemy zapisać w postaci
+
+<image/wzory/k1_page22_formula7.png>
+
+24

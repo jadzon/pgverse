@@ -1,0 +1,41 @@
+Rodzina przekształceń Fouriera 551
+
+ 
+
+*(1)= ŻY (kJe 7
+
+[EG rzeczywisła
+x(r)=2, Rex[kjcos( 27
+<image/wzory/k3_page512_formula1.png>
+
+<image/wzory/k3_page512_formula2.png>
+<image/wzory/k3_page512_formula3.png>
+
+  
+
+Dziedzina czasu: Dziedzina czasu:
+x(t) jest zespołony, ciągły i okresowy x(t) jest rzeczywisty, ciągły i okresowy
+t zmienia się w ciągu jednego okresu, od 0 do T t zmienia się w ciągu jednego okresu, od 0 do T
+Dziedzina częstotliwości. ;
+X[K) jest zes i nieokresowy X[k] jest rzeczywisty, dyskretny i nieokresowy
+k zmienia się od minus do plus nieskończoności im X[k] jest rzeczywisty, i nieokresowy
+dla k > 0 częstotiwości są dodatnie k zmienia się od minus do plus nieskończoności
+dla k < 0 częstotliwości są ujemne
+Uwaga: Przed zastosowaniem równania syntezy wartość
+| ReX[0] należy podzieść przez dwa.
+000... Przekształcenie zespołne | | |... Przekształcenie rzeczywiste
++£ Synteza «©
+x(1)= fX(o)e”'do x(1)= | ReX (o)cos(or)
+
+<image/wzory/k3_page512_formula4.png>
+<image/xezsljea_wzory/k3_page512_formula5.png>
+<image/wzory/k3_page512_formula6.png>
+
+Dziedzina czasu:
+x(t) jest zespołony, ciągły i nieokresowy x(t) jest rzeczywisty, ciągły i nieokresowy
+t zmienia się od minus do plus nieskończoności t zmienia się od minus do plus nieskończoności
+Dziedzina częstotliwości: Dziedzina częstotliwości:
+X(w) jest zespolony, ciągły i nieokresowy Re X(o) jest rzeczywisty, ciągły i nieokresowy
+« zmienia się od minus do płus nieskończoności im X(«) jest rzeczywisty, ciągły i nieokresowy
+dła w > 0 częstotliwości są dodatnie « zmienia się od minus do płus nieskończoności
+dła o < 0 częstotliwości są ujemne

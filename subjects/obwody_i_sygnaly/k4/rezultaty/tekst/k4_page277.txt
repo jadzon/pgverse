@@ -1,0 +1,40 @@
+33. Metody analizy obwodów liniowych prądu stałego _ 279
+
+A B Cc
+<image/wzory/k4_page277_formula1.png>
+G, U, a |
+lub w postaci:
+ry/k4_page277_formula2.png (3.3-24)
+
+gdzie wektory U,„ i J„ są nazywane odpowiednio: wektorem napięć węzłowych
+i wektorem wydajności prądowych węzłowych, zaś macierz G,„ — macierzą prze-
+wodności węzłowych.
+
+Dla sieci o w węzłach wektory U, i J„ mają wymiary (w — 1) x 1, zaś
+macierz G„ ma wymiary (w — 1) x (w — 1). Podobnie jak w metodzie prądów
+obwodowych, wektor J„ i macierz G,, występujące w metodzie napięć węz-
+łowych, można, wobec założenia o postaci prądowej wszystkich gałęzi, wy-
+znaczyć bezpośrednio na podstawie schematu sieci, bez konieczności zapisywa-
+nia dla niej równań równowagi i równań gałęziowych.
+
+Jeżeli węzły niezależne ponumerujemy i = 1,..., w — 1, to elementy wek-
+tora J„ i macierzy G,„ mają następującą interpretację:
+
+1. Wydajność prądowa węzłowa J,„, występująca w i-tym wierszu wek-
+tora J, = [Js Jw2::::, Jvw_1]7 jest sumą algebraiczną wydajności prądo-
+wych gałęzi incydentnych z i-tym węzłem, przy czym, jeśli węzeł ten
+jest węzłem końcowym gałęzi z nim incydentnej, to wydajność prądowa
+tej gałęzi jest uwzględniona w sumie ze znakiem dodatnim, jeśli zaś jest
+to węzeł początkowy, to wydajność prądowa gałęzi jest uwzględniona ze
+znakiem ujemnym.
+
+ 
+
+2. Macierz przewodności węzłowych G, = [Gy], i, j = 1,..., w — 1, jest
+macierzą symetryczną, przy czym: |
+— elementy G;, na przekątnej głównej macierzy, nazywane przewodnościami |
+własnymi węzłowymi, są zwykłymi sumami przewodności wszystkich gałęzi |
+incydentnych z i-tym węzłem, i = 1,..., n; |
+— elementy G, = G,, i ź j, poza przekątną macierzy, nazywane prze-
+wodnościami wzajemnymi węzłowymi, są sumami przewodności wszystkich gałęzi
+incydentnych jednocześnie z i-tym i j-tym węzłem, wziętymi ze znakiem

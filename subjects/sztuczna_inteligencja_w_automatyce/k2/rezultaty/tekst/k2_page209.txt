@@ -1,0 +1,51 @@
+214
+
+Za pomocą predykatu exists możliwe jest sprawdzenie istnienienia cząsteczki o
+określonym typie (np. exists([0,0,0,0,1,1,1,1] ...)), sprawdzenie czy cząsteczka jest
+związana z inną cząsteczką na danym kierunku (np. exists(... bound to V2 on N ...)),
+oraz czy jest przylegająca do innej cząsteczki (np. exists(... adjacent to V3 on N)).
+Możliwe jest również oznaczenie cząsteczki spełniającej określone kryteria jedną z
+15 etykiet, od V1 do V15 (np. exists(... mark V1)). Przykładowo — polecenie exi-
+sts([1,1,1,1,0,0,0,0] bound to V2 on NW, mark V3) oznacza: odszukaj cząsteczkę o ty-
+pie 11110000, związaną na kierunku NW z cząsteczką identyfikowaną przez zmienną
+V2 i zapamiętaj wynik w zmiennej V3 (zmienna V3 będzie od tego momentu iden-
+tyfikowała znalezioną przez polecenie cząsteczkę).
+
+Polecenia zgrupowane w predykacie action wykonują sekwencje poleceń umożli-
+wiających zmianę istniejących wiązań oraz położeń cząsteczek. Ze względu na mody-
+fikację właściwości cząsteczek, istotna jest kolejność w jakiej występują poszczególne
+predykaty, odwrotnie niż w części rozpoznającej cząsteczki. W przykładowym pro-
+gramie polecenie bind(V2 to V5 on SW) oznacza: połącz cząsteczkę identyfikowaną
+przez zmienną V2 z cząsteczką identyfikowaną przez zmienną V5 na kierunku SW.
+
+W odróżnieniu od Prologu, składnia języka nie determinuje jakie informacje prze-
+kazywane są do poszczególnych predykatów. Przyjęta została następująca interpre-
+tacja przekazywania parametrów: do predykatów search i action oraz głównego pre-
+dykatu structure (structure(0) w programie przykładowym) przekazywana jest pełna
+lista zmiennych, natomiast do pozostałych predykatów structure przekazywane są
+tylko te zmienne które zostały użyte w predykacie nadrzędnym (tj. zostały wyszcze-
+gólnione w części mark predykatu exists).
+
+Główną ideą wprowadzonego języka funkcji kompleksów było uzyskanie własności
+aby niewielkie zmiany w kodzie programu (tzn. w kompleksie cząsteczek kodujących
+program) na ogół prowadziły do małych zmian w algorytmach części rozpoznającej
+i wykonawczej programów. Taka własność języka jest podstawowa w przypadku
+modelowania spontanicznego powstawania złożonych struktur i ich dalszej ewolucji.
+Brak takich własności był przeszkodą takich symulacji w systemie opisanym w [?, 2].
+
+W opisanym języku małe zmiany w strukturze kompleksów cząsteczek prowadzą
+do usunięcia lub zmiany pewnych predykatów, co zazwyczaj prowadzi do zmian
+zdolności rozpoznawczych programu, np. do redukcji jego precyzji.
+
+8.4.3. Kodowanie
+
+Kompleks cząsteczek może kodować program. Każdy predykat structure jest repre-
+zentowany przez pojedynczy stos cząsteczek w którym zakodowana jest lista pre-
+dykatów exists. Stos kodujący predykat structure(0) także koduje predykaty akcji.
+Stosy związane z tym stosem kodują negację predykatów structure. Program przed-
+stawiony w tablicy ?? jest reprezentowany przez strukturę cząsteczek pokazaną na
+rys. 77. Zauważmy, że predykaty not(structure) są kodowane przez stosy cząsteczek
+przylegających do stosu kodującego predykat structure(0).
+
+Stosy cząsteczek kodujących predykaty są etykietowane specyficznymi typami
+cząsteczek, więc nie każdy stos zawiera w sobie funkcję.

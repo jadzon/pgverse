@@ -1,0 +1,37 @@
+139
+
+<image/figury/k2_page134_figure1.png>
+
+Sieci pełne (dokładne)
+
+W sieciach pełnych liczba neuronów w warstwie wejściowej, N, jest równa liczbie
+wektorów wejściowych w zbiorze uczącym M, czyli N = M. Wtedy nauczona sieć
+może generować odpowiedzi dokładne, tzn. że dla każdego wektora x; ze zbioru
+uczącego, wyjście jest równe y(x,) = d,, i = 1,2,...M.
+
+W tym przypadku mamy /V równań i N + 1 wag do wyznaczenia. Więc wartość
+jednej z wag może być dowolna, czyli można ja dobrać tak aby rozwiązanie speł-
+niało pewne dodatkowe kryteria. Np. wartość wagi wy, jest wartością wyjścia sieci
+dla wektorów wejściowych bardzo odległych od najbliższego im wektora ze zbioru
+uczącego.
+
+PRZYKŁAD 6.9
+
+Dla ilustracji działania pełnej sieci radialnej zastosowano ją do aproksymacji funkcji
+liniowej jednej zmiennej zadanej zbiorem uczącym zawierającym 11 wartości (krzy-
+żyki na rys. ??a). Na rys. ?7?b pokazano odpowiedzi sieci dla kilku wartości parame-
+tru b. Rosnące wartości parametru zwężają przebiegi funkcji radialnych, co powoduje
+
+że pomiędzy punktami uczącymi wartość funkcji maleje, aby dla dużych wartości b
+oprzeć się o wartość wagi wy. |
+
+PRZYKŁAD 6.10
+
+Przykład przedstawia wyniki zastosowania sieci radialnej do predykcji przebiegu
+szeregu czasowego. Jako funkcję wybrano przebieg liczby drapieżników w modelu
+drapieżnik-ofiara symulowanym metodami cząsteczkowymi, jak opisano w p. 8.2.2.
+Przebieg ten ma charakter deterministyczno-losowy — losowe rodzenie się ofiar i
+giniecie drapieżników oraz losowe zderzenia elementów oraz deterministyczna ogólna
+zasada opisana równaniem Lotki-Voltery. Przebieg ten przedstawiony na rys. ??
+składa się z ciągu 700 wartości funkcji (ny, no, . . . , nzoo). Zadanie predykcji polegało
+na przyjęciu, że dostępnych jest 300 początkowych próbek i na ich podstawie należało

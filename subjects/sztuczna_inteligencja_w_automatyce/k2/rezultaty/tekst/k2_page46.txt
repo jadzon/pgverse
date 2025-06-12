@@ -1,0 +1,39 @@
+<image/figury/k2_page46_figure1.png>
+
+Popraw1
+
+<image/wzory/k2_page46_formula1.png>
+
+gdzie f nazywa się funktorem lub literą funkcyjną. mi
+
+Wyrażenie otrzymane przez kwantyfikację wpz po pewnej zmiennej jest także
+wpz. Jeżeli zmienna w wpz została skwantyfikowana, to nazywa się ją zmienną żwia-
+zaną, a w przeciwnym wypadku zmienną swobodną. Wpz w których nie ma zmien-
+nych swobodnych nie są już predykatami, a reprezentują pewne zdania twierdzące.
+Takie wyrażenia nazywają się zdaniami. W dalszej części tego rozdziału będziemy
+zajmowali się tylko takimi wyrażeniami.
+
+PRZYKŁAD 4.2
+Rozpatrzmy kilka wpz będących zdaniami.
+Wyraże!
+<image/wzory/k2_page46_formula2.png>
+może wyrażać fakt że „Kot znajduje się pod stołem”.
+r . U . . .. . ś 2
+Zdanie „Wszystkie słonie są szare” może być reprezentowane przez”
+
+<image/wzory/k2_page46_formula3.png>
+
+gdzie wyrażenie kwantyfikowane jest implikacją, a X jest zmienną kwantyfikowaną.
+Mówimy, że wyrażenie zostało skwantyfikowane po X. Zakresem działania kwan-
+tyfikatora jest część następującego po nim wyrażenia wskazywana przez nawias.
+Zdanie: „Istnieje osoba, która napisała „Pan Cogito” ”, może być reprezentowane
+przez
+
+<image/wzory/k2_page46_formula4.png>
+
+Wyrażenie
+<image/wzory/k2_page46_formula5.png>
+
+może reprezentować zdanie: „Nie ma inteligentnych mrówek”.
+
+ZA nie (YX) (słoń(X) A kołor(X, szary)|

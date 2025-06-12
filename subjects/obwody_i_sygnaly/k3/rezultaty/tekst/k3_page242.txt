@@ -1,0 +1,47 @@
+242 3. Obwody prądu stałego
+
+C. Obwody prądu stałego. Przedmiotem rozważań rozdziału 3 będą me-
+tody analizy skupionych stacjonarnych obwodów prądu stałe-
+go, tj. obwodów (por. p. 2.2.2-A), w których wszystkie pobudzenia oraz wszyst-
+kie prądy i napięcia są stałe w przedziale czasu te(—c, +). Będziemy
+rozpatrywać zarówno obwody liniowe, jak i obwody nieliniowe prądu stałego.
+Przyjmiemy generalne założenie, że rozpatrywane obwody będą obwodami
+rezystancyjnymi (wyjątkiem będzie p. 3.7), tzn. będą zawierać — oprócz źródeł
+niezależnych — wyłącznie elementy bezinercyjne (por. p. 2.1.5-G). Elementy
+inercyjne (indukcyjności, pojemności, indukcyjności sprzężone) pełnią bowiem
+w obwodach prądu stałego funkcję trywialną, co wynika z faktu, iż napięcia stałe
+na indukcyjnościach i prądy stałe w pojemnościach są równe zeru (por. przykłady
+1.2-3a i 1.2-5a). Podkreślmy jednak, że elementy inercyjne są zdolne do
+gromadzenia w obwodach prądu stałego energii. Zwracamy przy tym uwagę, że
+jeśli rozpatrywany obwód zawiera — oprócz elementów bezinercyjnych — także
+elementy inercyjne, to musimy założyć, iż w obwodzie tym występuje stan
+ustalony przy pobudzeniach stałych (por. p. 2.2.2 oraz p. 3.7).
+
+Zwracamy także uwagę, iż obwód prądu stałego nie może zawierać elementu
+niestacjonarnego (por. p. 1.6.1), gdyż w elemencie takim nie mogą (poza
+przypadkiem trywialnym u = 0 A i = 0) wystąpić jednocześnie stały prąd
+i stałe napięcie.
+
+3.2. LINIOWE OBWODY REZYSTANCYJNE
+PRĄDU STAŁEGO
+
+liniowymi obwodami rezystancyjnymi prądu stałego nazywamy obwody
+zbudowane z idealnych niezależnych źródeł napięciowych o stałych siłach
+elektromotorycznych, z idealnych niezależnych źródeł prądowych o stałych
+wydajnościach prądowych oraz z liniowych elementów rezystancyjnych (bez-
+inercyjnych). Jak pamiętamy, do elementów takich należą między innymi: opór
+liniowy o równaniu (1.2-6), idealny opór ujemny o równaniu (1.3-53) i źródła
+sterowane czterech typów o równaniach (1.7-30). Obwody te są opisane
+wyłącznie liniowymi równaniami algebraicznymi (por. p. 2.1.5-G), w których
+niewiadome są stałymi funkcjami czasu (liczbami).
+
+Szczególnym przypadkiem liniowych obwodów rezystancyjnych są obwody
+zawierające tylko niezależne źródła idealne oraz opory liniowe. Obwody takie
+będziemy nazywać liniowymi obwodami (układami, sieciami) oporowymi.
+
+Dyskusję metod analizy liniowych obwodów rezystancyjnych prądu stałego
+rozpoczniemy od przedstawienia kilku prostych, charakterystycznych zagad-
+nień, których rozwiązanie ułatwia ogólną analizę obwodów”.
+
+b Z otrzymanych rezultatów będziemy korzystać także w analizie obwodów prądu zmiennego
+(por. rozdz. 4 i 5 w tomie II).

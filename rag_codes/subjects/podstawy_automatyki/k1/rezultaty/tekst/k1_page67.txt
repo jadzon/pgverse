@@ -1,0 +1,36 @@
+Napięcie x>(£) znajdujemy jako odwrotną transformatę Laplace'a U>(s)
+
+<image/wzory/k1_page67_formula1.png>
+
+2.5. Wyznaczanie charakterystyk częstotliwościowych
+
+Przykład 2.23
+
+Wyznaczyć charakterystyki częstotliwościowe (amplitudowo-fazową oraz loga-
+rytmiczne: modułu i fazy) elementu całkującego rzeczywistego.
+
+Rozwiązanie
+
+Elementem całkującym rzeczywistym nazywamy układ, którego równanie dyna-
+miki ma postać
+
+<image/wzory/k1_page6/_formula2.png>
+gdzie:
+| K - współczynnik wzmocnienia, przyjmujemy dla przykładu K= 2,
+T — stała czasowa, przyjmujemy przykładowo 7 = 4 s.
+
+Transmitancja operatorowa elementu całkującego rzeczywistego przyjmuje postać
+
+<image/wzory/k1_page67/_formula3.png>
+
+Charakterystyka amplitudowo-fazowa
+Wyznaczamy transmitancję widmową
+
+<image/wzory/k1_page67/_formula4.png>
+
+mnożąc licznik i mianownik G(jw) przez liczbę sprzężoną do mianownika, otrzymu-
+jemy
+
+<image/wzory/k1_page6/_formula5.png>
+
+69

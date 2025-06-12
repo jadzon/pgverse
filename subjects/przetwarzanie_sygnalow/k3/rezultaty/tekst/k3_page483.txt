@@ -1,0 +1,55 @@
+29. Rozpoczęcie pracy z DSP
+
+musimy popracować nad ałgorytmem, a nie nad jego implementacją. Na wykresach na rys.
+29.5 c), d) jest widoczny szum zaokrąglania wprowadzony w przypadku, gdy każdy punkt
+w odpowiedzi impulsowej filtru jest wyrażany przez wartość 16-bitową lub przez 14-bitową.
+Lepszy algorytm nie poprawiłby tych wykresów w żaden sposób; kształt odpowiedzi impul-
+sowej jest bowiem zepsuty przez szum.
+
+Na rys. 29.6 pokazano, jakie różnice między operacjami zmienno- i stałoprzecinkowymi
+występują w dziedzinie czasu. Na rys. 26.9 a) widzimy oscylacyjny sygnał o amplitudzie
+malejącej wykładniczo. Może on wyrażać na przykład falę dźwiękową z szarpniętej stru-
+ny albo sygnał wstrząsów ziemi pochodzący z odległego wybuchu. Tak jak poprzednio,
+przebieg w dużej skali będzie wyglądał jednakowo, niezależnie od tego, czy w reprezen-
+tacji próbek zastosowano format stało- czy zmiennoprzecinkowy. Aby zobaczyć różnicę,
+trzeba rozciągnąć skalę pionową (rys. 29.6 b, c, d). Jak już powiedziano w rozdziale 3,
+kwantyzacja przejawia się tu jako addytywny szum losowy ograniczający wykrywalność
+małych składników sygnału.
+
+Takie różnice w działaniu między operacjami stało- i zmiennoprzecinkowymi są często
+nieistotne. Mogą nawet pozostać niezauważone w pokazanych w dużej skali sygnałach
+z rys. 29.5 a i 29.6 a. Są jednak takie zastosowania, gdzie dodatkowe zalety pracy zmien-
+noprzecinkowej są pomocne i nawet mogą mieć znaczenie krytyczne. Na przykład w sys
+temach audio hi-fi, takich jak odtwarzacz CD, próbki sygnału są wyrażane w formacie
+stałoprzecinkowym z rozdzielczością 16-bitową. W większości przypadków taka jakość
+znacznie przekracza możliwości ludzkiego słuchu. Jednakże w najlepszych profesjonal-
+nych systemach fonicznych sygnały są próbkowane z rozdzielczością od 20 do 24 bitów,
+wykluczając absolutnie wszelkie artefakty, które mogłyby zakłócić muzykę. W algoryte
+mach przetwarzających takie sygnały cyfrowe o dużej dokładności prawie idealna jest
+technika zmiennoprzecinkowa.
+Lepsze działanie systemu zmiennoprzecinkowego jest też potrzebne w algorytmach
+szczególnie wrażliwych na szumy. Filtry SOI, na przykład, są prawie niewrażliwe
+wpływ zaokrągleń. Jak pokazano na rys. 29.5, szum spowodowany błędem zaokrągle
+nie zmienia ogólnego kształtu odpowiedzi częstotliwościowej; krzywa staje się tylka
+bardziej zaszumiona. Inna historia jest z filtrami NOI, gdzie zaokrąglanie może pc
+wodować wszelkiego rodzaju spustoszenia, z niestabilnością filtru włącznie. Technika
+zmiennoprzecinkowa umożliwia lepsze działanie tych algorytmów pod względem ostro
+ści odcięcia charakterystyki, tłumienia w paśmie zaporowym i przerzutu odpowiedzi
+skokowej.
+
+Zaawansowane narzędzia programowe
+
+Nasz przykład filtru realizowanego według specjalnych wymagań wskazuje najł
+szą drogę do uzyskania programu działającego na cyfrowych procesorach sygna
+SHARC: edycja, asemblacja, łączenie i ładowanie wykonywane przez indywidualne prof
+my. Ta metoda jest dobra do prostych zadań, lecz istnieją lepsze narzędzia dla programistć
+o większych wymaganiach. Spójrzmy więc, jakie oprogramowanie jest dostępne, gdy
+prawdę poważnie weźmiecie się do DSP.
+
+Pierwszym narzędziem, które chcemy omówić, jest kompilator C. Jak powiedziam
+w poprzednim rozdziale, zarówno asembler, jak i język C są na ogół stosowane «
+programowania DSP. Ogromną zaletą stosowania języka C jest biblioteka funkcji ora
+algorytmów DSP. W tablicy 29.3 przedstawiono częściową listę biblioteki funkcji ję
+zyka € do cyfrowych procesorów sygnałowych SHARC. Grupa funkcji matematyc
+nych obejmuje wiele funkcji często stosowanych w DSP, takich jak funkcje trygom
+metryczne (sin, cos, tg itd.), logarytmiczne i wykładnicze. Jeśli tego typu funkcje

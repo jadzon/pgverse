@@ -1,0 +1,27 @@
+24. Liniowe przetwarzanie obrazów
+
+<image/figury/k3_page358_figure2.png>
+
+A może być jeszcze lepiej. Jeśli chcecie zastosować prostopadłościenną (rys. 24.5) lub «
+
+nie wykładniczą funkcję PSF (rys. 24.6), to obliczenia są jeszcze sprawniejsze. Wynika to z fakt
+że sploty jednowymiarowe są, odpowiednio, filtrem o średniej kroczącej (rozdział 15) i « 7
+runkowym filtrem jednobiegunowym (rozdział 19). CA
+dzo szybko realizowane przez rekursję. W rezultacie uzyskuje się czas wykonania pro
+
+tylko do N, całkowicie niezależny od rozmiaru PSF. Kiczij GÓWIĄC AG ła yć
+zgodnie z potrzebami, z dowolnie długą funkcją PSF, z kilkoma tylko operacjami na liczbach
+całkowitych na piksel. Nafprzytiki splot Corsa JI ESTE WYRA TEZA A
+komputerze osobistym. To bardzo szybko! Nie podoba się wam kształt tych dwóch od
+impulsowych filtru? Wykonajcie splot obrazu z jedną z tych odpowiedzi kiłkakrommie, s
+mowę olatowńką koi PS (zgoda z tai UPRA Błzyna ad
+To są świetne algorytmy, które można z sukcesem realizować. Warto o nich pamiętać.
+
+Przykład dużej funkcji PSF — spłaszczanie oświetleni:
+Częstym zastosowaniem wymagającym dużej funkcji PSF jest ulepszanie obrazów o ni
+
+nym oświetleniu. Splot przez rozłączność jest algorytmem idealnie nadającym się do prze
+prowadzenia takiego przetwarzania. Z kilkoma zaledwie wyjątkami obrazy widziane prze
+oko są tworzone ze Światła odbitego. Wynika stąd, że widziany obraz jest proporcjonał
+do współczynnika odbicia pomnożonego przez oświetlenie pochodzące z otoczenia. p
+tworzenia w ten sposób obrazu przedstawiono na rys. 24.8. Na rys. 24.8 a) pokazano ro:

@@ -1,0 +1,30 @@
+w MATEOAR 9/5 1EMOWG
+© GAUTONATYK
+
+ 
+
+Pozycjonowanie biegunów w oparciu o sprzężenie od stanu
+
+Przykład:
+Dla danego układu zaprojektować układ sterowania ze sprzężeniem od stanu
+
+zapewniający bieguny s1=-1 i s2=-2
+
+SMOUBJS 8|8poJN
+
+<image/wzory/k/_page81_formula1.png>
+
+Rozwiązanie
+1. Sprawdzamy sterowalność pary A, B
+
+<image/wzory/k/_page81_formula2.png>
+
+2. Obliczamy wyznacznik macierzy (sl-A+BK) jako funkcję nieznanych
+współczynników wzmocnienia (elementów macierzy K)
+
+<image/wzory/k/_page81_formula3.png>
+
+ 
+
+POLITECHNIKA
+GDANSKA

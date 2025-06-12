@@ -1,0 +1,57 @@
+33. Przekształcenie Z
+
+ 
+
+Analiza systemów rekursywnych
+
+Jak nadana r: zaadaiała TA file rabsrewwny iact aricany równaniem różnicowym:
+
+<image/wzory/k3_page539_formula1.png>
+
+Wzór 33.2. Równanie różnicowe. Szczegóły można znaleźć w rozdziale 19
+
+gdzie xf ] i yf | są sygnałami wejściowym i wyjściowym, a wyrazy a, b — współczynnikami
+rekursywnymi. Oczywistym zastosowaniem tego wzoru jest opisanie, w jaki sposób progra-
+mista może zaimplementować filtr. Równie ważnym aspektem tego wzoru jest wyrażenie za-
+leżności matematycznej między wejściem a wyjściem, która musi być ciągle spełniona. O ile
+działanie systemów ciągłych jest opisane równaniami różniczkowymi, to systemy dyskretne
+działają zgodnie z równaniami różnicowymi. Z, podanej zależności możemy wyprowadzić
+najważniejsze charakterystyki systemu — odpowiedzi: impulsową, skokową i częstotliwościo-
+wą, rozmieszczenie biegunów i zer itd.
+
+Rozpoczniemy analizę od poddania przekształceniu Z (wzór 33.1) obu stron równa-
+nia 33.2 Chcemy bowiem zobaczyć, jak ta zależność wygląda w dziedzinie z. Stosując
+trochę algebry, możemy uzyskać zależność typu Y[z]/X[z], czyli stosunek sygnału wyj-
+ściowego do wejściowego, przy czym oba sygnały są wyrażone w dziedzinie z. Tak
+samo jak w przekształceniu Laplace'a, ten stosunek nosi nazwę funkcji przenoszenia
+systemu, oznaczanej jako H[z]. A oto, co uzyskujemy:
+
+<image/wzory/k3_page539_formula2.png>
+
+Wzór 33.3. Funkcja przenoszenia w postaci wielomianowej. W tej zależności współczynniki rekursywne
+są tatwe do bezpośredniej identyfikacji
+
+Jest to jeden z dwóch możliwych sposobów zapisu funkcji przenoszenia. Ta forma zapisu jest
+ważna, gdyż w takim zapisie są bezpośrednio zawarte współczynniki rekursywne. Załóżmy,
+na przykład, że znamy współczynniki rekursywne filtru cyfrowego, na przykład takie, jak
+
+<image/figury/k3_page539_figure1.png>
+
+.-—„— w, ANO zz [OJ O A zz PARE A ..r"""':u
+
+<image/wzory/k3_page539_formula3.png>
+
+Zwróćcie uwagę, że współczynniki „b” wchodzą do wzoru ze znakiem ujemnym przed
+nimi. Niektórzy autorzy zapisują ten wzór inaczej — stosując we wzorze dodawanie, lecz
+zmieniając znak wszystkich współczynników „b”. I tu pojawia się trudność. Jeśli ma-
+cie dany zestaw współczynników rekursywnych (taki jak w powyższej tabelce lub jak
+w programie do programowania filtrów), to jest szansa 50% na 50%, że współczynniki
+„b” będą miały odwrotne, niż się spodziewacie, znaki. Jeśli nie wychwycicie tej rozbież-
+ności, to filtr będzie przerażająco niestabilny.
+
+Wzór 33.3 wyraża funkcję przenoszenia z zastosowaniem ujemnych wykładników potęg z.
+tzn. z71, 272, z 3 itd. Po wstawieniu właściwego zestawu współczynników rekurs wnych
+możemy przekształcić wzór do wygodniejszej postaci z potęgami dodatnimi, tzn. z, z, z” itd.
+W rozważanym przykładzie mnożąc licznik i mianownik przez z%, uzyskujemy:
+
+<image/wzory/k3_page539_formula4.png>

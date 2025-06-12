@@ -1,0 +1,26 @@
+2. Pojęcia podstawowe — układy
+
+/k3_page232_figure1.png
+
+Rys. Z-2.2
+
+<image/ge232_fcwzory/k3_page232_formula3.png>
+
+...|||- .. ..
+
+„3 przedstawiono układ, będący modelem obwodowym procesu transmisji
+rowej (neuronie). Źródło o sile elektromotorycznej e reprezentuje sygnał
+ący z dendrytu). Napięcie u na wyjściu uk
+ym przez neuron od części receptorowej dk
+rakterystyce i, = (u) modeluje procesy nit
+ciowe układu względem zmiennych i,, ip, u
+
+ 
+
+page232_figure2.png
+
+Zadanie 214. Wyznaczyć równania zaciskowe dwójników pokazanyc
+
+wzory/k3_page232_fc
+
+figury/k3_page232_figure3.p

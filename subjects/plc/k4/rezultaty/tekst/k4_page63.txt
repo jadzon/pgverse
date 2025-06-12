@@ -1,0 +1,25 @@
+przyjmie wartości 0. Przykładowe wykresy czasowe sygnałów dla tego czaso-
+mierza pokazano na Rys. 2.8.
+
+Wyjście czasomierza wyłączającego z opóźnieniem 7OF (Off-delay) przyjmuje
+wartość / z chwilą pojawienia się / na wejściu ZN, a zostaje wyłączone z opóź-
+nieniem zadanym na wejściu PT po wyłączeniu wejścia IN (por. wykresy
+czasowe na Rys. 2.9)
+
+Blok RTC (Real-Time Clock) umożliwia przesłanie na wyjście CDT (Current
+Date and Time) wartości bieżącej daty i czasu w sterowniku, jeżeli na wejściu
+EN jest wartość /, przy czym w chwili, gdy wejście to zmienia stan z O na /, na-
+stępuje ustawienie w sterowniku daty i czasu zgodnie z wartością podaną na
+wejściu PDT (Preset Date and Time).
+
+<image/figury/k4_page63_figure1.png>
+
+Rys. 2.7 Wykresy czasowe sygnałów dla generatora impulsu TP
+
+<image/figury/k4_page63_figure2.png>
+
+Rys. 2.8 Wykresy czasowe sygnałów dla czasomierza załączającego TON
+
+ 
+
+2.3 Elementy oprogramowania 63

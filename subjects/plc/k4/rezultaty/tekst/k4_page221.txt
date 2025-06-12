@@ -1,0 +1,35 @@
+ry/k4_page221_formula1.png
+
+Funkcje konwersji umożliwiają zamianę danych z jednego typu na drugi. W ste-
+rownikach GE Fanuc serii 90-30 wykonywane są dla zamiany sposobu
+kodowania liczb całkowitych z kodu dopełnienie do dwóch (liczby typu /NT) na
+kod BCD-4 (przedstawienie czterech cyfr liczby dziesiętnej w formacie BCD) lub
+odwrotnie:
+
+e  INT_TO_BCD4 - funkcja konwersji liczby typu 7N7 na kod BCD-4;
+e ' BCD4_TO_INT - funkcja konwersji liczby całkowitej typu BCD-4 na typ
+INT.
+
+Funkcje te są uaktywniane, gdy do wejścia zezwolenie dopływa prąd i przenoszą
+one prąd na wyjście ok, jeżeli wykonane zostały prawidłowo (nie wystąpiło
+przekroczenie zakresu). Na wejściu IN funkcji podaje się adres argumentu
+w kodzie źródłowym, a na wyjściu Q adres argumentu w kodzie wynikowym.
+
+Na Wyd. 4.36 pokazano przykład użycia funkcji INT_TO_BCD4 do zamiany
+liczby typu /NT w rejestrze %R100 na liczbę przedstawioną w kodzie BCD-4
+umieszczoną na wyjściach binamych od %Q/ do %Q26, traktowanych jako ko-
+lejne bity zawierające daną typu BCD-4. Funkcja jest wykonywana, gdy zmienna
+%/l1 przyjmuje wartość 7. Jeżeli zawartość rejestru %R100 jest z zakresu od O do
+9999, to zmienna %M/ przyjmie wartość /, w przeciwnym przypadku O.
+
+Przykładowo, jeżeli w rejestrze %R100 jest liczba 329 w kodzie dopełnienie do
+dwóch, to ciąg zmiennych od %Q]/ (bit najmniej znaczący) do %Q16 (bit najbar-
+dziej znaczący) przyjmie wartości: //7/0_0/00_1001_0000.
+
+<image/figury/k4_page221_figure1.png>
+
+Wyd. 4.36 Przykład użycia funkcji konwersji
+
+ 
+
+4.10 Funkcje konwersji 22 1

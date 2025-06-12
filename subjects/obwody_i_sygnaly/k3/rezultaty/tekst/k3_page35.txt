@@ -1,0 +1,52 @@
+ge35_formula1.png
+
+1.2. Podstawowe modele zjawisk w obwodzie 35
+ni EO on AB
+
+entyczną zależność jak w przykładzie a). Zgodność uzyskanych wyników
+st konsekwencją odpowiedniego wyboru wartości początkowej i(0).
+
+U,
+
+wartość początkowa i(0) = — uj? jest bowiem równa wartości
+©
+
+= ( prąd wyznaczony w przykładzie a) przy założeniu zerowej wartości
+
+: zależności. Rozważmy obszar dielektryka w posta-
+długości d i polu przekroju poprzecznego S (rys. 1.2-7a),
+1oległymi metalowymi okładzinami O, i O, konden-
+O.
+
+iry/k3_page35_figure1.png
+
+dadzinach kondensatora jest zgromadzony ładunek stały:
+oraz —Q na okładzinie 0,. Ładunek ten wytwarza
+ca jednorodne *) i stacjonarne pole elektryczne scharak-
+1 natężenia pola E prostopadłym do okładzin konden-
+
+między okładzinami kondensatora, wywołane istnieniem
+ektrycznego o natężeniu E, jest określone wzorem:
+
+e
+ory/k3_page35_formula2.png (1.2-27)
+W obszarze dielektryka wektor indukcji elektrycznej D jest związany
+z wektorem natężenia pola zależnością:
+ory/k3_page35_formula3.png (1.2-28)
+
+gdzie E = £o£, jest przenikalnością elektryczną dielektryka (e, — przenikal-
+ność elektryczna próżni, e. — przenikalność względna dielektryka względem
+
+próżni).
+
+1 Ściśle biorąc, pole E byłoby w pełni jednorodne, o gdyby dielek tył O, i O, były płaszczyznam
+
+W przypadku o
+
+ograniczonych, na brzegach obszaru dielektryka występują Lep e
+
+(odstępstwa od jednorodności). Zniekształceń tych nie OE.
+
+ 
+
+4

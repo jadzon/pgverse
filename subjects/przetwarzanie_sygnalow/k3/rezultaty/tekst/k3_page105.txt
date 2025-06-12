@@ -1,0 +1,27 @@
+Algorytm od strony wyjścia
+
+ 
+
+Jednym ze sposobów poradzenia sobie z tym problemem jest wprowadzenie nieistniejących
+próbek. Polega to na dodaniu próbek o wartości zero na końcu sygnału wejściowego. Jest to
+tzw. dopełnianie (padding) sygnału zerami. Zamiast usiłować uzyskać dostęp do jakiejś nie-
+istniejącej wartości, maszyna splotowa otrzymuje próbkę o wartości zero. Ponieważ to zero
+jest eliminowane podczas mnożenia, więc wynik jest matematycznie taki sam, jak w przy-
+padku zignorowania nieistniejących wejść.
+
+Ważnym faktem jest, że próbki położone skrajnie na lewo i skrajnie na prawo w sygnale wyjścio-
+wym są obliczane na podstawie niekompletnej informacji. W potocznie używanej terminologii
+DSP mówi się, że odpowiedź impulsowa jest nie w pełni zanurzona w sygnale wejściowym.
+Jeśli odpowiedź impulsowa ma długość M punktów, to pierwsze oraz ostatnie M — | próbek
+
+op że zyja rak ip CO
+
+ustabilizowania swego działania po włączeniu zasilania. Różnica polega na tym, że w układzie
+elektronicznym można taki stan przejściowy łatwo pominąć, w DSP jest to zjawisko znaczące.
+Na rys. 6.10 przedstawiono przykład trudności, jakie mogą spowodować te efekty krańco-
+we. S$ygnałem wejściowym jest fala sinusoidalna z dodaną składową stałą. Zadaniem jest
+usunięcie składowej stałej z pozostawieniem niezniekształconej sinusoidy. To wymaga filtru
+górnoprzepustowego, takiego jak pokazana na rysunku odpowiedź impulsowa. Problem jest
+taki, że w pierwszych i w ostatnich 30 próbkach powstaje bałagan. Kształt przebiegu w tych
+
+<image/figury/k3_page105_figure1.png>

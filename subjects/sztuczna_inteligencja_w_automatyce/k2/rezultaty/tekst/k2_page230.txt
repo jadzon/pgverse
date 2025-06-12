@@ -1,0 +1,53 @@
+235
+
+prawej strony reguły, gdzie napotyka predykat !, którego działanie blokuje ponowną
+możliwość unifikacji zapytania z następną klauzulą programu i w związku z tym dzia-
+łanie programu się kończy. am
+
+PRZYKŁAD 9.17
+
+Rozpatrzmy zadanie polegające na wyborze z bazy danych osób spełniających wy-
+magane kryterium. Baza danych składa się z dwóch zbiorów faktów reprezentowa-
+nych przez predykaty student (Numer) i dochod (Numer ,wielkość_Dochodu), przy-
+czym argumenty Numer sa niepowtarzajacym się identyfikatorem osób. Na zapytanie
+rejestracja(X) program powinien podać numery wszystkich studentów o docho-
+dach mniejszych od 10000.
+
+Oto program spełniający postawione zadanie.
+
+/* Program 15 */
+
+rejestracja(X) :- student(X), dochod(X,Y),
+Y<=10000.
+
+student (321).
+student (444).
+student (222).
+student (123).
+student (124).
+
+dochod(321,12000).
+dochod(541,18000).
+dochod (444 ,9000).
+dochod(222,2400).
+dochod(123,13000).
+dochod(124,11500).
+dochod(311,8800).
+
+Przyglądając się działaniu programu widać, że sprawdzając spełnienie predykatu
+dochod będzie on niepotrzebnie przebiegał wszystkie fakty dochod niezależnie od
+tego, czy unifikacja już nastąpiła czy nie. Program nie wykorzystuje założenia, że
+numery osób w bazie danych nie powtarzają się.
+
+Użycie predykatu odcięcia zapobiega zbędnemu przeglądaniu zespołu faktów
+wiek. Zrealizujemy to zastępując pierwszą klauzulę programu 16 dwoma klauzulami
+
+rejestracja(X) :- student(X), pom(X,Y),
+Y<=10000.
+
+pom(X,Y) :- dochod(X,Y),!.
+
+Użycie w programie klauzuli pom(X,Y) :- dochod(X,Y),!. powoduje, że poszu-
+kiwanie spełnienia predykatu pom(X,Y) kończy się w chwili jakiejkolwiek unifikacji
+predykatu dochod z faktem dochod, ponieważ pociąga to za sobą wywołanie predy-
+katu odcięcia i tym samym zablokowanie dalszego przeglądania faktów dochod. Z

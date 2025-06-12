@@ -1,0 +1,31 @@
+98 1. Pałaria nndetewnwo __ slarnantu
+
+<image/figury/k4_page98_figure2.png>
+<image/wzory/k4_page98_formula1.png>
+
+Połączenie szeregowe oporów nieuzależnionych lub uzależnionych prądowo jest
+oporem nieuzależnionym lub uzależnionym prądowo 0 charakterystyce określonej
+wzorami (1.5-12) i (1.5-13). Na rys. 1.5-7 pokazano konstrukcję charakterystyki
+(1.5-13) — tzw. charakterystyki łącznej połączenia szeregowego dwóch oporów.
+
+<image/figury/k4_page98_figure1.png>
+
+Rys. 1.5-7
+W przypadku szczególnym, kiedy wszytkie łączone opory są liniowe,
+otrzymujemy:
+<image/wzory/k4_page98_formula2.png>
+a więc:
+f la3 (1.5-15)
+<image/wzory/k4_page98_formula3.png>
+
+Wzór (1.5-14) określa opór nowego elementu powstałego w wyniku połącze-
+nia szeregowego n oporów liniowych R, k=1,2,...,n.
+
+C. Połączenie równoległe oporów. Rozważmy połączenie równoległe
+
+n oporów (rys. 1.5-8) o charakterystykach określonych równaniami o postaci
+(1.3-2), tzn.:
+
+<image/wzory/k4_page98_formula4.png>
+
+Są to zatem albo opory nieuzależnione albo uzależnione napięciowo.

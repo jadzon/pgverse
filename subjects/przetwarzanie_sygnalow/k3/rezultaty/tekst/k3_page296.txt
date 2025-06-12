@@ -1,0 +1,60 @@
+324
+
+20. Filtry Czebys
+
+Odpowiedź 2: Bieguny są pojemnikami wypełnionymi magicznym proszkiem. Czym więcej
+biegunów w filtrze, tym lepiej on działa.
+
+To tylko żart mający zwrócić uwagę na fakt, że możecie z powodzeniem stosować te filiry,
+nie wgłębiając się w trudną matematykę z nimi związaną. Projektowanie filtrów aga
+specjalizacji. W codziennej praktyce większość inżynierów, naukowców i programistów.
+przychyla się raczej ku odpowiedzi 2 niż 1.
+
+Na rys. 20.2 przedstawiono odpowiedzi częstotliwościowe kilku filtrów Czebyszev
+o zafalowaniach 0,5%. W metodzie tu stosowanej liczba biegunów musi być parzysta.
+Częstotliwość odcięcia każdego filtru jest mierzona w punkcie opadania charakterystyki dc
+0,707 (-3 dB) wartości maksymalnej. Filtry o częstotliwości odcięcia leżących w pobliz
+0 lub 0,5 częstotliwości próbkowania mają ostrzejsze opadanie charakterystyki niż filtry
+o częstotliwości odcięcia ze środka zakresu. Na przykład filtr dwubiegunowy ma dla często-
+tliwości f. = 0,05 mniej więcej taką samą szybkość opadania jak filtr czterobiegunowy «
+f, = 0,25. To jest korzystne; w pobliżu wartości 0 i 0,5 można zastosować mniej biegunów
+ze względu na szum zaokrąglenia. Później powiemy o tym więcej. Są dwie metody wyzna:
+czenia współczynników rekursywnych bez używania przekształcenia Z. Pierwsza, metod:
+dla tchórzy — skorzystanie z tablicy. W tablicach 20.1 i 20.2 podano wartości współczyn:
+ników rekursywnych dla filtrów dolno- i górnoprzepustowego z zafalowaniami w paśmie
+przepustowym równymi 0,5%. Jeśli chcecie wykonać szybki, przybliżony projekt, to po
+prostu skopiujcie do waszego programu odpowiednie współczynniki.
+
+Dwie kwestie pojawiają się, gdy korzysta się z tablic przy projektowania filtrów. Po
+pierwsze, wybór parametrów zawartych w tablicach jest ograniczony. W tablicy 20.1
+uwzględniono np. tylko 12 różnych wartości częstotliwości odcięcia, maksymalnie 6 bie-
+gunów na filtr i nie ma tam żadnej możliwości wyboru wartości zafalowań w paśmie
+przepustowym. Nie można zoptymalizować filtru bez możliwości wyboru parametrów
+z ciągłego zakresu wartości. Po drugie, współczynniki trzeba ręcznie wprowadzać z ta-
+blicy do programu. Jest to bardzo czasochłonne i może zniechęcić do wypróbowywania
+wartości alternatywnych.
+
+Zamiast stosowania wartości stabelaryzowanych, rozważcie włączenie do programu
+podprogramu, który oblicza współczynniki. Taki program zamieszczono w tablicy 20.4.
+Korzystna, dzięki swej prostocie, jest struktura programu. Po wprowadzeniu czterech pa
+rametrów filtru program daje współczynniki a i b w matrycach A[ ] i B[ ]. Niekorzystne
+zaś jest wywołanie w programie podprogramu z tablicy 20.5. Na pierwszy rzut oka leń
+podprogram wygląda nieładnie. Nie martwcie się, nie jest on taki zły, na jaki wygląda! Jest
+w nim jedno proste rozgałęzienie w wierszu 1120. Cała reszta podprogramu to po prostu
+obliczanie liczb. Sześć zmiennych wchodzi do tego podprogramu, a pięć z niego wychodzi.
+Wewnątrz podprogramu jest stosowanych piętnaście zmiennych tymczasowych (oraz in:
+deksy). W tablicy 20.5 zawarto dwa zestawy danych testowych służących do sprawdzania
+i usuwania błędów z podprogramu. Działanie tego programu będzie szczegółowo opisane
+w rozdziale 33.
+
+Przerzut odpowiedzi skokowej
+
+Filtry Butterwortha i Czebyszewa mają odpowiedź skokową z przerzutem od 5 do 30%,
+zwiększającym się przy wzroście liczby biegunów. Na rys. 20.3 a) przedstawiono przy-
+kłady dwóch odpowiedzi skokowych filtrów Czebyszewa. Na rys. 20.3 b) pokazano
+charakterystyki, które są unikatowe w filtrach cyfrowych i nie mają żadnego odpo-
+wiednika w elektronice analogowej. Charakterystyki te wykazują, w niewielkim stop-
+niu, zależność przerzutu w odpowiedzi skokowej od częstotliwości odcięcia. Nadmierny
+przerzut i oscylacje w odpowiedzi skokowej wynikają z tego, że filtr Czebyszewa jest
+zoptymalizowany w dziedzinie częstotliwości kosztem jego właściwości w dziedzinie
+czasu.

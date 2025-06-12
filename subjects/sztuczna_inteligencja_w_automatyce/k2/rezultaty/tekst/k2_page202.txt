@@ -1,0 +1,23 @@
+<image/figury/k2_page202_figure2.png>
+
+8.2.2. Automaty komórkowe
+
+Zaproponowany przez Neumanna i Ulama w końcu lat 40. automat komórkowy jest
+zbiorem komórek rozłożonych regularnie w nieograniczonej przestrzeni (np. dwu-
+wymiarowej). W komórkach znajdują się identyczne automaty skończone, których
+stany zależą od stanów określonego zespołu innych automatów, zwanych sąsiednimi.
+
+Zachowanie się komórki jest zdeterminowane przez jej funkcję przejścia, która
+odwzorowuje stan komórki i wszystkich komórek do niej sąsiednich na nowy stan ko-
+mórki. Funkcja przejścia komórki automatu komórkowego jest identyczna dla wszyst-
+kich komórek i jest niezmienna w czasie. Stan całego automatu komórkowego jest
+zbiorem stanów poszczególnych komórek.
+
+Ważną cechą, którą mogą posiadać automaty komórkowe, jest ich uniwersalność
+obliczeniowa.
+
+8.3. Postulaty sztucznego życia
+
+Postulaty podane przez Langtona (1989) w artykule programowym pierwszej kon-
+ferencji poświęconej zagadnieniom sztucznego życia (ang. artificial life), dotyczące
+środowiska modelowania systemów biologicznych:

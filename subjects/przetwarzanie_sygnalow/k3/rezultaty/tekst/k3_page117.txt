@@ -1,0 +1,49 @@
+132 7. Właściwości splotu
+
+c,
+
+zera, ma fazę zerową. Podobnie widmo częstotliwościowe sygnału, symetryczne wokół ja-
+kiegoś punktu niezerowego, ma charakterystykę fazową będącą dokładnie linią prostą, a więc
+ma fazę liniową. Na koniec, widmo częstotliwościowe sygnału, które nie jest symetryczne,
+ma charakterystykę fazową niebędącą linią prostą, tzn. ma fazę nieliniową.
+
+Należy jeszcze zwrócić uwagę na pojęcia, które mogą być mylące — faza liniowa i nieliniowa.
+Co to ma wspólnego z pojęciem liniowości systemu, omawianym w poprzednich rozdziałach?
+Otóż zupełnie nic. Liniowość systemu jest pojęciem o szerokim znaczeniu, które jest podstawą
+niemal całego DSP (superpozycja, homogeniczność, addytywność itd.). Liniowość lub nielinio-
+wość fazy określa, czy charakterystyka fazowa jest, czy nie jest linią prostą. W istocie system
+musi być liniowy, aby nawet tylko móc określić, czy faza jest zerowa, liniowa czy nieliniowa.
+
+Właściwości matematyczne
+
+Przemienność operacji splotu
+Przemienność splotu wyraża się wzorem:
+an] * bfn] = b[n] * a[n)
+wzór 7.6. Przemienność splotu. Oznacza ona, że można zmieniać kolejność, w jakiej sygnały są
+poddawane operacji spłotu
+
+Powyższa zależność wyrażona słownie oznacza, że kolejność, w jakiej dwa sygnały są
+poddawane operacji splotu, nie ma znaczenia; wyniki są identyczne. Nabiera to, jak wyni-
+ka z rys. 7.8, szczególnego sensu w teorii sygnałów. W każdym systemie liniowym sygnał
+wejściowy i odpowiedź impulsowa systemu mogą być zamienione miejscami bez zmiany
+sygnału wyjściowego. Jest to bardzo interesujące stwierdzenie, które zwykle nie ma jed-
+nak żadnego znaczenia fizycznego. Sygnał wejściowy i odpowiedź impulsowa to dwie
+zupełnie różne rzeczy. Z tego tylko powodu, że zależności matematyczne zezwałają na
+jakieś operacje, nie wynika, że należy je wykonywać. Na przykład załóżmy, że zarabiamy
+10 USD/godz. x 2000 godz./rok = 20 000 USD/rok. Z przemienności mnożenia wynika,
+że można uzyskać taki sam roczny dochód, pracując tylko 10 godz./rok przy płacy 2000
+USD/godz. Spróbujcie przekonać waszego szefa, że to ma sens! Mimo to cecha przemien-
+ności ma duże zastosowanie w DSP do przekształcenia równań, jak w zwykłej algebrze.
+Łączność operacji splotu
+
+Czy można poddać operacji spłotu trzy lub więcej sygnałów? Odpowiedź brzmi: tak, a z łączno-
+ści operacji splotu wynika, jak to zrobić. Należy spleść dwa sygnały, aby uzyskać sygnał pośred-
+ni. Następnie trzeba ten sygnał pośredni spleść z trzecim sygnałem. Z faktu, że splot jest działa-
+niem łącznym, wynika, iż kolejność splotów nie ma znaczenia. Można to wyrazić równaniem:
+
+wzory/k3_page117_formula1.p
+
+ng
+Wzór 7.7. Zasada fącznośc! spiotu okreSra, jak poooawac Sprotowi trzy iuv więcej syynarów
+
+<image/figury/k3_page117_figure1.png>

@@ -1,0 +1,41 @@
+264 14. Wprowadzenie do filtrów cyfro
+
+Klasyfikacja filtrów
+
+W tablicy 14.1 podano klasyfikację filtrów według ich zastosowania i sposobu realizacji
+Zastosowania filtrów można podzielić na trzy kategorie: zastosowania w dziedzinie czas
+w dziedzinie częstotliwości oraz dostosowane do szczególnych wymagań. Jak już poprzedni
+powiedziano, filtry w dziedzinie czasu są stosowane wówczas, gdy informacja jest zak
+dowana w kształcie przebiegu sygnału. Filtracja w dziedzinie czasu jest używana np. d6
+wygładzania przebiegów, usuwania składowej stałej, kształtowania przebiegów itd., a filtry
+w dziedzinie częstotliwości są stosowane, gdy informacja jest zawarta w amplitudzie, często:
+tliwości i fazie sinusoid składowych. Celem takich filtrów jest rozdzielenie jednego pasm
+częstotliwości od innego. Filtry dostosowane do wymagań szczególnych są przeznaczone 60
+funkcji specjalnych, bardziej skomplikowanych niż podstawowe odpowiedzi filtrów (dolne
+i górnoprzepustowe, środkowoprzepustowe i środkowozaporowe). W rozdziale 17 opis
+na przykład, jak można stosować takie filtry specjalne do rozpłotu (deconvolution), a wt
+do uniknięcia niechcianego splotu.
+Filtry cyfrowe mogą być realizowane dwoma sposobami — przez splot (są też i
+ne filtrami o skończonej odpowiedzi impulsowej, SOT) lub przez rekursję (o nieskończonej
+odpowiedzi impulsowej, NOI). Filtry realizowane przy użyciu splotu mogą mieć znacznie
+korzystniejsze właściwości od filtrów rekursywnych, lecz działają znacznie wolniej.
+W następnych sześciu rozdziałach filtry cyfrowe będą opisane zgodnie z klasyfikacją po
+daną w tablicy 14.1. Najpierw zajmiemy się filtrami realizowanymi przez splot. Metoda
+średniej kroczącej (rozdz. 15) jest stosowana w dziedzinie czasu, okienkowanie funkcją si
+(rozdz. 16) — w dziedzinie częstotliwości, a metoda SO/ - do filtrów o szczególnych
+maganiach (rozdz. 17). Na zakończenie rozważań nad filtrami przedstawimy w rozdziale |
+metodę zwaną splotem FFT. Jest to algorytm zwiększający szybkość splotu, dzięki czem
+filtry SOI mogą działać szybciej.
+Następnie przejdziemy do filtrów rekursywnych. Filtr rekursywny jednobiegunowy (rozdz. 19
+jest stosowany w dziedzinie czasu, filtr Czebyszewa (rozdz. 20) zaś — w dziedzinie częstotli-
+wości. Filtry rekursywne o odpowiedzi zgodnej ze szczególnymi wymaganiami są p ojekto-
+wane metodą iteracyjną. Dlatego z ich omówieniem powstrzymamy się aż do rozdziału 26,
+w którym będą opisane procedury iteracyjne innego rodzaju, a mianowicie sieci neuronowe,
+Jak wynika z tablicy 14.1 spłot i rekursja są metodami konkurencyjnymi. W określon
+zastosowaniu musimy skorzystać z jednej lub drugiej metody. Którą wybrać? W rozdziale
+21 przedstawiono bezpośrednie porównanie obu metod, zarówno w dziedzinie czasu, jak
+i częstotliwości.
+
+Tab. 14.1. Klasvlikacia filtrów wedłua ich zastosowania i sposobu realizacji
+
+<image/tabele/k3_page242_table1.png>

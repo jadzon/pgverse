@@ -1,0 +1,36 @@
+1.2 Pojęcia podstawowe
+
+Konstrukcja przekaźnika elektromechanicznego pokazana na Rys. 1.1 nie uległa
+zmianie od połowy dziewiętnastego wieku, tj. od czasu jego pierwszego zasto-
+sowania w celu zwiększenia mocy sygnału telegraficznego przy transmisji na
+długie dystanse. Od tego czasu zmniejszyły się jego fizyczne wymiary i pobór
+mocy, wzrosła szybkość działania, wytrzymałość prądowa i napięciowa, a przede
+wszystkim wzrosła jego niezawodność.
+
+<image/figury/k4_page9_figure1.png>
+
+Główną część takiego przekaźnika stanowi nadal ruchoma kotwica zapewniająca
+elektryczne połączenie w obwodach, w których umieszczono styki tego prze-
+kaźnika. Działanie tych styków (zwiernych lub rozwiernych) jest zależne od sy-
+gnału w obwodzie wzbudzenia cewki przekaźnika.
+
+Chociaż obecnie stosuje się znacznie częściej łączniki elektroniczne z wyko-
+rzystaniem tranzystorów i tyrystorów, zarówno w niskoprądowych obwodach
+sterujących jak i w wysokoprądowych obwodach mocy, to dla zrozumienia zasad
+programowania sterowników konieczne jest podanie podstawowych danych
+o przekaźnikach. Stosowane przez dziesiątki lat przekaźnikowe systemy sterowa-
+nia były bowiem wykonywane niejednokrotnie z wielu tysięcy takich przekaźni-
+ków. Wszystkie funkcje podobnych systemów, a często znacznie bardziej złożo-
+nych, realizują obecnie programy sterowników. Programy profesjonalne powinny
+być więc pisane zgodnie z zasadami projektowania i w oparciu o doświadczenia
+praktyczne, które przez wiele lat wypracowano przy konstruowaniu układów
+przekaźnikowych.
+
+Cewki przekaźników umieszczone w obwodach wejściowych są pobudzane
+w zależności od położenia styków obiektowych (czujników), załączników
+i wyłączników. Zgodnie z zaprojektowanymi warunkami logicznymi i czasowy-
+mi zapewniają one pobudzanie cewek przekaźników, a przy większych obciąże-
+
+ 
+
+1.2 Pojęcia podstawowe 9

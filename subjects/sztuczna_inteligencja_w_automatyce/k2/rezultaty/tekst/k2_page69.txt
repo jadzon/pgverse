@@ -1,0 +1,50 @@
+5.1. Wnioskowanie rozmyte
+
+Logika rozmyta jest rozszerzeniem logiki bulowskiej włączającym pojęcie prawdy
+częściowej — znajdującej się pomiędzy prawdą a fałszem. Zaproponowana została
+w latach 60. przez Lotfi Zadeha z UC/Berkeley jako narzędzie do modelowania
+niokreśloności występujących w języku naturalnym.
+
+5.1.1. Zbiory rozmyte
+
+W klasycznej teorii zbiorów, podzbiór U zbioru X może być zdefiniowany jako od-
+wzorowanie elementów zbioru X w elementy zbioru 0. 1),
+
+<image/wzory/k2_page69_formula1.png>
+
+Odwzorowanie to może być reprezentowane jako zbiór uporządkowanych par. Pierw-
+szym elementem uporządkowanej pary jest element zbioru X, a elementem drugim
+jest element należący do zbioru £0. 1), gdzie ( reprezentuje nienależenie do pod-
+zbioru U, a 1 reprezentuje należenie. Prawdziwość lub fałszywość zdania
+
+<image/wzory/k2_page69_formula2.png>
+
+można określić przez odszukanie pary uporządkowanej, której pierwszym elementem
+jest r. Zdanie jest prawdziwe jeżeli drugim elementem pary jest 1 lub jest fałszywe
+jeżeli drugim elementem jest 0.
+
+Podobnie rozmyty podzbiór F' zbioru X może być zdefiniowany jako odwzoro-
+wanie elementów zbioru X w elementy zbioru [0. 1].
+
+<image/wzory/k2_page69_formula3.png>
+
+reprezentowane przez zbiór uporządkowanych par, gdzie każda para zawiera pierw-
+szy element należący do X, a drugi element należący do przedziału [0,1] przy czym
+każdemu elementowi X odpowiada jedna para uporządkowana. To definiuje odwzo-
+rowanie pomiędzy elementami zbioru X i wartościami z przedziału (0, 1). Wartość
+0 reprezentuje całkowite nie należenie do zbioru, wartość 1 — całkowite należenie, a
+wartości pośrednie — reprezentują częściową przynależność. Zbiór X jest nazywany
+obszarem rozważan lub przestrzenią (ang. universe of discourse). Odwzorowanie na-
+zywa się funkcją przynależności (ang. membership function).
+
+Reasumując, niech X oznacza pewien stały zbiór. Zbiór rozmyty F' można okre-
+ślić w X jako zbiór uporządkowanych par:
+
+<image/wzory/k2_page69_formula4.png>
+
+gdzie jp(x) jest funkcją przynależności zbioru F.
+
+jtp(T) = 1 oznacza pełną przynależność 1 do F,
+ApF(z) = O oznacza brak przynależności r do F,
+
+wartości pośrednie jtp(1) oznaczają częściową przynależność z do F.

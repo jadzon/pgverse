@@ -1,0 +1,37 @@
+3.6. Obwody rezystancyjne ze wzmacniaczami operacyjnymi 315
+
+w śśśśśygggdiggóśgjgÓgii yi A ISS
+
+wracające) i „—” (tzw. wejście odwracające), zacisk wyjściowy i zacisk od-
+niesienia (masa)”.
+Napięcie wejściowe:
+
+zOry/ka_ page313_formula1.png (3.6-1)
+
+jest różnicą napięć obu wejść. Z uwagi na bardzo duży opór wejściowy każdego
+z wejść (rzędu MQ, setek MQ, a wspecjalnych realizacjach rzędu GQ, a nawet
+TQ), można przyjąć, że wzmacniacz operacyjny pracuje z pomijalnie małymi
+prądami wejściowymi, tj. zakładać, że:
+
+zory/k3_page313_formula2.png (3.6-2)
+
+O właściwościach wzmacniacza operacyjnego decyduje zależność napięcia
+wyjściowego uz od napięcia wejściowego u,. Jeśli napięcie u, jest napięciem
+stałym lub napięciem wolnozmiennym (np. napięciem sinusoidalnym o niezbyt
+dużej częstotliwości), możliwe jest rozpatrywanie wzmacniacza operacyjnego
+jako układu rezystancyjnego, z pominięciem wpływu elementów inercyjnych
+(pojemności występujących w strukturze WO) na jego charakterystykę
+u = f(u,). Przy tym założeniu, tzn. w zakresie małych częstotliwości, typowa
+zależność uz = f(u;) ma postać przedstawioną na rys. 3.6-2 (por. [2] str. 174).
+
+<image/figury/k3_page313_figure1.png>
+
+Na wykresie z rys. 3.6-2 można wyraźnie wyróżnić dwa zakresy:
+
+a) Zakres pracy liniowej, w którym:
+
+ory/k3_page313_formula3.png (3.6-3)
+
+vw rzeczywistym WO liczba zacisków jest większa, m.in. o zaciski doprowadzające stałe
+napięcia zasilania wyka: + 15 V). Zaciski te, jako nieistotne dla rozważań nad modelem WO,
+zostały pominięte na rys. 3.6-1.

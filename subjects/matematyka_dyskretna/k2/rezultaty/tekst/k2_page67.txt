@@ -1,0 +1,51 @@
+8 Rozdział 1. Rachunek prawdopodobieństwa
+
+Możemy powiedzieć, że jest to prawdopodobieństwo zajścia zdarzenia A w sytuacji, gdy
+mamy pewność, że zaszło zdarzenie B. Przy klasycznej definicji, gdy prawdopodobień-
+stwo oznacza częstość wystąpienia, to prawdopodobieństwo P(A|B) oznacza jaka część
+elementów zbioru B należy do zbioru A.
+Wniosek 1.12 P(AM B) = P(A|B) : P(B).
+
+Jeżeli P(A|B) = P(A), to mówimy, że zdarzenie A jest niezależne od zdarzenia
+B. W takim przypadku zajście zdarzenia A nie zależy od tego, czy zaszło zdarzenie B.
+Jeżeli A i B są zdarzeniami o niezerowych prawdopodobieństwach i A jest niezależne
+od B, to B jest niezależne od A. Rzeczywiście P(A|B) = P(A) pociąga P(A n B) =
+P(A) : P(B), a to pociąga
+
+<image/wzory/k2_page67_formula1.png>
+Dlatego można mówić, że w takim przypadku zdarzenia A i B są niezależne.
+
+Definicia 1 13 Mówimv że zdarznia 4 i R<a niezależna iażali
+
+<image/wzory/k2_page67_formula2.png>
+
+Przykład 1.14 (Kontynuacja przyktadu 1.1C, z SZeScioma Kulami). Zdarzenie A = +1b,2b)
+wylosowania kuli białej i zdarzenie B = (2b,4c,6c) wylosowania kuli z parzystym nu-
+merem są niezależne, ponieważ P(A) = 1/3 oraz P(A|B) = 1/3. Po prostu częstość
+występowania kuli białej wśród kul o parzystych numerach (1 na 3) jest taka sama jak
+częstość występowania kuli białej wśród wszytkich kul (2 na 6).
+
+Jeżeli mamy więcej zdarzeń A;,... , A„, to mówimy, że są one parami niezależne,
+jeżeli każde dwa zdarzenia są niezależne, to znaczy gdy P(A; 0. A,) = P(A;) : P(A;)
+dla każdej pary i < j.
+
+Definicja 1.15 Zdarzenia A;,...,.A„, są niezależne jeżeli dla każdego podzbioru 7 €
+
+ls ni mamw
+
+<image/wzory/k2_page67_formula3.png>
+
+Przykład 1.16 (Kontynuacja przykładu 1.1b, z rzutem dwoma monetami). Niech A, będzie
+zdarzeniem, że na pierwszej monecie wypadł orzeł, A>, że na drugiej monecie wypadł
+orzeł, a As, że na obu monetach wypadło to samo. Mamy
+
+wzory/k2_paqe67_formula4.pna
+<image/wzory/k2_page67_formula5.png>
+
+Jak widac zdarzenia te są parami niezalezne, poniewaz dla kazdej pary indeksów 1 < i <
+j < 3 mamy P(A;  A,) = P(A;) - P(A;) = 4. Ale zdarzenia te nie są niezależne,
+ponie"*
+
+<image/wzory/k2_page67_formula6.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

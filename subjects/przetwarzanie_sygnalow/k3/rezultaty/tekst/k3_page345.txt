@@ -1,0 +1,65 @@
+376
+
+  
+ 
+    
+    
+ 
+
+23. Tworzenie i wyświetlanie obrazó
+
+Na rys. 23.12 e) przedstawiono wpływ jeszcze dalszego wzrostu kontrastu, który powoduj
+że tylko 16 z możliwych 256 poziomów jest wyświetlanych jako nienasycone. Zwiększoń
+też jaskrawość tak, że 16 nadających się do użytku poziomów znajduje się wokół DŚ
+wejściowej 150. W środkowym kwadracie szczegóły są teraz dobrze widoczne, jednak pc
+tym prawie wszystko na obrazie jest nasycone. Spójrzmy, na przykład, na szum przy i
+nicach obrazu. Jest tam bardzo niewiele pikseli o pośrednich odcieniach szarości.
+wszystkie piksele w tym obszarze są albo całkiem czarne, albo całkiem białe. Taka technik
+stosowania dużego kontrastu w celu zobaczenia tylko kilku poziomów szarości jest czasę
+nazywana rozciąganiem skali szarości (grayscale stretch).
+
+Ustawianie kontrastu jest sposobem rozszerzania (zoom) jakiegoś małego zakresu wartość
+pikseli. Ustawianie jaskrawości powoduje umieszczenie rozszerzonego obszaru na wybranyc
+wartościach pikseli. W większości cyfrowych systemów obrazujących możliwe jest ustawiani
+jaskrawości i kontrastu właśnie w taki sposób; często jest też wyświetlany wykres funkcji wyj
+ście/wejście (jak na rys. 23.12). Inne rozwiązania zastosowano w telewizorach i monitc
+ekranowych, gdzie do ustawiania jaskrawości i kontrastu służą układy analogowe, mogąa
+działać w sposób odmienny od omówionego. Na przykład ustawianie kontrastu w monitor
+może polegać na regulacji wzmocnienia sygnału analogowego, a jaskrawości — na doda
+
+lub odejmowaniu pewnego stałego poziomu. Wniosek z tego taki, że nie trzeba się dzi
+jeśli te regulacje analogowe nie zadziałają w sposób zgodny z oczekiwaniem.
+
+Przekształcenia skali szarości |
+
+Ostatni obraz, przedstawiony na rys. 23.12 f), różni się od pozostałych. Wykres wyjście/wej:
+ście ma pewne nachylenie nie w jednym, a w dwóch obszarach wartości wejściowych. Dzięk
+temu na obrazie mogą być jednocześnie dobrze widoczne trójkąty zarówno w lewym, ji
+i w prawym kwadracie. Oczywiście powoduje to nasycenie pikseli niełeżących blisko warto
+ści cyfrowych odpowiadających tym trójkątom. Zauważcie, że na tym rysunku nie pokaza
+położeń nastawników suwakowych jaskrawości i kontrastu; ustawienia są bowiem poza gra-
+nicami możliwości tych nastawników.
+
+Rozwijając dalej omówioną metodę, dochodzi się do mającej bardzo duże możliwości tech
+niki udoskonalania wyglądu obrazów, noszącej nazwę przekształcenia skali szarości. Istot
+tej techniki jest zwiększanie kontrastu dla niektórych wartości pikseli, kosztem tych, które
+nie są interesujące. Realizuje się to, określając względną ważność każdej z możliwych war
+tości pikseli, od.) do 255. Czym ważniejsza jest wartość piksela, tym większy kontrast jes
+ustawiany na obrazie. Implementację tej procedury przedstawimy na przykładzie.
+
+Obraz pokazany na rys. 23.13 a) pobrano w zupełnej ciemności, stosując aparat fotograficzn
+CCD czuły na daleką podczerwień. Obrazowanym parametrem jest temperatura. lm obiekt jes
+cieplejszy, tym więcej emituje energii w podczerwieni i tym jaśniejszy jest na obrazie. Dlateg
+tło jest bardzo czarne (zimne), postać ludzka jest szara (ciepła) a maskownica silnika ciężarów»
+ki biała (gorąca). Takie systemy są świetne dla wojska i policji; można obserwować kogoś, k
+nawet samego siebie nie może widzieć! Obraz na rys. 23.13 a) jest trudny do oglądania z powc
+du nierównomiernego rozkładu wartości pikseli. Większa część obrazu jest tak ciemna, że ni
+są widoczne żadne szczegóły. Z drugiej strony biel maskownicy silnika jest bliska nasycenia.
+Histogram tego obrazu jest przedstawiony na rys. 23.14 a). Na tym histogramie tło, pos
+ludzka i maskownica silnika ciężarówki mają wartości wyraźnie różniące się od siebie
+W tym przykładzie zwiększymy kontrast tła i maskownicy silnika kosztem pozostałych czę
+ści obrazu, włącznie z postacią ludzką. Taki sposób podejścia zilustrowano na rys. 23.14 b
+Deklarujemy, że piksele o najmniejszych wartościach, czyli tło, będą miały względny kon=
+trast równy 12. Piksele zaś o największych wartościach, a więc maskownica silnika, bęć
+miały względny kontrast 6, a postać ludzka — kontrast |, a przejścia między obszarami px
+winny mieć przebieg schodkowy. Wszystkie te wartość są określane metodą prób i błędów.

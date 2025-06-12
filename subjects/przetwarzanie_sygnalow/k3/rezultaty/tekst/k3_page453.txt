@@ -1,0 +1,54 @@
+Architektura cyfrowego procesora sygnałowego 489
+
+tę sytuację, włączając do jednostki centralnej podręczną pamięć instrukcji. Jest to mała pa-
+mięć zawierająca ok. 32 ostatnich instrukcji programu. Przy pierwszym przejściu pętli instrukcje
+muszą być przesłane przez magistralę pamięci programu. To powoduje spowolnienie działania
+ze względu na to, że współczynniki też muszą być pobierane tą drogą. Jednak przy dalszych
+wykonaniach pętli instrukcje programu mogą być pobierane z pamięci podręcznej. Dzięki temu
+całe przesyłanie informacji z pamięci do jednostki centralnej może być zrealizowane podczas
+jednego okresu zegarowego — próbka sygnału wejściowego przechodzi przez magistralę pamięci
+danych, współczynnik — przez magistralę pamięci programu, a instrukcja programu jest pobiera-
+na z podręcznej pamięci instrukcji. W potocznym języku technicznym takie wydajne przesyłanie
+danych nazywa się szerokopasmowym dostępem do pamięci (high memory access bandwidth).
+Na rys. 28.5 bardziej szczegółowo przedstawiono architekturę procesorów rodziny SHARC, po-
+kazując sterownik wejścia-wyjścia dołączony do pamięci danych. Tą drogą sygnały wchodzą
+do systemu i z niego wychodzą. Na przykład procesory DSP SHARC mają porty komunikacyjne
+tak szeregowe, jak i równoległe. To są połączenia dające skrajnie dużą szybkość. Na przykład
+przy częstotliwości zegara 40 MHz”? są dwa porty szeregowe, każdy działający z przepływ-
+nością bitową 40 Mbit/s, podczas gdy każdy z sześciu portów równoległych ma przepływność
+bitową 40 MB/s. Gdy wykorzystuje się wszystkie sześć portów równoległych razem, to osiąga
+się bardzo dużą przepływność bitową 240 MB/s.
+
+To wystarczyłoby do przesłania całego tekstu tej książki w ciągu zaledwie 2 ms! Równie waż-
+ne jest to, że specjalnie zaprojektowane układy umożliwiają przesyłanie tych strumieni danych
+bezpośrednio do pamięci (bezpośredni dostęp do pamięci — DMA) bez konieczności przekazy-
+wania przez rejestry jednostki centralnej (CPU). Inaczej mówiąc, zadania 1 i 14 z naszej listy
+w tablicy 28.1 są realizowane niezależnie i równocześnie z innymi zadaniami, nie zajmując
+żadnych okresów zegara jednostki centralnej. Główne magistrale (pamięci programu i pamię-
+ci danych) są również dostępne na zewnątrz układu scalonego, tworząc dodatkowy interfejs
+do pamięci zewnętrznych i urządzeń peryferyjnych. To umożliwia procesorom sygnałowym
+SHARC stosowanie pamięci o pojemności czterech gigasłów (16 GB), dostępnej z przepływ-
+nością bitową 40 megasłów/s (160 MB/s) dla danych 32-bitowych. To jest coś!
+
+Tego rodzaju duża szybkość działania układu wejście-wyjście jest charakterystyczna dla proceso-
+rów DSP. Dominującym celem jest wprowadzenie danych, wykonanie operacji matematycznych
+i wyprowadzenie danych, zanim pojawi się następna próbka. Wszystko poza tym ma znaczenie
+
+Zajrzyjmy teraz do wnętrza jednostki centralnej (CPU). W górnej części schematu (rys. 28.5)
+są dwa błoki nazwane generator adresów danych (DAG — Data Address Generator), po
+jednym dla każdej z dwóch pamięci. Sterują one adresami przesyłanymi do pamięci progra-
+mu i danych, określając, skąd informacja ma być odczytywana i gdzie wpisywana. W prost-
+szych mikroprocesorach to zadanie jest realizowane jako nieodłączna część sekwensera pro-
+gramu i jest zupełnie przejrzysta dla programisty. Jednak procesory DSP są zaprojektowane
+do pracy z buforami cyklicznymi i uzyskuje się w nich korzyści dzięki dodatkowym układom,
+skutecznie operującym tymi buforami. W ten sposób unika się wykorzystywania cennych
+okresów zegarowych CPU na śledzenie przebiegu gromadzenia danych. Na przykład w pro-
+cesorach sygnałowych SHARC każdy z dwóch generatorów adresów danych steruje ośmio-
+ma buforami cyklicznymi. To znaczy, że w każdym DAG są przechowywane 32 zmienne
+(4 na bufor) wraz z niezbędnymi funkcjami logicznymi.
+
+Po co tak wiele buforów cyklicznych? Niektóre algorytmy DSP są najlepiej realizowane eta-
+pami. Filtry SOI, na przykład, są bardziej stabilne, gdy się je realizuje jako kaskadę stopni
+
+*% Współcześnie produkowane procesory z rodziny SHARC są taktowane przebiegami
+RE 150 MHz (ADSP-21261) aż do 400 MHz (ADSP-21368 i ADSP-21369).

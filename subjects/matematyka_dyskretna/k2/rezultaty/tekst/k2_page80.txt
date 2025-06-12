@@ -1,0 +1,38 @@
+1.7. Wartość oczekiwana, średnia 21
+
+Pokażemy teraz jak można wykorzystać prawdopodobieństwo do rozważań kombina-
+torycznych. Udowodnimy następujące:
+
+Twierdzenie 1.48 Wierzchołki dowolnego grafu można pokolorować dwoma kolarami
+(białym i czarnym) w taki sposób, że przynajmniej połowa krawędzi ma swoje końce w
+różnych kolorach.
+
+Zanim przejdziemy do dowodu wyjaśnjmy kilka rzeczy:
+
+Definicja 1.49 Graf G jest to dowolny skończony zbiór wierzchołków VG wraz ze zbiorem
+krawędzi EG, gdzie krawędzie to pary wierzchołków.
+
+<image/wzory/k2_page80_formula1.png>
+
+Dla krawędzi e = fu,v) mówimy, że wierzchołki u i v są końcami krawędzi e lub, że
+krawędź e łączy u iv.
+
+Graf często przedstwiamy na rysunku jako zbiór punktów połączonych łukami. Na
+przykład rysunek 1.1 przedstawia graf ze zbiorem wierzchołków VG = fa,b,c,d, e, f,9)
+
+<image/wzory/k2_page80_formula2.png>
+
+Rysunek 1.1: Przykład grafu
+
+<image/figury/k2_page80_figure1.png>
+
+Łatwo jest pokolorować każdy graf tak, aby każda krawędź miała oba końce w jed-
+nym kolorze. Wystarczy wszystkie wierzchołki pokolorować tym samym kolorem. Graf
+z rysunku 1.1 można pokolorować tak, aby każda krawędź była dwukolorowa. Trzeba
+pokolorować na biało wierzchołki a, c, d i f i na czamo wierzchołki b, e i g. Ale nie dla
+każdego grafu jest możliwe takie pokolorowanie, w którym każda krawędź ma końce w
+różnych kolorach. Na przykład dla trójkąta, czyli grafu z wierzchołkami VG = f1,2,3)i
+krawędziami Eg = £11,2), (1,3), £2,3)) (patrz rysunek 1.2) nie istnieje takie pokolo-
+rowanie.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,36 @@
+Przyjęcie przez zmienną %// wartości / w chwili A uruchamia zliczanie czasu.
+W chwili B (tj. 2 s później) wartość bieżąca CV (zawartość rejestru %R 1/0) osią-
+ga wartość zadaną PV (zawartość rejestru %R1/) i na wyjściu czasomierza
+pojawia się prąd powodujący wzbudzenie cewki %Q2, a wartość CV jest nadal
+uaktualniana. W chwili C pojawia się prąd na wejściu kasującym czasomierza
+(%/2 przyjmuje wartość /), co powoduje zatrzymanie zliczania czasu i wyzero-
+wanie wartości bieżącej oraz przyjęcie przez zmienną %Q2 wartości 0. W chwili
+D sygnał kasujący zanika (rozwarcie styku %/2), więc rozpoczyna się ponowne
+odmierzanie czasu aż do chwili E, w której styk %// zostaje otwarty. Po ponow-
+nym pojawieniu się prądu na wejściu zezwolenie w chwili F, zliczanie czasu jest
+kontynuowane aż do zaniku tego prądu w chwili H, przy czym w chwili G, tj.
+gdy wartość bieżąca CV osiąga wartość zadaną PV, na wyjściu pojawia się prąd
+icewka %Q2 przechodzi w stan wzbudzenia. Suma odcinków czasowych DE
+i FG wynosi 2 s.
+
+e OFDT (OFF Delay Timer) - czasomierz wyłączający;
+
+Czasomierz wyłączający zlicza czas, w którym jego wejście zezwołenie jest
+w stanie OFF. Pojawienie się prądu na wejściu czasomierza wyzerowuje stan
+licznika czasu oraz ustawia wyjście w stan ON. Zanik prądu na wejściu rozpo-
+czyna odliczanie czasu w wybranych jednostkach, przy czym wyjście pozostanie
+w stanie ON aż do chwili, gdy wartość bieżąca CV osiągnie wartość zadaną PV.
+Kolejne pojawienie się prądu na wejściu zeruje CV i wyjście ponownie przecho-
+dzi w stan ON.
+
+Na Wyd. 4.11 pokazano przykład wykorzystania czasomierza wyłączającego do
+wyłączania wyjścia %Q3 (uwaga — cewka negująca) za każdym razem, gdy wej-
+ście %/1 jest włączone. Ponowne załączenie wyjścia %Q03 następuje po czasie
+0.5 s (odcinek czasu BC) od chwili przyjęcia przez zmienną %// wartości O. Rys.
+4.3 przedstawia odpowiednie wykresy czasowe.
+
+<image/figury/k4_page194_figure1.png>
+
+Wyd. 4.11 Przykład wykorzystania czaso mierza wyłączającego.
+
+194 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

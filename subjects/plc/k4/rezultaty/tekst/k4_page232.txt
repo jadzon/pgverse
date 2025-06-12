@@ -1,0 +1,7 @@
+Tab. 4.6 zawiera opis tych parametrów bloku PID, do których dostęp ma użyt-
+kownik. Zkolei w Tab. 4.7 przedstawiono typowe wartości początkowe
+parametrów, ich jednostki oraz granice w jakich mogą być zmieniane.
+
+<image/tabele/k4_page232_table1.png>
+
+232 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

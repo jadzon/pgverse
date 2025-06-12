@@ -1,0 +1,51 @@
+JTTA ESC IOPZ
+
+wę
+
+Hoga WWOKI MAR
+
+PPOEWRKZŁ
+
+Liusrzerz
+
+70
+
+3. Przetwarzanie analogowo-cyfrowe i cyfrowo-analogowe
+
+<image/wzory/k3_page59_formula1.png>
+
+Rys. 3.18. Schemat blokowy modulatora CVSD. Do podstawowego modulatora delta dodano układy lo-
+giczne w celu ulepszenia szybkości zmian napięcia
+
+wartość skoku staje się coraz większa. Ten filtr jest często nazywany sylabowym, ponie-
+waż jego właściwości zależą od średniej długości sylaby w sygnale mowy. Przy właściwej
+optymalizacji (zgodnie z zaleceniami producenta układu, a nie według naszych własnych
+pomysłów) częstotliwości przesyłania danych od 16 do 32 kHz dają sygnał mowy o ak-
+ceptowalnej jakości. Ciągle zmieniająca się wartość skoku powoduje, że dane cyfrowe są
+trudne do zrozumienia, ale to zrozumienie, na szczęście, wcale nie jest potrzebne. Sygnał
+analogowy jest bowiem odtwarzany w odbiorniku, w którym jest umieszczony filtr syla-
+bowy, identyczny z tym w nadajniku. Jeśli oba filtry są dopasowane do siebie, to znie-
+kształcenia wywołane modulacją CYSD są niewielkie. Ta modulacja jest przypuszczalnie
+najłatwiejszym sposobem cyfrowego przesyłania sygnału głosowego.
+
+Modulacja CVSD, choć świetna do kodowania sygnałów głosowych, nie może być stoso-
+wana do przetwarzania a/c ogólnego przeznaczenia. Jeśli nawet pominiemy fakt, że dane
+cyfrowe odnoszą się do pochodnej sygnału wejściowego, zmieniający się skok kwantyzacji
+wprowadzi zamieszanie niemożliwe do skorygowania. Ponadto, przy tej modulacji poziom
+stały sygnału wejściowego nie jest uwzględniony w uzyskiwanych danych cyfrowych.
+
+Te trudności są wyeliminowane w przetworniku delta-sigma przedstawionym na rys. 3.19,
+w którym umiejętnie połączono elektronikę analogową z algorytmami DSP. Zauważmy, że
+napięcie na kondensatorze jest teraz porównywane z potencjałem masy. Zmodyfikowano rów-
+nież pętlę sprzężenia zwrotnego, tak aby napięcie na kondensatorze zmniejszało się, gdy na
+wyjściu układu jest stan logiczny jeden i wzrastało w przypadku stanu zero. Wzrastający i ma-
+lejący wejściowy sygnał napięciowy próbuje wywołać wzrost lub zmniejszenie napięcia na
+kondensatorze. Ta zmiana napięcia jest wykrywana przez komparator, powodując, że iniektory
+generują ładunek przeciwdziałający, który utrzymuje napięcie na kondensatorze równe zeru.
+Jeśli napięcie wejściowe jest dodatnie, to w wyjściowym sygnale cyfrowym będzie
+więcej jedynek niż zer. Nadmiarowa liczba jedynek jest potrzebna do generowania
+ujemnego ładunku, który redukuje dodatni sygnał wejściowy. Podobnie, jeśli napięcie
+wejściowe jest ujemne, sygnał cyfrowy na wyjściu będzie zawierał więcej zer niź je-
+dynek, powodując iniekcje wypadkowego ładunku dodatniego. Jeśli sygnał wejściowy
+jest równy zeru, to na wyjściu pojawiają się jednakowe liczby zer i jedynek, powodując
+zerową wypadkową iniekcję ładunku.

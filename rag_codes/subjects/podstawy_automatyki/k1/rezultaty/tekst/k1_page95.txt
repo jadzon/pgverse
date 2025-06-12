@@ -1,0 +1,35 @@
+Przykład 2.34
+
+Zaprojektować układ sterowania dopływem wody do dwóch zbiorników (rys.
+2.33). Poziom wody w zbiornikach kontrolowany jest czujnikami a, b, c (a = 0, gdy
+poziom wody jest poniżej czujnika a, natomiast a = 1, gdy poziom wody jest powyżej
+czujnika a, podobnie dla pozostałych czujników). Dopływem wody sterują zawory
+elektromagnetyczne Z, i Z.
+
+Program pracy układu:
+
+— zawór Z; powinien być otwarty (Z, = 1) stale, gdy zbiornik jest niepełny (a = 0);
+— zawór Z» powinien być otwarty (Z» = 1), gdy poziom wody w zbiorniku nie osiąg-
+nął poziomu czujnika c; po jego przekroczeniu zawór zamyka się i otwiera się
+
+dopiero wtedy, gdy poziom wody w drugim zbiorniku osiągnął poziom czujnika a;
+
+— zawór Z» powinien być zamknięty, gdy zbiornik napełni się (b = 1).
+
+<image/figury/k1_page95_figure1.png>
+
+Napełnienie zbiorników powinno być sygnalizowane mignięciem żarówki. Ża-
+rówka jest włączana w obwód „przełącznikiem impulsowym” Y (chwilowe zamknięcie
+obwodu następuje, gdy Y = 1).
+
+Przedstawić schemat logiczny tego układu z zastosowaniem bramek logicznych
+NOR.
+
+Rozwiązanie
+
+Działanie układu opisuje tabela stanów (tab. 2.9). Na podstawie tej tabeli można
+napisać równanie funkcji Z;, Z, i Y w kanonicznej postaci alternatywnej:
+
+<image/wzory/k1_page95_formula1.png>
+
+97

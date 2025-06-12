@@ -1,0 +1,18 @@
+1.8. Sprzężenie magnetyczne 157
+
+H. Przypadek prądów stałych. W definicji transformatora idealnego po-
+ianej w p. A nie wprowadzaliśmy żadnych ograniczeń na rodzaj zmienności
+« czasie prądów i napięć zaciskowych i;, ią, u;, uz. Równania (1.8-46) powin-
+ży być zatem spełnione również wtedy, kiedy wielkości te są stałe w czasie.
+Z drugiej jednak strony, jeśli i, = I,, i, = I, w układzie z rys. 1.8-3, to
+/, = const, YW, = const i, zgodnie z równaniami (1.8-17),u; = u = 0(por.
+>. 1.8.1-F). W transformatorze idealnym, otrzymanym z indukcyjności sprzężo-
+cych w wyniku przejścia granicznego omówionego w p. B, spełnienie rów-
+zania u, = pu, przez niezerowe napięcia u;, u. jest zatem możliwe tylko
+*ówczas, gdy napięcia te są zmienne w czasie.
+
+Jak już jednak podkreślaliśmy, transformatora idealnego nie musimy trak-
+ować jako przypadku granicznego indukcyjności sprzężonych. Istnieją prak-
+*yczne możliwości (przybliżonej) realizacji transformatora idealnego o równaniu
+1.8-46), oparte na zupełnie innych zasadach, które są wolne od tego ogranicze-
+cia. Ich omówienie wykracza jednakże poza ramy tej książki.

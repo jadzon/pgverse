@@ -1,0 +1,40 @@
+Odpowiedź ta ma zazwyczaj kształt krzywej z przegięciem, jak to przedstawiono
+na Rys. B.2. Nastawy regulatora są w tym przypadku uzależnione od maksymal-
+nego nachylenia krzywej Ko /T i opóźnienia T zdefiniowanego przez punkt
+przecięcia prostej nachylenia maksymalnego z prostą poziomą poprowadzoną od
+wartości początkowej.
+
+Nastawy regulatorów obliczone na podstawie odpowiedzi skokowej podane
+przez Ziegłera i Nicholsa pokazuje Tab. B.2 [33].
+
+Inny zestaw nastaw regulatorów opartych na modelu odpowiedzi skokowej
+obiektu podano w Tab. B.3 [33]. Nastawy te obowiązują w przypadku, gdy
+głównym zadaniem układu regulacji jest nadążanie za zmianami wartości zada-
+nej. Podano wartości dla dwóch różnych wymagań odnośnie przebiegów
+wielkości wyjściowej w odpowiedzi na skokową zmianę wartości zadanej, przy
+czym wprowadzono tu dodatkową wielkość B określoną przez podaną zależność.
+
+Tab. B.4 [33] z kolei przedstawia nastawy regulatorów w układzie, którego
+głównym zadaniem jest tłumienie zakłóceń. Pokazano w jaki sposób należy do-
+brać parametry regulatorów w zależności od wymagań co do przebiegów
+w układzie regulacji. Uwzględniono także sytuacje, gdy w obiekcie występuje
+jedna dominująca stała czasowa a nie występuje opóźnienie (można aproksymo-
+wać go inercją pierwszego stopnia) oraz gdy obiekt jest elementem całkującym
+z opóźnieniem. Warto zwrócić uwagę na fakt, że jeżeli obiekt można przybliżyć
+inercją pierwszego stopnia bez opóźnienia (T = 0), to proponuje się jedynie uży-
+cie regulatora typu I.
+
+  
+ 
+
+Nzory/k4_page515_formula1.png
+<image/wzory/k4_page515_formula2.png>
+
+Tab. B.2 Nastawy regulatorów wg Zieglera-Nichołsa obliczone
+na podstawie parametrów odpowiedzi skokowej
+
+ 
+
+ 
+
+Dodatek B. Dobór optymalnych nastaw dla regulatora PID 515

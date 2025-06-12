@@ -1,0 +1,58 @@
+Ocena wyników 451
+
+ 
+
+To obliczenie jest wykonywane w wierszu 3180 dla warstwy wyjściowej. Stała proporcjo-
+nalności składa się z dwóch czynników: ELET — błędu sieci dla tego, określonego sygnału
+wejściowego oraz MU — stałej ustalonej na początku programu. W celu zrozumienia potrzeby
+użycia wartości błędu ELET w tym obliczeniu, wyobraźmy sobie, że obraz umieszczony na
+wejściu wytwarza mały błąd w sygnale wyjściowym. Następnie wyobraźmy sobie, że inny
+obraz wprowadzony na wejście wytwarza duży błąd wyjściowy. Ustawiając wagi, chcemy bar-
+dziej zmienić działanie sieci dla drugiego obrazu niż dla pierwszego. Jeśli coś kiepsko działa,
+to chcemy to zmienić; jeśli zaś działa dobrze, to zostawimy sprawę w spokoju. Tę ideę reali-
+zuje się przez zmienianie każdej wagi proporcjonalnie do aktualnej wartości błędu ELET.
+Aby zrozumieć, jak stała MU wpływa na system, wróćcie do przykładu ze spadochronia-
+rzem. Gdy spadochroniarz określi kierunek opadania stoku, musi zdecydować, jak daleko
+powinien przesunąć się w tym kierunku przed ponownym oszacowaniem nachylenia terenu.
+Jeśli zdecyduje się na przesunięcie na małą odległość, np. 1 metr, to będzie z dużą dokład-
+nością śledził kontury terenu i zawsze przemieszczał się w optymalnym kierunku. Trudność
+polega na tym, że wtedy spadochroniarz musiałby większość czasu poświęcać na szacowa-
+nie nachylenia stoku, zamiast na poruszanie się po nim. Może też wybrać odległość dużą,
+np. 1000 metrów. To wprawdzie umożliwi spadochroniarzowi bardzo szybkie poruszanie się
+w terenie, ale spowoduje niebezpieczeństwo przegapienia drogi w dół. Zbyt duża odległość
+może spowodować skakanie po całym terenie bez uzyskania żądanego postępu.
+
+W sieci neuronowej stała MU decyduje o zmianach wag przy każdej iteracji. Zastosowana
+wartość zmiany zależy od rozwiązywanego problemu i może być nawet tak mała jak 10%
+i tak duża jak O,1. Przez analogię z zadaniem ze spadochroniarzem można się obawiać, że
+zbyt mała wartość zmiany spowoduje, że zbieżność sieci będzie bardzo powolna. Natomiast
+zbyt duża zmiana spowoduje zbieżność nierównomierną, wywołując chaotyczne oscylacje
+wokół końcowego rozwiązania. Niestety sposób reakcji sieci neuronowej na różne warto-
+ści MU może być trudny do zrozumienia lub przewidzenia. To powoduje, że bardzo ważne
+jest monitorowanie błędu (tj. ESUM) podczas treningu, np. przekazywanie wartości ESUM
+do monitora wizyjnego po zakończeniu każdej iteracji. Jeśli system nie wykazuje właściwej
+zbieżności, to trzeba zatrzymać program i spróbować zastosować inną wartość MU.
+
+Ocena wyników
+
+A więc jak to działa? Program trenujący do rozpoznawania samogłosek wykonano trzykrot-
+nie, stosując różne wartości losowe jako wagi początkowe. Trzeba ok. 10 minut do zrealizo-
+wania 800 iteracji na komputerze osobistym Pentium I GHz.
+
+Na rys. 26.9 pokazano, jak w tym czasie zmienia się błąd sieci ESUM. Stopniowe opadanie
+przebiegu wskazuje, że sieć uczy się zadania i że wagi osiągają wartości bliskie optymalnych po
+kilkuset iteracjach. Każda próba daje inne rozwiązanie problemu, o różnym końcowym wyniku.
+Jest to analogiczne do spadochroniarza rozpoczynającego z różnych położeń, a więc i kończące-
+go na dnie różnych dolin. Ponieważ niektóre doliny są głębsze od innych, więc niektóre rozwią-
+zania sieci neuronowych są lepsze od innych. Wynika stąd, że algorytm uczący się powinien być
+wykonywany kilka razy, a najlepsza realizacja wybrana jako rozwiązanie końcowe.
+
+Na rys. 26.10 pokazano, jako wyświetlone obrazy, wagi warstwy ukrytej dla trzech różnych
+rozwiązań. Pierwszym działaniem podejmowanym przez sieć neuronową jest korelacja (mno-
+żenie i sumowanie) tych obrazów z sygnałem wejściowym. Wyglądają one jak szum losowy!
+Można pokazać, że te wagi działają, lecz to, dłaczego działają, ma w sobie coś z tajemnicy.
+Jeszcze jedna sprawa jest zastanawiająca. Ludzki mózg składa się z ok. 100 bilionów neu-
+ronów, z których każdy ma średnio 10 000 połączeń. Jeśli nie jesteśmy w stanie zrozumieć
+tej prostej sieci neuronowej w tym przykładzie, to jak moglibyśmy przeanalizować system
+będący co najmniej 100 000 000 000 000 razy bardziej skomplikowany. To są badania na
+miarę XXI wieku!

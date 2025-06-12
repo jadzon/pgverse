@@ -1,0 +1,31 @@
+98
+
+podziału zostaną omówione bardziej szczegółowo w dalszej części tego rozdziału.
+
+Uczenie z obserwacji
+
+<image/figury/k2_page93_figure1.png>
+
+6.2. Metody szukania ekstremum
+jako algorytmy uczenia
+
+W czasie uczenia z nauczycielem korzysta się ze zbioru par X;,d,,ł = 1,2,...n,
+zwanego zbiorem uczącym. Na podstawie tych par można obliczyć empiryczny błąd
+systemu (ryzyko empiryczne, błąd uczenia) jako
+
+<image/wzory/k2_page93_formula1.png>
+
+Błąd ten zależy od konkretnego zbioru uczącego i wartości parametrów w, nie zależy
+natomiast od rozkładu prawdopodobieństwa p(x, d). Ponieważ postać funkcji / jest
+zadana, funkcja E,„y(w) jest znana w postaci jawnej. Powstałą sytuację ilustruje
+poniższy prosty przykład.
+
+PRZYKŁAD 6.1
+
+Tablica ?? zawiera zbiór uczący. Przyjęto, że maszyna realizująca odwzorowanie
+x > d mar
+<image/wzory/k2_page93_formula2.png>
+Stąd po prostych podstawieniacn danych z tablicy f7 do wzoru (££) ryzyko empi-
+ryczne wyraża się wzorem (patrz też rys. ??a)
+
+<image/wzory/k2_page93_formula3.png>

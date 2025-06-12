@@ -1,0 +1,22 @@
+1.11. Zadania 13
+
+6. Stosując algorytm merge-sort posortuj ciąg słów: słowik, wróbel, kos, jaskółka,
+kogut, dzięcioł, gil, kukułka, szczygieł, sowa, kruk, czubatka.
+
+[Fragment wiersza Ptasie radio Juliana Tuwima]
+7. Dana jest funkcjaD: NxN<+N:
+
+<image/wzory/k2_page162_formula1.png>
+Oblicz D(2, 3). Co oblicza funkcja D?
+8. Danajest funkcjaM:NxN<+N:
+
+<image/wzory/k2_page162_formula2.png>
+Oblicz M (4,3). Co oblicza funkcja M?
+
+9. Wypisz ciąg przełożeń potrzebnych do przeniesienia czterech krążków na wieżach
+Hanoi.
+
+10. Udowodnij, że algorytm opisany w podrozdziale 8.1 wymaga 2” — 1 przełożeń do
+przeniesienia n krążków.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

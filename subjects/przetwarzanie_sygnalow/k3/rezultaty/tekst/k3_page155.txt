@@ -1,0 +1,52 @@
+9, Zastosowania DFT
+
+<image/figury/k3_page155_figure1.png>
+
+  
+ 
+ 
+ 
+  
+ 
+ 
+  
+ 
+ 
+  
+  
+ 
+
+być tym samym, co długość przekształcenia DFT. Na przykład sygnał 256-punktowy n ożĘ
+być dopełniony zerami, uzyskując długość 2048-punktową. Przekształcenie 2048-punktowe
+DFT daje widmo częstotliwościowe o 1025 próbkach. Dodane zera nie zmieniają kształtu
+widma, a wprowadzają tylko więcej próbek w dziedzinie częstotliwości. Mimo tego barć 0
+gęstego próbkowania, możliwość rozdzielenia bardzo bliskich pików poprawia się niewiele
+w stosunku do 256-punktowego DFT. Gdy przekształcenie DFT ma taka samą długość, jak
+sygnał wejściowy, to dwa czynniki w równym stopniu wpływają na ograniczenie rozć ie!
+czości. Wkrótce wrócimy jeszcze do tej kwestii.
+
+A teraz następne pytanie: Co się dzieje, gdy sygnał wejściowy zawiera sinusoidę o częstotli-
+wości leżącej pomiędzy dwiema funkcjami bazowymi? Odpowiedź zawarto na ryś. 9.4 a), na
+
+Ponieważ nie może być wyrażony przez pojedynczą próbkę, więc staje się pikiem z »gc
+które zwiększają minimalną odległość, przy jakiej piki są rozróżniane.
+Jakie jest rozwiązanie tego problemu? Przed dokonaniem przekształcenia DFT pomnóżmy |
+gnał przez okno Hamminga, jak to już poprzednio omówiono. Z rys. 9.4 b) wynika, że w wy:
+niku użycia okna widmo zmieniło się na trzy sposoby. Po pierwsze, dwa piki stają się bardź
+podobne do siebie. To dobrze. Po drugie, zmniejszyły się ogony. To też dobrze. Po rzecie,
+okno pogorszyło rozdzielczość widma w wyniku rozszerzenia pików. To źle. W języku St0-
+sowanym w DSP mówi się, że użycie okna prowadzi do kompromisu między rozdzie. ości
+(szerokością piku) a przeciekiem widmowym (wielkością ogonów). |
+Aby bardziej szczegółowo wniknąć w teoretyczne aspekty tego problemu, wyobraźmy sa bić
+nieskończenie długą dyskretną falę sinusoidalną o częstotliwości równej 0,1 częstotliwość
+próbkowania. Widmo częstotliwościowe tego sygnału jest nieskończenie wąskim pikiem
+podczas gdy dla wszystkich innych częstotliwości ma wartość zero. Oczywiście ani teg
+sygnału, ani jego widma częstotliwościowego nie można wprowadzić do komputera
+względu na ich nieskończenie dużą lub nieskończenie małą długość. W celu ominięcia
+trudności zmieniamy sygnał dwoma sposobami. Oba te sposoby zniekształcają prawd i
+widmo częstotliwościowe. |
+
+W pierwszym sposobie obcinamy informację zawarą w sygnale, mnożąc go przez jakieś pkn
+Na przykład 256-punktowe okno prostokątne umożliwia zachowanie poprawnych wartość
+w 256 punktach, podczas gdy wszystkie inne próbki w nieskończenie długim sygnale ostaji
+ustawione na wartość zero. Podobnie okno Hamminga ukształtowałoby zachowane próbki, p

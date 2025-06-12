@@ -1,0 +1,8 @@
+<image/figury/k4_page178_figure1.png>
+
+Rys. 3.50 Konfiguracja systemu sterowania i kontroli pracy
+czterech generatorów TG1..4 i trzech turbodmuchaw TDI..3
+z siecią Ethernet o topologii gwiaździstej.
+
+AREZZO ZE ET OPEC WRC Z OOO OW EEEE WE OW ECCE WERDER TOYS PSE PEC ZECY YORKE WC YET.
+178 Rozdział : 3. Sprzęt sterowników PLC

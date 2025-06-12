@@ -1,0 +1,35 @@
+1.8. Sprzężenie magnetyczne 137
+
+/k4_page135_formula1.png 135_figure1.png
+
+Rozważmy z kolei sytuację, kiedy w obu uzwojeniach występują prądy: i 1
+"uzwojeniu I oraz i; w uzwojeniu II. Całkowite skojarzenia magnetyczne 4,
+'Wą uzwojeń I i II są wówczas równe:
+
+<image/wzory/k4_page135_formula2.png>
+
+<image/wzory/k4_page135_formula3.png>
+
+Podwójny znak drugiego składnika we wzorach (1.8-9) i (1.8-10) jest spo-
+"odowany tym, że strumień wzajemny pochodzący od sąsiedniego uzwojenia
+?,, lub ©,,) może albo zwiększać albo zmniejszać strumień własny (odpowie-
+*nio ©, lub ©,). Zależy to zarówno od wzajemnego położenia uzwojeń, jak i od
+zwrotów i znaków prądów i, oraz i,.
+
+Oddziaływania magnetyczne podlegają zasadzie symetrii. W odniesieniu do
+ozważanego modelu zasadę tę można sformułować następująco. Jeśli i, = i,,
+9 część skojarzenia magnetycznego YW, wytwarzana przez strumień uzwojenia
+11 jest taka sama, jak odpowiednia część skojarzenia magnetycznego W, po-
+=hodząca od strumienia uzwojenia I, tzn.:
+
+<image/wzory/k4_page135_formula4.png>
+a więc:
+vzory/k4_page135_formula5.png (1.8-11)
+
+Indukcyjność wzajemną M obu uzwojeń definiujemy jako:
+
+<image/wzory/k4_page135_formula6.png>
+
+Tak określona indukcyjność wzajemna może być zatem zarówno dodatnia, jak
+- ujemna. Ze wzoru (1.8-12) oraz nierówności (1.8-4) i (1.8-8) wynika ważne
+ograniczenie wartości M:

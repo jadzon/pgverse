@@ -1,0 +1,30 @@
+5, Plik liczników C (Counter);
+Plik przeznaczony do zapisu wartości aktualnej i wartości zadanej oraz bi-
+
+tów statusu liczników.
+
+6. Plik sterowania R (Control);
+Plik, w którym zapisywane są dane dotyczące długości, położenia wskaźni-
+ka i bitów statusowych niektórych instrukcji, np. rejestrów przesuwających,
+generatorów sekwencji.
+
+Pliki czasomierzy T, liczników C i sterowania R zawierają elementy trzech
+16 bitowych słów.
+
+<image/tabele/k4_page244_table1.png>
+
+7. Plik liczb całkowitych N (/nteger);
+Plik używany do przechowywania wartości liczbowych lub informacji bito-
+wych.
+
+8. Zarezerwowany plik (Floating Point) - niedostępny dla użytkownika.
+Możliwe jest tworzenie przez użytkownika własnych plików danych (User-
+
+Defined) typu B, T, C, R oraz N, są to pliki od 9 do 255. Dodatkowo, plik 9
+jest wykorzystywany podczas komunikacji z innymi sterownikami.
+
+ 
+
+   
+
+Rozdział : 5. Język schematów drabinkowych dla SLC 500

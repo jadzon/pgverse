@@ -1,0 +1,49 @@
+86 1. Pojęcia podstawowe — elementy
+
+przy czym su s% Q, nie można zatem rozpatrywać oddzielnie składowej ele-
+ktrycznej i składowej magnetycznej pola elektromagnetycznego. Do problema-
+tyki pól niestacjonarnych należą:
+
+— fale elektromagnetyczne; podstawowymi wielkościami charakteryzujący-
+mi fale elektromagnetyczne są pola wektorowe E, D, H, B, spełniające rów-
+nania Maxwella. Pola te zależą od czasu i od punktu w przestrzeni. Tracą
+w zasadzie sens pojęcia obwodu elektrycznego i związanych z nim wielko-
+ści — prądów i napięć, przestają także obowiązywać prawa Kirchhoffa.
+
+B. Przybliżenie obwodowe. We wszystkich trzech wymienionych przypad-
+kach ogólną teorią opisującą całokształt zjawisk jest teoria pola elektromag-
+netycznego.
+
+Teoria obwodów elektrycznych może być uważana za przybliżenie
+teorii pola elektormagnetycznego (tzw. przybliżenie obwodowe) w przypadku, gdy
+pole jest quasi-stacjonarne (pole stacjonarne możemy uważać za przypadek
+szczególny pola quasi-stacjonarnego). Warunek quasi-stacjonarności ma zatem
+zasadnicze znaczenie jako zespół założeń, na których jest oparta teoria
+obwodów elektrycznych. Z tego względu warunek ten omówimy nieco szerzej
+starając się scharakteryzować go z różnych punktów widzenia oraz wskazać na
+powiązanie z przeprowadzonymi w p. 1.2 rozważanianiami nad elementami.
+
+C. Terminologia. Rozpoczniemy od kilku uwag natury terminologicznej.
+Mówimy ogólnie o polu quasi-stacjonarnym lub o polu spełniającym warunek
+(założenie) quasi-stacjonarności. W przypadku obwodu elektrycznego mówimy
+także o prądzie quasi-stacjonarnym, tj. o takim prądzie (lub obwodzie z prądem),
+którego pole w pewnym otoczeniu jest quasi-stacjonarne.
+
+D. Warunek quasi-stacjonarności. Warunek quasi-stacjonarności może-
+my sformułować następująco.
+
+Prąd i w obwodzie spełnia warunek quasi-stacjonarności, jeżeli jego pole
+magnetyczne w każdej chwili ty i w każdym punkcie określonego obszaru jest
+w przybliżeniu takie, jakie wywołałby w tym obwodzie prąd stały I o wartości
+równej chwilowej wartości prądu i w chwili tę, tzn. o wartości I = i(ty)”..
+
+E. Pomijalność efektów opóźnieniowych. Pokażemy teraz, że powyższa
+definicja jest równoważna warunkowi pomijalności efektów opóźnieniowych
+związanych ze skończoną prędkością rozchodzenia się zaburzeń elektromag-
+netycznych.
+
+Rozważmy przewód z prądem i oraz częściowe natężenie pola magne-
+tycznego AH w punkcie P, pochodzące tylko od elementu Al przewodnika
+(rys. 1.4-1). Zgodnie z przyjętą definicją, dla pola quasi-stacjonarnego mamy:
+
+Nieco ogólniejsze sformułowanie jest podane w Dodatku 2.

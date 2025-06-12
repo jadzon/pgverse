@@ -1,0 +1,40 @@
+3.5. Moce w obwodach prądu stałego _/ 309
+
+ 
+
+<image/wzory/k3_page307_formula1.png>
+którego jedynym rozwiązaniem spełniającym przyjęte założenie R > 0 jest:
+
+y/k3_page307_formula2.png (3.5-20)
+
+Sprawdzamy, że znak drugiej pochodnej d?*P/dR? w punkcie R = R, jest
+ujemny, a zatem w punkcie tym funkcja (3.5-19) osiąga maksimum (wykres tej
+funkcji w zależności od oporu R jest pokazany na rys. 3.5-10).
+
+<image/figury/k3_page307_figure1.png>
+
+Tak więc, obciążenie jest dopasowane do źródła wtedy i tylko wtedy, kiedy jest
+spełniona równość (3.5-20). Równość tę nazywamy warunkiem dopasowania.
+
+Obliczymy z kolei wartość maksymalnej mocy pobieranej w stanie dopaso-
+wania przez obciążenie. Uwzględniając warunek (3.5-20) we wzorze (3.5-19)
+otrzymujemy:
+
+<image/wzory/k3_page307_formula3.png>
+
+Moc określoną wzorem (3.5-21) nazywamy także mocą dysponowaną źródła
+napięciowego i oznaczamy P,,„„. Nazwę tę przyjmuje się ze względu na to, że jest
+to maksymalna moc jaką napięciowe źródło rzeczywiste, o ustalonej sile
+elektromotorycznej E i ustalonym oporze wewnętrznym R, może oddać do
+obciążenia.
+
+W stanie dopasowania w źródle tracona jest moc:
+
+vzory/k3_page307_formula4.png (3.5-22)
+
+równa mocy pobieranej przez obciążenie. Moc oddawana przez źródło E do
+obwodu wynosi wówczas:
+
+<image/wzory/k3_page307_formula5.png>
+
+a zatem sprawność źródła napięciowego przy dopasowaniu przyjmuje wartość:

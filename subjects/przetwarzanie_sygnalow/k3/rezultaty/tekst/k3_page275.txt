@@ -1,0 +1,13 @@
+Metoda nakładania z dodawaniem (overlap-add)
+
+   
+
+<image/wzory/k3_page275_formula1.png>
+
+<image/figury/k3_page275_figure1.png>
+
+ys. 18.1. Metoda naktadania z dodawaniem. Celem jest powo w wie oława Ly © 5 sowę
+filtru sygnału pewną liczbę segmentów, takich
+
+splotu. Splatając każdy segment odpowiedzią
+1, g, h). Następnie sygnat wyjściowy (rys. i) jest wyznaczany przez sumowanie

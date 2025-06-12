@@ -1,0 +1,48 @@
+26. Sieci neuronowe (i
+
+Takie metody analizy są użyteczne dla zrozumienia konsekwencji wyboru progu, lecz M
+cowa decyzja zależy od tego, co ludzie zaakceptują. Przypuśćmy, że początkowo ustaw
+cie próg urządzenia do wykrywania raka na pewną wartość, iśc w Gożżyjk Gdżascódji
+właściwa. Po przebadaniu urządzeniem wielu pacjentów porozmawiacie z kilkunastoma
+cjentami, którzy uzyskali wyniki fałszywie pozytywne. Słysząc, jak wasze urządzenie nie p
+trzebnie utrudniło życie tym ludziom, uzyskujecie silną motywację do zwiększenia pre
+Przypuszczalnie natkniecie się też na sytuację, wobec której poczujecie się jeszcze gorz
+— porozmawiacie z pacjentem nieuleczalnie chorym na raka, którego wasze urządzenie R
+zdołało wykryć. Na takie trudne przeżycie zareagujecie znacznym obniżeniem progu. W
+rę upływu czasu i wielokrotnego powtarzania się takich zdarzeń próg stopniowo ustala się
+pewnej wartości równowagi. To znaczy, że częstotliwość pojawiania się wyników fałs:
+pozytywnych pomnożona przez jakiś współczynnik istotności (obniżanie progu) jest ró
+noważona częstotliwością wyników fałszywie negatywnych pomnożoną przez pewien i
+współczynnik istotności (podwyższanie progu).
+Tę analizę można rozszerzyć na urządzenia o więcej niż jednym wyjściu. P h
+przykład, że system do wykrywania raka działa na zasadzie pobierania obrazu rentgen
+skiego pacjenta i automatycznej analizy tego obrazu przy użyciu algorytmów identyfik
+cych nowotwór. Algorytmy identyfikują obszary podejrzane i następnie mierzą najważ
+sze właściwości, aby pomóc w ocenie wyniku. Załóżmy na przykład, że mierzymy śred
+cę podejrzanego obszaru (parametr 1) i jaskrawość obrazu w tym obszarze (parametr .
+Przyjmijmy, że według przeprowadzonych badań guzy są na ogół większe i jaśniejsze
+zwykłych tkanek. Najpierw, jako pierwszą próbę, przeprowadźmy poprzednio opisaną :
+lizę ROC dla każdego parametru i określmy akceptowalny prób dla każdego z nich. V
+możemy wynik testu określić jako pozytywny tylko jeśli spełnia oba kryteria: param
+większy od pewnego progu oraz parametr 2 większy od innego progu. |
+Ta metoda oddzielnego wyznaczania progów poszczególnych parametrów i przywc
+następnie funkcji logicznych (I, LUB itd.) jest bardzo często stosowana. Niemniej jeć
+jest ona mało wydajna i istnieją znacznie lepsze metody. Tę kwestię wyjaśniono na rys. 4
+
+  
+ 
+ 
+  
+   
+ 
+ 
+  
+   
+ 
+ 
+ 
+ 
+ 
+  
+
+<image/figury/k3_page402_figure1.png>

@@ -1,0 +1,25 @@
+3.2. Kody binarne i arytmetyka 47
+
+znaków. Jeżeli natomiast znaki czynników są przeciwne, to jako mnożną wybiera się
+liczbę dodatnią. Operację mnożenia w zapisie U1 zilustrowano przykładem mnożenia
+liczb -6 i +5 przedstawionym na rysunku 3.42.
+
+Do rejestru RH (do bardziej znaczącej części R) wpisano wartość zero (Czytelnik
+łatwo może zauważyć, że taki sam wynik można otrzymać wpisując jako początkową
+wartość w tym rejestrze —0, tj. same jedynki). Do rejestru RL wpisano dodatnią mnożną, a
+do rejestru M ujemny mnożnik. Należy zauważyć, że po każdej operacji dodawania, w
+której powstaje przeniesienie, następuje korekcja tej operacji przez dodanie jedynki.
+Przesuwanie zawartości rejestru w prawo wymusza lewostronne wpisywanie jedynek, gdy
+liczba w rejestrze R jest ujemna lub zer, gdy liczba w R jest dodatnia. Jeżeli najmniej
+znacząca pozycja rejestru RL jest 0, to do rejestru RH dodawane jest O (czyli same jedynki
+lub same zera). Wynikiem mnożenia jest liczba —30 zapisana w kodzie Ul. Na
+rysunku 3.43 przedstawiono sieć działań odpowiadającą temu algorytmowi.
+
+Algorytm mnożenia dla zapisu U2
+
+Rozpatrzmy teraz mnożenie dwóch liczb w kodzie U2. Na rysunku 3.44 pokazano kolejne
+zawartości rejestrów dla mnożenia dwóch czterobitowych liczb —3 i —2.
+
+<image/figury/k3_page57_figure1.png>
+
+Rysunek 3.43. Algorytm mnożenia dwóch liczb w kodzie Ul

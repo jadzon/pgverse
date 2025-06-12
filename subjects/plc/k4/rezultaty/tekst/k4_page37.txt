@@ -1,0 +1,29 @@
+<image/tabele/k4_page37_table3.png>
+
+Tab. 2.2 Przedstawianie danych w postaci ciągu znaków
+
+<image/tabele/k4_page37_table1.png>
+
+Tab. 2.3 Typy danych ciągów dwuznakowych
+
+Tab. 2.3 zawiera dodatkowo opisy, jak należy interpretować kombinację dwóch
+
+znaków zaczynającą się znakiem dolara.
+
+Rozróżnia się dwa sposoby przedstawiania danych w postaci czasowej:
+
+e jako czas trwania (duration) do pomiaru lub kontroli czasu trwania zdarze-
+nia,
+
+e jako godzina dnia (rime of day) połączona ewentualnie z datą (date) dla syn-
+chronizacji początku lub końca zdarzenia z czasem astronomicznym.
+
+Czas trwania przedstawia się w jednostkach czasu poprzedzonych słowem klu-
+
+czowym T4, TIMEŚ, wł lub timefń, przy czym jednostki czasu mogą być
+
+oddzielone znakiem podkreślenia (por. Tab. 2.4).
+
+<image/tabele/k4_page37/_table2.png>
+
+<image/wzory/k4_page37_formula1.png>

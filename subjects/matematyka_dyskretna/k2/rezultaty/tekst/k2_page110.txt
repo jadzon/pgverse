@@ -1,0 +1,48 @@
+1.6. Funkcja parzystości (parity) 19
+
+Wadą tego systemu jest to, że klucze muszą być tej samej długości co sama wiadomość i
+muszą być trzymane w sekrecie. Powoduje to kłopoty z przesyłaniem i przechowywaniem
+kluczy.
+
+System one-pad można stosować w następujący sposób: Najpierw przesyła się bezpieczną
+pocztą (na przykład kurierską) zapasy kluczy, na przykład notesy z kartkami, gdzie każda
+strona zawiera jeden klucz. Następnie szyfrowane depesze mogą być przesyłane mniej
+bezpiecznymi kanałami. Trzeba tylko przestrzegać zasady, że jedna kartka może być uży-
+ta tylko raz (stąd angielska nazwa systemu). Same klucze powinny być losowane, aby
+przeciwnik nie mógł ich odgadnąć.
+
+Łamiąc szyfry często korzysta się z faktu, że wiadomości, lub ich fragmenty, występują
+z różną częstością (prawdopodobieństwem). Przypuśćmy dla prostoty, że szyfrujemy po-
+jedyncze znaki i niech £0, 1)* będzie zbiorem wiadomości (kody ASCII). Dla normal-
+nych tekstów (listów) rozkład częstości poszczególnych znaków jest bardzo niejednostaj-
+ny. Kody jednych liter występują dużo cześciej, niż innych, a pewne znaki nie występują
+wcale. Gdybyśmy teraz zastosowali jakiś prymitywny sposób kodowania bez klucza,
+gdzie każdy znak x zawsze jest szyfrowany za pomocą D(x), to w zaszyfrowanej wia-
+domości rozkład częstości będzie podobny (przepermutowany). Najczęściej występujący
+znak w wiadomości zaszyfrowanej odpowiada najczęściej występującemu znakowi w tek-
+ście, itd. Można to wykorzystać przy łamaniu szyfrów.
+
+Jak zaraz zobaczymy w przypadku szyfrów one-pad tak nie jest. Znaki w zaszyfro-
+wanej wiadomości posiadają rozkład jednostajny, tak jakbyśmy losowali kolejne znaki i
+dlatego analiza statystyczna jest tutaj bezużyteczna.
+
+Niech X = 40,1)” będzie zbiorem wiadomości z dowolnym rozkładem prawdopo-
+dobieństwa, a K = f0,1)” zbiorem kluczy z jednostajnym rozkładem prawdopodobień-
+stwa. Losujemy wiadomość z € X i klucz k € K i obliczamy wiadomośćy=r©k€
+(0,1)7. Niech A, oznacza zdarzenie, że wylosowano wiadomość z, Kx, że wylosowano
+klucz k, a C, zdarzenie, że otrzymano zaszyfrowaną wiadomość y. Zgodnie ze wzorem
+na prawdopodobieństwo całkowite mamy
+
+<image/wzory/k2_page110_formula1.png>
+
+ale P(Cy|Az) = 5 bo tylko dla jednego kluczak=r©%y, y=xz ©k. Dlatego
+
+<image/wzory/k2_page110_formula2.png>
+1.6 Funkcja parzystości (parity)
+
+Zdefiniuimy funkcję boolowska parzystości (parity):
+
+wzory/k2_pagqe110_formula3.pnq
+<image/wzory/k2_page110_formula4.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

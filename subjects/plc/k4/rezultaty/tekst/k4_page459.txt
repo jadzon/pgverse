@@ -1,0 +1,14 @@
+<image/figury/k4_page459_figure1.png>
+
+<image/tabele/k4_page459_table2.png>
+
+Wyd. 8.128 Podprogram FAZA_N - procedura sterowania w trybie pracy automa-
+tycznej dla pojedynczego cyklu
+
+8.8.3 Program dla sterownika SLC 500 Allen-Bradley
+
+ 
+
+<image/tabele/k4_page459_table1.png>
+
+<image/wzory/k4_page459_formula1.png>

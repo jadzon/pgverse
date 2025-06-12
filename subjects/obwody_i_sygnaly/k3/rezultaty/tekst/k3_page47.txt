@@ -1,0 +1,8 @@
+1.3. Elementy nieliniowe 47
+
+<image/figury/k3_page47_figure2.png>
+
+Charakterystyki z przykładów d, e opisują opory uzależnione prądowo, a charakterystyka
+z przykładu g — opór uzależniony napięciowo.
+
+<image/figury/k3_page47_figure1.png>

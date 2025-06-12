@@ -1,0 +1,40 @@
+96 5. Pamięci
+
+We współczesnych pamięciach dynamicznych cykle dostępu realizowane są także
+w różnych trybach pracy.
+
+l) Tryb, który polega na sekwencyjnym przesłaniu adresu wiersza a następnie ko-
+lumny, nazywa się trybem normalnym.
+
+2) Tryb pracy polegający na tym, że jednorazowe wybranie wiersza matrycy
+umożliwia wielokrotny odczyt różnych kolumn jest nazywany trybem stronico-
+wania (ang. page mode). Nazwa bierze się stąd, że ułatwia on sposób dzielenia
+pamięci operacyjnej opisany w rozdz. 7. Dopóki stan na wejściu RAS jest
+aktywny, to podanie wielokrotnie strobu CAS spowoduje odczyt tej kolumny,
+której adres znajduje się na wejściu adresowym.
+
+3) Tryb statycznego odczytu kolumn (ang. static-column mode) jest podobny do
+trybu stronicowania. Różni się on od poprzedniego tym, że zarówno RAS jak i
+CAS pozostają nie zmienione, a każdorazowa zmiana adresu kolumny, w czasie
+gdy oba wymienione stroby są aktywne, powoduje jej odczytanie.
+
+4) Tryb lokalny (ang. nibble mode) polega na tym, że dokonuje się odczytu jak
+w trybie normalnym, a następnie utrzymując aktywny RAS można dokonać kilku
+(np. 4) zmian CAS, co spowoduje, że adres kolumny będzie inkrementowany
+ibędą odczytywane kolejne komórki pamięci (np. 4 sąsiednie). Tryb ten jest
+szczególnie wygodny, gdy pobiera się rozkazy (lub argumenty) dłuższe niż słowo
+maszynowe.
+
+5.2.2. ORGANIZACJA PAMIĘCI OPERACYJNYCH
+
+Projektowanie bloków pamięci polega na łączeniu wielu jednakowych pamięciowych
+układów scalonych (np. układów pamięci dynamicznej) i odpowiednim ich wysterowaniu.
+Połączenie ma na celu zwiększenie pojemności pamięci. Na rysunku 5.9a przedstawiono
+
+a b
+
+jury/k3_page106_figure2.png
+
+figury/k3_page106_figure1.p
+
+Rysunek 5.9. Sposoby łączenia układów pamięciowych

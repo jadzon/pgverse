@@ -1,0 +1,23 @@
+Rozdział 1
+Grafy (nieskierowane)
+
+Definicja 1.1 Graf (nieskierowany) G = (VG. EG) jest to para składająca się ze skoń-
+czonego zbioru wierzchołków VG oraz ze zbioru krawędzi EG, gdzie krawędzie to pary
+wier
+
+<image/wzory/k2_page181_formula1.png>
+
+O krawędzi e = fu,v) mówimy, że łączy wierzchołki u i v, a o wierzchołkach u iv,
+że są końcami krawędzi e. Stopień wierzchołka v, oznaczany przez d(v), jest to liczba
+krawędzi wychodzących z v.
+
+Graf często przedstawiamy na rysunku jako zbiór punktów (lub kółek) połączonych
+odcinkami (lub łukami).
+
+<image/figury/k2_page181_figure1.png>
+
+Przykład 1.2 Rysunek 1.1 przedstawia graf G; = (V;,E;) ze zbiorem wierzchołków
+VY4 = fa,b,c,d,e, f,g) i zbiorem krawędzi
+E, = (ta,b), (a,dh, ta,e), (a,9), (be). 1c.9). ef). 4d, f). te, 1111.90)
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

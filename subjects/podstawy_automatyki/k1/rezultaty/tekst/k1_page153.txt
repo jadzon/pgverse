@@ -1,0 +1,47 @@
+6.2.1. Parametry elektryczne
+
+Wielkości elektryczne występujące na schemacie (rys. 6.2) charakteryzują odpo-
+
+wiednio:
+
+U, — napięcie zasilające wirnik,
+
+i, — prąd płynący w uzwojeniach wirnika,
+
+R„ — rezystancja zastępcza uzwojeń wirnika,
+
+L„ — indukcyjność zastępcza uzwojeń wirnika,
+— siła elektromotoryczna indukcji,
+w, — prędkość kątowa wimika.
+
+mw
+
+Na podstawie schematu zastępczego oraz drugiego prawa Kirchhoffa można napi-
+sać równanie elektryczne silnika
+
+<image/wzory/k1_page153_formula1.png>
+
+Napięcie na rezystancji uzwojeń wirnika jest proporcjonalne do prądu przez niego
+
+płynącego
+vzory/k1_page153_formula2.png
+
+Napięcie odniesione do indukcyjności wirnika jest proporcjonalne do zmian prądu
+przez niego płynącego (straty w obwodzie magnetycznym zostały tutaj pominięte)
+
+Nzory/k1_page153_formula3.png
+
+Gdy wirnik wykonuje ruch obrotowy, w jego uzwojeniach indukowana jest siła
+elektromotoryczna indukcji (SEM), której wartość jest proporcjonalna do prędkości
+kątowej wirnika
+
+zory/k1_page153_formula4.png
+
+gdzie k, — stała elektryczna, zależna m.in. od strumienia magnetycznego stojana oraz
+liczby zwojów w uzwojeniach wirnika.
+
+Podstawiając kolejne składowe napięcia U, do równania (6.1), otrzymujemy
+
+<image/wzory/k1_page153_formula5.png>
+
+155

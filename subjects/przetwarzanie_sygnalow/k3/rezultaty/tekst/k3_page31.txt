@@ -1,0 +1,62 @@
+Precyzja i dokładność 41
+
+ 
+
+ 
+
+Precyzja i dokładność?
+
+Precyzja (precision) i dokładność (accuracy) to terminy stosowane do opisu systemów i metod
+służących do pomiaru, estymacji lub przewidywania. W tych wszystkich przypadkach mamy
+do czynienia z jakimś parametrem, którego wartość chcemy poznać. Nazywamy ją wartością
+prawdziwą lub po prostu prawdą. Metoda daje wartość zmierzoną. Chcielibyśmy, aby ta
+wartość była możliwie jak najbliższa wartości prawdziwej. Precyzja i dokładność są sposo-
+bami opisu błędu, który może występować między tymi dwiema wartościami.
+
+Precyzja i dokładność są, niestety, używane wymiennie w sensie nietechnicznym.
+Rzeczywiście, słowniki, wyjaśniając te słowa, podają odsyłacze od jednej z tych nazw do
+drugiej! A jednak w nauce i technice każda z tych wielkości ma bardzo dokładną definicję.
+Starajcie się stosować te określenia prawidłowo i spokojnie tolerować tych, którzy używają
+tych terminów w niewłaściwy sposób.
+
+Jako przykład rozważmy oceanografa mierzącego głębokość wody przy użyciu sonaru. Ze
+statku są wysyłane krótkie impulsy dźwiękowe, odbijane następnie od dna morskiego i odbie-
+rane na powierzchni jako echo. Fale dźwiękowe przemieszczają się w wodzie ze względnie
+stałą prędkością, dzięki czemu można wyznaczyć głębokość na podstawie czasu, jaki upływa
+między impulsem wysłanym i odebranym. Jak we wszystkich pomiarach doświadczalnych,
+występuje pewien błąd między wartościami zmierzonymi i prawdziwymi. Na omawiany po-
+miar może wpływać wiele czynników, takich jak losowy szum aparatury elektronicznej, fale
+na powierzchni oceanu, roślinność na dnie oceanu, zmiany temperatury wody powodujące
+zmiany szybkości dźwięku itd.
+
+W celu zbadania tych wpływów oceanograf wykonuje szereg kolejnych odczytów pomiaro-
+wych w miejscu o znanej głębokości równej dokładnie 1000 metrów (wartość prawdziwa).
+Wyniki pomiarów są zestawiane w histogramie przedstawionym na rys. 2.11. Dane mają
+rozkład normalny, jak można tego było oczekiwać na podstawie centralnego twierdzenia gra-
+nicznego. Wartość średnia jest pośrodku rozkładu i wyraża najlepszą estymatę na podstawie
+danych uzyskanych z pomiarów. Odchylenie standardowe określa szerokość rozkładu, opisu-
+jąc jak duże odchylenia występują między kolejnymi wynikami pomiarów.
+
+W systemie mogą więc występować dwa ogólne rodzaje błędów. Po pierwsze, wartość średnia
+może być przesunięta w stosunku do wartości prawdziwej. Wartość tego przesunięcia jest nazy-
+wana dokładnością pomiaru. Po drugie, wyniki indywidualnych pomiarów mogą nie zgadzać
+się ze sobą, na co wskazuje szerokość rozkładu. Jest to nazywane precyzją pomiaru wyrażaną
+przez odchylenie standardowe, stosunek sygnału do szumu lub współczynnik rozrzutu CV.
+Rozpatrzmy pomiar o dobrej dokładności, lecz słabej precyzji. Histogram jest wtedy wypośrod-
+kowany wokół prawdziwej wartości, lecz bardzo szeroki, Chociaż pomiary są prawidłowe jako
+grupa, to każdy indywidualny wynik jest marną miarą prawdziwej wartości. Mamy tu do czy-
+nienia ze słabą powtarzałnością; zgodność wyników kolejnych pomiarów nie jest dobra. Słaba
+precyzja wynika z błędów losowych. Taką nazwę nadaje się błędom, które zmieniają się przy
+każdym powtórzeniu pomiaru. Uśrednianie kilku wyników pomiaru zawsze polepsza precyzję.
+Krótko mówiąc, precyzja jest miarą szumu losowego.
+
+Teraz wyobraźmy sobie pomiar o bardzo dobrej precyzji a marnej dokładności. Takie para-
+metry powodują, że histogram jest bardzo „wysmukły”, lecz nie jest wypośrodkowany wo-
+kół wartości prawdziwej. Wartości kolejnych odczytów są bliskie sobie, jednak wszystkie
+są obarczone dużym błędem. Marna dokładność wynika z błędów systematycznych. Są to
+błędy powtarzające się ściśle w ten sam sposób przy każdym pomiarze. Dokładność zależy
+zwykle od sposobu kalibracji systemu Na przykład przy pomiarze głębokości oceanu para-
+metrem mierzonym bezpośrednio jest czas. Odcinek czasu jest przetwarzany na głębokość
+w wyniku procedury kalibracyjnej zamieniającej milisekundy na metry. Może to być pro-
+
+3 Patrz przypis od tłumacza zamieszczony w tekście na końcu podrozdziału.

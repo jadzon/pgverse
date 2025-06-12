@@ -1,0 +1,37 @@
+324 3. Obwody prądu stałego
+
+Elementy inercyjne nie mają zatem wpływu na rozpływ prądów i rozkład
+napięć w obwodach prądu stałego i przy wyznaczaniu prądów i napięć mogą być
+pominięte, tzn. zastąpione zwarciami w przypadku indukcyjności i rozwarciami
+w przypadku pojemności. O rozpływie prądów i rozkładzie napięć w obwodach
+prądu stałego decydują tylko elementy rezystancyjne.
+
+Przykład 3.7-1. Napięcie U w obwodzie prądu stałego z rys. 3.7-la nie zależy od wartości
+indukcyjności Li pojemności C i może być obliczone na podstawie schematu z rys. 3.7-1b.
+
+<image/figury/k3_page324_figure1.png>
+
+madzona. Napięcia na indukcyjnościach i prądy w pojem-
+lach prądu stałego równe zeru, nie są natomiast równe zeru
+ściach i napięcia na pojemnościach. Elementy inercyjne są
+cądu stałego zdolne do gromadzenia energii.
+tem analizy obwodu prądu stałego zawierającego elementy
+lko wyznaczenie prądów lub napięć na elementach bądź
+, lecz również obliczenie energii gromadzonej w poszczegól-
+cyjnych. Zgodnie z ogólnymi wzorami (1.3-14) i (1.3-22)
+w indukcyjnościach i pojemnościach w obwodach prądu
+: wzorów (por. także przykłady 1.3-11 i 1.3-12):
+
+<image/wzory/k3_page324_formula2.png>
+
+je324_formula1.PpNg zyjności oraz:
+
+<image/wzory/k3_page324_formula3.png>
+
+nności, gdzie %, I, Q, U są ustalonymi wartościami
+<ojarzeń magnetycznych, prądów, ładunków i napięć w ele-
+
+ości i pojemności są liniowe, gromadzone w nich energie
+zą:
+
+<image/wzory/k3_page324_formula4.png>

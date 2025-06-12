@@ -1,0 +1,39 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z ? 3
+
+I. Zagadnienia elementarne i ich treści obowiązujące do pierwszego
+
+kolokwium z części „Mikrokontrolery”:
+
+1. Definicja mikrokontrolera (w skrócie: mk), dwie najważniejsze cechy jego
+
+jednostki centralnej.
+
+Mk można zdefiniować następująco:
+
+układ cyfrowy z wyspecjalizowanym mikroprocesorem i niezbędnymi do jego samodzielnej pracy
+urządzeniami zawartymi w jednym układzie scalonym (dzięki którym nie wymaga urządzeń
+zewnętrznych, takich jak np. kontrolery magistral, przerwań, generatory sygnałów taktujących
+mikroprocesor, itp.),
+
+jest zdolny do autonomicznej pracy, tzn. w najprostszych zastosowaniach nie wymaga przyłączenia
+zewnętrznych układów pomocniczych (peryferyjnych),
+
+został zaprojektowany do pracy w systemach kontrolno-pomiarowych oraz komunikacyjnych,
+stąd posiada rozbudowany system komunikacji z otoczeniem,
+
+z reguły pracuje w czasie rzeczywistym.
+
+Cechy jednostki centralnej:
+
+szerokość szyny danych. Może być ona 8-bitowa, 16-bitowa lub 32-bitowa.
+
+częstotliwość sygnału taktującego (zegarowego). Jej wartość powinna być jak najmniejsza,
+ponieważ pobór mocy przez mikrokontroler proporcjonalny jest do częstotliwości sygnału
+zegarowego, ale jednocześnie na tyle duża, aby zapewnić wymaganą minimalną prędkość
+przetwarzania danych przez jednostkę centralną.
+
+2. Uszczegółowiona budowa mk oraz funkcje realizowane przez jego bloki.
+(dokładniejsze informacje na temat poszczególnych bloków mk znajdują się w Tomie I materiałów do
+wykładu)
+
+<image/figury/k8_page1_figure1.png>

@@ -1,0 +1,52 @@
+128
+
+do identycznych klas, a mimo to poprawna klasyfikacja następuje — dwa neurony
+warstwy wejściowej przenoszą obrazy do przestrzeni odwzorowań, w której są one
+już liniowo separowalne. Zachowanie to można łatwo wytłumaczyć jeśli zauważymy,
+że wielkości wag neuronów warstwy wejściowej znacznie między sobą się różnią.
+m
+
+Powstaje ogólne pytanie: ile warstw jest koniecznych do klasyfikacji obrazów na-
+leżących do klas nie separowalnych liniowo? Można teoretycznie wykazać (patrz.
+np. Bishop 1996), że dwie warstwy wystarczają do klasyfikacji klas dowolnie roz-
+mieszczonych w przestrzeni. Wcześniej w tym skrypcie wykazano to dla przypadku
+obrazów binarnych należących do dwóch klas przez pokazanie, że dowolną funkcję
+logiczną można zrealizować przy pomocy sieci dwuwarstwowej.
+
+W konkretnych zadaniach, najczęściej, korzystnie jest użyć więcej niż dwie war-
+stwy.
+
+6.5.4. Sieci warstwowe jako aproksymatory funkcji
+
+Innym obok klasyfikacji często spotykanym zastosowaniem jest użycie sieci warstwo-
+wych do aproksymacji funkcji ciągłych.
+
+Zadanie aproksymacji polega na przybliżaniu zadanej ciągłej, wieloargumentowej
+funkcji h(x) funkcją H(w,x) realizowaną przez warstwową sieć neuronową, gdzie
+X=|1Iy Tą *** ©,]|! jest wektorem wejściowym, natomiastw=|w; wą *:: w]!
+jest wektorem parametrów (wag). Poniżej pokażemy, że przy doborze odpowiedniej
+liczby neuronów sieć trójwarstwowa może aproksymować z dowolną dokładnością
+dowolną funkcję h(x).
+
+Zauważmy, że sieć warstwowa złożona z neuronów unipolarnych może aproksy-
+mować (realizować) następującą funkcję (nazywaną bramką)
+
+<image/wzory/k2_page123_formula1.png>
+
+Funkcja ta przyjmuje wartość 1 dla punktu x znajdującego się wewnątrz hiperkostki
+o środku w punkcie Xoę= [r Toż *** To]! 1 krawędzi Ar, a wartość ( poza nią.
+Funkcję tę może aproksymować dwuwarstwowa sieć neuronowa mająca Żn neuro-
+nów w warstwie wejściowej i jeden neuron w warstwie wyjściowej. Każdy neuron w
+warstwie wejściowej reprezentuje jedną z hiperpłaszczyzn tworzących hiperkostkę,
+a wartości sygnałów wyjściowych tych neuronów (+ 0 lub = 1) mówią po której
+stronie hiperpłaszczyzn znajduje się punkt z, zaś neuron wyjściowy decyduje czy
+punkt z znajduje się wewnątrz hiperkostki.
+
+PRZYKŁAD 6.7
+Wyznaczymy tu sieć aproksymującą funkcję (??) dla przypadku dwuwymiarowego:
+n =2, to = [3,5 4,5), Ar=l1.
+
+Na rysunku ??a przedstawiono kwadrat wewnątrz którego funkcja przyjmuje
+wartość 1, przy czym strzałki wskazują półpłaszczyzny dla których odpowiedź neu-
+ronu ma być >0,5. Na podstawie równań prostych ograniczających ten kwadrat
+można wyznaczyć wagi czterech neuronów warstwy wejściowej sieci. Np. równanie

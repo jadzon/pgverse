@@ -1,0 +1,41 @@
+298 3. Obwody prądu stałego
+
+Zauważmy, na zakończenie, że jeżeli siła elektromotoryczna w rozpatrywa-
+nnym układzie będzie mniejsza od wartości E” odpowiadającej położeniu c
+prostej na rys. 3.4-19b, to omawiane zagadnienie ma rozwiązanie jednoznaczne.
+
+3.5. MOCE W OBWODACH PRĄDU STAŁEGO
+
+Przejdziemy obecnie do omówienia problemów dotyczących mocy w obwo-
+dach prądu stałego. Zgodnie z definicją ogólną (1.1-4) wszystkie moce w ob-
+wodach prądu stałego są stałymi funkcjami czasu. Będziemy je oznaczać dużą
+literą P, dodając w razie potrzeby odpowiednie indeksy.
+
+3.5.1. Moc pobierana przez dwójnik
+A. Przypadek ogólny. Rozważmy dwójnik rezystanycyjny, liniowy lub
+
+nieliniowy — rys. 3.5-1a, którego napięcie U oraz prąd I są stałe. Moc pobie-
+rana przez dwójnik jest określona wzorem (por. wzór (2.1-16)):
+
+zory/k4_page298_formula1.png (3.5-1)
+
+Moc (3.5-1) może być dodatnia, ujemna bądź równa zeru. Interpretacja
+znaku mocy jest analogiczna jak w przypadku mocy chwilowej oraz energii
+chwilowej pobieranej w określonym przedziale czasu (por. p. 1.1-G i p.2.1.2-G).
+Jeśli P > 0, dwójnik faktycznie pobiera moczotoczenia. Jeśli P < 0 (tzn.
+
+t
+
+<image/figury/k4_page298_figure1.png>
+
+moc pobierana jest ujemna), moc jest faktycznie oddawana przez dwójnik
+do otoczenia. Przypadek P = 0 zachodzi wtedy i tylko wtedy, kiedy
+U=0 lub I=0.
+
+Przykład 3.5-1. Moc pobierana przez dwójnik z rys. 3.5-2 wyraża się wzorem:
+
+vzory/k4_page298_formula2.png
+
+gdy jest on pobudzany stałym napięciem U, i wzorem:
+
+vzory/k4_page298_formula3.png

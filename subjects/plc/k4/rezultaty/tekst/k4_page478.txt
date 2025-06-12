@@ -1,0 +1,10 @@
+<image/figury/k4_page478_figure1.png>
+
+<image/figury/k4_page478_figure3.png>
+
+wwa w
+
+Wyd. 8.155 Druga faza sterowania (grzanie) — płynne dojście do wartości zadanej
+regulatora PID
+
+478 Rozdział : 8.Programy przykładowe

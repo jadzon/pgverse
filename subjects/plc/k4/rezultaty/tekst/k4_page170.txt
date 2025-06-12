@@ -1,0 +1,48 @@
+uprawnia do inicjowania transmisji (zapytania) jedynie element sieci z tytułem
+„nadrzędny”. W sieci takiej stosuje się także transmisje rozgłoszeniowe (Bro-
+adcast), w których komunikaty trafiają jednocześnie do wszystkich abonentów.
+
+W sieci magistralowej dane mogą być również wymienione przez przekazywanie
+dostępu do sieci (token passing). Polega to na tym, że kolejnym elementom sieci
+przydziela się żeton (token) zapewniający dostęp do sieci i możliwość przekaza-
+nia własnych danych, tzw. zmiennych globalnych, dla innych uczestników
+wymiany danych w tej sieci.
+
+W ostatnim okresie dużą popularność zdobyła niedeterministyczna, równo-
+prawna reguła wielodostępu przez rozpoznawanie nośnej i wykrywanie kolizji
+CSMA/CD (Carrier Sense Multiple Access with Collision Detection). Polega ona
+na nasłuchu łącza przed transmisją i na wykrywaniu i rozstrzyganiu sytuacji koli-
+zyjnych, które występują w trakcie jednoczesnego zgłaszania potrzeby dostępu
+do sieci przez wielu jej użytkowników.
+
+W sytuacjach kolizyjnych każda ze stacji musi przerwać transmisję i odczekać
+losowo wybrany okres czasu, po czym ponawia próbę dostępu do sieci.
+
+Natomiast w polowych sieciach (Field Network) systemów sterowania coraz sze-
+rzej stosuje się model dostępu producent-dystrybutor-konsument PDC (Producer
+- Distributor - Customer).
+
+Producent jednostki danych jest odpowiedzialny w warstwie aplikacji (applica-
+tion link layer) za produkowanie danych, dystrybutor jest odpowiedzialny za
+transfer danych od producenta do konsumentów.
+
+Jednostka danych emitowana do sieci przez producenta jest identyfikowana przez
+unikalną nazwę. Identyfikatory zmiennych są transmitowane przez kontrolera
+magistrali według listy wszystkich zmiennych istniejących w systemie. Abonenci
+sieci jako producenci lub konsumenci posiadają lokalne listy zmiennych, na któ-
+rych umieszcza się identyfikatory zmiennych.
+
+Producent jest informowany o żądaniu emisji jednostki danych przez odbiór jej
+kodu. Konsumenci danych to aplikacje, które żądają danych. Producent transmi-
+tuje wtedy informację zgodną z kodem. Ten mechanizm nazywa się
+adresowaniem źródła i stawia w pozycji uprzywilejowanej konsumentów.
+
+Protokół PROFIBUS w zakresie dostępu do nośnika wykorzystuje metodę prze-
+słania tokena przy komunikacji między stacjami typu master i metodę typu
+master-slave przy komunikacji między stacją typu master i prostymi urządzenia-
+mi typu slave. Kombinacja tych metod stanowi hybrydową metodę dostępu do
+nośnika [5].
+
+ 
+
+170 Rozdział: 3. Sprzęt sterowników PLC

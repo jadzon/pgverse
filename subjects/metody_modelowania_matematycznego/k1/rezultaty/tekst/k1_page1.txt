@@ -1,0 +1,41 @@
+Metody badania:
+- "in vivo” - w prawdziwym życiu
+- modelowanie fizyczne
+- modelowanie analogowe - wykorzystujemy modele matematyczne
+- modelowanie cyfrowe - wykorzystujemy modele matematyczne
+
+Zalety modelowania cyfrowego:
+- uniwersalność
+- moc obliczeniowa
+- możliwość modelowania i symulacji procesów hybrydowych (DDC)
+- _ elastyczność:
+- operowanie, użycie i zastosowanie modeli
+- zarządzanie, obsługa i kompilacja wyników
+
+Języki modelowania
+Typy procesów:
+- ciągłe
+- dyskretne, impulsowe
+- cyfrowe
+- hybrydowe
+
+Podstawy dyskretnego modelowania matematycznego:
+Modelowanie i symulacja (MAS) - konstruowanie modeli układów rzeczywistych i
+symulacja | i |
+
+Elementy
+<image/tafigury/k1_page1_figure1.png>
+- Śro
+
+Układ rzeczywisty
+- _ hipotetyczny fragment świata rzeczywistego, bierze się z obserwacji, intuicji, wiedzy,
+doświadczeń i praw fizyki.
+- źródło danych o zachowaniu się (sposobie reakcji) modelowanego procesu
+- postulat: modele powinny wyjaśniać dane eksperymentalne, a nie być bliskie
+„rzeczywistości”
+- Przykłady:
+— układy fizyczne/chemiczne, biologiczne, ekonomiczne, polityczne
+— układy techniczne
+- automatyzacja
+— mutacje obiektów/systemów
+— implementacja regulatorów

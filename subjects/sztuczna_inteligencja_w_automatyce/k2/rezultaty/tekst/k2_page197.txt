@@ -1,0 +1,12 @@
+202
+
+<image/figury/k2_page197_figure2.png>
+
+<image/figury/k2_page197_figure1.png>
+
+chaotycz
+
+<image/figurwzory/k2_page197_formula1.png>
+
+Trajektorie rozwiązania numerycznego równania Lorenza przedstawiono na rys. ??.
+Trajektorie te nigdy się nie przecinają — przebieg aperiodyczny. ies

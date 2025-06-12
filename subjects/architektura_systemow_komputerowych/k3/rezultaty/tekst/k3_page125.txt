@@ -1,0 +1,55 @@
+6.2. Sytuacje wyjątkowe 115
+
+6.2. SYTUACJE WYJĄTKOWE
+
+Istnieją zdarzenia, które powstają w systemie komputerowym w czasie wykonywania
+programu przez procesor i które wymagają jego reakcji czyli programowej obsługi tego
+zdarzenia. Aby spełnić to wymaganie procesor musi przerwać wykonywanie właściwego
+programu i przejść do stanu, w którym wykona odpowiedni program wcześniej
+umieszczony w pamięci komputera. Ponieważ zdarzeń takich może być wiele, to i zapa-
+miętanych programów także musi być wiele. Zdarzenia wywołujące przerwanie wykony-
+wania właściwego programu przez procesor i wywołanie odpowiedniego programu reakcji
+na to zdarzenie nazywane są sytuacjami wyjątkowymi (ang. exception). Sytuacje wyjąt-
+kowe mogą być dwojakiego rodzaju:
+
+l) sytuacje wyjątkowe powstałe w wyniku działania programu wykonywanego przez
+
+procesor,
+2) sytuacje wyjątkowe pochodzące z układów współpracujących z procesorem.
+
+Do pierwszej grupy sytuacji wyjątkowych należą zdarzenia niezamierzone, jak na przykład
+błędy, i zdarzenia zamierzone w programie, jak na przykład napotkanie umieszczonych
+w nim specjalnych rozkazów. Błędy mogą być następujące:
+— błąd adresowania, czyli wygenerowanie przez procesor adresu niedozwolonego
+(adres nie istniejący lub adres zabroniony),
+— błąd rozkazowy, czyli użycie nielegalnej instrukcji w programie,
+— błąd argumentu, czyli próba wykonania operacji niemożliwej (dzielenie przez
+zero).
+
+Zdarzenia zamierzone to zwykle zdarzenia, które są pomocne podczas uruchamiania
+programów. Wyróżnić można trzy rodzaje takich zdarzeń:
+
+l) Praca krokowa (ang. single step), czyli wykonywanie programu instrukcja po
+instrukcji. Umieszczone w programie rozkazy HALT (STOP) zatrzymują jego
+pracę aż do momentu reakcji operatora, tj. zmiany specjalnego sygnału wejścio-
+wego.
+
+2) Praca w trybie śledzenia (ang. /racing), czyli wykonywanie po zadanym typie
+rozkazu (lub każdym rozkazie) specjalnego podprogramu umożliwiającego moni-
+torowanie działania tych rozkazów.
+
+3) Praca w trybie pułapki (ang. breakpoini), czyli wykonywanie programu aż do
+miejsca, w którym programista podmienił rozkaz danego programu rozkazem
+wymuszającym specjalną reakcję. Przykładowo może to być zatrzymanie pracy
+procesora, kontrola stanów jego rejestrów i podmiana rozkazu-pułapki na rozkaz
+właściwy celem dokończenia wykonywania programu.
+
+Do drugiej grupy sytuacji wyjątkowych należą zdarzenia, które także można podzielić na
+dwie klasy:
+— błędy wykryte w różnych miejscach komputera przez specjalne układy detekcji
+błędów,
+— zdarzenia służące synchronizacji pracy procesora z urządzeniami znacznie wolniej-
+szymi od niego, informującymi go o swojej gotowości do pracy.
+Błędy mogą pochodzić z różnych źródeł, jak np.:
+— błąd na magistrali, gdzie specjalne układy mogą wykryć żądanie dostępu do nie
+istniejącego lub zabronionego obszaru pamięci,

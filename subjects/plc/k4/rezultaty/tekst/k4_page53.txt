@@ -1,0 +1,30 @@
+W Tab. 2.21 zebrano standardowe funkcje jednej zmiennej, natomiast funkcje
+wielu zmiennych przedstawia Tab. 2.22. Funkcje te mogą występować jako
+funkcje dla pewnego rodzaju danych (overloaded functions) lub jako funkcje dla
+określonego typu danych (typed functions).
+
+Symbole w Tab. 2.22 mogą być używane w językach tekstowych jako operatory
+zamiast nazw funkcji.
+
+<image/figury/k4_page53_figure1.png>
+
+<image/tabele/k4_page53_table1.png>
+
+Jeżeli argumenty funkcji DZY (dzielenie) są liczbami całkowitymi to wynik
+dzielenia powinien być także liczbą całkowitą otrzymaną przez obcięcie reszty
+z dzielenia, np. 7/3=2, (-7)/3=-2.
+
+Argumentami funkcji MOD (modulo — reszta z dzielenia całkowitoliczbowego)
+powinny być liczby całkowite.
+
+e Funkcje na ciągach bitów (Bit string functions)
+
+Do grupy funkcji operujących na ciągach bitów należą funkcje przesuwania bi-
+tów (bit shift functions), które przedstawiono w Tab. 2.23 oraz funkcje logiczne
+(bitwise Boolean functions) zebrane w Tab. 2.24. Funkcje te mogą być realizo-
+wane dla określonego typu danych (typed functions) lub dla danych dowolnego
+typu należącego do rodzaju ANY_BIT.
+
+ 
+
+2.3 Elementy oprogramowania 53

@@ -1,0 +1,34 @@
+<image/figury/k2_page116_figure1.png>
+
+przedstawionym na rys. ??a,b. Sygnał wyjściowy neuronu dany jest zależnością:
+
+<image/wzory/k2_page116_formula1.png>
+
+gdzie sygnał net będący ważoną sumą sygnałów wejściowych nazywany jest pobudze-
+niem łącznym, funkcja f(net) oddziałująca na pobudzenie łączne nazywa się funkcją
+aktywacji, w jest wektorem wag zdefiniowanym jako
+
+<image/wzory/k2_page116_formula2.png>
+
+x zaś jest wektorem wejściowym:
+
+<image/wzory/k2_page116_formula3.png>
+
+Typowymi funkcjami aktywacji są
+
+<image/wzory/k2_page116_formula4.png>
+<image/wzory/k2_page116_formula5.png>
+
+zwane odpowiednio ciągłą i dyskretną funkcją bipolarną. Ciągła funkcja aktywacji
+dla różnych wartości parametru A pokazana jest na rys. ??c. Zauważmy. że gdy
+A + oo, wówczas f(net) dąży do funkcji sgn(net) zdefiniowanej wzorem (??). Często
+też stosuje się funkcję aktywacji unipolarną, która przyjmuje wartości z przedziału
+(0, +1).
+
+Neurony łączone są w większe struktury, spośród których można wyróżnić dwie
+podstawowe — sieci warstwowe bez sprzężeń zwrotnych oraz sieci ze sprzężeniami
+zwrotnymi (rys. ??).
+
+Sieci warstwowe bez sprzężeń zwrotnych są układami statycznymi realizującymi
+złożone nieliniowe odwzorowanie, którego kształt zależy od przyjętej funkcji akty-
+wacji, stałej A i wektorów wag w wszystkich neuronów sieci. Sygnały wyjściowe tych

@@ -1,0 +1,48 @@
+80 4. Procesory
+
+Wyjaśnienia wymaga pojęcie stosu (ang. stack). Stosem nazywa się spójny obszar pamięci,
+tzn. taki, którego kolejne komórki mają kolejne adresy. Układ sterujący stosem pamięta
+tylko jeden adres, który jest przechowywany w miejscu zwanym wskaźnikiem stosu
+(ang. stack pointer). Miejsce to może być komórką pamięci, ale najczęściej jest to spec-
+jalny rejestr procesora. Zapis danej na stos jest dokonywany zawsze pod adres zawarty we
+wskaźniku stosu. Na początku pracy we wskaźniku stosu jest adres bazowy (najmniejszy
+adres obszaru pamięci przeznaczonego na stos). Po każdorazowym zapisie danej na stos
+dokonuje się inkrementacji wskaźnika, a więc zwiększenia adresu o 1. Dlatego wskaźnik
+stosu zawiera zawsze adres następnego „wolnego” miejsca dla zapisu. Natomiast chcąc
+odczytać informację ze stosu należy najpierw dokonać dekrementacji wskaźnika. Taka
+zasada powoduje, że istnieje dostęp tylko do tzw. wierzchołka stosu. W czasie zapisu
+pojemność stosu jest zwiększana, a podczas odczytu jest zmniejszana. Oczywiście w cza-
+sie zapisu rośnie obszar pamięci zajmowanej przez stos, a podczas odczytu maleje. Istnieje
+zawsze ograniczenie pojemności stosu. Najmniejszy adres jest nazywany bazą stosu,
+a największy limitem stosu. Stos można zorganizować także sprzętowo za pomocą zbioru
+rejestrów.
+
+<image/figury/k3_page90_figure1.png>
+
+Na rysunku 4.11 przedstawiono algorytm obliczeń podanego wyrażenia zapisanego
+w notacji polskiej wraz z mapą stosu dla kolejnych kroków tego przykładu. W podanym
+wyrażeniu pierwszym elementem jest argument, więc jest on zapisywany na stos
+(rys. 4.11a). Następnym elementem jest także argument, więc i on jest zapisywany na stos
+(rys. 4.11b). Kolejnym elementem wyrażenia jest operacja odejmowania, więc poprzednie
+argumenty są odczytywane ze stosu, wykonywana jest operacja odejmowania i wynik jest
+zapisywany na stos (rys. 4.1lc). Następne operacje to:
+
+— zapis argumentu c na stos (rys. 4.11d),
+
+— operacja dzielenia dwóch kolejnych zawartości wierzchołków stosu i przesłanie
+
+wyniku na stos (rys. 4.11e),
+
+— zapis argumentu d na stos (rys. 4.11f),
+
+— zapis argumentu e na stos (rys. 4.11g),
+
+— operacja mnożenia i zapis wyniku na stos (rys. 4.11h),
+
+— operacja dodawania i zapis wyniku na stos (rys. 4.11i).
+
+Działania tego typu były często wykorzystywane w kalkulatorach, gdzie użytkownik
+wpisując przemiennie argumenty i operacje decyduje o wykonywanych działaniach.
+W komputerach o dużej mocy obliczeniowej, które posługują się długimi słowami maszy-
+nowymi, stosuje się rozkazy 2- lub 3-adresowe. W mikrokomputerach, ze względu na
+niewielką długość słowa maszynowego, często stosuje się rozkazy jednoadresowe.

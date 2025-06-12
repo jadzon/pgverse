@@ -1,0 +1,41 @@
+3. Obwody prądu stałego
+
+h niezależnych źródeł napięciowych zwarciami i wszystkich
+prądowych rozwarciami.
+
+ło napięciowe z rys. 3.3-4c jest często nazywane źródłem
+ta uzasadnia indeks przyjęty w oznaczeniach parametrów
+
+/ przykładzie 3.2-2 wyznaczyliśmy opór zastępczy R,5 dwójnika bez-
+
+o po wyeliminowaniu źródeł niezależnych z dwójnika pokazanego na rys.
+
+arametry zastępczego źródła Thevenina dla tego dwójnika wystarczy zatem
+' na jego rozwartych zaciskach.
+
+ozwarciu zacisków AB dwójnika z rys. 3.2-6a możemy zapisać następujące
+praw Kirchhoffa:
+
+<image/1ge258wzory/k3_page258_formula2.png>
+
+z drugiego równania i podstawieniu do pierwszego otrzymamy:
+
+<image/wzory/k3_page258_formula3.png>
+
+tródła Thóvenina dla dwójnika z rys. 3.2-6a są zatem równe:
+
+<image/wzory/k3_page258_formula4.png>
+
+' przykładzie 3.3-1 obliczaliśmy metodą zamiany źródeł prąd I zaznaczo-
+.3-1a. Po kolejnych zamianach i łączeniach źródeł otrzymaliśmy schemat
+d. Zauważmy, że źródło napięciowe o parametrach Er =8Vi Rr=2kQ
+Thevenina dwójnika, do którego zacisków jest dołączona gałąź z szukanym
+
+hevenina. Powróćmy obecnie do układu z rys. 3.3-4a i do
+pauuawiam m jemuwwwuNią prądu I w Oporze Ry. Zgodnie z twierdzeniem Theve-
+nina układ ten możemy zastąpić układem równoważnym, pokazanym na rys.
+3.37zktregowynikajnatychmiastwzory
+
+<image/figury/k3_page258_figure1.png>
+
+Rys. 3.3-7

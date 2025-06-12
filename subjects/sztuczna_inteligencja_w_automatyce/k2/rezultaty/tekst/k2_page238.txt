@@ -1,0 +1,23 @@
+243
+
+[68] Sienkiewicz R., 2009, Experiments with the universal constructor in the Digi-
+Hive environment, Artificial Life: Borrowing from Biology. Proc. of the Austra-
+lian Conference on Artificial Life, LNAT, pp. 106-115,Springer, Berlin, 2009.
+
+[69] Sutton R.S., Barto A.G., (1998), Reinforcement Learning: An Introduction,
+MIT Press, Cambridge, MA, A Bradford Book.
+
+[70] Turing A., (1950), Computing machinery and intelligence, Mind, p. 433-460,
+wyd. pol.: Maszyna licząca a inteligencja, w: B. Chwedczuk (wyb.), Filozofia
+umysłu, Fundacja „Alatheia*, Warszawa 1995.
+
+71] Wolfram S., (2002) A new kind of science, Wolfram Media.
+[72] Wójcik M., (1991), Zasada rezolucji, PWN, Warszawa.
+[73] http://www.swarm.eti.pg.gda.pl/.
+
+[74] Yoon Y.O., Brobst R.W., Bergstresser P.R., Peterson L.L. A desktop neural
+network for dermatology diagnosis, J. of Neural Network Computing, 1989,
+Summer, 43-52.
+
+[75] Żurada J., Barski M.. Jędruch W., (1996), Sztuczne sieci neuronowe, PWN,
+Warszawa.

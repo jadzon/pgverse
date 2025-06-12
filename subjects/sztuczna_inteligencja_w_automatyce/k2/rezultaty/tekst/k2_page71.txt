@@ -1,0 +1,50 @@
+76
+
+PRZYKŁAD 5.3
+
+Ludzie i ich wzrost. Niech przestrzeń X będzie zbiorem liczb rzeczywistych w prze-
+dziale [130, 220] reprezentującym wzrost osób wyrażony w cm. Zdefiniujmy trzy
+zbiory rozmyte: niski, średniego wzrostu, wysoki, które będą odpowiadały odpo-
+wiednim pojęciom w języku naturalnym. Na rysunku ?? przedstawiono przykładowe
+funkcje przynależności definiujące te zbiory rozmyte oraz wartości funkcji przyna-
+leżności zbioru wysoki dla kilku przykładowych osób.
+
+W 6)
+A |
+
+<image/tabele/k2_page71_table1.png>
+
+a a nina
+140 160 180 200 220
+
+X=wzrost (em|]
+
+ 
+
+Rys. 5.3: Funkcje przynależności trzech zbiorów rozmytych dotyczących wzrostu (a) oraz
+wartości funkcji przynależności zbioru wysoki dla kilku przykladowo wybranych osób (b)
+
+W terminologii zbiorów rozmytych przestrzeń nazywa się zmienną lingwistyczną,
+a zdefiniowane na niej podzbiory nazywa się wartościami lingwistycznymi. W oma-
+wianym przykładzie zmienną lingwistyczną jest „wzrost”, a zbiorem możliwych war-
+tości tej zmiennej jest zbiór
+
+<image/wzory/k2_page71_formula1.png>
+
+Funkcje przynależności używane w zastosowaniach zwykle mają kształt trójkąta,
+trapezu, są funkcjami Gaussa, asymetrycznymi funkcjami Gaussa, funkcjami sig-
+moidalnymi, funkcjami typu s, funkcjami typu z, funkcjami typu m lub funkcjami
+dzwonowymi (rysunek ??).
+
+Funkcja Gaussa opisana jest wzorem
+
+<image/wzory/k2_page71_formula2.png>
+
+Asymetryczna funkcja Gaussa składa się z dwóch funkcji Gaussa o oddzielnie zada-
+nych parametrach o i c. Funkcja sigmoidalna dana jest wzorem
+
+<image/wzory/k2_page71_formula3.png>
+
+Jeden z wariantów funkcji typu s (ang. s-shaped, s-curve) jest opisany wzorem
+
+<image/wzory/k2_page71_formula4.png>

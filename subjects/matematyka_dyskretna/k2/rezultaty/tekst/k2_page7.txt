@@ -1,0 +1,44 @@
+1.5. Iloczyn kartezjański 7
+
+Twierdzenie 1.5 Różnica symetryczna n zbiorów:
+
+<image/wzory/k2_page7_formula1.png>
+zawiera elementy, które należą do nieparzystej liczby spośród zbiorów A;, Aa,..., - Ą,.
+Dowód przez indukcję ze względu na n. Twierdzenie jest oczywiste dla n = 1 lub
+n = 2. Załóżmy teraz, że jest ono prawdziwe dla n i rozpatrzmy:
+
+<image/wzory/k2_page7_formula2.png>
+Zbiór ten zawiera te elementy, które należą do (A, 6... 6 A) i nie należą do A„+;,
+oraz te, które nie należą do (A; 6... 6 A„) i należą do A„+;. W pierwszym przypad-
+ku są to elementy, które nie należą do A„+; i na mocy założenia indukcyjnego należą
+do jakiejś nieparzystej liczby zbiorów spośród A;,...,.A„. W drugim przypadku są to
+elementy, które należą do A„+;, a także do pewnej parzystej liczby zbiorów spośród
+Ay,. .. , An. Razem mamy wszystkie elementy należące do nieparzystej liczby zbiorów
+SpośTód A; ,..., An+1. o
+
+1.5 Iloczyn kartezjański
+Para uporządkowana jest to dwuelementowy ciąg (r, y). Mamy (r,y) = (u,v) wtedy i
+tylko wtedy gdy x = u Oraz y = v. Dopuszczalne jest także 1 = y.
+AxB oznaczailoczyn kartezjański zbiorów A i B. Jest to zbiór wszystkich uporządkowanych
+par (a, b), w których a € A ib € B. Inaczej
+
+<image/wzory/k2_page7/_formula3.png>
+
+Przykład 1.6 Dla A = f1,3,5) i B = f3,4) mamy
+
+<image/wzory/k2_page7_formula4.png>
+
+Można
+
+<image/wzory/k2_page7/_formula5.png>
+1.6 Rodzina zbiorów
+
+Czasami bedziemy mieli do czynienia ze zbiorem, którego elementami sa zbiory. Przez
+
+<image/wzory/k2_page/7_formula6.png>
+będziemy oznaczać zbiór wszystkich podzbiorów zbioru A.
+Przykład 1.7 Dla A = fa,b)
+
+<image/wzory/k2_page7_formula7.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

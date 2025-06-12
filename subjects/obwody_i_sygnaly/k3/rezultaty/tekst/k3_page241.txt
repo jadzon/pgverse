@@ -1,0 +1,43 @@
+32. Liniowe obwody rezystancyjne prądu stalego 243
+
+Wszystkie rozważania, które przeprowadzimy w p. 3.2 i p. 3.3, będą
+dotyczyć obwodów liniowych. Założenia o liniowości nie będziemy już
+zatem każdorazowo powtarzać.
+
+3.2.1. Opór zastępczy dwójnika rezystancyjnego
+
+A. Definicja oporu zastępczego. Rozważmy dwójnik rezystancyjny bez-
+źródłowy (por. p. 2.1.4-A) pokazany na rys. 3.2-1a.
+
+<image/wzory/k3_page241_formula1.png>
+
+Opór (zastępczy)”) rezystancyjnego dwójnika bezźródłowego definiujemy jako
+stosunek napięcia do prądu na jego zaciskach:
+
+<image/wzory/k3_page241_formula2.png>
+
+Zwracamy uwagę, że definicja ta obejmuje dowolne liniowe rezystancyjne
+dwójniki bezźródłowe, a więc także takie, które zawierają źródła sterowane.
+Opór R,5 określony wzorem (3.2-1) nie zależy oczywiście od wielkości zacis-
+kowych U, I, a równanie dwójnika z rys. 3.2-1a zapisujemy w postaci:
+
+y/k3_page241_formula3.png (3.2-2)
+
+Rezystancyjny dwójnik bezźródłowy z rys. 3.2-la możemy zatem zastąpić
+równoważnym jednoelementowym dwójnikiem oporowym o oporze R x5 (rys.
+3.2-1b).
+
+B. Przykłady obliczeń
+
+Przykład 3.2-1. Wyznaczymy opory zastępcze dwójników rezystancyjnych pokazanych na
+rys. 3.2-2a,b, c.
+
+a) Dwójnik oporowy z rys. 3.2-2a ma strukturę szeregowo — równoległą, tzn. występują w nim
+tylko połączenia szeregowe i równoległe oporów. Opór R,„ tego dwójnika można zatem obliczyć
+łącząc poszczególne opory w kolejności wynikającej z jego schematu. W wyniku połączeń
+otrzymujemy kolejne, prostsze dwójniki równoważne, aż do dwójnika jednoelementowego o oporze
+
+ry/k3_page241_formula4.png
+
+1) Pojęcie elementu zastępczego (równoważnego) będziemy rozumieć w sensie uwag przedsta-
+wionych w p. 1.5.2-I i p. 2.1.3-D.

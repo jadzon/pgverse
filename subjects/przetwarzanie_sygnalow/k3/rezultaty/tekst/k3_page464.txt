@@ -1,0 +1,45 @@
+28. Cyfrowe procesory sygnałowe
+
+<image/tabele/k3_page464_table1.png>
+
+Aby zrozumieć, jak to działa, przyjrzyjmy się wierszowi 008, jedynej instrukcji wewnątrz pętli.
+W tej pojedynczej instrukcji są równolegle wykonywane cztery operacje: D) warość (|
+przekazywana z bufora cyklicznego w pamięci programu do f2, 2) wartość y| ] jest p
+
+na z bufora cyklicznego w pamięci programu do f4, 3) poprzednie wartości f2 i f4 są v ,
+ne i umieszczane w Bosz 4) poprzednia wartość w 8 jest dodawana do skumaltoa w 2
+
+Na przykład przy wykonywaniu instrukcji z wiersza 008 po raz piąty, x[7] i x[8] są pobierane
+z pamięci i zapisywane w f2 i f4. W tym samym czasie x(6] i y[6] (które były w f2 i f4 ma
+początku tego okresu) są wymnażane i umieszczane w f8. Ponadto, wartość x[5] x y(5] (która
+była w f8 na początku tego okresu) jest dodawana do wartości f12.
+
+Porównajmy teraz liczbę okresów zegarowych wymaganych do wykonania programów nie
+zoptymalizowanego i zoptymalizowanego. Pamiętajcie, że w programie bez optymalizaę
+jest 20 pętli z czterema działaniami wykonywanymi w każdej pętli. Ten program wym:
+więc 80 okresów zegarowych do wykonania działań wewnątrz pętli oraz jeszcze dodatkow
+5 okresów zegarowych, co razem daje 85 okresów. Natomiast w programie zoptymalizowa
+nym wykonuje się 18 pętli w ciągu 18 okresów zegarowych, lecz koniecznych jest jeszcz
+dodatkowo 11 okresów na pierwsze załadowanie rejestrów i zakończenie ostatniej pętli. Daję
+to całkowity czas wykonania równy 29 okresom zegarowym, a więc około trzy razy krótsz
+niż w prostym programie bez optymalizacji.
+
+I tu pojawia się ważne pytanie. Jaka jest szybkość wykonania programu w języku € w
+równaniu z programem asemblerowym? Czy — gdy program z tablicy 28.2 zostanie skomf
+lowany — to uzyskany kod wykonywalny będzie podobny do naszych przykładów as
+efektywnego lub niefektywnego? Można na to odpowiedzieć, że kompilator daje efekty
+kod. Trzeba sobie jednak zdawać sprawę z tego, że iloczyn skalarny jest przykładem ba
+prostym. Dla kompilatora znacznie trudniejszym zadaniem jest wytworzenie optymali
+wanego kodu, gdy program staje się bardziej skomplikowany, np. z wielokrotnymi pętlat
+zagnieżdżonymi i niespodziewanymi skokami do podprogramów. Jeśli robicie coś w s i
+bezpośredni, to możecie oczekiwać, że kompilator dostarczy wam rozwiązanie prawie opi
+malne. Jeśli zaś robicie coś dziwacznego lub skomplikowanego, to spodziewajcie się, |
+program asemblerowy będzie wykonywany znacznie szybciej niż ten w języku C. W naj,
+szym przypadku może to być czynnik 2-3. Jak już wspomniano, efektywność języka € w
+równaniu z asemblerem zależy w dużym stopniu od zastosowanego procesora sygnałowe
+Przy stosowaniu języków wysokiego poziomu, jak C, procesory zmiennoprzecinkowe m
+ogólnie biorąc, być programowane bardziej efektywnie niż stałoprzecinkowe. Oczywiści
+tego celu konieczne są właściwe narzędzia programowe, takie jak debugery z właściwość
+mi profilowania, pomagające zrozumieć, jak długiego czasu wymaga wykonanie pc
+
+nych segmentów kodu.

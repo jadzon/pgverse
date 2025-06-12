@@ -1,0 +1,56 @@
+13. Przetwarzanie sygnałów ciągłych
+
+Podobnie jak w przypadku sygnałów dyskretnych, splot sygnału ciągłego może być rozpa-
+trywany od strony sygnału wejściowego albo wyjściowego. Rozpatrywanie od strony wej-
+ścia jest najlepszym opisem pojęciowym wyjaśniającym działanie splotu. Rozpatrywanie
+od strony wyjścia zaś daje opis matematyczny. Te opisy są w istocie identyczne z zapre-
+zentowanymi w rozdziale 6 dla sygnałów dyskretnych.
+
+Na rys. 13.2 pokazano, jak splot jest widziany od strony wejścia. Sygnał wejściowy x(/)
+przechodzi przez system charakteryzujący się odpowiedzią impulsową (1), dając na wyjściu
+sygnał y(r). Można to zapisać znanym równaniem: y(4) = x(t) * h(1). Sygnał wejściowy jest
+dzielony na wąskie kolumny, z których każda jest wystarczająco wąska, aby przez system
+być traktowana jako impuls. Innymi słowy, sygnał wejściowy zostaje rozłożony na nieskoń-
+czoną liczbę przeskalowanych i przesuniętych wersji funkcji delta. Każdy z tych impulsów
+wytwarza w sygnale wyjściowym przeskalowaną i przesuniętą wersję odpowiedzi impulso-
+wej. Uzyskany sygnał wyjściowy jest równy łącznemu wynikowi, a więc sumie wszystkich
+odpowiedzi indywidualnych.
+
+Przy takim sposobie działania szerokość kolumn musi być znacznie mniejsza od szerokości
+odpowiedzi systemu. Oczywiście matematycy doprowadzają to do skrajności, czyniąc seg-
+menty wejściowe nieskończenie wąskimi i sprowadzając zagadnienie do problemu oblicze-
+niowego. Tak więc rozpatrywanie od strony wejścia opisuje, jak pojedynczy punkt (lub wąski
+obszar) w sygnale wejściowym wpływa na większy fragment sygnału wyjściowego.
+Rozpatrywanie zaś od strony wyjścia powoduje sprawdzenie, w jaki sposób pojedynczy
+punkt w sygnale wyjściowym jest wyznaczony przez różne wartości pochodzące z sygnału
+wejściowego. Tak jak w przypadku sygnałów dyskretnych, na każdą wartość chwilową sy*
+gnału wyjściowego ma wpływ jedna sekcja sygnału wejściowego, mnożona (czyli ważona)
+przez odpowiedź impulsową odwróconą lewo-prawostronnie. W technice dyskretnej sygnały
+są przemnażane i sumowane. Sygnały ciągłe są przemnażane i całkowane. Można to wyrazić
+wzorem:
+
+<image/wzory/k3_page219_formula1.png>
+
+Wzór 13.1. Catka splotowa. Ten wzór wyjaśnia znaczenie wyrażenia: y(t) = x(t) * h(t)
+
+Powyższe wyrażenie jest nazywane całką splotową i jest bliźniaczą odmianą sumy splotowej
+(wzór 6.1) stosowanej do sygnałów dyskretnych. Rys. 13.3 ma ułatwić zrozumienie powyż-
+
+ 
+ 
+ 
+    
+   
+   
+
+przemieszczania się przez sygnał wejściowy i przez odpowiedź impulsową. Zamienia się
+więc zmienną £ na Tt. Wtedy x(/) i k(4) zmieniają się, odpowiednio, w x(t) i h(t). Taka zmiana
+nazw zmiennych jest potrzebna, gdyż £ jest już używane do reprezentowania punktu w ob-
+liczanym sygnale wyjściowym. Następnym krokiem jest lewo-prawostronne odwrócenie
+odpowiedzi impulsowej, co daje zamianę jej w h(-T). Przesunięcie odwróconej odpowiedzi
+impulsowej do położenia r daje wyrażenie h(r — t). Sygnał wejściowy jest następnie mnożo-
+ny (czyli ważony) przez odwróconą i przesuniętą odpowiedź impulsową, dając x(t) h(t — 1).
+
+<image/figury/k3_page219_figure2.png>
+
+nyury/no_|MGYCZ IV_IIYUIC I.|JIIJ

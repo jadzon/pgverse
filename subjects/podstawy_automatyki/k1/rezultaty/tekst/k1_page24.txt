@@ -1,0 +1,21 @@
+Po uporządkowaniu otrzymujemy równanie
+
+<image/wzory/k1_page24_formula1.png>
+
+Równanie (1.41) nazywamy równaniem „oryginalnym”, a równanie (1.44) rów-
+naniem „operatorowym” odpowiadającym warunkom (1.41) i warunkom początko-
+wym (1.42). Z równania (1.44) wyznaczamy funkcję niewiadomą X(s)
+
+<image/wzory/k1_page24_formula2.png>
+
+Niech sy, ..., s, będą biegunami (lub punktami osobliwymi) prawej strony równania
+(1.45); stosując do prawej i lewej strony przekształcenie odwrotne (1.21), otrzymamy:
+
+figu
+<image/wzory/k1_page24_formula3.png>
+
+lub
+
+<image/wzory/k1_page24_formula4.png>
+
+26

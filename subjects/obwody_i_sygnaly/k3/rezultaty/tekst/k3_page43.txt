@@ -1,0 +1,41 @@
+1.3. Elementy nieliniowe 43
+
+konsekwencji do wyodrębnienia trzech podstawowych
+aków elektrycznych (pole 6; opór), występowania stru-
+30 (pole B; indukcyjność) i gromadzenia ładunku (pole D;
+vspomnieliśmy, możliwość takiej separacji jest istotną cechą
+onego.
+
+niowe. Równania (1.2-6), (1.2-17) i (1.2-32) są równa-
+1i, elementy o tych równaniach zaliczamy z tego względu
+ów liniowych. W p. 1.3 omówimy ogólniejsze postacie tych
+odpowiadać ogólniejszej kategorii elementów, a mianowi-
+owych.
+
+”" NIELINIOWE
+je43_formula1.png
+
+rzedstawiliśmy rozważania prowadzące do najprostszych
+ch cech fizycznych obwodu elektrycznego. Opisaliśmy
+y obwodowe: opór, indukcyjność i pojemność. Elementy te
+iowymi, bowiem — odpowiednio — zależności: między
+iem i (opór), skojarzeniem magnetycznym W a prądem
+z między ładunkiem q a napięciem u (pojemność) by-
+
+'dzo różnych powodów, których nie będziemy tu omawiać,
+ją większe lub mniejsze odstępstwa od liniowości. Bardzo
+model liniowy można stosować tylko w wąskim zakresie
+napięć; poza tym zakresem element rzeczywisty może
+nieliniowości.
+
+. staje się takie uogólnienie skonstruowanych w p. 1.2
+niały one wspomniane nieliniowości.
+
+A. Opór skupiony i stacjonarny. Opór skupiony stacjonarny” (w skrócie
+opór) jest elementem (rys. 1.3-1a) o równaniu:
+
+»ry/k3_page43_formula2.png (1.3-1)
+I lub:
+ory/k3_page43_formula3.png (1.3-2)
+
+v Wyjaśnienie znaczenia przymiotnika „stacjonarny” podane jest w p. 1.3.4-B.

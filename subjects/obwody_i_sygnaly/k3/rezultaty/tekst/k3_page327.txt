@@ -1,0 +1,29 @@
+Zadania do rozdziału 3 329
+
+Zadanie 3.4. W jakim zakresie zmienia się prąd I w układzie z rys. Z-3.4 przy zmianach położenia
+suwaka potencjometru R; od punktu A do punktu B? Dane: J = 12 mA, R, = 5ka, R, = 1 kO,
+R; = 6 kQ.
+
+<image/figury/k3_page327_figure3.png>
+
+(
+
+Zadanie 3.5. Jaki powinien być stosunek podziału p <£ 1 oporu R > R, w układzie pokazanym na
+rys. Z-3.5, aby prąd I płynący przez opór R, był największy?
+
+R+R,
+
+ 
+
+Odp.: p =
+
+Zadanie 3.6. Korzystając ze wzorów na dzielniki napięcia, określić dla jakiego stosunku sił
+elektromotorycznych źródeł prąd w oporze R w układzie z rys. Z-3.6 jest równy zeru.
+
+<image/figury/k3_page327_figure1.png>
+
+zory/k3_page327_formula1.png
+
+Zadanie 3.7. Obliczyć opory zastępcze dwójników AB z rys. 3.7a, b.
+
+<image/figury/k3_page327_figure2.png>

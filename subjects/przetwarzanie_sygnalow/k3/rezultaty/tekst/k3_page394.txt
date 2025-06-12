@@ -1,0 +1,24 @@
+Odpowiedź impulsowa filtru stosowana w tej technice będzie omówiona nieco dalej. Na ra-
+zie zwróćcie uwagę, jak filtracja zmieniła profile. W tym przykładzie obraz jest jednolitym
+białym kołem otoczonym ciemnym tłem (funkcja typu „okrągła czapka”). Każdy z pobra-
+nych widoków ma płaskie tło z okrągłym obszarem reprezentującym białe koło. Filtracja
+wprowadza do widoków dwie znaczące zmiany. Po pierwsze, wierzchołek impulsu ulega
+spłaszczeniu, dzięki czemu w obrazie końcowym z projekcją wsteczną poziom sygnału we-
+wnątrz koła jest równomierny. Po drugie, zostały wprowadzone ujemne szpilki po bokach
+impulsu. Przy projekcji wstecznej te ujemne obszary przeciwdziałają rozmyciom.
+Czwarta metoda jest nazywana rekonstrukcją Fouriera. Do rekonstrukcji komputerowego obra-
+dwuwymiarowym
+
+fii komputerowej i nosi nazwę twierdzenia Fouriera o projekcji (Fourier slice theorem).
+Na rys. 25.18 zilustrowano to zagadnienie w dziedzinach przestrzeni i częstotliwości. W dziedzi-
+
+wyrażone przez siatkę dwuwymiarową. Widmo każdego widoku (sygnał jednowymiarowy) jest
+reprezentowane przez ciemną linię nałożoną na siatkę. Jak to wyrażono przez umiejscowienie linii
+na siatce, zgodnie z twierdzeniem Fouriera o przekrojach widmo widoku jest identyczne z wid-
+mem wzdłuż linii (przekroju) poprzez widmo obrazu. Na przykład widmo widoku | jest takie
+samo, jak środkowa kolumna w widmie obrazu, a widmo widoku 3 jest takie samo, jak środkowy
+wiersz widma obrazu. Zauważcie, że widmo każdego widoku umiejscowiono na siatce pod takim
+samym kątem, pod jakim widok został pierwotnie pobrany. Te wszystkie widma częstotliwościo-
+we zawierają częstotliwości ujemne i są przedstawiane z częstotliwości zerową pośrodku.
+
+<image/figury/k3_page394_figure1.png>

@@ -1,0 +1,26 @@
+(s) Ki
+
+<image/figury/k1_page90_figure1.png>
+
+Wyznaczamy uchyb zakłóceniowy przy założeniu, że W(s) = 0:
+
+<image/wzory/k1_page90_formula1.png>
+
+Transformata sygnału z(f) wynosi Z(s) mz, Do obliczenia wartości uchybu
+wykorzystujemy twierdzenie graniczne o wartości końcowej funkcji
+
+<image/wzory/k1_page90_formula2.png>
+
+Ad a) Dla układu bez regulatora
+
+<image/wzory/k1_page90_formula3.png>
+
+po przekształceniach otrzymujemy
+
+/zory/k1_page90_formula4.png
+
+Ad b) Dla układu z regulatorem P
+
+<image/wzory/k1_page90_formula5.png>
+
+92

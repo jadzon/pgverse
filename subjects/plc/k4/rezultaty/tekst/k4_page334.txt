@@ -1,0 +1,32 @@
+<image/figury/k4_page334_figure1.png>
+
+Przykład
+
+L IB7 - wprowadzenie siódmego bajtu wejść
+
+L IW7 wprowadzenie siódmego słowa wejść, tzn. bajtu 7 18
+
+L DW 7 wprowadzenie siódmego słowa danych
+
+L DR7 wprowadzenie prawego (niższego) bajtu siódmego słowa da-
+nych
+
+L DL7 wprowadzenie lewego (wyższego) bajtu siódmego słowa da-
+nych
+
+AZILUOZ WON
+
+ 
+
+Operator przekazania umożliwia przepływ informacji z akumułatora do pamięci.
+W trakcie przekazania zawartość akumulatora ! jest kopiowana do odpowied-
+niego obszaru pamięci. Obszar pamięci, do którego ma zostać skopiowana za-
+wartość akumulatora jest wskazywany przez argument operatora przekazania
+(np. T QW 7). Po wykonaniu operacji przekazania, zawartość akumulatora I po-
+zostaje niezmieniona. Ponieważ dane adresowane są jako słowo, przy przekazy-
+waniu bajtów do obszaru pamięci danych konieczne jest określenie, do którego
+bajtu słowa danych ma zostać przekazana zawartość akumulatora |.
+
+m W EPE EE ET EEE A W A A W A
+
+334 Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5

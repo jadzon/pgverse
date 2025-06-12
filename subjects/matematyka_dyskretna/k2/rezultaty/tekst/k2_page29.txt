@@ -1,0 +1,48 @@
+14 Rozdział 1. Arytmetyka
+
+Jeżeli liczba cyfr w postaci dwójkowej nie dzieli się przez 4, to uzupełniamy ją zerami na
+początku.
+
+Przykład 1.19 (110|1111/0110/0010)2 = (0110|1111/0110|0010)2 = $6F62.
+
+W ten sposób możemy używać zapisu szesnastkowego do zwięzłego przedstawiania dłu-
+gich ciągów bitów.
+
+1.11 Reprezentacja liczb w komputerze
+W wielu językach każda zmienna ma swój typ, który jest deklarowany na początku pro-
+gramu. Sposób przechowywania wartości zmiennej zależy od jej typu.
+1.11.1 Integer
+Zmienne typu integer przechowywane są zwykle w dwóch bajtach. Jeden bajt (ang. by-
+te) zawiera osiem bitów, tak więc wartość zmiennej typu integer przechowywana jest w
+szesnastu bitach. Pierwszy bit oznacza znak. Jeżeli jest on zerem, to liczba jest dodatnia,
+jeżeli jedynką, to ujemna.
+
+Jeżeli liczba jest dodatnia, to pozostałe piętnaście bitów stanowi binamy zapis tej
+liczby. Na przykład liczba 15 jest przechowywana jako:
+
+<image/wzory/k2_page29_formula1.png>
+
+Największą liczbę dodatnia, jaką można przechować w zmiennej typu integer, jest:
+
+<image/wzory/k2_page29_formula2.png>
+
+czyli zero i piętnaście jedynek. est to:
+
+<image/wzory/k2_page29_formula3.png>
+Liczby ujemne są przechowywane w tak zwanym systemie uzupełnieniowym. Liczba
+ujemna o wartości bezwzalednei z iest przedstawiana iako liczba:
+
+<image/wzory/k2_page29_formula4.png>
+
+w postaci binarnej. Na przykład liczba — 1 jest przedstawiona jako:
+
+<image/wzory/k2_page29_formula5.png>
+
+czyli szesnaście jedynek. A liczba —3 jako:
+
+<image/wzory/k2_page29_formula6.png>
+
+Najmniejsza liczba ujemna, którą można zmieścić do zmiennej typu integer, to:
+1000/0000 10000|0000,
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

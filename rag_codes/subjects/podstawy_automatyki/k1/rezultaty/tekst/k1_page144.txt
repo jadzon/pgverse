@@ -1,0 +1,26 @@
+5.4. Zamknięty układ sterowania hydraulicznego
+
+Z powodu pewnych ograniczeń w funkcjonowaniu otwartych układów sterowania
+hydraulicznego dodaje się sprzężenie zwrotne wartości wyjściowej, co przedstawiono
+na rysunku 5.4.
+
+<image/figury/k1_page144_figure1.png>
+
+Rys. 5.4. Zamknięty układ sterowania hydraulicznego
+
+Gdy wielkość wyjściowa osiągnie żądaną wartość, zawór z tłoczkiem przesuwnym
+wprawiony zostaje w ruch i zamykany jest otwór przelotowy.
+Dla przemieszczenia tłoczka zaworu y z rysunku 5.5 wynika, że
+
+<image/wzory/k1_page144_formula1.png>
+
+Przekształcając to równanie, otrzyn
+<image/wzory/k1_page144_formula2.png>
+a po zastosowaniu przekształcenia Lapla fig u ry/k 1 _page 1 44_fig u!
+
+<image/wzory/k1_page144_formula3.png>
+Na podstawie równania przepływu 1
+
+<image/wzory/k1_page144_formula4.png>
+
+146

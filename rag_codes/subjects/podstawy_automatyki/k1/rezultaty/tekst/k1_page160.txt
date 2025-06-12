@@ -1,0 +1,27 @@
+Przed uruchomieniem symulacji należy parametry te wprowadzić do przestrzeni
+roboczej MATLAB-a, wpisując:
+
+<image/wzory/k1_page160_formula1.png>
+
+W efekcie wykonania programu w MATLAB-ie i uruchomienia symulacji w Simu-
+linku otrzymano przebiegi pokazane na rysunku 6.6.
+
+<image/tabele/k1_page160_table1.png>
+
+Rys. 6.6. Odpowiedź skokowa silnika prądu stałego, uzyskana za pomocą:
+a) transmitancji operatorowej silnika — kółka; b) modelu silnika wyznaczonego w Simulinku — linia
+
+Jak widać, przebiegi uzyskane prezentowanymi metodami są identyczne, co po-
+twierdza przydatność zarówno MATLAB-a, jak i Simulinka do symulacji działania
+układów. Charakter otrzymanych przebiegów wskazuje, że silnik przy tak przyjętym
+modelu, rzeczywiście jest członem drugiego rzędu.
+
+6.7. Wyznaczenie odpowiedzi silnika
+na sygnały prostokątne w MATLAB-ie/Simulinku
+
+Na podstawie schematu blokowego silnika (rys. 6.3) zbudowano odpowiadający
+mu schemat w Simulinku, przedstawiony na rysunku 6.7. Aby móc przeprowadzić nu-
+meryczną symulację działania silnika, należy zdefiniować jego parametry (współ-
+czynniki i stałe).
+
+162

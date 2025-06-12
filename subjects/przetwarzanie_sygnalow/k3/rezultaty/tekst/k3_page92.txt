@@ -1,0 +1,18 @@
+Definicja symetrii lewo-prawostronnej może wydawać się dziwna, gdyż dokładnym środ-
+kiem sygnału jest (N/2 — 1/2) (między dwiema próbkami), a nie N/2. Z takiej
+symetrii wynika, że próbka zerowa wymaga specjalnego traktowania, O co tu chodzi?
+Ten rozkład jest częścią ważnej w DSP koncepcji, zwanej symetrią kołową. Polega ona
+na założeniu, że koniec sygnału jest powiązany z jego początkiem. Jak punkt x[4] jest obok
+punktu x[5], tak punkt x[N— 1] jest obok punktu x[0]. Całkiem jak wąż zjadający własny
+ogon. Gdy w taki kołowy sposób spojrzymy na sygnały parzyste i nieparzyste, to mamy
+de ielć crownil Jelme  peakcie dż] | doga w orc AU) Na przykład w sygna-
+le parzystym ta symetria wokół x(0] oznacza, że punkt x[1] ma wartość równą punktowi
+x[N — 1], punkt xf2] punktowi x[N — 2] itd. W sygnale nieparzystym punkty 0 i N/2 zawsze
+mają wartość zero. W sygnale parzystym punkty 0 i N/2 są równe odpowiednim punktom
+sygnału oryginalnego.
+3okije cyl EGNNÓM RON Wa ii m O ST
+j akwizycji ;
+
+sta po dodaniu do siebie odtwarzają sygnał oryginalny.
+
+<image/figury/k3_page92_figure1.png>

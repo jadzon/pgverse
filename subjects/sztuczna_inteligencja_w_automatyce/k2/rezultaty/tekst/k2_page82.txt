@@ -1,0 +1,40 @@
+87
+
+Implikacje
+
+Na etapie obliczania implikacji wyznaczona zostaje funkcja przynależności wnio-
+sku (następnika) w każdej z reguł.
+
+Stosując definicje Mamdaniego (patrz wzór ?? i rys. ??) funkcja przynależno-
+ści wniosku dla każdej reguły zostaje odcięta na wysokości wynikającej z operacji
+rozmytych.
+
+W omawianym przykładzie oznaczając przez s; funkcję sm obciętą na poziomie
+0,25, przez są funkcję sm obciętą na poziomie 0,375 oraz przez sz funkcję sd obciętą
+na poziomie 0,375 otrzymujemy:
+
+<image/wzory/k2_page82_formula1.png>
+
+Na etapie kompozycji wyznaczona zostaje funkcja przynależności wniosku będąca
+złożeniem funkcji przynależności wniosków w poszczególnych regułach. Stosuje się
+dwie metody kompozycji.
+
+W metodzie kompozycji MAX funkcja przynależności wniosku przyjmuje war-
+tości, które są maksimami spośród wartości funkcji przynależności otrzymanych dla
+wszystkich reguł.
+
+W omawianym przykładzie przyjmując, że implikacje wyznaczono metodą Mam-
+daniego, kompozycja MAX wyznacza funkcję przynależności wyniku (oznaczoną jako
+s(z) (rys. ?7):
+
+<image/wzory/k2_page82_formula2.png>
+
+W metodzie kompozycji sumacyjnej funkcja przynależności wniosku jest sumą
+funkcji przynależności otrzymanych dla wszystkich reguł. Może ona przyjmować
+wartości przekraczające 1 i wtedy, gdy to jest konieczne można ją normalizować.
+Precyzowanie
+
+Proces otrzymywania jednej liczbowej wartości odpowiedzi na podstawie otrzy-
+manej funkcji przynależności nazywa sie prcyżowaniem (defuzyfikacją). Proponowa-
+nych jest wiele algorytmów precyzowania spośród których najczęściej stosowane jest
+obliczenie środka cięzkości i wyznaczenie maksimum.

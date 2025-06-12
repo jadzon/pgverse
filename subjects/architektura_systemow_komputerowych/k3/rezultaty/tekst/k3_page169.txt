@@ -1,0 +1,28 @@
+8.2. Przyspieszanie współpracy procesora i pamięci 159
+
+<image/figury/k3_page169_figure2.png>
+
+on pamięci. Następne dostępy do pamięci mogą mieć miejsce wtedy, gdy rozkaz odczytuje
+z pamięci argumenty (tryb bezpośredni) lub ich adresy (tryb pośredni). Załóżmy, że mają
+zostać wykonane kolejno trzy rozkazy, z których pierwszy wymaga pobrania argumentu
+z pamięci i wynik ma zostać przesłany do pamięci, a dla dwóch następnych zarówno
+argumenty, jak i wyniki mają być w rejestrach. Na rysunku 8.3a pokazano sekwencję
+czynności (operacji) wykonywanych przez klasyczny komputer w czasie cyklu instrukcyj-
+nego pierwszego rozkazu. Operacjami tymi są:
+
+— dostęp do pamięci,
+
+— dekodowanie rozkazu,
+
+— obliczanie adresu argumentu,
+
+— wykonanie rozkazu.
+
+W każdym momencie wykonywana jest tylko jedna z podanych operacji mimo, że wy-
+konują ją różne bloki procesora. Można zatem tak zorganizować pracę, aby 4 bloki
+wykonujące 4 różne operacje mogły pracować współbieżnie. Otrzymamy wówczas prze-
+bieg, jak na rys. 8.3b, gdzie pokazano jak dostęp do pamięci (pobranie rozkazu lub
+argumentu, albo zapis wyniku) może się nakładać w czasie z dekodowaniem rozkazu,
+obliczaniem adresu i wykonaniem rozkazu. Można zauważyć, że w czasie dekodowania
+pierwszego rozkazu i obliczania adresu argumentu, pobrano już następny rozkaz, który
+jest dekodowany w czasie pobierania argumentu dla rozkazu pierwszego. Kolejne rozkazy

@@ -1,0 +1,47 @@
+Górna wartość zakresu Smax (Maximum Ścaled) (słowo 7) - jeżeli wartość
+zadana SP jest odczytywana w jednostkach inżynierskich - to parametr ten od-
+powiada wartości SP w jednostkach inżynierskich, dla wejścia równego wartości
+16383. Poprawny jest zakres -16383 do 16383. Dla procesora powyzej SLC 5/03
+poprawna wartość to -32768 do 32767.
+
+Dolna wartość zakresu Smin (Minimum Scaled) (słowo 8) — podobnie jak Smax
+- parametr ten odpowiada wartości SP w jednostkach inżynierskich kiedy wejście
+wynosi 0. Poprawny jest zakres -16383 do 16383. Dla procesora SLC 5/03 po-
+prawna wartość to od -32768 do 32767.
+
+Smax-S$min pozwala wprowadzać wartość zadaną SP w jednostkach inżynier-
+skich. Wartości DB (deadband), E (Error), i PV będą także wyświetlane w jed-
+nostkach inżynierskich. Zmienna procesowa PV będzie nadal z zakresu od (0 do
+16383.
+
+Zakres strefy nieczułości DB (Zero-crossing Deadband) (słowo 9), która okre-
+Śla zakres dla uchybu regulacji, dla którego wyjście nie ulegnie zmianie, gdy
+uchyb będzie się znajdować w tym zadanym zakresie. Zakres strefy nieczułości
+może zmieniać się od 0 do Smax przy skalowaniu lub od © do 16383, kiedy nie
+ma skałowania.
+
+Okres uaktualnienia (Loop Update) (słowo 13), który określa okres obliczenia
+bloku PID. Wartości wprowadzane są w 0.01 częściach sekundy. Gdy jest włą-
+czony tryb 577 wartość musi być zgodna z okresem S77 $:30. Zakres tego para-
+metru jest od I do 2.55 s. Dla procesora powyżej SLC 5/03 zakres od 0.01 do
+10.24 s
+
+Skalowana zmienna procesowa PY (Scaled Process) (słowo 14) jest to warto-
+ścią tylko do wyświetlana. Bez skalowania jej zakres jest od 0 do 16383.
+W przypadku skalowania od $min do Smax.
+
+Skałowany uchyb regulacji E (Scałed Error) (słowo 15) jest wartością uchybu
+obliczoną do wyświetlana w zakresie skalowania lub od -16383 do 16383.
+
+Wyjście procentowe CV% (Output) (słowo 16) jest aktualną wartością (w pro-
+centach) zmiennej sterującej, która może się zmieniać od (0 do 16383. Zakres
+CV% wynosi od 0 do 100%. Jeżeli wybrany został tryb AUTO, to wartości tej
+nie można zmieniać. Jeżeli wybrany został tryb MANUAL można zmienić war-
+tość wyjściową CV%, a tym samym zmiennej sterującej CV.
+
+[F4] Bit włączenie w bloku PID ograniczeń dla wyjścia OŁ (Output CV% Li-
+miting Enabled Bit) (słowo 0, bit 3), który przełącza się między Yes i NO . Wy-
+bór Yes oznacza, że uaktywnia się ograniczenie dla wyjścia CV% podane przez
+wartość minimalną i maksymalną. Przekroczenie tego ograniczenia po wyborze
+
+<image/tabele/k4_page279_table1.png>

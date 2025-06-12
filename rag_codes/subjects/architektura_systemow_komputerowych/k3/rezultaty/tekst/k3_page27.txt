@@ -1,0 +1,30 @@
+3.1. Układy cyfrowe 17
+
+<image/figury/k3_page27_figure4.png>
+
+Rysunek 3.3. Mapy Karnaugha jednopozycyjnego sumatora
+
+Rozpatrzmy teraz funkcję przeniesienia. Można zauważyć, że funkcję tę można zapi-
+sać jako:
+
+<image/wzory/k3_page27_formula1.png>
+
+o TEGuieutwji vj p yYouwi pysewwu Jyv432wj 4442 y v WJOWIY TY wj ŻA ŁAŁŁŁENA WAŁA z 4. uaówwiłń WUu-
+wejściowych bramek iloczynu. Układ sumatora jednobitowego realizujący funkcje y, i c,,,
+pokazano na rysunku 3.4.
+
+<image/wzory/k3_page27_formula2.png>
+
+Rysunek 3.4. Sumator jednobitowy
+
+Aby zrealizować operację sumowania dwóch k-bitowych liczb można połączyć ze
+sobą k jednopozycyjnych sumatorów jak pokazano na rysunku 3.5. Połączenie musi
+zapewnić właściwy kierunek propagacji przeniesienia. W przypadku sumatora przeniesie-
+nie musi propagować od najmniej znaczącej pozycji do najbardziej znaczącej.
+
+Układ kombinacyjny składający się z k identycznych bloków jest nazywany układem
+iteracyjnym. Projektując taki układ należy pamiętać o właściwym kierunku propagacji
+
+<image/figury/k3_page27_figure2.png>
+
+Rysunek 3.5. Iteracyjny układ sumatora wielobitowego

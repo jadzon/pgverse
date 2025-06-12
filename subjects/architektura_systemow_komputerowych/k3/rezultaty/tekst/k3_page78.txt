@@ -1,0 +1,54 @@
+68 4. Procesory
+
+inicjalizację procesu dostępu do pamięci. Takt drugi jest przeznaczony na sprawdzenie
+stanów na wejściowych liniach sterujących procesora. W takcie trzecim następuje odczyt
+(lub zapis) danej z pamięci i wreszcie takt czwarty może być przeznaczony na wykonanie
+samego rozkazu.
+
+Sygnały sterujące przychodzące na wejścia procesora są generowane przez układy
+współpracujące z procesorem (pamięci i urządzenia zewnętrzne) lub przez operatora
+(inicjalizacja pracy). Sygnały te wpływają na proces wykonywania programu. Wcześniej
+wymieniono już 4 sygnały. Były to sygnały:
+
+1) RESET — sygnał inicjalizacji pracy procesora po włączeniu napięcia zasilania.
+Sygnał ten ustawia pewien stan procesora, który powoduje, że po włączeniu
+zasilania, wykonywanie programu odbywa się zawsze od odczytania pierwszego
+rozkazu z tej samej komórki pamięci, określonej wcześniej przez projektanta
+stanu. Przykładowo RESET może np. zerować licznik rozkazów, aby pierwszym
+odczytywanym adresem był zawsze adres o numerze 0.
+
+2) STEP — sygnał wymuszający pracę krokową procesora. Oznacza to, że gdy
+sygnał jest aktywny, to procesor zatrzymuje się po każdym wykonanym rozkazie
+iczeka na decyzję operatora. Taki sposób pracy jest używany podczas urucha-
+mianiu systemu (lub programów).
+
+3) INT — sygnał przerwania pracy programu (ang. interrupt). Sygnał taki jest
+wysyłany przez układy współpracujące z procesorem, aby wymusić na nim wy-
+konanie specjalnego programu. Zadaniem takiego programu może być dokonanie
+transmisji odpowiedniej informacji do układu, który żąda przerwania. Przykła-
+dowo drukarka może wysłać sygnał przerwania, aby otrzymać do wydrukowania
+zawartość jakiegoś rejestru. Po wykonaniu tego programu procesor powraca do
+wykonywania programu właściwego. Dokładniej problem ten przedstawiono
+w rozdz. 6.
+
+4) HOLD — sygnał wstrzymania pracy programu. Sygnał jest wysyłany przez
+układy współpracujące z procesorem, aby wymusić na nim chwilowe zawieszenie
+pracy. Akcja ta ma na celu wymuszenie na procesorze zwolnienia magistrali
+(odłączenia się od magistrali), aby układy żądające zwolnienia mogły ją zająć dla
+wykonania przesłań, które nie dotyczą procesora. Przykładowo urządzenie ze-
+wnętrzne może zażądać odczytania informacji z pamięci. Przejmuje ono wówczas
+sterowanie magistrali, a po dokonaniu tej transmisji zwalnia ją, aby procesor mógł
+kontynuować wykonywanie programu.
+
+Po sprawdzeniu stanu wejściowych sygnałów sterujących procesor musi poinformować
+układy z nim współpracujące o swoich decyzjach. W tym celu generuje on wyjściowe
+sygnały sterujące. Na przykład po otrzymaniu sygnału INT procesor wysyła sygnał INTA,
+co oznacza zgodę na przerwanie wykonywania programu. Po sygnale HOLD procesor
+wysyła sygnał HLDA, który informuje układ żądający transmisji, że procesor wstrzymuje
+wykonywanie programu, zwalnia magistralę i układ żądający może dokonać transmisji.
+Taka transmisja nazywa się transmisją bezpośredniego dostępu do pamięci (ang. direct
+memory access — DMA).
+
+W trzecim takcie cyklu maszynowego następuje odczyt lub zapis pamięci i procesor
+wysyła sygnał strobu odczytu pamięci MR (ang. memory read) lub zapisu WR
+(ang. memory write). Jeśli jest to cykl pobrania rozkazu, to następuje zapisanie odczytanego

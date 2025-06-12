@@ -1,0 +1,41 @@
+154 7. Elementy oprogramowania komputerów
+
+Na rysunku 7.6b pokazano zmiany zawartości pamięci operacyjnej przy zmiennym
+podziale pamięci. Na rysunku pokazano mapę pamięci w trzech kolejnych fazach wymiany
+zawartości procesów. Niech w pamięci operacyjnej znajdują się cztery procesy, które
+zajmują tyle obszaru pamięci, że brak miejsca na piąty proces. Załóżono, że ma nastąpić
+wymiana procesów i z pamięci ma być usunięty proces 3, a w jego miejsce ma być
+wpisany proces 5. Po takiej czynności pozostaje wolny obszar pamięci. Niech następna
+wymiana procesów polega na usunięciu procesu pierwszego i wpisaniu procesu szóstego,
+co ponownie pozostawia wolny obszar. Po pewnym czasie, gdy w pamięci znajdzie się
+zbyt wiele wolnych obszarów, dokonywana jest alokacja procesów. Polega to na takim
+przemieszczeniu procesów, aby znowu pozostał tylko jeden wolny obszar. Procesy zostają
+do siebie „„dosunięte”. Program dokonujący alokacji ma za zadanie zmienić adresy bazowe
+procesów, które zostały wyliczone w czasie kompilacji i nadać im nowe wartości. Technika
+podziału pamięci nie jest zbyt efektywna, gdyż albo traci się na pojemności pamięci (duża
+część pamięci operacyjnej jest nie wykorzystana), albo na czasie pracy procesora (podczas
+alokacji programów procesor nie może wykonywać innych operacji).
+
+le1.png
+<image/tabele/k3_page164_table2.png>
+
+rysunek7.7.stronicowaniepamiciitabelestanuproceswaib
+
+Bardziej efektywną techniką jest technika stronicowania. Technika ta polega na tym,
+że cały obszar pamięci jest dzielony na stosunkowo niewielkie obszary o stałej wielkości,
+tzw. strony. Zwykle wielkość tych obszarów jest kilkakrotnie mniejsza od obszaru pamięci
+zajmowanego przez proces, więc każdy proces zajmuje kilka stron. System operacyjny
+w każdym momencie dysponuje aktualną listą wolnych stron i w czasie, gdy dany proces
+ma zostać zapisany do pamięci, system operacyjny sprawdza czy istnieje wymagana
+liczba wolnych stron. Jeśli tak jest, to załadowuje on dany proces do wolnych stron.
+Ponieważ strony te nie stanowią najczęściej spójnego obszaru pamięci, to system musi
+przechowywać także informacje, które strony są zajmowane przez każdy proces. W tym
+celu tworzona jest dla każdego procesu tzw. tabela stron, tj. lista stron zajmowanych przez
+dany proces.
+
+Na rysunku 7.7 pokazano fragment pamięci zawierający dwa procesy A i B. Tabela
+stron procesu A jest dwuelementowa, a procesu B pięcioelementowa. Adres logiczny
+składa się zawsze z dwóch składników: numeru strony i adresu względnego na stronie,
+tzw. przemieszczenia. Na przykład adres B1,17 oznacza komórkę siedemnastą pierwszej
+strony procesu B. Adres ten zamieniono na adres fizyczny 10,17, gdyż pierwsza strona
+procesu B znajduje się w pamięci na stronie 10, co wynika z tabeli stron. Koncepcja

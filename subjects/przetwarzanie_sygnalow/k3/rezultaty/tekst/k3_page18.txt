@@ -1,0 +1,44 @@
+28 2. Statystyka, rachunek prawdopodobieństwa i szumy
+
+W szczególności, dla sygnałów losowych, typowy błąd między wartością średnią dla N punk-
+tów a wartością średnią procesu jest określony wzorem:
+
+Typowy błąd = -—
+N2
+Wzór 2.4. Typowy błąd obliczenia wartości średniej procesu przy wykorzystaniu skończonej liczby
+próbek N. Parametr o jest odchyleniem standardowym
+
+Jeśli N jest małe, to szum statystyczny w obliczonej średniej będzie bardzo duży. Inaczej mó-
+wiąc, nie mamy dostępu do ilości danych wystarczających do prawidłowego scharakteryzowa-
+nia procesu. Im większa jest wartość N, tym mniejszy będzie spodziewany błąd. Z. mocnego
+prawa wielkich liczb, będącego kamieniem milowym w rozwoju teorii prawdopodobieństwa,
+wynika, że błąd staje się równy zeru, gdy N dąży do nieskończoności.
+
+W następnym kroku chcielibyśmy obliczyć odchylenie standardowe pobranego sygnału i za-
+stosować je jako estymatę odchylenia standardowego procesu reprezentowanego przez sygnał.
+I tu pojawia się pewna trudność. Zanim obliczymy odchylenie standardowe z wzoru 2.2, po-
+winniśmy już znać średnią p. Jednak nie znamy średniej wartości procesu, a tylko średnią
+N-punktowego sygnału, zawierającą błąd spowodowany szumem statystycztym. Ten błąd
+może powodować zmniejszenie obliczonej wartości odchylenia standardowego. Aby to skom-
+pensować, zastępuje się N przez N — 1. Jeśli N jest duże, to ta różnica jest bez znaczenia. Jeśli
+zaś N jest małe, to takie zastąpienie daje dokładniejszą estymatę standardowego odchylenia
+procesu. A więc wzór 2.2 jest estymatą odchylenia standardowego procesu reprezentowanego
+przez sygnał. Gdybyśmy we wzorze mieli dzielenie przez N, to uzyskalibyśmy odchylenie
+standardowe pobranego sygnału.
+
+A teraz spójrzmy na rys. 2.3 będący ilustracją omawianych problemów i zadajmy pytanie:
+czy wahania występujące w tych sygnałach są wynikiem szumu statystycznego, czy zmian
+zachodzących w procesie będącym źródłem sygnału? Nietrudno chyba dojść do przekonania,
+że te zmiany są zbyt duże jak na zjawiska losowe i muszą wynikać z procesu będącego Źró-
+dłem sygnału. Procesy, które zmieniają w ten sposób swoje właściwości nazywamy niesta-
+cjonarnymi. Sygnały zaś przedstawione poprzednio na rys. 2.1 były generowane w procesie
+stacjonarnym i wahania były powodowane wyłącznie szumem statystycznym. Na rys. 2.3 b)
+przedstawiono problem często spotykany w przypadku sygnałów niestacjonarnych: wolno
+zmieniająca się wartość średnia zakłóca obliczanie odchylenia standardowego. W tym przy-
+
+<image/figury/k3_page18_figure1.prfigury/k3_page18_figure2.png>
+
+Rys. 2.3. Przykłady sygnałów generowanych w procesach niestacjonarnych. Na wykresie a) zmienia się zarówno
+wartość średnia, jak i odchylenie standardowe. Na wykresie b) odchylenie standardowe pozostaje state i jest równe 1,
+podczas gdy wartość średnia zmienia się od 0 do 2. Powszechnie stosowaną metodą analizy jest podział takich sygna-
+łów na krótkie odcinki i obliczanie parametrów statystycznych każdego odcinka osobno

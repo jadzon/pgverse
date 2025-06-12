@@ -1,0 +1,46 @@
+1.4. Warunek quasi-stacjonarności i jego konsekwencje 85
+
+— magnetostatyka: pola H i B = uH w próżni lub w ośrodku magne-
+tycznym stanowiącym otoczenie przewodników z prądem stałym;
+
+— obwody prądu stałego: pola E i 6 =yE w ośrodku przewodzącym
+w obecności zewnętrznych źródeł energii (stałych sił elektromotorycznych lub
+stałych wydajności prądowych, por. p. 1.7.1). Elementami obwodów prądu
+stałego są opory (lub, ogólniej, elementy rezystancyjne — por. p. 1.3.4-G),
+a wielkościami charakteryzującymi obwody — stałe prądy i napięcia spełniające
+prawa Kirchhoffa (por. p. 1.5.1-A).
+
+2. Pole quasi-stacjonarne (wolnozmienne w czasie). Ładunki i prądy
+zmieniają się dostatecznie wolno w czasie, na tyle wolno, że do pominięcia są
+efekty opóźnieniowe związane ze skończonym czasem propagacji fali elektro-
+magnetycznej. Natężenia pola elektrycznego E i magnetycznego H są związa-
+ne prawem indukcji elektromagnetycznej Faradaya oraz prawem Ampere'a (por.
+Dodatek 1). Nadal zostaje zachowana możliwość charakteryzowania danego
+ośrodka przez jedno z równań (1.2-41) z pominięciem dwóch pozostałych
+i związana z tym możliwość niezależnego rozpatrywania pola elektrycznego
+(kondensator) i pola magnetycznego (cewka). Do problematyki pól qua-
+si-stacjonarnych należą:
+
+— obwody prądu zmiennego (prądu wolnozmiennego, prądu quasi-stacjo-
+narnego), zawierające jako elementy opory, indukcyjności i pojemności (lub,
+ogólniej, elementy rezystancyjne, indukcyjne i pojemnościowe — por. p. 1.3.4-G).
+Podstawowymi wielkościami charakteryzującymi obwody są zmienne prądy
+i napięcia spełniające równania elementów oraz prawa Kirchhoffa (por.
+p. 1.5.1-A). Wobec pominięcia zjawiska występowania fali elektromagnetycznej
+(a tym samym zjawiska promieniowania) energia dostarczona do obwodu przez
+zewnętrzne źródła energii jest całkowicie związana z obwodem — może być ona
+w elementach obwodu gromadzona lub rozpraszana (zamieniana na inną formę
+energii, np. ciepło).
+
+3. Pole niestacjonarne (szybkozmienne w czasie)”. Zasadnicze znaczenie
+mają w tym przypadku efekty związane z propagacją fali elektromagnetycznej.
+W każdym punkcie i w każdej chwili natężenia pola elektrycznego E i pola
+magnetycznego H są związane równaniami Maxwella (por. Dodatek 1). Nie
+jest przy tym możliwa charakterystyka ośrodka za pomocą tylko jednej stałej: y,
+e, .— por. równania (1.2-41) —z pominięciem pozostałych. Prędkość roz-
+chodzenia się fali elektromagnetycznej jest skończona i określona wzorem:
+
+<image/wzory/k4_page83_formula1.png>
+
+1) Chodzi tu o takie przypadki pól niestacjonarnych (zmiennych w czasie), których nie można
+zaliczyć do pól quasi-stacjonarnych.

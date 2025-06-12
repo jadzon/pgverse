@@ -1,0 +1,34 @@
+1.6. Potęgowanie 7
+
+Naszkicujmy tylko dowód drugiej implikacji, pozostałe dowodzi się podobnie. Załóż-
+my, że wykonanie programu znajduje się w punkcie C' i że zmienne p i q mają wtedy
+wartości p, i q,. Jeżeli w wyniku dalszego wykonania program ponownie dojdzie do
+punktu C, to znaczy, że p, 4 q,, bez straty ogólności możemy założyć, że i > qi.
+Wtedy nowe wartości zmiennych pi q mają wartości p = p; — q, OTAZ qo = qy. Z faktu,
+że wartości p, i q; spełniają asercję Wo (7: „9: ), wynika, że para p, iq, ma taki sam naj-
+większy wspólny dzielnik jak para wejściowa a i b. W rozdziale o teorii liczb pokazano,
+że para p» q2 ma taki sam zbiór wspólnych dzielników jak para p; q, . Tak więc także para
+P> q2 ma taki sam największy wspólny dzielnik jak para a b, więc spełnia asercję Wo.
+
+Aby pokazać, że program zatrzymuje się dla każdych danych spełniających warunek
+a,b > 0, wprowadzimy licznik dla punktu kontrolnego C. Licznikiem tym jest wartość
+max4p,q). Jest jasne, że wartość licznika jest zawsze liczbą całkowitą nieujemną i że
+zmniejsza się przy każdym ponownym odwiedzeniu punktu ©. Wykonanie programu nie
+może więc trwać w nieskończoność.
+
+1.6 Potęgowanie
+
+<image/figury/k2_page228_figure2.png>
+figury/k2_p
+
+W tym programie też są trzy punkty kontrolne. Punkt A na początku, zaraz za instruk-
+cją r
+
+<image/pi.wzory/k2_page228_formula1.png>
+<image/wzory/k2_page228_formula2.png>
+
+Trzeci punkt kontminv (' iest wewnatrz petli. iz przed Instrukcia X :=X- 1. z ASATCIĄ:
+
+<image/wzory/k2_page228_formula3.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

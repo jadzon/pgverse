@@ -1,0 +1,33 @@
+39
+
+Strategie sterowania wnioskowaniem
+
+Przy stosowaniu reguły odrywania możliwe są dwie podstawowe strategie sterowania
+wnioskowaniem: w przód (ang. forward chaining) i w tył (ang. backward chaining).
+Strategie te można stosować, gdy wyrażenia bazy wiedzy mają postać klauzul Horna.
+Gdy wyrażenia bazy wiedzy nie dadzą się sprowadzić do tej postaci, to dowodzenie
+może być przeprowadzone przy użyciu rezolucji, co jest omówione dalej.
+
+PRZYKŁAD 4.4
+
+Przykłady przebiegu wnioskowania w tył i w przód przedstawiono na rysunkach ??
+; 22
+177. |_|
+
+<image/tabele/k2_page50_table1.png>
+
+4.1.4. Wynikanie logiczne
+
+Dany jest zl '*
+
+<image/wzory/k2_page50_formula1.png>
+
+Jeżeli dana interpretacja powoduje, że każdy wpz w tym zbiorze jest prawdziwy (ma
+wartość 7), wtedy mówimy, że interpretacja spełnia zbiór wpz (jest jego modelem).
+
+Wpz W wynika logicznie ze zbioru wpz (jest jego konsekwencją) S jeżeli każda
+interpretacja spełniająca S także spełnia W, co oznaczamy S HF W.
+
+Istnieje ważny związek pomiędzy koncepcją wyrażenia wynikającego logicznie ze
+zbioru wpz i koncepcją wyrażenia wyprowadzonego ze zbioru wpz przy pomocy reguł
+wnioskowania:

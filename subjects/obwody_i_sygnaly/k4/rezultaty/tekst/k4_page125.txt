@@ -1,0 +1,30 @@
+1.7. Źródła 127
+
+<image/wzory/k4_page125_formula1.png>
+h oraz kiedy wszystkie wydajności prądowe są jednakowe (rys. 1.7-14):
+
+<image/wzory/k4_page125_formula2.png>
+
+G. Źródła stałe i ich charakterystyki. Rozważmy przypadek rzeczywis-
+tych źródeł stałych, tj. źródła napięciowego o stałej sile elektromotorycz-
+nej e = EF oraz źródła pradowego o stałei wydajności prądowej j = J (rys.
+1.7
+
+<image/figury/k4_page125_figure2.png>
+
+Równanie źródła napięciowego z rys. 1.7-15a ma, zgodnie z zależnością
+ogólną (1.7-6), postać:
+
+ry/k4_page125_formula3.png (1.7-22)
+
+Równanie to jest równaniem prostej w płaszczyźnie i, u (rys. 1.7-16a). Źródło
+napięciowe o stałej sile elektromotorycznej można zatem uważać za element
+rezystancyjny liniowy (p. 1.3.4-G) o równaniu (1.7-22) i charakterystyce przed-
+stawionej na rys. 1.7-16a.
+
+<image/figury/k4_page125_figure1.png>
+
+1) Zazwyczaj używamy mniej dokładnych, ale krótkich spał p napięcia stałego” oraz
+„źródło prądu stałego”. W praktyce stosujemy często oznaczenia tych źródeł przyjęte na rys. 1.7-15,
+wskazujące za Roa symbolu graficznego, iż chodzi tu o stałą siłę elektromotoryczną lub stałą
+wydajność prądową (por. przykład 1.7-3).

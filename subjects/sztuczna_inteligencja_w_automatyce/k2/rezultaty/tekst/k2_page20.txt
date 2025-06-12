@@ -1,0 +1,58 @@
+3.8.1. Algorytm A*
+
+Przypuśćmy, że f(n) jest estymatorem kosztów najtańszej drogi od węzła starto-
+wego do końcowego przechodzącej przez węzeł n. Rzeczywisty koszt tej drogi można
+wyrazić jak
+
+<image/wzory/k2_page20_formula1.png>
+gdzie g(n) oznacza koszt najtańszej drogi od węzła startowego s do węzła n, a h(n)
+jest kosztem najtańszej drogi od węzła n do rozwiązania.
+Algorytm A* spośród węzłów listy O wybiera do rozwinięcia węzeł, dla którego
+wyrażenie
+
+<image/wzory/k2_page20_formula2.png>
+
+ma wartość najmniejszą, gdzie g(n) oznacza wyznaczony do tej pory (estymowany)
+
+koszt najtańszej drogi od węzła startowego s do węzła n, a h(n) jest nadanym przez
+
+użytkownika oszacowniem kosztu najtańszej drogi od węzła n do rozwiązania.
+Jeżeli dla każdego wezła n zachodzi
+
+<image/wzory/k2_page20_formula3.png>
+
+to algorytm A* znajduje najtańszą drogę (algorytm jest dopuszczalny).
+Algorytm szukania na grafach składa się z następujących kroków:
+
+m
+
+1. Umieść s na liście O i oblicz f(s).
+2. Jeżeli O jest pusta, to zakończ program z sygnałem niepowodzenia.
+
+3. Usuń z O ten węzeł, dla którego wartość f jest najmniejsza i umieść go na
+liście Z. Oznacz ten węzeł przez n. Spośród węzłów o równych wartościach f
+wybierz dowolny ale zawsze końcowy (jeżeli jest taki).
+
+4. Jeżeli węzeł n jest końcowym, to zakończ program z sygnałem powodzenia i
+podaj ścieżkę rozwiązania.
+
+. Rozmnóż n. Dla każdego potomka oblicz f . Jeżeli n nie ma następników idź
+do 2.
+
+GI
+
+6. Przyporządkuj potomkom nie znajdującym się ani na O ani na Z obliczoną
+właśnie wartość f. Umieść te potomki na O i zapamiętaj wskaźniki wskazujące
+drogę do n.
+
+7. Przyporządkuj tym potomkom, które już znajdują się na O lub Z mniejszą z
+wartości f spośród ostatnio obliczonej i tej którą dotychczas posiadała. Umieść
+na O te potomki na Z, których wartości f zostały obniżone.
+
+8. Idź do 2.
+
+PRZYKŁAD 3.2
+
+Na rysunkach ?? i ?? przedstawiono przebiegi szukania rozwiązania układanki 3 x 3
+przy zastosowaniu metody A* i dwóch różnych sposobach wyznaczania funkcji h.
+m

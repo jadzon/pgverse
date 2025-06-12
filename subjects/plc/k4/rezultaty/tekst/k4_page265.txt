@@ -1,0 +1,30 @@
+zory/k4_page265_formula1.png
+
+Operacje logiczne realizują następujące instrukcje :
+
+* AND iloczyn logiczny bitów dwóch słów
+
+(bitwise AND) 16 bitowych. (Wyd. 4.34)
+e OR suma logiczna bitów dwóch słów
+
+(bitwise OR) 16 bitowych. (Wyd. 4.35).
+e XOR (Bimwise suma logiczna modulo 2 bitów słów
+
+eXclusive Or) 16 bitowych. (Wyd. 4.36).
+* NOT negacja logiczna bitów słowa 16 bito-
+
+(NOT) wego. (Wyd. 4.37)
+
+<image/tabele/k4_page265_table1.png>
+
+Wyd. 4.34 Instrukcja iloczynu logicznego AND
+
+<image/figury/k4_page265_figure1.png>
+
+Wyd. 4.35 Instrukcja sumy logicznej OR
+
+ 
+   
+ 
+
+5.8 Funkcje na ciągach bitów 265

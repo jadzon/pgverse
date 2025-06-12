@@ -1,0 +1,38 @@
+124 1. Pojęcia podstawowe — elementy
+
+Zastępując następnie otrzymane źródło prądowe równoważnym źródłem napię-
+ciowym dostajemy ostatecznie:
+
+<image/wzory/k4_page124_formula2.png>
+
+<image/wzory/k4_page124_formula3.png>
+
+wzory1.717i1.718okrelajsielektromotorycznioprwewntrz
+ny źródła napięciowego (rys. 1.7-7) równoważnego połączeniu równoległemu
+n źródeł napięciowych.
+
+ 
+
+przykad1.72.wzory1.717i1.718okrelajceparam
+połączeniu równoległym źródeł napięciowych są dość skomplikowa!
+dladwchrderys.1.78wzorytesprowadzajsidopostac
+
+<image/wzory/k4_page124_formula4.png>
+
+które można stosować wielokrotnie w przypadku, gdy łączonych j
+wzorów (1.7-19) obliczymy parametry e, R źródła równoważnego
+
+<image/wzory/k4_page124_formula5.png>
+
+e4wzory/k4_page124_forl
+
+ 
+
+Otrzymujemy:
+
+72 sin ot + 54 cos ot » ,
+a RAJ m 8 sin ot + 6coswt = 10 sin(wi
+
+3:6
+R=—=2kQ
+3+6

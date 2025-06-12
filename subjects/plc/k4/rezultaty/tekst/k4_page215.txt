@@ -1,0 +1,50 @@
+wyłączone oraz, w zależności od wartości zmiennej %M /, zostanie albo załączo-
+ne wyjście %Q6 i krok przyjmie wartość 6 (dla %M1= 31), albo załączone wyjście
+%0Q4 i numer kroku ustawiony na 4 (dla %M1=0).
+
+Generator pozostanie w tym stanie aż do chwili, w której będzie miała miejsce
+następna zmiana wartości zmiennej KOLEJNA z O na 7. W cyklu tym aktywne
+wyjście zostanie wyzerowane, wartość kroku zostanie zwiększona (zmniejszona,
+gdy %M1=0) o 1 i odpowiednie kolejne wyjście przyjmie wartość 7.
+
+Generacja kolejnych sekwencji zerowania/ustawiania zmiennych binarnych %Q
+będzie kontynuowana, dopóki zmienna ZERUJ nie przyjmie wartości /. Genera-
+cja taka odbywa się cyklicznie, tzn. w przypadku gdy %M1=31 i załączone jest
+wejście %Q/6, to w następnym kroku generowanie sekwencji rozpocznie się od
+wyjścia %Q/. Jeżeli natomiast %MI=0 i wyjście %Qljest w stanie ON, to
+w następnym kroku stan ON pojawi się nas wyjściu %Q016.
+
+Blok wykorzystuje rejestry od %R70 do %R12.
+
+Funkcji COMMREQ (COMMunication REQuest) używa się wtedy, gdy w pro-
+gramie występuje konieczność komunikacji procesora z modułami
+inteligentnymi, jak programowalny koprocesor PCM, szybki licznik HSC, mo-
+duł komunikacyjny CMM itp. Z tego względu w tym miejscu podane zostaną
+jedynie ogólne zasady użycia tej funkcji, z pominięciem szczegółów związanych
+ze specyfiką poszczególnych modułów. Po bliższe informacje opisujące funkcje
+wykonywane przez te moduły trzeba sięgnąć do instrukcji ich obsługi.
+
+Argumentami wejściowymi funkcji COMMREQ są:
+
+e  [N-adres pierwszego słowa bloku danych sterujących;
+
+e SYSID — określający numer kasety (rack) oraz gniazda (słot), w którym
+umieszczony jest moduł będący odbiorcą bloku danych sterujących;
+
+e TASK - numer zadania, które ma wykonać adresowany moduł.
+
+Wyjście FT (Function faulTed) funkcji może być ustawione w stan ON, jeżeli
+podany został błędny adres modułu lub błędny numer zadania do wykonania,
+liczba przesyłanych słów wynosi zero albo wskaźnik stanu modułu podany
+w bloku danych nie istnieje.
+
+Po wysłaniu danych funkcja COMMREQ może albo oczekiwać na odpowiedź
+adresowanego modułu (tryb WA/T), albo wykonywanie programu może być
+kontynuowane bez czekania na odpowiedź (tryb NO WAIT).
+
+Blok danych sterujących zawiera informacje szczegółowe dla inteligentnego
+modułu, a jego długość zależy od liczby przesyłanych danych. Blok danych po-
+siada następującą strukturę:
+
+EEYREPEWTYIO WYW TY EE PC EET PTY BET POT OTOP CY TE TYTON JYWITWINI TTW COTPEJOOWOCOOZ
+4.9 Operacje na tablicach danych 215

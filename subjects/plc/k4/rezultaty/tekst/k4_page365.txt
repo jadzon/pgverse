@@ -1,0 +1,10 @@
+<image/figury/k4_page365_figure1.png>
+
+tapele/k4_pages6b_table 1.png
+
+Deklaracja bloku funkcyjnego zawiera nazwę bloku, oraz nazwę, typ 1 rodzaj
+parametrów (Rys. 7.28).
+
+ 
+
+7.15 Programowanie bloków funkcyjnych 365

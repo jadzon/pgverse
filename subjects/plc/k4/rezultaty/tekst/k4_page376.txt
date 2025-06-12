@@ -1,0 +1,53 @@
+KNKT KY xy, gdzie:
+
+x=0 + 15 - numer kanału,
+
+y=3 + 6 - typ kanału.
+Typ kanału należy wybrać w zależności od zainstalowanego modułu
+wejść analogowych.
+
+« Jeżeli moduł wejść analogowych przetwarza mierzony sygnał tak, że
+wartości minimalnej mierzonego sygnału przyporządkowuje liczbę
++512, a wartości maksymalnej liczbę +2650, to należy wybrać typ ka-
+nału o numerze 3.
+
+« Jeżeli moduł wejść analogowych przetwarza mierzony sygnał tak, że
+wartości minimalnej mierzonego sygnału przyporządkowuje liczbę 0
+a wartości maksymalnej liczbę +2048, to należy wybrać typ kanału
+o numerze 4.
+
+* Jeżeli moduł wejść analogowych przetwarza mierzony sygnał tak, że
+wartości minimalnej mierzonego sygnału przyporządkowuje liczbę
+-2048 a wartości maksymalnej liczbę +2048, to należy wybrać typ ka-
+nału o numerze 5 lub 6.
+
+e Parametr OGR określa górną granicę dla XA - wielkości wyjściowej z blo-
+ku.
+Określenie parametru przy wywołaniu bloku
+OGR KF X, gdzie
+X =-32768 + +32767
+
+e Parametr UGR określa dolną granicę dla XA - wielkości wyjściowej z bło-
+ku.
+UGR KF X, gdzie
+X =-32768 + +32767
+
+e Parametr EINZ jest parametrem wejściowym bloku funkcyjnego FB250.
+Jeżeli wartość tego parametru zostanie ustawiona na 1, to wielkość anało-
+gowa jest odczytywana z tzw. próbkowaniem selektywnym. W trakcie cy-
+klicznego próbkowania (parametr EINZ =0) dekodowany jest stan wszyst-
+kich wejść analogowych. Czas jaki jest potrzebny na uaktualnienie zmierzo-
+nej wartości analogowej zależy w istotny sposób od liczby kanałów w mo-
+dule wejść analogowych. Jeżeli zależy nam na skróceniu tego czasu dla wy-
+branego wejścia analogowego, to można zastosować próbkowanie selektyw-
+ne. Przy tego typu próbkowaniu moduł analogowy zostaje pobudzony do
+natychmiastowego przetworzenia wartości analogowej wybranego kanału.
+Aż do chwili zakończenia przetwarzania wartości z wybranego kanału nie
+można się odwoływać do modułu analogowego, w którym odbywa się
+przetwarzanie z selektywnym próbkowaniem. Blok funkcyjny wykonujący
+
+ 
+
+==
+
+376 Rozdział: 7. Język listy instrukcji dla sterowników SIMATIC S5

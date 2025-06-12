@@ -1,0 +1,50 @@
+1.15. Problem: Waga 19
+
+4. Napisz dokładny algorytm odejmowania dwóch liczb w postaci dwójkowej.
+
+5. Liczby 81, 126 przedstaw w postaci dwójkowej. Jak będą one reprezentowane w
+komputerze jako stałe typu integer (byte, word)?
+
+6. Następujące liczby przedstaw w postaci dwójkowej: 6.75, 5.625, $B1, $FF.
+7. Następujące liczby przedstaw w postaci trójkowej: 80, 120.
+
+8. Następujące liczby w postaci dwójkowej, 10001101, 100101, przedstaw w postaci:
+a) dziesiętnej, b) szesnastkowej.
+
+9. Opisz algorytm zamiany ułamka z postaci dziesiętnej na postać dwójkową.
+
+10. Ile maksymalnie pytań z odpowiedziami TAK/NIE trzeba zadać, aby odgadnąć licz-
+bę z przedziału od 0 do 100 000?
+
+11. Zastosuj algorytm wyznaczania pierwiastków do znalezienia pierwiastka stopnia 3
+z liczby 512.
+
+115 Problem: Waga
+
+Wyobraźmy sobie wagę szalkową. Na jednej szalce, lewej, kładziemy jakiś przedmiot do
+zważenia, a następnie na obu szalkach kładziemy odważniki. Jeżeli waga jest w równowa-
+dze, to ważony przedmiot ma wagę równą sumie (nominałów) odważników położonych
+na prawej szalce minus suma odważników położonych na lewej szalce, obok ważonego
+przedmiotu. Na przykład, jeżeli na prawej szalce leżą odważniki 2 i 20 gramowe, a na
+lewej odważniki 4 i 5 gramowe, to przedmiot waży 13 = (20 + 2) — (5 + 4) gramów.
+Interesujące nas pytanie brzmi: jakie powinny być nominały poszczególnych odważ-
+ników, aby można było zważyć każdy ciężar o wadze od 1 do N, przy jak najmniejszej
+liczbie odważników. Zakładamy, że ważymy tylko przedmioty o całkowitych wagach.
+Pokaż, że
+
+(a) Zapomocąk odważników można zważyc co najwyżej (3* —1)/2 różnych ciężarów.
+
+(b) Jeżeli nominały odważników są kolejnymi potęgami trójki, to znaczy c, = 3* dla
+0<i < k-1,to zaich pomocą można zważyć każdy (całkowity) ciężaro nominale
+od 1 do (3* — 1)/2.
+
+Wskazówki:
+
+(a) Ponieważ każdy odważnik może się znajdować na prawej lub lewej szalce, lub na stole,
+to mamy 3* różnych położeń odważników. W śród tych położeń jest takie, gdzie wszystkie
+odważniki leżą na stole (wtedy ważymy zerowy ciężar). Ponadto jeżeli odważniki leżą
+na szalkach i odważają ciężar W, to zamieniwszy położenia odważników na szalkach
+(odważniki z lewej przekładamy na prawą szalkę, i na odwrót), będziemy odważać ciężar
+W.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

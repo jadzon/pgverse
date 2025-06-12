@@ -1,0 +1,51 @@
+2. Pojęcia podstawowe — układy
+
+tych trzech przypadków prawa strona równania (2.2-7
+» — albo stała, albo sinusoidalnie zmienna o pulsacji w, al
+3 T
+
+wnania niejednorodnego (2.2-7) jest sumą rozwiązania ogó
+aorodnego i dowolnego rozwiązania szczególnego równ
+© można zapisać w postaci:
+
+<image/wzory/k4_page226_formula2.png>
+
+tzaniem ogólnym równania jednorodnego:
+
+<image/wzory/k4_page226_formula3.png>
+:ge226_formula1.png
+
+iniem szczególnym równania (2.2-7).
+'kowe sformułowane dla całego rozważanego układu określa:
+i początkowe dla równania (2.2-7). Rozwiązanie (2.2-11) j
+nym równania niejednorodnego (2.2-7) w całej dziedzini
+ssujące nas rozwiązanie tego równania w przedziale
+mamy żądając, aby rozwiązanie ogólne (2.2-11) spełniał
+ve przy t = O, określone dla równania (2.2-7).
+
+że niezależnie od warunków początkowych, jakie mu
+ie (2.2-11), składowa i, dąży do zera przy t > +w:
+
+(2.2-13)
+
+warunku (2.2-13) istnieje zawsze takie rozwiązanie szczególne
+
+które jest:
+
+»rzypadku (2.2-8);
+
+dalne o pulsacji o w przypadku (2.2-9);
+
+— okresowe o okresie T w przypadku (2.2-10);
+a więc jest, jak mówimy, tego samego rodzaju co pobudzenie. W dalszym tekście
+symbolem i, (lub ogólniej, odpowiednią literą z indeksem u) będziemy ozna-
+czać takie właśnie rozwiązanie szczególne równania (2.2-7) — przy założeniu,
+że rozwiązanie to istnieje").
+Spełnienie warunku (2.2-13) powoduje, że po czasie dostatecznie dużym od
+
+chwili początkowej t = 0, można przyjąć w przybliżeniu, że:
+
+imi, (2.2-14)
+
+5 Warunek (22-13) jest warunkiem dostatecznym (ale nie koniecznym) istnienia rozwiązania
+szczególnego równania (2.2-7) o podanych właściwościach.

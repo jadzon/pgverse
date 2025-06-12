@@ -1,0 +1,25 @@
+Zadania do rozdziału 2 237
+
+<image/figury/k3_page235_figure3.png>
+
+O
+
+Zadanie 2.20. Czwórniki przedstawione na rys. Z-2.20a-d są niekiedy nazywane rzeczywistymi
+źródłami sterowanymi: rzeczywistym ŹNSN (a), rzeczywistym ŹPSP (b), rzeczywistym ŹNSP (c)
+i rzeczywistym ŹPSN (d). Jakie związki powinny zachodzić między parametrami czwórników b, c,d,
+i parametrami czwórnika a, aby czwórniki te były równoważne.
+
+ml hl
+
+ 
+
+R
+
+Odp.: b) R.,=R,, R„=R;, = a
+©) Ry. SRy, Ryy=Rą, Y=KkRy,
+
+d) Ry=Ry, Ry= Ry, 95 k/Ry
+
+Zadanie 2.21. Sprawdzić, że czwórniki z rys. Z-2.21a,b są równoważne.
+
+<image/figury/k3_page235_figure2.png>

@@ -1,0 +1,42 @@
+112
+
+przy założeniu p, 1.
+Uwzględniając te prawdopodobieństwa otrzymujemy ostatecznie
+
+<image/wzory/k2_page107_formula1.png>
+
+Przykład zastosowania algorytmu genetycznego — dylemat więźnia
+
+Za pomocą algorytmu genetycznego poszukiwano najlepszej strategii w dwuosobo-
+wej grze nazywanej dylematem więźnia. Posiada ona tablicę wypłat przedstawioną
+na rys. ??. Tablicę można interpretować jako wyniki dwóch możliwych działań więź-
+niów. Mogą oni zdradzać (tzn. współpracować z władzami) lub współpracować ze
+sobą.
+
+<image/tabele/k2_page107_table1.png>
+
+Przyjęto, że posunięcie gracza będzie opierało się o poprzednie 3 gry (sekwencja
+6 decyzji). Strategia gracza reprezentowana może być więc przez łańcuch 64 bitowy
+przedstawiający posunięcia gracza będące reakcją na wszystkie kombinacje decyzji
+mogące zaistnieć w poprzednich 3 grach. Dodatkowo dla wyznaczania posunięcia na
+początku gry, gdy jeszcze nie ma poprzednich gier, potrzebny jest 6 bitowy łańcuch
+zawierający hipotetyczny zapis 3 ostatnich gier. Ostatecznie przyjęto łańcuch 70
+bitowy reprezentujący kompletną strategię gracza.
+
+Prowadzono uczenie algorytmem genetycznym, przy czym jakość strategii okre-
+ślano na podstawie wyników gier algorytmów między sobą. Otrzymano bardzo roz-
+sądne strategie. np. (kolejność ia. on):
+
+<image/wzory/k2_page107_formula2.png>
+
+Przykład zastosowania algorytmu genetycznego — predykcja
+
+Jednym z typowych zastosowań algorytmów genetycznych jest predykcja czyli prze-
+widywanie przyszłych stanów jakiegoś procesu, na podstawie określonej liczby sta-
+nów dotychczasowych i ewentualnie innych parametrów mających wpływ na stan
+procesu.
+
+W tym zastosowaniu algorytmem predykcji może być wielomian, którego zmienne
+reprezentują wartości przeszłych stanów. Populacja algorytmów jest zbiorem takich
+wielomianów o różniących się wartościach współczynników. W trakcie trwania al-
+gorytmu genetycznego dobierane są wartości współczynników wielomianów. Jako

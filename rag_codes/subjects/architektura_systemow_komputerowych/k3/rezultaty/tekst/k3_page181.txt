@@ -1,0 +1,35 @@
+8.4. Systemy wieloprocesorowe 17]
+
+<image/tabele/k3_page181_table1.png>
+
+się w drugim wierszu i w drugiej kolumnie itd. Zmusza to programistów do odpowiedniego
+wprowadzania danych do przetwarzania.
+
+Na rysunku 8.13 przedstawiono proces wykonania programu mnożenia macierzy
+zwyżej przytoczonego przykładu w strukturze systolicznej. Węzły matrycy wykonują
+operacje c=c+ab (podstaw nową wartość c), gdzie a jest wartością wejścia z lewej
+strony węzła, b jest wartością z wejścia górnego, natomiast c opisuje stan węzła. Każdy
+węzeł odpowiednio powiela na swoich wyjściach wartości wejść z poprzedniego kroku.
+Odpowiedniość polega na tym, że wyjście dolne powiela stan górnego wejścia, a wyjście
+z prawej strony powiela stan lewego wejścia. Po 6 krokach przetwarzania stany na wyjś-
+ciach węzłów są równe wartościom macierzy C.
+
+W tablicy 8.1 przedstawiono wartości wejść i wyjść dla dwóch przykładowych węzłów,
+które arbitralnie wybrano jako węzły N,, i N,,.
+
+<image/figury/k3.figury/k3_page181_figure2.png>
+
+Rysunek 8.14. Obliczanie wartości cy, i cy, w komputerach ze sterowaniem przepływem danych
+
+Przykładem równoległego systemu asynchronicznego są tzw. komputery sterowane
+przepływem danych (ang. data flow model). Programy dla takich komputerów są tworzone
+przy zastosowaniu tzw. grafów przepływowych. Grafy te pokazują jak ciągi wartości
+wejściowych są przetwarzane na ciągi wartości wyjściowych. Działanie takich komputerów
+różni się od klasycznych tym, że w komputerach klasycznych program wskazuje na
+kolejność rozkazów, a w komputerach przepływowych program wskazuje na to, jak ma
+zachodzić przesyłanie danych.
+
+Rysunek 8.14 ilustruje jak można obliczyć wartości elementów macierzy C, z
+
+przytoczonego przykładu, wykorzystując ten model obliczeń. Na rysunku pokazano jedynie
+przykładowe obliczenie wartości cy, i cp,.

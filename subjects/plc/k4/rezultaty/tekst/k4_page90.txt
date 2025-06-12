@@ -1,0 +1,19 @@
+<image/figury/k4_page90_figure1.png>
+
+<image/tabele/k4_page90_table1.png>
+
+Tab. 2.46 Przedstawianie bloku działania
+
+<image/tabele/k4_page90_table2.png>
+
+Jak już wspomniano, zarządzanie wykonywaniem działań może być realizowane
+za pomocą skojarzonych z nimi kwalifikatorów działania (action qualifier).
+Kwalifikatory działania specyfikują, czy określone działanie ma być uruchomio-
+ne i z jakimi ewentualnymi ograniczeniami czasowymi. Tab. 2.47 zawiera
+zestawienie zdefiniowanych w normie kwalifikatorów działania. Kwalifikatorom
+L, D, SD, DS, i SL towarzyszy dodatkowo zmienna typu T/ME określająca czas
+trwania.
+
+OE CKW ZA ZOZ © CC RY CORACZAAAZARAAAO
+
+90 Rozdział : 2.Programowanie sterowników PLC

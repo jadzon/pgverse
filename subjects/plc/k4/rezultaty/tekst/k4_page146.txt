@@ -1,0 +1,8 @@
+<image/tabele/k4_page146_table1.png>
+
+Tab. 3.12 Zestawienie parametrów technicznych
+przykładowego modułu ALG222
+
+ 
+
+146 Rozdział : 3. Sprzęt sterowników PLC

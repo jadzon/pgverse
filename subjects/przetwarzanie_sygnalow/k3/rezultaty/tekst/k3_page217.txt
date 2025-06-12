@@ -1,0 +1,54 @@
+13. Przetwarzanie sygnałów ciągłych
+
+Przetwarzanie sygnałów ciągłych jest dziedziną podobną do DSP i stosowane metody są
+w większości prawie identyczne. Na przykład, podstawą zarówno DSP, jak i przetwarzania
+sygnałów ciągłych są: liniowość, rozkład, splot i analiza Fouriera. Sygnały ciągłe nie mogą być
+bezpośrednio reprezentowane w komputerach cyfrowych, dlatego w tym rozdziale nie spodzie-
+wajcie się programów komputerowych. Przetwarzanie sygnałów ciągłych opiera się na mate-
+matyce; sygnały są wyrażane w postaci równań, a systemy zmieniają jedne równania w inne.
+Podobnie jak komputer cyfrowy jest podstawowym narzędziem w DSP, tak rachunek różnicz-
+kowy i całkowy jest takim narzędziem w przetwarzaniu sygnałów ciągłych. Te metody były już
+stosowane od bardzo dawna, na długo przed wynalezieniem komputerów cyfrowych.
+
+Funkcja delta
+
+Sygnały ciągłe, podobnie jak dyskretne, mogą być poddawane rozkładowi na przeskalowane
+i przesunięte funkcje delta. Różnica polega na tym, że ciągła funkcja delta jest znacznie bar-
+dziej skomplikowana i matematycznie abstrakcyjna niż jej dyskretny odpowiednik. Zamiast
+określać, czym jest ciągła funkcja delta, zdefiniujemy ją przez jej właściwości.
+Eksperyment myślowy umożliwi zrozumienie istoty tej funkcji. Wyobraźmy sobie układ
+elektroniczny złożony z elementów liniowych, takich jak rezystory, kondensatory i cewki
+indukcyjne. Do wejścia układu jest dołączony generator sygnałowy wytwarzający krótkie
+impulsy © różnych kształtach. Wyjście układu połączono z oscyloskopem, wyświetlającym
+przebiegi będące odpowiedziami układu na każdy z impulsów wejściowych. Chcemy od-
+powiedzieć na pytanie: jak kształt impulsu wyjściowego jest związany z właściwościami
+impulsu wejściowego? Aby uprościć to badanie, będziemy stosować tylko impulsy wej.
+ściowe znacznie krótsze niż uzyskiwane na wyjściu. Na przykład, jeśli układ odpowiada
+impulsami milisekundowymi, to jako impulsy wejściowe powinniśmy stosować impulsy
+o długości rzędu mikrosekund.
+
+Po dokonaniu wielu pomiarów dochodzimy do trzech wniosków: Po pierwsze, kształt impulsu
+wejściowego nie ma wpływu na kształt impulsu na wyjściu. Na rys. 13.1 pokazano, że krótkie
+impulsy wejściowe o różnych kształtach dają na wyjściu impulsy o dokładnie jednakowym
+kształcie. Po drugie, kształt przebiegu wyjściowego jest całkowicie określony właściwościami
+systemu, tj. wartościami i konfiguracją rezystorów, kondensatorów i cewek indukcyjnych. Po
+trzecie, amplituda impulsu wyjściowego jest wprost proporcjonalna do powierzchni impulsu
+wejściowego. Na przykład impuls wyjściowy będzie miał taką samą amplitudę dla impulsów
+wejściowych mających amplitudy i czasy trwania: I Vi 1 us, 10 V i0,1 ps albo 1000 Vi I ns
+itd. Ta zależność dopuszcza też istnienie impulsów o powierzchni ujemnej. Wyobraźmy sobie
+na przykład kombinację impulsu o amplitudzie 2 V i czasie trwania 2 ps, po którym szybko
+następują dwa impulsy o amplitudzie —1 V, trwające 4 us. W tym przypadku całkowita po-
+wierzchnia impulsu wejściowego jest równa zero, a więc na wyjściu nie uzyskuje się niczego.
+Sygnały wejściowe, wystarczająco krótkie, aby mieć trzy wyżej wymienione właściwości, nazy-
+wamy impulsami. Impulsem jest więc każdy sygnał, który przez cały czas ma wartość zerową,
+oprócz krótkiego wyskoku o dowolnym kształcie. Na przykład w układzie nadajnika mikrofa-
+lowego impulsem mogą być sygnały w zakresie pikosekundowym, gdyż układy elektroniczne
+dają odpowiedź w zakresie nanosekundowym. Natomiast wulkan, którego wybuch trwa parę lat,
+może być traktowany jako impuls dla przemian geologicznych trwających przez tysiąciecia.
+Matematycy nie lubią być ograniczani żadnymi konkretnymi systemami i zwykle używają
+pojęcia impułs na określenie sygnału, który jest wystarczająco krótki, aby być impulsem
+w każdym dowolnym systemie. Jest to zatem sygnał nieskończenie krótki. Ciągła funkcja
+delta jest znormalizowaną wersją impulsu tego typu. Ciągła funkcja delta jest w szczególno-
+ści definiowana matematycznie przez trzy wyidealizowane właściwości: 1) sygnał musi być
+nieskończenie krótki, 2) impuls musi pojawiać się w czasie zero, oraz 3) impuls musi mieć
+powierzchnię równą jedności.

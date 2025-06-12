@@ -1,0 +1,30 @@
+28. Cyfrowe procesory sygnałowe
+
+<image/figury/k3_page470_figure1.png>
+
+Aby życie programisty uczynić łatwiejszym, w rodzinie procesorów SHARC zastosowano
+ujednoliconą przestrzeń adresową (unified address space). To oznacza, że przestrzeń adreso-
+wa 4G słów, dostępna przez 32-bitową magistralę adresową, jest podzielona między różne,
+pracujące wspólnie procesory. Przesłanie informacji z jednego procesora do drugiego wy-
+maga po prostu odczytu lub zapisu w odpowiednich lokacjach pamięci. O resztę „,zatroszczą
+się” wewnętrzne układy logiczne procesorów SHARC, przesyłając dane między procesorami
+z dużą przepływnością bitową 240 MB/s (przy zegarze 40 MHz).
+
+Rynek cyfrowych procesorów sygnałowych (DSP)
+
+Rynek procesorów DSP jest bardzo duży i gwałtownie się rozwija. Jego wartość wynosiła
+8-10 miliardów USD/rok na przełomie stuleci i rosła w tempie 30-40% rocznie (rys. 28.14).
+Siłą napędową tego rynku jest nieustające zapotrzebowanie na lepsze i tańsze urządzenia
+powszechnego użytku, takie jak telefony komórkowe, komputery multimedialne i wysokiej
+klasy urządzenia do odtwarzania muzyki. Rynek kształtują te właśnie urządzenia przynoszą-
+ce bardzo duży dochód, podczas gdy dziedziny mniej dochodowe, jak aparatura badawcza,
+„płyną na fali” nowej techniki.
+
+DSP można kupować w trzech postaciach — jako rdzeń, jako procesor oraz jako układ z
+płytką drukowaną. W DSP pojęcie „rdzeń” odnosi się do tej części procesora, w której są
+realizowane jego główne zadania, co obejmuje rejestry danych, układ mnożący, jednostkę
+arytmetyczno-logiczną (ALU), generator adresów i sekwenser programu. Pełny procesor
+wymaga jeszcze połączenia rdzenia z pamięcią i interfejsami służącymi do kontaktów ze
+światem zewnętrznym. Chociaż rdzeń i te układy peryferyjne są projektowane oddzielnie,
+to są wytwarzane w tym samym kawałku krzemu, dzięki czemu procesor jest pojedynczym
+układem scalonym.

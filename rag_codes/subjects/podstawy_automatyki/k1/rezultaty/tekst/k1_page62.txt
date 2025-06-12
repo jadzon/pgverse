@@ -1,0 +1,30 @@
+Na podstawie wyznaczonych transmitancji rysujemy schemat blokowy układu,
+pokazany na rysunku 2.14.
+
+<image/figury/k1_page62_figure1.png>
+
+Transmitancja zastępcza układu wynosi
+
+<image/wzory/k1_page62_formula1.png>
+
+Po przekształceniach, otrzymujemy
+
+<image/wzory/k1_page62_formula2.png>
+
+Stosując następujące oznaczenia: T = GT sad oraz k= - otrzymujemy
+a
+
+ 
+
+<image/wzory/k1_page62_formula3.png>
+
+2.4. Wyznaczanie charakterystyk czasowych
+
+Przykład 2.21
+
+Wyznaczyć odpowiedź impulsową elementu całkującego rzeczywistego o trans-
+mitancji
+
+<image/wzory/k1_page62_formula4.png>
+
+64

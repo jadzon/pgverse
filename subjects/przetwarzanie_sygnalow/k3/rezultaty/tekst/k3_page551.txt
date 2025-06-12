@@ -1,0 +1,16 @@
+33. Przekształcenie Z
+
+Obliczanie rozmieszczenia biegunów na płaszczyźnie s
+
+Niezależnie od typu projektowanego filtru ten program zaczyna się od dolnoprzepusto-
+sali dosa w iczyśia 4 oO GOL Jak podano
+w poprzednim rozdziale, filtry Butterwortha mają bieguny równomiernie rozmieszczone wo-
+kół okręgu na płaszczyźnie s. Nie stosuje się żadnych zer, bo filtr jest dolnoprzepustowy.
+Promień tego okręgu jest równy jeden, co odpowiada częstotliwości odcięcia © = 1. W bloku
+-3 w sieci działań (wiersze 1080 i 1090) są obliczane położenia każdej pary biegunów we
+współrzędnych prostokątnych. Zmienne programowe RP i IP to części rzeczywista i urojona
+położenia bieguna. Te zmienne programowe odpowiadają G i ©, gdzie para biegunów ma po-
+łożenie 6 ż jw. To położenie biegunów jest obliczone na podstawie liczby biegunów w filtrze
+(zmienna programowa NP) i w właśnie projektowanym stopniu (zmienna P%).
+
+<image/tabele/k3_page551_table1.png>

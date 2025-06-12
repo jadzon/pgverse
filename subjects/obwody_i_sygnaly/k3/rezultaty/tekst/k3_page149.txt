@@ -1,0 +1,37 @@
+18. Sprzężenie magnetyczne 151
+
+<image/figury/k3_page149_figure1.png>
+
+Macierz (1.8-43) jest macierzą symetryczną”), w której:
+
+ry/k3_page149_formula1.png (1.8-44)
+
+jest indukcyjnością wzajemną między k-tą i l-tą indukcyjnością (niektóre
+z tych indukcyjności wzajemnych mogą być równe zeru).
+
+Znak poszczególnych współczynników My = M, można określać, analo-
+gicznie jak dla przypadku dwóch indukcyjności sprzężonych, przez ustalenie par
+zacisków jednoimiennych dla każdej pary indukcyjności. Z oznaczeń na rys.
+1.8-15 wynika np. że: My > 0, My <0.
+
+Rozpatrywany układ n indukcyjności sprzężonych jest przykładem n-wro-
+towego elementu indukcyjnego SLS (por. p. C oraz p. 1.7.2-E).
+
+Energia w, gromadzona we wspólnym polu magnetycznym takiego układu
+wyraża się wzorami (1.8-26) i (1.8-31), przy czym ze wzoru (1.8-31) dostajemy
+wprost:
+
+<image/wzory/k3_page149_formula2.png>
+
+1.8.2. Transformator idealny
+
+A. Definicja. Transformatorem idealnym nazywamy  czterozaciskowy
+(dwuwrotowy) element SLS (rys. 1.8-16) określony równaniami:
+
+<image/wzory/k3_page149_formula3.png>
+gdzie p jest przekładnią transformatora idealnego:
+
+zory/k3_page149_formula4.png (1.8-47)
+
+Macierz L jesttakże macierzą dodatnio półokreśloną (patrz np. [11], str. 48 oraz tom III), co
+gwarantuje spełnienie nierówności (1.8-32).

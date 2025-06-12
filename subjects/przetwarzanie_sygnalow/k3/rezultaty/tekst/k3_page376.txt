@@ -1,0 +1,33 @@
+Rozdzielczość przestrzenna
+
+składowej podstawowej fali prostokątnej, są usuwane. To powoduje, że modulacja wydaje się
+być sinusoidalną, jak to pokazano na rys. 25.2 a). Przy małych częstotliwościach (jak na rys.
+25.2 b) wydaje się, że fala jest prostokątna. Podstawowa fala sinusoidalna zawarta w fali pro-
+stokątnej ma amplitudę 4/rx = 1,27 razy większą od amplitudy fali prostokątnej (patrz tablica
+13.10). W rezultacie podziałka z parami linii daje niewielkie przeszacowanie prawdziwej roz-
+dzielczości systemu, poczynając od tego, że efektywna amplituda jest większa niż mierzona od
+czystej czerni do czystej bieli. Jest to sprawa ciekawa, lecz prawie zawsze ignorowana.
+Ponieważ do pomiaru MFT są przemiennie używane fale prostokątna i sinusoidalna, więc
+powstała specjalna terminologia. Zamiast słowa „okres” w technice obrazowej używa się
+pojęcia para linii (linia ciemna obok jasnej). Na przykład częstotliwość przestrzenna jest
+określana jako 25 par linii na milimetr, zamiast 25 okresów na milimetr.
+
+Szerokość przebiegu funkcji PSF nie jest dokładnie zgodna z percepcją człowieka i jest
+trudna do pomiaru. Metody MTF są realizowane w dziedzinie niewłaściwej dla zrozumienia
+wpływu rozdzielczości na zakodowaną informację. Czy jest jakaś korzystniejsza alternaty-
+wa? Tak, jest nią funkcja rozmycia linii LSF (Line Spread Function) oraz odpowiedź kra-
+wędziowa. Funkcja rozmycia linii (rys. 25.3) jest odpowiedzią systemu na cienką linię w po-
+przek obrazu. Podobnie odpowiedź krawędziowa wskazuje, jak system odpowiada na ostrą,
+prostoliniową nieciągłość (krawędź). Ponieważ linia jest pochodną (lub pierwszą różnicą)
+krawędzi, więc funkcja LSF jest pochodną (lub pierwszą różnicą) odpowiedzi krawędziowej.
+Zastosowanym tutaj pojedynczym parametrem pomiaru jest odległość konieczna do wzrostu
+odpowiedzi krawędziowej od 10 do 90%.
+
+Stosowanie odpowiedzi krawędziowej do pomiaru rozdzielczości ma wiele zalet. Po pierw-
+sze, pomiar ma tę samą postać, w jakiej jest zakodowana informacja obrazowa. Faktycznie,
+główną przyczyną, dla której chce się poznać wartość rozdzielczości systemu, jest chęć zro-
+zumienia, jak są rozmywane krawędzie obrazu. Drugą zaletą jest łatwość pomiaru odpowiedzi
+krawędziowej spowodowana łatwym generowaniem krawędzi w obrazie. Jeśli trzeba, można
+łatwo określić funkcję LSF, wyznaczając pierwszą różnicę odpowiedzi krawędziowej.
+
+<image/figury/k3_page376_figure1.png>

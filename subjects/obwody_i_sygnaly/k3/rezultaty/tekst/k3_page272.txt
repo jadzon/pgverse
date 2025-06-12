@@ -1,0 +1,44 @@
+272 3. Obwody prądu stałego
+
+a
+
+Podstawiając równania gałęziowe do napięciowych równań równowagi (3.3-9) otrzymamy układ
+równań:
+
+<image/wzory/k3_page272_formula1.png>
+
+z których możemy wyznaczyć rozpływ prądów w sieci.
+Analogicznie, uwzględniając równania gałęziowe w prądowych równaniach równowagi (3.3-9)
+otrzymamy układ równań:
+
+<image/wzory/k3_page272_formula2.png>
+
+—U;+U,+U; =0
+
+—_ U ai U, + U5 = 0
+(3.3-14)
+
+<image/wzory/k3_page272_formula3.png>
+
+G,U; — GzU; — GU, = — GU»
+
+G,U, —G.U; + GGU5 z G;E;
+
+gdzie oznaczono G, = > i= 1,..., 6. Z równań tych możemy wyznaczyć rozkład napięć
+w sieci. |
+
+W rozpatrywanej w przykładach 3.3-10 i 3.3-11 sieci występuje g = 6
+gałęzi, a więc wyznaczenie rozpływu prądów lub rozkładu napięć na podstawie
+równań równowagi irównań gałęzi sprowadza się do rozwiązania układu sześciu
+równań z sześcioma niewiadomymi (układy (3.3-13) i (3.3-14)). W ogólnym
+przypadku omówiony sposób analizy sieci wymaga rozwiązania g równań
+z g niewiadomymi, a więc w przypadku sieci wielogałęziowych metoda ta jest
+związana z bardzo dużym nakładem obliczeniowym. Jak pokażemy w dalszych
+punktach, złożoność obliczeń niezbędnych do wyznaczenia rozpływu prądów
+lub rozkładu napięć w sieci może być wyraźnie zmniejszona przy zastosowaniu
+metod sieciowych.
+
+E. Przekształcenie obwodowe i przekształcenie węzłowe. Idea metod sie-
+ciowych polega na zredukowaniu g równań, z których można wyznaczyć
+g wielkości gałęziowych (prądów lub napięć gałęziowych), do mniejszej liczby
+równań, przez wprowadzenie nowych zmiennych niezależnych. W meto-

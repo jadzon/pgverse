@@ -1,0 +1,50 @@
+Liniowość przekształcenia Fouriera 185
+
+łe intuicyjnie; gdy zmienia się amplituda przebiegu w dziedzinie czasu, to o równoważną
+| - wartość powinny zmienić się amplitudy fal sinusoidalnych i kosinusoidałnych tworzących
+E' przebieg w dziedzinie częstotliwości.
+
+| Ujmując tę kwestię matematycznie, można stwierdzić, że jeśli x| ] i X[ ] są parą trans-
+format Fouriera, to kx| ] i kX[ ] są też parą transformat Fouriera dla dowolnej stałej k.
+Jeśli przebieg w dziedzinie częstotliwości jest wyrażony we współrzędnych prostokąt-
+nych, to wyrażenie kX[ |] oznacza, że zarówno część rzeczywista, jak i urojona są mnożo-
+ne przez k. Jeśli zaś ten przebieg jest wyrażony we współrzędnych biegunowych, to wy-
+rażenie kX| ] oznacza, że moduł jest mnożony przez k, a faza pozostaje niezmieniona.
+
+     
+
+zał
+
+000
+
+  
+ 
+
+  
+   
+
+BL,
+ji
+
+pe
+|
+
+m." m m m m m w m M m m wm w m mmm
+
+PEETETE.
+,
+
+£
+1—---
+8
+a>
+8
+
+ 
+
+<image/figury/k3_page167_figure1.png>
+
+1 wrr l W owy wraca
+dodawaniu odpowiadających im sygnałów w drugiej dziedzinie. Na rysunku sygnały w dziedzinie czasu
+b) są dodawane dając sygnał przedstawiony na rys. c).To powoduje sumowanie się części rzeczywistych i części
+:h odpowiednich widm częstotliwościowych

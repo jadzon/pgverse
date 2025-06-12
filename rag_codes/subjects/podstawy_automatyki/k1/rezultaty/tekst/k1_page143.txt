@@ -1,0 +1,30 @@
+Jeżeli pole powierzchni tłoka jest równe A, a współczynnik otwarcia otworu prze-
+lotowego wynosi b, to na podstawie równania przepływu można napisać w dużym
+przybliżeniu
+
+<image/wzory/k1_page143_formula1.png>
+gdzie QO(f) — oznacza objętościowe natężenie przepływu cieczy.
+
+Po zastosowaniu przekształcenia Laplace'a
+
+<image/wzory/k1_page143_formula2.png>
+<image/wzory/k1_page143_formula3.png>
+
+Oznacza to, że układ całkuje wartość wejściową. Jeżeli na wejściu zadziała wymu-
+szenie skokowe opisane jak niżej:
+
+<image/wzory/k1_page143_formula4.png>
+
+wtedy też (gdy £ ż 0) wartość wyjściowa wyniesie
+
+<image/wzory/k1_page143_formula5.png>
+
+Wartość wyjściowa rośnie więc z upływem czasu, co przedstawia rysunek 5.3.
+
+<image/figury/k1_page143_figure1.png>
+
+Tego typu odpowiedzi w układach sterowania są zazwyczaj niekorzystne, wpro-
+wadza się więc pewne udoskonalenia polegające na zastosowaniu sprzężenia zwrotne-
+go i zamknięciu pętli.
+
+145

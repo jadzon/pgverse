@@ -1,0 +1,49 @@
+może realizować nadzwyczaj złożona maszyna (komputer) posiadająca wbudowany
+model otaczającego świata i przeprowadzająca operacje logiczne na symbolach. Ma-
+nipulacja symbolami określa myślenie, a nie medium czy podłoże materialne tych
+symboli.
+
+Powszechna akceptacja tego paradygmatu wraz z analogicznymi teoretycznymi
+modelami w lingwistyce (prace Chomsky'ego) i kogniwistyce spowodowały zmierzch
+modelowań układów przy użyciu systemów dynamicznych.
+
+Paradygmat „manipulacji symbolami” zdominował na przeszło ćwierć wieku po-
+glądy na budowę maszyn posiadających inteligencję. Ważnymi osiągnięciami tech-
+nicznymi stanowiącymi potwierdzenie tego paradygmatu było skonstruowanie ro-
+bota STRIPS posiadającego model świata i prowadzącego automatyczne wniosko-
+wanie |?], budowa różnorodnych systemów ekspertowych, wielkich systemów groma-
+dzenia wiedzy i wnioskowania (projekt CYC), czy ostatnio rozwój systemów repre-
+zentacji wiedzy w postaci tzw. ontologii.
+
+Pomimo sukcesów takiego podejścia do konstrukcji inteligentnych maszyn stop-
+niowo zaczęto zauważać trudne do przekroczenia ograniczenia przy budowie inteli-
+gentnych systemów rozwiązujących złożone problemy praktyczne. Szczególne trud-
+ności pojawiały się przy budowie systemów, które powinny podejmować poprawne
+decyzje w nowych, nieprzewidywalnych, sytuacjach. Przykładami takich nieprzewi-
+dywalnych sytuacji są np. problemy sterowania w przypadku awarii (np. kierowania
+samochodem w przypadku uszkodzenia hamulców, uszkodzeniu koła, manewrach po
+wpadnięciu w poślizg, czy opisywane przypadki awaryjnych (udanych lub nie) stero-
+wań i lądowań samolotów z poważnymi nieprzewidywalnymi uszkodzeniami (takimi,
+które nie występują w programach szkolenia pilotów). Innymi przykładami takich
+sytuacji mogą być napotykane przeszkody przy poruszaniu się automatycznych po-
+jazdów po wylądowaniu na innych planetach lub problemy zachowania sie autono-
+micznych zespołów softwareowych agentów lub robotów w rozwiązywaniu nowych
+zadań. Poprawne decyzje w takich sytuacjach potrafią często podejmować ludzie,
+natomiast trudne lub prawie niemożliwe jest skonstruowanie systemów komputero-
+wych, działających w oparciu o paradygmat manipulacji symbolami, podejmujących
+poprawne decyzje i to nawet systemów podlegających uczeniu.
+
+Dominujący paradygmat krytykowano również poprzez brak analogii z działa-
+niem mózgu ludzkiego, który jest raczej układem dynamicznym w którym trudno
+wyróżnić bloki manipulacji symbolami.
+
+Powyżej wymienione trudności spowodowały stopniowe odchodzenie od paradyg-
+matu manipulacji symbolami. Powstający nowy paradygmat mówi że inteligentne
+działania mogą powstawać tylko poprzez zespołowe oddziaływanie wielu prostych
+agentów wykonujących zarówno operacje logiczne jak i bazujących na układach dy-
+namicznych. Uważa się, że powstająca inteligencja zależy jednak od fizycznego me-
+dium, w którym one działają (mówi się, że działanie agentów są wtedy „ucieleśnione”
+(ang. embodied)).
+
+Nowy paradygmat nawiązuje zarówno do działań inteligentnych powstających
+zarówno wewnątrz organizmów żywych, jak i w społecznościach organizmów.

@@ -1,0 +1,46 @@
+133
+Obliczymy teraz wartość 0.4. Na podstawie (??) mamy
+
+<image/wzory/k2_page128_formula1.png>
+
+<image/wzory/k2_page128_formula2.png>
+
+Podstawiając powyższe wyrażenie do równań (77) i (77) otrzymujemy
+
+<image/wzory/k2_page128_formula3.png>
+
+Obliczymy teraz wartość sygnału błędu ó,,. Pobudzenie j-tego neuronu, net;,
+
+wpływa teraz na wszystkie składowe błędu (??) poprzez wyjście y;, podczas gdy
+
+poprzednio pobudzenie net, wpływało tylko na jedną zależną od niego składową.
+Biorąc to pod uwagę, sygnał błędu 6,, w węźle j wynosi
+
+<image/wzory/k2_page128_formula4.png>
+
+a następnie mamy
+
+<image/wzory/k2_page128_formula5.png>
+
+<image/wzory/k2_page128_formula6.png>
+<image/wzory/k2_page128_formula7.png>
+
+gdzie 0., dane jest przez wzór (??). Podstawiając (??) do (??) mamy
+
+<image/wzory/k2_page128_formula8.png>
+
+Podstawiając (??) do (??) i (72) otrzymujemy ostatecznie wyrażenie opisujące za-
+sadę korekcji wag w warstwie pierwszej
+
+<image/wzory/k2_page128_formula9.png>
+
+Jak z niego wynika, korekcja wag dochodzących do neuronu j-tego w warstwie pierw-
+szej jest proporcjonalna do ważonej sumy wszystkich wartości 6 w warstwie następ-
+nej. Wagi wy;,, k=1,2,..., K, w warstwie wyjściowej, które wpływają na błąd 6,,
+oraz wagi v;,, dla i = 1,2,..., I, na które ma wpływ błąd 6,, zostały wyróżnione na
+rysunku pogrubionymi liniami.
+
+Dla obliczenia f'(net) rozpatrzmy dwie typowe funkcje aktywacji f(net) dane
+wzorami (??) i (22) Dla funkcji bipolarnej mamy
+
+<image/wzory/k2_page128_formula10.png>

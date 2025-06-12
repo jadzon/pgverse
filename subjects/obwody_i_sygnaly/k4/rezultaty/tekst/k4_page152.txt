@@ -1,0 +1,33 @@
+152 1. Pojęcia podstawowe — elementy
+
+<image/figury/k4_page152_figure1.png>
+
+Transformator idealny jest elementem o szerokich i różnorodnych zastoso-
+waniach w teorii obwodów. Będzie o nich mowa w dalszym tekście, a także
+w tomie III. Jak sugeruje nazwa, transformator idealny można uważać za
+idealny model transformatora rzeczywistego (rys. 1.8-1), w którym przy wielu
+ograniczeniach staramy się o uzyskanie w przybliżeniu związków (1.8-46) między
+napięciami i prądami zaciskowymi.
+
+B. Transformator idealny jako przypadek graniczny indukcyjności sprzężo-
+nych. Pokażemy teraz, że transformator idealny o równaniach (1.8-46) można
+w określonym sensie uważać za przypadek graniczny indukcyjności sprzężonych.
+
+Rozważmy układ indukcyjności sprzężonych (rys. 1.8-3) o równaniach
+(1.8-16) i (1.8-17) i załóżmy, że sprzężenie jest całkowite, tzn.:
+
+<image/wzory/k4_page152_formula1.png>
+Można wówczas wprowadzić liczbę p z 0 zdefiniowaną w sposób następują-
+cy:
+
+<image/wzory/k4_page152_formula2.png>
+przy czym:
+
+sgnp = sgnM (1.8-50)
+Uwzględniając wzór (1.8-49), równania (1.8-16) można przekształcić do
+postaci:
+<image/wzory/k4_page152_formula3.png>
+skąd wynika, że:
+
+vzory/k4_page152_formula4.png
+i, w konsekwencji, wobec równości (1.8-17):

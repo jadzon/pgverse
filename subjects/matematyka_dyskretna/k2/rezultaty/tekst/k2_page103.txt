@@ -1,0 +1,30 @@
+12 Rozdział 1. Funkcje boolowskie
+
+1.4.1 Suma (alternatywa) kilku zmiennych
+
+<image/figury/k2_page103_figure1.png>
+
+Na rysunku 1.2 przedstawiono sieć obliczającą altematywę ośmiu zmiennych:
+
+<image/wzory/k2_page103_formula1.png>
+
+Głębokość tej sieci wynosi 3.
+
+Podobnie można skonstruować sieć liczącą altematywę n zmiennych, gdzie n jest
+jakąś potęgą dwójki. Głębokość takiej sieci wynosi log n. Oczywiście tak samo możemy
+zbudować sieć dla uogólnionej koniunkcji lub operatora ©.
+
+1.4.2 Funkcje progowe
+
+Funkcja
+
+<image/wzory/k2_page103_formula2.png>
+
+jest funkcją progową o n zmiennych z progiem k. Będziemy zakładać, że l < k <n.
+Sieci funkcii proaowvch dwóch zmiennvch sa proste. ponieważ:
+
+<image/wzory/k2_page103_formula3.png>
+
+Przedstawiono je na rysunku 1.3.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

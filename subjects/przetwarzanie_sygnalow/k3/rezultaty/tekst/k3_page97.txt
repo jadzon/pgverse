@@ -1,0 +1,50 @@
+Każdy impuls,może być wyrażony jako przesunięta lub przeskałowana funkcja delta. Rozważmy
+sygnał a[n] złożony z samych zer oprócz próbki numer 8, która ma wartość —3. Jest to funk-
+cja delta przesunięta w prawo o 8 próbek i pomnożona przez —3. Można to wyrazić wzorem:
+afn] = -35[n — 8]. Postarajcie się zapamiętać ten sposób zapisu, gdyż jest on stosowany niemal
+we wszystkich wzorach dotyczących DSP.
+
+Co uzyskuje się na wyjściu systemu, jeśli na jego wejściu jest impuls, taki jak np. -36[n — 8]?
+Tu właśnie trzeba zastosować właściwości homogeniczności i niezmienności względem prze-
+sunięcia. Przeskalowanie i przesunięcie na wejściu powoduje takie samo przesunięcie i prze-
+skałowanie na wyjściu, Jeśli 5[n] daje h[n], to wynika stąd, że -36[n —8] daje -3h[n — 8].
+Innymi słowy, na wyjściu uzyskuje się wersję odpowiedzi impulsowej przesuniętą i przeska-
+lowaną © takie same wartości, jak funkcja delta na wejściu. Jeśli znamy odpowiedź impulso-
+wą systemu, to od razu wiemy, jak będzie on reagował na każdy impuls.
+
+Splot
+
+Podsumujmy sposób rozumienia sposobu, w jaki system zmienia sygnał wejściowy w wyj-
+ściowy. Po pierwsze, sygnał wejściowy może być rozłożony na zbiór impulsów, z których
+każdy można rozważać jako przesuniętą i przeskalowaną funkcję delta. Po drugie, sygnał
+wyjściowy wywołany przez każdy z impulsów jest przesuniętą i przeskalowaną wersją odpo-
+wiedzi impulsowej. Po trzecie, całkowity sygnał wyjściowy można wyznaczyć, sumując te
+przesunięte i przeskalowane odpowiedzi impulsowe. Inaczej mówiąc, jeśli znamy odpowiedź
+impulsową systemu, to możemy obliczyć sygnał wyjściowy dla każdego możliwego sygnału
+wejściowego. Tak więc wiemy wszystko o systemie. Niczego już więcej nie możemy się do-
+wiedzieć o właściwościach systemu liniowego. Jednak w następnych rozdziałach wykażemy,
+że ta informacja może być wyrażana w różnych formach.
+
+W niektórych zastosowaniach, w terminologii angielskojęzycznej, odpowiedź impulsowa po-
+jawia się pod innymi nazwami. Jeśli rozpatrywanym systemem jest filtr, to odpowiedź im-
+pułsowa jest nazywana filter kernel!” lub convolution kernel, a w dziedzinie przetwarzania
+obrazów — Point Spread Function — PSF (funkcja rozmycia punktu). Chociaż te pojęcia są
+używane na nieco różne sposoby, to wszystkie określają to samo — sygnał wytwarzany przez
+system, gdy na jego wejściu jest funkcja delta.
+
+Spłot jest operacją matematyczną, podobnie jak mnożenie, dodawanie i całkowanie.
+Wykonując dodawanie, bierze się dwie liczby i uzyskuje trzecią liczbę, w przypadku splotu
+zaś bierze się dwa sygnały i uzyskuje trzeci sygnał. Operacja splotu jest stosowana w wielu
+działach matematyki, jak rachunek prawdopodobieństwa i statystyka. W systemach linio-
+wych stosuje się splot do opisu wzajemnej zależności między trzema sygnałami — sygnałem
+wejściowym, odpowiedzią impulsową i sygnałem wyjściowym.
+
+<image/figury/k3_page97_figure1.png>
+
+Rys. 6.2. Zastosowanie splotu w DSP. Sygnat na wyjściu systemu liniowego jest równy sygnatowi wej-
+EO ZROPYCZZTWPAZ We wzorach operację spłotu
+oznacza się gwiazdką
+
+—unum— NN,
+10 w terminologii polskiej spotyka się czasem pojęcie „jądro filtru” określające odpowiedź impulsową
+filtru (przyp. tłum.).

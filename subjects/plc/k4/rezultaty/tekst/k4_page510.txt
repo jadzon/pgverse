@@ -1,0 +1,14 @@
+podłączone czujniki i elementy wykonawcze (sensor and actuator interface)
+oraz urządzenia operatorskie (human-machine interface);
+
+zbocze narastające (rising edge) — zmiana wartości zmiennej logicznej
+zOna I:
+
+zbocze opadające (falling edge) — zmiana wartości zmiennej logicznej
+z /ł na0;
+
+zmienna globalna (g/obal variable) — zmienna, której zasięg jest globałny:
+zmienna złożona (aggregate) -- uporządkowany zbiór danych tworzący typ
+danych;
+
+<image/tabele/k4_page510_table1.png>

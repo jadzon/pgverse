@@ -1,0 +1,17 @@
+217
+
+<image/figury/k2_page212_figure1.png>
+
+skonstruowana maszyna A nie zawiera d(A). Wprowadźmy więc maszynę B, która
+kopiuje opis d(A) (rys. b). Łącząc maszynę A z maszyną B i dołączając maszynę C,
+która steruje kolejnością operacji A i B, otrzymujemy kompleks maszyn A + B+C
+nazwany D, który na podstawie opisu d(D) wykonuje swoją kopię łącznie z kopią
+swojego opisu (rys. c). Ostatecznie oznaczając D + d(D) jako E, możemy stwier-
+dzić, że £ jest maszyną samoreprodukującą się (rys. d). W ten sposób pokazano, że
+możliwy jest proces samoreprodukcji, gdy maszyna samoreprodukująca się posiada
+wyróżnioną część stanowiącą jej opis.
+
+W ramach sprawdzenia działania uniwersalnego konstruktora w środowisku Digi-
+Hive, zakodowano łańcuch będący instrukcją złożenia zamkniętego pierścienia. Wy-
+niki symulacji przedstawiono na rysunku ??. W rezultacie, po 24 cyklach, powstała
+założona struktura.

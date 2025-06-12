@@ -1,0 +1,21 @@
+<image/wzory/k1_page159_formula1.png>
+
+<image/figury/k1_page159_figure2.png>
+
+  
+
+W drugiej metodzie na podstawie schematu blokowego silnika, pokazanego na
+rysunku 6.3, zbudowano odpowiadający mu schemat w Simulinku, przedstawiony
+na rysunku 6.5, zakładając, że M,,,. = 0. Sygnałem wejściowym jest sygnał skoku jed-
+nostkowego.
+
+<image/figury/k1_page159_figure1.png>
+
+Aby móc przeprowadzić numeryczną symulację działania silnika, należy zdefinio-
+wać jego parametry (współczynniki i stałe). Załóżmy, że:
+
+R„=20Q, J=0,1 kg-m*/s?,
+L,=0,1H, B = 0,5 N-m:s/rad,
+_k,=0,1 V:s/rad, k, = 0,1 N-m/A.
+
+161

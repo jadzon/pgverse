@@ -1,0 +1,58 @@
+492
+
+28. Cyfrowe procesory sygnałowe
+
+zapisie ułamka bez znaku 65 536 poziomów jest rozmieszczonych równomiernie między
+0 a 1. Wreszcie, format ułamka ze znakiem umożliwia reprezentowanie także liczb ujem-
+nych, równo rozmieszczonych między —1 a 1. |
+Natomiast w zmiennoprzecinkowych DSP do reprezentowania każdej wartości stosuje się |
+typowo co najmniej 32 bity. To daje znacznie więcej możliwych kombinacji niż dla formatu
+stałoprzecinkowego, a ściśle 2”? = 4 294 967 296. Główną cechą zapisu zmiennoprzecinko-
+wego jest nierównomierne rozmieszczenie reprezentowanych liczb. W najczęściej stosowa-
+nym formacie (według normy ANSIIEEE Std. 754-1985) największa i najmniejsza liczba to
++3,4 x 1075 oraz £1,2 x 10735, Reprezentowane wartości są nierównomiernie rozmieszczone
+między tymi dwiema wartościami skrajnymi tak, że odstęp między dwiema dowolnymi licz-
+bami jest ok. dziesięć milionów razy mniejszy niż wartość tych liczb. Zapis zmiennoprzecin-
+kowy omówiono bardziej szczegółowo w rozdziale 4.
+
+Wszystkie zmiennoprzecinkowe procesory sygnałowe mogą też operować liczbami stało-
+przecinkowymi, co jest konieczne do implementacji liczników, pętli oraz dla sygnałów przy-
+chodzących z przetwomików a/c i wychodzących do przetworników c/a. Nie znaczy to jed-
+nak, że matematyczne operacje stałoprzecinkowe mogą być wykonywane równie szybko, jak
+zmiennoprzecinkowe; to zależy od architektury wewnętrznej. Na przykład procesory sygna-
+łowe SHARC są zoptymalizowane tak dla operacji zmiennoprzecinkowych, jak i stałoprze-
+cinkowych i wykonują je z jednakową wydajnością. Dłatego procesory SHARC są często
+określane raczej jako „32-bitowe DSP”, a nie po prostu jako „zmiennoprzecinkowe”.
+
+Na rys. 28.6 przedstawiono porównanie podstawowych zalet procesorów sygnałowych stało-
+
+    
+ 
+   
+  
+  
+  
+    
+   
+    
+   
+     
+
+w DSP szybkość jest mniej więcej jednakowa, z powodu rozwiązań układowych silnie zopty-
+malizowanych dla operacji matematycznych. Wewnętrzna architektura DSP zmiennoprzecinko-
+wych jest bardziej skomplikowana niż stałoprzecinkowych. Wszystkie rejestry i magistrale da-
+nych muszą być 32-bitowe, a nie tylko 16-bitowe; układ mnożący i jednostka arytmetyczno-lo-
+giczna powinny móc szybko wykonywać zmiennoprzecinkowe operacje arytmetyczne, zestaw
+instrukcji musi być większy (aby mogły operować liczbami zarówno zmienno-, jak i stałoprze-
+cinkowymi) itd. Obliczenia zmiennoprzecinkowe (32 bity) mają lepszą dokładność i większy
+
+martwić o takie sprawy, jak przepełnienie, wyjście poza dolną granicę i błąd zaokrąglenia.
+
+Z drugiej strony, stałoprzecinkowe procesory DSP są tradycyjnie tańsze od urządzeń zmienno-
+przecinkowych. W elektronice ceny zmieniają się bardzo szybko; informacje w cennikach często
+dezaktualizują się już w chwili ich wydrukowania. Niemniej jednak koszt jest czynnikiem istot-
+nym dla zrozumienia rozwoju cyfrowych procesorów sygnałowych i trzeba mieć chociaż ogólną
+orientację w tej kwestii. Kiedy kończono pisanie tej książki w 2002 roku, cena stałoprzecinko-
+wych procesorów DSP mieściła się w granicach od 5 do 100 USD, zmiennoprzecinkowych zaś
+
+<image/figury/k3_page456_figure1.png>

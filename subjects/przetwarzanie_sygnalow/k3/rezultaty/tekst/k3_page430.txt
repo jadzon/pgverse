@@ -1,0 +1,42 @@
+Kodowanie delta
+
+ 
+
+<image/tabele/k3_page430_table1.png>
+
+<image/oygasnyszumetarawzory/k3_page430_formula1.png>
+
+AOR
+
+Kodowanie Hufimana: _ 0010 0001 000011 1 0011 000010 01 0001 1***
+4
+
+Pogrupowanie w bajty: _ (00100001 00001110 01100001  00100011***
+bajt 1 bajt 2 bajt 3 bajt 4
+
+Rys. 27.3. Kodowanie Huffmana. Tablica kodowa przypisuje każdej z siedmiu liter stosowanych w tym
+
+przegrupowania na standardowe bajty 8-bitowe, dogodne do przesytania i
+Kodowanie delta
+
+W nauce, technice i matematyce grecka litera delta (A) jest stosowana do oznaczania zmia-
+ny jakiejś wielkości. Pojęcie kodowanie delta odnosi się do kilku metod, w których dane
+są gromadzone jako różnice między kolejnymi próbkami (lub znakami), a nie same próbki.
+Przykład przedstawiono na rys. 27.4. Pierwsza wartość w pliku kodowanym metodą delta
+jest taka sama jak pierwsza wartość w danych oryginalnych. Wszystkie następne wartości
+w kodowanym pliku są równe różnicom (delta) między odpowiednią wartością w pliku wej-
+ściowym i wartością poprzednią w tym pliku.
+
+Kodowanie delta można stosować do kompresji danych, gdy zmiany wartości w pliku wejścio-
+wym są łagodne, a więc różnice między sąsiednimi wartościami są niewielkie. Takiej właściwości
+nie mają teksty ASCII ani kody wykonywalne, natomiast jest to cecha bardzo często spotykana
+
+Oyginalny strumień danych: 17 19 24 24 24 21 15 10 89 95 96 96 96 95 94 94 95 93 90 87 86 86 ***
+
+fff
+
+Kodowanie doła: 17 2 5 0 0-3 —6 -5 79 6 1 00 -1 -1 0 1 -2 -3 -3 -1 0 **+
+
+Rys. 27.4. Przykład kodowania delta. Pierwsza wartość w zakodowanym pliku jest taka sama, jak pierwsza wartość
+NE ER ed ONO ONZ
+„ oryginalnym

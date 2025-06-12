@@ -1,0 +1,18 @@
+<image/figury/k4_page434_figure1.png>
+<image/tabele/k4_page434_table3.png>
+
+Wyd. 8.89 Blok przerwań czasowych OB 13; blok PB2 realizuje algorytm PID
+
+<image/tabele/k4_page434_table2.png>
+
+Wyd. 8.90 Bloki startowe OB2I i OB22; w błoku FBI ustawiany jest okres przerwań
+dla bloku OB13
+
+<image/tabele/k4_page434_table1.png>
+
+Wyd. 8.91 Odczytanie bieżącej wartości z pozycjonera i realizacja węzła sumacyjne-
+go za regulatorem
+
+ 
+
+434 Rozdział : 8.Programy przykładowe

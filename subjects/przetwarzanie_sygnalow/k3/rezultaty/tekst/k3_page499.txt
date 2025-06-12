@@ -1,0 +1,47 @@
+Analiza obwodów elektrycznych 537
+
+<image/wzory/k3_page499_formula1.png>
+
+3 cos(ot + n/4) 1,5 cos(ot — x8)
+lub lub
+2,1213 cos(ot) - 2,1213 sin(ot) 1,3858 cos(of) + 0,5740 sin(ot)
+A
+ZFISTZWÓARTSOAKOŚ a 222——
+| zę 050%" sda” ”
+lub lub — lub
+2,1213 + /2,1213 0,1913 - j 0,4619 1,3858 — j 0,5740
+
+Rys. 30.4. EYE Liczby zespolone są często stosowane w DSP i elektroni-
+
+oenan
+
+prostokątnych lub Ponadto zmiana, jakiej ulega przebieg sinusoidalny w systemie liniowym, też może
+
+być wyrażona jako liczba zespołona
+W poprzednich rozdziałach opisaliśmy już, jak w przekształceniu Fouriera sygnał może być
+rozłożony na fale sinusoidalne i kosinusoidalne. Amplitudy fal kosinusoidalnych są nazywa-
+ne częścią rzeczywistą, a fal sinusoidalnych — urojoną. Podkreślaliśmy tam, że te wartości są
+liczbami rzeczywistymi, a pojęcia rzeczywisty i urojony były po prostu nazwami, które mają
+zaznaczyć odrębność tych dwóch wartości. Teraz, gdy wprowadziliśmy już liczby zespolone,
+stało się całkiem jasne, jakie jest pochodzenie tych nazw. Wyobraźmy sobie na przykład
+1024-punktowy sygnał rozłożony na 513 fal kosinusoidalnych i 513 sinusoidalnych. Stosując
+metodę zastępowania, możemy wyrazić to widmo przez 513 liczb zespolonych. Nie dajcie
+się jednak zmylić i nie pomyślcie, że jest to zespołone przekształcenie Fouriera — temat roz-
+działu 31. Jest to bowiem ciągle jeszcze rzeczywiste przekształcenie Fouriera, z tym tylko że
+widmo umieszczono w formacie zespolonym, stosując metodę zastępowania.
+
+Analiza obwodów elektrycznych
+
+Ta metoda zastępowania fal kosinusoidalnych i sinusoidalnych liczbami zespolonymi jest
+nazywana przekształceniem fazorowym (w polskiej terminologii używa się nazwy metoda
+symboliczna — przyp. tłum.). Jest to główne narzędzie stosowane do analizy sieci złożonych
+z rezystorów, kondensatorów i cewek indukcyjnych. (Inżynierowie elektrycy definiują prze-
+kształcenie fazorowe bardziej formalnie jako mnożenie przez czynnik zespolony e /* i wzięcie
+części rzeczywistej. Umożliwia to zapisanie tej procedury jako równania, co ułatwia operacje
+matematyczne. „Zastępowanie” daje taki sam wynik końcowy, lecz jest mniej eleganckie).
+
+Pierwszym krokiem w tych rozważaniach jest zrozumienie wzajemnych zależności między
+prądem a napięciem w trzech wymienionych elementach podstawowych. W rezystorze tę
+zależność wyraża prawo Ohma: u = iR, gdzie i jest chwiłową wartością prądu w rezystorze, u
+— chwilową wartością napięcia na rezystorze, a R — rezystancją. Natomiast zjawiskami w kon-
+densatorze i cewce indukcyjnej rządzą równania różniczkowe: i = € du/dt oraz u = L di/di,

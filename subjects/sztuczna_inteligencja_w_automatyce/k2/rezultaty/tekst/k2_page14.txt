@@ -1,0 +1,40 @@
+19
+
+<image/figury/k2_page14_figure1.png>
+
+3.3. _ Metoda szukania w głąb
+
+Przy stosowaniu metody szukania w głąb ustalana jest głębokość na jaką odbywać
+się będzie szukanie. Na rys. ?? przedstawiona jest sieć działań metody, a na rys.
+?7 przykład zastosowania metody do przeprowadzenia układanki 3 x 3 z zadanego
+stanu początkowego do zadanego stanu końcowego.
+
+Złożoność obliczeniowa metody wynosi O(ł') gdzie I jest przyjętą głębokością
+szukania. Biorąc pod uwagę liczbę węzłów grafu n i krawędzi m złożoność oblicze-
+niowa metody szukania w głąb wynosi O(m + n) (Kubale 1994).
+
+W przypadku nieznajomości głębokości, na której znajduje się rozwiązanie często
+stosowaną odmianą jest metoda szukania z iteracyjnym pogłębianiem (ang. iterative
+deepening search). Metoda ta rozpoczyna się od głębokości jeden i gdy rozwiązanie
+nie zostało znalezione, to przyjmowana jest głębokość 2 i ponownie przeprowadzone
+jest szukanie (od początku) i analogicznie za każdym razem gdy rozwiązanie nie zo-
+stało znalezione, głębokość jest zwiększana o 1. Liczba węzłów rozmnażanych przed
+znalezieniem rozwiązania wynosi:
+
+<image/wzory/k2_page14_formula1.png>
+
+gdzie b jest liczbą węzłów potomnych generowanych z jednego węzła, a d jest liczbą
+przebytych warstw. Pomimo wielokrotnego powtarzania szukania liczba rozmnaża-
+nych węzłow nie jest wiele większa niż w przypadku stosowania metod szukania
+wszerz lub w głąb. Np. dla b = 10 i d = 5 dla metody iteracyjnego pogłębiania
+otrzymujemy liczbę węzłów 123456 podczas gdy dla metody szukania wszerz mamy
+111111.
+
+Często wygodnie jest zrealizować metodę szukania w głąb przy pomocy funkcji
+rekurencyjnej (np. w zadaniu sprawdzania istnienia drogi pomiędzy węzłami grafu).
+
+3.4. Metoda z powracaniem
+Metoda szukania z powracaniem jest podobna do metody szukania w głąb. Różni się
+
+od niej jedynie tym, że w jednym kroku metody generowany jest tylko jeden węzeł
+potomny, a nie wszystkie jak w metodzie szukania w głąb.

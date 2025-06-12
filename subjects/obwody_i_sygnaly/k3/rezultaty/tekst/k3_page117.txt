@@ -1,0 +1,43 @@
+1.7. Źródła 119
+
+Na rys. 1.7-2 przedstawiono najprostsze obwody, w których można wyróżnić
+źródło i obciążenie (odbiornik). W obwodach z rys. 1.7-2 strzałkowanie napięć
+i prądów w obciążeniu odpowiada standardowi z rys. 1.1-1, a więc:
+
+/k3_page117_formula1.png (1.7-5)
+
+jest mocą pobieraną przez obciążenie. Jednocześnie, zgodnie z zależnością
+(1.7-3) lub (1.7-4), moc (1.7-5) jest równa mocy oddawanej przez źródło.
+<image/figury/k3_page117_figure1.png>
+C. Źródła rzeczywiste. Konsekwencją postulatu niezależności napięcia od
+
+prądu w przypadku idealnego źródła napięciowego (por. wzór (1.7-1)) oraz prądu
+od napięcia w przypadku idealnego źródła prądowego (por. wzór (1.7-2)) jest
+teoretyczna możliwość oddawania przez takie źródła do obwodu dowolnie dużej
+mocy chwilowej. Wynika to bezpośrednio z zależności (1.7-3) i (1.7-4). Wniosek
+ten jest jednak wynikiem daleko idącej idealizacji (źródła idealne), żaden
+bowiem rzeczywisty przetwornik energii nie może dostarczać dowolnie dużej
+mocy.
+
+Aby uniknąć tej rozbieżności z rzeczywistością wystarczy uwzględnić stra-
+ty występujące w każdym realnym elemencie źródłowym. Prowadzi to do
+pojęcia źródła rzeczywistego”).
+
+Rzeczywiste źródło napięciowe (rys. 1.7-3a) jest elementem skupionym
+o równaniu:
+
+»ry/k3_page117_formula2.png (1.7-6)
+
+gdzie e = e(t) jest zadaną funkcją czasu określającą siłę elektromotoryczną
+
+źródła, a R., jest oporem wewnętrznym źródła, R„efł*. W przypadku granicz-
+nym, gdy R, = 0, otrzymujemy idealne źródło napięciowe.
+
+Rzeczywiste źródło napięciowe można oczywiście traktować jako połączenie
+
+szeregowe idealnego źródła napięciowego i oporu R,,.
+
+') Przymiotnika „rzeczywisty” używamy tu głównie dla skontrastowania go z przymiotnikiem
+„idealny”. Źródła określone równaniami (1.7-6) i (1.7-7) są bowiem nadal w jakimś (ale już
+w mniejszym) stopniu idealizowanymi modelami realnych przetworników energii. Dokładniejsze
+modele przetworników energii mogą być znacznie bardziej skomplikowane.

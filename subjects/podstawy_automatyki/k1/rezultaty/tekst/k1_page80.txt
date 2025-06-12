@@ -1,0 +1,31 @@
+Wyznaczamy transformację operatorową układu zamkniętego
+
+<image/wzory/k1_page80_formula1.png>
+Po przekształceniach
+
+<image/wzory/k1_page80_formula2.png>
+
+Stosując aproksymację Padego, otrzymujemy
+
+<image/wzory/k1_page80_formula3.png>
+
+Równanie charakterystyczne układu ma postać
+
+<image/wzory/k1_page80_formula4.png>
+
+Po przekształceniach
+
+<image/wzory/k1_page80_formula5.png>
+Sprawdzamy warunki Hurwitza.
+— Z pierwszego warunku wynika, że:
+
+<image/wzory/k1_page80_formula6.png>
+
+czyli wszystkie współczynniki równania charakterystycznego istnieją i są jedna-
+kowego znaku.
+
+— Z drugiego warunku wyznacznik Hurwitza zapisujemy jako:
+
+<image/wzory/k1_page80_formula7.png>
+
+82

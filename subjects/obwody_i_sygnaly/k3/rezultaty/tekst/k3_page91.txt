@@ -1,0 +1,17 @@
+15. Prawa Kirchhoffa i łączenie elementów 93
+
+<image/figury/k3_page91_figure3.png>
+
+Uwaga. Pisząc równania (1.5-1) i (1.5-2) zakładamy, że prądy (względem węzła) oraz napięcia
+(względem obwodu) są zastrzałkowane jednakowo. Jeśli tak nie jest, tzn. jeśli niektóre prądy (rys.
+1.5-1€) lub niektóre napięcia (rys. 1.5-2b) są zastrzałkowane odmiennie niż pozostałe, muszą być one
+uwzględnione — odpowiednio — w równaniu (1.5-1) lub (1.5-2) ze znakiem minus (sumowanie
+algebraiczne). Dla przykładu, w sytuacjach przedstawionych na rys. 1.5-1c i rys. 1.5-2b, równania
+(1.5-1) i (1.5-2) przybierają postać:
+
+<image/wzory/k3_page91_formula1.png>
+
+Równania (1.5-1) i (1.5-2) mają charakter tożsamości ze względu na czas,
+mogą być zatem również zapisane w postaci:
+
+<image/wzory/k3_page91_formula2.png>

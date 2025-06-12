@@ -1,0 +1,38 @@
+zakresu (tzn. 0 ... 99,999,999) lub | w przeciwnym wypadku. Rejestr 40296,
+podobnie jak w poprzednim bloczku, jest zarezerwowany.
+
+Jeżeli wynik różnicy będzie ujemny, to wyzwolone zostanie wyjście 00293, jeśli
+zerowy, to wyjście 00292, zaś gdy będzie dodatni, uruchomiona zostanie funkcja
+mnożenia liczb 32-bitowych MULDP. Liczby, które będą wymnażane znajdują
+się w rejestrach 40297 i 40298 oraz 40299 i 40300. Rezultat tej operacji zapisany
+zostanie na czterech rejestrach od 40301 do 40304. Jeżeli z powodu przekrocze-
+nia zakresu, operacja nie zostanie wykonana, wyzwolone zostanie wyjście 00295.
+Zaś prawidłowy przebieg całych obliczeń uwidoczni się przez ustawienie wyjścia
+00294 w stan wysoki.
+
+6.5.3 Operacje jednoargum entowe
+
+ 
+
+Operacje te wykonywane są na liczbach całkowitych (16-bitowych). Należą do
+nich: pierwiastkowanie, pierwiastkowanie z przetwarzaniem, logarytmowanie
+przy podstawie 10, podnoszenie 10 do potęgi 1..7.999. Realizowane jest to za
+pomocą funkcji EMTH o kodach od $ do 8, lub za pomocą funkcji z rozszerzonej
+biblioteki instrukcji MATH o kodach od 1 do 4.
+
+<image/figury/k4_page294_figure1.png>
+
+Wyd. 6.14 Przykład wykonania funkcji jednoargumentowych na liczbach całkowi-
+tych: pierwiastkowanie liczb całkowitych, logarytmowanie liczb całkowitych,
+exponenta liczb całkowitych.
+
+W powyższym przykładzie przebieg obliczeń jest następujący: po wyzwoleniu
+wejścia 10004 następuje przetwarzanie liczby zapisanej na rejestrach 40313
+140314 za pomocą funkcji EMTH 5, o nazwie SQRT polegające na obliczeniu
+pierwiastka kwadratowego z tej liczby. Jeżeli przetwarzana liczba będzie zapisa-
+
+294
+
+     
+
+Rozdział : 6 Programowanie sterowników AEG SCHNEIDER Modicon

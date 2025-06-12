@@ -1,0 +1,41 @@
+mitancji; wektor M zawiera współczynniki mianownika transmitancji; funkcja
+tf2ss wykonuje operacje odwrotne;
+
+— funkcje ss2zp oraz zp2ss
+
+<image/wzory/k1_page121_formula1.png>
+
+funkcja ss2zp zamienia równania stanu na odpowiadającą im macierz transmitan-
+cji przedstawioną w postaci zer, biegunów i wzmocnień; funkcja zp2ss wykonuje
+przekształcenie odwrotne.
+
+— funkcje t/2zp oraz zp2tf
+
+<image/wzory/k1_page121_formula2.png>
+
+funkcja t/2zp znajduje zera, bieguny i wzmocnienia dla transmitancji lub macierzy
+transmitancji układu SIMO; funkcja zp2t/ wykonuje przekształcenie odwrotne.
+
+Inne funkcje wspomagające konstrukcję modeli
+Funkcje wspomagające konstrukcję modeli to:
+— rmodel — generuje ciągły losowy model liniowy:
+
+<image/wzory/k1_page121_formula3.png>
+
+— ord2 — generuje model układu oscylacyjnego rzędu drugiego o transmitancji po-
+staci
+
+<image/wzory/k1_page121_formula4.png>
+gdzie:
+w, — częstotliwość rezonansowa,
+Ę — współczynnik tłumienia;
+
+<image/wzory/k1_page121_formula5.png>
+— pade — generuje transmitancję układu przybliżającego opóźnienie o dany czas T;
+przybliżenie to jest realizowane w oparciu o rozwinięcie funkcji w szereg Taylora
+
+<image/wzory/k1_page121_formula6.png>
+
+Przybliżenie rzędu wyższego niż 5. należy generować w postaci równań stanu.
+
+123

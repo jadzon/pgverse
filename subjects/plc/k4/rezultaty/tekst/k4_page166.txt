@@ -1,0 +1,45 @@
+rzory/k4_page166_formula1.png 1.png
+
+ory/k4_page166_formula2.png KEEEEMM
+
+Standard RS-232 (Recommended Standard) wprowadzony przez E/A (Electro-
+nic Industries Association) w 1962 roku, zrewidowany w 1969 roku, i oznaczony
+jako RS-232C [14] (odpowiadający zaleceniu CCITT nr V.24) nadal jest po-
+wszechnie wykorzystywany do komunikacji w sterownikach PLC.
+
+Transmisja danych według tego standardu odbywa się przez niesymetryczne
+(jednokońcówkowe) łącze bit po bicie na odległość ok. 15 m z szybkością do
+20 Kb/s. Nadajnik jest źródłem napięcia nie przekraczającym 25 V, które powin-
+no być odporne na zwarcie do masy, a prąd zwarcia nie może przekraczać 0,5 A.
+Na liniach danych jedynka logiczna odpowiada napięciom w zakresie
+od —15 V do -3ŻV, a zero logiczne od 3V do 15 V, zaś dla linii sterujących obo-
+wiązuje logika odwrotna. Nieokreślony jest zakres napięcia od —-3 V do 3 Vi
+sygnał w tym zakresie nie może trwać więcej niż I ms, a ponadto czas przejścia
+przez ten obszar nie może być dłuższy od 3% czasu trwania bitu.
+
+Wydłużenie zasięgu transmisji tego łącza uzyskuje się po zastosowaniu jego roz-
+szerzenia, które stanowi łącze dalekopisowe (TTY module) zwane też łączem
+„pętli prądowej 20 mA” (20 mA loop). Połączenie takie ograniczone jest do
+dwóch par przewodów wykorzystywanych do transmisji (7xD) i odbioru danych
+(RxD) i pomija wszystkie sygnały kontroli transmisji. Rozwiązanie to wydłuża
+zasięg łącza do 4000 m dla szybkości transmisji 9,8 Kb/s.
+
+W celu zwiększenia zasięgu i odporności na zakłócenia wprowadzono dwu-
+przewodowe obwody określone standardami RS 423, RS 422, RS 485.
+
+Standard RS 423 charakteryzuje napięciowy obwód transmisji złożony z niesy-
+metrycznego nadajnika oraz symetrycznego (różnicowego) odbiornika. Obwody
+takie stosuje się jedynie w urządzeniach będących odbiornikami.
+
+Standard RS 422 określa obwody transmisyjne, które są symetryczne, zrów-
+noważone, bowiem składają się z różnicowego nadajnika, dwuprzewodowego,
+zrównoważonego toru przesyłowego oraz odbiornika z wejściem różnicowym.
+Jego prędkość transmisji wynosi od 0,1 do 10 Mb/s i wynika z ograniczenia jakie
+w tym standardzie nakłada się na szybkość zmian sygnału i czas trwania bitu.
+
+Nadajnik ma różnicowy obwód wyjściowy o napięciu zrównoważonym od 2 V
+do 6 V i rezystancji nie większej niż 100 (2. Prąd zwarciowy tego źródła nie mo-
+że przekraczać 0,15 A.
+
+NTWETTETOOTEPYTE PPT OTTTE ZZOZ TTOZTY SZYTE OZZOTEOOEOCPWT TZT ROWE TJT ZE TPT NP WEPETYOT TYT TECT YYY PEC EEE YET OAKA
+166 Rozdział : 3. Sprzęt sterowników PLC

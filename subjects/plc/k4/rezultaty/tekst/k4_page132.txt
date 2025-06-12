@@ -1,0 +1,29 @@
+Trwałość styków przekaźnika w module zależy od zastosowanej ochrony przed
+skutkami przepięć. Dla ochrony przed skutkami przepięć związanych głównie
+z wyłączeniami elementów obciążenia indukcyjnego powinny być stosowane, jak
+pokazano na Rys. 3.74, diody zabezpieczające dla obwodów prądu stałego. zaś
+dla prądu przemiennego układy RC, diody Zenera lub warystorowe ograniczniki
+przepięć. Układy RC i diody Zenera stosuje się w elementach o niewielkich mo-
+cach takich jak cewki łączników sprzętu elektrycznego. Natomiast warystorowe
+ograniczniki przepięć są szeroko stosowane w instalacjach niskiego napięcia
+I stanowią bardzo prostą i skuteczną ochronę przed przepięciami.
+
+   
+
+<image/wzory/k4_page132_formula1.png>
+
+Przykładowy moduł MDL 390 (120/240 Voli AC Isolated Output - 2 Amp,
+5 Point) jest modułem dla 5 izolowanych obwodów wyjściowych prądu prze-
+miennego, zasilanych z zewnętrznego źródła napięciowego od 120 do 240 VAC.
+
+<image/tabele/k4_page132_table1.png>
+
+Tab. 3.9 Zestawienie parametrów technicznych
+dla przykładowego modułu MDL390
+
+Poszczególne obwody są całkowicie izolowane i mogą być zasilane z tego same-
+go źródła zasilania, ale mogą też być zasilane ze źródeł o różnych fazach.
+
+ 
+
+132 Rozdział : 3. Sprzęt sterowników PLC

@@ -1,0 +1,36 @@
+1.6. Elementy niestacjonarne. Elementy SLS 109
+
+Dla elementu niestacjonarnego nie można zatem mówić o jednej charakte-
+rystyce, można natomiast mówićo rodzinie charakterystyk, której paramet-
+rem jest czas t. Na rys. 1.6-1 pokazano przykładowo rodzinę charakterystyk
+oporu niestacjonarnego nieliniowego.
+
+<image/figury/k4_page107_figure1.png>
+
+Element niestacjonarny jest liniowy, jeśli dla każdego t e 5? (dla każdego t z
+określonego przedziału) jego charakterystyka jest prostą i jest nieliniowy
+w przeciwnym przypadku. Opór niestacjonarny o równaniu (1.6-1) jest elemen-
+tem bezinercyjnym (por. p. 1.3.1-E). Indukcyjność niestacjonarna i pojemność
+niestacjonarna — równania (1.6-2) i (1.6-3) — są elementami inercyjnymi (por.
+p. 1.3.2-E i p. 1.3.3-E).
+
+B. Elementy niestacjonarne liniowe. Elementy niestacjonarne liniowe są
+zatem określone następująco:
+
+<image/wzory/k4_page107_formula1.png>
+
+-6)
+
+przy czym, zgodnie z przyjętymi w p. A założeniami, funkcje: R(t), L(t) i C(t)
+przyjmują dla każdego t e 8 (dla każdego t z określonego przedziału) tylko
+wartości dodatnie.
+
+Rozpatrzmy dla przykładu opór niestacjonarny liniowy o równaniu (1.6-4),
+dla którego:
+
+<image/wzory/k4_page107_formula2.png>
+
+Wartość oporu zmienia się zatem okresowo od wartości Ry — AR do wartości
+R,+AR. Rodzina charakterystyk takiego oporu jest pękiem prostych o współ-
+czynnikach kierunkowych zmieniających się od Ry — AR do Ry+4AR (tys.
+1.6-2).

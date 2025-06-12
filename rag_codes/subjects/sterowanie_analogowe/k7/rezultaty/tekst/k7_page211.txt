@@ -1,0 +1,19 @@
+Trajektoria fazowa — przykład 5a (sprzężenie prędkościowe)
+
+ 
+
+Narysować trajektorie fazowe dla układu pokazanego na schemacie (8=/,
+r()=0, x,(0)=-10, x>(t)=0, a=0,5). Wykreślić przebieg sygnału wyjściowego
+układu.
+
+<image/figury/k/_page211_figure1.png>
+
+[am0ZEJ] AuzAZOZSEŁd Epo]SIN
+
+Uwaga: tego typu dodatkowe sprzężenie nosi nazwę sprzężenia
+prędkościowego (jeśli sygnał x,(t) ma sens położenia, to na wyjściu
+bloku o transmitancji as uzyskamy sygnał ax>(t) proporcjonalny do
+prędkości).
+
+POLITECHNIKA
+GDANSKA

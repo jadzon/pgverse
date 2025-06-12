@@ -1,0 +1,39 @@
+Stan układu
+
+ 
+
+Przykład: napisać równania stanu dla układu RLC przedstawionego na
+schemacie. Przyjąć że sygnałem wejściowym jest napięcie u(t), a wyjściowym
+u£(t). Następnie, korzystając z Matlaba, wykreślić trajektorię sygnału
+wyjściowego, prądu cewki i napięcia na kondensatorze przy założeniu:
+R=100Q , L=10mH, C=2uF, uc(0+)=5V, iL(0+)=50mA, u(t)=10*1(t)V
+
+u(t) |
+
+<image/wzory/k/_page21_formula1.png>
+
+SMOUBJS 8|8pOJN
+
+iL(t) >
+
+   
+
+Ważna uwaga:
+R » jako zmienne stanu w układach
+2
+
+ 
+  
+
+()=ucft) | RLC wygodnie jest przyjąć
+napięcia na kondensatorach i
+
+prądy cewek
+
+<image/wzory/k/_page21_formula2.png>
+<image/wzory/k/_page21_formula3.png>
+
+ 
+
+POLITECHNIKA
+GDANSKA

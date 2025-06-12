@@ -1,0 +1,25 @@
+A.1. Algebra Boole'a 175
+p cp A
+
+Przykładową funkcję można zapisać:
+
+<image/wzory/k3_page185_formula1.png>
+<image/wzory/k3_page185_formula2.png>
+
+IZEvią pysiacią pizcudiawiciid 1UIKCJI DOOIOWSKIEJ JesT aZiesiętna postac zbioru
+implikantów lub zbioru implicentów. Najczęściej odpowiednim kombinacjom zmiennych
+przyporządkowuje się liczby dziesiętne i je podaje się jako elementy zbioru. Odpowied-
+niość tę można znaleźć na wiele sposobów, choć najwygodniejszy z nich to taki, który
+bezpośrednio wiąże indeksy zmiennych z wagą pozycji w zapisie binarnym. Kombinacji
+n zmiennych X, ... x„„ odpowiada liczba dziesiętna L(x„), gdzie
+
+<image/wzory/k3_page185_formula3.png>
+
+|
+8 [01
+
+<image/figury/k3_page185_figure3.png>
+
+85_figure1.png
+
+Rysunek D.1. Mapy Karnaugha

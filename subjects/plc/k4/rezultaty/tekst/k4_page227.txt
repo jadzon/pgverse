@@ -1,0 +1,32 @@
+mikrosekundowych. W prezentowanym przykładzie, w pierwszym cyklu ste-
+rownika, do rejestrów %R/00, %RI01 1 %RI02 wpisane zostaną
+odpowiednie wartości określające czas, który upłynął między wyłączeniem
+a załączeniem sterownika, a zmienna %M] przyjmie wartość /.
+
+<image/tabele/k4_page227_table1.png>
+
+Wyd. 4.41 Wykorzystanie funkcji SVCREQ do zatrzymania sterownika
+
+<image/tabele/k4_page227_table2.png>
+
+Wyd. 4.42 Odczyt czasu pomiędzy wyłączeniem a ponownym włączeniem sterownika
+
+4.11.1 Podprogramy
+
+ 
+
+(Subroutine Blocks)
+
+Aby zwiększyć przejrzystość programu można podzielić go na pewne logiczne
+części - podprogramy (subroutine blocks) - wywoływane z bloku głównego za
+pomocą instrukcji CALL. W ten sposób program główny może zawierać jedynie
+niewielką liczbę instrukcji służących do obsługi bloków podprogramów, które
+zawierają właściwe procedury sterowania fragmentami procesu.
+
+Maksymalnie w programie można zadeklarować 64 podprogramy, a w każdym
+z bloków programu sterującego dozwolone są 64 instrukcje wywołania podpro-
+gramu. Każdy blok programowy może zawierać do 3000 szczebli lub zajmować
+
+ 
+
+4.11 Funkcje sterujące zżł

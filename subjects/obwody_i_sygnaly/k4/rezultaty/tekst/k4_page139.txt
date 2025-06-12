@@ -1,0 +1,35 @@
+18. Sprzężenie magnetyczne 141
+
+gdzie:
+
+<image/wzory/k4_page139_formula1.png>
+i jest równa przyrostowi Awy w przedziale czasu (ty, t) energii w, gro-
+
+madzonej we wspólnym polu magnetycznym indukcyjności sprzężonych. Przyj-
+mując ty tak, aby:
+
+ory/k4_page139_formula2.png
+
+otrzymujemy, zgodnie ze wzorem (1.8-25), całkowitą energię w,, gromadzoną
+w polu magnetycznym indukcyjności sprzężonych:
+
+ry/k4_page139_formula3.png (1.8-26)
+
+lub w zapisie skalarnym”:
+
+<image/wzory/k4_page139_formula4.png>
+
+Zwracamy uwagę, iż wzór (1.8-26) ma taką samą budowę jak wzór (1.3-14)
+wyrażający energię w, w przypadku pojedynczej indukcyjności (tj. elementu
+dwuzaciskowego).
+
+Obliczmy całkę liniową (1.8-27). Jest to całka po linii łączącej punkt O(0, 0)
+z punktem A(W;, YW.) w płaszczyźnie W,, W, (rys.1.8-4a). Zgodnie z zależno-
+ściami (1.8-16) otrzymujemy:
+
+<image/wzory/k4_page139_formula5.png>
+
+<image/figury/k4_page139_figure1.png>
+
+1) Całka występująca we wzorach (1.8-26) i (1.8-27) jest całką liniową (lub, inaczej, całką
+krzywoliniową skierowaną, patrz np. [13], str. 126).

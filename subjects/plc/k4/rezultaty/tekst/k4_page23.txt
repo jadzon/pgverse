@@ -1,0 +1,24 @@
+<image/wzory/k4_page23_formula1.png>
+
+Zakładając, że silnik pokazany na Rys. 1.2 ma być wykorzystywany do automa-
+tycznego otwierania i zamykania drzwi, należy zaprojektować schemat stykowy
+obwodu sterowania i napisać program dla sterownika, który będzie realizował je-
+go funkcje.
+
+W rozwiązaniu pokazanym na Rys. /.// przyjęto, że działanie układu rozpoczyna
+się w chwili włączenia przez wchodzącego lub wychodzącego styku S7 (np. fo-
+tokomórki). Następnie przekaźnik K3 włącza otwieranie drzwi aż do najechania
+na wyłącznik krańcowy $3. Po czym, po przytrzymaniu drzwi otwartych przez
+przekaźnik czasowy K2, drzwi zaczynają się zamykać dzięki zadziałaniu prze-
+kaźnika KI aż do napotkania wyłącznika krańcowego $2. Zamykanie to nastę-
+puje o ile w międzyczasie nie został włączony przez fotokomórkę SI. Program
+w języku schematów drabinkowych realizujący to zadanie pokazano na Wyd. 1.7.
+
+<image/figury/k4_page23_figure1.png>
+
+Rys. 1.11 Schemat stykowy obwodu sterowania silnikiem
+wykorzystywanym do automatycznego otwierania i zamykania drzwi
+
+ 
+
+1.3 Proste przykłady układów sterowania silnikiem 23

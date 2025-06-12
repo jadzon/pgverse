@@ -1,0 +1,32 @@
+32 ___1. Pojęcia podstawowe — elementy
+
+Załóżmy, że prąd magnesujący i jest wywołany dołączeniem do zacisków
+cewki zewnętrznej siły elektromotorycznej e (rys. 1.2-5b)V. Wówczas, wobec
+założenia o pominięciu oporu uzwojenia:
+
+21)
+<image/figury/k3_page32_figure2.png>
+<image/wzory/k3_page32_formula1.png>
+
+Zewnętrzna siła elektromotoryczna e (rys. 1.2-5b) jest równa napięciu u na
+zaciskach cewki, a więc:
+
+<image/wzory/k3_page32_formula2.png>
+
+Równania (1.2-17) i (1.2-22) określają indukcyjność jako element obwodu
+(rys. 1.2-6).
+
+<image/figury/k3_page32_figure1.png>
+
+Rys. 1.2-6
+
+C. Równania indukcyjności. Indukcyjność (rys. 1.2-6) jest zatem elemen-
+tem opisanym przez parę równań:
+
+<image/wzory/k3_page32_formula3.png>
+Z równań tych otrzymujemy związek między napięciem i prądem w postaci:
+di
+udiaska (1.2-24)
+
+5 Z konieczności posługujemy się tu pojęciem, którego jeszcze nie omawialiśmy (por. p. 1.7.1).
+Zakładamy jednak, iż Czyte ikowi jest ono znane ze szkoły średniej lub z kursu izyki.

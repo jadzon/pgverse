@@ -1,0 +1,25 @@
+w HATECAR 94/51TEGOW
+p BGBAUTONATYKH
+
+Pozycjonowanie biegunów w oparciu o sprzężenie od stanu
+
+ 
+
+Przykład:
+Sprawdzić, dla jakich wartości b, i b, możliwe jest dowolne pozycjonowanie
+biegunów za pomocą sprzężenia od stanu dla danego układu
+
+SMOUBJS 8|8poJN
+
+<image/wzory/k/_page78_formula1.png>
+
+Wielomian charakterystyczny A-BK:
+<image/wzory/k/_page78_formula2.png>
+Żądany wielomian charakterystyczny:
+
+<image/wzory/k/_page78_formula3.png>
+
+ 
+
+POLITECHNIKA
+GDANSKA

@@ -1,0 +1,39 @@
+47
+
+rują nad ludźmi w tzw. taktyce szachowej, czyli rozpatrywaniu możliwych w danej
+pozycji wariantów i znajdowaniu ukrytych kombinacji. Natomiast strategia, czyli do-
+kładna ocena pozycji i tworzenie długofalowych planów, jest ich piętą achillesową.
+Problem w tym, że bardzo trudno stworzyć pozycję, w której o zwycięstwie decy-
+duje tylko i wyłącznie strategia, tym bardziej że nawet w trudnej sytuacji komputer
+się nie załamuje, lecz walczy do końca, wykorzystując wszystkie szanse lepiej od
+najwytrwalszego mistrza obrony.
+
+A jednak w pierwszych trzech partiach mistrz świata umiejętnie stwarzał na sza-
+chownicy pozycje, w których komputer był bezradny (Kramnik prowadził wówczas
+2,5:0,5). Wczesna wymiana hetmanów, wyraźnie zmniejszająca rolę taktyki, potem
+gromadzenie strategicznych plusów i komputer „dostrzegał” niebezpieczeństwo do-
+piero wtedy, gdy nawet najlepsza obrona nie mogła nic pomóc.
+
+Od czwartej partii jednak wszystko się zmieniło. Autorzy programu wprowadzili
+zmianę zalecającą komputerowi unikanie wymiany hetmanów. Z kolei Kramnik jakby
+stracił koncentrację. W piątej partii w gorszej, ale remisowej pozycji popełnił fatalny
+błąd i musiał się poddać. W szóstej zaś zrealizował wygrywającą na pierwszy rzut
+oka kombinację, ale komputer znalazł ukryte fenomenalne wręcz obalenie (to właśnie
+maszyna umie najlepiej). Załamany Rosjanin uznał się za pokonanego w pozycji,
+w której jeszcze miał szanse na remis. Na tym mecz praktycznie się skończył. W
+pozostałych partiach człowiek nawet nie próbował wygrać, lecz konsekwentnie, z
+pełnym zresztą poparciem elektronicznego rywala, doprowadzał je do remisu. Mecz
+potwierdził, że siłą gry najlepsze komputery mimo wyżej wymienionych wad już nie
+ustępują czołowym szachistom świata. Jaki to będzie miało wpływ na dalszy rozwój
+szachów pokaże czas.
+
+Michał Krasenkow Autor jest arcymistrzem szachowym.”
+
+3.12. Uwagi
+
+Stosowanie metod szukania jest uzasadnione, gdy nie jest znany algorytm rozwiąza-
+nia zadania.
+
+PRZYKŁAD 3.7
+
+<image/figury/k2_page42_figure1.png>

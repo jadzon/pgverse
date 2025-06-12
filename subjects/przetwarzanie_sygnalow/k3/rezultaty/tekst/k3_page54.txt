@@ -1,0 +1,59 @@
+Wybór filtru antyaliasingowego
+
+cego się w funkcji odłegłości. Obrazy są tworzone z pewnych obszarów jaskrawości i barw
+oraz ich relacji w stosunku do innych obszarów jaskrawości i barw. Patrząc na Mona Lisę,
+nie powiesz przecież: „Cóż za interesujący zbiór sinusoid”.
+
+I tu pojawia się problem. Twierdzenie o próbkowaniu służy do analizy tego, co dzieje się
+w dziedzinie częstotliwości podczas digitalizacji. Dlatego doskonale nadaje się do wyjaśnie-
+nia przetwarzania analogowo-cyfrowego sygnałów zawierających informację zakodowaną
+w dziedzinie częstotliwości. Twierdzenie o próbkowaniu niewiele jednak pomoże w wyja-
+śnieniu, jak sygnały kodowane w dziedzinie czasu powinny być przetwarzane na cyfrowe.
+Przyjrzyjmy się temu bliżej.
+
+Na rys. 3.15 przedstawiono kilka przykładów digitalizacji sygnałów kodowanych w dzie-
+dzinie czasu. Na rys. 3.15 a) widzimy przebieg analogowy, który ma być przetworzony na
+cyfrowy. W tym przypadku informacją, którą chcemy zachować, jest kształr impulsów pro-
+stokątnych. Ten przykładowy sygnał zawiera też krótką paczkę sinusoid o wielkiej częstotli-
+wości. One reprezentują szum szerokopasmowy, zakłócenia i inne podobne śmiecie, które za-
+wsze pojawiają się w sygnałach analogowych. Na dalszych rysunkach pokazano, jak będzie
+wyglądał sygnał po digitalizacji z użyciem różnych filtrów antyaliasingowych: Czebyszewa,
+Bessela i bez filtru.
+
+Ważne jest zrozumienie, że żadne z tych rozwiązań nie umożliwia odtworzenia sygnału orygi-
+nalnego na podstawie spróbkowanych danych. Sygnał oryginalny w sposób inherentny zawie-
+ra bowiem składowe o częstotliwościach większych od połowy częstotliwości próbkowania.
+Ponieważ te częstotliwości nie mogą występować w sygnale przetworzonym na cyfrowy, więc
+nie może ich również zawierać sygnał odtworzony. Te duże częstotliwości pochodzą z dwóch
+źródeł, którymi są: 1) szum i zakłócenia, które chcielibyśmy wyeliminować, oraz 2) ostre zbo-
+cza przebiegu, zawierające przypuszczalnie informacje, które chcielibyśmy zachować.
+
+W filtrze Czebyszewa (rys. 3.15 b) ten problem jest rozwiązywany przez ostre odcięcie
+wszystkich składowych o dużych częstotliwościach. W rezultacie uzyskuje się odfiltrowa-
+ny sygnał analogowy, który może być próbkowany i potem doskonale odtworzony. Jednak
+odtworzony sygnał jest identyczny z sygnałem odfiltrowanym a nie z oryginalnym. Chociaż
+podczas próbkowania niczego się nie utraciło, to przebieg został poważnie zniekształcony
+przez filtr anyaliasingowy. Jak wynika z rys. 3.15 b), kuracja okazała się gorsza niż sama
+choroba! A więc nie działajmy w ten sposób.
+
+W celu rozwiązania tego problemu zaprojektowano filtr Bessela (rys. 3.15 c). Przebieg na
+jego wyjściu jest bardzo zbliżony do przebiegu oryginalnego, ma tylko nieco zaokrąglone
+zbocza. Dobierając częstotliwość odcięcia filtru, można uzyskać kompromis między gładko-
+ścią zboczy a eliminacją składowych w.cz. w sygnale. Zastosowanie większej liczby biegu-
+nów umożliwia lepszy kompromis między tymi dwoma parametrami, Ogólnym zaleceniem
+jest wybór częstotliwości odcięcia równej około jednej czwartej częstotliwości próbkowa-
+nia. Daje to dwie próbki na każdym zboczu sygnału. Zwróćcie uwagę, że zarówno w filtrze
+Bessela, jak i Czebyszewa zostaje usunięta paczka szumu wielkoczęstotliwościowego ist-
+niejąca w sygnale oryginalnym.
+
+Ostatnią możliwością jest rezygnacja z filtru antyaliasingowego (rys. 3.15 d). Takie rozwią-
+zanie ma tę zaletę, że wartość każdej próbki jest identyczna z wartością sygnału oryginalne-
+go. Sygnał ma więc doskonałą stromość zboczy, a zmiana sygnału oryginalnego natychmiast
+znajduje swoje odzwierciedlenie w danych cyfrowych. Aliasing może jednak zniekształcić
+sygnał, co jest wadą tego rozwiązania. Zniekształcenie może przyjmować dwie różne formy.
+Po pierwsze, wielkoczęstotliwościowe zakłócenia i szumy, jak np. pojawiająca się w naszym
+przykładzie paczka sinusoid, będą przetworzone na jakieś niemające sensu próbki (jak na
+rys. 3.15 d). To znaczy, że każdy szum w.cz. występujący w sygnale analogowym pojawi się
+w sygnale cyfrowym jako szum, który uległ aliasingowi. W sensie ogólniejszym nie jest to
+problem próbkowania, lecz problem niedoskonałości elektroniki analogowej. Ograniczanie
+szumów i zakłóceń nie jest zadaniem przetwornika a/c; funkcję tę powinny spełniać ukła-

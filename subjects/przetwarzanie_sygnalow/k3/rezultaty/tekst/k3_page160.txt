@@ -1,0 +1,58 @@
+Spłot przez dziedzinę częstotliwości
+
+ 
+
+Jak dużą rozdzielczość odpowiedzi częstotliwościowej można uzyskać? Odpowiedź brzmi:
+nieskończenie dużą, jeśli jesteśmy skłonni dopełnić odpowiedź impulsową nieskończoną licz-
+bą zer. Inaczej mówiąc, nie ma innego czynnika ograniczającego rozdzielczość częstotliwo-
+ściową, prócz długości przekształcenia DFT. To prowadzi do ważnych wniosków. Chociaż
+odpowiedź impulsowa jest sygnałem dyskretnym, to odpowiadająca jej odpowiedź częstotli-
+wościowa ma charakter ciągły. Przekształcenie N-punktowe DFT odpowiedzi impulsowej do-
+starcza N/2 + 1 próbek w krzywej ciągłej. Jeśli wydłużymy DFT, to rozdzielczość się polepszy
+i dowiemy się więcej o kształcie krzywej ciągłej. Pamiętajmy, że odpowiedź częstotliwościo-
+wa wyraża zmiany fazy i amplitudy, jakim ulega fala kosinusoidalna, przechodząc przez sys-
+tem. Ponieważ sygnał wejściowy może zawierać wszelkie częstotliwości między O a 0,5, więc
+odpowiedź częstotliwościowa systemu w tym zakresie musi być krzywą ciągłą.
+
+Można to lepiej zrozumieć, wprowadzając inne a: z grupy transformat fourie-
+rowskich — dyskretne w czasie przekształcenie Fouriera (DTFT — Discrete Time Fourier
+Transform). Rozważmy sygnał złożony z N próbek poddawany N-punktowemu przekształce-
+niu Fouriera, dającemu N/2 + 1 próbek charakterystyki w dziedzinie częstotliwości. Pamiętamy
+z poprzedniego rozdziału, że przekształcenie DFT wymaga, aby sygnał w dziedzinie czasu był
+nieskończenie długi i okresowy. Tak więc N punktów powinno być powtarzanych wielokrotnie
+od minus do plus nieskończoności. Rozważmy teraz, co się dzieje, gdy sygnał w dziedzinie
+czasu dopełniamy ciągle rosnącą liczbą zer, aby uzyskać coraz to gęściejsze próbkowanie
+w dziedzinie częstotliwości. Dodawanie zer wydłuża przebieg w dziedzinie czasu, przy jedno-
+czesnym zmniejszaniu odstępów między próbkami w dziedzinie częstotliwości.
+
+Rozważmy teraz skrajną sytuację — dodanie nieskończonej liczby zer do sygnału w dzie-
+dzinie czasu. Wtedy, pod dwoma względami, powstaje inna sytuacja. Po pierwsze, sygnał
+w dziedzinie czasu ma teraz okres nieskończenie długi. Tak więc stał się sygnałem nieokre-
+sowym. Po drugie, odstępy między próbkami w dziedzinie częstotliwości stają się nieskoń-
+czenie małe. A zatem ten sygnał jest teraz sygnałem ciągłym. To jest przekształcenie DTFT,
+procedura zmieniająca dyskretny sygnał nieokresowy w dziedzinie czasu na sygnał będący
+krzywą ciągłą w dziedzinie częstotliwości. Odpowiedź częstotliwościową systemu określa
+się matematycznie, wyznaczając DTFT jego odpowiedzi impulsowej. Ponieważ nie da się
+tego zrobić w komputerze, więc stosuje się DFT do obliczania próbek prawdziwej odpowie-
+dzi częstotliwościowej. Jest różnica między tym, co wykonuje komputer (DFT), a tym, co
+realizujemy przy użyciu wzorów matematycznych (DTFT).
+
+Splot przez dziedzinę częstotliwości
+
+Powiedzmy, że jesteśmy niechętni stosowaniu splotu. Co wtedy możemy zrobić, mając dany
+sygnał wejściowy i odpowiedź impulsową i chcąc znaleźć wynikowy sygnał wyjściowy?
+Odpowiedź znajdziecie na rys. 9.8 — trzeba oba sygnały poddać przekształceniu do dziedziny
+częstotliwości, pomnożyć je przez siebie i następnie przekształcić uzyskany wynik z powro-
+tem do dziedziny czasu. Ta procedura zastępuje jedną operację splotu dwoma przekształce-
+niami DFT, mnożeniem i odwrotnym DFT. Mimo że operacje pośrednie są w tej procedurze
+odmienne, to uzyskany wynik jest identyczny ze standardowym algorytmem splotu.
+
+Czy ktokolwiek może aż tak bardzo nienawidzić splotu, aby podejmować tę kłopotliwą pro-
+cedurę? Otóż tak. Splotu unika się z dwóch przyczyn. Po pierwsze, splot jest operacją mate-
+matycznie trudną do realizacji. Załóżmy na przykład, że mamy daną odpowiedź impulsową
+systemu i sygnał na jego wyjściu. Jak obliczyć sygnał wejściowy? Ta operacja jest nazywana
+rozplotem (deconvolution), który jest zupełnie niemożliwy do zrozumienia w dziedzinie cza-
+su. Jednak rozplot w dziedzinie częstotliwości może być przeprowadzony jako proste dzie-
+lenie, operacja odwrotna do mnożenia. Dziedzina częstotliwości staje się godna uwagi, jeśli
+tylko zawiłości przekształcenia Fouriera są mniejsze niż operacji splotu. Nie jest to kwestia
+tego, którą z tych operacji bardziej lubimy, lecz tego, której mniej nienawidzimy.

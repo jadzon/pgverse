@@ -1,0 +1,34 @@
+2.1. Wielowrotniki i sieci 175
+
+<image/figury/k3_page173_figure2.png>
+Przykład 2.1-10. Czwórnik przedstawiony na rys. 2.1-5c ma następujące równania:
+
+Nzory/k3_page173_formula1.png 3_figure3.png
+
+BL. KOJĘCIE WIEIOWTOLIIKA. YYIELOWTOLNIKIEM (nh — wrolnikiemj nazywarmy
+układ (rys. 2.1-6a), w którym:
+a) wyróżniono 2n zacisków zgrupowanych w n par (n wrót);
+
+b) stan zaciskowy jest określony przez n napięć u,, u,,..., u, między
+zaciskami tworzącymi pary oraz n prądów iy,i;,...,i,, tzn. przez n-wymiaro-
+we wektory:
+
+<image/wzory/k3_page173_formula2.png>
+
+przy czym zakładamy, że dla każdej pary zacisków (każdych wrót) jest spełniony
+warunek zrównoważenia (rys. 2.1-6b)”:
+
+<image/wzory/k3_page173_formula3.png>
+
+c) wielkości zaciskowe u;,ua,...,U„,iy,ią,...,i, Są związane ze sobą n
+niezależnymi równaniami.
+
+Przypadkiem szczególnym wielowrotnika jest czwórnik (n = 2) oraz dwój-
+nik (n = 1).Przy n > 2 wszystkie wrota rysujemy zazwyczaj tak, jak to zostało
+pokazane na rys. 2.1-6a.
+
+<image/figury/k3_page173_figure1.png>
+
+') Zwracamy uwagę Czytelnika na fakt, iż spełnienie warunku zrównoważenia (2.1-15)
+gwarantuje spełnienie PPK dla całego wielowrotnika. Z równości (2.1-15) wynika bowiem, że
+suma prądów dopływających z otoczenia do wielowrotnika jest równa zeru.

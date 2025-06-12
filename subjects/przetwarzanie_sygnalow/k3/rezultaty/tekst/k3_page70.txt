@@ -1,0 +1,44 @@
+4. Oprogramowanie DSP
+
+wszystkie instrukcje i dane wymagane do realizacji postawionego zadania. Na przykład,
+gdy procesor napotka sekwencję bitów: 00000011 11000011, interpretuje ją jako instruk-
+cję nakazującą pobrać 16 bitów danych zapisanych w rejestrze BX, dodać je binarnie do
+zawartości 16 bitów rejestru AX i zapisać wynik w rejestrze AX. Ten poziom progra-
+mowania nosi nazwę kodu maszynowego lub wewnętrznego (machine code) i jest to
+poziom tylko o włos wyższy od pracy bezpośrednio z układami elektronicznymi.
+
+Praca w kodzie binarnym może w końcu nawet najcierpliwszego inżyniera doprowadzić do
+szału, dlatego sekwencjom zer i jedynek nadano nazwy zgodne z wykonywanymi przez nie
+funkcjami. Ten poziom programowania nazywamy asembłacją (assembly), której przykład po-
+dano w tablicy 4.4. Chociaż program asemblerowy jest znacznie łatwiejszy do zrozumienia, to
+jest on w zasadzie taki sam, jak kod maszynowy. Istnieje bowiem odpowiedniość jeden do jed-
+nego między instrukcjami programu i czynnościami podejmowanymi przez mikroprocesor. Na
+przykład: ADD AX, BX przekłada się na: 00000011 11000011. Program zwany asemblerem
+stosuje się do konwersji kodu asemblerowego z tablicy 4.4 (zwanego kodem źródłowym — so-
+urce code) na sekwencje zer i jedynek przedstawione w tablicy 4.3 (zwane kodem wynikowym
+lub kodem wykonawczym — object code, executable code). Ten kod może być bezpośrednio
+realizowany w mikroprocesorze. Programowanie asemblerowe wymaga, oczywiście, dogłębne-
+go rozumienia wewnętrznej budowy mikroprocesora, który zamierzamy ZastoSować.
+Programowanie asemblerowe obejmuje bezpośrednie operowanie elektroniką cyfrową: rejestra-
+mi, komórkami pamięciowymi, bitami stanu itd. Na następnym poziomie zaawansowania moż-
+na operować zmiennymi abstrakcyjnymi bez żadnego odniesienia do jakichś konkretnych roz-
+wiązań układowych. Są to języki skompilowane lub wysokiego poziomu. Kilkanaście z nich
+jest w powszechnym użyciu. Są to np. C, BASIC, FORTRAN, PASCAL, APL, COBOL, LISP.
+W tablicy 4.5 podano program w BASIC-u służący do dodawania 1234 i 4321. Programista zna
+tylko zmienne A, B i C i niczego nie musi wiedzieć o rozwiązaniach układowych.
+
+Program zwany kompilatorem stosuje się do konwersji kodu źródłowego wysokiego pozio-
+mu bezpośrednio na kod maszynowy. W tym celu kompilator musi w układach pamięcio-
+wych przydzielić komórki każdej zmiennej abstrakcyjnej pojawiającej się w programie. Na
+przykład, gdy kompilator po raz pierwszy napotka zmienną A w tablicy 4.5 (wiersz 100), to
+przyjmuje, że programista stosuje ten symbol do oznaczenia zmiennej zmiennoprzecinko-
+wej o pojedynczej dokładności. Kompilator wyznacza, odpowiednio, cztery bajty pamięci,
+które będą służyć tylko do przechowywania wartości tej zmiennej. Za każdym razem, gdy
+A pojawia się w programie, komputer wie, że trzeba zaktualizować zawartość tych czterech
+bajtów. Kompilator również rozkłada skomplikowane wyrażenia matematyczne, takie jak
+
+Tab. 4.3. Maszynowy kod programu do dodawania liczb 1234 i 4321. To jest najniższy poziom
+— bezpośrednie operowanie uktadami elektronicznymi. (Prawa kolumna jest
+przedłużeniem lewej)
+
+<image/tabele/k3_page70_table1.png>

@@ -1,0 +1,64 @@
+Zasilacze urządzeń elektronicznych — przewodnik
+
+dla początkujących
+
+<image/figury/k3_page583_figure3.png>
+
+:go jest ważną częścią urządzenia elektronicznego, lecz często po-
+mało (lub wcale) uwagi w podręcznikach elektroniki. To spowo-
+tej książki. Czytelnik znajdzie w niej materiał dotyczący natury
+opis bloków funkcjonalnych zasilaczy oraz omówienie układów
+
+ych konstruuje się zasilacze urządzeń elektronicznych.
+
+aczona dla techników elektroników oraz uczniów techników elek-
+ygą z niej również skorzystać zaawansowani hobbyści elektronicy
+
+wr
+
+(twarda oprawa)
+
+Pamięci masowe w systemach mikroprocesorowych
+
+<image/figury/k3_page583_figure2.png>
+
+awa miwę mA ma
+
+Cena: 51,00 zł
+
+ik dla każdego konstruktora chcącego dołączyć pamięć masową
+pulamiejszym standardzie IDE/ATA do systemu cyfrowego. Na
+'u uruchomieniowego z 8-bitowym mikrokontrolerem z rodziny
+dostęp do danych umieszczonych np. na partycji FAT32 nie jest
+! książce dokładnie opisano funkcje umożliwiające zapisywanie
+nych z różnorodnych pamięci masowych, np. dysków twardych,
+M czy kart pamięci CompactFlash.
+*ogramowanie napisano z wykorzystaniem bezpłatnego pakietu
+storem języka € dla mikrokontrolerów AVR (AVR-GCO). Dzięki
+przykładowego oprogramowania na inną platformą sprzętową (np.
+z rodziny PIC czy z rdzeniem ARM) nie powinno przysporzyć
+
+ks
+r. (twarda oprawa)
+
+Sztuka programowania mikrokontrolerów AVR. Podstawy
+
+<image/figury/k3_page583_figure1.png>
+
+Cena: 59,00 zł
+
+śdło wiedzy na temat technik programowania w asemblerze mikro-
+iny AVR produkowanych przez firmę Atmel. W książce zawarto
+ce budowy mikrokontrolerów AVR (opis m.in. rdzenia, pamięci
+danych, rejestrów specjalnych mikrokontrolera), opis języka asem-
+tna lista rozkazów, opis najważniejszych dyrektyw kompilatora)
+xdstawowych narzędzi do tworzenia i symulacji oprogramowania.
+1ej poruszono wybrane zagadnienia z arytmetyki mające zastoso-
+vwaniu oraz przedstawiono podstawowe algorytmy rozwiązujące
+i spotykane w technice mikroprocesorowej.
+
+kich elektroników, którzy chcą poznać budowę mikrokontrolerów
+wogramowania w asemblerze.
+
+yluc zuk
+r. (twarda oprawa)

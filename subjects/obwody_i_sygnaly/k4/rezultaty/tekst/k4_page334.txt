@@ -1,0 +1,25 @@
+334 | 3. Obwody prądu stałego
+
+<image/wzory/k4_page334_formula1.png>
+<image/wzory/k4_page334_formula2.png>
+
+Zadanie 3.21. Sieć zawiera 5 węzłów połączonych każdy z każdym tylko jedną gałęzia. lle
+niezależnych równań wynikających z PPK i niezależnych równań wynikających z NPK można
+zapisać dla tej sieci?
+
+Odp.: PPK: 4, NPK: 6
+
+Zadanie 3.22. Stosując metodę prądów obwodowych, obliczyć rozpływ prądów i rozkład napięć
+w sieci pokazanej na rys. Z-3.22. Dane: E =32V, R; =2kQ, R; =$ kQ, Rz=R5=
+= R, = 4 kQ, R, = 8 kQ, R, = 16kQ.
+
+<image/figury/k4_page334_figure1.png>
+
+Odp.: I, = 6 mA, I, = 4mA, I, = I, = ZmA
+I, = 1, = 1mA, I, = 3 mA, I = 8mA |
+U, = U, = 12V, U; = 20V, U; =8V
+U, =U; =16V, UG =4V
+
+niunia 2792 Otneonian matrya naniaź wazłowych obliczyć rozkład nanieć i rozoływ pradów w sieci
+
+<image/figury/k4_page334_figure2.png>

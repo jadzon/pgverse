@@ -1,0 +1,62 @@
+Właściwości dziedziny s 557
+
+ujemnych, — ©, mamy zespolone wartości sprzężone (taka sama część rzeczywista, ujem-
+na część urojona) w stosunku do wartości dla częstotliwości dodatnich ©. Przekształcenie
+Laplace”a jest po prostu rozszerzeniem tych samych koncepcji.
+
+Na rys. 32.2 pokazano trzy pary punktów na płaszczyźnie zmiennej zespolonej s: AiA,BiB'
+oraz € i €'. Tak samo jak w zespolonym widmie częstotliwościowym, punkty A, B i C (często-
+tliwości dodatnie) są zespolonymi wartościami sprzężonymi punktów A”, B” i C” (częstotliwości
+ujemne). Góma połowa płaszczyzny zmiennej zespolonej s jest lustrzanym odbiciem dolnej poło-
+wy i obie połowy są konieczne do uzyskania odpowiedniości z rzeczywistym sygnałem w dzie-
+dzinie czasu. Inaczej mówiąc, traktując te punkty jako pary, omija się matematykę liczb zespolo-
+nych, dzięki czemu możemy operować w dziedzinie czasu, stosując liczby tylko rzeczywiste.
+Ponieważ każda z tych par punktów ma określone wartości 6 i +0, więc istnieją dwa przebie-
+gi związane z każdą parą: cos(©/) e "9 oraz sin(©r) e **. Punkty, np. A i A” mają położenie
+6 = 1.5. i © = +40, a więc odpowiadają im przebiegi: cos(40r) e "1-* oraz sin(40r) e "*-*. Są
+to sinusoidy o amplitudzie rłumionej wykładniczo w funkcji czasu (rys. 32.2). Natomiast fale
+sinusoidalna i kosinusoidalna związane z punktami B i B' mają stałą amplitudę, gdyż O jest
+równa zero. Amplituda zaś fal sinusoidalnej i kosinusoidalnej związanych z punktami CiC'
+wzrasta, bo 6 jest ujemna.
+
+Wartość każdego położenia na płaszczyźnie zmiennej zespolonej s składa się z części rze-
+czywistej i części urojonej. Część rzeczywistą określa się, mnożąc sygnał w dziedzinie cza-
+su przez kosinusoidę ważoną wykładniczo i następnie wykonując całkowanie w granicach
+od —00 do o, Część urojoną wyznacza się w ten sam sposób, stosując jednak wykładniczo
+ważoną falę sinusoidalną. Można to przedstawić w postaci równania na przykładzie części
+
+3:«%.
+
+rzeczywis'" * *
+<image/wzory/k3_page517_formula1.png>
+
+Na rys. 32.3 przedstawiono przykład przebiegu w dziedzinie czasu, jego widmo częstotliwo-
+ściowe i jego reprezentację w dziedzinie s. Przykładowy sygnał jest impulsem prostokątnym
+o szerokości dwa i wysokości jeden. Jak wynika z rysunku, zespolona transformata Fouriera
+tego sygnału jest funkcją sinc w części rzeczywistej i sygnałem całkowicie zerowym w czę-
+ści urojonej. Na płaszczyźnie zmiennej zespołonej s jest to pofalowany sygnał dwuwymia-
+rowy, pokazany tu jako powierzchnie topograficzne części rzeczywistej i urojonej. Można to
+
+<image/wzory/k3_page517_formula2.png>
+
+Rozpoczynamy tu od definicji przekształcenia Laplace'a (wzór 32.1), wstawiamy wartość
+jednostkową jako x(r) i zmieniamy granice tak, aby były dopasowane do długości niezerowej
+części sygnału w dziedzinie czasu. Obliczenie całki daje sygnał w dziedzinie s, wyrażony
+jako zespolone położenie s i wartość zespolona X(5):
+
+Xx (s);
+
+s
+
+Chociaż jest to najbardziej zwarta postać odpowiedzi, to jednak zastosowanie zmiennych
+zespolonych powoduje, że jest ona trudna do zrozumienia i niemożliwa do zobrazowania tak
+jak na rys. 32.3. Rozwiązaniem tych niedogodności jest zastąpienie zmiennej zespolonej s
+przez 6 + jo i rozdzielenie następnie części rzeczywistej od urojonej:
+
+ReX(0,0)= ocos(0)| e” -e” +osin(0)| e” +e"
+
+o” +0
+
+ImX(a,6)= asin(o)| e” +e” Laca(ojfe -e"
+
+o +0

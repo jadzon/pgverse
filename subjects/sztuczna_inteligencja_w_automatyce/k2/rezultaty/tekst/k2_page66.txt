@@ -1,0 +1,38 @@
+71
+
+jest „pracuje dla". Częste zastosowanie ma połączenie „jest częścią" (np. cylinder
+jest częścią silnika).
+
+4.4. Ramy
+
+Ramy są wygodnym sposobem reprezentacji wiedzy. Stosują podstawowe zasady
+reprezentacji (O0-A-V) ale oferują bardziej efektywną reprezentację. Uzasadnieniem
+użycia ram było stwierdzenie, że ekspert człowiek przechowuje swoją wiedzę w po-
+staci różnych powiązanych koncepcji (ram).
+
+Rama jest prostą strukturą. Ma nazwę, poprzez którą następuje do niej odwołanie
+i zbiór klatek (ang. slots) — patrz rys. ??.
+
+<image/figury/k2_page66_figure1.png>
+
+Wartości domyślne są zwykle związane z ogólnymi własnościami klasy lub pojęcia
+pozostają niezmienne podczas trwania ramy. Wartości domyślne są używane tylko
+
+wtedy, gdy nie ma wartości bieżących dla danej klatki. Wartości bieżące dotyczą
+zwykle specyficznych obiektów — mogą być zmieniane w czasie działania systemu.
+Gdy wartość bieżąca istnieje, to jej wartość jest wartością klatki. Rama może być
+uważana za tablicę dynamiczną mającą trzy kolumny i dowolną liczbę wierszy.
+
+Ramy mogą być łączone w struktury obrazujące ich wzajemne relacje. Podsta-
+wową strukturą jest połączenie typu rama rodzicielska — rama potomna. Ramę po-
+tomną można uważać za pewną specjalizację ramy rodzicielskiej i odwrotnie rama
+rodzicielska może być uważana za pewną generalizację ramy potomnej. Zbiór takich
+połączeń pomiędzy ramami tworzy ich hierarchię, w której bardziej ogólne koncepcje
+pojawiają się na górze zaś bardziej specyficzne na dole struktury.
+
+Prostą i jedyną korzyścią łączenia ram w hierarchie, jest to, że informacja może
+być rozłożona niekoniecznie będąc duplikowaną
+
+Rama potomna może dziedziczyć wartości (zarówno domyślne jak i bieżące) od
+ram rodzicielskich, które z kolei mogą je dziedziczyć od swoich ram rodzicielskich,
+itd. W ten sposób informacja przepływa z góry na dół struktury.

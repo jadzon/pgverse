@@ -1,0 +1,42 @@
+112 1. Pojęcia podstawowe — elementy
+
+W rozpatrywanym przypadku zmiana energii gromadzonej nastąpiła wyłącz-
+nie wskutek zmiany indukcyjności, a więc wskutek ruchu punktu pracyw polu
+charakterystyk (anie wzdłuż ustalonej charakterystyki). Taki ruch w polu
+charakterystyk (zmiana indukcyjności) wymaga wykonania pracy. Praca ta
+może być wykonana przez siły zewnętrzne (powodujące np. ruch rdzenia w cewce
+lub ruch okładzin kondensatora) i wówczas może zwiększać energię gromadzoną
+w polu magnetycznym indukcyjności (lub, analogicznie, w polu elektrycznym
+pojemności). Praca ta może być wykonana także siłami samego pola i wówczas
+zostaje zużyta część energii gromadzonej w polu, np. pobranej przez element
+z obwodu. Indukcyjność niestacjonarna i pojemność niestacjonarna mogą być
+zatem traktowane jak swego rodzaju przetworniki energii, których
+zachowanie się w obwodzie elektrycznym jest opisywane równaniem jawnie
+zależnym od czasu — równania (1.6-5) i (1.6-6) lub równania ogólniejsze (1.6-2)
+i (1.6-3).
+
+Zjawisko dostarczania do elementu niestacjonarnego lub pobierania z tego
+elementu dodatkowej energii jest nazywane zjawiskiem pompowania, a energia
+z nim związana energią pompowania. Zjawisko to bywa wykorzystywane
+w niektórych urządzeniach elektronicznych, np. w tzw. wzmacniaczach paramet-
+rycznych”).
+
+ 
+
+E. Bilans energetyczny niestacjonarnej indukcyjności liniowej. Rozważmy
+teraz dokładniej bilans energetyczny dla niestacjonarnej indukcyjności linio-
+wej o równaniach (1.6-5). Energia pobrana przez element z otoczenia w prze-
+dziale czasu (ty, t) jest określona wzorem?:
+
+<image/wzory/k4_page112_formula1.png>
+Zgodnie z zależnościami (1.6-5) mamy:
+<image/wzory/k4_page112_formula2.png>
+
+Zauważmy ponadto, że:
+
+<image/wzory/k4_page112_formula3.png>
+Z porównania obu tych zależności otrzymujemy bez trudu:
+
+„ 3) Nazwy: element (obwód) parametryczny używamy często w znaczeniu: element (obwód)
+niestacjonarny.
+2 Dla uniknięcia ewentualnych niejasności zmienną całkowania oznaczamy tu przez T.

@@ -1,0 +1,41 @@
+Przedmowa 11
+
+elektromagnetycznych (elektrostatyka, magnetostatyka, pole przepływowe prą-
+du, podstawowe zjawiska i zagadnienia teorii zmiennego pola elektromagnetycz-
+nego). Z tego względu niektóre problemy uzupełniające, odnoszące się do
+równań Maxwella i warunku quasi-stacjonarności, zostały omówione w Dodat-
+kach.
+
+Jak już podkreśliliśmy, podręcznik powstał jako wynik naszych doświadczeń
+zdobytych podczas prowadzenia wykładów na Wydziale Elektroniki Politech-
+niki Warszawskiej i jest adresowany głównie do studentów tego wydziału.
+Staraliśmy się jednak o to, aby nie naruszając przyjętej koncepcji dostosować go,
+w miarę możliwości, do potrzeb ogólnych. Mamy zatem nadzieję, że będzie on
+pomocny w procesie nauczania nie tylko na naszym wydziale. Wyrażamy
+również przekonanie, że będą z niego korzystać wszyscy, którzy niezależnie od
+uzyskanych stopni i tytułów odczują kiedyś potrzebę sięgnięcia „do podstaw”.
+Czy nasze nadzieje i prognozy sprawdzą się, zdecydują o tym sami Czytelnicy.
+
+Pragniemy wyrazić swoje gorące podziękowanie wszystkim osobom, których
+wnikliwe i krytyczne uwagi przyczyniły się do istotnej poprawy tekstu. Słowa
+podziękowania kierujemy przede wszystkim do obu Recenzentów: prof. dr hab.
+Mirona Niedźwiedzkiego z Politechniki Gdańskiej i prof. dr hab. Mariana
+Piekarskiego z Politechniki Wrocławskiej. Ich życzliwa krytyka była dla nas
+ogromnie ważna.
+
+Dziękujemy także serdecznie kolegom z naszego zakładu: prof. dr hab.
+Jackowi Kudrewiczowi, którego oryginalne spojrzenie zmusiło nas do ponow-
+nego przemyślenia i zrewidowania niektórych poglądów, a także dr Edwardowi
+Śliwie, bez którego merytorycznej kontroli całości tekstu, w tym także zadań,
+popełnilibyśmy znacznie więcej błędów i uchybień. Za wskazanie tych, które
+— już bez naszej świadomości — pozostały w tekście, będziemy Czytelnikom
+bardzo zobowiązani.
+
+Słowa podziękowania składamy również redaktorowi naukowemu podręcz-
+nika Pani inż. Zuzannie Grzejszczak oraz pracownikom Zakładu Graficznego
+Politechniki Warszawskiej, dzięki którym otrzymał on taką oprawę, w jakiej
+trafia do rąk Czytelnika.
+
+Jerzy Osiowski
+Jerzy Szabatin
+Warszawa, listopad 1991 r.

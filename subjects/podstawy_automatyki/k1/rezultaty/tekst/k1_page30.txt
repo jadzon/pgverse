@@ -1,0 +1,32 @@
+Rozwiązanie
+Mianownik transformaty F(s) można zapisać jako
+
+<image/wzory/k1_page30_formula1.png>
+
+wykorzystujcwzory
+
+<image/wzory/k1_page30_formula2.png>
+
+<image/wzory/k1_page30_formula3.png>
+
+oraz przekształcając F(s), otrzymujemy
+
+<image/wzory/k1_page30_formula4.png>
+
+Oryginał /(t) wyliczamy jako odwrotną transformatę Laplace'a F(s):
+<image/wzory/k1_page30_formula5.png>
+<image/wzory/k1_page30_formula6.png>
+
+Przykład 2.5
+Znaleźć oryginał funkcji dla transformaty
+
+<image/wzory/k1_page30_formula7.png>
+
+Rozwiązanie
+Wyznaczamy pierwiastki wyrażenia w nawiasach (w mianowniku), otrzymując
+
+<image/wzory/k1_page30_formula8.png>
+
+Rozkładając transformatę F(s) na ułamki proste, otrzymujemy
+
+<image/wzory/k1_page30_formula9.png>

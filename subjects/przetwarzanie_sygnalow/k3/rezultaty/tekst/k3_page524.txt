@@ -1,0 +1,77 @@
+32. Przekształcenie Laplace'a
+
+ 
+
+Na rys. 32.5 d) amplituda przebiegu użytego do przebadania wzrasta z dokładnie z taką samą
+szybkością, z jaką jest tłumiona amplituda przebiegu odpowiedzi impulsowej. To powoduje,
+że iloczyn obu przebiegów ma stałą amplitudę. Jest to zatem linia podziału między przypad-
+kami przedstawionymi na rys. 32.5 c), e). Powierzchnia pod wykresem ma tu wartość prawie
+nieokreśloną (niech mi matematycy wybaczą to niezbyt precyzyjne określenie). Ściślej mó-
+wiąc, ten punkt znajduje się na granicy obszaru zbieżności. Jak wspomniano, wartości 6 i ©
+dające ten typ dokładnego kasowania są nazywane biegunami systemu. Bieguny zaznaczono
+krzyżykami (x) na płaszczyźnie zmiennej zespolonej s.
+
+Analiza obwodów elektrycznych
+
+Wprowadziliśmy przekształcenie Laplace'a, zaczynając od postaci graficznej, opisując, jak
+wyglądają przebiegi i w jaki sposób można nimi operować. Jest to najbardziej intuicyjny
+sposób zrozumienia tej metody, lecz bardzo różniący się od sposobu, w jaki metoda jest
+rzeczywiście stosowana. Przekształcenie Laplace'a jest w swojej istocie metodą matema-
+tyczną i jego stosowanie polega na pisaniu równań i operowaniu nimi. Trudność leży w tym,
+że łatwo się pogubić w algebrze liczb zespolonych z uwagi na jej abstrakcyjny charakter
+i utracić wszelkie związki ze światem rzeczywistym. Waszym zadaniem jest scalić ze sobą
+oba te sposoby podejścia do przekształcenia Laplace'a. Przekształcenie Laplace'a jest pod-
+stawową metodą analizy obwodów elektrycznych. Pamiętajcie, że w ten sam sposób można
+też przeanalizować każdy system, którego działanie jest opisane równaniami różniczkowym.
+Obwody elektryczne są po prostu przykładem, z którego korzystamy.
+Najprostszym podejściem jest rozwiązanie równań różniczkowych rządzących działaniem sys-
+temu i uzyskanie jego odpowiedzi impulsowej. Odpowiedź impulsową można następnie prze-
+kształcić, przenosząc ją do dziedziny s zgodnie ze wzorem 32.1. Na szczęście jest lepszy sposób
+— przekształcenie każdego elementu w jego równoważnik w dziedzinie s i następnie ocena, jak
+one współdziałają. Jest to bardzo podobne do przedstawionej w rozdziale 30 metody symbo-
+licznej, gdzie rezystory, cewki indukcyjne i kondensatory są reprezentowane przez R, j(oŁ oraz
+L/jOC. W przekształceniu Laplace'a rezystory, cewki indukcyjne i kondensatory stają się zmien-
+nymi zespolonymi: R, sŁ oraz 1/sc. Zauważcie, że metoda symboliczna (zwana przekształceniem
+fazorowym) jest podzbiorem przekształcenia Laplace'a. To znaczy, że jeśli wstawi się 6 równe
+zero do wyrażenia s = G + jo, to R pozostaje jako R, sŁ staje się joL, a 1/sC staje się 1//0C.
+Podobnie jak w rozdziale 30 potraktujemy każdy z trzech elementów podstawowych jako od-
+dzielny system, w którym przebieg prądowy jest sygnałem wejściowym, a napięciowy — wyj-
+ściowym. Gdy mówimy, że rezystory, cewki indukcyjne i kondensatory stają się równe R, sŁ
+oraz 1/sC w dziedzinie s, to odnosi się to do stosunku sygnału wyjściowego do wejściowego.
+Inaczej mówiąc, tym wyrażeniom jest równa transformata Laplace'a przebiegu napięciowego
+podzielona przez transformatę Laplace'a przebiegu prądowego.
+Załóżmy, dla przykładu, że w cewce indukcyjnej wymuszamy prąd będący przebiegiem kosi-
+nusoidalnym o amplitudzie jednostkowej i częstotliwości ©y. Powstający na cewce przebieg
+napięciowy można wyznaczyć, rozwiązując równanie różniczkowe rządzące tymi zjawiskami.
+<image/wzory/k3_page524_formula1.png>
+Jeśli przebieg prądowy rozpoczyna się w chwili 1 = 0, to przebieg napięciowy też rozpocznie
+
+się w tej samej chwili, tzn. i(1) = O oraz u(r) = O dla czasów r < 0. Te przebiegi prądu i napię-
+cia są przekształcane na ich reprezentacie w dziedzinie s według wzoru 32.1:
+
+<image/wzory/k3_page524_formula2.png>
+
+   
+   
+ 
+ 
+ 
+ 
+ 
+   
+   
+ 
+ 
+ 
+ 
+  
+ 
+ 
+  
+ 
+ 
+  
+ 
+  
+
+<image/wzory/k3_page524_formula3.png>

@@ -1,0 +1,24 @@
+strali rezerwowej. Sterownik może być również przełączony przez wyzwolenie
+przycisku w module komunikacji rezerwowej lub przez procedury w programie
+użytkownika. Po wystąpieniu przełączenia sterownika magistrale zamieniają role
+— łącze aktywne staje się rezerwowym, a rezerwowe aktywnym.
+
+<image/figury/k4_page124_figure2.png>
+
+Rys. 3.5 Gorąca rezerwa CPU w układzie dwóch sterowników
+
+<image/figury/k4_page124_figure1.png>
+
+w CPU aktywnym i rezerwowym .
+
+W układzie gorącej rezerwy CPU konieczna jest synchronizacja pracy obu CPU
+- aktywnej i rezerwowej - według schematu pokazanego na Rys. 3.6. Synchroni-
+zacja z wymianą danych zapewnia wykonywanie tego samego programu
+(umieszczonego w obu CPU) dla tych samych danych wejściowych. Synchroni-
+zacja cyklu pracy obejmuje wymianę danych wejściowych i wyjściowych,
+wybranych w konfiguracji obu sterowników. Rozwiązanie takie umożliwia po-
+nadto zmiany oprogramowania w czasie pracy systemu.
+
+ 
+
+124 Rozdział : 3. Sprzęt sterowników PLC

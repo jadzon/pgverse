@@ -1,0 +1,42 @@
+1.6. Zamiana systemu 9
+
+w postaci dziesietnei. korzystamv ze wzom (1.3):
+
+<image/wzory/k2_page24_formula1.png>
+
+i wykonujemy wszystkie rachunki w systemie dziesietnym:
+
+<image/wzory/k2_page24_formula2.png>
+Podobnie możemy postępować przy zamianie w odwrotną stronę, z systemu dziesiętnego
+na dwóikowv. Naipierw korzvstamv ze wzonu (1.1):
+
+<image/wzory/k2_page24_formula3.png>
+
+następnie przedstawiamy cyfry i podstawę systemu 10 w postaci dwójkowej i wykonuje-
+my wszystkie działania w systemie dwójkowym:
+
+<image/wzory/k2_page24_formula4.png>
+Ten sposób zamiany liczb z postaci dziesiętnej na dwójkową jest analogiczny do sposobu,
+w jaki wyżej zamienialiśmy liczby z postaci dwójkowej na dziesiętną. Byłby to naturalny
+sposób dla kogoś, kto swobodnie liczy w systemie dwójkowym. Sposób ten ma tę wadę,
+że wolno działa. Zobaczymy na przykładach dwa szybsze algorytmy zamiany postaci
+liczby z dziesiętnej na dwójkową.
+
+Weźmy liczbę 178. Pierwszy sposób polega na tym, że wyszukujemy największą po-
+tęgę liczby 2, która jeszcze jest mniejsza od naszej liczby (w przykładzie 128 = 27),
+następnie odejmujemy tę potęgę od naszej liczby i z różnicą postępujemy tak samo. Na
+końcu mamv liczbe w postaci sumv potea dwóiki. W naszvm przykładzie wvalada to tak:
+
+<image/wzory/k2_page24_formula5.png>
+
+Teraz już łatwo zapisać nasza liczbe w postaci dwóikowei:
+
+<image/wzory/k2_page24_formula6.png>
+Drugi sposób polega na kolejnym dzieleniu liczby w sposób całkowity przez 2 i za-
+pamiętywaniu reszt z dzielenia. Reszty te zapisane w odwrotnej kolejności tworzą zapis
+binamy liczby. Na przykład, weźmy znowu liczbę 178. W poniższej tabeli przedstawiono
+kolejne ilorazy i reszty.
+
+<image/tabele/k2_page24_table1.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

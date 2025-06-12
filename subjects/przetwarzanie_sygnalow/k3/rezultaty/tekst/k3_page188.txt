@@ -1,0 +1,17 @@
+_- Na rysunkach 11.1 d), g) przebieg w dziedzinie czasu został przesunięty o cztery i o osiem pró-
+= bek w prawo. Uwzględniając właściwości rozpatrywane w poprzednim rozdziale, wiadomo, że
+przesunięcie przebiegu w dziedzinie czasu nie wpływa na moduł, lecz dodaje składową liniową
+do charakterystyki fazowej. Charakterystyki fazowe przedstawione na rysunku nie zostały roz-
+winięte, więc obejmują tylko zakres od -x do xn. Zauważmy też, że oś pozioma w dziedzinie
+częstotliwości ma zakres -0,5 do 0,5. To znaczy, że w widmie są pokazane zarówno częstotli-
+wości ujemne, jak i dodatnie. Częstotliwości ujemne są informacją redundancyjną, lecz często
+uwzględnia się je na wykresach w DSP. Trzeba się więc przyzwyczaić do ich oglądania.
+
+Na rys. 11.2 podano te same informacje, co na rys. 11.1, lecz w dziedzinie częstotliwości za-
+współrzędne
+
+rę i
+prostokątnych zaś części rzeczywista i urojona są oscylacjami sinusoidalnymi, którym trudno
+przypisać jakieś znaczenie.
+
+<image/figury/k3_page188_figure1.png>

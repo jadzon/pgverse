@@ -1,0 +1,43 @@
+94 1. Pojęcia podstawowe — elementy sa
+
+Prawa Kirchhoffa są słuszne niezależnie od rodzaju łączonych elementów,
+pod warunkiem jednak, że są to elementy skupione. Określają one ograniczenia,
+jakie na prądy i napięcia w układzie skupionym nakłada struktura połączeń tego
+układu. Łącznie z równaniami elementów skupionych, z których jest zbudowany
+układ, równania (1.5-1) i (1.5-2), wyrażające prawa Kirchhoffa, stanowią zbiór
+równań opisujących w pełni dany układ skupiony.
+
+Przykład 1.5-1. Rozważmy układ skupiony przedstawiony na rys. 1.5-3 (por. układ z rys.
+1.1-4). Dla układu tego zapiszemy wszystkie równania wynikające z PPK i NPK.
+
+ 
+
+Rys. 1.5-3
+
+wzory/k4_page94_formula1.0nqobwodyzamknitenpk
+
+BA) U; ŁU Uz = O
+
+CB) —u;tu, tus = 0
+
+<image/wzory/k4_page94_formula2.png>
+BCA) u;,+u;—u,tuę=0
+(ABDCA) — u; — u, tu, +tug=0
+(ADCBA) u,+u, tu, tus = 0
+
+(ADCA) us kłus +ug=0
+
+Spośród czterech prądowych równań Kirchhoffa, które można zapisać dla rozważanego układu,
+trzy są niezależne. Czwarte równanie wynika z trzech pozostałych. Na przykład, równanie dla węzła
+D można otrzymać sumując trzy pozostałe i mnożąc wynik przez — 1.
+
+Podobnie, spośród napięciowych równań Kirchhoffa można wybrać (na kilka różnych
+sposobów) trzy równania niezależne. Pozostałe równania napięciowe będą kombinacjami liniowymi
+tych trzech. Na przykład, trzy pierwsze z wymienionych równań napięciowych (zapisane dla
+obwodów zamkniętych nazywanych oczkami) tworzą niezależny układ równań (por. p. 3.3.4-B,C).
+
+B. Zasada Tellegena. Załóżmy, że rozpatrujemy układ zbudowany
+z K elementów skupionych (np. dla układu z rys. 1.5-3 mamy K = 6) Dla
+dowolnego k-tego elementu, k = 1,..., K wyrażenie:
+
+<image/wzory/k4_page94_formula3.png>

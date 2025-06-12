@@ -1,0 +1,25 @@
+Wtedy układ równań w przestrzeni stanu możemy zapisać w postaci
+
+<image/wzory/k1_page4/_formula1.png>
+
+oraz
+
+<image/wzory/k1_page4/_formula2.png>
+
+Przykład 2.13
+
+Wyznaczyć równania stanu i wyjścia dla układu dwóch zbiorników z cieczą poka-
+zanego na rysunku 2.6, na którym przez d; i d, oznaczono natężenia dopływu cieczy do
+zbiorników.
+
+<image/figury/k1_page47_figure1.png>
+
+Rys. 2.6. Układ dwóch zbiorników z cieczą: A;, A — powierzchnie przekroju zbiorników;
+h,, hą — wysokość cieczy w zbiornikach; R;, R> — opory hydrauliczne zaworów
+
+Rozwiązanie
+Natężenie przepływu cieczy przez zawory zapisujemy jako:
+
+<image/wzory/k1_page4/_formula3.png>
+
+49

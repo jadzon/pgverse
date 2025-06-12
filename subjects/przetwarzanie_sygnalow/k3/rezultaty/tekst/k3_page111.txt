@@ -1,0 +1,36 @@
+126 7. Właściwości splotu
+na.)
+
+elementem przy nagrywaniu dźwięku, który dzięki temu brzmi bardziej naturalnie i przyjem-
+nie. W urządzeniach radarowych i sonarowych analizuje się sygnały echa w celu wykrycia
+samolotów i łodzi podwodnych. Geofizycy stosują echo do wykrywania złóż ropy. Zjawisko
+echa jest też istotne w sieciach telefonicznych, lecz tam chcemy go uniknąć.
+
+Operacje podobne do różniczkowania i całkowania
+
+Splot może zmieniać sygnał dyskretny w sposób podobny do całkowania i różniczkowania.
+Ponieważ pojęcia „pochodna” i „całka” dotyczą operacji na sygnałach ciągłych, więc nada-
+no inne nazwy ich odpowiednikom w przypadku sygnałów dyskretnych. Operacja dyskretna
+będąca naśladownictwem pierwszej pochodnej jest nazywana pierwszą różnicą. Podobnie,
+dyskretna postać całki jest nazywana sumą bieżącą. Spotyka się też określenia tych operacji
+jako pochodna dyskretna oraz całka dyskretna, chociaż matematycy marszczą brwi, sły-
+sząc takie nieformalne nazwy.
+
+Na rys. 7.2 przedstawiono odpowiedzi impulsowe realizujące pierwszą różnicę oraz sumę bieżą-
+cą, na rys. 7.3 zaś — przykład zastosowania tych operacji. Sygnał oryginalny (rys. 7.3 a) składa
+się z kilku fragmentów o zmieniającym się nachyleniu. Splecenie tego sygnału z odpowiedzią
+impulsową realizującą pierwszą różnicę daje sygnał przedstawiony na rys. 7.3 b). Tak jak w przy-
+padku pierwszej pochodnej, wartość każdego punktu w sygnale pierwszej różnicy jest równa na-
+chyleniu sygnału oryginalnego w tym punkcie. Suma bieżąca jest operacją odwrotną w stosunku
+do pierwszej różnicy. Tak więc poddanie splotowi sygnału z rys. 7.3 b) z odpowiedzią impulsową
+realizującą sumę bieżącą da sygnał przedstawiony na rys. 1.3 a).
+
+Te odpowiedzi impulsowe są na tyle proste, że do ich implementacji nie jest konieczny pełny
+program obliczania splotu. Pomyślmy o nich raczej w sposób alternatywny, przyjmując, że
+każda próbka jest sumą ważonych próbek wejściowych. Na przykład pierwszą różnicę można
+
+obliczyć z wzoru:
+yn] = xn] - xln - 1]
+Wzór 7.4. Obliczanie pierwszej różnicy. W tej zależności x[n] jest sygnatem oryginalnym, y[n] - pierwszą
+
+<image/figury/k3_page111_figure1.png>

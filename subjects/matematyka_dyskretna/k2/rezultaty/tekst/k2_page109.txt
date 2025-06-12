@@ -1,0 +1,23 @@
+18 Rozdział 1. Funkcje boolowskie
+
+Rysunek 1.8: Schemat sumatora
+
+<image/figury/k2_page109_figure1.png>
+
+Zauważmy, że deszyfrować można według tego samego wzoru:
+
+<image/wzory/k2_page109_formula1.png>
+
+poni
+
+<image/wzory/k2_page109_formula2.png>
+gdzie 0 reprezentuje wektor zerowy. Zaletą tego systemu jest to, że jest on absolutnie bez-
+pieczny. Zróbmy następujący eksperyment Przypuśćmy, że ktoś ma zaszyfrowaną wia-
+domość y i chce ją odszyfrować przez odgadnięcie samej wiadomości r. Zastanówmy się,
+dla jakich ciągów z istnieje klucz k, taki że z © k = y, czyli inaczej, jakie wiadomości
+mogą być zaszyfrowane w y. Okazuje się, że dla każdego ciągu z € 0,1)” istnieje klucz
+k, taki że 1 6 k = y. Wystarczy wziąć k = r 6 y. Mamy wtedy:
+
+<image/wzory/k2_page109_formula3.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

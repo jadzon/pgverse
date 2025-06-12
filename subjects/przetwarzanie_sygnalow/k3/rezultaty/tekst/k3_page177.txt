@@ -1,0 +1,40 @@
+Z uwzględnieniem częstotliwości ujemnych, sygnały w dziedzinie częstotliwości w DFT
+są widziane jako okresowe, o okresie 1,00 pomnożonym przez częstotliwość próbkowania,
+tj. od -0,5 do 0,5 lub od O do 1,0. Długość okresu w dziedzinie częstotliwości, wyrażona
+w numerach próbek, jest równa N, taka samo jak w dziedzinie czasu.
+
+Okresowość sygnałów w dziedzinie częstotliwości czyni je podatnymi na aliasing w dziedzi-
+nie częstotliwości, w pełni analogiczny do poprzednio opisanego aliasingu w dziedzinie czasu.
+Wyobraźmy sobie jakiś sygnał w dziedzinie czasu mający równoważne mu widmo częstotli-
+wościowe. Gdy sygnał w dziedzinie czasu ulega modyfikacji, jest oczywiste, że jego widmo
+zmieścić w obszarze przewidzianym, to jego część przejdzie do sąsiednich okresów. Tak jak po-
+przednio, taki aliasing powoduje dwa problemy: częstotliwości nie są umiejscowione tam, gdzie
+powinny być, a nakładające się sygnały z różnych okresów sumują się, niszcząc informację.
+Aliasing w dziedzinie częstotliwości jest trudniejszy do zrozumienia niż w dziedzinie czasu,
+gdyż charakter okresowości jest w dziedzinie czasu bardziej skomplikowany. Rozważmy ja-
+kąś jedną częstotliwość, która zostaje zmuszona do przesunięcia się z pozycji 0,01 do 0,49
+w dziedzinie częstotliwości. Odpowiadająca jej częstotliwość ujemna przemieszcza się więc
+od -0,01 do -0,49. Gdy częstotliwość dodatnia przechodzi przez barierę 0,5, to częstotliwość
+ujemna jest przemieszczana przez barierę -0,5. Ponieważ dziedzina częstotliwości ma cha-
+rakter okresowy, więc takie same zdarzenia zachodzą w innych okresach, np. od 0,5 do 1,5.
+Klon częstotliwości dodatniej przekracza częstotliwość 1,5 od lewej do prawej strony, pod-
+czas gdy klon częstotliwości ujemnej przekracza 0,5 od prawej do lewej. Pomyślmy, jakby
+to było, gdyby widoczny był tylko zakres częstotliwości od 0 do 0,5. Wydawałoby się, że
+częstotliwości wychodzące z prawej strony znowu się pojawiają z prawej strony, lecz poru-
+szają się w odwrotnym kierunku.
+
+Na rys. 10.10 przedstawiono, jak aliasing przejawia się w dziedzinach czasu i częstotliwości,
+gdy widziany jest tylko pojedynczy okres. Jeśli jeden koniec sygnału w dziedzinie czasu jest
+zbyt długi (rys. 10.10 a), aby zmieścić się w pojedynczym okresie, to wystający kraniec jest
+obcinany i dołączany z drugiej strony. Jeśli zaś sygnał w dziedzinie częstotliwości wykracza
+poza pojedynczy okres, wystający koniec ulega składaniu. Niezależnie od tego, gdzie kończy
+się segment podlegający aliasingowi, dodaje się on do sygnału obecnego w miejscu składa-
+nia. Informacja ulega więc zniszczeniu.
+
+Przyjrzyjmy się bliżej temu dziwnemu pojęciu, jakim są częstotliwości ujemne. Powstaje
+pytanie, czy są tylko dziwacznym artefaktem matematyki, czy mają jakieś znaczenie
+w świecie rzeczywistym. Tę kwestię wyjaśniono na rys. 10.11, gdzie przedstawiono sy-
+gnał dyskretny złożony z 32 próbek (rys. 10.11 a). Powiedzmy, że postawiono nam zadanie
+znalezienia widma częstotliwościowego odpowiadającego tym 32 punktom. Aby ułatwić
+
+<image/figury/k3_page177_figure1.png>

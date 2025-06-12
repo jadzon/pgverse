@@ -1,0 +1,45 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 8
+
+10. Właściwości układów peryferyjnych mk.
+
+Są programowalne - zadania przekazywane są im do wykonania odpowiednimi rozkazami,
+dokładniej mówiąc przez ustawienie odpowiednich bitów w rejestrach konfiguracyjnych
+(sterujących), przez wpisanie danych do rejestrów danych.
+
+Charakteryzują się dużym stopniem autonomii w stosunku do procesora rdzeniowego. Przekazane
+im zadania wykonywane są samodzielnie, bez zaangażowania czasu procesora.
+
+Od strony procesora układy we/wy programowane są za pośrednictwem magistrali wewnętrznej.
+
+Układom tym zazwyczaj przypisane są:
+
+. rejestry robocze (czyli rejestry danych zawierające wyniki ich działania),
+
+» rejestry konfiguracyjne/sterujące służące do konfiguracji i sterowania urządzeniem
+peryferyjnym,
+
+„ rejestry statusu zawierające aktualny stan urządzenia: flagi przerwań, komunikaty o błędach, itp.
+
+O zakończeniu wykonywania zadań procesor informowany jest ustawieniem odpowiedniego bitu w
+
+rejestrze stanu urządzenia (najczęściej flagi przerwania) lub wysłaniem sygnału żądania przerwania
+
+o ile jest ono odblokowane.
+
+11. Schematyczna budowa układu czasowego w mk oraz jego zasada pracy w dwóch
+
+podstawowych konfiguracjach.
+
+(dokładniejsze informacje na temat układów czasowych (licznikowych) mk oraz ich przykłady znajdują się
+w Tomie I materiałów do wykładu)
+
+<image/figury/k8_page6_figure1.png>
+
+jako właściwe układy czasowe (timers) — Są wtedy taktowane wewnętrznym sygnałem zegarowym
+przeznaczonym do taktowania jc. Timery wykorzystywane są w programie użytkownika jako wzorce
+czasu.
+
+« jako liczniki (counters) — Są one wtedy taktowane zewnętrznymi sygnałami doprowadzanymi
+
+poprzez linie wejściowe portów i wykorzystywane w programie użytkownika np. jako liczniki zmian
+poziomów sygnałów zewnętrznych

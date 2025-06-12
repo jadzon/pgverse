@@ -1,0 +1,42 @@
+1.12. Szyfry liniowe 19
+
+1.12 Szyfry liniowe
+
+Przypuśćmy, że mamy tekst zapisany za pomocą 26 liter alfabetu łacińskiego:
+
+<image/wzory/k2_page134_formula1.png>
+
+i chcemy ten tekst zaszyfrować. W tym celu utożsamiamy zbiór liter z elementami pier-
+ścier
+
+<image/wzory/k2_page134_formula2.png>
+
+wybieramy awie 1czDy a,b € 226, (AKIE ZE VW (a, £O) = 1, 1 SZylrUJEemy iltera po
+literz
+
+<image/wzory/k2_page134_formula3.png>
+
+Funkcja aeszytrułąca |est OKresiona wzorem:
+<image/wzory/k2_page134_formula4.png>
+Rzeczywiście:
+<image/wzory/k2_page134_formula5.png>
+Z tego wynika, że funkcja szyfrująca C (z) jest wzajemnie jednoznaczna.
+Przykład 1.39 Wybierzmy a = 23 i b = 201 zaszyfrujmy słowo
+matematyka.
+
+W tym celu musimy zaszyfrować 6 liter: m, a, t, e, y oraz k. Obliczenia przedstawiono w
+tabeli:
+
+<image/tabele/k2_page134_table1.png>
+
+Słowo matematyka po zaszyfrowaniu wygląda tak:
+
+kupikupaqu.
+Jeżeli zaś zastosujemy ten sam szyfr do początkowego zdania z wiersza Lokomotywa Ju-
+liana Tuwima:
+stoi na stacji lokomotywa,
+to otrzymamy:
+
+spewhuspuotwneqekepagu.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

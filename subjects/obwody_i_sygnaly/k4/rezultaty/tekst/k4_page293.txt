@@ -1,0 +1,25 @@
+34. Nieliniowe obwody rezystancyjne prądu stalego 295
+
+<image/figury/k4_page293_figure1.png>
+
+Przykład 3.4-6. Rozważmy jeszcze jeden przykład układu nieliniowego (rys. 3.4-18a), w które-
+go analizie, ze względu na mostkowy charakter jego struktrury, nie może być wykorzystana metoda
+wyznaczania charakterystyk łącznych. Załóżmy, że zadanie polega na znalezieniu zależności prądu
+I płynącego przez opór R od napięcia U. Charakterystyki wszystkich czterech diod idealnych mają
+postać jak na rys. 3.4-18b.
+
+<image/figury/k4_page293_figure2.png>
+
+Rozumowanie przebiega podobnie jak w przykładzie 2.1-19 (rys. 2.1-16a). Jeżeli napięcie U na
+dwójniku AB jest dodatnie, diody D, i D, są spolaryzowane w kierunku przewodzenia, zaś diody
+D, i D, wkierunku zaporowym. Prąd w dwójniku płynie wówczas od zacisku A do zacisku B przez
+diodę D;, opór R i diodę D, (droga przepływu jest zaznaczona na rys. 3.4-18a). Opór zastępczy
+dwójnika wynosi wówczas R + 2R5p, a więc:
+
+/k4_page293_formula1.png
+
+Jeśli napięcie U jest ujemne, diody D, i D, są spolaryzowane w kierunku zaporowym,
+natomiast diody D. i D, w kierunku przewodzenia. Prąd płynie od zacisku B do zacisku A przez
+diodę D;, opór R i diodę D,. W tym przypadku:
+
+ory/k4_page293_formula2.png

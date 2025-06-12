@@ -1,0 +1,39 @@
+3.1. Układy cyfrowe 25
+
+sięgająca wielu milionów. Pamięć o pojemności miliona komórek (27) wymaga zastosowa-
+nia bądź jednostopniowego dekodera składającego się z ponad miliona (27) bramek 20-
+-wejściowych, bądź dekodera matrycowego z matrycą 279 dwuwejściowych bramek
+i dwóch 10-wejściowych dekoderów sterujących. W rozdziale 5 podano także inne sposoby
+budowania dekoderów pamięci.
+
+KODERY I KONWERTERY KODU
+
+Koderem (lub enkoderem) nazywany jest układ kombinacyjny, który zamienia kod
+wejściowy na kod binarny NKB. Na rysunku 3.17 pokazano prosty trzybitowy koder kodu
+„l z2”” (a) i odpowiadającą mu tabelę prawdy (b). Można zauważyć, że słowo wyjściowe
+kodera wskazuje binarnie numer wejścia, na którym jest 1.
+
+a b
+
+<image/figury/k3_page35_figure1.png>
+
+"u
+
+Rysunek 3.17. Koder trzybitowy
+
+W technice komputerowej stosowane są także kodery nazywane koderami
+priorytetowymi, gdyż na ich wyjściach pojawia się słowo w kodzie NKB, które wskazuje
+na taki numer wejścia, który spełnia dwa warunki: pierwszy, że jest na nim 1, a drugi, że
+jest to wejście najbardziej znaczące spośród tych, na których jest 1. Na rysunku 3.18
+pokazano tabelę prawdy i oznaczenie takiego kodera. Jest to koder 8-wejściowy
+wyposażony w wejście dostępu E. Koder ten ma 5 wyjść. Trzy z nich są wyjściami
+informacyjnymi, a dodatkowe wyjścia EO (ang. enable output) i GS (ang. group strobe)
+wskazują na pewne wybrane kombinacje słowa wejściowego. I tak wyjście EO jest aktyw-
+ne, gdy na wejściach informacyjnych jest jakakolwiek jedynka.
+
+JI
+<image/figury/k3_pawzory/k3_page35_formula1.png>
+
+Rysunek 3.18. Tabela prawdy i oznaczenie kodera priorytetowego
+
+3 — Podstawy budowy i działania komputerów

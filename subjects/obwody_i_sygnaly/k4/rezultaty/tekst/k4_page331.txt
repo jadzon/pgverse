@@ -1,0 +1,27 @@
+poz
+
+m gm
+
+Zadania do rozdziału 3 333
+
+<image/figury/k4_page331_figure2.png>
+
+Zadanie 3.18. Pokazać, że dla dwójnika z rys. Z-3.18 nie istnieje zastępcze źródło Nortona.
+Dane: J =5mA.8=2R=imo
+
+<image/ifigury/k4_page331_figure5.png>
+
+Zadanie 3.19. Dwójnik AB rozważany w zad. 3.15 (rys. Z-3.15b) obciążono dwójnikiem pokaza-
+nym na rys. Z-3.19. Korzystając z twierdzenia Thcvenina obliczyć prąd w obciążeniu, jeśli
+R = 0,5 kQ, g = 6 mS.
+
+<image/figury/k4_page331_figure1.png>
+
+Odp.: I = 0,25 mA
+
+Zadanie 3.20. Na rys. Z-3.20 przedstawiono schemat zastępczy wzmacniacza tranzystorowego
+pracującego w układzie WE o wspólnym emiterze. Obliczyć stałonapięciowe wzmocnienie
+wzmacniacza określone jako K, = U„/E. Zastosować twierdzenie Nortona. Dane R; = 1,1 kQ,
+R, = 40 kQ, R, = 0,5 kQ, k = 2,5:107*, 8 = 50.
+
+<image/figury/k4_page331_figure3.png>

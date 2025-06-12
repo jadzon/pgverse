@@ -1,0 +1,33 @@
+174 2. Pojęcia podstawowe — układy
+
+Stan zaciskowy czwórnika jest określony przez wektory:
+
+ 
+
+<image/wzory/k4_page174_formula1.png>
+
+| o wymiarze 2.
+Czwórnik bywa nazywany również dwuwrotnikiem.
+
+D. Przykłady. W dotychczasowych rozważaniach mieliśmy już do czynie-
+nia z elementami czterozaciskowymi, które są przypadkami szczególnymi
+czwórników. Były nimi:
+
+— źródła sterowane czterech typów (rys. 1.7-20) o równaniach (1.7-30);
+
+— żyrator (rys. 1.7-25a) o równaniach (1.7-33);
+
+— indukcyjności sprzężone (rys. 1.8-3) o równaniach (1.8-16) i (1.8-17),
+które można doprowadzić do postaci (1.8-22);
+
+— transformator idealny (rys. 1.8-16) o równaniach (1.8-46).
+
+Inne przykłady czwórników przedstawiono na rys. 2.1-5.
+
+<image/figury/k4_page174_figure1.png>
+
+Przykład 2.1-8. Czwórnik z rys. 2.1-5a jest opisany równaniami:
+<image/figury/k4_page174_figure2.png>
+
+Przykład 2.1-9. Czwórnik z rys. 2.1-5b jest zbudowany z trzech dwójników. Jego równania
+mają postać:

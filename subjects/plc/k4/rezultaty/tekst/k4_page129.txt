@@ -1,0 +1,46 @@
+zory/k4_page129_formula1.png
+
+ESI =
+
+Moduły DO (oznaczane też przez DQ) zamieniają sygnały binarne sterownika na
+sygnały prądu stałego lub przemiennego potrzebne do wysterowania urządzeń
+w poszczególnych obwodach wyjściowych, które zasila się ze źródła zewnętrz-
+nego. Zamiany tych sygnałów dokonuje się głównie przez zamykanie lub
+otwieranie obwodów wyjściowych za pomocą łączników tranzystorowych albo
+tyrystorowych lub styków przekaźników. Przekaźniki te umieszczone są we-
+wnątrz modułu (Relay output), a ich styki mogą być zwierne (N.O.) albo
+rozwierne (N.C.) lub też przełączne (Form C relay), dla których każdemu wyj-
+ściu udostępnione są dwa styki — jeden zwierny a drugi rozwierny.
+Podobnie jak dla modułów wejściowych, polaryzacja źródła zasilania zewnętrz-
+nego dla modułów z łącznikami elektronicznymi zależy od typu zastosowanego
+modułu prądu stałego.
+Dla powszechnie stosowanych wyjściowych modułów dwustanowych typu źró-
+dło (SOURCE OUT), które na-
+ię też modułami o logice
+j (negative logic output)
+dułami ze „wspólną ma-
+eży stosować polaryzację
+(Rys. 3.12).
+
+wyjściowych ' modułów
+qaowych typu ujście
+OUT). które nazywa się
+lułami o logice dodatniej
+e logic output) lub mo-
+
+jury/k4_page129_figure1.png 2 »*spólnym plusem”
+
+stosować polaryzację do-
+
+ydułów przekaźnikowych
+
+stosować wspólną dla
+»bciążeń polaryzację do-
+bo ujemną.
+
+1 Przykład modułu wyjść
+nikowych
+
+ 
+
+3.4 Moduły wyjść dyskretnych DO 129

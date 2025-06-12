@@ -1,0 +1,73 @@
+432
+
+26. Sieci neuronowe (i wi
+
+|.
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+ 
+
+Podstawą tradycyjnego DSP są algorytmy przekształcające dane z jednej postaci w in
+przez procedury wykonywane krok po kroku. Do realizacji większości tych metod koniecz
+są także pewne parametry. Na przykład w filtrach rekursywnych stosuje się współcz)
+rekursywne, wykrywanie cech może być realizowane przez korelację i progi, a wyświetlat
+obrazu zależy od ustawień jaskrawości i kontrastu itd. Algorytmy opisują, co ma być wykt
+nywane, a parametry dostarczają wzorca do oceny danych. Właściwy wybór parametrów
+często ważniejszy od samego algorytmu. W sieciach neuronowych ta zasada jest doprc
+dzona do skrajności przez zastosowanie bardzo prostych algorytmów i wielu wysoce zopt
+malizowanych parametrów. Jest to rewolucyjne odejście od tradycyjnej nauki i techniki - 0
+logiki matematycznej i teorii popartej eksperymentem. W sieciach neuronowych te sposobj
+rozwiązywania problemów są zastępowane przez metodę prób i błędów, rozwiązania p
+matyczne oraz metodologię typu „to działa lepiej niż tamto”. W tym rozdziale przedstawiom
+różne kwestie dotyczące wyboru parametrów tak w sieciach neuronowych, jak i w trać
+nych algorytmach DSP.
+
+Wykrywanie celu
+
+Naukowcy i inżynierowie często chcą się dowiedzieć, czy istnieje dany obiekt lub warune
+Na przykład geofizycy poszukują ropy naftowej, lekarze badają pacjentów, szukając chc
+by, astronomowie badają Wszechświat w poszukiwaniu inteligencji pozaziemskiej itd. 1
+kwestie wymagają zwykłe porównania zebranych danych z jakimś progiem. Jeśli próg jet
+przekroczony, to cel (poszukiwany obiekt lub warunek) uważa się za istniejący.
+
+Załóżmy na przykład, że wynaleźliście urządzenie do wykrywania raka. Aparat jet
+przesuwany po ciele pacjenta i na ekranie monitora wyskakuje liczba od O do 30.
+liczby dotyczą pacjentów zdrowych, a duże oznaczają obecność tkanki nowotworo
+Stwierdzacie, że urządzenie działa dość dobrze, lecz nie jest jednak doskonałe i od cz
+do czasu popełnia błędy. Można więc postawić pytanie, jak stosować taki system z pożył
+kiem dla badanego pacjenta.
+
+Sposób systematycznej analizy tej sytuacji przedstawiono na rys. 26.1. Przyjmijmy, że urzą
+dzenie przetestowano na dwóch grupach: kilkuset ochotników, o których wiadomo, że
+zdrowi (nie są więc poszukiwanym celem) i kilkuset ochotników, o których wiadomo, że
+chorzy na raka (są celem). Wyniki testów w postaci histogramów pokazano na rys. 26.1 a), £
+Osobników zdrowych, ogólnie biorąc, charakteryzuje liczba mniejsza niż charakteryzując
+tych mających raka (co jest prawidłowe), lecz oba rozkłady w pewnym stopniu zachodzą
+siebie (co jest nieprawidłowe).
+
+Jak już powiedziano w rozdziale 2, histogram może być traktowany jako oszacowanie funke
+rozkładu prawdopodobieństwa (pdf) — rys. 26.1 c). Wyobraźmy sobie na przykład, 2
+urządzeniem przebadano wybranego losowo, zdrowego osobnika. Zgodnie z rys. 26.1 c) j
+szansa ok. 8%, że wynik będzie równy 3, a ok. 1%, że będzie 18 itd. (W tym p adz,
+nie określono, czy chodzi o liczby rzeczywiste wymagane w pdf, czy całkowite wymag
+w pmf. Tym się nie przejmujcie, to tutaj nie jest ważne).
+
+Pomyślcie teraz, co się dzieje, gdy urządzeniem przebada się pacjenta o nieznanym st
+zdrowia. Jaki wniosek wyciągniecie, gdy osoba, której nigdy przedtem nie widzieliście, uzyśk
+w badaniu wynik na przykład równy 15? Czy pacjent ma raka, czy nie? Prawdopodobieńs
+że pacjent o wyniku 15 jest zdrowy, wynosi — jak wiemy — 2,1%. Jednocześnie, z prawdog
+dobieństwem 0,7% pacjent chory na raka może uzyskać wynik równy 15. Jeśli nie są dostęj
+żadne inne informacje, to wywnioskujemy, iż trzy razy bardziej prawdopodobne jest, że [
+cjent jest zdrowy, niż że jest chory. A zatem wynik testu równy 15 prowadzi do wniosku, ź
+prawdopodobieństwo przynależności pacjenta do grupy docelowej wynosi 25%. Tę mek
+można uogólnić, tworząc krzywą pokazaną na rys. 26.1 d), wyrażającą prawdopodobień:
+raka na podstawie liczb uzyskiwanych z urządzenia [matematycznie: pdf, / (pdf, + pdf,)|.

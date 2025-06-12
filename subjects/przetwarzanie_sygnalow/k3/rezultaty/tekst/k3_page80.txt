@@ -1,0 +1,40 @@
+w systemie dyskretnym jest zazwyczaj oznaczany xfn|, a wyjściowy yfn]. W systemach ciągłych
+stosuje się oznaczenia x(f) i y(f).
+
+Jest wiele powodów, dla których potrzebne jest rozumienie systemu. Można na przykład
+chcieć zaprojektować system tłumiący szum w elektrokardiogramie lub zwiększający ostrość
+obrazu, albo usuwający echo w nagraniach dźwięku. W innych przypadkach system może
+dawać zniekształcenia lub zakłócenia, które chcemy określić i zmierzyć. Na przykład, gdy
+rozmawiamy przez telefon, spodziewamy się, że odbiorca słyszy coś, co przypomina nasz
+głos, Niestety sygnał wejściowy linii przesyłowej rzadko jest identyczny z wyjściowym. Jeśli
+rozumiemy, w jaki sposób linia przesyłowa (system) powoduje zmiany w sygnale, to być
+może uda się skompensować ten wpływ. W jeszcze innych przypadkach system może repre-
+zentować jakiś proces fizyczny, który chcemy badać lub analizować. Dobrymi przykładami
+a bo w z pkarw zk
+właściwości odległego obiektu. W kategoriach teorii systemów problem polega na znalezie-
+niu takiego systemu, który zamienia sygnał wysyłany w sygnał odbierany.
+
+Na pierwszy rzut oka może się wydawać, że zrozumienie wszystkich możliwych systemów
+jest zadaniem przytłaczającym. Na szczęście większość użytecznych systemów należy do
+klasy systemów liniowych. Jest to niezwykle ważny fakt. Bez koncepcji systemu liniowego
+bylibyśmy zmuszeni do analizowania indywidualnych właściwości wielu systemów niemają-
+cych ze sobą nic wspólnego. Mając tę koncepcję, możemy skoncentrować uwagę na cechach
+wspólnych dla wszystkich systemów liniowych. Naszym pierwszym zadaniem jest stwier-
+dzenie, jakie właściwości systemu czynią go systemem liniowym i w jaki sposób mają one
+AGRO GAGA załóy O sky odalóralconi, amonowej tach
+systemów przetwarzania sygnałów.
+
+Warunki liniowości
+
+ee dwie matematyczne właściwo-
+
+ści: homogeniczność (czyli fodnoodniśe Gz GabycdĆ: Jed GZÓOWKGIE, to oj
+tem ma dwie takie cechy, to jest udowodnione, że system jest liniowy. Jeśli się udowodni,
+że system nie ma jednej albo obu tych cech, to znaczy, że nie jest liniowy. Trzecia właści-
+wość, niezmienność wzgłędem przesunięcia, nie jest ścisłym warunkiem liniowości, lecz
+cechą wymaganą w wielu metodach DSP. Gdy w dziedzinie DSP spotykamy pojęcie system
+liniowy, to powinniśmy zakładać, że charakteryzuje się on niezmiennością wzgłędem przesunię-
+cia, jeśli nie znamy żadnych faktów świadczących przeciw temu. Wymienione trzy właściwości
+są matematyczną podstawą zdefiniowania i zastosowania teorii systemów liniowych. W dalszej
+
+<image/figury/k3_page80_figure1.png>

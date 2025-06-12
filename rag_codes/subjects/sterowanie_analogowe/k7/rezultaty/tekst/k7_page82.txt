@@ -1,0 +1,18 @@
+Pozycjonowanie biegunów w oparciu o sprzężenie od stanu
+3. Przyrównujemy współczynniki uzyskanego wyznacznika do współczynników
+żądanego wielomianu charakterystycznego. W rezultacie uzyskujemy układ
+równań, z którego wyznaczamy elementy macierzy wzmocnień.
+
+<image/wzory/k/_page82_formula2.png>
+
+SMOUBJS 8|8pOJN
+
+<image/wzory/k/_page82_formula1.png>
+
+Odpowiedź:
+<image/wzory/k/_page82_formula3.png>
+
+ 
+
+POLITECHNIKA
+GDAŃSKA

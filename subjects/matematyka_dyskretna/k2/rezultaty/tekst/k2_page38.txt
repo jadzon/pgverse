@@ -1,0 +1,37 @@
+Rozdział 1
+
+Kombinatoryka
+
+1.1 Ciągi
+
+Zastanówmy się, ile ciągów długości k; można utworzyć z elementów zbioru zawierającego
+n symboli. Jeżeli zbiór symboli zawiera dwa elementy:
+
+<image/wzory/k2_page38_formula1.png>
+
+to można utworzyć dwa ciąqi długości jeden:
+
+<image/wzory/k2_page38_formula2.png>
+
+cztery ciągi długości dwa:
+
+<image/wzory/k2_page38_formula3.png>
+
+Aby uzyskać ciągi długości trzy, postępujemy w następujący sposób: bierzemy cztery
+ciągi długości dwa i najpierw do każdego z nich dopisujemy na początku a. Otrzymujemy
+w ten sposób komplet:
+
+<image/wzory/k2_page38_formula4.png>
+Zauważmy, że są to wszystkie ciągi długości trzy z pierwszą literą a. Potem do tych
+samych czterech ciągów długości dwa dopisujemy na początku symbol b i otrzymujemy
+kompl
+
+<image/wzory/k2_page38_formula5.png>
+Kompiety w sq [wzigczne I oba Zawierają [UZne Cigyi. Razem tworzą zbior wszystkich
+ciągów długości trzy:
+
+<image/wzory/k2_page38_formula6.png>
+
+Postępując podobnie, możemy otrzymać szegnaście ciągów długości cztery.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

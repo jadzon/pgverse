@@ -1,0 +1,24 @@
+<image/figury/k3_page58_figure1.png>
+
+<image/wzory/k3_page58_formula1.png>
+
+ograniczeniem jest w tym układzie konieczność : 1) maksy-
+miaią AYADAĄ Śrócy AĄDK dA 88) 2) wuóiĄ KAKA Kiya 3) nzytknócią
+przekazywania danych. W ości, jeśli szybkość zmiany napięcia oraz
+krok kwantyzacji dobrano ab gus ary od estokę c
+bitowa nie przekracza celów komercyjnych jest to zbyt dużo. Na
+
+zakresu
+przykład konwencjonalne próbkowanie sygnału głosowego wymaga tylko 64 000 bit/s.
+
+Rozwiązaniem tej trudności jest przedstawiony na rys. 3.18 modulator delta ze zboczem
+zmiennym w sposób ciągły (CVSD - CG a Tę technikę zasto-
+
+szybkości
+zmian napięcia, to ostanie cztery bity będą samymi jedynkami (zbocze dodatnie) lub samymi
+zerami (zbocze ujemne). Taką sytuacje wykrywają układy logiczne, wytwarzając sygnał analo-
+gowy, który zwiększa porcje ładunków generowanych w iniektorach ładunków. To powoduje
+zwiększenie szybkości zmian napięcia dzięki wzrostowi skoków napięcia na kondensatorze.
+Filtr analogowy jest zwykle umieszczany między układami logicznymi a iniektorami ła-
+dunku. To powoduje zależność wartości skoku od czasu, w jakim układ był w warunkach
+ograniczenia szybkości zmian napięcia. Tak długo, jak układ ma tę szybkość ograniczoną,

@@ -1,0 +1,64 @@
+Rodzina przekształceń Fouriera 145
+
+ 
+
+ 
+
+Ciągłe przebiegi nieokresowe
+
+Ta kategoria obejmuje takie sygnały, jak np. zanikający przebieg wykładniczy i krzywą
+Gaussa. Te sygnały rozciągają się zarówno do plus, jak i do minus nieskończoności bez
+powtarzania w formie sygnału okresowego. Przekształcenie fourierowskie dla tego rodzaju
+sygnałów nosi nazwę po prostu przekształcenia Fouriera.
+
+Ciągłe przebiegi okresowe
+
+Oto przykłady przebiegów tego rodzaju: fala sinusoidalna, fala prostokątna lub inny przebieg
+powtarzający się okresowo w zakresie od minus do plus nieskończoności. Tę wersję prze-
+kształcenia Fouriera nazywamy szeregiem Fouriera.
+
+Dyskretne przebiegi nieokresowe
+
+Te sygnały są określone tylko jako punkty dyskretne między minus i plus nieskończono-
+ścią i nie powtarzają się w sposób okresowy. Ten rodzaj przekształcenia Fouriera nosi na-
+zwę dyskretnego w czasie przekształcenia Fouriera.
+
+Dyskretne przebiegi okresowe
+
+Są to sygnały dyskretne, które powtarzają się w sposób okresowy w zakresie od minus do
+plus nieskończoności. Przekształcenie Fouriera tego rodzaju jest czasem nazywane dyskret-
+nym szeregiem Fouriera, lecz najczęściej dyskretnym przekształceniem Fouriera.
+Możecie pomyśleć, że nazwy nadane tym czterem rodzajom przekształcenia Fouriera są my-
+lące i niezbyt precyzyjne. Macie rację, te nazwy powstawały w sposób raczej przypadkowy
+w ciągu 200 lat. Nie pozostaje wam nic innego, jak tylko nauczyć się ich na pamięć i zająć
+się dalszymi tematami.
+
+Wszystkie cztery wymienione kategorie sygnałów obejmują zakres od minus do plus nie-
+skończoności. Ale zaraz, zaraz, powiecie. A co będzie, jeśli mamy tylko skończoną licz-
+bę próbek zgromadzonych w naszym komputerze, na przykład sygnał zawierający 1024
+punktów. Czy nie ma jakiejś wersji przekształcenia Fouriera dla sygnałów o skończonej
+długości? Nie, nie ma. Fale sinusoidalna i kosinusoidalna są zdefiniowane jako trwające od
+minus nieskończoności do plus nieskończoności. Nie można zastosować grupy sygnałów
+nieskończenie długich do syntezy sygnału o skończonej długości. Sposobem ominięcia tego
+dylematu jest spowodowanie, aby dane skończone wyglądały jak sygnał o nieskończonej
+długości. W tym celu trzeba sobie wyobrazić, że sygnał ma nieskończoną liczbę próbek na
+lewo i na prawo od próbek rzeczywistych. Jeśli wszystkie te „wyobrażone” próbki mają
+wartość zero, to sygnał wygląda jak dyskretny i nieokresowy i można do niego zastosować
+dyskretne w czasie przekształcenie Fouriera. Rozwiązaniem alternatywnym jest uznanie, że
+wyobrażone próbki są duplikatem rzeczywistych 1024 punktów. W tym przypadku sygnał
+ma wygląd dyskretnego okresowego, o okresie 1024 próbek. Można więc skorzystać z dys-
+kretnego przekształcenia Fouriera.
+
+Jak się okazuje, do syntezy sygnału nieokresowego jest konieczna nieskończona liczba sinu-
+soid. To powoduje, że obliczenie dyskretnej w czasie transformaty Fouriera jest niemożliwe
+przy użyciu algorytmu komputerowego. Drogą eliminacji dochodzimy więc do wniosku, że
+w DSP jedynym możliwym rodzajem przekształcenia Fouriera jest DFT. Inaczej mówiąc,
+komputery cyfrowe mogą pracować tylko z informacjami, które są dyskretne i mają skoń-
+czoną długość. Walcząc z zagadnieniami teoretycznymi, zmagając się z trudnościami pracy
+domowej i rozszyfrowując tajniki matematyki, możecie korzystać z pierwszych trzech spo-
+śród poprzednio wymienionych przekształceń Fouriera. Ale gdy zasiądziecie do komputera,
+będziecie stosować tylko DFT. Na razie skoncentrujemy więc uwagę na dyskretnym prze-
+kształceniu Fouriera; inne omówimy krótko w dalszych rozdziałach.
+
+Wróćmy do przykładu rozkładu DFT przedstawionego na rys. 8.1. Mamy tam 16-punk-
+towy sygnał rozłożony na 18 sinusoid i kosinusoid, z których każda zawiera 16 punktów.

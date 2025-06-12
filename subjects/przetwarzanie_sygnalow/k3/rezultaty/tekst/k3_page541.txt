@@ -1,0 +1,33 @@
+33. Przekształcenie Z
+
+ 
+
+Jedyna różnica jest taka, że aby wyznaczyć odpowiedź częstotliwościową na płaszczyźnie z,
+poruszamy się po okręgu jednostkowym; po osi pionowej zaś, gdy wyznaczamy tę odpowiedź
+na płaszczyźnie s. Z biegunowego rozmieszczenia biegunów i zer wnioskujemy, że wycięcie
+na charakterystyce (pasmo zaporowe) ma miejsce przy pulsacji x/4, co odpowiada 0,125
+częstotliwości próbkowania.
+
+Ponieważ położenia biegunów i zer są znane, więc funkcję przenoszenia można zapisać we-
+dług wzoru 33.4 przez proste wstawienie wartości:
+
+<image/wzory/k3_page541_formula1.png>
+
+Trzeba przekształcić to wyrażenie do postaci według wzoru 33.3, aby można było określić
+współczynniki rekursywne implementujące ten filtr. Najpierw rozwińmy wyrażenie, wymna-
+żając wszystkie jego wyrazy:
+
+si ?0,70712+ j0,7071 2 - 0,7071: +0,7071" — 40,707 - /0,70712+ j0,7071" - 4” 0,7071
+p LĄ
+
+z —0, 6364 z + j 0,6364 z — -0,6364 z + 0,6364" - j0,6364 — j0,6364 2 + /0,6364 RY 0,6364
+
+<image/figury/k3_page541_figure1.png>
+
+<image/figury/k3_page541_figure2.png>
+
+w dziedzinie z. away drew zzajgpwj
+
+33.3. Projektowanie iltru pasmowozaporowego
+dwóch biegunów i dwóch zer na płaszczyźnie z (rys. a). Uzyskane odpowiedzi — — impułsowa i częstotliwościowa — są
+przedstawione, wycięcia na

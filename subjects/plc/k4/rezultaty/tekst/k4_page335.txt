@@ -1,0 +1,25 @@
+<image/figury/k4_page335_figure1.png>
+
+Przykład
+
+T IB7
+T Iw7
+TDW7
+T DR7
+
+T DL7
+
+przekazanie do siódmego bajtu wejść
+
+przekazanie do siódmego słowa wejść, tzn. bajtu 7 i 8
+przekazanie do siódmego słowa danych
+
+przekazanie do prawego (niższego) bajtu siódmego słowa da-
+nych
+
+przekazanie do lewego (wyższego) bajtu siódmego słowa da-
+nych
+
+ 
+
+7.6 Operacje wprowadzania i przekazania 335

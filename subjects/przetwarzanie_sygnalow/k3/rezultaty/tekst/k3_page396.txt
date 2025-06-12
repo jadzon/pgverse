@@ -1,0 +1,44 @@
+Tomografia komputerowa 429
+
+ 
+
+h[0]=1
+h(k]=0 dla parzystych wartości k
+2
+nk] © dla nieparzystych wartości k
+
+k
+Wzór 25.2. Odpowiedź impulsowa filtru stosowana do filtrowanej projekcji wstecznej. Wykres tej
+odpowiedzi pokazano na rys. 25.19 b)
+
+Przed rozstaniem się z tematem tomografii komputerowej trzeba wspomnieć, że w medycy-
+nie istnieje kilka innych, podobnych technik obrazowych. W tych wszystkich technikach jest
+szeroko stosowane DSP. W pozytonowej tomografii emisyjnej PET (Positron Emission
+Tomography) wstrzykuje się pacjentowi substancję promieniotwórczą o niewielkiej aktyw-
+ności, emitującą pozytony. Natychmiast po emisji pozyton anihiluje z elektronem, wysyła-
+jąc dwa fotony promieniowania gamma, które opuszczają ciało pacjenta w dwóch dokładnie
+przeciwnych kierunkach. Detektory promieniowania rozmieszczone wokół pacjenta wyszu-
+kują te pary fotonów i na tej podstawie następuje identyfikacja położenia linii, wzdłuż której
+przebiegają fotony gamma. Ponieważ punkt, z którego zostały wysłane fotony, musi leżeć
+gdzieś na tej linii, więc można zastosować algorytm rekonstruujący, podobny do używanego
+w tomografii komputerowej. W ten sposób uzyskuje się obraz podobny jak w tomografii
+komputerowej, z tą różnicą, że jaskrawość jest zależna od ilości substancji promieniotwór-
+czej znajdującej się w danym miejscu ciała pacjenta. Unikatową zaletą obrazowania PET jest
+możliwość włączania związku promieniotwórczego do różnych substancji pełniących ważne
+funkcje w procesach życiowych, np. do glukozy. Wtedy zrekonstruowany obraz jest związa-
+ny z koncentracją takiej substancji biologicznej. Dzięki temu staje się możliwe obrazowanie
+procesów fizjologicznych, a nie tylko anatomii. Można na przykład uzyskiwać obrazy poka-
+zujące, jakie funkcje mózgu są realizowane w poszczególnych jego częściach.
+
+Bardziej bezpośrednim konkurentem tomografii komputerowej jest obrazowanie za pomo-
+cą rezonansu magnetycznego MRI (Magnetic Resonance Imaging), stosowane obecnie
+w większości dużych szpitali. Ta technika była pierwotnie opracowana pod nazwą jądro-
+wego rezonansu magnetycznego NMR (Nuclear Magnetic Resonance). Zmiana nazwy na-
+stąpiła ze względu na promocję metody. Niektóre władze lokalne nie chciały bowiem, aby
+w ich społecznościach stosowano jakiekolwiek urządzenia jądrowe. Często okazywało się
+niemożliwe wytłumaczenie ludziom, że termin jądrowy odnosi się w tym przypadku do fak-
+tu, że każdy atom zawiera jądro. Skanowanie MRI przeprowadza się, umieszczając pacjenta
+wewnątrz silnego magnesu. Fale elektromagnetyczne wielkiej częstotliwości w połączeniu
+z polem magnetycznym wywołują rezonans jąder w wybranych atomach w ciele pacjenta,
+
+<image/figury/k3_page396_figure1.png>

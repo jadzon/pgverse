@@ -1,0 +1,41 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 14
+
+II. Zagadnienia elementarne i ich treści obowiązujące do drugiego kolokwium z
+części „Mikrosystemy”:
+
+1. Schemat blokowy mikrosystemu elektronicznego oraz funkcje jego bloków.
+(dokładniejsze informacje na temat poszczególnych bloków mk znajdują się w Tomie I (mikrokontroler)
+oraz w Tomie I/ materiałów do wykładu)
+
+Mikrosystem elektroniczny (wbudowany)
+
+<image/figury/k8_page12_figure1.png>
+
+. W skład mse mogą również wchodzić: logika programowalna, układy peryferyjne (przetworniki
+A/C, C/A, pamięci szeregowe EEPROM, itd.), wśród których można wyróżnić układy dopasowujące
+sygnały elektryczne do danego standardu interfejsu (np. MAX232AC) i kontrolery interfejsów
+szeregowych (np. Ethernetu, CAN, USB, IrDA), jak i równoległych.
+
+Komunikacja wewnątrz mse odbywa się za pomocą magistral równoległych lub mikrointerfejsów
+szeregowych. Mse komunikuje się z otoczeniem przeważnie za pomocą interfejsów szeregowych.
+
+W skrajnym przypadku mse może składać się wyłącznie z mikrokontrolera (w skrócie: mk).
+
+Składowe mikrosystemu elektronicznego:
+
+„  mikrokontroler(y) — najważniejszy element mse nadzorujący pracą wszystkich układów wchodzących
+w jego skład. Mikrokontroler steruje pracą mse za pośrednictwem magistral równoległych oraz
+interfejsów (mikrointerfejsów) szeregowych.
+
+« pamięć RAM — opcjonalnie w zależności od typu mk. Przechowuje zmienne programu mk.
+
+« pamięć FLASH — opcjonalnie w zależności od typu mk. Przechowuje kod programu mk.
+
+« logika programowalna — (SPLD, CPLD lub FPGA) realizująca przeważnie funkcje kombinacyjne
+(zastępująca konwencjonalne układy TTL) oraz wspomagająca mk w sterowaniu mse.
+
+« układy peryferyjne z mikrointerfejsem szeregowym (w skrócie: mis) — np. przetwomiki A/C, C/A,
+pamięci EEPROM, itd.
+
+« bufory - głównymi zadaniami są zwiększenie wydajności prądowej linii sterujących oraz separacja
+układów dołączonych do magistrali systemu.

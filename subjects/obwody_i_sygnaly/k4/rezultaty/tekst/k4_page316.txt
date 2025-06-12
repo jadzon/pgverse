@@ -1,0 +1,35 @@
+316 3. Obwody prądu stałego
+
+przy czym wartość współczynnika A (zwanego wzmocnieniem stałoprądowym)
+jest bardzo duża, z reguły większa od 10? (na rys. 3.6-2 przyjęto: A = 2: 105).
+Zakres pracy liniowej jest wyraźnie ograniczony. Dla wartości liczbowych
+podanych na rys. 3.6-2 zakres ten występuje dla wartości |u,| 4 10 V, co
+odpowiada bardzo małym wartościom napięcia wejściowego |u,| < 0,05
+mV (rys. 3.6-3a). W tym zakresie (i tylko w tym zakresie) wzmacniacz
+operacyjny można zastępować ŹNSN (rys. 3.6-3b).
+
+Przy A > + w charakterystyka z rys. 3.6-3a zwiększa nachylenie dążąc
+w granicy do położenia pionowego (linia przerywana na rys. 3.6-3a), tj. do
+odcinka prostej o równaniu u, = 0. Okazuje się w praktyce, że zastąpienie
+równania (3.6-3) dla bardzo dużych wartości A równaniem u, = 0 znakomicie
+
+<image/figury/k4_page316_figure1.png>
+
+<image/wzory/k4_page316_formula1.png>
+
+b) Zakres pracy nieliniowej, charakteryzujący się bardzo gwał-
+townym zakrzywieniem charakterystyki z rys. 3.6-2 po wyjściu z zakresu pracy
+liniowej i dojściem do nasycenia określonego przez wartość napięcia nasycenia
+U,„”. Można zatem w przybliżeniu przyjmować:
+
+» Przyjęcie zależności (3.6-4) oznacza, że w rozważanym zakresie nie ma związku między
+napięciem wyjściowym u, a napięciem wejściowym u;, byleby |u;| < U. Wartość napięcia u, jest
+określona wówczas przez równania układu (otoczenia), z którym WO współpracuje. Przyjęcie
+ograniczenia: |u| < U, jest pewnym uproszczeniem. W rzeczywistości zakres pracy liniowej jest
+nieco mniejszy (por. rys. 3.6-2).
+
+3 Wartość napięcia nasycenia U,,, jest uzależniona od wartości stałego napięcia zasilania i jest
+zwykle od tego napięcia ook. ŻY DY (przy typowych wartościach napięć zasiłających
++15V mamy U,, * 13YV, por.rys. 3.6-2).
+
+A

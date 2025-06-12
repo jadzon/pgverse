@@ -1,0 +1,56 @@
+26. Sieci neuronowe (i wię !)
+
+warstwy wyjściowej wyznacza amplitudę jednej składowej częstotliwościowej. Wykonuj
+się to zadanie, ustalając wagi każdego węzła warstwy wyjściowej takie same, jak sinusoid
+której się szuka. Uzyskana w ten sposób sieć koreluje sygnał wejściowy z każdą podsta
+wą funkcją sinusoidalną, obliczając DFT. Oczywiście, dwuwarstwowa sieć neuronowa m
+możliwości znacznie mniejsze niż standardowa architektura trójwarstwowa. To znaczy, ż
+sieci neuronowe mogą realizować zarówno przetwarzanie nieliniowe, jak i liniowe.
+Przypuśćmy, że do zaprojektowania wag sieci neuronowej zastosowano jedną z konwencje
+nalnych metod DSP. Czy można twierdzić, że taka sieć jest optymalna? Tradycyjne algo
+my DSP opierają się zwykle na założeniach dotyczących właściwości sygnału wejściowegc
+Na przykład filtracja Wienera jest optymalna dla maksymalizacji stosunku sygnału do szur
+przy założeniu, że widma sygnału i szumu są znane; korelacja jest optymalna do wy
+nia celów przy założeniu, że szum jest biały; rozplot przeciwdziała niepożądanemu splotów
+przy założeniu, że odpowiedź impulsowa rozplotu jest odwrotnością oryginalnej odpowiedz
+impulsowej splotu itd. Trudność polega na tym, że naukowcy i inżynierowie rzadko m
+doskonałą wiedzę o sygnałach wejściowych, które można napotkać. Chociaż ZK:
+tematyczne mogą być eleganckie, to działanie całego systemu jest ograniczone poziome
+dobrego rozumienia danych.
+Jako przykład weźcie testowanie tradycyjnego algorytmu DSP aktualnymi sygnałami
+ściowymi. Następnie powtórzcie ten test z algorytmem nieco zmienionym, na przykład p
+zwiększenie jednego parametru o 1%. Jeśli wynik drugiego testu jest lepszy niż pie!
+RZ to oryginalny algorytm nie jest optymalizowany dla aktualnie wykonywanego zadan
+iemal wszystkie konwencjonalne algorytmy DSP można znacznie ulepszyć przez
+wanie — metodą prób i błędów — małych zmian parametrów i procedur algorytmu. To j
+właśnie sposób działania sieci neuronowych.
+
+Trenowanie sieci neuronowych
+
+Projektowanie sieci neuronowych można najlepiej objaśnić na przykładzie. Probłem, któr
+chcemy rozwiązać, przedstawiono na rys. 26.8. Jest to identyfikowanie pojedynczych file
+w obrazie tekstu. Takiemu zadaniu, będącemu rozpoznawaniem obrazu, poświęca się wiek
+uwagi. Jest ono na tyle łatwe, że w wielu próbach jego rozwiązania osiągnięto częściow
+sukces, ale też na tyle trudne, że nie ma rozwiązań idealnych. Rozwiązanie tego problem
+wykorzystano z powodzeniem w wielu produktach handlowych, takich jak urządzenia d
+odczytywania adresów w obrocie pocztowym, a także do wprowadzania dokumentów d
+procesorów tekstów.
+
+Pierwszym krokiem w opracowaniu sieci neuronowej jest utworzenie bazy danych złoże
+z przykładów. W problemie rozpoznawania tekstu tworzy się taką bazę przez 50-kra
+wydrukowanie na kartce papieru 26 dużych liter: A, B, C, D.... Y, Z. Następnie te 13005
+przetwarza się na obraz cyfrowy, stosując jedno z wielu urządzeń skanujących dostępn
+wraz z komputerami osobistymi. Ten duży obraz cyfrowy jest następnie dzielony na ma
+obrazy 10 x 10 pikseli, z których każdy zawiera pojedynczą literę. Ta informacja zost
+zarejestrowana jako 1,3-megabajtowa baza danych: 1300 obrazów, 100 pikseli na ob
+
+8 bitów na piksel. Pierwsze 260 obrazów z tej bazy będzie użytych do trenowania s
+neuronowej (tj. określania wag), a pozostałe obrazy — do testowania działania sieci. B
+danych musi też zawierać sposób identyfikacji litery zawartej w każdym z obrazów. Możi
+na przykład do każdego obrazu 10 x 10 dodać dodatkowy bajt zawierający kod ASCII
+nej litery. W innym rozwiązaniu położenie każdego obrazu 10 x 10 w bazie danych m
+wskazywać, jaka to jest litera. Na przykład wszystkie obrazy od 0 do 49 mogą być li
+obrazy 50-99 literą B itd.
+
+W omawianym przykładzie będzie projektowana sieć neuronowa do dowolnego zada
+— określenia, które obrazy 10 x 10 zawierają samogłoskę A, E, I, O lub U. Takie rozwią

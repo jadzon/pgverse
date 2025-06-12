@@ -1,0 +1,39 @@
+266 3. Obwody prądu stałego
+
+<image/wzory/k4_page266_formula1.png>
+
+<image/figury/k4_page266_figure1.png>
+
+Wyznaczenie napięcia rozwarcia U, w układzie z rys. 3.3-15a jest znacznie bardziej skom-
+plikowane (zachęcamy Czytelnika do samodzielnego przeprowadzenia niezbędnych obliczeń). Tak
+więc w rozważanym przypadku metoda Nortona jest wyraźnie prostsza pod względem ob-
+liczeniowym.
+
+3.3.4. Metody sieciowe
+
+A. Charakterystyka metod. Omówione dotychczas metody analizy są
+użyteczne wówczas, gdy interesuje nas prąd (napięcie) w pojedynczej, wyróżnio-
+nej gałęzi układu. Analiza układu polega jednak bardzo często na obliczeniu
+prądów lub napięć we wszystkich jego gałęziach, tzn. zadaniem analizy jest
+wyznaczenie rozpływu prądów lub rozkładu napięć w układzie. W takich przy-
+padkach znacznie efektywniejsze są metody sieciowe analizy: metoda prądów
+obwodowych i metoda napięć węzłowych”.
+
+Rozpływ prądów lub rozkład napięć w układzie można wprawdzie wyzna-
+czyć stosując umiejętnie dotąd poznane metody, jednak sposób prowadzenia
+analizy za pomocą tych metod (lub ich kombinacji) nie jest z reguły algorytmicz-
+ny, a sam przebieg i sprawność techniczna analizy zależy w dużym stopniu od
+wykazanej w jej trakcie inwencji. Metody sieciowe są natomiast metodami
+systematycznymi, które można zalgorytmizować, zaprogramować i w efekcie
+analizę układu można przeprowadzić z wykorzystaniem komputera. Są one
+szczególnie skuteczne w analizie złożonych układów (sieci).
+
+Podstawy metod sieciowych formułuje się na gruncie teorii grafów. Pełną
+i ścisłą dyskusję metod sieciowych przedstawimy w III tomie książki, po
+wprowadzeniu niezbędnych elementów teorii grafów. W tym punkcie ograniczy-
+my się do omówienia zasadniczej koncepcji metod sieciowych, prezentując ją na
+przykładzie liniowych sieci oporowych prądu stałego w spo-
+sób bardziej intuicyjny, aniżeli sformalizowany.
+
+*) Metoda napięć węzłowych jest także nazywana metodą potencjałów węzłowych (por. przypis
+na str, 277).

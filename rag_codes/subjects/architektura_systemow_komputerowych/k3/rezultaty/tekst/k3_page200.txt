@@ -1,0 +1,48 @@
+190 Dodatek B
+
+ 
+
+Układ stronicowania umożliwia pracę ze stronami o pojemności 4 KB lub 4 MB.
+Układ ten zawiera rejestr konwersji adresów TLB (ang. translation lookaside buffer),
+który umożliwia konwersję adresu liniowego na adres fizyczny.
+
+Układ sterowania zapewnia oprócz poprawnej pracy samego procesora, odpowiednie
+połączenie procesora z otoczeniem. Przyjmuje wejściowe sygnały sterujące i generuje
+sygnały wyjściowe, jak np. sygnały inicjalizacji (RESET i INIT), sygnały przerwań (INTR
+i NMI), sygnały arbitrażu (BREQ, BOFF, HOLD, HLDA), stroby dostępu do pamięci
+i urządzeń zewnętrznych. Pełny opis sygnałów zająłby zbyt wiele miejsca i dlatego po-
+minięto go tutaj.
+
+B.3. ALPHA
+
+Procesor Alpha opracowano w firmie Digital Equipement Corporation do produkowanych
+przez nią komputerów VAX. Jedną z wersji jest 64-bitowy procesor produkowany w obu-
+dowie 431-końcówkowej i zasilany napięciem 3,3V. Procesor jest wykonywany bardzo
+nowoczesną technologią CMOS w rastrze 0,75 im. Szybkość pracy wyznacza zegar
+o częstotliwości 200 MHz, a ponieważ rozkazy są jednocyklowe, to czas cyklu rozkazo-
+wego wynosi 5ns. Architektura procesora jest typu RISC. Procesor wykonuje 168
+rozkazów o formacie 32-bitowym. Argumenty rozkazów mogą być 8-, 16-, 32- i 64-
+-bitowe, gdy są liczbami całkowitymi i 32- lub 64- bitowe, gdy są liczbami zmienno-
+pozycyjnymi.
+
+Na rysunku D.17 pokazano schemat blokowy procesora. Wyróżniono na nim
+następujące bloki:
+
+— jednostkę centralną CPU,
+
+— sterownik pamięci,
+
+— sterownik urządzeń we/wy,
+
+— sterownik łącza szeregowego z pamięcią ROM.
+
+Jednostka centralna CPU składa się z następujących bloków:
+— układu sterowania pobieraniem i dekodowaniem rozkazów,
+— bloku ALU dla liczb stałopozycyjnych,
+— bloku ALU dla liczb zmiennopozycyjnych,
+— bloku współpracy z pamięcią,
+— bloków pamięci kieszeniowych.
+
+<image/figury/k3_page200_figure1.png>
+
+Rysunek D.17. Architektura mikroprocesora ALPHA

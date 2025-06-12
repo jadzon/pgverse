@@ -1,0 +1,45 @@
+24 Rozdział 1. Teoria liczb
+
+Przykład 1.42 Każda z liczb od 0 do 104 = 3 - 5 - 7 — 1 ma inny zestaw reszt względem
+liczb 3, 5 i 7. Tak więc stosując sposób chińskich generałów z liczbami 3, 5, 7 możemy
+liczyć żołnierzy z dokładnością do 104.
+
+Ale sposób chińskich generałów pozwala także stwierdzić, o ile zmieniła się liczba
+żołnierzy. Przypuśćmy bowiem, że na porannym apelu było z żołnierzy i uzyskano reszty:
+
+<image/wzory/k2_page139_formula1.png>
+
+a na apelu wieczornym bvło v żołnierzy i otrzymano reszty:
+
+<image/wzory/k2_page139_formula2.png>
+
+wtedy różnica x — y spełnia następujący układ kongruencji:
+
+<image/wzory/k2_page139_formula3.png>
+
+Jak widać, chińskie twierdzenie o resztach pozwala wnioskować o dużych liczbach za
+pomocą operacji na małych liczbach. Zobaczmy teraz inne zastosowanie tego twierdzenia.
+
+Przykład 1.43 Zastanówmy sie. ile wvnosi reszta z dzielenia liczbv
+
+<image/wzory/k2_page139_formula4.png>
+
+przez 15. Łatwo można policzyć, że: M = 4 (mod5)oraz M =1 (mod 3),a więc:
+
+<image/wzory/k2_page139_formula5.png>
+ponieważ 4 jest jedyną liczbą z przedziału 0,1,2,...,14, która posiada reszty 4 = 1
+(mod 3) oraz 4 = 4 (mod 5).
+
+1.14 Pierwiastki kwadratowe
+Definicja 1.44 Liczbę y nazywamy pierwiastkiem kwadratowym liczby z w pierścieniu
+
+<image/wzory/k2_page139_formula6.png>
+Przykład 1.45 W Z, pierwiastkami 4 są 2 i 3, a liczba 2 nie posiada pierwiastka.
+Zauważmy. żeieżeliu? = r (mod m) to
+<image/wzory/k2_page139_formula7.png>
+czyli m = y= =y (mod m), też jest pierwiastkiem r.
+
+Lemat 1.46 Jeżeli m jest liczbą pierwszą i 1 = y?, to y i —y są jedynymi pierwiastkami
+zz.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

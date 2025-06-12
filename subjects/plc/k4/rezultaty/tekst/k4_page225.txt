@@ -1,0 +1,29 @@
+<image/figury/k4_page225_figure1.png>
+
+Wyd. 4.40 Przykład użycia pary instrukcji JUMP i LABEL
+
+Uwaga: W celu uniknięcia tworzenia pętli wykonywanych bez końca, instrukcja
+skoku wstecz musi być poprzedzona warunkiem umożliwiającym zakończenie
+pętli (jak w przykładzie z Wyd. 4.40).
+
+Instrukcje skoku mogą mieć postać nie zagnieżdżoną (non-nested) lub zagnież-
+dżoną (nested). W pierwszym przypadku zakresy działania takich instrukcji nie
+mogą się przecinać, a każdej instrukcji JUMP musi odpowiadać dokładnie jedna
+instrukcja LABEL. W drugim przypadku pary takie mogą się krzyżować lub do
+jednej instrukcji LABEL można wykonywać skoki z wielu różnych miejsc
+w programie. Instrukcje zagnieżdżone oznaczone są na schemacie drabinkowym
+literą N. Jedyne ograniczenie w ich stosowaniu stanowi zakaz przecinania się
+z zakresem działania instrukcji nie zagnieżdżonych.
+
+Szczególny przypadek funkcji sterujacych stanowi funkcja SVCREQ (SerViCe
+REQuest), która w zależności od podanego na jej wejście FNC numeru obsługi,
+umożliwia wykonanie jednej ze specjalnych funkcji sterownika:
+
+e zmiana lub odczytanie liczby słów, dla których ma być wykonana funkcja
+sprawdzenia sumy kontrolnej (Checksum): FNC = 6;
+
+e zmiana lub odczyt wartości czasu i daty (Time-of-Day) w zegarze sterowni-
+ka: FNC=7;
+
+7 ROC TEA I." YW YWZY YE WE YTY I W NO TAE OWCZE: O RECZ ZE O O
+4.11 Funkcje sterujące 225

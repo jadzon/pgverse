@@ -1,0 +1,56 @@
+362 23. Tworzenie i wyświetlanie obrazów
+NN O A
+
+W przetwarzaniu obrazów stosuje się na ogół 256 poziomów szarości (poziomów kwantyza-
+cji), co jest równoważne jednemu bajtowi na piksel. Jest kilka przyczyn takiego wyboru. Po
+pierwsze, jeden bajt jest wygodny do operowania danymi, gdyż komputery na ogół właśnie
+w bajtach gromadzą dane. Po drugie, duża liczba pikseli w obrazie kompensuje w pewnym
+stopniu ograniczoną liczbę poziomów kwantyzacji. Rozpatrzmy na przykład grupę sąsiadu-
+Jących pikseli o cyfrowych wartościach zmieniających się między 145 i 146. Oko ludzkie
+odbiera jaskrawość tego obszaru jako równą 145,5. Inaczej mówiąc, obrazy drżą. Po trzecie
+i najważniejsze, wielkość skoku jaskrawości równa 1/256 (0,39%) jest mniejsza od rozróż-
+niałności oka. Obraz prezentowany widzowi nie polepszy się więc przy użyciu liczby pozio-
+mów kwantyzacji większej niż 256.
+
+Jednak niektóre obrazy powinny być rejestrowane z kwantyzacją powyżej 8 bitów na piksel.
+Pamiętajmy, że większość obrazów, jakie można spotykać w DSP, wyraża parametry nie-
+wizualne. Wtedy większą liczbę poziomów kwantyzacji można wykorzystać w obrazie do
+uchwycenia drobnych szczegółów sygnału. Nie należy się jednak spodziewać, żeby ludzkie
+oko zobaczyło całą informację zawartą w tych tak gęsto rozmieszczonych poziomach. Do
+kwestii związanych z tym faktem wrócimy przy omawianiu jaskrawości i kontrastu.
+Wartość każdego piksela w obrazie cyfrowym reprezentuje mały obszar w obrazie ciągłym
+przetwarzanym na cyfrowy. Załóżmy dla przykładu, że sonda wenusjańska, krążąc nad pla-
+netą, pobiera próbki co 10 metrów wzdłuż jej powierzchni. To wyznacza kwadratową prze-
+strzeń próbkowania oraz siatkę próbkowania, przy czym każdy piksel reprezentuje obszar
+10 m * 10 m. Pomyślmy teraz, co się dzieje przy pojedynczym pomiarze odbitych mikrofal,
+Sonda emituje silnie zogniskowaną wiązkę energii mikrofalowej, uderzającą w powierzchnię
+planety na kołowym obszarze, o średnicy na przykład 15 metrów. Każdy piksel zawiera więc
+informację o tym obszarze kołowym, niezależnie od wymiarów siatki próbkowania.
+Obszar obrazu ciągłego mający swój udział w wartości pikselu jest nazywany aperturą
+próbkowania. Rozmiar apertury próbkowania jest często związany z charakterystyczny-
+mi właściwościami konkretnych stosowanych systemów obrazujących. Ograniczeniem,
+na przykład mikroskopów, są układy optyczne i długość fali świetlnej, elektronicznych
+aparatów fotograficznych i kamer zaś — losowe rozpraszanie elektronów w czujniku ob-
+razowym itd. W większości przypadków realizuje się siatkę próbkowania w przybliżeniu
+taką samą, jak apertura próbkowania w systemie. Rozdzielczość końcowego obrazu cyfro-
+wego ogranicza większa z tych dwóch wartości — siatka próbkowania lub jego apertura.
+Powrócimy do tego tematu w rozdziale 25 przy omawianiu rozdzielczości przestrzennej
+obrazów cyfrowych.
+
+Do obrazów cyfrowych dodaje się barwę przez przypisanie każdemu pikselowi trzech liczb,
+wyrażających natężenie światła trzech barw podstawowych: czerwonej, zielonej i niebieskiej.
+Mieszanie tych trzech barw daje wszystkie możliwe barwy, które mogą być odbierane
+oko ludzkie. Do zapisu natężenia każdej z barw podstawowych stosuje się na ogół j
+bajt, dzięki czemu w obrazie może występować 256 x 256 x 256 = 16,8 mln różnych barw.
+Barwa jest bardzo ważna, gdy celem jest przedstawienie widzowi prawdziwego obrazu Świa-
+ta, np. w telewizji i w fotografii. Na ogół nie o to chodzi w nauce i technice. W tych dzie
+dzinach celem jest analiza sygnału dwywymiarowego z wykorzystaniem — jako narz
+— ludzkiego systemu widzenia. Do tego zupełnie wystarczające są obrazy czamo-białe.
+
+Aparaty fotograficzne i oczy
+
+Oko i elektroniczny aparat fotograficzny omawiamy wspólnie, gdyż ich budowa i dzi
+są bardzo podobne. Oba te systemy optyczne zawierają zespół soczewek oraz czujnik
+zowy. Zespół soczewek wychwytuje część światła emitowanego przez obiekt i ogniskuje
+na czujniku obrazowym. Następnie czujnik obrazowy przekształca obraz świetlny na sygna
+wideo — elektroniczny lub neuronowy.

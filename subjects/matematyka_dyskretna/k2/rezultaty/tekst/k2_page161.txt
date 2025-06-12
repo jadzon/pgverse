@@ -1,0 +1,49 @@
+12 Rozdział 1. Rekurencja
+
+gdzie a > 1ib > 1. Równanie takie otrzymamy szacując czas działania algorytmu
+rekurencyjnego, który metodą "dziel i rządź" dzieli problem na a podproblemów rozmiaru
+n/b. Funkcja f(n) opisuje czas potrzebny na podzielenie problemu na podproblemy i na
+połączenie rozwiązań podproblemów w rozwiązanie całego problemu.
+
+Na koniec podamy bez dowodu twierdzenie mówiące jak można szacować funkcję
+T'(n) określoną równaniem (1.8).
+
+Twierdzenie 1.1 (o rekurencji uniwersalnej) Niech 7'(n) będzie określone dla nieujem-
+nych liczb całkowitych równaniem rekurencyjnym
+
+<image/wzory/k2_page161_formula1.png>
+
+gdzie a > 1, b > Li n/b oznacza [n/b] lub |n/bj. Wtedy
+e Jeżeli f(n) = O(n'%8:"7*) dla pewnej stałej e > 0, to T(n) = O(n'"*").
+e Jeżeli f(n) = ©(n'%7), to T(n) = ©(n'%*:” logn).
+
+e Jeżeli f(n) = Q(n'e"+<) dla pewnej stałej e > 0 oraz f(n/b) < cf(n) dla
+pewnej stałej c < 1, to T(n) = ©(f(n)).
+
+1.11 Zadania
+
+1. Napisz program, który rekurencyjnie oblicza: a) funkcję silnia, b) funkcję Fibonac-
+ciego, c) funkcję wykładniczą 27.
+
+2. Napisz program, który oblicza symbol Newtona:
+a) według wzoru rekurencyjnego
+
+<image/wzory/k2_page161_formula2.png>
+
+b! wodna wzami
+<image/wzory/k2_page161_formula3.png>
+Porównaj te programy.
+. Napisz program, który rekurencyjnie oblicza funkcję:
+
+W
+
+<image/wzory/k2_page161_formula4.png>
+
+. Oblicz NW D(39, 24) według rekurencyjnego algorytmu Euklidesa.
+
+O
+
+„ Według algorytmu łączenia połącz ciągi a = (2, 5, 10, 13, 16, 23)
+ib = (1,3,4,7, 15,20).
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

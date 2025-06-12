@@ -1,0 +1,35 @@
+30. Liczby zespolone
+
+gdzie C to pojemność a L — indukcyjność. W najogólniejszym przypadku analizy obwodów,
+te kłopotliwe równania różniczkowe są łączone ze sobą według konfiguracji układu i następ-
+nie rozwiązywane w celu wyznaczenia żądanych parametrów. Wprawdzie ta metoda powie
+wszystko o obwodzie, lecz obliczenia matematyczne powodują prawdziwy mętlik.
+Metodę można znacznie uprościć, ograniczając sygnały tylko do sinusoidalnych. Wyrażając te
+sinusoidy w liczbach zespolonych, można trudne równania różniczkowe zastąpić
+znacznie prostszymi równaniami algebraicztymi, Taki sposób działania zilustrowano na rys. 30.5.
+Każdy z trzech elementów podstawowych (rezystor, kondensator, cewka indukcyjna) traktujemy —
+jako system. Wejściem do systemu jest prąd sinusoidalny płynący przez element, a wyjściem
+— napięcie między dwiema końcówkami tego elementu. Z tego wynika, że wejście i wyjście sys-
+temu mogą być reprezentowane przez dwie zmienne zespolone, odpowiednio / (dla prądu) oraz —
+U (dla napięcia). Zależność między wejściem a wyjściem też może być wyrażona przez liczbę
+zespoloną. Tę liczbę zespoloną nazywamy impedancją i oznaczamy symbolem Z. A więc:
+IxZz=zU
+Można to wyrazić słownie: liczba zespolona reprezentująca napięcie sinusoidalne jest rów-
+na liczbie zespolonej reprezentującej prąd sinusoidalny pomnożonej przez impedancje (inną
+liczbę zespoloną). Znając dowolne dwie z tych liczb, można wyznaczyć trzecią. We współ-
+rzędnych biegunowych moduł impedancji jest stosunkiem amplitud U i /. Podobnie, faza
+impedancji jest różnicą faz U i /.
+O 'tej zależności można pomyśleć, że jest to prawo Ohma dla sinusoid. Prawo Ohma (u = iR)
+opisuje, w jaki sposób rezystancja określa zależność między prądem a napięciem w rezysto-
+rze. Gdy sygnały są sinusoidalne, zależność przyjmuje postać: U = / Z, Tak więc impedan-
+cja wyznacza zależność między prądem a napięciem. Rezystancja jest zwykłą liczbą, gdyż
+jest związana z dwiema zwykłymi liczbami. Impedancja jest liczbą zespoloną, gdyż daje
+zależność między dwiema liczbami zespolonymi. Impedancja zawiera więcej informacji niż
+tezystancja, gdyż określa zarówno amplitudy, jak i kąty fazowe.
+Na podstawie równań różniczkowych opisujących działanie rezystora, kondensatora i cewki
+indukcyjnej można wykazać, że impedancje tych elementów są, odpowiednio: R, —j/oC oraz
+R RAŁNE c EOJE te OSC a A
+o jednostkowej amplitudzie (rys. 30.5). Stosując metodę zastępowania, można wyrazić taką
+falę jako 1 + 0. Napięcie na rezystorze będzie więc: U = / Z=(1 + (y) R=R + (0y. Inaczej
+
+<image/figury/k3_page500_figure1.png>

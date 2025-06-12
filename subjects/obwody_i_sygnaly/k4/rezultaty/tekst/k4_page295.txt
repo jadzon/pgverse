@@ -1,0 +1,38 @@
+34. Nieliniowe obwody rezystancyjne prądu stałego 297
+
+trwania tego procesu punkt pracy diody porusza się po odcinku 04 charakterys-
+tyki i po osiągnięciu przy E = 0,5 V punktu A w układzie następuje stan
+wynikający z warunków równowagi układu. Ustalona wartość napięcia na
+diodzie będzie wówczas równa U.
+
+<image/figury/k4_page295_figure1.png>
+
+Przyjmijmy z kolei, że nadal zwiększamy siłę elektromotoryczną źródła od
+wartości 0,5 V do wartości E', odpowiadającej położeniu b prostej oporu na
+rys. 3.4-19b. Punkt pracy diody przesunie się wówczas od punktu A do punktu D.
+Jeżeli teraz siłę elektromotoryczną zwiększymy — choćby minimalnie — ponad
+wartość E', następuje natychmiastowy przeskok punktu pracy diody od punktu
+D do punktu F. Dalsze zwiększenie siły elektromotorycznej powoduje przesuwa-
+nie się punktu pracy diody po jej charakterystyce od punktu F w kierunku jej
+wzrostu. Jeśli jednak siłę elektromotoryczną zaczęlibyśmy zmniejszać od wartoś-
+ci większych od E' do wartości 0,5 V, punkt pracy poruszałby się wzdłuż
+odcinka FB charakterystyki i przy E = 0,5 V znalazłby się w punkcie B.
+Układ osiągnąłby wtedy drugi możliwy stan równowagi, przy tej samej wartości
+siły elektromotorycznej źródła E = 0,5 V i tych samych parametrach jego
+elementów. Ustalona w tym przypadku wartość napięcia na diodzie byłaby
+równa U5.
+
+Jak wynika z przeprowadzonej dyskusji rozważane zagadnienie ma dwa
+rozwiązania. Napięcie na diodzie może przyjąć wartość U „, odpowiadającą
+punktowi pracy A lub wartość U5, odpowiadającą punktowi pracy B. To, który
+z tych przypadków faktycznie wystąpi, zależy od sposobu dochodzenia
+układu do punktu pracy. Rozstrzygnięcie tej kwestii nie jest w ogólnym
+przypadku proste i wymaga pewnych dodatkowych informacji o sposobie
+pobudzania układu.
+
+Z dyskusji wynika, że przy omówionym wyżej sposobie pobudzania układu
+punkt pracy diody nie może znaleźć się w punkcie C charakterystyki, a więc nie
+może wystąpić efekt oporu ujemnego”,
+
+1) Łatwo jednak zauważyć, że innym sposobie zz" układu (jakim?) punkt pracy
+diody mógłby znaleźć się na aa odcinku charakterys

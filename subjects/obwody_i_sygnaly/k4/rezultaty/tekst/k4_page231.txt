@@ -1,0 +1,25 @@
+Zadania do rozdziału 2 233
+
+<image/wzory/k4_page231_formula1.png>
+
+Zadanie 2.5. Czwórniki (rys. Z-2.5a, b) o równaniach:
+
+vzory/k4_page231_formula2.png
+
+<image/figury/k4_page231_figure2.png>
+
+gdzie k,, ką, ry,rą E SR* są nazywane odpowiednio konwerterem ujemno-impendancyjnym NIC
+(ang. negative impedance converter) oraz inwerterem ujemno-impendancyjnym NIV (ang. negative
+impedance inverter). Wyznaczyć równania zaciskowe dwójników otrzymanych z tych czwórników po
+dołączeniu do zacisków wtórnych oporu R.
+
+Ty72
+Odp.: a) u; w —kykaąRiy, b) u; = = pg
+
+Zadanie 2.6. Wyznaczyć równania zaciskowe czwórników z rys. Z-2.6a,b.
+
+<image/figury/k4_page231_figure1.png>
+
+Odb.:
+
+<image/wzory/k4_page231_formula3.png>

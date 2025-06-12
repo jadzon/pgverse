@@ -1,0 +1,15 @@
+Z każdym etapem SFC skojarzone jest pewne działanie (action). Działanie może
+być wyrażone przez zmienną logiczną, zestaw instrukcji w języku /Ł, poleceń
+w języku S7, szczebli języka LD, obwodów FBD a także jako graf SFC. Etap,
+który zawiera zero działań realizuje funkcję WA/7, tzn. oczekiwane jest spełnie-
+nie warunków przejścia do następnego etapu.
+
+Tab. 2.44 pokazuje przykłady deklaracji działań. Ponadto, działaniem może być
+także każda zmienna logiczna deklarowana w blokach VAR lub VAR_OUTPUT
+albo ich graficzny odpowiednik. Deklaracja działania jest lokalna w zakresie
+elementu oprogramowania, który ją zawiera.
+
+<image/tabele/k4_page87/_table1.png>
+
+EE ERO
+2.5 Programowanie w oparciu o graf sekwencji SFC 87

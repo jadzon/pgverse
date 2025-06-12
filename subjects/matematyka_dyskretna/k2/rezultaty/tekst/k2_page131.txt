@@ -1,0 +1,44 @@
+16 Rozdział 1. Teoria liczb
+
+czyli
+<image/iwzory/k2_page131_formula1.png>
+dla ji
+
+<image/wzory/k2_page131_formula2.png>
+
+czyli NW L/(a, m) = 1 (WNIOSEK 1.22).
+
+Z powyższego dowodu wynika, że element odwrotny do a można wyliczyć stosując
+algorytm Euklidesa. Na przykład policzmy element odwrotny do 12 w pierścieniu Z,7.
+Najpierw zastosujemy algorytm Euklidesa, aby obliczyć z i y, takie że:
+
+<image/wzory/k2_page131_formula3.png>
+
+Kolejne kroki algorytmu przedstawiono w tabeli:
+
+<image/wzory/k2_page131_formula4.png>
+
+Man
+
+<image/wzory/k2_page131_formula5.png>
+czyl)
+<image/wzory/k2_page131_formula6.png>
+
+ale:
+
+<image/wzory/k2_page131_formula7.png>
+
+czyli 1u jest elementem odwrotnym Go 12 w pierscieniu £47.
+Definicja 1.32 Zbiór elementów odwracalnych w Z „ oznaczamy przez Z/;,.
+Przykład 1.33 Z; = 41,3,5,7).
+
+Lemat 1.34 Jeżeli liczba m jest pierwsza, to każdy element a € Z, a ź 0, jest odwra-
+calny, czyli pierścień Z „ jest ciałem.
+
+Lemat 1.35 Jeżeli a,b € Z; to ab € Z; oraza”” € Z;.
+To oznacza, że Z; z mnożeniem jest grupą.
+
+Dowód: Elementem odwrotnym do iloczynu ab jest b” !a"*, a elementem odrotnym do
+a”' jest a. o
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,28 @@
+zapewniającej stopień ochrony co najmniej IP2X. Nie powinno się łączyć części
+znajdujących się wewnątrz obudowy izolacyjnej z przewodem ochronnym.
+
+<image/figury/k4_page155_figure1.png>
+
+W III klasie ochronności ochronę przed porażeniem zapewnia się przez zasto-
+sowanie zasilania bardzo niskim napięciem bezpiecznym SEŁY lub bardzo
+niskim napięciem ochronnym PELYV.
+
+W obwodach wejściowo-wyjściowych sterownika, aby zapewnić jednoczesną
+ochronę przed dotykiem bezpośrednim i pośrednim, najczęściej wymagane
+jest użycie obwodów bardzo niskich napięć, nie przekraczających napięć I zakre-
+su: odpowiednio 50V dla prądu przemiennego i 120V dła prądu stałego, które
+uznaje się jako bezpieczne w przeciętnych warunkach użytkowania.
+
+Obwody bardzo niskich napięć mogą być całkowicie izolowane względem ziemi
+lub też mogą łączyć się w różny sposób z uziomami lub przewodami ochronny-
+mi. Wszystko to zależy od zastosowanych źródeł zasilania i innych
+uwarunkowań. To sprawia, że rozróżnia się układy:
+
+e bardzo niskich napięć bezpiecznych SELV (Safety extra-low Voltage),
+
+e bardzo niskich napięć ochronnych PEŁY (Protection extra-low Voltage),
+
+e bardzo niskich napięć funkcjonalnych FEŁY (Functional extra-low Voltage).
+Schematy tych układów pokazano na Rys. 3.34.
+
+3.7 Zastłanie sterowników 1 5 5

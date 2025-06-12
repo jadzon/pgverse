@@ -1,0 +1,24 @@
+<image/figury/k4_page17/_figure2.png>
+
+oraz wykres czasowy dla przerzutnika KKS
+
+W schematach drabinkowych funkcja przerzutnika może być zrealizowana albo
+z użyciem styku przekaźnika w obwodzie wzbudzenia jego cewki (tzw. samo-
+podtrzymanie lub zatrzask — ang. latch), albo w postaci pary cewek sprzężonych
+przypisanych do jednej zmiennej, z których jedna umożliwia tylko ustawianie
+(cewka S$), a druga tylko zerowanie zmiennej (cewka R). Oba sposoby realizacji
+przerzutnika RS dla schematu połączeń z Rys. 1.7 przedstawiono na Wyd. 1.2,
+a przerzutnika SR na Wyd. 1.3.
+
+<image/figury/k4_page17/_figure4.png>
+
+Rys. 1.7 Połączenie styków R i S z modułem wejść dwustanowych
+
+<image/figury/k4_page17/_figure1.png>
+
+Wyd. 1.2 Dwa sposoby programowania przerzutnika RS w języku schematów drabin-
+kowych (dla zwiernych styków S i R)
+
+ 
+
+1.2 Pojęcia podstawowe 17

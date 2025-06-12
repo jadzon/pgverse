@@ -1,0 +1,41 @@
+figury/k4_page352_figure3.pn
+
+ 
+
+AKUMUL
+
+figu: y/R*_VGYSJUL_IIYUIG I.|VIIY
+Wynik w al
+
+Rys. 7.19 Działanie instrukcji sumy słów OW
+A
+
+figury/k4_page352_figure4.pn
+figuryska_payesoz_nyurez.pny
+
+Rys. 7.20 Działanie instrukcji sumy moduło 2 słów XÓW
+
+Operator AW można wykorzystać do ustawiania na © wybranych bitów słowa.
+Operator OW można wykorzystać do ustawiania na | wybranych bitów słowa.
+Operator XOW można wykorzystać do porównywania dwóch ciągów bitów.
+W słowie wynikowym wystąpi wówczas | na tych pozycjach, na których bity
+w obu akumulatorach są różne.
+
+Niezależnie od rodzaju wykonywanej operacji logicznej ustawiane są dwa bity
+(CCO0,CC1) słowa statusowego procesora.. Stan tych bitów może być sprawdza-
+ny przy pomocy odpowiednich instrukcji skoku (por. 7.14).
+
+<image/tabele/k4_page352_table1.png>
+
+Drugą grupę operatorów, które działają na ciągach bitów stanowią operatory
+przesunięcia. Umożliwiają one przesuwanie zawartości akumulatora | o zadaną
+liczbę pozycji w dwojaki sposób:
+
+e przesunięcie wszystkich bitów słowa bitowego o zadaną liczbę pozycji w
+lewo lub w prawo. Bity, które zostają "wypchnięte" ze słowa są tracone,
+natomiast puste miejsca są wypełniane przez 0 lub przez bit znaku (0 dla
+liczb dodatnich, I dla ujemnych) w zależności od rodzaju użytego operatora,
+
+O Z A Z OO W O W EE w w w w 1-1 TA A A. A 0
+
+352 Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5

@@ -1,0 +1,28 @@
+164 1. Pojęcia podstawowe — elementy
+
+<image/figury/k3_page164_figure4.png>
+
+=p +wiwaj AakiiwiY DPYUDUU WIQUŁEGLIIG UIUU LIG PIZECIWNY.
+
+Zadanie 1.32. Znaleźć parametry źródła napięciowego równoważnego połączeniu źródeł z rys.
+Z-1.32. Dane: E, = 12 V, J = 1 mA, R; = 3 kQ, R, = 6kQ.
+
+<image/figury/k3_page164_figure1.png>
+
+Odp.: E, =6V, R,=2kQ
+
+Zadanie 1.33. Znaleźć źródła równoważne połączeniom źródeł z rys. Z-1.33.
+
+<image/figury/k3_page164_figure2.png>
+
+Odp.: a) idealne źródło prądowe o wydajności prądowej j;
+b) idealne źródło napięciowe o sile elektromotorycznej e.
+
+Zadanie 1.34. Znaleźć parametry źródła napięciowego równoważnego połączeniu źródeł z rys.
+Z-1.34a i b.
+
+Odp.: a) E, = E, + J,R;, R,= R;
+b) E. = E;,, Rz=R
+
+Zadanie 1.35. Układ z rys. 1.7-21b jest zasilany na zaciskach EB napięciem uzg i obciążony na
+zaciskach CB oporem Ry. Wyznaczyć napięcie ucg na złączu kolektor-baza.

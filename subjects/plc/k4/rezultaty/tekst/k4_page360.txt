@@ -1,0 +1,35 @@
+nadrzędnym. Są to operatory bezargumentowe. Operator BE jest zawsze ostatnią
+instrukcją każdego bloku. Powoduje ona bezwarunkowe przerwanie aktualnie
+wykonywanego bloku i powrót do bloku nadrzędnego.
+
+Po wykonaniu instrukcji BEU następuje bezwarunkowy powrót do poprzednio
+wykonywanego bloku. W odróżnieniu jednak od instrukcji BE można tą instruk-
+cję "ominąć" poprzez zastosowanie odpowiedniej instrukcji skoku (Rys. 7.25).
+
+<image/figury/k4_page360_figure1.png>
+
+Wykonanie instrukcji BEC jest zależne od wyniku poprzedzających ją tnstrukcji
+logicznych. Jeżeli wynik poprzedzających ją instrukcji jest równy | to następuje
+powrót do bloku nadrzędnego (wykonanie aktualnie przetwarzanego bloku zo-
+staje przerwane), przy czym wynik operacji logicznych pozostaje niezmieniony,
+tj. 1. Może on być w bloku nadrzędnym wykorzystywany np. do ustawiania
+znaczników. W przypadku, gdy wynik operacji logicznych poprzedzających in-
+strukcję BEC jest równy O operacja nie zostaje wykonana i liniowe przetwarza-
+nie programu jest kontynuowane w aktualnie wykonywanym bloku.
+
+<image/figury/k4_page360_figure2.png>
+
+Rys. 7.26 Instrukcja końca warunkowego bloku BEC.
+
+Oprócz omówionych powyżej podstawowych instrukcji skoku w blokach funkcyj-
+nych można korzystać z następujących operatorów uzupełniających:
+
+e JU= skok bezwarunkowy,
+
+e JC= skok warunkowy,
+
+     
+
+Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5
+
+360

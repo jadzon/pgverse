@@ -1,0 +1,56 @@
+Zaprojektowanie filtru cyfrowego dającego żądaną odpowiedź częstotliwościową jest cał-
+<kiem proste. Trudną częścią projektu jest określenie, jaką odpowiedź częstotliwościową na-
+
+leży zastosować. Rozpatrzmy kilka różnych strategii stosowanych w DSP do projektowania
+filtrów dostosowanych do szczególnych wymagań.
+
+Dowolna odpowiedź częstotliwościowa
+
+=mnnnnaasnoznnai
+
+1
+t
+|
+|
+
+spie
+
+ 
+
+ 
+
+  
+
+>
+
+=== Z... -
+
+0,4
+
+  
+
+  
+
+i
+
+i i
+i i
+RZ
+0,2 0.3
+Częstotiwość
+
+3
+1
+0
+o
+17.2. Zależność odpowiedzi częstotliwościowej filtru od długości odpowiedzi impulsowej. Na rysunku przedsta-
+odpowiedzi częstolliwościowe uzyskane przy różnych długościach odpowiedzi impulsowej filtrów. Liczba punk-
+iw w każdej odpowiedzi impulsowej jest M + 1, od próbki © do M. Czym więcej punktów zawiera odpowiedź impul-
+
+0,1
+
+tym lepiej uzyskana odpowiedź częstotliwościowa jest dopasowana do odpowiedzi żądanej. Żądaną odpowiedź
+
+  
+
+można zobaczyć na rys. 17.1 a)

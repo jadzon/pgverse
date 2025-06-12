@@ -1,0 +1,26 @@
+Ponieważ oś odciętych ma podziałkę logarytmiczną, powyższym równaniom od-
+powiadają odcinki linii prostych (funkcja stałowartościowa lub funkcja liniowa).
+
+Obliczamy nachylenie wykresu dla dwóch wartości: w = w, i w=10w,, różniących
+się od siebie o dekadę. I
+
+Nachylenie charakterystyki dla pierwszego przedziału pulsacji (dla w << T ) wy-
+nosi:
+
+<image/wzory/k1_page7/0_formula1.png>
+
+zatem
+
+Charakterysty|
+
+Nachylenie charakterystyki aia arugiego przeaziafu pulsacji (dia w>> T ) wy-
+nosi:
+
+<image/wzory/k1_page/0_formula2.png>
+
+<image/wzory/k1_page/0_formula3.png>
+
+<image/wzory/k1_page/0_formula4.png>
+<image/wzory/k1_page/0_formula5.png>
+
+72

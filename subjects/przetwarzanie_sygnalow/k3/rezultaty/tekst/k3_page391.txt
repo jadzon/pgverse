@@ -1,0 +1,36 @@
+25. Specjalne techniki obrazowe
+
+ 
+
+<image/figury/k3_page391_figure1.png>
+
+i detektor z przyrostami kątowymi o ok. 1” i powtarzając proces przesuwania
+
+Na rys. 25.15 zilustrowano zależność między zmierzonymi widokami i odpowiadającym in
+obrazem. Każda próbka pobierana w systemie tomografii komputerowej jest równa sum
+wartości obrazu wzdłuż promienia wskazującego tę próbkę. Na przykład widok 1 znalezie
+no, sumując piksele w każdej kolumnie. Widok 3 zaś jest znajdowany przez sumowan
+w wierszach. Inne widoki, takie jak widok 2, uzyskano, sumując piksele wzdłuż promieni
+biegnących pod jakimś określonym kątem.
+
+Istnieją cztery główne sposoby obliczania obrazu przekroju, gdy ma się dany zestaw je,
+widoków. Są to tzw. algorytmy rekonstruujące tomografii komputerowej. Pierwszy spo:
+sób jest zupełnie nieprzydatny w praktyce, lecz daje lepsze zrozumienie problemu. Polega o
+na rozwiązywaniu wielu równoważnych równań liniowych. Dla każdego pomiaru moż
+napisać jedno równanie. To znaczy, że określona próbka w określonym profilu jest s
+określonej grupy pikseli w obrazie. Aby obliczyć N? nieznanych zmiennych (tj. óiożij
+seli obrazu), trzeba mieć N? niezależnych równań, a więc N* pomiarów. Większość ko
+terowych skanerów tomograficznych pobiera o ok. 50% próbek więcej, niż wynika z ostryd
+wymagań tej analizy. Na przykład w celu zrekonstruowania obrazu 512 x 512 system
+pobrać 700 widoków zawierających po 600 próbek. Przez takie „przedobrzenie” probler
+uzyskuje się zmniejszenie szumów i artefaktów. Trudności w tej pierwszej metodzie rekc
+strukcji obrazu tomografii komputerowej są związane z czasem obliczeń. Rozwi
+kilkuset równoważnych równań liniowych to paskudne zadanie.
+W drugiej metodzie rekonstrukcji w tomografii komputerowej stosuje się technikę ite
+ną, aby małymi krokami obliczyć końcowy obraz. Jest kilka odmian tej metody: techr
+rekonstrukcji algebraicznej (ART — Algebraic Reconstruction Technique), technika rów
+czesnej rekonstrukcji iteracyjnej (SIRT — Simultaneous lterative Reconstructiom Techniq
+oraz technika iteracji metodą najmniejszych kwadratów (ILST — lierative Least
+Technique). Różnice między tymi metodami leżą w sposobie wykonywania kolejnych kore
+cji, a więc — odpowiednio — promień po promieniu, piksel po pikselu, następuje jednocze
+korekcja całego zestawu danych. Jako przykład tych technik omówimy ART.

@@ -1,0 +1,24 @@
+<image/tabele/k3_page143_table1.png>
+
+Gdy pętle wewnętrzną i zewnętrzną zamieni się miejscami, to program przechodzi w pętli
+przez każdą próbkę w dziedzinie czasu, obliczając udział wartości tego punktu w sygnale
+w dziedzinie częstotliwości. Całkowity sygnał w dziedzinie częstotliwości jest wyznaczany
+przez sumowanie udziałów pochodzących od indywidualnych punktów w dziedzinie czasu.
+To prowadzi do następnego pytania: jakiego rodzaju udział w dziedzinę częstotliwości wnosi
+indywidualna próbka w dziedzinie czasu? Odpowiedź jest zawarta w interesującym aspekcie
+analizy Fouriera, zwanym dualizmem.
+
+Dualizm
+
+rwnaniasyntezyianalizywzory8.2i8.4sdosiebieuderzajcopodobne.przejcie
+z jednej dziedziny do drugiej wymaga pomnożenia znanych wartości przez funkcje bazowe
+i zsumowania uzyskanych iloczynów. EE AE RADA adnie.
+
+_ _0N/2+1 punktach. W dalszych rozdziałach będzie mowa o tym, że w zespolonym DFT
+w obu dziedzinach — zarówno czasu, jak i częstotliwości — mamy sygnały zespolone, każdy
+0 N punktach. EE PERLA 2
+
+-_ chodzenia z dziedziny do dziedziny — pozornie
+
+Taką symetrię między dziedzinami czasu i częstodiwości nazywany duelizanem. Wynika z nie
+. go wiele interesujących właściwości. Na przykład pojedynczy punkt w dziedzinie częstotliwości

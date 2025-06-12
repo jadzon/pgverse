@@ -1,0 +1,42 @@
+1.3. Elementy nieliniowe 61
+
+stanowiące jedynie inny zapis związków (1.3-1), (1.3-2), (1.3-8) i (1.3-17).
+
+Równości (1.3-25) podkreślają wyraźnie, że napięcie u (prąd i, skojarzenie
+magnetyczne YW, ładunek q) w chwili t zależą tylko od wartości prądu i
+(napięcia u, prądu i, napięcia u) w tej samej chwili. Do właściwości tej powrócimy
+w p. 1.4.
+
+D. Elementy symetryczne i niesymetryczne. Elementy oraz ich charak-
+terystyki dzielimy na symetryczne i niesymetryczne.
+
+O elemencie (oporze, indukcyjności, pojemności) mówimy, że jest symetrycz-
+ny, jeśli jego charakterystyka jest symetryczna względem początku układu
+współrzędnych (rys. 1.3-20a), tzn. jest wykresem funkcji nieparzystej.
+W przeciwnym przypadku mówimy o charakterystyce niesymetrycznej i elemen-
+cie niesymetrycznym (rys. 1.3-20b).
+
+<image/figury/k3_page61_figure1.png>
+
+Przykład 1.3-7. Opory o charakterystykach przedstawionych na rys. 1.3-5 a, b, c, e, g są
+symetryczne. Opory o charakterystykach d, f są niesymetryczne.
+Wszystkie indukcyjności o charakterystykach z przykładu 1.3-4i wszystkie pojemności o charak-
+terystykach z przykładu 1.3-6 są symetryczne.
+Dławik (przykład 1.3-3) oraz kondensator wypełniony ferroelektrykiem (przykład 1.3-5) są
+elementami symetrycznymi.
+
+E. Indukcyjność i pojemność w obwodzie prądu stałego. Z równości
+definicyjnych (1.3-8) i (1.3-9) wynika wprost, że jeśli w indukcyjności występuje
+prąd stały, to napięcie na indukcyjności jest równe zeru, tzn.:
+i=z][=cont => u=0.
+
+Podobnie, z równości (1.3-17) i (1.3-18) wynika, że w pojemności, na
+której napięcie jest stałe, nie występuje prąd, tzn. u = U = const > i = 0.
+
+F. Przykłady. Omówimy teraz przykłady ilustrujące typowe obliczenia,
+które wykonuje się często, jeśli w analizowanym obwodzie występują nieliniowe
+opory, indukcyjności lub pojemności.
+
+Przykład 1.3-8. Rozważmy opór nieliniowy z przykładu 1.3-2c. Załóżmy, że stała a wynosi
+a = 50 V: ATHZi że przez opór płynie prąd stały I = 40 mA. Obliczymy moc pobieraną przez
+opór.

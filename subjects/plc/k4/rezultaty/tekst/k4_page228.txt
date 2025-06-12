@@ -1,0 +1,35 @@
+do 16 kB pamięci sterownika, przy czym, oczywiście, program główny wraz ze
+wszystkimi podprogramami musi zmieścić się w ograniczeniach wynikających
+z rozmiarów pamięci określonej jednostki centralnej.
+
+Podprogram może być wykorzystywany dowolną liczbę razy podczas wykony-
+wania programu sterującego, a więc powtarzające się w programie bloki
+instrukcji mogą zostać wyodrębnione jako podprogramy wywoływane w razie
+potrzeby w odpowiednich miejscach programu. Pozwala to na zmniejszenie jego
+całkowitych rozmiarów. Podprogramy mogą być wywoływane z poziomu innych
+podprogramów, a nawet z samych siebie (wywoływanie rekurencyjne), przy
+czym dopuszczalnych jest 8 zagnieżdżonych (jedno wewnątrz drugiego) wywo-
+łań.
+
+Podprogram jest wykonywany po wywołaniu z bloku głównego programu lub
+innego podprogramu za pomocą instrukcji CALL. Sposób użycia tej instrukcji
+przedstawiono we fragmencie programu na Wyd. 4.43.
+
+Jeżeli w trakcie wykonywania programu zmienna %M/ przyjęła wartość 7, to po
+dojściu programu do szczebla zawierającego wywołanie podprogramu POZIOM I
+przepływ prądu zostanie od razu przeniesiony do pierwszego szczebla bloku
+zawierającego ten podprogram. Po wykonaniu bloku podprogramu sterowanie
+przepływem prądu powraca do następnego szczebla po instrukcji CALL (w tym
+przypadku jest to szczebel zakończony cewką %Q]1.
+
+<image/figury/k4_page228_figure1.png>
+
+Wyd. 4.43 Przykład użycia instrukcji CA LL do wywołania podprogramu
+
+Uwaga: Użycie instrukcji wywołania danego podprogramu musi zostać poprze-
+dzone zdefiniowaniem tego podprogramu w deklaracjach bloków (Block
+DeclarationsS).
+
+ 
+
+228 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

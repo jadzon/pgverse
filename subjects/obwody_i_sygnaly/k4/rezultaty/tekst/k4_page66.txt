@@ -1,0 +1,47 @@
+66 1. Pojęcia podstawowe — elementy
+
+ 
+
+Obliczenie dla pojemności Cx, wartości energii w punkcie pracy, w którym napięcie wynosi
+5
+U = 1Vnie przedstawia trudności. Energia ta jest nim HJ. W przypadku pojemności C„, należy
+j obliczyć najpierw wartość ładunku w punkcie pracy, a więc rozwiązać równanie:
+
+<image/_wzory/k4_page66_formula1.png>
+
+Równanie to ma tylko jedno rozwiązanie (wynika to z definicji pojemności). Dla przyjętych danych
+5
+mamy q = 1 uC, zatem energia wynosi 3 u.
+
+G. Elementy rezystancyjne, indukcyjne i pojemnościowe. Przyjęte
+w p.1.3.1, 1.3.2 i 1.3.3 założenia, jakie spełniają charakterystyki oporów,
+indukcyjności i pojemności, wynikają z przesłanek fizycznych i odpowiadają
+właściwościom elementów rzeczywistych: oporników (rezystorów), cewek i kon-
+densatorów. W praktyce występuje jednak potrzeba posługiwania się także
+elementami nieco bardziej ogólnymi, których charakterystyki nie spełniają
+przyjętych dla oporu, indukcyjności i pojemności warunków. Można je nazwać
+odpowiednio elementami rezystancyjnymi”, indukcyjnymi i pojemnościowymi
+i określić w następujący sposób.
+Niech funkcja F (lub Fp, F,, F£) będzie funkcją dwóch zmiennych rzeczy-
+wistych i niech równanie:
+
+<image/wzory/k4_page66_formula2.png>
+
+będzie równaniem uwikłanym krzywej ciągłej w płaszczyznie x, y.
+Elementem rezystancyjnym (skupionym, stacjonarnym) nazywamy element
+opisany równaniem:
+
+<image/wzory/k4_page66_formula3.png>
+
+| Elementem indukcyjnym (skupionym, stacjonarnym) nazywamy element
+| opisany równaniami:
+|
+
+<image/wzory/k4_page66_formula4.png>
+<image/wzory/k4_page66_formula5.png>
+
+') Ze względów terminolocznych bardziej konsekwentne byłoby użycie nazwy elementy
+oporowe. Potoczne znaczenie słów element oporowy jest jednak bardzo zbliżone do znaczenia terminu
+| opór, co w wielu przypadkach (zwłaszcza dotyczących elementów wielowrotowych, por. p. 1.7.2-E)
+mogłoby doprowadzić do opacznych interpretacji. Z tego względu w dalszym tekście będziemy
+| używać nazwy element rezystancyjny.

@@ -1,0 +1,50 @@
+6 Rozdział 1. Grafy skierowane
+
+Algorytm [Forda-Bellmana]
+
+Dane wejściowe: Graf skierowany G = (V, E), długości krawędzi w : E + R.
+Dane wyjściowe: Macierz D odległości z s do wszystkich wierzchołków.
+
+e dla każdego v € V podstaw Dfv] := w(s,v)
+
+e Dls] := 0;
+
+e dla każdego k od 1 do n — 2 zrób:
+
+o dla każdego v 44 s zrób:
+dla każdego u € V zrób: Dfv] := min(Dfe], Dfu] + w(u,v))
+
+Algorytm Forda-Bellmana najpierw podstawia Dfv] := w(s,v). Jest to pierwsze
+przybliżenie. Potem w n— 2 rundach, dla każdego wierzchołka v € V algorytm sprawdza,
+czy istnieje wierzchołek u, który wyznacza krótszą drogę do v.
+
+Przykład 1.5 Algorytm Forda-Bellmana zastosowany do grafu z rysunku 1.2 działa w
+następujący sposób: Na początku macierz D przedstawia się następująco:
+
+W pierwszej iteracji zewnętrznej pętli, dla k = 1, algorytm dla każdego wierzchołka
+v ź£ s sprawdza, czy istnieje wierzchołek u, przez który wiedzie krótsza droga do v. I
+tak dla v = a, stwierdza, Dfb) + w(b,a) = 2+1 < © = Dla]. Oznacza, to, że
+droga z s do b a potem krawędzią do a jest krótsza od dotychczasowego oszacowania oo.
+Dlatego algorytm podstawia 3 na Df[a]. Dla v = b wartość D[b) = 2 nie zmienia się
+ponieważ droga przez c D[e] + w(c,b) = 2 + 1 = 3 nie jest krótsza od dotychczasowego
+oszacowania. Dla v = c algorytm znajduje krótszą drogę przez d; D(d] + w(d,c) =
+1 + (-2) = —1 < De] i zmienia Dle) na —1. Dla v = d wartość macierzy D nie jest
+korygowana, a dla v = t algorytm odnajduje drogę przez a, Dfa] + w(a,t) =3+1=
+4 < oo i posyła D[t] := 4. Tak więc po pierwszej iteracji pętli macierz DD ma następujące
+wartości:
+
+<image/wzory/k2_page215_formula1.png>
+
+W drugiej iteracji dla k = 2 tylko wartość Dfb) zostaje poprawiona, gdyż D|c)+w(c, b) =
+-1+1=0< 2 = Dfb). Nowa wartość D[b| = 0. Pozostałe wartości nie zmieniają się i
+po drugiej iteracji macierz D wygląda tak
+
+<image/wzory/k2_page215_formula2.png>
+
+W trzeciej iteracji pętli dla k = 3 algorytm najpierw znajduje krótszą drogę do a (przez b)
+i poprawia D[a) := 1, a potem znajduje krótszą drogę do t (przez a) i poprawia Dft] := 2.
+Po trzeciej iteracji macierz D wygląda tak
+
+<image/tabele/k2_page215_table1.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

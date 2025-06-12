@@ -1,0 +1,20 @@
+<image/figury/k3_page493_figure2.png>
+
+<image/wzory/k3_page493_formula1.png>
+
+bardzo wytężyć uwagę). Liczba zespolona zapisana we współrzędnych prostokątnych ma
+postać: a + bj. Informacja jest zawarta w dwóch zmiennych a oraz b, lecz właściwą liczbę
+zespoloną tworzy całe wyrażenie: a + bj. We współrzędnych biegunowych istotna informacja
+jest zawarta w M oraz 0, lecz jakie jest pełne wyrażenie właściwej liczby zespolonej w tych
+współrzędnych?
+
+Kluczem do odpowiedzi na to pytanie jest wzór 30.9 opisujący konwersję współrzędnych
+biegunowych na prostokątne. Jeśli zaczniemy rozważanie od liczby zespolonej a + bj i zasto-
+sujemy wzór 30.9. to uzyskamy:
+
+<image/wzory/k3_page493_formula2.png>
+30.10. WE WSPOIZĘGNYCH pruostUKĄtnYycH i Oregunowych. Lewa
+woski Sodhę ZARA WA KOPCE O a prawa — ważnie Bantecja ałężzy
+M i © oraz a i b jest opisana wzorami 30.8 i 30.9
+
+<image/figury/k3_page493_figure1.png>

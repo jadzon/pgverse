@@ -1,0 +1,36 @@
+1.2. Podstawowe modele zjawisk w obwodzie 27
+
+<image/wzory/k3_page27_formula1.png>
+
+— - . - «a
+
+Uwaga. Zwracamy uwagę, iż przejście od równania (1.2-4) do równania (1.2-6) jest oparte
+na przyjętym założeniu o pozostaniu w mocy zależności, na podstawie których otrzymaliśmy
+równanie (1.2-4). Prawidłowości tego założenia nie możemy w chwili obecnej ocenić; będzie to
+przedmiotem późniejszych rozważań (por. p. 1.4). Na razie zatem musimy traktować przejście od
+równania (1.2-4) do równania (1.2-6) jako formalną ekstrapolację wzoru wyprowadzonego
+dla pola stacjonarnrgo (prądu i napięcia stałego) na przypadek pola niestacjonarnego (prądu
+i napięcia zmiennego).
+
+C. Moc i energia. Opór określony równaniem (1.2-6) jest elementem
+reprezentującym nieodwracalne straty energii występujące przy przepływie
+prądu w obwodzie. Moc chwilowa pobierana przez opór ma postać:
+
+<image/wzory/k3_page27_formula2.png>
+
+i jest zawsze nieujemna. Energia chwilowa wą pobrana przez opór w przedziale
+czasu Ćty,t), t> to, wyraża się zatem wzorem:
+
+<image/wzory/k3_page27_formula3.png>
+
+i jest niemalejącą funkcją czasu t. Oznacza to, że energia pobrana przez opór
+z otoczenia nie może być do tego otoczenia zwrócona — jest ona zamieniana na
+ciepło (tzw. ciepło Joule'a) lub inną postać energii. Występowanie w obwodzie
+oporu jest więc równoznaczne z występowaniem strat energii.
+
+D. Przykłady.
+
+Przykład 1.2-1. Na oporze R = 4 kQ, występuje impulsowy trójkątny sygnał napięcia (rys.
+1.2-3). Obliczymy energię pobraną przez ten opór, jeśli U, = 2Vi T=3s.
+
+<image/figury/k3_page27_figure1.png>

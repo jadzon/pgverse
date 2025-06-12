@@ -1,0 +1,42 @@
+Zestaw próbny SHARC EZ-KIT Lite 511
+
+ 
+
+<image/tabele/k3_page474_table1.png>
+
+rami do obliczeń stałoprzecinkowych. Dzięki takim właściwościom procesor ADSP-21160M
+wykonuje 1024-punktowe przekształcenie FFT w czasie zaledwie 46 us. Cyfrowy procesor
+sygnałowy SIMD zawiera drugi zestaw jednostek obliczeniowych (jednostkę arytmetycz-
+no-logiczną, szybki rejestr przesuwający (barrel shifter), tablicę rejestrów danych i układ
+mnożący), dzięki czemu procesor zachowuje wsteczną kompatybilność programu z rodziną
+ADSP-2106x, a stwarza możliwość działania dziesięciokrotnie lepszego niż tamte układy.
+
+Zestaw próbny SHARC EZ-KIT Lite*0
+
+W zestawie próbnym EZ-kit Lite znajdziecie wszystko, co jest niezbędne do nauczenia się
+pracy z cyfrowymi procesorami sygnałowymi SHARC, a więc część sprzętową, oprogra-
+mowanie i podręcznik. Na rys. 29.1 przedstawiono schemat blokowy układu dostarczanego
+w zestawie EZ-KIT Lite, którego najważniejszym elementem jest cyfrowy procesor sygnało-
+wy ADSP-21161. Układy są zmontowane na płycie drukowanej 13,5 x 20 cm. Połączeń, któ-
+rymi musicie się zająć, jest niewiele — zasilanie napięciem stałym, łącze USB do komputera
+osobistego oraz sygnały wejściowy i wyjściowy. Zasilacz i kabel USB są zresztą dostarczane
+w zestawie. Sygnały wejściowy i wyjściowy są na poziomie sygnałów akustycznych, o am-
+plitudzie ok. 1 V. Myśl jest tu taka, żeby dołączyć mikrofon do wejścia, a do wyjścia — kilka
+wzmacniających głośników (takich, jak stosowane w komputerach osobistych). W ten sposób
+możecie usłyszeć efekty działania różnych algorytmów DSP.
+
+Przetwarzanie analogowo-cyfrowe i cyfrowo-anałogowe jest realizowane w koderze-dekode-
+rze (codecu) AD1836 firmy Analog Devices. Jest to koder-dekoder audio 96 kHz zawierają-
+cy również przetwornik c/a AD1852.
+
+Przyciski na płycie umożliwiają użytkownikowi generowanie przerwań, kasowanie procesora
+i przełączanie kilku bitów flagowych, które mogą być czytane przez system. Sześć diod elek-
+troluminescencyjnych wmontowanych na płycie może być włączanych i wyłączanych przez
+przełączanie stanów bitów. Jeśli jesteście ambitni, to możecie wykorzystać znajdujące się na
+płycie sekcje dające dostęp do portu szeregowego, portów Link Port, interfejsu optycznego
+SPDIF i magistrali procesora.
+
+30 Oferta zestawów ewaluacyjnych dla procesorów DSP firmy Analog składała się z 8 typów dla róż-
+nych rodzin DSP. W skład zestawów wchodzi m.in. 90-dniowa licencja na pakiet programistyczny
+VisualDSP++. Szczegółowe informacje są dostępne pod adresem: hrp://www.analog.com/processorx/
+sharc/evaluationDevelopment/evaluationKits.himl.

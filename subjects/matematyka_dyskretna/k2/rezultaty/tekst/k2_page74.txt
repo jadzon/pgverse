@@ -1,0 +1,41 @@
+1.5. Zmienna losowa 15
+
+a) P(Y =y)= Zzex(a) /(z.y)
+b) P(X = z) = LycY(Q) f(z,y)
+
+Dowód Zauważmy, że
+
+<image/wzory/k2_page7/4_formula1.png>
+ponieważ
+<image/wzory/k2_page74_formula2.png>
+
+Z drugiej strony
+
+<image/wzory/k2_page74_formula3.png>
+
+Podobnie można pokazać, że
+
+<image/wzory/k2_page7/4_formula4.png>
+
+o
+
+Przykład 1.30 Sumując wiersze tabeli z przykładu 1.28b można otrzymać gęstość roz-
+kładu zmiennej .X2, a sumując kolumny gęstość rozkładu X3 .
+
+<image/figury/k2_page74_figure1.png>
+
+Podobnie jak dla jednej zmiennej, mając gęstość łącznego rozkładu prawdopodobień-
+stwa dwóch zmiennych X i Y można obliczać prawdopodobieństwa zdarzeń opisywa-
+nych przez te zmienne.
+
+Przykład 1.31 Weźmy zmienne X2 i X: z przykładu 1.30. Wtedy
+
+<image/wzory/k2_page7/4_formula5.png>
+
+oraz
+
+P(X < X3) = P(X=0 i Xz=] lub X20(0 i X3=2 lub COBI i X3 m 2) =
+
+<image/wzory/k2_page74_formula6.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,36 @@
+AG. Ohwadv rezvstancvino 7» wzmacniaczami anaranvinvmi 17
+
+<image/wzory/k4_page315_formula1.png>
+
+Łącząc równania (3.6-4) i (3.6-5), dostajemy kompletny opis idealnego
+wzmacniacza operac yjnego (rozważanego jako element rezystancyjny) w postaci
+równań:
+
+<image/wzory/k4_page315_formula2.png>
+oraz równania:
+
+Nzory/k4_page315_formula3.png 8.61)
+
+obowiązującego dla obu rozważanych zakresów pracy WO.
+
+Równania (3.6-6) odpowiadają charakterystyce idealnego wzmacniacza
+operacyjnego przedstawionej na rys. 3.6-4.
+
+Idealny wzmacniacz operacyjny, opisany równaniami (3.6-6) i (3.6-7), jest
+zatem, ogólnie biorąc, czterozaciskowym nieliniowym elementem rczys-
+tancyjnym o charakterystyce u, = f(u,) przedstawionej na rys. 3.6-4. W za-
+kresie pracy liniowej, określonym zależnościami (3.6-4), element ten staje się
+elementem liniowvm.
+
+<image/figury/k4_page315_figure1.png>
+
+Uwaga. W zastosowaniach praktycznych, przyjmując model liniowy WO, posługujemy się często
+
+równościami:
+<image/wzory/k4_page315_formula4.png>
+nie eksponując ograniczenia:
+vzory/k4_page315_formula5.png (3.6-9)
+
+dla napięcia u;. Należy jednak pamiętać, że niezależnie od tego czy ograniczenie to wymieniamy
+wyraźnie, czy pomijamy milczeniem, obowiązuje ono zawsze i określa granice stosowalności modelu
+liniowego.

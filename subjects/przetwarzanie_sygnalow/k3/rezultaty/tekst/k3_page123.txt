@@ -1,0 +1,66 @@
+7. Właściwości splotu
+
+OO
+
+Korelacja jest operacją matematyczną bardzo podobną do splotu. Podobnie jak w splocie,
+w korelacji występują dwa sygnały dające w wyniku trzeci. Ten trzeci sygnał jest nazywany
+korelacją wzajemną dwóch sygnałów wejściowych. Jeśli sygnał jest poddany korelacji sam
+ze sobą, to uzyskany wynik nosi nazwę autokorelacji. W poprzednim rozdziale zaprezen-
+towano maszynę splotową, aby pokazać, jak splot jest realizowany. Na rys. 7.14 w podobny
+sposób zaprezentowano tzw. maszynę korelacyjną. Sygnał odbierany x[n] i sygnał korelacji
+wzajemnej y[n] przedstawiono u góry i u dołu rysunku. Przebieg £[n], którego szukamy w sy-
+gnale odbieranym — zwany sygnałem docelowym (target), jest zawarty wewnątrz maszyny
+korelacyjnej. Każda próbka w y[n] jest obliczana przez przesuwanie maszyny korelacyjnej
+w lewo lub w prawo, aż wskaże próbkę właśnie obliczaną. Następnie wskazane próbki sy-
+gnału odbieranego wpadają do maszyny korelacyjnej i są przemnażane przez wartości odpo-
+wiednich punktów w sygnale docelowym. Suma tych iloczynów jest następnie przesuwana
+do odpowiedniej próbki w sygnale korelacji wzajemnej.
+
+Wartość każdej próbki w sygnale korelacji wzajemnej jest miarą tego, jak dalece odbierany
+sygnał jest podobny do sygnału docelowego, w tym miejscu. Wynika stąd, że w sygnale
+korelacji wzajemnej pik będzie powstawał dla każdego sygnału docelowego, który jest
+obecny w sygnale odbieranym. Inaczej mówiąc, wartość korelacji wzajemnej ma mak-
+simum, gdy sygnał docelowy jest dopasowany swymi właściwościami do takich samych
+cech sygnału odbieranego.
+
+A co się dzieje, jeśli sygnał docelowy zawiera próbki o wartościach ujemnych? To niczego
+nie zmienia. Wyobraźmy sobie, że maszyna korelacyjna jest ustawiona w taki sposób, że
+sygnał docelowy jest idealnie dopasowany do odpowiedniego przebiegu w sygnale odbie-
+ranym. Gdy próbki z sygnału odbieranego wpadają do maszyny korelacyjnej, są wówczas
+mnożone przez zgodne z nimi próbki w sygnale docelowym. Jeśli pominąć szum, próbka
+o wartości dodatniej będzie mnożona przez samą siebie, dając w wyniku liczbę dodatnią.
+Nawet jeśli sygnał docelowy jest w całości ujemny, to pik przebiegu korelacji wzajemnej
+będzie jednak dodatni.
+
+Jeśli sygnał odbierany zawiera szum, to szum będzie również w sygnale korelacji wza-
+jemnej. Nie można uniknąć podobieństwa szumu losowego, w pewnym stopniu, do każde-
+go — jakie byśmy wybrali — sygnału docelowego. Szum występujący w sygnale korelacji
+wzajemnej jest po prostu miarą tego podobieństwa. Pik wytwarzany na sygnale korelacji
+
+wzajemnej jest, poza tym szumem, symetryczny (lewa strona w stosunku do prawej).To
+
+stwierdzenie jest prawdziwe, nawet jeśli sygnał docelowy nie jest symetryczny. Ponadto,
+
+szerokość tego piku jest dwa razy większa niż szerokość sygnału docelowego. Pamiętajmy, ©
+
+że sygnał korelacji wzajemnej próbuje wykrywać sygnał docelowy, a nie go odtwarzać.
+Nie ma żadnej przyczyny, aby spodziewać się, że ten pik będzie wyglądał podobnie jak
+sygnał docelowy.
+
+Korelacja jest optymałną metodą wykrywania znanych przebiegów w szumie przypadko- ©
+
+wym. Tak więc pik, przy użyciu korelacji, wznosi się bardziej powyżej szumu niż może
+być wytwarzany przez każdy inny system liniowy. (Mówiąc idealnie poprawnie — metoda
+korelacji jest optymalna tylko dla Josowego szumu białego). Stosowanie korelacji do wy-
+krywania znanego przebiegu jest często nazywane filtracją dopasowaną. Powiemy o niej
+więcej w rozdziale 17.
+
+Maszyny korelacyjna i splotowa są identyczne, poza jedną niewielką różnicą. Jak już na-
+
+pisano w poprzednim rozdziale, sygnał wewnątrz maszyny splotowej jest odwracany le-
+wo-prawostronnie. To oznacza, że próbki o numerach 1,2,3,... są ustawione od prawej do
+lewej strony. W maszynie korelacyjnej nie ma takiego odwracania i ustawienie próbek
+jest w normalnym kierunku. Ponieważ lewo-prawostronne odwracanie sygnału jest jedyną
+różnicą między dwiema operacjami, więc można wyrazić korelację, stosując takie same
+wzorymatematycznejakdlasplotu.wymagatowstpnegolewoprawostronnegoodwr
+cenia jednego lub dwóch sygnałów korelowanych w celu skasowania odwracania z lewej

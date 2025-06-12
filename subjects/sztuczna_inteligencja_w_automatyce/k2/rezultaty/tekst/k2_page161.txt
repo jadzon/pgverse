@@ -1,0 +1,25 @@
+166
+
+<image/figury/k2_page161_figure1.png>
+
+kwadrat różnicy pomiędzy liniami ciągłymi. Jak widać z rysunków zbyt mała liczba
+neuronów (1 lub 2) powoduje zarówno duży błąd empiryczny jak i duży błąd gene-
+ralizacji. Z kolei duża liczba neuronów (30) powoduje bardzo mały błąd empiryczny
+natomiast bardzo duży błąd generalizacji. Optymalną w tym przypadku jest sieć o
+6 neuronach. Przy jej zastosowaniu uzyskujemy mały błąd empiryczny i mały (naj-
+mniejszy z rozpatrywanych) błąd generalizacji. Można z tego wyciągnąć wniosek, że
+istnieje optymalna liczba neuronów (złożoność systemu uczącego się) zapewniająca
+najlepszą generalizację.
+
+Przeprowadzono też aproksymację stosując sieć o 30 neuronach w warstwie wej-
+ściowej ale korzystając tym razem z 81 par uczących. Wyniki aproksymacji przed-
+stawiono na rys. ??. Jak widać zwiększona liczba par uczących spowodowała, że
+tym razem sieć o 30 neuronach zapewnia bardzo dobrą generalizację, czyli można
+się spodziewać, że zwiększenie liczebności zbioru uczącego zmienia (zwiększa) opty-
+malną złożoność sieci. im
+
+PRZYKŁAD 6.16
+
+Na rysunku ?? przedstawiono przykładowe rozmieszczenia punktów uczących w
+dwuwymiarowej przestrzeni należących do dwóch klas i linii separujących klasy. Po-
+wstają pytania, które linie separujące zapewnią lepszą generalizację? Na rysunku ??a

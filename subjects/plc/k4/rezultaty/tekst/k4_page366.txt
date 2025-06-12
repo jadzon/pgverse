@@ -1,0 +1,46 @@
+<image/figury/k4_page366_figure1.png>
+
+Rys. 7.28 Przykład deklaracji bloku funkcyjnego
+Jeżeli lista deklaracji parametrów jest pominięta, to blok funkcyjny zachowuje
+się jak błok programowy z tym, że można w nim korzystać z pełnego zbioru in-
+strukcji procesora.
+
+7.15.1 Instrukcje z argumentem formalnym
+
+ 
+
+Instrukcje z argumentem formalnym mogą być programowane tylko wewnątrz
+bloków funkcyjnych. Argument formalny występujący w omawianych instruk-
+cjach stanowi odwołanie do listy parametrów wywołania bloku funkcyjnego.
+To z jakimi argumentami blok funkcyjny ma być wykonany podaje się w chwili
+jego wywołania. Argumenty z jakimi został wywołany blok funkcyjny noszą na-
+zwę argumentów aktualnych. W trakcie wykonania instrukcji z argumentem
+formalnym w miejsce argumentu formalnego podstawiany jest odpowiedni ar-
+gument aktualny z listy parametrów wywołania bloku funkcyjnego. Dzięki temu
+jeden blok funkcyjny może być wielokrotnie przetwarzany z różnymi argumen-
+tami. Poniżej przedstawiono podstawowe instrukcje z argumentem formalnym.
+
+Operatory binarne z argumentem formalnym
+
+e A = -Sprawdza, czy argument formalny ma stan | i łączy stan
+sprawdzonego argumentu jako iloczyn logiczny (AND) z wynikiem
+poprzedniej operacji logicznej.
+
+e AN = - Sprawdza, czy argument formalny ma stan O i łączy stan
+sprawdzonego argumentu jako iloczyn logiczny (AND) z wynikiem
+poprzedniej operacji logicznej.
+
+e O = -Sprawdza. czy argument formalny ma stan I i łączy stan
+sprawdzonego argumentu jako suma logiczna (OR) z wynikiem po-
+przedniej operacji logicznej.
+
+* ON= -Sprawdza, czy argument formalny ma stan I i łączy stan
+sprawdzonego argumentu jako suma logiczna (OR) z wynikiem po-
+przedniej operacji logicznej.
+
+e = = -Przypisuje wynik wykonanych poprzednio operacji logicz-
+nych argumentowi.
+
+PROZA OT RE R m mA m A AA W w dak MA 0 M O O 4 O EE y
+
+366 Rozdział : 7, Język listy instrukcji dla sterowników SIMATIC S5

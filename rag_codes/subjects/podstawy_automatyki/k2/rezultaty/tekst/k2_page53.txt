@@ -1,0 +1,71 @@
+11 Dynamika układów impulsowych
+
+"11.1 Cel ćwiczenia
+
+Ćwiczenie ma na celu zapoznanie się z zagadnieniem regulacji impul-
+sowej, to jest regulacji występującej jedynie w dyskretnych chwilach czasu.
+Ćwiczenie obejmuje badanie wpływu parametrów zarówno obiektu
+sterowania, jak i regulatora impulsowego na proces regulacji
+
+11.2 Podstawowe wiadomości
+
+11.2.1 Układ impulsowy
+
+Układem impulsowym nazywa się układ, w którym występuje przetwa-
+rzanie któregokolwiek z sygnałów ciągłych na sygnał impulsowy. Układ taki
+więc charakteryzuje się występowaniem zarówno sygnałów ciągłych (w(t),
+v(t), e(t)), jak i dyskretnych (e(nTp), v(n1/p)), jak pokazano na rysunku
+11.1.
+
+<image/figury/k2_page53_figure2.png>
+
+Rys. 11.1: Schemat blokowy impulsowego układu regulacji
+
+W literaturze istnieje rozgraniczenie pomiędzy układami impulsowymi
+
+" (sampled-data systems - występują tu sygnały ciągłe i dyskretne) a układami
+
+dyskretnymi (discrete systems — występują jedynie sygnały dyskretne w cza-
+sie). Ponieważ zarówno układy dyskretne, jak i układy impulsowe mogą być
+opisane za pomocą równań różnicowych, na potrzeby niniejszego opracowa-
+nia przyjęto, że układy impulsowe będą równoważnie nazywane układami
+dyskretnymi.
+
+Częścią główną układu impulsowego jest regulator (sterownik binarny
+lub komputer sterujący), który na podstawie sygnału uchybu mierzonego
+w dyskretnych chwilach czasu wytwarza sygnał sterujący.
+
+Dyskretyzacja (próbkowanie lub impulsowanie) w dziedzinie czasu
+polega najczęściej na okresowym pobieraniu próbek sygnału ciągłego,
+jak pokazano na rysunku 11.2. Wewnątrz regulatora będącego, jak wspom-
+niano, urządzeniem cyfrowym, następuje dodatkowo kwantyzacja,
+
+105
+
+czyli dyskretyzacja w dziedzinie wartości (amplitudy - sygna! może przyj-
+mować określoną ilość wartości dyskretnych).
+
+<image/figury/k2_page53_figure1.png>
+
+1.2.2 Wybrane metody opisu układów impulsowych
+
+Podobnie jak transformata Laplace'a pozwala sprowadzić problem opisu
+liniowego obiektu ciągłego za pomocą równania różniczkowego do opisu
+za pomocą równania algebraicznego, tak również w przypadku układów
+dyskretnych istnieje metoda z punktem wyjścia w postaci równania różni-
+cowego (transformata Laurenta, nazywana transformatą 2”).
+
+W opisie inwariantnego względem czasu układu impulsowego (dyskret-
+nego) stosuje się operacje: sumowania, mnożenia oraz przesunięcia w czasie
+o pojedynczy okres próbkowania, reprezentowanego przez operator :"!.
+
+Jednym ze sposobów opisu impulsowego układu dynamicznego,
+oprócz różnicowego równania wejścia-wyjścia ( ny 7 m)
+
+<image/wzory/k2_page53_formula1.png>
+
+jest opis transmitancją w dziedzinie zmiennej zespolonej (:]. Założywszy
+w poprzednim równaniu zerowe warunki początkowe, oraz stosując trans-
+formate Laurenta
+
+<image/wzory/k2_page53_formula2.png>

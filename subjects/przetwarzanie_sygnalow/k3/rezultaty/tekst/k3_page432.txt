@@ -1,0 +1,52 @@
+Oryginalny strumień
+
+danych:
+
+Kodowanie wadtug
+
+tablicy kodowej:
+
+Kompresja LZW 467
+
+<image/tabele/k3_page432_table1.png>
+
+123 145 201 4 119 89 243245 59 11 206 145 201 4 243 245+***
+
+HÓO -2PBEA
+z ZARZ"
+123256 119 89 257 59 11 206 256 257***
+
+"<
+
+Rys. 27.6. Przyktad tablicy kodowej stosowanej do kompresji danych. Jest ona podstawą popułarnej metody
+Kodowanie się sekwencji
+
+czonym, a nie generowanym w rzeczywistości przez algorytm LZW)
+
+zwykle ok. 5:1. Kompresja LZW w komputerach osobistych jest podstawą niektórych programów
+użytkowych, które — jak twierdzą ich twórcy — podwoją pojemność waszego twardego dysku.
+Kompresja LZW jest zawsze stosowana w plikach obrazowych GIF i oferowana jako opcja
+w TIFF i PostScript. Kompresja L.ZW jest chroniona patentem USA nr 4,558,302, przyzna-
+nym 10 grudnia 1985 r. firmie Sperry Corporation (obecnie Unisys Corporation). O informa-
+cje w sprawie licencji można się zwracać do: Welch Licensing Department, Law Department,
+M/SC2SW1, Unisys Corporation, Blue Bell, Pennsylvania, 19424-0001.
+
+W kompresji LL.ZW korzysta się z tablicy kodowej, jak to pokazano na rys. 27.6. Tablica
+zawiera na ogół 4096 wpisów. W tym przypadku dane zakodowane w LZW zawierają wy-
+łącznie 12-bitowe słowa kodowe, z których każde odnosi się do jednego wpisu w tablicy
+kodowej. Dekompresję realizuje się, pobierając każde zakodowane słowo z pliku skompry-
+mowanego i tłumacząc je za pomocą tablicy kodowej, aby stwierdzić, jaki znak lub zestaw
+znaków reprezentuje. Słowa kodowe od 0 do 255 w tablicy są zawsze przeznaczone do
+reprezentowania pojedynczych bajtów z pliku wejściowego. Gdyby na przykład zastosowa-
+no tylko te pierwsze 256 słów kodowych, to każdy bajt w pliku oryginalnym byłby prze-
+tworzony na 12 bitów w pliku zakodowanym L.ZW, co dałoby plik większy o 50%. Podczas
+dekompresji wszystkie słowa 12-bitowe byłyby tłumaczone tablicą kodową z powrotem na
+pojedyncze bajty. Oczywiście, takie rozwiązanie nie byłoby użyteczne.
+
+W metodzie LLZW kompresję uzyskuje się, stosując słowa kodowe od 256 do 4095 do repre-
+zentowania sekwencji bitów. Na przykład 523 może reprezentować sekwencję trzech bajtów:
+231 124 234. Za każdym razem, gdy algorytm kompresji napotka tę sekwencję w pliku wej-
+ściowym, słowo kodowe 523 jest umieszczane w zakodowanym pliku. Podczas dekompresji
+słowo kodowe 523 jest tłumaczone przez tablicę kodową w celu odtworzenia prawdziwej
+3-bajtowej sekwencji. Im dłuższa jest sekwencja przypisana do danego słowa kodowego i im
+częściej ta sekwencja się powtarza, tym silniejszą kompresję się uzyskuje.

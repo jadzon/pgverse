@@ -1,0 +1,33 @@
+//k4_page308_formula1.png KEEKEENMNA)
+
+Bloki konwersji dostępne w sterownikach serii Modicon 984 zostały opisane
+w rozdziale 6.1 przy okazji omawiania wielofunkcyjnego bloku MATH. Przy-
+kład ich wykorzystania przedstawia poniższy fragment programu.
+
+<image/tabele/k4_page308_table1.png>
+
+<image/wzory/k4_page308_formula2.png>
+
+Wyzwolenie wejścia 10001 powoduje zamianę liczby całkowitej 32-bitowej za-
+pisanej na rejestrach 40050 i 40051 w liczbę zmiennoprzecinkową. Wynik kon-
+wersji umieszczony zostanie w rejestrach 40054 1 40055 po czym wyzwolone
+zostanie wyjście 00001. W kołejnym skanie, liczba zmiennoprzecinkowa z reje-
+stru 40045 i 40055 zostanie przekształcona w liczbę całkowitą 32-bitową. Wynik
+tej operacji umieszczony zastanie w rejestrach 40060 i 40061. Prawidłowy prze-
+bieg konwersji zasygnalizowany zostanie przez wyzwolenie wyjścia 00002.
+
+Zamiana na liczbą całkowitą odbywa się przez zaokrąglenie do największej licz-
+by całkowitej mniejszej niż przekształcana liczba zmiennoprzecinkowa. I tak,
+jeśli przekształcamy 5.5 to otrzymamy 5, zaś w wyniku przekształcania —5.5
+otrzymamy —6. O ujemnym znaku liczby informuje stan wysoki na wyjściu
+00003.
+
+ 
+
+ 
+
+   
+
+Rozdział : 6 Programowanie sterowników AEG SCHNEIDER Modicon
+
+308

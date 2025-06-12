@@ -1,0 +1,50 @@
+32 Rozdział 1. Teoria liczb
+
+Po przejściu pierwszego testu stosujemy test drugi, a gdy liczba n go przejdzie stosu-
+jemy test trzeci.
+
+Ponieważ liczby Carmichaela są dość rzadkie, więc drugi test wyeliminuje większość
+liczb złożonych.
+
+Jeżeli chcemy wyklosować liczbę pierwszą to losujemy nieparzystą liczbę, a mastępnie
+sprawdzamy, czy jest ona pierwsza. Jeżeli nie, to sprawdzamy następne liczby n + 2, n+
+
+1,....
+
+1.20 Zadania
+1. Dla każdej z liczb:r = 8, —8, 120 oraz —120 znajdź liczbę y € 40, 1, 2,3,4) taką,
+żer=y (mod 5).
+2. W pierścieniu Z s wykonaj działania 7 + 6 oraz 7 - 6.
+
+3. W pierścieniu Zs rozwiąż równania: a) 1+r=0,b)1+r=2,c)5+zr=0,d)
+5+r=2.
+
+4. W pierścieniu Z; rozwiąż równania: a) 4 - x = 1,b)4-r =2.
+5. W pierścieniu Zs rozwiąż równania: a) 3 - z = 1,b)3- x = 2.
+
+6. Dla liczb a = 600i b = 1050 oblicz NW D(a,b) oraz liczby całkowite r i y
+spełniające równanie ra + yb = NW D(a, b).
+
+7. Oblicz NW D(199816, 199819).
+
+8. W pierścieniu Z +7 rozwiąż równania: a) S$r = 2 (mod 17).
+
+9. W pierścieniu Z, , rozwiąż równania: a) 6r = 2, b) Gr = 9.
+10. Znajdź całkowite rozwiązanie (z, y) spełniające równanie: 17: + 40y = 1.
+11. Podaj rozkład na czynniki pierwsze liczb 240 oraz 111.
+12. Ile dzielników ma liczba 240?
+
+13. Podaj tabliczkę dodawania i mnożenia w ciele Z. Podaj elementy odwrotne do 5 i
+6w Za.
+
+14. Znajdź elementy odwrotne do wszystkich elementów dwracalnych w Zs.
+15. Dla jakich par reszt (a; , a2) istnieją liczby a spełniające układ kongruencji:
+
+<image/wzory/k2_page14/_formula1.png>
+
+16. Niech m; i mą będą dowolnymi dodatnimi liczbami całkowitymi. Dla jakich par
+reszt (a; , aa) istnieją liczby a spełniające układ kongruencji:
+
+<image/wzory/k2_page14/_formula2.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,38 @@
+132 6. Urządzenia zewnętrzne
+
+<image/tabele/k3_page142_table1.png>
+
+Rysunek 6.12. Słowa sterujące dla różnego rodzaju ramek
+
+i numer ramki, której potwierdzenia się spodziewa. Te informacje są zawarte w słowie
+sterującym.
+
+Słowo sterujące ramki informacyjnej ma postać jak w rysunku 6.12. Najbardziej
+znaczący bit jest zawsze zerem. Po nim następują trzy bity numeru ramki nadawanej NN.
+Następny bit PF ma dwa znaczenia, w zależności od rodzaju stacji, która wysyła to słowo.
+Jeśli stacja nadrzędna wysyła słowo sterujące z jedynką na tej pozycji PF = 1 (ang. poł/),
+to oznacza dla stacji podrzędnej, że żąda od niej odpowiedzi. Typowe transmisje przebie-
+gają ze słowem sterującym, które ma na tej pozycji jedynkę. Jeśli słowo to jest wysyłane
+przez stację podrzędną, to jedynka na tej pozycji PF = 1 (ang. fina/) oznacza, że przesyłana
+ramka jest ramką ostatnią. Ostatnie trzy bity stanowią numer ostatnio potwierdzonej,
+a więc poprawnie odebranej ramki.
+
+KOMUNIKAT NADZORCZY
+
+Jeśli pierwsze dwa bity w słowie sterującym są 1 i 0, to oznacza, że przesyłany komunikat
+jest komunikatem nadzorczym, a więc jest to przesłanie rozkazu. Dwubitowe pole, ozna-
+czone na rys. 6.12 napisem „Kod”, określa jeden z czterech rozkazów. Rozkazy te są
+wysyłane przez odbiornik i informują o jego stanie. Jeśli wartość tych bitów jest 00, to
+odbiornik informuje o swojej gotowości. Jeśli jest 10, to oznacza niegotowość odbiornika.
+Jeśli jest 01, to odbiornik potwierdza przyjęcie ramek do numeru NOI, tj. pomniejszonej
+o I zawartości pola NO. Jednocześnie odbiornik żąda przesyłania ramek począwszy od
+numeru NO. Jeśli wreszcie wartość tych bitów jest 11, to odbiornik żąda przesłania ramki
+o numerze NO.
+
+KOMUNIKAT STERUJĄCY
+
+Jeśli w słowie sterującym wartość pierwszych dwóch bitów jest 11, to przesyłana ramka
+jest ramką sterującą. Jej znaczenie jest różne w zależności od tego czy jest wysyłana przez
+stację główną, czy przez podrzędną. Oba pola z napisem „Kod” (w sumie pięciobitowe) są
+polami kodu operacji. Można zatem zakodować 32 rozkazy. Jeśli ramka jest wysyłana
+przez stację główną, to są to rozkazy inicjalizacji stacji podrzędnej, rozłączenia połączenia,

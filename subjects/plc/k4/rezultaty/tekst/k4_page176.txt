@@ -1,0 +1,36 @@
+W sieciach tych szybkości transmisji wynoszą do 10 Mb/s. W jednym segmencie
+sieci wykorzystujących kabel /0Base5 można dołączyć przez złącze zaciskowe
+(' Vampire" connectors) do 100 węzłów (nodes) i może ona mieć rozpiętość do
+500 m. W sieci z ekranowanym kablem /0Base2 można łączyć przez łącze BNC
+(BNC connector) 30 węzłów i może ona mieć rozpiętość do 185 m.
+
+Podstawową wadą sieci magistralowych jest groźba awarii sieci w wyniku
+uszkodzenia kabla lub jednego przyłącza. Wobec tego w systemach sterowania
+coraz szerzej stosuje się kabeł podwójnych, ekranowanych skrętek STP
+(Shielded Twisted Pair) IOBaseT, który umożliwia budowę sieci gwiaździstych
+(Star Topology) z jednym punktem cetralnym stanowiącym uziemiony koncen-
+trator (Hub). W sieciach o topologii gwiazdy uszkodzenie jednego jej ramienia
+nie powoduje awarii sieci. Jedynie uszkodzenie koncentratora, które jest mało
+prawdopodobne, może unieruchomić sieć.
+
+Wykonanie koncentratora limituje liczbę węzłów włączonych do sieci łączem
+telefonicznym RJ 45 (telephone connectors), zaś rozpiętość takiej sieci określa
+limit długości 100m dla jednego ramienia gwiazdy.
+
+Każdy węzeł sieci musi mieć unikalny 32 bitowy adres /P (/nternet Protocol)
+(np. 200.0.0.13), który składa się z dwóch części identyfikujących sieć (netid
+part) i serwera (hostid part). Dla adresowania w dwóch sieciach połączonych
+przez Gateway , który ma dwa adresy, deklaruje się makę bitową (Subnet Mask)
+(np.255.255.255.0.)
+
+Moduł komunikacyjny CMM321 Ethernet można wykorzystywać do programo-
+wania sterownika w sieci, jak również do wymiany danych przez programy
+aplikacyjne. Rys. 3.49 przedstawia ekran do konfiguracji modułu komunikacyj-
+nego CMM321. Opis parametrów konfiguracyjnych tego modułu przedstawiono
+w Tab. 3.15. Interfejs Ethernet TCP/IP może być wykorzystywany również jako
+deterministyczny standard przesyłania danych EGD (Ethernet Globał Data).
+Transmisja EGD w ustalonym czasie pozwała elementowi tej sieci (producento-
+wi) przesyłać dane do jednego lub wielu innych sieciowych urządzeń
+(konsumentów).
+
+<image/tabele/k4_page17/6_table1.png>

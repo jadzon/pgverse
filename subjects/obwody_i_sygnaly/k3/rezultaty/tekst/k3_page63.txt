@@ -1,0 +1,40 @@
+1.3. Elementy nieliniowe 63
+
+mm ŁŁ2>2o a>—————
+
+ 
+
+:znej przedstawione na rys. 1.3-21 są stosowane bardzo często w tzw.
+r obwodu nieliniowego, zwłaszcza wówczas, gdy charakterystyki oporu
+ksymować dostatecznie dokładnie zależnością analityczną i znany jest
+
+5r w przypadku c) opisuje funkcja:
+
+<image/wzory/k3_page63_formula2.png>
+
+pór w czasie jednego okresu obliczamy następująco:
+
+ge683_fol
+<image/wzory/k3_page63_formula3.png>
+
+z indukcyjność nieliniową o charakterystyce Y = Lęgi +uf”, La,
+ilnie zmienny i = I „sinot. Wyznaczymy napięcie u na indukcyjności,
+
+1
+ości parametrów: Ly = 1 mH, a= 10% Wb'A*, l, = 2mA,
+
+pisać w postaci:
+
+:'ory/k3_page63_formula4.png
+Dla rozważanej indukcyjności mamy:
+<image/wzory/k3_page63_formula5.png>
+
+a po prostych przekształceniach trygonometrycznych:
+
+<image/wzory/k3_page63_formula6.png>
+Uwzględniając dane liczbowe otrzymujemy ostatecznie:
+
+<image/wzory/k3_page63_formula7.png>
+
+Zauważmy, że — w przeciwieństwie do prądu — napięcie nie jest w tym przypadku sinusoidalnie
+zmienne. Jest to konsekwencją nieliniowego charakteru indukcyjności.

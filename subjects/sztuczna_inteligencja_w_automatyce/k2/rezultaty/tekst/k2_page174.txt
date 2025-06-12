@@ -1,0 +1,29 @@
+179
+
+6.10.5. Przykład zastosowania algorytmu genetycznego do
+uczenia sieci neuronowej
+
+<image/figury/k2_page174_figure3.png>
+
+<image/figury/k2_page174_figure2.png>
+
+Rys. 6.79: Struktura zastosowanej sieci neuronowej
+
+Zadaniem sieci neuronowej jest sterowanie układu składającego się z wózka i
+odwróconego wahadła w układzie przedstawionym na rys. ??. Przyjęto, że na wejście
+sieci podane są składowe wektora stanu wahadła a, 4, z, ż. Sieć sterująca jest
+siecią warstwową jednokierunkową o strukturze przedstawionej na rys. ??. Na jej
+pojedynczym wyjściu generowany jest sygnał określający siłę f, działającą na wózek.
+
+W postawionym zadaniu opracowania algorytmu sterującego odwróconym waha-
+dłem nie można zastosować metody uczenia z nauczycielem, ponieważ nie są znane
+wartości siły przykładanej do podstawy wahadła zapewniające optymalne stero-
+wanie. Zastosowany poniżej sposób jest jednym z przykładów systemów uczenia z
+krytykiem, gdzie zmiana parametrów systemu (wag sieci neuronowej) następuje po
+całej sekwencji sterowania na podstawie skumulowanej oceny jakości sterowania.
+
+Zastosowany algorytm genetyczny
+
+System nauki sieci za pomocą algorytmu genetycznego zawiera stałą, parzystą liczbę
+sieci (oznaczoną w programie komputerowym przez LiczbaSieci) dwuwarstwowych
+o niezmiennej strukturze. Liczba neuronów w warstwie ukrytej wynosi LiczbNeuronUkr.

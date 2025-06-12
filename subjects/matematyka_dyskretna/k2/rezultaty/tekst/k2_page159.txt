@@ -1,0 +1,39 @@
+10 Rozdział 1. Rekurencja
+ale tam odgadnięto dokładne rozwiązanie. Teraz pokażemy jak dojść do rozwiąznia zaczynając
+od ogólniejszej postaci. Zacznijmy od równania
+
+<image/wzory/k2_page159_formula1.png>
+zearóa, jakie funkcje postaci F' (n) = c” spełniają to równanie. Po podstawieniu do
+<image/wzory/k2_page159_formula2.png>
+
+Po poazieleniu sromnami przez c", orzymamy
+
+<image/wzory/k2_page159_formula3.png>
+Jest to równanie kwadratowe z dwoma rozwiązaniami 6 = (1 + v5)/2 orz Y = (1 —
+V5)/2, czyli dwie funkcje F;(n) = 6” oraz F;(n) = w” spełniają równanie (1.5).
+Zauważmy, że także każda funkcja postaci
+
+<image/wzory/k2_page159_formula4.png>
+gdzie c; i ca to stałe, spełnia równanie (1.5). Sprawdźmy teraz, dla jakich stałych c; i cz
+funkcja F spełnia zależności F(0) = 0 i F(1) = 1. Otrzymujemu układ równości
+
+<image/wzory/k2_page159_formula5.png>
+
+Powyższy układ jest spełniony dla
+
+<image/wzory/k2_page159_formula6.png>
+Tak więc otrzymujemy wzór na funkcję Fibonacciego
+<image/wzory/k2_page159_formula7.png>
+1.9 Metoda iteracyjna
+
+Moteda iteracyjna polega na rozwijaniu rekursji. Jako pierwszy przykład rozważmy za-
+leżność.
+
+<image/wzory/k2_page159_formula8.png>
+
+Dla uproszczenia zakładamy, że n jest potęgą n = 4*, dla jakiegoś k naturalnego. Funkcję
+T rozwijamy w następujący sposób:
+
+<image/wzory/k2_page159_formula9.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

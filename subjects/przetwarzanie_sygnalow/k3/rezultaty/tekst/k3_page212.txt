@@ -1,0 +1,39 @@
+oRRAZKME MW 1-0
+
+ 
+
+]
+|
+12. Szybkie przekształcenie Fouriera |
+p, wyc Si) ya cz zi lecz wzrasta on znacznie wolniej ze wzrostem.
+N. Na przykład 32-punktowe FFT jest ok. dziesięciokrotnie szybsze niż metoda korełacyjna.
+Jednak 4096-punktowe FFT jest już rysiąckzotnie szybsze. Dla małych wartości N (powiedzmy,
+
+od 32 do 128) FFT jest bardzo przydatne, a dla dużych N (1024 i więcej) jest już absolutnie
+niezbędne. Na rys. 12.8 w formie graficznej porównano czasy wykonania obu algorytmów.
+Przekształcenie FFT ma, oprócz szybkości, jeszcze jedną zaletę. FFT jest obliczane bar-
+dziej dokładnie, gdyż mniejsza liczba operacji powoduje mniejszy błąd zaokrąglania.
+Można to wykazać, obliczając FFT dowolnego sygnału i następnie poddając uzyskane
+widmo częstotliwościowe odwrotnemu FFT. Powoduje to odtworzenie oryginalnego sy--
+
+gnału w dziedzinie czasu, z dodaniem jednak szumu zaokrąglania pochodzącego z obli-
+
+czeń. Wielkość charakteryzującą ten szum uzyskuje się, obliczając odchylenie standar-
+dowe różnicy między dwoma sygnałami. Dla porównania można powtórzyć taką samą
+procedurę, stosując DFT wyznaczane metodą korelacyjną i następnie odpowiadające mu.
+odwrotne DFT. Jaki jest wynik takiego porównania szumu zaokrąglania w DFT i FFT”.
+Zobaczcie sami na rys. 12.9. |
+
+Dalszy wzrost szybkości
+
+Jest kilka sposobów jeszcze dalszego zwiększania szybkości FFT, jednakże dają one poprawę
+tylko ok. 20-40%. W jednym z tych sposobów rozkład w dziedzinie czasu jest zatrzymywa-
+ny dwa etapy wcześniej — wówczas gdy każdy sygnał składa się tylko z czterech punktów.
+Zamiast
+
+słowy, FFT jest tak zmodyfikowane, aby obliczać rzeczywiste DFT zamiast zespolonego DFT.
+Te algorytmy noszą nazwy rzeczywistego FFT oraz FFT (lub
+
+programy FFT. W tablicach 12.6 i 12.7 zamieszczono programy dla tych logarytmów.
+
+<image/tabele/k3_page212_table1.png>

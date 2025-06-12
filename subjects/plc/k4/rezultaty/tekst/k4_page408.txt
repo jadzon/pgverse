@@ -1,0 +1,20 @@
+<image/figury/k4_page408_figure5.png>
+
+<image/figury/k4_page408_figure4.png>
+
+Wyd. 8.37 Przełączenie gwiazda-trójkąt z opóźnieniem 0.2 s
+
+<image/figury/k4_page408_figure1.png>
+
+Wyd. 8.38 Ustawienie markera %M3 dla zabezpieczenia przed przeciążeniem
+
+<image/figury/k4_page408_figure3.png>
+
+ 
+
+Wyd. 8.39 Ustawienie markera %M5 w przypadku braku sygnału od styków
+potwierdzających przez czas większy niż 1.5 s
+
+ 
+
+408 Rozdział : 8.Programy przykładowe

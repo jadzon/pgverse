@@ -1,0 +1,51 @@
+14. Wprowadzenie do filirów cyfrowych
+
+wyjściu jest skok jednostkowy. Ponieważ skok jest całką impulsu, więc odpowiedź skoko-
+wa jest całką impulsowej. Z tego wynikają dwa sposoby wyznaczania odpowiedzi skokc
+wej: 1) wprowadzenie przebiegu skokowego na wejście filtru i zobaczenie, co się pojawia na
+jego wyjściu, lub 2) scałkowanie odpowiedzi impulsowej. Dla matematycznej ścisłości trzeba
+stwierdzić, że pojęcie całkowanie jest używane w odniesieniu do sygnałów ciągłych, podczas
+gdy całkowanie dyskretne, tj. suma bieżąca, odnosi się do sygnałów dyskretnych. Odpowiedź
+częstotliwościową można określić, wyznaczając transformatę DFT (przy użyciu algorytmu
+FFT). Będzie to rozważane w dalszej części tego rozdziału. Przebieg odpowiedzi częstot
+wości można wykreślać w pionowej skali liniowej (jak na rys. 14.1 c) lub w logarytmiczr ej
+(w dB, jak na rys. 14.1 d). W skali liniowej są lepiej widoczne zafalowania i spadki wzmoc
+nienia w paśmie przepustowym, a w skali logarytmicznej — tłumienie w paśmie zaporowym.
+Może nie pamiętacie decybeli? Oto krótkie przypomnienie. Jeden beł (na cześć Alexandna
+Grahama Bella) oznacza zmianę mocy o czynnik 10. Na przykład układ elektroniczny
+o wzmocnieniu 3 bele daje sygnał wyjściowy o mocy 10 x 10 x 10 = 1000 razy większej niż
+moc sygnału wejściowego. Decybel (dB) jest dziesiątą częścią bela. Tak więc wartości decy
+belowe —20 dB, —10 dB, O dB, 10 dB i 20 dB oznaczają, odpowiednio, stosunki mocy: 0,0;
+0,1; 1; 10i 100. Tak więc każde dziesięć decybeli oznacza, że moc zmienia się o czynnik I(
+I tu pojawia się pewien kłopot — zwykle chcemy posługiwać się wartością napięcia
+gnału, a nie jego mocą. Weźmy na przykład wzmacniacz o wzmocnieniu 20 dB. Oznacz
+to, z definicji, że moc sygnału wzrasta o czynnik 100. Ponieważ wartość napięcia sygnału
+jest proporcjonalna do pierwiastka kwadratowego mocy, więc napięciowa wartość sygn
+jest 10 razy większa na wyjściu niż na wejściu. Wartość 20 dB więc to czynnik 100 dla
+mocy, a tylko 10 dla napięcia. Każde dwadzieścia decybeli oznacza, że napięcie zmienia
+się o czynnik 10. Można to wyrazić wzorami:
+
+P,
+dB=10log, >
+
+dB=20log,, 2
+Wzór 14.1. Definicja decybeli. Decybele są sposobem wyrażania stosunku dwóch sygnatów. Stosunek
+mocy (Pz/P;) jest opisany innym wzorem niż stosunek wartości napięcia sygnału (Uz/U4)
+
+powyszewzoryzawierajlogarytmopodstawie10.jednakwwielujzykachkompute
+rowych jest stosowany tylko logarytm o podstawie e (logarytm naturalny, zapisywany jako
+logxlubinx.monazastosowalogarytmnaturalnymodyfikujcpowyszewzorywn.
+stępujący sposób: dB = 4,342945 log,(P>/P,) oraz dB = 8,685890 log,(U>/U,).
+
+Decybele są sposobem wyrażani ia stosunku dwóch sygnałów, dlatego doskonale nadają się do opi
+su wzmocnienia systemu, tj. stosunku między sygnałem wyjściowym i wejściowym. Inżynierowie
+stosują jednak decybele także do określania wartości napięcia (lub mocy) pojedynczego sygnal
+odnosząc go do pewnej wartości odniesienia. I tak na przykład dBV oznacza, że sygnał jest ode
+niesiony do poziomu 1 V wartości skutecznej. Podobnie dBm określa, że poziomem odniesienia
+jest sygnał wytwarzający moc 1 mW na obciążeniu 600 £2 (czyli wartość skuteczna ok. 0,78
+Jeśli nie rozumiecie niczego więcej na temat decybeli, to zapamiętajcie dwie rzeczy. Po
+pierwsze spadek —3 dB oznacza spadek wartości napięcia sygnału do 0,707 (a więc spadek
+mocy do 0,5). Po drugie, zapamiętajcie następującą tablicę konwersji decybeli na stosunki
+wartości napiecia syznału:
+
+<image/tabele/k3_page232_table1.png>

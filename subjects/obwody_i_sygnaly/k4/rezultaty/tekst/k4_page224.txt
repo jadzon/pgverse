@@ -1,0 +1,64 @@
+:9e224_formula1.png
+
+2. Pojęcia podstawowe — układy
+
+i stan nieustalony
+
+  
+  
+ 
+    
+
+talonego jest jednym z ważniejszych pojęć teorii obwodó
+harakteryzować i zinterpretować ograniczając się jednak
+
+pojęciowej. Metodami wyznaczania rozwiązań ró
+(obwody, sieci) w stanie ustalonym będziemy zajmować
+dałach.
+
+my. W teorii obwodów powszechnie używa się takich poj
+
+dy, sieci) prądu stałego;
+dy, sieci) prądu sinusoidalnego;
+dy, sieci) prądu okresowego.
+
+aczenie tych pojęć:
+
+ieć) SLS prądu stałego (sinusoidalnego, okresowego) —
+obwód, sieć) prądu stałego (sinusoidalnego, okresoweg
+9 nym to taki układ, w którym wszystłie nahudsawia i cis
+' wydajności prądowe oraz wszystkie
+
+00, + 0) i są odpowiednio:
+
+zmienne o tej samej pulsacji;
+enne o tym samym okresie.
+
+iszystkie sygnały są określone dla
+yjęciem, że zjawiska nie mają początk
+izie, dzieje się tak, jakby działo się za'
+ą przy tym tego samego rodzaju
+
+'sinusoidalne, okresowe), to wszystkie
+»kresowe). Nie występuje chwila pocz
+warunków początkowych. Mówimy I
+'m przy pobudzaniu stałym (sinusoidal
+
+jak w p. 22.1-D nie zajmujemy się teraz pre
+
+maamaaawmaanezaammadystanustaionymoewdanymukadziewystwzory/k4_page224.
+
+widzenia rozwiązywanie układu w stanie ustalonym polega na wyzn:
+sieciowych w przedziale (—0, +00) o z góry założonej postaci — 1
+
+pobudzenia.
+
+Sygnał okresowy, przy spełnieniu pewnych warunków regularności
+w postaci szeregu Fouriera”). Wyrazami szeregu Fouriera są składowe
+harmonicznych oraz składowa stała. Z tego punktu widzenia układy q
+ustalonym są przypadkiem ogólnym, zawierającym w sobie, formal
+
+*) Pojęcia te są znane Czytelnikowi -—- przynajmniej częścio»
+W niewielkim zakresie posługiwaliśmy się nimi już w dotychczasowyct
+
+% Szczegółowo będzie o tym mowa w rozdziale 5.

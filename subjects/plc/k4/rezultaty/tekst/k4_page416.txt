@@ -1,0 +1,17 @@
+<image/tabele/k4_page416_table1.png>
+
+Wyd. 8.57 Sygnalizacja zadziałania wyłączników krańcowych
+
+<image/tabele/k4_page416_table3.png>
+
+Wyd. 8.58 Zatrzymanie silnika po przyciśnięciu przycisku STOP lub przycisku prze-
+ciążenie lub zadziałaniu wyłącznika krańcowego
+
+<image/tabele/k4_page416_table2.png>
+
+Wyd. 8.59 Zgaszenie sygnalizacji zadziałania wyłączników krańcowych po urucho-
+mieniu silnika w przeciwnym kierunku; wyzerowanie markera F1.4 po przyci-
+śnięciu przycisku STOP
+
+WODE YO W Z O A OO OC:
+4 16 Rozdział : 8.Programy przykładowe

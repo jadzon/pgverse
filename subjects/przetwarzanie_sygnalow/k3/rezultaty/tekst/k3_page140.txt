@@ -1,0 +1,56 @@
+8. Dyskretne przekształcenie Fouriera
+
+amplitudami sinusoid i dziedziną częstotliwości, jak również dodatkowym czynnikiem rów-
+nym 2 dla pierwszej i ostatniej próbki.
+
+Skąd się bierze negacja części urojonej? To się robi wyłącznie w celu utrzymania zgodności
+części rzeczywistej DFT z „wielkim bratem”, czyli z zespolonym przekształceniem Fouriera
+(DFT). W rozdziale 29 wykażemy, że ta negacja jest konieczna, aby prawidłowo zadziałały
+operacje matematyczne w zespolonym DFT. Wielu autorów, operując tylko z rzeczywistym
+DFT, w ogóle nie wprowadza tej negacji. Niektórzy autorzy nie wprowadzają nawet współ-
+czynnika skalowania 2/N. Bądźcie więc przygotowani na to, że możecie spotkać takie pomi-
+nięcia w niektórych analizach. Tutaj uwzględniamy te kwestie z niezwykle ważnego powo-
+du; najskuteczniejszy sposób obliczania DFT prowadzi przez algorytm szybkiej transformaty
+Fouriera (FFT), przedstawiony w rozdziale 12. FFT tworzy transformatę w dziedzinie czę-
+stotliwości zgodnie z wzorami 8.2 i 8.3. Jeśli dopuścicie do bałaganu we współczynnikach
+skalowania, to wasze programy zawierające FFT nie zadziałają zgodnie z oczekiwaniami.
+
+<image/wzory/k3_page140_formula1.png>
+
+Transformatę DFT można obliczać trzema zupełnie różnymi metodami. Po pierwsze, można
+podejść do problemu jako do układu równań równoważnych. Ta metoda jest przydatna do
+zrozumienia DFT, lecz nie ma praktycznego znaczenia ze względu na zbyt małą efektyw-
+ność. W drugiej metodzie korzysta się z pojęcia wprowadzonego w poprzednim rozdzia
+le — z korelacji. Polega ona na wykrywaniu znanego przebiegu w innym sygnale. Trzecia
+metoda, zwana szybkim przekształceniem Fouriera (FFT), jest pomysłowym algorytmem.
+który rozkłada DFT o N punktach na N przekształceń DFT, każde o pojedynczym punkcie.
+Przekształcenie FFT jest, typowo, setki razy szybsze od innych metod. Pierwsze dwie me-
+tody będą tu omówione, a FFT będzie tematem rozdziału 12. Trzeba pamiętać, że w tych
+wszystkich trzech metodach uzyskuje się jednakowy wynik. Którą z nich powinno się stoso-
+wać? W praktyce, metoda korelacyjna jest zalecana, jeśli DFT ma mniej niż ok. 32 punkty.
+W innych przypadkach stosuje się FF7.
+Metoda równań równoważnych
+
+Podejdźmy do obliczania transformaty DFT w sposób następujący. Mamy dane /V wartości
+w dziedzinie czasu i chcemy obliczyć /V wartości w dziedzinie częstotliwości (pomijając dwi
+wartości z dziedziny częstotliwości, o których wiadomo, że muszą być zerowe). Pomocna
+będzie podstawowa algebra. Zeby znaleźć N niewiadomych, trzeba móc napisać N ró
+liniowo niezależnych. Aby to uczynić, weźmy pierwsze próbki z wszystkich sinusoid i
+mujmy je. Suma musi być równa pierwszej próbce w sygnale w dziedzinie czasu, uzyskuje:
+my więc pierwsze równanie. Podobnie można zapisać równania dla każdego z pozost
+punktów w sygnale w dziedzinie czasu, uzyskując w wyniku żądane N równań. Rozwi
+można uzyskać, stosując znane sposoby rozwiązywania równań równoważnych, takie, j
+metody eliminacji Gaussa. Niestety ta metoda wymaga wielkiej liczby obliczeń i w
+nie jest stosowana w DSP. Jest jednak ważna z innego powodu. Pokazuje bowiem, dlac
+jest możliwy rozkład sygnału na sinusoidy, jak wiele sinusoid jest potrzebnych oraz to, ż
+funkcje bazowe muszą być liniowo niezależne. Wkrótce powiemy o tym więcej.
+
+Metod korełacyjna
+
+Przejdźmy teraz do lepszej metody — do standardowego sposobu obliczania transf
+DFT. Działanie metody objaśnimy na przykładzie. Przyjmijmy, że próbujemy obliczyć
+formatę DFT sygnału 64-punktowego. Z tego wynika, że powinniśmy obliczyć 33 I
+w części rzeczywistej oraz 33 punkty w części urojonej w dziedzinie częstotliwości. W
+przykładzie przedstawimy tylko sposób obliczania jednej próbki /m X[3], tj. amplitudy
+sinusoidalnej, której trzy pełne okresy mieszczą się między punktami 0 i 63. Wszystkie i
+wartości w dziedzinie częstotliwości są obliczane w podobny sposób.

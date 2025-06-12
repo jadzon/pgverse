@@ -1,0 +1,48 @@
+8 Rozdział 1. Kombinatoryka
+
+a jeżeli zbiór zawiera dwa elementy fa.b), to ma cztery podzbiory:
+
+<image/wzory/k2_page43_formula1.png>
+
+Rozważmy teraz ogólnie podzbiory zbioru
+
+<image/wzory/k2_page43_formula2.png>
+
+Z każ
+
+<image/wzory/k2_page43_formula3.png>
+
+jest Związana jeyu iuunuja uiaianiwt yStyLziia, UNIEMULIG LGDLĘPUJGCY 11 WŁULCIIA:
+
+<image/wzory/k2_page43_formula4.png>
+
+Dziedziną funkcji XA jest zbiór f1,. .. ,n), a przeciwdziedziną zbiór (0, 1). Zauważmy,
+że każdemu podzbiorowi odpowiada jedna funkcja charakterystyczna, i na odwrót, jeżeli
+weźmiemy dowolną funkcję:
+
+<image/wzory/k2_page43_formula5.png>
+
+to wyż
+
+<image/wzory/k2_page43_formula6.png>
+Przykład 1.7 Ula n = 5 funkcja cnarakterystyczna x 4 zbioru A = 42,3,5) jest opisana
+przez ciąg (0, 1,1,0,1), a ciąg (1,0,1, 1,0) opisuje funkcję charakterystyczną zbioru:
+(1,3,4).
+Z powyższych rozważań wynika, że liczba podzbiorów zbioru n-elementowego jest rów-
+na liczbie funkcji ze zbioru £1,. .. „n) w zbiór f0.1). Czyli na podstawie twierdzenia ??
+mamy twierdzenie poniższe.
+
+Twierdzenie 1.8 Każdy zbiór n-elementowy ma 2” podzbiorów.
+
+1.6 Podzbiory k-elementowe
+
+Zastanówmy się teraz nad podzbiorami określonej mocy. Mówimy, że zbiór jest mocy n,
+jeżeli zawiera n elementów. Dla zbioru czteroelementoweqo
+
+<image/wzory/k2_page43_formula7.png>
+mamy jeden podzbiór pusty (zeroelementowy), cztery podzbiory jednoelementowe:
+1), (2, 13), (4)
+sześć podzbiorów dwuelementowych:
+(12), (13), (1.4), 12,3), (2,4), 13,4),
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

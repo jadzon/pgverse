@@ -1,0 +1,114 @@
+<image/tabele/k4_page494_table1.png>
+
+<image/wzory/k4_page494_formula1.png>
+
+ 
+
+DB003
+
+BIokK danych regulatora.
+
+: KH =
+
++
+hm
+
+: KR
+
+"DOD JOU WN=C
+M4lun I
+
+NENNDEUN
+
+0000
+
++1000
+
+0090
+
++4000
+
+0000
+
++800
+
+0000
+
+40
+
+0000
+
++313
+
+0000
+1600109000100001
++1000
+
+0000
+
++1000
+
+0000
+
++0
+
+0000
+0000
+0000
+0090
+0000
++305
+0000
++0
+0000
+0000
+00900
+0000
++0
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+FFAE
+0090
+0000
+0000
+0000
+0000
+FFIF
+0200
+PFCC4
+0148
+
+; współczymnik proporcjonalności K
+
+ 
+
+(kf NOT
+| gel
+
+; współczynnik proporcjonalności R (*0.0501)
+; Czas całkowania Ti (*0.001)
+
+; czas różniczkowania Td
+
+; wartość zacana SP
+
+; Słowo Sterujące .
+; wartość dla sterowania ręcznego
+
+; ograniczenie górne wielkości wyjściowej
+
+; ograniczenie dolne wielkości wyjściowej
+
+; wielkość regulowana PV
+
+; wielkość wyjściowa regulatora
+
+Wyd. 8.184 Blok DB3 jest blokiem danych regulatora
+
+zory/k4_page494_formula2.png

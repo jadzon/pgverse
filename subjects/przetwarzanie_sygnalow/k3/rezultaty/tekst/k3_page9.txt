@@ -1,0 +1,60 @@
+18
+
+1. Rozległość zastosowań i głębia problematyki DSP
+
+dziedziną zastosowania sonaru pasywnego są wojskowe systemy inwigilacyjne do wy-
+krywania i śledzenia łodzi podwodnych. W sonarach pasywnych pracuje się na ogół na
+mniejszych częstotliwościach niż w aktywnych, gdyż takie sygnały są słabiej pochłaniane
+w wodzie. Zasięg wykrywania może wynosić nawet tysiące kilometrów.
+
+DSP zrewolucjonizowało sonar w tych samych aspektach, co radar. Są to: generacja
+i kompresja impulsów oraz filtracja wykrywanych sygnałów. Pod pewnym względem
+sonar jest łatwiejszy od radaru — pracuje z mniejszymi częstotliwościami. Pod innym
+względem jest jednak trudniejszy, gdyż środowisko, w którym działa, jest mniej jedno-
+rodne i mniej stabilne. W systemach sonarowych stosuje się zazwyczaj rozległe sieci
+elementów nadawczych i odbiorczych, a nie tylko jeden kanał. Przez odpowiednie ste-
+rowanie sygnałami i ich mieszanie w tych wielu elementach, urządzenie sonarowe może
+wysyłać impulsy do żądanych miejsc i określać kierunki, z których są odbierane sygnały
+echa. Do obsługi tych wielu kanałów sonary wymagają DSP o takiej efektywności pracy,
+jak w radarach.
+
+Sejsmołogia odbiciowa
+
+Już w latach 20. XX wieku geofizycy wykryli, że strukturę skorupy ziemskiej moż-
+na badać falami dźwiękowymi. Poszukiwacze wywoływali wybuchy i rejestrowali sy-
+gnały echa pochodzące od warstw granicznych znajdujących się głębiej niż 10 km pod
+powierzchnią ziemi. Takie sejsmogramy odczytywano bezpośrednio wzrokowo i na ich
+podstawie odwzorowywano strukturę warstw podziemnych. Odbiciowe metody sejsmicz-
+ne stały się nagle głównym sposobem wyszukiwania złóż ropy i innych bogactw natural-
+nych, i takim pozostają do dziś.
+
+W przypadku idealnym impuls dźwiękowy wysyłany w głąb Ziemi wytwarza pojedynczy
+sygnał echa od każdej warstwy granicznej, przez którą impuls przechodzi. Niestety, nie
+zawsze jest to takie proste. Każdy powracający sygnał echa musi znowu przejść przez
+wszystkie warstwy graniczne leżące powyżej miejsca jego powstania. Może to wywołać
+odbijanie się echa między warstwami i wykrywanie ech echa na powierzchni. Wykryty
+sygnał może, w wyniku ech wtórnych, być bardzo skomplikowany i trudny do inter-
+pretacji. Od lat 60. szeroko stosuje się DSP do wyizolowania echa pierwotnego z ech
+wtórnych w sejsmogramie odbiciowym. Jak geofizycy radzili sobie niegdyś bez DSP?
+Odpowiedź jest prosta — szukali łarwych miejsc, gdzie odbicia wielokrotne były minimal-
+ne. DSP umożliwia znalezienie ropy w trudnych miejscach, np. pod oceanem.
+
+Przetwarzanie obrazów
+
+Obrazy są sygnałami o szczególnych właściwościach. Po pierwsze, są one wyrażane parame-
+trami przestrzennymi (odległościami), podczas gdy większość innych sygnałów jest wyraża-
+na parametrami czasowymi. Po drugie, obrazy zawierają bardzo dużo informacji. Na przykład
+trzeba 10 MB pamięci do zarejestrowania 1 sekundy telewizyjnego sygnału wideo. Jest to
+ponad tysiąc razy więcej niż dla sygnału głosowego o podobnym czasie trwania. Po trzecie,
+ostateczną oceną jakości obrazu jest często subiektywna ocena widza, a nie kryterium obiek-
+tywne. Z powodu tych specyficznych właściwości przetwarzanie obrazów stanowi oddzielną
+grupę zastosowań w ramach DSP.
+
+Medycyna
+
+W roku 1895 Wilhelm Konrad Roentgen odkrył, że promieniowanie X może przenikać
+przez znaczne obszary materii. Możliwość zaglądania do wnętrza organizmu żywego
+człowieka zrewolucjonizowała medycynę. W ciągu zaledwie kilku lat medyczne urzą-
+dzenia rentgenowskie rozprzestrzeniły się na całym świecie. Mimo oczywistego sukcesu
+obrazowanie przy użyciu promieni X miało cztery ograniczenia, zanim w latach 70. nie-
+wprowadzono DSP i podobnych technik. Po pierwsze, nakładające się na siebie tkanki

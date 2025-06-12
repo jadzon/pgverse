@@ -1,0 +1,38 @@
+159
+
+Zadaniem uczenia jest utworzenie drzewa decyzyjnego z rys. ?? na podstawie
+znajomości 6 zestawów pomiarowych (obrazów) przedstawionych w tablicy ??.
+
+<image/tabele/k2_page154_table1.png>
+
+Podstawową zasadą uczenia indukcyjnego jest tzw. zasada brzytwy Ockhama mó-
+wiąca, że: „bytów nie należy mnożyć więcej niż potrzeba” co tutaj można wyra-
+zić jako: najbardziej prawdopodobną hipotezą jest hipoteza najprostsza, która jest
+zgodna z wszystkimi obserwacjami. W myśl tej zasady poszukujemy zmiennej, która
+ma największy wpływ na podejmowaną decyzję (np. jej określona wartość pozwala
+na jednoznaczną decyzję); zmienna ta staje się korzeniem budowanego drzewa. Na-
+stępnie tworzymy fragment drzewa decyzyjnego oparty o tą zmienną i dalej kolejno
+wyznaczamy następne zmienne o największych wpływach na decyzje i tworzymy dal-
+sze fragmenty drzewa. Przy wyznaczaniu wpływu kolejnych zmiennych bierzemy pod
+uwagę tylko te obrazy uczące, które spełniają warunki aby dostać się do określonego
+węzła drzewa.
+
+W omawianym przykładzie, na podstawie rysunku ?? widać, że najistotniejszą
+zmienną jest zmienna r;, której pozytywna wartość zawsze powoduje alarm. Po
+jej wybraniu otrzymujemy pierwszy węzeł drzewa decyzyjnego (rysunek ??). Gdy
+zmienna r; przyjmuje wartość 1, to decyzją jest alarm: gdy zmienna z; przyjmuje
+wartość 0, to należy na nowo określić zmienną (spośród pozostałych) o największym
+wpływie na decyzję biorąc pod uwagę dane uczące dą, dą i dz. Postępując wg tej
+zasady otrzymujemy całe drzewo przedstawione na rysunku ??. Drzewo to w nie-
+wielkim stopniu różni się od drzewa oryginalnego pokazanego na rys. ??, co ilustruje
+tablica ??. mi
+
+6.7.1. Metoda wyboru atrybutów
+
+Najczęściej we wczesnych etapach tworzenia drzewa decyzyjnego nie ma zmiennych,
+których określona wartość pozwala na jednoznaczną decyzję. Wtedy jako miarę
+wpływu zmiennej na podejmowaną decyzję przyjmuje się entropię * rozkładu praw-
+dopodobieństwa decyzji wynikających z przyjęcia tej zmiennej jako węzła drzewa
+decyzyjnego.
+
+6Jest to zarazem miara ilości informacji

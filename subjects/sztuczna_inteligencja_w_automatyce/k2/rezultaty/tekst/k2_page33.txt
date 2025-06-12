@@ -1,0 +1,49 @@
+jej nieistnienia).
+
+Powszechnie stosowanym sposobem wyznaczania najlepszego ruchu jest metoda
+minimar. Polega ona na wyznaczeniu w specyficzny sposób oceny danego węzła na
+podstawie ocen węzłów znajdujących na określonej głębokości w stosunku do niego.
+
+Jakość prowadzonej gry zależy od jakości funkcji oceniającej stan gry i od głę-
+bokości szukania.
+
+Funkcja oceniająca stan gry ma decydujący wpływ na jakość prowadzonej gry.
+Gdyby pozwalała bezbłędnie wskazywać stany lepsze, to zniknełaby potrzeba prowa-
+dzenia procesu szukania. W praktyce stosuje się funkcje ważone będące kombinacją
+liniową wartości różnych częściowych ocen f stanu gry:
+
+<image/wzory/k2_page33_formula1.png>
+gdzie w;,t = 1,2,..., n są arbitralnie dobranymi współczynnikami.
+PRZYKŁAD 3.4
+Gra w kółko i krzyżyk. Dwóch graczy: X (my — stawiamy znaki x) i O (znaki o).
+Przyjmujemy następujące kryterium oceny stanu gry:
+
+e(p) zz (liczba wierszy, kolumn i przekątnych ciągle dostępnych dla
+X) — (liczba wierszy, kolumn i przekątnych ciągle dostępnych
+dla O)
+Na rysunkach ??, 27 i 27 przedstawione są kolejne etapy gry w kółko i krzyżyk
+przy zastosowaniu strategii minimax o głębokości 2. mu
+
+3.11. Metoda a — 6
+
+Metoda odcinania a — 5 (ang. a — 8 pruning) jest techniką obliczeń zmniejszająca
+złozoność obliczeniową metody minimax. Technika ta bierze sie z obserwacji, że
+wartości niektórych węzłów nie maja wpływu na wartości węzłów znajdujących się
+powyżej nich. W związku z tym węzły te i węzły z nich wynikające mogą zostać
+usunięte z drzewa (odcięte), a tym samym zmniejsza się ilość obliczeń.
+
+PRZYKŁAD 3.5
+
+Na rysunku ?? przedstawiono proste drzewo gry. Należy obliczyć wartość węzła A
+metodą a — f.
+
+Wykonujemy następującą sekwencje obliczeń i wnioskowań (będziemy stosować
+konwencję: nazwa węzła=liczba, co będzie oznaczać, że liczba jest wartościa wezła):
+1. Z wartości węzłów D=8 i E=13 obliczny, że B=8.
+
+2. Na podstawie p. 1 wnioskujemy, że A>8.
+3. Na podstawie F=2 wnioskujemy, że C<2.
+4. Na podstawie p.3 wnioskujemy, że A=2.
+
+Widać, że w obliczeniach nie uwzględnono wartości węzłów G i H, bo nie mają
+wpływu na wartość wezła A. m

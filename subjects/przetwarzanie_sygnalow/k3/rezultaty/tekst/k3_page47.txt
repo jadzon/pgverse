@@ -1,0 +1,14 @@
+58 3. Przetwarzanie analogowo-cyfrowe i cyfrowo-anałogowe
+
+<image/wzory/k3_page47_formula1.png>
+
+Rys. 3.9. 6-biegunowy filtr Bessela utworzony przez kaskadowe połączenie 3 układów Sallena-Keya. Jest to filtr dolno-
+przepustowy o częstotliwości odcięcia 1 kHz
+
+<image/tabele/k3_page47_table1.png>
+
+<image/figury/k3_page47_figure2.png>
+
+Rys. 3.10. Objaśnienie dziatania filtru z przetączanymi pojemnościami. W filtrach tego rodzaju rezystory są
+zastąpione kondensatorami i przełącznikami. Jak wynika z odpowiedzi ukiadów na tunkcję skokową, dwa kor-
+densatory i przełącznik mogą realizować taką samą funkcję, jak obwód rezystor-kondensator

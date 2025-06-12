@@ -1,0 +1,6 @@
+iry/k4_page441_figure2.png iure1.png
+
+Wyd. 8.102 Procedura zmian szybkości ustawiania wyjścia regulatora PID w trybie
+pracy ręcznej
+
+8.6 Regulacja temperatury z wykorzystaniem bloku PID 441

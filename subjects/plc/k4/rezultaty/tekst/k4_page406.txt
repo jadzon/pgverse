@@ -1,0 +1,38 @@
+: uruchomienie silnika w lewo powinno być w tym przypadku niemoż-
+liwe. natomiast można uruchomić silnik w przeciwnym kierunku - po
+przyciśnięciu przycisku SR silnik zaczyna się obracać w przeciwnym
+kierunku i jednocześnie gaśnie lampka.
+
+      
+
+8.3.2 Realizacja dla sterownika GE Fan
+
+EA
+
+   
+ 
+
+YEN |
+
+ANN
+
+ 
+
+   
+
+'Tab. 8.6 przedstawia zestawienie połączeń wejść i wyjść dwustanowych sterow-
+nika GE Fanuc serii 90-30 z odpowiednimi wyjściami i wejściami panelu opera-
+torskiego do sterowania napędem według podanych wymagań.
+
+<image/tabele/k4_page406_table1.png>
+
+Tab. 8.6 Zestawienie połączeń wejść i wyjść sterownika
+
+Tekst programu w języku ŁD realizującego algorytm sterowania silnikiem poka-
+zano na Wyd. 8.33 - Wyd. 8.40. W programie dla uproszczenia nie uwzględniono
+działania wyłączników krańcowych. Brak potwierdzenia załączenia cewek przez
+styki potwierdzające przez okres dłuższy niż /.5 s powoduje ustawienie markera
+%M 5 (Wyd. 8.39), który może być wykorzystany do sygnalizacji awarii w ukła-
+dzie.
+
+rzory/k4_page406_formula1.png

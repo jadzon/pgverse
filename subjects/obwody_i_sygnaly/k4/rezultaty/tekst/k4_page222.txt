@@ -1,0 +1,46 @@
+222 2. Pojęcia podstawowe — układy
+
+Równania różniczkowe opisujące stan wymuszony s
+jednorodnymi”, a rozwiązania wymuszone spełniaj
+początkowe. Równania różniczkowe opisujące stan si
+równaniami jednorodnymi, a rozwiązania swobodi
+rowe warunki początkowe.
+
+Uwaga. W każdym z wymienionych przypadków zakładamy, że
+istnieją i są określone jednoznacznie. Kwestią warunków, przy których :
+zajmować się teraz nie będziemy.
+
+e.rozwizaniecakowite.zzaoeniaoliniowowzory/k4_page222_
+sckwencji, liniowości równań różniczkowych wchodzący
+sieciowych układu) wynika od razu następująca fundame
+
+Rozwiązanie całkowite, tj. rozwiązanie określające prę
+tów układu dla te (0, + 00) w przypadku włączenia w chwil
+pobudzeń: e;, €ą,..., m, Jm+1:---. Ją przy niezerowyci
+kowych, jest sumą rozwiązania swobodnego i rozwiązania |
+
+<image/wzory/k4_page222_formula1.png>
+
+F. Przypadek układu bezinercyjnego. Podział na st<
+swobodny traci sens, jeśli układ jest bezinercyjny. W układ:
+ma elementów zdolnych do gromadzenia energii, nie okreś
+warunków początkowych. W układzie bezinercyjnym prądy i napięcia są
+wywołane tylko działaniem zewnętrznych pobudzeń. W tym sensie w układzie
+bezinercyjnym występuje tylko stan wymuszony (za stan wymuszony można
+uważać także stan spoczynku, w którym pobudzenia są zerowe).
+
+G. Przykład.
+
+Przykład 2.2-1. W układzie przedstawionym na rys. 2.2-1 działa źródło prądowe o stałej
+wydajności prądowej j = J m 6 mA dla te(0, +co). Wartość prądu i w indukcyjności Ł
+w chwili t = 0 jest równa i(0) = 2 mA”. Wyznaczymy składową swobodną i, oraz składową
+wymuszoną ł„ prądu i dla te(0, +0), przy założeniu, że R = 1 kQ, L= 1 mH.
+
+Równania sieciowe układu mają postać:
+
+<image/wzory/k4_page222_formula3.png>
+
+V Ściślej mówiąc, wśród równań różniczkowych h do równań sieciowych układu są
+równania niejednorodne, których prawe strony zależą od pobudzeń €5,...,£, ja +15--- Ja.
+
+% Wartość ta nie wynika ze schematu i jest rezultatem tego, co działo się w układzie dla t < 0.

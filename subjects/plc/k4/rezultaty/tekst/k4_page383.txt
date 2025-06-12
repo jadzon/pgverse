@@ -1,0 +1,29 @@
+<image/wzory/k4_page383_formula1.png>
+
+W rozdziale tym przedstawiono przykłady programów w języku schematów dra-
+binkowych LD, języku listy instrukcji IL oraz z wykorzystaniem grafu sekwencji
+SFC. Na początku prezentowanych jest kilka prostych przykładów sterowania
+silnikiem z jednoczesnym pokazaniem odpowiadających im układów sterowania
+przekaźnikowego. Następne przykłady dotyczą realizacji zadań sterowania lo-
+gicznego dla paneli dydaktycznych:
+
+e symulatora urządzenia do sortowania drewna,
+
+e napędu dwukierunkowego
+
+oraz zadań sterowania w układach regulacji z wykorzystaniem algorytmu PID:
+
+e regulacji dwupołożeniowej z inercyjno - podatnym sprzężeniem zwrolnym,
+regulacji trójpołożeniowej w układzie sterowania siłownikiem,
+
+regulacji temperatury soku w procesie cukrowniczym,
+
+regulacji z korekcją dla stabilizacji pH,
+
+sterowania sekwencyjnego w procesie wsadowym na przykładzie panelu dy-
+daktycznego symułującego reaktor chemiczny.
+
+Prezentacja programów poprzedzona zostanie krótkimi opisami paneli dydak-
+tycznych lub procesów, dla których programy te przygotowano.
+
+wzory/k4_paqe383_formula2.pnt

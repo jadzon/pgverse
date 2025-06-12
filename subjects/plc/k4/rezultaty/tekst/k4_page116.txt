@@ -1,0 +1,15 @@
+matematyczne. CPU udostępnia do programowania bateryjnie podtrzymywany
+zegar czasu rzeczywistego, który można synchronizować poprzez łącza komuni-
+
+kacyjne.
+
+W zasilaczu wbudowane jest łącze szeregowe RS 422 umożliwiające podłączenie
+programatora. Można też wykorzystywać dwa łącza instalowane w niektórych
+CPU, w tym jedno RS 422 a drugie RS 232.
+
+<image/tabele/k4_page116_table1.png>
+
+GE Fanuc serii 90-30
+
+p PTT" EPE TT TTE TOPOET YTY ATE TE Y TYT YNY NET POTTERZE YTY TTE ZPO AETYTTP TOCK
+116 Rozdział : 3. Sprzęt sterowników PLC

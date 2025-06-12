@@ -1,0 +1,31 @@
+1.3. Funkcje boolowskie 7
+
+Wyrażenia boolowskie można także budować za pomocą operatorów boolowskich i na-
+wiasów. Jeżeli U i W są dwoma wyrażeniami boolowskimi, to wyrażeniami boolowskimi
+są także następujące wyrażenia:
+e U or W (sumalub alternatywa),
+e U and W (koniunkcja),
+e not W (negacja),
+e U xor W (exclusive orlub altematywa wykluczająca),
+e (U) (wyrażenie U wzięte w nawias).
+Przykładami wyrażeń boolowskich w języku Pascal są:
+e true or b,
+eb and not(x>=0),
+e (0<=x) and (x<=160),
+e (0<x) or (x>10).
+gdzie b jest zmienną typu boolean, a x — zmienną liczbową.
+Wyrażenia boolowskie występują w języku Pascal w instrukcjach warunkowych lub
+w pętlach while i repeat.
+1.3 Funkcje boolowskie
+Funkcje boolowskie n zmiennych to funkcje:
+<image/wzory/k2_page98_formula1.png>
+gdzie B = 0, 1). Mamy cztery funkcje boolowskie jednej zmiennej:
+e funkcję stałą fą równą 0,
+e identyczność /f,,
+e negację f2,
+e funkcję stałą f3 równą 1.
+Wartości tych funkcji zestawiono w tabeli:
+
+<image/tabele/k2_page98_table1.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

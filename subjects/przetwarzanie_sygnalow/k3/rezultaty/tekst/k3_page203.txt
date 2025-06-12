@@ -1,0 +1,45 @@
+<image/tabele/k3_page203_table1.png>
+
+Rys. 12.2. Rozkład FFT. Sygnat N-punktowy jest rozkiadany na N sygnałów, z których każdy zawiera
+pojedynczy punkt. W każdym etapie zastosowano rozktad z przeplotem, rozdzielając próbki o numerach
+parzystych i nieparzystych.
+
+zrozumienia tej procedury jest dokładne przeanalizowanie rys. 12.2. W tym procesie rozkła-
+dania jest konieczne log>N etapów, tzn. sygnał 16-punktowy (2%) wymaga 4 etapów, sygnał
+512-punktowy (27) — 7 etapów, sygnał 4096-punktowy (2!?) — 12 etapów itd. Zapamiętajmy
+to wyrażenie: łog>N; będziemy się do niego wielokrotnie odwoływać w tym rozdziale.
+Teraz, kiedy już zrozumieliście procedurę rozkładania sygnału, można ją znacznie uprościć.
+Rozkład jest niczym innym, jak zmianą uporządkowania próbek w sygnale. Na rys. 12.3
+pokazano wymagany schemat takiej zmiany. W lewej kolumnie zamieszczono listę numerów
+próbek sygnału oryginalnego, wraz z ich binarnymi równoważnikami. W prawej kolumnie
+podano listę numerów próbek po zmianie uporządkowania, także z binarnymi równoważni-
+kami numerów. Ważną zasadą jest to, że liczby binarne przed i po zmianie uporządkowania
+są względem siebie odwrócone. Na przykład próbka 3 (0011) została zamieniona miejscami
+z próbką numer 12 (1100). Podobnie próbkę numer 14 (1110) zamieniono miejscami z prób-
+ką numer 7 (0111) i tak dalej. Rozkład FFT w dziedzinie czasu jest zwykle wykonywany
+przez algorytm sortowania z odwróceniem bitowym. Obejmuje on zmianę uporządkowania
+N próbek w dziedzinie czasu przez zliczanie binarne ze zmianą kolejności bitów (bit naj-
+mniej znaczący z lewej strony), jak to przedstawiono w prawej kolumnie na rys. 12.3.
+Następnym krokiem w realizacji algorytmu jest wyznaczenie widm częstotliwościowych
+|-punktowych sygnałów w dziedzinie czasu. Nic łatwiejszego, gdyż widmo częstotliwo-
+ściowe sygnału |-punktowego jest równe temu sygnałowi. Wynika stąd, że ten etap nie
+wymaga żadnych operacji. Chociaż nie trzeba w tym etapie wykonać żadnej pracy, to
+nie zapomnijmy, że każdy z |-punktowych sygnałów jest teraz widmem częstotliwościo-
+wym, a nie sygnałem w dziedzinie czasu.
+
+Ostatnim etapem w FFT jest połączenie ze sobą N widm częstotliwościowych w kolejności
+odwrotnej do tej, jaka miała miejsce przy rozkładzie w dziedzinie czasu. I tu w algorytmie
+powstaje pewien nieporządek. Niestety nie da się zastosować skróconego odwracania bitów,
+trzeba cofać się wstecz etap po etapie. W pierwszym etapie 16 widm częstotliwościowych
+1-punktowych jest syntetyzowanych w 8 widm częstotliwościowych (każde po 2 punkty).
+W etapie drugim te 8 widm podlega syntezie w 4 widma częstotliwościowe 4-punktowe itd.
+Po ostatnim etapie uzyskuje się wynik FFT — 16-punktowe widmo częstotliwościowe.
+
+Na rys. 12.4 pokazano, jak dwa 4-punktowe widma częstotliwościowe są ze sobą łączone
+w pojedyncze widmo o 8 punktach. Ta synteza musi anulować rozkład z przeplotem dokonany
+w dziedzinie czasu. Innymi słowy, operacja w dziedzinie częstotliwości powinna odpowiadać
+przeprowadzonej w dziedzinie czasu procedurze łączenia ze sobą dwóch sygnałów 4-punk-
+
+!
+i
+I

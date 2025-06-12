@@ -1,0 +1,47 @@
+Własności macierzy U:
+
+<image/wzory/k2_page167_formula1.png>
+<image/wzory/k2_page167_formula2.png>
+
+Jeżeli u,; jest ustalone, wtedy środkiem klastra c; minimalizującym wyrażenie (??)
+jest wartość średnia
+
+<image/wzory/k2_page167_formula3.png>
+
+gdzie |G;| jest licznością klastra G;.
+
+Algorytm C-średnich (ang. C-means clustering)
+
+Krok 1. Wybierz początkowe środki klastrów c;, i = 1,2,..., M. Zazwyczaj losowo
+spośród punktów x;, i = 1..... N.
+
+Krok 2. Wyznacz macierz przynależności U.
+Krok 3. Oblicz wartość kryterium z wzoru (??).
+
+Krok 4. Oblicz nowe środki klastrów według wzoru (??). Przejdź do kroku 2.
+
+Algorytm C-średnich nie zapewnia zbieżności do minimum globalnego.
+
+Algorytm „zwycięzca bierze wszystko”
+
+Algorytm „zwycięzca bierze wszystko” (ang. winner take all) zaproponowany przez
+Kohonena jest algorytmem iteracyjnym, w którym w kolejnych krokach przesuwane
+są punkty w reprezentujące centra klastrów. Punkty te nazywane są w literaturze
+neuronami — współrzędne punktu są wagami neuronu”. W każdym kroku algorytmu
+ze zbioru punktów x wybierany jest jeden punkt i spośród wszystkich punktów w
+wyznaczany jest punkt najbliższy do punktu x — nazywany zostaje „zwycięzcą”,
+Następnie zwyciężający neuron przesuwany jest w kierunku punktu x.
+Algorytm działa w następująco:
+
+1. Losowy wybór punktu x
+
+2. Wyznaczenie zwycięskiego punktu o indeksie m poprzez obliczenie minimum od-
+ległości euklidesowej pomiędzy punktem x i wektorem wag neuronu w;,, £ =
+Miżzyows z?
+
+<image/wzory/k2_page167_formula4.png>
+
+Przyjęcie interpretacji, że punkt jest reprezentowany przez wagi neuronu powoduje, że znaj-
+dywanie zwycięskiego punktu może odbywać się za pomocą sieci neuronowej — w przypadku znor-
+malizowania wag, tzn. ||w|| = 1 zwycięski neuron to ten, którego odpowiedź na pobudzenie x jest
+największa

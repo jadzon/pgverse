@@ -1,0 +1,38 @@
+238 __2. Pojęcia podstawowe — układy
+
+Zadanie 2.22. Sprawdzić, że czwórniki z rys. Z-2.22a,b mają ide
+Dlaczego czwórniki te nie są równoważne?
+
+figury/k4_page238_figur
+
+Zadanie 2.23. Które z elementów rezystancyjnych z zad. 1.11 są dw
+
+odp.elementyocharakterystykachbie.wzory/k4_page238_fc
+Zadanie 2.24. Które z dwójników z zad. 2.4 są dwójnikami pasywn
+
+Odp.: Dwójnik c) oraz dwójnik b) dla «a > —1.
+
+Zadanie 2.25. Które z dwójników z zad. 2.9 są dwójnikami aktywn
+
+Odp.: Dwójnik b) oraz dwójnik c) dla 7 < R.
+
+Zadanie 2.26. Dla jakiego zakresu parametru g dwójnik pokazany
+aktywnym?
+
+figury/k4_page238_figt
+
+Od > z)
+M MZ USS=
+P- 9 R'R
+
+Zadanie 2.27. Wykazać, że czwórniki NIC i NIV (por. zad. 2.5) są liniowymi rezystancyjnymi
+czwórnikami aktywnymi.
+
+Zadanie 2.28. Wykazać, że dioda pojemnościowa i złącze Josephsona są elementami bezstratnymi.
+Wskazówka: Należy skorzystać z definicji punktu spoczynku elementu indukcyjnego lub elementu
+pojemnościowego (por. zad. 1.14 i 1.15) i przeprowadzić podobne rozumowanie jak w przykładzie
+2.1-31.
+
+Zadanie 2.29. W układzie z rys. Z-2.29 działa dla t e (0, + o) źródło stałe o sile elektromotorycznej
+e = E. Wchwili t = 0 wartość napięcia u na pojemności jest równa zeru. Wyznaczyć składowe:
+swobodną, wymuszoną, przejściową i ustaloną napięcia u dla t e (0, +0).

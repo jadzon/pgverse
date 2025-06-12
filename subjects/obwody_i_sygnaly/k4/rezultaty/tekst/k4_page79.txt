@@ -1,0 +1,49 @@
+1.3. Elementy nieliniowe 79
+
+nm A A A W Z R a W A A O A 0 m m m m
+
+charakterystyka leży bowiem w drugiej i czwartej ćwiartce.
+
+Zastosowania oporu ujemnego są liczne i różnorodne. Dotyczą one roz-
+maitych zagadnień techniki układów elektronicznych (np. generatory, wzmac-
+niacze, odtłumiki i in.) oraz ich teorii (np. teoria generacji, teoria stabilności,
+synteza liniowych układów aktywnych itp.).
+
+C. Moc i energia. Moc chwilowa pobierana przez opór ujemny:
+
+izory/k4_page79_formula1.png (1.3-54)
+
+jest ujemna. Oznacza to, że opór ujemny oddaje energię do otoczenia, jest on
+zatem modelem zjawiska odwrotnego do zjawiska strat. Procesy fizyczne,
+których przejawem jest opór ujemny, mogą mieć różnorodną i złożoną naturę.
+Ich zewnętrznym efektem jest wyrażona wzorem (1.3-54) zdolność do „od-
+tłumiania” obwodu, tj. kompensacji strat, a nawet dostarczania energii do
+obwodu. Można powiedzieć, iż opór ujemny jest modelem pewnego przetwor-
+nika energii, który dzięki swoim właściwościom wewnętrznym jest zdolny do
+przetwarzania jednej postaci energii na inną.
+
+Opór nieliniowy o charakterystyce z rys. 1.3-34 lub 1.3-35 i punkcie pracy
+A na opadającej części charakterystyki pobiera z otoczenia moc prądu stałego
+UT, oddaje zaś do otoczenia moc prądu zmiennego (1.3-54).
+
+D. Opory ujemne typu S$ i N. Idealny opór ujemny — R o równaniu
+(1.3-53) i charakterystyce z rys. 1.3-36b jest elementem rczystancyjnym o wzajem-
+nie jednoznacznej charakterystyce. Jego równanie może być oczywiście przed-
+stawiane również w postaci:
+
+<image/wzory/k4_page79_formula2.png>
+
+We wszystkich układach rzeczywistych realizujących opór ujemny otrzymuje
+się charakterystykę nieliniową na płaszczyznie u, i, której jedynie pewien
+fragment lub fragmenty mają ujemne nachylenie (charakterystykitypu N i S
+z rys. 1.3-34 i 1.3-35). Przy wyjściu poza zakres opadania charakterystyki efekt
+oporu ujemnego zanika i element rzeczywisty zachowuje się zupełnie inaczej, niż
+wynikałoby to z równania (1.3-53). W praktyce efekt oporu ujemnego można
+uzyskać jedynie dla ograniczonego, dostatecznie małego zakresu wartości
+prądów i napięć. Przy większych wartościach u, i należy oczekiwać efektów
+nieliniowych związanych z zakrzywieniem się charakterystyki elementu rze--
+czywistego (rys. 1.3-37). Poza zakresem oporu ujemnego charakterystyka
+zakrzywia się i w rezultacie powraca do pierwszej i trzeciej ćwiartki. Na rys. 1.3-37
+pokazano dwa przypadki odpowiadające oporowi ujemnemu uzyskanemu
+z charakterystyki typu N (linia ciągła) i z charakterystyki typu S (linia
+przerywana). W wielu zagadnieniach jest zatem konieczne odróżnianie tych

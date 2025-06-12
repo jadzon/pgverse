@@ -1,0 +1,48 @@
+Yes powoduje zatrzymanie całkowania w algorytmie P/D, jest to mechanizm
+Anti-reset windup. Ponowne jego włączenie następuje gdy wyjście, z wszystkimi
+składowymi, w tym również z przesunięciem, osiągną zakres określony przez
+limity dla tego wyjścia. Niezależnie od wyboru przekroczenie tego zakresu sy-
+gnalizowane jest przez bity przekroczenia dolnego LL (Lower Limit) i górnego
+UL (Upper Limit)
+
+Zakres dla zmiennej procesowej PV i zmiennej sterującej CV zawiera się w gra-
+nicach od 0 do 16383. Wprowadzenie jednostek inżynierskich wymaga przeska-
+lowania wejść i wyjść przy pomocy instrukcji SCŁ (Scale).
+Na przykład, zakładając, że mamy wielkość wejściową PV z zakresu od 4 do
+20mA i należy przeskalować ją do zakresu od 0 do 16383. Przeskalowaną war-
+tość wejściową otrzymujemy po następującym przyporządkowaniu 4mA=3277,
+20mA=16383. Skalowanie takie pozwala wprowadzić wartość zadaną i zakres
+strefy nieczułości w jednostkach inżynierskich i wyświetlać zmienną procesową
+PV i uchyb regulacji w tych samych jednostkach inżynierskich. PV jest wyświe-
+tlane zawsze w jednostkach inżynierskich.
+Poniższe równanie przedstawia relację między wejściem a wartością przeskalo-
+waną:
+* Wartość przeskalowana = (wartość wejściowa * nachylenie) + przesunięcie;
+Nachylenie = (skala max -skala min)/(wejście max - wejście min);
+Przesunięcie = skala min - (wejście min * nachylenie);
+
+Moduł wejściowy mierzący zmienną procesową PV musi mieć pełen zakres bi-
+narny od 0 do 16383. Jeżeli wartość wejściowa jest mniejsza o zera (ustawiony
+jest bit 15 na 1), to PV przyjmie wartość 0 i bit przekroczenia zakresu zmiennej
+procesowej „Process var out of range” zostanie ustawiony na | ( bit 12 słowa 0
+w Control Block). Jeżeli PV jest większa niż 16383 (bit 14 = 1), wtedy PV
+przyjmie wartość 16383 i bit „Process var out of range” zostanie ustawiony
+na 1.
+
+Jeżeli jest ustawiony tryb Manual, algorytm P/ID nie oblicza wartości CV.
+
+W tym trybie możliwe jest wprowadzenie nowej wielkości CV% w skali pro-
+centowej. Jeżeli pod tym adresem używany jest moduł wyjść analogowych, trze-
+ba zapisać (skompilować) program z wyłączoną opcją zabezpieczenia pliku: File
+Protection ustawioną na None. Jeżeli to nie zostanie wykonane nie będzie moż-
+liwe ustawianie wartości CV w trybie Manual.
+
+Niektóre zadania regulacji, takie jak regulacja z korekcją lub regulacja z predyk-
+cją, wymagają dodawania do wartości CV stałej lub zmiennej wartości korygują-
+cej. Możliwe to jest przez wpisanie wartości z zakresu od -16383 do +16383 do
+zmiennej „Feed Forward or Bias” (słowo 6) w Control Block. Wartość ta zosta-
+nie dodana do wartości wyjściowej CV.
+
+ 
+
+280 Rozdział : 5. Język schematów drabinkowych dla SLC 500

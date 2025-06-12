@@ -1,0 +1,18 @@
+Jednobiegunowe filtry rekursywne 313
+
+<image/figury/k3_page286_figure3.png>
+
+Rys. 19.4. Przykład jednobiegunowych filtrów teo pycawacęnzędi a żę eS Aert
+zastosowania jednobiegunowych filtrów
+
+ 
+
+<image/figury/k3_page286_figure1.png>
+
+ode zonc rw gary ror inckiwł don b) pokazano odpowiedzi częstotliwościowe jednobiegu-
+nowych filtrów rekursywnych — górno- i dolnoprzepustowego, a na rys. C) — W s porę rze we
+filtrów rekursywnych oczekiwaniami
+
+nie zawsze są zgodne z
+feśli w filtrze chce się osiągnąć wartości parametrów. Na przyktad krzywa dla f, = 0,25 na
+c) jest zupełnie nieprzydatna w praktyce. Winić za to można wiele czynników, aliasing, szum zaokrągila-

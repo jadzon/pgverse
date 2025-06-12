@@ -1,0 +1,39 @@
+Przykład
+Instrukcję Ł KC 345 można zastąpić instrukcją Ł DW 2, przy czym drugie słowo
+danych musi mieć następującą zawartość
+
+<image/tabele/k4_page344_table1.png>
+
+Bity 15-11 nie są wykorzystywane.
+Zerowanie licznika
+
+Jeżeli warunek zerowania licznika ma wartość I, to licznik jest zerowany - war-
+tość licznika jest ustawiona na 0.
+
+Zliczanie w górę (licznik dodający)
+
+Aktualna wartość licznika jest zwiększana o ! przy każdej zmianie z O na | wa-
+runku zliczania w górę (wartość logiczna wyrażenia poprzedzającego instrukcję
+CU). Gdy wartość licznika osiągnie 999, nie jest dalej zwiększana i dalsze zmia-
+ny warunku zliczania w górę nie mają żadnego wpływu na aktualną wartość
+licznika.
+
+Zliczanie w dół (licznik odejmujący)
+
+Aktualna wartość licznika jest zmniejszana o | przy każdej zmianie z O na | wa-
+runku zliczania w dół (wartość logiczna wyrażenia poprzedzającego instrukcję
+CD). Gdy wartość licznika osiągnie 0, nie jest dalej zmniejszana i dalsze zmiany
+warunku zliczania w dół nie mają żadnego wpływu na aktualną wartość licznika.
+
+Sprawdzanie licznika
+
+Wyjście licznika może być sprawdzane i wynik tego sprawdzenia można wyko-
+rzystać w operacjach logicznych. Sprawdzenie licznika na wartość | daje w wy-
+niku I, jeżeli wartość licznika jest większa od 0. Sprawdzenie licznika na war-
+tość | daje w wyniku 0, gdy wartość licznika jest równa 0.
+
+ 
+
+EW NYUT Z "E CEJ =
+
+344 Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5

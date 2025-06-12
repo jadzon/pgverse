@@ -1,0 +1,20 @@
+1.17. Problemy 31
+
+117 Problemy
+
+Oto algorytm konstrukcji minimalnego drzewa spinającego T = (V, Er) dla grafu G =
+(V, E): (1) zaczynamy od zbioru wszystkich krawędzi Eq := E grafu G, (2) sortujemy
+krawędzie E według długości, od najdłuższej do najkrótszej (3) dla każdej krawędzi e €
+E usuwamy ją z Er, jeżeli jej usunięcie nie rozspójnia grafu 7.
+
+Udowodnij poprawność tego algorytmu.
+
+Zastosuj powyższy algorytm do grafu z rysunku 1.9a.
+
+Niech G = (V,E) będzie dowolnym grafem z wagami krawędzi w, a T = (V,Er)
+dowolnym minimalnym drzewem spinającym. Pokaż, że dla dowolnego wierzchołka v €
+V do Er należą te krawędzie wychodzących z v, które maja najkrótsze wagi, to znaczy,
+jeżeli e i f są dwiema krawędziami przyległymi do v takimi, że e € Er oraz f £ Eq,to
+w(e) < w( f).
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

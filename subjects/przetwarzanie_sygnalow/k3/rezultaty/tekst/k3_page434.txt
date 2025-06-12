@@ -1,0 +1,60 @@
+Kompresja LZW 469
+
+ 
+
+wego nie jest dodawana do tablicy kodowej, jeśli nie została przedtem umieszczona w pliku
+skomprymowanym jako pojedyncze znaki (słowa kodowe od 0 do 255). Jest to ważne, ponie-
+waż umożliwia programowi dekompresji odtwarzanie tablicy kodowej bezpośrednio z danych
+skomprymowanych, bez konieczności przesyłania oddzielnie tablicy kodowej.
+
+Na rys. 27.7 przedstawiono sieć działań kompresji LZW. W tablicy 27.3 zaś podano krok po
+kroku szczegóły przykładu dotyczącego pliku wejściowego złożonego z 45 bajtów, będącego
+strumieniem tekstowym ASCII: the/rainlin(Spain/falislmaintylinithelplain**. Gdy mówimy,
+że algorytm LZW odczytuje znak „a” z pliku wejściowego, to mamy na myśli odczyt warto-
+ści 01100001 (liczba 97 wyrażona jako słowo 8-bitowe), gdzie 97 jest znakiem „a” w AŚCII.
+Gdy mówimy, że algorytm wpisuje znak „a” do pliku zakodowanego, to myślimy o wpisaniu
+000001100001 (liczba 97 wyrażona jako słowo 12-bitowe).
+
+W algorytmie kompresji zastosowano dwie zmienne: CHAR i STRING. W zmiennej CHAR jest
+przechowywany pojedynczy znak, tj. wartość pojedynczego bajtu między 0 a 255. Zmienna
+STRING jest zmienną długości strumienia danych, czyli grupy jednego lub więcej znaków,
+przy czym każdy znak jest pojedynczym bajtem. W ramce 1 na rys. 27.7 wykonywanie pro-
+gramu rozpoczyna się od pobrania pierwszego bajtu z pliku wejściowego i umieszczenie go
+w zmiennej STR/NG. W tablicy 27.3 to działanie pokazano w wierszu 1. Potem następu-
+je pętla algorytmu dla każdego dodatkowego bajtu w pliku wejściowym, sterowana w sieci
+działań przez ramkę 8. Za każdym razem, gdy z pliku wejściowego jest odczytywany ja-
+kiś bajt (ramka 2), jest on zapisywany w zmiennej CHAR. Tablica danych jest następ-
+nie przeszukiwana w celu określenia, czy takiemu połączeniu ze sobą dwóch zmiennych
+STRING + CHAR przyporządkowano już jakieś słowo kodowe (ramka 3).
+
+Jeśli w tablicy kodowej nie znaleziono dopasowania, to podejmuje się trzy działania, jak to
+pokazano w ramkach 4, 5 i 6. W ramce 4 słowo kodowe 12-bitowe odpowiadające zmiennej
+STRING jest wpisywane do pliku skomprymowanego. W ramce 5 jest w tablicy tworzone
+nowe słowo kodowe dla połączenia STRING + CHAR. W ramce 6 zmienna STR/NG przyj-
+muje wartość zmiennej CHAR. Przykład tych działań podano w wierszach od 2 do 10 w ta-
+blicy 27.3, dla pierwszych 10 bajtów przykładowego pliku.
+
+Gdy zaś dopasowanie w tablicy kodowej zostało znalezione (ramka 3), to połączenie
+STRING + CHAR jest wpisywane do zmiennej STR/NG bez podejmowania żadnych dal-
+szych działań (ramka 7). Tak więc, jeśli pasująca sekwencja została znaleziona w tablicy,
+nie podejmuje się żadnych działań przed stwierdzeniem, czy jest w tablicy jakaś dłuższa
+pasująca sekwencja. Przykład takiego działania pokazano w wierszu 11, gdzie sekwen-
+cja STRING + CHAR = in jest zidentyfikowana jako już mająca słowo kodowe w tablicy.
+W wierszu 12 następny znak z pliku wejściowego, /, jest dodawany do sekwencji i w tabli-
+cy kodowej jest szukana sekwencja in/. Ponieważ tej dłuższej sekwencji nie ma w tablicy,
+więc program dodaje ją do tablicy, wyprowadzając słowo kodowe dla krótszej sekwencji,
+które jest już w tablicy (słowo 262) i zaczyna poszukiwania sekwencji rozpoczynających
+się od znaku /. Taki ciąg działań jest kontynuowany, aż nie będzie już więcej znaków w ko-
+dzie wejściowym. Program kończy się słowem kodowym odpowiadającym bieżącej wartości
+STRING wpisywanej do skomprymowanego pliku (jak to zilustrowano w ramce 9 na rys.
+27.7 i wierszu 45 tablicy 27.3).
+
+Sieć działań algorytmu dekompresji LL.ZW przedstawiono na rys. 27.8. Każde słowo kodowe
+jest odczytywane ze skomprymowanego pliku i porównywane z tablicą kodową w celu uzy-
+skania tłumaczenia. Wszystkie słowa kodowe są poddane takiej procedurze; tablica kodowa
+jest uaktualniana, dzięki czemu ciągle jest zgodna z tą stosowaną podczas kompresji. Jest
+jednak mała komplikacja związana z dekompresją. Istnieją pewne kombinacje danych powo-
+dujące, że algorytm dekompresji odbiera słowo kodowe, którego jeszcze nie ma w tablicy.
+Takie przypadki są obsługiwane w ramkach 4, 5 i 6.
+
+28 Znany fragment z musicalu My Fair Lady (przyp. tłum.).

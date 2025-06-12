@@ -1,0 +1,38 @@
+vzory/k4_page356_formula1.png
+
+W blokach danych znajdują się dane (np. wartości zadane, wyniki operacji aryt-
+metycznych), z którymi współpracuje program użytkownika. Do operowania na
+blokach danych można się posługiwać następującymi operatorami:
+e C - wywołanie bloku danych,
+e  G-tworzenie lub usunięcie bloku danych.
+Argument powyższych operatorów ma następującą postać:
+
+DB nr - DB oznacza, że odwołujemy się do bloku danych, nr jest liczbą
+
+określającą numer bloku, do którego się odwołujemy.
+Obydwa przedstawione operatory są wykonywane niezależnie od wyniku po-
+przedzających je operacji logicznych i nie wpływają na zmianę tego wyniku.
+W celu uzyskania dostępu do danej należy uprzednio przy pomocy operatora C
+wywołać blok danych, w którym jest ona zapamiętana. Wywołany blok danych
+pozostaje aktywny "wewnątrz" bloku, w którym został wywołany, aż do mo-
+mentu wywołania innego bloku danych. Wywoływać można bloki danych, które
+zostały wcześniej utworzone. Na Rys. 7.22 w bloku PB5 wywołano blok danych
+DB13. Od tego momentu odczytywanie i zapisywanie słów danych odbywa się
+w bloku DB13 (chyba, że zostanie wywołany inny blok danych). Następnie wy-
+konywany jest bezwarunkowy skok do bloku PB17. Odwołania do danych nadal
+dotyczą bloku DB13. Dopiero w momencie wywołania bloku danych DB23 od-
+wołując się do danych korzystamy z bloku DB23. Po zakończeniu wykonywania
+bloku PB17 aktywny jest znowu blok danych DB13, który został uprzednio wy-
+wołany w bloku PB$.
+
+<image/figury/k4_page356_figure1.png>
+
+Rys. 7.22 Dostęp do danych zapamiętanych w blokach danych
+
+a.
+
+ 
+
+NA W 1 2
+
+356 Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5

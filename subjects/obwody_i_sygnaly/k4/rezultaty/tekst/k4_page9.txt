@@ -1,0 +1,49 @@
+Przedmowa 9
+
+już mówimy: nanoelektroniki), a także techniki cyfrowej i komputerowych metod
+projektowania zrodzi zapewne w przyszłości potrzebę uwzględniania w pod-
+stawowym kursie teorii obwodów zagadnień zupełnie nowych, których dziś
+w najlepszym przypadku możemy się jedynie domyślać.
+
+Włączenie do programów nauczania teorii obwodów nowych wątków, bez
+rezygnacji z klasycznych już, lecz nadal aktualnych zagadnień, wymagałoby
+zwiększenia liczby godzin przeznaczonych na teorię obwodów w planach zajęć.
+Ostatnio obserwujemy jednakże narastającą tendencję do zmniejszania zakresu
+wykładanego materiału. Wynika to w głównej mierze z przyczyn obiektywnych.
+Wobec stale rozszerzającego się zakresu tematycznego przedmiotów specjalis-
+tycznych robi się coraz „ciaśniej” w programach nauczania przedmiotów
+podstawowych. Ponadto stało się już w chwili obecnej jasne, że konieczne jest
+radykalne zreformowanie studiów i zapewnienie studentom warunków do
+faktycznego, samodzielnego studiowania, zamiast mechanicznego „wkuwania”
+wykładanych treści. Wykłady staną się zapewne czymś w rodzaju komentarza
+lub też przewodnika metodycznego, ułatwiającego i ukierunkowującego pracę
+własną studenta. Ta zaś może być efektywna jedynie wtedy, kiedy student będzie
+dysponować dostatecznie obszernym i odpowiednio pogłębionym podręcz-
+nikiem. Koncepcję systemu nauczania spełniającego wymienione postulaty
+rozpoczęto już realizować na wydziale, na którym wykładają autorzy.
+
+Przedstawione przesłanki legły u podstaw naszej decyzji o napisaniu
+niniejszego podręcznika. Od wydania podręcznika poprzedniego, autorstwa
+Cz. Rajskiego (tom 1) i J. Osiowskiego (tom 2; tom trzeci z planowanej
+trzytomowej edycji nigdy nie ujrzał światła dziennego), minęło już ponad
+dwadzieścia lat, co w interesującej nas dziedzinie stanowi całą epokę. Zarówno
+zakres tematyczny, jak i sposób ujęcia tamtego podręcznika już dawno
+zdeaktualizowały się. Inne, nowsze podręczniki wydane w języku polskim, choć
+„z reguły bardzo dobre, a przeważnie świetne”, były albo tłumaczeniami,
+z wyraźnym piętnem specyfiki uczelni zagranicznych, albo też były pisane dla
+potrzeb wydziałów elektrycznych. Kilka pozycji skryptowych, które ukazały się
+w tym czasie na rynku wydawniczym, aczkolwiek bardzo przydatnych, nie
+wypełniło istnicjącej luki.
+
+Treść podręcznika, układ tekstu, wybór materiału i sposób jego przed-
+stawienia odpowiadają wykładom prowadzonym przez nas na Wydziale Elek-
+troniki Politechniki Warszawskiej. Naszym założeniem było starać się pisać tak,
+jak wykładamy. Założenie to dotyczy przede wszystkim koncepcji ogólnej
+podręcznika i kolejności poszczególnych rozdziałów. W przyjętej koncepcji
+położyliśmy nacisk na bardzo wyraźne uwypuklenie warstwy pojęciowej teorii
+obwodów. Przy niezwykle szybkim wzroście zasobów wiedzy zadaniem naczel-
+nym w procesie dydaktycznym staje się bowiem umożliwienie pełnego i dogłęb-
+nego zrozumienia zagadnień i pojęć podstawowych. Potem jest czas
+i miejsce na opanowanie metod, a — w końcu — wielu, niekiedy szczegó-
+łowych i peryferyjnych zagadnień, decydujących jednak często o praktycznej
+umiejętności posługiwania się nabytą wiedzą.

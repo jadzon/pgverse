@@ -1,0 +1,34 @@
+98 5. Pamięci
+
+ 
+
+ury/k3_page108_figure3.png
+
+figury/kfigury/k3_page108_figure2.pnt
+
+Rysunek 5.11. Blok pamięci dynamicznej
+
+pierwszej kolumny (pierwszego bitu). Sygnały sterujące CAS są zwarte w jedną linię
+wejściową.
+
+Oprócz odpowiedniego wysterowania układów pamięciowych w bloku pamięci należy
+zapewnić także wykonanie innych funkcji pamięci, jak np. odświeżanie pamięci dyna-
+micznych.
+
+Na koniec tego podrozdziału przedstawiono cztery funkcje, które w niektórych roz-
+wiązaniach są realizowane przez bloki pamięci:
+
+1) ochrona przed utratą zawartości w przypadku zaniku napięcia zasilania,
+
+2) praca z przeplotem,
+
+3) pamięć dwubramowa,
+
+4) układowe wspomaganie systemu operacyjnego w zarządzaniu pamięcią.
+
+OCHRONA PRZED UTRATĄ ZAWARTOŚCI W PRZYPADKU ZANIKU NAPIĘCIA ZASILANIA
+
+W przypadku pamięci półprzewodnikowych może się zdarzyć, że w czasie pracy pamięci
+zaniknie napięcie zasilające, co może spowodować utratę zawartości pamięci. Aby tego
+uniknąć zasilacze wyposaża się w wyjście sygnalizujące zanik napięcia. Sygnał ten jest
+podawany do układu przerwań (por. rozdz. 6) jako przerwanie o najwyższym priorytecie.

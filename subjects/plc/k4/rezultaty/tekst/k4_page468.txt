@@ -1,0 +1,6 @@
+<image/figury/k4_page468_figure1.png>
+
+Wyd. 8.135 Podprogram(7) — obliczanie wartości zadanych dla poszczególnych
+regulacji
+
+468 Rozdział : 8.Programy przykładowe

@@ -1,0 +1,32 @@
+Rozdział 1
+
+Rekurencja
+
+1.1 Wieże Hanoi
+
+Rekurencja jest to zdolność podprogramu (procedury lub funkcji) do wywoływania sa-
+mego siebie. Zacznijmy od przykładu wież Hanoi. Przypuśćmy, że mamy trzy wieże lub
+trzy paliki: A, B i C. Na pierwszym paliku, A, znajdują się trzy krążki różnej wielkości,
+nanizane w porządku od największego na dole do najmniejszego na górze. Paliki Bi ©
+są na początku puste. Należy przenieść wszystkie krążki z palika A na B, posługując się
+w razie potrzeby palikiem C, według następujących reguł:
+
+e można przenosić po jednym krążku z jednego palika na inny,
+
+e nie można umieszczać większego krążka na mniejszym.
+Rozwiązaniem tej łamigłówki dla trzech krążków jest następujący ciąg siedmiu przeło-
+żeń:
+
+<image/wzory/k2_page152_formula1.png>
+gdzie zapis X — Y oznacza przeniesienie szczytowego krążka z palika X na palik Y.
+Chodzi nam teraz o algorytm, który dla dowolnej liczby N krążków wypisze ciąg
+operacji potrzebnych do przełożenia N krążków z palika A na palik B.
+Algorytm przekładania krążków
+e jeżeli N = 1, to przekładamy ten jeden krążek A + B,
+e jeżeli N > 1, to:
+o przekładamy N — 1 krążków z A na pomocniczy palik C (posługując się w
+razie potrzeby palikiem B),
+o przekładamy /N-ty krążek z A na B,
+o przekładamy N — 1 krążków zC na A (za pomocą palika B).
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

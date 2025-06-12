@@ -1,0 +1,59 @@
+22. Przetwarzanie sygnałów fonicznych
+
+Na rys. 22.9 przedstawiono często spotykany sposób przedstawiania sygnałów mowy — spek-
+trogram mowy lub tzw. odbitkę głosu (voice print). Sygnał foniczny jest dzielony na krótkie
+segmenty, o czasie trwania, powiedzmy, od 2 do 40 ms. Następnie korzysta się z przekształce-
+nia FFT w celu znalezienia widma częstotliwościowego każdego segmentu. Uzyskane widma
+umieszcza się obok siebie i przetwarza na obraz o różnej skali szarości (mniejsze amplitudy
+są białe, a większe stają się coraz ciemniejsze). To umożliwia obserwację zmian zawartości
+częstotliwości w sygnale mowy w funkcji czasu. Długość segmentu wybrano kompromisowo
+z uwzględnieniem rozdziełczości częstotliwościowej (korzystniejszej dla dłuższych segmen-
+tów) oraz rozdzielczości czasowej (korzystniejszej dla krótszych segmentów).
+
+Jak zademonstrowano na przykładzie głoski a w słowie rain, głoski dźwięczne charaktery
+zują się przebiegiem okresowym w dziedzinie czasu (rys. 22.9 a) oraz widmem częstotliwo-
+ściowym będącym szeregiem równomiernie rozmieszczonych harmonicznych (rys. 22.9 b).
+Natomiast na przykładzie głoski s w słowie storm można stwierdzić, że głoski trące mają
+bogaty w szum sygnał w dziedzinie czasu (rys. 22.9 c) i także zaszumione widmo często-
+tliwościowe (rys. 22.9 d). Na widmach jest też widoczne ukształtowanie formantów w obu
+dźwiękach. Można również zauważyć, że obrazy słowa rain zarówno w dziedzinie czasu, jak
+i częstotliwości, są bardzo podobne w obu przypadkach wymawiania tego słowa.
+W krótkim odcinku czasowym, np. 25 ms, sygnał mowy można aproksymować, określając
+trzy parametry: |) rodzaj pobudzenia — szumowe lub okresowe, 2) częstotliwość pobudze-
+nia okresowego (jeśli jest stosowana), 3) współczynniki filtru cyfrowego symulującego od-
+powiedź traktu głosowego. Następnie można syntetyzować ciągły sygnał mowy przez stałe
+uaktualnianie tych trzech parametrów ok. 40 razy na sekundę. Ta metoda przyczyniła się do
+jednego z wczesnych komercyjnych sukcesów DSP — Speak $ Spell, sprzedawanego w du-
+żych ilościach urządzenia do elektronicznego wspomagania edukacyjnego dla dzieci. Jakość
+dźwięku w tego rodzaju syntezie mowy jest marna. Brzmienie jest raczej mechaniczne, nie-
+zupełnie przypominające brzmienie głosu ludzkiego. Taka synteza wymaga jednak tylko bar-
+dzo małej bitowej przepływności danych, typowo kilka kbit/s.
+
+Synteza tego rodzaju jest też podstawą liniowego kodowania predykcyjnego (LPC — Linear
+Predictive Coding), będącego metodą kompresji sygnału mowy. Zarejestrowany cyfrowo
+sygnał mowy jest dzielony na krótkie segmenty, z których każdy jest scharakteryzowany
+zgodnie z trzema parametrami modelu. Do tego jest konieczne kilkanaście bajtów na seg-
+ment, czyli od 2 do 6 kB/s. Informacja z segmentu jest przesyłana lub rejestrowana, zgodnie
+z potrzebami i potem odtwarzana syntetyzatorem mowy.
+
+Dalszym krokiem w omawianej dziedzinie są algorytmy rozpoznawania mowy służące do
+rozpoznawania fragmentów sygnału mowy na podstawie uzyskanych parametrów. Polega to
+na ogół na porównaniu segmentu informacji z szablonami dźwięków poprzednio zarejestro-
+wanych w celu zidentyfikowania wymawianych słów. Ta metoda nie działa jednak zbyt do-
+brze. Jest przydatna w niektórych zastosowaniach, lecz daleka od dorównania możliwościom
+słuchowym człowieka. Aby zrozumieć, dlaczego rozpoznawanie mowy jest dla komputera
+tak trudnym zadaniem, wyobraźcie sobie, że ktoś nagle wypowiada następujące zdanie:
+Larger run medical buy dogs fortunate almost when.
+
+Nie zrozumiecie, oczywiście, znaczenia tego zdania, gdyż ono wcale go nie ma (także po
+angielsku — przyp. tłum.). Co ważne, przypuszczalnie nawet nie zrozumiecie poszczególnych
+słów, gdy są one wymawiane. Zasadą odbioru i zrozumienia mowy jest bowiem rozpoznawa:
+nie słów nie tylko na podstawie ich brzmienia, lecz także ich kontekstu w zdaniu i oczekiwań
+słuchacza. Wyobraźmy sobie na przykład, że słuchamy dwóch zdań:
+
+The child wore a spider ring on Halloween.
+
+(Dziecko nosiło naszyjnik z pająków podczas ZA
+He was an American spy during the war.
+
+(On był amerykańskim szpiegiem podczas wojny).

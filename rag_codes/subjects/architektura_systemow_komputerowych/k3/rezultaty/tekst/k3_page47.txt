@@ -1,0 +1,31 @@
+3.2. Kody binarne i arytmetyka 37
+
+poprawności można wykorzystywać np. przy transmisji informacji. Jeżeli kontrola daje
+negatywny rezultat, to transmisję można unieważnić lub powtórzyć.
+
+<image/tabele/k3_page47_table1.png>
+
+Niektóre kody nadmiarowe zestawiono w tablicy 3.4. Kod „2 z 5” jest kodem 5-bito-
+wym dla cyfr od 0 do 9. Istnieje tylko 10 kombinacji binarnych, które na 5 pozycjach
+każdego słowa mają dwie jedynki. Poprawność operacji na takich słowach można spraw-
+dzać przez kontrolę liczby jedynek. Kod „z nadmiarem 3” (ang. excess 3) ma własność
+samodualności, tj. jeżeli L(A) jest wartością dziesiętną słowa binarnego A, to prawdziwa
+
+<image/jestzalenwzory/k3_page47_formula1.png>
+
+Kod HEX jest nazywany kodem szesnastkowym (ang. hexadecimal), który na czte-
+rech pozycjach binarnych przedstawia kody 16 znaków alfanumerycznych. Pierwsze 10 to
+cyfry dziesiętne jak w kodzie BCD, tj. od 0 do 9. Następnych sześć, które odpowiadają
+liczbom dwucyfrowym 10, 11, 12, 13, 14 i 15 oznacza się literami A, B, C,D,EiF.
+
+W tablicy 3.4 każdemu słowu kodu BCD dodano tzw. bit parzystości, który ma war-
+tość 1, gdy w danym słowie jest nieparzysta liczba jedynek i wartość 0, gdy jest ona
+parzysta. W tak utworzonym kodzie każde słowo zawiera parzystą liczbę jedynek. Niekiedy
+stosowane są także kody z bitem nieparzystości, tj. takie, które uzupełniają słowo do
+nieparzystej liczby jedynek.
+
+W ostatniej kolumnie tablicy 3.4 przedstawiono kod korekcyjny, tj. kod, który jest
+stosowany nie tylko do detekcji błędów, ale także do ich poprawiania. W tablicy pokazano
+kod szesnastkowy wraz z 3 dodatkowymi bitami. Każdy z tych 3 bitów jest bitem
+parzystości dla 3 różnych pozycji kodu szesnastkowego. Oznaczmy bity kodu szesnastko-
+wego przez DI, D2, D3 i D4, przy czym najmniej znaczący bit D1 jest po lewej stronie

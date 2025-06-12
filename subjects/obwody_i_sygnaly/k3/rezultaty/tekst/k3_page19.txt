@@ -1,0 +1,42 @@
+1.1. Wprowadzenie 19
+
+wartociowe.niejestononatomiastpotrzebnejeliwyraenialubwzorys
+formułowane na liczbach ogólnych (tzw. równania wielkościowe). Dla przykładu,
+we wzorze (1.1-1) nie podaliśmy jednostki napięcia (V), ale napiszemy
+U, = 20 mV lub:
+
+<image/wzory/k3_page19_formula1.png>
+
+Podobnie powiemy: „opór R” bez podawania jednostki, ale również: „opór
+R=10kQ".
+
+E. Elementy. Jednym z podstawowych pojęć teorii obwodów jest pojęcie
+elementu lub elementu obwodowego. Jest to pojęcie trudne do formalnego
+zdefiniowania, poprzestaniemy zatem na wymienieniu kilku najważniejszych
+cech charakteryzujących elementy.
+
+Element jest modelem pewnego zjawiska lub pewnej cechy fizycznej
+związanej z obwodem elektrycznym. To samo zjawisko lub ta sama cecha mogą
+być przedstawiane (modelowane) z uwzględnieniem różnych właściwości lub
+z różnym stopniem dokładności. Może to prowadzić do elementów o zróż-
+nicowanym stopniu komplikacji.
+
+Element jest rozpatrywany jako coś niepodzielnego, jako swojego rodzaju
+elementarna „cegiełka”. Z reguły rezygnujemy z wnikania w procesy zachodzące
+wewnątrz tej cegiełki.
+
+Element ma wyróżnione zaciski, tj. punkty, w których może łączyć się
+z innymi elementami (lub jak mówimy z otoczeniem). Będziemy przyjmować na
+razie, że element ma dwa zaciski (element dwuzaciskowy), oznaczone na rys. 1.1-1
+literami A i B. Jest to przypadek najprostszy. W dalszych punktach będziemy
+rozważać także elementy o większej liczbie zacisków (elementy wielozaciskowe).
+
+<image/figury/k3_page19_figure1.png>
+
+Z elementem wiążemy dwie wielkości zaciskowe: prąd elementu i oraz
+napięcie na elemencie u (rys. 1.1-1). Wielkości te są związane równaniem elementu,
+definiującym dany element i określającym jego podstawowe właściwości. Na
+przykład, dobrze znany ze szkoły średniej opór (rys. 1.1-2a) jest elementem
+o równaniu (prawo Ohma):
+
+u=Ri (1.1-2)

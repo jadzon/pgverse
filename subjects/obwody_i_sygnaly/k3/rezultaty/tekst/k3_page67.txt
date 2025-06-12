@@ -1,0 +1,36 @@
+1.3. Elementy nieliniowe 67
+
+Z O 0 00m
+
+OI
+
+zory/k3_page67_formula1.png e67 _figure2.png
+
+R Amnnnia 4 2 02) (1.3-27) i (1.3-29) określają charakterystyki elementów.
+rakterystyk są pokazane na rys. 1.3-24. Charakterystyka
+wykresem funkcji o postaci (1.3-1) lub (1.3-2), spełniającej
+, Charakterystyka z rys. 1.3-24b nie jest wykresem funkcji
+w tym przypadku funkcja odwrotna i = g,(y). Charak-
+tc nie przechodzi tylko przez pierwszą i trzecią ćwiartkę.
+terystyki z rys. 1.3-24 nie spełniają założeń przyjętych przy
+1.3.1), indukcyjności (p. 1.3.2) i pojemności (p. 1.3.3).
+
+ury/k3_page67_figure1.png
+je67_formula2.png
+
+ości i pojemności są oczywiście przypadkami szczególnymi,
+tów rezystancyjnych, indukcyjnych i pojemnościowych.
+
+) jest równaniem algebraicznym wiążącym wielkości i, u.
+inc yjny jest zatem elementem bezinercyjnym (por. p. 1.3.1-E).
+ie i elementy pojemnościowe opisane równaniami
+z równaniami (1.3-29) i (1.3-30) są natomiast elementami
+
+icyjny, indukcyjny lub pojemnościowy) jest liniowy, jeśli
+jest linią prostą i jest nieliniowy w pozostałych przypad-
+
+tryczny, jeśli jego charakterystyka jest symetryczna wzglę-
+lu współrzędnych i niesymetryczny w pozostałych przy-
+
+1) Dokładniej, są one elementami inercyjnymi przy założeniu, że równania (1.3-27) i (1.3-29)
+dadzą się rozwikłać odpowiednio względem W oraz q (formalne szczegóły pomijamy).

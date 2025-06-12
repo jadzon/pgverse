@@ -1,0 +1,20 @@
+131
+
+<image/wzory/k2_page126_formula1.png>
+
+zas L jest nielnmowym operatorem O postaci
+
+<image/wzory/k2_page126_formula2.png>
+
+gdzie funkcje f(-) są funkcjami aktywacji dane wzorami:
+
+<image/wzory/k2_page126_formula3.png>
+lub
+
+<image/wzory/k2_page126_formula4.png>
+
+Oznaczając pożądany sygnał wyjściowy jako
+
+<image/wzory/k2_page126_formula5.png>
+
+<image/figury/k2_page126_figure1.png>

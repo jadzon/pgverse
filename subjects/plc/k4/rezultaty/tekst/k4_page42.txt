@@ -1,0 +1,24 @@
+« W przypadku danej należącej do typu wyliczeniowego, jej wartość domyślna
+w chwili inicjacji jest równa pierwszej wartości z podanej listy, np. wartość
+początkowa zmiennej typu ANAŁOG_SIGNAL_TYPE powinna być równa
+SINGLE_ENDED.
+
+* Dla typu okrojonego domyślna wartość początkowa danej jest równa dolne-
+mu ograniczeniu, np. dana typu ANALOG_DATA powinna mieć w chwili
+inicjacji wartość —4095.
+
+* Dla danych należących do innych typów pochodnych (tablice, typy struktu-
+ralne) domyślne wartości początkowe są określone na podstawie typów
+składowych.
+
+<image/tabele/k4_page42_table2.png>
+
+Tab. 2.9 Przykłady deklaracji wartości początkowych
+
+<image/tabele/k4_page42_table1.png>
+
+Tab. 2.10 Domyślne wartości początkowe
+dla danych typu elementarnego
+
+TATR RLZ ILG ZO ZEK ROZ OEG ZĘC
+42 Rozdział : 2.Programowanie sterowników PLC

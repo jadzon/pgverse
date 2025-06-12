@@ -1,0 +1,10 @@
+Przy pomocy języka FBD przedstawione zostały graficznie zdefiniowane w nor-
+mie standardowe funkcje (por. 2.3.2) i bloki funkcyjne (por. 2.3.4).
+
+<image/tabele/k4_page107_table1.png>
+
+Rys. 2.18 Przykłady realizacji logicznej sumy OR
+a) węzeł OR (wired-OR) w języku LD b) funkcja w języku FBD
+
+ZZO WZZZEEZEOZZZZZL TZ ZZOZ CZD OZ TZOP ZZO ZL OE SZOT OZO SD ZZOZ WOS TA POZ ZZZZZZZĄ
+2.8 Język schematów bloków funkcyjnych FBD 107

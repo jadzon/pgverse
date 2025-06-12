@@ -1,0 +1,14 @@
+<image/figury/k1_page129_figure2.png>
+
+Rys. 3.13. Odpowiedź skokowa dla układu tłumik—masa-sprężyna
+
+Przykład 3.12
+
+Porównać charakterystyki skokowe układu regulacji z elementem inercyjnym
+pierwszego rzędu dla różnych rodzajów regulatorów (rys. 3.14).
+
+<image/figury/k1_page129_figure1.png>
+
+Rys. 3.14. Układ regulacji: a) z różnymi regulatorami; b) charakterystyki skokowe
+
+131

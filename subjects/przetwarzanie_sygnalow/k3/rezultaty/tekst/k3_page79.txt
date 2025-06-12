@@ -1,0 +1,40 @@
+5. Systemy liniowe
+
+ 
+
+Podstawą większości metod DSP jest strategia „dziel i rządź”, zwana zasadą superpozycji.
+Przetwarzany sygnał jest dzielony na proste składniki, po czym każdy z nich jest przetwa-
+rzany indywidualnie a wyniki są następnie ponownie łączone ze sobą. Takie podejście ma tę
+wielką zaletę, że umożliwia rozbicie jednego skomplikowanego problemu na wiele łatwych.
+Zasadę superpozycji można stosować tylko w odniesieniu do systemów liniowych, a więc ta-
+kich, dla których obowiązują pewne reguły matematyczne. Na szczęście większość zastoso-
+wań spotykanych w nauce i technice należy do klasy systemów liniowych. W tym rozdziale
+są rozpatrywane pytania fundamentalne dla DSP: co to znaczy, że system jest liniowy; jakie
+są sposoby dzielenia sygnałów na prostsze składowe i jak zasada superpozycji daje dużą
+rozmaitość metod przetwarzania sygnałów.
+
+Sygnały i systemy
+Sygnał jest opisem zmian jednego parametru przy zmianach innego — np. napięcie w ukła-
+dzie elektronicznym zmieniające się w funkcji czasu lub natężenie oświetlenia zmieniające
+się z odległością. Systemem jest każdy proces wytwarzający sygnał wyjściowy w odpowiedzi
+na sygnał wejściowy, co zilustrowano na schemacie blokowym na rys. 5.1. Systemy ciągłe
+mają na wejściu i na wyjściu sygnały ciągłe (np. analogowe układy elektroniczne), Systemy
+dyskretne mają dyskretne sygnały wejściowe i wyjściowe (np. programy komputerowe ope-
+rujące wartościami zarejestrowanymi w pamięciach).
+W oznaczeniach sygnałów obowiązuje kilka reguł. Te reguły nie zawsze są przestrzegane
+w DSP, lecz należy je zapamiętać ze względu na powszechnie stosowanie. Bez jasnych i kla-
+rownych oznaczeń matematyka stałaby się trudniejsza. Po pierwsze, w oznaczeniu sygnałów
+ciągłych stosuje się nawiasy okrągłe, np. x(f) i y(1), a w dyskretnych — nawiasy kwadratowe,
+np. x[n] i yn]. Po drugie, do oznaczania sygnałów używa się małych liter. Duże litery są
+zarezerwowane dla sygnałów w dziedzinie częstotliwości, które będą omawiane w dalszych
+rozdziałach. Po trzecie, oznaczenie nadawane sygnałowi jest zwykle opisem parametru repre-
+zentowanego przez sygnał. Na przykład napięcie w zależności od czasu jest oznaczane jako
+u(t), a cena giełdowa wyznaczana każdego dnia — jako p[d].
+-_ Sygnały i systemy są często rozpatrywane bez dokładnej znajomości parametrów, które re-
+prezentują. Jest to podobne do stosowania w algebrze oznaczeń x i y bez przypisywania tym
+zmiennym jakiegokolwiek znaczenia fizycznego „ Dochodzimy tu do czwartej reguły ozna-
+czania sygnałów. Jeśli nie jest dostępne oznaczenie bardziej opisowe, to sygnał wejściowy
+
+<image/wzory/k3_page79_formula1.png>
+
+<image/figury/k3_page79_figure1.png>

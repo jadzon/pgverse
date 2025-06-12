@@ -1,0 +1,13 @@
+<image/tabele/k4_page239_table1.png>
+
+Tab. 4.12 Funkcje na bitach (Bit Operation Functions)
+
+<image/tabele/k4_page239_table3.png>
+
+Tab. 4.13 Funkcje przesyłania danych (Data Move Functions)
+
+<image/tabele/k4_page239_table2.png>
+
+   
+
+4.13 Zestawienie funkcji języka LD dla sterowników serii 90-30 239

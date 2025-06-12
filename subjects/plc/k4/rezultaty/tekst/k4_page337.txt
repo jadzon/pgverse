@@ -1,0 +1,49 @@
+Przykład
+
+Instrukcje Ł KT 739.2 można zastąpić na przykład instrukcją Ł DW 5, przy czym
+drugie słowo danych musi mieć następującą zawartość
+
+<image/tabele/k4_page337_table1.png>
+
+Bity 14 i 15 nie są wykorzystywane.
+
+Działanie czasomierza
+
+Po uruchomieniu czasomierza, od wartości zadanej jest odejmowana wartość I
+co jednostkę czasu określoną przez podstawę, aż do momentu, gdy wartość ta
+osiągnie 0.
+
+Zerowanie czasomierza
+Czasomierz jest zerowany (wartość czasu zostaje ustawiona na 0), gdy warunek
+zerowania czasomierza ma wartość |.
+
+Sprawdzanie wartości czasu
+
+Wyjście czasomierza może być sprawdzane i wynik tego sprawdzenia można
+wykorzystać w omówionych operacjach logicznych. Wynik sprawdzenia czaso-
+mierza zależy od rodzaju użytego czasomierza.
+
+W prowadzenie (odczytanie) wartości czasu
+Bieżąca wartość czasu znajduje się w słowie czasomierza i jest zakodowana
+w kodzie dwójkowym. Może być ona wprowadzona do akumulatora przy pomo-
+cy instrukcji:
+KOLEJNOŚĆ PROGRAMOWANIA L T nr
+CZASOMIERZA gdzie nr jest liczbą określającą numer
+fm 6 4  » «  ,  « , | czasomierza. którego bieżący czas zosta-
+Izony. Znajdująca się w aku-
+artość czasu może być dalej
+t. Istnieje również możliwość
+ia bieżącego czasu w kodzie
+, y się wówczas posłużyć in-
+y/k4_page337_figure1.png
+C Tnr
+tość czasu wprowadzona w
+może być dalej przetwarza-
+<azana do wyjść, do których
+jys: pruiącwJnNy Wyświetlacz cyfrowy.
+
+ 
+
+ 
+
+7.7 Czasomierze 337

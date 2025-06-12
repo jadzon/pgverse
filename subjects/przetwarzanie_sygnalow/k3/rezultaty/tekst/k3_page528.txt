@@ -1,0 +1,41 @@
+568 32. Przekształcenie Laplace'a
+
+ 
+
+przez nas wartości części rzeczywistej i urojonej będą zero. Można to zrozumieć, rozpatru-
+jąc wzór 32.3 wyrażający H(s). Jeśli położenie s jest równe któremukolwiek z zer, to jeden
+z wyrazów w liczniku będzie równy zeru. To czyni całe wyrażenie równym zeru, niezależ-
+nie od pozostałych wartości.
+
+Następnie wędrówka naszej mrówki prowadzi nas do jednego z biegunów, gdzie znowu
+mierzymy wartości części rzeczywistej i urojonej H(s). Mierzona wartość staje się coraz to
+większa i większa w miarę, jak coraz bardziej zbliżamy się do dokładnego położenia bieguna
+(stąd też jego nazwa). To też można zrozumieć na podstawie wzoru 32.3. Jeśli położenie s
+jest równe jednemu z p w mianowniku, to mianownik będzie równy zeru, a dzielenie przez
+zero powoduje, że całe wyrażenie staje się nieskończenie duże.
+
+Zbadawszy te położenia szczególne, nasza mrówka wędruje teraz w sposób przypadkowy
+po płaszczyźnie zmiennej zespolonej s. Wartość H(s) w każdym położeniu zależy całko-
+wicie od rozmieszczenia zer i biegunów, ponieważ na tym dziwnym terenie nie są do-
+zwolone żadne cechy innego rodzaju. Jeśli jesteśmy blisko bieguna, wartość jest duża,
+a w pobliżu zera — mała.
+
+Rozmieszczenie zer i biegunów
+
+  
+
+04 urojona (a « 10')
+bóókbhkbonaae3ś
+
+10 OLzAcAł SŁ
+-10-8 -6 4 -2 0 2 4 6 8 10
+08 rzeczywista (a x 10')
+
+ 
+
+<image/figury/k3_page528_figure1.png>
+
+Rys. 32.7. Bieguny i zera w dziedzinie s. Na rysunkach przedstawiono zależność między rozmieszczeniem zer i bie-
+gunów, wykresem na płaszczyźnie zmiennej zespolonej s oraz odpowiedzią częstotliwościową. Wykresy dotyczą filtru
+pasmowozaporowego o wartościach elementów: R = 220 Q, L = 54 pH, C = 470 pF Takie wartości dają pulsację
+środkową pasma zaporowego filtru w = 6,277 - 10%, co odpowiada częstotliwości ok. 1 MHz

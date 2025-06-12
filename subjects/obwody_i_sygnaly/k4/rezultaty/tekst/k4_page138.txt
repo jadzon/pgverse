@@ -1,0 +1,41 @@
+<image/wzory/k4_page138_formula1.png>
+
+<image/wzory/k4_page138_formula2.png>
+
+<image/wzory/k4_page138_formula3.png>
+
+138 1. Pojęcia podstawowe — elementy
+
+Współczynnik sprzężenia k określamy wzorem:
+
+Z, nierówności (1.8-13) wynika, że:
+
+    
+   
+
+01
+
+W przypadku k = 1 (M? = Ly L,) mówimy, że sprzężenie jest całkowi
+albo idealne. W przypadku k=0 (M =0) niewystępuje sprzężenie mi
+uzwojeniami.
+
+w s
+
+B. Model obwodowy indukcyjności sprzężonych. Równania (1.8-9)i(1.8-1
+z uwzględnieniem definicji (1.8-12) określają model obwodowy dwóch indu
+cyjności sprzężonych (rys. 1.8-3). Równania te mają postać:
+
+H
+
+<image/wzory/k4_page138_formula4.png>
+
+Oraz: p
+
+<image/wzory/k4_page138_formula5.png>
+przy czym:
+
+Lę,Ljef*, MeR p,
+
+L.
+
+p

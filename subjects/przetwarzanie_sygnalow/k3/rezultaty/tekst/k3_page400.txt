@@ -1,0 +1,62 @@
+26. Sieci neuronowe (i więcej!)
+
+nieistnienia wykrywanego celu, gdyż wynik rak ma powodować jakieś działanie, a nie —
+
+Takie decyzje uzyskuje się, porównując uzyskaną wartość wyjściową testu z ooo :
+giem. Jeśli wartość jest większa od progu, to mówi się, że test jest pozytywny, a więc cel
+istnieje. Jeśli zaś wartość jest mniejsza od progu, to test jest negatywny, co wskazuje, że celu
+nie ma. W omawianym przykładzie poszukiwania raka negatywny wynik testu powoduje ode:
+słanie pacjenta do domu ze stwierdzeniem, że jest zdrowy. W przypadku testu poz ego
+prowadzi się badania dodatkowe, jak na przykład pobranie próbki tkanki igłą do  biopeji
+Niektóre wyniki testów nie będą prawidłowe, bo rozkłady prawdopodobieństwa dotycz: SJ
+istnienie lub nieistnienia celu nakładają się na siebie. Tak więc niektórzy pacjenci odesłani
+do domu w rzeczywistości mają raka, a niektórzy wysłani na dodatkowe badania są zdrowi.
+W terminologii stosowanej w systemach wykrywania celu klasyfikację prawidłową nazy
+się prawdziwą, a nieprawidłową — fałszywą. Na przykład jeśli pacjent ma raka i test p
+widłowo wykrywa jego kondycję, to mówi się, że jest prawdziwie pozytywny. Jeśli z
+pacjent nie ma raka i test też to wykazuje, to zachodzi przypadek prawdziwie neg;
+
+ny. Przypadek fałszywie pozytywny ma miejsce wówczas, gdy pacjent nie ma raka, a test
+błędnie wykazuje, że go ma. To powoduje niepotrzebne zmartwienia, a także ból i koszty
+związane z dodatkowymi badaniami. Jeszcze gorszy scenariusz mamy w przypadku fa szy:
+wie negatywnym, gdy rak jest, a test wykazuje, że pacjent jest zdrowy. Jak wszyscy *
+nieleczony nowotwór może być przyczyną wielu poważnych kłopotów zdrowotnych, a naw
+przedwczesnego zgonu.
+
+Ludzkie cierpienia wywołane tymi błędami dwóch rodzajów powodują, że zrównoważony
+wybór progu jest ważną i delikatną sprawą. Ile przypadków fałszywie pozytywnych oż:
+na tolerować, aby zredukować liczbę przypadków fałszywie negatywnych. Na rys. 2
+zaprezentowano graficzny sposób oceny tego problemu — tzw. krzywą ROC (Recei
+Operating Characteristics). Krzywa ROC wyraża zależność procentowej części sygnał
+będących celem i uznawanych za pozytywne (im większa ta część, tym lepiej) od pro
+centowej części sygnałów niebędących celem a błędnie uznawanych za pozytywne (im
+mniejsza ta część, tym lepiej). Inaczej mówiąc, każdy punkt na krzywej ROC
+jeden z możliwych kompromisów między liczbą wyników prawdziwie pozytywnych i
+szywie pozytywnych.
+
+Na rysunkach 26.2 a)+d) pokazano cztery ustawienia progu w omawianym przykłi
+dzie wykrywania raka. Spójrzcie, na przykład, na rys. 26.2 b), gdzie próg ustawiono
+wartość 17. Pamiętajcie, że każdy test dający wartość wyjściową większą od progu je
+traktowany jako wynik pozytywny. Około 13% powierzchni rozkładu przypadków m
+będących celem znajduje się powyżej progu (tzn. na prawo od progu). Spośród w
+
+kich pacjentów niemających raka 87% będzie uznanych za negatywnych (tj. prawdzi |
+negatywnych), podczas gdy 13% będzie uznanych za pozytywnych (tj. fałszywie poz
+tywnych). Natomiast w rozkładzie przypadków będących celem ok. 80% powierzchi
+znajduje się powyżej progu. To znaczy, że 80% chorych na raka da pozytywny
+
+testu (tj. prawdziwie pozytywny). Pozostałe 20% mających raka będzie błędnie uza
+nych za negatywnych (tj. fałszywie negatywnych). Jak pokazano na krzywej ROC
+rys. 26.2 b), tak dobrany próg daje punkt na tej krzywej o współrzędnych: udział pa
+tywnych wyników dła przypadków niebędących celem = 13% oraz udział pozy
+wyników dla przypadków będących celem = 80%.
+
+Proces wykrywania jest tym bardziej skuteczny, im bardziej krzywa ROC zagina się w
+runku górnego, lewego kąta wykresu. Wyniki uzyskane przez czyste zgadywanie tworzą I
+prostą biegnącą po przekątnej pod kątem 45”. Względnie niskie ustawienie progu (rys. 26.2
+powoduje, że prawie wszystkie przypadki będące celem zostają wykryte. Uzyskuje s
+kosztem wielu fałszywych alarmów (wyników fałszywie pozytywnych). Ustawienie zaś
+
+gu względnie wysoko (rys. 26.2 d) wytwarza sytuację odwrotną — mało fałszywych
+
+lecz wiele chybionych celów.

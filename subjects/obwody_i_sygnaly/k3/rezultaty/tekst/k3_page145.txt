@@ -1,0 +1,42 @@
+1.8. Sprzężenie magnetyczne 147
+
+ 
+
+Proponujemy Czytelnikowi sprawdzenie, że indukcyjność zastępcza L określona wzorem
+_3-38) zawiera się w granicach:
+
+vzory/k3_page145_formula1.png (18-39)
+
+rzy czym wartość największa i najmniejsza są osiągane przy sprzężeniu idealnym (M? = L; L-).
+
+Przykład 1.8-2. Wyznaczymy indukcyjność zastępczą L układu indukcyjności sprzężonych
+zrzedstawionych na rys. 1.8-11a.
+
+<image/figury/k3_page145_figure1.png>
+
+Postępując podobnie jak w przykładzie 1.8-1, tj. przerysowując układ z rys. 1.8-1la w postaci
+rrzedstawionej na rys. 1.8-11b, możemy napisać:
+
+ory/k3_page145_formula2.png
+
+z więc:
+Nzory/k3_page145_formula3.png
+
+7 warunku:
+(3_page 145_formula4.png
+
+zamy!);
+k3_page145_formula5.png
+
+z stąd:
+
+<image/wzory/k3_page145_formula6.png>
+
+:ory/k3_page 145_formula7.png
+
+U Jak widać wartość stałej A nie ma znaczenia dla dalszych rozważań i nie wpływa na
+mateczny wynik. Z tego względu w obliczeniach przyjmuje się często dla uproszczenia A = 0.
+
+ 
+
+NN A

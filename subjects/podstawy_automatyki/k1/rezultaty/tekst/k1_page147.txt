@@ -1,0 +1,21 @@
+Można także wykazać, że wartość wyjściowa osiąga 86,5% swojej wartości końcowej
+po upływie 27'i 95% po upływie 37. Współczynnik k wzmacnia lub redukuje x,,, tak by
+uzyskać wartość końcową Xg(/).
+
+<image/figury/k1_page147_figure2.png>
+
+5.6. Zmodyfikowany układ serwomechanizmu
+
+W przypadku gdy sygnały wejściowe są zmienne, układ udoskonalamy — rozbudo-
+wując go o elementy sprężysto-tłumiące, np. jak na rysunku 5.8.
+
+<image/figury/k1_page147_figure1.png>
+
+Rys. 5.8. Schemat kinetyczny serwomechanizmu zmodyfikowanego
+
+Rozpatrując dźwignię, do której przyłożony jest sygnał wejściowy x,(4) (rys. 5.9),
+otrzymujemy
+
+<image/wzory/k1_page14/_formula1.png>
+
+149

@@ -1,0 +1,38 @@
+1.13. Chińskie twierdzenie o resztach 21
+
+że litera e koduje literę o, a litera p koduje literę t. Mamy więc dwa równania:
+
+<image/wzory/k2_page136_formula1.png>
+Po odjęciu tych równań stronami mamy:
+<image/wzory/k2_page136_formula2.png>
+
+Korzystając z algorytmu Euklidesa, możemy teraz wyliczyć element odwrotny do 5 w pier-
+ścieniu Z. J est to 21, ponieważ:
+
+<image/wzory/k2_page136_formula3.png>
+
+takv
+
+<image/wzory/k2_page136_formula4.png>
+
+Teraz z drugiego rownania mozemy wyliczyc 5:
+
+<image/wzory/k2_page136_formula5.png>
+1.13 Chińskie twierdzenie o resztach
+
+W starożytnych Chinach generałowie używali pewnego ciekawego sposobu liczenia swo-
+ich żołnierzy. Dla kilku niewielkich liczb parami względnie pierwszych, na przykład dla:
+
+<image/wzory/k2_page136_formula6.png>
+obliczano i zapamiętywano reszty z dzielenia liczby żołnierzy przez te liczby. W celu
+obliczenia reszt kazano żołnierzom ustawić się trójkami, piątkami i siódemkami. Jeżeli
+przy następnym apelu wszystkie trzy reszty były takie same, to znaczyło, że nie brakuje
+żadnego żołnierza.
+Zobaczmy, jak ten sposób działa. Weźmy najpierw dwie liczby:
+<image/wzory/k2_page136_formula7.png>
+
+W poniższej tabeli mamy zestawione reszty modulo 2 i 3 liczb od 0 do 5:
+
+<image/tabele/k2_page136_table1.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

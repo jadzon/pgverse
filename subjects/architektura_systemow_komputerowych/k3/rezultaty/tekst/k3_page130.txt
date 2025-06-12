@@ -1,0 +1,34 @@
+120 6. Urządzenia zewnętrzne
+Z " _  _-L_L __'. I7200ZENMW ZEWNĘTTZNE
+
+<image/figury/k3_page130_figure1.png>
+
+W układzie łańcuchowym rozstrzyganie o kolejności obsługi następuje poprzez umiej-
+scowienie danego sterownika w łańcuchu. Im wyższy priorytet nadawany jest urządzeniu,
+tym bliżej układu zgłoszenia przerwań umieszcza się go w łańcuchu. Każdy sterownik
+zgłasza żądanie przerwania do układu zgłoszenia przerwania. Pojawienie się już jednego
+z nich powoduje przesłanie sygnału INT do procesora i uaktywnienie łańcucha. Układ
+przerwań może być albo w stanie oczekiwania na przerwanie, albo w stanie obsługi
+przerwania. W stanie oczekiwania układ zgłoszenia przerwań wysyła 1 na wejście El
+pierwszego układu, umożliwiając w ten sposób zgłoszenie przez niego przerwania. Każdy
+sterownik działa w taki sposób, że jeżeli na jego wejściu El jest 0 (blokada zgłoszenia
+przerwania), to i na wyjściu EO jest 0. Jeżeli natomiast na jego wejściu EI jest 1, to stan
+jego wyjścia EO zależy od tego, czy zgłasza on przerwania czy nie. Jeżeli zgłasza
+przerwania, to ustawia na swoim wyjściu 0 blokując dalszy ciąg łańcucha, a jeżeli nie
+zgłasza przerwania, to na wyjściu ustawia | odblokowując dalszy ciąg łańcucha. Sterownik
+zgłaszający przerwanie musi jednocześnie wysłać swój numer (wektor przerwań) na
+magistralę danych systemu, aby procesor mógł rozpoznać urządzenie przerywające jego
+pracę.
+
+Na rysunku 6.2 pokazano strukturę łańcuchowego układu przerwań. Jak widać układ
+zgłoszenia przerwań jest bardzo prosty, gdyż składa się z jednej bramki sumy. Początkowo
+układ zgłoszenia przerwań odblokowuje cały łańcuch wysyłając 1 na swoje wyjście. Jeżeli
+urządzenie we-wy poprzez swój sterownik żąda przerwania, to wysyła sygnał do układu
+zgłoszenia przerwań i rozpocznie tym samym akcję zgłoszenia przerwania do procesora.
+Na wyjściu układu zgłoszenia przerwań pojawi się sygnał INT, który przesłano do pro-
+cesora. Jednocześnie na wyjściu EO danego sterownika pojawi się 0, które zablokuje
+dalsze stopnie łańcucha. Gdy procesor potwierdzi odebranie zgłoszenia przerwania syg-
+nałem INTA (ang. interrupt acknowledge), to nastąpi otwarcie bufora wyjściowego
+sterownika dołączającego go do magistrali. Podczas strobu odczytu, pojawiającego się na
+magistrali sterującej, sterownik wyśle swój numer na magistralę danych. Na tej podstawie
+procesor będzie mógł utworzyć adres początku podprogramu obsługi tego urządzenia.

@@ -1,0 +1,52 @@
+33. Metody analizy obwodów liniowych prądu stałego 273
+
+dzie prądów obwodowych zmiennymi tymi są prądy obwodowe, natomiast
+w metodzie napięć węzłowych — napięcia węzłowe.
+
+Zastąpienie prądów gałęziowych w równaniach sieci nowymi zmiennymi
+— prądami obwodowymi — nosi nazwę przekształcenia obwodowego. W wyni-
+ku przekształcenia obwodowego prądowe równania równowagi sieci będą
+spełnione tożsamościowo, natomiast napięciowe równania równowagi
+przejdą w tzw. równania obwodowe, w których niewiadomymi są prądy obwo-
+dowe. W metodzie prądów obwodowych g równań z niewiadomymi prądami
+gałęziowmi redukuje się więc do n równań obwodowych z niewiadomymi
+prądami obwodowymi.
+
+Zastąpienie napięć gałęziowych w równaniach równowagi sieci napięciami
+węzłowymi nosi nazwę przekształcenia węzłowego. W wyniku przekształcenia
+węzłowego napięciowe równania równowagi będą spełnione tożsamościo-
+w o, natomiast prądowe równania równowagi przejdą w tzw. równania węzłowe,
+w których niewiadomymi są napięcia węzłowe. W metodzie napięć węzłowych
+g równań z niewiadomymi napięciami gałęziowymi redukuje się zatem do w — 1
+równań węzłowych z niewiadomymi napięciami węzłowymi.
+
+Po rozwiązaniu n równań obwodowych względem prądów obwodowych
+lub w 1 równań węzłowych względem napięć węzłowych nowe zmienne
+można w prosty sposób przeliczyć na zmienne gałęziowe. Tym samym rozpływ
+prądów (rozkład napięć) w sieci można wyznaczyć przy znacznym uproszczeniu
+obliczeń.
+
+F. Metoda prądów obwodowych. W metodzie prądów obwodowych bę-
+dziemy zakładać, że każda gałąź sieci ma postać napięciową — rys. 3.3-19a (lub
+też jest do tej postaci przekształcona). Metodę prądów obwodowych przedstawi-
+my na przykładzie sieci z rys. 3.3-20. Otrzymane rezultaty uogólnimy następnie
+na dowolną sieć spełniającą przyjęte założenia.
+
+W sieci z rys. 3.3-20 występują trzy oczka a, b, c. Oczka te tworzą zbiór
+obwodów niezależnych. Przyjmiemy, że w oczkach a, b, c płyną pewne umowne
+prądy I,, I,, I, o zwrotach zgodnych z przyjętym i jednakowym dla wszystkich
+oczek kierunkiem ich obiegu (patrz rysunek). Prądy te będziemy nazywać
+prądami obwodowymi”) i uważać za pewne nowe zmienne wprowadzone do opisu
+sieci.
+
+Za pomocą prądów obwodowych można bez trudu wyrazić prądy gałęziowe.
+Prąd I, wgałęzio numerze k jest sumą algebraiczną (z uwzględnieniem zwrotów)
+prądów obwodowych tych oczek, do których gałąź ta jednocześnie należy.
+
+Dla rozważanej sieci prądy gałęziowe I,,...,I. wyrażają się poprzez prądy
+obwodowe I,, I,, I. następująco:
+
+1 Prądy te są przyporządkowane oczkom. W związku z tym są puszka nazywane w literaturze
+prądami oczkowymi, a omawiana metoda — metodą prądów oczkowyc Przy Rany tu nazwy
+oj y obwodowe” i „metoda prądów obwodowych”, w ogólnym bowiem przypadku
+zbiór obwodów niezależnych nie musi być zbiorem oczek (por. tom III).

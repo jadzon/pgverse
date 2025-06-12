@@ -1,0 +1,30 @@
+3. Obwody prądu stałego
+
+iry/k4_page256_figure1.png
+
+» dwa dwójniki są równoważne należy pokazać, że mają one
+wy. W przypadku liniowych dwójników rezystancyjnych jest
+
+ge256_formula1.PNQ ykszaniem, że ich charakterystyki są identyczne. Charak-
+iniowego dwójnika rezystancyjnego jest linią prostą, a więc
+sharakterystyka dwójnika AB z rys. 3.3-4b, przy założeniu
+Jięcia jak na rysunku, jest opisana równaniem:
+
+Nzory/k4_page256_formula2.png
+
+ 
+
+.igury/k4_page256_figure3.png
+
+rrzy zatozenmiu takiego samego zasirzatkowania prądu 1 napięcia, charak-
+terystykę dwójnika z rys. 3.3-4c opisuje równanie:
+
+<image/wzory/k4_page256_formula3.png>
+
+Rozważane dwójniki będą zatem równoważne wtedy i tylko wtedy, gdy Ry = a
+i Er = b. Stałą b możemy wyznaczyć przyjmując w równaniu (3.3-1) prąd
+i = 0. Odpowiada to rozwarciu zacisków AB dwójnika z rys. 3.3-4b. Stała b jest
+więc równa napięciu, które wystąpi na rozwartych zaciskach układu z rys.
+3.3-4a— patrz rys. 3.3-6a. Napięcie to będziemy nazywać napięciem rozwarcia
+ioznaczać U,. Wynika stąd, że aby dwójniki z rys. 3.3-4b i c były równoważne,
+musi zachodzić równość:

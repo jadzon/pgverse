@@ -1,0 +1,33 @@
+14 Rozdział 1. Struktury danych
+
+e w przeciwnym razie porównaj e z zawartością korzenia W (z):
+o jeżeli e < W (z), to wstaw e do poddrzewa 730,
+o jeżeli e > W (z), to wstaw e do poddrzewa 7,;,.
+
+Przykład 1.11 Przypuśćmy, że mamy ciąg liczb naturalnych:
+128, 76, 106, 402, 100, 46, 354, 1018, 112, 28, 396, 35.
+
+Utworzymy dla tego ciągu drzewo poszukiwań binarnych.
+
+Rysunek 1.5: Drzewo poszukiwań po wstawieniu elementów: 128, 76, 106, 402
+
+<image/figury/k2_page176_figure2.png>
+ę
+
+28,35, 46, 76, 100, 106, 112, 128, 354, 396, 402, 1018.
+
+Jeżeli mamy już drzewo poszukiwań binamych 7', to dla każdego wierzchołka x € T
+zachodzi
+
+e dla każdego y € Tzo, W (y) < W (z),
+e dla każdego y € T-;, W (y) > W (2).
+
+Czyli wszystkie wierzchołki w lewym poddrzewie 7,9 zawierają wartości mniejsze
+od wartości w z, a wszystkie wierzchołki w prawym poddrzewie 7,; zawierają wartości
+mniejsze od wartości w z.
+
+Aby stwierdzić, czy jakiś element e znajduje się na tym drzewie. Postępujemy podob-
+nie jak przy wstawianiu elementów. Zaczynamy od korzenia drzewa r = A i szukamy
+elementu e za pomocą poniższego algorytmu.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

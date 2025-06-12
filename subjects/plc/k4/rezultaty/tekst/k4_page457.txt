@@ -1,0 +1,23 @@
+<image/tabele/k4_page457_table2.png>
+
+dium chłodzącego i załączenie mieszadła
+
+ 
+
+Wyd. 8.124 Podprogram FAZA_3 (chłodzenie) — koniec chłodzenia po osiągnięciu
+temperatury początkowej reakcji
+
+tabele/k4_page457_table1.opng
+
+Wyd. 8.125 Podprogram FAZA_4 (opróżnianie) — zamknięcie zaworów dopływu
+czynników reakcji oraz przepływu mediów chłodzącego i grzewczego
+
+——
+
+ 
+
+ 
+
+ 
+
+8.8 Sterowanie sekwencyjne procesem wsadowym 457

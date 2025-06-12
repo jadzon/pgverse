@@ -1,0 +1,45 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 27
+
+Znaczenie linii układu interfejsu szeregowego:
+
+. SI - szeregowe wejście danych interfejsu SPI dla danych wysyłanych i danych konfiguracyjnych,
+
++. SO — szeregowe wyjście danych interfejsu SPI służące do odbioru danych z interfejsu szeregowego i
+odczytu danych statusu układu,
+
++ SCK -zegar taktujący transmisję szeregową interfejsu SPI,
+
+». CS - wejście wyboru układu uaktywniające interfejs SPI do udziału w transmisji,
+
+»  RST — wejście resetu układu — aktywny stan na tej linii wprowadza kontroler w stan początkowy,
+
++ INT — linia przerwania zewnętrznego informująca o tym, iż kontroler żąda od mk obsługi,
+
+« LINIE INTERFEJSU SZEREGOWEGO - linie służące do transmisji danych. Ich liczba i funkcje
+zależne są od typu danego interfejsu szeregowego.
+
+18. Schemat blokowy mikroserwera TCP/IP bazującego na kontrolerze Ethernet (np.
+ENC28J60) sterowanym interfejsem SPI, funkcje poszczególnych bloków
+mikroserwera TCP/IP.
+
+<image/figury/k8_page25_figure1.png>
+
+Funkcje bloków mikroserwera TCP/IP:
+
+. Mk (MCU) steruje kontrolerem Ethernet za pomocą interfejsu SPI.. Linią danych wyjściowych
+SDO przesyła się słowa sterujące, dane do wysłania najczęściej w postaci gotowego datagramu IP, a
+za pomocą linii danych wejściowych SDI odczytuje się odebrany datagram IP i dane statusowe. Mk
+programowo obsługuje stos TCP/IP, czyli realizuje najczęściej protokoły: Ethernet (składanie i
+analiza ramki ethernetowej), IP, ARP, TCP, UDP oraz protokoły warstwy aplikacji takie jak serwer
+HTTP, klient POP3, klient SMTP, itd.
+
+« Kontroler Ethernet w pełni sprzętowo realizuje obsługę sieci Ethernet. Uzupełnia ramki
+
+ethernetowe o preambułe i sumę kontrolną, koduje/dekoduje dane kodem Manchester, zapewnia
+odpowiednie poziomy sygnałów dla standardu 1OBASE-T.
+
++ Transformator separujący ma za zadanie galwanicznie odizolować mikroserwer od sieci Ethemet
+oraz, o ile jest to wymagane, uformować przebieg trapezoidalny z prostokątnego podawanego na
+różnicowym wyjściu TPIN, TPOUT.
+
+„ Do gniazda RJ-45 wpinamy kabel standardu 10BaseT łączący mikroserwer z siecią Internet.

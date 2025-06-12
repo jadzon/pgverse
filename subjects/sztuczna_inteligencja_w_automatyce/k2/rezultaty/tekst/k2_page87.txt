@@ -1,0 +1,50 @@
+92
+
+Zadanie wyznaczenia rozkładu p(zy,1ro,...,c„) znacznie się upraszcza jeżeli w sys-
+temie występuje niezależność warunkową zmiennych losowych zdefiniowana nastę-
+pująco: Jeżeli zachodzi:
+
+<image/wzory/k2_page87_formula1.png>
+
+gdzie R, € f2,..... T;-1), to zmienna losowa z; jest warunkowo niezależna od zmien-
+nych losowych zawartych w zbiorze fzy,...,z;_1) X Ry. Przy występowaniu nieza-
+leżności warunkowej rozkład zmiennej losowej x, zależy od zbioru R, nazywanego
+rodzicielskim, a nie zależy od zbioru f24,...,1;-4) 4 Ry.
+
+Struktura sieci bayesowskiej bezpośrednio wskazuje zależności pomiędzy zmien-
+nymi losowymi w systemie. Stosuje się konwencje, że węzły rodzicielskie danego
+węzła tworzą zbiór rodzicielski Ry, czyli warunkowy rozkład prawdopodobieństwa
+danego węzła zależy od wartości węzłów rodzicielskich, a nie zależy od wartości
+węzłów je poprzedzających. Węzły rodzicielskie „zasłaniają” poprzedzające węzły.
+
+Ze względu na występowanie w sieci bayesowskiej niezależności warunkowych
+możliwe jest na podstawie opisujących sieć prawdopodobieństw warunkowych wy-
+znaczenie prawdopodobieństwa łącznego i następnie dowolnych innych prawdopo-
+dobieństw.
+
+Pokazują to dwa poniższe przykłady.
+
+PRZYKŁAD 5.12
+
+Dana jest prosta sieć (łańcuch Markowa) o strukturze z % y + ż i prawdopodo-
+bieństwach danych w tablicy ??. Należy wyznaczyć rozkład prawdopodobieństwa
+p(z|z).
+
+<image/figury/k2_page87_figure1.png>
+
+Z wzoru na prawdopodobieństwo warunkowe mamy
+
+<image/wzory/k2_page87_formula2.png>
+
+Na podstawie reguły łańcuchowej otrzymujemy wzór na rozkład łączny
+
+<image/wzory/k2_page87_formula3.png>
+
+Że względu na to, że zmienna losowa z jest warunkowo niezależna od zmiennej r
+mamy p(z|z,y) = p(zly), i stąd
+
+<image/wzory/k2_page87_formula4.png>
+
+oraz ostatec”n'e
+
+<image/wzory/k2_page87_formula5.png>

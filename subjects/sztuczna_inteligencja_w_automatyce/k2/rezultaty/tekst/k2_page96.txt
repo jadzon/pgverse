@@ -1,0 +1,43 @@
+Podstawiając do równania (??) kolejne sygnały wejściowe (x,,ł = 1...., m)
+otrzymujemy układ równań liniowych, zwanych równaniami regresji
+
+<image/wzory/k2_page96_formula1.png>
+
+Stosując oznaczenia
+
+<image/figury/_wzory/k2_page96_formula2.png>
+
+równanie (??) możemy zapisać w postaci
+
+<image/wzory/k2_page96_formula3.png>
+Jeżeli M = N (czyli liczba równań jest równa liczbie niewiadomych), to otrzy-
+mujemy roz
+<image/wzory/k2_page96_formula4.png>
+
+Jeżeli (co jest typową sytuacją) M > N, to układ równań nie ma rozwiązania”.
+Wtedy możemy poszukiwać rozwiązania przybliżonego. W tym celu zastąpimy rów-
+nanie (??) równaniem
+
+<image/wzory/k2_page96_formula5.png>
+
+gdzie wektor e reprezentuje różnice wartości lewych i prawych stron równania.
+
+Korzystając z równania (??) poszukiwanie rozwiązania przybliżonego sprowadza
+się do znalezienia rozwiązania w minimalizującego sumę kwadratów składowych
+wektora e, czyli minimum wyrażenia
+
+<image/wzory/k2_page96_formula6.png>
+
+Po prostych, nie przytaczanych tu przekształceniach (patrz np. Jang 1997) oraz
+spełnieniu pewnych ogólnych założeń, otrzymujemy rozwiązanie
+
+<image/wzory/k2_page96_formula7.png>
+Z powyższego wynika, że jeżeli układ uczący się przedstawiony jest równaniem
+77), gdzie parametry wy, wą,.... wy dobierane są w procesie uczenia, to możemy
+| y Wy, WZ ł 1 )
+je wyznaczyć w jednym kroku obliczeniowym, danym równaniem (??).
+PRZYKŁAD 6.2
+W tablicy ?? przedstawiony jest zbiór uczący. Przyjęto, że system uczący się opisany
+jest wzorem
+
+<image/wzory/k2_page96_formula8.png>

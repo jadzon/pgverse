@@ -1,0 +1,8 @@
+j Generacja szumu cyfrowego 39
+
+<image/figury/k3_page29_figure1.png>
+
+- Na rys. 2.10 c) przedstawiono, jak w tej metodzie można pójść o krok dalej, tworząc każdą
+próbkę przez sumowanie 12 liczb losowych. Wartość średnia jest teraz równa sześć, a odchy-
+_ lenie standardowe jeden. A najważniejsze jest, że funkcja pdf stała się wirtualnie gaussow-
+ska. Tę procedurę można stosować do tworzenia sygnału szumu o rozkładzie normalnym,

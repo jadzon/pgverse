@@ -1,0 +1,56 @@
+82 1. Pojęcia podstawowe — elementy
+
+uje ono bez żadnych dodatkowych ograniczeń na zakresy
+;stępujących w tym równaniu. Jeśli np. zapisujemy równanie
+* postaci (1.2-6), tzn.:
+
+vzory/k3_page82_formula3.png
+
+zyjmujemy, że i,u e ? (charakterystyką oporu liniowego jest
+zinek prostej — rys. 1.3-3b). Oznacza to w szczególności, że
+może wystąpić dowolnie duży prąd i dowolnie
+
+'zypadku oporów nieliniowych wszystkich trzech typów (p.
+
+indukcyjności i pojemności liniowych i nieliniowych, co
+
+ielkości i, u, W, q może przybierać dowolne wartości.
+
+nie mają, oczywiście, elementy rzeczywiste: oporniki, cewki
+
+Każdy z tych elementów jest projektowany i wykonany na
+1,ge82_form ula1 „png >puszczalnych wartości prądów czy napięć. Po przekroczeniu
+
+it traci, na ogół, założone właściwości i może ulec zniszczeniu.
+
+pujący wniosek.
+
+obwodowy może modelować właściwości elementu rzeczy-
+
+aniczonym zakresie zmian prądów i napięć.
+
+elementów obwodowych określają zależności między parami
+»/ lub ug, niezależnie od ich przebiegów czasowych.
+aieliniowym o równaniu (1.3-2) występuje napięcie u = u(t),
+| określa jednoznacznie przebieg prądu:
+
+<image/wzory/k3_page82_formula2.png>
+
+o jak zmienia się w czasie napięcie u(t). Analogiczną
+ją wszystkie inne elementy obwodowe.
+rwiste odznaczają się natomiast tym, że ich charakterystyki
+2. siększym stopniu zależą od charakteru czy parametrów
+przebiegów czasowych prądu lub napięcia. Zależność ta może być nieznaczna
+i wówczas element obwodowy może być poprawnym modelem elementu
+rzeczywistego. Jeśli jednak staje się ona wyraźna, jest to świadectwem, iż danego
+elementu rzeczywistego nie można w sposób poprawny i pełny opisać przy użyciu
+modelu jakim jest element obwodowy”.
+Klasycznym przykładem takiego elementu rzeczywistego jest dławik, tj.
+cewka nawinięta na rdzeń ferromagnetyczny, przy sinusoidalnie zmiennym
+prądzie magnesującym:
+
+ 
+
+1) Często jednak zdarza się, że takie elementy rzeczywiste można modelować tworząc tzw.
+schematy zastępcze będące połączeniami elementów obwodowych modelujących poszczególne
+cechy elementu rzeczywistego.

@@ -1,0 +1,52 @@
+1.8. Liczby pierwsze i względnie pierwsze 13
+
+Lemat 1.20 NW DQ(a, b) jest podzielny przez każdy wspólny dzielnik liczb a i b.
+
+Z lematu 1.20 wynika, że największy wspólny dzielnik NW D(a, b) może być rów-
+noważnie zdefiniowany jako taki wspólny dzielnik liczb a i b, który jest podzielny przez
+każdy wspólny dzielnik a i b.
+
+Lemat 1.21 Liczba d jest największym wspólnym dzielnikiem liczb a i b wtedy i tylko
+wtedy gdy d będzie wspólnym dzielnikiem a i b oraz istnieją liczby całkowite z i y, takie
+że d = ra + yb.
+
+Dowód jeżeli NW D(a, b) = d to dla, d|b oraz (z twierdzenia 1.19) istnieją liczby całko-
+wite z i y, takie że: d = ra + yb.
+Na odwrót, jeżeli d dzieli a i b oraz ra + yb = d, to każdy wspólny dzielnik a i b
+
+dzieli d, a więc d jest największym wspólnym dzielnikiem a i b. D
+Wniosek 1.22 Jeżeli istnieją liczby całkowite r i y, takie, że ratyb = 1, to NW D(a,b) =
+1.
+
+Przykład 1 2% 7astanówmv cia ile wvnasi NW D/1008 200) Paniewa?:
+
+<image/wzory/k2_page128_formula1.png>
+oraz ź jest wspolnym dzielnikiem 1996 1 ZUUU, więc NW D(1998, 2000) = 2.
+Zastanówmy sia taraz ile wvnasi NW (1900 20011 Poniewa?
+
+<image/wzory/k2_page128_formula2.png>
+
+więc NW D(199Y,2001) dzieli 2, a poniewaz 2 nie dzieli ani 1LY9Y, ani ZUUL, więc
+NW D(1999, 2001) = 1.
+
+1.8 Liczby pierwsze i względnie pierwsze
+
+Dwie liczby naturalne a i b są względnie pierwsze, jeżeli NW D(a,b) = 1, a liczba
+naturalna p jest pierwsza, jeżeli p > 1 i jedynymi dzielnikami naturalnymi p są jedynka i
+
+samo p.
+Ota wszvstkia liczhv nierwsza mnieisza ad 50:
+
+<image/wzory/k2_page128_formula3.png>
+
+Liczba n > 1, ktora nie jest pierwsza jest złozona. Istnieją wtedy dwie liczby k, m < n,
+takie, że n = k: m.
+
+19 Rozkład liczb na czynniki pierwsze
+
+W tym rozdziale zobaczymy, że każdą liczbę naturalną n > 1 możnarozłożyć naczynniki
+pierwsze i że taki rozkład jest jednoznaczny z dokładnością do kolejności czynników. Na
+
+<image/_wzory/k2_page128_formula4.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

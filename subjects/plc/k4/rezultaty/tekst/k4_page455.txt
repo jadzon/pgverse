@@ -1,0 +1,19 @@
+<image/figury/k4_page455_figure1.png>
+
+latora PID
+
+<image/figury/k4_page455_figure3.png>
+
+ 
+
+Wyd. 8.120 Podprogram FAZA_2 (grzanie) — stabilizacja temperatury
+
+<image/figury/k4_page455_figure2.png>
+
+ 
+
+ 
+
+a z m w m0 m 4
+
+8.8 Sterowanie sekwencyjne procesem wsadowym 455

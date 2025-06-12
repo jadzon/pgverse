@@ -1,0 +1,14 @@
+<image/figury/k4_page131_figure1.png>
+
+Rys. 3.13 Schemat obwodu wewnętrzne go i układu połączeń zewnętrznych
+modułu wejść i przekaźnikowych wyiść
+
+<image/figury/k4_page131_figure2.png>
+
+Rys. 3.14 Ochrona styków przekaźników w modułach wyjść przed skutkami przepięć
+przy obciążeniu indukcyjnym: a) dioda zabezpieczająca (dla prądu stałego),
+b) układ RC, c) diody Zenera, d) warystor.
+
+ 
+
+3.4 Moduły wyjść dyskretnych DO 131

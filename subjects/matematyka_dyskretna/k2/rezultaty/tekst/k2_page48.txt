@@ -1,0 +1,48 @@
+1.10. Zasada włączania i wyłączania 13
+
+Wyobraźmy sobie, że obliczając prawą stronę tej równości liczymy po kolei elementy
+zbioru A i dla każdego elementu dodajemy +1 do ogólnej sumy, następnie liczymy ele-
+menty zbiorów B i dla każdego dodajemy +1, a na końcu liczymy elementy przekroju
+AN B i dla każdego dodajemy —1. Zastanówmy się teraz jaki jest udział poszczególnych
+elementów w tak powstałej sumie. Jeżeli jakiś element występuje tylko w A lub tylko w
+B, to jego udział wynosi 1. Ale także, jeżeli należy do obu zbiorów A i B to jego udział
+wynosi 1 = 1 + 1 — 1. Dlatego na końcu wynik będzie równy liczbie elementów, które
+należą do jednego lub drugiego zbioru.
+
+Przykład 1.13 Policzmy ile spośród liczb od 1 do 30 jest podzielnych przez 2 lub 3. Niech
+Aa oznacza zbiór liczb z tego przedziału podzielnych przez 2, a Az zbiór liczb podzielnych
+przez 3. Liczby podzielne przez 2 lub 3 tworzą zbiór A> U Ax. Mamy
+
+<image/wzory/k2_page48_formula1.png>
+
+Aa O As zawiera liczby podzielne przez 2 i 3, czyli podzielne przez 6. Ze wzoru na sumę
+
+<image/mawzory/k2_page48_formula2.png>
+
+Podobnie możemy uzasadnić wzór na sumę trzech zbiorów:
+
+<image/wzory/k2_page48_formula3.png>
+Jeżeli zastosujemy podobne liczenie, to udział elementów, które należą tylko do jednego
+zbioru, wynosi 1, tych, które należą do dwóch (ale nie do trzech naraz), wynosi 1+1—1 =
+1, atych, które należą do wszystkich trzech zbiorów, 1+1+1—1-1-1+1=1.
+
+Przykład 1.14 Policzmy ile spośród liczb od 1 do 30 jest podzielnych przez 2, 3, lub 5.
+Niech A> oznacza zbiór liczb podzielnych przez 2, Az zbiór liczb podzielnych przez 3,
+a As podzielnych przez 5. Mamy |A2| = 15, |Ag| = 10, |As| = 6, |A2 N Ag] = 5,
+|Aa 0.45! = 3, |Az 0 As| = 2, |A2 M Ag MM A5| = 1. Ze wzoru na sumę otrzymujemy:
+
+<image/wzory/k2_page48_formula4.png>
+
+Jak widać, tylko osiem liczb mniejszych od 30 nie jest podzielnych przez 2, 3 lub 5; są to:
+1, 7, 11, 13, 17, 19, 23, 29.
+
+W następnym podrozdziale pokażemy jak można obliczyć sumy dowolnej skończonej
+klasy zbiorów.
+1.10 Zasada włączania i wył ąaczania
+Zacznijmy od przykładu. W grupie 100 studentów 45 uprawia koszykówkę, 53 pływanie,
+a 28 jedno i drugie. Pytanie: ilu studentów nie uprawia ani koszykówki, ani pływania?
+
+Zadanie to można rozwiązać „na palcach”. 17 = 45 — 28 studentów uprawia tylko
+koszykówkę, a 25 = 53 — 28 studentów uprawia tylko pływanie. Zatem 70 = 17425428
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

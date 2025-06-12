@@ -1,0 +1,52 @@
+168
+
+je 168_formula1.png
+
+2. Pojęcia podstawowe — układy
+
+amy je równaniami sieciowymi lub
+ikładu”,
+
+wnań sieciowych polega na wyznaczen
+:ć) w elementach tworzących sieć, wy
+„sił elektromotorycznych i/lub wydajnc
+t zatem opisem kompletnym, uwzględ:
+w układu. Jest to więc w jakimś sens
+a układów opisywanych sieciowo 0:
+ny metodami sieciowymi. Są one po:
+zy polegających na rozwiązywaniu lub
+ładu. Metody te będziemy stopniowo |
+go. Ich systematyczne ogólne ujęcie p:
+my ogólne sposoby formułowania róv
+zymy się jedynie do prostego przykła:
+
+©zpatrzmy układ przedstawiony na rys. 2.1-1£
+pującej postaci (przyjmujemy oznaczenia jak ne
+
+iry/k4_page168_figure 1
+
+b) równania wynikające z praw Kirchhoffa:
+
+PPK: i=ie+i,
+
+NPK: emtyęttk, U =ri+u,
+
+Są to zatem równania sieciowe rozważanego układu.
+
+Proponujemy Czytelnikowi sprawdzenie, że po wyeliminowaniu z tych równań napięć uz, uc, u,
+
+otrzymujemy następujące równania tylko względm prądów i, kk:
+
+*) Będziemy rozpatrywać tylko układy skończone, tzn. będziem
+elementów, z których jest zbudowany układ, jest skończona, a więc
+równań sieciowych. Układami nieskończonymi (tj. zbudowan
+zajmować się nie będziemy, a ewentualne odstępstwa od tej
+
+zad. 3.2 i 3.14).
+
+zawsze zakładać, że liczba
+ończona jest również liczba
+ymi z nieskończonej liczby elementów)
+zasady będą wyraźnie zaznaczone (por.
+
+wzory/k4_page168_

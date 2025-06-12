@@ -1,0 +1,82 @@
+o
+
+| Element trójstawny można również objąć, analogicznie jak w regulacji
+dwupołożeniowej, sprzężeniem 2 dwoma obiektami | inercyjnymi,
+otrzymując w efekcie (przy włączeniu silnika do struktury regulatora)
+regulator typu PID
+
+| Istotnym czynnikiem jakości regulacji jest częstotliwość łączeń, która za-
+leży od szerokości strefy histerezy //. Najmniejsza możliwa zmiana wielkości
+regulowanej y(t) powinna być mniejsza od B, gdyż w przeciwnym razie
+j może zajść przypadek, w którym uchyb nie znajdzie się w strefie nieczułości
+regulatora, a układ będzie się znajdował w fazie ciągłych drgań.
+
+| Wstanie ustalonym uchyb regulacji może leżeć w strefie nieczułości ele-
+| mentu trójstawnego, co z kolei może powodować wystąpienie niezerowej
+wartości uchybu ustalonego, czyli to, że regulator nie zostanie uruchomiony.
+
+10.2.4  Serwomechanizm przekaźnikowy
+
+Regulatory trójpołożeniowe często można spotkać w układzie serwome-
+|chanizmu przekaźnikowego pokazanego na rysunku 10.5, stanowiącego
+pewne rozwinięcie idei serwomechanizmu liniowego, od którego
+wymaga się możliwie szybkiej reakcji na zmianę sygnału odniesienia,
+|? należałoby interpretować jako wymóg odpowiednio dużego wzmocnie-
+nia prędkościowego k, [2], czyli występowania sygnałów o znacznych am-
+plitudach. W układach rzeczywistych występują ograniczenia wartości syg-
+j nałów, podobnie jak skończoność wzmocnienia, natomiast stosu.ąc element
+przekaźnikowy, można przyjąć, że układ wykazuje nieskończone wzmoc-
+nienie, a jednocześnie amplituda sygnałów pozostaje ograniczona (wartości,
+na których załącza się przekaźnik).
+
+<image/figury/k2_page49_figure2.png>
+Rys. 10.5: Schemat blokowy serwomechanizmu przekaźnikowego
+
+10.2.5  Serwomechanizm przekaźnikowy ze sprzężeniem tachometrycznym
+
+| Analogiczniedo przypadku serwomechanizmu liniowego poprawę jakości
+
+regulacji serwomechanizmu uzyskuje się po doprowadzeniu do regulatora
+| dodatkowego sygnału proporcjonalnego do prędkości zmian wielkości
+| wyjściowej y(t), jak pokazano na rysunku 10.6.
+
+z z
+
+97
+
+<image/figury/k2_page49_figure1.png>
+
+10.2.6 Wpływ sprzężenia tachometrycznego na portret fazowy
+serwomechanizmu przekaźnikowego
+
+W przypadku serwomechanizmu przekaźnikowego ze strefą histerezy,
+w procesie regulacji może powstać tak zwany cykl graniczny — stan oscy-
+lacji wielkości wyjściowej o stałym okresie i stałej amplitudzie. Wystąpienie
+cyklu granicznego jest uzależnione od strefy nieczułości i histerezy przekaź-
+nika trójpołożeniowego.
+
+Rozpatrując część liniową układu regulacji daną transmitancją
+
+<image/wzory/k2_page49_formula1.png>
+
+jo ==—- aaaaim i mssieaaski Aniwa zwan zbniołobas 10: wariobA
+
+<image/wzory/k2_page49_formula2.png>
+
+lub alternatywnie, wprowadzając ucnyD €([) = wi!) "ylf) przy wir) = cwiist,
+
+<image/_wzory/k2_page49_formula3.png>
+
+1U w p'owau4ciuwu ŁAWCE Ly ik KGŁARZYY yYNAG
+
+<image/wzory/k2_page49_formula4.png>
+
+można narysować trajektorię fazową układu, przedstawioną na rysunku 10.7,
+na której występują trzy różne rodzaje trajektorii dane odpowiednio równa-
+
+pio: fomozenicadswaii mabaawa nio ma siwsetwowecwicrwyntzoh aewwiewwanzoba: 1 41 "
+
+wzorv/ko naae40Q formiila5 nna
+uzorv/kO nana4Q formiilaAi nna
+
+<image/wzory/k2_page49_formula7.png>

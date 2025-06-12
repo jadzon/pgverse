@@ -1,0 +1,46 @@
+12 Rozdział 1. Grafy skierowane
+
+1.7 Problemy
+
+1.7.1 Cykl Eulera w grafi e skierowanym
+
+Cykl Eulera w grafie skierowanym jest to droga zamknięta przechodząca przez każdą
+krawędź grafu dokładnie jeden raz. Udowodnij, że jeżeli graf skierowany jest spójny jako
+graf nieskierowany, to ma cykl Eulera wtedy i tylko wtedy, gdy w każdym jego wierz-
+chołku liczba krawędzi wchodzących jest równa liczbie krawędzi wychodzących. Jeżeli
+w grafie jest pętla (u, u), to liczymy ją jako krawędź wchodzącą do u i jako wychodzącą
+Z u.
+
+Zaproponuj algorytm wynajdywania cyklu Eulera w grafie skierowanym.
+
+Które z grafów przedstawionych na rysunkach w tym rozdziale mają cykle Eulera?
+
+1.7.2 Ciąg de Bruijna
+Ciąg de Bruijna rzędu n to cykliczne ustawienie 2” bitów takie, że każdy ciąg n bitów
+występuje w tym cyklu dokładnie jeden raz jako n kolejnych bitów.
+
+Na przykład ciąg 0011 jest ciągiem de Bruijna rzędu 2 (10 występuje na pozycjach 4
+i 1), a ciąg 00010111 jest ciągiem de Bruijna rzędu 3 (110 występuje na pozycjach 7, 8i
+1, a 100 na pozycjach 8, 1 i 2).
+
+Aby otrzymaż ciąg de Bruijna rzędu n rozważmy następujący graf skierowany G=(V,E).
+Wierzchołki grafu V = £0,1)”7* to zbiór wszystkich ciągów bitów długosci n — 1. Dwa
+wierzchołki u, v € V tworzą krawędź, (u,v) € E wtedy i tylko wtedy, gdy ostatnich
+n — 2 bitów u jest takie samo jak pierwsze n — 2 bitów v. Krawędź ta jest etykietowana
+ostatnim bitem v.
+
+Narysuj graf G dla n = 2,314.
+
+Udowodnij, że:
+
+e Graf jest spójny (jako graf nieskierowany) i posiada cykl Eulera.
+
+e Etykiety każdej drogi długości n— 1 tworzą nazwę ostatniego wierzchołka tej drogi.
+
+e Cykl Eulera ma 2” krawędzi i przechodzi przez każdy wierzchołek dwa razy.
+
+e Etykiety cyklu Eulera tworzą ciąg de Bruijna rzędu n.
+
+Wyznacz ciąg de Bruijna rzędu 4.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

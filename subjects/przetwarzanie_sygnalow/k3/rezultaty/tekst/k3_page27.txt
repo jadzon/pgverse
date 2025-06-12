@@ -1,0 +1,43 @@
+37
+
+383
+
+ 
+
+zestawiono w tablicy 2.5, Ta krzywa jest bardzo często używana w rachunku prawdopodobień-
+stwa, dlatego nadano jej własny symbol: ©(x) (duża grecka litera fi). Na przykład D(-2) ma war-
+
+Zbiorową funkcję (cdf) rozkładu normalnego przedstawiono na rys. 2.9, a jej wartości liczbowe
+tość 0,0228. To wskazuje na prawdopodobieństwo 2,28%, że wartość sygnału znajdzie się między
+
+całkowanie. Taka krzywa dyskretna, będąca wynikiem symulowanego całkowania, jest na-
+stępnie zapisywana w tablicy wykorzystywanej do obliczania wartości prawdopodobieństwa.
+
+Rozkład normalny
+
+ 
+
+table1.png
+
+muzakannacskn==otn=>
+
+       
+
+manakuaankenunakem=m -
+
+tabele/k3_page27_
+
+p LJ
+
+4 Aa | RŻ—Z———
+£ F= mę wy: „Wi TW "WT q
+
+b. 2.5. ©(x), zbiorowa funkcja rozkładu dla rozkiadu normalnego (wartość średnia = 0, odchylenie stan-
+1). Wartości rozkładu obliczono przez catkowanie numeryczne rozktadu normalnego przedstawionego na
+©(x) jest prawdopodobieństwem, że wartość sygnału o rozkładzie normalnym, w jakimś czasie wybranym
+
+mniejsza od x. W tablicy wartość x jest wyrażona w jednostkach odchylenia standardowego, w odnie-
+
+        
+
+R

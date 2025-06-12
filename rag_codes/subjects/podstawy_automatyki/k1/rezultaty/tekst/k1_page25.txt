@@ -1,0 +1,29 @@
+Jeżeli prawa strona równania (1.45) jest funkcją wymierną, to staramy się ją przed-
+stawić w postaci sumy ułamków prostych, następnie obliczyć (odczytać z tablic) odpo-
+wiednie oryginały.
+
+Zastosowaną tu metodę rozwiązywania możemy przedstawić w postaci przejrzy-
+stego schematu (rys. 1.6), do którego będziemy powracać przy wszystkich zastosowa-
+niach przekształcenia Laplace'a do rozwiązywania równań różniczkowych całkowych.
+
+<image/figury/k1_page25_figure1.png>
+
+Przykład 1.16
+Rozwiązać równanie
+
+<image/wzory/k1_page25_formula1.png>
+
+gdzie:
+
+ory/k1_page25_formula2.png
+z następującymi warunkami początkowymi: x(0) = I, x'(0) = 1.
+
+Równanie po podstawieniu odpowiednich wartości przyjmuje postać
+
+<image/wzory/k1_page25_formula3.png>
+
+Po dokonaniu transformacji Laplace'a otrzymujemy
+
+<image/wzory/k1_page25_formula4.png>
+
+27

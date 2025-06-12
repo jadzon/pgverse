@@ -1,0 +1,12 @@
+<image/tabele/k4_page149_table1.png>
+
+Czas uaktualniania dla 8 kanałów wynosi 12 ms. Przerwy w obwodach prądo-
+wych sygnalizowane są przez jego zmienne statusowe %ł. Moduł wymaga
+zasilania 24VDC. Po utracie zasilania sterownika, wyjście jest podtrzymywane
+na ostatnio ustawionej wartości lub na wartości zadeklarowanej w konfiguracji,
+np. na wartości równej 0. Dane katalogowe tego modułu zawiera Tab. 3.13.
+Należy zwrócić szczególną uwagę na dopuszczalne warunki obciążalności tego
+modułu i na różnice pomiędzy tymi warunkami dla wyjść prądowych i napięcio-
+wych.
+
+3.6 Moduły wyjść analogowych AO 149

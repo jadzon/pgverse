@@ -1,0 +1,51 @@
+33. Metody analizy obwodów liniowych prądu stałego | 261
+
+Pokażemy, że wydajność prądową J„ źródła zastępczego można powiązać
+bezpośrednio z rozważanym źródłowym dwójnikiem AB i tym samym nadać jej
+niezależną interpretację. Przy spełnieniu równości (3.3-6) dwójniki z rys. 3.3-4b
+i 3.3-9a są równoważne, a więc przez ich zwarte zaciski AB musi płynąć ten sam
+prąd (rys. 3.3-9b i c). Wnioskujemy stąd natychmiast, że wydajność prądowa Jy
+jest równa prądowi I., który popłynie przez zwarte zaciski AB dwójnika z rys.
+3.3-4b (prądowi zwarcia).
+
+Możemy zatem sformułować następujące twierdzenie zwane twierdzeniem
+Nortona lub twierdzeniem o zastępczym źródle prądowym”.
+
+Dowolny liniowy dwójnik rezystancyjny”) (rys. 3.3-4b) możemy zastąpić
+równoważnym rzeczywistym źródłem prądowym (rys. 3.3-9a) o wydajności prądo-
+wej Jy i przewodności wewnętrznej Gy, przy czym:
+
+— wydajność prądowa J , jest równa prądowi płynącemu przez zwarte zaciski
+dwójnika (prądowi zwarcia I.)
+
+— przewodność wewnętrzna Gy jest równa przewodności zastępczej G45
+dwójnika bezźródłowego (rys. 3.3-6b) otrzymanego po zastąpieniu w rozważanym
+dwójniku wszystkich niezależnych źródeł napięciowych zwarciami oraz wszystkich
+niezależnych źródeł prądowych rozwarciami.
+
+Zastępcze źródło prądowe z rys. 3.3-9a jest nazywane źródłem Nortona; stąd
+indeks występujący w oznaczeniach parametrów tego źródła.
+
+Odnotujmy przydatny w praktyce związek, jaki zachodzi między napię-
+ciem U, na rozwartych zaciskach dowolnego dwójnika liniowego AB, prądem
+I. płynącym przez jego zwarte zaciski i oporem zastępczym R 45 (por. pierwszy
+ze wzorów 3.3-6):
+
+y/k3_page259_formula1.png (3.3-7)
+Przykład 3.3-7. Rozważmy ponownie dwójnik źródłowy z rys. 3.2-6a. Po zwarciu zacisków
+
+AB otrzymujemy układ pokazany na rys. 3.3-10. Dla węzłów B i C zapiszemy prądowe równania
+Kirchhoffa:
+
+<image/wzory/k3_page259_formula2.png>
+
+Wyznaczając prąd I, z drugiego z tych równań i podstawiając do pierwszego równania otrzymuje-
+my:
+
+»ry/k3_page259_formula3.png
+
+Prąd 1, obliczamy z napięciowego równania Kirchhoffa:
+<image/wzory/k3_page259_formula4.png>
+
+1) Stosowane są także nazwy: „zasada Nortona” lub „zasada zastępczego źródła prądowego”.
+2) Z wyjątkiem dwójnika będącego idealnym źródłem napięciowym.

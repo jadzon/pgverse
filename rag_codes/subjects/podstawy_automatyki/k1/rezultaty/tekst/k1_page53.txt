@@ -1,0 +1,32 @@
+Wykorzystując drugie prawo Kirchhoffa, można zapisać równanie
+
+<image/wzory/k1_page53_formula1.png>
+
+Napięcie na cewce u; (£) jest związane z prądem płynącym w obwodzie następują-
+cą zależnością
+
+<image/wzory/k1_pageb3_formula2.png>
+
+Na podstawie napięcia wyjściowego u(1) można określić prąd płynący w obwo-
+dzie
+
+<image/wzory/k1_page53_formula3.png>
+
+czcpowyszewzoryotrzymujemyrwnanierniczkowebdcejednzpo
+g07000003-* . . . . m
+
+<image/figury/k1_page53_figure1.png>
+
+<image/wzory/k1_page53_formula4.png>
+Znając funkcję napięcia wejściowego u;(f) oraz warunki początkowe, można wy-
+znaczyć napięcie wyjściowe u»(/).
+Dokonując przekształcenia Laplace'a otrzymanego równania różniczkowego przy
+założeniu zerowych warunków początkowych, otrzymujemy inną postać modelu ma-
+tematycznego rozważanego obwodu, a mianowicie transmitancję operatorową:
+
+wzory/k1naaa5kaformiila5nna
+
+<image/wzory/k1_page53_formula6.png>
+<image/wzory/k1_page53_formula7.png>
+
+55

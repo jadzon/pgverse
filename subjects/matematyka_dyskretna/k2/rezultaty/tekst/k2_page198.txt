@@ -1,0 +1,40 @@
+20 Rozdział 1. Grafy (nieskierowane)
+
+Rysunek 1.11: Graf po przejściu trzech krawędzi
+
+<image/figury/k2_page198_figure1.png>
+
+tą drogą zaczynając od v. Droga ta kończy się w v lub vg i przechodzi kilka razy przez
+v. Mamy więc kilka pętli, które zaczynają się i kończą w i być może końcowy odci-
+nek zaczynający się w v i kończący w vy. Otóż tylko pierwsza krawędź tego ostatniego
+odcinka może rozspójniać graf. Wszystkie inne krawędzie wychodzące z v są częściami
+cykli.
+
+Aby udowodnić, że algorytm dobrze działa, trzeba pokazać, że wszystkie krawędzie
+grafu będą odwiedzone. Po każdej iteracji algorytmu graf jest spójny, więc jeżeli z wierz-
+chołka v nie odchodzą żadne krawędzie, to znaczy, że nie ma już żadnych krawędzi w
+grafie.
+
+Powyższy algorytm mimo, że prosty i szybki wymaga sprawdzania, czy usunięcie
+krawędzi nie rozspójni grafu.
+
+Drugi algorytm wyznaczania cyklu Eulera.
+
+Dane wejściowe: spójny graf, w którym wszystkie wierzchołki są parzystego stopnia.
+Pomocniczy STOS.
+
+Dane wyjściowe: CE — cykl Eulera.
+
+e Zaczynamy od dowolnego wierzchołka v, i wkładamy go na STOS,
+
+e Natępnie powtarzamy dopóki STOS nie jest pusty
+o Niech v będzie wierzchołkiem z wierzchu STOSU
+o jeżeli z v odchodzą jakieś nieodwiedzane krawędzie, to wybieramy jedną z
+nich, przechodzimy na jej drugi koniec, zaznaczamy jako odwiedzoną i jej drugi
+koniec wkładamy na STOS.
+
+o Jeżeli wszystkie krawędzie odchodzące z v były już odwiedzone, to zdejmu-
+jemy v ze STOSU, przekładamy na wyjście CE oraz przechodzimy do wierzchołka
+znajdującego się pod v na STOSIE.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

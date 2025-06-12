@@ -1,0 +1,52 @@
+8 Rozdział 1. Struktury danych
+
+Istnieje sposób przedstawiania wyrażeń arytmetycznych nie wymagający nawiasów.
+Jest to tak zwana notacja polska lub Łukasiewicza. Jest ona też nazywana notacją postfixową,
+ponieważ znak operacji stoi na końcu wyrażenia, za argumentami, czyli wyrażenie w no-
+tacji postfixowej ma postać:
+
+pierwszy argument — drugi argument — operacja.
+
+Notacja, do jakiej jesteśmy przyzwyczajeni, nazywa się infixowa, ponieważ operacja znaj-
+duje się pomiędzy argumentami, czyli wyrażenie w notacji infixowej ma postać:
+
+pierwszy argument — operacja — drugi argument.
+Przykład 1.5 Wyrażenie w postaci postfixowej
+
+<image/wzory/k2_page170_formula1.png>
+
+ma
+
+<image/wzory/k2_page170_formula2.png>
+a wy
+<image/wzory/k2_page170_formula3.png>
+
+jest posmxową postacią wyrazenia
+
+<image/wzory/k2_page170_formula4.png>
+W wyrażeniach w postaci postfixowej nie potrzeba nawiasów. Wartość wyrażenia można
+w sposób jednoznaczny odtworzyć z samego wyrażenia za pomocą następującego algo-
+rytmu.:
+
+Algorytm obliczania wartości wyrażenia w postaci postfixowej.
+Dla kolejnych elementów zapisu wyrażenia:
+
+e jeżeli element jest stałą lub zmienną, to wkładamy jego wartość na stos,
+e jeżeli element jest znakiem operacji, to:
+
+o zdejmujemy dwie wartości z wierzchu stosu,
+
+o wykonujemy operację na tych wartościach,
+
+o obliczoną wartość wkładamy na wierzch stosu,
+
+e po przejściu całego wyrażenia jego wartość znajduje się na stosie.
+Przykład 1.6 Zademonstrujmy ten algorytm na przykładzie wyrażenia:
+
+<image/wzory/k2_page170_formula5.png>
+
+Załóżmy, że zmienne mają następujące wartości: a = 3,b=2,c=1ld=4,e=2.
+Poniższa tabela przedstawia zawartość stosu po przeczytaniu kolejnych elementów wyra-
+żenia.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

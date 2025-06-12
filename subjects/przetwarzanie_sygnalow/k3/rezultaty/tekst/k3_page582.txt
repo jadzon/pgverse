@@ -1,0 +1,56 @@
+<image/podmaskwzory/k3_page582_formula1.png>
+
+układów elektronicznych
+
+iry/k3_page582_figure3.png
+
+stawiono obszerny opis języka symulacyjnego SPICE, który jest
+owych narzędzi komputerowej analizy obwodów elektronicznych,
+wych, jak i cyfrowych. Po wprowadzeniu, zawierającym teoretycz-
+rytmów stosowanych w języku SPICE, zaprezentowano opis pod-
+jów analiz dostępnych w programie i przykłady ich użycia.
+sowana do studentów wydziałów elektronicznych i elektrycznych
+technicznych oraz do wszystkich elektroników zainteresowanych
+lizą układów elektronicznych.
+
+obrowolski
+
+str. (twarda oprawa)
+
+<image/wzory/k3_page582_formula2.png>
+
+iry/k3_page582_figure1.png
+
+iepowtarzalna jak jej autor. Jest to jedyny w swoim rodzaju prze-
+ch projektowania układów analogowych, napisany zgodnie z du-
+nego praktyka, którego podstawowym celem jest zrozumieć dla-
+iła tak jak powinno.
+
+d:
+
+eresuje nas usuwanie usterek? Dlatego, że nawet najlepsi inżynie-
+iię wykonywania projektów, tak trudnych i stanowiących tak duże
+icowane układy często nie działają tak jak miały działać — a przy-
+zuł...)”
+
+Dease
+itr. (rwarda oprawa)
+
+Wzmacniacze operacyjne
+
+iry/k3_page582_figure2.png
+
+»endium wiedzy na temat wzmacniaczy operacyjnych, w którym
+położono na zagadnienia praktyczne, przede wszystkim: projek-
+
+itywnych i generatorów przebiegów funkcyjnych, źródła szumów
+ygowych, omówienie znaczenia parametrów charakteryzujących
+racyjne, a także dobór wartości elementów dla wybranych apli-
+»orcja rozważań teoretycznych jest jedynie uzupełnieniem wiado-
+
+:h, które powinien posiadać każdy elektronik zajmujący się ukła-
+i. Z tego powodu książka powinna być „niezbędnikiem” zarówno
+i pracowniach konstrukcyjnych, jak i w domowych laboratoriach
+
+a
+- (twarda oprawa)

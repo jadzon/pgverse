@@ -1,0 +1,52 @@
+4.6. Przykładowa lista rozkazów 79
+ała
+
+następny, tj. znajdujący się w programie po rozkazie warunkowym. Rozkazy skoków
+i wywołań zawierają adres skoku, tj. adres komórki pamięci, w której znajduje się rozkaz
+wykonywany bezpośrednio po wykonaniu rozkazu skoku.
+
+4.6.4. ROZKAZY STERUJĄCE PRACĄ PROCESORA
+
+HALT — stop — zatrzymanie wykonywania programu.
+NOP — no operation — rozkaz pusty.
+
+Rozkaz HALT zatrzymuje pracę procesora, aż do momentu ponownego uruchomienia
+programu przez zdarzenie zewnętrzne (ponowną inicjalizację procesora, czyli po po-
+jawieniu się sygnału RESET lub po zgłoszeniu przerwania, tj. pojawieniu się sygnału
+INT), a rozkaz NOP jest rozkazem pustym — „nic nie rób”.
+
+Przedstawiona lista rozkazów stanowi uproszczony przykład zbioru rozkazów proce-
+sora. Z tego opisu wynika jednak kilka ważnych problemów, które będą dalej przed-
+stawione. Pierwszym z nich jest problem liczby adresów, które powinny zostać
+wyspecyfikowane w rozkazie. W zasadzie każdy rozkaz powinien podawać adresy 3 ope-
+randów (dwa adresy argumentów danego rozkazu i jeden adres wyniku operacji) oraz
+adres następnego rozkazu. Komputery, których rozkazy zawierają te wszystkie adresy
+nazywane są komputerami czteroadresowymi. Dla wyspecyfikowania podanych 4 adresów
+potrzebne są bardzo długie słowa rozkazowe. Celem zmniejszenia długości rozkazu stosuje
+się rozwiązania pozwalające wyeliminować pewną liczbę adresów. Jednym z nich było
+wprowadzenie licznika rozkazów, co pozwoliło na eliminację adresu następnego rozkazu
+i konstrukcję komputerów trzyadresowych. Celem dalszego ograniczenia liczby adresów
+można przyjąć założenie, że dla wszystkich operacji wynik będzie przesyłany w miejsce
+jednego z argumentów. Wówczas można zmniejszyć liczbę adresów do dwóch. W kom-
+puterach o bardzo krótkim słowie rozkazowym (np. mikrokomputery 8-bitowe) stosuje się
+dalsze ograniczenie liczby adresów przez rozwiązanie polegające na tym, że jeden z argu-
+mentów wszystkich rozkazów i wynik jest zawsze w tym samym miejscu (na przykład
+w rejestrze akumulatora). Takie komputery nazywane są jednoadresowymi.
+
+Istnieje także technika obliczeń umożliwiająca wykorzystanie komputerów bezadreso-
+wych. Ideę tej techniki podał Łukasiewicz i znana jest jako notacja polska (ang. Polish
+nolalion). Notacja zapisu wyrażeń arytmetycznych polega na tym, że każda operacja
+arytmetyczna jest poprzedzona iei arenmentami Na nrzvkład wvrażania:
+
+" wzoru/k2 nana8RQ formiila1 nna
+przedst.
+
+<image/wzory/k3_page89_formula2.png>
+Co OZNavza, 4© vpciaćja vuejmowania aoryczy argumentow a 1 b, operacja dzielenia
+dotyczy wyniku poprzedniego działania i c, operacja mnożenia argumentów d i e, a
+argumentami dodawania są wyniki poprzednich operacji. Algorytm obliczeń działający
+według takiego zapisu jest przedstawiony następująco:
+1) Sprawdza się kolejność elementów zapisu od znaku równości w prawą stronę.
+2) Jeżeli napotkany element jest argumentem, to jest on zapisywany na stos. Jeżeli
+napotkany element jest znakiem działania, to ze stosu są odczytywane dwa
+argumenty i wykonywane jest to działanie.

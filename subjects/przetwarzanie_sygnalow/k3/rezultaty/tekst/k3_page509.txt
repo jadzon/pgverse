@@ -1,0 +1,53 @@
+31. Zespołone przekształcenie Fouriera
+
+Bardzo ważna jest symetria zespolonego przekształcenia Fouriera. Jak pokazano na rys. 31.1.
+rzeczywisty sygnał w dziedzinie czasu odpowiada widmu częstotliwościowemu z parzystą CZĘ-
+ścią rzeczywistą i nieparzystą częścią urojoną. Inaczej mówiąc, sygnały przy częstotliwościach
+ujemnych i dodatnich mają takie same znaki w części rzeczywistej (jak punkty 1 i 2 na rys. 31.1).
+a przeciwne w części urojonej (punkty 3 i 4).
+
+To prowadzi do innego tematu — do kwestii części urojonej w dziedzinie czasu. Dotychczas za-
+kładaliśmy, że sygnał w dziedzinie czasu jest całkowicie rzeczywisty, czyli że część urojona jest
+zerowa. Nie jest to jednak wymagane w zespolonym przekształceniu Fouriera. Jaki jest więc sens
+fizyczny urojonego sygnału w dziedzinie czasu? Zwykle nie ma to żadnego sensu fizycznego. Jest
+to po prostu rzecz dopuszczalna w matematyce liczb zespolonych, bez żadnego odniesienia do
+świata, w którym żyjemy. Są jednak takie zastosowania, gdzie ten fakt może być wykorzystany do
+celów matematycznych.
+
+Taki przykład podano w rozdziale 12. Część urojona w dziedzinie czasu daje widmo często-
+tliwościowe o nieparzystej części rzeczywistej i parzystej urojonej. Jest to przeciwieństwo
+widma dawanego przez część rzeczywistą sygnału w dziedzinie czasu (rys. 31.1). Podczas
+gdy sygnał w dziedzinie czasu zawiera zarówno część rzeczywistą, jak i urojoną, to widmo
+częstotliwościowe jest sumą tych dwóch widm, które zostały oddzielnie obliczone. W roz-
+dziale 12 opisano, jak zastosować tę zasadę, aby algorytm FFT obliczał od razu widma czę-
+stotliwościowe dwóch sygnałów rzeczywistych. Jeden sygnał jest umieszczony w części rze-
+czywistej dziedziny czasu, drugi zaś — w części urojonej. Po obliczeniu FFT widma dwóch
+sygnałów są rozdzielane metodą rozkładu parzysto-nieparzystego.
+
+Rodzina przekształceń Fouriera
+Podobnie jak DFT, również inne przekształcenia z rodziny fourierowskiej mają wersje rze-
+czywiste i zespolone. Mamy więc cały „ogród zoologiczny” wzorów, których zestawienie
+podano w tablicy 31.1. Zamiast analizować poszczególne równania, spróbujcie je zrozumieć
+jako dobrze zorganizowaną, symetryczną grupę. Niżej podane komentarze opisują organi-
+zację grupy przekształceń Fouriera. Komentarze są szczegółowe, powtarzające się i nudne.
+Niemniej są one podstawą dla zrozumienia teoretycznego DSP. Przestudiujcie je dokładnie.
+1. Cztery przekształcenia Fouriera
+Sygnał w dziedzinie czasu może być ciągły albo dyskretny; może też być okresowy lub nie-
+okresowy. Z tego wynikają cztery typy przekształceń Fouriera: dyskretne przekształcenie
+Fouriera (sygnał dyskretny, okresowy), dyskretne w czasie przekształcenie Fouriera (sy-
+gnał dyskretny, nieokresowy), szereg Fouriera (sygnał ciągły, okresowy) i przekształcenie
+Fouriera (sygnał ciągły, nieokresowy).
+Jeśli sygnał jest dyskretny w jednej dziedzinie, to będzie okresowy w drugiej. Podobnie, jeśli
+sygnał jest ciągły w jednej dziedzinie, to będzie nieokresowy w drugiej. Sygnały ciągłe są
+oznaczane nawiasami okrągłymi ( ), dyskretne — kwadratowymi [ ]. Nie ma żadnego zapisu
+odróżniającego sygnał okresowy od nieokresowego.
+
+2. Przekształcenia rzeczywiste i zespolone
+Każde z wymienionych czterech przekształceń Fouriera ma swoją wersję zespoloną i rzeczy:
+wistą. W zespolonych wersjach przekształcenia mamy sygnał zespolony tak w dziedzinie cza-
+su, jak i częstotliwości. W wersjach rzeczywistych mamy zaś sygnał rzeczywisty w dziedzinie
+czasu i dwa sygnały rzeczywiste w dziedzinie częstotliwości. W przypadku przekształceń ze-
+spolonych stosuje się zarówno częstotliwości dodatnie, jak i ujemne, podczas gdy w prze-
+kształceniach rzeczywistych są stosowane tylko częstotliwości dodatnie. Przekształcenia ze-
+społone są zwykle zapisywane w postaci wykładniczej. Można jednak skorzystać z zależności
+Eulera, aby — w razie potrzeby — przetworzyć je do postaci kosinusoidalnej lub sinusoidalnej.

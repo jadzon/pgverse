@@ -1,0 +1,33 @@
+- Dałszy wzrost szybkości 235
+
+ 
+
+ściowe składane z widm o różnych rodzajach symetrii może być doskonale rozdzielone na
+te dwa sygnały składowe. Uzyskuje się to przez rozkład parzysto-nieparzysty opisany w roz-
+dziale 5. Inaczej mówiąc, można wyznaczyć dwa rzeczywiste DFT przez pojedyncze FFT.
+Jeden z tych sygnałów jest usytuowany w części rzeczywistej w dziedzinie czasu, a drugi
+— w Części urojonej. Po obliczeniu zespolonego DFT (oczywiście przez FFT) widma są roz-
+dzielane przy użyciu rozkładu parzysto-nieparzystego. Ta metoda redukuje czas wykonania
+o ok. 40%, gdy dwa lub więcej sygnałów trzeba poddać przekształceniu FFT. To skrócenie
+czasu nie jest dokładnie o czynnik 2 ze względu na czas potrzebny do obliczeń związanych
+z rozkładem parzysto-nieparzystym. Jest to metoda stosunkowa prosta ze znacznie mniejszą
+liczbą pułapek czyhających na programistę niż przy pisaniu programu FFT od podstaw.
+Dalszym krokiem jest modyfikacja algorytmu w taki sposób, aby pojedyncze DFT można
+było obliczać szybciej. To, co się robi w tym celu, wygląda niezbyt ładnie. Sygnał wejściowy
+jest rozdzielany na połowy przy użyciu rozkładu z przeplotem. Punkty parzyste (jest ich N/2)
+są umieszczone w części rzeczywistej sygnału w dziedzinie czasu, podczas gdy N/2 punk-
+tów nieparzystych wchodzi do części urojonej. Następnie jest obliczane N/2-punktowe FFT,
+co wymaga tylko połowy czasu potrzebnego do obliczenia FFT N-punktowego. Uzyskany
+w ten sposób przebieg w dziedzinie częstotliwości jest potem rozdzielany metodą rozkładu
+parzysto-nieparzystego, co w rezultacie daje widma częstotliwościowe dwóch przeplatanych
+sygnałów w dziedzinie czasu. Te dwa widma częstotliwościowe są następnie łączone ze sobą
+w pojedyncze widmo, tak właśnie jak w ostatnim etapie syntezy FFT.
+
+Dziedzina częstotliwości
+
+<image/figury/k3_page215_figure1.png>
+
+  
+
+ORO
+kM

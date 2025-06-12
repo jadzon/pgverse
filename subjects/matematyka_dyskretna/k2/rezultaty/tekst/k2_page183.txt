@@ -1,0 +1,36 @@
+1.1. Izomorfizm grafów 5
+
+1.1 Izomorfizm grafów
+
+Izomorfizmem grafu G = (VG,EG) na graf H = (Vy,Ey) nazywamy funkcję wza-
+jemnie jednoznaczną h : Va + Vy spełniającą warunek: fu,v) € EG wtedy i tylko
+wtedy, gdy £h(u), h(v)) € Ej. Jeżeli taka funkcja istnieje, to mówimy, że grafy G i H
+są izomorficzne. Łatwo sprawdzić, że izomorfizm grafów jest relacją równoważności.
+
+Przykład 1.6 Rysunki 1.3a i 1.3b przedstawiają ten sam graf Gy = (V4, E4) ze zbiorem
+wierzchołków V; = fa,b,c,d) oraz zbiorem krawędzi
+
+E, = (fa,b), (a,c), (a,d), (b,c))
+
+GrafG; = (V;, Ez) zrysunku 1.4a jest izomorficzny z grafem Gy. Izomorfizmem zG;
+na Gy jest funkcja h : V, = V4 określona następująco: h(a) = c, h(b) = b, h(c) = a,
+
+h(d) = d.
+Graf Gę z rysunku 1.4b nie jest izomorficzny z grafami Gy i G:. Graf G, zawiera
+wierzchołek d stopnia jeden, a w grafie G„ takiego wierzchołka nie ma.
+
+Rvsunek 1.3: Rvsunki a) i bl przedstawiaja ten sam araf (7.
+
+<image/figury/k2_page183_figure1.png>
+
+Rysunek 1.4: a) Graf Gz izomorficzny z G4. b) Graf Gę nieizomorficzny z Gy
+
+<image/figury/k2_page183_figure2.png>
+
+Jeżeli mamy izomorfizm grafu G = (VG. EG) na graf H = (Vy, Ep), to możemy
+powiedzieć, że H jest takim samym grafem co G tylko ze zmienionymi nazwami wierz-
+chołków.
+
+Twierdzenie 1.7 Jeżeli grafy G = (VG,EG) i H = (Vy, Ey) są izomorficzne, to:
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

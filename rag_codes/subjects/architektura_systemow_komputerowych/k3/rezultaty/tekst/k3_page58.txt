@@ -1,0 +1,33 @@
+48 3. Podstawy techniki cyfrowej
+
+jury/k3_page58_figure1.png able1.png
+
+Po wyzerowaniu rejestru RH (w zapisie U2 zero ma tylko jedną postać), zapisaniu do
+rejestru RL mnożnej, a do rejestru M mnożnika, w pierwszym kroku przedstawianego
+algorytmu do rejestru RH dodawane jest zero, gdyż najmniej znacząca pozycja rejestru RL
+wynosi 0. W następnych krokach jest dodawany mnożnik. Po 4 krokach w rejestrze R
+znajduje się wartość 1101 0110, a więc nie jest to prawidłowy wynik mnożenia.
+
+Algorytm mnożenia ma różną postać w zależności od znaku mnożnej (liczby w re-
+jestrze R). Jeśli mnożna jest dodatnia, to algorytm nie różni się od algorytmu mnożenia dla
+liczb w kodzie NKB (zaleca się Czytelnikowi sprawdzenie). Jeśli natomiast mnożna jest
+ujemna, to wynik mnożenia, otrzymany po właściwej dla danej długości słowa liczbie
+kroków, należy skorygować w dodatkowym kroku przez dodanie ujemnego mnożnika, jak
+to zrobiono na rysunku 3.44a. Korekcji rejestru R wymaga jedynie jego bardziej znacząca
+część RH. Skąd bierze się konieczność korekcji? Można zauważyć, że (n+1)-bitowa
+
+mnożna A w zanicia 117 moża hvó nrzadotawiana iabn:
+
+<image/wzory/k3_page58_formula1.png>
+
+Stąd iloczy:- ----
+
+<image/wzory/k3_page58_formula2.png>
+
+Jeśli a, jes: IUWIIG V |UIIUŁIIA JEDŁ UUUGLUIIGJ, LU WAIILUDU IIUCZYJIU UUPUWIAUA LYIKU pierw-
+szemu składnikowi tej sumy. Pierwszy składnik sumy można zrealizować stosując zwykły
+algorytm mnożenia w kodzie NKB. Jeśli natomiast a, jest równe | (mnożna ujemna), to
+algorytm dla kodu NKB należy uzupełnić krokiem, w którym odjęto drugi składnik tej
+sumy. W kroku tym dodaje się zatem wartość mnożnika (przesuniętego do najbardziej
+znaczącej pozycji rejestru R, co oznacza pomnożenie przez 2”) ze zmienionym znakiem.
+Ponieważ w naszym przykładzie a, = 1, to korekcja polega na dodaniu ujemnego mnożnika

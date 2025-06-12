@@ -1,0 +1,56 @@
+148
+
+wzorem (??) ma wartość
+
+<image/wzory/k2_page143_formula1.png>
+
+Ciekawa sytuacja powstaje, gdy w pamięci zapisane są wektory ortogonalne st”,
+Na podstawie (??) i (??) możemy wyznaczyć wektor pobudzeń łącznych, gdy stanem
+. . . ,
+sieci jest wektor st” ):
+
+<image/wzory/k2_page143_formula2.png>
+
+Przyjmując, że wektor s” jest jednym z wektorów wzorcowych, oraz na podstawie
+warunku ortogonalności, który dla wektorów o składowych +1 przybiera postać
+s(ts0) = 0 dla i ź j i s(””!sU) = n dla i = j, otrzymujemy natychmiast
+
+<image/wzory/k2_page143_formula3.png>
+
+Przyjmując, że spełniona jest nierówność n > p, widać, że stan st”) jest stanem
+stabilnym.
+
+Pojemność pamięci rekurencyjnej
+
+Jednym z najważniejszych parametrów pamięci autoasocjacyjnej jest jej pojemność,
+czyli liczba obrazów, które może efektywnie zapamiętać. Przeprowadzimy analizę po-
+jemności pamięci przy założeniu, że wszystkie składowe wektorów wzorcowych sy),
+j mz | Zna ny R, mz l,2,11«; p. są niezależnymi dyskretnymi zmiennymi losowymi
+przyjmującymi wartości £1 z prawdopodobieństwem P = 1/2.
+
+Podstawiając do wzoru (??) wzór (??) otrzymujemy
+
+(6.42)
+
+<image/wzory/k2_page143_formula4.png>
+
+W wyrażeniu (??) na wartość pobudzenia łącznego i-tego neuronu, nie uwzględniając
+zerowych wag na głównej przekątnej, kładąc st”) = st”) oraz wyłączając przed sumy
+składnik m = m', otrzymujemy
+
+<image/wzory/k2_page143_formula5.png>
+
+Wektor stanu pamięci v jest stabilny, gdy sgn(net,) = sgn (Z; 1 woj) =y,i=
+
+( +
+
+JyŻpasn; n. Stąd na podstawie (??) widać, że składowa s!” jest stabilna, gdy znak
+z s « ś) > : 4
+
+sumy w (??) jest taki sam jak znak sj” lub gdy znaki te są przeciwne, ale wartość
+
+sumy jest mniejsza od n.
+
+Wprowadźmy parametr
+
+<image/wzory/k2_page143_formula6.png>

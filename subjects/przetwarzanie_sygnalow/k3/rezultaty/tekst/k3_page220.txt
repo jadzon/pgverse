@@ -1,0 +1,57 @@
+Potem wartość sygnału wyjściowego jest wyznaczana przez całkowanie tego iloczynu w gra-
+„nicach od minus do plus nieskończoności, zgodnie z rys. 13.1.
+
+Jeśli macie trudności ze zrozumieniem tych rozważań, powróćcie do rozdziału 6 i przypomnij-
+cie sobie te same koncepcje zastosowane do sygnałów dyskretnych. Na rys. 13.3 podano inny
+sposób opisu maszyny splotowej z rys. 6.8. Jedyna różnica jest taka, że użyto całek zamiast
+sumowań. Nie ma tu więc niczego nowego, a tylko rozszerzenie już znanych informacji.
+
+Na przykładzie pokażemy sposób zastosowania splotu ciągłego w problemach praktycznych
+oraz zastanowimy się, jakie operacje matematyczne są wtedy niezbędne. Na rys. 13.4 przed-
+stawiono prosty system liniowy z sygnałami ciągłymi — elektroniczny filtr dolnoprzepustowy
+złożony z rezystora i kondensatora. Impuls wchodzący do tego systemu daje na wyjściu szyb-
+ki skok sygnału do pewnej wartości i następnie wykładnicze opadanie w kierunku zera. Tak
+więc odpowiedź impulsowa tego prostego układu elektronicznego jest jednostronną funkcją
+eksponencjalną. Wyrażając matematycznie odpowiedź impulsową tego systemu, trzeba ją po-
+dzielić na dwa odcinki wyrażone wzorami:
+
+<image/wzory/k3_page220_formula1.png>
+
+gdzie « = 1/RC (R w omach, C w faradach, : w sekundach). Tak jak w przypadku sygnałów
+dyskretnych, ciągła odpowiedź impulsowa zawiera pełną informację o systemie, czyli o jego
+reakcji na wszystkie możliwe sygnały. Kontynuując ten przykład, załóżmy, że na wejściu
+układu jest tym razem impuls prostokątny (rys. 13.5) wyrażony przez:
+
+<image/wzory/k3_page220_formula2.png>
+Ponieważ zarówno sygnał wejściowy, jak i odpowiedź impulsowa są dobrze znane w postaci
+wyrażeń matematycznych, więc sygnał wyjściowy y(r) można obliczyć jako całkę splotową
+wg wzoru 13.1. Sprawę komplikuje fakt, że oba sygnały są zdefiniowane raczej w pewnych
+obszarach, a nie jako jedno wyrażenie matematyczne. Często tak bywa w przetwarzaniu sy-
+gnałów ciągłych. Zwykle robi się wykres pokazujący, jak dwa sygnały przesuwają się wobec
+siebie dla różnych wartości t. W omawianym przykładzie dwa sygnały wcale nie zachodzą
+
+<image/wzory/k3_page220_formula3.png>
+
+p. 13.3. Splot widziany od strony wyjścia. Na każdą wartość w sygnałe wyjściowym ma wpływ wiele punktów z sy-
+
+<image/figury/k3_page220_figure1.png>
+
+ 
+
+z
+i
+r
+dj
+Ą
+
+ELE PL
+
+PMS CZA
+
+aia0 mj RR poza
+Z O ZTEÓEZOZOOZ TPR TERIER
+
+PRZ
+DEEIDPDEITIRINZ. 1?
+
+tau

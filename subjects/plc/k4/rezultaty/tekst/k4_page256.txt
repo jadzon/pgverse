@@ -1,0 +1,37 @@
+W momencie gdy warunki przestają być spełnione następuje zatrzymanie odli-
+czania czasu. Gdy warunki ponownie zostają spełnione czasomierz rozpoczyna
+odliczanie od wartości, na której poprzednio zostało ono zatrzymane. Zerowania
+zapamiętanej wartości zliczonego czasu dokonuje się instrukcją RESet.
+
+Liczniki (Counters), które umożliwiają zliczanie liczby zmian stanu w ich ob-
+wodach wejściowych reprezentowane są przez następujące instrukcje :
+
+* CTU (Counter Up) licznik sumujący - liczący w górę. Zliczana jest każ-
+da zmiana 0 — 1 warunków obwodu logicznego.
+
+e CTU (Counter Down) licznik odejmujący - liczący w dół. Zliczana jest
+każda zmiana 0 1 warunków obwodu logicznego
+
+Do układów liczników załiczany jest również układ szybkiego licznika HSC,
+jednak jest on dostępny tylko w sterownikach wyposażonych w specjalne wejście
+zliczające.
+Do zerowania czasomierzy i liczników używa się instrukcji RES (RESer).
+W zależności od elementu pliku, z którym jest skojarzona, powoduje ona nastę-
+pujące działanie:
+e  Dlaelementów pliku czasomierzy 7 ustawia wartości ACC na 0
+
+oraz ustawia na 0 bity DN, 77 oraz EN.
+e Dla elementów pliku liczników C ustawia wartości ACC na 0
+
+oraz ustawia na © bity QV, UN, DN, CU, CD.
+e Dla elementów pliku sterowania R ustawia wartości POS na 0
+
+oraz ustawia na 0 bity EN, EU, DN, EM, ER, UL.
+
+<image/figury/k4_page256_figure1.png>
+
+Wyd. 4.14 Przykład użycia licznika CTU
+
+ 
+
+2wzory/k4_paqe256_formula1.pna

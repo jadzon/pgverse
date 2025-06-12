@@ -1,0 +1,10 @@
+<image/tabele/k4_page413_table3.png>
+
+<image/tabele/k4_page413_table1.png>
+
+Tekst programu w języku IL realizującego sterowanie napędem rewersyjnym
+przedstawiono na Wyd. 8.53 - Wyd. 3.59.
+
+<image/tabele/k4_page413_table2.png>
+
+8.3. Sterowanie napędem dwukierunkowym 413

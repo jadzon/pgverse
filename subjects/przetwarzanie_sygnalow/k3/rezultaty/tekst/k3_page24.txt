@@ -1,0 +1,57 @@
+34 2. Statystyka, rachunek prawdopodobieństwa i szumy
+
+ 
+
+Trudność w obliczaniu histogramu pojawia się, gdy liczba wartości, jaką może przyjmo-
+wać każda próbka, jest znacznie większa niż liczba próbek w sygnale. Dotyczy to zawsze
+sygnałów wyrażanych w zapisie zmiennoprzecinkowym, w którym każda próbka jest zapi-
+sywana jako wartość ułamkowa. W zapisie w liczbach całkowitych wartość próbki może
+być na przykład 3 lub 4, a w zapisie zmiennoprzecinkowym są miliony możliwych warto-
+ści między 3 i 4. Metoda obliczania histogramów opisana poprzednio wymaga obliczania
+liczby próbek mających każdą z możliwych wartości poziomów kwantyzacji. Jest to nie do
+zrealizowania w przypadku danych zmiennoprzecinkowych, gdyż istnieją miliardy możli-
+wych poziomów, które trzeba uwzględnić. Co gorsza, prawie wszystkie z tych możliwych
+poziomów nie mają odpowiadających im próbek. Wyobraźmy sobie, na przykład, sygnał
+złożony z 10 000 próbek, z których każda ma miliard możliwych wartości. Konwencjonalny
+histogram zawierałby wtedy miliard punktów, z których wszystkie — oprócz 10 000 — mia-
+łyby wartość zero.
+
+Rozwiązaniem tych trudności jest metoda polegająca na utworzeniu histogramu o dowolnie
+dobranej długości i punkcie początkowym, składającego się z przedziałów o określonych
+szerokościach (metoda zwana binning). Wybiera się taką długość histogramu, aby była równa
+jakiejś dogodnej liczbie, np. 1000 punktów; są to tzw. przedziały (bins). Wartość w każdym
+przedziale wyraża całkowitą liczbę próbek w sygnale, które mają wartości zawarte w pew-
+nym zakresie. Weźmy na przykład sygnał zmiennoprzecinkowy o wartościach pomiędzy 0,0
+i 10,0 i histogram o 1000 przedziałów. Przedział © w histogramie wyraża liczbę próbek sy-
+
+ 
+
+|
+
+4 ————
+
+ 
+
+s)
+|
+
+p————
+
+[+ paiów ra |
+
+ 
+
+pocza=zj
+
+       
+
+—— a
+
+<image/figury/k3_page24_figure2.png>
+
+<image/figury/k3_page24_figure1.png>
+
+Rys. 2.7. Przyktady histogramów przedziatowych. Jak pokazano na rys. a), sygnaf zastosowany w tym przykładzie ma
+długość 300 próbek, które są liczbami zmiennoprzecinkowymi zawartymi w przedziale od 1 do 3. Na rys. b), c) przed-
+
+czość na osi pionowej. Zastosowanie większej liczby przedziałów powoduje poprawę rozdzielczości w obu kierunkach

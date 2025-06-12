@@ -1,0 +1,38 @@
+22. Przetwarzanie sygnałów fonicznych
+
+<image/wzory/k3_page328_formula1.png>
+
+wymaga użycia logarytmowania zespolonego, operacji bardziej złożonej niż logarytmowanie
+stosowane na co dzień w nauce i technice. Gdy filtrowanie liniowe jest ograniczone do filtru
+zerofazowego, to logarytm zespolony jest wyznaczany przez zwykły logarytm wartości bez-
+względnej sygnału. Po przepuszczeniu sygnału przez filtr zerofazowy znak sygnału oryginal-
+nego jest na nowo wprowadzany do sygnału odfiltrowanego.
+
+Innym zagadnieniem jest aliasing zachodzący podczas operacji logarytmowania. Wyobraźmy
+sobie na przykład digitalizację ciągłej fali sinusoidalnej. Zgodnie z twierdzeniem o próbko-
+waniu wystarczą dwie lub więcej próbek na okres sinusoidy. Rozpatrzmy teraz digitalizację
+logarytmu tej ciągłej fali sinusoidalnej. Ostre narożniki tego przebiegu wymagają o wiele
+więcej próbek na okres, aby przebieg właściwie zdyskretyzować w czasie, tzn. zapobiec
+aliasingowi. Wymagana częstotliwość próbkowania może być nawet 100 razy większa po
+logarytmowaniu niż przed nim. Co więcej, jest bez znaczenia, czy wykonuje się logaryt-
+mowanie sygnału ciągłego, czy jego cyfrowej reprezentacji - wynik jest taki sam. Aliasing
+następuje, gdy częstotliwość próbkowania nie jest wystarczająco duża, aby można było
+„uchwycić” ostre narożniki przebiegu spowodowane nieliniowością. W rezultacie sygnały
+foniczne mogą wymagać próbkowania z częstotliwością 100 kHz lub większą, zamiast stan-
+dardowej o wartości tylko 8 kHz.
+
+Nawet jeśli uwzględni się te wszystkie szczegóły, to nie ma gwarancji, że zlinearyzowane sygna-
+ły będą mogły być rozdzielone filtrem liniowym. Przyczyną jest możliwość nakładania się widm
+sygnałów zlinearyzowanych, nawet wtedy, gdy widma sygnałów oryginalnych się nie nakładają.
+Jako przykład weźmy dodawanie dwóch fal sinusoidałnych o częstotliwościach 1 kHz i 2 kHz.
+Te sygnały nie nakładają się na siebie w dziedzinie częstotliwości, więc mogą być całkowicie
+rozdzielone przez filtrację liniową. Wyobraźmy sobie teraz, że oba te przebiegi sinusoidalne
+zostały przemnożone przez siebie. Stosując przekształcenie homomorficzne, wyznacza się loga-
+rytm tego połączonego sygnału, uzyskując jako rezultat sumę logarytmów obu sinusoid. Problem
+leży w tym, że logarytm fali sinusoidalnej zawiera dużo harmonicznych. Ponieważ harmoniczne
+obu sygnałów nakładają się na siebie, więc całkowite rozdzielenie nie jest możliwe.
+
+Mimo tych przeszkód, proces homomorficzny zawiera ważne pouczenie: sygnały powinny
+być przetwarzane w sposób zgodny ze sposobem tworzenia tych sygnałów. Zatem pierwszym
+krokiem w rozwiązywaniu zadania z dziedziny DSP powinno być zrozumienie, w jaki sposób
+informacja jest reprezentowana w sygnałach, które mają być przetwarzane,

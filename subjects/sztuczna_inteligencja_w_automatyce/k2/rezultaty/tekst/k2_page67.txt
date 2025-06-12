@@ -1,0 +1,6 @@
+4.5. Logika opisowa
+
+Trudności w prowadzeniu wnioskowania przy reprezentacji wiedzy metodami sieci
+semantycznych i ram doprowadziły do powstania metody nazywanej logiką opisową.
+Logika opisowa zachowuje wygodę tworzenia opisu właściwą ramom przy jednocze-
+śnie dużej efektywności wnioskowania.

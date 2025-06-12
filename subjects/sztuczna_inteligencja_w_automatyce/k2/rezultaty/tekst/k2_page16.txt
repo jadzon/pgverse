@@ -1,0 +1,3 @@
+<image/figury/k2_page16_figure1.png>
+
+Rys. 3.4: Układanka 3 x 3. Drzewo stanów uzyskane metodą szukania w głąb (z książki [?])

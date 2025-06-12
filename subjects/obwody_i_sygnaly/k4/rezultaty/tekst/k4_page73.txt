@@ -1,0 +1,36 @@
+|
+
+1.3. Elementy nieliniowe 73
+
+B. Zastosowania. Opór statyczny (przewodność statyczna) jest paramet-
+rem bardzo dogodnym do charakteryzowania oporu nieliniowego jako elemen-
+tu obwodu prądu stałego. Jeżeli bowiem założymy, że na oporze nieliniowym
+występują stały prąd I oraz stałe napięcie U (rys. 1.3-30a,b), to element ten
+zachowuje się tak jak opór liniowy o wartości R„, odpowiadającej punktowi
+pracy A(I, U) (rys. 1.3-30c). Jeżeli jednak zmieniłby się prąd I lub napięcie U,
+zmieni się także wartość R „.
+
+<image/figury/k4_page73_figure1.png>
+
+ory/k4_page73_formula1.png (1.3-43)
+
+gdzie I, U-składowe stałe, Ai, Au—składowezmienne małe w porównaniu ze
+składowymi I, U. Przy zmianach wartości i, u, określonych związkami (1.3-43),
+punkt pracy na charakterystyce będzie znajdować się w małym otoczeniu punktu
+A(I, U). Możemy zatem w przybliżeniu zastąpić łuk charakterystyki
+odcinkiem prostej stycznej do charakterystyki w punkcie A, tzn. przyjąć
+zależność liniową (rys. 1.3-31a):
+
+zory/k4_page73_formula2.png (1.3-44)
+
+gdzie Ry, jest oporem dynamicznym określonym w punkcie 4.
+Podstawiając do tej zależności związki (1.3-43) otrzymujemy:
+
+Dla punktu A mamy Ai =0, Au = O, a więc:
+
+an
+NZ
+
+ory/k4_page73_formula4.png
+
+i, w konsekwencji:

@@ -1,0 +1,54 @@
+22. Przetwarzanie sygnałów fonicznych
+
+Przetwarzanie sygnałów fonicznych, czyli sygnałów muzyki i mowy. obejmuje różne dziedzi-
+ny; wszystkie one są związane Z prezentacją dźwięku słuchaczom. Trzy obszary zastosowań
+są szczególnie ważne: 1) odtwarzanie muzyki z bardzo wysoką wiernością, np. z płyt kom=
+paktowych audio, 2) telekomunikacja głosowa oraz 3) synteza mowy, a więc komputero
+generacja i rozpoznawanie ludzkiego głosu. Chociaż te aplikacje mają różne cele i występują
+w nich odmienne problemy, to we wszystkich przypadkach wytwarzane sygnały są odbiera-
+ne przez ludzkie ucho. Cyfrowe przetwarzanie sygnałów wprowadziło rewolucyjne zmiany
+w tych i innych dziedzinach cyfrowej techniki fonicznej.
+
+Słuch ludzki
+enie jego działania utrud-
+
+Ludzkie ucho jest organem wyjątkowo skomplikowanym. Zrozumi
+nia dodatkowo fakt, że informacje z obu uszu łączą się ze sobą w bardzo zawikłanej sieci
+neuronowej, jaką jest ludzki mózg. Trzeba podkreślić, że zamieszczone poniżej omówienie
+jest bardzo skrótowe. W ludzkim słyszeniu jest bowiem wiele zjawisk bardzo złożonych i nie
+w pełni jeszcze poznanych.
+Na rys. 22.1 przedstawiono główne elementy i procesy tworzące ucho człowieka. Ucho ze
+wnętrzne składa się z dwóch części — widocznej małżowiny usznej utworzonej z chrząsik
+okrytej skórą oraz z przewodu słuchowego © średnicy ok. 0,5 cm wchodzącego na ok. 3 cn
+w głąb czaszki. Te struktury kierują zewnętrzny dźwięk do czułych organów — ucha środko*
+wego i wewnętrznego, ukrytych w głębi czaszki. Na końcu przewodu słuchowego znajduje
+się napięta błona bębenkowa. Fale dźwiękowe, uderzając w błonę bębenkową, wywołuj,
+jej drgania. Ucho środowe zawiera kosteczki słuchowe przenoszące te drgania do ślimaka
+(w uchu wewnętrznym), gdzie są przetwarzane na impulsy neuronowe. Ślimak jest wypełnio-
+ną płynem rurką o średnicy ok. 2 mm i długości 3 cm. Chociaż na rys. 22.1 pokazano ślimak
+jako prosty, w rzeczywistości jest spiralny i wygląda jak mała muszla ślimaka.
+Gdy fala dźwiękowa próbuje przejść z powietrza do płynu, tylko mała część dźwięku prze:
+chodzi przez tę granicę, reszta energii dźwięku ulega odbiciu. Przyczyną jest to, że powietrze.
+ma małą impedancję mechaniczną (małe ciśnienie akustyczne i duża prędkość ruchu cząs
+czek spowodowana małą gęstością i dużą ściśliwością), ciecz zaś ma dużą impedancję
+chaniczną. Wyrażając się mniej technicznie, można powiedzieć, że machanie ręką w wodzie
+wymaga więcej wysiłku niż w powietrzu. Ta różnica impedancji mechanicznych powoduj
+że większość dźwięku jest odbijana od granicy powietrze/ciecz.
+Ucho środkowe jest elementem dopasowującym impedancje, zwiększającym ułamek energ.
+dźwięku przechodzącej do płynu w uchu wewnętrznym. Ryby, na przykład, nie mają ani
+błony bębenkowej, ani ucha środkowego, gdyż nie mają potrzeby słuchania w powietrzu
+Dopasowanie impedancji wynika w głównej mierze z różnie powierzchni błony bębenka
+wej (odbierającej dźwięk z powietrza) i okienka owalnego (przekazującego dźwięk do p
+w Ślimaku, patrz rys. 22.1). Błona bębenkowa ma powierzchnię ok. 60 mm?, a okienko o
+ne — ok. 4 mm?. Ciśnienie jest stosunkiem siły do powierzchni, dlatego ta różnica powierzch
+ni powoduje ok. 15-krotne zwiększenie ciśnienia fali dźwiękowej.
+W ślimaku znajduje się błona podstawna, stanowiąca podstawę dla ok. 12 000 receptorów
+słuchowych tworzących nerw ślimakowy. Błona podstawna jest najsztywniejsza w pobliżu
+okienka owalnego i staje się coraz bardziej elastyczna w kierunku końca. Dzięki temu błosa
+działa jak analizator widma częstotliwościowego. Błona podstawna, poddana oddziaływania
+sygnału o dużej częstotliwości, drga w swojej sztywnej części, pobudzając komórki nerwowe
+w pobliżu okienka owalnego. Małe częstotliwości zaś pobudzają komórki nerwowe w ko
+cowej części błony. To powoduje, że specyficzne włókna w nerwie ślimakowym reagują n
+pewne określone częstotliwości. Jest to tzw. teoria miejsca (place principle), zgodnie z którą
+największe znaczenie w wytwarzanym wrażeniu wysokości dźwięku ma miejsce pobudzeńi
+ślimaka (miejsce na błonie podstawnej).

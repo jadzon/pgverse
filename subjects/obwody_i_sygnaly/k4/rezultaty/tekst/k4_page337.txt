@@ -1,0 +1,17 @@
+Zadania do rozdziału 3 - 339
+
+<image/wzory/k4_page337_formula1.png>
+
+Zakładając, że U,, = 15 V, zaprojektować układ przerzutnika Schmitta (tzn. dobrać tak stosunek
+Ry/Rą oraz napięcie odniesienia Ev), aby wartości progowe U, i U, były odpowiednio równe 5 V
+i -1V.
+
+<image/figury/k4_page337_figure1.png>
+
+vzory/k4_page337_formula2.png
+
+Zadanie 3.41. Coraz szersze zastosowanie znajduje ostatnio układ scalony, zwany transkonduktan-
+cyjnym wzmacniaczem operacyjnym (w skrócie TWO lub OTA — od angielskiej nazwy operational
+transconductance amplifier), przedstawiony na rys. Z-3.41a.
+
+<image/figury/k4_page337_figure2.png>

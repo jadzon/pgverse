@@ -1,0 +1,32 @@
+wości w zaworach z tłoczkiem przesuwnym, straty ciśnienia, ściśliwość cieczy i podat-
+ności części metalowych. W rzeczywistych układach trzeba uwzględnić niektóre z tych
+czynników, jeżeli mogą mieć one znaczny wpływ na odpowiedź układu.
+
+5.5. Odpowiedź serwomechanizmu
+na wymuszenie skokowe
+
+Z wymuszeniem skokowym mamy do czynienia, gdy
+
+<image/wzory/k1_page146_formula1.png>
+
+Z równania (5.7) wyznaczamy transformatę sygnału wyjściowego Xo(s)
+
+<image/wzory/k1_page146_formula2.png>
+
+Rozkładając powyższe wyrażenie na ułamki proste, otrzymujemy
+
+<image/wzory/k1_page146_formula3.png>
+
+Stosując odwrotne przekształcenie Laplace'a, wyznaczamy sygnał wyjściowy
+
+<image/wzory/k1_page146_formula4.png>
+
+Oznacza to, że xg(£) rośnie wykładniczo z czasem, aż do osiągnięcia wartości xy k,
+co pokazuje rysunek 5.7.
+Po upływie czasu 7 (stałej czasowej układu sterowania)
+
+<image/wzory/k1_page146_formula5.png>
+
+Po upływie czasu 7 wartość wyjściowa osiąga 63,2% swojej wartości końcowej.
+
+148

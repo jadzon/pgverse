@@ -1,0 +1,44 @@
+2.1. Wielowrotniki i sieci 211
+
+z podaną definicją, wielowrotnik bezstratny jest wielowrotnikiem pasywnym.
+Spełnia on zatem zawsze, oprócz równości (2.1-56), nierówność definicyjną
+(2.1-54). Wynika stąd w szczególności, że obie strony równości (2.1-56) są zawsze
+nieujemne.
+
+Wielowrotnik pasywny, który nie jest wielowrotnikiem bezstratnym, nazy-
+wamy wielowrotnikiem stratnym.
+
+D. Przykłady i uzupełnienia.
+
+Przykład 2.1-29. Opór stacjonarny (liniowy lub nieliniowy) jest dwójnikiem pasywnym.
+Z warunku definicyjnego (1.3-3) wynika bowiem, że moc pobierana przez opór jest nieujemna:
+
+'k4_page209_formula1.png az
+a więc energia pobrana w przedziale czasu (ty, £), t > ty jest też zawsze nieujemna:
+:ory/k4_page209_formula2.png (21-58)
+l Opór nie jest zdolny do gromadzenia energii, tzn.:
+(2.1-59)
+
+//k4_page209_formula3.png
+a więc zależność definicyjna (2.1-51) jest spełniona. Opór jest oczywiście dwójnikiem stratnym.
+
+Przykład 2.1-30. Dwójnikiem pasywnym jest także opór niestacjonarny liniowy lub nielinio-
+wy (p. 1.6.1-A), a także każdy element rezystancyjny (p. 1.3.4-G), którego charakterystyka
+określona równaniem (1.3-26) nie przechodzi przez drugą lub czwartą ćwiartkę płaszczyzny u, i.
+W przypadkach tych są spełnione również nierówności (2.1-57) i (2.1-58) oraz równość (2.1-59)7.
+
+Przykład 2.1-31. Nietrudno sprawdzić, że indukcyjność stacjonarna (liniowa lub nieliniowa),
+a także pojemność stacjonarna (liniowa lub nieliniowa) są dwójnikami pasywnymi bezstratnymi.
+Powróćmy do rozważań z p. 1.3.2-C dotyczących energii gromadzonej przez indukcyjność.
+Rozważmy dowolną chwilę tę, przedział (ty, + co) oraz dowolną chwilę te Ć tg, + o). Energia
+6 (t,) zgromadzona w chwili ty przez indukcyjność jest energią zgromadzoną w polu magnetycz-
+nym. Zgodnie ze wzorem (1.3-14):
+
+<image/wzory/k4_page209_formula4.png>
+
+gdzie Wy = y(t,). Energię pobraną z otoczenia przez indukcyjność w przedziale czasu (tg, t)
+obliczamy ze wzoru:
+
+1) Zwracamy uwagę, iż pasywność oporu niestacjonarnego wynika z przyjętego w p. 1.6.1-A
+założenia, iż charakterystyki określone równaniem (1.6-1) zawsze przechodzą tylko przez pierwszą
+i trzecią ćwiartkę.

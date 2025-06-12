@@ -1,0 +1,55 @@
+Stosowanie liczb zespolonych metodą zastępowania 533
+
+do wydzielenia składowych prostokątnych z liczby zespolonej, tak operatory Mag( ) oraz
+Phase( ) służą do wydzielenia składowych biegunowych — modułu i przesunięcia fazowego.
+Na przykład jeśli A = 5e*"”, to Mag(A) = 5 i Phase(A) = 1/7.
+
+Stosowanie liczb zespolonych metodą
+zastępowania
+
+Podsumujmy dotychczasowe rozważania. Rozwiązania zwykłych równań algebraicznych
+często zawierają pierwiastki kwadratowe z liczb ujemnych. Noszą one nazwę liczb zespo-
+lonych i wyrażają rozwiązania, które nie mogą istnieć w takim świecie, jaki znamy. Liczby
+zespolone są wyrażane w jednej z dwóch postaci: a + bj (współrzędne prostokątne) lub Me *
+(współrzędne biegunowe), przy czym j jest symbolem wyrażającym 4-1. W każdym z tych
+zapisów jedna liczba zespolona zawiera dwie informacje — albo a oraz b, albo M oraz 6.
+Mimo swojej dość nieuchwytnej natury, liczby zespolone podlegają prawom matematycznym
+podobnym (lub identycznym) do praw rządzących zwykłymi liczbami.
+
+W ten sposób opisaliśmy, czym są liczby zespolone i jakie jest ich miejsce w czystej matema-
+tyce. Naszym następnym zadaniem jest omówienie sposobów pożytecznego wykorzystania
+tych liczb w problemach naukowych i technicznych. Jak jest możliwe stosowanie matema-
+tyki niemającej żadnego związku z naszym codziennym doświadczeniem? A oto odpowiedź:
+Jeśli narzędziem, którym dysponujemy, jest młotek, to spowodujmy, żeby problem miał wy-
+gląd gwoździa. Innymi słowy, przetwarzamy problem fizyczny do postaci liczb zespolonych,
+operujemy na tych liczbach i następnie przez powrotne przetworzenie wracamy do rozwiąza-
+nia problemu fizycznego.
+
+Są dwa sposoby wyrażania problemów fizycznych przy użyciu liczb zespolonych: metoda
+prostego zastępowania oraz bardziej elegancka metoda, którą nazwiemy równoważnością
+matematyczną. W następnym rozdziale, obejmującym zespołone przekształcenie Fouriera,
+będzie omówiona metoda równoważności matematycznej. Pozostała część tego rozdziału jest
+poświęcona metodzie zastępowania.
+
+W metodzie zastępowania bierze się dwa rzeczywiste parametry fizyczne i umieszcza jeden
+z nich w części rzeczywistej liczby zespolonej, a drugi — w części urojonej. To umożliwia
+operowanie tymi dwiema wartościami jako jedną całością, tj. jako jedną liczbą zespoloną. Po
+wykonaniu żądanych operacji matematycznych rozdziela się liczbę zespoloną na jej części
+rzeczywistą i urojoną, co znowu odpowiada interesującym nas parametrom fizycznym.
+Przedstawimy tę metodę na prostym przykładzie. Jak pamiętacie z podstaw fizyki, wekto-
+ry mogą reprezentować takie wielkości, jak siła, prędkość, przyspieszenie itd. Wyobraźmy
+sobie żagłlówkę pchaną w jednym kierunku przez wiatr, a w drugim — przez prąd morski.
+Wynikowa siła działająca na łódź jest sumą wektorową dwóch indywidualnych wektorów sił.
+Ten przykład przedstawiono na rys. 30.3, na którym dwa wektory A i B są sumowane według
+zasady równoległoboku, dając wektor C.
+
+Możemy to zagadnienie wyrazić w liczbach zespolonych, umieszczając współrzędną
+wschód/zachód w części rzeczywistej liczby zespolonej, a północ/południe — w części uro-
+jonej. W ten sposób możemy każdy wektor traktować jako jedną liczbę zespoloną, chociaż
+składa się ona z dwóch części. Na przykład siła wiatru, wektor A, może w 2 częściach mieć
+kierunek wschodni, a w 6 częściach — północny, co reprezentuje liczba zespolona 2 + ój.
+Podobnie siła prądu morskiego, wektor B, może mieć w 4 częściach kierunek wschodni,
+a w 3 — południowy, co wyraża liczba zespolona 4 — 3. Te dwa wektory można zsumować
+według wzoru 30.1, uzyskując liczbę zespoloną 6 + 3j reprezentującą wektor C. Przenosząc
+ten wynik z powrotem do pojęć świata fizycznego, uzyskuje się kierunek wypadkowej siły
+działającej na żaglówkę: 6 części w kierunku północnym i 3 — we wschodnim.

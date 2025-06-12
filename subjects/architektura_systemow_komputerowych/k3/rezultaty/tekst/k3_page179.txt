@@ -1,0 +1,42 @@
+8.4. Systemy wieloprocesorowe 169
+
+Wynikiem mnożenia jest macierz:
+
+<image/wzory/k3_page1/9_formula1.png>
+
+Każdy spośród 6 elementów macierzy wynikowej jest obliczany za pomocą operacji
+polegającej na wykonaniu dwóch mnożeń i jednego dodawania. Jeśli te trzy operacje
+uznamy za jeden krok obliczeń, to elementy macierzy wynikowej mogą zostać obliczone
+w 6 krokach. Celem dekompozycji takiego zadania przedstawmy macierz A jako macierz
+(A,, A,, A;), gdzie A; jest wektorem odpowiadającym i-temu wierszowi macierzy A oraz
+macierz B jako macierz (B,, B,), gdzie B, jest wektorem odpowiadającym i-tej kolumnie
+macierzy B. Wynikową macierz € można przedstawić jako macierz (C,, C,, C,), gdzie
+
+<image/wzory/k3_page1/9_formula2.png>
+
+Widać stąd, że każdy wektor C, można obliczyć w jednym kroku mając do dyspozycji
+dwa procesory. Każdy z procesorów obliczać może jeden z elementów wektora. Zatem
+obliczenie macierzy wynikowej można wykonać w 3 krokach (dla każdego wiersza ma-
+cierzy C oddzielnie).
+
+Zadanie to można zdekomponować także inaczej. Mając do dyspozycji trzy procesory
+można zadanie zdekomponować w taki sposób, aby w jednym kroku obliczać kolumny
+macierzy wynikowej i wówczas zadanie wykonać w dwóch krokach. Natomiast jeżeli
+mamy 6 procesorów, to obliczenia można wykonać w jednym kroku (dla każdego elementu
+macierzy C oddzielnie). Mając 12 procesorów można dokonać obliczenia wszystkich
+elementów macierzy C tak, aby dwa procesory wykonywały operację mnożenia równo-
+legle. Dla dodania wyników mnożeń potrzeba tylko 6 procesorów i w czasie tej operacji
+6 procesorów pozostanie nie wykorzystanych. Przykład ten ilustruje, jak trudny może być
+problem synchronizacji wykonywanych operacji w równoległych systemach kompute-
+rowych.
+
+Wyróżnia się dwie klasy systemów równoległych: systemy synchroniczne i systemy
+asynchroniczne. W systemach należących do pierwszej klasy poszczególne kroki pracy
+systemu są synchronizowane w taki sposób, że kolejne z nich rozpoczynają się wówczas,
+gdy wszystkie procesory skończą wykonywanie swoich poprzednich zadań. Przebiegi
+czasu pracy poszczególnych procesorów w systemie synchronicznym zilustrowano na
+rysunku 8.11.
+
+<image/figury/k3_page17/9_figure1.png>
+
+Rysunek 8.11. Synchronizacja pracy w równoległych systemach komputerowych

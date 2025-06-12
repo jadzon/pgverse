@@ -1,0 +1,51 @@
+14 Rozdział 1. Oznaczenia
+
+e n=QO(n+logn).
+
+Następujący lemat jest bardzo użyteczny przy szacowaniu asymptotycznym. Jego do-
+wód zostawiamy jako ćwiczenie.
+
+Lemat 1.19 Jeżeli granica lim = istnieje i jest właściwa (nie jest równa oc), to g(n) =
+O(f(n)).
+
+Wniosek 1.20 Jeżeli g(n) = o(f(n)), to g(n) = O(f(n)).
+
+Następujący przykład pokazuje, że oszacowanie asymptotyczne może być zawodne.
+
+Przykład 1.21 Weźmy dwie funkcje f(n) = 300n oraz g(n) = n loga n. Mamy f(n) =
+o(g(n)), ale f(n) > g(n) dla wszystkich n < 23%, czyli dla wszystkich liczb mniejszych
+od liczby atomów w naszej galaktyce (porównaj podrozdział duże liczby w rozdziale o
+arytmetyce).
+
+Z drugiej jednak strony oszacowanie asymptotyczne wystarczy do naszych cełów i
+jest łatwiejsze do uzyskania.
+
+Przykład 1.22 Rozważmy trzy algorytmy: pierwszy działający w czasie f;(n) = cyn,
+drugi w czasie fą(n) = czn? i trzeci w czasie f3(n) = cą2”. Funkcje te określają czas
+działania na pewnym konkretnym komputerze. Niech ny, na i ns oznazczają długości
+wejść, dla których algorytmy dają odpowiedź w ciągu jednej sekundy, to znaczy f; (n: ) =
+fa(na) = fs(ns) = le.
+
+Przypuśćmy teraz, że mamy 1000 razy szybszy komputer i pytamy jakie wejścia teraz
+mogą być policzone przez te algorytmy w ciągu jednej sekundy.
+
+Dla pierwszego algorytmu działającego w czasie liniowym możemy teraz obliczać
+1000 razy dłuższe dane wejściowe, ponieważ f,(1000n,) = 1000/,(n;,). Dla drugie-
+go algorytmu działającego w czasie sześciennym możemy teraz obliczać 10 razy dłuższe
+dane wejściowe, ponieważ f2(10n2) = 1000/f2(n2). Dla trzeciego algorytmu działają-
+cego w czasie wykładniczym możemy teraz obliczać tylko dane wejściowe o 10 dłuższe,
+ponieważ fą(ng + 10) = 1024 fz(ns3).
+
+111 Zadania
+1. Oblicz )77_, i2* dlan = 0,1,2,3,4.
+2. Oblicz T[;_, (i + 1).
+3. Oblicz J];.., (2i + 1).
+4. Niech A = (1,2,3,4,5), B = (1,3,5,7)1C = f4,5,6,7,8). Oblicz AUBUC,
+
+ANBNC,A-B,AN(B-C),AGB,AGBOGC.
+
+5. Niech 7 = f1,2,3,4,5) będzie zbiorem indeksów. Dla każdego i e 7 określamy
+zbór B; = (r€N|i< z <2i). Oblicz (J,., B;, (;cy Bi. A) © As © As Oraz
+A © A2 © Asz © 4; © 45.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

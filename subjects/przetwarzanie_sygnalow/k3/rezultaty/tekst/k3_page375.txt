@@ -1,0 +1,45 @@
+Sposób, w jaki żeberka zlewają się ze sobą, jest ważny dla zrozumienia ograniczeń tej
+tody pomiaru. Wyobraźcie sobie pobieranie obrazu pokazanego na rys. 25.2. Na suni
+25.2 a), b) przedstawiono przykłady małej i dużej częstotliwości przestrzennej. Przy mał
+częstotliwościach (rys. 25.2b) krzywa jest płaska na wierzchołkach i u dołu, lecz k zd
+są rozmazane. Przy większych częstotliwościach (rys. 25.2 a) amplituda modulacji się zma
+szyła. Jest to zgodne z przebiegiem funkcji MTF na rys. 25.1 b) — przy większych częstot
+ściach przestrzennych amplitudy są mniejsze. Pojedyncze żeberka są rozróżnialne w obra
+tak długo, jak amplituda pozostaje większa niż ok. od 3 do 10% wysokości pierwotnej.
+to związane ze zdolnością oka do postrzegania małych różnic kontrastu między aksim
+i minimami w obecności szumu obrazu.
+
+Dużymi zaletami pomiaru podziałką z parami linii są prostota i szybkość. Największą
+jest zależność wyniku od właściwości ludzkiego oka, a więc pewien składnik s biektyw
+Nawet jeśli jest zmierzona cała krzywa MFT, to najczęściej stosowanym sposobem *
+nia rozdzielczości systemu jest podanie częstotliwości, przy której MFT jest zmniejszone
+3, 5 lub 10%. Niestety nie zawsze jest zdefiniowane, której z tych wartości użyto. W d.
+katalogowych są często podawane dość mgliste parametry, takie jak „rozdzielczość ogra
+czająca” (limiting frequency). Ponieważ producenci pragną, aby parametry ich wyrobów.
+możliwie jak najlepsze (niezależnie od tego, jak dobre są naprawdę te wyroby), więc najł
+pieczniej jest interpretować dwuznaczne wartości jako wyznaczone przy redukcji
+3% krzywej MTF.
+
+Delikatną kwestią, na którą trzeba zwrócić uwagę, jest definiowanie MTF w kategoriach f
+nusoidalnej, podczas gdy w podwójnej podziałce liniowej stosuje się fale prostokątne. | |
+to stąd, że żeberka są równomiernie rozłożonymi obszarami ciemnymi i jasnymi. Taki U
+ułatwia wyprodukowanie iałki; trudno byłoby wytworzyć linie o sinusoidalnie z ieni
+cym się stopniu szarości. Jakie są konsekwencje stosowania fali prostokątnej do pomiaru l
+
+  
+  
+  
+ 
+ 
+ 
+   
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+<image/figury/k3_page375_figure1.png>

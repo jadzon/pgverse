@@ -1,0 +1,93 @@
+28. Cyfrowe procesory sygnałowe
+
+Cyfrowe przetwarzanie sygnałów jest przeprowadzane przy użyciu operacji matematycznych,
+w odróżnieniu na przykład od przetwarzania tekstów lub innych podobnych programów.
+w których tylko przemieszcza się zgromadzone dane. Wynika stąd, że komputery zaprojekto-
+wane do zastosowań w ekonomii i innych aplikacji ogólnych nie są zoptymalizowane dla al-
+gorytmów takich, jak filtracja cyfrowa i analiza fourierowska. Cyfrowe procesory sygnałowe
+są mikroprocesorami specjalnie zaprojektowanymi do realizacji zadań cyfrowego przetwa-
+rzania sygnałów. W ciągu ostatnich kilkunastu lat nastąpił niebywały rozwój tych urządzeń,
+które znalazły zastosowanie wszędzie — od telefonii komórkowej aż po wysokiej klasy apa
+raturę badawczą. W istocie projektanci układów stosują skrót DSP na określenie cyfrowego
+procesora sygnałowego, a projektanci oprogramowania — cyfrowego przetwarzania sygna-
+łów. W tym rozdziale będzie mowa o tym, czym procesory DSP różnią się od innych ro--
+dzajów mikroprocesorów, a także o tym, jak stwierdzić, czy dany procesor jest odpowiedni |
+do konkretnego zastosowania oraz jak rozpocząć pracę w tej nowej ekscytującej dziedzinie.
+W następnym rozdziale omówimy bardziej szczegółowo jeden z tych bardzo zaawansowa-
+nych technicznie produktów — rodzinę SHARC* firmy Analog Devices.
+
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+ 
+ 
+  
+  
+ 
+ 
+  
+  
+
+Czym cyfrowe procesory sygnałowe różnią się od
+innych mikroprocesorów
+
+W latach 60. przewidywano, że sztuczna inteligencja zrewolucjonizuje współdziałanie czło-
+wieka z komputerem i innymi urządzeniami. Wierzono, że z końcem XX wieku będą istniały
+już roboty do sprzątania domów, komputery kierujące samochodami i interfejsy głosowe ste-
+rujące gromadzeniem i wyszukiwaniem informacji. Tak się jednak nie stało. Te zadania oka-
+zały się znacznie bardziej skomplikowane, niż przewidywano i bardzo trudne do wykonania
+przy użyciu funkcji logicznych realizowanych krok po kroku przez komputery cyfrowe.
+
+Jednakże, w czasie ostatnich czterdziestu lat okazało się, że komputery mają niezwykłe
+możliwości w dwóch wielkich dziedzinach, którymi są: 1) operowanie danymi, takic ja
+przetwarzanie tekstu i zarządzanie bazami danych, 2) obliczenia matematyczne, stoso
+w nauce, technice i w cyfrowym przetwarzaniu sygnałów. Wszystkie mikroprocesory
+
+malizowanego do obu zadań. W projektowaniu układów są konieczne kompromisy uwzglęć
+niające przeciwstawne wymogi związane z różnymi parametrami — np. z rozmiarem zestawu
+instrukcji i łatwością obsługi przerwań. Jeszcze ważniejsze są problemy związane z wprow
+
+dzaniem mikroprocesora na rynek — koszt opracowania i wytwarzania, konkurencyjność, c?
+życia wyrobu itd. Ogólnie biorąc, te problemy dotyczą także tradycyjnych mikroproc
+takich jak Pentium”, ukierunkowanych przede wszystkim na operowanie danymi. P |
+sygnałowe zaś są przeznaczone do obliczeń matematycznych niezbędnych w cyfrowym prze:
+twarzaniu sygnałów.
+Na rys. 28.1 zestawiono najważniejsze różnice między tymi dwiema kategoriami mikropr»
+cesorów. Operowanie danymi obejmuje zapamiętywanie i sortowanie informacji. Rozważm
+na przykład program do przetwarzania tekstu. Podstawowym jego zadaniem jest zapamię
+tywanie informacji (wprowadzanej z klawiatury przez operatora), organizowanie info
+(wycinanie i wstawianie, sprawdzanie pisowni, układ stron itd,), a następnie odzyskiwan
+informacji (np. zapisanie informacji na dyskietce lub wydrukowanie jej przez drukarkę k
+serową). Te zadania są realizowane przez przenoszenie danych z jednej lokalizacji do im
+i sprawdzanie nierówności, czyli porównywania (A = B, A < B itd.). Jako przykład weźm
+sortowanie listy słów w porządku alfabetycznym. Każde słowo jest reprezentowane prz
+liczbę 8-bitową, wartość AŚCII pierwszej litery słowa. Układanie w porządku alfabetyczny
+polega na przestawianiu kolejności słów tak długo aż wartości ASCII będą w sposób ci
+
+wzrastały od początku do końca listy. Można tego dokonać przez wielokrotne powta
+
+dwóch kroków aż do zakończenia porządkowania według alfabetu. Po pierwsze, sprz

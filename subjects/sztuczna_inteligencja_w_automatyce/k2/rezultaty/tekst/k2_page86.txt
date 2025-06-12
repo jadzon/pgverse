@@ -1,0 +1,28 @@
+91
+
+prosta sytuacja może być przedstawiona w postaci sieci bayesowskiej pokazanej na
+rys. ?7, gdzie w tablicach obok węzłów podano prawdopodobieństwa warunkowe i
+bezwarunkowe realizacji zmiennych losowych reprezentowanych przez węzły.
+
+<image/figury/k2_page86_figure1.png>
+
+Zadanie wnioskowania w systemach probabilistycznych polega na wyznaczaniu
+rozkładu prawdopodobieństwa zbioru hipotez H = H;,Hą,...,H,, przy zadanych
+wartościach przesłanek e = c€;,€ą,...,€4. W rachunku prawdopodobieństwa znajo-
+mość łącznego rozkładu prawdopodobieństwa zmiennych losowych umożliwia wyzna-
+czenie dowolnego prawdopodobieństwa warunkowego tych zmiennych. Czyli wnio-
+skowanie sprowadza się do obliczenia prawdopodobieństwa warunkowego p(H|e) we-
+dług wzoru
+
+<image/wzory/k2_page86_formula1.png>
+
+lub według repnłv Ravesa
+
+<image/wzory/k2_page86_formula2.png>
+
+5.2.1. Niezależność warunkowa
+
+Obliczenie łącznego rozkładu prawdopodobieństwa dokonuje się na podstawie zada-
+nych prawdopodobieństw warunkowych według reguły łańcuchowej
+
+<image/wzory/k2_page86_formula3.png>

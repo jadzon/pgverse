@@ -1,0 +1,44 @@
+50
+
+okresie przed drugą wojną światową. Np. klasyczna monografia Churcha (1956) cy-
+tuje prace następujących uczonych: Chwistek, Jaśkowski, Kuratowski, Leśniewski,
+Łukasiewicz, Mostowski, Rasiowa, Słupecki, Sobociński.
+
+4.1.1. Elementy rachunku predykatów
+Podstawowymi elementami rachunku predykatów sa:
+
+predykaty które reprezentują własność elementu lub relację pomiędzy elementami.
+Argumentami predykatów mogą być zmienne (oznaczane tutaj słowami roz-
+poczynającymi się od dużych liter), stałe (oznaczane słowami rozpoczynające
+się od małej litery lub w cudzysłowie) oraz funkcje (oznaczane literami /, g,
+h). Na przykład predykat ojciec(X,Y ) może reprezentować relację ojcostwa.
+Podstawiając różne elementy za X i Y wartością predykatu jest prawda (7),
+gdy X jest ojcem Y lub fałsz (F), w przeciwnym przypadku.
+
+operatory logiczne oddziałujace na predykaty. Najczęściej są to operatory: nie
+(not) (7), t (and) (A), lub (or) (V), jeżeli to (if) (+) (tablica ?2).
+
+<image/figury/k2_page45_figure1.png>
+
+kwantyfikatory które reprezentują zdania : dla wszystkich X (kwantyfikator uni-
+wersalny VX) i istnieje X (kwantyfikator egzystencjalny 1X).
+
+Prawidłowe wyrażenia rachunku predykatów nazywane są wyrażeniami popraw-
+nie zbudowanymi (wpz).
+
+PRZYKŁAD 4.1
+
+Podamy tu kilka przykładów wpz.
+Wyrażer
+<image/wzory/k2_page45_formula1.png>
+składa się z dwocn predykatow 1 nadal ma charakter predykatu, Ktory może np.
+przyjmować wartość prawda (T) dla X będących inteligentnymi mrówkami * (rysu-
+nek ??a).
+Wyrażer”
+<image/wzory/k2_page45_formula2.png>
+przyjmuje wartosc / dla przedmiotow A nie będących stoniam! lub będących koloru
+szarego co ilustruje diagram Venna na rys. ??b.
+
+Słowo „może” użyte tutaj i w dalszych przykładach oznacza, że wyrażenie predykatowe poda-
+nego znaczenia nabiera dopiero po odpowiedniej, jednej z wielu wielu możliwych, interprefacji, co
+wyjaśnione będzie później

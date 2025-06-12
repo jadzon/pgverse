@@ -1,0 +1,63 @@
+<image/figury/k2_page21_figure2.png>
+
+Rys. 4.2: Kryterium Nyquista przy stabilnych transmitancjach układów otwartych
+
+4.2.6 Wykres Nicholsa
+
+Podobnie jak charakterystyki logarytmiczne, wykres Nicholsa
+jest kolejną reprezentacją kryterium Nyquista, tym razem we współrzędnych:
+przesunięcie fazowe układu otwartego, wzmocnienie układu otwartego,
+jak pokazano na rysunku 4.3. Wnioski co do stabilności są analogiczne do
+
+kryterium Nyquista.
+
+<image/figury/k2_page21_figure1.png>
+
+Rys. 4.3: Siatka wykresu Nicholsa
+
+ona odzwNÓA
+
+i
+
+ 
+
+41
+
+4.2.7 Metoda linii pierwiastkowych
+
+Metoda ta pozwala na określenie położenia biegunów transmitancji
+układu zamkniętego na podstawie położenia biegunów transmitancji układu
+otwartego, którego zmiana powoduje przesunięcie biegunów (pierwiastków
+równania charakterystycznego) po liniach nazywanych liniami pierwiastko-
+wymi.
+
+Określenie zakresu wzmocnienia układu otwartego, dla którego układ
+zamknięty będzie stabilny, odbywa przez sprawdzenie dla określonych war-
+tości k, czy istnieją bieguny o nieujemnej części rzeczywistej, czyli zgodne
+z definicją stabilności podaną na początku rozdziału.
+
+4.2.8 Zapas modułu i fazy
+
+Ważną zaletą wymienionych graficznych kryteriów stabilności jest pros-
+tota określenia zapasu stabilności (modułu i fazy) za pomocą:
+
+e zapasu modułu A [dB]
+
+Zapas modułu to krotność, o jaką musiałoby wzrosnąć wzmocnienie
+układu otwartego przy niezmiennym argumencie transmitancji wid-
+mowej (przesunięciu fazowym), aby doprowadzić układ zamknięty do
+granicy stabilności.
+
+Pomiędzy zapasem modułu A a zapasem wzmocnienia x istnieje za-
+leżność
+
+<image/wzory/k2_page21_formula1.png>
+e zapasu fazy Ay [7]
+
+Zapas fazy to wartość zmiany argumentu transmitancji widmowej
+
+(przesunięcia fazowego) układu otwartego przy niezmiennym
+
+wzmocnieniu, która doprowadziłaby układ zamknięty do granicy
+
+stabilności.

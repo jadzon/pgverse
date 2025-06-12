@@ -1,0 +1,32 @@
+Zastosowany w module łącznik triakowy nie dopuszcza zasilania ze źródła prądu
+stałego. W każdym obwodzie modułu jest bezpiecznik (3A), obwód RC dla fil-
+tracji zakłóceń oraz warystorowe zabezpieczenie przed przepięciami. Moduł ten
+dopuszcza uderzenia prądowe (/nrush Current) przez czas jednego cyklu o wiel-
+kościach nie większych niż 10 razy prąd nominalny i dlatego może być
+stosowany dla szerokiej gamy obciążeń indukcyjnych i pojemnościowych.
+
+<image/figury/k4_page133_figure1.png>
+
+Rys. 3.15 Schemat obwodu wewnętrznego i układu połączeń zewnętrznych
+modułu wyjść prądu przemiennego MDL390
+
+ry/k4_page133_formula1.png NEM
+
+Jako przykład modułu wyjść prądu stałego przedstawiony zostanie moduł dla 16
+obwodów wyjściowych MDL 742 (12/24 volt DC Positive Logic I Amp Electro-
+nic Short Circuit Protection Output module). Dwie grupy wyjść modułu, po 8
+obwodów w każdej, są zasilane z zewnętrznych źródeł napięciowych od 12 do
+24VDC. W obwodach obu grup umieszczono elektroniczne zabezpieczenie przed
+skutkami zwarć, oznaczone przez ESCP. Moduł ten został zaprojektowany jedy-
+nie dla dodatniej polaryzacji źródła zasilania.
+
+W każdym obwodzie modułu jest kondensator filtrujący składowe zmienne na-
+pięcia, a ponadto dioda zabezpieczająca przed skutkami przepięć. Moduł ten
+dopuszcza uderzenia prądowe przez czas 10 ms o wielkościach 5 krotnie więk-
+szych od natężenia prądu nominalnego.
+
+ 
+
+ 
+
+3.4 Moduły wyjść dyskretnych DO 133

@@ -1,0 +1,24 @@
+<image/tabele/k4_page474_table3.png>
+
+Wyd. 8.144 Program główny - przerzutnik RS wyboru fazy chłodzenia realizowanej
+w segmencie 05. Ustawienie markerów wyboru fazy następuje w pracy automa-
+tycznej lub ręcznej pod warunkiem, że poziom w reaktorze jest większy niż mini-
+
+malny i czynniki nie są już schłodzone
+
+<image/tabele/k4_page47/4_table2.png>
+
+Wyd. 8.145 Program główny - przerzutnik RS wyboru fazy opróżniania realizowanej
+w segmencie 06. Ustawienie markerów wyboru fazy następuje w pracy automa-
+tycznej lub ręcznej pod warunkiem, że zbiornik nie jest pusty
+
+<image/tabele/k4_page47/4_table1.png>
+
+Wyd. 8.146 Program główny — zapalenie lampek potwierdzenia wyboru fazy stero-
+wania (a tym samym odpowiedniego bloku programowego)
+
+<image/figury/k4_page474_figure1.png>
+
+ 
+
+474 Rozdział : 8.Programy przykładowe

@@ -1,0 +1,65 @@
+190 10. Właściwości przekształcenia Fouriera
+nn
+
+I jaki mamy wynik? Położenia zboczy są wyraźnie widoczne w przebiegu na rys. 10.6 c),
+a wcale ich nie ma na rys. 10.6 b). Jest tak dlatego, bo zbocze tworzy się tam, gdzie narasta
+jednocześnie wiele sinusoid, co jest możliwe tylko w przypadku skoordynowania ich faz.
+Krótko mówiąc, dużo informacji o kształcie przebiegu w dziedzinie czasu jest zawartych
+raczej w fazie niż w module. Pozostaje to w przeciwieństwie do sygnałów, w których infor-
+macja jest zakodowana w dziedzinie częstotliwości — takich, jak sygnały foniczne. W tych
+sygnałach najważniejszy jest moduł, faza ma mniejsze znaczenie. W dalszych rozdziałach
+zobaczymy, że ten sposób rozumowania tworzy strategie projektowania filtrów i innych
+metod przetwarzania sygnałów. Zrozumienie, w jaki sposób informacja jest reprezentowana
+w sygnale, jest zawsze pierwszym krokiem do udanego DSP.
+
+Dlaczego symetria lewo-prawostronna jest równoważna zerowej (lub liniowej) fazie? Odpowiedź
+znajdziecie na rys. 10.7. Taki sygnał może być rozłożony na prawą i lewą połówkę
+(rys. 10.7 a, b, c). Próbka w środku symetrii (w tym przypadku jest nim zero) zostaje podzie-
+lona równo między lewą i prawą połówkę, dzięki czemu obie strony są wzajemnie idealnymi
+odbiciami lustrzanymi. Moduły tych dwóch połówek będą identyczne, jak to przedstawiono
+na rys. 10.7 e), f), fazy zaś będą miały odwrotne znaki (rys. 10.7 h, i). Wynikają z tego dwa
+ważne stwierdzenia. Po pierwsze, każdy sygnał symetryczny lewo-prawostronnie będzie miał
+liniową charakterystykę fazową, gdyż nieliniowość fazy w lewej połówce dokładnie kompen-
+suje nieliniowość prawej połówki.
+
+<image/figury/k3_page172_figure2.png>
+
+|
+|
+|
+
+—
+'
+1
+i
+1
+1
+1
+1
+1
+1
+
+uazjczasoda
+
+     
+
+je
+
+== --==amaaząa
+
+  
+
+©
+P+----
+3 wu
+8 n-.>
+8
+
+Numer próbki
+
+poka fp adgecenrdnznk z ian o charakterze impulsowym. Sygnat na rys.
+znaleziono, wykonując przeksztatcenie DFT przebiegu z rys. a), zastępując fazę losowymi liczbami i przeprowadzając
+odwrotne przeksztatcenie DFT. Sygnat na rys. c) znałeziono, znaleziono, wykonując DFT przebiegu z rys. a), zastępując modut
+
+liczbami losowymi i przeprowadzając odwrotne przeksztatcenie DFT. Informacja o potożeniu zboczy jest zachowana
+rys. c), lecz nie na rys. b). Wynika stąd, że faza zawiera informację o położeniu zdarzeń w sygnałe w dziedzinie czasw

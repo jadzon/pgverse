@@ -1,0 +1,35 @@
+<image/wzory/k4_page370_formula1.png>
+
+Niektóre bloki są wbudowane w system operacyjny jednostki centralnej sterow-
+nika. W niniejszym rozdziale zostaną omówione niektóre z tych bloków.
+
+ 
+
+Z. systemem operacyjnym jednostki centralnej sterownika Simatic S5 zintegro-
+wany jest algorytm regulacji PID. Może on być wykorzystywany przez użytkow-
+nika przy pomocy bloku organizacyjnego 0OB251. Przed wywołaniem bloku or-
+ganizacyjnego OB251 musi zostać utworzony I wywołany blok danych zawiera-
+jący parametry regulatora i miejsce na dane robocze algorytmu (Tab. 7.14). Blok
+ten musi mieć długość co najmniej 49 słów. Algorytm regulacji PID jest wyko-
+nywany cyklicznie i wyznacza na podstawie sygnałów wejściowych wartość
+wielkości wyjściowej. W celu cyklicznej realizacji algorytmu regulacji błok or-
+ganizacyjny OB250 powinien być wywoływany. z któregoś z bloków przerwań
+czasowych. Okres, z jakim jest wywoływany algorytm PID może być wówczas
+programowany przez użytkownika przez ustawienie wartości odpowiedniego
+słowa systemowego (por. Tab. 7.16).
+
+<image/figury/k4_page370_figure1.png>
+
+Objaśnienie oznaczeń:
+
+K - Współczynnik proporcjonalności SP - Wartość zadana
+
+R - Parametr części proporcjonalnej E - Uchyb regułacji
+
+TA - Okres próbkowania dYH  - Wartość dla sterowania ręcznego
+TN - Czas całkowania YH _- - Wartość dla sterowania ręcznego
+TV - Czas różniczkowania BGOG - Górne ograniczenie wyjścia
+
+m_n mo mm: mh Ma M MA RMA MM M A M 1 M M M A m M m M mn m w M R 02 M m m a p Z 0 M
+
+370 Rozdział ; 7, Język listy instrukcji dla sterowników SIMATIC $5

@@ -1,0 +1,18 @@
+Dodatek B- wyznaczanie parametrów cyklu granicznego z
+wykorzystaniem arkusza kalkulacyjnego
+
+ 
+
+Zadanie: Dla układu pokazanego na schemacie, korzystając z Excela, wyznaczyć parametry cyklu
+
+ 
+
+<image/figury/k/_page194_figure2.png>
+
+Rozwiązanie: Wyznaczamy przebieg funkcji -1/J(M) i badamy punkt jej przecięcia z funkcją G(jw)
+na płaszczyźnie zespolonej
+
+<image/figury/k/_page194_figure1.pnwzory/k7_page194_formula1.png>
+
+>OLITECHNIKA - i |
+GDAŃSKA

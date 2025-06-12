@@ -1,0 +1,61 @@
+|
+|
+
+ 
+
+Spłot 243
+
+ 
+
+<image/figury/k3_page222_figure1.png>
+
+całkowania tych dwóch impulsów. Przy całkowaniu pierwszego impulsu wartość całki nagle
+wzrasta od zera do jedności, więc daje skok jednostkowy. Po przejściu impulsu ujemnego war-
+tość całki sygnału nagle powraca od jedności do zera, dając w rezultacie impuls prostokątny.
+Różniczkowanie upraszcza ten probłem, ponieważ wyznaczanie splotu jest łatwe, gdy jeden
+z sygnałów jest złożony z impulsów. Każdy z dwóch impulsów w przebiegu x'(1) wnosi
+przeskalowaną i przesuniętą wersję odpowiedzi impulsowej do pochodnej sygnału wyjścio-
+wego y'(1). Tak więc: y'(1) = h(1) — h(r — 1). Sygnał wyjściowy y(f) można wyznaczyć przez
+wstawienie wyrażenia określającego h(r) i scałkowanie uzyskanego wzoru.
+
+Drobną niedogodnością tej procedury jest, przy różniczkowaniu, utrata składowej stałej sygnału
+wejściowego. To może spowodować błąd wartości tej składowej w obliczonym sygnale wyjścio-
+wym. Matematycznie traktuje się tę składową jako dowolną stałą, którą można dodać podczas
+całkowania. Nie ma żadnego sposobu systematycznej identyfikacji tego błędu, lecz można go
+zwykle skorygować przez sprawdzenie całego obliczenia. Tak na przykład nie ma błędu skła-
+dowej stałej w przykładzie na rys. 13.7. Jest to wiadome, gdyż obliczony sygnał wyjściowy ma
+prawidłową wartość składowej stałej, gdy t staje się bardzo duże. Gdy w jakimś szczególnym
+zadaniu wystąpi ten błąd, to można obliczenie uzupełnić o odpowiedni składnik stały.
+
+Ta metoda działa także dla sygnałów, które można zredukować do impulsów przez wielo-
+krotne różniczkowanie. Takie sygnały są w nazewnictwie stosowanym w DSP określane jako
+sygnały odcinkowo-wielomianowe (piecewise polynomials), Po wykonaniu splotu, początko-
+wa operacja różniczkowania wielokrotnego jest anulowana przez wielokrotne całkowanie.
+Jedyna pułapka polega tu na tym, że utracona wartość składowej stałej musi być wyznaczana
+w każdym etapie całkowania przez znalezienie prawidłowej stałej całkowania.
+
+Zanim zaczniecie rozwiązywać jakieś zadanie z wykorzystaniem trudnej metody ze splotem sy-
+gnałów ciągłych, powinniście rozważyć możliwość innego podejścia do postawionego proble-
+mu. Postawcie sobie pytanie: Czy rzeczywiście musimy znać matematyczne wyrażenie sygnału
+wyjściowego, czy może wystarczy nam wykres przebiegu. Jeśli wystarczy wykres, to lepiej
+będzie rozwiązywać problem metodami techniki dyskretnej. Trzeba wtedy aproksymować prze-
+bieg ciągły próbkami, na których operację splotu można realizować bezpośrednio programem
+komputerowym. Jest to sposób znacznie łatwiejszy, choć nie jest czysty matematycznie.
+
+<image/figury/k3_page222_figure2.png>
+
+Rys. 13.6. Obliczanie spłotu odcinkami. Ponieważ wiele sygnatów ciągtych jest definiowanych w pew-
+nych obszarach, więc spłot musi być obliczany obszar po obszarze. W tym przykładzie obliczanie sygnału
+wyjściowego jest rozdziełone na trzy odcinki: a) — bez zachodzenia na siebie sygnału wejściowego
+
+i przesuniętej, odwróconej lewo-prawostronnie odpowiedzi impulsowej, b) — z częściowym zachodze-
+niem tych sygnatów, c) — z catkowitym zachodzeniem
+
+ 
+
+"m; >» rz2. "EE.
+ami N GTI TSW cackkoJE M
+
+Z ZOZ
+
+S£+

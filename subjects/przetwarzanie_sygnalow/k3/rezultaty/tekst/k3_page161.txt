@@ -1,0 +1,42 @@
+178 9. Zastosowania D
+
+ 
+
+Drugim powodem unikania splotu jest szybkość obliczeń. Przypuśćmy, że projektujemy filtr
+cyfrowy o odpowiedzi impulsowej zawierającej 512 próbek. W komputerze osobistym z ze-
+garem 200 MHz i arytmetyką zmiennoprzecinkową obliczenie każdej próbki — przy zastoso-
+waniu standardowego algorytmu splotu — wymaga czasu 1 ms. A zatem wydajność systemu
+jest tylko 1000 próbek/s. Jest to 40-krotnie zbyt wolno, jak na potrzeby aparatury audio hi-fi
+oraz 10 000 razy zbyt wolno dla aparatury wideo o telewizyjnej jakości obrazu.
+
+Standardowy algorytm splotu jest wolny, ponieważ wymaga wielkiej liczby operacji mnoże-
+nia i dodawania. Proste przeniesienie problemu, przez DFT, w dziedzinę częstotliwości niestety
+
+Przekształcenie FFT jest omówione w rozdziale 12, a metoda splotowa FFT — w rozdziale 18.
+Na razie skupimy uwagę na splataniu sygnałów przez mnożenie w dziedzinie częstotliwości.
+Na początku trzeba zdefiniować sposób mnożenia dwóch sygnałów w dziedzinie czę-
+stotliwości, a więc wyjaśnić, co znaczy zapis: X(f] x H[Ą] = YU]. We współrzędnych
+biegunowych moduły są mnożone Mag Y[f] = Mag X[f] x Mag HUJ], a fazy dodawane
+Phase Y[f]| = Phase X(f] + Phase H[f]. W celu zrozumienia tych zasad wyobraźmy sobie
+wchodzącą do systemu falę kosinusoidalną o pewnej amplitudzie i fazie. Również sygnał
+wyjściowy jest falą kosinusoidalną o pewnej amplitudzie i fazie. Odpowiedź częstotliwo-
+ściowa we współrzędnych biegunowych opisuje bezpośrednio zależności między tymi dwie-
+ma amplitudami i dwiema fazami.
+
+prostokątnych wykonuje się zgodnie z wzorami:
+
+<image/wzory/k3_page161_formula1.png>
+
+mem on PYT WWIEECAPYN EP
+=XII] x
+
+Proszę zwrócić szczególną uwagę na zrozumienie mnożenia we współrzędnych biegunowych
+przechodzenia fal kosinusoidalnych przez system. Następnie trzeba po prostu zaakceptować
+
+moduły i odjąć fazy, tj. Mag H[f] = Mag Yf] / Mag X(f] oraz Phase H[f] = Phase Y(f) — Phase
+We współrzędnych prostokątnych konieczne jest skorzystanie z wzorów:
+
+<image/fitwzory/k3_page161_formula2.png>
+
+CEE NZ
+1] =Y[M/X[H]

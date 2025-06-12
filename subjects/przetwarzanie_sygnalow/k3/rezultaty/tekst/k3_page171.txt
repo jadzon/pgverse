@@ -1,0 +1,38 @@
+<image/figury/k3_page171_figure1.png>
+
+Rozważmy na przykład przebieg, który jest symetryczny wokół próbki zero, a zatem ma
+fazę zerową. Na rys. 10.5 a) pokazano, jak faza tego sygnału się zmienia, gdy sygnał jest
+przesuwany w lewo lub w prawo. Przy największej częstotliwości, równej połowie często-
+liwości próbkowania, faza wzrasta o x przy każdym przesunięciu o jedną próbkę w lewo
+i zmniejsza się o x przy przesunięciu o jedną próbkę w prawo. Przy częstotliwości zerowej
+nie ma przesunięcia fazy. W całym zakresie, od 0 do częstotliwości maksymalnej (równej 0,5
+częstotliwości próbkowania), zmiany fazy w funkcji częstotliwości są liniowe.
+
+Wszystkie przykłady, które dotychczas podaliśmy, dotyczyły fazy liniowej. Na rys. 10.5 b)
+pokazano, że sygnały o nieliniowej charakterystyce fazowej reagują na przesunięcie w taki
+sam sposób, jak sygnały o charakterystyce liniowej. W tym przykładzie nieliniowa charakte-
+rystyka fazowa jest linią prostą z nałożonymi na nią dwoma impulsami prostokątnymi. Gdy
+następuje przesunięcie w dziedzinie czasu, to elementy nieliniowe są po prostu nakładane na
+prostą o zmienionym nachyleniu.
+
+Co się dzieje z częścią rzeczywistą i urojoną, gdy przebieg w dziedzinie czasu ulega prze-
+sunięciu? Przypomnijmy sobie, że sygnały w dziedzinie częstotliwości zapisane we współ-
+rzędnych prostokątnych są w zasadzie niemożliwe do bezpośredniego zrozumienia. Części
+rzeczywista i urojona wyglądają na ogół jak przypadkowe oscylacje bez wyraźnego kształtu.
+Gdy sygnał w dziedzinie czasu ulega przesunięciu, te „pokręcone” przebiegi stają się jeszcze
+bardziej oscylacyjne i trudne do interpretacji. Nie traćcie czasu na próby zrozumienia tych
+sygnałów oraz charakteru ich zmian przy przesunięciach w dziedzinie czasu.
+
+Na rys. 10.6 w ciekawy sposób przedstawiono, jaka informacja jest zawarta w fazie i jaka w mo-
+„dule. Przebieg na rys. 10.6 a) ma dwie istotne cechy — zbocze narastające przy próbce 55 i zbo-
+cze opadające przy próbce 110. Zbocza są bardzo ważne, jeśli informacja jest zawarta w kształ-
+cie przebiegu. Zbocze wskazuje, kiedy coś się zdarza, rozdzielając to, co się dzieje na lewo od
+zbocza, od tego, co się dzieje na prawo. Jest to w dziedzinie czasu informacja w jej najczystszej
+formie. Na rys. 10.6 wykonano najpierw przekształcenie DFT sygnału z rys. 10.6 a) i uzyska-
+ne widmo częstotliwościowe wyrażono we współrzędnych biegunowych. Aby znaleźć sygnał
+przedstawiony na rys. 10.6 b), zastąpiono fazę losowo wybranymi liczbami z zakresu od —x do
+x i wykonano odwrotne przekształcenie DFT w celu odtworzenia przebiegu w dziedzinie czasu.
+Tak więc przebieg na rys. 10.6 b) ma źródło tylko w informacji zawartej w module. W podob-
+ny sposób, zastępując moduł małymi liczbami iosowymi przed wykonaniem odwrotnego prze-
+kształcenia DFT, wyznaczono przebieg przedstawiony na rys. 10.6 c). Odtworzenie przebiegu
+przedstawione na rys. 10.6 c) uzyskano więc tylko na podstawie informacji zawartych w fazie.

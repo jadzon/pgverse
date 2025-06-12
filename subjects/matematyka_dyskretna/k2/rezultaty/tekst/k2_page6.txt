@@ -1,0 +1,32 @@
+6 Rozdział 1. Oznaczenia
+
+<image/figury/k2_page6_figure1.png>
+
+L+x AR UŁAŁŁŁAŁ zy 1444 J ULAŁA LAJAUŁ UTY
+
+A 6 B oznacza różnicę symetryczną zbiorów, która zawiera elementy należące tylko do
+jednego z dwóch zbiorów:
+
+<image/wzory/k2_page6_formula1.png>
+Przykł
+<image/wzory/k2_page6_formula2.png>
+
+W poniższym lemacie zebrano podstawowe własności różnicy symetrycznej zbiorów.
+
+<image/figury/k2_page6_figure2.png>
+
+Dowód:
+
+Udowodnimy, tylko dwie tożsamości, dowód pozostałych pozostawiamy czytelnikowi
+jako ćwiczenie.
+
+Aby pokazać, że różnica symetryczna jest łączna wystarczy zauważyć, że zbiór A ©
+(BeC) lub (AG8B)EC zawiera te elementy, które należą do nieparzystej liczby zbiorów,
+czyli te, które należą tylko do A, plus te, które należą tylko do B, plus te, które należą
+tylko do C, plus te, które należą do przekroju AN BNC.
+
+Udowodnimy teraz ostatnią implikację. Jeżeli A © B = , to
+
+<image/wzory/k2_page6_formula3.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

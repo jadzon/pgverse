@@ -1,0 +1,38 @@
+172 2. Pojęcia podstawowe — uklady
+
+<image/figury/k4_page172_figure1.png>
+
+ 
+
+Różniczkując pierwsze równanie i podstawiając wyznaczoną zale
+ostatecznie związek między prądem i oraz napięciem u:
+
+<image/wzory/k4_page172_formula2.png>
+będący równaniem dwójnika z rys. 2.1-3a.
+
+Uwaga. Jak wynika z rozpatrzonych dwóch przykładów, wy?
+
+z jego równań sieciowych bywa procedurą skomplikowaną, może
+
+różniczkowań. W rozdziale 6 przedstawimy inny sposób, który dla pew
+
+tej należą oba rozpatrzone przykłady) umożliwia znacznie prostsze +
+
+Przykład 2.1-4. Dwójnik z rys. 2.1-3b zawiera liniową niestacjo
+napięcie u, jest równe — por. wzór (1.6-9):
+
+<image/wzory/k4_page172_formula4.png>
+zwzory/k4_page172_fol
+
+Równanie dwójnika ma zatem postać:
+
+<image/wzory/k4_page172_formula1.png>
+
+Przykład 2.1-5. Przyjmijmy, że opór nieliniowy N występując:
+opisany równaniem:
+
+zory/k4_page172_formula5.png
+
+Równanie tego dwójnika można wówczas zapisać w postaci:
+
+rzory/k4_page172_formula6.png

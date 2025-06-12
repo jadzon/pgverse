@@ -1,0 +1,37 @@
+1.2. Algorytm Euklidesa, wersja rekurencyjna 5
+
+1.2 Algorytm Euklidesa, wersja rekurencyjna
+
+Innym przykładem algorytmu rekurencyjnego może być rekurencyjna wersja algorytmu
+Em który oblicza największy wspólny dzielnik dwóch dodatnich liczb naturalnych
+funkcja NWD(a,b):
+
+e jeżeli a = b, to NW D(a,b) =a,
+
+e jeżeli a > b, to NW D(a,b) = NW D(a —b,b),
+
+e jeżeli a < b, to NW D(a,b) = NW D(a,b — a).
+
+W języku Pascal powyższą procedurę możemy zapisać w następujący sposób:
+
+function NWD(a,b:integer):integer;
+begin
+if a=b then NWD:=a
+else if a>b then NWD:=NwWD(a-b,b)
+else NWD:=NWD(a,b-a)
+end;
+
+Rysunek 1.2: Schemat działania rekurencyjnej wersji algorytmu Euklidesa
+
+<image/figury/k2_page154_figure1.png>
+
+Na rysunku 8.2 przedstawiono proces obliczania funkcji NWD(7,3).
+
+1.3 Funkcje rekurencyjne
+
+Czasami wygodnie jest zdefiniować funkcje za pomocą wzoru rekurencyjnego. Na przy-
+kład funkcję silnia definiuje się zwykle za pomocą następujących dwóch równań:
+
+<image/wzory/k2_page154_formula1.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,24 @@
+_2.2.5 Deklaracja zmiennych
+
+ 
+
+Każdy element oprogramowania powinien na początku zawierać deklaracje uży-
+wanych zmiennych zawierającą określenie typów do jakich należą i ewentualnie
+ich fizyczną lub logiczną lokalizację. Zakres działania takiej deklaracji jest lokal-
+ny w obrębie tego elementu oprogramowania, w którym się pojawia, tzn. że inne
+elementy oprogramowania nie mają dostępu do tych zmiennych. Co najwyżej
+mogą być one przekazywane jako argumenty wejściowe lub wyjściowe przy wy
+woływaniu tego elementu oprogramowania. Jedyny wyjątek stanowią tu
+zdefiniowane w konfiguracji (por. 2.4) zmienne globalne (global variables), do
+których dostęp w elemencie oprogramowania uzyskuje się za pomocą deklaracji
+VAR_EXTERNAL.
+
+Tab. 2.12 zawiera słowa kluczowe używane w elementach oprogramowania lub
+konfiguracjach do deklaracji zmiennych, natomiast w Tab. 2.13 pokazano przy-
+kłady taktch deklaracji
+
+<image/tabele/k4_page45_table2.png>
+
+<image/tabele/k4_page45_table1.png>
+
+2.2 Typy danych i deklaracje zmiennych 45

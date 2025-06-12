@@ -1,0 +1,40 @@
+<image/wzory/k4_page91_formula1.png>
+
+Warunki początkowe grafu SFC są określone przez etap początkowy (initial
+step), który jest w stanie aktywnym z chwilą inicjacji programu użytkownika lub
+bloku funkcyjnego zawierającego graf SFC.
+
+Zmiana stanu procesu polega na przechodzeniu między kolejnymi, bezpośrednio
+połączonymi etapami i zależy od warunku przejścia między nimi.
+
+Przejście (tranzycja) jest dostępne (enabled) tylko wtedy, gdy wszystkie bezpo-
+średnio poprzedzające je etapy są aktywne. Kasowanie przejścia występuje
+wtedy, gdy jest ono dostępne i jest spełniony warunek przejścia (wyrażenie lo-
+giczne określające warunek przejścia ma wartość /). Kasowanie przejścia
+powoduje dezaktywację wszystkich bezpośrednio poprzedzających je etapów
+i aktywację wszystkich etapów występujących bezpośrednio po nim.
+
+Przy konstrukcji grafu SFC trzeba pamiętać o następujących wymaganiach:
+
+e dwa etapy nie mogą być bezpośrednio połączone — muszą być zawsze roz-
+dzielone przejściem;
+
+e dwa przejścia nie mogą być bezpośrednio połączone — muszą być zawsze
+rozdzielone etapem.
+
+Graf SFC umożliwia modelowanie procesów współbieżnych za pomocą tzw.
+sekwencji współbieżnych (simultaneous sequences) realizowanych w ten spo-
+sób, że kasowanie warunku przejścia prowadzi do jednoczesnej aktywacji kilku
+różnych etapów występujących bezpośrednio za nim. Sekwencje takich etapów
+rysowane są równolegle. Po równoczesnej aktywacji sekwencji współbieżnych
+dalsze wykonywanie każdej z nich przebiega niezależnie od pozostałych. W celu
+podkreślenia szczególnej natury takiego przejścia rozchodzenie się (divergence)
+i schodzenie (convergence) sekwencji współbieżnych jest zaznaczane przez po-
+dwójną linię poziomą.
+
+Zasady modelowania za pomocą sekwencji etapów i przejść w grafie SFC zebra-
+no w Tab. 2.48.
+
+<image/tabele/k4_page91_table1.png>
+
+2.5 Programowanie w oparciu o graf sekwencji SFC 91

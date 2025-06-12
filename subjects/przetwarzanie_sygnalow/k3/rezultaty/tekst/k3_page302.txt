@@ -1,0 +1,18 @@
+Są dwa sposoby zwiększenia maksymalnej liczby biegunów, jaką możemy zastosować. Pc
+pierwsze, skorzystajcie z podwójnej dokładności. Wymaga to zastosowania podwójnej
+kładności również przy obliczaniu współczynników (z wartością x włącznie).
+
+Drugim sposobem jest implementacja filtru przez realizację jego stopni. Na przykład
+zacja filtru 6-biegunowego zaczyna się od kaskady trzech stopni, po dwa bieguny
+Program podany w tablicy 20.4 łączy te trzy stopnie w jeden zestaw współczynników
+kursywnych w celu ułatwienia programowania. Filtr jest jednak bardziej stabilny, jeśli j
+
+dla fikru 6-biegunowego jest wywoływany trzy razy. Po zakończeniu wykonywania podpro-
+gramu pięć zmiennych powraca do programu głównego: A0, Al, A2, BL i B2. Są to współ-
+czynniki rekursywne dla właśnie realizowanego stopnia dwubiegunowego i mogą być użyte
+do implementacji filtru przez realizację poszczególnych stopni.
+
+ławy ctczęss ze rmy usuwania blędów. Tablica zawiera dwa zestawy danych
+służące do sprawdzania podprogramu z tablicy 20.5 i usuwania biędów
+
+<image/tabele/k3_page302_table1.png>

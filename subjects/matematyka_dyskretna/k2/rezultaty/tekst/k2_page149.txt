@@ -1,0 +1,41 @@
+34 Rozdział 1. Teoria liczb
+
+1.21.4 Układ kongruencji
+
+Istnieje inny sposób rozwiązywania układu kongruencji. Pokażemy go na przykładzie
+układu
+
+<image/wzory/k2_page149_formula1.png>
+
+Najpierw szukamy dwóch liczb ag; i ao spełniających warunki
+
+<image/wzory/k2_page149_formula2.png>
+
+Udowodnij, że rozwiązaniem układu (1.8) jest
+
+<image/wzory/k2_page149_formula3.png>
+
+Jak policzyć ao; OTaZ a;9? Ponieważ 3 i 5 są względnie pierwsze, więc istnieją zr i y takie,
+
+<image/wzory/k2_page149_formula4.png>
+
+Pokaż, że jezen puustawiny agy 57 (MOQ 10) ULAŁ Qyg = oy (moda 10), w
+dobrze.
+
+1.21.5 Chińskie twierdzenie o resztach
+Z chińskiego twierdzenia o resztach wynika, że jeżeli NW D(m.n) = 1, to funkcja
+
+<image/wzory/k2_page149_formula5.png>
+
+stanowi wzajemnie jednoznaczne odwzorowanie pomiędzy Z „„„ a iloczynem kartezjań-
+skim Z, x Z,.
+
+Na iloczynie kartezjańskim Z „ x Z,„ możemy określić działania dodawania i mnoże-
+nia w następujący sposób:
+
+<image/wzory/k2_page149_formula6.png>
+
+Łatwo można sprawdzić, że zbiór Z „ x Z, z tak określonymi działaniami, jest pierście-
+niem. Ponadto funkcja f spełnia warunki f(x+y) = f(x)+ f(y) oraz f(z:y) = f(z):(y).
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

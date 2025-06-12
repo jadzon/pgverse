@@ -1,0 +1,29 @@
+Ustawianie domyślnych parametrów regulatora takich jak wzmocnienie, czas
+różniczkowania, częstość całkowania, wartość zadana powinno być zrealizowane
+w pierwszym cyklu sterownika. W tym celu wykorzystano styk systemowy
+
+FST_ŚCN. Na Wyd. 8.101 przedstawiono przykład ustawienia parametrów regu-
+latora PID.
+
+<image/figury/k4_page440_figure3.png>
+
+Wyd. 8.101 Konfiguracja regulatora w pie rwszym cyklu pracy sterownika
+
+Przekazywanie wyjścia regulatora na elementy wykonawcze oraz jego obsługa
+w trybie pracy ręcznej jest realizowana przez procedurę przedstawioną na Wyd.
+8.102. Użycie standardowego trybu regulacji ręcznej w sterowniku (styki UP
+i DN bezpośrednio podłączone do bloku regulatora PID) jest bardzo niewygodne,
+ponieważ zmiana wyjścia regulatora od 0 do 32000 trwałaby zbyt długo. Aby za-
+pobiec tak wolnemu działaniu zastosowano procedurę dynamicznego doboru
+szybkości zmian wyjścia regulatora w trybie ręcznym. Naciśnięcie jednego
+z przycisków sterujących elementem wykonawczym (T-DG4OP lub T-DG£CL)
+powoduje zmianę sygnału sterującego o ok. 1%. Przytrzymanie przycisku przez
+czas dłuższy niż 3s powoduje dziesięciokrotny wzrost szybkości zmian wyjścia.
+Możliwość szybkiego działania ma szczególne znaczenie w sytuacjach awaryj-
+nych.
+
+<image/figury/k4_page440_figure2.png>
+
+ 
+
+vzorv/k4 bpade440 formula1.ona

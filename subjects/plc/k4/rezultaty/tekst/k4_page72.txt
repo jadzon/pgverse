@@ -1,0 +1,29 @@
+2. Jeżeli wejście /NTERVAL jest niezerowe, to skojarzone z zadaniem elementy
+oprogramowania powinny być okresowo (z podanym na tym wejściu prze-
+działem czasu) szeregowane w kolejki do wykonania, dopóki na wejściu
+SINGLE jest wartość O. Jeśli wejście /NTERVAL jest zerowe (wartość do-
+myślna), to skojarzone elementy oprogramowania nie powinny być
+szeregowane okresowo.
+
+<image/figury/k4_page72_figure1.png>
+
+<image/figury/k4_page72_figure3.png>
+
+w sposób graficzny
+
+3. Wejście PRIORITY ustala priorytet skojarzonych elementów oprogramowa-
+nia, przy czym O oznacza priorytet najwyższy, a kolejne liczby odpowiadają
+kolejnym niższym priorytetom. Jak pokazano w Tab. 2.39 i Tab. 2.40, prio-
+rytet elementu oprogramowania (czyli priorytet skojarzonego z nim zadania)
+może być wykorzystany do szeregowania z wywłaszczaniem lub bez wy-
+właszczania.
+
+a) W przypadku szeregowania bez wywłaszczania (non-preemptive schedu-
+ling), przetwarzanie staje się dostępne w zasobie, gdy wykonanie jakiegoś
+elementu oprogramowania lub funkcji systemu operacyjnego są zakończone.
+Gdy przetwarzanie w zasobie jest dostępne, to powinno rozpocząć się wy-
+konywanie elementu oprogramowania o najwyższym priorytecie. Jeśli na
+wykonanie oczekuje więcej niż jeden element oprogramowania z najwyż-
+
+W bO
+72 Rozdział : 2.Programowanie sterowników PLC

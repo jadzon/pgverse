@@ -1,0 +1,21 @@
+<image/tabele/k4_page89_table1.png>
+
+Najczęściej kojarzy się etap z działaniem za pomocą tzw. bloku działania (ac-
+tion block), który w sposób graficzny reprezentuje przetwarzanie logicznej
+zmiennej wejściowej, oraz kwalifikatora działania (action qualifier) w celu
+określenia warunków zezwolenia na wykonanie zadeklarowanego zestawu in-
+strukcji tworzących działanie. Sposób graficznego przedstawienia bloku
+działania pokazano w Tab. 2.46. Pole „a” może być pominięte jeżeli kwalifika-
+torem działania jest N (por. Tab. 2.47).
+
+Użycie zmiennej logicznej zwrotnej, oznaczonej jako pole „c” w Tab. 2.46 jest
+opcjonalne. Wyznaczone działanie może wykorzystywać tę zmienną do
+sygnalizacji kompletności wykonania, przekroczenia czasu, wystąpienia błędów
+itp. W przypadku kaskadowego łączenia bloków działania, jak pokazano to
+w Tab. 2.45, możliwe jest wykorzystanie wielu zmiennych zwrotnych, chociaż
+bloki te mają tylko jedną wspólną zmienną wejściową oddziaływującą równocze-
+śnie na wszystkie połączone bloki.
+
+OOOO CZ OZ OE TO Z ZZ ECO OE OTW OOO OOOO ZE O ZZO ZEW OCET SIZE OWE OW POWT ZE ZERO Z EEK,
+
+2.5 Programowanie w oparciu o graf sekwencji SFC 89

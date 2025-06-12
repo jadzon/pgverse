@@ -1,0 +1,26 @@
+<image/figury/k1_page41_figure1.png>
+
+Rys. 2.2. Układ masa-tłumik-sprężyna umieszczony na bezmasowym wózku
+
+Rozwiązanie
+Korzystając z drugiego prawa Newtona, otrzymujemy
+
+<image/wzory/k1_page41_formula1.png>
+
+lub inaczej
+
+<image/wzory/k1_page41_formula2.png>
+
+Równanie to jest matematycznym modelem układu mechanicznego.
+Dokonując transformaty Laplace'a poszczególnych składników, otrzymujemy:
+
+<image/wzory/k1_page41_formula3.png>
+
+<image/wzory/k1_page41_formula4.png>
+
+[ky] = kY (5),
+
+<image/wzory/k1_page41_formula5.png>
+Ź(ku] =kU(S).
+
+43

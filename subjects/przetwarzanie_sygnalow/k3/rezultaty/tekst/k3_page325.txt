@@ -1,0 +1,55 @@
+Nieliniowe przetwarzanie sygnałów fonicznych 355
+
+Podkreślone słowa mają w języku angielskim identyczne brzmienie, a jednak ze względu na
+ich kontekst słyszymy poprawne słowa. Korzystając z naszej zgromadzonej przez lata wiedzy
+o świecie, wiemy, że dzieci nie są tajnymi agentami a ludzie w czasie wojny nie noszą dziwacz-
+nej biżuterii. Na ogół nie jest to akt świadomy, lecz nieodłączna część ludzkiego słyszenia.
+
+W większość algorytmów rozpoznawania mowy wykorzystuje się tylko dźwięk pojedyn-
+czych słów, a nie ich kontekst. Te algorytmy próbują rozpoznawać słowa, a nie zrozumieć
+mowę. Jest to ich poważną wadą w porównaniu ze słuchaczem-człowiekiem. W popularnych
+systemach rozpoznawania mowy pojawiają się trzy kłopotliwe trudności: 1) Rozpoznawana
+mowa musi mieć wyraźne przerwy między słowami. To uwalnia algorytm od konieczności
+zajmowania się zwrotami brzmiącymi podobnie, lecz złożonymi z innych słów (np. spider
+ring i spy during). Takie rozpoznawanie jest więc powolne i niewygodne dla ludzi przyzwy-
+czajonych do nieprzerwanego strumienia słów. 2) Słownik bywa często ograniczony do kil-
+kuset słów. To znaczy, że algorytm przeszukuje tylko ograniczony zestaw słów, aby znaleźć
+najlepiej dopasowane. W miarę rozszerzania słownika, wzrasta czas rozpoznawania i stopa
+błędów, 3) Algorytm musi być przetrenowany dla każdego mówiącego. Każda osoba stosu-
+jącą system musi więc wypowiedzieć każde słowo, które ma podlegać rozpoznawaniu, a czę-
+sto trzeba je powtarzać pięć do dziesięciu razy. Taka spersonalizowana baza danych znacznie
+zwiększa dokładność rozpoznawania słów, lecz jest bardzo niewygodna i czasochłonna.
+Opracowanie udanej techniki rozpoznawania mowy stanie się wielkim osiągnięciem. Mowa
+jest najszybszym i najskuteczniejszym sposobem komunikowania się ludzi. Rozpoznawanie
+mowy ma potencjalne możliwości zastąpienia pisania, wprowadzania tekstów przez klawia-
+turę i sterowania elektronicznego przy użyciu gałek i przełączników. Rozpoznawanie mowy
+musi działać jeszcze lepiej, aby zostało zaakceptowane przez rynek komercyjny. Postęp w tej
+dziedzinie przyjdzie przypuszczalnie z obszarów sztucznej inteligencji i sieci neuronowych,
+w tym samym stopniu co z samego DSP. I nie należy tego kojarzyć z trudnościami technicz-
+nymi, lecz z szansą dla techniki.
+
+Nieliniowe przetwarzanie sygnałów fonicznych
+
+Stosując filtrację cyfrową, można wieloma sposobami udoskonalać sygnały foniczne. Na przy-
+kład filtrację Wienera stosuje się do oddzielania tych częstotliwości, które należą głównie do
+sygnału od tych, które są głównie szumem (patrz rozdział 17). Przy użyciu rozpłotu można
+kompensować niepożądany splot, np. w rekonstrukcji starych nagrań (też omówionej w roz-
+dziale 17). Tego rodzaju metody liniowe stanowią trzon DSP. W przetwarzaniu sygnałów fo-
+nicznych przydatne też są niektóre metody nieliniowe. Dwie z nich będą tu krótko omówione.
+Pierwsza z tych metod nieliniowych jest stosowana do tłumienia szumu szerokopasmowego
+w sygnale mowy. Ten typ szumu obejmuje: szum taśmy magnetofonowej, szum elektroniczny
+w układach analogowych, podmuchy wiatru w mikrofonach, oklaski tłumu itd. Filtracja liniowa
+nie na wiele tu się przyda, ponieważ częstotliwości szumu całkowicie nakładają się na często-
+tliwości sygnału głosowego, obie częstotliwości obejmują zakres od 200 Hz do 3,2 kHz. Jak
+można rozdzielić sygnały, jeśli nakładają się zarówno w dziedzinie czasu, jak i częstotliwości?
+A oto, jak wykonuje się takie rozdzielanie. W krótkim segmencie mowy wartości składo-
+wych częstotliwościowych są w znacznym stopniu zróżnicowane. Na rys. 22.10 a) przed-
+stawiono, jako przykład, widmo częstotliwościowe 16-milisekundowego segmentu mowy
+(tj. 128 próbek przy próbkowaniu z częstotliwością 8 kHz). Większość energii sygnału jest
+zawarta w kilku składowych częstotliwościowych o dużych wartościach. Na rys. 22.10 b) zaś
+pokazano widmo samego szumu losowego. Jest ono bardzo nieregularne, lecz ma bardziej
+równomierny rozkład przy małych wartościach.
+
+A teraz kluczowa koncepcja — jeśli występuje zarówno sygnał, jak i szum, to mogą one być
+częściowo rozdzielone przez obserwację wartości każdej składowej częstotliwościowej. Jeśli
+wartość składowej jest duża, to najprawdopodobniej jest to składowa sygnału, należy ją więc

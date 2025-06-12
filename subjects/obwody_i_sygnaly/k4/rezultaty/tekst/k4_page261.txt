@@ -1,0 +1,42 @@
+33. Metody analizy obwodów liniowych prądu stałego 263
+
+1. obliczyć prąd zawarcia I. płynący przez zwarte zaciski AB tego układu
+(rys. 3.3-9b) i przyjąć Jy = I.;
+
+2. obliczyć przewodność zastępczą Gy = Gy bezźródłowego dwójnika
+AB (rys. 3.3-6b);
+
+3.zeschematuzastpczegorys.3.311obliczyszukanwielkowzory
+(3.3-8)).
+
+Przykład 3.3-8. Korzystając z metody Nortona obliczymy prąd 7 w układzie analizowanym
+w przykładzie 3.3-6 (rys. 3.3-8a).
+
+<image/figury/k4_page261_figure1.png>
+
+Po zwarciu zacisków AB otrzymujemy układ pokazany na rys. 3.3-12. Napięcia na wszystkich
+E
+oporach tego układu są jednakowe i równe z Z prądowego równania Kirchhoffa dla węzła A
+
+wynika więc, że prąd zwarcia:
+
+zory/k4_page261_formula1.png
+
+1 3
+Ponieważ Gy = R. = 2x (por. przykład 3.3-6), zatem po podstawieniu obu wyników do wzoru
+T
+
+(3.3-8) otrzymujemy:
+
+ory/k4_page261_formula2.png
+
+E. Założenie liniowości. Istotnym założeniem twierdzeń Thevenina i Nor-
+tona jest założenie o liniowości dwójnika AB z rys. 3.3-4b. Twierdzenia te
+przestają być słuszne dla dwójników nieliniowych. Na założeniu o liniowości
+została oparta konstrukcja dowodu twierdzenia Thevenina przeprowadzonego
+w p. A. Przyjęty tam sposób dowodzenia może być zastosowany jedynie do
+dwójników rezystancyjnych, tylko w tym przypadku możemy bowiem posługi-
+wać się pojęciem charakterystyki dwójnika. Wykorzystując to pojęcie można
+przeprowadzić dowód twierdzenia Nortona analogiczny do dowodu twierdzenia
+Thevenina z p. A (w dowodzie twierdzenia Nortona z p. C skorzystaliśmy
+z zasady równoważności źródeł).

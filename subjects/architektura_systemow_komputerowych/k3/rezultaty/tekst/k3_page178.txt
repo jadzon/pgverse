@@ -1,0 +1,25 @@
+168 8. Mechanizmy przyspieszające pracę komputerów
+
+<image/figury/k3_page17/8_figure2.png>
+
+W wielu systemach wykorzystuje się zjawisko lokalności programu i wyposaża się
+każdy procesor we własną pamięć, co znacznie zmniejsza częstotliwość odwołań do
+wspólnej pamięci. W takich systemach wyróżnia się wówczas dwa typy magistral: jedną
+magistralę systemową oraz drugą tzw. magistralę lokalną. System taki jest pokazany na
+rysunku 8.10. Pokazane na rysunku dekodery adresu dołączone do magistrali lokalnej
+informują układ arbitra czy procesor żąda dostępu do pamięci własnej, czy do pamięci
+wspólnej.
+
+8.4.2. OBLICZENIA RÓWNOLEGŁE
+
+Jednym z najważniejszych warunków przyspieszania obliczeń w układach wieloprocesoro-
+wych jest wykorzystanie algorytmów pozwalających na zrównoleglanie operacji. Algoryt-
+my te opierają się na dekompozycji danego zadania na takie podzadania, które mogą być
+wykonywane równocześnie. W takim przypadku można zlecać różnym procesorom różne
+
+podzadania tak, aby pracowały one równolegle. Dalej pokażemy przykładowy sposób
+dekompozycji zadania.
+
+Rozpatrzmy przykład mnożenia dwóch macierzy:
+
+<image/wzory/k3_page1/8_formula1.png>

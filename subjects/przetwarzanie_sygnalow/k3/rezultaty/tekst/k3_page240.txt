@@ -1,0 +1,15 @@
+262 14. Wprowadzenie do filtrów cyfrowych
+
+<image/figury/k3_page240_figure1.png>
+
+ 
+
+<image/figury/k3_page240_figure2.png>
+
+ 
+
+RA aoc filtru pasmowoprzepustowego. Filtr pasmowoprzepustowy można utworzyć, tącząc ka-
+
+dolno- i górnoprzepustowy (rysunek a). Można to zredukować do jednego stopnia, jak pokazano na |
+rysunku 0). Odpowiedź impulsowa tego pojedynczego stopnia jest równa spłotowi odpowiedzi impulsowych filtrów
+dolno- i górnoprzepustowego

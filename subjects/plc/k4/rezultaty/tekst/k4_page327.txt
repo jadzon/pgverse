@@ -1,0 +1,15 @@
+7.4 Funkcje logiczne
+
+ 
+
+W Tab. 7.4 przedstawiono zestaw podstawowych operatorów, przy pomocy któ-
+rych można realizować funkcje logiczne.
+
+<image/tabele/k4_page327_table1.png>
+
+Maksymalna liczba markerów, wejść i wyjść, czasomierzy i liczników może się
+zmieniać w zależności od typu wykorzystywanej jednostki centralnej.
+
+W Z W ME A OO APE AE EE
+
+7.4 Funkcje logiczne 327

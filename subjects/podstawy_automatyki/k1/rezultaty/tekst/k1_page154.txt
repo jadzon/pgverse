@@ -1,0 +1,42 @@
+6.2.2. Parametry mechaniczne
+
+Wielkości mechaniczne występujące na schemacie (rys. 6.2) charakteryzują odpo-
+wiednio:
+M, — moment obrotowy wirnika,
+w, — prędkość kątową wirnika,
+B — współczynnik tarcia lepkiego zredukowany do wału wimika,
+J — moment bezwładności zredukowany do wału wirnika,
+i„ — prąd płynący w uzwojeniach wirnika,
+M,, — stały moment obciążenia silnika.
+
+Moment obrotowy wirnika wykorzystywany do pokonania momentów przeciwsta-
+wiających się jego ruchowi można zapisać jako
+
+<image/wzory/k1_page154_formula1.png>
+
+Zakładając, że strumień magnetyczny stojana ma wartość stałą, moment obrotowy
+wirnika, proporcjonalny do prądu płynącego przez wirnik, możemy zapisać jako
+
+zory/k1_page154_formula2.png
+
+gdzie k,, — stała mechaniczna, zależna m.in. od strumienia magnetycznego stojana oraz
+liczby zwojów w uzwojeniach wirnika.
+
+Moment związany z przyspieszeniem kątowym wirnika można zapisać jako
+
+zory/k1_page154_formula3.png
+
+Moment związany z oporami ruchu wirnika można zapisać jako
+
+zory/k1_page154_formula4.png
+
+Podstawiając kolejne składowe momentu M, do równania (6.3), otrzymamy
+
+<image/wzory/k1_page154_formula5.png>
+
+Przekształcając równania (6.2) i (6.4), otrzymujemy układ równań różniczkowych
+będący modelem silnika:
+
+<image/figury/wzory/k1_page154_formula6.png>
+
+156

@@ -1,0 +1,58 @@
+10 Rozdział 1. Rachunek prawdopodobieństwa
+
+Przykład 1.19 Wyobraźmy sobie urnę z trzema kulami: 1 białą i 2 czarnymi. Przypuśćmy,
+że pierwsza osoba wylosowała jedną kulę i schowała ją. Jakie jest prawdopodobieństwo,
+że druga osoba wylosuje kulę białą? Niech 4, oznacza, że pierwsza osoba wylosowała
+białą kulę, wtedy A; oznacza, że wylosowała czarną kulę. Niech 4 oznacza, że druga
+
+osoba wylosowała białą kulę.
+Mamy P(A;) = 1/3, P(A4) = 2/3, P(A>| A+) = 0 oraz P(A2|A; ) = 1/2. Razem
+daje te
+
+<image/wzory/k2_page69_formula1.png>
+
+A jakie jest prawdopodobieństwo, że po drugim losowaniu w urnie zostanie biała kula?
+Zajdzie to wtedy, gdy obie osoby wylosują kulę czarną. Z wniosku 1.12 mamy
+
+<image/wzory/k2_page69_formula2.png>
+
+Jak widać prawdopodobieństwo wyłosowania białej kuli jest takie samo dla pierwszego,
+drugiego i trzeciego losującego.
+
+Ponieważ przestrzeń zdarzeń jest tutaj mała, więc można nasz wynik sprawdzić bezpo-
+średnio. Oznaczmy kule przez 1b, 2c i 3. Niech przestrzeń zdarzeń elementarnych będzie
+
+<image/wzory/k2_page69_formula3.png>
+
+Zakładamy, że każdy z tych wyników jest równie prawdopodobny. Widać teraz, że zdarze-
+nia: A; = ((1b,2c), (1b,3c)), A2 = £(2e, Ib), (3c, 1b)) oraz P(A4NAZ) = f(2c,3c), (3c, 2c))
+są równo prawdopodobne.
+
+Rozważmy teraz przypadek, gdy w urnie jest n ku] z czego k białych. Znowu zakłada-
+my, że każdy wynik dwóch losowań jest równie prawdopodobny. Mamy P(A;) = k/n,
+P(A) = (n—k)/n, P(A|A;) = (k — 1)/(n — 1) oraz P(A>|A; ) = k/(n — 1). Razem
+daje tc
+
+<image/wzory/k2_page69_formula4.png>
+
+Czyli w tym przypadku, również druga osoba ma taką samą szansę wylosowania kuli
+białej co pierwsza.
+
+Przykład 1.20 Wyobraźmy sobie dwie urny z kulami. W pierwszej urnie jest jedna kula
+biała i jedna czarna, a w drugiej urnie dwie białe i jedna czarna. Rzucamy monetą. Jeżeli
+wypadnie orzeł, to losujemy kulę z pierwszej urny, jeżeli reszka, to losujemy z drugiej
+urny.
+
+Jakie jest prawdopodobieństwo, że wylosujemy kulę białą? Niech B oznacza wyloso-
+wanie kuli białej, a A wypadnięcie orła na monecie, wtedy A' oznacza, że na monecie
+wypadła reszka. Mamy P(A) = P(A') = 1/2 oraz
+
+P(B|A) = 1/2 -jest to prawdopodobieństwo wylosowania kuli białej pod warunkiem,
+że wypadł orzeł i losowaliśmy z pierwszej urny.
+
+P(B|A') = 2/3 -jest to prawdopodobieństwo wylosowania kuli białej pod warun-
+kiem, że wypadła reszka i losowaliśmy z drugiej urny.
+
+Korzystając teraz ze wzoru (1.1) mamy
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

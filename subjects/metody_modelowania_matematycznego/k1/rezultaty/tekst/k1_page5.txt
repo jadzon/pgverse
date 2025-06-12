@@ -1,0 +1,35 @@
+Model scalony - uproszczony model podstawowy zasadny dla układu eksperymentu
+
+model podstawowy: — operacje uproszczenia:
+- elementy (e) pomijanie - e,v,r,(S)
+- _ zmienne opisowe (v) upraszczanie -r,S
+- _ reguły interakcji (r) zastępowanie - deterministyczna v ** losowa v
+
+- schemat oddziaływań (s) uogólnienie (zakresów v)
+grupowanie - e, v
+
+*pomijanie czynników, które mają znikomy wpływ na reakcję modelu podstawowego biorąc
+pod uwagę określone kryterium porównawcze par wej-wyj modelu i układu rzeczywistego
+
+*zastępowanie reguł interakcji mechanizmem probabilistycznym
+- _ eliminacja zmiennych opisowych lub złożonych podukładów modelu podstawowego o
+pseudostochastycznym charakterze
+- _ zmiana formy modelu i interpretacja jego reakcji - mechanizm probabilistyczny jest
+realizowany przez deterministycznie opisane generatory liczb pseudolosowych
+
+*uogólnianie zakresów - każda wartość z zakresu zmiennej modelu scalonego może
+reprezentować wiele wartości zakresu tej zmiennej w modelu podstawowym
+
+*agregacja (grupowanie):
+- elementów modelu podstawowego w bloki(elementy) modelu scalonego
+- _ zmiennych opisowych elementów modelu podstawowego w jedną zmienną opisującą
+element modelu scalonego poprzez:
+- uwektorowienie
+- równoważność deterministyczną (przyczynowo-skutkową) wraz z pomiarami
+- równoważność probabilistyczna/stochastyczna(wynikająca z domysłu)
+- szeregowanie
+Przejście z układu rzeczywistego na model scalony (zintegrowany):
+
+relacje zasadności
+
+<image/figury/k1_page5_figure1.png>

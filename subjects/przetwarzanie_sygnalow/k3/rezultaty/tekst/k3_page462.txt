@@ -1,0 +1,42 @@
+28. Cyfrowe procesory sygnałowe
+
+Te przyszłe udoskonalenia zminimalizują różnicę czasów wykonania programów w języku C
+i asemblerze i umożliwią wprowadzenie języka © do większej liczby zastosowań.
+
+W celu lepszego zrozumienia decyzji wyboru języka C lub asemblera przyjrzyjmy się ty-
+powemu zadaniu DSP zaprogramowanemu w każdym z tych języków. Przykładem będzie
+obliczenie iloczynu skalarnego dwóch matryc x| ] i y( |]. Jest to prosta operacja matematyczna
+- mnożymy każdy współczynnik w jednej matrycy przez odpowiadający mu współczynnik
+w drugiej i sumujemy uzyskane iloczyny, tj. x[0] x yf0] + xf1] x y[1] + xf2] x yf2] + ..
+To wyrażenie powinno się wydawać bardzo znajome; jest to bowiem podstawowa operacja
+w filtrach SOI. A więc każda próbka w sygnale wyjściowym jest wyznaczana przez wymno-
+żenie zarejestrowanych próbek sygnału wejściowego (w jednej matrycy) przez współczynni-
+ki filtru (w drugiej) i sumowanie iloczynów.
+
+W tablicy 28.2 podano, jak iloczyn skalarny jest obliczany w języku C. W wierszach 001-004
+definiujemy długości dwóch matryc, x[ |] i y[ ] równe 20 elementom. Definiujemy też result
+(wynik) — zmienną, w której jest przechowywany obliczony iloczyn skalarny po zakończe-
+niu programu, Wiersz 011 steruje pętlą 20 konieczną do obliczeń, wykorzystując zmienną
+n jako licznik pętli. Jedyną instrukcją w pętli jest wiersz Q12, w którym następuje mnożenie
+odpowiednich współczynników z obu matryc i dodanie iloczynu do zmiennej akumulatora s.
+(Jeśli nie znacie języka C, to warto się dowiedzieć, że instrukcja: s + = x[n] * y[n] znaczy to
+samo, co s = s + x[n] * y[n]). Po pętli, wartość akumulatora jest przekazywana do zmiennej
+wyjściowej resułf w wierszu 013.
+
+Podstawową korzyścią ze stosowania języków wysokiego poziomu (jak C, Fortran lub Basic)
+jest uniknięcie konieczności rozumienia przez programistę architektury zastosowanego mi-
+kroprocesora. Znajomość tej architektury jest pozostawiona kompilatorowi. Natomiast w po-
+danym krótkim programie w języku C zastosowano kilka zmiennych: n, s, result oraz ma-
+tryce: xf ] i yl ]. Wszystkim tym zmiennym musi być przyporządkowana jakaś „rezydencja”
+w układach procesora, aby można było śledzić ich wartości. W zależności od mikroprocesora
+pamięciami dla tych zmiennych mogą być rejestry danych ogólnego przeznaczenia, lokacje
+w pamięci głównej lub specjalne rejestry przeznaczone do poszczególnych funkcji. Jednak
+osoba pisząca program w języku wysokiego poziomu wie niewiele lub nic o takiej orga-
+nizacji pamięci; to zadanie przydzielono programiście, który napisał program kompilujący.
+Problem w tym, że ci dwaj ludzie nigdy się nie spotkali, komunikują się tylko poprzez ze-
+staw wcześniej ustalonych reguł. Języki wysokiego poziomu są łatwiejsze od języka asem-
+blera, gdyż stosując je, zlecamy komu innemu połowę pracy. Języki wysokiego poziomu są
+jednak mniej efektywne, gdyż nie jesteśmy całkiem pewni, jak działa ta część pracy, która
+została zlecona.
+
+<image/tabele/k3_page462_table1.png>

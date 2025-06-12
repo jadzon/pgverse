@@ -1,0 +1,11 @@
+Odpowiednie zapamiętywanie wyjść z funkcji i bloków funkcyjnych bezpośred-
+nio skojarzonych z zadaniem, lub używanych jako wejścia elementów
+oprogramowania posiadających bezpośrednie skojarzenia z zadaniem, powinno
+być zapewnione w celu spełnienia przedstawionych wyżej wymagań.
+
+<image/tabele/k4_page7/4_table1.png>
+
+Tab. 2.39 Przykłady szeregowania zadań bez wywłaszczania
+(Non-preemptive scheduling) dla konfiguracji z Rys. 2.10
+
+74 Rozdział : 2.Programowanie sterowników PLC

@@ -1,0 +1,57 @@
+32. Przekształcenie Laplace'a
+
+ 
+
+Jak dotąd nasze postępowanie jest identyczne, jak w poprzednim rozdziale, z tą tylko
+różnicą, że zamiast jo stosujemy s. Różnica między obiema metodami staje się widocz-
+na dopiero w dalszej procedurze, którą właśnie będziemy omawiać. Występuje teraz,
+gdy nie będziemy już mogli posługiwać się jv. Możemy wykreślać odpowiedź często-
+tliwościową lub badać ją w jakiś sposób, lecz ze względu na zasady matematyki nie
+możemy jej stosować w dalszych krokach analizy. Pojawią się zaś interesujące aspekty
+analizy Laplace'a. Wyznaczenie H(s) jest kluczem do analizy Laplace'a. Jednak funkcja
+przenoszenia H(s), aby była użyteczna, musi być wyrażona w pewnej szczególnej po-
+staci. Wymaga to operacji algebraicznych realizowanych w dwóch następnych krokach
+analizy.
+
+Krok 3: Przekształćcie H(s) w taki sposób, aby było stosunkiem dwóch wielomianów. Wtedy
+funkcję przenoszenia można zapisać jako:
+
+<image/wzory/k3_page526_formula1.png>
+Wzór 32.2. Funkcja przenoszenia w postaci wielomianowej
+
+Wyrażenie funkcji przenoszenia w takiej postaci jest zawsze możliwe, jeśli działanie sys-
+temu jest rządzone równaniami różniczkowymi. Na przykład impuls prostokątny pokazany
+na rys. 32.3 nie jest rozwiązaniem równania różniczkowego i jego transformata Laplace'a
+nie może być zapisana w takiej postaci. Natomiast może być tak zapisana funkcja przeno-
+szenia każdego obwodu elektrycznego złożonego z rezystorów, cewek indukcyjnych i kon-
+densatorów. W przypadku filtru RŁC pasmowozaporowego, analizowanego w tym przykła-
+dzie, operacje algebraiczne przedstawione w kroku 2 od razu dały funkcję przenoszenia we
+właściwej postaci, to znaczy:
+
+gy PE Ls” +1/C€
+as*+bs+c Ls” +Rs+1/C
+gdzie a=L, b=0, c=1l/C;
+oraz a=L, b=R,c=l/C€
+
+Krok 4: Rozłóż na czynniki wiełomiany w liczniku i mianowniku (jest to tzw. faktoryzacja). To
+znaczy rozbijcie wiełomiany w liczniku i mianowniku na czynniki, z których każdy zawiera
+pojedyncze s. Wszystkie te czynniki pomnożone przez siebie muszą dawać wielomian z licz-
+nika lub mianownika. Równanie przybiera więc postać:
+
+<image/wzory/k3_page526_formula2.png>
+
+Wzór 32.3. Funkcja przenoszenia rozłożona na czynniki w dziedzinie s. Wzór w takiej postaci może być
+wyrażony przez zera i bieguny
+
+Pierwiastki licznika, zy, Z», Zą ... Są zerami równania, a pierwiastki mianownika — biegunami.
+Są to te same zera i bieguny, z którymi spotkaliście się już wcześniej w tym rozdziale. Ich
+zastosowanie omówimy w dalszej części rozdziału.
+
+Rozkładanie na czynniki w dziedzinie s jest proste, jeśli licznik i mianownik są wielomiana-
+mi drugiego rzędu (lub niższego).
+
+Inaczej mówiąc, łatwo możemy operować wyrazami s i s?, lecz nie s”, ś*, s5, ... Wynika to
+z łatwości wyznaczania pierwiastków wielomianu drugiego rzędu ax? + bx + c z dobrze
+znanego wzoru na pierwiastki równania kwadratowego: x=>bt b? -4ac 2a. Stosując
+tę metodę, można funkcję przenoszenia analizowanego filtru rozłożyć na czynniki w spo-
+sób następujący:

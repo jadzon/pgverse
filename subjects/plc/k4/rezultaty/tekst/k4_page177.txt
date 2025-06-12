@@ -1,0 +1,32 @@
+<image/tabele/k4_page177_table1.png>
+
+Rys. 3.49 Konfiguracja modułu komunikacyjnego CMM321.
+
+Rys. 3.50 przedstawia przykładową konfigurację systemu sterowania i kontroli
+z Wydziału Elektrociepłowni Huty Katowice [11]. System ten nadzoruje pracę
+czterech generatorów TG1..4 i trzech turbodmuchaw TD21..3, tłoczących wzbo-
+gacone w tlen powietrze do wielkiego pieca.
+
+System ten został zaprojektowany w oparciu o sterowniki PLC GE Fanuc serii
+90-30, które współpracują z sieciowym systemem sterowania nadrzędnego i wi-
+zualizacji FIX32 v.6.15PL firmy Intellution osadzonym na platformie
+programowej Windows NT v.4.0PL.
+
+W systemie tym jest wspólna sieć obiektowa i systemowa. Jest to sieć Ethernet
+o gwiaździstej topologii.
+
+Funkcje redundancji w tej sieci są zapewnione dzięki zastosowaniu w sterow-
+nikach podwójnych modułów Ethernet oraz dzięki zastosowaniu dwóch
+koncentratorów dla obu gwiaździstych sieci. Rozwiązanie to zapewnia ciągłą
+komunikację, nawet w przypadku uszkodzenia gałęzi sieci lub jednego koncen-
+tratora sieci.
+
+Przykład ten pokazuje po pierwsze, że rozwój i dostępność sieci Ethernet skłania
+do coraz szerszego jej wykorzystywania, również w trudnych i odpowiedzialnych
+systemach sterowania - mimo jej niedeterministycznego charakteru, bowiem przy
+dużej szybkości transmisji nie ma to takiego znaczenia. Po drugie, sieć ta jest
+stosowana w warstwie sterownikowej i warstwie sterowania nadrzędnego, a tym
+samym upraszcza sprzętową strukturę systemu sterowania.
+
+ PEROZOZEOOOEEJ JE ZOO O TATY W AE OE YATO TEPEE TYT EE WT TE O POT TIE PTC JK 1 UAE ACO  Y WIOOAAOZAAC ZEDO ZEOT RTU © RY V PEZTEJSDA I
+3.9 Moduł komunikacyjny 177

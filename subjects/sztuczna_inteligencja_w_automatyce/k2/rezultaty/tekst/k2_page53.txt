@@ -1,0 +1,55 @@
+sa
+4
+
+m
+
+GT
+
+a
+-
+
+Korzystamy tu z wzorów:
+
+<image/wzory/k2_page53_formula1.png>
+
+x »Y) A p(Y)]]]
+
+. Standaryzacja zmiennych:
+
+uzoru/ko nanaR? farmiila? nna
+
+<image/wzory/k2_page53_formula3.png>
+
+„. Eliminacja kwantyfikatorów szczegółowych:
+
+Korzystamy tu z wzorów:
+
+<image/wzory/k2_page53_formula4.png>
+
+gdzie g(:) — funkcja Skolema. Na przykład
+
+<image/wzory/k2_page53_formula5.png>
+
+jest równoważne
+
+<image/wzory/k2_page53_formula6.png>
+
+W omawianym głównym przykładzie mamy:
+
+<image/wzory/k2_page53_formula7.png>
+
+. Przesunięcie kwantyfikatorów uniwersalnych na początek wyrażenia:
+
+<image/wzory/k2_page53_formula8.png>
+
+>. Przedstawienie wyrażenia w normalnej postaci iloczynowej:
+
+Korzystamy tu z wzoru: AV BAC =(AVB)A(AVC).
+W naszym przykładzie postępując wg. schematu av (bvc)AdAe=(aVbvV
+c)(av dA e) mamy:
+
+<image/wzory/k2_page53_formula9.png>
+
+i następnie postępując wg. schematu (av dAe) = (aVd)A(aVe)
+
+<image/wzory/k2_page53_formula10.png>

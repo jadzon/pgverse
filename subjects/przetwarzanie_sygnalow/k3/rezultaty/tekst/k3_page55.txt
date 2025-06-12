@@ -1,0 +1,55 @@
+3. Przetwarzanie analogowo-cyfrowe i cyfrowo-analogowe
+
+dy elektroniczne jeszcze przed digitalizacją sygnału. Może się okazać, że w celu rozwiąza-
+nia problemu filtr Bessela powinien być umieszczony przed przetwornikiem a/c. To jednak
+oznacza, że filtr trzeba traktować jako element przetwarzania analogowego, a nie jako układ
+działający na rzecz przetwarzania a/c.
+
+Drugi objaw aliasingu jest trudniej uchwytny. Gdy w sygnale analogowym następuje jakieś
+zdarzenie (np. zbocze), to sygnał cyfrowy (rys. 3.15 d) wykrywa takie zdarzenie w następnej
+próbce. W danych cyfrowych nie ma żadnej informacji o tym, co dzieje się między próbkami.
+Teraz, w tym przykładzie, porównajmy sytuację w systemie bez fifrru i w systemie z filtrem
+Bessela. Wyobraźmy sobie np. rysowanie prostych między próbkami na rys. 3.15 c). Chwila,
+gdy ta wykreślona linia przecina połowę amplitudy skoku, daje podpróbkowe oszacowanie
+czasu wystąpienia zbocza w sygnale analogowym. W systemie bez filtru taka informacja
+podpróbkowa jest całkowicie tracona. Nie musicie stosować jakichś zawiłych twierdzeń, aby
+oszacować, jak omawiany problem wpłynie na wasze konkretne zastosowanie. Wystarczy
+dobre zrozumienie tego, co zamierzacie zrobić z danymi po ich akwizycji.
+
+Przetwarzanie o wielu częstotliwościach
+próbkowania (multirate)
+
+W elektronice występuje silna tendencja zastępowania układów analogowych przez al-
+gorytmy cyfrowe. Doskonałym tego przykładem jest przetwarzanie danych. Rozpatrzmy
+projekt cyfrowego rejestratora głosu, czyli urządzenia, które digitałizuje sygnał głosowy,
+gromadzi dane w postaci cyfrowej i potem rekonstruuje sygnał w celu jego odtworze-
+nia. Aby móc odtworzyć zrozumiały sygnał głosowy, urządzenie powinno wychwyty-
+wać sygnały o częstotliwości od 100 do 3000 Hz. Sygnał analogowy wytwarzany w mi-
+krofonie zawiera jednak także znacznie większe częstotliwości, powiedzmy do 40 kHz.
+Najprostszym podejściem jest przepuszczenie sygnału analogowego przez 8-biegunowy,
+dolnoprzepustowy filtr Czebyszewa o częstotliwości odcięcia 3 kHz i następnie sprób-
+kowanie sygnału z częstotliwością 8 kHz. Z drugiej strony systemu przetwornik c/a
+odtwarza sygnał analogowy z częstotliwością 8 kHz, z pamiętaniem rzędu zerowego.
+Do uzyskania końcowego sygnału głosowego jest zastosowany inny filtr Czebyszewa
+o częstotliwości odcięcia 3 kHz.
+
+Wiele pożytecznych zalet ma próbkowanie szybsze niż to wynika z bezpośredniej analizy.
+Wyobraźmy sobie na przykład przeprojektowanie cyfrowego rejestratora głosu z zastoso-
+waniem częstotliwości próbkowania 64 kHz. Zadanie filtru antyaliasingowego jest teraz
+łatwiejsze: przepuścić częstotliwości poniżej 3 kHz, usuwając wszystkie powyżej 32 kHz.
+Podobne uproszczenie dotyczy też filtru odtwarzającego. Krótko mówiąc, większa często-
+tliwość próbkowania umożliwia zastąpienie filtrów 8-biegunowych prostymi układami re-
+zystor-kondensator (RC). Trudność polega na tym, że system cyfrowy jest teraz zapychany
+danymi z większą częstotliwością próbkowania.
+
+Na następnym, wyższym szczeblu rozwoju są techniki przetwarzania, w których w jednym
+systemie stosuje się więcej niż jedną częstotliwość próbkowania (multfirate). W przykładzie
+cyfrowego rejestratora głosu taka technika funkcjonuje następująco. Najpierw sygnał głoso-
+wy jest przepuszczany przez prosty dolnoprzepustowy filtr RC i próbkowany z częstotliwo-
+ścią 64 kHz. Uzyskane dane cyfrowe zawierają żądane pasmo głosu między 100 i 3000 Hz,
+lecz także nieużyteczne pasmo między 3 kHz i 32 kHz. Następnie usuwa się, w sposób
+programowy, wszystkie częstotliwości nieużyteczne, stosując cyfrowy filtr dolnoprzepustowy
+o częstotliwości odcięcia 3 kHz. Potem obniża się częstotliwość próbek w sygnale cyfro-
+wym z 64 kHz do 8 kHz, pomijając po prostu każde 7 z 8 próbek. Taka procedura nosi na-
+zwę decymacji. Uzyskane w ten sposób dane cyfrowe są równoważne danym wytwarzanym
+w wyniku ostrej filtracji analogowej i bezpośredniego próbkowania z częstotliwością 8 kHz.

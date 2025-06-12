@@ -1,0 +1,60 @@
+32. Przekształcenie Laplace'a
+
+ 
+
+Dwie główne metody stosowane w przetwarzaniu sygnałów — splot i analiza Fouriera — uczą
+nas, że działanie systemu liniowego może być w pełni rozumiane na podstawie jego od-
+powiedzi impulsowej lub częstotliwościowej. Takie podejście jest bardzo uogólnione, gdyż
+te odpowiedzi mogą przyjmować prawie każdy możliwy kształt lub postać. W istocie, jest
+to podejście zbyt ogólne dla wielu zastosowań w nauce i technice. Wzajemne oddziaływa-
+nia wielu parametrów w naszym Wszechświecie są opisane równaniami różniczkowymi. Na
+przykład napięcie na cewce indukcyjnej jest proporcjonalne do pochodnej prądu płynącego
+w tej cewce. Siła przyłożona do ciała o pewnej masie jest proporcjonalna do pochodnej jego
+prędkości. W fizyce jest mnóstwo zależności tego rodzaju. Odpowiedzi częstotliwościowa
+i impulsowa tych systemów nie mogą być dowolne, lecz powinny być zgodne z rozwiązania-
+mi tych równań różniczkowych. To znaczy, że ich odpowiedzi impulsowe mogą składać się
+tylko z przebiegów wykładniczych i sinusoidalnych. Przekształcenie Laplace'a jest metodą
+analizy tych szczególnych systemów w przypadku sygnałów ciągłych. Przekształcenie Z jest
+podobną metodą stosowaną w przypadku sygnałów dyskretnych.
+
+Właściwości dziedziny s
+
+Przekształcenie Laplace'a jest dobrze znaną matematyczną metodą rozwiązywania równań
+różniczkowych. Metodę nazwano na cześć wielkiego matematyka francuskiego Pierre'a
+Simona de Laplace'a (1749-1827). Podobnie jak inne transformaty, przekształcenie Laplace'a
+zmienia jeden sygnał w inny, zgodnie z pewnym ustalonym zestawem reguł lub równań.
+Przekształcenia Laplace'a zamienia sygnał w dziedzinie czasu na sygnał w dziedzinie s,
+zwanej też płaszczyzną zmiennej zespolonej s (rys. 32.1). Sygnał w dziedzinie czasu jest
+ciągły i ma zakres od minus do plus nieskończoności i może być okresowy lub nieokresowy.
+W przekształceniu Laplace'a sygnał w dziedzinie czasu może być zespołony, lecz w dziedzi-
+nie przetwarzania sygnałów rzadko jest to potrzebne. W tym omówieniu i w prawie wszyst-
+kich zastosowaniach praktycznych sygnał w dziedzinie czasu jest całkowicie rzeczywisty.
+Dziedzina s, jak to przedstawiono na rys. 32.1, jest płaszczyzną zmiennej zespolonej, tzn. są
+tam liczby rzeczywiste wzdłuż osi poziomej i urojone wzdłuż pionowej. Odległość wzdłuż osi
+rzeczywistej jest wyrażana jako zmienna 6, a wzdłuż urojonej — jako ©, czyli pulsacja. Ten
+układ współrzędnych umożliwia oznaczenie położenia dowolnego punktu przez współrzędne
+6 i w. Przy użyciu zapisu zespolonego każde położenie jest reprezentowane zmienną zespo-
+loną s, przy czym s = G + jw. Podobnie jak w przekształceniu Fouriera, sygnały w dziedzinie
+s są zapisywane dużymi literami. Na przykład sygnał w dziedzinie czasu x(/) jest przekształca-
+ny na sygnał X(s) w dziedzinie s, lub zapisując inaczej X(6, w). Płaszczyzna zmiennej zespo-
+lonej s jest ciągła i rozciąga się do nieskończoności we wszystkich czterech kierunkach.
+Każdy punkt, oprócz położenia na płaszczyźnie zmiennej zespolonej s określonego przez jakąś
+liczbę zespoloną, ma też wartość, która jest też liczbą zespoloną. Innymi słowy, każde położe-
+nie na płaszczyźnie zmiennej zespolonej s ma część rzeczywistą i urojoną. Tak jak dla wszyst-
+kich liczb zespolonych, zamiast części rzeczywistej i urojonej można określać moduł i fazę.
+O ile w przekształceniu Fouriera analizuje się sygnały, wyrażając je sinusoidami, to w anali-
+zie z przekształceniem Laplace'a wyraża się je sinusoidami oraz funkcjami wykładniczymi.
+Z matematycznego punktu widzenia przekształcenie Fouriera jest więc podzbiorem bardziej
+skomplikowanego przekształcenia Laplace'a. Na rys. 32.1 zobrazowano graficznie zależność
+między dziedziną s a dziedziną czasu. Aby znaleźć wartości wzdłuż osi pionowej na płasz-
+czyźnie zmiennej zespolonej s (dla określonego 6), mnoży się najpierw sygnał w dziedzinie
+czasu przez przebieg wykładniczy e *'. W lewej połówce płaszczyzny zmiennej zespolo-
+nej s następuje mnożenie sygnału w dziedzinie czasu przez przebiegi wykładnicze rosnące
+w funkcji czasu (6 < 0), a w prawej — przez malejące w funkcji czasu (6 > 0). Następnie
+wykonuje się zespolone przekształcenie Fouriera sygnału ważonego wykładniczo. Uzyskane
+widmo umieszcza się wzdłuż linii pionowej na płaszczyźnie zmiennej zespolonej s, przy
+czym górna połówka płaszczyzny zmiennej zespolonej s zawiera częstotliwości dodatnie,
+
+|
+|
+|

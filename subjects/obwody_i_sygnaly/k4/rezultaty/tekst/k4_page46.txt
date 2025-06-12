@@ -1,0 +1,43 @@
+46 1. Pojęcia podstawowe — elementy
+
+Opór R (przewodność G) są zatem współczynnikami kierunkowymi charak-
+terystyk oporu liniowego (rys. 1.3-3b,C).
+
+D. Moc ienergia. Zgodnie z założeniem (1.3-3) moc chwilowa pobierana
+przez opór (liniowy lub nieliniowy) jest zawsze nieujemna:
+
+<image/wzory/k4_page46_formula1.png>
+
+Energia chwilowa wą pobrana przez opór:
+
+<image/wzory/k4_page46_formula2.png>
+
+jest także nieujemna i jest niemalejącą funkcją czasu t. Oznacza to, że energia
+pobrana przez opór z otoczenia nie może być do tego otoczenia zwrócona; jest
+ona zamieniana na ciepło (lub inną postać energii). Mówimy zatem, że opór jest
+elementem stratnym (dyssypatywnym). Występowanie w obwodzie oporu jest
+równoznaczne z występowaniem strat energii.
+
+Powtórzyliśmy tu niemal dosłownie sformułowania z p. 1.2.1-C odnoszące się
+do oporu liniowego.
+
+E. Bezinercyjność oporu. Opór (liniowy lub nieliniowy) zaliczamy do
+elementów bezinercyjnych, tj. takich, których równanie wiążące prąd i z napię-
+ciem u jest równaniem algebraicznym. Elementy bezinercyjne nie są zdolne do
+gromadzenia energii.
+
+O pojęciu bezinercyjności (a także o pojęciu przeciwstawnym — inercyjności)
+będzie dokładniej mowa w p. 2.1.5-G.
+
+F. Przykłady. Podamy teraz kilka przykładów charakterystyk oporów
+nieliniowych, a także funkcji wykorzystywanych do ich aproksymacji.
+
+Przyklad 1.3-1. Opór nieliniowy jest modelem obwodowym wielu diod półprzewodnikowych.
+Charakterystyki kilku typowych diod są przedstawione na rys. 1.3-4.
+
+Przyklad 1.3-2. Charakterystyki rzeczywistych oporów nieliniowych są często aproksymowa-
+ne prostymi funkcjami. Wykresy kilku typowych funkcji aproksymujących wraz z ich opisem
+analitycznym są przedstawione na rys. 1.3-5.
+
+Opory o charakterystykach a, b, c, są nieuzależnione. Dla przypadków tych równania
+odwrotne do podanych równań mają postać:

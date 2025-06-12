@@ -1,0 +1,45 @@
+j 3.5. Moce w obwodach prądu stalego 311
+
+Analogicznie jak w przypadku źródła napięciowego, moc tracona w prze-
+wodności wewnętrznej źródła prądowego przy dopasowaniu:
+
+<image/wzory/k3_page309_formula1.png>
+
+jest równa mocy wydzielanej w obciążeniu i równa połowie mocy oddawanej
+przez źródło J do obwodu. Tym samym:
+
+-
+
+<image/wzory/k3_page309_formula2.png>
+
+skąd wynika, że sprawność źródła prądowego w stanie dopasowania przyjmuje
+wartość:
+
+zory/k3_page309_formula3.png BM)
+| D. Przypadek źródeł równoważnych. Załóżmy teraz, że rozpatrywane w p.
+B, € źródła napięciowe i prądowe są równoważne, tzn. spełnione są równości
+E = JR, oraz G, = 1/R,. Bez trudu zauważamy wówczas, że moc dyspono-
+wana źródła napięciowego jest równa mocy dysponowanej źródła prądowego:
+
+<image/wzory/k3_page309_formula4.png>
+
+Jeżeli źródła są równoważne, moce wydzielane w obciążeniu w stanie
+dopasowania są zatem identyczne, niezależnie od tego czy obciążenie współpra-
+cuje ze źródłem napięciowym, czy ze źródłem prądowym. Wynika stąd natych-
+miast, że w przypadku źródeł równoważnych identyczne są także moce tracone
+przy dopasowaniu w oporach wewnętrznych (przewodnościach wewnętrznych)
+obu źródeł, a tym samym i moce Pz i P, oddawane przez te źródła do
+obwodów.
+
+Uwaga. W ogólnym przypadku obwody z rys. 3.5-7 możemy uważać za obwody zastępcze
+układu liniowego o bardziej złożonej strukturze, w którym została wyróżniona część źródłowa i część
+odbiorcza (rys. 3.3-13a). Źródło napięciowe (rys. 3.5-7a) ma wówczas sens zastępczego źródła
+Thóvenina, zaś źródło prądowe (rys. 3.5-7b) jest zastępczym źródłem Nortona (por. rys. 3.3-13b, C).
+Opór R jest w obu przypadkach oporem zastępczym dwójnika liniowego stanowiącego odbiornik
+(obciążenie).
+
+E. Przykłady. Rozważania przeprowadzone w p. B, C i D zilustrujemy
+obecnie kilkoma przykładami.
+
+Przykład 3.5-9. Rozpatrzmy układ przedstawiony na rys. 3.5-11, w którym rzeczywiste źródło
+napięciowe o parametrach E, R jest obciążone dwójnikiem o zaciskach ,4B. Znane są wartości

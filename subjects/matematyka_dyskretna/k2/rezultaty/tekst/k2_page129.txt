@@ -1,0 +1,55 @@
+14 Rozdział 1. Teoria liczb
+
+Twierdzenie 1.24 Każdą liczbę naturalną n > 1 można przedstawić jako iloczyn liczb
+
+pierwszvch (niekoniecznie różnvch):
+
+<image/wzory/k2_page129_formula1.png>
+
+Dowoa nie wprost. rrzypuscmy, ze isinieje uczoa nawraina n, KOrEJ nie mozna przed-
+stawić jako iloczynu liczb pierwszych i że n jest najmniejszą taką liczbą. n nie może być
+liczba nierwsza (ha wtadv n = a.) wiec n iact liczha złażana rczvli ie<t nnstari:
+
+<image/wzory/k2_page129_formula2.png>
+
+dla k, m < n. Ale poniewaz k 1 m są mniejsze 0d n, więc mozna je roztozyc na czynniki
+
+<image/awzory/k2_page129_formula3.png>
+
+e wiruv. "iuiow OZI. MIIOKIIV H47/.RIOME 104,/.K2WV FE LOD LV IIIIIAE KIECTE WWOYAT,
+
+<image/wzory/k2_page129_formula4.png>
+Aby pokazać, że rozkład jest jednoznaczny (z dokładnością do kolejności czynników),
+musimy najpierw udowodnić dwa lematy.
+
+Lemat 1.25 Niech a i b będą dodatnimi względnie pierwszymi liczbami naturalnymi.
+Wtedy dla dowolnej liczby c, jeżeli a|be, to alc.
+
+Dowód. 7 twierdzenia 1 10 istnieia dwie liczhv całkowite r i » takie że'
+
+<image/wzory/k2_page129_formula5.png>
+
+Pomnnzmv tera7 anie stmnv tada mwnania nrze7 =
+
+<image/wzory/k2_page129_formula6.png>
+
+i zauwazmy, ze a dzieli oba Sktadniki po lewej stonie rownania, a więc dzieli prawą
+stronę, czyli c. o
+
+Lemat 1.26 Ieżeli liczba nierwsza n dzieli ilaczvn liczb pierwszych
+
+<image/wzory/k2_page129_formula7.png>
+
+(niekoniecznie roznycn), to wteay p jest rowne jeanej Z CZD q;.
+
+Dowód przez indukcję ze względu na r. Dla r = 1 mamy plq,, a ponieważ q, jest
+pierwsza i p > l, więcp= qq.
+Załóżmy teraz, że teza zachodzi dla r i przypuśćmy, że p dzieli
+
+<image/wzory/k2_page129_formula8.png>
+Mamiy uwa przy pduki: dY  UŁIE qę4.y, GADU IŁ. W piŁLWSZYLU PiŁypaunup = qęży.
+W drugim przypadku mamy NW D(p,q+41) = 1, bo 1 i 4,4 to jedyne dzielniki liczby
+qr-1. Z lematu 1.25 wynika teraz, że p dzieli q; > * * * q,, a z założenia indukcyjnego, że
+p = q, dlajakiegoś1 < i <r. o.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

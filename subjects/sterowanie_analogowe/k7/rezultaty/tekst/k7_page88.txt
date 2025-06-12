@@ -1,0 +1,21 @@
+Pozycjonowanie biegunów w oparciu o sprzężenie od stanu
+
+Przykład (jak poprzedni, Matlab)
+Korzystając z Matlaba wyznaczyć wektor wzmocnień od stanu zapewniający
+
+<image/biegunywzory/k7_page88_formula1.png>
+
+<image/wzory/k/_page88_formula2.png>
+
+SMOUBJS 8|8pOJN
+
+Wyznaczyć transmitancię uzyskanego układu oraz wykreślić odpowiedź
+
+<image/figury/k/_page88_figure2.png>
+
+ 
+
+ 
+
+POLITECHNIKA
+GDANSKA

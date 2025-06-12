@@ -1,0 +1,11 @@
+<image/tabele/k4_page267_table1.png>
+
+Wyd. 4.38 Instrukcja przesuwania bitów w lewo BSL
+
+<image/figury/k4_page267_figure1.png>
+
+Wyd. 4.39 Instrukcja przesuwania bitów w prawo BSR
+
+   
+
+5.8 Funkcje na ciągach bitów 267

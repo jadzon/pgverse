@@ -1,0 +1,31 @@
+zory/k4_page254_formula1.png KM
+
+Uwarunkowania czasowe w programie realizuje się z wykorzystaniem następują-
+cych czasomierzy (iimers):
+
+* TON (Timer ON delay) czasomierz załączający z opóźnieniem
+po załączeniu ,
+
+e TOF (Timer OFf delay) czasomierz załączający z opóźnieniem
+po wyłączeniu,
+
+e RTO (Retentive Timer On) czasomierz załączający z opóźnieniem po załą-
+czeniu i z zapamiętaniem odmierzonego czasu.
+
+Czasomierz TON mierzy czas od chwili, gdy zostają spełnione warunki obwodu
+logicznego, zaś TOF gdy przestają być spełnione warunki obwodu logicznego.
+W momencie gdy warunki przestają być spełnione (dla TOF zostają spełnione)
+następuje zatrzymanie odliczania czasu. Gdy warunki ponownie są (nie są) speł-
+nione czasomierz zostaje wyzerowany i odliczanie rozpoczyna się od 0. Czaso-
+mierze te nie zapamiętują ostatnio odmierzonej wartości czasu. Przykłady wyko-
+rzystania tych czasomierzy pokazują Wyd. 4.1] i Wyd. 4.12. Wykorzystanie
+bitów statusowych czasomierza EN, DN, TT wymaga wprowadzenia dodatkowe-
+go szczebla, podobnie jak pokazany Rung 6:1 i6:3.
+
+<image/figury/k4_page254_figure1.png>
+
+Wyd. 4.11 Przykład użycia czasomierza TON (opóźnione załączanie)
+
+   
+
+254 Rozdział : 5. Język schematów drabinkowych dlą SLC 500

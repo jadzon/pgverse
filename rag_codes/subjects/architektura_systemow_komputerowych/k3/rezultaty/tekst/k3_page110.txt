@@ -1,0 +1,29 @@
+100 5. Pamięci
+RZN | OM
+
+obszaru znajdującego się w pamięci kieszeniowej, to mówimy o trafieniu. Natomiast jeśli
+procesor odwoła się do innego obszaru, to mówimy o chybieniu i wówczas trzeba zapewnić
+wymianę zawartości pamięci kieszeniowej. Ponieważ często po takim odwołaniu program
+wraca do poprzedniego obszaru, to tryb wymiany projektuje się w taki sposób, aby
+dotyczyła ona jedynie części pamięci kieszeniowej.
+
+<image/tabele/k3_page110_table1.png>
+
+W tablicy 5.1 zestawiono szybkości i pojemności pamięci operacyjnych i pamięci
+kieszeniowych dla kilku typów komputerów firmy IBM. Porównując szybkości działania
+widać, że cykl pracy pamięci kieszeniowej jest 5+15 razy krótszy od czasu cyklu pamięci
+operacyjnej. Czas trwania cyklu maszynowego komputera jest równy czasowi cyklu
+pamięci kieszeniowej.
+
+W niniejszym podrozdziale omówiono najpierw organizację pamięci kieszeniowej
+i kryteria doboru jej pojemności, a następnie współpracę pamięci operacyjnej z pamięcią
+kieszeniową.
+ORGANIZACJA PAMIĘCI KIESZENIOWEJ
+
+Niech będzie dana pamięć operacyjna o pojemności 2” słów podzielona na k bloków
+(rys. 5.12a) o pojemności q = 2'/k słów oraz pamięć kieszeniowa o pojemności m słów
+
+ire1.pr
+<image/figury/k3_page110_figure3.png>
+
+Rysunek 5.12. Mapa pamięci operacyjnej (a) i kieszeniowej (b)

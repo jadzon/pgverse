@@ -1,0 +1,34 @@
+<image/wzory/k4_page4/_formula1.png>
+
+W normie /EC 1/31 — 3 wyróżnia się następujące elementy organizacyjne opro-
+gramowania:
+
+« funkcje,
+
+" bloki funkcyjne,
+
+« programy.
+Elementy te mogą być dostarczane przez producentów lub programowane przez
+użytkownika w sposób opisany poniżej. W kolejnych podpunktach tego rozdziału
+przedstawione zostaną standardowe elementy oprogramowania występujące
+w różnych językach. Zwykle realizowane to będzie na drodze graficznego przed-
+stawienia elementu (używanego w językach FBD i LD) oraz przykładu użycia
+w języku S7.
+
+Dla celów programowania sterowników PLC funkcję (function) definiuje się
+jako element organizacyjny programu, który z chwilą wykonania dostarcza jeden
+element danych, chociaż może składać się on z wielu wartości, np. tablica. Funk-
+cje nie zawierają wewnętrznej informacji o stanie (jest to więc „element
+statyczny”), tzn. wywołanie funkcji z tymi samymi argumentami (parametrami
+wejściowymi) zawsze daje tę samą wartość na wyjściu, w przeciwieństwie do
+bloku funkcyjnego (por. 2.3.3). Przykład użycia funkcji SZN i COS w językach
+tekstowym i graficznym pokazano na Rys. 2.6.
+
+ 
+
+<image/figury/k4_page47_figure1.png>
+
+Rys. 2.6 Przykłady użycia funkcji: a) w języku strukturalnym ST
+b) w języku schematów bloków funkcyjnych FBD
+TTE TOZZ ZZOZ ZOZ ODRY PRZOD OOOO OOO TZ DY DEL PY ZE ZOO PO DÓOI DOŃ OZI O DEDO OC)
+2.3 Elementy oprogramowania 47

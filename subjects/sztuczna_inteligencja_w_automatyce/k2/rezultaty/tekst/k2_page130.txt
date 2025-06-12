@@ -1,0 +1,44 @@
+135
+
+Krok 6 Obliczenie wektorów sygnałów błędów 6. i 6, obydwu warstw. Wektor 6.
+ma rozmiar (K x 1), a wektor ó, ma rozmiar (J x 1). Dla bipolarnej funkcji
+aktywacji (772)
+
+<image/wzory/k2_page130_formula1.png>
+
+<image/wzory/k2_page130_formula2.png>
+<image/wzory/k2_page130_formula3.png>
+
+Dla unipolarnej tunkcji aktywacji (77)
+<image/wzory/k2_page130_formula4.png>
+<image/wzory/k2_page130_formula5.png>
+
+Krok 7 Uaktualnienie wag warstwy wyjściowej
+wzorv/k2 naae130 formula6.pna
+<image/wzory/k2_page130_formula7.png>
+
+Krok 8 Uaktualnienie wag warstwy ukrytej
+wzorv/k? naaea130 farmulaR nna
+
+<image/wzory/k2_page130_formula9.png>
+
+Krok 9 Jeżeli ! < ptop= I1+ 1 i przejście do kroku 4.
+
+Krok 10 Cykl nauki został zakończony. Jeżeli teraz E < Ear; to zakończenie
+nauki, w przeciwnym razie rozpoczęcie nowego cyklu przez przejście do kroku
+3.
+
+Omówiono wariant dokonujący korekty po każdym podaniu nowego obrazu. W przy-
+padku stosowania wariantu dokonywania korekty po podaniu wszystkich obrazów
+uczących, należy po podaniu każdego obrazu obliczyć wektor korekcji wag ale nie
+dokonywać korekcji, a po podaniu wszystkich obrazów, zsumować wektory korekcji
+i wynikowy wektor korekcji dodać do wektora wag.
+
+6.5.6. Przykład zastosowania metody propagacji wstecznej
+
+Omówimy tu przykład uczenia metodą propagacji wstecznej jednowarstwowej sieci
+klasyfikującej dwanaście znaków przedstawionych na rys. ??a. Znaki te, z których
+każdy reprezentuje inną klasę, zajmują wierzchołki 35-wymiarowej kostki i są oczy-
+wiście liniowo separowalne, a tym samym nauczona sieć jednowarstwowa powinna
+je poprawnie klasyfikować. Wyniki klasyfikacji odczytywano przyporządkowując sy-
+gnałom na wyjściach neuronów liczbę 1, gdy przekraczają poziom 0.5, a liczbę 0 w

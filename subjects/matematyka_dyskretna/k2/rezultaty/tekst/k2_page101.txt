@@ -1,0 +1,48 @@
+10 Rozdział 1. Funkcje boolowskie
+
+Metode te można uocólnić na funkcie n zmiennych. W prowadzimy oznaczenie:
+
+<image/wzory/k2_page101_formula1.png>
+
+Dla dowolnego wektora a € (0,1)”, niech a(i) oznacza i-tą współrzędną wektora a.
+Rozważmy teraz wyrażenie:
+
+<image/wzory/k2_page101_formula2.png>
+
+Zauważmy, że m,(.) jest równe 1 tylko wtedy, gdy podstawimy x; = a(i), dla każdego
+i, czyli dla r = a. Widać z tego, że:
+
+<image/wzory/k2_page101_formula3.png>
+
+Jest to dysjunkcyjna postać normalna (DNF) funkcji f (sumowanie oznacza tutaj altematywę).
+Aby otrzymać postać koniukcyjną, zaczynamy od wyrażenia:
+
+<image/wzory/k2_page101_formula4.png>
+
+Zauważmy, że s„(x) jest równe 0 tylko wtedy, gdy podstawimy: x; = a(i), dla każdego
+i, czyli dla x = a. Widać z tego, że:
+
+<image/wzory/k2_page101_formula5.png>
+
+Jest to koniunkcyjna postać normalna (CNF) funkcji f.
+
+1.4 Sieci boolowskie
+
+Najpierw przykład. Na rysunku 1.1 przedstawiono pewną sieć boolowską. Jest to graf
+skierowany z sześcioma wierzchołkami (bramkami) i pięcioma krawędziami łączącymi
+niektóre bramki. W tym i następnych przykładach przyjmujemy, że krawędzie są skiero-
+wane od góry do dołu. Bramki mają etykiety. Jedna etykietowana jest stałą 1, dwie ety-
+kietowane są zmiennymi zr i y, a trzy etykietowane są operatorami logicznymi, A, V i —.
+Bramki oznaczone stałymi lub zmiennymi są bramkami wejściowymi i żadne krawędzie
+nie prowadzą do nich. Bramka — ma jedną krawędź wchodzącą, a bramki v i A po dwie.
+Bramka v jest bramką wyjściową, bo nie wychodzi z niej żadna krawędź. Z każdą bramką
+w sieci możemy związać wyrażenie boolowskie. W przypadku bramki etykietowanej stałą
+lub zmienną, tym wyrażeniem jest ta stała lub ta zmienna. Z bramką A związane jest wy-
+rażenie r A 1, z bramką — wyrażenie —y, a z bramką v wyrażenie (1 A x) V —y.
+Ogólnie, sieć boolowska to graf składający się z wierzchołków, nazywanych bramka-
+mi, i skierowanych krawędzi łączących niektóre bramki. Każda bramka ma swoją etykietę,
+którą może być stała 1 lub 0, zmienna lub operator boolowski. W naszych rozważaniach
+ograniczymy się do czterech operatorów: A, v, > 1 ©, ale można rozważać sieci z innym
+zbiorem operatorów. Do bramek oznaczonych stałymi lub zmiennymi nie prowadzą żadne
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

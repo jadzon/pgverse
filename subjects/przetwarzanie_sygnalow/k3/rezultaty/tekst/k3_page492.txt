@@ -1,0 +1,50 @@
+30. Liczby zespolone
+
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+   
+ 
+    
+   
+
+<image/figury/k3_page492_figure1.png>
+
+Operując równaniami, takimi jak powyższe, korzysta się z dwóch sztuczek. Po pi ,
+pieką pojawia się wyraz j?, tam zastępuje się go przez —1. Wynika to z definicji j,
+tzn. j 2=(/-1?=-1. Druga sztuczka dotyczy eliminowania wyrazu j z mianownika ułamka.
+Na przykład lewa strona równania 30.4 ma mianownik c +dj. Trzeba licznik i mianownik -
+pomnożyć przez czynnik (c — jd), usuwając w ten sposób z mianownika wszelkie wyrazy uro-
+jone. Zmiana znaku części urojonej liczby zespolonej daje liczbę nazywaną liczbą zespoloną
+sprzężoną. Oznacza się ją gwiazdką w prawym, górnym rogu zmiennej. Na przykład jeśli
+Z=a+bj,to Z” = a —bj. Tak więc wzór 30.4 wyprowadzono, mnożąc zarówno licznik, jak
+i mianownik przez zespoloną liczbę sprzężoną mianownika. |
+Niżej podane podstawowe zależności algebraiczne są słuszne także wówczas, gdy zmien-
+ne A, B, C są liczbami zespolonymi. Te zależności można udowodnić, rozdzielając każdą
+zmienną na jej część rzeczywistą i urojoną i wykonując działania algebraiczne.
+AB =BA
+Wzór 30.5. Zasada przemienności mnożenia
+
+(A+B)+C=zZA+(B+C)
+Wzór 30.6. Zasada tączności dodawania
+A(B+C)=AB+AC
+Wzór 30.7. Zasada rozdzielności mnożenia względem dodawania
+
+<image/iwzory/k3_page492_formula1.png>
+
+Liczby zespołone mogą być wyrażane nie tylko we współrzędnych prostokątnych (o czym już
+powiedziano), lecz także we współrzędnych biegunowych. Na rys. 30.2 podano trzy przykłady
+liczb zespolonych w postaci biegunowej. Są to te same liczby, które przedstawiono poprzed-
+nio na rys. 30.1. Moduł jest długością wektora zaczynającego się w początku układu współ-
+rzędnych, a kończącego w punkcie oznaczającym liczbę zespoloną. Kąt fazowy jest mierzony
+między tym wektorem a dodatnią osią x. Przekształcenia liczb zespolonych ze współrzędnych

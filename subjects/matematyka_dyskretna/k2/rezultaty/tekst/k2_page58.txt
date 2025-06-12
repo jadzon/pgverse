@@ -1,0 +1,49 @@
+1.14. Problemy 23
+
+1.14.3 Kombinacje z powtórzeniami
+
+k-elementowe kombinacje z powtórzeniami ze zbioru n-elementowego są to k-elementowe
+wybory elementów zbioru n-elementowego, w których elementy mogą się powtarzać i
+w których nie jest istotna kolejność wybieranych elementów. Na przykład, mamy czte-
+ry trzyelementowe kombinacje z powtórzeniami ze zbioru dwuelementowego f1, 2); oto
+one: (1,1, 1), (1,1,2), (1,2,2), (2,2,2).
+
+Udowodnij, że liczba k-elementowych kombinacji z powtórzeniami ze zbioru n-
+elementoweco wvnosi
+
+<image/wzory/k2_page58_formula1.png>
+
+1.14.4  Permutacje z powtórzeniami
+
+Przypuśćmy, że mamy n przedmiotów k różnych typów oraz, że przedmiotów typu ; jest
+ny. Rozważmy ustawienia wszystkich tych przedmiotów w ciąg. Przy tym dwa ustawienia
+są rozróżnialne tylko, jeżeli na jakiejś pozycji mają przedmioty różnych typów. Pokaż, że
+takich rozróżnialnych ustawień jest
+
+<image/wzory/k2_page58_formula2.png>
+
+Ile słów można utworzyć z liter słowa MATMA (litery M i A mogą wystąpić po dwa
+razy)?
+
+1.14.5 Podziały uporządkowane
+
+Mamy n elementówy zbiór A i liczby n, ...n, takie, że ny + ...ny = n. Pokaż, że
+element" zhian: 4 mażna na
+
+<image/wzory/k2_page58_formula3.png>
+
+sposoby podzielić na k podzbiorów A;,... „Az, takich, że |A;| = n;. Zakładamy przy
+tym, że kolejność podzbiorów jest istotna.
+Na ile sposobów można rozdać 52 kartry na cztery osoby?
+
+1.14.6  Permutacje bez punktów stałych
+Udowodnij, że liczba przestawień (permutacji bez punktów stałych) w zbiorze n-elementowym
+
+jest równa zaokręgleniu liczby © do najbliższej liczby naturalnej; e jest podstawą loga-
+rytmu naturalnego.
+
+Wskazówka. Skorzystaj z twierdzenia ??, z rozwinięcia:
+
+<image/wzory/k2_page58_formula4.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

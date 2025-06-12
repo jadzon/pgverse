@@ -1,0 +1,54 @@
+234
+
+pla).
+p(b).
+plc).
+p(d).
+
+Wykonując program uzyskujemy 65 rozwiązań (64 rozwiązania pierwszej klau-
+zuli - PQR=aaa, aab,..., ddd, i jedno dawane przez drugą — PQR=aabbcc). Jeżeli
+teraz zmienimy czwartą klauzulę Programu 10 na p(b) :- !. i ponownie go wyko-
+namy, to otrzymamy 9 rozwiązań (8 rozwiązań klauzuli pierwszej, PQR=aaa, aab,
+aba, abb, baa, bab, bba, bbb i jedno dawane przez drugą PQR=aabbcc). Ogra-
+niczenie liczby rozwiązań spowodowane zostało przez dodanie predykatu !, który
+wywołany po unifikacji predykatu p(Z) z nagłówkiem klauzuli pb) :- !., odcina
+wszystkie dalsze możliwe unifikacje tego predykatu (czyli odcina możliwość unifika-
+cji p(Z) z p(c) i p(d)). Identycznie się dzieje po unifikacjach z klauzulami p(Y)
+ip(X). Zauważmy, że działanie predykatu ! ma charakter lokalny (ograniczony do
+danej klauzuli, w której występuje, i do danego jej wywołania) i nie przeszkadza w
+spełnieniu predykatu pp(aa,bb,cc) uwarunkowanego spełnieniem p(c).
+
+Powróćmy znów do Programu 14 i zamieńmy tym razem klauzulę pierwszą na:
+
+<image/wzory/k2_page229_formula1.png>
+
+Efekt umieszczenia ! jest tu oczywisty. Po unifikacji p(X) z p(a) i p(Y) z p(a)
+następuje wywołanie predykatu !, który odcina dalsze próby unifikacji p(X) i p(Y)
+a także samej kwerendy p(P,Q,R). Następuje jeszcze przejście do predykatu p(Z),
+który unifikuje się czterokrotnie i na tym program się kończy dając cztery rozwią-
+zania PQR=aaa,aab,aac,aad.
+
+Kończąc te rozważania łatwo przewidzieć, że Program 14 wywołany zapytaniem
+pp(P,Q,R), !., odpowie PQR=aaa. =
+
+Typowymi zastosowaniami predykatu odcięcia jest przekształcanie procedur nie-
+deterministycznych w deterministyczne oraz eliminacja zbędnych przeszukiwań przy
+wykonywaniu programu. Obydwa te zastosowania zilustrowane są w poniższych
+przykładach.
+
+PRZYKŁAD 9.16
+
+Rozpatrzmy działanie Programu 15, który stanowi niewielką modyfikację programu
+8, polegającą na dodaniu do pierwszej klauzuli programu predykatu !.
+
+/* Program 14 */
+
+element (Nazwa, [Nazwa|_]) :- !.
+element (Nazwa, [_|O0gon]) :- element (Nazwa,Ogon).
+
+Dodanie predykatu odcięcia zamieniło niedeterministyczną procedurę element w
+procedurę deterministyczną. Widać to wyraźnie w przypadku wywołania programu
+zapytaniem element (X, [a,b,c,d]). Program 7 w odpowiedzi na to zapytanie gene-
+rował rozwiązania będące kolejnymi elementami zadanej listy. Program 15 generuje
+tylko jedno rozwiązanie, X=a. Dzieje się tak dlatego, że po unifikacji zapytania z
+nagłowkiem pierwszej klauzuli i związaniu zmiennej X z a program przechodzi do

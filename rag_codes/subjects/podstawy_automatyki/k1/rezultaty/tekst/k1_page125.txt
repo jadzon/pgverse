@@ -1,0 +1,26 @@
+Wykorzystując program MATLAB, wyznaczyć transmitancję zastępczą G,(s) tego
+układu.
+
+Razrwiazsania
+
+<image/figury/k1_page125_figure2.png>
+
+ 
+
+Stąd transmitancja zastępcza G,(s) ma postać
+
+<image/wzory/k1_page125_formula1.png>
+
+Przykład 3.9
+Danv iest układ. którezo schemat iest przedstawiony na rysunku 3.11, gdzie:
+
+<1_page125_formula2.png
+
+<image/figury/k1_page125_figure1.png>
+
+Rys. 3.11. Układ ze sprzężeniem zwrotnym
+
+Wykorzystując program MATLAB, wyznaczyć transmitancję zastępczą G.(s) tego
+układu.
+
+127

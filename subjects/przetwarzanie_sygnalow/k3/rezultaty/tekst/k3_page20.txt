@@ -1,0 +1,58 @@
+2. Statystyka, rachunek prawdopodobieństwa i szumy
+
+Z definicji histogramu wynika, że suma wszystkich liczb próbek w histogramie musi być
+równa liczbie nunktów w svenałe:
+
+<image/wzory/k3_page20_formula1.png>
+
+Wzór 2.5. Suma wszystkich liczb próbek w histogramie jest równa liczbie punktów w sygnale. W tym
+wzorze H, jest histogramem, N — liczbą punktów w sygnale, a M - liczbą punktów w
+
+Histogramu można użyć do efektywnego obliczania wartości średniej i odchylenia standar-
+dowego w bardzo dużych zestawach danych. Jest to ważne zwłaszcza w przypadku obrazów,
+które mogą zawierać miliony próbek. Histogram grupuje razem próbki mające takie same
+wartości. Umożliwia to obliczanie parametrów statystycznych z wykorzystaniem kilku grup
+zamiast wielkiej liczby próbek indywidualnych. Przy użyciu tego sposobu oblicza się war-
+tość i odchylenie standardowe z wzorów:
+
+<image/wzory/k3_page20_formula2.png>
+
+Wzór 2.6. Obliczanie wartości średniej na podstawie histogramu. Można to traktować jako lączenie
+w grupy wszystkich próbek o jednakowych wartościach i następnie obliczanie z wzoru 2.1 wartości
+
+<image/wzory/k3_page20_formula3.png>
+
+Wzór 2.7. Obliczanie odchylenia standardowego na podstawie histogramu. Koncepcja jest taka sama jak
+we wzorze 2.2, poza tym że wszystkie próbki o jednakowych wartościach są 0d razu brane do obliczeń
+W tablicy 2.3 zamieszczono program do obliczania histogramu, wartości średniej i odchylenia
+standardowego przy użyciu powyższych wzorów. Obliczanie histogramu jest bardzo szybkie,
+gdyż wymaga tylko indeksowania i inkrementacji. Obliczanie wartości średniej i odchylenia
+standardowego wymaga zaś czasochłonnych operacji dodawania i mnożenia. Strategia tego al-
+gorytmu polega na zastosowaniu tych wolnych operacji tylko do niewielu liczb w histogramie,
+a nie do wielu próbek w sygnale. Dzięki temu ten algorytm jest znacznie szybszy niż metody
+opisane poprzednio. Jest to czynnik ok. 10 dla sygnałów bardzo długich, w przypadku obliczeń
+na komputerach ogólnego zastosowania.
+
+Bardzo ważne jest zwrócenie uwagi na fakt, że pobrany sygnał jest zaszumioną wersją pro-
+cesu, który reprezentuje. To stwierdzenie jest tak istotne, że powoduje zróżnicowanie nazw
+niektórych pojęć. I tak histogramem jest wykres utworzony na podstawie pobranego sygnału.
+Odpowiadająca mu krzywa, opisująca proces, jest nazywana funkcją masy praw
+
+stwa (pmf — probability mass function). Histogram jest zawsze obliczany przy użyciu skoń-
+czonej liczby próbek, podczas gdy pmy jest wykresem, który byłby uzyskany z nieskończonej
+liczby próbek. Wykres pmf może być oszacowany (wywnioskowany) na podstawie histogramu
+lub wydedukowany metodami matematycznymi, jak w przykładzie z rzucaniem monetą.
+
+Na rys. 2.5 przedstawiono przykład wykresu pmf oraz jednego z możliwych histogramów,
+który mógłby być z nim związany. Kluczem do zrozumienia tych pojęć są jednostki opisują-
+ce oś pionową. Jak to już poprzednio powiedziano, na osi pionowej histogramu jest przedsta-
+wiona liczba występowania określonych wartości sygnału. Oś pionowa wykresu pmf zawiera
+podobną informację, lecz wyrażoną procentowo. Inaczej mówiąc, aby uzyskać przybliżony
+wykres pm/, dzieli się każdą wartość histogramu przez całkowitą liczbę próbek. Wynika stąd,
+że wszystkie wartości wykresu pmf muszą mieścić się w granicach do 0 do 1 i że suma
+wszystkich wartości w tym wykresie jest równa |.
+
+Wykres pmf jest istotny, gdyż opisuje prawdopodobieństwo występowania określonych war-
+tości. Wyobraźmy sobie, na przykład, sygnał o wykresie pmf z rys. 2.5 b) , taki jak poprzed-
+nio pokazano na rys. 2.4 a). Jakie jest prawdopodobieństwo, że próbka pobrana z tego sygna-
+łu będzie miała wartość 120? Odpowiedź daje wykres na rys. 2.5 b) — prawdopodobieństwo

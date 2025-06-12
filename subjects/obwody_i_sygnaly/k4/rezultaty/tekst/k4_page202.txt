@@ -1,0 +1,36 @@
+202 2. Pojęcia podstawowe — uklady i
+
+   
+
+B. Komentarze. Podane sformułowanie zasady superpozycji uzupełniam
+kilkoma komentarzami.
+
+1. Zasada superpozycji jest podstawową właściwością układów liniowy:
+i może być uważana za właściwość definiującą klasę tych układów (por.
+2.1.5-H). W tym ujęciu układy nieliniowe to takie układy, które nie spełniaj
+
+a) b)
+
+<image/figury/k4_page202_figure1.png>
+
+zasady superpozycji, tzn. dla których przy przyjętych założeniach nie zawsze
+muszą być spełnione równości (2.1-44).
+
+2. Zasadę superpozycji należy rozumieć w ten sposób, że równości (2.1-44)
+zachodzą dla każdego prądu i orazdla każdego napięcia u przy do-
+wolnych pobudzeniach, tj. przy dowolnie zadanych wielkościach e;, >,...,
+Gus Jn+ 13**> s Jg*
+
+3. Przy formułowaniu zasady superpozycji zakładaliśmy, że wszystkie dzia-
+łające w sieci źródła niczależne zostały przeniesione na zaciski wielowrotnika,
+który w związku z tym staje się wielowrotnikiem bezźródłowym. Gdyby warunek
+ten nie był spełniony (np. gdybyśmy pozostawili niektóre źródła niezależne
+w strukturze wielowrotnika), wówczas wielowrotnik nie spełniałby założenia
+o bezźródłowości (por. p. 2.1.4). W konsekwencji, równości (2.1-44) mogłyby nie
+być spełnione, mimo iż rozpatrywany układ byłby nadal liniowy (na przypadek
+taki zwróciliśmy wyraźnie uwagę w p. 2.1.5-H).
+
+4. Z właściwości łączności operacji dodawania wynika, że zasadę super-
+pozycji można, w załeżności od potrzeb, stosować w różnych wariantach,
+grupując odpowiednio składniki we wzorach (2.1-44). Dla przykładu (rys.
+2.1-21a,b), pierwszy ze wzorów (2.1-44) można zapisać w postaci:

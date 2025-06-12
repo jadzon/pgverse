@@ -1,0 +1,49 @@
+140 1. Pojęcia podstawowe — elementy
+
+    
+   
+     
+  
+  
+ 
+ 
+  
+    
+  
+  
+  
+
+<image/wzory/k3_page140_formula2.png>
+i, u są określone wzorami (1.8-19), zaś F, = [F,,,F
+'ą funkcją wektorową dwóch zmiennych wektorowych.
+wany równaniami (1.8-21) jest liniowy, jeśli pierwsze ró
+liniowe” i jest nieliniowy w pozostałych przypadkach.
+> indukcyjności sprzężone o równaniach (1.8-16) i (1.8-17)
+ierzowych (1.8-18) są dwuwrotowym elementem indukcyjn
+iniowym i stacjonarnym).
+
+16) i (1.8-17) otrzymujemy bez trudu równania wiążące
+cia:
+
+<image/wzory/k3_page140_formula3.png>
+age 1
+
+wnaniami różniczkowymi, indukcyjności sprzężone są zat
+y j nym (por. p. 1.3.2-E).
+
+romadzona. Moc chwilowa pobierana przez indukcyjnoś
+3) ma postać:
+
+<image/wzory/k3_page140_formula4.png>
+
+<image/wzory/k3_page140_formula5.png>
+
+muwszym w — „(tę () pobrana przez indukcyjności sprzężone w przedział
+czasu (ty, ty wyraża się zatem następująco — por. p. 1.3.2-C:
+
+<image/wzory/k3_page140_formula6.png>
+
+<image/wzory/k3_page140_formula7.png>
+
+5 Dokładniej, jeśli oba równania skalarne: F, s(t, ią, W, b) = 0, Fra(i4. ią, Wy, Wa) = 0
+są liniowe względem wszystkich zmiennych (por. p. 1.7.2-E).

@@ -1,0 +1,25 @@
+<image/figury/k2_page85_figure1.png>
+
+Rys. 5.15: Przykład wnioskowania rozmytego metodą Sugeno — ustalanie wielkości napiwku
+
+(Matlab Fuzzy Logic Toolbox)
+
+być dyskretne (przyjmujące wartości ze zbiorów skończonych lub przeliczalnych)
+lub ciągłe.
+
+e Ukierunkowane krawędzie reprezentują zależności przyczynowe pomiędzy zmien-
+nymt losowymi.
+
+e Każdy węzeł potomny A skojarzony jest z prawdopodobieństwem warunkowym
+p(A/B), gdzie B jest zbiorem wszystkich jego węzłów rodzicielskich. Każdy korzeń
+grafu € skojarzony jest z prawdopodobieństwem bezwarunkowym p(C).
+
+PRZYKŁAD 5.11
+
+Rozpatrzmy następującą sytuację. W mieszkaniu został zainstalowany system alar-
+mowy. Jest prawie niezawodny przy wykrywaniu włamania, ale czasami w czasie bu-
+rzy bliskie uderzenie pioruna także uruchamia alarm. Właściciel alarmu ma dwóch
+zaprzyjaźnionych sąsiadów Stefana i Barbarę, którzy zobowiązali się telefonować do
+niego do pracy gdyby usłyszeli alarm. Stefan prawie zawsze telefonuje gdy usłyszy
+alarm, ale czasami bierze za alarm dzwięki klaksonu dochodzące z ulicy i też telefo-
+nuje. Barbara z kolei często słucha głośnej muzyki i czasami nie słyszy alarmu. Ta

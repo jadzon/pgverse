@@ -1,0 +1,38 @@
+5.2. Pamięci operacyjne 101
+
+zwanych dalej liniami (rys. 5.12b). W każdej linii pamięci kieszeniowej (ang. s/or) ma być
+pamiętany jeden blok pamięci operacyjnej wraz jego numerem, czyli etykietą (ang. tag).
+Długość linii pamięci kieszeniowej s wynosi wówczas s=8q + log,k słów. Niech
+przykładowa pamięć operacyjna ma pojemność 2”=64 KB, a pamięć kieszeniowa
+m = 128. Jeśli założymy wielkość bloku q = 8 bajtów, to liczba bitów w słowie pamięci
+kieszeniowej wyniesie 77, ponieważ w pamięci operacyjnej znajduje się k = 8192 bloków
+8-bajtowych i s = 64 + 13.
+
+W danym momencie tylko m spośród k bloków (k >> m) rezyduje w pamięci kiesze-
+niowej i tylko one są dostępne dla procesora. Jeżeli procesor zażąda z pamięci operacyjnej
+słowa, którego nie ma w pamięci kieszeniowej (chybienie), to następuje wymiana
+zawartości tylko jednego bloku, tj. wymiana zawartości jednej komórki pamięci
+kieszeniowej. Przy projektowaniu pamięci kieszeniowej powstaje problem jej opty-
+malizacji. Zwykle sprowadza się go do określenia pojemności pamięci kieszeniowej mając
+znane czasy cyklu pamięci głównej i kieszeniowej. Pomocnym parametrem przy
+rozwiązywaniu tego zagadnienia jest współczynnik trafienia H (ang. hit ratio). Współ-
+czynnik ten oznacza prawdopodobieństwo, że odwołanie procesora do pamięci natrafi na
+adres w pamięci kieszeniowej.
+
+<image/figury/k3_page111_figure1.png>
+
+Rysunek 5.13. Zależność prawdopodobieństwa trafienia od pojemności pamięci kieszeniowej
+
+Na rysunku 5.13 pokazano zależność współczynnika H od pojemności pamięci kie-
+szeniowej. Badania wykonano dla minikomputera PDP-11. Z wykresu widać, że powyżej
+pewnej pojemności prawdopodobieństwo trafienia rośnie bardzo wolno. Stąd można
+wnioskować, że zwiększanie pojemności pamięci kieszeniowej powyżej pewnej granicy
+jest nieefektywne.
+
+Jaka jest zależność pomiędzy czasem dostępu do pamięci operacyjnej T, i czasem
+dostępu do pamięci kieszeniowej T.?
+
+Średni czas dostepu do namieci można wvznaczyć biorac:
+
+<image/scwzory/k3_page111_formula1.png>
+<image/wzory/k3_page111_formula2.png>

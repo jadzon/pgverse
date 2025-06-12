@@ -1,0 +1,39 @@
+8.2. Modelowanie indywiduowe
+
+Można wyróżnić dwa poniżej podane podejścia do modelowania formalnego syste-
+mów.
+
+Modele globalne Model matematyczny globalnego zachowania się systemu (oparty
+najczęściej o równania różniczkowe). Symulacja działania systemu poprzez roz-
+wiązanie równania różniczkowego: numeryczne lub w postaci zamkniętej.
+
+Modele indywiduowe Określenie lokalnych reguł funkcjonowania i wzajemnego
+oddziaływania elementów systemu. Symulacja komputerowa ewolucji systemu
+składającego się z wielu takich elementów. Złożone globalne zachowanie się
+modelu uzyskuje się jako rezultat oddziaływań o zasięgu lokalnym.
+
+Modele omawiane do tej pory należały do grupy modeli globalnych. Obecnie
+zajmiemy się modelami indywiduowymi. Klsycznymi metodami modelowania indy-
+widuowego są dynamikę molekularną i automaty komórkowe.
+
+Na rysunku ?? przedstawiono przykład systemu, który może być modelowany
+globalnie (równanie różniczkowe wynikające z praw mechaniki płynów) i indywidu-
+owo (modelowanie ruchów i zderzeń wszystkich cząsteczek).
+
+8.2.1. Dynamika molekularna
+
+Metoda dynamiki molekularnej (MD od ang. molecular dynamics) polega na symu-
+lacji ruchu cząsteczek w polu sił przez nie wytwarzanych lub sił zewnętrznych.
+W przypadku układu N cząsteczek, siła F, działająca na cząsteczkę ż wynosi
+
+<image/wzory/k2_page200_formula1.png>
+
+gdzie F;, jest siłą, z którą cząsteczka j oddziałuje na cząsteczkę i, a F; jest siłą
+pochodzącą z zewnątrz układu. Znając energię potencjalną cząsteczki, W;,, siłę na
+nią oddziałującą wyznacza się ze wzoru
+
+<image/wzory/k2_page200_formula2.png>
+
+<image/figury/k2_page200_figure1.png>
+
+Rys. 8.11: Przykład systemu, który można modelować globalnie i indywiduowo

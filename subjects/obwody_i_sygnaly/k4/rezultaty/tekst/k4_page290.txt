@@ -1,0 +1,31 @@
+290 3. Obwody prądu stalego
+
+Bardzo często w obwodach nieliniowych występują dwójniki rezystancyjne
+powstałe przez połączenie oporu (nieliniowego lub liniowego) szeregowo z ide-
+alnym źródłem napięciowym o stałej sile elektromotorycznej bądź równolegle
+z idealnym źródłem prądowym o stałej wydajności prądowej. Celowe jest zatem
+osobne prześledzenie, jak zmienia się charakterystyka oporu po dołączeniu do
+niego źródła idealnego.
+
+<image/figury/k4_page290_figure1.png>
+
+Rozważmy cztery przypadki pokazane na rys. 3.4-9a-d przy założeniu
+E > 0, J > 0 i przyjmijmy, że charakterystyka oporu Ry, przedstawiona
+przykładowo na rys. 3.4-9e, jest opisana funkcją u = f(i) lub i = o(u).
+Charakterystyki poszczególnych dwójników są wówczas określone równaniami:
+
+<image/wzory/k4_page290_formula1.png>
+
+a ich wykresy we współrzędnych u,i są pokazane na rys. 3.4-10.
+Na podstawie tych wykresów możemy sformułować następujące wnioski:
+
+— w wyniku szeregowego połączenia idealnego źródła napięciowego o sile
+elektromotorycznej E > 0 zoporem nieliniowym otrzymujemy dwójnik, które-
+go charakterystyka jest charakterystyką oporu nieliniowego przesuniętą wzdłuż
+osi napięć o wartość E: w kierunku napięć dodatnich, jeżeli kierunek źródła jest
+zgodny z przyjętą strzałką napięcia na dwójniku (rys. 3.4-9a), oraz w kierunku
+napięć ujemnych, jeżeli kierunek źródła jest przeciwny do strzałki tego napięcia
+(rys. 3.4-9b);
+
+— w wyniku równoległego połączenia idealnego źródła prądowego o wy-
+dajności prądowej J > 0 z oporem nieliniowym otrzymujemy dwójnik, którego

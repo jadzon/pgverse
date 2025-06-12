@@ -1,0 +1,63 @@
+128 7. Właściwości splotu
+
+ratryce
+
+<image/tabele/k3_page113_table3.png>
+
+Zależności tego rodzaju noszą nazwę równań rekurencyjnych lub różnicowych. Wrócimy do
+nich w rozdziale 19. Na razie ważne do zrozumienia jest, że te zależności są identyczne ze
+splotem z wykorzystaniem odpowiedzi impulsowych z rys. 7.2. W tablicy 7.1 zamieszczono
+programy komputerowe wykonujące operacje podobne do różniczkowania i całkowania.
+
+Filtry dolno- i górnoprzepustowe
+
+Projektowanie filtrów cyfrowych będzie szczegółowo omówione w dalszych rozdziałach. Na
+razie zadowólmy się zrozumieniem ogólnej postaci ich odpowiedzi impulsowych. Na rys.
+7.4 przedstawiono kilka typowych odpowiedzi impulsowych filtrów dolnoprzepustowych.
+Ogólnie biorąc, te odpowiedzi impulsowe są złożone z grupy dodatnich, sąsiadujących ze
+
+      
+
+|
+
+--- m mm m a mz mz
+
+  
+
+----Jaaantoao | ----
+
+—zzdnzzzzjzzzom
+zaj zawaadjzawwm
+
+„zm mmm mm
+
+     
+
+ 
+ 
+
+| -———
+1
+,
+i
+'
+-——
+
+ 
+ 
+
+3
+
+i
+i
+i
+i
+ł
+i
+i
+10 15
+
+8
+GDZIEŻ
+
+Numer próbki

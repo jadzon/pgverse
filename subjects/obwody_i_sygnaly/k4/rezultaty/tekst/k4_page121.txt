@@ -1,0 +1,29 @@
+1.7. Źródła 123
+
+oraz przewodności wewnętrznej:
+
+ry/k4_page121_formula1.png (1.7-14)
+
+Wynika to wprost z zasad łączenia równoległego (p. 1.5.2-A) oraz równań
+(1.7-7) źródeł prądowych.
+
+<image/figury/k4_page121_figure1.png>
+
+3. Nieco bardziej skomplikowane zależności otrzymujemy przy łączeniu
+równoległym źródeł napięciowych oraz przy łączeniu szeregowym źródeł
+prądowych. Korzystamy wówczas z omówionych w p. D warunków równoważ-
+ności źródła napięciowego i prądowego.
+
+Rozpatrzymy najpierw połączenie równoległe n źródeł napięciowych o si-
+łach elektromotorycznych e, i oporach wewnętrznych R, (rys. 1.7-7). Prze-
+kształcamy każde ze źródeł napięciowych do postaci równoważnego źródła
+prądowego o wydajności prądowej:
+
+ory/k4_page121_formula2.png (1.7-15)
+
+i zastępujemy połączenie n źródeł prądowych równoważnym źródłem prądo-
+wym o parametrach określonych wzorami (1.7-13) i (1.7-14), tj.:
+
+<image/wzory/k4_page121_formula3.png>
+
+<image/figury/k4_page121_figure2.png>

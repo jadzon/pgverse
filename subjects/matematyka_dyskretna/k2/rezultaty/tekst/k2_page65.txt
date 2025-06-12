@@ -1,0 +1,53 @@
+6 Rozdział 1. Rachunek prawdopodobieństwa
+
+Ale oczywiście funkcja prawdopodobieństwa może być dowolną funkcją spełniającą
+warunki A4 i A5. Na przykład
+
+<image/wzory/k2_page65_formula1.png>
+
+lub
+
+<image/wzory/k2_page65_formula2.png>
+
+b) W przykładzie 1.2a, ze zbiorem wszystkich liter w tekście, prawdopodobieństwo
+może być zdefiniowane jako częstości występowania poszczególnych liter w tym
+tekście. Na podstawie częstości występowania liter można zgadywać w jakim języku
+napisany jest tekst. Podobnie można rozpatrywać częstość występowania słów w
+tekście i na tej podstawie zgadywać autorstwo tekstu.
+
+W następującym twierdzeniu zebrano kilka prostych wniosków wynikających z ak-
+sjomatów prawdopodobieństwa.
+
+Twierdzenie 1.7 a) P(0)=0.
+b) Jeżeli A € B, to P(A) < P(B) oraz P(B — A) = P(B) — P(A).
+
+urzonullzD NnanoRR fonrmiuila nng
+
+<image/wzory/k2_page65_formula4.png>
+
+Dowód:
+
+a) Z aksjomatu A3 mamy P(0) = P(QuU 0) = P(0) + P(%), a O jest jedyną liczbą
+spełniającą równość r = r + r.
+
+b) Jeżeli A € B, to B = (B — A)UA orz (B — A) NA = 0, a więc z aksjomatu A3
+P(B) = P(B — A) + P(A) > P(A).
+
+c) Mamy AUB = AU(B - (AN B)) omz AN (B - (AM B)) = 0, a więc z aksjomatu
+A3 P(AUB) = P(A) + P(B — (AM B)), a ponieważ AN B € B, z wniosku 1.7b
+mamy P(B — (AN B)) = P(B) — P(AN B).
+
+d) wynika bezpośrednio z c). o
+
+Przykład 1.8 (kontynuacja przykładu 1.3d) z czteroma monetami). Jeżeli założymy roz-
+kład jednostajny, to prawdopodobieństwo że na pierwszej i trzeciej monecie wypadł orzeł
+wynosi 1/4, a prawdopodobieństwo, że na pierwszej i trzeciej monecie wypadnie to samo
+wynosi 1/2.
+
+Podobnie w przypadku, gdy rzucamy n > 3 monetami (przykład 1.19). Przestrzeń
+zdarzę elementarnych zawiera 2” ciągów, z czego 2”7* sprzyja zdarzeniu, że na pierw-
+szej i trzeciej monecie wypadnie orzeł, a 277! sprzyja zdarzeniu, że na pierwszej i trzeciej
+monecie jest to samo. Tak więc otrzymamy takie same prawdopodobieństwa jak w przy-
+padku rzutu czteroma monetami.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

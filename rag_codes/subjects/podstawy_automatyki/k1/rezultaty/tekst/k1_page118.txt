@@ -1,0 +1,8 @@
+Zastosowanie funkcji residue do rozkładu transformaty X(s) na ułamki proste
+przedstawia plik „ulamki.m”.
+
+<image/figury/k1_page118_figure1.png>
+
+<image/tabele/k1_page118_table1.png>
+
+120

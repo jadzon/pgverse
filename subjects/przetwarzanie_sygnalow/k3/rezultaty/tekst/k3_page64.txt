@@ -1,0 +1,58 @@
+76
+
+ 
+
+4. Oprogramowanie DSP
+
+frowe automatycznie obliczają uzupełnienia do 2: 0 = 0000, -1 = 1111, -2 = 1110, -3 = 1101 itd.
+Jest tu analogia do hodometru w nowym samochodzie. Przy jeździe do przodu daje on odczyty:
+00000, 00001, 00002, 00003, itd., a przy jeździe do tyłu: 00000, 99999, 99998, 99997 itd.
+W zapisie uzupełnienia do 2 przy użyciu 16 bitów są reprezentowane liczby od —32 768 do
+32 767. Pierwszy bit z lewej strony jest 0, gdy liczba jest dodatnia lub równa zero, albo 1, gdy
+liczba jest ujemna. Dlatego pierwszy bit z lewej strony jest nazywany bitem znaku, podobnie
+jak w zapisie znak-moduł. Konwersja między liczbami dziesiętnymi a ich reprezentacją w zapisie
+uzupełnienia do 2 jest bezpośrednia dla liczb dodatnich — po prostu przejście od liczby dziesiętnej
+do binarnej. Dla liczb ujemnych często stosuje się następujący algorytm: 1) należy wziąć wartość
+bezwzględną liczby dziesiętnej, 2) przekształcić ją na wartość binarną, 3) odwrócić stany wszyst-
+kich bitów (czyli wyznaczyć komplement - tzn. wszystkie zera zamienić na jedynki, a jedynki na
+zera), 4) do uzyskanej liczby binarnej dodać 1. Na przykład: —5 — 5 — 0101 — 1010 — 1011.
+Zapis uzupełnienia do 2 jest trudny dla człowieka, łatwy zaś dla komputera.
+
+<image/wzory/k3_page64_formula1.png>
+Sposób kodowania liczb zmiennoprzecinkowych jest bardziej skomplikowany niż stałoprze-
+cinkowych. Podstawowa zasada jest taka sama, jak w zapisie wykładniczym, gdzie mantysa
+jest mnożona przez 10 podniesione do wykładnika potęgi. Na przykład 5,4321 x 105, gdzie
+5,4321 jest mantysą, a 6 wykładnikiem potęgi. Zapis wykładniczy doskonale służy do re-
+prezentacji liczb bardzo dużych i bardzo małych. Na przykład: 1,2 x 109 — liczba atomów
+w kuli ziemskiej lub 2,6 x 107?* — stosunek drogi przebywanej przez żółwia w ciągu jednej
+sekundy do średnicy naszej Galaktyki. Zauważmy, że liczby w zapisie wykładniczym są
+znormalizowane w taki sposób, że na lewo od przecinka dziesiętnego jest tylko jedna cyfra
+różna od zera. Osiąga się to przez odpowiedni dobór wykładnika.
+Zapis zmiennoprzecinkowy jest podobny do wykładniczego z tą wszakże różnicą, że stosuje
+się w nim podstawę 2, a nie 10. Jest w użyciu kilka podobnych do siebie formatów zmienno-
+przecinkowych. Najpopularniejszy jest format objęty normą ANSIAEEE Std. 754-1985. Ta
+norma definiuje format dla liczb 32-bitowych, tzw. o pojedynczej dokładności, a także dla
+64-bitowych (o podwójnej dokładności). Jak wynika z rys. 4.2, 32 bity stosowane w zapisie
+o pojedynczej dokładności są podzielone na trzy osobne grupy: bity od 0 do 22 tworzą man-
+tysę, od 23 do 30 — wykładnik, a bit 31 jest bitem znaku. Te bity tworzą liczbę
+zmiennoprzecinkową v według zależności:
+
+v=(-1)' xM x259
+
+Wzór 4.1. Wzór do konwersji sekwencji bitów na liczbę zmiennoprzecinkową. Liczba jest wyrażona przez
+v, $ jest wartością bitu znaku, M — wartością mantysy, a E — wyktadnika
+Wyrażenie (-1)$ oznacza po prostu, że bit znaku $ jest O dla liczby dodatniej i 1 dla ujemnej.
+Zmienna E jest liczbą między 0 i 255 wyrażoną przez 8 bitów wykładnika. Odejmując od tej
+liczby 127, uzyskuje się czynnik wykładniczy o zakresie od 27/2? do 21%3, Tak więc wykład-
+nik jest wyrażony w zapisie binarnym przesuniętym z przesunięciem 127.
+Mantysa jest tworzona z 23 bitów jako ułamek binarny. Na przykład ułamek dziesiętny
+2,783 interpretuje się jako 2 + 7/10 + 8/100 + 3/1000. Ułamek binarny 1,0101 oznacza:
+1 + 0/2 + 1/44 0/8 + 1/16. Liczby zmiennoprzecinkowe są znormalizowane w taki sam sposób
+jak w zapisie wykładniczym, tzn. jest tylko jedna cyfra niezerowa na lewo od przecinka dzie-
+siętnego (w kodzie binarnym zwanego przecinkiem binarnym). Ponieważ jedyną cyfrą nieze-
+rową w kodzie binamym jest |, więc pierwszą cyfrą w mantysie zawsze będzie | i dlatego ta
+liczba nie musi być zapisywana. Usunięcie tej redundancji umożliwia poprawę dokładności
+liczby o 1 bit. Mantysę tworzą 23 bity: my, may, Mag... mę, zgodnie z wyrażeniem
+
+M =1,my M, Mys ...MM, PM,
+Wzór 4.2. Algorytm konwersji sekwencji bitów na mantysę M, zawartą we wzorze 4.1

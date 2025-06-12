@@ -1,0 +1,45 @@
+Histogram, pmf, pdf 29
+
+kładzie odchylenie standardowe sygnału w krótkim przedziale jest równe jeden. Jednak od-
+chylenie standardowe całego sygnału jest równe 1,16. Ten błąd można niemal całkowicie
+wyeliminować dzieląc sygnał na krótkie odcinki i obliczając parametry statystyczne każdego
+odcinka osobno. Jeśli trzeba, można uśrednić odchylenia statystyczne wszystkich odcinków
+uzyskując jedną wartość.
+
+Histogram, pmf, pdf
+
+Załóżmy, że do komputera mamy przyłączony 8-bitowy przetwornik a/c i że zbieramy 256 000
+próbek jakiegoś sygnału. Na rys. 2.4 a) przedstawiono, jako przykład, 128 próbek, które mogą
+być częścią tego zestawu danych. Każda z próbek może przyjmować jedną z 256 możliwych
+wartości: od 0 do 255. Histogram pokazuje, jakie są w sygnale liczby próbek o określonych
+wartościach, dla każdej z możliwych wartości. Na rys. 2.4 b) przedstawiono histogram dla 128
+próbek z rys. 2.4 a). Są na przykład 2 próbki o wartości 110; 7 próbek o wartości 131; 0 pró-
+bek o wartości 170 itd. Oznaczmy histogram przez H,, gdzie i jest indeksem zmieniającym się
+od 0 do M — 1, a M jest liczbą możliwych wartości próbki. Na przykład Hsg jest liczbą próbek
+mających wartość 50. Na rys. 2.4 c) przedstawiono histogram sygnału obejmujący wszystkie
+próbki, a więc 256k punktów. Jak można zauważyć, przy większej liczbie próbek histogram
+ma przebieg bardziej gładki. Tak jak w przypadku wartości średniej, szum statystyczny hi-
+stogramu (jego chropowatość) jest odwrotnie proporcjonalny do pierwiastka kwadratowego
+z liczby użytych próbek.
+
+ 
+
+<image/figury/k3_page19_figure2.png>
+
+    
+
+10000
+
+ 
+
+m —2-—- >
+
+  
+
+0-1 r !
+90 100 110 120 130 140 150 160 170
+Wartość próbki
+
+24. Przykad hlatogramów. Na ry. s) przedstawiomo 128 próbek z batzo ługogo sygnału, każda próbka może
+ować wartość catkowitą od 0 do 255. Na rys. b), c) przedstawiono histogramy, stosując, odpowiednio, 128
+6 000 próbek z tego dlugiego sygnału. Jak pokazano na rysunkach, histogram jest tym gładszy. im więcej próbek użyto

@@ -1,0 +1,17 @@
+5. Systemy liniowe
+
+ 
+
+dolnej, nie powinny występować zniekształcenia przy przekraczaniu zera itd. Następnie
+technik będzie zmieniał amplitudę przebiegu i obserwował wpływ tych zmian na przebieg
+wyjściowy. Jeśli system jest liniowy, to zmiany amplitudy na wyjściu powinny śledzić
+zmiany wejściowe. W końcu technik będzie zmieniał częstotliwość przebiegu i spraw-
+dzał, czy zmiany częstotliwości na wyjściu są identyczne. Przy zmianach częstotliwości
+mogą na wyjściu być widoczne zmiany amplitudy i fazy, lecz to jest w pełni dopuszcza|-
+ne w systemie liniowym. Przy pewnych częstotliwościach sygnał wyjściowy może być
+nawet zerowy, to znaczy może być sinusoidą o amplitudzie zero. Jeśli technik sprawdzi
+te wszystkie fakty, to dojdzie do wniosku, że system jest liniowy. Ten wniosek nie jest
+wprawdzie ścisłym dowodem matematycznym, lecz jego poziom ufności jest — w sposób
+uzasadniony — wysoki.
+
+<image/figury/k3_page85_figure1.png>

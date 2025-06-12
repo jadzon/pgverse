@@ -1,0 +1,39 @@
+Właściwości matematyczne 133
+
+<image/wzory/k3_page118_formula1.png>
+
+<image/wzory/k3_page118_formula2.png>
+
+| ALSO
+| xn hęln] * hzln] yin]
+
+Rys. 7.9. Zasada łączności w teorii systemów. Ta zasada określa dwie ważne właściwości
+
+jako catości. Po drugie, dwa lub więcej kaskadowych można zastąpić systemem pojedynczym.
+Odpowiedź tego systemu określa się spłotem odpowiedzi poszczególnych stopni
+pierwotnych, które zastąpiono
+
+Zasadę łączności stosuje się w teorii systemów do opisu zachowania systemów kaskadowych
+(rys. 1.9). Dwa lub więcej systemów jest połączonych kaskadowo, jeśli wyjście jednego systemu
+
+oe GR 0 NORA ONWWAA EA OJ SAGA GOW ot
+Rozdzielność splotu względem dodawania
+Rozdzielność splotu względem dodawania wyraża się wzorem:
+aln] * bln] + afn) * c[n] = aln] * (bfn] + c[n))
+Wzór 7.8. Rozdzielność operacji splotu opisuje, jak analizować systemy równolegie
+
+Z rozdzielności splotu wynika sposób analizy systemów równoległych z sumowanymi wyj-
+ściami. Jak to przedstawiono na rys. 7.10, dwa lub więcej systemów może mieć wspólne
+wejście x(n], a ich sygnały wyjściowe są sumowane, dając y(n]. Dzięki temu, że splot jest
+operacją rozdzielną, można taką kombinację systemów zastąpić pojedynczym systemem
+o odpowiedzi impulsowej równej sumie odpowiedzi impulsowych systemów pierwotnych.
+
+<image/wzory/k3_page118_formula3.png>
+
+——————
+
+<image/wzory/k3_page118_formula4.png>
+
+Rys. 7.10. Właściwość rozdzielności względem dodawania w teorii systemów. Ta właściwość powoduje,
+że systemy równołegte z sumowanymi wyjściami można zastępować pojedynczym systemem. Odpowiedź
+impulsowa tego systemu zastępczego jest równa sumie odpowiedzi impulsowych wszystkich systemów

@@ -1,0 +1,30 @@
+<image/figury/k4_page328_figure1.png>
+
+Wykonanie powyższego ciągu instrukcji przebiega w następujący sposób:
+l. Sprawdzenie czy wejście / /./ ma wartość 1.
+2. Sprawdzenie czy wejście / /.2 ma wartość 1. Wyznaczenie iloczynu
+wyniku tego sprawdzenia z wynikiem poprzedniego sprawdzenia.
+3. Sprawdzenie czy marker F /.5 ma wartość 0. Wyznaczenie iloczynu
+wyniku tego sprawdzenia z wynikiem poprzednich operacji.
+4. Wartość wyjścia Q 7.5 jest równa wynikowi wykonanych operacji.
+
+Wyjście Q 7.5 zostanie załączone (będzie miało wartość logiczną 1) jeżeli wej-
+ścia //./ i 11.2 będą miały wartość I i marker F 1.5 będzie miał wartość 0.
+
+Omówianv zestaw inefrukcii ndnowiada wiec nastenniacei funnkcii lnaioznai:
+
+<image/wzory/k4_page328_formula1.png>
+
+Odnosząc się do równoważnego schematu drabinkowego można powiedzieć, że
+w przypadku łączenia szeregowego styków operator A odpowiada stykowi
+zwiernemu, zaś operator AN stykowi rozwiernemu.
+
+.png
+vzory/k4_page328_formula2.png
+
+Wykonanie powyższego ciągu instrukcji przebiega w następujący sposób:
+l. Sprawdzenie czy wejście / 2.7 ma wartość |.
+
+ 
+
+328 Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5

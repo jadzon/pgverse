@@ -1,0 +1,28 @@
+<image/figury/k4_page198_figure1.png>
+
+Wyd. 4.14 Przykład wykorzystania funkcji arytmetycznych
+
+* SUMA := %R100 + %R102;
+wartość zmiennej typu D/NT o symbolicznej nazwie SUMA ma być równa
+sumie liczb określonych przez zawartość rejestrów %R100 i %R101 (trak-
+towanych wspólnie jako pierwszy argument 32 bitowy) oraz %R102
+i %R103 (drugi argument 32 bitowy);
+
+e %R10:= %AlI - %Al3;
+do rejestru %R10 wprowadź różnicę zawartości rejestrów wejść analogo-
+wych %A/1 1 %A13;
+
+e %R104:= SUMA*5,;
+do rejestrów %R104 i %R105 traktowanych jako jedna zmienna 32 bitowa
+wprowadź wartość zmiennej SUMA pomnożoną przez stałą 5;
+
+e %AQI := %RIO/ DZIEL;
+do rejestru wyjścia analogowego %AQ1 wprowadź wynik dzielenia całko-
+witoliczbowego zawartości rejestru %R/0 przez wartość zmiennej typu /NT
+o symbolicznej nazwie DZ/EŁ,;
+
+e do rejestru %AQ2 wprowadź resztę z dzielenia całkowitoliczbowego zawar-
+tości rejestru %R/0 przez DZIEL.
+
+ NOKZREZAC ZA ZE RZECZE CZERWONY UCZY PIĄ BETO PRO TT TO PITRY TYT EE PPC OBO ESY O TY EDA OT EW" EA TIE AROPOROYT A JP WODOTTPITRUOW RE TEJW PODOCĄ RA
+198 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

@@ -1,0 +1,20 @@
+196
+
+puterów VAX składanych z ponad 400 zespołów wybieranych
+przez klientów. Przy zastosowaniu systemu szkieletowego OP$4,
+w ciągu trzech miesięcy zbudowano system prototypowy zawie-
+rający 250 reguł. Rezultaty uzyskiwane przy zastosowaniu pro-
+totypu przekonały DEC do zainwestowania w budowę komplet-
+nego systemu, który został zakończony w 1981 roku. Stał się
+wielkim sukcesem komercyjnym.
+
+7.2. Struktura systemu ekspertowego
+
+Na rys. ?? przedstawiono strukturę typowego systemu ekspertowego.
+
+<image/figury/k2_page191_figure1.png>
+
+7.3. Reprezentacja wiedzy
+
+W standardowym systemie ekspertowym wiedza może być reprezentowana przez
+jedną z metod omówionych w rozdziale 3.

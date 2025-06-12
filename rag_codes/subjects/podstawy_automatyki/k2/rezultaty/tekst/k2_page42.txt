@@ -1,0 +1,115 @@
+82
+
+8.3.5 Analiza parametryczna układu nadążnego z zakłóceniami
+
+Uzyskać w zakresie kp odpowiadającym stabilnej (jak w przypadku bez
+zakłóceń) pracy układu charakterystyki /;(t4) = f(kp), h(t») = f(kp).
+gdzie ty jest arbitralnie obranym horyzontem symulacji przy wymuszeniach:
+
+e falą trójkątną,
+e sinusoidą,
+e falą prostokątną,
+a odpowiednie charakterystyki są średnią z trzech symulacji.
+
+8.3.6 Sprawozdanie
+Sprawozdanie powinno zawierać:
+
+- odpowiedzi skokowe na trzy typy wymuszeń wraz z opisem wpływu
+wzmocnienia regulatora na jakość nadążania (polecenie 8.3.2);
+określić wartość wskaźników IAE oraz ISE;
+
+- charakterystyki 7(ż,) = f(kp), Ia(ta) = f(kp) (dla każdego z wymu-
+szeń), a dla kp odpowiadającego minimum sumy obu wskaźników —
+odpowiedzi skokowe (polecenie 8.3.3); jeżeli jest to możliwe, określić
+pojedynczą wartość kp, zapewniającą dobrą jakość nadążania w przy-
+padku wszystkich trzech typów wymuszeń;
+
+- odpowiedzi skokowe na trzy typy wymuszeń dla układu nadążnego
+z uwzględnieniem zakłóceń losowych wraz z opisem wpływu wzmoc-
+nienia regulatora na jakość nadążania (polecenie 8.3.4); określić war-
+tość wskaźników IAE oraz ISE (na podstawie pojedynczej symulacji)
+oraz zdolność odrzucania zakłóceń;
+
+- charakterystyki 1;(14) = f(*p), (tn) = f(kp) (dla każdego z wymu-
+szeń) będące średnią z trzech symulacji (polecenie 8.3.5). Sprawdzić
+symulacyjnie, czy wzmocnienie kp wyznaczone w przypadku analizy
+parametrycznej bez zakłóceń zapewnia zadowalające odrzucanie
+zakłóceń, załączyć odpowiedzi skokowe na trzy typy wymuszeń
+układu zakłócanego.
+
+T
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+l
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+l
+|
+|
+
+9 Regulacja dwupołożeniowa
+
+9.1 Cel ćwiczenia
+
+Ćwiczenie ma na celu zapoznanie się z zagadnieniem regulacji dwustaw-
+nej na przykładzie układu regulacji temperatury. Przedstawia ono również
+problem dynamicznej korekcji działania regulatora będącego dwupołożenio-
+wym przekaźnikiem z histerezą oraz podstawowe cechy regulatora niby-
+
+-ciągłego.
+9,2 Podstawowe wiadomości
+
+9.2.1 Idea regulacji dwupołożeniowej (dwustawnej)
+
+Regulacja dwustawna znajduje zastosowanie tam, gdzie potrzebne jest
+wyłączanie i załączanie dopływu energii do obiektu, czyli gdzie wyróżnione
+są jedynie dwa stany pracy oznaczane jako wyłączony i załączony bądź jako
+0i1.
+
+Głównym elementem najprostszego regulatora dwustawnego jest
+przekaźnik dwupołożeniowy o charakterystyce statycznej pokazanej na
+rysunku 9.1.
+
+<image/figury/k2_page42_figure1.png>
+
+Rys. 9.1: Charakterystyka statyczna przekaźnika dwupołożeniowego
+
+Rzeczywisty przekaźnik charakteryzuje się występowaniem strefy
+histerezy o szerokości H oraz występowaniem stanu załączenia i wyłączenia.
+Stan wyłączenia, oznaczany umownie jako 0, najczęściej odpowiada wartości
+Umin © 0, ale w przypadku uwzględnienia strat energii spotyka się również
+Umie 7 0. Stan załączenia oznacza się umownie jako 1.
+
+Najczęściej spotykanym zadaniem regulacji dwustawnej jest regulacja
+temperatury, gdzie moc grzejna jest wyłączana (0) bądź załączana (1),
+co odpowiada stanowi stygnięcia i ogrzewania. Na tej podstawie można
+powiedzieć, że proces regulacji ma charakter nieciągły — istnieją dwa stany
+sygnału wyjściowego z regulatora.

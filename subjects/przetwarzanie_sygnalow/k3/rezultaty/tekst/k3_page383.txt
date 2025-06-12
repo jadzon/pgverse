@@ -1,0 +1,28 @@
+416
+
+25. Specjalne techniki obraza
+
+Losowy szum obrazowy występuje zwykle w dwóch postaciach. Szum pierwszego typi
+(rys. 25.9 a) mna stalą: muplitadę PS DN AI 04 owo
+szumione. Natomiast szum pokazany na rys. 25.9 b) wzrasta przy wzrastającym po
+sygnału, w wyniku czego jasne obszary są bardziej zaszumione niż ciemne. W v
+obrazów pojawia się zam obu rodzajów, lecz jeden z nih jest zwykle dominujący Na
+kład, zazwyczaj szum zmniejsza się wraz z poziomem sygnału aż do osiągnięcia p
+plateau stałej wartości szumu.
+
+Źródłem szumu o stałej amplitudzie jest zwykle przedwzmacniacz. Wszystkie elektronicz
+ne układy analogowe generują szum. Szum jest jednak najbardziej szkodliwy tam, gdzić
+wzmacniany sygnał jest jeszcze bardzo mały, bezpośrednio w CCD lub innym czujniku «
+razowym. Szum przedwzmacniacza pochodzi od losowych ruchów elektronów w tranzysta
+rach. Dlatego wartość szumu zależy od sposobu zaprojektowania układu, lecz nie zależy «
+poziomu wzmacnianego sygnału. Na przykład typowy aparat fotograficzny CCD ma stc
+nek sygnału do szumu od ok. 300 do 1000 (40 do 60 dB), definiowany jako pełny zakre
+poziomu sygnału podzielony przez odchylenie standardowe szumu o stałej amplitudzie.
+Szum wzrastający z poziomem sygnału powstaje, gdy obraz jest reprezentowany przez m
+liczbę indywidualnych zdarzeń. Mogą to być np. fotony promieniowania rentgenowskiegt
+przechodzące przez ciało pacjenta, fotony światła wchodzące do aparatu fotograficznego lu
+datay wory difywykć czaję GOA EA padl powi
+
+wane 10 000 elektronów. W wodo toobkE 2 00 ORO Godckch woda
+
+<image/figury/k3_page383_figure1.png>

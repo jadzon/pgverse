@@ -1,0 +1,28 @@
+8.6 Regulacja temperatury z wykorzystaniem bloku
+
+a
+
+ 
+
+Schemat układu pomiaru i automatycznej regulacji temperatury w instalacji che-
+micznego oczyszczania soku buraczanego w procesie produkcji cukru przedsta-
+wiono na Rys. 8./2. Podgrzewanie soku odbywa się w czterech podgrzewaczach
+parowych, lecz jak widać, układ automatycznej regulacji działa tylko na jednym
+z nich. Ma on za zadanie precyzyjne utrzymanie temperatury na wartości zada-
+nej. Umieszczenie czujnika za ostatnim podgrzewaczem powoduje dodatkowe
+opóźnienie w układzie regulacji pogarszając jego własności dynamiczne.
+W układzie regulacji należy zastosować algorytm regulacji PID. Na Rys. 8./3
+pokazany jest schemat blokowy układu regulacji.
+
+<image/figury/k4_page438_figure1.png>
+
+Rys. 8.12 Schemat technologiczny instalacji podgrzewania soku z układem regulacji
+temperatury
+
+<image/figury/k4_page438_figure2.png>
+
+Rys. 8.13 Schemat blokowy układu regulacji PID temperatury soku
+
+ 
+
+438 Rozdział : 8.Programy przykładowe

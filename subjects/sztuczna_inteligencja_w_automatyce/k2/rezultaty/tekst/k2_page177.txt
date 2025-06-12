@@ -1,0 +1,26 @@
+182
+
+układ równań różniczkowych ma postać:
+
+<image/wzory/k2_page177_formula1.png>
+
+(6.64)
+gdzie
+
+<image/wzory/k2_page177_formula2.png>
+
+oraz M — masa wózka, m — masa wahadła, I — długość sztywnego (z założenia
+nieważkiego) ramienia wahadła, b — współczynnik tarcia lepkiego, x — położenie
+wózka, a — kąt odchylenia ramienia od pionu, f, — siła przyłożona do wózka.
+
+Dla rozwiązania powyższego układu równań nieliniowych zastosowano algorytm
+numeryczny Runge-Kutta drugiego rzędu. Na rys. ?? przedstawiono przykładowy
+przebieg w czasie stanu wahadła począwszy od zadanego stanu początkowego przy
+braku siły oddziałującej na wózek.
+
+<image/figury/k2_page177_figure2.png>
+
+Przykładowe wyniki
+
+Przeprowadzono szereg symulacji starając się dobrać parametry systemu zapewnia-
+jące możliwie szybkie uczenie sieci. Okazało się, że uczenie następuje ale jest wolno

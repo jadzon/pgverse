@@ -1,0 +1,27 @@
+W związku z coraz powszechniejszym stosowaniem sterowników PLC, pojawiła
+się konieczność ich standaryzacji, a w szczególności metod programowania.
+Doświadczenia zebrane przez wielu producentów i użytkowników sterowników
+programowalnych w praktyce przemysłowej zaowocowały opracowaniem i wy-
+daniem w 1993r. przez Międzynarodową Komisję Elektroniki (/nternational
+Electronical Commission IEC) normy IEC 1131 „Programmable Controllers”.
+Standard ten zawarł w sobie doświadczenia wypracowane w ostatnich latach
+w dziedzine programowania PLC, a przede wszystkim normy, wytyczne i reko-
+mendacje takie jak :
+
+" [EC 848 - Grafcet (Francja),
+
+«  DIN40719, DIN 19239, VDI 2880 (Niemcy),
+
+»  NEMA ICS-3-304 (USA).
+
+Norma /EC 1131 obejmuje informacje ogólne (General Informations) oraz stan-
+daryzuje osprzęt i wymagania testowe (Equipment and Test Requirements).
+W trzeciej części, dotyczącej języków programowania (Programming Langu-
+ages), norma definiuje pojęcia podstawowe, zasady ogólne, model programowy
+i model komunikacyjny oraz ujednoliconą koncepcję programowania PLC w ję-
+zykach tekstowych i graficznych. Pozostałe dwie części dotyczą wytycznych dla
+użytkownika (User Guidelines) oraz standaryzacji w zakresie wymiany informa-
+cji (Messaging Services).
+
+| O
+8 Rozdział : 1. Wprowadzenie i podstawy

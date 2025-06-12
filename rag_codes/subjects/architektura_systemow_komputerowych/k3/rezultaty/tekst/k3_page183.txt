@@ -1,0 +1,39 @@
+A.1. Algebra Boole'a 173
+
+<image/tabele/k3_page183_table1.png>
+
+Ponieważ 7 aksiomatn 3 1 4
+
+<image/wzory/k3_page183_formula1.png>
+
+to y=A"rb. wynika stąd, ze IunKcję DoOlIowsKĄ mozna zapisywac na rozne sposoby.
+Będziemy poszukiwać takiego przedstawienia funkcji, które odpowiada najprostszej jej
+realizacji. Pokazane też zostaną kryteria oceny prostoty układu logicznego.
+
+Trzy wymienione funkcje (suma, iloczyn, negacja) dwóch zmiennych nie wyczerpują
+listy wszystkich możliwych funkcji dwóch zmiennych. Łatwo pokazać, że wszystkich
+funkcji dwóch zmiennych jest 16, gdyż jest ich 2 do potęgi 2”. W tablicy D.2 przedstawio-
+no je wszystkie jako funkcje zmiennych x, i x,.
+
+nkcja stała,
+nkcja NOR,
+nkcja implikacji (zakazu),
+:gacja xy,
+/k3_page183_formula2.png <= AAA
+;gacja x;,
+nkcja sumy wyłączającej, sumy
+modulo 2 lub funkcja EXOR,
+ND,
+zynu,
+noważności,
+iama ze zmienną,
+vzory/k3_page183_formula3.png "e
+iama ze zmienną,
+likacji,
+ty,
+a.
+
+Niektóre z podanych funkcji, jak suma, iloczyn, EXOR, NAND, NOR i funkcja równo-
+ważności, łatwo jest zdefiniować dla większej liczby zmiennych. Funkcję boolowską
+dowolnej liczby zmiennych można przedstawić na różne sposoby. Tu przedstawiono
+4 z nich na przykładzie funkcji trzech zmiennych. Określenie funkcji, to przypisanie odpo-

@@ -1,0 +1,21 @@
+<image/tabele/k4_page59_table1.png>
+
+Tab. 2.28 Przykład ukonkretnienia bloku funkcyjnego
+
+Deklaracja bloku funkcyjnego może być wykonana tekstowo lub graficznie, po-
+dobnie jak funkcji. Przykład deklaracji bloku funkcyjnego o nazwie DEBOUNCE
+pokazano w Tab. 2.29. Słowami kluczowymi ograniczającymi deklarację bloku
+są FUNCTION_BLOCK oraz END_FUNCTION_BLOCK. Łącze zewnętrzne
+określa w jaki sposób następuje komunikacja między błokiem funkcyjnym
+a elementem wywołującym go. W tym przypadku stanowią je zmienne wejścio-
+we /N i DB_TIME oraz zmienne wyjściowe OUT i ET_OFF. Ciało bloku określa
+natomiast jakie działania mają być wykonane w ramach błoku funkcyjnego. Tu
+zadaniem bloku jest przekazywanie na wyjście OUT impulsu pojawiającego się
+na wejściu /N z opóźnieniem określonym przez DB_TIME. Na wyjściu ET_OFF
+pojawia się wartość określająca, ile czasu upłynęło od chwili zaniku impulsu na
+wejściu /N.
+
+<image/figury/k4_page59_figure1.png>
+
+RODZ ZO SZEY WY O ZZEZOZZZOOZZZZNRT ORO ZZ LOCO OOOO ZOO OZ ZOWZZZEZ PORE ZET OR TO ORLY IZOTOP OZ ZZO TZS TRIZ
+2.3 Elementy oprogramowania 59

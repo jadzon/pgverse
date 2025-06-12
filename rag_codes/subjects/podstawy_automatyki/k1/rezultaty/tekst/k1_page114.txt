@@ -1,0 +1,31 @@
+Wprowadzamy zmienne stanu:
+
+vzory/k1_page114_formula1.png
+
+oraz zapisujemy równania stanu:
+
+<image/wzory/k1_page114_formula2.png>
+v obliczamy z (3.2)
+
+<image/wzory/k1_page114_formula3.png>
+
+Stosując odwrotne przekształcenie Laplace'a, otrzymujemy:
+Nzory/k1_page114_formula4.png
+<image/wzory/k1_page114_formula5.png>
+
+Powracając do (3.4), otrzymujemy:
+
+<image/wzory/k1_page114_formula6.png>
+
+y obliczamy z (3.3)
+
+<image/wzory/k1_page114_formula7.png>
+
+Zapisując równania (3.5) i (3.6) w postaci macierzowej, otrzymujemy
+
+<image/wzory/k1_page114_formula8.png>
+
+Na podstawie równań (3.5) i (3.6) tworzymy w Simulinku model rozwiązywanego
+równania różniczkowego w postaci schematu blokowego pokazanego na rysunku 3.3.
+
+116

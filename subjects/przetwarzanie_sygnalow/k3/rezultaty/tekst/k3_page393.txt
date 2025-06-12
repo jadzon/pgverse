@@ -1,0 +1,35 @@
+426
+
+25. Specjalne techniki obrazć
+
+Dwa ostatnie spośród czterech algorytmów rekonstruujących oparto na formalnych, r
+tematycznych rozwiązaniach problemu. Są to eleganckie przykłady DSP. Trzecia metc
+nosi nazwę fiłtrowanej projekcji wstecznej. Jest to modyfikacja starszej techniki,
+projekcją wsteczną lub prostą projekcją wsteczną. Prosta projekcja wsteczna (rys. 25.16
+jest rozwiązaniem mało wyszukanym, opartym na zdrowym rozsądku. Pojedyncza p 5bk
+jest rzutowana wstecznie przez ustawienie na jednakową wartość wszystkich pikseli *
+promienia wskazującego próbkę. Mniej technicznym językiem można powiedzieć, że p je
+cja jest tworzona przez przemiatanie każdego widoku wstecz przez obraz w kierunku, z k
+rego był on pierwotnie pobrany. Końcowy, rzutowany wstecznie obraz jest więc pob
+jako suma wszystkich widoków rzutowanych wstecznie.
+
+Projekcja wsteczna jest wprawdzie koncepcyjnie prosta, lecz jednak nie rozwiązuje pr
+blemu w prawidłowy sposób. Uzyskany w wyniku projekcji wstecznej obraz jest bowie!
+bardzo rozmyty. Pojedynczy punkt prawdziwego obrazu jest rekonstruowany jako pewię
+obszar kołowy o jaskrawości zmniejszającej się wraz ze wzrostem odległości od środka e
+koła. W kategoriach bardziej formalnych trzeba stwierdzić, że funkcja rozmycia punktu P$
+projekcji wstecznej jest kołowo symetryczna i zmniejsza się odwrotnie proporcjonalnie
+promienia koła.
+
+Filtrowana projekcja wsteczna jest techniką korygującą rozmycia powstające przy p
+stej projekcji wstecznej. Każdy widok, jak to pokazano na rys. 25.17, jest przed p -
+wsteczną filtrowany, aby przeciwdziałać rozmywającej funkcji PSF. Każdy z jednow
+miarowych widoków jest więc splatany z jednowymiarową odpowiedzią impulsową fih
+w celu utworzenia zestawu widoków przefiltrowanych. Te widoki są następnie rzuto
+wstecznie, dając zrekonstruowany obraz będący bliskim przybliżeniem obrazu „prawi
+wego”. Obraz uzyskiwany przez filtrowaną projekcję wsteczną jest rzeczywiście id
+
+ny z obrazem „prawidłowym” wówczas, gdy tak liczba widoków, jak i liczba punktć
+w widoku są nieskończenie duże.
+
+<image/figury/k3_page393_figure1.png>

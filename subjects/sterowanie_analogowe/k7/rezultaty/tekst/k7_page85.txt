@@ -1,0 +1,29 @@
+Pozycjonowanie biegunów w oparciu o sprzężenie od stanu
+
+ 
+
+Pozycjonowanie biegunów metodą Ackermana (tylko układy z jednym wejściem)
+
+Jeśli układ jest sterowalny, a żądany wielomian charakterystyczny układu ze
+sprzężeniem jest postaci:
+
+<image/wzory/k/_page85_formula1.png>
+
+SMOUBJS 8|8poJN
+
+to wektor wzmocnień zapewniający uzyskanie wielomianu żądanego możemy
+obliczyć ze wzoru:
+
+<image/wzory/k/_page85_formula2.png>
+
+gdzie:
+<image/wzory/k/_page85_formula3.png>
+
+Dla układów sterowalnych o jednym wejściu macierz sterowalności jest
+kwadratowa, a jej wyznacznik jest niezerowy więc możemy skorzystać z
+powyższego wzoru
+
+ 
+
+POLITECHNIKA
+GDAŃSKA

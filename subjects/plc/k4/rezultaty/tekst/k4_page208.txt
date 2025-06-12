@@ -1,0 +1,37 @@
+e  MSKCMP (MaSKed CoMPare) - porównaj zawartość dwóch różnych cią-
+gów bitów z możliwością maskowania wybranych bitów.
+
+Dla funkcji BIT_TEST należy określić adres pierwszego słowa, od którego za-
+czyna się testowanie (wejście IN) oraz numer testowanego bitu (wejście BIT).
+Wartość testowanego bitu zostaje umieszczona na wyjściu Q.
+
+Dła przykładu z Wyd. 4.25 zmienna wewnętrzna %M/ przyjmie taką samą war-
+tość jak wejście binarne, którego numer określa wartość NR_WEJ. Jeżeli
+NR_WEJ przyjmie wartość spoza zakresu od / do 32 (dwa słowa) to %Ml
+przyjmuje wartość 0.
+
+<image/figury/k4_page208_figure1.png>
+
+Wyd. 4.25 Przykład wykorzystania funkcji testowania wartości bitu
+
+Funkcji BIT_POS używa się w celu lokalizacji pierwszego niezerowego bitu
+w ciągu. Argumentem wejściowym jest adres, od którego należy zacząć poszu-
+kiwanie (wejście IN). Na wyjście POS przekazywany jest numer pierwszego
+znalezionego niezerowego bitu. Jeżeli w zadanym ciągu nie znaleziono takiego
+bitu, to wyjście POS przyjmuje wartość zero. Funkcja przekazuje prąd na wyj-
+ście ok zawsze, gdy jest aktywna.
+
+Wyd. 4.26 pokazuje przykład, w którym do rejestru %R20 zostanie wprowadzony
+
+numer pierwszego niezerowego wejścia binarnego spośród wejść od %/17 do
+%148 (dwa słowa) lub zero, jeżeli wszystkie te wejścia są w stanie OFF.
+
+<image/figury/k4_page208_figure2.png>
+
+ 
+
+Wyd. 4.26 Przykład zastosowania funkcj i BIT_POS
+
+ 
+
+208 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

@@ -1,0 +1,41 @@
+lub inaczej
+
+<image/wzory/k2_page80_formula1.png>
+
+Relacja rozmyta A  B może być definiowana na wiele sposobów. Najczęściej
+korzysta się z następującej definicji zaproponowanej przez Mamdaniego, w której
+implikacje utożsamia się z iloczynem kartezjańskim zbiorów rozmytych (definicja
+?7)
+
+<image/wzory/k2_page80_formula2.png>
+
+czyli
+
+<image/wzory/k2_page80_formula3.png>
+
+Podstawiając (??) do (7?) otrzymujemy (patrz też rys. 7)
+
+<image/wzory/k2_page80_formula4.png>
+
+<image/figury/k2_page80_figure1.png>
+
+Wykorzystując uzyskaną zależność oraz rozszerzając dotychczasowe rozważania
+na wiele reguł, większą od jednego liczbę sygnałów wejściowych i uwzględniając fakt,
+że sygnały wejściowe przyjmują wartość dokładną (nie rozmytą) proces wnioskowa-
+nia rozmytego sprowadza się do poniżej opisanego postępowania.
+
+Kompletny system wnioskowania rozmytego zawiera pewną liczbę reguł rozmy-
+tych o postaci:
+
+<image/figury/k2_page80_figure2.png>
+
+gdzie A, B;, i = 1,2,..., m, j = Jyżdyw a sy m, są zbiorami rozmytymi o znanych
+funkcjach przynależności, z;, i = 1,2,..., n są sygnałami wejściowymi, a y jest
+sygnałem wyjściowym.
+
+Typowy proces wnioskowania rozmytego polega na odwzorowaniu liczbowych sy-
+gnałów wejściowych (nie rozmytych) na liczbowe sygnały wyjściowe (nie rozmyte).
+Proces wnioskowania zachodzi w pięciu etapach nazywanych rozmywaniem (fuży-
+fikacją), zastosowaniem operacji rozmytych, zastosowaniem implikacji (omówiona
+wcześniej definicja Mamdaniego lub inne), kompozycją (metoda MAX lub suma-
+cyjna) oraz precyzowaniem (defuzyfikacją).

@@ -1,0 +1,51 @@
+Nzory/k4_page25_formula1.png RM
+
+Silnik napędu regulacyjnego zasilany jest z sieci o napięciu 380V z zabezpiecze-
+niem przed skutkami przeciążeń prądowych (Rys. 1.12) . Styk rozwierny wyłącz-
+nika bezpiecznikowego BI określa zadziałanie tego zabezpieczenia. Ponadto styk
+zwierny B daje informację o obecności napięcia 380V. Kierunek wirowania sil-
+nika wybiera się stycznikami SZ, SO (zamykania i otwierania). Cewki tych
+styczników są pobudzane w obwodach zasilanych napięciem 220V, zarówno
+przy ręcznym sterowaniu lokalnym ŁO jak i automatycznym albo ręcznym ste-
+rowaniu zdalnym ZD. W obwodach tych równolegle do cewek włączono wary-
+story, które stanowią zabezpieczenie przepięciowe.
+
+Miejsce sterowania wybiera się lokalnym łącznikiem miejsca sterowania Z/ŁL,
+który jest umieszczony na lokalnej stacyjce sterowania. Dodatkowo, stacyjka ste-
+rowania lokalnego jest wyposażona w wyłącznik awaryjny WA oraz w przycisk
+zgłoszenia ZĘ (zezwolenia) zamiaru sterowania lokalnego oraz przycisk do kon-
+troli działania wszystkich lampek sygnalizacyjnych KŁ. Należy przewidzieć na-
+stępujące lampki :
+
+e automatyczne albo ręczne sterowanie zdalne ZD,
+
+e ręczne sterowanie lokalne LO,
+
+e awariaAW.
+
+Rozkaz zamykania i otwierania zdalnego realizuje się przez styk RZ i RO, nato-
+miast w sterowaniu lokalnym przez styki przycisków PZ i PO. W obwodach po-
+budzenia cewek styczników wprowadzono zabezpieczenie termiczne silnika,
+które zapewnia styk przekaźnika termicznego F2 oraz zabezpieczenie przeciąże-
+nia momentowego zrealizowane przez wyłączniki MZ i MO. Ponadto w obwo-
+dach tych umieszczono styki wyłączników krańcowych KZ i KO organu
+wykonawczego, którym steruje ten silnik.
+
+Napęd taki może być wykorzystany w obwodach regulacji trójpołożeniowej, dla
+której przykłady programów przedstawiono w rozdziale 8.
+
+Tutaj zadanie polega na zaprojektowaniu obwodów wejściowych i wyjściowych
+oraz zasilania do sterowania tym silnikiem przez sterownik PLC. Zakłada się
+przy tym, że wyłączniki momentowe i krańcowe oraz termiczny mają dodatkowe
+styki i można je włączyć w obwody wejściowe sterownika w celu alarmowania
+ich zadziałania w systemie sterownikowym.
+
+Rozwiązanie tego zadania pokazano na Rys. 1.73, na którym pokazano schemat
+obwodu zasilania oraz na Rys. 1.14 i Rys. 1.15, przedstawiających podłączenia
+obwodów styków obiektowych do modułu wejść typu ujście MDL 645 oraz ele-
+mentów wyjściowych do przekaźnikowego modułu wyjść MDL 940 sterownika
+firmy GE Fanuc. Opis tych modułów zamieszczono w 3 rozdziale.
+
+ 
+
+1.3 Proste przykłady układów sterowania silnikiem 25

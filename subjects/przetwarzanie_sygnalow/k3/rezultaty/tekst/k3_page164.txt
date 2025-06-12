@@ -1,0 +1,60 @@
+Spłot przez dziedzinę częstotliwości
+
+ 
+
+Powróćmy teraz do splotu w dziedzinie częstotliwości. Zauważyliście, być może, że
+trochę oszukaliśmy na rys. 9.8. Przypomnijmy sobie, że spłot sygnału o N punktach
+z M-punktową odpowiedzią impulsową daje w wyniku (NW + M —- 1) — punktowy sygnał
+wyjściowy. Oszukaliśmy, przyjmując sygnał wejściowy, w którym ostatnia część zawiera
+same zera i umożliwiając powstanie takiego wydłużenia przebiegu. W rezultacie prze-
+bieg na rys. 9.8 a) zawiera 453 próbek niezerowych, a na rys. 9.8 b) — 60 takich próbek.
+Wynika stąd, że splot tych dwóch przebiegów (rys. 9.8 c) dobrze mieści się w przewi-
+dzianych 512 punktach.
+
+Rozważmy teraz przypadek bardziej ogólny przedstawiony na rys. 9.9. Sygnał wejścio-
+wy (rys. 9.9 a) ma długość 256 punktów, podczas gdy odpowiedź impulsowa zawiera 51
+punktów niezerowych (rys. 9.9 b). Stąd wynika, że splot tych sygnałów ma długość 306
+punktów (rys. 9.9 c). Problem polega na tym, że jeśli do realizacji splotu stosujemy mno-
+żenie w dziedzinie częstotliwości, to w sygnale wyjściowym jest dopuszczalnych tylko 256
+próbek. Zatem stosuje się 256-punktowe przekształcenie DFT, aby przenieść przebiegi na
+rys. 9.9 a), b) w dziedzinę częstotliwości. Po wymnożeniu używa się 256-punktowego od-
+wrotnego przekształcenia DFT w celu wyznaczenia sygnału wyjściowego. W jaki sposób
+ścisnąć 306 wartości prawidłowego sygnału do 256 punktów udostępnionych przez algorytm
+w dziedzinie częstotliwości? Odpowiedź brzmi: nie da się tego zrobić. Te 256 punktów jest
+zniekształconą wersją prawidłowego sygnału. Ten proces nosi nazwę spłotu kołowego. Jest
+on ważny z tego względu, że chcemy go uniknąć.
+
+W celu zrozumienia splotu kołowego przypomnijmy sobie, że w N-punktowym przekształce-
+niu DFT sygnał w dziedzinie czasu jest widziany jako nieskończenie długi przebieg okreso-
+wy o N próbkach na okres. Na rys. 9.9 d) pokazano, jak w tym przykładzie w trzech okresach
+sygnał wyjściowy jest widziany przez DFT. Ponieważ N = 256, więc każdy okres składa się
+z 256 punktów: 0-255, 256-511 i 512-767. Wykonanie splotu w dziedzinie częstotliwości
+powoduje próbę umieszczenia 306-punktowego prawidłowego sygnału wyjściowego (rys. 9.9
+c) w każdym z 256-punktowych okresów. Powoduje to wepchnięcie 49 próbek do sąsiednie-
+go okresu z prawej strony, gdzie zachodzą one na próbki znajdujące się tam w sposób upraw-
+niony. Te zachodzące na siebie fragmenty sumują się, dając w wyniku w każdym z okresów
+spłot kołowy, jak to pokazano na rys. 9.9 e).
+
+Jak już się rozumie naturę splotu kołowego, to dość łatwo można go uniknąć. Trzeba po
+prostu każdy ze splatanych sygnałów dopełnić o wystarczającą liczbą zer, aby stworzyć
+dla sygnału wyjściowego miejsce do operowania N+ M - 1 punktami w prawidłowym
+splocie. Można na przykład sygnały na rys. 9.9 a), b) dopełnić zerami tak, aby uzyskały
+długości po 512 punktów, umożliwiając zastosowanie 512-punktowego przekształcenia
+DFT. Po realizacji splotu w dziedzinie częstotliwości sygnał wyjściowy zawierałby 306
+próbek niezerowych plus 206 próbek o wartości zero. W rozdziale 18 szczegółowo opi-
+sano tę procedurę.
+
+Dlaczego jest ona nazywana splotem kołowym? Wróćmy do rys. 9.9 d) i przyjrzyjmy się
+środkowemu okresowi (próbki od 256 do 511). Ponieważ wszystkie okresy są takie same,
+więc część sygnału, która wypływa z tego okresu w prawo, jest taka sama, jak wpływająca
+do niego z lewej strony. Jeśli rozpatrujemy tylko pojedynczy okres, taki jak na rys. 9.9 e),
+to okazuje się, że prawa strona sygnału jest w pewnym sensie związana z jego lewą stroną.
+Wyobraźmy sobie węża kąsającego własny ogon; próbka 255 jest zlokalizowana obok próbki
+0, tak samo jak próbka 100 obok próbki 101. Gdy część sygnału wychodzi z tego okresu
+w prawo, to w magiczny sposób znowu się pojawia po lewej stronie. Tak więc N-punktowy
+sygnał w dziedzinie czasu zachowuje się tak, jakby był kołowy.
+
+Poprzednio postawiliśmy pytanie, czy ma istotne znaczenie sposób widzenia DFT w dziedzi-
+nie czasu — jako sygnału N-punktowego, a nie jako nieskończenie długiego sygnału okreso-
+wego o okresie N. Splot kołowy jest przykładem sytuacji, gdy ma to znaczenie. Jeśli sygnał
+w dziedzinie czasu jest rozumiany jako okresowy, to zniekształcenia występujące w splocie

@@ -1,0 +1,53 @@
+194 2. Pojęcia podstawowe — uklady
+
+ 
+
+ 
+
+Podobnie oznaczamy sygnały wyjściowe przy y, = y,(t),
+
+<image/wzory/k4_page194_formula2.png>
+
+Operację, jaka przyporządkowuje pobudzeniom x sygnal
+wówczas zapisać w postaci:
+
+<image/wzory/k4_page194_formula3.png>
+
+Zakładamy przy tym, że każdemu wektorowi x z pewn
+operacja (2.1-34) przyporządkowuje jednoznacznie wektor
+Y, y € Y. Zwracamy przy tym uwagę, że dla danego układi
+operacji F nie jest określona jednoznacznie, zależy ona
+wybraliśmy sygnały wejściowe i wyjściowe.
+
+Jeżeli rozpatrywany układ jest wielowrotnikix
+gunnikie m, wówczas możemy sprowadzić go do przypź
+że do wszystkich wrót dołączamy idealne źródła nap
+prdowe.pozwalatonaustaleniewektorasygnawwejcwzory/k4_page194
+wyjściowe możemy przyjąć np. prądy wrót zasilanych napi:
+zasilanych prądowo.
+
+Podamy teraz kilka formalnych określeń odnoszącyci
+
+Operacja F jest liniowa, jeśli jest addytywna i jednoroc
+
+<image/wzory/k4_page194_formula4.png>
+<image/wzory/k4_page194_formula5.png>
+
+dla każdego x, x,, x, € X oraz dla każdej liczby rzeczywi
+
+Związki (2.1-35) i (2.1-36) mogą być zapisane w postac
+zależności:
+
+<image/wzory/k4_page194_formula6.png>
+
+dla każdych x,, x, € X, a;, 0, € R.
+
+   
+
+Przed określeniem pojęcia stacjonarności operacji F rozważmy tzw. operację.
+przesunięcia określoną następująco:
+194_f la7.pn (21-38)
+<image/wzory/k4_page194_formula7.png>
+
+Zapis (2.1-38) oznacza, że sygnały wchodzące w skład wektora x(t) zostały
+przesunięte w czasie o tę samą wartość t, € %.

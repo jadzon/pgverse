@@ -1,0 +1,18 @@
+161
+
+<image/wzory/k2_page156_formula1.png>
+
+Tablica 6.5: Funkcja logiczna f reprezentująca zadane drzewo decyzyjne z rysunku ??
+oraz funkcja logiczna f reprezentująca drzewo decyzyjne otrzymane w procesie uczenia
+przedstawione na rys. ??
+
+ściami zdarzeń.
+
+Przyjmijmy oznaczenia: ż = 1.2...., I — numer atrybutu, j = 1,2...., J; — indeks
+wartości przyjmowanych przez ż-ty atrybut, k = 0, 1 — możliwe decyzje, L — liczba
+elementów zbioru uczącego, Ł;;y — liczba decyzji o wartości k, gdy wybrano wartość
+o indeksie j atrybutu o numerze ż (patrz tablica ??2).
+
+<image/figury/k2_page156_figure2.png>
+
+Zastępując prawdopodobieństwa liczebnościami, entropia rozkładu prawdopodo-

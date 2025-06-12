@@ -1,0 +1,41 @@
+2.1. Wielowrotniki i sieci 207
+
+ 
+
+E. Zasada kompensacji w odniesieniu do zwarcia i rozwarcia. Zasada
+kompensacji pozostaje słuszna, jeśli wybrany dwójnik D jest rozwarciem
+(i = 0) lub zwarciem (u = 0). Oznacza to, że jeśli na wybranych rozwartych
+zaciskach w sieci pierwotnej występuje napięcie u, to dołączenie do tych
+zacisków idealnego źródła napięciowego o sile elektromotorycznej e = u nie
+zmieni prądów i napięć w sieci. W szczególności pozostanie równy zeru prąd i
+w dołączonym źródle napięciowym (rys. 2.1-27a).
+
+<image/figury/k4_page205_figure1.png>
+
+Podobnie, jeśli na wybranych zwartych zaciskach w sieci pierwotnej występu-
+je prąd i, to zastąpienie zwarcia idealnym źródłem prądowym o wydajności
+prądowej j = i nie zmieni prądów i napięć w sieci. W szczególności pozostanie
+równe zeru napięcie u na dołączonym źródle prądowym (rys. 2.1-27b).
+
+F. Przykłady.
+
+Przykład 2.1-27. Załóżmy, że w układzie pokazanym na rys. 2.1-28a jest poszukiwany prąd
+
+I płynący przez źródło stałe o sile elektromotorycznej E i że zmierzono w tym celu prąd Iy |
+w oporze nieliniowym RA występującym na przekątnej mostka. Przyjmiemy następujące wartości
+liczbowe: E = 24V, R=lLkQ, /y=6mA.
+
+Zgodnie z zasadą kompensacji, prąd I możemy obliczyć rozpatrując układ zmodyfikowany
+(rys. 2.1-28b), w którym opór R, został zastąpiony idealnym źródłem prądowym o wydajności
+prądowej 74. Korzystając z zasady superpozycji obliczamy na podstawie układu zmodyfikowanego
+już bez trudu:
+
+<image/wzory/k4_page205_formula1.png>
+
+<image/figury/k4_page205_figure2.png>
+
+uni
+
+Przykład 2.1-28. Zasada kompensacji jest słuszna dla dowolnego układu skupionego pod
+warunkiem, że zarówno w układzie pierwotnym, jak i zmodyfikowanym prądy i napięcia są określone
+jednoznacznie. W celu zilustrowania istotności warunku jednoznaczności rozwiązań w sieci

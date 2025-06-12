@@ -1,0 +1,37 @@
+3 Rozdział 1. Funkcje boolowskie
+
+Podobnie jak w arytmetyce, kropkę będziemy opuszczać, jeżeli nie będzie to prowadzić
+do niejednoznaczności.
+
+Operacje altematywy i koniunkcji można też zdefiniować za pomocą następujących
+wzoró
+
+<image/wzory/k2_page95_formula1.png>
+
+Negacja jest operacją jednoargumentową, oznaczaną przez:
+
+<image/wzory/k2_page95_formula2.png>
+
+i określoną przez tabelę:
+
+<image/wzory/k2_page95_formula3.png>
+<image/tabele/k2_page95_table1.png>
+
+Lemat 1.1 Operacje alternatywy, koniunkcji i negacji spełniają następujące tożsamości:
+(a) p+łq=q+p, pq = qp (alternatywa i koniunkcja są przemienne),
+
+| 1aisą
+
+wy),
+
+<image/figury/k2_page95_figure1.png>
+
+Najprostsze dowody powyższych tożsamości polegają na sprawdzeniu, że zachodzą one
+dla każdego możliwego podstawienia za zmienne wartości 1 lub 0. Na przykład, udowod-
+nimy
+
+<image/wzory/k2_page95_formula4.png>
+
+SZYMAIĆ IIUŁIIWE PUUSLAWICILA ŁŁUIALIC HA W KAUUCI
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

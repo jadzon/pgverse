@@ -1,0 +1,47 @@
+252 3. Obwody prądu stałego
+
+i znanych parametrach elementów. Zagadnienie to można rozwiązać zapisując
+równania sieciowe układu, tj. równania jego elementów i równania połączeń
+wynikające z praw Kirchhoffa, a następnie wyznaczając z otrzymanego w ten
+sposób układu równań szukany prąd (napięcie). Obliczanie prądu (napięcia) na
+podstawie równań sieciowych jest ogólną metodą analizy, wymagającą jednak
+dla rozbudowanych układów rozwiązania dużego układu równań. Nakład
+obliczeniowy jest tym większy, im bardziej złożony jest układ.
+
+W wielu przypadkach możliwe jest stosowanie w obliczeniach specjalnych
+metod, stanowiących podstawowe narzędzia (techniki) analizy obwodów i umoż-
+liwiających znaczne jej uproszczenie. Stosowanie tych metod umożliwia sprawne
+rozwiązanie szerokiego wachlarza zagadnień analizy, bez odwoływania się do
+opisu sieciowego układu.
+
+33.1. Metoda zamiany źródeł
+
+A. Koncepcja metody. Załóżmy, że interesuje nas prąd (napięcie) w wyróż-
+nionym elemencie liniowego układu rezystancyjnego prądu stałego. Jeżeli układ
+ten, lub jego fragment, jest układem oporowym o strukturze szerego-
+wo — równoległej, to w obliczeniach możemy zastosować metodę zamiany
+źródeł. Metoda ta polega na zamianie — w ogólnym przypadku wielokrot-
+nej — niezależnych rzeczywistych źródeł napięciowych na równoważne źródła
+prądowe (lub odwrotnie) oraz na ich odpowiednim łączeniu (por. p. 1.7.1-D,E,F).
+
+Kolejność zamiany źródeł i kolejność ich łączenia wynikają ze struktury
+układu. W rezultacie kolejnych łączeń otrzymujemy coraz to prostsze układy,
+równoważne ze względu na obliczany prąd lub napięcie, aż do układu
+elementarnego, z którego szukany prąd (napięcie) można już obliczyć bezpośred-
+nio.
+
+Praktyczne stosowanie metody zamiany źródeł najdogodniej jest wyjaśnić na
+przykładzie.
+
+Przykład 3.3-1. Rozważmy układ z rys. 3.3-1a, w którym należy obliczyć prąd I w oporze 6 kQ.
+Źródło prądowe zamieniamy, zgodnie ze wzorami (1.7-9), na równoważne źródło napięciowe.
+W otrzymanym po tej zamianie układzie (rys. 3.3-1b) łączymy szeregowo źródła napięciowe (por.
+wzory1.711i1.712.wwynikutegopoczeniapowstajeukadrys.3.31cwktrymoba
+rdanapiciowespoczonerwnolegle.poichpoczeniupor.wzory1.717i1.718
+otrzymamy układ (rys. 3.3-1d), w którym już nietrudno jest obliczyć szukany prąd.
+
+B. Przypadek układu ze źródłami sterowanymi. Metodę zamiany źródeł
+można stosować także w przypadkach, gdy w układzie o strukturze szeregowo-
+równoległej występują źródła sterowane, pod warunkiem jednak, że w prze-
+kształceniach układu nie biorą udziału te gałęzie, w których występują wielkości
+sterujące. Rozpatrzmy następujący przykład.

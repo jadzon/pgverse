@@ -1,0 +1,52 @@
+3.2. Kody binarne i arytmetyka 5]
+
+Na koniec niniejszego punktu przedstawiono zmodyfikowany algorytm mnożenia
+liczb w zapisie U2, zwany algorytmem Bootha. Niech będzie dana ujemna liczba w zapi-
+
+sie U2. Ponadto niech k bardziej znaczących pozycji tej liczby będzie jedynkami. Wówczas
+można te liczha nrzedctawiń ian:
+
+<image/wzory/k3_page61_formula1.png>
+
+Przekształcaiac nawvższe wvrażenia można ntrzvmać inna iean nostać, a mianowicie:
+
+<image/wzory/k3_page61_formula2.png>
+
+lakie przedstawienie liczby nasunęło pomysł, że wartość dziesiętną L(A) liczby zapisanej
+w U2 można obliczyć biorąc pod uwagę zmianę wartości na sąsiednich pozycjach. I tak
+sumowanie zaczyna się biorąc a 2”, a dalej zależnie od zmian wartości bitów. Jeśli z i-tej
+na (1+1)-szą jest zmiana wartości bitów z 1 na O, to należy dodać 2'. Jeśli natomiast zmiana
+zachodzi z 0 na 1, to należy odjąć 2'. Podobnie podczas mnożenia istnieje możliwość
+uwzględniania w każdym kroku wartości pary bitów, a nie jednego jak w przedstawionych
+już algorytmach. Jeżeli w danym kroku dwa sąsiednie bity są jednakowe, to zawartość
+rejestru R jest tylko przesuwana. Jeżeli natomiast te dwa bity są różne, to do rejestru RH
+jest dodawana lub odejmowana wartość mnożnika w zależności od wartości tych bitów.
+Jeśli wartość bitów jest 01, to mnożnik jest dodawany, a gdy wartość bitów jest 10, to jest
+on odejmowany. Taki algorytm składa się zwykle z mniejszej liczby operacji niż przed-
+stawiony poprzednio. Na rysunku 3.46 przedstawiono stany rejestrów dla algorytmu
+Bootha, a na rysunku 3.47 jego sieć działań. W pierwszym kroku algorytmu do rejestru
+RH wpisywane są zera, a do rejestru RL mnożnik. W celu zapoczątkowania działań
+tworzy się dodatkową pozycję RL_, do której jest wpisywane zero. W naszym przykładzie
+na początku algorytmu bity kontrolne R, i RL_, mają wartość 10, więc w tym kroku
+następuje odejmowanie. W drugim kroku sąsiednie bity mają wartość 01, więc następuje
+dodawanie. W trzecim wartości bitów są 10, więc ponownie nastąpi odejmowanie.
+W czwartym kroku na pozycjach R, i RL_, są dwie jedynki, więc nastąpi tylko przesuwa-
+nie. Należy zauważyć, że podczas przesuwania zawartości rejestru R jest ona uzupełniana
+w taki sposób, by nie został zmieniony znak. Oznacza to uzupełnianie zerami, gdy pamię-
+tana liczba jest dodatnia, a jedynkami, gdy liczba jest ujemna (przesuwanie arytmetyczne).
+
+DZIELENIE
+
+Operacja dzielenia dwóch liczb jest bardziej złożona od mnożenia z dwóch powodów.
+Pierwszym powodem jest to, że wynik dzielenia może nie być liczbą całkowitą i dlatego
+algorytmy dzielenia muszą uwzględniać fakt, że wynik powinien składać się z dwóch
+liczb: części całkowitej i reszty. Drugim powodem jest problem wymaganej liczby bitów
+dzielnej. Przy założeniu pożądanej długości ilorazu równego k podczas dzielenia przez
+dzielnik o długości równej m wymagana długość dzielnej powinna być m + k.
+
+Rozpatrzony zostanie algorytm dzielenia liczb w kodzie NKB wzorowany na dziesięt-
+nym dzieleniu „na papierze . Na rysunku 3.48 przedstawiono przykład dzielenia liczby
++14 przez +3. Założono także, że dzielna jest 7-bitowa a dzielnik jest 4-bitowy. Zatem
+wynik dzielenia będzie 3-bitowy. W każdym kroku algorytmu dokonuje się porównania
+„aktualnej ” wartości dzielnej z dzielnikiem. Przez aktualną wartość dzielnej rozumie się
+odpowiednią część bitów (odpowiednie pozycje) dzielnej, a odpowiedniość ta zależy od

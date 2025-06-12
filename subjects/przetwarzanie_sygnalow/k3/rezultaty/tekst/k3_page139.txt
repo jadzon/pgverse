@@ -1,0 +1,43 @@
+Synteza, obliczanie odwrotnej transformaty DFT 155
+
+Na rys. 8.6 zilustrowano działanie odwrotnego DFT oraz drobne różnice między dziedziną
+częstotliwości i amplitudami koniecznymi do syntezy. Na rys. 8.6 a) przedstawiono przy-
+kład sygnału, który chcemy syntetyzować — impuls o amplitudzie 32 w próbce zerowej.
+Na rys. 8.6 b) pokazano reprezentację tego sygnału w dziedzinie częstotliwości. Część rze-
+czywista sygnału w dziedzinie częstotliwości ma stałą wartość równą 32. Część urojona
+(niepokazana) zawiera same zera. Jest to ważna para DFT - impuls w dziedzinie czasu
+odpowiada wartości stałej w dziedzinie częstotliwości. Tę kwestię przedyskutujemy w na-
+stępnym rozdziale. Na razie ważne jest, że sygnał na rys. 8.6 b) jest przekształceniem DFT
+sygnału z rys. 8.6 a), przebieg zaś na rys. 8.6 a) jest odwrotnym przekształceniem DFT
+przebiegu z rys. 8.6 b).
+
+Wzór 8.3 jest stosowany do przekształcenia sygnału w dziedzinie częstotliwości (rys. 8.6 b)
+na amplitudy fal kosinusoidalnych (rys. 8.6 c). Jak to pokazano na rysunku, wszystkie próbki
+mają wartość dwa, oprócz próbek 0 i 16 mających wartość jeden. W tym przykładzie nie
+pokazano amplitud fal sinusoidalnych, gdyż mają one wartość zero i są nieistotne. Równanie
+syntezy (wzór 8.2) jest następnie stosowane do przekształcenia amplitud fal kosinusoidal-
+nych (rys. 8.6 c) na sygnał w dziedzinie czasu (rys. 8.6 a).
+
+Powyżej opisano, czym sygnał w dziedzinie częstotliwości różni się od amplitud sinusoid,
+lecz nie powiedziano, dłaczego występuje ta różnica. Różnica powstaje, gdyż reprezentacja
+sygnału w dziedzinie częstotliwości jest określana jako gęstość widmowa. Na rys. 8.7 poka-
+zano, na czym to polega. Na tym rysunku jako przykład wzięto część rzeczywistą reprezenta-
+cji sygnału 32-punktowego w dziedzinie częstotliwości. Jak trzeba się było spodziewać, są to
+próbki od 0 do 16, reprezentujące 17 częstotliwości rozmieszczonych w równych odstępach
+między 0 i 1/2 częstotliwości próbkowania. Gęstość widmowa opisuje, jak dużo sygnału (pod
+względem wartości) występuje na jednostkę szerokości pasma. Aby przetworzyć amplitudy
+sinusoid na gęstość widmową, należy podzielić każdą amplitudę przez reprezentowaną przez
+nią szerokość pasma. To prowadzi do następnej kwestii: jak określić szerokość pasma każdej
+częstotliwości dyskretnej w dziedzinie częstotliwości.
+
+Szerokość pasma, jak to przedstawiono na rys. 8.7, można określić, rysując linie podziału
+między próbkami. Na przykład próbka numer 5 mieści się w paśmie między 4,5 i 5,5; prób-
+ka numer 6 w paśmie między 5,5 i 6,5 itd. Szerokość pasma każdej próbki, wyrażona jako
+ułamek pasma całkowitego (tzn. N/2), wynosi 2/N. Wyjątkiem są próbki skrajne, które mają
+połowę tego pasma, czyli 1/N. To można wyjaśnić współczynnikiem skalowania 2/N między
+
+<image/figury/k3_page139_figure1.png>
+
+Rys. 8.7. Szerokość pasma próbek w dziedzinie częstotliwości. Każdą próbkę w dziedzinie częstotliwości
+można traktować jako zajmującą pasmo częstotliwości o szerokości 2/N, wyrażonej jako utamek pasma
+OREW, AAAA 0 AAC PEARCE 7%

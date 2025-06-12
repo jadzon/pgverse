@@ -1,0 +1,43 @@
+<image/tabele/k4_page222_table1.png>
+
+Do funkcji sterujących zalicza się w sterownikach serii 90-30 funkcje, które ste-
+rują wykonywaniem programu lub zmieniają sposób w jaki jednostka centralna
+CPU wykonuje program napisany w schemacie drabinkowym. Należą do nich
+instrukcje wykonywania skoków w programie, chwilowego zakończenia progra-
+mu, aktualizacji stanu wejść lub wyjść sterownika oraz wykonania przez
+sterownik usług specjalnych.
+
+Do funkcji sterujących zaliczono tu także instrukcję COMMENT, która służy
+jedynie wstawieniu w dowolnym miejscu programu objaśnień dotyczących tego
+fragmentu programu. Komentarz może zawierać dowolny tekst zawierający do
+2048 znaków.
+
+Ponadto w sterownikach GE Fanuc do grupy tej zalicza się omówioną w punkcie
+4.11.1 instrukcję wywołania podprogramu (CALL) oraz blok funkcyjny PID,
+omówiony osobno w 4.12, ze względu na jego rolę w układach regulacji.
+
+Funkcji DO_IO używa się do aktualizacji stanu wejść lub wyjść sterownika
+w trakcie wykonywania programu. poza normalną obsługą wejść i wyjść w cyklu
+sterownika (por. 3.2.1). Argumentami funkcji są: adres pierwszego wejścia lub
+wyjścia, które należy obsłużyć (wejście ST), adres ostatniego wejścia lub wyjścia
+(wejście END) oraz (opcjonalnie) adres w pamięci sterownika (wejście ALT), do
+którego należy wpisać odczytane wielkości (gdy obsługiwane są wejścia) lub z
+którego należy przepisać odpowiednie wartości do modułów wyjściowych. Ar-
+gument na wejściu ALT musi być tego samego typu co argumenty na wejściach
+ST i END. Jeżeli w przypadku odczytu wejść argument ALT jest nieokreślony,
+to aktualizowane są odpowiednie zmienne binarne przyporządkowane wejściom
+dwustanowym na etapie konfiguracji sterownika.
+Po poprawnym wykonaniu funkcji na wyjściu ok pojawia się prąd.
+
+W przykładzie z Wyd. 4.37 przyjęcie przez zmienną %M 100 wartości / spowo-
+duje uaktualnienie stanu (ponowne skanowanie w bieżącym cyklu sterownika)
+wejść dwustanowych od %// do %/32. Jeżeli operacja wykonana zostanie po-
+prawnie, to zmienna %M10] przyjmie wartość /.
+
+Drugi szczebel w przykładzie pokazuje natomiast sposób wykorzystania funkcji
+DO_IO do natychmiastowego przepisania zawartości rejestrów %R100 i %R101
+do wyjść analogowych %AQ]1 i AQ2, bez czekania na fazę obsługi wyjść.
+
+ 
+
+ZAŁ Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

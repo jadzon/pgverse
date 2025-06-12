@@ -1,0 +1,36 @@
+6 Rozdział 1. Funkcje boolowskie
+
+<image/figury/k2_page97_figure2.png>
+
+AJ AAU 44 — tv: «| 4. MAGALAŁŁ4 444444444 AUA 4 AJ 544 4445501, 4 GYFUK dy waóśw.
+
+Łączność operacji © zapewnią, że możemy opuszczać nawiasy w wyrażeniach typu (q 6
+q) 8 r, bez spowodowania niejednoznaczności.
+Operację xor można zdefiniować poprzez altematywę, koniunkcję i negację:
+
+<image/wzory/k2_page97_formula1.png>
+
+W algebrze podzbiorów operacja xor odpowiada różnicy symetrycznej:
+<image/wzory/k2_page97_formula2.png>
+1.2 Wyrażenia boolowskie
+
+Podobnie jak wyrażenia arytmetyczne, możemy budować wyrażenia boolowskie. Wyra-
+żeniami boolowskimi są stałe 0 i 1 oraz zmienne boolowskie (typu boolean). Bardziej
+złożone wyrażenia można budować za pomocą operatorów boolowskich i nawiasów. Je-
+żeli U i W są dwoma wyrażeniami boolowskimi, to wyrażeniami boolowskimi są także
+następujące wyrażenia:
+
+<image/wzory/k2_page97_formula3.png>
+
+1.2.1 Wyrażenia boolowskie w języku Pascal
+W języku Pascal wyrażeniami boolowskimi są stałe true i false oraz zmienne ty-
+pu boolean. Wyrażenia boolowskie można też budować z wyrażeń arytmetycznych za
+pomocą tak zwanych operatorów relacyjnych. Jeżeli U i W są dwoma wyrażeniami aryt-
+metycznymi, to wyrażeniem boolowskim jest wyrażenie:
+
+UopW,
+gdzie op oznacza dowolny operator relacyjny. Operatory relacyjne są zestawione w tabeli:
+
+<image/figury/k2_page97_figure1.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

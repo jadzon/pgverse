@@ -1,0 +1,38 @@
+1.3. Elementy nieliniowe 45
+
+— każdej wartości prądu i odpowiada dokładnie jedna wartość napięcia
+u i odwrotnie, każdej wartości napięcia u odpowiada dokładnie jedna wartość
+
+prądu i.
+Na rys. 1.3-2 podano przykłady charakterystyk uzależnionych prądowo.
+
+<image/figury/k3_page45_figure1.png>
+
+Opór uzależniony prądowo ma następujące właściwości:
+
+— może w nim wystąpić dowolny prąd ie;
+
+— każdej wartości prądu i odpowiada dokładnie jedna wartość napięcia u;
+
+— nie jest oporem nieuzależnionym.
+
+Analogicznie, opór uzależniony napięciowo ma następujące właściwości:
+
+— może w nim wystąpić dowolne napięcie ueŻ;
+
+— każdej wartości napięcia u odpowiada dokładnie jedna wartość prądu i;
+
+— nie jest oporem nieuzależnionym.
+
+Przykłady charakterystyk uzależnionych napięciowo otrzymalibyśmy zamie-
+niając na rys. 1.3-2 oznaczenia osi: i na u oraz u na i.
+
+C. Opory liniowe i nieliniowe. Opór jest liniowy, jeśli jego charakterystyka
+jest linią prostą i jest nieliniowy w pozostałych przypadkach. Opór liniowy (rys.
+
+1.3-3a) jest oporem nieuzależnionym, a jego równanie można zapisywać w obu
+postaciach — nor. wzorv (1.2-6 i (1.2-8%:
+
+<image/wzory/k3_page45_formula1.png>
+
+<image/figury/k3_page45_figure2.png>

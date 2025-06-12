@@ -1,0 +1,35 @@
+2.2. Rozwiązania równań układów SLS 223
+
+<image/figury/k3_page221_figure1.png>
+
+Eliminując prąd i, otrzymujemy równanie różniczkowe względem prądu i:
+
+/k3_page221_formula1.png (2.2-3)
+
+Składową swobodną i, prądu i obliczamy rozwiązując równanie jednorodne, tzn. przyjmu-
+jąc w równaniu (2.2-3) j = 0 dla te(0, +0). Otrzymujemy:
+
+/kK3_page221_formula2.png
+
+2R
+gdzie x =" = 2-10* 15.
+
+Stałą A wyznaczamy z warunku początkowego: A = i(0) = 2 mA. Tak więc:
+
+<image/wzory/k3_page221_formula3.png>
+
+Składową wymuszoną obliczamy przyjmując w równaniu (2.2-3) j = J dla te(0, +0)
+i zakładając zerowy warunek początkowy. Rozwiązanie ogólne równania niejednorodnego (2.2-3)
+ma postać:
+
+y/k3_page221_formula4.png
+
+gdzie B = z] = 3 mA. Stałą A wyznaczamy z założenia i(0) = 0:
+ry/k3_page221_formula5.png
+skąd otrzymujemy A = —B = — z = —3 mA. Tym samym:
+
+i, = 3(1—e*) [mA], te(0, +0) (2.2-5)
+
+Sumując składowe (2.2-4) i (2.2-5) otrzymujemy rozwiązanie całkowite dla te (0, +0):
+
+<image/wzory/k3_page221_formula6.png>

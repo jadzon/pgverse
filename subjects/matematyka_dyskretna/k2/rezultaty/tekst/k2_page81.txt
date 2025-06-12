@@ -1,0 +1,41 @@
+22 Rozdział 1. Rachunek prawdopodobieństwa
+
+<image/figury/k2_page81_figure1.png>
+
+Dowód twierdzenia 1.48: Przypuśćmy, że graf ma n = |VG| wierzchołków i m = |Eg|
+krawędzi. Rozważmy przestrzeń zdarzeń elementamych (? złożoną ze wszystkich moż-
+liwych pokolorowań wierzchołków grafu G. Jest ich |0| = 2”. Dla każdej krawędzi
+e = fu,v) € Eg określmy zmienną losową X, w następujący sposób: X,(w) = 1, jeżeli
+w kolorowaniu w oba końce krawędzi e mają różne kolory i X,(w) = 0 w przeciwnym
+przypadku. P(X, = 1) = $, ponieważ w połowie kolorowań końce e mają różne kolory.
+W jednej czwartej kolorowań oba końce są białe (kolorowań, w któtych u i v mają kolor
+biały, jest 2772, bo na tyle sposobów można pokolorować pozostałe n — 2 wierzchołków)
+oraz w jednej czwartej kolorowań oba są czame.
+Mamy więc E(X,) = 1/2. Rozważmy teraz sumę zmiennych losowych
+
+<image/wzory/k2_page81_formula1.png>
+
+Wartość zmiennej X (w) to liczba różnokolorowych krawędzi w kolorowaniu w. Ale
+
+<image/wzory/k2_page81_formula2.png>
+Dlatego, zgodnie z wnioskiem 1.42 musi istnieć kolorowanie w, dla którego X (w) >
+m/2. o
+
+Średnia liczba różnokolorowych krawędzi w kolorowaniu może być obliczona bez
+używania terminologii rachunku prawdopodobieństwa. Policzmy ile we wszystkich kolo-
+rowaniach jest różnokolorowych krawędzi. Z jednej strony jest to
+
+Y (liczba różnokolorowych krawędzi w kolorowaniu w).
+
+wen
+Z drugiej strony
+$ (liczba kolorowań, w których krawędź e jest różnokolorowa) = )" 277! = m-2"7!.
+cEka cEEG
+
+Przedostatnia równość wynika z tego, że liczba kolorowań, w których e jest różnoko-
+lorowa wynosi 277! (połowa wszystkich). Średnia liczba różnokolorowych krawędzi w
+kolore*"""* ... ..., nach
+
+<image/wzory/k2_page81_formula3.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

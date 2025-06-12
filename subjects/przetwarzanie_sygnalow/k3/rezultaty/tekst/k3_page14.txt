@@ -1,0 +1,64 @@
+2, Statystyka, rachunek prawdopodobieństwa i szumy
+
+najcie z programem komputerowym w tablicy 2.1. Takie sumowania często pojawiają się
+w DSP, dlatego trzeba je w pełni zrozumieć.
+
+W elektronice wartość średnia jest zwykle nazywana wartością DC (składowa stałoprądo-
+wa). Wartość AC (składowa zmiennoprądowa) określa zaś, jak sygnał fluktuuje wokół war-
+tości średniej. Jeśli sygnał jest prostym, powtarzającym się przebiegiem, takim jak sinusoida
+lub przebieg prostokątny, to jego odchylenia od średniej mogą być wyrażane przez amplitudę
+szęzyt-szczyt. Niestety większość sygnałów nie ma wyraźnie określonej wartości szczyt-
+szczyt, lecz ma charakter losowy, tak jak sygnały na rys. 2.1. W takich przypadkach trzeba
+stosować metody ogólniejsze i parametr zwany odchyleniem standardowym, oznaczany
+6 (mała grecka litera sigma).
+
+Zacznijmy od tego, że wyrażenie |xr-u| określa, jak dalece i-ta próbka odchyla się od śred-
+niej. Odchylenie średnie sygnału wyznacza się, sumując odchylenia wszystkich poszczegól-
+nych próbek i następnie dzieląc tę sumę przez liczbę próbek N. Zauważmy, że do sumowania
+bierzemy wartości bezwzględne odchyleń, w przeciwnym razie wartości ujemne i dodatnie
+dałyby w wyniku zero. Odchylenie średnie jest liczbą określającą typowe odchylenie prób-
+ki od średniej. Odchylenie średnie, choć proste i wygodne, prawie nigdy nie jest używane
+w statystyce. Wiąże się to z fizycznymi właściwościami sygnałów. W większości przypad-
+ków ważnym parametrem nie jest odchylenie od średniej, lecz moc wyrażona przez to odchy-
+lenie. Na przykład gdy sygnały losowe łączą się z sobą w układzie elektronicznym, to szum
+wypadkowy wynika z sumowania mocy poszczególnych sygnałów, a nie ich amplitud.
+Odchyłenie standardowe jest parametrem podobnym do odchylenia średniego, z tą wszakże
+różnicą, że w tym przypadku następuje uśrednianie mocy, a nie amplitud. Uzyskuje się to,
+podnosząc wartości odchyleń do kwadratu przed wyznaczeniem średniej (pamiętamy, że moc
+jest proporcjonalna do kwadratu napięcia). Następnie wyciąga się pierwiastek kwadratowy,
+aby „skompensować” poprzednie podnoszenie do kwadratu. Odchylenie standardowe można
+więc wyrazić wzorem:
+
+z
+
+Wi: (3-1)
+
+Wzór 2.2. Obliczenie odchylenia standardowego sygnalu. Sygnał jest zawarty w próbce x, p jest średnią
+obliczoną z wzoru 2.1, N jest liczbą próbek a G — odchyleniem standardowym
+
+Powyższy wzór można też zapisać w postaci:
+
+<image/wzory/k3_page14_formula1.png>
+
+Proszę zauważyć, że wartość średnią uzyskuje się przez dzielenie przez N— | zamiast przez N.
+Tę delikatną sprawę przeanalizujemy w następnym podrozdziale. Wyraz o? często występuje
+w statystyce i nosi nazwę wariancji. Odchylenie standardowe jest miarą wartości fluktuacji
+sygnału od średniej. Wariancja wyraża moc tych fluktuacji. Inną wielkością, z którą trzeba
+się zapoznać, jest wartość rms (wartość średniokwadratowa — root mean square), CZĘSIO sto-
+sowana w elektronice. Odchylenie standardowe, z definicji, określa część zmiennoprądową
+(AC) sygnału, podczas gdy wartość rms jest miarą zarówno składowej stałoprądowej (DC),
+jak i zmiennoprądowej (AC). Jeśli sygnał nie zawiera składowej stałej, to wartość średniokwa-
+dratowa (rms) jest identyczna jak odchylenie standardowe. Na rys. 2.2 przedstawiono zależno-
+ści między odchyleniem standardowym i wartością międzyszczytową (peak-fo-peak) dla kilku
+często spotykanych przebiegów.
+
+W tablicy 2.1 podano komputerową procedurę obliczania wartości średniej i odchylenia stan-
+dardowego przy użyciu wzorów 2.1 i 2.2. Programy w tej książce mają, w zamierzeniu autora,
+wyrażać algorytmy w najprostszy sposób. Wszystkie inne kwestie są traktowane jako wtórne.
+Rezygnuje się tu z dobrej techniki programowania, jeśli dzięki temu uzyskuje się program
+bardziej logiczny i o większej jasności. Na przykład: stosuje się uproszczoną wersję BASIC,
+podaje się numerację wierszy, jedyną dopuszczalną strukturą sterującą jest FOR-NEXT, nie
+
+g*=
+
+©

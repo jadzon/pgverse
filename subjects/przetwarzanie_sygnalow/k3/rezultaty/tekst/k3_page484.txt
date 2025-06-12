@@ -1,0 +1,32 @@
+Zaawansowane narzędzia programowe 521
+
+<image/5figury/k3_page484_figure1.png>
+
+1. Łatwe poruszanie się między działaniami związanymi z edycją,
+budową programu i debugowaniem
+
+2. Mieszanie asemblera i C dla stworzenia wspólnego pliku źródłowego
+3. Obejrzenie rezultatów „budowy”
+
+4. Silny edytor rozumie składnię
+
+5. Łatwy dostęp przez zakładki
+
+Rys. 29.7. Przykładowy ekran VisualDSP. Daje on zintegrowane środowisko tworzenia aplikacji do programów na pro-
+cesory SHARC. RE
+nie, symułacja, debugowanie, tadowanie,
+
+potrzebne w waszym programie, już samo to będzie chyba wystarczającą motywacją do
+zastosowania języka C zamiast asemblera. Szczególną uwagę zwróćcie na procedury
+„przetwarzanie sygnałów” w tablicy 29.3. Tam znajdziecie kluczowe algorytmy DSP,
+w tym rzeczywiste i zespolone FFT, filtry SOI i NOI i funkcje statystyczne, jak np.
+wartości średnia i skuteczna oraz wariancja. Wszystkie te procedury są oczywiście na-
+pisane w asemblerze, dzięki czemu są bardzo efektywne pod względem wykorzystania
+tak szybkości, jak i pamięci.
+
+W tablicy 29.4 podano przykład programu w języku C zaczerpnięty z „CĆ Compiler and
+Reference Manual” firmy Analog Devices. Ten program generuje echo przez dodawanie
+do sygnału jego opóźnionej wersji. Ostatnie poprzednie 4000 próbek sygnału wejścio-
+wego jest gromadzone w buforze cyklicznym. Za każdym pobraniem próbki stan bufora
+cyklicznego jest uaktualniany, najnowsza próbka jest dodawana do przeskałowanej wersji
+najstarszej próbki i powstała w ten sposób próbka jest kierowana na wyjście.

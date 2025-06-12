@@ -1,0 +1,46 @@
+Na pracę regulatora można wpływać ustawiając odpowiednie bity słowa sterują-
+cego STEU (Tab. 7.15).
+
+Wyższy bajt słowa sterującego (DL! 1) jest wykorzystywany przez regulator i nie
+powinien być w żaden sposób modyfikowany, gdyż może to zakłócić poprawną
+pracę regulatora.
+
+Algorytm prędkościowy
+
+W przypadku algorytmu prędkościowego wielkość wyjściowa regulatora dY; jest
+wyznaczana w chwilach czasu 4, = k*TA według następujących zależności:
+e Bez korekcii zakłócenia (D11.5=1). różniczkowany iest svenał FE (D11.1=0)
+
+<image/wzory/k4_page373_formula1.png>
+
+e  Zkorekcia zakłócenia (Dl1.5=1). różniczkowany iest svenał E (D11.1=0)
+
+<image/wzory/k4_page373_formula2.png>
+e Bez korekcji zakłócenia (D11.5=1), różniczkowany jest sygnał EZ
+
+(DIl 1=)
+
+<image/wzory/k4_page3/3_formula3.png>
+
+e Z korekcia zakłócenia (D11.5=1). różniczkowany iest sygnał EZ (D11.1=0)
+
+<image/wzory/k4_page3/3_formula4.png>
+
+zał A ammaazK OT YÓW (Ba aka all (7 ak
+
+mm „JIA POPE a lm La WE PPTP] |FPY NM TEJEE
+za mm am sA mam mMÓD TÓŻ Cm mamo u = TY mm m6
+— —za llzA mam af JOY) momasska() maa m
+
+vzory/k4_page37/3_formula9.png
+
+LUHMIY IMUCRJ UZNALZA UyDNICUIĄ LIIWIIĘ CZADU, W RLUICJ wyziiaCZANa jest wartość
+danego sygnału.
+
+Algorytm pozycyjny
+W przypadku algorytmu pozycyjnego wielkość wyjściowa regulatora jest obli-
+czana w chwilach czasu :,= k*TA według następującej zależności:
+
+<image/wzory/k4_page373_formula10.png>
+
+<image/tabele/k4_page37/3_table1.png>

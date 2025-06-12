@@ -1,0 +1,23 @@
+e Bloki danych DB
+Bloki danych w odróżnieniu od wszystkich pozostałych bloków nie zawie-
+rają żadnych wykonywalnych instrukcji. W błokach tych przechowywane
+są dane wykorzystywane w programie.
+
+<image/figury/k4_page321_figure1.png>
+
+Przykładowa struktura programu z Rys. 7.4 zawiera blok organizacyjny OBI,
+który jest przetwarzany cyklicznie. Blok ten jest wywoływany w każdym cyklu
+pracy procesora. Najprostszy program może się składać z ciągu instrukcji zapi-
+sanych w bloku organizacyjnym OB1. Dla zachowania przejrzystości bardziej
+złożonego programu można podzielić go na bloki programowe PB i korzystać z
+instrukcji skoku do takich bloków. Co więcej, w blokach tych można również
+umieszczać instrukcje skoku tworząc tzw. zagnieżdżone struktury programowe.
+W takich strukturach wywołany blok programowy jest realizowany, aż do osią-
+gnięcia instrukcji końca bloku, po czym kontynuowane jest wykonanie progra-
+mu, z którego nastąpił skok.
+
+Wywołanie bloku danych DB zapewnia dostęp do danych z tego bloku.
+
+   
+
+7.2 Struktura programu 321

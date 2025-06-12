@@ -1,0 +1,49 @@
+4 Rozdział 1. Struktury danych
+
+Definicja 1.2 Kolejka jest listą z trzema operacjami:
+
+e dodawania nowego elementu na koniec kolejki,
+e zdejmowania pierwszego elementu z początku kolejki,
+e sprawdzania, czy kolejka jest pusta.
+
+Taki sposób dodawania i odejmowania elementów jest określany angielskim skrótem
+FIFO (first in first out, czyli pierwszy wszedł — pierwszy wyjdzie). Przykłady kolejek
+spotykamy w sklepach, gdzie klienci czekający na obsłużenie tworzą kolejki.
+
+Definicja 1.3 Stos jest listą z trzema operacjami:
+e dodawania elementu na wierzch stosu,
+e zdejmowania elementu z wierzchu stosu,
+e sprawdzania, czy stos jest pusty.
+
+Na stosie dodajemy i odejmujemy elementy z tego samego końca, podobnie jak w
+stosie talerzy spiętrzonym na stole. Talerze dokładane są na wierzch stosu i zdejmowa-
+ne z wierzchu stosu. Taka organizacja obsługi listy określana jest angielskim skrótem
+LIFO (last in first out, czyli ostatni wszedł - pierwszy wyjdzie). Niektórzy w ten spo-
+sób organizują pracę na biurku. Przychodzące listy układają na stosie i jak mają czas, to
+zdejmują jeden list i odpowiadają na niego.
+
+Przyjrzyjmy się zastosowaniu kolejki lub stosu do szukania. Przypuśćmy, że szukamy
+przez telefon pewnej informacji (na przykład chcielibyśmy się dowiedzieć, kto z naszych
+znajomych ma pewną książkę).
+
+Algorytm szukania książki wśród znajomych
+
+e tworzymy STOS, który na początku jest pusty,
+
+e wkładamy na STOS numer telefonu swojego znajomego,
+
+e powtarzamy dopóki na stosie są jakieś numery:
+o zdejmujemy z wierzchu STOSU jeden numer telefonu,
+o dzwonimy pod ten numer,
+o jeżeli osoba, do której się dodzwoniliśmy, posiada szukaną książkę, to ko-
+
+niec poszukiwań,
+
+o jeżeli nie posiada książki, to pytamy ją o numery telefonów jej znajomych,
+
+którzy mogą mieć książkę (lub znać kogoś kto ją ma); każdy nowy numer zostaje
+dopisany do STOSU.
+
+W powyższym algorytmie zamiast stosu może być użyta kolejka.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

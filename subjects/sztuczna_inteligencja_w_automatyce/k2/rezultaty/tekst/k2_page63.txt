@@ -1,0 +1,54 @@
+Zagadnienie pełności
+
+Mówimy, że procedura wnioskowania jest pełna wtedy i tylko wtedy gdy dowolne
+wyrażenie wynikające logicznie z dowolnej bazy danych moę być także z niej wy-
+prowadzone przy użyciu tej procedury. Algorytm dowodu wykorzystujący regułę
+modus ponens jest pełny w przypadku wyrażeń zapisanych w postaci klauzu] Horna
+(to znaczy w postaci —p; V e VW... V —pn V q co jest równoważne wyrażeniu
+PLAP2A..-. A Pn + q).
+
+PRZYKŁAD 4.13
+
+Stosując wyłącznie regułę modus ponens wykazać s(a) na podstawie następujących
+wyrażeń:
+
+<image/wzory/k2_page63_formula1.png>
+
+Jak łatwo się przekonać, stosując wyłącznie regułę modus ponens dowodu prze-
+prowadzić się nie daje (drugie wyrażenie nie jest klauzulą Horna), a z drugiej strony
+stosując regułę rezolucji dowód uzyskuje się bardzo łatwo. Czyli procedura dowodu
+oparta wyłącznie o regułę wnioskowania modus ponens nie jest pełna, gdy wyrażenia
+nie są w postaci klauzul Horna. =
+
+Zagadnienie istnienia pełnej procedury dowodu jest bardzo ważne. Jeżeli pełna
+procedura dowodzenia twierdzeń matematycznych by istniała i była znana to: (a)
+wszystkie hipotezy mogłyby być wykazane mechanicznie, (b) cała matematyka mo-
+głaby być wygenerowana z zespołu podstawowych aksjomatów. Pytania o pełność
+doprowadziły do powstania największych prac matematycznych XX wieku.
+
+Kurt Gódel w 1930 roku podał twierdzenie o pełności w logice pierwszego rzędu:
+każde wyrażenie wynikające ze zbioru wpz BW może być z niego wyprowadzone
+przez pewną procedurę R, czyli
+
+<image/wzory/k2_page63_formula2.png>
+
+Nie jest to trywialne ponieważ występowanie kwantyfikatorów i zagnieżdżonych
+funkcji prowadzi do baz o nieskończonych rozmiarach.
+
+Gódel nie podał algorytmu R, stwierdził tylko, że istnieje. J.A. Robinson (1965)
+podał algorytm dowodu oparty o rezolucję i wykazał jego pełność.
+
+Logika pierwszego rzędu jest częściowo rożstrzygalna, tzn. że jeżeli jakieś wy-
+rażenie wynika z danej bazy wiedzy. to w skończonym czasie można to wykazać,
+natomiast jeżeli nie wynika, to procedura dowodzenia może nigdy się nie zakończyć.
+Z częściowej rozstrzygalności logiki pierwszego rzędu wynika, że wykazanie sprzecz-
+ności bazy wiedzy jest też częściowo rozstrzygalne.
+
+ 
+
+3Poprzez niewielkie rozszerzenie języka pierwszego rzędu o schemat indukcji Gódel sformułował
+i udowodnił słynne twierdzenie o niepełności: istnieją zdania arytmetyczne prawdziwe, których nie
+da się wyprowadzić z przyjętych dla arytmetyki aksjomatów. Twierdzenie Godla wraz z odkryciem
+fizyki kwantowej, zasadą nieoznaczoności Heisenberga, problemem stopu w maszynie Turinga oraz
+odkryciem procesów chaotycznych spowodowało odejście od deterministycznego i przewidywalnego
+świata Newtona dominującego w fizyce XVIII i XIX wieku.

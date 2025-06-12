@@ -1,0 +1,45 @@
+2. Statystyka, rachunek prawdopodobieństwa i szumy
+
+ 
+
+W cyfrowym przetwarzaniu sygnałów statystyka i rachunek prawdopodobieństwa są stoso-
+wane do opisu sygnałów i procesów, w których sygnały są wytwarzane. Na przykład podsta-
+wowym zastosowaniem DSP jest tłumienie zakłóceń, szumu i innych niepożądanych składni-
+ków występujących w uzyskiwanych danych. Takie składniki mogą być nieodłączną częścią
+mierzonego sygnału lub mogą powstawać w wyniku niedoskonałości systemu akwizycji.
+Mogą też być wprowadzane jako niepożądany produkt uboczny niektórych operacji DSP.
+Statystyka i rachunek prawdopodobieństwa umożliwiają pomiar i klasyfikację tych nieko-
+rzystnych zjawisk, co jest pierwszym krokiem do opracowania metod usuwania takich kło-
+potliwych składników. W tym rozdziale będą omówione najważniejsze koncepcje statystyki,
+z podkreśleniem ich zastosowania do opisu sygnałów.
+
+Terminologia sygnałów i wykresów
+
+Sygnał jest opisem zależności jednego parametru od innego. Na przykład w elektronice ana-
+logowej najpospolitszym sygnałem jest napięcie, które zmienia się w funkcji czasu. Ponieważ
+oba te parametry mogą charakteryzować się ciągłym zakresem wartości, więc sygnał bę-
+dziemy nazywać ciągłym. Poddanie zaś takiego sygnału przetwarzaniu analogowo-cyfrowe-
+mu powoduje kwantyzację obu parametrów. Jako przykład wyobraźmy sobie przetwarzanie
+12-bitowe z częstotliwością próbkowania 1000 próbek/s. Reprezentacja napięcia jest ograni-
+czona do 4096 (2!2) możliwych poziomów binarnych, a czas jest wyrażany tylko przyrostami
+równymi | ms. Sygnały utworzone na podstawie parametrów w ten sposób skwantowanych
+są nazywane sygnałami dyskretnymi lub wyrażonymi cyfrowo. Większość sygnałów wystę-
+pujących w przyrodzie ma charakter ciągły, dyskretne zaś są wewnątrz komputerów (choć
+w obu tych przypadkach bywają wyjątki). Mogą też istnieć sygnały, w których jeden para-
+metr jest ciągły, a drugi dyskretny. Takie sygnały są dość rzadko spotykane, dlatego nie nada-
+no im specjalnych nazw i trzeba wyraźnie określać charakter każdego z dwóch parametrów.
+Na rys. 2.1 przedstawiono dwa sygnały dyskretne, które można spotkać w systemach akwi-
+zycji danych cyfrowych. Oś pionowa może wyrażać napięcie, natężenie światła, ciśnienie
+dźwięku lub nieskończoną liczbę innych parametrów. Ponieważ nie wiemy, co jest wyrażone
+na tej osi w każdym szczególnym przypadku, więc damy osi etykietę ogólną: wartość sygna-
+łu”. Ten parametr jest też nazywany zmienną zależną, a oś — osią y lub osią rzędnych.
+
+Oś pozioma wyraża drugi parametr sygnału. Jest też nazywana osią x lub osią odciętych,
+a parametr — zmienną niezależną. Na osi poziomej sygnału najczęściej występuje czas, lecz
+w niektórych zastosowaniach mogą się pojawiać inne wielkości. Na przykład geofizycy mogą
+
+<image/figury/k3_page12_figure1.png>
+
+|
+2. Autor do określenia wartości chwilowych sygnału używa słowa amplitude. Po polsku zaś amplituda
+oznacza wartość maksymalną, np. okresowego przebiegu sinusoidalnego lub impulsu (przyp. tłum.).

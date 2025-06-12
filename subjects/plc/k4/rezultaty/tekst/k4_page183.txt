@@ -1,0 +1,34 @@
+<image/tabele/k4_page183_table2.png>
+
+Tab. 4.2 Zmienne binarne.
+
+<image/tabele/k4_page183_table1.png>
+
+Występuje tu duża elastyczność w przyporządkowywaniu zmiennym odpowied-
+niego typu. Zmienna rejestrowa, w zależności od potrzeb, może być traktowana
+jako zmienna typu /NT lub WORD. Jej zawartość może także reprezentować
+dwie kolejne zmienne typu BYTE. Dwie kolejne zmienne rejestrowe mogą rów-
+nież reprezentować liczbę typu D/N7. Podobnie, szesnaście kolejnych zmiennych
+binarnych może być traktowane jako liczba typu /NT, jako WORD albo jako
+BCD-4.
+
+W sterownikach GE Fanuc występuje grupa zmiennych binarnych reprezentująca
+dane systemowe, takie jak informacje o błędach działania, aktualnym czasie,
+trybie pracy sterownika, czy jest to pierwszy cykl sterownika itd. Zmienne te
+mogą być wykorzystywane w programie sterującym. Niektóre z nich mogą być
+tylko czytane (zmienne typu %S), natomiast zmienne typu %SA, %SB, %5C mo-
+gą być także zmieniane. Zmiennym systemowym przyporządkowane zostały
+nazwy symboliczne (nickname) ułatwiające rozszyfrowanie ich zawartości.
+Najczęściej używane zmienne systemowe przedstawiono w Tab. 4.4.
+
+Zmienne zachowywane (retentive variables) są to zmienne, których wartości są
+przechowywane w pamięci z podtrzymaniem bateryjnym po zatrzymaniu lub
+wyłączeniu sterownika. Zmiennymi takimi są zmienne rejestrowe, systemowe,
+globalne oraz wejścia binarne. Przechowywane w pamięci z podtrzymaniem
+mogą być także wyjścia binarne i zmienne wewnętrzne binarne (nie dotyczy to
+zmiennych chwilowych %7), jeżeli zostały przypisane cewkom z zapamiętaniem
+stanu (retentive coils).
+
+ 
+
+4.2 Typy danych i deklarowanie zmiennych 153

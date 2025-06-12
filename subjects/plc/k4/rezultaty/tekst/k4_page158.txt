@@ -1,0 +1,37 @@
+<image/figury/k4_page158_figure1.png>
+
+Rys. 3.36 Schemat układu zasilania z baterii akumulatorów sterownika oraz obwo-
+dów VO w układzie SELV.
+
+2. Ochrona przez zastosowanie bardzo niskiego napięcia PELV.
+
+Obwody SEŁV i PELV mają takie same wymogi co do stosowanych źródeł zasi-
+lania oraz sposobów ułożenia przewodów instalacji. Podobnie gniazda
+wtyczkowe i wtyczki nie powinny pasować do gniazd i wtyczek innych obwo-
+dów, w tym SEŁY, ani obwodów o innym napięciu.
+
+Istotną różnicę między obwodami PEŁY i SEŁY stanowi konieczność uziemienia
+części czynnych obwodu PEŁY, tj. jednego przewodu fazowego lub jednego bie-
+guna obwodu. Również części przewodzące dostępne urządzeń i obwodów PEŁYV
+powinny być uziemione.
+
+Ochrona przed dotykiem bezpośrednim powinna być zapewniona przez izolację
+wytrzymującą napięcie probiercze przemienne o wartości skutecznej 500V
+w ciągu | minuty, ogrodzenie lub obudowy (osłony) o stopniu ochrony co naj-
+mniej IP2X.
+
+Nie jest konieczna ochrona przez dotykiem bezpośrednim, jeżeli urządzenie
+
+znajduje się w strefie objętej wpływem połączenia wyrównawczego, a napięcie
+
+znamionowe nie przekracza:
+
+e 25V prądu przemiennego lub 60V prądu stałego nietętniącego, a urządzenia
+są użytkowane w miejscach suchych,
+
+e 6V prądu przemiennego lub 15V prądu stałego nietętniącego w innych przy-
+padkach.
+
+m TYTT"TPETTYTTTYTTEMECTTEPRPIWCCTTPTE
+
+vzory/k4_page158_formula1.png

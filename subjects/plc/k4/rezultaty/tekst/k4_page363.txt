@@ -1,0 +1,21 @@
+Skok JM jest wykonywany gdy:
+
+e po wykonaniu operacji arytmetycznej lub operacji logicznej na ciągu bitów
+lub operacji konwersji zawartość akumulatora ! mieści się w dozwolonym
+zakresie ujemnym,
+
+e po wykonaniu operacji arytmetycznej lub konwersji zawartość akumulato-
+ra | jest większa od dozwolonego zakresu,
+
+e przy wykonaniu operacji porównania zawartość akumulatora 2 jest mniejsza
+od zawartości akumulatora | (porównanie typu "mniejsze" jest spełnione).
+
+Skok JO jest wykonywany gdy:
+
+e po wykonaniu operacji arytmetycznej lub operacji konwersji zawartość
+akumulatora | nie mieści się w dozwolonym zakresie.
+
+gury/k4_page363_figure1.png
+e1.png
+
+7.14 Funkcje sterujące 363

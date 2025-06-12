@@ -1,0 +1,57 @@
+18. Splot FFT
+
+W tym rozdziale będą przedstawione dwie ważne metody DSP — metoda nakładania z doda-
+waniem (overlap-add) oraz splot FFT. Metoda nakładania z dodawaniem jest stosowana do
+rozdzielenia długich sygnałów na mniejsze segmenty w celu łatwiejszego ich przetwarzania
+W metodzie splotu FFT wykorzystuje się metodę nakładania z dodawaniem wraz z szybkim
+przekształceniem Fouriera, dzięki czemu sygnały mogą być splatane przez wymnażanie
+widm częstotliwościowych. Dla filtrów o odpowiedzi impulsowej dłuższej niż ok. 64 punkty
+
+splot FFT jest szybszy niż splot standardowy, dając dokładnie taki sam wynik.
+
+Metoda nakładania z dodawaniem (overlap-add)
+
+Jest wiele zastosowań DSP, w których długi sygnał musi być filtrowany segmentami. Na
+przykład cyfrowy sygnał audio © wysokiej wierności (hi-fi) wymaga przepływności bitowej
+5 MB/min, podczas gdy cyfrowy sygnał wideo ok. 500 MB/min. Przy tak dużych szybko-
+ściach przesyłania danych często się zdarza, że pamięć komputera jest niewystarczająca do
+jednoczesnego przechowywania całego przetwarzanego sygnału. Są też systemy, które prze-
+twarzają segment po segmencie, gdyż pracują w czasie rzeczywistym. Na przykład sygnały
+telefoniczne nie powinny być opóźniane o więcej niż kilkaset milisekund, co ogranicza ilość
+danych dostępnych do przetwarzania w każdej dowolnej chwili. Są jeszcze inne zastosowa
+nia, w których przetwarzanie może wymagać podziału sygnału na segmenty. Przykładem jest
+splot FFT będący głównym tematem tego rozdziału.
+W metodzie nakładania z dodawaniem (overlap-add) korzysta się z podstawowej procedury
+DSP: 1) rozkład sygnału na proste składowe, 2) przetworzenie każdej składowej w jakiś po-
+żyteczny sposób, 3) połączenie przetworzonych składowych w końcowy sygnał. Na rys. 18.1
+przedstawiono przykład realizacji takiej procedury w metodzie nakładania z sumowaniem.
+Na rys. 18.1 a) pokazano sygnał, który ma być filtrowany, a na rys. 18.1 b) — zastosowaną
+odpowiedź impulsową dolnoprzepustowego filtru okienkowanego funkcją sinc. Przechodząc
+na dół rysunku, widzimy sygnał odfiltrowany (rys. 18.1 i) będący wygładzoną wersją sygna-
+łu wejściowego. Kwestią zasadniczą w tej metodzie jest zależność długości tych sygnałów
+od splotu. Gdy sygnał N-próbkowy jest splatany z M-próbkową odpowiedzią impulsową.
+to sygnał wyjściowy ma długość równą N + M - 1 próbek. Na przykład sygnał wejściowy
+(rys. 18.1 a) ma długość 300 próbek (od 0 do 299), odpowiedź impulsowa (rys. 18.1 b) 101
+próbek (od 0 do 100) i sygnał wyjściowy (rys. 18.1 i) 400 próbek (od O do 399).
+
+Tak więc, gdy N-punktowy sygnał jest filtrowany, jest on rozszerzany o M — | punktów w pra-
+wo. (Tak jest przy założeniu, że odpowiedź impulsowa zmienia się od indeksu O do M. Jeśli
+w odpowiedzi impulsowej stosuje się indeksy ujemne, to rozszerzenie nastąpi także w lewo).
+Na rys. 18.1 a) do sygnału dodano zera między próbkami 300 i 399, aby pokazać, gdzie
+następuje rozszerzenie. Niech was nie dziwią małe wartości na krańcu sygnału wyjściowego
+(rys. 18.1 i). Jest to po prostu wynikiem odpowiedzi impulsowej filtru okienkowanego funk-
+cją since mającą małe wartości na swych krańcach. Wszystkie 400 próbek na rys. 18.1 i) ma
+wartości niezerowe, choć niektóre z nich są zbyt małe, aby były widoczne na wykresie.
+
+Na rysunkach 18 c), d), e) przedstawiono rozkład zastosowany w metodzie nakładania z do-
+dawaniem. Sygnał zostaje rozdzielony na segmenty. Każdy z nich zawiera 100 próbek sygna-
+łu oryginalnego. Ponadto dodano po 100 zer z prawej strony każdego segmentu. W następ-
+nym kroku każdy segment jest indywidualnie filtrowany przez splatanie go z odpowiedzią
+impulsową filtru. W ten sposób uzyskuje się segmenty wyjściowe pokazane na rysunkach
+18.1 f), g), h). Ponieważ każdy segment wejściowy ma długość 100 próbek, a odpowiedź
+impulsowa 101 próbek, więc każdy segment wyjściowy będzie miał długość 200 próbek.
+Rzeczą ważną do zrozumienia jest to, że 100 zer dodano do każdego segmentu po to, aby
+umożliwić rozszerzenie podczas operacji splotu.
+
+Zauważmy, że rozszerzenie powoduje nakładanie się segmentów wyjściowych. Te nakłada-
+jące się segmenty wyjściowe są sumowane, dając w wyniku sygnał wyjściowy (rys. 18.1 i).

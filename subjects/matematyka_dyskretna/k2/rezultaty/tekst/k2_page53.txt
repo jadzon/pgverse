@@ -1,0 +1,44 @@
+18 Rozdział 1. Kombinatoryka
+Twierdzenie wynika teraz z równości:
+
+<image/wzory/k2_page53_formula1.png>
+
+1.12 Generowanie obiektów kombinatorycznych
+
+W tym rozdziale zajmiemy się algorytmami generującymi (wypisującymi) obiekty kom-
+binatoryczne. Przedstawione algorytmy będą działaly według następującego schematu:
+
+e Wypisujemy pierwszy obiekt
+
+e Powtarzamy, aż do napotkania ostatniego obiektu:
+
+o Przetwarzamy bieżący obiekt tak, aby otrzymać następny obiekt.
+
+Takie algorytmy mają tą zaletę, że nie wymagają dużo pamięci. Należy tylko pamiętać
+jeden obiekt.
+
+Algorytmy generujące obiekty są używane w przypadku, gdy chcemy sprawdzić wszyst-
+kie obiekty danej klasy lub wtedy, gdy chcemy wylosować obiekt danej klasy. Przypuść-
+my, na przykład, że chcemy wylosować jakiś 3 elementowy podzbiór zbioru £1,...,7).
+W tym celu losujemy liczbę naturalną k od 1 do (7) = 35, a następnie generujujemy
+podzbiory, aż do elementu k.
+
+1.12.1 Generowanie podzbiorów
+Zaczniemy od najprostszego przypadku wypisania wszystkich podzbiorów zbioru
+
+<image/wzory/k2_page53_formula2.png>
+Algorytm wypisujący wszystkie podzbiory zbioru 41.....n):
+e Pierwszy podzbiór: 0.
+
+e by uzyskać następny po A podzbiór:
+o Wskazujemy na największy element nie należący do A, czyli a = maxfi £
+A)
+o Jeżeli takiego a nie ma, to koniec algorytmu, zbiór A jest ostatnim podzbio-
+rem.
+o W przeciwnym przypadku dodajemy a do A i usuwamy z A wszystkie ele-
+menty większe od a.
+
+Przykład 1.18 Dla n = 3 powyższy algorytm wypisze po kolei następujące zbiory: 0,
+13 12) 123) (1) (1,3) 11,2), 11,2,3).
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

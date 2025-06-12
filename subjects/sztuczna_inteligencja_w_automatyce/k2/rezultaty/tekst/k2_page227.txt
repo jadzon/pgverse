@@ -1,0 +1,48 @@
+232
+
+/* Program 11 */
+
+perm( [] , (]).
+perm(L, [GI0]) .- usun(G,L,L1) ,
+perm(Li,0).
+
+usun(E, [(El0] ,0).
+usun(E, [GIO] ,[GI01]) :- usun(E,0,01).
+
+Procedura usun(E,L1,L2) usuwa element E z listy L1 tworząc listę L2. Procedura
+perm(L1,L2) sprawdza, czy lista L2 jest w relacji permutacją z listą L1. Pierwsza jej
+klauzula stwierdza, że permutacją listy pustej jest lista pusta. Druga klauzula mówi,
+że lista [GIO] jest permutacją listy L, jeżeli lista O jest permutacją listy powstałej
+z listy L po usunięciu z niej elementu G. Obie te klauzule definiują permutację.
+Łączne działanie rekurencji i nawracania powoduje, że program znajduje wszystkie
+permutacje elementów zadanej listy. am
+
+Powyższe dwa przykłady a także ?? pokazują, że pisząc program w Prologu
+można koncentrować sie na podawaniu definicji operacji, które mają być wykonane,
+nie zajmując się tym, jak one będą wykonane. Takie podejście do programowania
+nosi nazwę deklaratywnego, w odróżnieniu od podejścia proceduralnego, w którym
+pisząc program musimy wiedzieć, jakie konsekwencje na wykonanie programu będzie
+miała każda wprowadzona procedura i w jakiej kolejności będą one wykonywane.
+Oczywiście, nie da się pisać programów w Prologu wyłącznie stosując podejście
+deklaratywne, szczególnie stosując sterowanie jego wykonaniem (następny punkt),
+tym niemniej możliwe w Prologu podejście deklaratywne znacznie ułatwia pisanie i
+czytanie programów.
+
+9.2. Sterowanie wykonaniem programu
+
+Prolog umożliwia ograniczone sterowanie przebiegiem wykonania programu przez
+wymuszanie nawracania oraz przez stosowanie tzw. odcięcia. W tej części omówimy
+obie te metody sterowania, a ponadto omówimy działanie predykatu standardowego
+findall tworzącego listę rozwiązań uzyskanych w procesie nawracania, działanie
+predykatu standardowego not i tzw. założenie o zamkniętości świata.
+
+9.2.1. Wymuszanie nawracania — predykat fail
+
+Jedyną własnością standardowego predykatu fail jest to, że nigdy nie jest on spęł-
+niony. Jeżeli napotkany zostanie w czasie wykonywania programu, to jego niespeł-
+nienie wymusza nawracanie. Stosowany jest więc do wymuszania nawracania w sy-
+tuacjach, w których nawracanie samoistnie by nie zaszło.
+
+PRZYKŁAD 9.14
+
+Zbadamy działanie predykatu fail w poniższym programie.

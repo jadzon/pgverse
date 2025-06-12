@@ -1,0 +1,35 @@
+4.]. Organizacja procesora 6]
+
+do wysłania do pamięci adres następnego rozkazu. Celem łatwej realizacji tego zadania
+w procesorach stosuje się licznik (na rys. 2.2 oznaczono go symbolem LR) nazywany
+zwykle licznikiem rozkazów PC (ang. program counter). Przygotowanie następnego adresu
+polega wówczas na dokonaniu inkrementacji zawartości tego licznika.
+
+Istnieją jednak trzy przypadki, kiedy procesor zmienia kolejność wykonywania rozka-
+zów. Pierwszym z nich jest przypadek, gdy sam rozkaz umieszczony w programie zmienia
+tę kolejność. Jest to rozkaz skoku wraz z adresem skoku do określonego miejsca pamięci.
+W takim przypadku adresem następnego rozkazu nie będzie zawartość licznika rozkazów
+zwiększona o 1, ale adres skoku. Następuje wtedy załadowanie nową wartością licznika
+rozkazów PC lub innego rejestru (rejestru adresowego AD na rys. 4.1). Jeśli wykonanie
+rozkazu skoku zależy od spełnienia jakiegoś warunku, to mówi się, że skok jest warun-
+kowy. Wykonanie takiego rozkazu odpowiada realizacji rozgałęzień w algorytmie opisują-
+cym ten program.
+
+Drugim przypadkiem zmiany wykonywania ciągu rozkazów jest zażądanie przełącze-
+nia się procesora i wykonania programu wskazanego przez system operacyjny. Może to
+wynikać z analizy dotychczasowej pracy procesora, jak np. wykrycie błędu. W takim
+przypadku system operacyjny, po rozpoznaniu rodzaju błędu, wywołuje program reakcji
+na dany błąd (korekcja błędu, poinformowanie operatora, zatrzymanie akcji itp.) ustawiając
+odpowiednie zawartości w rejestrze PC (lub AD).
+
+Trzecim przypadkiem zmiany kolejności wykonywania rozkazów jest reakcja proceso-
+ra na przychodzące z zewnątrz sygnały. Zwykle procesor jest wyposażony w odpowiednie
+wejścia, na których pojawiają się sygnały informujące procesor o pewnych zdarzeniach.
+Zdarzeniem takim może być przykładowo żądanie przez operatora inicjalizacji pracy
+komputera (reset) lub wykonywanie rozkazów „krok po kroku” (praca krokowa) wraz
+z analizą stanu procesora. I w takim przypadku odpowiednie układy powodują ustawienie
+nowej zawartości w rejestrze PC (lub AD).
+
+<image/figury/k3_page71_figure1.png>
+
+Rysunek 4.1. Organizacja typowego procesora

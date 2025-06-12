@@ -1,0 +1,41 @@
+Projektowanie filtru
+
+ 
+
+Są jeszcze inne okna, o których mogliście słyszeć, choć nie dorównują one oknom Blackmana
+*i Hamminga. Okno Bartletta ma kształt trójkątny, zbieżność jest uzyskana przy użyciu li-
+nii prostych. Okno Hanninga, zwane też oknem z podwyższonym cosinusem, jest opisane
+wzorem: w(i] = 0,5 — O,5cos(2xi/M). Te dwa okna mają w przybliżeniu taką samą szybkość
+opadania charakterystyki, jak okno Hamminga, lecz gorsze tłumienie w paśmie zaporowym
+(Bartlett: —-25 dB lub 5,6%, Hanning: -44 dB lub 0,63%). Mogliście też słyszeć o oknie
+prostokątnym. Jest ono tym samym, co brak jakiegokolwiek okna. Daje ono po prostu ob-
+cinanie ogonów charakterystyki (jak na rys. 16.1 c). Wtedy szybkość opadania jest ok. 2,5
+razy większa niż dla okna Blackmana, lecz tłumienie w paśmie zaporowym wynosi tylko
+-21 dB (8,9%).
+
+Projektowanie filtru
+
+Przystępując do projektowania filiru okienkowanego funkcją sinc, trzeba wybrać dwa para-
+metry: częstotliwość odcięcia f. oraz długość odpowiedzi impulsowej filtru M. Częstotliwość
+odcięcia jest wyrażana jako ułamek częstotliwości próbkowania, a więc musi się mieścić
+w granicach od 0 do 0,5. Wartość M ustala opadanie charakterystyki w paśmie przejściowym
+zgodnie z przybliżonym wzorem:
+
+M = SŻ
+
+BW
+
+Wzór 16.3. Zależność między długością filtru M a szybkością opadania charakterystyki. Długość
+odpowiedzi impulsowej filtru M określa szerokość pasma przejściowego filtru BW. Jest to tylko wzór
+przybliżony, gdyż szybkość opadania zależy od zastosowanego okna
+gdzie BW jest szerokością pasma przejściowego mierzonego od miejsca, gdzie zaczyna
+dopiero schodzić poniżej wartości | do miejsca, gdzie prawie osiąga zero (powiedz-
+my — od 99% do 1%). Szerokość pasma przejściowego jest też wyrażana jako ułamek
+częstotliwości próbkowania i musi się mieścić między 0 i 0,5. Na rys. 16.3 podano
+przykład zastosowania tego przybliżonego wzoru. Trzy przedstawione krzywe obliczo-
+no na podstawie odpowiedzi impulsowych o długościach M = 20, 40 i 200. Ze wzoru
+16.3 wynika, że szerokości pasma przejściowego są równe, odpowiednio, BW = 0,2;
+0.1 i 0,02. Na rys. 16.3 b) pokazano, że kształt odpowiedzi impulsowej nie zależy od
+wybranej częstotliwości odcięcia.
+
+<image/figury/k3_page253_figure1.png>

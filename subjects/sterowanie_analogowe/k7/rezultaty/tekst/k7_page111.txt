@@ -1,0 +1,20 @@
+Obserwator stanu i jego zastosowanie
+
+ 
+
+Zakładamy, że mamy parametry modelu(A, B, C, D). Znajomość parametrów
+umożliwia symulowanie obiektu, zatem obserwator możemy utożsamić z
+układem symulującym obiekt. Symulacja ma przebiegać w ten sposób, aby
+stan obiektu i modelu były identyczne. Warunki początkowe powinny być
+takie same.
+
+SMOLUB]S 8|8pOW
+
+<image/wzory/k7/_page111_formula1.png>
+
+ 
+
+<image/wzory/k/_page111_formula2.png>
+Poprawka korygująca błąd gdy nie ma takich samych warunków początkowych
+
+Ra Al

@@ -1,0 +1,49 @@
+27. Kompresja danych
+
+Na rys. 27.3 przedstawiono uproszczony schemat kodowania Huffmana. Znaki od A do
+występują w oryginalnym strumieniu danych z prawdopodobieństwami podanymi w tablicy
+Ponieważ znak A występuje najczęściej, więc będzie reprezentowany pojedynczym bitem
+jako 1. Następny, pod względem częstości występowania, znak B dostaje dwa bity, jest
+prezentowany przez 01. I tak kontynuujemy przydzielanie bitów aż do znaku występujące
+najrzadziej, którym jest G. Temu znakowi przydzielamy sześć bitów, 000011. Jak pokaz. na
+na rys. 27.3, słowa kodowe o zmiennej długości są na nowo sortowane w grupy ośmiobile
+we, będące standardem w komputerach.
+
+Podczas dekompresji (czyli rozpakowywania skomprymowanych plików) wszystkie ośmi
+bitowe grupy są umieszczane jedna za drugą, tworząc długi ciąg zer i jedynek. Przyjrzyj
+się dokładnie tablicy kodowej na rys. 27.3 i zwróćcie uwagę, że każde zakodowane sło
+składa się z dwóch części: pewnej liczby zer przed jedynką i opcjonalnego binarnego sło
+wa kodowego po jedynce. To umożliwia podział tego strumienia danych dwójkowych
+słowa kodowe bez konieczności stosowania ograniczników lub innych znaczników międz
+poszczególnymi słowami. Program dekompresji przegląda strumień zer i jedynek aż do pc
+jawienia się prawidłowego słowa kodowego i potem rozpoczyna poszukiwanie następnegi
+znaku. Sposób tworzenia słów kodowych daje pewność, że podczas rozdzielania nie pe
+wstaną niejednoznaczności.
+
+Bardziej zaawansowana wersja kodowania, z wykorzystaniem metody Huffmana, nosi r
+kodowania arytmetycznego. W tym sposobie kodowania sekwencje znaków są rep
+
+wane przez indywidualne słowa kodowe, według prawdopodobieństwa występowania. Zaleń
+tego sposobu jest kompresja danych lepsza o, powiedzmy, 5-10%. Często stosuje się
+kodowanie ciągów, po którym następuje albo kodowanie Huffmana, albo arytmetyczne. Ja
+można się było spodziewać, algorytmy tego typu są bardzo skomplikowane i ich opracc
+nie powierza się specjalistom z dziedziny kompresji danych.
+
+Aby można było zrealizować kodowanie Huffmana lub arytmetyczne, algorytmy kompre
+i dekompresji muszą być zgodne pod względem binarnych słów kodowych zastosowany
+do wyrażania każdego znaku (lub grupy znaków). Można to uzyskać dwoma sposob:
+Najprostszym jest zastosowanie wcześniej zdefiniowanej tablicy kodowania, która zawsi
+pozostaje taka sama, niezależnie od informacji poddawanej kompresji. W metodach t
+dziej złożonych stosuje się kodowanie zoptymalizowane dla tych danych, które są aktuali
+używane. To wymaga włączenia tablicy kodowania do pliku podlegającego kompresji, ał
+móc skorzystać z tej tablicy w programie dekompresji. Oba sposoby są często stosor
+
+  
+  
+ 
+ 
+  
+  
+  
+
+<image/figury/k3_page429_figure1.png>

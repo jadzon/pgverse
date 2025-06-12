@@ -1,0 +1,46 @@
+110
+
+<image/wzory/k2_page56_formula1.png>
+
+e CZŁON INERCYJNY N-TEGO RZĘDU
+Pominięty z uwagi na zbyt skomplikowaną postać transmitancji
+e CZŁON OSCYLACYJNY
+
+Transmitancje dyskretne wyznaczone odpowiednio: przekształceniem
+skokowo-inwariantnym, metodą Tustina i przekształceniem 6 okreś-
+lone są wzorami:
+
+<image/wzory/k2_page56_formula3.png>
+
+e CZŁON CAŁKUJĄCY IDEALNY
+
+Transmitancje dyskretne wyznaczone odpowiednio: przekształceniem
+skokowo-inwariantnym, metodą Tustina i przekształceniem 6 okreś-
+lone są wzorami
+
+<image/wzory/k2_page56_formula6.png>
+
+111
+
+e CZŁON CAŁKUJĄCY Z INERCJĄ
+
+Transmitancje dyskretne wyznaczone odpowiednio: przekształceniem
+skokowo-inwariantnym, metodą Tustina i przekształceniem 6 okreś-
+lone są wzorami:
+
+<image/wzory/k2_page56_formula2.png>
+
+© CZŁON KUZNICZRUJĄCYI IUEALINY
+
+Transmitancje dyskretne wyznaczone odpowiednio: przekształceniem
+skokowo-inwariantnym, metodą Tustina i przekształceniem 6 okreś-
+lone są wzorami
+
+<image/wzory/k2_page56_formula4.png>
+
+e CZŁON RÓŻNICZKUJĄCY RZECZYWISTY
+Transmitancje dyskretne wyznaczone odpowiednio: przekształceniem
+skokowo-inwariantnym, metodą Tustina i przekształceniem 6 okreś-
+lone są wzorami:
+
+<image/wzory/k2_page56_formula5.png>

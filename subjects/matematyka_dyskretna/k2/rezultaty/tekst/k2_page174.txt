@@ -1,0 +1,40 @@
+12 Rozdział 1. Struktury danych
+
+e dopóki KOLEJKA nie jest pusta, powtarzamy:
+o bierzemy jeden wierzchołek v z początku KOLEJKI,
+
+o odwiedzamy wszystkiech synów wierzchołka v i wkładamy je na koniec
+kolejki.
+
+Poniżej przedstawiono odwiedzane wierzchołki oraz zawartość kolejki po każdej kolejnej
+iteracji pętli algorytmu przeszukiwania wszerz drzewa przedstawionego na rysunku 1.1.
+
+<image/tabele/k2_page174_table1.png>
+
+W metodzie przeszukiwania wszerz wierzchołki są przeszukiwane w kolejności od wierz-
+chołków będących najbliżej wierzchołka początkowego do wierzchołków będących dalej.
+1.4.3 Rekurencyjne algorytmy przeszukiwania drzew
+
+Istnieje prosty i ciekawy sposób uzyskiwania postaci postfixowej wyrażenia arytmetycz-
+nego z drzewa tego wyrażenia. Aby uzyskać postać postfixową wyrażenia, należy prze-
+szukać drzewo tego wyrażenia w pewien określony sposób, zwany przeszukiwaniem po-
+storder.
+
+Przeszukiwanie postorder. Aby przeszukać (pod)drzewo mające swój korzeń w wierz-
+chołku z:
+
+e przeszukujemy jego lewe poddrzewo (z korzeniem w 20),
+e przeszukujemy jego prawe poddrzewo (z korzeniem w 21),
+e odwiedzamy wierzchołek r (korzeń drzewa).
+
+Algorytm ten możemy krótko przedstawić w schemacie:
+lewe poddrzewo — prawe poddrzewo — korzeń.
+
+Przykład 1.9 Jeżeli przeszukamy drzewo z rysunku 1.4 i wypiszemy po kolei etykiety od-
+wiedzanvch wierzchołków. to otrzymamy ciaa:
+
+<image/wzory/k2_page174_formula1.png>
+
+który jest postacią postnxową wyrazenia 2(a + 3/d).
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

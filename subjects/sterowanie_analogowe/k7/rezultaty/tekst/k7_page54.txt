@@ -1,0 +1,24 @@
+Stabilność
+
+ 
+
+Jak widzimy, wartości własne macierzy A wynoszą 1 i -2 czyli układ nie jest
+stabilny asymptotycznie. Po diagonalizacji widzimy, że mod związany z
+wartością własną 1 nie jest podłączony do wyjścia więc nawet kiedy
+zmienna stanu dozna „wybuchu”, to na wyjściu nie zobaczymy jego efektu.
+
+SMOUBJS 8|8pOJN
+
+W przypadku modelu transmitancyjnego możemy uzyskać postać:
+
+<image/wzory/k/_page54_formula1.png>
+
+Jak widzimy, z postaci tej wynika, że w relacji wejście-wyjście obiekt jest
+stabilny (BIBO stabilny). Stąd możemy wyciągnąć wniosek, że model stanowy
+ujawnia nam cechy układu, które mogą zostać niewykryte w oparciu o analizę
+modelu transmitancyjnego.
+
+ 
+
+POLITECHNIKA
+GDANSKA

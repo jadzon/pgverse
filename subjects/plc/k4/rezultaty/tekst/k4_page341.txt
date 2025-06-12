@@ -1,0 +1,38 @@
+<image/wzory/k4_page341_formula1.png>
+
+Czasomierz odmierza zaprogramowany czas, gdy wynik warunku uruchomienia
+czasomierza zmieni wartość z O na | (zbocze narastające). Po uruchomieniu cza-
+somierz kontynuuje pracę bez względu na aktualny wynik warunku uruchomie-
+nia czasomierza. Testowanie czasu na wartość | daje wynik 1, gdy:
+
+e zaprogramowany czas upłynął i
+e warunek zerowania czasomierza nie jest spełniony.
+
+<image/tabele/k4_page341_table1.png>
+
+Czasomierz zostanie uruchomiony i zacznie odliczać czas t=300x0.1s=30s
+w chwili, gdy wejście I 7.0 zmieni wartość z O na 1 i na wejściu 7 7./ jest war-
+tość 0. Po uruchomieniu czasomierz kontynuuje pracę niezależnie od aktualnego
+stanu wejścia I 7.0. Wyjście Q 4.0 przyjmie wartość 1 po upływie 30s. Jeżeli
+czasomierz zostanie uruchomiony i wystąpi ponowna zmiana wartości wejścia
+17.0 z O na | przed upływem zaprogramowanego czasu, to czasomierz zacznie
+od nowa odliczać zaprogramowany czas. Gdy stan wejścia 7 7./ zmieni się z O na
+I, to wartość czasu zostanie wyzerowana niezależnie od wartości wejścia 7 7.0,
+a wyjście Q 4.0 przyjmie wartość 0. Jeżeli wejście 7 7.7 ma wartość 1, to zmiana
+stanu wejścia 7 7.0 z O na 1 nie spowoduje uruchomienia czasomierza.
+
+Ww;
+[i
+
+V
+
+<image/figury/k4_page341_figure1.png>
+
+SI
+
+Rys. 7.13 Diagram pracy czasomierza załączającego z opóźnieniem, podtrzymują-
+cego
+
+ 
+
+7.7 Czasomierze 341

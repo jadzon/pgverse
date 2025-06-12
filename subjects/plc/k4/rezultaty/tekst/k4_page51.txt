@@ -1,0 +1,31 @@
+<image/tabele/k4_page51_table1.png>
+
+   
+
+2.3.2 Funkcje standardowe _
+
+W normie /EC 1/3/-3 określono pewną liczbę funkcji standardowych, wspól-
+nych dla różnych języków programowania. Większość z prezentowanych funkcji
+standardowych występuje na ogół w oprogramowaniu dostarczanym przez pro-
+ducentów sterowników programowalnych. W dalszej części tego rozdziału
+prezentowane będą przykłady graficznego przedstawienia funkcji oraz jej użycia
+w języku tekstowym S7. Notacja /N7, /N2, ..., /Nn oznaczać będzie kolejne wej-
+ścia funkcji uporządkowane od góry do dołu, natomiast QU7 odnosić się będzie
+do wyjścia.
+
+Do funkcji standardowych należą następujące funkcje:
+e Funkcje konwersji typu (Type conversion functions)
+
+Funkcje umożliwiające zmianę danych z jednego typu na inny powinny mieć
+postać *_7TO_**, gdzie * oznacza typ argumentu wejściowego, a ** typ argu-
+mentu wyjściowego. Tab. 2.20 zawiera przykłady funkcji konwersji.
+
+Funkcja TRUNC służy do zaokrąglenia w dół liczby rzeczywistej do liczby cał-
+kowitej (obcięcia części po przecinku), np. wynikiem funkcji /RUNC[7.6) będzie
+liczba /, a wynikiem TRUNC(-1.6) będzie liczba —/.
+
+Funkcje *_TO_BCD oraz BCD_TO_+** umożliwiają konwersję danych pasniędzy
+typami BYTE, WORD, DWORD lub ŁWORD zawierającymi dane kodowane
+UZEZZEODTZE POT IOT OODĘTOTY APROPO. OT POTU RSEOTSY JII OPPIDA TO, ZORĘZOOTAEY . OPO PAY PYTA PRE RAZY WOZY OOJOOZORZZZCZID A NL TA |. REEDA
+
+2.3 Elementy oprogramowania 51

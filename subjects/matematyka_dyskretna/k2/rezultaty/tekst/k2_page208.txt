@@ -1,0 +1,73 @@
+O O w w
+
+15.
+
+16.
+
+17.
+
+18.
+19.
+
+20.
+
+Rozdział 1. Grafy (nieskierowane)
+
+Ile jest grafów ze zbiorem wierzchołków £1,...,n)?
+
+„. Ile krawędzi ma dwudzielny graf pełny K,,.„?
+
+„ Udowodnij, że izomorfizm grafów jest relacją równoważności.
+
+. Narysuj wszystkie graty ze zbiorem wierzchołków V = (a,b,c). Które z nich są
+
+izomorficzne?
+
+. Narysuj możliwie jak najwięcej nieizomorficznych grafów z czterema wierzchoł-
+
+kami fa,b,c,d).
+
+. Narysuj dwa nieizomorficzne grafy z tą samą (możliwie jak najmniejszą) liczbą
+
+wierzchołków.
+
+. Narysuj dwa nieizomorficzne drzewa z tą samą (możliwie jak najmniejszą) liczbą
+
+wierzchołków.
+
+. Narysuj dwa nieizomorficzne grafy z tą samą (możliwie jak najmniejszą) liczbą
+
+wierzchołków i tą samą liczbą krawędzi.
+
+. Narysuj dwa nieizomorficzne grafy, które mają tą samą liczbą wierzchołków stop-
+
+nia k, dla każdego k.
+
+. Zastosuj algorytm przeszukiwania grafu w głąb (wszerz) do grafów z rysunków 1.1
+
+i 1.10.
+
+. Zkonstruuj drzewa spinające dla grafów z rysunków 1.1 i 1.10.
+„ Korzystając z drzew spinających z poprzedniego zadania, znajdź zbiór cykli funda-
+
+mentalnych dla grafów.
+
+Zmodyfikuj algorytm przeszukiwania grafu wszerz tak, aby wyznaczał on także
+drzewo spinające (złożone z tych krawędzi, którymi przeszedł algorytm). Zastosuj
+ten algorytm do grafów z rysunków 1.1, 1.7i 1.10.
+
+Sprawdź, które grafy przedstawione na rysunkach w tym rozdziale posiadają cykl
+(lub drogę) Eulera.
+
+Sprawdź, które grafy przedstawione na rysunkach w tym rozdziale posiadają cykl
+lub drogę Hamiltona.
+
+Zastosuj algorytm kolorowania z nawrotami do grafu z rysunku 1.7.
+
+Znajdź graf, dla którego heurystyka przedstawiona w podrozdziale o kolorowaniu
+grafów nie znajduje optymalnego kolorowania.
+
+Narysuj hiperkostkę H,. Wskaż w niej cykl Hamiltona. Prześledź na niej protokół
+rozsyłania wiadomości.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

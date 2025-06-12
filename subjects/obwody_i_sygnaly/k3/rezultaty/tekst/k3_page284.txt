@@ -1,0 +1,34 @@
+284 3. Obwody prądu stalego
+
+<image/figury/k3_page284_figure2.png>
+
+Przykład 3.4-1. Sposób zastosowania twierdzenia Thevenina do analizy obwodu nieliniowego
+z jednym elementem nieliniowym zilustrujemy na przykładzie układu z rys. 3.4-3a. Przyjmiemy
+następujące dane: charakterystyka oporu Ry: u=af, a=2 V/A, R=10 Q, 8 =3,
+E = 5V.
+
+<image/figury/k3_page284_figure1.png>
+
+Liniową część układu (rys. 3.4-3b) zastępujemy źródłem napięciowym o parametrach Er m 4 V,
+R; =2 Q. Otrzymany w ten sposób układ zastępczy (rys. 3.4-3c) jest opisany równaniem
+nieliniowym:
+
+zory/k3_page284_formula1.png
+
+którego rozwiązanie analityczne nie nastręcza trudności. Jedynym pierwiastkiem rzeczywistym tego
+równania jest I = 1 A. Pozostałe prądy wynoszą I, = (0,2 A oraz I, = Q3A.
+
+B. Metoda charakterystyki łącznej. Rozważmy teraz ponownie układ
+z rys. 3.4-3a, przyjmując że opór Ry jest opisany charakterystyką
+u = a(e”' — 1), gdzie a=2V, b= ; A”, przy czym pozostałe parametry
+układu pozostają bez zmian. Równanie opisujące układ zastępczy ma w tym
+przypadku postać:
+
+<image/wzory/k3_page284_formula2.png>
+
+i jest równaniem przestępnym. Przybliżonym rozwiązaniem uzyskanym nume-
+rycznie jest I = 1,188 A.
+
+Jak widzimy, już w przypadku tak prostego obwodu nieliniowego metody
+analityczne zawodzą. Prąd I w obwodzie z rys. 3.4-3c można natomiast
+wyznaczyć w sposób przybliżony za pomocą prostych metod graficznych.

@@ -1,0 +1,39 @@
+124
+
+6.5.2. Sieci warstwowe jako bramki logiczne
+
+Pojedyncze neurony dyskretne mogą realizować dowolne iloczyny lub sumy logiczne
+argumentów wejściowych co ilustruje rys. ??. Gdy argument z1;, £ = 1,2,... ,n wcho-
+dzący w skład sumy lub iloczynu ma być zanegowany, wtedy należy zamienić odpo-
+wiadającą mu wagę w; z 1 na —1.
+
+<image/figury/k2_page119_figure1.png>
+
+Ponieważ każdą funkcję logiczną można przedstawić w postaci sumy iloczynów
+(lub iloczynu sum), to można ją zrealizować za pomocą dwuwarswtwowej sieci neu-
+ronowej obliczającej w pierwszej warstwie sumy (iloczyny), a w drugiej iloczyny
+(sumy).
+
+6.5.3. Sieci warstwowe jako klasyfikatory
+
+Wygodnym sposobem przedstawiania zagadnień klasyfikacji jest interpretacja geo-
+metryczna. Stosując ją, każdemu obrazowi wejściowemu reprezentowanemu przez
+wektor x = [11,13,...,1,]' odpowiada punkt w przestrzeni n wymiarowej nazywanej
+przestrzenią obrazów. Obszary zajmowane przez obrazy należące do poszczególnych
+klas nazywają się obszarami decyżyjnymi.
+
+Ważną własnością jest liniowa separowalność obszarów decyzyjnych. Obszary te
+są liniowo separowalne, jeżeli dają się parami rozdzielić przez hiperpłaszczyzny. Na
+rysunku ?? przedstawiono przykłady separowalności obszarów decyzyjnych.
+
+Jeżeli na neuron o wagach w = [wy,wo,...,Wą,W,;;| podany zostanie obraz
+wejściowy x,to na wyjściu neuronu pojawia się sygnał, który może mieć wartość
+mniejszą, równą lub większą od zera. Miejscem geometrycznym zerowych odpowiedzi
+neuronu są punkty x dane równaniem
+
+<image/wzory/k2_page119_formula1.png>
+
+Równanie to jest równaniem hiperpłaszczyzny w przestrzeni obrazów. Czyli interpre-
+tacją geometryczną neuronu w przestrzeni obrazów jest hiperpłaszczyzna dzieląca
+przestrzeń obrazów na dwie części; część, w której odpowiedzi neuronu będą ujemne
+i część, w której będą dodatnie (rys. ??).

@@ -1,0 +1,39 @@
+1. Pojęcia podstawowe — elementy
+
+39) ma również prostą interpretację geometryczną. Oznacza
+rtość R,„,, jest współczynnikiem kierunkowym stycznej do
+yunkcie A (rys. 1.3-29a), a więc:
+
+<image/wzory/k3_page72_formula2.png>
+
+synnikiem skali.
+
+1y R,,„ zależy, podobnie jak opórstatyczny R,„, od położe-
+
+irakterystyce, można go więc uważać za wielkość zależną od
+
+cia u). Na rys. 1.3-29b przedstawiono zależność oporu
+od prądu i dla charakterystyki z rys. 1.3-29a.
+
+:ge72_formula1.png
+
+gury/k3_page72_figure1.png
+
+ą określić przewodność dynamiczną G
+
+dyn :
+
+<image/wzory/k3_page72_formula3.png>
+
+jmowanych przy definiowaniu oporu w p. 1.3.1 wynika, że
+ewodność statyczna są dodatnie:
+
+<image/wzory/k3_page72_formula4.png>
+
+podczas gdy opór dynamiczny i przewodność dynamiczna mogą być zarówno
+dodatnie, równe zeru, jak i ujemne”, tzn.:
+
+<image/wzory/k3_page72_formula5.png>
+
+w Niekiedy dogodnie jest dopuszczać przyjmowanie przez R.(G„) i R„,„(G,,„) wartości
+granicznych R. = 0, Rz= to, Ry, = to.

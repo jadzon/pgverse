@@ -1,0 +1,54 @@
+Przedmowa
+
+Sterowniki programowalne PŁC są coraz szerzej stosowane do sterowania ma-
+szyn, urządzeń i procesów przemysłowych. Wiąże się z tym wzrost popytu na
+literaturę o tematyce związanej z ich programowaniem.
+
+Pierwsza w Polsce książka poświęcona programowaniu sterowników PŁC po-
+
+wstała w wyniku realizacji projektu S_JEP-07/8/ w ramach europejskiego pro-
+
+gramu dydaktycznego TEMPUS. Projekt ten dotyczył komputerowych systemów
+sterowania.
+
+W książce przedstawione zostały podstawy, zasady i przykłady programo-
+
+wania sterowników PLC.
+
+e Podstawy omówiono w oparciu o międzynarodową normę /EC 1131-3 doty-
+czącą języków programowania sterowników programowalnych. Ze względu
+na to, że większość spotykanych narzędzi programowania (a także instrukcji)
+napisana została w języku angielskim, w celu ułatwienia odniesienia się do
+nich dla większości używanych pojęć czy określeń podano także ich angiel-
+skie odpowiedniki.
+
+e Zasady programowania opracowano na podstawie bogatego doświadczenia
+autorów w zakresie dydaktyki oraz projektowania i uruchamiania systemów
+sterowania we współpracy ze znanymi firmami zajmującymi się automatyką
+przemysłową. Zasady te omawia się prezentując oprogramowanie dla wybra-
+nych sterowników z popularnych serii.
+
+e Przykłady obejmują zarówno proste zadania sterowania logicznego jak
+i zadania sterowania w układach regulacji z wykorzystaniem algorytmu PID
+oraz sekwencyjnego sterowania procesami wsadowymi. Omawiane przykła-
+dy są sprawdzone w dydaktyce jaki i w zastosowaniach praktycznych.
+
+Rozdział pierwszy poświęcony jest historii rozwoju sterowników, wprowadze-
+niu podstawowych pojęć z zakresu sterowania logicznego, takich jak sterowanie
+przekaźnikowo-stykowe czy przerzutniki, by następnie na bazie kilku prostych
+przykładów układów sterowania silnika pokazać sposoby realizacji takich ukła-
+dów przy użyciu sterowników PLC.
+
+W rozdziale drugim zostały przedstawione podstawy i zasady programowania
+sterowników PŁC. Omówiono także poszczególne języki programowania oraz
+sposób tworzenia struktury wewnętrznej programu w postaci grafu sekwencji
+SFC. Rozdział ten jest oparty na definicjach i zaleceniach wprowadzonych
+w trzeciej części międzynarodowej normy IEC 1131 Programmable Controllers.
+Do rozdziału tego warto sięgnąć dwukrotnie - najpierw w celu zaznajomienia się
+z ogólnymi sposobami programowania sterowników, a po zapoznaniu się z kon-
+kretnymi rozwiązaniami dla poszczególnych sterowników ponownie, w celu
+usystematyzowania wiadomości i wyrobienia sobie poglądu na stosowane przez
+producentów rozwiązania.
+
+Ea O O Z O O I
+Przedmowa 1

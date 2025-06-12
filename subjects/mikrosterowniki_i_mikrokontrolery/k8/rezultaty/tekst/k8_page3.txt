@@ -1,0 +1,59 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 5
+
+wskaźnik stosu — rejestr zawierający adres ostatniej zapełnionej komórki stosu (wierzchołka stosu
+— specjalnego rodzaju pamięci zwanego stosem (jest on umieszczony w pamięci danych), z którego
+odczyt wektorów informacji cyfrowej możliwy jest wyłącznie w kolejności odwrotnej do kolejności
+ich wpisywania).
+
+rejestry robocze (uniwersalne) lub ogólnego przeznaczenia GPR (ang. General Purpose
+Registers) — pewny zestaw rejestrów ogólnego przeznaczenia. Mają przechowywać argumenty
+wykonanych operacji i wyniki. Np. dla procesorów AVR są to rejestry r0 do r31, dla mk rodziny
+PIC jest to rejestr W , (Work register) a dla MCS8051 rejestrA (Accumulator).
+
+4. Cechy architektury harwardzkiej procesorów rdzeniowych mk.
+
+Opiera się na użyciu dwóch oddzielnych szyn dla danych i rozkazów, dzięki czemu w trakcie
+pobierania argumentów wykonywanej właśnie instrukcji można równocześnie zacząć pobieranie
+następnego słowa rozkazowego (pre-fetch). Skraca to cykl rozkazowy i zwiększa szybkość pracy.
+
+Obszary adresowe pamięci danych i programu (wewnętrznych i czasami zewnętrznych) są
+rozdzielone. Pociąga to za sobą niejednoznaczność adresów, ponieważ pod tym samym adresem jc
+widzi pamięć RAM i FLASH. W tym przypadku stosuje się inne rozkazy dla pamięci programu i inne
+dla pamięci danych.
+
+magistrala danych i rozkazów mają różną szerokość (długość słowa). Wadą tego rozwiązania jest
+utrudniony przepływ danych z pamięci programu do obszaru pamięci operacyjnej, co uniemożliwia
+
+stosowanie jednej z podstawowych technik programistycznych (look-up tables).
+
+5. Cechy architektury Von-Neumanna procesorów rdzeniowych mk.
+
+Jednolita przestrzeń adresowa, w której wszystkie pamięci, rejestry i układy we/wy są umieszczone
+w jednej, wspólnej przestrzeni adresowej. W architekturze tej zakłada się, że podział przestrzeni
+adresowej na pamięć programu, pamięć danych oraz obszar we/wy jest czysto umowny i zależy
+wyłącznie od rozmieszczenia tych elementów w obszarze adresowym podczas projektowania systemu.
+
+Mk ma jedną szynę danych wspólną dla danych i programu. Dzięki temu programowanie jest
+ułatwione, gdyż dostęp do danych, programu i urządzeń we/wy odbywa się przy użyciu
+zunifikowanych rozkazów wykorzystujących te same tryby adresowania. Tworzenie tablic stałych,
+tablicy wektorów, itp. w pamięci FLASH nie stanowi problemu.
+
+W tym rozwiązaniu wykonanie instrukcji wymaga kilku przesłań danych (najpierw bajt z kodem
+rozkazu, a po nim bajty z argumentami) po magistrali danych, co czyni tę architekturę zdecydowanie
+wolniejszą od harwardzkiej.
+
+6. Funkcje i typy pamięci zaimplementowanych w mk.
+
+Podział ze względu na pełnione funkcje:
+
+pamięć programu (zawierająca kod programu, tablice stałych, wektor resetu i przerwań), w
+
+technologii ROM, EPROM lub FLASH
+
+pamięć danych (przechowująca zmienne),
+
+stos sprzętowy (obsługi przerwań i wywołań funkcji odkładają na niego bieżącą wartość licznika
+rozkazów i po zakończeniu działania „zdejmują” ją),
+
+pamięć EEPROM (przechowuje zmienne lub tablice stałych, które po wyłączeniu zasilania nie mogą
+ulec skasowaniu).

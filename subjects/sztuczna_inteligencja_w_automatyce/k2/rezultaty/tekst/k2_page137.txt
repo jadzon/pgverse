@@ -1,0 +1,8 @@
+<image/figury/k2_page137_figure2.png>
+
+Rys. 6.37: Aproksymowana funkcja. Kółka przedstawiają zbiór uczący
+
+<image/figury/k2_page137_figure1.png>
+
+Rys. 6.38: Aproksymowana funkcja i jej aproksymacja przez sieć radialną o (a) 6 neuronach,
+(b) 15 i (c) 32 neuronach

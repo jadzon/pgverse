@@ -1,0 +1,40 @@
+Rozdział 1
+
+Wiadomości wstępne
+
+Skrypt zawiera przegląd wiedzy teoretycznej i metod praktycznych dotyczących kon-
+strukcji i zasad działania komputerowych systemów ze sztuczną inteligencją, a także
+przedstawia wgląd w dyskusje filozoficzne dotyczące relacji pomiędzy działaniem
+komputerów i działaniem umysłu.
+
+Dla pełnego zrozumienia prezentowanego materiału wystarcza elementarna zna-
+jomość algebry Boole'a, podstaw matematyki wyższej na poziomie kursów na pierw-
+szym roku studiów technicznych, oraz ogólne umiejetności programowania kompu-
+terów.
+
+1.1. Zakres materiału
+
+Podstawowe pojęcia Sztuczna inteligencja: definicje, metody i zastosowania, hi-
+storia rozwoju
+
+Filozofia sztucznej inteligencji Dualizm, test Turinga, hipoteza silnej SI, chiński
+
+pokój Searlego, stanowisko Penrose'a, paradygmaty.
+
+Metody szukania na grafach Metody szukania: wszerz, w głąb, równych kosz-
+tów, heurystyczne, na grafach AND-OR, minimax, alfa-beta.
+
+Reprezentacja wiedzy i wnioskowanie Metody logiczne w sztucznej inteligen-
+cji Metody automatycznego wnioskowania w logice pierwszego rzędu, reguła
+rezolucji. Język Prolog jako system wnioskowania.
+
+Wnioskowanie w warunkach niepewności Metody rozmyte i sieci probabilistyczne.
+
+Metody uczenia Uczenie z nauczycielem. Uczenie bez nauczyciela i samoorganiza-
+cja. Metody szukanie ekstremum jako algorytmy uczenia. Metody gradientowe,
+genetyczne, symulowanego wyżarzania i roju. Sieci neuronowe i algorytm pro-
+pagacji wstecznej. Systemy rozmyto-neuronowe. Uczenie drzew decyzyjnych.
+Metody samoorganizacji. Uczenie ze wzmocnieniem (z krytykiem).
+
+Systemy z bazą wiedzy Architektura. Pozyskiwanie wiedzy. Strategie wniosko-
+wania. Wiedza rozproszona — neuronowe systemy ekspertowe.

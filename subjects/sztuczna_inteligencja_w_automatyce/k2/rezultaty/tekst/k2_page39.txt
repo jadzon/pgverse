@@ -1,0 +1,25 @@
+44
+
+<image/wzory/k2_page39_formula1.png>
+
+<image/figury/k2_page39_figure1.png>
+
+Podobnie, w sytuacji przedstawionej na rys. ??b każdy człowiek znający zaledwie
+zasady gry widzi, że białe mogą łatwo utrzymać remis poruszając się wyłącznie
+królem. Jak podano w pracy Seymour. Nordwood (1993) w tej sytuacji program
+Deep Thought grając białymi zbił wieże, co pozwoliło czarnym przedostać się przez
+barierę pionów i łatwo wygrać.
+
+Od początku istnienia komputerów tworzono programy grające w szachy. Jednym
+z inicjatorów tej dziedziny był twórca teorii informacji Claude E. Shannon (patrz
+artykuł w Scientific American z roku 1950 (Shannon 1950)). W ciągu 50 lat poziom
+gry komputerów zmienił się od gry na bardzo niskim poziomie do gry mistrzowskiej
+(rys ??). W roku 1997 w komputer Deep Blue pokonał mistrza świata Kasparowa w
+stosunku 3:2 (patrz artykuły twórców koncepcji i oprogramowania tego komputera
+(Hsu i inni 1990, Campbell i inni 2002)).
+
+Komputer Deep Blue ma strukturę równoległą. System składa się z 30-węzłowego
+(30-procesorowego) komputera IBMRS/6000 SP i 480 jedno-układowych szachowych
+maszyn szukających. Każdy procesor komputera współpracuje z 16 maszynami szu-
+kającymi. System SP zawiera 28 węzłów z procesorem P2SC 120 MHz i 2 węzły z
+procesorem P2SC 135MHz. Węzły komunikują się ze sobą przez szybki przełącznik.

@@ -1,0 +1,58 @@
+Przetwarzanie sygnału fonicznego 15
+
+Kompresja
+
+Przy próbkowaniu sygnału głosowego z częstotliwością 8000 próbek/sekundę większość in-
+formacji cyfrowych to informacje nadmiarowe (redundancyjne). Informacja zawarta w jednej
+próbce jest bowiem w znacznym stopniu powielona w próbkach sąsiednich. Opracowano
+wiele algorytmów DSP do przetwarzania cyfrowych danych głosowych na strumień danych
+o mniejszej wymaganej przepływności bitowej (bis). Są to algorytmy kompresji danych.
+Równoważne im algorytmy dekompresji stosuje się do odtwarzania sygnału w jego orygi-
+nalnej postaci. Poszczególne algorytmy różnią się od siebie stopniem kompresji i uzyskiwaną
+jakością dźwięku. Ogólnie biorąc, zredukowanie przepływności bitowej danych z 64 kbi/s
+do 32 kbit/s nie powoduje pogorszenia jakości dźwięku. Przy kompresji do przepływności bi-
+towej 8 kbi/s wpływ na jakość dźwięku jest już wprawdzie zauważalny, lecz taką kompresję
+można jeszcze stosować w sieciach telefonicznych dalekiego zasięgu. Najwyższa osiągalna
+kompresja do ok. 2 kbit/s powoduje znaczne zniekształcenia dźwięku, lecz jest przydatna
+w niektórych zastosowaniach — np. wojskowych i w łączności podmorskiej.
+
+Tłumienie echa
+
+Występowanie echa jest poważnym problemem w łączności telefonicznej dalekiego zasięgu.
+Gdy mówimy do mikrofonu aparatu telefonicznego, sygnał reprezentujący nasz głos wę-
+druje do aparatu odbiorczego, z którego część sygnału powraca jako echo. Jeśli odległość
+wynosi kilkaset kilometrów, to czas powrotu echa jest równy kilka milisekund. Ucho jest
+przyzwyczajone do odbioru echa o tak małym opóźnieniu i połączenie jest traktowane jako
+prawidłowe. Przy większych odległościach echo staje się coraz bardziej słyszalne i irytują-
+ce. Opóźnienie może osiągać kilkaset milisekund w łączności międzykontynentalnej i jest
+wtedy szczególnie nieprzyjemne. Cyfrowe przetwarzanie sygnałów daje rozwiązanie tych
+uudności przez pomiar sygnału powrotnego i generowanie odpowiedniego antysygnału li-
+kwidującego kłopotliwe echo. Ta sama technika umożliwia użytkownikom aparatów tele-
+fonicznych z głośnikiem jednoczesne słuchanie i mówienie bez kłopotów ze sprzężeniem
+akustycznym (gwizdami interferencyjnymi). Może też być stosowana do tłumienia szumu
+otoczenia przez redukowanie go antyszumem generowanym cyfrowo.
+
+Przetwarzanie sygnału fonicznego
+
+Wzrok i słuch to dwa najważniejsze nasze zmysły. Właśnie dlatego znaczna część zastosowań
+DSP jest związana z przetwarzaniem obrazu i dźwięku. Słuchamy zarówno muzyki, jak i mowy.
+Technika DSP spowodowała rewolucyjne zmiany w obu tych dziedzinach.
+
+Muzyka
+
+Droga prowadząca od mikrofonu muzyka do głośnika audiofila jest długa. Dzięki cyfrowej
+reprezentacji przesyłanych danych zapobiega się pogorszeniu jakości związanemu zwykle
+z analogowym przetwarzaniem i zapamiętywaniem. Jest to oczywiste dla każdego, kto po-
+równywał jakość muzyki uzyskiwanej z magnetofonu z muzyką z płyty kompaktowej. Utwór
+muzyczny jest w studiu dźwiękowym zazwyczaj nagrywany w wielu kanałach lub na wielu
+ścieżkach. W niektórych przypadkach nagrywa się osobno nawet poszczególne instrumenty
+i wokalistów. Inżynier dźwięku ma wtedy większą swobodę w tworzeniu nagrania finalnego.
+Złożony proces łączenia z sobą indywidualnych ścieżek nagraniowych nazywa się miksowa-
+niem. Do realizacji kilku ważnych funkcji podczas miksowania można zastosować DSP. Są
+to: filtracja, sumowanie i odejmowanie sygnałów, edycja sygnałów i inne.
+
+Jednym z najciekawszych zastosowań DSP w dziedzinie przygotowania muzyki jest szłuczny
+pogłos. Jeśli sygnały z poszczególnych kanałów są po prostu sumowane, to brzmienie
+dźwięku wydaje się rozrzedzone i kruche, jakby muzycy grali gdzieś w otwartej przestrze-
+ni. Słuchacze odnoszą takie wrażenie, gdyż są w dużym stopniu przyzwyczajeni do echa
+i pogłosu zawartego w słuchanej muzyce, a te właśnie efekty są na ogół minimalizowane

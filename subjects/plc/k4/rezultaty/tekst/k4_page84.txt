@@ -1,0 +1,42 @@
+HED: D.: 98% SpÓ DÓSÓb HWASEOOAAN GE ROLE BY LOZYWYNCA „eż AC ko U
+
+Bz* .. wzoarv/ką naae84 formula1 nna
+
+ 
+
+(* Ci =
+<image/emo_srezwzory/k4_page84_formula2.png>
+INITIAL_strzk * Etap początkowy — postać tekstowa
+(* Ciażo etapu -
+Step body ) +kk — ; : :
+ZND_STEP nazwa etapu początkowego
+W Sk etapu — postać ogólna
+kkk —
+3
+
+Wskaźnik etapu — bezpośredni dostęp
+do zmiennej logicznej ***.X z prawej
+strony etapu
+
+| Czas aktywności etapu — postać ogólna
+okł | *** T = zmienna typu TIME (czas)
+
+Tab. 2.42 Przedstawienie etapu
+
+  
+
+Przejście (transition) przedstawia warunki logiczne, których spełnienie jest wy-
+magane do przeniesienia sterowania z jednego lub więcej etapów
+poprzedzających przejście do jednego lub więcej etapów występujących za przej-
+ściem. Przejście przedstawiane jest graficznie jako poziomy odcinek
+przecinający linię łączącą etapy.
+
+Z każdym przejściem jest skojarzony warunek przejścia (rransition condition),
+który jest wynikiem rozwiązania pojedynczego wyrażenia logicznego. Warunek
+przejścia zawsze prawdziwy oznacza się symbolem / lub słowem kluczowym
+TRUE.
+
+Sposoby kojarzenia warunków przejścia z przejściem z wykorzystaniem różnych
+Języków opisanych w normie IEC 1131-3 przedstawiono w Tab. 2.43.
+
+<image/tabele/k4_page84_table1.png>

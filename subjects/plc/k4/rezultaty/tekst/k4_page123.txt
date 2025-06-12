@@ -1,0 +1,32 @@
+<image/tabele/k4_page123_table1.png>
+
+dla wybranych modułów
+
+322 (CLCC AA W IL i = |
+
+SCE Standby CPU Reduńdancy)
+
+ 
+
+W ostainim okresie, w celu podwyższenia niezawodności systemów sterowania,
+projektuje się coraz cześciej systemy z redundancją CPU (Hor Standby CPL
+Redzmdancy). Redundancja taka zapewnia kontynuację działania systemu nawet
+w razie wystąpienia błędu. Wystąpienie błędu w jednej z CPU w takim redun
+dancyjnym układzie również nie zatrzymuje działania systemu. Przykładowe
+rozwiązanie redundancyjne dla sterowników GE Fanuc serii 90-70 pokazano na
+Rvs. 3.5. $ystem gorącej rezerwy CPU składa się z dwóch jednostek CPU: pod-
+stawowej (primary) i rezerwowej (secondary) połączonych jedną lub dwoma
+magistralami za pomocą modułów BTM (Bus Transmitter Module) i BRM (Bus
+Receiver Module). Tylko jedna CPU jest jednostką aktywną realizującą zadania
+sterowania. natomiast druga stanowi gorącą rezerwę jednostki aktywnej
+W przypadku awarii następuje przejęcie sterowania przez jednostkę rezerwową.
+Warunki przejęcia sterowania określa się w konfiguracji systemu. Po wykryciu
+błędu systemu w magistrali aktywnej sterownik zostaje przyłączony do magi-
+
+hz iz 0 M M ZN
+
+3.2 łednostka centralna CPU 123
+
+ 
+
+w EA PT W ĘĄ A A A W WOK + a ra mW wy

@@ -1,0 +1,39 @@
+78 sa 1. Pojęcia podstawowe — elementy
+
+Załóżmy, że prąd i oraz napięcie u są określone związkami (1.3-43), przy
+czym punkt A(I, U) leży na opadającej części charakterystyki. Dla małych
+składowych zmiennych 4i, Au dostajemy wówczas przybliżone równanie
+(1.3-45),przyczym R,„ < 0. Taka aproksymacja ma oczywiście sens tylko dla
+takiego otoczenia punktu 4, które nie wykracza poza opadający zakres
+charakterystyki. Często zdarza się przy tym, że cały zakres opadania (między
+punktami B i C na rys. 1.3-34) można aproksymować jedną prostą, np.
+styczną w punkcie przegięcia A.
+
+Analogicznie możemy rozumować w przypadku oporu uzależnionego napię-
+ciowo o równaniu (1.3-2), przyjmując, że funkcja pa (u) jest w danym przedziale
+funkcją malejącą (rys. 1.3-35). O charakterystyce takiego oporu mówimy często,
+że jest to charakterystyka typu N”. Również w tym przypadku, dla dostatecznie
+małego otoczenia punktu A (nie wykraczającego poza punkty B i C na rys.
+1.3-35), możliwe jest przyjęcie równania przybliżonego (1.3-45) dla małych
+składowych zmiennych, przy czym Ryn < 0 (Gy, < 0).
+
+B. Opór ujemny jako element obwodu. Powyższe rozważania prowadzą
+do wniosku, że przy użyciu odpowiednich oporów nieliniowych i przy odpowied-
+nich ograniczeniach możliwe jest uzyskanie oporu ujemnego. Taki idealny opór
+ujemny rys. 1.3-36a jest elementem rezystancyjnym (por. p. 1.3.4-G) o równaniu:
+
+<image/wzory/k3_page78_formula1.png>
+
+Jest to zatem element skupiony, liniowy i stacjonarny o charakterystyce
+przedstawionej na rys. 1.3-36b. Zwracamy jednak uwagę, iż tak określony opór
+ujemny nie jest oporem? w sensie definicji podanej w p. 1.3.1-A, jego
+
+<image/figury/k3_page78_figure1.png>
+
+) Charakterystyka z rys. 1.3-35 przypomina literę N. Takie charakterystyki mają m.in. diody
+tunelowe oraz lampy wieloclektrodowe (np. tetrody) z tzw. efektem dynatronowym (stąd spotykana
+również nazwa: orzeka dynatronowa). Jest również możliwe uzyskiwanie charak
+terystyki Ra S oraz typu N w specjalnie do tego przeznaczonych układach tranzystorowych (m.in.
+w układach ze sprzężeniem zwrotnym).
+
+3) Wystąpuje tu niezręczność terminologiczna, która jest jednak trudna do uniknięcia.

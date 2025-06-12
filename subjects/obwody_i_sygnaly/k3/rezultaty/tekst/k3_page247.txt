@@ -1,0 +1,33 @@
+r H m m am r.
+
+e2.png
+
+<image/wzory/k3_page247/_formula1.png>
+wyrażające napięcia U; i U, na elementach dzielnika w zależności od napięcia
+U i wartości oporów R; i R,.
+
+Napięcie U jest więc w układzie dzielnika „podzielone” na napięcia U, i U2,
+w stosunku określonym przez ułamki występujące we wzorach (3.2-14).
+
+Związki (3.2-14) można zapisać także za pomocą przewodności elementów
+dwójnika. Jeżeli oznaczymy G, = 1/R;, i G, = 1JRa, to związki te przyjmą
+postać:
+
+<image/wzory/k3_page247_formula2.png>
+
+<image/figury/k3_page247_figure1.png>
+
+B. Dzielnik prądu. Dzielnik prądu (lub dzielnik prądowy) jest układem
+dwóch oporów połączonych równolegle (rys. 3.2-11). Jeżeli przez zaciski tego
+układu płynie prąd I, to powstaje na nim napięcie:
+
+'ory/k8_page247_formula3.png (3.2-16)
+| Napięcie U jest zarazem napięciem na obu oporach R; i Ra, a więc:
+<image/wzory/k3_page24/_formula4.png>
+
+Podstawiając zależność (3.2-16) do wzorów (3.2-17) otrzymamy związki:
+
+<image/wzory/k3_page247_formula5.png>
+
+wyrażające prądy I, i I, w elementach dzielnika. Związki te zapisane za pomocą
+przewodności elementów dzielnika przyjmują postać:

@@ -1,0 +1,28 @@
+<image/wzory/k4_page113_formula1.png>
+
+Celem tego rozdziału jest omówienie podstawowych elementów sprzętu sterowni-
+ków PLC z uwzględnieniem głównego celu tego podręcznika jakim jest
+przedstawienie zasad i przykładów programowania. Nie jest to więc omówienie
+wyczerpujące, niemniej zawiera najważniejsze zagadnienia i pojęcia, które są
+niezbędne do zrozumienia podstaw programowania. W tym celu przedstawiono
+podstawowe parametry techniczne oraz zasady działania jednostki centralnej
+CPU i podstawowych modułów stosowanych w systemach sterownikowych.
+Każdy z omawianych modułów został przedstawiony na przykładzie wybranego
+modułu sterownika GE Fanuc serii 90-30 jako reprezentanta sterowników mo-
+dułowych PLC średniej wielkości. Wydaje się, że prezentacja tego zakresu
+metodą szczegółowego omówienia jednego przypadku (case study) jest najwła-
+ściwsze.
+
+Niektóre nowe lub szczególnie ważne zagadnienia, np. takie jak układy zasilania
+sterowników omawia się nieco szerzej niż wymagałby tego kurs programowania.
+Układy zasilania sterowników przedstawiono zgodnie z zaleceniami polskich
+norm dotyczącymi układów zasilania aparatury sterowniczej, ze szczególnym
+uwzględnieniem aspektów ochrony zapewniającej bezpieczeństwo.
+
+Szerzej opisano również działanie układów pozycjonowania, w których coraz
+częściej stosuje się przetworniki obrotowo-impulsowe oraz moduły szybkich licz-
+ników. Podobnie, w związku z rozwojem sieci komunikacyjnych, przedstawiono
+główne pojęcia i zagadnienia komunikacyjne w sieciach sterownikowych.
+
+RZEESERTELCJ TTTEJETT POTY" YTETPOTPOTOTECTTOT PET EYE RTTPTYTTW OTTO IT TYPY TTE PTE EC TOO" OTUTOOWYTOCYOWYPPIENYEWYO TT
+Rozdział : 3. Sprzęt sterowników PLC 113

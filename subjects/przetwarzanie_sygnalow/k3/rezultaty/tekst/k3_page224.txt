@@ -1,0 +1,64 @@
+<image/figury/k3_page224_figure1.png>
+
+Przekształcenie Fouriera 245
+
+zespolonych, omówionym w rozdziale 29. Należy pamiętać, że niektórzy autorzy stawiają
+ten znak minus we wzorze, a inni nie. Zauważcie też, że częstotliwość jest wyrażana sym-
+bolem w. Jak pamiętacie, taki zapis oznacza pulsację (natural frequency), której jednostką
+są radiany na sekundę. Obowiązuje zależność w = 2x/, gdzie / jest częstotliwością w okre-
+sach na sekundę (Hz). Zapis z użyciem pulsacji preferują matematycy i ci wszyscy, którzy
+odpowiedź na problemy DSP znajdują przez rozwiązywanie równań, gdyż przy stosowaniu
+pulsacji liczba zapisywanych symboli jest na ogół mniejsza.
+
+W równaniach analizy dla sygnałów ciągłych jest stosowana taka sama metoda, jak w przy-
+padku sygnałów dyskretnych: korelacja z falami kosinusoidalnymi i sinusoidalnymi. Te rów-
+nania ma
+
+<image/wzory/k3_page224_formula1.png>
+<image/wzory/k3_page224_formula2.png>
+
+Wzór 13.3. Przekształcenie Fouriera, równania analizy. W tych wzorach Re X(w) i lm X(w) są częściami
+rzeczywistą i urojoną widma częstotliwościowego, a x(t) analizowanym sygnatem w dziedzinie czasu
+
+Jako przykład zastosowania równań analizy określimy odpowiedź częstotliwościową dolno-
+przepustowego filtru RC. W tym celu wyznacza się transformatę Fouriera odpowiedzi impul-
+sowej tego układu, już poprzednio przedstawionej na rys. 13.4 i opisanej wzorami:
+
+<image/wzory/k3_page224_formula3.png>
+
+   
+      
+
+Dziedzina czasu Dziedzina częstotliwości
+100 1 ' 1 1 i 1
+| poj ooo
+807--—4-—-—-4-———ponnanpannaqn==——4
+sol zd DK
+R ba! TRG Ś R A=”
+i ic
+SE |
+1 1 1
+i i
+
+ 
+
+    
+
+tap PTT]
+BIC a" OPrZOEEg|
+BT SZĄ
+j PZ U okół Zż
+WYESZZĘSZY ZE ACZ
+' i 1 1 '
+zje finaj a
+i 1 1
+% | s |
+0 20 40 60 80 100 120 140
+
+13.8. Przykład przeksztatcenia Fouriera. Sygnał w dziedzinie czasu x(t) obejmuje zakres od minus do płus nieskończo-
+
+TRUDRIĘRRIOKT KT
+
+Sygnał w dziedzinie częstotliwości składa się z części rzeczywistej Re X(w) i części urojonej im X(w), z których każda
+zakres od zera do nieskończoności dodatniej. Oś częstotliwości jest na tym wykresie wyskalowana w okresach na
+(w Hz). W cełu przeliczenia tych wartości na pułsację trzeba je pomnożyć przez 2m

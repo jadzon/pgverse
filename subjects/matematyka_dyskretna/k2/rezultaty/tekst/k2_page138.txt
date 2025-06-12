@@ -1,0 +1,54 @@
+1.13. Chińskie twierdzenie o resztach 23
+
+będą dowolnymi resztami. Wtedy istnieje liczba całkowita a, taka że:
+
+<image/wzory/k2_page138_formula1.png>
+
+Ponadto jeżeli liczby a i b są rozwiązaniami układu kongruencji (1.6), to ich różnica
+a — b dzieli się przez iloczyn wszystkich liczb m;, czyli przez:
+
+<image/wzory/k2_page138_formula2.png>
+
+Dowód Nainiarw ndawadnimv dmna rzaść twianizania Pla tażdann 1 < ś< » mamy:
+
+<image/wzory/k2_page138_formula3.png>
+
+<image/wzory/k2_page138_formula4.png>
+czyli
+„„Azory/k2_ page138_ formula$. png
+
+Vy ARRAY AAGAJY 9 p Sj waga Paa sISŁÓ,
+
+4404441448 SA UW 4 4146-44 "., 444-41444
+wiĄC także ich iloczyn M dzieli a — b. Rzeczywiście, przypuśćmy bowiem, że M ma
+rozk
+
+„Azory/k2_ page138_ formula6. png
+
+Neż 4646 MU STYUWA *v p «A WAŁAWYE LAK AGM ausy 1iLGAKZ 188] 4 r 1U4A YyveL "w, m” yć ] PĘ
+występuje w rozkładzie jakiegoś m;, czyli dzieli m; oraz a — b, a więc w paakiabia
+liczby a — b, liczba p; występuje z wy kładnikiem 8 > a;. Dlatego M z a —b.
+
+Zaharzvmo tara7 3a ntład (1 GI ma moywiszania Niash A4. — AM im. ozuli.
+
+<image/wzory/k2_page138_formula7.png>
+
+Poniewaz Mę 1 My IMdją TUZIĄCZIE TUZKTAJY, WIĘC /V W 74M, M;) = 1 ULAŁ ISULEJE N;,
+
+takie
+<image/wzory/k2_page138_formula8.png>
+
+WO asusa
+
+<image/wzory/k2_page138_formula9.png>
+
+Zanważmu żaiożolis 4 ś tam.IM. aras:
+
+wzory/k2_page138_formula10.pnq
+<image/wzory/k2_page138_formula11.png>
+
+dla aazucyu i, a wiGr U jOJŁ 1UŁWIGŁOGUCIII UDIGUU ŁUW 45CŁ 4 4
+
+co
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

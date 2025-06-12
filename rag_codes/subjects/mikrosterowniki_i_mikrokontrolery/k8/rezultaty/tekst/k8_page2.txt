@@ -1,0 +1,47 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 4
+« Jednostka centralna (dokładniej zawarty w niej mikroprocesor) realizuje program zawarty w
+pamięci programu (typu FLASH).
+»* Zmienne programu przechowywane są w pamięci danych SRAM.
+
+„ _ Jednostka centralna jak i pozostałe wewnętrzne bloki mk są taktowane sygnałem zegarowym (clock),
+generowanym i rozprowadzanym przez system zegarowy. Częstotliwość sygnału zegarowego może
+być stabilizowana np. zewnętrznym oscylatorem kwarcowym.
+
+. W stan początkowy mk wprowadzany jest sygnałem RESET generowanym przez układ resetu.
+
+. Układy peryferyjne umożliwiają odczyt sygnałów wejściowych cyfrowych, jak i również
+analogowych (przetworniki A/C) oraz generację sygnałów wyjściowych stosowanych do sterowania
+układami mse. Komunikacja z otoczeniem mk odbywa się za pośrednictwem linii portów we/wy.
+
+3. Budowa mikroprocesora z punktu widzenia programisty. Funkcje jego bloków i
+
+ 
+
+rejestrów wewnętrznych.
+
+<image/figury/k8_page2_figure1.png>
+
+« rejestr rozkazów IR (ang. Instruction Register) — przechowywany jest w nim kod aktualnie
+wykonywanego rozkazu. Kody rozkazów pobierane są do rejestru rozkazów z pamięci programu.
+
+« układ sterujący — w tym bloku znajduje się dekoder rozkazów służący do dekodowania rozkazu
+zawartego w rejestrze rozkazów. Na tej podstawie układ sterowania wytwarza wewnętrzne i/lub
+zewnętrzne sygnały sterujące (na magistrali sterującej) realizujące dany rozkaz.
+
+« ALU (uniwersalna jednostka arytmetyczno logiczna) — wykonująca wszelkie operacje arytmetyczne i
+logiczne. Rodzaj wykonywanych operacji zależy od wewnętrznych sygnałów wytwarzanych przez
+układ sterujący.
+
++ rejestry dostępne programowo:
+
+. rejestr flagowy (statusowy) — zawierający dodatkowe cechy wyniku wykonywanej operacji,
+potrzebne do podjęcia decyzji o dalszym sposobie przetwarzania informacji. Cechami tymi mogą
+być np. znak wyniku, przekroczenia zakresu wyniku lub parzystości lub nieparzystości wyniku.
+Wystąpienie określonego wyniku sygnalizowane jest ustawieniem lub wyzerowaniem określonego
+bitu zwanego znacznikiem lub flagą w tym rejestrze.
+
+„ licznik rozkazów PC (ang. Program Counter)- rejestr mikroprocesorowy zawierający adres
+komórki pamięci programu, w której przechowywany jest kod rozkazu przeznaczony do wykonania
+jako następny. Czyli po wczytaniu kolejnego kodu rozkazu zawartość licznika rozkazów powinna
+zostać zmieniona tak, aby wskazywał on na kolejny rozkaz przeznaczony do wczytania do
+mikroprocesora.

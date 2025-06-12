@@ -1,0 +1,41 @@
+3.6. Obwody rezystancyjne ze wzmacniaczami operacyjnymi 319
+
+Przykład 3.6-2. Na rys. 3.6-5b przedstawiony jest wzmacniacz odwracający (znak, fazę syg-
+nału).
+Wobec warunku u, = 0, napięcie wejściowe u,, jest napięciem na oporze Ry, a więc, analo-
+gicznie jak w poprzednim przykładzie:
+y/k3_page317_formula1.png
+Ten sam prąd popłynie przez opór R; (bowiem i? = i; = ( oraz u, = 0), możemy zatem napisać
+równanie:
+
+zory/k3_page31/_formula2.png
+
+z którego otrzymujemy:
+
+zory/k3_page317_formula3.png (86-11)
+Dla R, > R, układ spełnia istotnie rolę wzmacniacza (|k| > 1), zmieniającego przy tym znak
+napięcia”),
+
+Zauważamy, że zarówno wzmacniacz nieodwracający, jak i wzmacniacz odwracający zachowują
+się przy przyjętych ograniczeniach jak źródło napięciowe sterowane napięciem (rys. 3.6-5c) opisane
+równaniem:
+
+ry/k3_page317_formula4.png BED
+przy czym współczynnik k zależy tylko od wartości oporów R; i R i jest określony odpowiednio
+
+wzorem (3.6-10) lub (3.6-11).
+W przypadku wzmacniacza nieodwracającego, opór na zaciskach wejściowych można uważać za
+nieskończenie wielki (wobec założenia i; = i; = 0), natomiast w przypadku wzmacniacza
+odwracającego opór ten jest skończony i równy R, (co oznaczono linią przerywaną na rys. 3.6-5€).
+
+Przykład 3.6-3. Ważnym układem wykorzystującym właściwości wzmacniacza operacyjnego
+jest wtórnik (rys. 3.6-6). Wtórnik może być uważany za przypadek szczególny wzmacniacza
+nieodwracającego (rys. 3.6-5a), dla którego przyjęto R, = 0. Ze wzoru (3.6-10) otrzymujemy
+wówczask = 1, niczależnie od wartości oporu R, > 0. Można zatem przyjąć R; = ©,co prowadzi
+do układu wtórnika pokazanego na rys. 3.6-6, dla którego:
+
+ry/k3_page317_formula5.png (86-13)
+
+<image/figury/k3_page317_figure1.png>
+
+u Uwaga podana w przypisie na stronie poprzedniej odnosi się także do zależności (3.6-11).

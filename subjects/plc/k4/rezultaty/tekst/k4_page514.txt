@@ -1,0 +1,39 @@
+Dz OE REM RY A 24 SĄ: poż it pasowe: 4 03 U PATA ti dE
+Regulator. | Nastawy regulatora... 7 PRECZ Row NIONA sżęsć
+
+<image/wzory/k4_page514_formula2.png>
+
+—..-
+
+= =RiT
+
+Tab. B.1 Nastawy regulatorów wg SRD
+
+Gdy dodaje się działanie różniczkujące, to wyprzedzenie fazowe regulatora po-
+maga wstabilizacji układu. Zaleca się wówczas stosowanie większego
+wzmocnienia I krótszych czasów całkowania.
+
+W wielu procesach niedopuszczalne jest wywołanie drgań ustałonych do celów
+nastawiania regulatora, więc nie można stosować metody drgań krytycznych.
+
+ 
+
+zory/k4_page514_formula3.png
+
+Inna metoda doboru nastaw regulatorów oparta jest na odpowiedzi otwartego
+układu regulacji na skokowa zmianę sygnału wejściowego. Obwód regulacji
+można przerwać w dowolnym miejscu, ale zazwyczaj czyni się ustawiając regu-
+lator w tryb pracy ręcznej. Należy wtedy zarejestrować przebieg czasowy
+odpowiedzi układu na skokową zmianę wielkości sterującej.
+
+Wielkość mierzona
+(część pełnego zakresu pomiarowego)
+
+<image/figury/k4_page514_figure1.png>
+
+czas min”
+
+Rys. B.2 Odpowiedź czasowa procesu
+
+ÓW W
+514 Dodatek B. Dobór optymalnych nastaw dla regulatora PID

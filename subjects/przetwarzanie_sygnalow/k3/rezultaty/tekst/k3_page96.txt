@@ -1,0 +1,43 @@
+110 6. Spłot
+
+ 
+
+Splot jest matematyczną operacją łączenia dwóch sygnałów, dającą w wyniku trzeci sygnał.
+Jest to najważniejsza metoda w cyfrowym przetwarzaniu sygnałów. Stosując rozkład im-
+pulsowy, opisuje się systemy sygnałem zwanym odpowiedzią impułsową. Ważne znaczenie
+splotu wynika z faktu, że wiąże on ze sobą trzy istotne sygnały — wejściowy, wyjściowy
+i odpowiedź impulsową. W tym rozdziale przedstawiono spłot z dwóch punktów widzenia.
+określanych jako algorytm od strony wejścia i algorytm od strony wyjścia. Splot jest mate-
+matyczną podstawą DSP. Nie ma w tej książce niczego ważniejszego niż splot.
+
+Funkcja delta i odpowiedź impulsowa
+
+W poprzednim rozdziale opisano, w jaki sposób sygnał może być rozkładany na grupę skła-
+dowych zwanych impulsami. Impuls jest sygnałem złożonym z samych zer, oprócz pojedyn-
+czego punktu niezerowego. W rezultacie rozkład impulsowy daje możliwość analizy sygnałów
+próbka po próbce. W poprzednim rozdziale przedstawiono też podstawową koncepcję DSP:
+sygnał wejściowy jest rozkładany na proste składowe addytywne; każda z tych składowych jest
+przepuszczana przez system liniowy i uzyskane sygnały wyjściowe są poddawane syntezie (su-
+mowaniu). Sygnał będący wynikiem takiej procedury „dziel i rządź” jest identyczny z sygna-
+łem uzyskiwanym przez bezpośrednie przejście sygnału oryginalnego przez system. Chociaż
+jest wiele możliwych sposobów rozkładu sygnału, to dwie metody tworzą trzon przetwarzania
+sygnałów. Są to: rozkład impulsowy i rozkład Fouriera. Przy stosowaniu rozkładu impulsowego
+można zastosowaną procedurę opisać operacją matematyczną zwaną spłotem. W tym rozdziale
+(i w większości następnych) będziemy się zajmować tylko sygnałami dyskretnymi. Splot doty-
+czy także sygnałów ciągłych, lecz wtedy operacje matematyczne są bardziej skomplikowane.
+Na przetwarzanie sygnałów analogowych zwrócimy uwagę w rozdziale 13.
+
+Na rys. 6.1 zdefiniowano dwa ważne pojęcia stosowane w DSP. Pierwszym jest funkcja
+delta, oznaczana grecką literą delta 5[n]. Funkcja delta jest znormalizowanym impulsem.
+którego próbka numer zero ma wartość jeden, a wszystkie pozostałe próbki wartość zero.
+Z. tego powodu funkcja delta jest często nazywana impulsem jednostkowym.
+
+Drugie pojęcie zdefiniowane na rys. 6.1 to odpowiedź impulsowa. Jak to już sugeruje na-
+zwa, odpowiedź impulsowa jest sygnałem pojawiającym się na wyjściu systemu, gdy na jego
+wejściu jest funkcja delta (impuls jednostkowy). Jeśli dwa systemy różnią się od siebie pod
+jakimkolwiek względem, to ich odpowiedzi impulsowe będą różne. Podobnie jak sygnał wej-
+ściowy i wyjściowy oznacza się często przez x(n] i yn], to odpowiedzi impulsowej nadaje
+się symbol h[n] Oczywiście sposób oznaczania można zmienić, jeśli są możliwe symbole
+bardziej opisowe, np. fin] na oznaczenie odpowiedzi impulsowej filtru.
+
+<image/figury/k3_page96_figure1.png>

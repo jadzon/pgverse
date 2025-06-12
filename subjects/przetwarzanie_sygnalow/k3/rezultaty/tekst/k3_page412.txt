@@ -1,0 +1,25 @@
+26. Sieci neuronowe (i
+
+<image/tabele/k3_page412_table1.png>
+
+Pierwszym działaniem programu jest ustawienie każdej wagi na pewną wartość począt
+
+przy użyciu generatora liczb losowych. Jak pokazano w wierszach od 190 do 240, wa
+warstwy ukrytej przypisano wartości początkowe między -0,0005 i 0,0005, a warstwy
+ściowej między -0,5 i 0,5. Wartości zakresów wybiera się w taki sposób, NAA
+kości był taki sam, jaki muszą mieć obliczone wagi. Określa się te wartości na pc
+
+1) zakresu wartości sygnału wejściowego, 2) liczby wejść sumowanych = loidjeń
+oraz 3) zakresu wartości wynikających z zakresu zmian sigmoidy (wejście ok. -5 < x
+a wyjście od O do 1). Gdy na przykład 101 sygnałów wejściowych o typowej ość
+jest mnożonych przez typową wartość wagi 0,0002, to suma iloczynów jest ok. 2, a
+mieści się w wejściowym zakresie zmian sigmoidy. |
+Gdybyśmy oceniali działanie sieci neuronowej, stosując te wagi losowe, to mogliby
+oczekiwać wyniku takiego, jak przy losowym zgadywaniu. Algorytm uczący się px
+sza działanie sieci przez stopniowe zmiany każdej wagi we właściwym kierunku. Je
+procedura iteracyjna, w programie realizowana w pętli FOR-NEXT w wierszach |
+Każda iteracja powoduje, że wagi stają się trochę bardziej skuteczne w rozdzielaniu «
+tów będących i niebędących celem. Pętla iteracyjna jest zwykłe wykonywana tak dłu a
+przestaje się uzyskiwać dalszą poprawę. W typowych sieciach RCA J
+liczba iteracji gdzieś pomiędzy wartościami dziesięć i dziesięć tysięcy, na ogół it
+kilkaset. W omawianym przykładzie przeprowadzono 800 iteracji.

@@ -1,0 +1,33 @@
+Stabilność
+
+Wyznaczmy transmitancję systemu danego równaniami stanu:
+
+<image/wzory/k7_page49_formula1.png>
+
+a
+O
+
+of
+(OJ
+D
+
+=
+5
+=
+O
+=
+o
+
+<image/wzory/k/_page49_formula2.png>
+
+<image/wzory/k/_page49_formula3.png>
+
+<image/wzory/k/_page49_formula4.png>
+
+Zauważmy: model transmitancyjny w tym przypadku ma rząd niższy niż
+model stanowy! Dlaczego? Jakie są tego konsekwencje?
+
+ 
+
+POLITECHNIKA
+GDANSKA

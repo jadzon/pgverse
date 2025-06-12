@@ -1,0 +1,42 @@
+być modyfikowane przez żadne polecenie w ramach pętli. Polecenie FOR powo-
+duje zmianę wartości zmiennej kontrolnej od wartości początkowej (określonej
+na drodze podstawienia) do końcowej (wyrażenie występujące za słowem TO)
+zgodnie z określonym przyrostem (wyrażenie po słowie BY). Wartością domyśl-
+ną dla przyrostu jest /. Testowanie warunku końca pętli odbywa się na początku
+każdej iteracji, stąd gdy wartość początkowa jest większa niż końcowa, to se-
+kwencja poleceń w pętli w ogóle nie będzie wykonana.
+
+Polecenie WHILE powoduje powtarzanie sekwencji poleceń do słowa
+END_WHILE dopóki skojarzone z nim wyrażenie logiczne jest prawdziwe. Jeżeli
+wartość początkowa tego wyrażenia jest fałszywa, to grupa poleceń nie będzie
+w ogóle wykonana.
+
+Polecenie REPEAT powoduje wykonanie sekwencji poleceń do słowa UNTIL
+zawierającego warunek logiczny, którego prawdziwość oznacza zakończenie
+pętli. Tak więc, w przeciwieństwie do pętli FOR oraz WHILE, tu sprawdzanie
+warunku zakończenia pętli następuje na końcu, co oznacza, że pętla ta jest wyko-
+nywana co najmniej jeden raz.
+
+Przedstawione w Tab. 2.59 przykłady użycia poleceń iteracyjnych są sobie rów-
+noważne.
+
+Oprócz wspomnianych wyżej elementów języka $7 używane są także zdefinio-
+wane w normie /EC //31-3 elementy wspólne dla różnych języków
+programowania, a w szczególności elementy wewnętrznej struktury programu:
+s  TYPE...END_TYPE;
+VAR...END_VAR;
+VAR_INPUT...END_VAR;
+VAR_OUTPUT...END_VAR;
+VAR_IN_OUT...END_VAR;
+VAR_EXTERNAL...END_VAR;
+FUNCTION...END_FUNCTION;
+FUNCTION_BLOCK...END_FUNCTION_BLOCK;
+PROGRAM...END_PROGRAM;
+STEP...END_STEP,;
+TRANSITION...END_TRANSITION;
+ACTION...END_ACTION.
+
+Języka $7 użyto do przedstawienia w postaci tekstowej zdefiniowanych w nor-
+mie standardowych funkcji (por. 2.3.2) i bloków funkcyjnych (por. 2.3.4).
+
+<image/tabele/k4_page112_table1.png>

@@ -1,0 +1,25 @@
+oraz
+
+<image/figury/kwzory/k1_page46_formula1.png>
+
+Transmitancję układu można również przedstawić w postaci sumy, odpowiadają-
+cej równoległemu połączeniu elementów
+
+<image/wzory/k1_page46_formula2.png>
+
+Dla równoległego połączenia elementów jak na rysunku 2.5 możemy napisać:
+
+<image/wzory/k1_page46_formula3.png>
+
+<image/figury/k1_page46_figure1.png>
+
+Rys. 2.5. Schemat blokowy układu
+Stosując odwrotną transformację Laplace'a, otrzymujemy:
+
+<image/wzory/k1_page46_formula4.png>
+
+Wprowadzamy następujące oznaczenia:
+
+<image/wzory/k1_page46_formula5.png>
+
+48

@@ -1,0 +1,88 @@
+162
+
+8. Dyskretne przekształcenie Fouriera
+
+ 
+
+Zapisy we współrzędnych prostokątnych i biegunowych zawierają wprawdzie dokładnie taką
+samą informację, lecz istnieje wiele takich problemów, w których jeden zapis jest łatwiej-
+szy od drugiego. Na rys. 8.10 przedstawiono sygnał w dziedzinie częstotliwości zarówno
+we współrzędnych prostokątnych, jak i biegunowych. Ostrzeżenie: Nie próbujcie zrozumieć
+kształtu części rzeczywistej i urojonej; głowa wam pęknie! Natomiast wykresy we współ
+rzędnych biegunowych są zrozumiałe w sposób bezpośredni; występują tylko częstotliwości
+poniżej ok. 0,25 i przesunięcie fazy jest w przybliżeniu proporcjonalne do częstotliwości.
+Jest to odpowiedź częstotliwościowa filtru dolnoprzepustowego.
+
+Kiedy należy stosować zapis we współrzędnych prostokątnych, a kiedy w biegunowych”
+Współrzędne prostokątne są na ogół korzystniejsze do obliczeń, a więc we wzorach i w pro-
+gramach komputerowych. Wykresy zaś są prawie zawsze sporządzane we współrzędnych
+biegunowych. Jak to już wykazano na poprzednim przykładzie, dla człowieka jest prawie
+niemożliwe zrozumienie właściwości sygnału w dziedzinie częstotliwości przez ogłądanie
+wykresów części rzeczywistej i urojonej. W typowym programie sygnały w dziedzinie czę-
+stotliwości są utrzymywane we współrzędnych prostokątnych dopóty, dopóki obserwator nie
+ma potrzeby ich obejrzenia, wtedy wykonuje się konwersję na współrzędne biegunowe.
+Dlaczego sygnał w dziedzinie częstotliwości jest łatwiejszy do zrozumienia we współrzęd-
+nych biegunowych niż w prostokątnych? To pytanie sięga do samego sedna kwestii przy:
+datności rozkładu sygnału na sinusoidy. Przypomnijmy sobie pojęcie wiemości odtwarzania
+sinusoidy, o której była mowa w rozdziale 5. Jeśli sinusoidę wprowadzi się do systemu li-
+niowego, to na wyjściu też uzyska się sinusoidę o dokładnie takiej samej częstotliwości, jak
+na wejściu. Zmienić się mogą tylko amplituda i faza. Zapis we współrzędnych biegunowych
+reprezentuje sygnały bezpośrednio przez amplitudę i fazę składowych fal kosinusoidalnych.
+A więc systemy mogą być reprezentowane przez stwierdzenie, w jaki sposób modyfikują
+amplitudę i fazę każdej z tych fal kosinusoidalnych.
+Zastanówmy się teraz, co się stanie, jeśli zapis we współrzędnych prostokątnych zastosujemy
+w następującej sytuacji. Mieszanina sinusoid i kosinusoid jest wprowadzana do systemu link
+wego, a więc na wyjściu też jest mieszanina sinusoid i kosinusoid. Problem polega na tym, że
+fala kosinusoidalna na wejściu może na wyjściu dać zarówno falę kosinusoidalną, jak i sinus
+idalną. Podobnie wejściowa fala sinusoidalna może na wyjściu dać zarówno fale kosinusoidalm
+jak i sinusoidalną. Chociaż to skrzyżowanie pojęć można jakoś wyprostować, to cała metod
+niezbyt pasuje do kwestii, dlaczego w pierwszej kolejności chcieliśmy stosować sinusoidy.
+
+ 
+  
+ 
+ 
+   
+ 
+  
+ 
+ 
+ 
+ 
+   
+  
+ 
+   
+  
+   
+   
+   
+  
+   
+  
+   
+   
+  
+   
+ 
+  
+
+Niedogodności współrzędnych biegunowych
+
+Jest wiele niedogodności związanych ze stosowaniem zapisu we współrzędnych biegunowych
+Żadna z nich nie ma decydującego znaczenia, są tylko rzeczywiście kłopotliwe. W tablicy £
+podano program komputerowy do konwersji między zapisami we współrzędnych prostokąta
+i biegunowych. W tym programie podano sposoby rozwiązania niektórych tych niedog ,
+Niedogodność 1 — radiany i stopnie
+Fazę można wyrażać albo w stopniach, albo w radianach. Wartość fazy sygnału, podana w s
+niach, mieści się w granicach od —180 do 180. Przy użyciu radianów każda wartość będzie w gr
+nicach od —x do n, czyli między —3,141592 i 3,141592. W większości języków komputerowyć
+jest wymagane stosowanie radianów w funkcjach trygonometrycznych, takich jak sinus, kosi
+
+arcus tangens itd. Praca z tymi długimi liczbami dziesiętnymi może być irytująca, a uzyskał
+dane — trudne do interpretacji. Na przykład, jeśli chcemy wprowadzić do sygnału 90-stopnic
+przesunięcie fazy, to musimy dodać do jego fazy liczbę 1,570796. Chociaż wprowadzenie
+liczby do programu nie jest zadaniem ponad siły, to jednak bywa nużące. Najlepszym sposoł
+rozwiązania tej kwestii jest zdefiniowanie, na początku programu stałej równej P/ = 3,1415
+Wtedy 90-stopniowe przesunięcie fazy można zapisać jako P//2. W DSP szeroko stosuje się
+równo stopnie, jak i radiany, dlatego trzeba umieć się posługiwać obiema tymi jednostkami.

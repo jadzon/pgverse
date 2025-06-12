@@ -1,0 +1,69 @@
+210
+
+11. Pary transformat Fouriera
+
+ 
+
+Alternatywnie można też zastosować przekształcenie DTFT do określenia widma częstotli-
+wościowego w funkcji ułamków częstotliwości próbkowania fi
+
+Wzór 11.2. Widmo, jak we wzorze 11.1, lecz wyrażone w zależności od częstotliwości próbkowania.
+Parametr ! jest utamkiem częstotliwości próbkowania, zmieniającym się w sposób ciągły od 0 do 0,5.
+Aby uniknąć dzielenia przez zero, zastosowano Mag X(0) = M
+
+Innymi słowy, wzór 11.1 daje N/2 + 1 próbek widma częstotliwościowego, wzór 11.2 zaś daje
+krzywą ciągłą, która pokrywa się z próbkami. Na podstawie tych wzorów można wyznaczyć
+tylko moduł. Faza może być określona tylko przez lewo-prawostronne odwrócenie przebiegu
+w dziedzinie czasu, jak to opisano w poprzednim rozdziale.
+
+Zauważmy, że amplituda oscylacji na rys. 11.3 b) nie zanika do zera przed osiągnięciem czę-
+stotliwości 0,5. Jak się można było spodziewać, przebieg nadał zachodzi na następny okres
+i tam ulega aliasingowi. To zmienia kształt charakterystyki częstotliwościowej; ten efekt jest
+uwzględniony we wzorach 11.1 i 11.2.
+
+Często warto wiedzieć, jak wygląda widmo częstotliwościowe, gdy nie ma aliasingu. Ma to
+znaczenie, gdyż sygnały dyskretne są często stosowane do reprezentowania lub modelowania
+sygnałów ciągłych, a sygnały ciągłe nie ulegają aliasingowi. Aby usunąć aliasing z wzorów
+1.1 i 11.2, trzeba w nich zmienić mianowniki, odpowiednio z sin(tk/N) na nk/N oraz sin(rf)
+na nf. Na rys. 11.4 zilustrowano znaczenie tych zmian. Wyraz xf może się zmieniać tylko
+od 0 do 1,5708, ponieważ f może zmieniać się od 0 do 0,5. W tym zakresie nie ma dużej
+różnicy między przebiegami sin(nf) i rf . Przy częstotliwości zerowej wartości obu przebie-
+gów są jednakowe, a dla częstotliwości 0,5 jest tylko 36% różnicy. Bez aliasingu krzywa
+z rys. 11.3 b) miałaby nieco mniejszą amplitudę w pobliżu prawego krańca wykresu, a pozo-
+stałaby niezmieniona przy lewym krańcu.
+
+Widmo częstotliwościowe impulsu prostokątnego, jeśli nie ulega aliasingowi (ponieważ prze-
+bieg w dziedzinie czasu jest ciągły albo aliasing ignorujemy), to ma postać ogólną sin(x)/x.
+Dła sygnałów ciągłych impułs prostokątny i funkcja sin(x)/x są parą transformat Fouriera. Dla
+sygnałów dyskretnych jest to tylko przybliżenie, z błędem spowodowanym aliasingiem.
+
+W przebiegu sin(x)/x pojawia się kłopot w punkcie x = 0, wartość funkcji jest wówczas zerem
+dzielonym przez zero. Nie jest to trudny problem matematyczny; gdy x staje się bardzo małe,
+to sin(x) zbliża się do wartości x (rys. 11.4). To zmienia funkcję sin(x)/x w x/x, która ma war-
+tość jeden. Inaczej mówiąc, gdy x staje się coraz mniejsze, wartość sin(x)/x dąży do jedności,
+więc dla x = 0 mamy sin(x)/x = 1. Spróbuj teraz powiedzieć komputerowi, żeby to obliczył!
+Wszystko, co komputer zauważy, to dzielenie przez zero i wtedy zastopuje wykonywanie
+
+<image/wzory/k3_page191_formula1.png>
+| |
+
+ 
+  
+   
+   
+   
+ 
+ 
+ 
+ 
+    
+   
+   
+ 
+   
+
+<image/tabele/k3_page191_table1.png>
+
+Rys. 11.4. Porównanie przebiegów x oraz sin(x). Funkcje ylx) = x oraz y(x) = sin(x) są zbliżone do siebie
+dla matych wartości x i różnią się od siebie tylko o 36% dla x = 1,57 (TV2). Te przebiegi opisują, jakie
+odchylenie widma impulsu prostokątnego od czystej funkcji sinx/x wywotuje aliasing

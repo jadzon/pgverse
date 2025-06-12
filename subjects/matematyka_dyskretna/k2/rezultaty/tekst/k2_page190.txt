@@ -1,0 +1,34 @@
+12 Rozdział 1. Grafy (nieskierowane)
+
+o odwiedzamy wszystkie wierzchołki, które nie były jeszcze odwiedzane, a są
+połączone krawędzią z wierzchołkiem v, wkładamy je na koniec kolejki i zazna-
+czamy jako odwiedzone.
+
+Przykład 1.19 Poniżej przedstawiono odwiedzane wierzchołki oraz zawartość kolejki po
+każdej kolejnej iteracji pętli algorytmu przeszukiwania wszerz dla grafu przedstawionego
+na rysunku 1.7 (przeszukanie zaczynamy od węzła a):
+
+<image/tabele/k2_page190_table1.png>
+
+W metodzie przeszukiwania wszerz wierzchołki są przeszukiwane w kolejności od wierz-
+chołków będących najbliżej wierzchołka początkowego do wierzchołków będących dalej.
+
+1.5 Liczenie skł adowych spójnóci
+Algorytmu przeszukiwania grafów można użyć do liczenia składowych spójności.
+Algorytm liczenia składowych spójności grafu
+Dane wejściowe: graf G = (V,E).
+Dane wyjściowe: liczba składowych spójności — Isp.
+e lsp:=0;
+e Powtarzaj dopóki są jeszcze nieodwiedzone wierzchołki w grafie:
+o Weź jeden nieodwiedzony jeszcze wierzchołek v; Isp:=lsp+1;
+o przeszukaj (za pomocą algorytmu przeszukiwania grafu w głąb) wszystkie
+wierzchołki osiągalne z v i zaznacz je jako odwiedzone.
+1.6 Drzewa spinające
+Definicja 1.20 Drzewo spinające (rozpinające) grafu G = (V,E), to dowolne drzewo
+T = (V, Er) spełniające warunek Er € E (zauważmy, że T' ma taki sam zbiór wierz-
+
+chołków co G).
+
+Przykład 1.21 Drzewo z rysunku 1.6 jest drzewem spinającym dla grafu z rysunku 1.1.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,41 @@
+— 232 „O EEK"PEZTTĘ" PTY 0077
+
+Analiza widmowa sygnałów 173
+
+<image/figury/k3_page156_figure1.png>
+
+nadto ustawiając na zero wszystkie punkty poza oknem. Sygnał nadal jest nieskończenie długi,
+lecz tylko skończona liczba próbek ma wartości niezerowe.
+
+Jaki wpływ na sygnał w dziedzinie częstotliwości ma okienkowanie? Zgodnie z rozważaniami
+podanymi w rozdziale 10, operacja mnożenia dwóch sygnałów w dziedzinie czasu odpowiada
+operacji spłotu w dziedzinie częstotliwości. Ponieważ widmem oryginalnym jest nieskończe-
+nie wąski pik (tj. funkcja delta), więc widmo sygnału okienkowanego jest widmem okna prze-
+suniętym do położenia piku. Na rys. 9.5 pokazano, jak wygląda pik widma po zastosowaniu
+czterech różnych okien. (Jeśli chcecie odświeżyć swoją wiedzę o decybelach, zajrzyjcie do
+rozdziału 14). Widmo na rys. 9.5 a) jest wynikiem zastosowania okna prostokątnego, a na
+rys. 9.5 b), c) — dwóch popularnych okien, Hamminga i Blackmana (informację o nich podano
+we wzorach 16.1 i 16.2 oraz na rys. 16.2 a).
+
+Z rys. 9.5 wynika, że te wszystkie okna zniekształciły widmo oryginalne przez rozszerzenie piku
+i dodanie ogonów złożonych z licznych listków bocznych. Jest to nieunikniony rezultat wyko-
+rzystania tylko części oryginalnego widma w dziedzinie czasu. Tu można porównać właściwości
+trzech okien. Okno Blackmana daje najszerszy listek główny (to jest źle), lecz najmniejsze ogo-
+ny (dobrze). Okno prostokątne daje najwęższy listek główny (dobrze), lecz największe ogony
+(źle). Okno Hamminga ma właściwości pośrednie między tymi dwoma oknami.
+
+Proszę zauważyć, że widma częstotliwościowe są krzywymi ciągłymi, a nie próbkami dys-
+kretnymi. Po okienkowaniu sygnał w dziedzinie czasu jest nadał nieskończenie długi, cho-
+ciaż większość próbek jest zerowych. To znaczy, że widmo częstotliwościowe składa się
+z © /2 + 1 próbek pomiędzy 0 i 0,5, a więc tak samo, jak linia ciągła.
+
+To prowadzi do drugiego sposobu potrzebnego do takiego zmodyfikowania sygnału w dziedzi-
+nie czasu, aby mógł być wprowadzony do komputera. Metoda polega na wyborze N punktów
+z sygnału. W tych N punktach muszą być zawarte wszystkie punkty niezerowe zidentyfikowane
+przez okno, lecz może być w nich zawarta także dowolna liczba zer. Daje to efekt próbkowania
+ciągłej krzywej widma częstotliwościowego. Jeśli na przykład wybrano wartość N równą 1024,
+to krzywa ciągła widma będzie próbkowana 513 razy między 0 i 0,5. Jeśli wybrano N znacznie
+większe niż długość okna, to próbki w dziedzinie częstotliwości będą wystarczająco bliskie
+siebie, żeby piki i wgłębienia krzywej ciągłej zostały zachowane w nowym widmie. Jeśli wy-
+brano N równe długości okna, to mniejsza liczba próbek w widmie powoduje, że regularny
+obraz pików i wgłębień zmienia się w nieregularne ogony, zależne od tego, gdzie trafiły próbki.

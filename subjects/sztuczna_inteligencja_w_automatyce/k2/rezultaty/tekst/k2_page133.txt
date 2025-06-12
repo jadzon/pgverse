@@ -1,0 +1,16 @@
+138
+
+<image/figury/k2_page133_figure2.png>
+
+Rys. 6.32: Typowe funkcje radialne
+
+Przyjmijmy, że dysponujemy zbiorem uczącym, gdzie wektorom wejściowym X;,
+t = 1,2,.../ M odpowiadają sygnały wyjściowe y(x,) = d,. Wtedy wektor wag w
+sieci neuronowej może być wyznaczony jako rozwiazanie układu równań
+
+<image/wzory/k2_page133_formula1.png>
+
+Pry stosowaniu sieci radialnych można wyróżnić kilka podejść do sposobu ich
+konstrukcji.
+
+<image/figury/k2_page133_figure1.png>

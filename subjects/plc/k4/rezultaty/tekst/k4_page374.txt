@@ -1,0 +1,48 @@
+OJCA POM
+
+Bloki organizacyjne 0B21 i OB22 są tzw. blokami startowymi. Można wyróżnić
+
+dwie procedury startowe:
+
+e Procedura ręczny zimny restari ma miejsce w chwili zmiany trybu pracy ste-
+rownika ze STOP na RUN. Następuje to zawsze po przełączeniu odpowied-
+niego przełącznika na jednostce centralnej sterownika lub przez wybór od-
+powiedniej zmiany trybu pracy z programatora. W przypadku wystąpienia
+ręcznego zimnego restartu zawsze wykonywany jest blok organizacyjny
+OB21. Po wykonaniu programu zapisanego w bloku OB21, sterownik prze-
+chodzi do cyklicznego wykonywania bloku OB1. Programując odpowiednio
+blok OB2] można np. ustawiać wartości początkowe zmiennych.
+
+e Procedura automatyczny zimny restart ma miejsce zawsze w chwili powrotu
+napięcia zasilania sterownika, jeżeli przed jego zanikiem sterownik praco-
+wał w trybie RUN. W przypadku wystąpienia automatycznego zimnego re-
+startu wykonywany jest zawsze blok organizacyjny OB22. Po wykonaniu
+programu zapisanego w bloku OB22, sterownik przechodzi do cyklicznego
+wykonywania bloku OB]. Programując blok OB22 można odpowiednio re-
+agować na wystąpienie przerwy w zasilaniu.
+
+ 
+
+7.16.3 Bloki przerwań - OB10--0B13
+
+Bloki organizacyjne OB10, OB11, OB12 i OB13 są błokami przerwań, które są
+przetwarzane z przerwaniem czasowym. Są one wywoływane przez system ope-
+racyjny co określony okres czasu. Okres ten ma domyślną wartość 100ms dla
+bloku OB13 i zero dla pozostałych bloków. Może być jednak programowo zmie-
+niany w zakresie od 1Oms do 1Omin z krokiem 10ms przez ustawienie odpo-
+wiedniego słowa systemowego. Najwyższy priorytet ma blok organizacyjny
+OB13, najniższy OB10. W Tab. 7.16 przedstawiono słowa systemowe, które
+należy modyfikować, aby wpływać na okres czasu, co jaki są wywoływane bloki
+przerwań czasowych.
+
+<image/tabele/k4_page374_table1.png>
+
+w
+
+ 
+
+ 
+
+WZ a —
+
+374 Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5

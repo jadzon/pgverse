@@ -1,0 +1,64 @@
+150
+
+8. Dyskretne przekształcenie Fouriera
+
+matematyczne. W celu stwierdzenia, jakiego zapisu użyto, wystarczy spojrzeć na zmienną
+niezależną i jej zakres. Może to być jeden z czterech zapisów: k (lub jakaś inna liczba cał-
+kowita) zmieniająca się od © do N/2; f zmieniające się od 0 do 0,5; © zmieniająca się od
+0 do m; lub częstotliwość wyrażona w hercach, zmieniająca od 0 do połowy zastosowanej
+częstotliwości próbkowania.
+
+Funkcje bazowe DFT
+
+Stosowane w dyskretnym przekształceniu Fouriera fałe sinusoidalna i kosinusoidalna są zwy-
+kle nazywane funkcjami bazowymi DFT. Można powiedzieć, że na wyjściu DFT uzyskuje
+się zestaw liczb wyrażających amplitudy. Funkcje bazowe są zestawem fal sinusoidalnej i ko-
+sinusoidalnej o amplitudzie jednostkowej. Jeśli przypisać każdą amplitudę (w dziedzinie czę-
+stotliwości) do właściwej fali sinusoidalnej lub kosinusoidalnej (więc do funkcji bazowych),
+to wynikiem jest zestaw wyskalowanych fal sinusoidalnych i kosinusoidalnych, które można
+zsumować w celu utworzenia sygnału w dziedzinie czasu.
+
+Funkcje bazowe DFT są opisane wzorami:
+
+<image/wzory/k3_page134_formula1.png>
+
+wzr8.1.wzorywyraajcebazowefunkcjedft.wtychwzorachciisisfalamisinusoidaln
+
+i kosinusoidalną, każda o długości N punktów od i = 0 do N - 1. Parametr k określa częstotliwość fali.
+
+W N-punktowym DFT współczynnik k przyjmuje wartości od 0 do N/2.
+
+gdzie: cz[ ] jest falą kosinusoidalną, której amplituda jest zawarta w Re X[K], a szl ] - falą si-
+nusoidalną o amplitudzie zawartej w /m X[k]. Na rys. 8.5, jako przykład, przedstawiono kilka
+z 17 fal sinuoidalnych i 17 kosinusoidalnych stosowanych DFT o liczbie punktów N = 32.
+Ponieważ te przebiegi po zsumowaniu mają utworzyć sygnał wejściowy, więc muszą mieć
+długość taką samą, jak sygnał wejściowy. W tym przypadku oba przebiegi mają 32 punkty
+o numeracji od i = © do 31. Parametr k ustala częstotliwość każdej sinusoidy. W szczególno-
+ści c;[ ] jest falą kosinusoidalną, której jeden pełny okres mieści się w N punktach, cs[ ] zaś
+jest falą kosinusoidalną mającą pięć pełnych okresów itd. Jest to ważna koncepcja, konieczna
+
+do zrozumienia funkcji bazowych; parametr częstotliwościowy k jest równy liczbie pełnych ©
+
+okresów mieszczących się w N punktach sygnału.
+
+Przyjrzyjmy się bardziej szczegółowo kilku z tych funkcji bazowych. Na rys. 8.5 a)
+pokazano falę kosinusoidalną cyl ]. Jest to fala kosinusoidalna o częstotliwości zero,
+a więc jest to stała wartość równa jedności. To znaczy, że Re X[0] przechowuje średnią
+wartość wszystkich punktów sygnału w dziedzinie czasu. W elektronice powiedziałoby
+się, że przechowuje wartość przesunięcia napięcia stałego (DC offset). Falę sinusoidalną
+sgl ] o częstotliwości zerowej pokazano na rys. 8.5 b). Jest to sygnał składający się
+z samych zer. Ponieważ nie może to mieć żadnego wpływu na syntetyzowany sygnał
+w dziedzinie czasu, więc wartość /m X[0] jest nieistotna i zawsze ustawiana na zero.
+Wkrótce powiemy o tym więcej.
+
+Na rysunkach 8.5 c), d) przedstawiono cl ] i szl ] — sinusoidy, których dwa pełne okre-
+sy obejmują N punktów. Odpowiadają one Re X[2] i Im X[2]. Podobnie na rysunkach
+8.5 e), f) przedstawiono cygl ] i s;9l ] — sinusoidy, których dziesięć pełnych okresów obejmuje
+N punktów. Te sinusoidy odpowiadają amplitudom przechowywanym w matrycach Re X[10]
+i Im X[10]. Problem jest taki, że próbki na rysunkach 8.5 e), f) nie wyglądają już jak sinuso-
+idy i kosinusoidy. Gdyby na tych rysunkach nie poprowadzono linii ciągłych, trudno byłby
+nawet określić kształt tych przebiegów. To może wydawać się nieco niepokojące, ale nie
+przejmujcie się tym. Z matematycznego punktu widzenia te próbki tworzą dyskretne sinuso-
+idy, nawet jeśli wzrokowo nie możemy prześledzić ich kształtu.
+
+|

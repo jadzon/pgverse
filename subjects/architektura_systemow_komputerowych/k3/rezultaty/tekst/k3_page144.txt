@@ -1,0 +1,48 @@
+134 6. Urządzenia zewnętrzne
+
+NN = 2. Żądanie zawiera bit PF = 1, co oznacza, że stacja nie otrzymała więcej komunika-
+tów. Wówczas stacja główna wysyła ponownie ramkę z numerem 2. Ponieważ w tej ramce
+jest bit PF=|1, to zmusza to stację podrzędną do odpowiedzi. Należy zauważyć, że
+wartość NO jest znowu równa 0. Stacja podrzędna musi potwierdzić zarówno ramkę
+o numerze 2, jak i o numerze 3. Załóżmy, że stacja podrzędna ma do wysłania dwa
+komunikaty. W takim przypadku potwierdzenie może zostać przesłane w komunikacie
+informacyjnym. W drugim komunikacie jest bit PF = 1, co świadczy o tym, że stacja B nie
+ma już więcej komunikatów. Stacja A nadaje wtedy ponownie swoje komunikaty.
+
+Załóżmy, że w drugim komunikacie pojawi się bit PF=1, a więc stacja żąda potwier-
+dzenia odbioru. Załóżmy ponadto, że stacja B ma do przesłania dwa nowe komunikaty i że
+podczas transmisji pierwszego powstał błąd. Na żądanie potwierdzenia stacja A odpowiada
+komunikatem nadzorczym żądając powtórzenia (pierwsze bity równe 11) ramki o numerze
+2 i żądając potwierdzenia (PF = 1). Ramka jest przesyłana z bitem PF= 1, gdyż nie ma
+dalszych ramek do transmisji.
+
+Na rysunku 6.13b pokazano przykład transmisji dupleksowej, gdzie stacja A przesyła
+komunikat do stacji B i jednocześnie stacja B przesyła komunikat do stacji A. Wydaje się,
+że Czytelnik potrafi teraz sam prześledzić ciąg komunikatów.
+
+6.5.3. TRANSMISJA ZNAKOWA
+
+Transmisja znakowa jest stosowana głównie przy przesyłaniu kodu znakowego ASCII.
+Jednym ze stosowanych protokołów jest protokół BISYNC. Ramka tego protokołu składa
+się z 8 pól i jest pokazana na rysunku 6.14. Pierwsze dwa pola ramki stanowią dwa znaki
+synchronizacji. W kodzie ASCII są to słowa 00010110, gdzie najbardziej znaczący bit
+(lewy) jest bitem parzystości. Słowo tak wybrano, że siedmiokrotne przesuwanie cykliczne
+nie spowoduje otrzymania pierwotnego układu bitów. Dopiero ósme przesunięcie spowodu-
+je otrzymanie powtórzenia słowa pierwotnego. Rozpoczynając transmisję nadajnik wysyła
+dwa słowa synchronizacji. Podczas transmisji odbiornik w specjalnym rejestrze prze-
+chowuje aktualny bajt, czyli ostatnio odczytane 8 bitów. Obserwacja ostatnich 8 bitów jest
+konieczna do stwierdzenia, czy nadszedł znak synchronizacji czy nie. Jeśli w rejestrze
+znajdzie się znak synchronizacji, to odbiornik wykorzystuje ten moment dla podsynchro-
+nizowania własnego generatora. Ponieważ może się zdarzyć, że końcówka jakiegoś znaku
+i początek następnego tworzą słowo synchronizacji, to aby uniknąć potraktowania tego
+złożenia jako znaku synchronizacji, w ramce stosowane są dwa słowa synchronizacji.
+
+Następnym znakiem, po znakach synchronizacji, jest bajt 00000001 czyli znak SOH
+(ang. start of header). Jest to znak sygnalizujący rozpoczęcie nagłówka. Nagłówek składa
+się z trzech części: z adresu odbiornika, z liczby będącej długością transmitowanego ciągu
+i ze znaku STX (ang. start of text) kończącego nagłówek i wskazującego na rozpoczęcie
+transmisji tekstu. Następnie przesyłany jest właściwy tekst. Po nim następuje znak końca
+
+<image/tabele/k3_page144_table1.png>
+
+Rysunek 6.14. Ramka komunikatu protokołu BISYNC

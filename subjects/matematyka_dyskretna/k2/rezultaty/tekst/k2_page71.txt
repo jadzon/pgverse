@@ -1,0 +1,44 @@
+12 Rozdział 1. Rachunek prawdopodobieństwa
+
+c) Rozważmy rzut n monetami, (przykład 1.1g). Dla każdego i, 1 < i < n określamy
+zmienną .X;; X;(w) = 0, jeżeli na i-tej monecie wypadł orzeł, oraz X;(w) = 1,
+jeżeli wypadła reszka.
+
+d) Rozważmy losowanie jednej kuli z urny zawierającej siedem ponumerowanych kul.
+Q = f1,2,3,4,5,6,7). Niech zmienna losowa X bedzie zdefiniowana jako
+
+<image/wzory/k2_page71_formula1.png>
+
+a zmienna losowa .X3 jako
+
+<image/wzory/k2_page71_formula2.png>
+
+(.X2(w) jest resztą z dzielenia numeru kuli przez 2, a .X3(w) resztą z dzielenia przez
+3). Wartości tych dwóch zmiennych zebrane są w tabeli.
+
+<image/tabele/k2_page71_table2.png>
+
+Możemy teraz określić inne zmienne losowe, na przykład Y = X + X3, Z =
+Xą : X3, W = 2X2 — X3. Ich wartości zebrano w tabeli
+
+<image/tabele/k2_page71_table1.png>
+
+e) Rozważmy rzut dwoma kostkami (przykład 1.1e) Q = f£(,j) | 1 < i,j < 6). Niech
+X, oznacza wynik rzutu na pierwszej kostce, .Xą wynik rzutu na drugiej kostce.
+Wtedy zmienna Y = X; + X2 określa sumę oczek na obu kostkach.
+
+Mając zmienną losową „X i liczbę rzeczywistą z definiujemy zdarzenie X = z jako
+<image/wzory/k2_page71_formula3.png>
+Zauważmy, że jeżeli liczba r nie należy do zbioru wartości X (0?) zmiennej X, to zda:
+
+rzenie X = z jest zdarzeniem niemożliwym. Prawdopodobieństwo zdarzenia X = r
+wynosi
+
+<image/wzory/k2_page71_formula4.png>
+Defini
+
+<image/wzory/k2_page71_formula5.png>
+
+nazywamy runkcją gęstosci (rozktaau) prawaopoaoDienstwa zmiennej 1oSowej 1.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

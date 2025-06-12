@@ -1,0 +1,56 @@
+5.2. Pamięci operacyjne 105
+NN rnnnnnnnoo_ 0
+
+dowolnym miejscu w danej linii pamięci kieszeniowej. Na rysunku 5.18 pokazano jak, dla
+naszego przykładu, można zrealizować pamięć kieszeniową umieszczając po dwa bloki
+pod jednym adresem pamięci kieszeniowej. W takim przypadku pojemność pamięci wynosi
+64 linie 142-bitowe. Liczba bitów w linii bierze się stąd, że jeden blok zawiera 71 bitów
+(dodatkowy bit jest przeznaczony na oznaczenie miejsca bloku w danej linii pamięci
+kieszeniowej). Dla naszego przykładu dowolność wymiany jest ograniczona jedynie do
+dwóch miejsc. Zaletą takiego rozwiązania jest możliwość wyeliminowania układu pamięci
+skojarzeniowej.
+
+ALGORYTMY WYMIANY ZAWARTOŚCI PAMIĘCI OPERACYJNEJ I KIESZENIOWEJ
+
+Algorytmy wymiany zawartości pamięci kieszeniowej stosowane są w przypadku, kiedy
+procesor żąda dostępu do komórki pamięci, która aktualnie nie znajduje się w pamięci
+kieszeniowej. W przypadku odwzorowania bezpośredniego, problem ten sprowadza się do
+wymiany zawartości odpowiedniej komórki pamięci. Dla pozostałych dwóch odwzorowań
+jest pozostawiony wybór bloku, który można usunąć i w to miejsce zapisać potrzebny
+blok. Wyboru dokonuje się stosując jeden z trzech algorytmów:
+
+l) Algorytm usuwania najdłużej nie używanego bloku — LRU (ang. least-recently
+used). Jest on stosowany wtedy, gdy odwzorowanie zrealizowano zmodyfikowaną
+metodą skojarzeniową, gdyż wówczas łatwo jest zaznaczać taki blok. W zależności
+od liczby bloków zapisanych pod jednym adresem pamięci skojarzeniowej dodaje
+się do bloku słowo o długości logp, gdzie p jest liczbą bloków zapisanych pod
+jednym adresem w pamięci kieszeniowej. W naszym przykładzie p = 2, więc
+dodaje się jeden bit. Na początku pracy bit ten dla obydwu słów jest 0. Do bloku,
+do którego nastąpiło odwołanie, wpisuje się na tę pozycję jedynkę i jeśli w tym
+momencie ma nastąpić wymiana, to zachodzi ona dla bloku, dla którego bit ten
+jest równy 0. Jeśli natomiast, w czasie pracy procesora, nastąpi odwołanie do
+bloku, którego bit jest równy 0, to bit skojarzony z tym blokiem jest ustawiany
+w stan l, a zerowany jest bit drugiego bloku. W przypadku, gdy pod jednym
+adresem jest więcej bloków, to każde odwołanie do bloku ustawia wskaźnik
+(dodatkowe słowo) w stan o jeden większy niż największy wskaźnik skojarzony
+z blokiem znajdującym się w tej komórce pamięci kieszeniowej. Jeśli któryś ze
+wskaźników osiągnie wartość maksymalną, to następne trafienia w dany blok
+powodują dekrementację wartości wskaźników w pozostałych blokach. Jeśli istnie-
+je kilka bloków z zerową wartością wskaźników, to usuwany jest przypadkowy
+blok.
+
+2) Algorytm FIFO (ang. first-in-first-out) powoduje usunięcie bloku, który najdłużej
+przebywa w pamięci kieszeniowej. W tym algorytmie każdy blok musi mieć
+dodatkowy wskaźnik, który wskazuje kolejność wpisywania bloków do danej
+komórki pamięci kieszeniowej.
+
+3) Algorytm najrzadziej używanego bloku LFU (ang. least-frequently used) polega
+na usuwaniu bloku, do którego było najmniej odwołań. W tym przypadku z każ-
+dym blokiem związany musi być licznik zliczający odwołania do danego bloku.
+
+STRATEGIA AKTUALIZACJI ZAWARTOŚCI PAMIĘCI KIESZENIOWEJ I PAMIĘCI OPERACYJNEJ
+
+Przyjęcie strategii aktualizacji zawartości pamięci kieszeniowej i pamięci operacyjnej jest
+konieczne z dwóch powodów:
+
+8 — Podstawy budowy i działania komputerów

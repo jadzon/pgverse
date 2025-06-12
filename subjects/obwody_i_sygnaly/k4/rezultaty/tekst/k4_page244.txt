@@ -1,0 +1,20 @@
+244 3. Obwody prądu stalego
+
+<image/figury/k4_page244_figure2.png>
+
+b) Dwójnik oporowy z rys. 3.2-2b jest dwójnikiem o strukturze mostkowej. Ponieważ nie
+występują w nim ani połączenia szeregowe, ani równoległe, zatem jego oporu nie można obliczyć
+metodą zastosowaną w przykładzie a. Jedną z metod obliczania oporu dwójnika mostkowego jest
+zapisanie jego równań wynikających z praw Kirchhoffa i wyznaczenie z nich, zgodnie z definicją
+
+U
+(3.2-1), stosunku T wielkości zaciskowych. Jeżeli przyjmiemy oznaczenia jak na rys. 3.2-4, to
+
+wzory/k4_page244_formula1.pn
+w x 3 age244_figure1.png
+
+Rys. 3.2-4
+
+równania opisujące dwójnik mają postać:
+
+<image/wzory/k4_page244_formula2.png>

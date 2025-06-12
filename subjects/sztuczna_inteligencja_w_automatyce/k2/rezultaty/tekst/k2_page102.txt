@@ -1,0 +1,39 @@
+107
+
+<image/figury/k2_page102_figure1.png>
+
+Rys. 6.7: Przykładowe kolejne punkty wyznaczane w metodach szukania przypadkowego
+(linia ciągła) i symulowanego wyżarzania (linia przerywana). Zauważmy, że w symulowa-
+nym wyżarzaniu kolejne wartości funkcji mogą wzrastać lub maleć, podczas gdy w metodzie
+szukania przypadkowego mogą tylko maleć
+
+PRZYKŁAD 6.3
+
+Zastosowano metodę symulowanego wyżarzania do rozwiązania zadania o komiwo-
+jażerze. Generacja nowego stanu drogi polegała na zmianie istniejącej drogi poprzez
+trzy losowo wybierane operacje przedstawione na rys. ??. am
+
+6.4.4. Algorytmy genetyczne (metody ewolucyjne)
+
+Algorytmy ewolucyjne są ważnymi metodami poszukiwania minimum funkcji. Za-
+sada działania algorytmu genetycznego polega na początkowym wyborze pewnej
+liczby punktów początkowych, a następnie na przeprowadzeniu wielu cykli uczenia.
+W czasie cyklu oceniana jest jakość punktów, wybierane są punkty najlepsze (se-
+lekcja) i tworzone są z nich pary, na podstawie których tworzone są punkty nowe
+(krzyżowanie) oraz dokonywane są losowe zmiany punktów (mutacja). Dzięki tym
+operacjom w kolejnych cyklach otrzymuje się punkty coraz bliższe minimum, dotyczy
+to zarówno całej populacji jak i punktu w danej chwili najlepszego. Po przeprowa-
+dzeniu pewnej liczby cykli proces uczenia się kończy i z populacji punktów wybiera
+się punkt najlepszy.
+
+Algorytmy genetyczne są próbą naśladowania procesów biologicznej ewolucji,
+której działanie w taki sposób przypuszczalnie zachodzi.
+
+Klasyczny algorytm genetyczny
+
+Istnieje wielka ilość odmian i wariantów algorytmów genetycznych. Poniżej podane
+zostaną zasady działania tzw. klasycznego algorytmu genetycznego, a później podane
+zostaną niektóre możliwe modyfikacje.
+
+W klasycznym algorytmie genetycznym punkt rozwiązujący zadanie reprezen-
+towany jest przez łańcuch binarny, nazywany czasami chromosomem o określonej i

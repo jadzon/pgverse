@@ -1,0 +1,40 @@
+22. Przetwarzanie sygnałów fonicznych
+
+<image/figury/k3_page314_figure1.png>
+
+Nie można jednak powiedzieć, że ucho jest całkiem głuche na fazę. Zmiana fazy może bowiem
+inaczej ustawiać sekwencję czasową w sygnale fonicznym. Przykładem jest system świergoto-
+wy (rozdział 11) zmieniający impuls w sygnał o znacznie dłuższym czasie trwania. Są to jednak
+na ogół osobliwości, a nie zjawiska występujące przy słuchaniu w normalnym środowisku.
+Przypuśćmy, że poprosiliśmy skrzypka, aby zagrał jakiś ton, np. A poniżej środkowego C |.
+Gdy wyświetlimy ten przebieg na oscyloskopie, wygląda on jak przebieg piłokształtny poka-
+zany na rys. 22.3 a). Jest to spowodowane lepką kalafonią, jaką skrzypek posmarował włók-
+no smyczka. Pokazany na rysunku przebieg powstaje w wyniku pociągania smyczkiem po
+strunie, potem pociągania w drugim kierunku i ewentualnego odrywania smyczka od struny.
+Ten cykl ciągle się powtarza, dając przebieg piłokształtny.
+
+Na rys. 22.3 b) przedstawiono, jak ten dźwięk jest odbierany przez ucho jako sygnał o czę-
+stotliwości 220 Hz z harmonicznymi 440, 660, 880 Hz itd. Gdyby ten ton zagrano na jakimś
+innym instrumencie, przebieg miałby inny wygłąd; ucho jednak też by słyszało częstotliwość
+220 Hz i jej harmoniczne. Oba instrumenty brzmią podobnie, gdyż wytwarzają taką samą
+częstotliwość podstawową zagranego tonu. Mówi się więc, że dają dźwięki o takiej samej
+wysokości. Ponieważ jednak względne amplitudy harmonicznych są różne, więc instrumenty
+mają inną barwę dźwięku.
+Często się sądzi, że barwa dźwięku zależy od kształtu przebiegu. Jest to stwierdzenie słuszne,
+choć nieco mylące. Percepcja barwy dźwięku jest wynikiem detekcji harmonicznych przez ucho.
+Zawartość harmonicznych jest określona kształtem przebiegu, lecz nieczułość ucha na fazę czyni tę
+zależność bardzo jednostronną. To znaczy, że określony przebieg daje tylko jedną barwę dźwięku,
+Ucho jest bardzo przyzwyczajone do słuchania dźwięku o częstotliwości podstawowej z har-
+monicznymi. Dźwięk będący kombinacją sinusoid o częstotliwościach | kHz i 3 kHz wydaje
+się słuchaczowi naturalny i miły. Dźwięk zaś złożony z sinusoid 1 kHz i 3,1 kHz wydałby
+się nieprzyjemny.
+
+Taki odbiór dźwięku jest podstawą standardowej skali muzycznej, którą przy użyciu klawiatury
+fortepianu zilustrowano na rys. 22.4. Uderzenie w klawisz położony najbardziej na lewo wytwa-
+rza częstotliwość podstawową 27,5 Hz z harmonicznymi 55, 110, 440, 880 Hz itd. (są tam też
+harmoniczne leżące pomiędzy tymi wartościami, lecz nie są one istotne w tych rozważaniach).
+Harmoniczne są zgodne z częstotliwościami podstawowymi wytwarzanymi przy uderzeniach
+w inne klawisze. Ściślej mówiąc, każdy co siódmy biały klawisz daje harmoniczną dźwięku da-
+wanego przez skrajny, lewy klawisz. Tak więc ósmy klawisz od łewej strony daje częstotliwość
+
+21 W polskim nazewnictwie środkowe C jest określane jako c”, a A poniżej jako a (przyp. tłum.).

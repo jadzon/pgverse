@@ -1,0 +1,26 @@
+Płaszczyzna fazowa
+
+ 
+
+Przestrzeń fazowa — jest to n wymiarowa przestrzeń której elementami są
+wektory o składowych będącymi pochodnymi względem czasu pierwszej
+składowej.
+
+Metoda przestrzeni fazowej jest metodą geometryczną. Każdemu stanowi
+odpowiada punkt w tej przestrzeni. W przypadku układów 2 rzędu metoda
+ta jest wygodna gdyż trajektorie fazowe wykreślamy na płaszczyźnie.
+
+Zakładamy że model systemu jest w następującej postaci:
+
+[am0ZEJ] AuzAZOZSEŁd Epo]SIN
+
+<image/wzory/k/_page198_formula1.png>
+
+Dokonajmy przekształcenia:
+
+<image/wzory/k/_page198_formula2.png>
+
+ 
+
+POLITECHNIKA
+GDANSKA

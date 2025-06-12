@@ -1,0 +1,49 @@
+104 5. Pamięci
+
+ 
+
+<image/wzory/k3_page114_formula1.png>
+
+Rysunek 5.17. Układ pomocniczy sprawdzania zawartości pamięci kieszeniowej
+
+sposób kolejnego odczytywania poszczególnych komórek pamięci bardzo spowalniałby
+jej pracę. Dlatego do celu stosuje się pamięć asocjacyjną i stąd nazwa metody.
+
+Na rysunku 5.17 pokazano układ sprawdzania zawartości pamięci kieszeniowej przy
+zastosowaniu pamięci asocjacyjnej. Pamięć asocjacyjna jest to pamięć RAM (w naszym
+przykładzie 128 słów 13-bitowych) wyposażona w dodatkowe wejścia przepytywania
+(w naszym przykładzie 13 — liczba ta jest równa długości słowa) i dodatkowe wyjścia
+odpowiedzi (w naszym przykładzie 128 — ich liczba jest równa liczbie słów w pamięci).
+Pamięć działa w taki sposób, że jeżeli na wejścia przepytywania zostanie podane słowo, to
+na wyjściach odpowiedzi pojawiają się:
+
+„I” — jeśli w danej komórce znajduje się dane słowo,
+
+„0” — jeśli dana komórka zawiera inne słowo.
+
+Dlatego jeśli na wejścia przepytywania. podano numer bloku (13-bitowy), to pamięć
+odpowiada jedynką na tym wyjściu odpowiedzi, które odpowiada linii zawierającej ten
+numer. Na wyjściu pamięci asocjacyjnej pojawia się słowo w kodzie „l zk”, które jest
+podawane na wejście kodera o 7 wyjściach adresujących pamięć kieszeniową. Jeśli jest
+chybienie, to na wyjściu pamięci asocjacyjnej są same zera i pamięć kieszeniowa nie jest
+odczytywana.
+
+Wadą tej metody jest trudność zaprojektowania układu sprawdzania zawartości pa-
+mięci kieszeniowej w przypadku, gdy jej pojemność jest stosunkowo duża. Powodem tego
+jest to, że cena pamięci asocjacyjnej rośnie szybko wraz z pojemnością. Wówczas można
+zastosować metodę odwzorowania zwaną zmodyfikowaną metodą skojarzeniową.
+
+Zmodyfikowana metoda skojarzeniowa (ang. sef-associative mapping) pozwala na
+zastosowanie niewielkiej pamięci skojarzeniowej lub uniknięcia stosowania jej, nawet
+w przypadku, gdy pamięć kieszeniowa ma dużą pojemność. W metodzie tej dąży się do
+zmniejszania liczby linii pamięci kieszeniowej przez umieszczenie kilku bloków pod
+jednym jej adresem. Z daną linią pamięci kieszeniowej są kojarzone tylko pewne bloki
+pamięci operacyjnej (jak w metodzie bezpośredniej). Bloki te mogą być zapisywane na
+
+pamięci nr słowa
+
+<image/figury/k3_page114_figure1.png>
+
+mięci operacyjnej
+
+Rysunek 5.18. Ilustracja zmodyfikowanej metody skojarzeniowej

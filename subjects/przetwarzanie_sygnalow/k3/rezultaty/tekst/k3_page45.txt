@@ -1,0 +1,58 @@
+3. Przetwarzanie anałogowo-cyfrowe i cyfrowo-analogowe
+
+ 
+
+Aby to zrozumieć, wyobraźmy sobie sygnał analogowy zawierający dwa położone blisko
+siebie impulsy. Jeśli przepuścimy ten sygnał przez filtr dolnoprzepustowy (usuwający więk-
+sze częstotliwości), to impulsy zleją się ze sobą. Na przykład sygnał analogowy zawierający
+częstotliwości od 0 do 10 kHz będzie miał dokładnie taką samą rozdzielczość, jak sygnał
+cyfrowy powstający w wyniku próbkowania z częstotliwością 20 kHz. Musi tak być, gdyż
+zgodnie z twierdzeniem o próbkowaniu oba te sygnały zawierają tę samą informację.
+
+Filtry analogowe w przetwarzaniu danych
+
+Na rys. 3.7 przedstawiono schemat blokowy systemu cyfrowego przetwarzania danych zgod-
+nego z wymogami twierdzenia o próbkowaniu. Sygnał wejściowy, przed wprowadzeniem
+go do przetwornika a/c, przechodzi przez elektroniczny filtr dolnoprzepustowy usuwający
+wszystkie częstotliwości powyżej częstotliwości Nyquista (połowy częstotliwości próbko-
+wania). To jest konieczne, aby zapobiec powstawaniu aliasingu podczas próbkowania i dla-
+tego ten filtr jest nazywany antyaliasingowym. W dalszej części systemu sygnał, przetwo-
+rzony już na cyfrowy, jest poddawany przetwarzaniu c/a i przechodzi do następnego filtru
+dolnoprzepustowego ustawionego na częstotliwość Nyquista. Ten filtr wyjściowy jest nazy-
+wany odtwarzającym (albo rekonstrukcyjnym) i może też realizować poprzednio opisane
+wzmacnianie widma częstotliwości związane z korektą wpływu pamiętania zerowego rzędu.
+Z tym prostym modelem jest, niestety, spory kłopot. Ograniczenia filtrów elektronicznych
+mogą być problemem tak samo poważnym, jak trudności, którym mają zapobiegać.
+
+Jeśli interesujecie się głównie oprogramowaniem, to pewno uważacie, że nie warto czytać
+tego podrozdziału. Nie macie racji! Nawet jeśli przyrzekliście sobie nigdy nie dotknąć oscy-
+loskopu, to zrozumienie właściwości filtrów analogowych jest bardzo ważne dla osiągnięcia
+sukcesu w dziedzinie DSP. Po pierwsze, właściwości każdego zdigitalizowanego sygnału,
+z jakim się spotkacie, będą zależały od rodzaju filtru antyaliasingowego zastosowanego przy
+pobieraniu sygnału. Jeśli nie rozumiecie natury filtru antyaliasingowego, to nie możecie zro-
+zumieć natury sygnału cyfrowego. Po drugie, przyszłością DSP jest zastępowanie rozwiązań
+układowych przez oprogramowanie. Na przykład metoda przetwarzania o wielu częstotliwo-
+ściach próbkowania, przedstawiona w dalszej części tego rozdziału, ogranicza konieczność
+stosowania filtrów antyaliasingowych i odtwarzających dzięki pomysłowym trikom progra-
+mowym. Jeśli nie rozumiecie rozwiązań układowych, to nie będziecie umieli zaprojekto-
+wać oprogramowania, które mogłoby je zastąpić. Po trzecie, wiele zagadnień DSP wiąże się
+z projektowaniem filtrów cyfrowych. Powszechnie przyjętym sposobem postępowania jest
+rozpoczynanie projektowania od równoważnego filtru analogowego i przekształcenie go na
+oprogramowanie. W materiale dalszych rozdziałów książki zakłada się, że Czytelnicy mają
+podstawowe wiadomości o technice filtrów analogowych.
+
+Na ogół są stosowane trzy rodzaje filtrów analogowych: Czebyszewa, Butterwotha i Bessela
+(zwany też filtrem Thomsona). Każdy rodzaj filtru jest przewidziany do optymalizacji innych
+parametrów. Złożoność każdego filtru można dobierać przez wybór liczby biegunów i zer.
+Są to pojęcia matematyczne, które dalej objaśnimy. Im więcej jest biegunów w filtrze, tym
+więcej podzespołów elektronicznych on wymaga i tym lepiej działa. Każda z wymienionych
+nazw opisuje, co filtr robi, a nie określoną konfigurację rezystorów i kondensatorów. Na
+przykład 6-biegunowy filtr Bessela może być realizowany przy użyciu wielu różnych typów
+układów, które wszystkie mają taką samą charakterystykę wypadkową całkowitą. Do celów
+DSP charakterystyki tych filtrów są ważniejsze od ich konstrukcji. Niemniej jednak rozpocz-
+niemy od krótkiego opisu elektronicznego projektowania tych filtrów, aby dać Czytelnikom
+ogólne pojęcie na ten temat.
+
+Na rys. 3.8 przedstawiono układ często stosowany jako element filtrów analogowych. Jest
+to zmodyfikowany układ Sallena-Keya. Nazwa pochodzi od nazwisk autorów artykułu z lat
+pięćdziesiątych, w którym opisali tę technikę. Przedstawiony układ jest dwubiegunowym fil-

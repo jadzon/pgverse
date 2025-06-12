@@ -1,0 +1,28 @@
+<image/figury/k4_page130_figure1.png>
+
+Najczęstszymi obciążeniami dla modułów wyjściowych są obciążenia induk-
+cyjne, głównie cewki przekaźników lub styczników. Moduły wyjściowe
+z obciążeniami indukcyjnymi, w których zastosowano łączniki elektroniczne
+mają polaryzację dodatnią albo ujemną. dlatego zazwyczaj w tych modułach
+producent wprowadza zabezpieczenia łączników przed napięciami indukującymi
+się w cewkach w trakcie rozwierania styków łub w czasie innych rozłączeń.
+Elementami takich zabezpieczeń w obwodach prądu stałego sa odpowiednio po-
+łączone diody lub warystory, natomiast w obwodach prądu przemieniuego są to
+elementy RC, diody zabezpieczające albo warystory.
+
+Dla modułów przekaźnikowych należy koniecznie zadbać o takie zabezpiecze-
+nia umieszczając w obwodach wyjściowych odpowiednie elementy
+zabezpieczające, przy czym montując te elementy należy uwzględnić zastosowa-
+ną polaryzację zasilania.
+
+Ponadto trzeba w dokumentacji modułów przekaźnikowych zwrócić uwagę na
+dane dotyczące ograniczenia liczby przełączeń styków przekaźnika takiego mo-
+dułu w zależności od przewidywanych obciążeń prądowych. W danych
+katalogowych podaje się zwykle dopuszczalne liczby przełączeń styków dla roż-
+nych obciążeń prądowych, por. przykładowe dane w Tab. 3.8.
+
+<image/tabele/k4_page130_table1.png>
+
+m na m MBM 2 MWK
+
+wzory/k4_paqe130_formula1.pna

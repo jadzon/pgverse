@@ -1,0 +1,56 @@
+584 33. Przekształcenie Z
+
+Ta metoda działa dobrze i jest często stosowana w pakietach projektowania filtrów. Jej głów-
+nym ograniczeniem jest nieuwzględnianie szumu zaokrągłania wpływającego na charakte-
+rystyki systemu. Nawet jeśli wyznaczona tą metodą odpowiedź częstotliwościowa wygląda
+doskonale, to zrealizowany system może być całkowicie niestabilny!
+
+To nas prowadzi do trzeciej metody — wyznaczania odpowiedzi częstotliwościowej na pod-
+stawie współczynników rekursywnych stosowanych do implementacji filtru. Rozpoczynamy
+od znalezienia odpowiedzi impulsowej filtru, przepuszczając impuls przez filtr. W następnym
+kroku poddajemy odpowiedź impulsową przekształceniu DFT (oczywiście stosując FFT),
+aby wyznaczyć odpowiedź częstotliwościową systemu. W tej procedurze jedynym punktem
+krytycznym, o którym trzeba pamiętać, jest konieczność zebrania wystarczająco dużej liczby
+próbek odpowiedzi impulsowej, tak aby próbki pominięte nie miały znaczenia. Aczkolwiek
+na temat kryteriów teoretycznych związanych z tą kwestią można by napisać całe książki, to
+jednak reguły praktyczne są znacznie prostsze. Stosujcie tak wiele próbek, ile uznajecie za
+konieczne. Po wyznaczeniu odpowiedzi częstotliwościowej cofnijcie się i powtórzcie proce-
+durę, stosując dwukrotnie większą liczbę próbek. Jeśli obie uzyskane odpowiedzi impulsowe
+są wystarczająco podobne, to możecie być pewni, że ograniczenie odpowiedzi impulsowej
+nie wprowadziło was w błąd.
+
+Stopnie kaskadowe i równolegie
+
+Bardziej skomplikowane filtry rekursywne projektuje się zwykle stopień po stopniu, aby
+uniknąć żmudnych operacji algebraicznych w dziedzinie z. Na rys. 33.4 przedstawiono
+dwa sposoby łączenia pojedynczych stopni — łączenie kaskadowe lub łączenie równole-
+głe z sumowaniem wyjść. Można na przykład połączyć kaskadowo filtry dolno- i gór-
+noprzepustowy, aby uzyskać filtr pasmowoprzepustowy. W podobny sposób równoległe
+połączenie filtrów dolno- i górnoprzepustowego może dać filtr pasmowozaporowy. Dwa
+filtry, które łączymy ze sobą, nazwiemy systemem 1 i systemem 2, a ich współczynniki
+rekursywne oznaczymy, odpowiednio, przez ag. a;, a, by, by oraz Ag, Ay, A> By, B;.
+Naszym celem jest połączenie ze sobą tych stopni (kaskadowo lub równolegle) w jeden
+filtr rekursywny, który nazwiemy systemem 3, o współczynnikach rekursywnych a%, ay,
+ax, 3, Ax, by, bz, bz, b4.
+
+Jak pamiętacie z poprzednich rozdziałów, odpowiedź częstotliwościową systemu filtrów
+łączonych kaskadowo uzyskuje się przez mnożenie odpowiedzi poszczególnych stopni,
+a w przypadku połączenia równoległego — przez ich dodawanie. Takie same reguły obo-
+wiązują dla funkcji przenoszenia w dziedzinie z. Dzięki temu można łączyć ze sobą
+systemy rekursywne, przenosząc cały problem do dziedziny z, wykonując wymagane
+mnożenie lub dodawanie i powracając następnie do współczynników rekursywnych sys-
+temu finalnego.
+
+Jako przykład tej metody przeprowadzimy operacje algebraiczne łączące dwa stopnie bikwa-
+dratowe w kaskadę. Funkcję przenoszenia każdego stopnia określamy, wpisując do wzoru
+33.3 odpowiednie współczynniki rekursywne. Następnie znajdujemy funkcję przenoszenia
+całego systemu H[z], wymnażając funkcje przenoszenia obu stopni:
+
+<image/wzory/k3_page543_formula1.png>
+
+Wymnażając wielomiany i grupując wyrazy podobne, uzyskujemy:
+
+<image/wzory/k3_page543_formula2.png>
+
+Ponieważ powyższe wyrażenie ma postać zgodną ze wzorem 33.3, więc możemy bezpo-
+średnio wypisać współczynniki rekursywne implementujące cały system kaskadowy:

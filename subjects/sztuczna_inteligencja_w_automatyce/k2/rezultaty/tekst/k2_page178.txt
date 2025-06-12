@@ -1,0 +1,42 @@
+183
+
+<image/figury/k2_page17/8_figure1.png>
+
+Rys. 6.82: Przebi
+skala log-lin
+
+zbieżne i krytyczna jest moc obliczeniowa komputera i parametry algorytmu ge-
+netycznego. Poniżej zaprezentowano wyniki jednej z symulacji, w której przyjęto
+następujące parametry:
+
+układ wózek-wahadło: M = 10kg, m = 30kg, ! = 30m, b = 0:
+
+sieć neuronowa: LNeuronUkr=10-5), WzmNeu= 1000, co zapewniało możliwość pod-
+niesienia wahadła odchylonego od pionu o około 733;
+
+algorytm genetyczny: LSieci 30, LSelBez=2(8), LStanPocz 20, LKroTest 1000,
+8 =0.1, Prawdkrzyz=0.2, PrzedzMut=0.1, CzestMut=0.01.
+
+W czasie uczenia generowano losowo 20 stanów początkowych o równomier-
+nym rozkładzie prawdopodobieństwa z zakresu: a € (—r/6,r/6), a € (—r/3,1r/3).
+c € (—10,10),, « e (—10,10) i dla każdego z nich sieć sterowała wahadłem przez
+1000 kroków.
+
+Na rys. ?? przedstawiono otrzymany dla tych parametrów przebieg minimalnego
+błędu podczas uczenia sieci. Błąd E obliczany był według wzoru (??) dla najlepszej
+sieci w danym cyklu, dla 100 wybranych losowo i niezmiennych testowych stanów
+początkowych, różnych od tych dla których określana była jakość sieci podczas dzia-
+łania algorytmu genetycznego.
+
+W przedstawionym przykładzie przeprowadzono ponad 30000 cykli uczenia —
+realizacja jednego cyklu algorytmu genetycznego wykonywana przez komputer z
+procesorem Athlon 850MHz trwała około 20s.
+
+Własności otrzymanej sieci neuronowej zilustrowano na rysunku ?? gdzie przed-
+stawiono sygnał wyjściowy sieci w funkcji dwóch sygnałów wejściowych, kąta i pręd-
+kości kątowej wahadła przy przyjęciu zerowego położenia wózka i zerowej prędkości
+wózka.
+
+Przebieg sterowania wahadłem za pomocą nauczonej sieci pokazany jest na rys. ??
+dla dwóch różnych stanów początkowych. Widać na nich stopniową (z przeregulo-
+waniami) stabilizację wahadła. Na szczególną uwagę zasługuje działanie sterownika

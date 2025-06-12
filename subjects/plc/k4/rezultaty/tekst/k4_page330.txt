@@ -1,0 +1,37 @@
+(GDA SUW A LSA 10 NR
+
+W przypadku gdy chcemy, aby operacja sumy została wykonana przed operacją
+iloczynu musimy użyć wyrażeń nawiasowych.
+
+Rozważmy ciąg instrukcji:
+
+<image/tabele/k4_page330_table2.png>
+
+Wyrażenia nawiasowe wymuszają wykonanie w pierwszej kolejności operacji
+sum logicznych wejść 7 3.1, 7 3.2 oraz 7 3.3, I 3.4. Następnie wykonywany jest
+iloczyn wyników operacji sumowania logicznego. Przedstawiony ciąg instrukcji
+realiznie nastenniaca fnnkcie lnoiczna:
+
+<image/wzory/k4_page330_formula1.png>
+
+Rozwazmy ciąg instrukcji:
+
+<image/tabele/k4_page330_table1.png>
+
+Wykonanie powyższego ciągu instrukcji rozpocznie się od sprawdzenia wartości
+wejść 7 4.3, I 4.4 i wyznaczenia sumy logicznej wyników tego sprawdzenia. Na-
+stępnie sprawdzana jest wartość wejścia / 4.7 i wykonany jest iloczyn logiczny
+tego sprawdzenia z wynikiem wykonanej uprzednio operacji sumy. W końcu
+wykonywana jest suma logiczna wyniku poprzednich operacji z wynikiem
+sprawdzenia wejścia /4.0. Otrzymany wynik zostaje przypisany do wyjścia
+Q 5.5 Przedstawinny ciao instrnkcii realiznie wiec nastenniaca funkcie looiczną:
+
+<image/wzory/k4_page330_formula2.png>
+
+WzZYTINTStO
+
+ 
+
+ 
+
+330 Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5

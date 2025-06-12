@@ -1,0 +1,29 @@
+Przedmowa
+
+Kolejny tom podręcznika „Podstawy automatyki” nawiązuje bezpośrednio do po-
+przedniego i stanowi zbiór zadań różnego typu i o różnym stopniu trudności, aby
+umożliwić studiującemu, poprzez rozwiązywanie zadań, lepsze i praktyczne zrozu-
+mienie spraw omawianych w części teoretycznej. Stanowi też pewne uzupełnienie
+wykładu. Materiał jest ułożony w logicznej kolejności od zagadnień prostych do trud-
+niejszych. Chociaż do opisu omawianej teorii i metod zastosowano wiele elementów
+matematyki wyższej, przedstawiony w tekście materiał matematyczny podano w prosty
+i łatwy do studiowania sposób. Dla studentów powinien stanowić pomoc w systema-
+tycznym poznawaniu podstawowej teorii i głównych metod automatyki.
+
+Jestem szczerze wdzięczny moim współpracownikom za pomoc w opracowaniu
+tego zbioru:
+
+Panu dr. inż. Wiesławowi Wszołkowi, Państwu mgr inż. Agacie Nawrockiej,
+mgr. inż. Andrzejowi Kotowi i mgr. inż. Dariuszowi Grzybkowi.
+
+Szczególne podziękowanie składam Panu mgr. inż. Romanowi Ornackiemu za
+pieczę na całością wydania.
+
+Pragnę serdecznie podziękować Panu prof. dr. hab. inż. Zenonowi Jędrzykiewi-
+czowi za wkład pracy, cenne i konstruktywne uwagi, które okazały się bardzo pomocne
+w opracowaniu ostatecznej formy podręcznika.
+
+Zespołowi Redakcji Uczelnianych Wydawnictw Naukowo-Dydaktycznych ser-
+decznie dziękuję za staranne przygotowanie go do druku.
+
+Janusz Kowal

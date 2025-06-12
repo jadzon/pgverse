@@ -1,0 +1,50 @@
+228
+
+Działanie programu rozpoczyna się od sprawdzenia spełnienia pierwszego pre-
+dykatu zapytania, czyli od predykatu p(X). Unifikuje się on z pierwszą klauzula
+programu, przy czym zmienna X związana zostaje z obiektem a, czyli predykat p(X)
+jest spełniony dla X=a. Następuje sprawdzenie spełnienia predykatu p(Y). Unifikuje
+się on z pierwszą klauzulą i jest spełniony dla Y=a. Trzeci predykat zapytania też
+unifikuje się z pierwszą klauzulą programu dla Z=a. Czwarty predykat X<>Y jest
+predykatem systemowym i jest spełniony, gdy X i Y są związane z różnymi obiek-
+tami. Ponieważ X i Y zostały związane z tym samym obiektem, predykat ten nie
+jest spełniony. Następuje więc nawrót do predykatu p(Z), uwolnienie zmiennej Z i
+próba jego unifikacji z dalszymi klauzulami. Unifikuje się on z klauzulą p(b) dla
+Z=b. Następuje ponowne przejście do predykatu X<>Y, który oczywiście dalej nie
+jest spełniony.
+
+Kolejne nawroty i unifikacje p(Z) z pozostałymi klauzulami trwają do wyczer-
+pania się wszystkich klauzul. Jeżeli nie ma już innej możliwości unifikacji p(Z),
+nastepuje nawrócenie do predykatu p(Y) i ponowna jego unifikacja. Unifikuje się
+on z klauzulą p(b) dla Y=b. Następuje teraz przejście do p(Z), jego unifikacja z
+p(a). przejście do predykatu X<>Y, który tym razem jest spełniony i przejście do
+predykatu X<>Z. Predykat X<>Z jest niespełniony, ponieważ zarówno X jak i Z są
+związane z obiektem a. Następuje nawrócenie bezpośrednio do p(Z) (z ominięciem
+X<>Y), ponieważ predykaty systemowe są omijane przy nawracaniu. Predykat p(Z)
+unifikuje się teraz z p(b). Ponieważ ta unifikacja powoduje niespełnienie Y<>Z, na-
+stępuje kolejny nawrót do p(Z) i jego unifikacja z p(c). Związanie Z z c powoduje, że
+wszystkie predykaty nierówności są już spełnione i w ten sposób spełnione jest całe
+zapytanie i program wyświetla rozwiązanie: X=a, Y=b, Z=c. Program nie poprze-
+staje na jednym rozwiązaniu i stosując mechanizm nawracania kontynuuje proces
+poszukiwania nowych spełnień zapytania i tym samym generacji nowych rozwiązań.
+W omawianym przykładzie następuje teraz nawrócenie do predykatu p(Z), unifika-
+cja z p(d), sprawdzenie spełnienia nierówności i wyświetlenie nowego rozwiązania:
+X=a, Y=b, Z=d. Dalej już łatwo widać, że program ten uzyska 24 rozwiązania, czyli
+wszystkie wariacje bez powtórzeń 3 elementów spośród 4. m
+
+Rozpatrzmy teraz, na innym przykładzie, proces poszukiwaia rozwiązania, gdy
+program zawiera zarówno fakty jak i reguły.
+PRZYKŁAD 9.7
+Rozpatrzmy proces poszukiwania rozwiązania w programie 1 dla zapytania
+
+korzysta(monika,Rzecz)
+
+Pierwsza unifikacja predykatu korzysta(monika,Rzecz) następuje z nagłówkiem
+klauzuli:
+
+korzysta(X,Y) :- posiada (X,Y), lubi(X,Y).
+
+W trakcie unifikacji zmienna X zostaje związana z obiektem monika, zaś zmienna
+Rzecz pozostaje wolną. Następuje teraz sprawdzenie spełnienia prawej strony reguły,
+które rozpoczyna się od sprawdzenia spełnienia predykatu posiada(monika Rzecz).
+Predykat ten unifikuje się z faktem posiada(monika,auto) dla Rzecz=auto, jest

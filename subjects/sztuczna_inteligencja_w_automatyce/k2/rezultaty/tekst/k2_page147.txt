@@ -1,0 +1,25 @@
+152
+
+gdzie a,b,c są parametrami. Parametry te będziemy nazywali parametrami
+przesłanek. Kształt funkcji dzwonowej dla różnych wartości tych parametrów
+przedstawiony jest na rysunku ??.
+
+<image/figury/k2_page147_figure1.png>
+
+Warstwa 2 (ustalona) Węzły tej warstwy obliczają iloczyny sygnałów na ich wej-
+ściach. Na ich wyjściach otrzymujemy siły zadziałania poszczególnych reguł.
+
+<image/wzory/k2_page147_formula1.png>
+
+Warstwa 3 (ustalona) Węzły tej warstwy obliczają znormalizowane siły zadziała-
+nia poszczególnych reguł według wzoru
+
+<image/wzory/k2_page14/_formula2.png>
+Warstwa 4 (adaptacyjna) Węzły tej warstwy obliczają następujące iloczyny
+<image/wzory/k2_page14/_formula3.png>
+Parametry p, q, r nazywane są parametrami konsekwencji.
+
+Warstwa 5 (ustalona) Pojedynczy węzeł tej warstwy oblicza sumę sygnałów z wę-
+złów warstwy 4
+
+<image/wzory/k2_page14/_formula4.png>

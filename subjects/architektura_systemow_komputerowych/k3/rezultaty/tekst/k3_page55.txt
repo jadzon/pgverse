@@ -1,0 +1,27 @@
+3.2. Kody biname i arytmetyka 45
+
+idwóch rejestrów. Jeden z nich jest rejestrem o długości równej długości słowa
+argumentów, a drugi o podwójnej długości, w którym, w kolejnych krokach, będzie
+powstawał wynik. W naszym przykładzie pierwszy rejestr będzie rejestrem 4-bitowym
+(dalej oznaczanym przez M), a drugi rejestr będzie rejestrem 8-bitowym (dalej oznaczanym
+przez R). Ten ostatni rejestr będzie podzielony na dwie części: mniej znaczą część ozna-
+czoną przez RL i bardziej znaczącą część oznaczoną przez RH.
+
+Na rysunku 3.39 pokazano kolejne 4 kroki algorytmu mnożenia w opisywanym ukła-
+dzie oraz stany rejestrów w każdym z kroków. Najpierw do rejestru o podwójnej długości
+R jest zapisywana mnożna na mniej znaczące pozycje. Na bardziej znaczące pozycje
+wpisywane są zera. Do rejestru M jest zapisywany mnożnik. W każdym kroku mnożenia
+wykonywane są dwie operacje: warunkowe dodawanie i przesuwanie w prawo (SHR).
+Operacja dodawania jest warunkowa, gdyż jest uzależniona od wartości aktualnego
+najmniej znaczącego bitu rejestru mnożnej. Jeżeli wartość tego bitu jest 0, to do bardziej
+znaczącej części rejestru mnożnej dodaje się zera. Jeżeli wartość tego bitu jest 1, to do
+rejestru mnożnej dodawana jest wartość mnożnika. Zaleca się niewprawnemu Czytelnikowi
+dokładne prześledzenie kolejnych kroków algorytmu.
+
+Na rysunku 3.40 pokazano układ realizujący opisany algorytm. Układ sterowania
+generuje sygnał przesuwania zawartości rejestru R oraz sygnał sterujący układem ALU.
+Układ ALU opisano w rozdziale 4, natomiast teraz wystarczy przyjąć, że do zawartości
+
+<image/figury/k3_page55_figure1.png>
+
+Rysunek 3.41

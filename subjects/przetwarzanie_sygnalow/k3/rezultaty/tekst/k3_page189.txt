@@ -1,0 +1,59 @@
+11, Pary transformat Fouriera
+
+ 
+
+Drugą interesującą sprawą na rys. 11.2 jest dualność DFT. Wiadomo, że w DFT każ-
+dej próbce w dziedzinie częstotliwości odpowiada sinusoida w dziedzinie czasu. Jednak
+słuszna jest też zależność odwrotna: każdej próbce w dziedzinie czasu odpowiada sinuso-
+ida w dziedzinie częstotliwości. Włączenie do wykresów częstotliwości ujemnych powo-
+duje, że dualność staje się bardziej symetryczna. Na przykład z rysunków 11.2 d), e), f)
+wynika, że impuls w próbce numer 4 w dziedzinie czasu daje 4 okresy fali kosinuso-
+idalnej w części rzeczywistej fali widma częstotliwościowego i 4 okresy ujemnej fali
+sinusoidalnej w części urojonej. Zgodnie z zasadą dualności, impuls w próbce numer 4
+w części rzeczywistej widma częstotliwościowego daje cztery okresy fali kosinusoidal-
+nej w dziedzinie czasu. W podobny sposób impuls w próbce numer 4 w części urojonej
+widma częstotliwościowego daje 4 okresy ujemnej fali sinusoidalnej dodawane do fali
+w dziedzinie czasu.
+
+Jak wspomniano w rozdziale 8, powyższe właściwości można wykorzystać jako inny sposób
+obliczania DFT (oprócz korelacji w dziedzinie czasu z sinusoidami). Każda próbka w dzie-
+dzinie czasu daje w wyniku falę kosinusoidalną dodawaną do części rzeczywistej w dziedzi-
+nie częstotliwości oraz ujemną falę sinusoidalną dodawaną do części urojonej. Amplituda
+każdej sinusoidy jest określona przez amplirudę próbki w dziedzinie czasu. Częstotliwość
+każdej sinusoidy jest wyznaczona przez numer próbki punktu w dziedzinie czasu. Algorytm
+zawiera: 1) krokowe przechodzenie przez wszystkie próbki w dziedzinie czasu, 2) obliczanie
+fal sinusoidalnych i kosinusoidalnych odpowiadających kolejnym próbkom oraz 3) sumo-
+wanie wszystkich sinusoid składowych. W rezultacie program jest prawie identyczny z pro-
+gramem w metodzie korelacyjnej (tablica 8.2), przy czym pętle zewnętrzna i wewnętrzna są
+zamienione.
+
+Funkcja sin(x)/x
+
+Na rys. 11.3 przedstawiono często spotykaną parę transformat: impuls prostokątny i funk-
+cję sin(xy/x. Ta funkcja jest też oznaczana jako sinc(x). Funkcja opisuje sinusoidę, której
+amplituda zmniejsza się proporcjonalnie do 1/x. Na rys. 11.3 a) impuls prostokątny jest
+umieszczony symetrycznie wokół próbki zero, w wyniku czego połowa impulsu znajdu-
+je się z prawej strony wykresu, a druga połowa — z lewej. W przekształceniu DFT jest
+to traktowane jako pojedynczy impuls ze względu na okresowość w dziedzinie czasu.
+Transformaty DFT tego sygnału przedstawiono na rysunkach 11.3 b), c), a w wersji rozwi-
+niętej — na rysunkach 11.3 d), e).
+
+Spójrzmy najpierw na widmo rozwinięte (rysunki 11.3 d, e). Moduł rozwinięty jest oscylacją
+o amplitudzie zmniejszającej się w funkcji częstotliwości. Charakterystyka fazy jest złożona
+z samych zer, czego można było oczekiwać z powodu symetrii sygnału w dziedzinie czasu
+wokół próbki numer 0. Używamy nazwy moduł rozwinięty, aby zaznaczyć, że może on mieć
+wartości zarówno dodatnie, jak i ujemne. Moduł z definicji powinien być zawsze dodatni, jak
+to przedstawiono na rysunkach 11.3 b), c), gdzie uzyskuje się w całym zakresie moduł do-
+datni przez wprowadzenie przesunięcia fazy równego x dla wszystkich częstotliwości, przy
+których rozwinięty moduł jest ujemny na rys. 11.3 d).
+
+Impuls prostokątny na rys. 11.3 f) jest przesunięty tak, że ma wygląd pojedynczego impulsu,
+lecz nie jest już symetryczny w stosunku do próbki numer 0. Wprawdzie takie przesunię-
+cie nie zmienia charakterystyki modułu w dziedzinie częstotliwości, lecz dodaje składową
+liniową do charakterystyki fazy, powodując w niej zupełny bałagan. A jak wygląda widmo
+częstotliwościowe w postaci części rzeczywistej i urojonej? Zbyt zagmatwane, żeby w ogóle
+się nim zajmować. i
+
+Złożony z N punktów sygnał w dziedzinie czasu, który zawiera impuls prostokątny o ampli-
+tudzie jednostkowej i o szerokości M punktów, ma widmo częstotliwościowe DFT określone
+wzorem:

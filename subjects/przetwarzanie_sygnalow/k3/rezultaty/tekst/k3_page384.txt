@@ -1,0 +1,61 @@
+Stosunek sygnału do szumu
+
+ 
+
+ 
+
+znaleźć więcej elektronów, a w innych mniej. Ściślej mówiąc, liczba elektronów będzie miała
+rozkład normalny, czyli gaussowski o wartości średniej 10 000, o pewnym odchyleniu stan-
+dardowym opisującym, jak duże są wahania liczby elektronów w poszczególnych studniach.
+W statystycznym rozkładzie Poissona odchylenie standardowe jest równe pierwiastkowi
+kwadratowemu z liczby indywidualnych zdarzeń. Jest to podstawowa cecha tego rozkładu.
+Wynika z niej, że jeśli jest N pikseli w każdym pikselu, to wartość średnia jest równa N,
+a odchylenie standardowe /N. Stosunek sygnału do szumu jest zatem równy NIJN lub po
+prostu YN. Wyraża się to wzorami: *
+H=
+
+G=/N
+SNR=/N
+Wzór 25.1. Rozktad statystyczny Poissona. W tym rozkładzie ju jest średnią liczbą indywidualnych
+
+zdarzeń, N. Odchylenie standardowe O jest równe pierwiastkowi kwadratowemu średniej liczby
+indywidualnych zdarzeń. Stosunek sygnału do szumu jest wartością średnią podzieloną przez odchylenie
+
+W podanym jako przykład układzie CCD odchylenie standardowe jest 10000 =100, sto-
+sunek sygnału do szumu jest też równy „/10000 =100. Jeśli średnia liczba elektronów na
+studnię wzrośnie do miliona, to zarówno odchylenie standardowe, jak i stosunek do szumu
+wzrastają do 1000. Szum wzrasta więc ze wzrostem sygnału, jak widać to na rys. 25.9 b).
+Sygnał jednak wzrasta szybciej niż szum, powodując polepszenie stosunku sygnału do szu-
+mu. Nie należy mylnie sądzić, że mniejszy sygnał da mniejszy szum, a więc lepszą infor-
+mację. Trzeba pamiętać, że celem nie jest tłumienie szumu, lecz wyodrębnienie sygnału z
+szumu. Dlatego podstawowym parametrem jest stosunek sygnału do szumu.
+
+Wiele systemów obrazowych działa na zasadzie konwersji jednej cząstki (lub fotonu) w inną.
+Zastanówmy się na przykład, jakie zjawiska zachodzą w medycznym, rentgenowskim sys-
+temie obrazowym. W lampie rentgenowskiej elektrony uderzają w metalową tarczę, wy-
+twarzając promieniowanie rentgenowskie. Po przeniknięciu przez ciało pacjenta promienie
+rentgenowskie trafiają w detektor z lampą próżniową, zwany wzmacniaczem obrazu. Tutaj
+promienie rentgenowskie są kolejno przetwarzane w fotony świetlne, następnie w elektrony,
+a potem znowu w fotony świetlne, Te fotony wchodzą do kamery, gdzie generują elektrony
+w studni układu CCD. W każdej z tych pośrednich postaci obraz jest reprezentowany przez
+skończoną liczbę cząstek (lub fotonów), z czego wynika dodany szum zgodny z wzorem
+25.1. Całkowity stosunek sygnału do szumu wyraża łączny szum wszystkich stopni, jednak
+zwykle jeden stopień jest dominujący. Jest to stopień o najgorszym stosunku sygnału do
+szumu z powodu najmniejszej liczby cząstek (lub fotonów). Ten dominujący stopień ograni-
+czający jest w terminologii angielskiej nazywany quantum sink.
+
+W systemach noktowizyjnych takim dominującym ograniczeniem jest liczba fotonów, które
+może wychwycić kamera. Im noc jest ciemniejsza, tym bardziej zaszumiony jest uzyskany
+obraz. Podobnym przykładem jest medyczny, rentgenowski system obrazowy — ogranicze-
+niem dominującym jest liczba fotonów (kwantów) promieniowania rentgenowskiego ude-
+rzających w detektor. Wyższy poziom promieniowania daje obrazy z mniejszym szumem
+kosztem silniejszego napromieniowania pacjenta.
+
+Nasuwa się pytanie, kiedy statystyczny szum Poissona jest głównym szumem w obrazie.
+Otóż jest on dominujący zawsze wtedy, gdy szum pochodzący od dominującego stopnia
+ograniczającego (quantum sink) jest większy od szumów z innych źródeł w systemie, ta-
+kich jak np. układy elektroniczne. Rozważmy na przykład typowy aparat fotograficzny CCD,
+w którym stosunek sygnału do szumu wynosi 300. To znaczy, że szum z przedwzmacniacza
+CCD jest 1/300 częścią pełnego zakresu sygnału. Równoważny szum byłby wytwarzany,
+gdyby dominujący stopień ograniczający systemu charakteryzował się liczbą 90 000 czą-
+stek na piksel. Jeśli dominujący stopień ograniczający wyraża się mniejszą liczbą cząstek,

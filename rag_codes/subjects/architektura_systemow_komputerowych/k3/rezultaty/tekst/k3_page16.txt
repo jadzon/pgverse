@@ -1,0 +1,15 @@
+6 1. Wprowadzenie
+
+W rozdziale siódmym omówiono niektóre zagadnienia programowania na najniższym
+poziomie, jak np. wywołania podprogramów i zasadę translacji programów. Przedstawiono
+tam także zadania i funkcje systemów operacyjnych oraz ich powiązanie ze sprzętem.
+
+Ostatni ósmy rozdział książki poświęcono pewnym problemom związanym z archi-
+tekturą współczesnych komputerów. W rozdziale tym podano klasyfikację systemów kom-
+puterowych oraz przedstawiono mechanizmy pozwalające na przyspieszenie pracy kom-
+puterów. Pokrótce omówiono architektury potokowe, architektury typu Harvard i RISC,
+a także omówiono systemy wieloprocesorowe.
+
+Niniejsza książka może dać Czytelnikowi podstawy do zrozumienia zasad budowy
+i działania komputerów, a przedstawione tu zagadnienia mogą stanowić punkt wyjścia do
+dalszego zaznajamiania się z tą tematyką.

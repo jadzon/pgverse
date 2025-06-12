@@ -1,0 +1,56 @@
+192 2. Pojęcia podstawowe — układy
+
+Uwzględniając równania definicyjne (1.3-31) prostownika idealnego, analizę układu z
+2.1-16a można rozdzielić na dwa przypadki:
+
+a) u > 0; wówczas prostowniki 1 i 4 stanowią zwarcie, a prostowniki 2 i 3 nie
+dzą prądu;
+
+b) u < 0; wówczas prostowniki 2 i 3 stanowią zwarcie, a prostowniki 1 i 4 nie
+dzą prądu.
+
+Otrzymujemy zatem następujący opis sieciowy:
+
+<image/wzory/k4_page192_formula1.png>
+
+zory/k4_page192_formula2.png
+
+  
+   
+   
+
+Z równań tych wynika, że:
+<image/wzory/k4_page192_formula3.png>
+ory/k4_page192_formula4.png (21-33)
+
+Równania (2.1-32) są równaniami algebraicznymi nieliniowymi, równanie zaciskowe
+(2.1-33) jest natomiast równaniem linio wym.
+
+Mamy tu zatem do czynienia z przykładem układu, który jest nieliniowy (równania sieciowe są
+nieliniowe), ale którego równanie zaciskowe jest liniowe. Jeśli więc układ z rys. 2.1-16a traktujemy
+jako sieć, a więc interesuje nas co dzieje się wewnątrz układu (np. jaki jest prąd i), to jest to układ
+nieliniowy. Gdyby jednak interesowało nas zachowanie się zaciskowe tego układu, to z równania
+(2.1-33) wynika, że dwójnik z rys. 2.1-16a jest równoważny oporowi liniowemu R
+(rys. 2.1-16b).
+
+Przykład ten dobrze ilustruje różnicę między opisem zaciskowym i ogólniejszym opisem
+sieciowym. Jest także uzupełnieniem przedstawionych w p. E rozważań nad właściwościami równań
+zaciskowych.
+
+G. Opis układów bezinercyjnych. Równania sieciowe układu skupionego
+są równaniami różniczkowymi zwyczajnymi i/lub równaniami algebraicznymi.
+W ich skład wchodzą równania wyrażające prawa Kirchhoffa, które są zawsze
+równaniami algebraicznymi. W klasie układów skupionych można zatem
+wyodrębnić podklasę takich układów, których równania sieciowe można
+przedstawić tylko w postaci równań algebraicznych (tzn. nie ma wśród nich
+równań różniczkowych). Umożliwia to wprowadzenie jeszcze jednej, dość
+istotnej linii podziału.
+
+Układ skupiony nazywamy układem bezinercyjnym, jeśli jego równania
+sieciowe można przedstawić tylko w postaci równań algebraicznych, i układem
+inercyjnym — w przeciwnym przypadku, tzn. jeśli wśród równań sieciowych
+występują równania różniczkowe.
+
+a mma im a m a m ..
+
+w m» a m mA Mm

@@ -1,0 +1,40 @@
+102
+
+10.34 Wpływ wartości parametrów na odpowiedź skokową
+serwomechanizmu przekaźnikowego bez sprzężenia
+tachometrycznego
+
+Określić wpływ wartości parametrów układu na odpowiedź skokową
+i trajektorię fazową:
+
+e szerokości strefy histerezy H,
+
+e szerokości strefy nieczułości B,
+wybierając dla każdego ze zmienianych parametrów trzy wartości.
+10.3.5 _ Wpływ wartości parametrów na odpowiedź skokową
+
+serwomechanizmu przekaźnikowego ze sprzężeniem
+tachometrycznym
+
+Określić wpływ wartości parametrów układu na odpowiedź skokową
+
+i trajektorię fazową: fi u /k 2 ade 5 2 .
+e szerokości strefy histerezy H, I ty -P d „figure 1 png
+e szerokości strefy nieczułości 3,
+e wzmocnienia prądnicy tachometrycznej K;,
+
+wybierając dla każdego ze zmienianych parametrów trzy wartości.
+Dla zadanych: B oraz H dobrać na podstawie symulacji wzmocnienie kę,
+zapewniające krótki czas regulacji oraz małe przeregulowanie.
+
+10.3.6 Sprawozdanie
+Sprawozdanie powinno zawierać:
+
+- odpowiedzi skokowe dla różnych szerokości strefy histerezy i strefy
+nieczułości (polecenie 10.3.2); określić amplitudę, częstotliwość
+oraz wartość średnią oscylacji;
+
+- odpowiedzi skokowe w układzie z korekcją dynamiczną, wraz z omó-
+wieniem wpływu zmienianych parametrów (polecenie 10.3.3) na wy-
+mienione wyżej wskaźniki jakości regulacji; w przypadku zaniku
+oscylacji określić wartość ustaloną uchybu;

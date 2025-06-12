@@ -1,0 +1,34 @@
+118 1. Pojęcia podstawowe — elementy
+
+|
+<image/figury/k3_page118_figure2.png>
+|
+
+izory/k3_page118_formula1.png (1.7-2)
+gdzie j = j(t) jest zadaną funkcję czasu określającą wydajność prądową źród-
+ła.
+
+Siły elektromotoryczne i wydajności prądowe nazywamy często pobudzenia-
+mi lub wymuszeniami, odgrywają one bowiem rolę czynników wywołujących
+prądy i napięcia w obwodzie.
+
+Dla uniknięcia sprzeczności wykluczamy przypadki: zwarcia zacisków
+idealnego źródła napięciowego (warunek u = 0 jest sprzeczny z warunkiem
+definicyjnym (1.7-1)) oraz rozwarcia idealnego źródła prądowego (waru-
+nek i = 0 jest sprzeczny z warunkiem definicyjnym (1.7-2))2.
+
+B. Moc oddawana przez źródło. Na rys. 1.7-1 napięcia i prądy zostały
+zastrzałkowane przeciwnie do standardowej konwencji strzałkowania,
+przyjętej dla dowolnego elementu na rys. 1.1-1. W przypadku źródeł konwencja
+przedstawiona na rys. 1.7-1 jest jednak dogodniejsza, bowiem:
+
+zory/k3_page118_formula2.png (1.7-3)
+w przypadku idealnego źródła napięciowego oraz:
+
+zory/k3_page118_formula3.png (1.7-4)
+w przypadku idealnego źródła prądowego oznaczają moce oddawane przez
+źródła, co oczywiście odpowiada roli, jaką mają spełniać źródła w obwodzie
+elektrycznym.
+
+1) Spotykany jest także inny symbol graficzny idealnego źródła prądowego (rys. 1.7-10)
+2) Por. przypis na str. 68 oraz rys. 1.3-26.

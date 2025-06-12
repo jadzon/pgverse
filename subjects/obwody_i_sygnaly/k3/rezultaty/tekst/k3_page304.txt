@@ -1,0 +1,45 @@
+304 3. Obwody prądu stalego
+
+B. Bilans mocy dla gałęzi. Zasadę Tellegena (3.5-10) można także odnieść
+
+do gałęzi jako elementów sieci. Moce P, występujące we wzorze (3.5-10)
+
+przyjmują wówczas znaczenie mocy pobieranych przez poszczególne gałęzie
+sieci, tzn. P, = U,I,, gdzie U, jest napięciem, a I, — prądem k-tej gałęzi.
+
+Sprawdzimy zasadę Tellegena w takim ujęciu dla sieci z przykładu 3.3-12:
+
+<image/wzory/k3_page304_formula1.png>
+
+Porównajmy teraz sieci rozpatrywane w przykładach 3.3-12 i 3.3-13 (rys.
+3.3-20 i 3.3-21). Obie sieci są równoważne ze względu na rozpływ prądów
+i rozkład napięć, tzn. prądy i napięcia odpowiadających sobie gałęzi w obu
+sieciach są identyczne. Identyczne są zatem również moce pobierane (lub
+oddawane) przez poszczególne gałęzie. Na tym jednak podobieństwa kończą się.
+Zauważmy, że w odpowiadających sobie gałęziach źródłowych obu sieci moce
+czynne tracone w oporach wewnętrznych są różne. Na przykład moc tracona
+w oporze wewnętrznym R, źródła napięciowego E, w sieci z rys. 3.3-20 jest
+równa 20 mW, natomiast moc tracona w przewodności wewnętrznej G, = 1/R;
+
+źródła prądowego J; w sieci z rys. 3.3-21 jest równa © mW. Tym samym różne
+
+są wartości mocy dostarczanych do układu przez odpowiadające sobie źródła
+idealne. Na przykład źródło E, w sieci z rys. 3.3-20 dostarcza moc 6 mW, zaś
+
+źródło Jy w sieci z rys. 3.3-21 moc -7 mW (tzn. faktycznie pobiera moc).
+Zbadajmy ten problem dokładniej.
+
+Rozważmy rzeczywiste źródła: napięciowe o sile elektromotorycznej E
+i oporze wewnętrznym R, oraz prądowe o wydajności prądowej J i przewod-
+ności wewnętrznej G„ współpracujące z tym samym obciążeniem R = 1/G
+(rys. 3.5-7a,b). Załóżmy, że źródła te są równoważne, tzn. E = RJ oraz
+G,„ = 1/R,. Przy tych warunkach prąd I, napięcie U oraz moc P w dwójniku
+o oporze R (przewodności G) są jednakowe.
+
+a) b)
+<image/figury/k3_page304_figure2.png>
+
+Rys. 3.5-7
+
+Porównajmy teraz moc P,, traconą w oporze wewnętrznym źródła napięcio-
+wego z mocą P;, traconą w przewodności wewnętrznej źródła prądowego oraz

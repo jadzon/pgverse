@@ -1,0 +1,30 @@
+2.1. Wielowrotniki i sieci 191
+
+<image/figury/k4_wzory/k4_page189_formula1.png>
+
+W ogólnym przypadku równania te zawierają równanie nieliniowe (2.1-27), układ jest zatem
+nieliniowy. Z równań tych otrzymujemy, po odpowiednich przekształceniach, równanie:
+
+<image/wzory/k4_page189_formula2.png>
+Jeśli mostek spełnia warunek zrównoważenia:
+
+//k4_page189_formula3.png (2.1-30)
+
+to równanie (2.1-29) oraz równanie (2.1-27) mają jedyne rozwiązanie:
+
+ry/k4_page189_formula4.png (2.1-31)
+
+a więc w elemencie nieliniowym występują zerowy prąd i zerowe napięcie.
+Uwzględniając rezultat (2.1-31) w równaniach (2.1-28) możemy pominąć równanie (2.1-27),
+a więc równania sieciowe stają się równaniami liniowymi (układ jest liniowy). Umożliwia to usunięcie
+z układu z rys. 2.1-15a elementu nieliniowego (rys. 2.1-15b)*”.
+Przykład 2.1-19. Rozpatrzmy układ przedstawiony na rys. 2.1-16a, w którym występują
+
+prostowniki idealne (por. p. 1.3.4-H), a więc elementy rezystancyjne nieliniowe. Układ ten nazywamy
+układem prostowania dwupołówkowego (będzie on analizowany szczegółowo w p. 5.4.2).
+
+<image/figury/k4_page189_figure1.png>
+
+1 Na rys. 2.1-15b pozostawiliśmy zaciski AB rozwarte. Jak wynika z równości (2.1-31) można
+je również zewrzeć, a także włączyć między nie dowolny dwójnik bezźródłowy. cje te nie
+zmieniłyby równań sieciowych (2.1-28).

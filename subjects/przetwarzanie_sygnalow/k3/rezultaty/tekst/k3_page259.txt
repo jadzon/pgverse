@@ -1,0 +1,79 @@
+Granice możliwości 283
+
+ 
+
+W drugim przykładzie zaprojektujemy filtr pasmowoprzepustowy oddzielający ton sygnali-
+
+*zacji w sygnale fonicznym. Chodzi tu np. o oddzielenie sygnału powstającego przy naciśnięciu
+
+przycisku w telefonie. Zakładamy, że sygnał jest przetwarzany na cyfrowy z częstotliwością
+10 kHz, a celem jest wyizołowanie pasma o szerokości 80 Hz wokół częstotliwości 2 kHz.
+Wyrażając te wartości w ułamkach częstotliwości próbkowania, chcemy stłumić wszystkie
+częstotliwości poniżej 0,196 i powyżej 0,204 (co odpowiada częstotliwościom 1960 Hz
+i 2040 Hz). W celu uzyskania pasma przejściowego równego 50 Hz (0,05 częstotliwości
+próbkowania) przyjmiemy długość odpowiedzi impulsowej filtru równą 801 punktów i za-
+stosujemy okno Blackmana. W tablicy 16.2 zamieszczono program do obliczenia odpowie-
+dzi impulsowej filtru, a na rys. 16.6 przedstawiono jego odpowiedź częstotliwościową.
+Projektowanie składa się z kilku etapów. W pierwszym projektuje się dwa filtry dolnoprzepu-
+stowe o częstotliwościach odcięcia 0,196 oraz 0,204. Ten drugi filtr jest następnie poddawa-
+ny inwersji widmowej, w wyniku której staje się filtrem górnoprzepustowym (patrz rozdział
+14, rys. 14.6). Następnie te dwie odpowiedzi impulsowe są sumowane, co daje w rezultacie
+filtr pasmowozaporowy (patrz rys. 14.8). Wreszcie, wykonuje się następną inwersje widmo-
+wą dającą żądany filtr pasmowoprzepustowy.
+
+Granice możliwości
+
+W filtrach okienkowanych funkcją sinc można, bez żadnych kłopotliwych niespodzianek,
+uzyskać niewiarygodnie dobre właściwości. Przyjmijmy na przykład, że chcemy wyodrębnić
+sygnał o wartości | mV pojawiający się na linii energetycznej 120 V. W tym przypadku filtr
+dolnoprzepustowy powinien mieć współczynnik tłumienia w paśmie zaporowym co najmniej
+-120 dB (jedna część na milion — wyjaśnienie dla tych, co nie znoszą decybeli). Jak już
+poprzednio wyjaśniono, okno Blackmana daje tylko —74 dB (jedna część na pięć tysięcy).
+Na szczęście łatwo można uzyskać lepsze tłumienie. Sygnał wejściowy można wstępnie od-
+filtrować, stosując konwencjonalną odpowiedź impulsową filtru okienkowanego funkcją sinc
+i uzyskując w ten sposób sygnał pośredni. Ten sygnał może następnie być jeszcze raz prze-
+puszczony przez ten filtr, co daje dalsze zwiększenie współczynnika tłumienia do —148 dB
+(1 część na 30 milionów, nie byle co!). Można również te dwa stopnie połączyć w jeden filtr.
+Odpowiedź impulsowa tego łączonego filtru będzie równa spłotowi odpowiedzi obu stopni.
+Z tego wynika też, że splatanie dowolnej odpowiedzi impulsowej filtru z samą sobą daje
+w rezultacie odpowiedź impulsową o znacznie lepszym tłumieniu w paśmie zaporowym.
+Ceną, jaką się za to płaci, jest dłuższa odpowiedź impulsowa filtru i wolniejsze opadanie
+charakterystyki. Na rys. 16.7 a) przedstawiono odpowiedź częstotliwościową 201-punktowe-
+go filtru dolnoprzepustowego utworzonego przez splecenie z samą sobą 101-punktowej od-
+powiedzi impulsowej filtru okienkowanego funkcją sinc z oknem Blackmana. Zadziwiająco
+dobre są właściwości takiego filtru! Jeśli rzeczywiście jest niezbędne tłumienie lepsze niż
+-100 dB, to trzeba stosować zapis o podwójnej dokładności. Przy pojedynczej dokładności
+szum zaokrągleń na sygnale w paśmie przepustowym może też błędnie pojawiać się w pa-
+śmie zaporowym z amplitudą w zakresie od —100 dB do —120 dB.
+
+Na rys. 16.7 b) przedstawiono inny przykład filtru okienkowanego funkcją sinc o nie-
+wiarygodnie dobrym działaniu. Jest to filtr dolnoprzepustowy o 32 001-punktowej od-
+powiedzi impulsowej. Odpowiedź częstotliwościowa jest taka, jak można oczekiwać
+- z opadaniem równym 0,000125 częstotliwości próbkowania. Jak dobry jest taki filtr?
+Spróbujcie zbudować analogowy filtr elektroniczny przepuszczający sygnały od napięcia
+stałego (DC) do 1000 Hz z wahaniami mniejszymi od 0,02% i z blokowaniem wszystkich
+częstotliwości powyżej 1001 Hz z pozostałością nie większą niż 0,02%. To jest dopiero
+filtr! Jeśli rzeczywiście chcecie być pod wrażeniem to, pamiętajcie, że w obu filtrach na
+rys. 16.7 zastosowano zapis o pojedynczej dokładności. Zastosowanie podwójnej dokład-
+ności umożliwia zwiększenie poziomu uzyskiwanych parametrów o milion razy.
+
+    
+  
+  
+
+||. Zw 2 mma a
+
+m m m a A WA
+
+0 | „m | 0
+
+az
+
++ aw. wyteresrew were.
+
+Z BIODRO TZ WWE SÓW w mai ra dia Z
+
+HK
+
+UKADAAŁGE :*.
+z - ZZEDOSZZZE JG KE a L- - me 8

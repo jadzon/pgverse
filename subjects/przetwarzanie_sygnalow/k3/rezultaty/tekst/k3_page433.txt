@@ -1,0 +1,30 @@
+Rys. 27.7. Sieć działań kompresji LZW. Zmienna CHAR jest pojedynczym bajtem. Zmienna STRING jest sekwencją
+o zmiennej długości. Dane są odczytywane z pliku wejściowego (ramki 1 i 2) jako pojedyncze bajty i wpisywane do
+skomprymowanego (ramka 4) jako kody 12-bitowe. W tablicy 27.3 podano przykład tego algorytmu
+
+  
+ 
+ 
+ 
+  
+  
+    
+   
+  
+   
+
+27. Kompresja danych
+
+Chociaż ten sposób jest prosty, to są jednak do pokonania dwie przeszkody: 1) jak określić,
+które sekwencje powinny być w tablicy kodowej oraz 2) jak wyposażyć program dekompre-
+sji w taką samą tablicę kodową, jak stosowana w programie kompresji. W algorytmie
+świetnie rozwiązano oba te problemy.
+
+Gdy program LZW zaczyna kodować plik, to tablica kodowa zawiera tylko pierwszych
+wpisów; reszta tablicy pozostaje pusta. To znaczy, że pierwsze słowa kodowe wpisywane
+pliku zakodowanego są po prostu pojedynczymi bajtami z pliku wejściowego przetworzon
+do 12 bitów. W miarę dalszego kodowania algorytm LZW identyfikuje sekwencje
+jące się w danych i dodaje je do tablicy kodowej. Kompresja się zaczyna, gdy algorytm
+raz drugi napotka taką sekwencję. Podstawową sprawą jest to, że sekwencja z pliku wejści
+
+<image/wzory/k3_page433_formula1.png>

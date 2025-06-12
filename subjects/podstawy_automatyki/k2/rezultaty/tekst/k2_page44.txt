@@ -1,0 +1,61 @@
+<image/figury/k2_page44_figure1.png>
+
+Z punktu widzenia oceny jakościowej procesu regulacji przedmiotem
+zainteresowania w fazie ustalonych oscylacji jest ich amplituda,
+częstotliwość oraz wartość średnia. Regulator dwustawny bez korekcji może
+być w uproszczeniu uznany za regulator proporcjonalny.
+
+Sprzężenie zwrotne w układzie regulacji zamyka się przez obiekt cieplny,
+którego właściwości dynamiczne decydują © jakości regulacji,
+ponieważ w wielu przypadkach strefa histerezy regulatora przekaźnikowego
+(dwupołożeniowego) jest pomijalnie mała w stosunku do zakresu zmian
+temperatury.
+
+9.2.4 Regulacja dwustawna z korekcją
+
+W celu zmniejszenia amplitudy oscylacji w stanie ustalonym (związanych
+z częstotliwością przełączeń) należy zmniejszyć okres impulsowania,
+czyli zwiększyć częstotliwość przełączeń. W tym celu element nieliniowy
+obejmuje się sprzężeniem zwrotnym, przez co amplituda oscylacji ulega
+zmniejszeniu, a ich charakter jest zależny od obiektu znajdującego się
+w sprzężeniu.
+
+Jeżeli w gałęzi sprzężenia zwrotnego umieści się element inercyjny pierw-
+szego rzędu (rysunek 9.6), charakterystyka dynamiczna regulatora zostanie
+uformowana na kształt charakterystyki regulatora typu PD.
+
+ZE
+
+<image/figury/k2_page44_figure2.png>
+
+Rys. 9.6: Schemat blokowy układu regulacji dwustawnej z korekcją (PD)
+
+Przy założeniu, że przekaźnik można traktować jako element o bardzo
+dużym wzmocnieniu k,, transmitancja układu otwartego po zamknięciu
+wewnętrznej pętli sprzężenia zwrotnego jest określona wzorem
+
+<image/wzory/k2_page44_formula1.png>
+
+Dla k, — oo przyjmuje on postać
+
+<image/wzory/k2_page44_formula2.png>
+
+a dynamikę regulatora można w przybliżeniu opisać jako
+
+<image/wzory/k2_page44_formula3.png>
+
+gdzie kp = Ę, Ta =TY.
+Przykładowe przebiegi w strukturze z korekcją PD pokazano na rysunku
+
+9.7 wraz ze sposobem przybliżonego wyznaczania parametrów regulatora
+(dla e(t) = e - 1(t)):
+
+<image/wzory/k2_page44_formula4.png>
+
+gdzie indeks oo oznacza wartość zmierzoną w stanie ustalonych oscylacji.
+
+Jeżeli w gałęzi sprzężenia zwrotnego umieści się równoległe połączenie
+elementów inercyjnych pierwszego rzędu (rysunek 9.8), to po wprowadze-
+niu do sumatora jednego z sygnałów ze znakiem przeciwnym charaktery-
+styka dynamiczna regulatora zostanie uformowana na kształt charaktery-
+styki regulatora typu PID.

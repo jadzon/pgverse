@@ -1,0 +1,59 @@
+DSP stałoprzecinkowe a DSP zmiennoprzecinkowe 495
+
+ 
+
+W jaki sposób dokonacie wyboru procesora stało- lub zmiennoprzecinkowego, znając już ich
+zalety i wady? Trzeba tu uwzględnić kilka kwestii. Najpierw zobaczcie, ile bitów zastosowano
+w przetwornikach a/c i c/a. W wielu zastosowaniach 12-14 bitów na próbkę jest rozgranicze-
+niem używania procesora stało- lub zmiennoprzecinkowego. Na przykład w technice TV i dla
+innych sygnałów wizyjnych stosuje się, typowo, przetworniki a/c i c/a 8-bitowe i dokładność
+operacji stałoprzecinkowych jest wystarczająca. Natomiast w profesjonalnych systemach fo-
+nicznych próbkowanie może być nawet 20- lub 24-bitowe i prawie na pewno jest konieczne
+użycie procesora zmiennoprzecinkowego, aby móc uzyskać duży zakres dynamiczny.
+Następną kwestią do rozważenia jest złożoność algorytmu, który ma być zastosowany. Jeśli
+jest dość prosty, to pomyślcie o formacie stałoprzecinkowym:; a jeśli bardziej skomplikowany
+— to o zmiennoprzecinkowym. Na przykład filtracja SOI i inne operacje w dziedzinie czasu
+wymagają tylko kilkudziesięciu wierszy kodu programu i dlatego są odpowiednie do proce-
+sorów stałoprzecinkowych. Algorytmy w dziedzinie częstotliwości zaś, takie jak analiza wid-
+mowa i splot FFT, zawierają wiele szczegółów i mogą być znacznie trudniejsze do zaprogra-
+mowania. Mogą wprawdzie być napisane w formacie stałoprzecinkowym, lecz zastosowanie
+formatu zmiennoprzecinkowego znacznie skróci czas opracowania programu.
+
+W końcu pomyślcie też o pieniądzach — jak istotny jest koszt produktu, a jak ważny koszt
+opracowania programu? Przy wyborze zapisu stałoprzecinkowego koszt produktu będzie zre-
+dukowany, lecz koszt opracowania będzie przypuszczalnie większy z powodu trudniejszych
+algorytmów. Odwrotnie przy zapisie zmiennoprzecinkowym — opracowanie będzie szybsze
+i tańsze, lecz produkt końcowy — droższy.
+
+Kilka głównych trendów rozwoju procesorów DSP zaprezentowano na rys. 28.8. Na
+rys. 28.8 a) przedstawiono wpływ, jaki cyfrowe procesory sygnałowe wywarły na rynek
+systemów wbudowanych (embedded). Są to takie zastosowania, w których mikroprocesor jest
+wykorzystywany do bezpośredniego sterowania jakimś większym systemem, np. telefonem
+komórkowym, kuchenką mikrofalową lub samochodową tablicą rozdzielczą. W odniesieniu
+do takich układów jest często stosowana nazwa „mikrokontroler” (lub po polsku bardziej
+prawidłowo — mikrosterownik — przyp. tłum.), w odróżnieniu od mikroprocesorów stoso-
+wanych w komputerach osobistych. Jak wynika z rys. 28.8 a), ok. 38% projektantów syste-
+mów wbudowanych już zaczęło stosować DSP, a rozważa to dalsze 49%. Duża wydajność
+i możliwości obliczeniowe procesorów DSP powodują, że są często wybierane jako najlepsze
+rozwiązanie w projektach układów wbudowanych.
+
+Jak pokazano na rys. 28.8 b), inżynierów stosujących obecnie procesory sygnałowe stałoprze-
+cinkowe jest dwa razy więcej niż tych stosujących procesory zmiennoprzecinkowe. Zależy to
+jednak w dużym stopniu od rodzaju aplikacji. Procesory stałoprzecinkowe są bardziej popułar-
+ne w rynkowym sprzęcie powszechnego użytku, gdzie koszt elektroniki musi być bardzo niski.
+Dobrym przykładem są tu telefony komórkowe. Gdy producent musi konkurować z innymi,
+aby sprzedać miliony sztuk swojego wyrobu, to kilkudolarowa różnica kosztu może decydować
+o sukcesie lub porażce. Procesory zmiennoprzecinkowe są zaś częściej używane wówczas, gdy
+jest wymagane lepsze działanie, a koszt nie jest istotny. Przyjmijcie na przykład, że projektu-
+jecie medyczny system obrazowy, taki jak tomograf komputerowy. Sprzedaje się tylko kilkaset
+sztuk danego modelu takiego urządzenia, w cenie po kilkaset tysięcy dolarów. W takiej apli-
+kacji koszt procesora DSP jest nieznaczący, ale jego dobre działanie ma decydujące znaczenie.
+Najszybciej rozwijającym się sektorem rynku DSP są jednak procesory zmiennoprzecinkowe,
+mimo że obecnie w użyciu jest wielka liczb procesorów stałoprzecinkowych. Jak pokazano
+na rys. 28.8 c), więcej niż połowa inżynierów stosujących układy 16-bitowe zamierza przejść
+w najbliższej przyszłości na systemy zmiennoprzecinkowe.
+
+Przed odejściem od tego tematu powinniśmy raz jeszcze podkreślić, że w procesorach zmien-
+no- i stałoprzecinkowych stosuje się na ogół — odpowiednio — 32 bity łub 16 bitów — lecz nie
+zawsze. Na przykład w procesorach rodziny SHARC liczby są reprezentowane w 32-bito-
+wym zapisie stałoprzecinkowym, a więc w trybie przyjętym w cyfrowych systemach audio.

@@ -1,0 +1,29 @@
+136
+
+<image/figury/k2_page131_figure2.png>
+
+s A s. 6.31: Uczenie sieci neurono-
+figu ry/k2_page 1 3 1 _figure 1 .png j metodą propagacji wstecznej:
+klasyfikowane znaki, (b) prze-
+gi błędu w procesie uczenia dla
+
+ku różnych współczynników 7
+
+przeciwnym razie, co jest równoważne zastąpieniu układzie neuronów ciągłych neu-
+ronami dyskretnymi. Badana sieć zawierała 12 unipolarnych neuronów o ciągłych
+funkcjach aktywacji z parametrami A = 1.
+
+Przeprowadzono 200 cykli uczenia sieci dla kilku wartości współczynnika 7, po
+których uzyskano następujące błędy łączne:
+
+<image/wzory/k2_page131_formula1.png>
+
+Przebieg uczenia pokazano na rys. ??b. Z rysunku widać wyraźnie wpływ współ-
+czynnika 7) na szybkość uczenia. Zbyt duża jego wartość (7 = 4) powoduje duże
+oscylacje i przeregulowania i w efekcie duży błąd końcowy. Pośrednie wartości (7 = 2
+lub 1) powodują, pomimo niewielkich oscylacji, szybkie osiąganie małych wartości
+błędu. Wreszcie zbyt małe wartości (7 = 0,5 lub 0,25) powodują systematyczne i
+bez oscylacji, ale powolne malenie błędu, który po ustalonej liczbie kroków pozostaje
+jednak stosunkowo duży. Widać więc, że w omawianym przykładzie optymalnymi
+wartościami współczynnika 7 było 2 lub 1. Kontynuując proces uczenia poza przy-
+jęte 200 cykli, uzyskiwano małe wartości błędu także dla wolniej zbieżnych procesów

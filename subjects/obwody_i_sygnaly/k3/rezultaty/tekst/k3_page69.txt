@@ -1,0 +1,41 @@
+1.3. Elementy nieliniowe 69
+
+rozważanych w teorii obwodów. Charakterystyki te są często wykorzystywane do aproksymacji
+charakterystyk diod rzeczywistych (np. półprzewodnikowej diody krzemowej PN — rys. 1.3-27a
+i diody Schottky'ego — rys. 1.3-27b).
+
+c) q
+
+  
+
+p]
+
+<image/figury/k3_page69_figure1.png>
+
+ 
+
+Rys. 1.3-27
+
+Przyklad 1.3-14. Na rys. 1.3-27c jest pokazany wykres typowej charakterystyki diody
+pojemnościowej PN (warikapu lub waraktora).
+Dioda pojemnościowa jest elementem pojemnościowym, którego charakterystyka Fo(u, q) = 0
+jest opisana funkcją (por. [5], str.199):
+
+<image/wzory/k3_page69_formula1.png>
+
+gdzie g, jest napięciem dyfuzyjnym (od 0,2 V do 0,9 V w zależności od technologii wykonania), zaś
+m = 1/2 dla złącza skokowego lub m = 1/3 dla złącza liniowego.
+
+Charakterystyka diody pojemnościowej jest określona jedynie dla napięć u < o, (dla napięć
+u > gz dioda zachowuje się jak opór nieliniowy). W praktyce diody pojemnościowe pracują przy
+polaryzacji wstecznej, tzn. dla napięć ujemnych w zakresie ue (u,,,, u„.. ) zaznaczonym na rys.
+1.3-27e (dla typowej diody pojemnościowej u,,, = — 25 V, u, = — 2 V). W tym zakresie napięć
+charakterystyka diody pojemnościowej jest często aproksymowana charakterystykami pojemności
+nieliniowych:
+
+<image/wzory/k3_page69_formula2.png>
+
+Przykład 1.3-15. Na rys. 1.3-27d jest przedstawiony element nazywany złączem Josephsona.
+Złącze to składa się z dwóch warstw nadprzewodnika (N) oddzielonych warstwą izolatora (7).
+Zgodnie z prawami fizyki nadprzewodników prąd i w złączu Josephsona zmienia się sinusoidalnie
+w funkcji strumienia w:

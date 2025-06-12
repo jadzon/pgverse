@@ -1,0 +1,31 @@
+<image/tabele/k4_page110_table1.png>
+
+Polecenie przypisania zastępuje wartość bieżącą zmiennej (pojedynczej lub
+wieloelementowej) przez wynik obliczenia wyrażenia. Składa się ono z nazwy
+zmiennej, operatora przypisania := oraz wyrażenia. Jeżeli zmienna jest wieloele-
+mentowa (np. typu ANAŁOG_CHANNEL_CONFIGURATION zdefiniowanego
+w Tab. 2.8), to wszystkie elementy tej zmiennej przyjmą odpowiednie wartości
+wyrażenia, które powinno być tego samego typu jak zmienna. Polecenie przypi-
+sania jest także wykorzystywane przy nadawaniu wartości funkcji w ciele funkcji
+przez umieszczenie nazwy funkcji po lewej stronie operatora := , jak pokazano
+w przykładzie a) z Tab. 2.17.
+
+Wywołanie funkcji odbywa się na drodze wprowadzenia do wyrażenia jej nazwy
+z listą argumentów umieszczoną w nawiasach, jak pokazano w Tab. 2.58.
+Wywołanie bloku funkcyjnego za pomocą polecenia zawierającego nazwę bloku
+oraz umieszczone w nawiasach podstawienia wartości dla parametrów wejścio-
+wych (por. Tab. 2.59). Powrót z funkcji lub bloku funkcyjnego następuje po
+dojściu do ich fizycznego końca albo przez polecenie RETURN, które jest zwykle
+wynikiem wykonania polecenia /F.
+
+Polecenia wyboru /F oraz CASE umożliwiają wykonanie jednego polecenia (lub
+grupy poleceń) w zależności od spełnienia określonego warunku.
+
+W poleceniu /F określona grupa połeceń będzie wykonana tylko w przypadku,
+gdy skojarzone z poleceniem wyrażenie logiczne przyjmie wartość /. Jeżeli wa-
+runek nie jest spełniony, to albo nie jest wykonywane żadne polecenie, albo
+wykonana jest grupa poleceń występujących po słowie kluczowym ELSE (lub
+słowie ELSEIF, jeśli skojarzony z nim warunek jest spełniony). W Tab. 2.59
+
+A EEEE EK ZEE RJ
+110 Rozdział : 2.Programowanie sterowników PLC

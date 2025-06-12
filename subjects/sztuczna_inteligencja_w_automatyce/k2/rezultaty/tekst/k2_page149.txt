@@ -1,0 +1,38 @@
+<image/figury/k2_page149_figure1.png>
+
+Rys. 6.50: Przystępna książka opisująca metody SVM
+
+6.6. Metody wektorów wspierających (SVM)
+
+Metody wektorów wspierających (ang. support vector machines (SVM)) konstruują
+klasyfikatory z tzw. największym marginesem. Omówione zostaną sposoby postępo-
+wania w przypadku klas liniowo separowalnych, a następnie rozszerzenie metod na
+przypadki klas nie separowalnych liniowo.
+
+6.6.1. Klasyfikacja dwóch klas liniowo separowalnych
+
+Hiperpłaszczyzna wspierająca (klasę) — hiperpłaszczyzna równoległa do hiperpłasz-
+czyzny decyzyjnej i taka, że wszystkie punkty reprezentujące daną klasę leżą po jej
+jednej stronie i przynajmniej jeden punkt należący do tej klasy leży na tej hiper-
+płaszczyźnie.
+
+Odległość pomiędzy dwoma hiperpłaszczyznami wspierającymi nazywa się mar-
+ginesem.
+
+Klasyfikator z największym marginesem — klasyfikator którego hiperpłaszczyzna
+decyzyjna jest równoodległa od dwóch hiperpłaszczyzn wspierających z największym
+możliwym marginesem (rys, ??).
+
+Omówiona zostanie teraz metoda znajdywania hiperpłaszczyzny decyzyjnej. Przyj-
+mujemy, że zadany jest zbiór uczący zawierający obrazy należące do dwóch liniowo
+separowalnych klas:
+
+<image/wzory/k2_page149_formula1.png>
+
+Przyjmijmy. że hiverbłaszczvzna decvzvina dana iest wzorem
+
+<image/wzory/k2_page149_formula2.png>
+Stąd, nie tracąc na ogólności, równania dwóch hiperpłaszczyzn wspierajacych mogą
+mieć posta
+
+<image/wzory/k2_page149_formula3.png>

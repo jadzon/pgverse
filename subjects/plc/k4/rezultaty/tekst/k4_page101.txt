@@ -1,0 +1,41 @@
+<image/tabele/k4_page101_table2.png>
+
+Jak pokazano w przykładzie w Tab. 2.53, język listy instrukcji IL składa się
+z sekwencji instrukcji, z których każda powinna zaczynać się w nowej linii. In-
+strukcja powinna zawierać nazwę operatora z ewentualnymi modyfikatorami
+oraz operand (jeden lub więcej, oddzielone przecinkami, w załeżności od wyma-
+gań operatora). Operandami mogą być stałe lub zmienne reprezentowane
+w jakikolwiek sposób opisany w punkcie 2.2.
+
+Instrukcja może być poprzedzona przez etykietę zakończoną dwukropkiem, na-
+tomiast ewentualny komentarz powinien być ostatnim elementem linii. Między
+instrukcjami można wprowadzać puste linie.
+
+<image/tabele/k4_page101_table1.png>
+
+Listę standardowych operatorów i dozwolonych modyfikatorów przedstawiono
+w Tab. 2.54. O ile nie określono tego w tabeli inaczej, to poszczególne operatory
+działają w ten sposób, że wartość wyrażenia jest obliczana jako wynik działania
+operatora na wartość bieżącą wyrażenia z uwzględnieniem wartości operandu,
+np. instrukcję AND %/X1 należy interpretować jako
+
+wynik := wynik AND %lX1.
+
+Modyfikator N oznacza logiczną negację operandu. Np. instrukcję ANDN %/X2
+należy interpretować jako
+wynik := wynik AND NOT %IX2.
+
+Modyfikator ( oznacza, że jako operatora należy użyć wynik wykonania kolej-
+nych instrukcii aż do napotkania operatora ). np. ciąg instrukcji:
+
+<image/wzory/k4_page101_formula1.png>
+
+należy interpretować jako
+wynik := wynik AND (%1X1 OR %IX2).
+
+Modyfikator C oznacza, że instrukcja powinna być wykonana tylko wtedy, gdy
+wartość bieżąca wyniku jest logiczną 7 (lub O, jeśli użyto także modyfikatora N).
+
+ 
+
+2.7 Język instrukcji IL 101

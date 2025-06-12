@@ -1,0 +1,7 @@
+<image/figury/k4_page46_figure1.png>
+
+<image/figury/k4_page46_figure2.png>
+
+Tab. 2.13 Przykłady deklaracji zmiennych
+
+wzory/k4_page46_formula1.pnq

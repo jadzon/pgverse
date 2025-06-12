@@ -1,0 +1,38 @@
+34 3. Podstawy techniki cyfrowej
+.... .  ,  _ „ „Ź,„n=—„—„—„_„__ Ao ddawy IE cylrowej
+
+nik Q, zmienia swój stan przy każdym impulsie pojawiającym się na wyjściu przerzutni-
+ka Q,. Wykres czasowy na rysunku 3.32b ilustruje przebiegi zmian przerzutników na tle
+przebiegu zegarowego. Założono, że przerzutnik zmienia stan w czasie dodatniego (z O na
+l) zbocza wejścia zegarowego. Okres licznika (liczba stanów) wynosi 8, a kolejność
+stanów przedstawiana w kodzie binarnym zmienia się według porządku 7, 6, 5, 4, 3, 2, 1
+10. Taki licznik nazywa się licznikiem poprzednikowym (ang. up-down counter).
+
+<image/figury/k3_page44_figure4.png>
+
+Na rysunku 3.33a przedstawiono licznik działający na podobnej zasadzie tylko z in-
+nym wysterowaniem wejść zegarowych. Sekwencja takiego układu to stany O, 1, 2, 3, 4, 5,
+6 i 7. Taki licznik nazywa się licznikiem następnikowym (ang. bottom-up counter).
+Niekiedy istnieje potrzeba dynamicznej (w czasie pracy licznika) zmiany kierunku liczenia
+(poprzednikowy na następnikowy lub odwrotnie). Można to osiągnąć wprowadzając dodat-
+kowe wejście sterujące, a takie liczniki są nazywane licznikami rewersyjnymi.
+
+Przedstawione liczniki są licznikami szeregowymi (asynchronicznymi), gdyż zmiany
+stanów kolejnych przerzutników następują z pewnym opóźnieniem względem siebie. Może
+to powodować pewne niekorzystne zjawiska, szczególnie podczas dekodowania stanów
+(hazard — powstawanie na wyjściach dekodera impulsów fałszywych). Dlatego często
+stosuje się liczniki równoległe (synchroniczne), w których wszystkie przerzutniki zmienia-
+ją swoje stany jednocześnie, synchronicznie z przebiegiem zegarowym.
+
+Na rysunku 3.34 pokazano wejścia i wyjścia typowego 4-bitowego licznika. Licznik
+jest wyposażony w wejście zegarowe CLK oraz w cztery wejścia sterujące. Wejście steru-
+jące LD (ang. load) jest wejściem synchronicznym i służy do wpisywania danych z wejść
+D,rD,. Wejście zerujące CLR (ang. clear) jest także wejściem synchronicznym. Ponadto
+są dwa wejścia dostępu: CEP (ang. count enable parallel) umożliwiające zliczanie i CET
+(ang. count enable trickle) umożliwiające powstanie przeniesienia TC (ang. terminal
+count). Wyjście TC służy do rozbudowywania licznika, tj. do łączenia go z innymi takimi
+samymi układami.
+
+<image/figury/k3_page44_figure1.png>
+
+Rysunek 3.34. Typowy licznik czterobitowy

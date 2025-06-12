@@ -1,0 +1,30 @@
+Niedogodności współrzędnych biegunowych
+
+ 
+
+<image/tabele/k3_page149_table1.png>
+
+Niedogodność 6 — moduł jest zawsze dodatni (niejednoznaczność fazy równa n)
+Na rys. Oo ana
+i biegunowych. Przebieg części rzeczywistej jest gładki i zupełnie łatwy do zrozumienia,
+RSS OWE edo ke poc zoo: Sygnały zaś we współrzędnych biegu-
+nowych zawierają nagłe nieciągłości i ostre naroża. Przyczyną jest moduł, który z definicji
+zawsze jest dodatni. Gdy tylko część rzeczywista staje się mniejsza od zera, moduł pozostaje
+dodatni przez zmianę fazy o x (lub —x, co daje taki sam skutek). Nieregularne krzywe nie są
+żadnym problemem w matematyce, ale mogą być trudne do interpretacji.
+Jednym z rozwiązań tego problemu jest przyzwolenie na to, aby moduł miał wartości
+ujemne. W przykładzie z rys. 8.13 spowodowałoby to, że moduł miałby taki sam prze-
+bieg, jak część rzeczywista, podczas gdy faza byłaby całkowicie zerowa. Nie ma w tym
+nic złego, o ile tylko pomaga w zrozumieniu. Zwracajcie jednak uwagę, aby sygnału
+o ujemnych wartościach nie nazywać „modułem”, gdyż łamałoby jego formalną defini-
+cję. W tej książce nazwa rozwinięty moduł jest używana do określenia „modułu”, który
+może przyjmować wartości ujemne.
+
+<image/figury/k3_page149_figure1.png>
+
+Rys. 8.12. Przyktad rozwijania fazy. e
+
+przez konwersję współrzędnych prostokątnych na biegunowe. Wartości lego sygnału muszą mieścić się
+między -nt i m (tj. -3,14159 i 3,14159). Jak pokazano na dolnej krzywej, faza może zostać rozwinięta
+przez dodanie lub odjęcie od każdej próbki catkowitych wielokrotności 2n. Wielokrotność jest tak wybra-
+na, aby zminimalizować nieciągłości między punktami

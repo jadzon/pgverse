@@ -1,0 +1,28 @@
+15. Prawa Kirchhoffa i lączenie elementów 101
+
+<image/figury/k4_page99_figure1.png>
+
+W wyniku połączenia szeregowego otrzymujemy:
+<image/wzory/k4_page99_formula1.png>
+gdzie:
+
+<image/wzory/k4_page99_formula2.png>
+
+Równanie to określa charakterystykę nowego elementu (rys. 1.5-10):
+
+<image/wzory/k4_page99_formula3.png>
+gdzie:
+rzory/k4_page99_formula4.png (1.5-27)
+
+Połączenie szeregowe indukcyjności jest indukcyjnością określoną równa-
+niami (1.5-26) i (1.5-27).
+
+W przypadku szczególnym, kiedy wszystkie łączone indukcyjności są liniowe,
+otrzymujemy, zgodnie z równaniem (1.5-25):
+
+<image/wzory/k4_page99_formula5.png>
+a więc:
+ory/k4_page99_formula6.png (1.5-29)
+
+Wzór (1.5-29) określa indukcyjność nowego elementu powstałego w wyniku
+połączenia szeregowego n indukcyjności liniowych L,, k= 1,2,...,n.

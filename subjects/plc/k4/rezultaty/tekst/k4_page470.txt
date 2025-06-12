@@ -1,0 +1,22 @@
+(0..10 V) oraz różnice zakresów napięć modułu wyjść analogowych sterownika
+(-10..+10 V) w stosunku do zakresu elementów wykonawczych (0..10 V) zaist-
+niała konieczność przeskalowania sygnałów sterowniku. Sposób przeskalowania
+
+podaje Tab. 8.14.
+
+<image/figury/k4_page470_figure1.png>
+
+Rys. 8.19 Schemat układu regulacji temperatury w reaktorze chemicznym z wykorzy-
+staniem bloku PID2 sterownika Modicon 984
+
+Tekst programu w języku ŁD realizującego zadanie sterowania procesem wsa-
+dowym przedstawiono na Wyd. 8.136 - Wyd. 8.160.
+
+Numeric Cross Re
+REF: SYMBOL:
+
+<image/figury/k4_page470_figure3.png>
+
+ 
+
+470 Rozdział : 8.Programy przykładowe

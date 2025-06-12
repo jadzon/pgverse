@@ -1,0 +1,31 @@
+Właściwą minimalizację przeprowadzamy, sklejając jedynki (dla postaci alterna-
+tywnej) lub zera (dla postaci koniunkcyjnej), i otrzymujemy:
+
+<image/wzory/k1_page94_formula1.png>
+
+DIoSUJĄC prawa TOZQZIEiNOSC!I I pocnfaniania, przeKsztaicając y = (X; + Xx3)(2X + X),
+
+otrzymujemy
+
+<image/wzory/k1_page94_formula2.png>
+
+Stąd wniosek, że postać koniunkcyjna jest równoważna postaci alternatywnej.
+Schemat logiczny układu z zastosowaniem bramek NAND przedstawia rysu-
+nek 2 31
+
+<image/wzory/k1_page94_formula3.png>
+
+<image/figury/k1_page94_figure1.png>
+
+Rys. 2.31. Schemat logiczny z bramek NAND
+
+Schemat logiczny układu z zastosowaniem bramek NOR przedstawia rysu-
+nek 2.32.
+
+<image/wzory/k1_page94_formula4.png>
+
+<image/figury/k1_page94_figure2.png>
+
+Rys. 2.32. Schemat logiczny z bramek NOR
+
+96

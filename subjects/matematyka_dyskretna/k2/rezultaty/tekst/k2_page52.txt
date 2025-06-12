@@ -1,0 +1,43 @@
+1.11. Przestawienia 17
+
+Aby policzyć moc sumy zbiorów
+
+<image/wzory/k2_page52_formula1.png>
+możemy wykorzystać wzór (??), przy założeniu, że X = UJ;_, A;. Mamy wtedy
+Twier*=7%*= 110
+
+<image/wzory/k2_page52_formula2.png>
+
+111 Przestawienia
+
+Przestawieniem będziemy nazywać permutację bez punktu stałego, czyli taką permutację,
+w której żaden element nie stoi na swoim miejscu. Wykorzystamy teraz zasadę włączania
+i wyłączania, do policzenia liczby przestawień w zbiorze n-elementowym.
+
+Twierdzenie 1.17 Liczba przestawień (permutacji bez punktów stałych) w zbiorze n-
+elementowvm wvnosi:
+
+<image/wzory/k2_page52_formula3.png>
+
+Dowód. Niech X będzie zbiorem wszystkich permutacji na zbiorze f1,... „n), a A;
+zbiorem permutacji, w których ż jest punktem stałym, to znaczy (i) = i. Moc zbioru A;
+wynos
+
+<image/wzory/k2_page52_formula4.png>
+
+poniewaz w zbiorze A; są te permulacje, ktore permutują wszystkie n — 1 elementów
+oprócz i-tego. Podobnie moc zbioru A, wynosi:
+
+<image/wzory/k2_page52_formula5.png>
+
+bo teraz w A; permutujemy n — ; elementów, wszystkie oprócz tych, które należą do 7.
+Permutacje bez punktów stałych to te permutacje, które nie należą do żadnego ze zbiorów
+A;. Z zasady włączania i wyłączania ich liczba wynosi:
+
+<image/wzory/k2_page52_formula6.png>
+Pogrupujmy teraz składniki według mocy zbiorów 7. Mamy (7) podzbiorów mocy ;. Dla
+każdego z nich składnik sumy wynosi (—1)'(n — ;)!, tak więc liczba przestawień wynosi:
+
+<image/wzory/k2_page52_formula7.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

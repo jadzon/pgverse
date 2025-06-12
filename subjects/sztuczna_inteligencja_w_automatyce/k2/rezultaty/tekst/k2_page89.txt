@@ -1,0 +1,44 @@
+94
+
+<image/figury/k2_page89_figure1.png>
+
+Rys. 5.17: Cztery typy wnioskowania w sieciach bayesowskich. Wszystkie one polegają na
+wyznaczaniu prawdopodobieństwa p(Z|F'), gdzie Z jest zmienną, której prawdopodobień-
+stwo chcemy otrzymać (zmienną reprezentującą zapytanie), a F jest zmienną reprezentu-
+jącą zaistniały fakt
+
+5.2.3. Algorytmy wnioskowania w siecach bayesowskich
+
+W punkcie ?? pokazano, że struktura sieci wraz z zadanymi prawdopodobieństwami
+warunkowymi stanowią opis równoważny prawdopodobieństwu łącznemu. Prowa-
+dzi to do algorytmu wyznaczania dowolnego prawdopodobieństwa polegającego na
+wyznaczeniu rozkładu łącznego, a następnie na jego podstawie dowolnego rozkładu
+poszukiwanego.
+
+Ilość danych potrzebna do opisu sieci wraz z zadanymi prawdopodobieństwami
+warunkowymi jest znacznie mniejsza od ilości danych potrzebnych do opisu prawdo-
+podobieństwa łącznego. Z tego powodu algorytm wnioskowania polegający na wy-
+znaczeniu najpierw rozkładu łącznego, a następnie rozkładów poszukiwanych, które
+też mogą zawierać niewielką ilość danych jest nieefektywny, gdyż rozpoczynając się
+od niewielkiej liczby danych, generuje ich dużą liczbę aby w wyniku znowu otrzymać
+niewielką liczbę danych.
+
+Znaleziono algorytmy pozwalające bezpośrednio wyznaczyć poszukiwany dowolny
+rozkład prawdopodobieństwa bez konieczności przechodzenia przez rozkład łączny
+(patrz rys. ??). Algorytmy te ze względu na ich złożony opis nie będą tu omawiane.
+
+Oprócz algorytmów dokładnych często stosuje się metody symulacji stochastycz-
+nej (metody Monte Carlo).
+
+W metodach symulacji stochastycznej najpierw losowo generuje się wartości ko-
+rzeni drzewa zgodnie z zadanymi prawdopodobieństwami, a następnie generuje się
+wartości pozostałych węzłów zgodnie z zadanymi prawdopodobieństwami warunko-
+wymi. Na podstawie otrzymanych wartości oblicza się poszukiwane częstości, które
+dla dużej liczby eksperymentów zmierzają do odpowiednich prawdopodobieństw.
+
+PRZYKŁAD 5.14
+
+Dla sieci z rys. ?? przeprowadzono symulację stochastyczną. Wykresy błędów otrzy-
+mywanych prawdopodobieństw w funkcji liczby kroków symulacji przedstawiono na
+rys. ??, a otrzymane końcowe wyniki oraz wyniki dokładnych obliczeń przedsta-
+wiono w tablicy ??. |

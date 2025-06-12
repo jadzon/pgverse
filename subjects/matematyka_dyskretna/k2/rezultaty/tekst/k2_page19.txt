@@ -1,0 +1,41 @@
+4 Rozdział 1. Arytmetyka
+
+gdzie d; są cyframi należącymi do zbioru /0,..., 9).
+Liczby można też zapisywać w systemach z inną bazą. Jeżeli za bazę systemu wybie-
+rzemy liczbę b, to potrzebujemy b cyfr, a zapis:
+
+<image/wzory/k2_page19_formula1.png>
+
+oznacza w systemie z bazą b liczbę:
+
+<image/wzory/k2_page19_formula2.png>
+
+którą możemy też zapisać w postaci:
+<image/wzory/k2_page19_formula3.png>
+
+1.2 System dwójkowy
+
+W informatyce bardzo ważnym systemem jest system dwójkowy (binamy), gdzie pod-
+stawą jest liczba 2 i gdzie mamy tylko dwie cyfry, 0 i 1 (cyfry w systemie dwójkowym
+nazyw” ża kiknneż) Paożm
+
+<image/wzory/k2_page19_formula4.png>
+
+ozn
+
+<image/wzory/k2_page19_formula5.png>
+
+lub:
+<image/wzory/k2_page19_formula6.png>
+
+Przykład 1.1 Zapis 110 oznacza w systemie dwójkowym liczbę:
+<image/wzory/k2_page19_formula7.png>
+czemu w systemie dziesiętnym odpowiada 4 + 2 = 6. Podobnie zapis:
+1101101
+oznacza w systemie dziesiętnym liczbę 64 + 32 + 8 + 4 + 1 = 109.
+Poniżej w pierwszej tabeli przedstawiono siedemnaście kolejnych liczb w postaci dwój-
+
+kowej i dziesiętnej, a w drugiej jedenaście pierwszych potęg liczby 2 w postaci dwójkowej
+i dziesiętnej.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

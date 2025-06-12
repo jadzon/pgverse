@@ -1,0 +1,61 @@
+42
+
+Sposób odczytu zapasu fazy i zapasu wzmocnienia z wykresu Nyquista
+pokazano na rysunku 4.4, a z wykresów Bodego na rysunku 4.4.
+Odczyt zapasu stabilności (tutaj: zapasu modułu i fazy) z wykresu Nicholsa
+jest zgodny z definicją.
+
+<image/figury/k2_page22_figure2.png>
+
+Rys. 4.4: Wyznaczanie zapasu fazy i zapasu wzmocnienia na wykresie Nyquista
+
+<image/figury/k2_page22_figure3.png>
+
+ 
+
+43
+
+4.3 Przebieg ćwiczenia
+
+4.3.1 Wpływ wzmocnienia obiektów na przebieg charakterystyk
+częstotliwościowych
+
+Określić wpływ wartości wzmocnienia k na stabilność układu zamknię-
+tego dla obiektów:
+
+e dwuinercyjnego z astatyzmem,
+
+e dwuinercyjnego,
+
+e inercyjnego n-tego rzędu,
+
+e dwukrotnie całkującego z inercją,
+
+wybierając dla zmienianego parametru trzy wartości (jeżeli jest to możliwe,
+tak aby układ zamknięty był: stabilny, na granicy stabilności oraz niesta-
+bilny). Dla każdego z przypadków przeanalizować wpływ stanu stabilności
+na odpowiedź skokową układu zamkniętego.
+
+4.3.2 Zapas stabilności
+
+Dla obiektu o zadanych parametrach określić zapas stabilności,
+zaznaczając odpowiednie wartości na charakterystyce Nyquista, Bodego
+oraz Nicholsa.
+
+4.3.3 Metoda linii pierwiastkowych
+
+Określić wpływ wartości wzmocnienia k na stabilność układu zamknię-
+tego dla obiektów:
+
+e trzeciego rzędu z astatyzmem,
+
+e czwartego rzędu z astatyzmem.
+
+4.3.4 Sprawozdanie
+Sprawozdanie powinno zawierać:
+
+— charakterystyki częstotliwościowe wraz z opisem wpływu wzmocnie-
+nia na stabilność układu zamkniętego (polecenie 4.3.1);
+
+— charakterystyki częstotliwościowe obiektu o zadanych parametrach
+wraz z zaznaczonym na nich zapasem stabilności (polecenie 4.3.2);

@@ -1,0 +1,55 @@
+12. Szybkie przekształcenie Fouriera
+
+<image/tabele/k3_page202_table1.png>
+
+jącego zrozumienie tej symetrii. W praktyce wprowadza się widmo częstotliwościowe rzeczy-
+wistego DFT do próbek od 0 do N/2 w matrycach zespolonego DFT i następnie korzysta się
+z podprogramu do wytworzenia częstotliwości ujemnych w próbkach od N/2 + 1 do N — 1. Taki
+program zamieszczono w tablicy 12.1. W celu sprawdzenia, czy istnieje właściwa symetria,
+należy — po wykonaniu odwrotnego przekształcenia FFT — przyjrzeć się części urojonej w dzie-
+dzinie czasu. Powinna ona zawierać same zera, jeśli wszystko jest w porządku (poza szumem
+o wartości kilku części na milion, przy użyciu obliczeń o pojedynczej dokładności).
+
+Jak działa FFT
+
+FFT jest skomplikowanym algorytmem i poznanie jego szczegółów pozostawia się zwykle
+tym, którzy specjalizują się w tej problematyce. W tym podrozdziale będzie opisane ogólne
+działanie FFT, jednak z ominięciem jednego istotnego zagadnienia — zastosowania liczb zespo-
+lonych. Jeśli jednak macie odpowiednie przygotowanie z matematyki liczb zespolonych, to
+możecie między wierszami wyczytać prawdziwą naturę tego algorytmu. Nie martwcie się, jeśli
+nie wychwycicie niektórych szczegółów. Bardzo niewielu naukowców i inżynierów potrafi od
+ręki napisać program FFT.
+
+W zapisie zespolonym każda z dziedzin — tak czasu, jak i częstotliwości — zawiera jeden
+sygnał złożony z N punktów zespolonych. Każdy z tych punktów zespolonych zawiera
+dwie liczby, wyrażające część rzeczywistą i część urojoną. Na przykład, gdy mówimy o ze-
+
+spolonej próbce X[42], odnosi się to do kombinacji Re X[42] i Im X[42]. A zatem każda:
+zmienna zespolona zawiera dwie liczby. W przypadku mnożenia dwóch zmiennych zespo--
+lonych trzeba wykonać kombinację czterech oddzielnych składników w celu utworzenia
+dwóch czynników iloczynu (takich jak we wzorze 9.1). W poniższych rozważaniach na
+temat „Jak działa FFT” zastosowano specyficzne słownictwo związane z zapisem zespo-
+
+lonym. W tym języku pojęcia sygnał, punkt, próbka i wartość odnoszą się do kombinacjij
+
+części rzeczywistej i urojonej.
+
+FFT działa na zasadzie rozłożenia N-punktowego sygnału w dziedzinie czasu na N Giwi
+
+też w dziedzinie czasu, z których każdy zawiera jeden punkt. Następnym krokiem jest obli-
+
+czenie N widm częstotliwościowych odpowiadających tym N sygnałom w dziedzinie czasu.
+
+Wreszcie, N widm podlega syntezie, tworząc jedno widmo częstotliwościowe.
+
+Na rys. 12.2 przedstawiono przykład rozkładu w dziedzinie czasu z zastosowaniem FFT.
+W tym przykładzie 16-punktowy sygnał jest rozkładany w czterech etapach. W pierwszym
+
+etapie 16-punktowy sygnał jest rozdzielany na dwa sygnały 8-punktowe. W drugim eta-
+pie dane są rozkładane na cztery sygnały zawierające po 4 punkty. Takie rozkładanie jest
+
+kontynuowane aż do uzyskania N sygnałów zawierających po jednym punkcie, Za każdy
+
+razem, gdy sygnał jest dzielony na dwa, stosuje się rozkład z przeplotem, a więc sygnał
+
+jest rozdzielany na próbki o numerach parzystych i nieparzystych. Najlepszym sposobem

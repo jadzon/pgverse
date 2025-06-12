@@ -1,0 +1,27 @@
+5.7 Funkcje relacji
+
+Sprawdzanie relacji równości, większości i mniejszości może być dokonywane
+na danych pochodzących z plików danych różnego typu. Poniżej pokazane są
+funkcje relacji na elementach pliku liczników C5 oraz na wartościach stałych.
+
+Porównanie dwóch liczb przez maskę realizuje funkcja MEQ (Masked EQual)
+
+przestawiona na Wyd. 4.25. Jeżeli w wyniku porównania otrzymamy zgodność,
+wówczas wyjście funkcji MEQ przyjmuje wartość 1.
+
+<image/tabele/k4_page261_table2.png>
+
+Wyd. 4.25 Instrukcja porównania z maskowaniem MEQ
+Funkcja EQU (EQUa/) porównuje dwie wartości słów: Source A i Source B,
+jeżeli wartości te są równe (A=B), na wyjściu pojawia się wartość 1 (Wyd. 4.26).
+
+Natomiast funkcja NEQ (Not EQual) daje 1, gdy wartości nie są równe
+(A£B).(Wyd. 4.27).
+
+<image/tabele/k4_page261_table1.png>
+
+Wyd. 4.26 Instrukcja testowania równości EQU
+
+ 
+
+5.7 Funkcje relacji 261

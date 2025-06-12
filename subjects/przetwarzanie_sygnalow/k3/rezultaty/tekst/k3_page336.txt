@@ -1,0 +1,32 @@
+Aparaty fotograficzne i oczy 367
+
+<image/figury/k3_page336_figure1.png>
+
+siatkówki. Po pierwsze, do bocznej części plamki żółtej przylega nerw wzrokowy i warstwy
+pośredniczące, dzięki czemu receptory są bardziej bezpośrednio wystawione na działanie pa-
+dającego światła. To powoduje, że plamka żółta ma wygłąd niewielkiego wgłębienia w siat-
+kówce. Po drugie, w plamce żółtej znajdują się tylko czopki, upakowane znacznie gęściej niż
+w pozostałej części siatkówki. Brak pręcików w plamce żółtej wyjaśnia, dlaczego widzenie
+nocne jest często lepsze, gdy na obiekt patrzy się z boku, zamiast na wprost. Po trzecie, na
+każde włókno nerwu wzrokowego oddziałuje tylko kilka czopków, co daje dobrą zdolność
+lokalizacji. Plamka żółta jest zadziwiająco mała. Przy zwykłej odległości, jak przy czytaniu,
+plamka żółta widzi tylko obszar o średnicy | mm, mniejszy od rozmiaru ER litery!
+W tym obszarze rozdzielczość jest równoważna siatce ok. 20 x 20 pikseli.
+
+Wzrok ludzki przezwycięża problem małych wymiarów plamki żółtej przez nagłe Ray gał-
+ki ocznej. Te gwałtowne ruchy powodują, że dająca dużą rozdzielczość plamka żółta szybko
+przebiega pole widzenia, poszukując właściwych informacji. Ponadto, w wyniku tych na-
+głych ruchów oka pręciki i czopki otrzymują ciągle zmieniający się obraz świetlny. Jest to
+ważne z powodu naturalnej zdolności siatkówki do przystosowywania się do zmian natężenia
+światła. Rzeczywiście, jeśli zmusimy oko do zatrzymania się przez jakiś czas na tym samym
+widoku, to szczegóły i barwy obrazu zaczną blaknąć po kilku sekundach.
+
+Czujnikiem obrazu najczęściej stosowanym w elektronicznych aparatach fotograficznych
+i kamerach jest układ ze sprzężeniem ładunkowym CCD (Charge Coupled Device). Jest to
+układ scalony, który w latach 80. zastąpił większość lamp próżniowych stosowanych w ka-
+merach jako czujniki; podobnie jak dwadzieścia lat wcześniej tranzystory zastąpiły wzmac-
+niacze lampowe. Sercem układu CCD jest cienka płytka krzemowa o powierzchni zwykle
+ok.l cm”. Jak pokazano na przekroju na rys. 23.7, dolna powierzchnia jest powleczona
+cienką warstwą metalu połączoną z masą. Powierzchnia górna jest pokryta cienka warstwą
+izolatora elektrycznego. Na niej umieszczono elektrody, według powtarzającego się wzoru.
+Najpopularniejszym rodzajem układów CCD są układy z odczytem trzyfazowym, w których

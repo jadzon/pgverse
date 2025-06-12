@@ -1,0 +1,45 @@
+1.11. Kolorowanie grafów 25
+
+Wierzchołek e też nie może być pokolorowany wyższym kolorem, więc też qo zdejmujemy.
+
+<image/wzory/k2_page203_formula1.png>
+
+Wierzchołek d ma w tym momencie najwyższy kolor c(d) = 3, więc zmiana koloru nie jest
+możliwa i zdejmujemy go ze stosu. Mamy teraz następujące kolorowanie
+
+<image/wzory/k2_page203_formula2.png>
+
+A RZ M 4177 |"—_|MYL=YM MAŁE sek" "I
+
+Jeżeli zastosujemy powyższy algorytm do pokolorowania grafu pełnego K,„ n — 1 ko-
+lorami, to wypróbuje on wszystkie (n— 1)! kolorowań dla pierwszych n —1 wierzchołków.
+Pesymistyczny czas działania algorytmu jest więc (2(27).
+
+Problem kolorowania grafów jest trywialny, jeżeli mamy tylko jeden kolor k =
+Jednym kolorem można pokolorować tylko grafy bez krawędzi.
+
+Proste jest też kolorowanie grafów dwoma kolorami. Grafy, które można pokolorować
+dwoma kolorami, to grafy dwudzielne. Grafu nie można pokolorować dwoma kolorami,
+jeżeli zawiera cykl nieparzystej długości. Poniżej pokażemy, że i na odwrót: jeżeli graf
+nie ma cyklu nieparzystej długości, to można go pokolorować dwoma kolorami.
+
+Poniżej przedstawiamy algorytm kolorowania grafów dwoma kolorami. Dla prostoty
+zakładamy, że kolorowane grafy są spójne. Algorytm można łatwo przerobić tak, aby
+kolorował wszystkie grafy.
+
+Algorytm kolorowania grafu dwoma kolorami
+Dane wejściowe: spójny graf G = (V,E).
+Dane wyjściowe: pokolorowanie wierzchołków grafu G za pomocą dwóch kolorów c :
+V = 41,2) lub informacja, że takiego pokolorowania nie ma.
+e weź pierwszy wierzchołek v, pokoloruj go pierwszym kolorem c(v) := 1.
+e powtarzaj aż do skutku: Weź wszystkie wierzchołki, które są połączone krawędzią
+z jakimś wierzchołkiem pokolorowanym w poprzedniej iteracji i nie mają jeszcze
+koloru..
+
+o Jeżeli wśród nich żadne dwa nie są połączone krawędzią, to pokoloruj je
+jednym kolorem (innym niż wierzchołki kolorowane w poprzedniej iteracji).
+
+o Jeżeli wśród nich są dwa połączone krawędzią, to pokolorowanie dwoma
+kolorami nie jest możliwe.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

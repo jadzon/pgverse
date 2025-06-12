@@ -1,0 +1,45 @@
+96 1. Pojęcia podstawowe — elementy
+
+Jeśli więc np. żądamy, aby w układzie były spełnione
+nie musimy już dodatkowo wymagać spełnienia zasady 7]
+spełniona automatycznie.
+
+Przykład 1.5-2. Rozważmy ponownie układ z rys. 1.5-3. Spraw«
+wynika zasada Tellegena dla tego układu.
+Zgodnie z PPK prądy i, i;,i, można wyrazić za pomocą prądóv
+
+<image/wzory/k4_page96_formula3.png>
+Równości te uwzględniamy w sumie:
+
+zory/k4_page96_fc
+<image/wzory/k4_page96_formula4.png>
+
+Grupując wyrazy względem prądów i;, i., i, otrzymamy:
+
+<image/wzory/k4_page96_formula5.png>
+
+skąd po uwzględnieniu trzech pierwszych równań napięciowych ukłać
+
+vzory/k4_page96_formula1.png
+
+Zazwyczaj jako podstawowe prawa rządzące obwodai
+skupionymi przyjmujemy oba prawa Kirchhoffa. Moż
+postulaty, na których jest oparta cała teoria obwodów s__,._..
+
+1.5.2. Łączenie szeregowe i równoległe elementów
+
+A. Zasady łączenia szeregowego i równoległego. Wyróżniamy dwa pod-
+stawowe sposoby łączenia elementów skupionych dwuzaciskowych: połączenie
+szeregowe i połączenie równoległe, przedstawione odpowiednio na rys. 1.5-4
+i 1.5-5.
+
+ 
+
+<image/rdobisfigury/k4_page96_figure1.png>
+Wy 1 Ua 1 r U,
+
+p — 1
+I u
+en
+
+Rys. 1.5-4 Rys. 1.5-5

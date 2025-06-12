@@ -1,0 +1,24 @@
+28. Cyfrowe procesory sygnałowe
+
+<image/figury/k3_page460_figure1.png>
+
+    
+    
+ 
+   
+    
+
+To daje 2% poziomów kwantyzacji rozmieszczonych równomiernie w stosunkowo małym
+kresie, powiedzmy od -1 do 1. Przy zapisie zmiennoprzecinkowym zaś 27? poziomów
+tyzacji jest rozmieszczonych logarytmicznie w ogromnym zakresie, typowo +3,4 x 10*.
+daje procesorom stałoprzecinkowym lepszą dokładność, a więc mniejszy błąd kwan
+w każdej próbce. Jednak 32-bitowe procesory zmiennoprzecinkowe mają większy zakres
+namiczny, 60 znaczy, że większa jest różnica między najmniejszą i największą liczbą,
+mogą być reprezentowane.
+
+Język C a język asemblera
+
+Procesory DSP są programowane w tych samych językach, które są używane w innych
+stosowaniach w nauce i technice, zwykle w języku asemblera lub w C. Programy
+w asemblerze mogą być wykonywane szybciej, a programy w języku C są łatwiej
+opracowania i utrzymywania. W tradycyjnych zastosowaniach, takich jak programy wy

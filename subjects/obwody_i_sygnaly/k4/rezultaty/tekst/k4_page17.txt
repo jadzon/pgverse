@@ -1,0 +1,42 @@
+Rozdział 1
+
+POJĘCIA PODSTAWOWE — ELEMENTY
+
+1.1. WPROWADZENIE
+
+A. Oznaczenia. Wielkości fizyczne związane z obwodem elektrycznym,
+
+rozpatrywane jako funkcje czasu t, będziemy oznaczać małymi literami np:
+
+— napięcie: u lub u(t);
+
+— natężenie prądu: i lub i(t);
+
+— strumień skojarzony (skojarzenie magnetyczne): Y lub Y(t);
+
+— ładunek: q lub q(t);
+
+— siła elektromotoryczna: e lub e(t);
+
+— wydajność prądowa: j lub j(t);
+starając się wszędzie tam, gdzie nie prowadzi to do nieporozumień, używać
+oznaczeń jednoliterowych: u, i, W, q, e, j. W niektórych przypadkach, dla
+wyraźnego podkreślenia, że rozpatrywana wielkość jest funkcją czasu t (jest
+zmienna w czasie), będziemy pisać: u = u(t), i = i(t) itd.
+
+Dużymi literami będziemy oznaczać wielkości stałe w czasie. Na przykład:
+
+<image/wzory/k4_page17_formula1.png>
+
+oznacza, że napięcie (natężenie prądu) jest stałe w czasie lub, krócej, że jest to
+napięcie stałe (natężenie prądu stałego). Dużymi literami (ewentualnie z od-
+powiednimi indeksami) będziemy także oznaczać niektóre parametry liczbowe
+charakteryzujące wielkości zmienne w czasie. Na przykład, w wyrażeniu:
+
+<image/wzory/k4_page17_formula2.png>
+U,, oznacza amplitudę (wartość maksymalną) sinusoidalnie zmiennego napię-
+cia u.
+
+Z uwagi na ustalone zwyczaje lub dla uniknięcia nieporozumień będą
+występować niekiedy pewne odstępstwa od przedstawionych reguł. Na przykład,
+strumień magnetyczny © będzie oznaczany dużą literą zarówno w przypadku,

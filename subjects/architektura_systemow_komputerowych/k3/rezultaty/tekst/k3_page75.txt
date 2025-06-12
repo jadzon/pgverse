@@ -1,0 +1,38 @@
+4.2. Cykl rozkazowy procesora 65
+
+zory/k3_page/5_formula1.png
+
+Czas potrzebny na odczytanie kodu operacyjnego rozkazu z pamięci, na pobranie
+argumentów, na wykonanie rozkazu i przesłanie wyniku operacji nazywa się cyklem
+rozkazowym lub cyklem instrukcyjnym. Składa się on z kilku faz zwanych cyklami
+maszynowymi, których liczba odpowiada liczbie dostępów do pamięci. Pierwszy cykl
+maszynowy w każdym cyklu rozkazowym to cykl pobrania kodu rozkazu (ang. fetch).
+Jeżeli argumenty rozkazu znajdują się w rejestrach procesora, to wykonanie operacji
+zakodowanej w tym rozkazie może nastąpić bezpośrednio po jego pobraniu, czyli w tym
+samym cyklu maszynowym. Jeśli jednak argumenty tego rozkazu znajdują się w kodzie
+programu lub w pamięci, to następne cykle maszynowe będą cyklami odczytu pamięci
+(ang. memory read).
+
+Do tej pory mówiliśmy jedynie o argumentach operacji nie wspominając o jej wyniku.
+Natomiast rozkaz powinien specyfikować także miejsce przesłania wyniku operacji. Może
+on zostać zapisany do jakiegoś rejestru procesora i wówczas nie jest wymagany osobny
+cykl maszynowy dla tej operacji. Ale może też zajść przypadek wymagający przesłania
+wyniku do pamięci. Wtedy rozkaz musi określać adres tego miejsca. Podobnie jak dla
+argumentów, adres przeznaczenia może znajdować się w rejestrze, w kodzie programu
+lub w pamięci. Układ sterowania zapewni, że ostatnim cyklem maszynowym takiego
+cyklu rozkazowego będzie cykl zapisu do pamięci (ang. memory write). Argumenty
+operacji i wynik operacji nazywane są często operandami danej operacji. Mówi się o
+operandach źródłowych (argumentach) i operandach przeznaczenia (wynikach).
+
+Na rysunku 4.3 przedstawiono graficznie kolejne fazy cyklu rozkazowego. Na dwóch
+poziomach zaznaczono fazy zaangażowania procesora (dolny poziom oznaczony CPU)
+i pamięci (górny poziom oznaczony PAM). Pokazany na rysunku przykładowy cykl instruk-
+cyjny składa się z 4 faz:
+
+1) fazy pobrania rozkazu,
+
+2) i 3) dwóch faz pobrania argumentów rozkazu,
+
+4) fazy zapisu wyniku do pamięci.
+
+<image/figury/k3_page75_figure1.png>

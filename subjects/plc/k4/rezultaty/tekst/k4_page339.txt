@@ -1,0 +1,44 @@
+7.7.2 Czasomierz impulsowy z przedłużeniem
+
+Czasomierz impulsowy z przedłużeniem zaczyna odmierzać czas, gdy wynik wa-
+runku uruchomienia zmienia wartość z 0 na 1. Po uruchomieniu czasomierz
+kontynuuje pracę bez względu na aktualną wartość warunku uruchomienia cza-
+somierza. Testowanie czasu na wartość | daje wynik 1, gdy:
+
+e nie jest spełniony warunek zerowania czasomierza i
+
+e nie upłynął zaprogramowany czas.
+
+LA I 70 , warunek uruchomienia czasomierza
+
+2.1 KT 300.1 ; wprowadzenie wartości czasu
+
+3.SE TI ; instrukcja uruchomienia czasomierza impulsowego
+z przedłużeniem
+
+4A I 7.4 ; warunek zerowania czasomierza
+
+5.R T1 ; instrukcja zerowania czasomierza
+
+6.A T1 ; sprawdzenie czasu
+
+7,= Q 40
+
+8. LC TI ; wprowadzenie wartości czasu w kodzie BCD
+
+9. T QW 10 , przekazanie bieżącej wartości czasu do QW/0
+
+W chwili, gdy wejście 7 7.0 zmieni wartość z O na 1 i wejście 7 7.7 ma wartość 0,
+czasomierz zostanie uruchomiony i zacznie odliczać czas t=300x0.1s=30s. Wyj-
+ście Q 4.0 będzie miało wartość | przez 30s. Po upływie tego czasu zarówno
+wartość czasu jak i wartość wyjścia Q 4.0 będzie równa zero. Czasomierz będzie
+kontynuował pracę nawet jeśli przed upływem zaprogramowanego czasu wejście
+I 7.0 przyjmie wartość 0. Jeżeli czasomierz zostanie uruchomiony i przed upły-
+wem zaprogramowanego czasu nastąpi ponowna zmiana wartości warunku uru-
+chomienia z 0 na I, to czasomierz zacznie od nowa odliczać zaprogramowany
+czas. Gdy wartość wejścia / 7./ zmieni się z O na 1, to wartość czasu zostanie
+wyzerowana niezależnie od stanu wejścia 7 7.0, natomiast wyjście Q 4.0 przyj-
+mie wartość 0. Jeżeli wejście / 7.7 ma wartość 1, to zmiana stanu wejścia / 7.0 z
+O na 1 nie spowoduje uruchomienia czasomierza.
+
+<image/figury/k4_page339_figure1.png>

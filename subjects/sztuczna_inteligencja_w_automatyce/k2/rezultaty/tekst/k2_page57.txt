@@ -1,0 +1,25 @@
+62
+
+<image/figury/k2_page57_figure1.png>
+
+PRZYKŁAD 4.12
+
+Stosując regułę rezolucji należy pokazać, że wpz (3Z)A(Z) wynika z podanego po-
+niżej zbióru klauzul (2)-(7). Ponieważ —(3Z)A(Z) = (YZ)-A(Z) zadanie można
+sprowadzić do wykazania że zbiór klauzul (1)-(7) jest sprzeczny.
+
+<image/wzory/k2_page57_formula1.png>
+
+Stosując regułę rezolucji do wybranych par klauzul otrzymujemy:
+
+<image/wzory/k2_page57_formula2.png>
+
+Klauzula —Q(a,Y) nie unifikuje się z Q(b.c) i nie ma innych możliwych unifika-
+cji, więc cofnięcie się do klauzuli (1)(2) i próba znalezienia innej unifikacji literału
+-P(X). Ponieważ nie ma innych unifikacji »P(X), więc cofnięcie się klauzuli (1) i
+próba wyznaczenia innej jej rezolwenty. Otrzymujemy
+
+<image/wzory/k2_page57_formula3.png>
+
+Klauzula —Q(a, Z) nie unifikuje się z Q(b,c) i nie ma innych możliwych unifikacji,
+więc cofnięcie się do klauzuli (1)(3) i wyznaczenie innej rezolwenty poprzez próby

@@ -1,0 +1,21 @@
+189
+
+<image/tabele/k2_page184_table1.png>
+
+<image/tabele/k2_page184_table2.png>
+
+Rys. 6.88: Maksymalne wartości Q(s,a) ze względu na kierunek a, (a), oraz zaznaczone
+strzałkami kierunki maksymalizujące poszczególne wartości (,(s,a), (b)
+
+dla każdego stanu wartości maksymalne ze względu na kierunki i te wartości oraz
+kierunki je maksymalizujące przedstawiono na rysunku ??. Strzałki reprezentujące
+kierunki są ostatecznym rozwiązaniem problemu optymalizacji, wskazują bowiem w
+każdej kratce optymalny kierunek akcji.
+
+Zwróćmy uwagę na to, że dla kratki startowej najlepszym kierunkiem jest Ś.
+Jest, to trochę zaskakujące, ponieważ jak łatwo widać z rysunku ?? sekwencja akcji
+NEEEESS zapewnia maksymalną sumę nagród. Tak rzeczywiście byłoby dla środo-
+wiska deterministycznego. Jednak biorąc pod uwagę losowość przeskoków poruszanie
+się tą trasą naraża agenta na „niebezpieczeństwa” wejścia do stanu o współrzędnych
+(1,2) z nagrodą r = —12. Okazuje się, jak to wynika z algorytmu ()-learning, średnio
+najlepsza jest strategia określona strzałkami z rys. ??b. Ten przypadek pokazuje, że

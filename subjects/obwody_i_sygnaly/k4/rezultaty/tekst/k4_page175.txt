@@ -1,0 +1,42 @@
+2.1. Wielowrotniki i sieci 177
+
+nie pobiera tę moc z otoczenia. Jeśli w innej chwili moc pobierana p jest
+ujemna, to oznacza, że układ w rzeczywistości oddaje wtej chwili moc do
+otoczenia (por. p. 1.1-G).
+
+Energia pobrana przez układ z otoczenia w przedziale czasu <ty, t> wyraża
+
+się wzorem:
+vzory/k4_page175_formula1.png (2.1-18)
+|| a więc:
+/k4_page175_formula2.png (2.1-19)
+
+Jeśli wartość całki we wzorze (2.1-18) jest dodatnia, oznacza to, że
+w przedziale czasu ty, t) układ faktycznie po brał energię z otoczenia. Jeśli
+wartość ta jest ujemna (energia pobrana jest ujemna), świadczy to o tym, że
+układ faktycznie oddał do otoczenia energię równą (por. p. 1.1-G):
+
+t
+— | pdt'
+to
+H. Przykłady. Rozpatrzmy kilka przykład ów dotyczących rozważa-
+nych już czwórników.
+Przykład 2.1-12. Transformator idealny (rys. 1.8-16) jest czwórnikiem o równaniach (1.8-46),
+tzn:!)
+<image/wzory/k4_page175_formula3.png>
+
+Moc chwilowa pobierana przez transformator idealny jest zawsze równa zeru. Dla dowolnych
+napięć i prądów u;, u, i;,i, spełniających równania (2.1-20) mamy bowiem:
+
+<image/wzory/k4_page17/5_formula4.png>
+
+Oznacza to, że jeśli np. moc u,i, pobierana z otoczenia przez pierwsze wrota jest dodatnia, to taka
+sama moc — ui, jest oddawana do otoczenia przez drugie wro a.
+
+Przykład 2.1-13. Taką samą właściwością odznacza się żyrator (rys. 1.7-25a). Uwzględniając
+bowiem równania (1.7-33) żyratora otrzymujemy:
+
+<image/wzory/k4_page175_formula5.png>
+
+z „ŁEM uniknięcia kolizji oznaczeń przekładnię transformatora idealnego oznaczamy tutaj
+ktorą

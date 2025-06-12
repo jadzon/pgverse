@@ -1,0 +1,32 @@
+Projektowanie filtru Czebyszewa-Butterwortha 595
+
+WEZ OKOWANE JT may
+
+śmy wynik pośredni — współczynniki rekursywne dla jednego stopnia filtru dołnoprzepusto-
+wego 0 częstotliwości odcięcia jeden.
+
+Zmiana częstotliwości odcięcia filtru dolnoprzepustowego
+
+Zmiana częstotliwości filtru rekursywnego jest realizowana również metodą odwzorowa-
+nia konforemnego. Przyjmijmy, że znamy funkcję przenoszenia dolnoprzepustowego filtru
+rekursywnego 0 częstotliwości odcięcia równej jeden. Funkcję przenoszenia podobnego
+filtru dolnoprzepustowego o nowej częstotliwości odcięcia W uzyskuje się, stosując od-
+powiednie przekształcenie, wykonywane też tylko przez podstawienie zmiennych, tak jak
+w przekształceniu biliniowym. Rozpoczynamy od zapisania funkcji przenoszenia filtru
+o częstotliwości odcięcia równej jeden i następnie zamiast każdego wyrazu z =! podstawia-
+
+<image/figury/k3_page554_figure2.png>
+
+LGOCLE/ NO_MJGYCYU*T_LOGNIC I.|JIIY
+
+<image/figury/k3_page554_figure1.png>
+
+Wzór 33.13. Konwersja filtru dolnoprzepustowego na filtr dolnoprzepustowy 0 innej częstotliwości
+odcięcia. Drukiem pochyłym zapisano współczynniki rekursywne filtru o częstotliwości równej jeden,
+a drukiem prostym - filtru o częstotliwości odcięcia W
+
+Zmiana częstotliwości odcięcia filtru dolnoprzepustowego na górnoprzepustowy
+Omówioną wyżej metodę zmiany częstotliwości można tak zmodyfikować, aby uzyskać za-
+
+mianę odpowiedzi dolnoprzepustowej systemu na górnoprzepustową z jednoczesną zmianą
+częstotliwości odcięcia. Realizuje się to przez podstawienie:

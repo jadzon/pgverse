@@ -1,0 +1,26 @@
+Zapis we współrzędnych biegunowych 161
+
+<image/figury/k3_page145_figure2.png>
+
+Rys. 8.9. Konwersja ze współrzędnych prostokątnych na biegunowe. Dodawanie fal kosinusoidalnej
+a WEN
+
+Zależnie od sposobu zapisu — OSACE 2: można
+rozważać DFT na dwa różne sposoby. DFT wyrażone we współrzędn nych daje
+
+we współrzędnych
+rozkład sygnału N-punktowego na N/2 + 1 pk rkm tylo atk
+amplitudzie (zwanej modułem) i przesunięciu fazy. Dlaczego w zapisie we współrzędnych
+biegunowych są stosowane fale kosinusoidalne zamiast sinusoidalnych? Fale sinusoidalne
+nie mogą wyrażać składowej stałej (DC) sygnału, ponieważ fala sinusoidalna o zerowej czę-
+stotliwości jest złożona z samych zer (rys. 8.5 a, b).
+
+<image/figury/k3_page145_figure1.png>
+
+-8.10. Przykład reprezentacji sygnału w dziedzinie częstotliwości we współrzędnych prostokątnych i biegunowych.
+m diaz cartacycdniraaazainę s: zydreksiwnczam podac atięsei Tak jak w tym
+ładzie, zapis we współrzędnych biegunowych daje zwykle obserwatorowi lepsze zrozumienie właściwości sygna-
+
+«« odbwkch poodaywi JAAEGA AOC SAGW toon A, pac żę Kaa Goraj zało.
+Zwróćcie szczególną uwagę na fakt, że pierwsza i ostatnia próbka w wykresie przesunięcia fazy muszą być
+we, podobnie jak to jest w części urojonej

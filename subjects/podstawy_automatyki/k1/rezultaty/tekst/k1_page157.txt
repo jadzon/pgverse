@@ -1,0 +1,28 @@
+<image/figury/k1_page157_figure1.png>
+
+Rys. 6.4. Przekształcony schemat blokowy silnika prądu stałego
+
+Na podstawie schematu blokowego z rysunku 6.4 transmitancję G(s) można zapi-
+sać jako
+
+<image/wzory/k1_page157_formula1.png>
+
+Mnożąc licznik i mianownik przez (sŁ,, + R.,)(sJ + B), otrzymujemy
+
+<image/wzory/k1_page157/_formula2.png>
+
+Przekształcając dalej, otrzymujemy
+
+<image/wzory/k1_page157_formula3.png>
+
+Zazwyczaj współczynnik tarcia B jest niewielki, w efekcie czego przyjmujemy, że
+R„J >> BL, oraz k,k„ >> R„B. Transmitancję silnika G(s) zapisujemy wtedy w postaci
+uproszczonej
+
+<image/wzory/k1_page157/_formula4.png>
+
+Dzieląc licznik i mianownik przez k,k,,, otrzymujemy
+
+<image/wzory/k1_page15/_formula5.png>
+
+159

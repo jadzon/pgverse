@@ -1,0 +1,41 @@
+Szybkość wykonania — język programowania | 83
+
+<image/tabele/k3_page71_table1.png>
+
+Y = LOG(Xcox)). na bardziej podstawowe operacje arytmetyczne. Mikroprocesory wiedzą
+tylko jak dodawać, odejmować, mnożyć i dzielić. Wszelkie działania bardziej skomplikowa-
+ne muszą być wykonywane jako ciąg tych czterech podstawowych operacji.
+
+Języki wysokiego poziomu izolują programistę od układów elektronicznych. To ułatwia pro-
+gramowanie i umożliwia przekazywanie kodu źródłowego między mikroprocesorami róż-
+nych typów. Najważniejsze jest wszakże to, że programista stosujący język kompilatora nie
+musi niczego wiedzieć o wewnętrznym działaniu komputera. Tę odpowiedzialność wziął na
+siebie inny programista — ten, który napisał kompilator.
+
+Większość kompilatorów działa na zasadzie konwersji całego programu na kod maszynowy, za-
+nim program jest wykonywany. Wyjątkiem od tej zasady jest kompilator zwany interpreterem.
+Najbardziej znanym przykładem jest interpreter BASIC. Interpreter przetwarza pojedynczy
+wiersz kodu źródłowego na kod maszynowy, wykonuje ten kod maszynowy i następnie prze-
+chodzi do następnego wiersza kodu źródłowego. Daje to prostym programom otoczenie inte-
+raktywne, choć szybkość wykonywania jest skrajnie mała (powiedzmy o czynnik 100).
+Najwyższy poziom zaawansowania reprezentują specjalizowane aplikacyjne pakiety opro-
+
+JAM WIO Na ALE
+
+źliwi ZA Beż Koci c wyci jego
+biał wiający NE REDA e
+W najlepszym przypadku producent dostarczy wysublimowany pakiet programowy wspo-
+magający opracowanie programu i zawierający: biblioteki algorytmów, napisane wcześniej
+procedury, narzędzia do usuwania błędów w programie itd. Można po prostu łączyć ikony,
+aby utworzyć żądany system, korzystając z łatwego w użyciu obrazowania graficznego.
+Operuje się wówczas drogami sygnałów, algorytmami do przetwarzania sygnałów, parame-
+trami wejść i wyjść analogowych itd. Gdy jesteście już zadowoleni z projektu programu, jest
+on transformowany w odpowiedni kod maszynowy do wykonywania w układach elektro-
+nicznych. Inne typy pakietów aplikacyjnych są stosowane w przetwarzaniu obrazu, analizie
+widmowej, oprzyrządowaniu i sterowaniu, projektowaniu filtrów itd. To jest w znacznym
+stopniu sprawa przyszłości.
+
+Tab. 4.5. Program BASIC do dodawania liczb 1234 i 4321. Kompilator jest programem konwertującym
+kod źródłowy wysokiego poziomu na kod maszynowy
+
+<image/tabele/k3_page71_table2.png>

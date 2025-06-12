@@ -1,0 +1,31 @@
+4? 3. Podstawy techniki cyfrowej
+
+które przekroczyły zakres. W przykładzie korekcja dotyczy obu tetrad. W następnym
+kroku trzeba uwzględnić powstałe przeniesienia na odpowiednich tetradach. Przeniesienia
+po korekcji powstały na obu tetradach. Dlatego do drugiej tetrady dodawane jest prze-
+niesienie powstałe na pierwszej tetradzie, a przeniesienie powstałe na drugiej tetradzie ma
+wagę dziesiętną 100 (liczba w nawiasie). Ponieważ tetrada pierwsza ma wartość 4, a druga
+ma wartość 3, to wraz z przeniesieniem daje poprawny wynik dodawania.
+
+<image/tabele/k3_page52_table2.png>
+
+Przypadek 2. Rozpatrzony będzie teraz przypadek, gdy liczby mają przeciwny znak.
+Pokazane to będzie na przykładzie dodawania dwóch 5-bitowych liczb, z których jedna
+jest ujemna (+9 i -7). W tablicy 3.10 pokazano tę operację dla wszystkich 4 zapisów. Dla
+zapisu ZM i BCD (operacja ta jest najtrudniejsza) algorytm postępowania jest następujący:
+
+a) porównać moduły obu argumentów i przyjąć jako znak wyniku znak liczby o
+
+większym module,
+
+b) od większego modułu odjąć moduł mniejszy.
+
+Pierwszy krok tego algorytmu nie nastręcza większych trudności, natomiast wyjaśnienia
+wymaga sposób odejmowania liczb w kodzie NKB i BCD. Celem pokazania tego sposobu
+rozpatrzone będą dwa przypadki:
+
+— jeżeli na danej pozycji odjemna jest równa 1,
+
+— jeżeli na danej pozycji odjemna jest równa 0.
+
+<image/tabele/k3_page52_table1.png>

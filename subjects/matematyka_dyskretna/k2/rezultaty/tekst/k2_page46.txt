@@ -1,0 +1,45 @@
+1.7. Dwumian Newtona 11
+
+Pierwszy dowód. (1 + t)” jest wielomianem stopnia n. Policzmy współczynnik tego
+wielomianu stojący przy t*. Rozważmy iloczyn:
+
+<image/wzory/k2_page46_formula1.png>
+
+Przy rozwijaniu tego wyrażenia wybieramy z każdego czynnika 1 lub t, potem wymna-
+żamy wybrane elementy i sumujemy tak utworzone iloczyny. W iloczynie otrzymamy t*
+wtedy, gdy t wybierzemy k razy oraz 1 wybierzemy n — k razy. Można to zrobić na (;)
+sposobów, tak więc współczynnik przy t* wynosi (7).
+
+Drugi dowód przez indukcję. Wzór jest oczywisty dla n = 0. Załóżmy teraz, że jest
+prawdziwy dla n. Mamy:
+
+<image/wzory/k2_page46_formula2.png>
+
+Współczynnik przy t* po prawej stronie wynosi:
+
+<image/wzory/k2_page46_formula3.png>
+
+Pierwszy składnik pochodzi od iloczynu: (,” ,)£*7* + t, a drugi od iloczynu: (z)t* -1.Ze
+wzoru (??) wynika, że współczynnik przy t* wynosi (”;'). o
+Jeżeli do wzoru Newtona podstawimy t = £, a potem pomnożymy obie strony przez a”,
+to otrzymamy inną znaną wersję wzoru Newtona.
+
+Wniosek 1.10 Dla dowolnych liczb rzeczywistych a i b i dowolnej liczby całkowitej n >
+0:
+
+<image/wzory/k2_page46_formula4.png>
+
+Jeżeli podstawimy t = 1 do wzoru z twierdzenia ??, to otrzymamy:
+
+<image/wzory/k2_page46_formula5.png>
+
+co potwierdza jeszcze raz, że wszystkich podzbiorów zbioru n-elementowego jest 2”.
+
+Zobaczymy teraz, że wśród wszystkich podzbiorów zbioru 41,. .. ,n) jest tyle samo
+podzbiorów mocy parzystej (o parzystej liczbie elementów) i podzbiorów mocy niepa-
+rzystej (o nieparzystej liczbie elementów).
+
+Twierdzenie 1.11 Dla każdego zbioru zawierającego n elementów, liczba podzbiorów
+parzystej mocy jest równa liczbie podzbiorów nieparzystej mocy.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,27 @@
+Struktura obrazu cyfrowego 361
+
+| o
+
+3
+
+4
+
+R
+
+SJ
+
+a
+4
+
+A
+A
+
+ 
+
+<image/tabele/k3_page330_table1.png>
+
+Rys. 23.1. Struktura obrazu cyfrowego. Przyktadem jest obraz planety Wenus uzyskany z odbitych mikrofal. Obraz
+cyfrowy jest reprezentowany przez dwuwymiarową matrycę liczb, zwanych pikselami. W tym obrazie matryca ma
+200 wierszy i 200 kolumn, a piksele mają wartości od 0 do 255. Przy pobieraniu tego obrazu wartość każdego pik-
+sela odpowiadała poziomowi odbitej energii mikrofałowej. Obraz jest wyrażany w skali szarości przez przyporządko-
+wanie liczb od 0 do 255 do zmieniających się odcieni szarości

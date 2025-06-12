@@ -1,0 +1,36 @@
+Pojedynek 3: Filtr o średniej kroczącej przeciw filtrowi jednobiegunowemu 337
+
+<image/figury/k3_page308_figure1.png>
+
+Rys. 21.5. Porównanie czasów wykonania filtrów SOI i NOI. Na wykresach pokazano względne czasy
+
+cad isę ay yo rega ran znarizydrwa
+filtrem Czebyszewa. Wykresy dla filtru SOI dotyczą zarówno realizacji przez algorytm splotu
+
+stndróowego zl FFI Ca wykarywnia dru okienkowaega lij sr ras prz
+
+Pojedynek 3: Filtr o średniej kroczącej przeciw
+filtrowi jednobiegunowemu
+
+Nasz trzeci pojedynek będzie walką filtrów w dziedzinie czasu. Pierwszym zawodnikiem
+będzie 9-punktowy filtr o średniej kroczącej, a jego przeciwnikiem w tym pojedynku
+— jednobiegunowy filtr rekursywny działający z wykorzystaniem techniki dwukierunko-
+wej. Aby osiągnąć porównywalną odpowiedź częstotliwościową, trzeba w filtrze jedno-
+biegunowym zastosować współczynnik opadania przebiegu między kolejnymi próbkami
+równy x = 0,70. Walka rozpoczyna się na rys. 21.6, gdzie przedstawiono odpowiedzi
+częstotliwościowe obu filtrów. Żadna z nich nie jest imponująca, lecz oczywiście rozdzie-
+lanie pasm częstotliwości nie jest dziedziną zastosowania tych filtrów. Nie przyznajemy
+punktów żadnemu filtrowi.
+
+Na rys. 21.7 przedstawiono odpowiedzi skokowe rywalizujących filtrów. Odpowiedź fil-
+tru o średniej kroczącej (rys. 21.7 a) jest linią prostą, a więc tworzy najszybszą drogę
+przejścia z jednego poziomu na inny. Odpowiedź filtru rekursywnego (rys. 21.7 b) jest
+łagodniejsza, co może być korzystniejsze w niektórych zastosowaniach. Dajemy po jed-
+nym punkcie dla każdego filtru.
+
+Porównywane filtry są w zasadzie równorzędne pod względem działania i wybór jednego
+z nich jest często wynikiem osobistych preferencji projektanta. Są jednak dwa przypadki,
+gdzie jeden filtr ma niewielką przewagę nad drugim. Chodzi o takie sytuacje, gdy jest ko-
+nieczny kompromis między czasem opracowania i czasem wykonania. W pierwszym z tych
+przypadków chcecie skrócić czas opracowania filtru i jesteście skłonni zaakceptować jego
+wolniejsze działanie. Może na przykład być potrzebny filtr o kilku tysiącach punktów do jed-

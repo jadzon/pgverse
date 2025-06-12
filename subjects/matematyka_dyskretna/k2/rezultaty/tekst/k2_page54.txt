@@ -1,0 +1,42 @@
+1.12. Generowanie obiektów kombinatorycznych 19
+
+Zauważmy, że funkcje charakterystyczne wypisywanych podzbiorów, traktowane ja-
+ko binamy zapis liczb, tworzą ciąg kolejnych liczb od 0 do 2” — 1. Szukając następnego
+z kolei elemenetu algorytm postępuje podobnie jak algorytm zwiększania o jeden liczby
+w systemie dwójkowym.
+
+1.12.2 Generowanie k-elementowych podzbiorów
+Algorytm generujący k elementowe podzbiory zbioru (1.....n):
+
+e Pierwszy k-podzbiórto (1,...,k).
+e Przypuśćmy, że ostatnio wygenerowany podzbiór, to A = fay,.. .,ax), gdzieay <
+... € ak. Aby wygenerować następny podzbiór:
+o znajdujemy najmniejsze takie i, że a; + 1 q£ A;
+o jeżeli a; = n, to znaczy, że A = (n— k + 1,...„n) i jest to ostatni wyge-
+nerowany podzbiór.
+o jeżeli a; < n, to zwiększamy a; o jeden, a elementy mniejsze od a, zamie-
+niamy na i — 1 najmniejszych liczb, to znaczy a, := j dla j < t.
+Dlan = 6ik = 4 algorytm wypisze po kolei następujące podzbiory (podajemy je bez
+nawiasów i przecinków)
+1234, 1235, 1245, 1345, 2345, 1236, 1246, 1346, 2346, 1256, 1356, 2356, 1456, 2456, 3456.
+Zauważmy,że najpierw wypisywane są 4-podzbiory niezawierające 6:
+1234, 1235, 1245, 1345, 2345
+a później 4-podzbiory zawierające 6
+1236, 1246, 1346, 2346, 1256, 1356, 23506, 1456, 2456, 3456,
+które otrzymywane są w ten sposób, że do kolejnych 3-podzbiorów zbioru f1....,5)
+dopisywana jest 6.
+
+Jest to ogólna zasada działania tego algorytmu: aby wypisać j-podzbiory zbioru £1,...,i)
+algorytm najpierw wypisuje j podzbiory zbioru f1,...,i — 1), a następnie podzbiory
+zawierające element : (są one otrzymywane przez dodawanie i do j — 1 podzbiorów zbio-
+rm £1,...,ś— 1)).
+
+W powyższym przykładzie wśrod podzbiorów zawierających 6 najpierw mamy te,
+które są utworzone z 3-podzbiorów 41, 2, 3, 4) z dopisaną 6:
+
+1236, 1246, 1346, 2346,
+a po nich następują te, które są utworzone z 2-podzbiorów 1, 2, 3, 4), z dopisaną 5 i 6:
+
+1256, 1356, 2356, 1456, 2456, 3456.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

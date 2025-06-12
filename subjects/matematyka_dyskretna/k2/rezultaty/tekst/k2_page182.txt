@@ -1,0 +1,39 @@
+3 Rozdział 1. Grafy (nieskierowane)
+
+Stopień wierzchołkw a i f wynosi 4, wierzchołki c i g są stopnia 3, wierzchołki b, di
+e stopnia 2.
+
+Lemat 1.3 Niech G = (V,E), będzie dowolnym grafem z m = |E| krawędziami. Wtedy
+
+<image/wzory/k2_page182_formula1.png>
+
+Dowód: Jeżeli policzymy wszystkie krawędzie wychodzące ze wszystkich wierzchołków
+grafu, to z jednej strony mamy sumę )*, -„ d(v), a z drugiej 2|E| = 2m ponieważ każda
+krawędz e = fu,v) jest liczona dwa razy, raz jak liczymy krawędzie wychodzące z u i
+drugi raz jak liczymy krawędzie wychodzące z v. o
+Wniosek 1.4 Liczba wierzchołków o nieparzystych stopniach jest parzysta.
+
+Graf H = (Vy, Eg) nazywamy podgrafem grafu G = (VG, EG), jeżeli Vy € VG
+orz Ey € Eg.
+Przykład 1.5 Grafy przedstawione na rysunkach 1.5 i 1.6 są podgrafami grafu z rysun-
+ku 1.1 .GrafG2 = (Va, E>) zrysuku 1.5 zawiera sześć wierzchołków Va = fa,b,c,d,e,g)
+i trzy krawędzie E> = f£a,e), (b,c), 4e,9)).
+
+GrafG;z = (V3, Ez) z rysuku 1.6 zawiera siedem wierzchołków V; = fa,b,c,d,e, f,g)
+i pięć krawędzi Eg = ffa,by, fa,dy, £a,e).£a,9).fb.ch. 4d, f)).
+
+Graf pełny o n wierzchołkach, oznaczany przez K'„, jest to graf z n wierzchołkami,
+w którym każde dwa wierzchołki połączone są krawędzią.
+
+Rysunek 1.2: a) Graf pełny K4. b) Graf pełny dwudzielny K3 3
+
+<image/figury/k2_page182_figure1.png>
+
+Graf G = (V,E) jest dwudzielny, jeżeli zbiór jego wierzchołków można rozbić na
+dwie części V = V, UVA, VW, MV = 0, tak, że każda krawędź e € E ma końce w
+obu zbiorach V, i V>. Pełny graf dwudzielny K,„,„ ma zbiór wierzchołków rozbity na
+dwa podzbiory: V; = fvy,...,Ym) IVa = (wy,...,w„), a krawędzie łączą każdy
+wierzchołek z V, z każdym wierzchołkiem z Va, czyli E = ffv,w,)|l<i<m,1<
+j £ni.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,18 @@
+<image/tabele/k4_page47/9_table2.png>
+
+Wyd. 8.156 Grzanie — porównywanie poziomu w reaktorze z wartością minimalną
+i sterowanie zaworem odpływu cieczy grzewczej oraz mieszadłem
+
+<image/tabele/k4_page479_table1.png>
+
+Wyd. 8.157 Grzanie — przeskalowanie sygnałów PV i SP oraz stabilizacja temperatu-
+ry według algorytmu PID
+
+<image/figury/k4_page47/9_figure1.png>
+
+Wyd. 8.158 Grzanie — sterowanie zaworem dopływu medium grzewczego według
+wielkości wyjściowej regulatora
+
+m A O A i M m AO U RO W O YA PY POWA YW OT 2 © YNA 2 M A z m m m m m m m
+
+8.8 Sterowanie sekwencyjne procesem wsadowym 479

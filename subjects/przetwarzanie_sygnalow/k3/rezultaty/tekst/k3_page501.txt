@@ -1,0 +1,43 @@
+Analiza obwodów elektrycznych 539
+
+mówiąc, jest to fala kosinusoidalna o amplitudzie R. Następnie wyznaczamy napięcie na kon-
+densatorze: U = I Z=(1 + 05) (-jł»wC). To wyrażenie redukuje się do (0 — j/wC), a więc do
+sinusoidy o amplitudzie 1/0C. W podobny sposób oblicza się napięcie na cewce indukcyjnej:
+U=IZ=(I + WX(joŁ). To wyrażenie redukuje się do (0 + jo), a więc ujemnej sinusoidy
+o amplitudzie ©.
+
+Uroda tej metody polega na tym, że obwody RŁC można analizować bez uciekania się do równań
+różniczkowych. Impedancja rezystorów, kondensatorów i cewek indukcyjnych jest traktowana
+tak samo jak rezystancja w obwodzie prądu stałego. To obowiązuje też dla wszystkich kombinacji
+podstawowych, takich jak rezystory połączone szeregowo lub równolegle, dzielniki napięcia itd.
+Na rys. 30.6 przedstawiono, jako przykład, obwód RLC zwany filtrem wycinającym (pa-
+smowozaporowym, tzw. filtr typu norch) służącym do usuwania wąskiego pasma częstotli-
+wości. Taki filtr może np. eliminować zakłócenia o częstotliwości 60 Hz (w Europie 50 Hz,
+przyp. tłum.) w sygnale fonicznym albo pomiarowym. Gdyby ten obwód składał się z 3 re-
+zystorów (zamiast rezystora, kondensatora i cewki), to zależność między napięciem wyjścio-
+wym a wejściowym byłaby określona wzorem stosowanym dla dzielników napięcia: U, /U;,
+= (R + Rą) / (R; + Ry + Rz). Ponieważ obwód zawiera kondensator i cewkę indukcyjną, więc
+rezystancje we wzorze trzeba zastąpić impedancjami:
+
+Um Z2+Z3
+U. Z1+Z2+Z3
+
+gdzie: U, U,„ Z, Z2, Z3 są zmiennymi zespolonymi. Wstawiając impedancje każdego elementu:
+
+: J
+pesza
+Ua > ©C
+
+UR R+joL=-
+oC
+
+Następnie wykonujemy operacje algebraiczne, aby oddzielić wszystkie wyrazy zawierające j
+od wszystkich, które j nie zawierają. Innymi słowy, rozdzielamy to wyrażenie na jego części
+rzeczywistą i urojoną. Te działania algebraiczne mogą być nużące i długie, lecz alternatywą
+byłoby napisanie i rozwiązanie równań różniczkowych, a więc zadanie jeszcze przykrzejsze.
+Po wydzieleniu części rzeczywistej i urojonej wyrażenie zespolone opisujące filtr wycinający
+nrzvimuie nostać:
+
+<image/wzory/k3_page501_formula1.png>
+
+<image/figury/k3_page501_figure1.png>

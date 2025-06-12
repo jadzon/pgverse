@@ -1,0 +1,34 @@
+300 3. Obwody prądu stałego
+
+charakterystyka leży w pierwszej oraz trzeciej ćwiartce układu współrzędnych i,
+w konsekwencji, moc pobierana jest zawsze dodatnia.
+
+Przykład 3.5-3. Moc pobierana przez dwójnik mostkowy z rys. 3.5-3, w którym U = 7 V oraz
+R = $ kQ wynosi (por. przykład 3.2-1b):
+
+<image/wzory/k3_page300_formula1.png>
+
+<image/figury/k3_page300_figure1.png>
+
+Przykład 3.54. Obliczymy moc pobieraną przez dwójnik nieliniowy z rys. 3.5-4 dla na-
+stępujących danych: I = I mA, R = 2kQ, Rz: u =af, a = 2 V/mA3.
+
+<image/figury/k3_page300_figure2.png>
+
+Ponieważ opór statyczny oporu nieliniowego R, jest równy Ry, = al? = 2kQ, zatem opór
+statyczny dwójnika:
+
+<image/wzory/k3_page300_formula2.png>
+
+a stąd moc pobierana:
+
+vzory/k3_page300_formula3.png
+
+C. Pasywność a moc pobierana. Zbadamy obecnie relację między pasyw-
+nością dwójnika rezystancyjnego, stanowiącego fragment sieci prądu stałego,
+a pobieraną przez niego mocą P = UI.
+
+Z założenia rozpatrywany dwójnik rezystancyjny jest stacjonarny (por.
+ostatni akapit p. 3.1-C), jest zatem jednoznacznie określony przez swoją
+charakterystykę w płaszczyźnie i, u. W p. 2.1.8-D pokazaliśmy, że dwójnik taki
+jest pasywny wtedy i tylko wtedy, kiedy jego charakterystyka nie przechodzi

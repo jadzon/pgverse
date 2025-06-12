@@ -1,0 +1,54 @@
+analogowe, a nawet minikomputery. Obecnie ich możliwości wzrastają jeszcze
+bardziej gwałtownie, bowiem prawie co miesiąc pojawiają się nowe idee i roz-
+wiązania.
+
+Sterowniki PLC rozwijały się głównie dlatego, aby umożliwiać szybkie reago-
+wanie na zmiany wymagań aplikacyjnych przez łatwiejszą możliwość przepro-
+gramowywania i bez potrzeby zmian sprzętowych.
+
+Powszechnie uważa się, że rozwój produkcji i zastosowań sterowników PLC na-
+
+stąpił przede wszystkim dzięki:
+
+e _ podobieństwu schematów drabinkowych używanych w oprogramowaniu
+PLC do stosowanych schematów stykowo-przekaźnikowych,
+
+e zwiększeniu niezawodności komputerów przemysłowych na tyle, aby mogły
+działać w zanieczyszczonym środowisku,
+
+e wprowadzeniu programowej kontroli obwodów wejściowych i wyjściowych
+oraz wielu innych możliwości diagnostyki systemowej i obiektowej,
+
+e  zaprojektowaniu specjalnego zbioru instrukcji uwzględniających warunki
+przemysłowe, w których przebiega sterowany proces,
+
+e zapewnieniu komunikacji z gniazdami przemysłowymi, panelami operator-
+skimi, wyświetlaczami, komputerami osobistymi oraz innymi urządzeniami
+typu HMI (Human Machine Interface) w celu komunikacji operatorów pro-
+cesów z systemami sterowania.
+
+Ze wzrostem liczby i zakresu zastosowań rosły żądania wprowadzania nowych
+funkcji, zwiększania pamięci oraz liczby wejść i wyjść. Większość producentów
+zareagowała na te potrzeby przez wprowadzanie nowych modeli sterowników
+PLC, które dzieli się na:
+
+e małe (50-150 przekaźników),
+
+e średnie (150-500 przekaźników),
+
+e duże (500-3000 przekaźników).
+
+Jednak modele te nie były ze sobą wzajemnie kompatybilne, gdyż programy dla
+jednych nie funkcjonowały w innych. Ponadto nie miały one możliwości zwięk-
+szania liczby wejść i wyjść - można to było zrobić jedynie przez wymianę ste-
+rownika na większy, co oczywiście zwiększało koszty.
+
+Obecnie producentów obowiązuje koncepcja wprowadzania na rynek całych ro-
+dzin sterowników (family concept), polegająca na podobnym projektowaniu
+wszystkich modeli sterowników i pozwalająca na zaspokojenie potrzeb rynku,
+umożliwiając lepszy dobór sprzętu dla różnych wielkości projektowanych insta-
+lacji.
+
+ 
+
+1.1 Rys historyczny 5

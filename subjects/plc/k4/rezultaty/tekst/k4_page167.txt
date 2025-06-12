@@ -1,0 +1,35 @@
+Odbiornik musi mieć impedancję wejściową nie mniejszą niż 4 k Q. Jego para-
+metry elektryczne określa progowe napięcie jego wejścia, które wynosi 200 mV
+dla napięć wspólnych od —7 V do +7 V. Ponadto, określona jest charakterystyka
+napięciowo-prądowa obwodu wejściowego. Jeśli chodzi o odporność odbiornika
+to określa się, że nie może on ulec uszkodzeniu po wyłączeniu lub załączeniu
+zasilania w warunkach, gdy nastąpi zwarcie na linii, wystąpi zwarcie przewodu
+do masy lub też gdy nadajnik zostanie wyłączony.
+
+<image/figury/k4_page167_figure2.png>
+
+Standard RS 485, określa obwody transmisyjne, które są również symetryczne,
+zrównoważone, przy czym mogą obejmować wiele nadajników i wiele odbiorni-
+ków. Dopasowanie linii zapewniają dwa rezystory Rq = 60 Q, które umieszcza
+się na jej początku i na końcu.
+
+<image/figury/k4_page167_figure1.png>
+
+Nadajnik ma różnicowy obwód wyjściowy o napięciu zrównoważonym
+od —1,5 V do 5 V i rezystancji nie większej niż 60 ©. Prąd zwarciowy tego Źró-
+dła nie może przekraczać 0,15 A przy zwarciu do masy.
+
+Nadajniki są trójstanowe i w danym czasie tylko jeden z nich może nadawać,
+a pozostałe powinny być w stanie wysokiej impedancji. Muszą jednak mieć za-
+bezpieczenie przed kolizją przy jednoczesnym nadawaniu kilku nadajników.
+
+Nadajnik może być obciążony przez co najwyżej 32 odbiorniki i 2 rezystancje
+dopasowujące. Obciążeniem może być obwód o poborze | mA przy napięciu
+wspólnym do 12 V, lecz nie mogą to być dodatkowe rezystory poza dopasowują-
+cymi.
+
+ 
+
+ 
+
+3.9 Moduł komunikacyjny 167

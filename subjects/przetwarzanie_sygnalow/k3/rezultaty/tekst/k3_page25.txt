@@ -1,0 +1,36 @@
+Rozkład normalny 35
+
+<image/tabele/k3_page25_table1.png>
+
+gnału mających wartość między 0 i 0,01, przedział | — liczbę próbek o wartościach między
+0,01 i 0,02 itd. aż do przedziału 999 zawierającej liczbę próbek o wartościach między 9,99
+i 10,0. W tablicy 2.4 podano program obliczania histogramu przedziałowego tą metodą.
+
+Ile przedziałów powinno się stosować? Konieczne jest pogodzenie sprzecznych wymagań.
+Z jednej strony, jak pokazano na rys. 2.7, zbyt wiele przedziałów utrudnia estymację am-
+plitudy pmf, gdyż w każdym przedziale jest niewiele próbek, więc szum statystyczny jest
+bardzo duży. Z. drugiej jednak strony, zbyt mało przedziałów utrudnia estymację pmf/ w kie-
+runku poziomym. A zatem wybór liczby przedziałów powinien być kompromisem między
+rozdzielczością wzdłuż osi y i rozdzielczością na osi x.
+
+Rozkład normalny
+
+Sygnały powstające w wyniku procesów losowych mają zwykle przebieg funkcji gęstości
+prawdopodobieństwa o kształcie dzwonowym. Taki przebieg nazywamy rozkładem normal-
+nym lub rozkładem Gaussa, czyli gaussowskim. Nazwa pochodzi od nazwiska wielkiego
+niemieckiego matematyka Carla Friedricha Gaussa (1777-1855). Przyczynę, dla której taki
+rozkład tak często występuje w przyrodzie, krótko omówimy w powiązaniu z generacją szu-
+mu cyfrowego. Podstawowy kształt krzywej jest opisanyy funkcją wykładniczą typu:
+
+<image/wzory/k3_page25_formula1.png>
+Tę podstawową zależność można przekształcić w pełną krzywą gaussowską, wprowadzając
+dobieraną wartość średnią u i odchylenie standardowe o. Ponadto wzór musi być znormali-
+zowany, aby powierzchnia całkowita pod krzywą była równa jedności. Jest to wymóg doty-
+czący wszystkich funkcji rozkładów prawdopodobieństwa. W rezultacie uzyskuje się ogólną
+postać wyrażenia opisującego rozkład normalny. Jest to jeden z najważniejszych wzorów
+w dziedzinie statystyki i rachunku prawdopodobieństwa:
+
+<image/wzory/k3_page25_formula2.png>
+
+| Wzór 2.8. Wzór opisuje rozktad normalny, zwany również rozkładem Gaussa lub po prostu gaussowskim.
+p W tej zależności P(x) jest funkcją rozkładu prawdopodobieństwa, U wartością średnią i o odchyleniem

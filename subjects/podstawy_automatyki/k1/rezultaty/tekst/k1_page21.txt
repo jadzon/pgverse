@@ -1,0 +1,29 @@
+<image/wzory/k1_page21_formula1.png>
+
+przy czym współczynniki C;, są, ogólnie biorąc, zespolone. Można je wyliczyć
+w znany sposób, sprowadzając prawą stronę wzoru (1.33) do wspólnego mianowni-
+ka M(s) i przyrównując tożsamościowo liczniki.
+
+Uwzględniając wzór (1.25), mamy dla £2 0
+
+<image/wzory/k1_page21_formula2.png>
+
+Dla dowolnych zespolonych s,, wykonując Z" przekształcenie obu stron równo-
+ści (1.33), otrzymujemy ogólny wzór w postaci
+
+<image/wzory/k1_page21_formula3.png>
+
+Współczynniki C;, można również obliczyć bezpośrednio ze wzoru
+
+<image/wzory/k1_page21_formula4.png>
+
+gdzie: k= 1, 2,....., Oy; i= 1, 2,......, £.
+
+W praktyce inżynierskiej najczęściej spotykamy się z przypadkiem, kiedy wszystkie
+pierwiastki s; mianownika M(s) są pojedyncze. Ponieważ wszystkie współczynniki 0t,
+dla tego przypadku są równe jedności, to możemy zapisać ©, = 1; i = 1, 2,..., K=n, zatem
+wszystkie sumy względem wskaźnika k (wzór (1.33)) oraz (wzór (1.35)) redukują się do
+pojedynczych wyrazów dla k = 1. Oznaczając C/, = C,, otrzymujemy rozkład na ułamki
+proste w postaci
+
+23

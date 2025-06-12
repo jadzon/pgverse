@@ -1,0 +1,38 @@
+Stan układu- układy wyższych rzędów, jednorodne
+
+Trajektoria stanu układu wyższego rzędu
+
+<image/wzory/k7_page7_formula1.png>
+<image/wzory/k/_page7_formula2.png>
+
+<image/wzory/k/_page7_formula3.png>
+
+w L
+
+ 
+    
+
+macierz fundamentalna
+macierz tranzycji stanu
+
+<image/wzory/k/_page7_formula4.png>
+
+ 
+ 
+
+POLITECHNIKA
+GDANSKA
+
+a
+O
+
+of
+(OJ
+D
+
+=
+5
+=
+O
+=
+o

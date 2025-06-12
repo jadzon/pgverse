@@ -1,0 +1,40 @@
+Wieloetapowe procesy decyzyjne mogą być modelami wielu rzeczywistych proce-
+sów, w szczególności procesów ekonomicznych, procesów sterowania oraz planowania
+akcji.
+
+Przykładami wieloetapowych procesów decyzyjnych są: maksymalizacja zysku
+przedsiębiorstwa w ciągu zadanego okresu czasu, sterowanie zespołem elektrowni
+wodnych umieszczonych wzdłuż jednej rzeki i jej dopływów (np. kanadyjski system
+Hydro Quebec) zapewniający maksymalną ilość dostarczanej energii, sterowanie ze-
+społem wind, sterowanie odwróconym wahadłem, gry, itp. Do typowych wieloetapo-
+wych procesów decyzyjnych zaliczają się też wszelkie zadania alokacji, czyli rozdzie-
+lania określonych zasobów pomiędzy określoną liczbę użytkowników zapewniające
+optymalny zysk.
+
+Charakterystyczne dla wieloetapowych procesów decyzyjnych jest, że akcje skła-
+dające się na optymalny proces decyzyjny nie muszą być lokalnie najlepsze, tzn.
+związana z nimi nagroda nie musi być największą z możliwych nagród do otrzyma-
+nia w danym stanie. Czasami należy zrezygnować z wysokich lokalnych nagród dla
+osiągnięcia globalnego optimum — maksymalizacja nagrody na pewnym etapie może
+prowadzić do pogorszenia globalnej oceny systemu.
+
+Rozróżnia się systemy ciągłe i dyskretne, deterministyczne, w których żądane
+przejścia stanów zachodzą na pewno, i niedeterministyczne, w których żądane zmiany
+zachodzą tylko z określonym prawdopodobieństwem (mogą nastąpić przejścia inne
+niż żądane) lub zachodzą spontaniczne zmiany stanów na skutek losowych czynni-
+ków zewnętrznych. Nagrody mogą być otrzymywane po każdej akcji lub istnieć tylko
+jednorazowa nagroda po zakończeniu procesu (np. wygrana w grach). Procesy mogą
+trwać ustaloną liczbę kroków (określony czas) lub nie mieć końca.
+
+PRZYKŁAD 6.20
+
+Przykład wieloetapowego procesu decyzyjnego — zadanie optymalnego sterowania
+zespołem wind (rys. ??).
+
+<image/figury/k2_page171_figure1.png>
+
+Rys. 6.75: Przykładowy stan systemu trzech wind
+
+Stan systemu:
+
+e położenie wind,

@@ -1,0 +1,17 @@
+<image/tabele/k4_page36_table2.png>
+
+Tab. 2.1 przedstawia sposoby prezentacji danych w postaci liczbowej. Dla przy-
+kładów liczb przedstawionych w układach innym niż dziesiętny w nawiasach
+podano odpowiadające im wartości dziesiętne. [Dopuszcza się użycie znaków
+podkreślenia (_) wtrąconych między cyfry dla poprawy czytelności zapisu.
+
+<image/tabele/k4_page36_table1.png>
+
+Dana może być także przedstawiona w postaci ciągu zawierającego zero lub wię-
+cej znaków ograniczonych z obu stron znakiem pojedynczego cudzysłowu (').
+Kombinacja trzech znaków: znaku dolara ($) oraz dwóch cyfr szesnastkowych
+jest interpretowana jako szesnastkowa reprezentacja ośmiobitowego kodu znaku,
+jak pokazuje piąty przykład w Tab. 2.2.
+
+ane e
+36 Rozdział * ”. Programowanie sterowników PLC

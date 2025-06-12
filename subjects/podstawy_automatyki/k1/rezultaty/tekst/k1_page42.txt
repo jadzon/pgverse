@@ -1,0 +1,21 @@
+Jeżeli przyjmiemy, że warunki początkowe były równe zero, transformatę Lapla-
+ce'a równania możemy zapisać jako
+
+<image/wzory/k1_page42_formula1.png>
+
+stąd otrzymujemy transmitancję układu
+
+<image/wzory/k1_page42_formula2.png>
+
+Następnie zapiszemy model tego układu w przestrzeni stanu. W tym celu skorzy-
+stamy z zapisu równania w postaci
+
+<image/wzory/k1_page42_formula3.png>
+
+którego postać ogólna to
+
+<image/wzory/k1_page42_formula4.png>
+
+Podstawiamy współczynniki:
+
+<image/wzory/k1_page42_formula5.png>

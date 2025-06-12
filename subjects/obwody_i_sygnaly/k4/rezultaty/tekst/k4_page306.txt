@@ -1,0 +1,41 @@
+306 3. Obwody prądu stałego o
+
+<image/wzory/k4_page306_formula1.png>
+
+Zatem P % P'+P".
+
+c)
+<image/wzory/k4_page306_formula2.png>
+
+ 
+
+Rys. 3.5-8
+
+3.5.3. Dopasowanie obciążenia do źródła
+
+A. Sprawność źródeł. Rozpatrzmy ponownie rzeczywiste źródło napięcio-
+we o sile elektromotorycznej E i oporze wewnętrznym R,, obciążone dwójnikiem
+o oporze R (obwód z rys. 3.5-7a). Z obwodem tym są związane następujące moce:
+
+P — moc pobierana przez obciążenie (oddawana przez rzeczywiste źródło
+napięciowe do obciążenia);
+
+P,„ — moc pobierana przez opór R, (tracona w oporze wewnętrznym źródła);
+
+P;z — moc oddawana przez idealne źródło napięciowe do układu.
+
+Wprowadzimy pojęcie sprawności rzeczywistego źródła napięciowego, defi-
+niując ją jako stosunek:
+
+<image/wzory/k4_page306_formula3.png>
+Ponieważ, zgodnie z zasadą Tellegena:
+
+<image/wzory/k4_page306_formula4.png>
+
+zatem sprawność 47; można zapisać w postaci:
+
+<image/wzory/k4_page306_formula5.png>
+
+Wykres sprawności 4; w funkcji stosunku R/R. jest przedstawiony na
+rysunku 3.5-9. Sprawność źródła napięciowego jest tym większa, im większy jest
+opór obciążenia R w porównaniu z oporem wewnętrznym źródła R.,.

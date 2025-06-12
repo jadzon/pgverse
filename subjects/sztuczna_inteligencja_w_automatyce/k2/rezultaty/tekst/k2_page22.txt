@@ -1,0 +1,8 @@
+<image/figury/k2_page22_figure1.png>
+
+Rys. 3.8: Układanka 3 x 3. Drzewo stanów uzyskane metodą szukania heurystycznego,
+gdzie 4 jest liczbą kroków od węzła startowego do danego, a h jest sumą odległości każdego
+klocka od swojego położenia końcowego (wyrażanych liczbą przesunięc) zwiększoną o liczbę
+punktów dla każdego klocka na obwodzie, któremu przyznane zostaje 6 punktów, gdy nie
+następuje za nim właściwy klocek, 0 punktów w przeciwnym przypadku oraz zwiększoną
+o 3 punkty za klocek na środku tablicy (z książki |?])

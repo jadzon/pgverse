@@ -1,0 +1,40 @@
+ZZYLIOLCB
+
+ 
+
+Przez zmienne (variables) rozumie się takie dane, których wartości mogą zmie-
+niać się w trakcie pracy sterownika, np. dane skojarzone z wejściami, wyjściami
+lub pamięcią sterownika. W deklaracji zmiennej podaje się typ do jakiego należy.
+
+Zmienna skalarna (jednoelementowa) reprezentuje pojedynczą daną należącą do
+typu elementarnego, wyliczeniowego lub okrojonego. Zmienna taka może być
+reprezentowana symbolicznie (przez nazwę) lub w sposób bezpośrednio
+określający powiązanie ze strukturą wejść, wyjść lub pamięci sterownika (Directly
+represented variable). W tym drugim przypadku zmienna reprezentowana jest
+przez znak %, przedrostek określający jej lokalizację i ewentualnie rozmiar
+(por. Tab. 2.11) oraz jedną lub więcej liczb całkowitych bez znaku oddzielonych
+kropkami, określających adres zmiennej. Poniżej przedstawiono przykłady zasto-
+sowań:
+%QX75 lub %Q75 bit 75 na wyjściu
+
+%1W215 słowo 215 na wejściu
+
+%QB7 bajt 7 na wyjściu
+
+%MD48 słowo podwójne pod adresem 48 w pamięci
+%IW2.5.7.1 patrz opis poniżej.
+
+Producenci sterowników mogą wprowadzać bezpośrednią załeżność między na-
+zwą zmiennej a fizyczną lub logiczną lokalizacją w pamięci, na wejściu lub
+wyjściu sterownika. W tym przypadku kolejne pola zawierające liczby oddzielo-
+ne kropkami są interpretowane jako hierarchiczny sposób adresacji, gdzie
+pierwsze pole od lewej strony reprezentuje najwyższy poziom. Na przykład
+zmienna %/W2.5.7.1 może oznaczać pierwsze słowo dla modułu wejściowego na
+siódmej pozycji w piątej kasecie dla drugiej magistrali //O systemu sterowników
+programowalnych. Użycie bezpośredniej reprezentacji zmiennej dopuszczalne
+jest tylko w programach, konfiguracjach i zasobach, a maksymalna liczba pozio-
+mów w adresowaniu hierarchicznym jest zależna sprzętowo.
+
+<image/tabele/k4_page43_table1.png>
+
+wzoryv/k4_pade43_formula1.0na

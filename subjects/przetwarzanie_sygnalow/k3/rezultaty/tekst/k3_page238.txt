@@ -1,0 +1,24 @@
+14. Wprowadzenie do filtrów cyfrowych
+
+Filtry górnoprzepustowe, pasmowoprzepustowe
+i pasmowozaporowe
+
+Filtry górnoprzepustowe, pasmowoprzepustowe i pasmowozaporowe projektuje się, rozpo-
+czynając od filtru dolnoprzepustowego i następnie przekształcając go w taki sposób, aby uzy:
+skać żądaną odpowiedź. Dlatego w większości rozważań o projektowaniu filtrów są podawa-
+ne tylko przykłady dotyczące filtrów dolnoprzepustowych. Są dwie metody przekształcenia
+filtru dolnoprzepustowego w górnoprzepustowy: inwersja widmowa i odwrotna inwersja
+widmowa. Obie są jednakowe użyteczne.
+a badanie zc serc radka Na rys. 14.5 a) pokazano odpowiedź
+impulsową filtru dolnoprzepustowego zwaną funkcją okienkowanego sinc(x) będącą przed-
+miotem rozważań w rozdziale 16. Ta odpowiedź impulsowa ma długość 51 punktów, chociaż
+
+z tej odpowiedzi odpowiedź częstotliwościową pokazano na rys. 14.5 b). Wyznaczono ją,
+dopełniając odpowiedź impulsową 13 zerami i wykonując 64-punktowe przekształcenie FFT.
+Aby przemienić odpowiedź impulsową filtru dolnoprzepustowego w odpowiedź filtru gómo-
+przepustowego, trzeba zrobić dwie rzeczy. Po pierwsze, należy zmienić znak każdej
+
+w odpowiedzi impulsowej. Po drugie, trzeba dodać jeden do próbki leżącej w środku syme-
+trii. W rezultacie uzyskuje się odpowiedź impulsową filtru górnoprzepustowego (rys. 14.5 c)
+
+<image/figury/k3_page238_figure1.png>

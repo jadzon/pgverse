@@ -1,0 +1,34 @@
+129
+
+<image/figury/k2_page124_figure1.png>
+
+prostej oznaczonej numerem 1 ma postać 1ą — 2 = (0 i stąd wagi odpowiadającego
+jej neuronu wynoszą: wy = 0, wyją = 1, wyją = —2. Wyznaczone w ten sposób wagi
+neuronów w pierwszej warstwie zostały następnie pomnożone przez stały współczyn-
+nik >> 1 (przykładowo 20), aby w uzyskanej sieci przejście pomiędzy wartościami
+wyjścia 0 i 1 było odpowiednio strome. Ostatecznie otrzymano
+
+<image/wzory/k2_page124_formula1.png>
+
+Biorąc te wagi oraz przyjmując wagi neuronu wyjściowego: wz, = 1, £ = 1,2,3,4,
+Wzyz = —3,5 otrzymujemy sieć przedstawioną na rysunku ??b, zaś odpowiedź tej
+sieci na sygnały wejściowe z zakresu (0,6) przedstawiono na rys ??c. |
+
+Podając wyjścia sieci realizujących bramki na odpowiednio ważone wejścia nen-
+ronu liniowego (sumującego) otrzymujemy trójwarstwową sieć mogącą aproksymo-
+wać dowolną funkcję, przy czym dokładność aproksymacji zależy od szerokości bramki
+Az.
+
+PRZYKŁAD 6.8
+
+Na rysunku ??a przedstawiono przykładową sieć zbudowaną z dwóch sieci realizu-
+jących bramki i jednego neuronu liniowego, zaś na rysunku ??b funkcję realizowaną
+przez całą sieć. m
+
+Pokazano powyżej, że trójwarstwowa sieć neuronowa może aproksymować do-
+wolną funkcję. Jak wspomniano wcześniej do takiej aproksymacji wystarczy już sieć
+dwuwarstwowa.
+
+W praktycznych realizacjach nie aproksymuje się funkcji za pomocą sumowania
+bramek, tylko przyjmuję się sieć warstwową o określonej liczbie warstw i liczbach
+neuronów w warstwach i bezpośrednio poprzez naukę uzyskuje się pożądane przy-

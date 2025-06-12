@@ -1,0 +1,24 @@
+162 8. Mechanizmy przyspieszające pracę komputerów
+
+rozkazu i dlatego słowo to jest przesyłane do rejestru rozkazów. Do współpracy z pamięcią
+danych stosuje się specjalny układ obliczania adresu argumentu (w zależności od rodzaju
+rozkazu), a argumenty są odczytywane z pamięci danych i zapisywane do rejestrów
+procesora lub odczytywane z rejestrów i zapisywane do pamięci. Taka organizacja jest
+nazywana architekturą typu Harvard. W tego typu układzie można rozdzielić magistralę
+rozkazów i danych, co umożliwi rozpoczęcie nowego cyklu dostępu do pamięci rozkazów
+zanim nie zakończy się wykonanie poprzedniego rozkazu.
+
+Na rysunku 8.5 pokazano uproszczony schemat blokowy architektury typu Harvard.
+W niektórych zastosowaniach, zwłaszcza w systemach mikroprocesorowych dedykowa-
+nych specjalnym zastosowaniom, pamięć programu jest pamięcią stałą (typu ROM)
+I w czasie pracy systemu dokonuje się tylko jej odczytów.
+
+8.3. ARCHITEKTURY POTOKOWE
+8.3.1. ZASADA DZIAŁANIA
+
+Dwa podstawowe typy architektur, w których uzyskuje się zwiększenia szybkości obliczeń,
+to: architektura potokowa i architektura równoległa. Celem wyjaśnienia różnicy pomiędzy
+nimi załóżmy, że w klasycznym komputerze jeden rozkaz wykonuje się w pięciu cyklach
+maszynowych:
+
+<image/figury/k3_page172_figure2.png>

@@ -1,0 +1,43 @@
+208 2. Pojęcia podstawowe — układy
+
+   
+   
+
+zmodyfikowanej rozważmy przykład układu z rys. 2.1-29a. W układzie tym dioda tunelowa
+o charakterystyce pokazanej na rys. 1.3-4c jest połączona równolegle z oporem liniowym R=40Q
+i powstały w ten sposób dwójnik jest zasilany ze źródła prądowego o wydajności prądo-
+wej J = 7 mA.
+
+<image/figury/k4_page208_figure1.png>
+
+ 
+
+Rys. 2.1-29
+
+Na rys. 2.1-29b jest przedstawiona konstrukcja charakterystyki łączne
+diody tuneloweji oporu R (por. p. 1.5.2-C), zktórej wynika, że przy warto
+układzie jest określone jednoznacznie i wynosi U = 0,2 V oraz że |
+tunelową jest równy I = 2 mA. Punkt pracy diody tunelowej (punkt A
+współrzędne (U = 0,2 V, I = 2 mA). Zastąpmy obecnie dwójnik dołę
+idealnym źródłem prądowym o wydajności prądowej I = 2 mA (i
+z rys. 2.1-29b możliwe są teraz trzy rozwiązania, odpowiadające punktor
+jedno (odpowiadające punktowi 4) jest identyczne jak dla układu piery
+
+Zasada kompensacji przestaje zatem obowiązywać, jeśli układ zmodyf
+jednoznacznych.
+
+2.1.8. Układy pasywne i układy aktywne
+
+Omówimy teraz jeszcze jedną, ważną linię podziału ukłe
+iaktywnea.przezsowoukadbdziemyrozumwzory/k4_page208_
+wielowrotnik i jego przypadki szczególne (dwójnik, czwó:
+
+A. Pojęcie pasywności i aktywności. Dyskusję zac:
+(rys. 2.1-2a). Załóżmy, że jego stan zaciskowy u=u(i), i
+w przedziale (ty, + co), gdzie ty jest dowolnie wybraną c
+Rozważmy dowolną chwilę t € (ty, +00). Energia j
+przez dwójnik w przedziale czasu Cty, t» jest określona
+W chwili £, w dwójniku mogła być zgromadzona pew
+dwójnik może zawierać elementy zdolne do gromadzenia '
+energię przez © (ty). Całkowitą energię, jaka została dost:
+do chwili t, możemy zatem zapisać w postaci:

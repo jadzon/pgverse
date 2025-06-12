@@ -1,0 +1,22 @@
+166 1. Pojęcia podstawowe — elementy
+
+Zadanie 1.38. Obliczyć indukcyjności zastępcze układów przedstawionych na rys. Z-1.38a i b.
+Przyjąć następujące wartości indukcyjności: L, = 2 mH, L, = 8 mH, M = 2mH, Z, = 3 mH.
+
+Odp.: Jh PESEIDON" „m
+L +1, +L, -2M
+= (L, Lj — M*)L;
+
+(ŻuEljly=k |
+
+b) L,
+
+<image/figury/k3_page166_figure1.png>
+
+Zadanie 1.39. Sprawdzić, że transformator idealny o przekładni p (rys. Z-1.39) obciążony na
+zaciskach wtórnych oporem R (indukcyjnością Ł, pojemnością C) jest równoważny oporowi
+o wartości p*R (indukcyjności o wartości p? Ł, pojemności o wartości C/p?).
+
+<image/figury/k3_page166_figure2.png>
+
+Rys. Z-1.39

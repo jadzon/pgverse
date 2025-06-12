@@ -1,0 +1,56 @@
+223
+
+2. ma_dostep(tomasz,radio).
+na co program odpowiada no (nie).
+
+3. korzysta(ewa,radio).
+odpowiedż: yes. Zauważmy, że przygotowując tę odpowiedż program nie mógł
+wprost skorzystać z faktu korzysta(ewa,radio) bo takiego w programie nie ma
+i musiał skorzystać z reguły wiążącej korzystanie z posiadaniem i lubieniem.
+
+4. korzysta(Osoba,wideo).
+odpowiedż: Osobastomasz Zauważmy, że używając zmiennej Osoba sformuło-
+wano zadanie znalezienia wszystkich osób korzystających z wideo.
+
+5. korzysta(monika,Przedmiot).
+odpowiedż: Przedmiot=auto, Przedmiot=ksiazki. Forma pytania podobna do
+poprzedniej, jednak tym razem Prolog znajduje 2 rozwiązania.
+
+6. korzysta(monika,X), korzysta(jan,X).
+odpowiedż: X=auto. Jest to przykład pytania złożonego — zapytano, czy z zawar-
+tych w programie klauzul wynika, że istnieje jakiś przedmiot z którego korzystają
+monika i jan.
+
+—I
+.
+
+korzysta(0,P).
+odpowiedź:
+
+O=ewa P=plyty, O=jan P=auto, O=ewa P=radio,
+O=tomasz P=wideo, O=monika P=auto, O=smonika P=ksiazki
+
+Użycie w pytaniu dwóch zmiennych zmusiło program do wyznaczenia wszystkich
+par obiektów spełniających relację korzysta.
+mi
+
+9.1.4. Przykłady uzycia termów złozonych
+
+PRZYKŁAD 9.2
+
+Przypuśćmy, że chcemy zawrzeć w programie spis przedmiotów znajdujących się w
+magazynie wraz z pewnymi danymi je charakteryzującymi, ale dane te (ich liczba i
+charakter) zależą od przedmiotu. Przypuśćmy, że w magazynie znajdują się książki
+opisywane przez podanie autora i tytułu, płyty dzielące się na płyty z muzyką kla-
+syczną i rozrywkową przy czym płyty z muzyką klasyczną opisywane są przez nazwi-
+sko kompozytora, tytuł utworu i nazwisko solisty lub dyrygenta, zaś plyty rozryw-
+kowe przez zespół lub solistę i tytuł płyty. Wreszcie w magazynie są piłki jednego
+tylko rodzaju. Ponadto, każdy przedmiot charakteryzowany jest liczbą egzemplarzy
+i ceną. Wszystkie te dane chcielibyśmy umieszczać w programie korzystając tylko z
+trzyargumentowego predykatu magazyn(przedmiot.cena.ilosc).
+Rozpatrzmy spełniający te wymagania kompletny program:
+
+/* Program 2 */
+
+magazyn(ksiazka( Sienkiewicz H.”,*Potop”),60,17).
+magazyn(ksiazka(”Blixen K*, Pozegnanie z Afryka ”),41,30).

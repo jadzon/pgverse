@@ -1,0 +1,45 @@
+A.2. Układy kombinacyjne 179
+
+<image/figury/k3_page189_figure1.png>
+
+Rysunek D.5. Minimalna postać koniunkcyjna
+
+trzy operacje (a tym samym trzy rodzaje bramek) stanowią system funkcjonalnie pełny,
+tj. taki, że dowolną funkcję można zapisać za pomocą tych trzech operacji. Łatwo można
+wykazać, że istnieją inne zestawy funkcjonalnie pełne. Tu zostaną przedstawione trzy
+z nich:
+
+1) NAND,
+
+2) NOR,
+
+3) 1,I, EXOR.
+
+Za pomocą funkcji NAND można zrealizować dowolną funkcję boolowską, gdyż trzy
+operacje boolowskie (I, LUB, NIE) dadzą się zrealizować za pomocą funkcji NAND
+(rys. D.6). Warto zauważyć, że funkcja sumy jest realizowana jako funkcja NAND o za-
+negowanych wejściach. Stąd wniosek, że realizując alternatywną postać funkcji za pomocą
+
+bramek NAND otrzymuje się trzy poziomy bramek, a realizując postać koniunkcyjną
+cztery.
+
+L>— | | d
+>,D DDD =D
+
+Rysunek D.6. Równoważność bramek NAND
+
+D-
+
+Na rysunku D.7 pokazano jak można przekształcić układ logiczny I-LUB-NIE na
+układ logiczny NOR. Zauważmy, że iloczyn logiczny jest realizowany jako bramka NOR
+z zanegowanymi wejściami. W tym przypadku postać alternatywna będzie czteropoziomo-
+wa, a postać koniunkcyjna trzypoziomowa.
+
+Trzecim zestawem funkcjonalnie pełnym jest przypadek, gdy operacje algebry są
+operacjami: suma modulo 2, iloczyn i stała 1. Taka algebra nazywa się algebrą Reada-
+-Mullera. Dla wykazania pełności funkcjonalnej zestawu trzeba pokazać i w tym
+
+D>=+D>D> - pes
+edL>— 12- =] > e _>e-
+
+Rysunek D.7. Równoważność bramek NOR

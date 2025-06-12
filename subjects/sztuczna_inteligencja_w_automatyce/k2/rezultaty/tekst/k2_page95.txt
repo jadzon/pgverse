@@ -1,0 +1,42 @@
+100
+
+W przypadku gdy funkcja f(x,w) zależy liniowo od parametrów w minimum
+ryzyka empirycznego (??) można wyznaczyć metodą najmniejszych kwadratów opi-
+sana w p. ??.
+
+W przypadku nieliniowego wpływu wartości parametrów w metody analityczne
+poszukiwania minimum funkcji (??) poprzez przyrównywanie pochodnych do zera
+zazwyczaj nie mają znaczenia praktycznego ze względu na nieliniowość funkcji i
+występowanie licznych minimów lokalnych
+
+W pierwszym przypadku nie można uzyskać rozwiązań powstałych równań w po-
+staci jawnej, zaś w drugim uzyskuje się wielką liczbę rozwiązań. Z tego powodu do
+poszukiwania minimum stosuje się metody numeryczne. Zadania poszukiwania mi-
+nimum funkcji wielu zmiennych są trudne i wymagają dużych mocy obliczeniowych
+i wciąż poszukuje się efektywnych algorytmów minimalizacji. Podstawowe, stoso-
+wane, algorytmy omówione są w następnym punkcie. Są to algorytmy gradientowe,
+szukania przypadkowego i symulowanego wyżarzania, algorytmy ewolucyjne i algo-
+rytmy roju. Oprócz nich istnieją inne algorytmy związane z uczeniem specyficznych
+struktur, będą one omówione w dalszych częściach rozdziału.
+
+6.3. Metoda najmniejszych kwadratów
+
+Mamy model liniowy opisany równaniem (patrz też rys. ??)
+
+<image/wzory/k2_page95_formula1.png>
+
+gdzie y jest sygnałem wyjściowym, x = (x;,...,z,] jest wektorem sygnałów wejścio-
+wych, gy, ..., Pn Są znanymi funkcjami, a wy, wą,..., wy są parametrami.
+
+<image/figury/k2_page95_figure1.png>
+
+Rys. 6.3: Model liniowy — ilustracja do równania (??)
+
+Metoda najmniejszych kwadratów rozwiązuje następujące zadanie. Mamy zbiór
+par: wektorów sygnałów wejściowych x i odpowiadających im sygnałów wyjściowych
+
+d (par sygnałów uczących) (x;:d;).t = 1..... M. Należy tak dobrać parametry mo-
+delu liniowego wy. wa..... wą aby podając na jego wejście sygnały x;.ł = 1..... M,
+otrzymać na wyjściu sygnały y,,ł = 1...., M możliwie bliskie d,.i = 1,...,M (w
+
+sensie kryterium kwadratowego) .

@@ -1,0 +1,54 @@
+_7.11_ Funkcje na ciągach bitów
+
+ 
+
+Pierwszą grupę operatorów działających na ciągach bitów stanowią operatory
+logiczne, których argumentami są zawartości akumulatora 2 i akumulatora 1.
+Realizację tych operatorów można przedstawić schematycznie następująco:
+
+<image/tabele/k4_page351_table2.png>
+
+Do operatorów tych zaliczamy:
+
+e AW  -iloczyn logiczny bitów słowa zawartego w akumulatorze 2 z odpo-
+wiednimi bitami słowa zawartego w akumulatorze 1,
+
+e OW  -suma logiczna bitów słowa zawartego w akumulatorze 2 z odpo-
+wiednimi bitami słowa zawartego w akumulatorze I,
+
+e  XOW -suma logiczna modulo dwa bitów słowa zawartego w akumulato-
+rze 2 z odpowiednimi bitami słowa zawartego w akumulatorze |.
+
+Są to operatory uzupełniające i mogą być stosowane jedynie w blokach funkcyj-
+
+nych. Realizacja operacji działających na ciągach bitów jest niezależna od wyni-
+
+ku poprzedzających je operacji logicznych i nie wpływa na zmianę tego wyniku.
+
+Wynik wykonanej operacji jest umieszczany w akumułatorze |, zaś zawartość
+
+akumulatora 2 nie ulega zmianie.
+
+IL IWw10 ; wprowadzenie zawartości /W/0 do akumulatora |
+
+2L Iw12 ; wprowadzenie zawartości /W/2 do akumulatora |;
+zawartość /W/0 zostaje przesunięta do akumulatora 2
+
+3. XOW ; zawartość akumulatora 2 zostaje połączona jako suma
+
+modulo dwa z zawartością akumulatora 1. Wynik jest
+umieszczony w akumulatorze |
+
+4. T FWS ; przekazanie wyniku do słowa markerów FW5
+AKUMULATO
+tabele/k4_page351_table1.pnc
+AKUMULATO
+AW
+
+Wynik w akumulatorze 1 [000100000011 1000)
+
+Rys. 7.18 Działanie instrukcji iloczynu słów AW
+
+ 
+
+7.11 Funkcje na ciągach bitów 351

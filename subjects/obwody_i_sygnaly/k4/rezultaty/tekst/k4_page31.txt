@@ -1,0 +1,39 @@
+1.2. Podstawowe modele zjawisk w obwodzie - 31
+
+B. Indukcyjność jako element obwodu. Rozpatrzmy teraz przypadek,
+kiedy prąd magnesujący i = i(t) jest zmienny w czasie, a więc natężenie pola
+magnetycznego H oraz indukcja magnetyczna B są niestacjonarne. W konsek-
+wencji, zmienny w czasie jest także strumień magnetyczny © oraz skojarzenie
+magnetyczne Y. Załóżmy jednak, że wszystkie zależności, które doprowadziły
+nas poprzednio do równania (1.2-15), pozostają nadal słuszne. Słuszne pozostaje
+zatem również samo równanie (1.2-15), tzn. między skojarzeniem magnetycz-
+nym YW a prądem magnesującym i zachodzi związek:
+
+<image/wzory/k4_page31_formula1.png>
+<image/figury/k4_page31_figure1.png>
+
+Zapis (1.2-18) podkreśla, iż skojarzenie magnetyczne w chwili t jest propor-
+cjonalne do prądu w tej samej chwili. Przyjmujemy przy tym, że współczynnik
+L w równaniu (1.2-17) jest identyczny zindukcyjnością L określoną przez wzór
+(1.2-16) dla przypadku pola magnetostatycznego (tj. pola magnetycznego prądu
+stałego).
+
+Uwaga. Zwracamy uwagę, iż podobnie jak w przypadku oporu, przejście od równania (1.2-15)
+dorównania (1.2-17) ma charakter formalnej ekstrapolacji. Nie wiemy bowiem, narazie, czy
+i przy jakich warunkach przejście takie jest poprawne. Kwestia ta będzie przedmiotem późniejszych
+rozważań (por. p. 1.4).
+
+W przypadku kiedy pola H i B są niestacjonarne, konieczne jest
+uwzględnienie zjawiska indukcji elektromagnetycznej i rządzącego nim prawa
+Faradaya. Zgodnie z tym prawem, jeśli linia zamknięta K jest brzegiem
+powierzchni S, przez którą przenika zmienny w czasie strumień magnetyczny
+PD = P(t), to wzdłuż linii K indukuje się siła elektromotoryczna indukcji:
+
+<image/wzory/k4_page31_formula2.png>
+
+Jeżeli linia K zostanie wybrana tak jak na rys. 1.2-5b, tzn. składa się z odcinka
+zewnętrznego (w stosunku do rdzenia) oraz linii pokrywającej się z uzwojeniem
+(tj. z razy otaczającej rdzeń), to siła elektromotoryczna indukcji wzdłuż linii
+K wyraża się wzorem:
+
+<image/wzory/k4_page31_formula3.png>

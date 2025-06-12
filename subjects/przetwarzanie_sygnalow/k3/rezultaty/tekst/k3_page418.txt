@@ -1,0 +1,55 @@
+26. Sieci neuronowe (i więce
+
+<image/figury/k3_page418_figure1.png>
+
+  
+ 
+ 
+  
+   
+  
+ 
+ 
+  
+
+węzeł ukryty
+
+Rys. 26.10. Przykład wag sieci neuronowej. Na tym rysunku wagi dla trzech różnych rozwiązań
+wyświetlone jako obrazy. Patrząc na te obrazy, odnosi się wrażenie, że wszystkie trzy rozwiązania
+
+Na rys. 26.11 a) pokazano histogram sygnału wyjściowego sieci neuronowej dla 260 i
+w zestawie trenującym. Pamiętajcie, że wagi wybrano w taki sposób, aby sygnał I
+był bliski jeden dla obrazów samogłosek, a w innych przypadkach bliski zeru. Uzyskano €
+skonałe rozdzielenie, bez żadnego nakładania się obu rozkładów. Zauważcie też, że rozk
+samogłosek jest węższy niż nie-samogłosek. Przyczyną tego jest zadeklarowanie przez i
+że błąd w wykryciu celu jest pięciokrotnie ważniejszy od błędu w wykryciu obiektu n
+dącego celem (patrz wiersz 2220).
+Na rys. 26.11 b) pokazano histogramy dla obrazów od 261 do 1300 w bazie « ny
+Wprawdzie rozkłady dla obiektów będących i niebędących celem są dość wyraźne, to
+są one jednak całkiem rozdzielone. Dlaczego sieć neuronowa działa lepiej na pie
+260 literach niż na ostatnich 1040? Rys. 26.11 a) jest mylący! Łatwo wykonać test,
+już się widziało odpowiedzi. Inaczej mówiąc, sieć neuronowa rozpoznaje specyfice
+obrazy w zestawie trenującym, a nie ogólne wzorce rozróżniające samogłoski od
+„samogłosek.
+Na rys. 26.12 przedstawiono, w postaci wykresów ROC, wyniki uzyskane przy uż)
+tych trzech rozwiązań. Próba b) daje sieć wyraźnie lepszą niż dwie pozostałe próby (a
+Jest to kwestia losowego przypadku zależnego od zastosowanych wag początkowi
+Przy jednym ustawieniu progu sieć neuronowa zaprojektowana w wyniku próby b) m
+wykryć 24 z 25 celów (tj. 96% obrazów samogłosek), z występowaniem fałszywych 4
+mów tylko raz na 25 obiektów niebędących celami (tj. 4% obrazów nie-samogłosek)
+nieźle, jeśli uwzględnić abstrakcyjny charakter tego problemu i bardzo ogólne rozwi:
+nie, jakie zastosowano.
+I jeszcze kilka końcowych komentarzy na temat sieci neuronowych. Uzyskanie zbie
+ści sieci neuronowej podczas jej trenowania bywa trudne. Jeśli błąd sieci (ESUM)
+zmniejsza się w sposób ustalony, to program trzeba zakończyć, zmienić i rozpocząć |
+wykonywanie od nowa. Może to wymagać kilku prób, zanim się powiedzie. W celu:
+gnięcia zbieżności można zmieniać trzy wielkości: 1) stałą MU, 2) wartość począt! o
+wag losowych oraz 3) liczbę ukrytych węzłów. Te wielkości podano tu w takiej kolejn
+w jakiej powinny być zmieniane.
+Najbardziej krytyczną sprawą w opracowaniach sieci neuronowych jest ważność przykł
+trenujących. Na przykład podczas opracowywania nowych produktów rynkowych jedym
+stępne dane testowe pochodzą z prototypów, symulacji, przypuszczeń itd. Sieć
+trenowana na podstawie tych wstępnych informacji może nie działać prawidłowo w
+cowym zastosowaniu. Każda różnica między trenującą bazą danych a danymi ostatec:
+pogorszy działanie sieci neuronowej (prawo Murphy'ego dla sieci neuronowych). Z tą
+neuronową nie próbuj po raz drugi takiego zgadywania; nie potrafisz!

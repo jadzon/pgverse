@@ -1,0 +1,45 @@
+2115_formula1.png
+
+1.7. Źródła 117
+
+_—- stacjonarne (8)
+—— niestacjonarne
+
+żaniach najwięcej uwagi poświęciliśmy elementom sku-
+tacjonarnym (w skrócie elementom SLS) oraz układom
+i elementów (układom SLS). Będziemy starali się zawsze
+otyczące klasy rozpatrywanych elementów (obwodów,
+» jednak, zwłaszcza wówczas, gdy będzie to jednoznacznie
+30 sposobu opisu, założenie dotyczące klasy SLS może być
+dstępstwa od tego założenia (nieliniowość, niestacjonar-
+zawsze wyraźnie podkreślane.
+
+ątkiem ostatniego rozdziału tomu III) dotyczy elementów
+sieci) skupionych. Nie będziemy więc, na ogół, za-
+zy omawianiu kolejnych zagadnień.
+
+1 elementów występujących w teorii obwodów należą
+lami obwodowymi przetworników energii, tj.
+ują przemiany energii w postaci np. energii mechanicznej,
+ergię elektryczną, związaną z obwodem elektrycznym.
+tuje przemianę energii elektrycznej z jednej jej postaci (np.
+na inną (np. energię prądu zmiennego).
+
+< fizycznych powodujących taką przemianę energii może
+orii obwodów interesuje nas jednak nie strona fizyczna
+ej efekt, którego modelem obwodowym jest źródło.
+ektrycznym jest tym elementem, który może dostar-
+odu.
+
+1.7.1. Źródła niezależne”
+
+A. Źródła idealne. Idealne źródło napięciowe jest elementem skupionym
+(rys. 1.7-1a), którego napięcie u jest niezależne od prądu i, przy czym:
+
+y/k3_page115_formula2.png (1.7-1)
+
+gdzie e = e(t) jest zadaną funkcją czasu określającą siłę elektromotoryczną
+
+» źródła.
+
+1 Źródła niezależne są również nazywane źródłami autonomicznymi.

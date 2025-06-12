@@ -1,0 +1,39 @@
+Właściwości dziedziny z 579
+
+ 
+
+całkowicie rzeczywisty (najczęstszy przypadek), to dolna i górna połówka płaszczyzny z są
+wzajemnie odbiciami lustrzanymi, tak samo jak w dziedzinie s.
+
+Zwróćcie szczególną uwagę na sposób zastosowania zmiennej częstotliwościowej © w obu
+przekształceniach. Sinusoida ciągła może mieć dowolną częstotliwość z zakresu od 0 (DC)
+do nieskończoności. To znaczy, że w na płaszczyźnie s musi mieć możliwość zmian od minus
+do płus nieskończoności. Natomiast sinusoida dyskretna może mieć częstotliwość tylko od
+0 (DC) do połowy częstotliwości próbkowania. To znaczy częstotliwość wyrażona ułam-
+kiem częstotliwości próbkowania musi się mieścić w granicach od 0 do 0,5, a wyrażona
+jako pulsacja (tj. © =2nf) — w granicach od 0 do z. Jest to zgodne z geometrią płaszczyzny
+z, na której interpretujemy © jako kąt wyrażony w radianach. To znaczy, że częstotliwości
+dodatnie odpowiadają kątom od 0 do x radianów, a ujemne — od 0 do —x radianów. Ponieważ
+częstotliwość na płaszczyźnie z jest wyrażona w inny sposób niż na płaszczyźnie s, więc nie-
+którzy autorzy używają odmiennych oznaczeń dla odróżnienia tych dwóch wielkości. Często
+stosowany jest zapis (2 dla oznaczenia częstotliwości w dziedzinie z oraz © — dla częstotliwo-
+ści w dziedzinie s. W tej książce stosujemy symbol w dla częstotliwości w obu przekształce-
+niach, ale w wielu innych publikacjach o DSP spotkacie dwa różne symbole.
+
+Na płaszczyźnie s wartości znajdujące się wzdłuż osi pionowej tworzą odpowiedź czę-
+stotliwościową sytemu. Z tego wynika, że transformata Laplace'a wyznaczona dla 6 = 0
+jest równa transformacie Fouriera. W analogiczny sposób można stwierdzić, że odpowiedź
+częstotliwościową w dziedzinie z można wyznaczyć wzdłuż okręgu jednostkowego. Można
+to stwierdzić, określając ze wzoru 33.1 transformatę z dla r = 1, w wyniku czego wzór
+upraszcza się do dyskretnej w czasie transformaty Fouriera (DTFT). To powoduje umiesz-
+czenie częstotliwości zerowej w punkcie o wartości jeden na osi poziomej na płaszczyź-
+nie z. Dodatnie częstotliwości widma są rozmieszczone w prawo od tego punktu w kierunku
+przeciwnym do ruchu wskazówek zegara i zajmują górną połowę okręgu. Częstotliwości
+ujemne są zaś rozmieszczone od punktu częstotliwości zerowej w kierunku zgodnym z ru-
+chem wskazówek zegara, tworząc dolną połówkę okręgu. Dodatnie i ujemne częstotliwości
+widma spotykają się we wspólnych punktach © = x i w = —x. Ta geometria kołowa dotyczy
+też widma częstotliwościowego sygnału dyskretnego, który jest okresowy. To znaczy, że gdy
+kąt częstotliwości przekroczy wartość x, to występują takie same wartości jak między 0 a x.
+Poruszając się wokół okręgu, ciągle na nowo widzicie powtarzające się te same wartości.
+
+<image/figury/k3_page538_figure1.png>

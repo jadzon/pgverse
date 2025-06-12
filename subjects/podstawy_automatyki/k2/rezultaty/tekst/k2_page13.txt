@@ -1,0 +1,74 @@
+3 Charakterystyki częstotliwościowe
+układów liniowych
+
+3.1 Cel ćwiczenia
+
+Ćwiczenie ma na celu zapoznanie się z charakterystykami częstotliwościo-
+wymi podstawowych elementów automatyki, takimi jak: charakterystyka
+amplitudowo-fazowa, logarytmiczna charakterystyka modułu oraz logaryt-
+miczna charakterystyka fazowa, z jednoczesną analizą wpływu wartości
+poszczególnych parametrów na ich kształt.
+
+3.2 Podstawowe wiadomości
+
+3.2.1 Charakterystyki częstotliwościowe
+
+Charakterystykami częstotliwościowymi układu liniowego nazywa się
+odpowiednio przedstawione zależności wartości transmitancji widmowej od
+pulsacji w (4) wymuszenia. Do najczęściej spotykanych charakterystyk
+częstotliwościowych zalicza się charakterystykę amplitudowo-fazową,
+logarytmiczną charakterystykę modułu oraz logarytmiczną charakterystykę
+fazową.
+
+3.2.2 Transmitancja widmowa
+
+POW iedź LONGO układu stacjonarnego na wymuszenie u(t) =
+
+Irmie dl 41 doo sanalkoaścia einiseoid alina
+
+<image/wzory/k2_page13_formula3.png>
+
+Wprowadzając oznaczenia
+
+<image/wzory/k2_page13_formula4.png>
+
+transmitancję widmową G(jw) można wyrazić następująco:
+
+<image/wzory/k2_page13_formula5.png>
+
+przy czym
+
+<image/wzory/k2_page13_formula6.png>
+
+o W A EE W EE NKK
+
+25
+
+Transmitancję widmową łączy z transmitancją operatorową zależność
+
+<image/wzory/k2_page13_formula1.png>
+
+3.2.3 Charakterystyka amplitudowo-fazowa
+
+Charakterystyką amplitudowo-fazową (lub krócej wykresem Nyquista)
+nazywa się wykres transmitancji widmowej na płaszczyźnie zmiennej
+zespolonej, przy czym na osi rzędnych (osi liczb rzeczywistych) odłożona jest
+wartość P(w), a na osi odciętych (osi liczb urojonych) wartość Q(w).
+
+Każdemu punktowi charakterystyki amplitudowo-fazowej odpowiada
+odczytana wartość amplitudy i przesunięcia fazowego po zaniknięciu skła-
+dowych wykładniczych odpowiedzi na wymuszenie sinusoidalne o określo-
+nej pulsacji w.
+
+<image/wzory/k2_page13_formula2.png>
+
+Zgodnie z rysunkiem 3.1 w stanie ustalonym stosunek amplitudy sygnału
+wymuszającego u(t) o pulsacji w = w; do odpowiedzi układu y(t) wynosi
+b. a przesunięcie fazowe ma wartość p(w) < 0. Na przedstawionym na
+PA 3.2 wykresie Nyquista powyższa zależność ocpow iada punktowi
+
+%w1). Qlw1)). gdzie P(w,) = - + cos (Płw; 1)),a Q( wy) = Ł siu (plwą)).
+
+<image/figury/k2_page13_figure2.png>
+
+Rys. 3.2: Konstrukcja charakterystyki amplitudowo-fazowej

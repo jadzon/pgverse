@@ -1,0 +1,32 @@
+AU AUS relacji ;
+
+ 
+
+W celu realizacji operacji porównania dwóch liczb w sterownikach Modicon nie
+wprowadzono osobnej instrukcji, lecz wykorzystuje się jedną z funkcji bloku
+EMTH o kodzie 22 (CMPFP), realizującą porównanie liczb zmiennoprzecinko-
+wych. Blok ten (przedstawiony na Wyd. 6.22) posiada trzy wyjścia binarne,
+z których jedno sygnalizuje prawidłowość wykonania operacji, zaś na dwu pozo-
+stałych zakodowana jest wzajemna zależność porównywanych liczb.
+
+<image/tabele/k4_page301_table2.png>
+
+Wyd. 6.22 Realizacja porównania liczb zmiennoprzecinkowych w wykorzystaniem
+funkcji EMTH 22 o nazwie CMPFP
+
+Gdy konieczne jest porównanie liczby całkowitej ze zmiennoprzecinkową, moż-
+na posłużyć się (omawianą przy okazji instrukcji arytmetycznych) funkcją po-
+równania CMPIF (EMTH 16). Sposób jej wykorzystania przedstawia Wyd. 6.76.
+
+<image/tabele/k4_page301_table1.png>
+
+Wyd. 6.23 Realizacji porównania liczb całkowitych w oparciu o funkcję SUB
+
+Najprostszą metodą porównania liczb całkowitych 16-bitowych jest zastosowa-
+nie funkcji SUB, która oprócz wykonania operacji odejmowania informuje
+o znaku wyniku, a zatem o relacji miedzy odjemną i odjemnikiem. Wyd. 6.23
+ilustruje taki przykład dla liczb L1 i L2 zapisanych w rejestrach 40100 i 40101.
+
+ 
+
+6.6 Funkcje relacji 301

@@ -1,0 +1,43 @@
+1.6. Zadania 11
+
+Udowodnimy przez indukcję, że po i-tej iteracji zewnętrznej pętli wierzchołki o nu-
+merch od 1 do i mają już prawidłowe wartości w macierzy D. Po pierwszej iteracji s
+ma prawidłową wartość D[s] = 0. W i tej iteracji pętli (zakładamy, że wierzchołki o
+numerach od 1 do i — 1 mają już prawidłowe wartości w macierzy D) obliczamy Dfi).
+Zauważmy, że najkrótsza droga z s do v, przebiega przez wierzchołki o mniejszych od ;
+numerach. Niech u będzie przedostatnim wierzchołkiem na tej drodze. Długość tej drogi
+wynosi d(s,u) + w(u,v;) = Dfu] + w(u,v,) i zostanie odnaleziona w pętli.
+
+Ponieważ mamy podwójne zagnieżdżenie pętli i w obu liczba iteracji jest ograniczona
+przez n, czas działania algorytmu jest O(n”).
+
+Przykład 1.10 (kontynuacja przykładu 1.9) ]eżeli zastosujemy ten algorytm do grafu z
+rysunku 1.4, to w kolejnych iteracjach zewnętrznej pętli obliczy on D[s] = 0, D[b| = oe,
+Died = 1, Dla] = —2, D|d| = —4 oraz Dft) = —3.
+
+16 Zadania
+
+1. Narysuj wszystkie grafy skierowane ze zbiorem wierzchołków V = fa, by. Które
+z nich są spójne? Które z nich są izomorficzne?
+
+Wskazówka: Definicja izomorfizmu grafów skierowanych jest taka sama jak dla
+grafów nieskierowanych.
+
+2. Które z grafów przedstawionych na rysunkach w tym rozdziale są spójne?
+
+3. Narysuj możliwie jak najwięcej nieizomorficznych grafów skierowanych z trzema
+wierzchołkami fa, b,c).
+
+4. Narysuj parę różnych i izomorficznych grafów skierowanych z możliwie najmniejszą
+liczbą wierzchołków.
+
+<image/figury/k2_page220_figure1.png>
+
+5. Zastosuj algorytm Dijkstry i znajdź najkrótszą drogę z s do £ w grafie z rysunku 1.5.
+6. Zastosuj algorytm Forda-Bellmana do grafu z rysunku 1.5.
+
+7. Znajdź najkrótszą drogę z s do t w grafach z rysunków 1.31 1.4.
+
+8. Zastosuj algorytm Forda-Bellmana do grafów z rysunków 1.3 i 1.4.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

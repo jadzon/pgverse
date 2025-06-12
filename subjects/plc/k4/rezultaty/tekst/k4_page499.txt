@@ -1,0 +1,10 @@
+<image/tabele/k4_page499_table2.png>
+
+Wyd. 8.188 Etap początkowy S1
+
+Etap SI (Wyd. 8.186) jest etapem początkowym grafu sekwencji. Ustawia on ze-
+rowe warunki początkowe wszystkich zmiennych.
+
+<image/figury/k4_page499_figure1.png>
+
+8.8 Sterowanie sekwencyjne procesem wsadowym 499

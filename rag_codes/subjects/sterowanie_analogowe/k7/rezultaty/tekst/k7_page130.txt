@@ -1,0 +1,22 @@
+Problem śledzenia wartości zadanej
+
+ 
+
+<image/wzory/k/_page130_formula1.png>
+
+vvjHMiuUvvuuLiiliy liuwvvy vvuiLUI ULUIIU UMIIIIIUVVYGI ry vv i IAMDtyY|PSUJĄWY JHUDUL.
+
+tałym, wymaganym położeniem (wartości
+<image/wzory/k7_page130_formula2.png>
+
+<image/wzory/k/_page130_formula3.png>
+
+<image/wzory/k/_page130_formula4.png>
+
+ 
+
+u(t) =-Kz*(t)
+z*'(t) = Az(t) + Bu(t) + L(y(t) - Cz(t) — x,)
+
+POLITECHNIKA Hf
+GDANSKA

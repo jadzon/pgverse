@@ -1,0 +1,39 @@
+AKUMULA'”
+
+<image/tabele/k4_page354_table2.png>
+
+Wynik w aku!
+
+Rys. 7.21 Wykonanie instrukcji przesunięcia w lewo słowa bitowego SLW
+
+Niezależnie od rodzaju wykonywanej operacji przesunięcia ustawione zostają
+dwa bity (CC0,CC1) słowa statusowego procesora. Stan tych bitów może być
+sprawdzany przy pomocy odpowiednich instrukcji skoku (7.14).
+
+<image/tabele/k4_page354_table1.png>
+
+Trzecią grupę operatorów działających na ciągach bitów są operatory testujące
+i wymuszające stan wybranego bitu w ciągu bitów:
+
+e TB - sprawdza wybrany bit ciągu bitowego na stan |,
+
+e  TBN- sprawdza wybrany bit ciągu bitowego na stan 0.
+
+e SU - ustawia wybrany bit ciągu bitowego,
+
+e RU -zeruje wybrany bit ciągu bitowego.
+
+Przedstawione operatory są wykonywane niezależnie od wyniku poprzedzają-
+cych je operacji logicznych. Operatory SU i RU nie wpływają na zmianę wyniku
+poprzedzających je operacji logicznych. Opzratory TB i TBN dają wynik spraw-
+dzenia | odpowiednio, gdy stan testowanego bitu jest równy | lub 0. Argumen-
+tem omawianych operatorów może być słowo danych, słowo czasomierza, lub
+słowo licznika, słowo systemowe.
+
+Przykład
+
+figury/k4_page354_figure1.dpngpocztkowej
+
+p NE A M R MA A AA ZZA BAZE M Z ME Z A ZZA AA NADA MAPY M RD 0 NM 9 M + 0 w MA MA PA > M A M m m m
+
+354 Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S$5

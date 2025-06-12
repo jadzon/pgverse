@@ -1,0 +1,45 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 21
+„ bloku warstwy aplikacji realizującej zadania zgodne z przeznaczeniem układu.
+Znaczenie linii:
+CS — wybór układu do transmisji (aktywny poziomem niskim). Gdy CS jest w stanie niskim można do
+
+układu wprowadzać rozkazy oraz dane i wyprowadzać dane oraz zawartość rejestrów statusu.
+Układ zaczyna wykonywać wprowadzony rozkaz, gdy na CS pojawi się zbocze narastające.
+
+SDO — szeregowe wyjście danych służące do wyprowadzania danych oraz zawartości rejestru statusu.
+SDI — szeregowe wejście danych przeznaczone do wprowadzania rozkazów i danych do układu.
+CLK - zegar taktujący transmisją szeregową.
+
+analogowe linie we-wy — dostarczają sygnały analogowe do/z bloku warstwy aplikacji.
+
+cyfrowe sygnały sterujące — dodatkowe sygnały sterujące zależne od aplikacji (np. sygnał przerwania
+INT, wstrzymania transmisji HOLD, itp.)
+
+11. Schemat blokowy pamięci o dostępie szeregowym z interfejsem SPI, znaczenie
+linii i funkcje jej bloków.
+
+<image/figury/k8_page19_figure1.png>
+
+Pamięć szeregowa składa się z
+
+„ - bloku interfejsu SPI służącego do komunikacji z otoczeniem,
+
+« rejestru statusu służącego do konfiguracji pamięci oraz zawierającego jej stan,
+
+„ układu kontrolnego pamięci kontrolującego jej pracę i realizującego wbudowane algorytmy
+programowania i odczytu danych,
+
+« bloków obsługi pamięci składających się z układów obsługujących dostęp do matrycy pamięci, dla
+pamięci EEPROM i FLASH z bloków generujących napięcia potrzebne do programowania i
+kasowania pamięci oraz z układów wykrywających spadek napięcia zasilania,
+
+. matrycy pamięci składającej się z komórek pamięci danego typu (w danej technologii)
+zorganizowanych w wiersze i kolumny.
+
+Znaczenie linii dla szeregowych pamięci:
+
+CS — wybór układu do transmisji (aktywny poziomem niskim). Gdy CS jest w stanie niskim można do
+pamięci wprowadzać rozkazy oraz dane i wyprowadzać dane oraz zawartość rejestru statusu.
+Pamięć zaczyna wykonywać wprowadzony rozkaz, gdy na CS pojawi się zbocze narastające.
+
+SO — szeregowe wyjście danych służące do wyprowadzania danych oraz zawartości rejestru statusu.

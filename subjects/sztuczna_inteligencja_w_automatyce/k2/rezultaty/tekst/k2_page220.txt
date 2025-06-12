@@ -1,0 +1,35 @@
+225
+
+Szczególnym przypadkiem termów zlożonych są tzw. termy rekurencyjne, czyli
+termy w których argumentami funktorów są te same funktory. Mogą one służyć do
+przedstawiania list i drzew.
+
+PRZYKŁAD 9.3
+W Programie 3 zdefiniowano drzewo przedstawione na rys. ??.
+
+/* Program 3 */
+
+drzewo(g(1,g(2,g(3,g(4,g(5,n,n) ,g(6,n,n)),
+g(7,g(8,n,n) ,g(9,n,n))),
+g(10,g(11,g(12,n,n) ,g(13,n,n)),
+g(14,g(15,n,n) ,g(16,n,n)))),
+g(17,g(18,g(19,g(20,n,n) ,n),
+n),
+g(21,g(22,n,n),
+g(23,g(24,n,n),
+n))))).
+
+<image/figury/k2_page220_figure1.png>
+
+9.1.5. Wykonanie programu
+
+W rozdziale tym zajmiemy się przebiegiem realizacji programu w Prologu. Wyko-
+nanie programu polega na sprawdzeniu, czy zadane pytanie, wyrażone za pomocą
+predykatu lub ciągu predykatów, wynika logicznie z zawartych w programie fak-
+tów i reguł. Znajomość algorytmu tego sprawdzania jest potrzebna dla właściwego
+przygotowania programu, pomimo że programując w Prologu znacznie mniej trzeba
+myśleć o sposobie wykonywania programu niż w innych językach. Uważa się czasami,
+że Prolog jest jednym z pierwszych języków programowania, zawierających zalążki
+metody programowania polegającej na tym, że podaje się fakty i reguły o jakiejś
+dziedzinie i precyzuje cele nie zastanawiając nad sposobem wykonania. Podaje się
+maszynie, „co” ma zrobić nie zastanawiając sie, „jak” ma to zrobić.

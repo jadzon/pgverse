@@ -1,0 +1,27 @@
+niach prądowych przekaźników pośredniczących lub styczników, których styki
+umieszczone w obwodach mocy zapewniają włączanie i wyłączanie urządzeń
+wykonawczych takich jak napędy sterujące, regulacyjne, urządzenia grzewcze,
+itp.
+
+Omawianie zasad programowania sterowników PŁC w najbardziej rozpo-
+wszechnionym języku schematów drabinkowych, opartym o zasady projektowa-
+nia układów stykowo-przekaźnikowych, zostanie rozpoczęte od kilku prostych
+przykładów takich układów.
+
+Rozpatrzmy najprostszy obwód sterowania trójfazowym silnikiem asynchronicz-
+nym, zasilanym z sieci o napięciu 380V zgodnie ze schematem pokazanym na
+Rys. 1.2.
+
+<image/figury/k4_page10_figure1.png>
+
+Rys. 1.2 Schemat obwodu mocy trójfazowego silnika prądu przemiennego
+
+Silnik jest połączony ze źródłem napięcia przez styki przekaźników KI albo K2,
+w zależności od wybranego przez przyciski sterownicze kierunku wirowania: $7
+(w prawo) i $2 (w lewo), zaś jego wyłączenie następuje za pomocą przycisku
+wyłączającego S$0 (stop). Załóżmy, że jest to silnik jednobiegowy z jednopozio-
+mową ochroną termiczną. Ochrona ta działa pod wpływem nagrzania paska bi-
+
+ 
+
+10 Rozdział : 1. Wprowadzenie i podstawy

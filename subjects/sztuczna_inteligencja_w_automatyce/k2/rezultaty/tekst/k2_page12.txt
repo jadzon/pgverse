@@ -1,0 +1,23 @@
+17
+
+jest sieć działań metody, a na rys. ?? przykład zastosowania metody do rozwiąza-
+nia zadania polegającego na przeprowadzeniu układanki 3 x 3 z zadanego stanu
+początkowego do zadanego stanu końcowego.
+
+<image/figury/k2_page12_figure1.png>
+
+3.2.1. Złożoność obliczeniowa metody szukania wszerz
+
+Liczba węzłów rozmnażanych przed znalezieniem rozwiązania wynosi:
+
+<image/wzory/k2_page12_formula1.png>
+
+gdzie b jest liczbą węzłów potomnych generowanych z jednego węzła, a d jest liczbą
+przebytych warstw. Stąd złożoność obliczeniowa metody szukania wszerz wynosi
+O(b'). Złożoność tą ilustruje tablica ?? przedstawiająca czasy obliczeń i zajętość
+pamięci metody w zależności od liczby przejrzanych warstw. Tablica została utwo-
+rzona przy założeniu, że czas generacji jednego węzła wynosi lms, zapamiętanie
+jednego węzła wymaga 100 bajtów pamięci oraz b = 10.
+
+Biorąc pod uwagę liczbę węzłów grafu n i krawędzi m złożoność obliczeniowa
+metody szukania wszerz wynosi 0(m + n) (Kubale 1994).

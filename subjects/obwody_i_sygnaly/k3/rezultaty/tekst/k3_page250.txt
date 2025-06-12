@@ -1,0 +1,34 @@
+4. Ohwadv nradu staleca
+
+<image/wzory/k3_page250_formula2.png>
+
+zielników. Dzielniki napięcia i prądu są przykładami ukła-
+dualnych (por. p. 2.1.6). Związki (3.2-18) i (3.2-19) można
+z potrzeby ich wyprowadzania — wprost na podstawie
+(3.2-15) oraz zasad dualizmu zestawionych w tablicy 2.1-1.
+
+zastosowań. Umiejętne posługiwanie się wzorami opisują-
+żliwia w wielu przypadkach wyraźne uproszczenie analizy
+
+je250_formula1.png
+
+szważmy układy przedstawione na rys. 3.2-12a i b. W układzie z rys. 3.2-12a
+U na oporze R,, a w układzie z rys. 3.2-12b — prąd I w oporze 3 Q.
+
+ry/k3_page250_figure1.png
+
+'. 3.2-12a obliczamy najpierw napięcie U, na oporze R,. Ze wzoru (32-14)
+nika, że”:
+
+<image/wzory/k3_page250_formula3.png>
+
+Napięcie U, jest ponownie dzielone w układzie dzielnika utworzonego przez opory Ri R;, zatem:
+
+<image/wzory/k3_page250_formula4.png>
+
+VW zapisie tego wzoru w jemy się bardzo dogodnym, skrótowym oznaczeniem połączenia
+równoległego dwóch oporów:
+
+Nzory/k3_page250_formula5.png
+
+Zapis ten będziemy także stosować w dalszym tekście.

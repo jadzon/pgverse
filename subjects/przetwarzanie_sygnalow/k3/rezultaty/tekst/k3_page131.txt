@@ -1,0 +1,34 @@
+Zapis i format rzeczywistego DFT
+
+ 
+
+Zapis i format rzeczywistego DFT
+
+Dyskretne przekształcenie Fouriera (DFT), jak to przedstawiono na rys. 8.3, zmienia
+N-punktowy sygnał wejściowy w dwa (N/2 + 1)-punktowe sygnały wyjściowe. Sygnał wej-
+ściowy ma być poddany rozkładowi, a dwa sygnały wyjściowe zawierają amplitudy składo-
+wych sinusoidalnej i kosinusoidalnej (wyskałowanej w sposób, który później krótko omó-
+wimy). Mówimy, że sygnał wejściowy jest sygnałem w dziedzinie czasu. Jest tak, gdyż na
+wejściu DSP najczęściej spotykane są sygnały złożone z próbek pobieranych w regularnych
+odstępach czasu. Oczywiście na wejście systemu DSP można wprowadzić dane każdego ro-
+dzaju, niezależnie od tego, jak były one pozyskane. Gdy w analizie Fouriera spotykacie poję-
+cie „dziedzina czasu”, to może ono odnosić się do próbek pobieranych w odstępach czasu lub
+
+idalnej (łącznie ze specjalnym skalowaniem, które — zgodnie z obietnicą — omówimy dalej).
+W dziedzinie częstotliwości jest zawarta informacja dokładnie taka sama, jak w dziedzinie
+czasu, lecz w innej formie. Znając dane w jednej dziedzinie, można obliczyć je w drugiej.
+Jeśli jest dany sygnał w dziedzinie czasu, to proces obliczania sygnału w dziedzinie często-
+tliwości jest nazywany prostym rozkładem, analizą lub przekształceniem DFT, albo po
+prostu DFT. Jeśli zaś znamy dane w dziedzinie częstotliwości, to obliczenia w dziedzinie
+czasu są nazywane syntezą lub odwrotnym DFT. Zarówno synteza, jak i analiza mogą być
+wyrażane w postaci wzorów i algorytmów komputerowych.
+
+Liczba próbek w dziedzinie czasu jest zwykle reprezentowana przez zmienną N. Chociaż
+N może być dowolną liczbą dodatnią, to zwykle wybiera się potęgę liczby 2, tj. 128, 256, 512,
+1024 itd. Są dwie przyczyny takiego wyboru. Po pierwsze, w cyfrowych pamięciach danych sto-
+suje się adresowanie dwójkowe, co czyni potęgi liczby dwa naturalną długością sygnału. Po dru-
+gie, w najbardziej efektywnym algorytmie do obliczeń DFT, szybkim Fouriera
+(FFT), zwykle stosuje się N będące potęgą dwóch. Typowo wybiera się /V między 32 i 4096.
+W większości przypadków próbki mają numerację raczej od O do N — 1, a nie od 1 do N.
+
+<image/figury/k3_page131_figure1.png>

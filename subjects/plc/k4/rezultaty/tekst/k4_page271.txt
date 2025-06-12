@@ -1,0 +1,23 @@
+/k4_page271_formula1.png BEAM
+
+Funkcje natychmiastowego aktualizowania danych w czasie cyklu programowe-
+
+= T
+(i
+wzory/k4_page271_fc
+
+<image/_figury/k4_page271_figure2.png>
+
+LUKU LU/ N"T_|]FUIJU LC / I LUK LU ' .|ZI 'Y
+
+Wyd. 4.47 Instrukcja aktualizacji danych wejściowych IIM
+
+<image/figury/k4_page271_figure1.png>
+
+Wyd. 4.48 Instrukcja aktualizacji danych wyjściowych IOM
+
+ 
+
+zy z «c yy 4 z zw e o OO
+
+5.11 Funkcje sterujące 271

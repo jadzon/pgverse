@@ -1,0 +1,49 @@
+1.4. Dodatnie długości, algorytm Dijsktry 7
+
+Jest o ostateczna postać macierzy, gdyż w czwartej iteracji jej wartości nie są już popra-
+wione.
+
+Aby udowodnić, że algorytm działa poprawnie pokażemy przez indukcję, że po +-tej ite-
+racji zewnętrznej pętli Dfv] zawiera długość najkrótszej drogi z s do v zawierającej co
+najwyżej i + 1 krawędzi. Przed pierwszą iteracją D[v] zawiera długość drogi złożonej z
+jednej lub zero krawędzi. Załóżmy, że po + iteracjach D zawiera długość najkrótszej drogi
+z i + 1 lub mniej krawędziami.
+
+ł ak No
+
+<image/wzory/k2_page216_formula1.png>
+
+Taj owej OOM MY 4 0 M U 44 | ae kikkó kkkkkAOJ 6 40499 Sykakoś kkk kkk, 44 AUIGNA 0 — WEJ +Vr+1
+
+jest najkrótszą drogą dO v,++; Z i + 1 lub mniej krawędziami. Gdyby istniała krótsza droga
+do v,41 Z Co najwyżej i + 1 krawędziami, to mielibyśmy krótszą drogę do v z co najwyżej
+i+ 2 krawędziami; sprzeczność. Czyli długość drogi s = vo,. . . ,V;4.1 jest równa Dfor4]
+po i tej iteracji. Dlatego po i + 1 iteracji D[v] będzie zawierać długość najkrótszej drogi
+do v z i + 2 krawędziami.
+
+Po zakończeniu pracy algorytmu Dfv) zawiera długość najkrótszej drogi z s do v,
+ponieważ, jeżeli w grafie wszystkie cykle są dodatniej długości, to w minimalnej drodze
+żaden wierzchołek nie powtarza się i droga nie zawiera więcej niż n — 1 krawędzi.
+
+Algorytm zawiera trzy pętle zagnieżdżone jedna w drugą. Zewnętrzna pętla wykonuje
+się n — 2 razy. Dla każdego k wewnętrzna pętla wykonuje się n — 1 razy, raz dla każdego
+v € V - (s), a dla każdego v mamy n wykonań najbardziej wewnętrznej pętli, czyli czas
+działania algorytmu można oszacować przez c : (n — 2)(n — 1)n < Cn”, gdzieci c to
+stałe. Tak więc złożoność czasowa algorytmu wynosi O (n*).
+
+1.4  Dodatnie dł ugóci, algorytm Dijsktry
+W tym podrozdziale podamy algorytm znajdowania odległości od źródła do wszystkich
+wierzchołków grafu dla przypadku, gdy długości wszystkich krawędzi są dodatnie.
+Algorytm Dijkstry
+Dane wejściowe: Graf skierowany G = (V,E), dodatnie długości krawędzi w : E
+R.
+Dane wyjściowe: Macierz D odległości z s do wszystkich wierzchołków.
+e dla każdego v € V podstaw D/v] := w(s,v)
+e Dls] :=0;
+e T:=T- (s)
+e dopóki 7 4 0 powtarzaj:
+o wybierz wierzchołek u € 7 taki, że D[u| = min(D/p) | pe T)
+OT :=T- fu);
+o dla każdego v € T podstaw D[v] := min(Dfr), Dfu] + w(u,v))
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

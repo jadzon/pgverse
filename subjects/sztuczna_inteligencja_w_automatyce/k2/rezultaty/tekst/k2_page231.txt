@@ -1,0 +1,52 @@
+236
+
+drugiej strony takie użycie predykatu odcięcia nie przeszkadza programowi w znale-
+zieniu wszystkich odpowiedzi na postawione zapytanie (zamiana wszystkich faktów
+dochod na reguły dochod :- !. skróciłaby także proces przeglądania bazy danych,
+ale spowodowałaby to, że program znajdował by tylko jedną odpowiedź). |
+
+PRZYKŁAD 9.18
+
+Ostatnim przykładem zastosowania predykatu ! jest Program 17 usuwający z listy
+powtarzające się elementy. Program wywoływany jest zapytanie usun_pow(L1,L2),
+gdzie L1 jest listą zadaną, zaś L2 listą po usunięciu powtórzeń. Np. na zapytanie
+usun_pow([a,b,a,b,c,a] ,L) program odpowiada L=[b,c,a].
+
+/* Program 16 */
+
+usun_pow( [] , []).
+
+usun_pow([XIY],W) :- element(X,Y), !,
+usun_pow(Y,W).
+
+usun_pow([X/Y],[XIw]) :- usun_pow(Y,W).
+
+element (Nazwa, (Nazwa|_]).
+element (Nazwa, [_|Ogon]) :- element (Nazwa ,Ogon).
+
+Predykat ! umieszczono dla zapobieżenia unifikacji zapytania usun_pow(Li ,L2)
+z klauzulą trzecią, po unifikacji z klauzulą drugą i stwierdzeniu spełnienia predykatu
+element (X ,Y).
+
+9.2.3. Tworzenie listy obiektów — predykat findall
+
+Prolog oferuje szereg predykatów standardowych, których argumentami są predy-
+katy. Stanowi to odstępstwo od składni klauzul Horna, którymi posługuje się Prolog
+i predykaty takie nazywa się metajęzykowymi. Istnienie predykatów metajęzyko-
+wych zakłóca obraz Prologu jako systemu dowodzenia metodą rezolucji twierdzeń
+logicznych zadanych w postaci klauzul Horna, ale z drugiej strony znacznie zwiększa
+efektywność języka.
+
+Predykat standardowy
+
+findall(NazwaZmiennej ,<atom>,Lista)
+
+powoduje wywołanie predykatu <atom>, a następnie gromadzi na liście Lista wszyst-
+kie uzyskane w procesie nawracania wartości zmiennej NazwaZmiennej. Predykat
+<atom> musi zawierać zmienną o nazwie NazwaZmiennej, zaś dziedzina listy Lista
+musi być zadeklarowana w bloku domains.
+
+PRZYKŁAD 9.19
+
+W Programie 17, stanowiącym rozszerzenie Programu 11, predykat findall powo-
+duje zebranie w listę wszystkich permutacji elementów zadanej listy.

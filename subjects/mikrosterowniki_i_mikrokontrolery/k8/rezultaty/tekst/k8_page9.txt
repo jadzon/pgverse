@@ -1,0 +1,21 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z ? 11
+Dwie podstawowe funkcje układu:
+
+« Funkcję nadajnika (transmiter ) — wysyłanie zawartości określonego rejestru, tzw. bufora
+nadajnika, w postaci szeregowej poprzez określone wyprowadzenia portu. Oznacza to, że na wyjściu
+linii portu pojawia się ciąg binarny odpowiadający zawartości wysyłanego rejestru.
+
+„ W funkcji odbiornika (receiver) sterownik komunikacji szeregowej potrafi przetworzyć ciąg binarny
+doprowadzony do wejścia określonej linii portu na zawartość rejestru, zwanego buforem odbiornika.
+
+15. Format danych dla standardu UART, budowa kontrolera interfejsu UART oraz
+ogólna jego obsługa.
+
+(pełny opis interfejsu UART znajduje się w Tomie I materiałów do wykładu oraz w dokumentacjach do
+poszczególnych mikrokontrolerów)
+
+<image/wzory/k8_page9_formula1.png>
+
+nyury/RnO_JaYCY_IIYUICZ.]JI IY
+
+<image/figury/k8_page9_figure1.png>

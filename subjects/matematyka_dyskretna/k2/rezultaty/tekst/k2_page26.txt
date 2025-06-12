@@ -1,0 +1,41 @@
+1.8. Duże liczby 11
+
+Lemat 1.11 W systemie o podstawie b liczba naturalna x ma |log,| + 1 (w przybliżeniu
+log, z) cyfr.
+
+Korzystając z tego faktu możemy ustalać przybliżoną liczbę cyfr potrzebną do zapisu
+liczb.
+
+Wniosek 1.12 Liczba, posiadająca k cyfr w systemie dziesiętnym ma około k log 10 =
+k - 10/3 bitów w systemie dwójkowym, a liczba mająca k bitów w postaci dwójkowej ma
+około k - 3/10 cyfr w postaci dziesiętnej.
+
+Dowód: Jeżeli liczba x ma w postaci dziesiętnej k cyfr, to k = logyg z. W postaci dwój-
+kowej x ma około loga x bitów, a logą z = logigz : logą 10 m k': log 10 m k: 10/3,
+ponieważ log, 2 * 0.301029996 = 3/10.
+
+Podobnie, jeżeli liczba x ma w postaci dwójkowej k bitów, to w postaci dziesiętnej
+ma około log;g 1 = logyo2 : loga I © k- 3/10.
+
+1.8 Duże liczby
+
+Aby się zorientować jak duże mogą być liczby przedstawione za pomocą systemu dziesiętnego
+lub dwójkowego przypatrzmy się poniższej tabeli:
+
+<image/figury/k2_page26_figure1.png>
+
+Przykład 1.13 Rozważmy prosty algorytm sprawdzający, czy liczba naturalna z jest pierw-
+sza. Algorytm ten dzieli x przez kolejne liczby od 2 do 4/7. Jeżeli x ma 120 bitów, to
+potrzeba 2% = 107 dzieleń. Jeżeli założymy, że komputer potrafi wykonać 100 milionów
+dzieleń w ciągu sekundy i 3 x 105 w ciągu roku, to będzie liczył około 300 lat. W rozdziale
+o teorii liczb będziemy mówić o szybszych algorytmach sprawdzających pierwszość liczb
+mających po kilkaset bitów.
+
+Przykład 1.14 Przypuśćmy, że chcemy zaprojektować tablicę, która dla każdego ciągu
+złożongo z ośmiu liter przechowuje jakąś informację (jeden bajt). W przypadku 26 liter
+
+<image/takichwzory/k2_page26_formula1.png>
+
+zatem pvu zebuwatiwysiiy WIĘCEJ LIŁ LUV YIYAUAJWW PalILIĘLL.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

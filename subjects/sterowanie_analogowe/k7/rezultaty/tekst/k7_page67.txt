@@ -1,0 +1,23 @@
+Obserwowalność
+
+ 
+
+Przykład: 3
+Sprawdzić obserwowalność układu danego w postaci kanonicznej 3
+ckaszsaznsalszh a
+[02
+wj
+=
+je
+ę
+<image/wzory/k/7_page67_formula1.png>
+Wynik:
+
+Nzory/k7_page67_formula2.png
+
+Wniosek: układ dany w postaci kanonicznej obserwowalnej jest zawsze obserwowe
+
+ 
+
+POLITECHNIKA
+GDANSKA

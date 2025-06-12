@@ -1,0 +1,34 @@
+<image/tabele/k4_page379_table1.png>
+
+e Parametr BG określa adres modułu wyjść analogowych (złącze na płycie
+łączeniowej sterownika, w którym moduł jest zainstalowany), do którego ma
+zostać przekazana wielkość analogowa.
+
+Określenie parametru przy wywołaniu bloku
+BG KF X, gdzie X = 128 -- 240.
+e Parametr KNKT określa numer kanału, do którego ma być wysłana wielkość
+analogowa w module wyjść analogowych oraz rodzaj kanału.
+Określenie parametru przy wywołaniu bloku
+KNKT KY x,y, gdzie:
+x=( + 15 - numer kanału,
+y=0=| -typ kanału.
+Typ kanału należy wybrać w zależności od zainstalowanego modułu
+wyjść analogowych.
+
+« Jeżeli moduł wyjść analogowych przetwarza wartości cyfrowe tak, że
+wartości cyfrowej (0 przyporządkowuje wartość minimalną sygnału
+wyjściowego, a wartości cyfrowej 1024 przyporządkowuje wartość
+maksymalną, to należy wybrać typ kanału o numerze 0.
+
+a Jeżeli moduł wyjść analogowych przetwarza wartości cyfrowe tak, że
+wartości cyfrowej -1024 przyporządkowuje wartość minimalną sy-
+
+ 
+
+am m A A M a
+
+ 
+
+ 
+
+7.16 Wybrane zintegrowane bloki specjalne 379

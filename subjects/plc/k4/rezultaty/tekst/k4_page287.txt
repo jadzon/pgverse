@@ -1,0 +1,30 @@
+6.3 Lac ULLi SRiRS
+
+——— A 12 z 8 a
+
+ 
+
+Ograniczona liczba podstawowych elementów schematu  drabinkowego
+w sterownikach typu Modicon zmusza do realizacji przerzutników z dostępnych
+styków i cewek. Poniższe przykłady przedstawiają realizacje przerzutnika RS
+z dominującym wejściem zerującym RESET (Wyd. 6.5) oraz przerzutnika SR
+z dominującym wejściem ustawiającym SET (Wyd. 6.6). W obu przypadkach
+wejście 10001 pełni rolę wejścia ustawiającego S, zaś z wejścia 10002 podawany
+jest sygnał zerujący R.
+
+<image/tabele/k4_page287_table2.png>
+
+Wyd. 6.5 Realizacja przerzutnika R$
+
+<image/tabele/k4_page287_table1.png>
+
+Wyd. 6.6 Realizacja przerzutnika SR
+
+W obu przykładach zakłada się, że styki SET i RESET w obwodach wejścio-
+wych są stykami zwiernymi.
+
+ 
+
+|" | TAN WPA POPE 4 YE M TA TE PA 4-6 ANTY m
+
+6.2 Przerzutniki ŚR i RS 287

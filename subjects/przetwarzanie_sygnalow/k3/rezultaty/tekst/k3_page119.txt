@@ -1,0 +1,43 @@
+134 7. Właściwości spłotu
+
+ZOO | nNn
+
+Przenoszenie między wejściem a wyjściem
+
+Nie jest to formalna właściwość matematyczna, a raczej sposób myślenia o sytuacji często
+spotykanej w dziedzinie przetwarzania sygnałów. Wyobraźmy sobie system liniowy mający na
+wejściu sygnał xfn] i wytwarzający na wyjściu sygnał y[n], jak to przedstawiono na rys. 7.11.
+Przyjmijmy teraz, że sygnał wejściowy zmienia się w jakiś sposób liniowy. tworząc nowy
+sygnał wejściowy, który oznaczymy x [n]. Jest wtedy wytwarzany nowy sygnał wyjściowy
+y'[n]. Powstaje pytanie, jaki jest związek zmiany sygnału wejściowego ze zmianą na wyjściu.
+Odpowiedź na to pytanie brzmi: sygnał wyjściowy zmienia się dokładnie w ten sam, liniowy
+sposób, jak zmienił się sygnał wejściowy. Na przykład, jeśli sygnał wejściowy został wzmoc-
+niony o czynnik 2, to sygnał wyjściowy też będzie wzmocniony o taki sam czynnik. Jeśli
+sygnał wejściowy jest zróżniczkowany, to i wyjściowy będzie zróżniczkowany. Jeśli sygnał
+wejściowy zostanie w jakiś sposób odfiltrowany, to wyjściowy też będzie odfiltrowany w iden-
+tyczny sposób. Można to łatwo wykazać, korzystając z faktu, że splot jest operacją łączną.
+Centralne twierdzenie graniczne
+
+Centralne twierdzenie graniczne jest ważnym narzędziem w teorii prawdopodobieństwa,
+gdyż wyjaśnia ono matematycznie, dlaczego rozkład prawdopodobieństwa Gaussa jest tak
+często spotykany w przyrodzie. A oto przykłady. Wartość szumu cieplnego w układach elek-
+tronicznych podlega rozkładowi Gaussa; gaussowskie jest też natężenia wiązki laserowej
+w przekroju poprzecznym; charakter gaussowski ma nawet rozkład trafień wokół tzw. oka
+byka na tarczy do gry w strzałki. Zgodnie z najprostszą postacią centralnego twierdzenia
+granicznego rozkład prawdopodobieństwa Gaussa powstaje wówczas, gdy obserwowana
+zmienna jest sumą wielu procesów przypadkowych. Nawet jeśli procesy składowe nie mają
+rozkładu Gaussa, to suma będzie miała taki rozkład.
+
+Ciekawe są implikacje centralnego twierdzenia granicznego związane ze splotem. Jeśli sy-
+gnał o kształcie podobnym do impulsu jest wielokrotnie splatany sam za sobą, to powstaje
+krzywa o kształcie rozkładu Gaussa. Przykład podano na rys. 7.12. Sygnał na rys. 7.12 a) jest
+nieregularnym impulsem, specjalnie tak dobranym, aby nie był podobny do przebiegu gaus-
+sowskiego. Na rys. 7.12 b) pokazano wynik jednokrotnego poddania tego sygnału splotowi
+samego z sobą, a na rys. 7.12 c) — wynik po trzykrotnym wykonaniu tej operacji. Nawet po
+tylko trzech operacjach splotu przebieg jest bardzo zbliżony do krzywej Gaussa. W języku
+matematycznym mówi się, że taka procedura powoduje bardzo szybką zbieżność do krzywej
+gaussowskiej. Szerokość uzyskanego rozkładu Gaussa (tj. c we wzorach 2.7 lub 2.8) jest
+równa szerokości orginalnego impulsu (wyrażonej jako 6 we wzorze 2.7) pomnożonej przez
+pierwiastek kwadratowy z liczby wykonanych operacji splotu.
+
+<image/figury/k3_page119_figure1.png>

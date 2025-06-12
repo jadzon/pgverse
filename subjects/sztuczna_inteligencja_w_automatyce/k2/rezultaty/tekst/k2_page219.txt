@@ -1,0 +1,46 @@
+ro
+ro
+—
+
+magazyn(plyta(klasyczna(”Bruckner A.”,*Symfonia nr 9”,
+*Jochum E.*)),40,40).
+magazyn(plyta(rozrywkowa('Cat Stevens”,
+"Tea for the tillerman”)),45,5).
+magazyn(pilka,8,100).
+
+Wykonajując Program 2 z następującymi pytaniami:
+
+magazyn(plyta(klasyczna( Bruckner A.*, Symfonia nr 9”,
+*Jochum E.”)),X,Y).
+
+magazyn(plyta(X) ,Y,Z). magazyn(X,Y,Z).
+
+magazyn(X,Y,Z), Z<=200, Z>=30.
+
+otrzymujemy odpowiednio
+
+X=40, Y=40
+
+X=klasyczna( Bruckner A.”, Symfonia nr 9”, 'Jochum E.*),
+Y=40, Z=40
+
+X=rozrywkowa('Cat Stevens”,*”Tea for the tillerman”),
+Yy=45, Zs=$
+
+X=ksiazka( Sienkiewicz H.”,*Potop*”), Y=60, Z=17
+X=ksiazka(”Blixen K*”, Pozegnanie z Afryka”),
+
+Y=41, Z=30
+
+X=plyta(klasyczna(*Bruckner A.”,”Symfonia nr 9”,*Jochum E.*)),
+Y=40, Z=40
+
+X=plyta(rozrywkowa('Cat Stevens”,*Tea for the tillerman?”)),
+Y=45, Z=5)
+
+X=pilka, Y=8, Z=100
+
+Strukturę obiektu złożonego występującego w programie 2 ilustruje drzewo przed-
+stawione na rys. ??. |)
+
+<image/figury/k2_page219_figure2.png>

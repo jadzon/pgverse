@@ -1,0 +1,22 @@
+Zakres stosowania deklaracji zmiennych globalnych VAR_GLOBAL jest ograni-
+czony do konfiguracji lub zasobów, w których jest ona użyta, z wyjątkiem, gdy
+jest deklarowana ścieżka dostępu do zmiennej globalnej w zasobie (element
+1Od w Tab. 2.35).
+
+Konstrukcja VAR_ACCESS..END_VAR umożliwia wyspecyfikowanie nazw
+zmiennych, do których dostęp można uzyskać za pomocą usług komunikacyj-
+nych. Każdej takiej nazwie zmiennej towarzyszy ścieżka dostępu z podaniem,
+czy jest to zmienna wejściowa lub wyjściowa programu, zmienna globalna lub
+zmienna bezpośrednio powiązana ze strukturą wejść, wyjść lub pamięcią sterow-
+nika (zmienne takie omówiono w 2.2.4). Jeśli jest to zmienna wieloelementowa
+(tablica lub struktura), to ścieżka dostępu może być określona do elementu
+zmiennej. Kierunek ścieżki dostępu może być określony jako READ_WRITE (do
+odczytu i zapisu) lub READ_ONLY (tylko do odczytu), co oznacza, że w pierw-
+szym przypadku usługi komunikacyjne mogą zarówno czytać jak i zmieniać
+wartość zmiennej a w drugim tylko czytać, bez możliwości zmiany. Jeśli nie
+określono kierunku dostępu, to przyjmuje się go domyślnie jako READ_ONŁY.
+
+<image/tabele/k4_page69_table1.png>
+
+O
+2.4 Elementy konfiguracji 69

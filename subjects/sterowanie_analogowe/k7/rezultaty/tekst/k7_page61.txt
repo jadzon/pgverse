@@ -1,0 +1,32 @@
+Sterowalność
+
+    
+  
+   
+
+Przykład:
+Sprawdzić sterowalność układu z wykorzystaniem pakietu Matlab:
+
+<image/wzory/k/_page61_formula1.png>
+
+SMOUBJ]S 8|8poW
+
+<image/wzory/k7_page61_formula2.png>
+
+% wyznaczenie macierzy sterowalności
+Pc=ctrb (A,B)
+
+% wyznaczenie rzędu
+
+% macierzy sterowalności
+
+rank (PC)
+
+ 
+
+ 
+
+rząd macierzy sterowalności wynosi 3 więc układ jest sterowalny
+
+POLITECHNIKA
+GDANSKA

@@ -1,0 +1,53 @@
+188 a __ 2. Pojęcia podstawowe — układy |
+
+Kwestia rozstrzygania o stacjonarności (lub niestacjonarności) układu skupionego staje się
+znacznie prostsza, jeśli układ jest liniowy. W przypadku równań sieciowych liniowych (względem
+prądów i napięć) można mówić o współczynnikach tych równań. Jeśli współczynniki te są
+stałe, tj. nie zależą od czasu t (równania o stałych współczynnikach), to jest to cechą stacjonarności.
+W przeciwnym przypadku (równania liniowe o zmiennych współczynnikach) układ nie jest stacjonar-
+ny. Do kwestii liniowości i stacjonarności układu powrócimy jeszcze w p. H.
+
+Wyodrębnienie klasy układów liniowych i klasy układów stacjonarnych
+umożliwia oczywiste scharakteryzowanie klas dopełniających: układów nielinio-
+wych i układów niestacjonarnych.
+
+Układ skupiony, który nie jest układem liniowym (stacjonarn ym), jest układem
+nieliniowym (niestacjonarnym).
+
+Do niektórych kwestii dotyczących podziału układów na liniowe i nieliniowe
+powrócimy jeszcze w p. F.
+
+C. Układy SLS. Na podstawie definicji i rozważań z p. A iB możemy już
+bez trudu określić najważniejszą i najbardziej nas interesującą klasę układów
+skupionych, liniowych i stacjonarnych, tj. klasę układów SLS 0.
+
+(R) Układy SLS są opisywane równaniami sieciowymi, które można przedstawić
+w postaci równań różniczkowych zwyczajnych, liniowych o stałych współczyn-
+nikach i/lub równań algebraicznych, liniowych o stałych współczynnikach.
+
+(E) Układy zbudowane tylko z idealnych źródeł niezależnych oraz elementów
+lub podukładów SLS są układami SLS.
+
+W połączeniu z odpowiednią konkluzją sformułowaną w p. 2.1.4-B, otrzymu-
+jemy stąd następującą właściwość:
+
+(E) Układy zbudowane tylko z bezźródłowych elementów lub podukładów SLS
+są bezźródłowymi układami SLS (w skrócie: układami SLSB).
+
+D. Przyklady. Powróćmy do przykładów podanych w p. 2.1.2. Na
+podstawie podanych w p. A—C definicji i właściwości stwierdzamy bez trudu,
+że:
+
+— dwójniki z rys. 2.1-1b i 2.1-3a (przykłady 2.1-1 i 2.1-3) oraz czwórniki
+z rys. 2.1-Sa,b,c (przykłady 2.1-8, 2.1-9 i 2.1-10) są — odpowiednio — dwójni-
+kami SLS i czwórnikami SLS;
+
+— dwójnik z rys. 2.1-3b (przykład 2.1-4) jest dwójnikiem skupionym, linio-
+wym, ale niestacjonarnym;
+
+— dwójniki z rys. 2.1-3c,d (przykłady 2.1-5 i 2.1-6) i rys.2.1-11b są dwój-
+nikami skupionymi, stacjonarnymi, ale nieliniowymi.
+
+5 Niekiedy tę klasę układów oznacza się także skrótem SSLS lub SLSS (dodatkowe S od
+słowa „skończony”). Zgodnie z założeniem z p. 2.1.1-A (por. przypis na str. 168), nasze rozważania
+ograniczamy tylko do klasy układów skończonych i tego faktu już dodatkowo nie podkreślamy.

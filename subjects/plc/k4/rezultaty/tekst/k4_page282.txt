@@ -1,0 +1,39 @@
+<4_page282_formula1.png |]
+
+Podstawowymi elementami struktury schematów drabinkowych w sterownikach
+Modicon firmy AEG są segmenty (segments), które podzielone są na podsieci
+(networks). Cały schemat drabinkowy jest zatem zbiorem segmentów. Regułą
+jest, że liczba segmentów jest większa lub równa liczbie wykorzystywanych
+przez sterownik węzłów (drops). Każdy segment zawiera podsieci, których licz-
+ba w obrębie danego segmentu ograniczona jest jedynie przez limit pamięci oraz
+maksymalny czas przeglądania programu (scan rimie) wynoszący 250 ms. Każda
+podsieć stanowi małą drabinkę ograniczoną od lewej strony przez szynę zasilają-
+cą. Wyd. 6.1 przedstawia przykładową podsieć. Może być ona zbudowana mak-
+symalnie z siedmiu szczebli (rungs) zwanych również rzędami (rows) oraz jede-
+nastu kolumn zawierających najmniejsze elementy schematu, takie jak styki,
+cewki oraz inne elementy języka, np. czasomierze, bloki arytmetyczne itp.
+
+<image/tabele/k4_page282_table1.png>
+
+Wyd. 6.1 Przykład maksymalnego zapisania podsieci
+
+Sposób przeglądania i realizowania schematu drabinkowego (scanning) jest na-
+
+stępujący:
+
+e poszczególne segmenty przeglądane są w kolejności wynikającej z ich nume-
+racji lub zgodnie z kolejnością wymuszoną poprzez skoki w programie. Ża-
+rządza tym umieszczona w harmonogramie segmentów (segment scheduler)
+tablica kolejności realizowania schematu (order of solve table),
+
+ 
+
+ZETTRZY TZEEWCT YE
+
+ 
+
+ 
+
+Rozdział : 6 Programowanie sterowników AEG SCHNEIDER Modicon
+
+282

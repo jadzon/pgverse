@@ -1,0 +1,34 @@
+Rozdział 2
+
+POJĘCIA PODSTAWOWE — UKŁADY
+
+2.1. WIELOWROTNIKI I SIECI
+
+Dotychczysowe rozważania niemal w całości poświęcone były elemen-
+tom. W tym rozdziale zajmiemy się niektórymi właściwościami układów, tj.
+obiektów powstałych w wyniku połączenia różnych elementów albo — jak
+mówimy często — zbudowanych z elementów.
+
+Będziemy interesować się w szczególności sposobami tworzenia opisu
+układu oraz jego właściwościami. Nie będziemy natomiast — jak na razie —
+zajmować się analizą układów, tj. metodami poszukiwania rozwiązań równań
+tworzących opis układu. Metodom analizy poświęcone będą dalsze rozdziały
+książki, począwszy od rozdziału trzeciego.
+
+2.1.1. Ujęcie sieciowe i ujęcie zaciskowe
+
+Wśród sposobów tworzenia opisu układu (obwodu, sieci) oraz charakteryzo-
+wania jego właściwości wyróżnić można dwa ujęcia”:
+— ujęcie sieciowe prowadzące do opisu sieciowego układu;
+— ujęcie zaciskowe i związany z nim opis zaciskowy układu.
+Postaramy się teraz krótko scharakteryzować oba wymienione sposoby
+opisu układu.
+
+A. Równania sieciowe. Mówiąc o sieci mamy zwykle na myśli układ
+elektryczny o znanej, z reguły rozbudowanej konfiguracji, tzn. o znanych
+elementach oraz o znanej strukturze połączeń tych elementów (lub, inaczej,
+o znanej topologii). Równania układu rozpatrywanego jako sieć uwzględniają
+równania wszystkich elementów oraz równania połączeń wynikające z praw
+
+1) Znane są także inne sposoby opisu układu, np. w postaci tzw. równań stanu, o których będzie
+mowa w tomie III.

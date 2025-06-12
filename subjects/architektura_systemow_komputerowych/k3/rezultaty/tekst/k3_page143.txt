@@ -1,0 +1,27 @@
+6.5. Protokoły transmisji 133
+
+kasowania poprzednio wysłanych rozkazów, zmiany trybu pracy itp. Jeśli ramka jest
+wysyłana przez stację podrzędną, to są to odpowiedzi dla stacji głównej. Na przykład
+może to być odpowiedź informująca o powstałych błędach. Komunikaty sterujące mają
+zatem charakter pomocniczy względem samej transmisji.
+
+PRZYKŁAD WSPÓŁPRACY DWÓCH STACJI
+
+Na rysunku 6.13a zilustrowano przebieg transmisji pomiędzy dwoma stacjami. Po lewej
+stronie rysunku symbolicznie zaznaczono stację główną A, a po prawej stację podrzędną
+B. Zakłada się pracę w półdupleksie. Współpraca zaczyna się od wysłania ramki infor-
+macyjnej ze stacji A do B. Przy strzałce reprezentującej transmisję zaznaczono zawartość
+
+<image/figury/k3_page143_figure1.png>
+
+Rysunek 6.13. Przesyłanie komunikatów przy transmisji szeregowej
+
+słowa sterującego ramki. Pierwsza transmisja jest wysyłana ze słowem sterującym,
+w którym wartość NN =0,P=0 i NO=0. Dla następnych transmisji zwiększa się tylko
+numer komunikatu NN, aż do momentu kiedy zaprogramowano transmisję wraz z bitem
+P = 1, tj. z żądaniem aby stacja B potwierdziła odebrane komunikaty. Załóżmy, że ramkę
+z numerem NN = 2 nieprawidłowo odebrano. Wówczas stacja podrzędna wysyła komunikat
+nadzorczy ze słowem sterującym, w którym jest rozkaz powtórzenia źle odebranej ramki.
+Stacja może wysłać rozkaz z kodem 11 (por. opis komunikatu nadzorczego) lub z ko-
+dem 01. Są to odpowiednio komunikat nadzorczy lub komunikat sterujący. Na rysunku 6.13
+pokazano ten pierwszy przypadek, tj. stacja podrzędna żąda powtórzenia transmisji ramki

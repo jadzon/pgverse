@@ -1,0 +1,37 @@
+Twierdzenie o różniczkowaniu obrazu (transformaty)
+
+Obraz (transformata) jest zawsze funkcją analityczną, ma więc wszystkie pochod-
+ne. Można je otrzymać przez różniczkowanie funkcji pod znakiem całki.
+
+<image/wzory/k1_page13_formula1.png>
+
+Przykład 1.7
+Wyznaczyć transformatę funkcji /(1) = tsinot.
+
+Transformata funkcji sinoł jest znana i wynosi m3 1—3z „Zatem na podstawie twier-
+dzenia (1.13) możemy zapisać S +0
+
+<image/wzory/k1_page13_formula2.png>
+
+Mamy zatem
+
+<image/wzory/k1_page13_formula3.png>
+
+CAŁKOWANIE
+
+Podstawowymi własnościami przekształcenia Laplace'a, decydującymi o jego zna-
+czeniu i zastosowaniu, są właściwości polegające na tym, że operacje różniczkowania
+i całkowania funkcji /(1) zostają po dokonaniu przekształcenia zastąpione mnożeniem
+lub dzieleniem przez s, a więc operacjami algebraicznymi.
+
+Twierdzenie o całkowaniu oryginału
+
+Operacji całkowania oryginału od 0 do zmiennego punktu z odpowiada podzielenie
+obrazu przez —s.
+
+<image/wzory/k1_page13_formula4.png>
+
+Zakładamy tutaj, że istnieje obraz funkcji /(1), a 6 jest to zmienna pomocnicza ozna-
+czająca czas. Wtedy również istnieje obraz całki z tej funkcji.
+
+16

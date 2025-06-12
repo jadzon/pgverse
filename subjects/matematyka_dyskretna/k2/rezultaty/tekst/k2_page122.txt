@@ -1,0 +1,45 @@
+1.5. Pierścień Z „, 7
+
+<image/wzory/k2_page122_formula1.png>
+
+Zauważmy, że klasy abstrakcji elementów równoważnych pokrywają się.
+Lemat 1.11 Jeżeli xr=y (modm), to [z|=f[y].
+Dow
+<image/wzory/k2_page122_formula2.png>
+
+bz=r (mod m)1z przecnoamości retaCjiz=y (mod m), Czyli:
+
+<image/wzory/k2_page122_formula3.png>
+
+awi
+
+<image/wzory/k2_page122_formula4.png>
+
+Identycznie pokazujemy zawieranie oawrolme [yj C (rj. [m
+
+Następna ważna własność klas abstrakcji to ich rozłączność.
+
+Lemat 1.12 Jeżeli [x]nfy]46, to [z|=[yl
+inaczej, dwie klasy abstrakcji [x) i [y) albo są identyczne, albo są rozłączne.
+
+Dowód. Przypuśćmy, że klasy [z] i [y| mają wspólny element z. Wtedy:
+
+<image/wzory/k2_page122_formula5.png>
+
+Z przechodniości mamy wtedy x = y (mod m), az lematu 1.11 [r] = ([y). o
+
+15 Pierścień Z,,
+Klasy abstrakcji relacji modulo m wyglądają następująco:
+
+<image/wzory/k2_page122_formula6.png>
+
+Dla dowolnego k z przedziału 0 < k < m — 1, klasa [k] jest postaci:
+
+<image/wzory/k2_page122_formula7.png>
+(Z oznacza zbiór liczb całkowitych). Zbiór klas abstrakcji modulo m oznacza się przez
+Zm:
+Ponieważ relacja modulo jest zgodna z działaniami dodawania i mnożenia, możemy
+zdefiniować dodawanie i mnożenie na klasach abstrakcji. Mówiąc w skrócie, aby wyko-
+nać działanie na dwóch klasach abstrakcji, wybieramy dowolnych przedstawicieli tych
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

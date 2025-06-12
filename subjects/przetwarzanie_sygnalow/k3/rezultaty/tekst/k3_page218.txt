@@ -1,0 +1,31 @@
+Funkcja delta 239
+
+<image/figury/k3_page218_figure1.png>
+
+nię, więc trzeba przyjąć, że jej amplituda jest nieskończenie duża. Nie przejmujcie się tym; to nie
+cie się z problemem, w którym istotny byłby fakt, czy amplituda jest, czy nie jest nieskończona.
+Funkcja delta jest pojęciem matematycznym, a nie sygnałem ze świata rzeczywistego. Realne sy-
+Tak jak w przypadku funkcji dyskretnej, ciągła funkcja delta jest oznaczana symbolem ma-
+tematycznym 5( ). Sygnał wyjściowy systemu będący odpowiedzią na ciągłą funkcję delta
+jest nazywany odpowiedzią impulsową i jest często oznaczany przez h( ). Proszę zauważyć,
+że nawiasy okrągłe ( ) stosuje się do oznaczania sygnałów ciągłych, a kwadratowe [ ] — sy-
+gnałów dyskretnych. Taki zapis stosuje się w tej książce i prawie wszędzie w DSP, nie jest
+to jednak zapis uniwersalny. Na wykresach impulsy są przedstawiane jako pionowe strzałki
+(parz rys. 13.1 d) o długościach wyrażających powierzchnie impulsów.
+
+Chcąc lepiej zrozumieć impulsy w świecie rzeczywistym, spójrzcie na nocnym niebie na
+jakąś planetę i na jakąś gwiazdę, np. na Marsa i Syriusza. Wydaje się, że obie mają — dla
+oka nieuzbrojonego — taką samą jasność i wymiar. Przyczyna takiego podobieństwa nie
+jest oczywista, bo geometria oglądania jest w obu przypadkach drastycznie różna. Mars
+ma ok. 6000 km średnicy i znajduje się 60 mln km od Ziemi, Syriusz zaś jest ok. 300
+razy większy i ponad milion razy bardziej oddalony. Te liczby powinny dawać wrażenie,
+że Mars jest ponad trzy tysiące razy większy od Syriusza. Jak to jest możliwe, że oba te
+obiekty wyglądają podobnie?
+
+Mars i Syriusz wydają się nam jednakowe, będąc na tyle małe, że dla ludzkiego układu
+wzrokowego są impułsami. Dostrzegany kształt jest odpowiedzią impulsową oka, a nie rze-
+czywistym obrazem gwiazdy lub planety. Ten fakt staje się oczywisty, gdy te dwa obiekt
+obejrzymy przez mały teleskop. Mars ma wtedy wygląd ciemnej tarczy, podczas gdy Syriusz
+nadal wydaje się być jasnym impulsem. Z tej także przyczyny gwiazdy migoczą, a planety
+nie. Obraz gwiazdy jest wystarczająco mały, aby mógł być na krótko blokowany w atmosfe-
+rze przez pyłki lub turbulencje, których wpływ na obraz planety jest znacznie słabszy.

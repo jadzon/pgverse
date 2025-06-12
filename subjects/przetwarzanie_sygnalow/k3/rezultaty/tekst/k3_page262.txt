@@ -1,0 +1,29 @@
+Dowolna odpowiedź częstotliwościowa 287
+
+- żądanej odpowiedzi częstotliwościowej z dziedziny częstotliwości w dziedzinę czasu. W fil-
+"trze okienkowanym funkcją sinc zarówno odpowiedź częstotliwościowa, jak i odpowiedź
+sę ję kaj ay RK 2d Ą
+wane matematycznie, przez przekształcenie Fouriera. Tymczasem w metodzie przedstawio-
+nej w tym rozdziale obie odpowiedzi są wyrażone matrycami liczb, a program komputerowy
+(FFT) jest stosowany do przejścia od jednej do drugiej.
+Na rys. 17.1 pokazano, na czym polega ta metoda. Na rys. 17.1 a) przedstawiono żądaną
+odpowiedź częstotliwościową filtru. Jest ona, najoględniej mówiąc, bardzo nieregularna i by-
+łaby z pewnością niemożliwa do zrealizowania przy użyciu elektroniki analogowej. Ta ide-
+alna odpowiedź częstotliwościowa jest zdefiniowana przez matrycę odpowiednio wybranych
+liczb, a nie przez jakiś wzór matematyczny. W tym przykladzie jest to 513 próbek rozmiesz
+
+lepiej wyrazić żądaną odpowiedź częstotliwościową, podczas gdy mniejsza ich liczba może
+czasem być zalecana z uwagi na zredukowanie czasu obliczeń podczas projektowania filtru.
+Na ogół jednak ta ostatnia kwestia nie jest bardzo istotna i w większości zastosowań dobrym
+wyborem jest długość 513 punktów.
+Oprócz matrycy zawierającej wartości modułu (rys. 17.1 a), musi być odpowiadająca jej
+matryca fazy, o takiej samej długości. W tym przykładzie faza żądanej odpowiedzi impul-
+sowej jest całkowicie zerowa i matryca wartości fazy nie jest w ogóle pokazana na rys.
+17.1. Podobnie jak do matrycy wartości modułu, także do matrycy wartości fazy może być
+wprowadzona dowolna krzywa, którą ma realizować filtr. Pamiętajcie jednak, że próbki
+pierwsza i ostatnia (tj. O i 512) w matrycy fazy muszą mieć wartość zero (lub wielokrot-
+ności 21, co oznacza to samo). Odpowiedź częstotliwościowa może być też wyrażona we
+ych prostokątnych przez umieszczenie w matrycach części rzeczywistej i urojo-
+nej, zamiast modułu i fazy.
+
+<image/tabele/k3_page262_table1.png>

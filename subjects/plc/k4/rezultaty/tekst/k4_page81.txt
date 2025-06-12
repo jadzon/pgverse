@@ -1,0 +1,29 @@
+4) Grafcet
+
+Na Rys. 2.14 przedstawiono czwarty sposób opisu działania układu napełniania
+zbiorników - Grafcet. Kwadraty od 1 do 6 są etapami, które rozumiane są jako
+zbiory stanów, lub jako zbiory akcji. W chwili początkowej etapy 41,4) są ak-
+tywne. Przejście (1), które następuje po tych etapach może wystąpić tylko
+wtedy, gdy zmienna m przyjmie wartość /. Jeżeli wystąpiło przejście (1), to eta-
+py 2 15 stają się aktywne. Jeżeli aktywny jest etap 2, to wyjście V;=/ co zostało
+przedstawione za pomocą prostokąta zawierającego zmienną V, dołączonego do
+etapu 2. Gdy etap 2 jest aktywny, to przejście (2) może mieć miejsce tylko wtedy
+gdy h,=1 i wtedy aktywnym staje się etap 3. W podobny sposób można przeana-
+lizować kolejne przejścia między etapami.
+
+<image/figury/k4_page81_figure1.png>
+
+Współbieżność w tym modelu jest wyraźnie pokazana. Etapy 1, 2 i 3 odpowia-
+dają stanom Zbiornika ! (odpowiednio: pusty, w trakcie wypełniania oraz
+w trakcie opróżniania) a etapy 4, 5 i 6 odpowiadają stanom Zbiornika 2.
+
+Sekwencje stanów (lub aktywnych etapów) i warunków przejścia między nimi są
+widoczne. Gdy etap 2 jest aktywny, tylko wejście hl może zmieniać działanie
+etapów 2 i 3, niezależnie od innych etapów i od innych wejść.
+
+Metoda Grafcet wykorzystuje więc formalizm sieci Petri typu P/T (Pozy-
+cja/Tranzycja) z pewnymi modyfikacjami koniecznymi dla modelowania
+i programowania procesów dyskretnych. Jej zaletą jest możliwość zapisu funkcji
+
+ZATO OPT TZY OZ POZZO OOOO OGOOOZOZZZZOZZOP TT ZY DZY TZZOOZOZ ZIZI OOZZO DD OZI)
+2.5 Programowanie w oparciu o graf sekwencji SFC 81

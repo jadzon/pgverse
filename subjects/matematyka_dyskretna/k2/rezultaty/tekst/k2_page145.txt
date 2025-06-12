@@ -1,0 +1,54 @@
+30 Rozdział 1. Teoria liczb
+
+1.19.2 Test Fermata
+
+Drugi test jest algorytmem probabilistycznym i opiera się na twierdzeniu Fermata 1.54.
+Losujemy liczbę a < n i najpierw sprawdzamy, czy NW D(a,n) = 1. Jeżeli a i n
+nie są względnie pierwsze, i VW D(a,n) = d > 1, to djest dzielnikiem n i n nie jest
+pierwsza.
+Jeżeli NW D(a,n) = 1, to obliczamy a”"'! mod n. Jeżeli a"7' 4 1 (mod n), to
+mamy pewność, że n nie jest liczbą pierwszą.
+Definicja 1.56 Taką liczbę a, dla której NW D(a,n) = 1oraza””' 4 1 (mod n)
+będziemy nazywać świadkiem Fermata dla n, ponieważ zaświadcza ona, że n jest złożona.
+Jeżeli a"! = 1 (mod n), to orzekamy, że liczba n jest pierwsza. W tym przypadku
+możemy się pomylić. Liczba n może być złożona a mimo to wylosowaliśmy pechowo i
+a"! =] (mod n). Ale zachodzi następujący lemat.
+Lemat 1.57 Jeżeli istnieje takie a € Z;, żea””! £ 1 (mod n), to przynajmniej poło-
+wa elementów Z;, jest świadkiem Fermata dla n.
+Dow |
+<image/wzory/k2_page145_formula1.png>
+
+Hi j RAA MAKA WNN J 0 pzy NANA AAA Z WAŁ W pesa na 164 P9 kaj pow zowanakk
+
+prze” = ntrrumami: Ł alamantńnwr
+
+<image/wzory/k2_page145_formula2.png>
+
+różnycu iiiiguży SUVg Utd 1.00), £ KWIYCI KdZUY JEM SWIAUKIELU CELA, MZECZYWI-
+
+ście
+<image/wzory/k2_page145_formula3.png>
+
+Wiyu OsiUMAUTY ŁEUŁAEÓDUE JUJE M AMUJKKUMUJ [AZKU PPU,
+
+Jeżeli n jest pierwsze, to z Twierdzenia Fermata, algorytm zawsze orzeknie dobrze.
+Z lematu 1.57 wynika, że jeżeli n jest złożona i istnieje świadek Fermata dla n, to takich
+świadków jest co najmniej połowa, i nasz algorytm pomyli się z prawdopodobieństwem
+< 1/2. Prawdopodobieństo, to można zmniejszyć poprzez powtórzenie algorytmu r razy,
+z różnymi wylosowanymi a.
+
+Istnieją jednak liczby złożone n, które nie mają świadków złożoności. Na przykład
+n = 561. Kłopot bierze się stąd, że 561 = 3: 11 - 17, a560 = 561 — 1 dzieli się przez
+2 = 3—1,10 = 11 — 1 oraz przez 16 = 17 — 1. Dlatego dla dowolnego a, jeżeli
+NW D(a, 561) = 1, to a jest względnie pierwsze z 3, 11 i 17 oraz mamy
+
+<image/wzory/k2_page145_formula4.png>
+
+iz chińcbiarmn thuiandzonnia na meoztach unwnilka ża
+
+<image/wzory/k2_page145_formula5.png>
+
+Takie uczby nazywają Sie uczoami Ldricnatla. FIEIWSZE UZy £ MUCH W 901, 11UD 1 1729.
+Występują one bardzo rzadko, jest ich tylko 255 wśród liczb mniejszych od 100 000 000.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

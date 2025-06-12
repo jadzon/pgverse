@@ -1,0 +1,42 @@
+2.1. Wielowrotniki i sieci 209
+
+<image/wzory/k3_page207_formula1.png>
+
+Dwójnik nazywamy pasywnym (P), jeśli dla każdej pary chwil t, i
+1 € (ty, +o0) oraz dla każdego dopuszczalnego stanu zaciskowego u, i ener-
+gia (2.1-50) jest nieujemna, tzn.:
+
+<image/wzory/k3_page207_formula2.png>
+
+Definicja ta ma prostą interpretację fizyczną. Dwójnik pasywny może
+pobierać energię z otoczenia, może ją gromadzić, może ją także oddawać do
+otoczenia. Zawsze jednak (tzn. w każdej chwili i dla każdego dopuszczalnego
+stanu zaciskowego) całkowita energia dostarczona do dwójnika pasyw-
+nego jest nieujemna. Dwójnik pasywny nie może zatem oddać do otoczenia
+więcej energii, niż wynosi suma energii pobranej przez niego uprzednio
+z otoczenia i energii zgromadzonej w chwili początkowej ty.
+
+Dwójnik, który nie jest pasywny, nazywamy dwójnikiem aktywnym (A).
+Definicję dwójnika aktywnego możemy zatem sformułować przez zaprzeczenie
+definicji (2.1-51).
+
+Dwójnik jest aktywny (A), jeśli istnieją takie chwile ty i t € Cty, +00) oraz
+taki dopuszczalny stan zaciskowy u, i, że energia (2.1-50) jest ujemna, tzn.:
+
+<image/wzory/k3_page207_formula3.png>
+
+Oznacza to, że dwójnik aktywny jest zdolny do tego, aby oddać do otoczenia
+większą energię, niż suma energii pobranej uprzednio z otoczenia i energii
+zgromadzonej w chwili początkowej. O ile jednak cecha pasywności jest cechą
+globalną (nierówność (2.1-51) dla dwójnika pasywnego jest spełniona zawsze),
+o tyle cecha aktywności jest cechą lokalną. Dwójnik jest aktywny, jeśli
+nierówność (2.1-52) zachodzi dla pewnego dopuszczalnego stanu zaciskowego
+i dla pewnej pary chwil tę, t > ty;dla innych stanów zaciskowych i dla innych
+chwil energia (2.1-50) może być nieujemna.
+
+B. Przypadek wielowrotnika. Definicje (2.1-51) i (2.1-52) można bez tru-
+du uogólnić na przypadek wielowrotnika, którego stan zaciskowy u = u(t),
+iitpor.wzory2.114jestokrelonywprzedzialekto00.ww
+czas:
+
+<image/wzory/k3_page207_formula4.png>

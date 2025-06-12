@@ -1,0 +1,30 @@
+Algorytm od strony wejścia
+
+Zbadajmy teraz próbkę x[8] — ostatni punkt sygnału wejściowego. Jest to próbka o numerze
+8 i wartości —0,5. Jak pokazano na wykresie w prawym, dolnym rogu na rys. 6.6, x[8] daje
+AZ a a 0) pomnożoną przez -0,5. Zera
+
+do punktów od 0 do 7. Na koniec sprawdźmy wpływ
+akit ii 1 OR26 pól asia Sldodć tma, więc wiiowiaj, dhładcwo wiikiowe
+złożone z samych zer.
+
+W omówionym przykładzie x|n] jest sygnałem 9-punktowym a kin] 4-punktowym. W następ-
+ym sytuację, wybierając 4-punktowy
+
+wego, cztery próbki xfn) dają cztery przesunięte i i przeskalowane wersje 9-punktowej odpowie-
+
+dzi impulsowej. Tak jak poprzednio, z przodu i z tyłu dodano zera jako znaki-wypełniacze.
+
+Ale przyjrzyjmy się tym rysunkom. Przecież sygnał wyjściowy na rys. 6.7 jest identyczny jak
+
+sygnał wyjściowy na rys. 6.5. To nie pomyłka, lecz ważna właściwość. Operacja splotu jest
+
+przemienna: aln] * bfn] = bln) * an]. Z. matematycznego punktu widzenia nie ma znacze-
+jest
+
+la Lali ławka di NŁ Sil wddkno |od
+powiedź impulsowa to dwie całkiem różne rzeczy i ich wzajemna zamiana nie ma sensu.
+Przemienność spłotu jest narzędziem matematycznym służącym do przekształcania wzorów
+w celu uzyskania potrzebnych wyników.
+
+<image/figury/k3_page101_figure1.png>

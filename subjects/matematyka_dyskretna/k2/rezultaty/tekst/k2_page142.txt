@@ -1,0 +1,41 @@
+1.16. Szybkie potęgowanie 27
+
+<image/figury/k2_page142_figure1.png>
+
+<image/wzory/k2_page142_formula1.png>
+Przykład 1.52 Aby obliczyć 2** mod 13 trzeba wymnozyć 2** = 2*9.2*.2* = 3.4.2 =
+11 (mod 13).
+
+Zauważmy, że każda liczba naturalna k jest sumą potęg dwójki
+
+<image/wzory/k2_page142_formula2.png>
+
+gdzie d; € 40,1) to cyfry rozwinięcia dwójkowego k.
+Powyższe uwagi sugerują następujący algorytm obliczania potęgi a*.
+Algorytm szybkiego potęgowania
+Dane wejściowe: podstawa a oraz wykładnik k=(dj,.. . „d6) w postaci binamej.
+
+x:=a; y:=l1
+if d0=1 then y:=y*a mod n
+for i:=1 to j do
+X:=x*x mod n;
+if di=l then y:=y*x mod n
+
+Zmienna x zawiera kolejne potęgi a o wykładnikach będących potęgami 2. Na początku
+r = a=a*'.Poi tej iteracji pętli forz = a? . Jeżeli di = 1 to mnożymy y przez z = a”.
+
+Nak
+
+<image/wzory/k2_page142_formula3.png>
+Przykitaa 1.35 r rzesieazmy aziatanie aigorytmu podczas opliczania ż** (mod 13). 19
+w zapisie dwójkowym ma postać (10011). Poniższa tabela zawiera wartości zmiennej x
+i y przed wejściem do pętli for i=©0) oraz po każdej iteracji.
+
+<image/wzory/k2_page142_formula4.png>
+
+Zauważmy, że wyniki pośrednie, i ostateczny, należą do Z „i algorytm nie potrzebuje
+zbyt dużej pamięci. Algorytmu tego nie można stosować do obliczania a* w liczbach
+całkowitych, jeżeli k jest duże, to wynik ostateczny oraz pośrednie będą zbyt duże, żeby
+mógł się zmieścić w pamięci komputera.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

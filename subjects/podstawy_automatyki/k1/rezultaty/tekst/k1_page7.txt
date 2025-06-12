@@ -1,0 +1,35 @@
+Zatem
+Zhiv]|= L.
+
+Przykład 1.2
+
+4-92 a. a . a . .. ma. m
+
+<image/wzory/k1_page/_formula1.png>
+
+1.3. Najważniejsze własności przekształcenia Laplace'a
+
+Praktyczne zastosowanie przekształcenia Laplace'a polega na tym, że prowadzimy
+obliczenia nie na danych funkcjach, lecz na ich obrazach. Podobnie, gdy mamy do wy-
+konania operację mnożenia, to korzystamy z logarytmów, gdyż to sprowadza się do pro-
+stych operacji dodawania. Proces odwzorowania można uważać za coś w rodzaju prze-
+kładu z jednego języka na inny, każdemu słowu odpowiada inne słowo. W transformacji
+Lapiace'a każdej funkcji (oryginałowi) odpowiada inna funkcja (transformata, obraz).
+Czym jest słownik przy przekładzie, tym przy przekształceniu Laplace'a jest tablica
+przyporządkowanych sobie oryginałów i obrazów.
+
+Najważniejsze właściwości przekształcenia Laplace'a, mające zasadnicze znacze-
+nie dla praktyki i zastosowań, zostaną ujęte w postaci kilku prostych wzorów i reguł,
+stanowiących w pewnym sensie gramatykę rachunku operatorowego. Na nich oparta
+jest technika stosowania metody operatorowej w konkretnych problemach.
+
+LINIOWOŚĆ
+
+Przekształcenie Laplace'a jest przekształceniem liniowym, tzn. ma następującą,
+przedstawioną dalej właściwość.
+
+Jeśli:
+
+<image/wzory/k1_page7/_formula2.png>
+
+10

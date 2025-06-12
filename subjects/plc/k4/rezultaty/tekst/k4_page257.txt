@@ -1,0 +1,13 @@
+<image/figury/k4_page257_figure2.png>
+
+Wyd. 4.15 Zerowanie licznika CTU.
+
+<image/tabele/k4_page257_table1.png>
+
+Wyd. 4.16 Przykład użycia licznika CTD.
+
+<image/figury/k4_page257_figure1.png>
+
+Wyd. 4.17 Ustawianie licznika CTD.
+
+5.5 Czasomierze i liczniki 257

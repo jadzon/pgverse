@@ -1,0 +1,38 @@
+27. Kompresja danych
+
+<image/figury/k3_page431_figure1.png>
+
+w tych przypadkach, gdy plik reprezentuje jakiś sygnał. Na przykład na rys. 27.5 a) pokaz: 0
+segment sygnału fonicznego, przetworzonego na sygnał cyfrowy z rozdzielczością 8-bitową, więć
+wartości próbek mieszczą się w granicach od —127 do 127. Na rys. 27.5 b) pokazano ten syg
+zakodowany metodą delta. Podstawową właściwością sygnału po kodowaniu delta jest mniejsz
+amplituda niż w sygnale oryginalnym. Inaczej mówiąc, kodowanie delta zwiększyło prawdopo
+EE
+To niejednakowe prawdopodobieństwo jest właśnie tą cechą, która jest niezbędną do d:
+kodóreiia Pak Sadi oytió) osiki A GA WCG o KA
+prostą, to kodowanie delta da wynik w postaci ciągu próbek mających jednakową wartość.
+Tego wymaga kodowanie ciągów. Dlatego często stosowanym sposobem kompresji sygnał
+jest kodowanie delta z następującym po nim kodowaniem Huffmama i/lub kodowaniem ciągć
+Metodę stosowaną w kodowaniu delta można rozszerzyć, uzyskując technikę bardziej sko
+plikowaną zwaną liniowym kodowaniem predykcyjnym (LPC — Linear Predictive Codin,
+Aby zrozumieć LPC, wyobraźmy sobie, że pierwsze 99 próbek z sygnału wejściowego za
+ło już zakodowanych i zabieramy się do próbki numer 100. Zadajemy sobie wtedy pytanie
+jaka jest najbardziej prawdopodobna wartość próbki 100 wyznaczona na podstawie wartość
+pierwszych 99 próbek? W przypadku kodowania delta najbardziej prawdopodobna wartość
+próbki 100 jest taka sama jak wartość poprzedniej próbki 99. Ta wartość oczekiwana je
+stosowana jako odniesienie przy kodowaniu próbki 100. To znaczy, że w kodowanym pli
+ku umieszcza się różnicę między próbką i wartością spodziewaną. W kodowaniu LPC te
+sposób ulega rozszerzeniu przez lepsze odgadywanie najbardziej prawdopodobnej wartc
+próbki. Realizuje się to, uwzględniając nie tylko jedną, lecz kilka ostatnich próbek. Algoryt
+stosowane w LLPC są podobne do filtrów rekursywnych z wykorzystaniem przekształcenia 4
+i innych metod z bogatym aparatem matematycznym.
+
+Kompresja LZW
+
+Nazwa kompresji LLZW pochodzi od nazwisk jej twórców, którymi są A. Lempel i J. Ziv, z późm
+szymi modyfikacjami, które wprowadził Terry A. Welch. Dzięki swojej prostocie i uniwersalna
+LZW jest podstawową metodą kompresji danych, o ogólnym przeznaczeniu. Można oczekiwać,
+metoda LZW, zastosowana typowo do tekstów, kodów wykonywalnych i plików danych podoba
+go typu, spowoduje ich kompresję do ok. połowy rozmiaru oryginalnego. LZW jest też skułec
+w przypadku plików danych o bardzo dużej redundancji, takich jak stabelaryzowane liczby, ź
+dłowe kody komputerowe i zbierane sygnały. W tych przypadkach współczynnik kompresji

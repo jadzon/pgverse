@@ -1,0 +1,27 @@
+147
+
+stanów o mniejszej energii. Stąd, ponieważ istnieje dolna granica wartości funkcji
+energii, to sieć musi osiągnąć jakiś stan stabilny, który znajduje się w minimum
+energii lokalnym lub globalnym.
+
+Obliczając ze wzoru (??) energię układu dla wektora komplementarnego —v,
+łatwo widać, że E(—v) = E(v). Stąd wynika, że wielkość minimum funkcji E(=v)
+jest taka sama jak funkcji E(v). Prowadzi to do ważnego wniosku, że układ może
+zmierzać zarówno do punktu v, jak i —v. Do którego z nich dojdzie, zależy od
+odległości punktu reprezentującego stan początkowy do punktów v i =v.
+
+Pamięć autoasocjacyjna Hopfielda jest często nazywana w literaturze dekoderem
+korygującym przekłamania. Odzwierciedla to fakt, że pamięć na podstawie podanego
+na wejście wektora różniącego się nieznacznie od wektora zapamiętanego odtwarza
+na wyjściu wektor zapamiętany, czyli jest układem progowym. Ilustrują to rysunki
+77.1 27 gdzie przedstawiono przykładowe obrazy wzorcowe i przebieg procesu od-
+czytu przy podaniu na wejście pamięci zniekształconego wzorca.
+
+<image/figury/k2_page142_figure2.png>
+
+<image/figury/k2_page142_figure3.png>
+
+Ortogonalność wzorców
+
+Przyjmijmy, że w pamięci zapisano obrazy st”), m = 1,2,...,p, a na wejście po-
+dany jest obraz s(”. Pobudzenie łączne i-tego neuronu dla reguły aktualizacji danej

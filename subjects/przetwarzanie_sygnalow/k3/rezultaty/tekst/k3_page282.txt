@@ -1,0 +1,53 @@
+Metoda rekursywna 309
+
+ 
+
+<image/wzory/k3_page282_formula1.png>
+
+sumowanie wszystkich uzyskanych iloczynów. Zauważcie, że nie ma tu wartości by, gdyż
+odpowiada ona próbce właśnie obliczanej. Wzór 19.1 jest nazywany wzorem rekursywnym
+a filtry obliczane przy jego użyciu — filtrami rekursywnymi. Wartości „a” i „b” określające
+filtr są nazywane współczynnikami rekursywnymi. W praktyce można stosować nie więcej
+niż kilkanaście współczynników, gdyż filtr mógłby stać się niestabilny (tj. sygnał wyjścio-
+wy byłby ciągle rosnący lub oscylujący). W tablicy 19.1 podano przykład programu filtru
+rekursywnego.
+
+try rekursywne są często nazywane filtrami o nieskończonej odpowiedzi impułsowej (NON).
+
+Filtry rekursywne działają na zasadzie spłatania sygnału wejściowego z bardzo długą odpo-
+
+wiedzią impulsową filtru, choć jest stosowanych niewiele współczynników.
+Zależność między współczynnikami rekursywnymi i odpowiedzią impulsową filtru jest okre-
+ślona metodą matematyczną zwaną przekształceniem Z, które będzie tematem rozdziału 33.
+
+i odpowiedzią impulsową, łąc kai cAC: edo
+d filtr, projektowanie systemów rekursywnych naśladujących analogowe iestety
+
+większość użytkowników DSP. Jest to dziedzina dla tych, którzy specjalizują się w DSP.
+
+<image/figury/k3_page282_figure2.png>
+
+   
+
+zl RÓG ti yiętE
+
+DZICZZ
+
+kim.
+
+RZY" IĘCHSEZOWIZ Z
+
+„ORZREŻZZJ
+
+KITARIŻKE
+
+ze
+
+ 
+
+Fę<ti ań w-—kiwiwwkikw wi WK 6100700000
+
+mym md dw 2 PK A «ik
+= a
+EE
+ROZ

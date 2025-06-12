@@ -1,0 +1,55 @@
+Argumentem aktualnym powyższych operatorów mogą być liczniki (C),
+czasomierze (7) oraz adresowane bitowo wejścia (7), wyjścia (Q) i markery
+
+(F).
+
+Operacje ustawiania i zerowania z argumentem formalnym
+e S$ = -ustawianie argumentu formalnego,
+e RB = - zerowanie argumentu formalnego.
+Argumentem aktualnym powyższych operatorów mogą adresowane bitowo
+wyjścia (Q), markery (F).
+Możliwości realizacji funkcji logicznych przedstawiona w rozdziale 7.1.
+
+Operacje wprowadzania i przekazania z argumentem formalnym
+
+e |. = - wprowadzanie,
+
+e LC = -wprowadzanie argumentu formalnego w kodzie BCD,
+e LW= - wprowadzanie kombinacji bitowej,
+
+e T = -przekazanie.
+
+Argumentem aktualnym operatora L= mogą być adresowane w postaci bajtu
+lub słowa: wejścia (7), wyjścia (Q) i markery (F) oraz liczniki (C) lub cza-
+somierze (7). Argumentem aktualnym operatora LC= mogą być liczniki (©)
+lub czasomierze (7).
+
+Argument aktualny operatora LW= musi być typu dane (D).
+
+Argumentem aktualnym operatora T= mogą być liczniki (©) lub czasomie-
+rze (7) oraz adresowane w postaci bajtu lub słowa: wejścia (7), wyjścia (Q)
+i markery (F).
+
+Operatory realizujące funkcje zliczania i odmierzania czasu z argumentem
+formalnym
+. SP - uruchomienie czasomierza impulsowego,
+* SR - uruchomienie czasomierza impulsowego z przedłużeniem,
+e SEC= - uruchomienie czasomierza załączającego z opóźnieniem lub
+ustawienie licznika,
+e SSU= - uruchomienie czasomierza załączającego z opóźnieniem i z
+podtrzymaniem lub instrukcja zliczania w górę licznika,
+e SFD== - uruchomienie czasomierza wyłączającego z opóźnieniem po
+wyłączeniu lub instrukcja zliczania w dół licznika,
+e RD = -zerowanie licznika lub czasomierza.
+Argumentem aktualnym powyższych operatorów mogą być czasomierze (7)
+lub liczniki (C)
+
+Operator przetwarzania
+e DO = -wykonuje argument formalny.
+Argumentem aktualnym operatora DO= mogą być bloki danych (DB),
+bloki programowe (PB), bloki krokowe (SB) lub bloki funkcyjne (FB)
+bez listy parametrów.
+
+   
+
+7.15 Programowanie bloków funkcyjnych 367

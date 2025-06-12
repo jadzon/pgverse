@@ -1,0 +1,41 @@
+1.3. Elementy nieliniowe 57
+
+i (1.3-18) — (rys. 1.3-13a). Będzie to, w zasadzie, powtórzenie rozważań
+przeprowdzonych w p. 1.3.2-C dla indukcyjności.
+
+Zgodnie z zależnościami (1.1-4) i (1.3-18) moc chwilowa pobierana przez
+pojemność jest określona wzorem:
+
+rzory/k4_page57_formula1.png
+
+<image/figury/k4_page57_figure2.png>
+
+puust piacy (u,yj ua wiaiantczydtyw Uuuaia oŁy vu puważtnu unaawu
+
+wenńtrzednuch (rvs
+
+je57_formula2.png
+
+ 
+
+1.3-15a), oraz p <0, jeśli punkt pracy zbliża się do
+yółrzędnych (rys. 1.3-15b).
+
+iry/k4_page57_figure1.png
+
+indukcyjności, aby ruch punktu pracy mógł odbywać się
+p <0), najpierw punkt ten musi oddalić się od początku
+h (p > 0).
+
+jemność może oddawać do otoczenia tylko tę energię, którą
+i pobrała.
+
+e, że pojemność jest elementem zdolnym do gromadzenia
+iadzona (magazynowana) przez pojemność jest energią pola
+
+chwili ty pojemność jest w stanie spoczynku tzn.
+= (. Punkt pracy w chwili ty znajduje się zatem w po-
+łrzędnych, zaś energia w, gromadzona przez pojemność
+zyjmijmy, że w chwili bieżącej t > ty: q = q(t). Energia
+zynowana) przez pojemność jest równa energii pobranej
+„ty, £>, a zatem:

@@ -1,0 +1,29 @@
+W przedstawionym na Rys. 7.9 rozwiązaniu założono, że przed włączeniem sil-
+nika pomocniczy styk przekaźnika K3A jest włączony. Uruchomienie silnika za
+pomocą $7 zostaje podtrzymane, aż do momentu włączenia hamulca F3. Wtedy
+przekaźnik K2 zmienia kierunek wirowania silnika, aż do powrotu hamulca do
+położenia początkowego.
+
+_1.3.2 Przełączanie silnika z opóźnieniem
+
+ 
+
+Zakładając, że w układzie sterowania silnikiem pokazanym na Rys. /.2 po za-
+trzymaniu silnika za pomocą przycisku $0 (stop) można go ponownie uruchomić
+dopiero po zadanym czasie, należy zaprojektować schemat stykowy obwodu ste-
+rowania i napisać program dla sterownika, który będzie realizował jego funkcje.
+
+Rozwiązanie pokazane na schemacie Rys. /./0 różni się od poprzedniego jedynie
+ostatnimi dwoma szczeblami, których zadaniem jest spowodowanie opóźnienia
+włączenia silnika po chwili naciśnięcia przycisku $0 (stop) w zależności od na-
+stawy przekaźnika czasowego K4A. W programie na Wyd. 1.6 funkcje przekaź-
+nika czasowego realizuje czasomierz z opóźnieniem czasowym równym 2s.
+
+<image/figury/k4_page21_figure1.png>
+
+Rys. 1.10 Schemat stykowy obwodu sterowania
+silnikiem z opóźnionym przełączaniem.
+
+ 
+
+1.3 Proste przykłady układów sterowania silnikiem 21

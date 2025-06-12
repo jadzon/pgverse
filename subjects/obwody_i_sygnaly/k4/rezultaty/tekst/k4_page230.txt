@@ -1,0 +1,15 @@
+2. Pojęcia podstawowe — układy
+
+ 
+
+Dla a = 3 równanie jednorodne przyjmuje postać
+<image/wzory/k4_page230_formula1.png>
+skąd wyznaczamy składową przejściową:
+
+vzory/k4_page230_formula2.png
+
+Ponieważ, jak nietrudno sprawdzić, A = — 2E < 0, więc uc, > — ©, gdy t— +. Rozważany
+układ nie osiąga zatem stanu us
+
+Przykład ten ilustruje znaczenie wnika (22-13) dla osiągnięcia przez układ stanu ustalo-
+nego.

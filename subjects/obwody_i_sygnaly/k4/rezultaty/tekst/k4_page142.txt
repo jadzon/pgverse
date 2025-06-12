@@ -1,0 +1,39 @@
+142 1. Pojęcia podstawowe — elementy
+
+ 
+
+a po zamianie zmiennych całkowania określonej związkami (1.8-28) dostajemy
+(rys. 1.8-4b):
+
+<image/wzory/k4_page142_formula1.png>
+
+Jest to całka różniczki zupełnej, bowiem:
+
+<image/wzory/k4_page142_formula2.png>
+
+Całka (1.8-29) nie zależy zatem od wyboru linii całkowania w płaszczyźnie i 1» 1a:
+Wybierzemy więc linię całkowania tak, jak to pokazano na rys. 1.8-4c, tzn. jako
+linię złożoną z dwóch odcinków OB i BA. Na tych odcinkach mamy odpo-
+wiednio:
+
+<image/wzory/k4_page142_formula3.png>
+
+Uwzględniając te zależności we wzorze (1.8-29) otrzymujemy:
+
+<image/wzory/k4_page142_formula4.png>
+(1.8-30)
+
+lubwzapisiemacierzowympor.wzory1.819i1.820
+
+<image/wzory/k4_page142_formula5.png>
+
+Można wykazać (szczegóły pomijamy — patrz zad. 1.37), że z uwagi na
+nierówność (1.8-13) energia w, jest nieujemna:
+
+<image/wzory/k4_page142_formula6.png>
+
+co jest zresztą oczywiste ze względów fizycznych.
+
+E. Zaciski jednoimienne. W wielu zagadnieniach dotyczących indukcyj-
+ności sprzężonych istotne znaczenie ma znak indukcyjności wzajemnej M. Jest
+on możliwy do ustalenia, jeśli jest znana geometria wzajemnych położeń obu

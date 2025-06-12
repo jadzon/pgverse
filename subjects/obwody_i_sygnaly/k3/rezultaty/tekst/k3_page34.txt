@@ -1,0 +1,40 @@
+£:—: .„”a 10,7) mamamm' I) A £im: +wmm 7) =.
+
+<image/wzory/k3_page34_formula1.png>
+
+Jeżeli prąd w indukcyjności narasta do wartości stałej według funkcji typu (l-e""*), t>0,to
+napięcie maleje do zera według funkcji e”*, t > 0. Szybkość narastania prądu i szybkość zanikania
+napięcia są jednakowe i określone przez stałą a.
+
+Przyklad 1.2-4. Wyznaczymy prąd i płynący przez indukcyjność L (rys. 1.2-6) przy założe-
+niu, że znany jest przebieg napięcia u na jej zaciskach. Obliczenia przeprowadzimy dla przypadków:
+
+fiouirv/k2 naaa34 fiaitirae2 nna
+
+<image/wzory/k3_page34_formula2.png>
+
+a) Korzystając ze związku (1.2-25) otrzymujemy:
+
+<image/wzory/k3_page34_formula3.png>
+
+gdzie 4 jest pewną stałą. W ogólnym przypadku prąd i jest określony z dokładnością do tej stałej.
+W wielu zagadnieniach interesuje nas jednak jedynie składnik sinusoidalny. Przyjmujemy wtedy
+A = 0 i tym samym:
+
+<image/wzory/k3_page34_formula4.png>
+
+Otrzymana zależność między prądem i napięciem na indukcyjności jest wówczas identyczna jak
+w przykładzie 1.2-3b. Taka sama jest też interpretacja tej zależności.
+
+b) W tym przypadku przebieg napięcia jest określony w przedziale (0, + co), a więc prąd należy
+wyznaczyć ze związku (1.2-26), przyjmując w nim £, = 0:
+
+<image/wzory/k3_page34_formula5.png>
+
+Podstawiając w otrzymanym wzorze t = 0 otrzymujemy i(0) = 0, a więc założoną wartość
+początkową prądu.
+
+c) Przypadek ten różni się od przypadku b) jedynie inną wartością początkową prądu i(0).
+Korzystając z otrzymanego w przykładzie b) wyniku możemy napisać:
+
+<image/wzory/k3_page34_formula6.png>

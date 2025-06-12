@@ -1,0 +1,13 @@
+<image/figury/k4_page420_figure2.png>
+
+Wyd. 8.64 Sterowanie w trybie ręcznym
+
+<image/tabele/k4_page420_table1.png>
+
+Wyd. 8.65 Histereza dla poziomu minima Inego
+
+<image/figury/k4_page420_figure1.png>
+
+Wyd. 8.66 Sprawdzenie ograniczenia poziomu dolnego i górnego
+
+420 Rozdział : 8.Programy przykładowe

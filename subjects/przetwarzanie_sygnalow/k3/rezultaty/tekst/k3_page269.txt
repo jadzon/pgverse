@@ -1,0 +1,24 @@
+DZ JEZOENOOWYREYNAZY PIZZE TEZ AC r ni Ki KÓPÓZY TD
+
+XI KUAZTSTAWKZA*
+
+17. Filtry dostosowane do szczególnych
+
+<image/wzory/k3_page269_formula1.png>
+
+ 
+
+Na rys. 17.6 przedstawiono ogólną zasadę działania metody. Widmo częstotliwościowe orygi-
+nalnego sygnału fonicznego pokazano na rys. 17.6 a). Na rys. 17.6 b) przedstawiono odpowiedź
+częstotliwościową aparatury nagrywającej — dość gładką krzywą, mającą jednak kilka ostrych
+pików. Widmo sygnału nagranego (rys. 17.6 c) jest równe widmu prawdziwemu (rys. 17.6 a)
+pomnożonemu przez niejednostajną odpowiedź częstotliwościową (rys. 17.6 b). Celem rozpio-
+tu jest przeciwdziałanie niepożądanemu splotowi. Innymi słowy, odpowiedź częstotliwościowa
+filtru rozpłatającego (rys. 17.5 d) musi być odwróceniem odpowiedzi z rys. 17.6 b). To znaczy,
+że każdy pik na rys. 17.5 b) będzie kasowany przez odpowiadające mu wgłębienie na
+
+; więc moż
+ali pri » ns. 17..) dsponją tyko widmem polazanym na ry 17.6 c)?
+ia związane z rozplotem „na oślep” są zwykle rozwiązywane przez przyjęcie esty-
+
+ec zew i rocznik

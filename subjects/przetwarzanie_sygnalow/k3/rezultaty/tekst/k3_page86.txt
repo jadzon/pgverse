@@ -1,0 +1,42 @@
+Specjalne cechy liniowości 99
+
+ 
+
+ 
+
+Przykłady systemów liniowych i nieliniowych
+
+W tablicy 5.1 podano przykłady częstospotykanych systemów liniowych i nieliniowych.
+Przeglądając ten wykaz, pamiętajmy o matematycznych aspektach liniowości (homogenicz-
+ność, addytywność oraz niezmienność wzgłędem przesunięcia), jak również o nieformalnych
+sposobach określania liniowości stosowanych przez większość naukowców i inżynierów (/i-
+niowość statyczna i wierność odtwarzania sinusoidy).
+
+Specjalne cechy liniowości
+
+Liniowość jest cechą przemienną, a więc obejmującą dwa lub więcej systemów. Koncepcje
+przemienności przedstawiono ogólnie na rys. 5.7. Wyobraźmy sobie dwa systemy połączo-
+ne w kaskadę, tzn. wyjście jednego systemu jest wejściem następnego. Jeśli każdy z sys-
+temów jest liniowy, to cały połączony system też będzie liniowy. Z cechy przemienności
+wynika, że zmiana kolejności systemów w kaskadzie nie wpływa na właściwości całego
+połączonego systemu. Przypuszczalnie stosowaliście już tę zasadę w układach elektronicz-
+nych. Wyobraźmy sobie na przykład układ składający się z dwóch stopni — wzmacniacza
+i filtru. Jak jest lepiej — najpierw wzmacniać, potem filtrować, czy filtrować i następnie
+wzmacniać? Jeśli oba stopnie są liniowe, to ich kolejność w kaskadzie nie ma żadnego
+znaczenia i sygnał uzyskany na wyjściu jest w obu przypadkach taki sam. Trzeba jednak
+pamiętać, że we współczesnej elektronice występuje wiele zjawisk o charakterze nielinio-
+wym, które powodują, że kolejność układów w systemie jest istotna. Takie zjawiska to np.:
+zakłócenia, przesunięcie stałoprądowe (offset DC), szumy wewnętrzne, zniekształcenia
+spowodowane ograniczeniem szybkości zmian sygnału.
+Na rys. 5.8 zilustrowano następny krok w teorii systemów liniowych — wielokrotne wejścia
+i wyjścia. System z wielokrotnymi wejściami i/lub wyjściami jest liniowy, jeśli składa się
+z liniowych podsystemów i sumowań sygnałów. Złożoność sytemu nie ma znaczenia, wszel-
+kie nieliniowości są w nim jednak niedopuszczalne.
+Przeprowadzimy pewien eksperyment myślowy ułatwiający zrozumienie, jakie jest zna-
+czenie liniowości w systemach z wielokrotnymi wejściami i/lub wyjściami. Zacznijmy od
+umieszczenia sygnału na jednym z wejść, podczas gdy na pozostałych jest utrzymywany
+sygnał zerowy. Wtedy wielokrotne wyjścia odpowiedzą taką samą kombinacją sygnałów.
+Powtórzmy następnie tę procedurę, umieszczając inny sygnał na innym wejściu. Tak jak
+poprzednio, na pozostałych wejściach będzie utrzymywany sygnał zerowy. Ten drugi sy-
+
+<image/figury/k3_page86_figure1.png>

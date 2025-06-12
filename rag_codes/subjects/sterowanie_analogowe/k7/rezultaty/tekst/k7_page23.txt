@@ -1,0 +1,33 @@
+Stan układu
+
+ 
+
+Innym sposobem do uzyskania modelu stanowego będzie napisanie równania
+różniczkowego oraz skorzystanie z fazowych zmiennych stanu. Dla naszego
+przykładu będzie to:
+
+ 
+   
+ 
+  
+  
+ 
+ 
+
+<image/wzory/k/_page23_formula1.png>
+
+SMOUBJS 8|8pOJN
+
+Wprowadzamy oznaczenia: x, (£) =u,(t), x1(t)=x,(t), u(t) = u,(t)
+Wtedy:
+
+<image/wzory/k7_page23_formula2.png>
+
+ 
+ 
+ 
+ 
+
+<image/wzory/k/_page23_formula3.png>
+
+<image/wzory/k7/_page23_formula4.png>

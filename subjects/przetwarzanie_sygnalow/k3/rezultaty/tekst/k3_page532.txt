@@ -1,0 +1,49 @@
+32. Przekształcenie Laplace'a
+
+wszystkie bieguny w filtrze Butterwortha leżą na tym samym okręgu, więc we wszystkich
+połączonych kaskadowo stopniach stosuje się takie same wartości R i C. Jedyną różnicą mię-
+dzy stopniami jest wzmocnienie. Dlaczego takie kołowe rozmieszczenie biegunów zapewnia
+odpowiedź optymalnie płaską? Nie szukajcie żadnej oczywistej ani intuicyjnej odpowiedzi
+na to pytanie; to po prostu wynika z analizy matematycznej. |
+Na rys. 32.11 pokazano, jak można zmodyfikować położenia biegunów w taki sposób, aby |
+utworzyć filtr Czebyszewa. Jak wynika z rozważań w rozdziale 3, w filtrze Czebyszewa osią
+ga się ostrzejsze przejście między pasmami kosztem zwiększenia zafalowań w paśmie przepu-
+stowym. Na płaszczyźnie zmiennej zespolonej s odpowiada to spłaszczeniu w elipsę okręgu,
+na którym są bieguny. Im bardziej spłaszczona elipsa, tym więcej jest zafalowań w paśmie
+przepustowym i tym ostrzejsze jest przejście. Taki filtr, tworzony jako kaskada stopni Sallena-
+Keya, wymaga w każdym stopniu różnych wartości rezystorów i kondensatorów.
+
+Na rys. 32.11 przedstawiono też następny poziom zaawansowania w metodyce projektowa-
+nia filtrów — filtr eliptyczny. W tym filtrze uzyskuje się najostrzejsze z możliwych przejście
+między pasmami z jednoczesnym dopuszczeniem do zafalowań w paśmie tak przepustowym,
+jak i zaporowym. Na płaszczyźnie zmiennej zespolonej s odpowiada to rozmieszczeniu zer na
+osi urojonej, przy czym pierwsze znajduje się blisko częstotliwości odcięcia. Filtry eliptyczne
+mają kilka odmian i są w projektowaniu znacznie trudniejsze niż konfiguracje Butterwortha
+czy Czebyszewa. Przyczyną jest fakt, że rozmieszczenie biegunów i zer filtru eliptycznego
+nie jest prostą figurą geometryczną, lecz jest określone matematycznie z udziałem funkcji
+eliptycznych i całek (stąd nazwa filtru).
+
+Ponieważ każdy stopień bikwadratowy wytwarza dwa bieguny, więc filtry rzędu parzystego
+(liczba biegunów 2, 4, 6 itd.) mogą być tworzone przez kaskadowe łączenie stopni bikwa-
+dratowych. Jednak filtry rzędu nieparzystego (liczba biegunów 1, 3, 5 itd.) wymagają tego,
+czego stopnie bikwadratowe nie mogą zapewnić — pojedynczego bieguna na osi rzeczywistej.
+Jest to nic innego, jak prosty obwód RC dodany do kaskady. Na przykład filtr 9-biegunowy
+
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+  
+
+<image/figury/k3_page532_figure1.png>

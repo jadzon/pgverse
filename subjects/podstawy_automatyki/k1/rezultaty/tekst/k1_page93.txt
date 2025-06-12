@@ -1,0 +1,31 @@
+Przykład 2.33
+
+Zaprojektować układ o trzech wejściach x;, x» i x;, w którym sygnał wyjściowy
+y =1, gdy na wejściu pojawi się liczba w naturalnym kodzie binarnym podzielna przez
+trzy lub nieparzysta. Wyznaczyć postać minimalną funkcji y = f(x, x», x3) oraz przed-
+stawić schemat logiczny tego układu z zastosowaniem bramek NAND i NOR.
+
+Rozwiązanie
+Działanie układu opisuje tabela stanów (tab. 2.7).
+
+<image/tabele/k1_page93_table1.png>
+
+Na podstawie tabeli (tab. 2.7) można napisać równanie funkcji y w kanonicznej
+postaci alternatywnej
+
+<image/wzory/k1_page93_formula1.png>
+
+lub w kanonicznej postaci koniunkcyjnej
+
+<image/wzory/k1_page93_formula2.png>
+
+Minimalizacji funkcji y dokonujemy za pomocą tablic Karnaugha (tab. 2.8).
+
+Tabela 2.8
+Tablice Karnaugha
+
+<image/tabele/k1_page93_table3.png>
+
+Postać alternatywna Postać koniunkcyjna
+
+95

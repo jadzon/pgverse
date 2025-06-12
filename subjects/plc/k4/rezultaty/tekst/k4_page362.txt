@@ -1,0 +1,44 @@
+Przy pomocy pięciu pozostałych instrukcji skoku można sprawdzać aktualny stan
+trzech bitów (CCO0,CC1,O0YV) słowa statusowego procesora. W zależności od
+stanu tych bitów wykonywane są odpowiednie instrukcje skoku.
+
+<image/tabele/k4_page362_table1.png>
+
+Skok JZ jest wykonywany gdy:
+
+e po wykonaniu operacji arytmetycznej lub operacji logicznej na ciągu bitów
+lub operacji konwersji zawartość akumulatora I wynosi 0,
+
+e przy wykonaniu operacji porównania zawartości obu akumulatorów są sobie
+równe,
+
+e _ po wykonaniu instrukcji przesunięcia ostatnio wypchnięty bit jest równy O.
+
+Skok JN jest wykonywany gdy:
+
+e _ po wykonaniu operacji arytmetycznej lub operacji logicznej na ciągu bitów
+lub operacji konwersji zawartość akumulatora | jest różna od 0,
+
+e przy wykonaniu operacji porównania zawartości obu akumulatorów są różne
+(porównanie typu "różne" jest spełnione),
+
+e _ po wykonaniu instrukcji przesunięcia ostatnio wypchnięty bit jest równy I.
+
+Skok JP jest wykonywany gdy:
+
+e _ po wykonaniu operacji arytmetycznej lub operacji logicznej na ciągu bitów
+lub operacji konwersji zawartość akumulatora | mieści się w dozwolonym
+zakresie dodatnim,
+
+e po wykonaniu operacji arytmetycznej lub operacji konwersji zawartość
+akumulatora 1 jest mniejsza od dozwolonego zakresu,
+
+e przy wykonaniu operacji porównania zawartość akumulatora 2 jest większa
+od zawartości akumulatora 1 (porównanie typu "większe" jest spełnione),
+
+e po wykonaniu operacji na ciągu bitów zawartość akumulatora ] jest różna
+od zera.
+
+—— nn a A M 2
+
+362 Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5

@@ -1,0 +1,54 @@
+33. Przekształcenie Z
+
+ 
+
+Drugi krok konwersji przekształcenia Laplace'a w przekształcenie Z jest wykonywany Z za-
+stosowaniem drusiei postaci przebiegu wykładniczego:
+
+<image/wzory/k3_page537_formula1.png>
+Jest to wprawdzie idealnie prawidłowe wyrażenie przekształcenia Z, ale nie jest to postać
+najbardziej dogodna do zapisu zespolonego. W przekształceniu Laplace'a przezwyciężono tę
+trudność, wprowadzając nową zmienną zespoloną s = 6 + jw. W ten sam sposób zdefiniuje-
+my nową zmienną dla przekształcenia Z:
+z=re”
+Jest to zdefiniowanie zmiennej zespolonej z będącej zapisem biegunowym kombinacji dwóch
+zmiennych rzeczywistych r i ©. Trzecim krokiem w wyprowadzeniu przekształcenia Z jest zaza-
+stąpienie r i © przez z. W ten sposób dochodzimy do standardowej postaci przekształcenia Z:
+X(z)= 2, x|n]z"
+Wzór 33.1. Przekształcenie Z. Określa ono zależność między sygnałem x[n] w dziedzinie czasu
+i sygnałem X(z) w dziedzinie z
+Dlaczego w przekształceniu Z stosuje się r” zamiast e "9" oraz z zamiast s? Jak podano w roz-
+dziale 19, filtry rekursywne są implementowane przez zestaw współczynników rekursywnych.
+W celu analizy tych systemów w dziedzinie z trzeba mieć możliwość konwersji tych współ-
+czynników rekursywnych na funkcję przenoszenia w dziedzinie z i na odwrót. Jak to pokrółce
+wykażemy, zdefiniowanie przekształcenia Z w ten sposób (7” i z) daje najprostszy sposób po-
+ruszania się między tymi dwoma ważnymi sposobami reprezentacji systemu. Zdefiniowanie
+w ten sposób przekształcenia Z powoduje w istocie, że przechodzenie od jednego do drugie-
+go sposobu reprezentacji staje się trywialne.
+Na rys. 33.2 zilustrowano różnicę między płaszczyznami zmiennej zespolonej s przekształcenia
+Lapłace'a i płaszczyzną zmiennej zespolonej z w przekształceniu Z. Położenia na płaszczyź-
+nie zmiennej zespolonej s są określane dwoma parametrami — współczynnikiem tłumienia
+wzdłuż osi poziomej 6 i pulsacją © wzdłuż osi pionowej. Innymi słowy, te dwa rzeczywiste
+parametry są umieszczone w układzie współrzędnych prostokątnych. Taka geometria wynika
+z definicji s, zmiennej zespolonej reprezentującej położenie na płaszczyźnie zmiennej zespo-
+lonej s przez zależność s = G + jo.
+W przekształceniu Z zaś stosuje się zmienne r i ©, umieszczone we współrzędnych bieguno-
+wych. Odległość r od początku układu współrzędnych jest wartością współczynnika opadania
+wykładniczego. Odległość kątowa mierzona od dodatniej półosi poziomej © jest częstotliwością
+kątową, czyli pulsacją. Taka geometria wynika z definicji z wyrażonej wzorem z = re %”. Można
+więc powiedzieć, że zmienna zespolona wyrażająca położenie na płaszczyźnie z jest utworzona
+jako kombinacja dwóch parametrów rzeczywistych we współrzędnych biegunowych.
+Te różnice między przekształceniami skutkują tym, że linie pionowe na płaszczyźnie s od-
+powiadają okręgom na płaszczyźnie z. Na płaszczyźnie s na rys. 33.2 pokazano jako przy-
+kład rozmieszczenie biegunów i zer, w którym wszystkie bieguny i zera leżą na liniach
+pionowych. Równoważne bieguny i zera na płaszczyźnie z leżą na okręgach współśrod-
+kowych w stosunku do początku układu współrzędnych. Można to zrozumieć, analizując
+podaną wcześniej zależność: © = -In(r). Na przykład oś pionowa płaszczyzny s (tj. o = 0)
+odpowiada okręgowi jednostkowemu na płaszczyźnie z (tj. r = 1). Linie pionowe w lewej
+połówce płaszczyzny s odpowiadają okręgom położonym wewnątrz okręgu jednostkowe-
+go na płaszczyźnie z. Linie pionowe w prawej połówce płaszczyzny s odpowiadają zaś
+okręgom na zewnątrz koła jednostkowego na płaszczyźnie z. A zatem lewa i prawa strona
+płaszczyzny s są równoważne — odpowiednio — obszarom wewnątrz i na zewnątrz okręgu
+jednostkowego. System ciągły, na przykład, jest niestabilny, gdy bieguny zajmują prawą
+połówkę płaszczyzny s. W ten sam sposób system dyskretny jest niestabilny, gdy bieguny są
+na zewnątrz okręgu jednostkowego na płaszczyźnie z. Gdy sygnał w dziedzinie czasu jest

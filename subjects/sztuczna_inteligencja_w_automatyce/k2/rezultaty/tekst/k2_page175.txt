@@ -1,0 +1,50 @@
+180
+
+W jednym cyklu algorytmu genetycznego generowana jest losowo stała liczba sta-
+nów początkowych wahadła (LiczbaStanPocz). Ocena jakości sieci w cyklu polega
+na sterowaniu przez sieć wahadłem, począwszy od każdego z wylosowanych stanów
+początkowych, przez określoną liczbę kroków (LiczbaKroTest), przy czym długość
+jednego kroku sterowania jest równa długości kroku całkowania KrokCalk równa-
+nia (77). W czasie sterowania obliczane są chwilowe wartości błędów sterowania
+zdefiniowane jako
+
+<image/wzory/k2_page175_formula1.png>
+
+które następnie są sumowane po wszystkich krokach sterowania i wszystkich stanach
+początkowych. Otrzymuje się w ten sposób błąd działania sieci w cyklu
+
+<image/wzory/k2_page175_formula2.png>
+
+W czasie działania algorytmu genetycznego jako kryterium sieci przyjmuje się
+skumulowany błąd zdefiniowany jako
+
+<image/wzory/k2_page175_formula3.png>
+
+gdzie ż jest numerem cyklu.
+
+Po zakończeniu sprawdzania działania wszystkich sieci następuje ich selekcja.
+Przed jej rozpoczęciem dokonuje się projekcji wartości błędów sterowania sieci B na
+odcinek (5, 1) według wzoru
+
+<image/wzory/k2_page175_formula4.png>
+
+gdzie B; maz I Bimin są odpowiednio wartościami maksymalnymi i minimalnymi
+skumulowanych błędów, a 0 £< 8 < 1 jest arbitralnie wybranym współczynnikiem.
+Kryterium to rzutuje wartości błędów B, sterowania sieci na odcinek (5, 1).
+
+Do następnego etapu algorytmu genetycznego wybiera się losowo sieci z praw-
+dopodobieństwem proporcjonalnym do jakości c. Liczba wybranych w ten sposób
+sieci jest parzysta i wynosi LiczbaSelLos<LiczbaSieci. Dodatkowo do następ-
+nego etapu bez losowania wprowadza się LiczbaSelBez najlepszych sieci (o naj-
+większych wartościach kryterium c), przy czym LiczbaSelBez = (LiczbaSieci —
+LiczbaSelLos)/2.
+
+Podczas etapu krzyżowania spośród sieci wybranych losowo tworzy się losowo
+LiczbaSelLos/2 par sieci. Następnie przeglądając odpowiadające sobie neurony w
+parach sieci, wymienia się ich wagi z prawdopodobieństwem Prawdkrzyz. Dodatkowo
+na podstawie każdej z LiczbaSelBez sieci wprowadzonej bez losowania tworzy się
+sieć potomną o wagach zmienionych według wzoru w = w + PrzedzMut x (Y —
+0.5), gdzie Y jest zmienną losową o równomiernym rozkładzie prawdopodobieństwa
+przyjmującą wartości z przedziału (0,1), a PrzedzMut jest arbitralnie dobranym
+współczynnikiem. Po tych etapach otrzymuje się ponownie liczbę sieci wynoszącą
+LiczbaSieci ponieważ 2 x LiczbaSelBez + LiczbaSelLos = LiczbaSieci.

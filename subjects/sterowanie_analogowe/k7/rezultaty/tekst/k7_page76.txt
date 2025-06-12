@@ -1,0 +1,29 @@
+w HATECAR 94/51TEGOW
+p BGBAUTONATYKH
+
+ 
+
+Pozycjonowanie biegunów w oparciu o sprzężenie od stanu
+
+Przykład:
+Dla danego układu określić wartości wzmocnień w układzie ze sprzężeniem
+
+od stanu, zapewniające bieguny -4, -4 i -5. Wyznaczyć transmitancję układu
+ze sprzężeniem oraz narysować jego schemat
+
+SMOUBJS 8|8poJN
+
+<image/wzory/k7_page76_formula1.png>
+
+Rozwiązanie:
+
+<image/wzory/k7_page76_formula2.png>
+Odp.
+<image/wzory/k7_page76_formula3.png>
+
+<image/wzory/k/_page7/6_formula4.png>
+
+ 
+
+POLITECHNIKA
+GDANSKA

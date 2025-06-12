@@ -1,0 +1,32 @@
+<image/figury/k4_page202_figure1.png>
+
+Wyd. 4.18 Przykład wykorzystania instrukcji relacji do realizacji elementu dwupoło-
+żeniowego z histerezą
+
+Jeżeli wartość zmiennej %A// (poziom w zbiorniku) jest mniejsza od wartości
+określonej w rejestrze %R/ (ograniczenie dolne), to wyjście %Q5 jest załączone
+(zawór napełniający jest otwarty). Jeżeli wartość w rejestrze %A// jest większa
+od zawartości rejestru %R2 (ograniczenie górne), to wyjście %Q5 jest wyłączone
+(zawór zamknięty). W przedziale między wartościami z rejestrów %R]/ i %R2
+(wartość zmiennej %R7 jest mniejsza niż zmiennej %R2) stan wyjścia %Q5 po-
+zostaje bez zmian.
+
+Wyd. 4.19 pokazuje z kolei inny sposób zabezpieczenia przed niepotrzebnym
+przełączaniem elementu wykonawczego w sytuacji, gdy wartość mierzona nie-
+wiele różni się od wartości zadanej. W tym przypadku definiuje się dopuszczalny
+czas odstępstwa wartości regulowanej od zadanej, po którym dopiero następuje
+zmiana stanu (załączenie lub wyłączenie) elementu wykonawczego. Jeżeli war-
+tość zmiennej %A// spadnie poniżej wartości zadanej określonej przez %R3 (np.
+wskutek opróżniania zbiornika) na okres dłuższy niż / s, to nastąpi załączenie
+%Q5. Jeżeli wskutek działania elementu wykonawczego sterowanego wyjściem
+%Q5 (np. otwarcie zaworu napełniania zbiornika) wartość w rejestrze %A1/
+przekroczy wartość określoną przez %R3 i będzie trwało to dłużej niż / s, to
+wyjście %Q5 zostanie wyłączone. Na Rys. 4.5 pokazano odpowiednie przebiegi
+czasowe wyjścia %Q5 sterującego zaworem napełniającym i poziomu w zbiorni-
+ku %Al1.
+
+     
+
+Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30
+
+202

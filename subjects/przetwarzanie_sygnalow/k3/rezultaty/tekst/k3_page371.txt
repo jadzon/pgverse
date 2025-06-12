@@ -1,0 +1,42 @@
+Bliższe spojrzenie na splot obrazowy 403
+
+<image/tabele/k3_page371_table1.png>
+
+Zwróćcie uwagę, że obrót PSF wynikający ze splotu skompensował odwrócenie dokonane
+
+przy projektowaniu PSF. Dlatego twarz na rys. 24.15 nie jest odwrócona, mając takie samo
+
+ukierunkowanie, jak wzorzec wykrywany w obrazie wejściowym. A zatem z powodzeniem
+
+zastosowaliśmy spłot do przeprowadzenia korelacji. Porównajcie rys. 24.13 c) z rys. 24.15,
+
+WSSE CZYN NIC A I Ay
+został wykryty.
+
+Splot FFT daje taki sam obraz wyjściowy, jak program konwencjonalnego splotu podany
+w tablicy 24.1. Czy skrócony czas wykonania osiągany w splocie FFT jest rzeczywiście
+wart dodatkowej złożoności programu? Przyjrzyjmy się temu bliżej. Na rys. 24.16 przepro-
+wadzono porównanie czasów wykonania dla: splotu konwencjonalnego z operacjami zmien-
+noprzecinkowymi (oznaczenie ZP), splotu konwencjonalnego na liczbach całkowitych (ozna-
+czenie CAŁK) oraz splotu FFT z operacjami zmiennoprzecinkowymi (oznaczenie FFT).
+Przedstawiono dane dla dwóch różnych rozmiarów obrazu, 512 x 512 oraz 128 x 128.
+
+Po pierwsze, zauważcie, że czas wykonania splotu FFT nie zależy od rozmiarów odpowie-
+dzi impulsowej filtru, co obrazują płaskie krzywe na wykresie. Na komputerze osobistym
+Pentium 100 MHz obraz 128 x 128 może być poddany splotowi w czasie ok. 15 sekund przy
+użyciu splotu FFT, a obraz 512 x 512 wymaga ponad 4 minut””. Zsumowanie liczby obliczeń
+pokazuje, że czas wykonania splotu FFT jest proporcjonalny do N? łog>N dla obrazu N x N.
+Tak więc obraz 512 x 512 wymaga czasu ok. 20 razy dłuższego niż obraz 128 x 128.
+
+Splot konwencjonalny ma czas wykonania proporcjonalny do N?M? dla obrazu N x N splata-
+nego z odpowiedzią impulsową filtru M x M. Można to zrozumieć, rozpatrzywszy program
+podany w tablicy 24.1. Można powiedzieć, że czas wykonania splotu konwencjonalnego bar-
+dzo silnie zależy od rozmiarów odpowiedzi impulsowej filtru. Jak pokazano na rysunku, splot
+FFT jest szybszy od konwencjonalnego zmiennoprzecinkowego, jeśli odpowiedź impulsowa
+filtru jest większa niż ok. 10 x 10 pikseli. W większości przypadków można do splotu kon-
+wencjonalnego stosować liczby całkowite, podwyższając ten punkt zrównania szybkości do
+
+27 Obecnie (rok 2006) czas trwania podobnej operacji skrócono, w zależności od zastosowanego oprogra-
+mowania, do kilkunastu lub nawet kilku sekund. Zgodnie z danymi katalogowymi, MatL.Ab w wersji
+14 zainstalowany na komputerze z procesorem Pentium 4 HT 2,8 GHz i pamięcią I GB wykona takie
+obliczenie w czasie nie dłuższym niż | do 2 sekund (za: htrp:/Avww.intel.com) (przyp. tłum.).

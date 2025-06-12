@@ -1,0 +1,51 @@
+zatrzymanie sterownika (Shut Down): FNC = 13;
+zerowanie tablicy błędów (Fault Tables): FNC = 14;
+odczyt ostatnio zarejestrowanego wystąpienia błędu w tablicy błędów:
+FNC = 15;
+
+e odczyt czasu jaki upłynął od włączenia sterownika: FNC = /6;
+
+e odczyt statusu wymuszeń (//O Override Status) dla wejść i wyjść sterowni-
+ka: FNC = 18;
+
+e odczyt sumy kontrolnej: FNC = 23;
+
+e porównanie modułów wejściowych i wyjściowych obecnych aktualnie
+w sterowniku z konfiguracją sterownika: FNC = 26;
+
+e odczyt czasu jaki upłynął między ostatnim wyłączeniem a ponownym załą-
+czeniem sterownika: FNC = 29.
+
+Argumentami funkcji SVCREQ są: numer wykonywanej obsługi podawany na
+wejście FNC oraz adres bloku parametrów potrzebnych do wykonania żądanej
+obsługi, wprowadzany na wejście PARM. Błok taki może zawierać zarówno
+wejścia jak i wyjścia danej funkcji.
+
+Szczegóły dotyczące sposobów wykorzystania funkcji SVCREQ oraz jej para-
+metryzacji można znaleźć w instrukcjach programowania sterowników
+GE Fanuc. Tutaj jedynie przedstawiono dwa przykłady celem zobrazowania
+możliwości funkcji SVCREQ:
+
+e zatrzymanie sterownika (FNC=/3) w przypadku wykrycia błędu braku
+komunikacji z modułem wejściowym lub wyjściowym, tzn. gdy zmienna
+systemowa LOS_/OM przyjęła wartość /.
+
+W przykładzie na Wyd. 4.4] wykorzystano instrukcję skoku na koniec pro-
+gramu, ponieważ przejście sterownika w tryb STOP możliwe jest tylko po
+zakończeniu bieżącego cyklu. Wprawdzie wykonanie funkcji SVCREQ+13
+nie wymaga żadnych parametrów, jednak ze względu na wymagania pro-
+gramatora, na wejściu PARM użyto argumentu %R/1000, który z punktu
+widzenia funkcji jest pusty.
+
+e odczyt czasu pomiędzy wyłączeniem a ponownym załączeniem sterownika
+(FNC=29), por. Wyd. 4.42.
+
+Funkcja SVCREQ429 posiada blok parametrów wyjściowych obejmujący
+tylko trzy słowa. W pierwszych dwóch zawarta jest liczba sekund (zmienna
+typu DINT), jakie upłynęły pomiędzy wyłączeniem a ponownym załącze-
+niem sterownika, przy czym pierwsze słowo zawiera część mniej znaczącą.
+Trzecie słowo zawiera pozostałą wartość czasu wyrażoną w jednostkach 100
+
+ 
+
+226 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

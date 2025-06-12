@@ -1,0 +1,19 @@
+| Zadania do rozdziału 2 239
+
+<image/figury/k3_page237_figure3.png>
+
+Zadanie 2.30. W układzie z rys. Z-2.29 działa dla t e (0, +co) źródło sinusoidalne o sile elek-
+t
+tromotorycznej e = Eo W chwili t == 0 wartość napięcia u na pojemności wynosiła E,.
+
+Wyznaczyć składowe: swobodną, wymuszoną, przejściową i ustaloną napięcia u dla t e (0, +0).
+
+<image/wzory/k3_page237_formula1.png>
+
+Zadanie 2.31. W układzie z rys. Z-231 działa źródło o sile elektromotorycznej e = 0 dla
+te(—«, Ojie = E = const dlate (0, +00). Dla jakich wartości parametru x € St* układ osiąga
+stan ustalony przy t + +©0?
+
+<image/figury/k3_page237_figure1.png>
+
+Odp.: 1> —1

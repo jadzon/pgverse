@@ -1,0 +1,41 @@
+264 3. Obwody prądu stałego
+
+O twierdzeniach Thevenina i Kocia będziemy jeszcze mówili w dalszych
+rozdziałach, uogólniając je na dowolne dwójniki liniowe, w których mogą
+występować elementy inne niż rezystancyjne oraz źródła inne niż źródła stałe.
+Tam też — korzystając z zasady superpozycji i z zasady kompensacji — podamy
+dowody tych twierdzeń dla przypadku ogólnego (p. 4.4.4-B i D).
+
+F. Układy typu źródło — odbiornik. Układ przedstawiony na rys. 3.3-4a
+możemy uważać za przypadek szczególny układu o bardziej ogólnej strukturze
+pokazanej na rys. 3.3-13a, w której dwójnik występujący z lewej strony zacisków
+
+<image/figury/k4_page264_figure1.png>
+
+AB jest częścią źródłową układu (źródłem), a dwójnik dołączony z prawej strony
+do zacisków AB jest jego częścią odbiorczą (odbiornikiem). Przez określenie
+„źródło” rozumiemy tu dwójnik liniowy, o złożonej w ogólnym przypadku
+strukturze, w którym może występować wiele źródeł (niezależnych i sterowa-
+nych) i wiele oporów. Podobnie, odbiornik może być dwójnikiem o złożonej
+strukturze.
+
+W dotychczasowych rozważaniach przyjmowaliśmy, że odbiornik jest opo-
+rem R, (por. p. A). Jest jednak oczywiste, że twierdzenia o źródłach zastępczych
+można wykorzystać do obliczania prądu (napięcia) w odbiorniku także wówczas,
+gdyjeston dowolnym dwójnikiem. Istota tych twierdzeń polega bowiem na
+możliwości zastąpienia części źródłowej układu równoważnym źródłem
+Thevenina lub Nortona (rys. 3.3-13 b,c). Podkreślmy przy tym, że założenie
+o liniowości dotyczy jedynie części źródłowej; odbiornik może być dwójnikiem
+o bardzo ogólnym charakterze, np. źródłowym, nieliniowym, niestacjonarnym
+itd. Prąd (napięcie) w odbiorniku należy wówczas obliczać dokonując analizy
+układów zastępczych z rys. 3.3-13b,C.
+
+Metody źródeł zastępczych mogą więc być użyteczne w analizie bardzo
+szerokiej klasy układów i jedynym warunkiem ich stosowania jest liniowość
+części źródłowej analizowanego układu.
+
+G. Dualizm metod. W twierdzeniach o źródłach zastępczych występuje
+bardzo wyraźnie zasada dualizmu. Twierdzenia Thevenina i Nortona są dualne
+i jedno z nich może być wykazane na podstawie drugiego za pomocą reguł
+dualizmu omówionych w p. 2.1.6. Wielkościami dualnymi są napięcie rozwarcia
+i prąd zwarcia. Układami o strukturach dualnych są źródła Thevenina i Nortona.

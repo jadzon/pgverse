@@ -1,0 +1,49 @@
+Aparaty fotograficzne i oczy 363
+
+ 
+
+Działanie soczewki przedstawiono na rys. 23.2. W podanym przykładzie obraz łyżwiarki
+jest zogniskowany na ekranie. Pojęcie zogniskowanie oznacza, że powstaje dopasowanie je-
+den do jednego każdego punktu łyżwiarki z odpowiadającym mu punktem na ekranie. Jako
+przykład weźmy obszar | mm x I mm na czubku stopy łyżwiarki. W jasnym świetle na ten
+obszar o powierzchni | mm? pada 100 bilionów fotonów światła w ciągu sekundy. Zależnie
+od właściwości powierzchni, od | do 99% padających fotonów odbija się losowo w róż-
+nych kierunkach. Tylko niewielka część tych odbitych fotonów przejdzie przez soczewkę. Na
+przykład tylko ok. milionowa część odbitego światła przechodzi przez soczewkę o średnicy
+I cm umieszczoną w odległości 3 m od obiektu.
+
+Załamanie światła w soczewce zmienia kierunek rozchodzenia się pojedynczych fotonów,
+zależnie od położenia punktu, w którym uderzają w granicę szkło/powietrze oraz od kąta
+padania. Te zmiany kierunków powodują, że światło rozchodzące się z jednego punktu po-
+wraca do jednego punktu na ekranie projekcyjnym. Wszystkie fotony, które odbijają się
+od czubka stopy oraz przechodzą przez soczewkę, są z powrotem gromadzone na „czubku
+stopy” rzutowanym na obrazie. Podobnie porcje światła pochodzące ze wszystkich punktów
+obiektu przechodzą przez soczewkę i są ogniskowane w odpowiadających im punktach na
+rzutowanym obrazie.
+
+Na rys. 23.3 i 23.4 przedstawiono schematycznie kwowa elektronicznego aparatu fotogra-
+
+ficznego i ludzkiego oka. Oba te przyrządy optyczne są światłoszczelnymi komorami z so-
+czewką umieszczoną z jednej strony i czujnikiem światła z drugiej. W aparacie znajduje się
+powietrze, a oko jest wypełnione przezroczystym płynem. Systemy soczewek mają w obu
+przypadkach dwa parametry regulowane: ogniskową i średnicę źrenicy (w aparacie fotogra-
+ficznym — średnicę przesłony).
+
+Jeśli soczewka nie jest prawidłowo zogniskowana, to każdy punkt obiektu będzie rzutowany
+na czujnik obrazowy jako kolisty obszar, powodując rozmycie obrazu. W aparacie ognisko-
+wanie wykonuje się, przesuwając soczewkę bliżej lub dalej od czujnika obrazowego. Oko
+zaś zawiera dwie soczewki — wypukłą rogówkę w przedniej części gałki ocznej i regulowaną
+soczewkę wewnątrz oka. Załamanie światła następuje głównie w rogówce, która ma jednak
+ściśle ustalony kształt i położenie. Regulacja ogniskowania następuje więc w soczewce we-
+wnętrznej — elastycznej strukturze mogącej zmieniać kształt pod wpływem mięśni akomo-
+dacyjnych. Mięśnie, kurcząc się, powodują spłaszczanie soczewki w taki sposób, aby obiekt
+dawał ostry obraz w ognisku.
+
+W obu systemach optycznych istnieje regulacja ilości światła padającego na soczewkę, a więc
+jaskrawości obrazu rzutowanego na czujnik obrazowy. W oku do tego celu służy Źrenica
+będącą okrągłym otworem pośrodku tęczówki, a w aparacie fotograficznym ilość światła
+reguluje się przesłoną, Tęczówka oka jest utworzona z nieprzezroczystej tkanki mięśniowej,
+która może się kurczyć, rozszerzając źrenicę. W aparacie funkcję źrenicy pełni odpowiedni
+mechanizm zwany przesłoną.
+
+<image/figury/k3_page332_figure1.png>

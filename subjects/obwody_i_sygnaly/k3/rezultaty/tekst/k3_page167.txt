@@ -1,0 +1,49 @@
+2.1. Wielowrotniki i sieci 169
+
+zory/k3_page167_formula1.png , figure1.png
+
+ 
+
+B. Równania zaciskowe. Dla wielu zagadnień teorii obwodów charak-
+terystyczne jest tzw. ujęcie zaciskowe i związany z nim opis zaciskowy. Ujęcie
+zaciskowe występowało już przy rozważaniu elementów zarówno dwu-
+zaciskowych (opory, indukcyjności, pojemności, źródła — p. 1.2, 1.3 i 1.7.1), jak
+i czterozaciskowych (źródła sterowane, żyrator, indukcyjności sprzężone, trans-
+formator idealny — p. 1.7.2 i 1.8). Obecnie omówimy nieco dokładniej pod-
+stawowe cechy ujęcia (opisu) zaciskowego.
+
+Ujęcie zaciskowe polega na tym, że:
+
+a) w układzie wyróżnia się pewną liczbę zacisków lub par zacisków (wróż),
+za pomocą których rozpatrywany układ może być połączony z otoczeniem (tj.
+z innymi układami);
+
+b) wprowadza się pojęcie stanu zaciskowego układu, tj. zbioru prądów
+i napięć związanych z wyróżnionymi zaciskami układu; w ogólnym przypadku
+stan zaciskowy jest określony przez dwa wektory: wektor napięć zaciskowych
+i wektor prądów zaciskowych — o tych samych wymiarach, zależnych od liczby
+zacisków lub liczby par zacisków;
+
+c) układ rozpatruje się względem jego zacisków i jego stanu
+zaciskowego, tzn. opisuje się go równaniami wiążącymi ze sobą prądy i napięcia
+zaciskowe (tzw. równania zaciskowe).
+
+Dany stan zaciskowy może istotnie wystąpić na zaciskach rozpatrywanego
+układu, jeżeli prądy i napięcia zaciskowe spełniają równania układu. Taki stan
+zaciskowy nazywamy stanem dopuszczalnym.
+
+W ujęciu zaciskowym układ może być rozpatrywany jako „czarna skrzynka”,
+której wnętrze nie jest znane lub, z jakichkolwiek względów, nie jest dla nas
+interesujące. Zachowanie się układu jest opisywane i badane względem jego
+zacisków. Układ można opisać zaciskowo, jeśli tylko spełnienie wymienionych
+trzech postulatów nie prowadzi do kolizji z prawami fizyki. W szczególności
+konieczne jest, aby prądy i napięcia zaciskowe były określone w sposób
+niesprzeczny z prawami Kirchhoffa.
+
+Jeśli znana jest struktura wewnętrzna układu, to jego równania zaciskowe
+można otrzymać z równań sieciowych przez eliminację prądów i napięć
+„wewnętrznych”, tzn. doprowadzając je do postaci, w której występują tylko
+prądy i napięcia zaciskowe.
+
+Metody badania układów opisanych zaciskowo nazywamy metodami zacis-
+kowymi. Metody te, szeroko rozpowszechnione w teorii obwodów, są stosowane

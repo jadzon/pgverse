@@ -1,0 +1,12 @@
+Kwantyzacja 45
+
+ 
+
+<image/wzory/k3_page34_formula1.png>
+
+<image/figury/k3_page34_figure1.png>
+
+3.1. Przebiegi ilustrujące proces digitalizacji. rozdziełono na dwa stopnie, aby wptyw próbkowania
+od wpływu Pierwszym stopniem jest układ (S$/H), po którym
+są wartości chwiłowe sygnału okresowo. Drugi stopień, przetwornik a/c (ADC)
+najbliższą, mu wartość W rezultacie każda próbka

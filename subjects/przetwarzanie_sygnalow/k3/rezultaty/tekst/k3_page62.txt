@@ -1,0 +1,57 @@
+4. Oprogramowanie DSP
+
+ 
+
+Zadania realizowane z wykorzystaniem DSP są na ogół programowane w tych samych
+językach, co inne zadania naukowe i techniczne np. w języku C, BASIC i asemblerze.
+Uniwersalność i możliwości języka € powodują, że on jest zwykle wybierany przez naukow-
+ców z dziedziny techniki komputerowej i przez innych programistów profesjonalnych. Z dru-
+giej zaś strony prostota BASIC-a czyni go świetnym wyborem dla naukowców i inżynierów,
+którzy tylko okazjonalnie odwiedzają świat oprogramowania. Niezależnie od używanego ję-
+zyka, większość ważnych zagadnień związanych z programowaniem DSP jest na poziomie
+znacznie niższym — w sferze „wirujących” zer i jedynek. Są to m.in. takie problemy jak:
+sposoby wyrażania liczb przez zestawy bitów, błędy zaokrąglania w arytmetyce komputero-
+wej, szybkość obliczeniowa różnych typów procesorów. Ten rozdział dotyczy kwestii, które
+możecie rozwiązywać na wysokim poziomie, aby uniknąć stłamszenia przez wewnętrzne pro-
+blemy waszego komputera na niskim poziomie.
+
+Liczby w komputerze
+
+Komputery cyfrowe są bardzo sprawne w zapisywaniu i przywoływaniu liczb. Niestety ten
+proces nie odbywa się bez błędów. Na przykład wydajecie polecenie swojemu komputerowi,
+aby zapisał liczbę 1,41421356. Komputer wykonuje to polecenie najlepiej, jak umie i zapisuje
+najbliższą liczbę, jaką jest zdolny wyrazić: 1,41421354. W niektórych przypadkach taki błąd
+nie ma żadnego znaczenia, podczas gdy w innych jest fatalny. Inną ilustracją problemu są kla-
+syczne błędy obliczeniowe wynikające z dodawania dwóch liczb o wartościach bardzo się od
+siebie różniących — np. 1 i 0,00000001. Chcielibyśmy, aby wynik był 1,00000001, ale kompu-
+ter odpowiada: 1. Zrozumienie, w jaki sposób komputer zapisuje liczby i nimi operuje, pozwala
+przewidzieć i skorygować te trudności, zanim program wypluje z siebie bezsensowne dane.
+Takie kłopoty powstają, ponieważ do zapisania każdej liczby jest przydzielona pewna ustalo-
+na liczba bitów, zwykle 8, 16, 32 lub 64. Rozważmy np. przypadek, gdy 8 bitów jest używa-
+nych do zapisania wartości pewnej zmiennej. Ponieważ jest 2$ = 256 możliwych sekwencji
+bitów, więc zmienna może przyjmować tylko 256 różnych wartości. Jest to fundamentalne
+ograniczenie, na które nic nie możemy poradzić. Możemy tylko decydować, jaką wartość
+każda sekwencja bitów ma reprezentować. W najprostszych przypadkach 256 sekwencji bi-
+tów może reprezentować liczby całkowite od 0 do 255, od I do 256, od —127 do 128 itd.
+W rzadziej spotykanym rozwiązaniu 256 sekwencji bitów może reprezentować 256 liczb
+powiązanych ze sobą wykładniczo: 1, 10, 100, 1000, ... , 1075%, 10755. Każdy mający dostęp
+do danych powinien zdawać sobie sprawę, jaką wartość reprezentuje każda sekwencja bitów.
+Do tego celu służy zazwyczaj jakiś algorytm lub wzór umożliwiający konwersję między
+wartością reprezentowaną a odpowiadającą jej sekwencją bitów, i na odwrót.
+
+Chociaż jest wiele możliwych sposobów kodowania, to tylko dwa formaty zapisu są
+w powszechnym użyciu: stałoprzecinkowy (zwany też zapisem liczb całkowitych)
+oraz zmiennoprzecinkowy (zwany też zapisem liczb rzeczywistych). W tej książce w pro-
+gramach w BASIC-u, zmienne stałoprzecinkowe są zaznaczane symbolem % jako ostatni
+znak w nazwie — np. 1%, N%, SUM% itd. Wszystkie inne zmienne są wartościami zmienno-
+przecinkowymi, np. X,Y, MEAN itd. Oceniając formaty przedstawione na następnych kilku
+stronach, spróbujcie rozważać je pod względem zakresu (najmniejsza i największa liczba,
+którą mogą reprezentować) oraz dokładności (rozmiar przerw między liczbami).
+
+Zapis statoprzecinkowy (liczby całkowite)
+
+Zapis stałoprzecinkowy jest stosowany do wyrażania liczb całkowitych, dodatnich i ujem-
+nych: ... —-3, —2, —1, 0, 1, 2, 3, ... W programach w językach wysokiego poziomu, takich jak
+C i BASIC, zwykle jest przydzielonych 16 bitów do zapisu każdej liczby całkowitej. W naj-
+prostszym przypadku 2/9 = 65 536 możliwych sekwencji bitów jest przypisanych liczbom
+od 0 do 65 535. Jest to zapis liczb całkowitych bez znaku (unsigned integer). Jego uprosz-

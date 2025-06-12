@@ -1,0 +1,49 @@
+4 Rozdział 1. Teoria liczb
+
+a resztę przez
+a mod b.
+
+Przykład 1.2 22 - 4 = 5 oraz 22 mod 4 = 2, ponieważ 22 =5-4+2oraz0<2<4.
+
+W przypadku, gdy a i b są liczbami całkowitymi iloraz i różnice można róznie definiować.
+Na przykład w języku Pascal iloraz dwóch liczb typu całkowitego oznacza się przez
+a div b
+
+i jest to [a/b| — zaokrąglenie ilorazu a/b w dół, gdy a/b jest dodatnie i [a/b], —
+zaokrąglenie ilorazu a/b w górę, gdy a/b jest ujemne. Reszta, którą oznacza się przez
+a mod b,
+jest określona wzorem:
+a mod b = a-(a div b)*b.
+
+Mamy więc, na przykład:
+22 div 4 =5; (-22)div 4 = -5; 22 div(-4)= -5; (-22)div(-4)= 5;
+22 mod 4 = 2; (-22)mod 4 = -2; 22 mod(-4)= 2; (-22)mod(-4)= -2.
+
+1.2 Podzielność liczb
+Mówimy, że liczba całkowita a 4 0 dzieli liczbę całkowitą b, jeżeli istnieje liczba całko-
+
+<image/owzory/k2_page119_formula1.png>
+
+Będziemy to oznaczac przez a|b. £auwazmy, ze zachodzi wtedy:
+<image/wzory/k2_page119_formula2.png>
+
+Liczbę a nazywamy dzielnikiem liczby b.
+
+Przykład 1.3 3/6, 3/ — 6 oraz 3(0.
+
+Lemat 1.4 jeżeli a|b oraz ajc,to a/(b+ c) oraz a (b — c)
+
+Dowód. Jeżeli a|b i alc, to istnieją dwie liczby całkowite k i m, takie że:
+
+<image/wzory/k2_page119_formula3.png>
+
+Man
+
+<image/wzory/k2_page119_formula4.png>
+<image/wzory/k2_page119_formula5.png>
+
+czyli a azieti b + © OTAZ b — c. o
+
+o
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

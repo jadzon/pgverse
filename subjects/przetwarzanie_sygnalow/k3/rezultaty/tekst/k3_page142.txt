@@ -1,0 +1,59 @@
+158 8. Dyskretne przekształcenie Fouriera
+
+ 
+
+Pojęcie korelacji wprowadziliśmy w rozdziale 7. Jak pamiętacie, aby wykryć znany przebieg
+zawarty w innym sygnale, trzeba pomnożyć oba sygnały przez siebie i zsumować wszyst-
+kie punkty sygnału wynikowego. Jedna liczba, będąca wynikiem tej procedury, jest miarą
+wzajemnego podobieństwa dwóch sygnałów. Tę metodę zilustrowano na rys. 8.8. Na dwóch
+rysunkach 8.8 c), d) przedstawiono sygnał, którego szukamy — falę sinusoidalną, której
+3 okresy mieszczą się między próbkami 0 i 63. Na rys. 8.8 e) pokazano wynik mnożenia
+przebiegów a) i c). Podobnie na rys. 8.8 f) mamy rezultat mnożenia przebiegów b) i d).
+Suma wszystkich punktów w przebiegu e) wynosi 32, podczas gdy suma wszystkich punk-
+tów w przebiegu f) jest równa zero, co wskazuje na fakt, że znaleźliśmy żądany algorytm.
+Inne próbki w dziedzinie częstotliwości są obliczane w taki sam sposób. Ta procedura jest
+sformalizowana w postaci wzoru analitycznego wyrażającego matematyczny sposób oblicza-
+nia transformaty w dziedzinie częstotliwości na podstawie sygnału w dziedzinie czasu:
+
+<image/wzory/k3_page142_formula1.png>
+
+<image/wzory/k3_page142_formula2.png>
+
+wzr8.4.wzoryanalitycznedoobliczaniatranstormatydft.wtychwzorachxijestanalizowanymsygnaem
+w dziedzinie czasu, a Re X/k] i lm X[k] są sygnałami w dziedzinie częstotliwości, które mają być obliczone.
+Indeks i zmienia się od 0 do N-- 1, a indeks k od 0 do N/2
+
+Wyraźmy to słownie: każdą próbkę w dziedzinie częstotliwości oblicza się, mnożąc sygnał
+w dziedzinie czasu przez falę kosinusoidalną lub sinusoidalną, której szukamy i sumując
+następnie obliczone wartości punktów. Gdyby ktoś was zapytał, co robicie, powiedzcie w za-
+ufaniu: „Koreluję sygnał wejściowy z każdą funkcją bazową”. W tablicy 8.2 podano program
+komputerowy do obliczania DFT tą metodą.
+
+wzoryanalityczneniewymagajspecjalnegopotraktowaniapunktwpierwszegoiostatnie
+go, jak to było we wzorach syntetycznych. Przy części urojonej we wzorze 8.4 jest jednak
+znak minus. Tak jak poprzednio, ta negacja powoduje, że rzeczywiste przekształcenie DFT
+jest zgodne z zespolonym DFT. Negacja nie zawsze jest uwzględniana.
+
+Aby ten algorytm korelacyjny funkcjonował, funkcje bazowe muszą mieć interesującą właści-
+wość — każda z nich musi być całkowicie nieskorelowana z wszystkimi pozostałymi. To znaczy,
+że jeśli mnożymy przez siebie którekolwiek dwie z tych funkcji bazowych, to suma warto-
+ści obliczonych punktów będzie równa zero. Funkcje bazowe mające taką właściwość nazy-
+wamy ortogonalnymi. Istnieje wiele innych ortogonalnych funkcji bazowych, takich jak fala
+prostokątna lub trójkątna, impulsy itd. Sygnały mogą być rozkładane na te inne ortogonalne
+funkcje bazowe przy użyciu metody korelacyjnej, podobnie jak to robiliśmy, stosując przebiegi
+sinusoidalne. Nie chodzi tu o sugestię, że to może być użyteczne, a tylko o stwierdzenie, że jest
+taka możliwość.
+
+Jak to poprzednio przedstawiono w tablicy 8.1, w odwrotnym przekształceniu DFT istnieją
+dwa sposoby realizacji w postaci programu komputerowego. Różnica polega na zamianie
+miejscami pętli wewnętrznej i zewnętrznej podczas syntezy. Wprawdzie nie zmienia to koń-
+cowego wyniku uzyskiwanego w programie, lecz daje inne spojrzenie na sposób realizowa-
+nia programu. Program DFT w tablicy 8.2 też można zmienić, zamieniając miejscami pętle
+wewnętrzną i zewnętrzną w wierszach od 310 do 380. Tak jak poprzednio, wynik uzyski-
+wany z programu się nie zmienia, lecz nasz sposób myślenia o wykonywanych obliczeniach
+jest różny. Te dwa różne sposoby spojrzenia na DFT i odwrotne DFT można opisać jako
+algorytmy „od strony wejścia” i „od strony wyjścia”, tak jak przy splocie.
+
+Program podany w tablicy 8.2 jest napisany w taki sposób, że opisuje, jak wszystkie próbki
+w dziedzinie czasu wpływają na jedną próbkę w dziedzinie częstotliwości. To znaczy, że
+program oblicza poszczególne wartości w dziedzinie częstotliwości kolejno, a nie jako grupę.

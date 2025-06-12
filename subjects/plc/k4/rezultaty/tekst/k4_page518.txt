@@ -1,0 +1,14 @@
+<image/tabele/k4_page518_table1.png>
+
+"W celu oznaczenia granicy dolnej zakresu należy poza konturem symbolu
+» graficznego napisać literę L. a dla granicy górnej s literę H. | |
+W celu bliższego określenia parametrów środowiska lub mierzonych wielko-
+ści dopuszcza się zamieszczanie poza obrysem symbolu graficznego wzoru
+chemicznego lub określenia słownego.
+"Litery oznaczające rodzaje promieniowania radioaktywnego należy umiesz-
+czać poza konturem symbołu graficznego.
+Tab. C.1 Oznaczenia literowe punktów PA
+
+ 
+
+5 18 Dodatek C. Oznaczenie punktów automatyki

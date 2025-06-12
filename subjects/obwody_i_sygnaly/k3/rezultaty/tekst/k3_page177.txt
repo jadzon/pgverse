@@ -1,0 +1,17 @@
+2.1. Wielowrotniki i sieci 179
+
+<image/wzory/k3_page177_formula1.png>
+
+<image/figury/k3_page177_figure3.png>
+
+napięć związanych ze sobą m — 1 równaniami. Równanie (2.1-24) zostało już
+wykorzystane.
+
+Rozważmy teraz n-wrotnik przyjmując n = m — 1 izakładając, żez każdej
+pary zacisków jeden zacisk jest uziemiony (rys. 2.1-8b). Można łatwo zauważyć,
+że struktury z rys. 2.1-8a i 2.1-8b, choć formalnie różniące się liczbą zacisków,
+są w zasadzie identyczne. Gdyby w układzie z rys. 2.1-8b wszystkie zaciski
+uziemione połączyć w jeden zacisk, otrzymalibyśmy układ z rys. 2.1-8a. Prąd
+tego wspólnego zacisku byłby określony drugą zależnością (2.1-25), analogicznie
+jak w układzie z rys. 2.1-8a. W konsekwencji również równania układów
+z rys. 2.1-8a i 2.1-8b byłyby jednakowe.

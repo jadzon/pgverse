@@ -1,0 +1,30 @@
+vzory/k1_page82_formula1.pnq
+<image/wzory/k1_page82_formula2.png>
+
+Przykład 2.28
+Zbadać stabilność układu pokazanego na rysunku 2.25, stosując kryterium Nyquista.
+
+<image/figury/k1_page82_figure1.png>
+
+Przerywając myślowo pętlę sprzężenia zwrotnego przed węzłem sumacyjnym,
+otrzymujemy układ otwarty o transmitancji
+
+<image/wzory/k1_page82_formula3.png>
+
+podstawiajczagsihsodpowiedniewzoryotrzymujemy
+
+<image/wzory/k1_page82_formula4.png>
+
+Stabilność układu otwartego sprawdzamy, stosując kryterium Hurwitza.
+Równanie charakterystyczne układu otwartego ma postać
+
+<image/wzory/k1_page82_formula5.png>
+
+Z pierwszego warunku Hurwitza wynika, że:
+
+<image/wzory/k1_page82_formula6.png>
+
+czyli wszystkie współczynniki równania charakterystycznego istnieją i są jednakowe-
+go znaku.
+
+84

@@ -1,0 +1,21 @@
+Rozwiązanie
+Transformatę H(s) możemy rozłożyć na iloczyn transformat
+
+<image/wzory/k1_page28_formula1.png>
+
+<image/wzory/k1_page28_formula2.png>
+
+Znajdujemy oryginały transformat H;(s) i H>(S):
+<image/wzory/k1_page28_formula3.png>
+
+<image/wzory/k1_page28_formula4.png>
+
+Z twierdzenia o splocie funkcji wyliczamy h(t)
+
+<image/wzory/k1_page28_formula5.png>
+
+1(T) ma stałą wartość = 1, więc:
+
+<image/wzory/k1_page28_formula6.png>
+
+<image/wzory/k1_page28_formula7.png>

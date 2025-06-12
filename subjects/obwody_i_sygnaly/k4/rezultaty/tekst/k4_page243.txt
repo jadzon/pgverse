@@ -1,0 +1,31 @@
+32. Liniowe obwody rezystancyjne prądu stałego 245
+Po odpowiednich przekształceniach otrzymujemy:
+
+<image/wzory/k4_page243_formula1.png>
+
+c) Dwójnik z rys. 3.2-2c zawiera źródło sterowane. W tym przypadku opór dwójnika
+wyznaczamy na podstawie opisujących go równań. Przyjmując oznaczenia jak na rys. 3.2-5
+zapisujemy następujące równania dwójnika:
+
+ry/k4_page243_formula2.png
+
+l skąd otrzymujemy:
+
+rzory/k4_page243_formula3.png
+
+ 
+
+C. Nieco inny przykład, W niektórych metodach analizy (np. w metodach
+źródeł zastępczych — por. p. 3.3.3) zachodzi potrzeba obliczenia oporu zastęp-
+czego dwójnika bezźródłowego, powstałego z danego dwójnika źródłowego po
+wyeliminowaniu z niego wszystkich źródeł niezależnych, tzn. zastąpieniu
+niezależnych źródeł napięciowych zwarciami i niezależnych źródeł prądowych
+rozwarciami. Źródła sterowane pozostają przy tym w strukturze dwójnika
+niezmienione.
+
+Przykład 3.2-2. Rozważmy dwójnik źródłowy pokazany na rys. 3.2-6a. Po wyeliminowaniu
+
+2R
+z niego źródeł niezależnych otrzymamy dwójnik (rys. 3.2-6b) o oporze zastępczym R,, = B+1
+
+<image/figury/k4_page243_figure1.png>

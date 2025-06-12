@@ -1,0 +1,62 @@
+Rodzina przekształceń Fouriera 549
+
+ 
+
+3. Analiza i synteza
+
+Dla każdego przekształcenia mamy równania analizy (zwane też przekształceniem prostym)
+oraz syntezy (zwane też przekształceniem odwrotnym). Równania analizy opisują sposób
+obliczania każdej wartości w dziedzinie częstotliwości na podstawie wszystkich wartości
+w dziedzinie czasu. Równania syntezy zaś opisują obliczanie każdej wartości w dziedzinie
+czasu na podstawie wszystkich wartości w dziedzinie częstotliwości.
+
+4. Zapis w dziedzinie czasu
+
+W dziedzinie czasu sygnały ciągłe są oznaczane jako x(1), a sygnały dyskretne jako x[n].
+W przekształceniach zespolonych te sygnały są zespolone, a w rzeczywistych — rzeczy-
+wiste. Wszystkie sygnały w dziedzinie czasu mają zakres od minus nieskończoności do
+plus nieskończoności. W przypadku jednak, gdy sygnał w dziedzinie czasu jest okresowy,
+jesteśmy zainteresowani tylko pojedynczym okresem, gdyż reszta jest informacją nad-
+miarową. Zmienne 7 i N oznaczają, odpowiednio, okres sygnału ciągłego i dyskretnego
+w dziedzinie czasu.
+
+5. Zapis w dziedzinie częstotliwości
+
+Sygnały ciągłe w dziedzinie częstotliwości są oznaczane jako X(w), jeśli są zespolone,
+a Re X(0) i Im X(©), gdy są rzeczywiste. Sygnały dyskretne w dziedzinie częstotliwo-
+ści są oznaczane jako X[K], jeśli są zespolone oraz Re X[k] i Im X[k), gdy są rzeczywiste.
+W przekształceniach zespolonych występują częstotliwości ujemne o zakresie od minus
+nieskończoności do zera oraz częstotliwości dodatnie — od zera do plus nieskończoności.
+W przekształceniach rzeczywistych stosuje się tylko częstotliwości dodatnie. Jeśli sygnał
+w dziedzinie częstotliwości jest okresowy, to jesteśmy zainteresowani tylko pojedynczym
+okresem, gdyż reszta jest informacją nadmiarową. Dla sygnałów ciągłych w dziedzinie czę-
+stotliwości pełny okres zmiennej niezależnej © zawiera się w granicach od -x do n. Dla
+sygnałów dyskretnych stosujemy okres, w którym k zmienia się od 0 do N — 1.
+
+6. Równania analizy
+
+Równania analizy operują na zasadzie korelacji, tzn. mnożenia sygnału w dziedzinie czasu
+przez sinusoidę i całkowania (sygnału ciągłego w dziedzinie czasu) lub sumowania (sygnału
+dyskretnego w dziedzinie czasu) we właściwym zakresie czasu. Jeśli sygnał w dziedzinie
+czasu jest nieokresowy, to ten zakres czasu będzie się rozciągał od minus do plus nieskoń-
+czoności. Jęśli zaś sygnał jest okresowy, to zakresem właściwym będzie pełny okres sygnału.
+Podane w zestawieniu równania zapisano z całkowaniem (lub sumowaniem) w pełnym okre-
+sie od (0 do 7 (lub od 0 do N — 1). Taki sam wynik dałby jednak każdy inny pełny okres, tj.
+od —T do 0, od -7/2 do 7/2 itd.
+
+7. Równania syntezy
+
+Równania syntezy opisują, jak jest obliczana pojedyncza wartość w dziedzinie czasu na
+podstawie wszystkich punktów w dziedzinie częstotliwości. Wykonuje się to, mnożąc sy-
+gnał w dziedzinie częstotliwości przez sinusoidę i całkując (dla ciągłego sygnału w dzie-
+dzinie częstotliwości) lub sumując (dla sygnału dyskretnego) we właściwym zakresie
+częstotliwości. Jeśli sygnał w dziedzinie częstotliwości jest zespolony i nieokresowy, to
+właściwy zakres częstotliwości rozciąga się od minus do plus nieskończoności. Jeśli zaś
+sygnał w dziedzinie częstotliwości jest zespołony i okresowy, to właściwym zakresem
+będzie pełny okres, czyli od -n do nx (dla sygnału ciągłego w dziedzinie częstotliwości)
+lub od © do N — 1 (dla sygnału dyskretnego). Jeśli sygnał w dziedzinie częstotliwości
+jest rzeczywisty i nieokresowy, to właściwy będzie zakres od ( do płus nieskończono-
+ści, a więc obejmujący tylko częstotliwości dodatnie. Na koniec, jeśli sygnał w dziedzinie
+częstotliwości jest rzeczywisty i okresowy, to właściwy zakres obejmuje połowę okresu
+zawierającą częstotliwości dodatnie, tj. albo do Q do x (dla sygnału ciągłego w dziedzinie
+częstotliwości), albo od 0 do N/2 (dla sygnału dyskretnego).

@@ -1,0 +1,40 @@
+340 3. Obwody prądu stałego
+
+ 
+
+Układ ten jest opisany równaniami:
+
+<image/wzory/k3_page339_formula1.png>
+
+a więcjego modelem obwodowym jest ŹPSN (rys. Z-3.41b). Podstawowym zastosowaniem TWO jest
+wykorzystanie go do symulacji oporu skupionego (rys. Z-3.41 c), co ma doniosłe znaczenie praktyczne
+w technologii nowoczesnych układów mikroelektronicznych. Należy:
+
+a) sprawdzić, że układ z rys. Z-3.41c przy warunku u; = u,, realizuje istotnie opór
+(uziemiony) o wartości R = 1/g, (rys. Z-3.41d);
+
+b) wykazać, że połączenie dwóch TWO jak na rys. Z-3.4le realizuje wzmacniacz o wzmoc-
+
+zory/k3_page339_formula2.png |
+
+Zadanie 3.42. W układach z rys. Z-3.42a,b obliczyć odpowiednio rozkład napięć i rozpływ prądów.
+Czy rozpływ prądów w układzie z rys. Z-3.42b zmieni się, jeśli występujące w nim indukcyjności
+sprzęgniemy (rys. Z-3.42c)?
+
+<image/figury/k3_page339_figure2.png>
+
+Zadanie 3.43. Obliczyć całkowitą energię W zgromadzoną w układzie przedstawionym na rys.
+Z-3.43.Dane:E = 32 V,R, = 4kQ, R, = 1 kQ, L= 1 mH, Ry:i = au|u|,a = 0,125 mA/V?,
+
+u + |u|
+D:i =
+
+ 
+
+20
+„r=2kQ,Czy:q = au + fu, a= 210” CV, p = 90 pF.
+r
+
+<image/wzory/k3_page339_formula3.png>
+
+Odp.: W = 4 n]

@@ -1,0 +1,30 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 24
+
+14. Ogólny schemat przetwornika cyfrowo-analogowego (C/A), funkcje
+poszczególnych bloków układu.
+
+<image/figury/k8_page22_figure1.png>
+
+Każdy przetwornik C/A sterowany interfejsem szeregowym składa się z części:
+« cyfrowej zawierającej:
+
+„ - blok interfejsu SPI służący do wprowadzania danych konfiguracyjnych i danych do przetworzenia
+na wartość analogową. Dane te są wprowadzane na wejściu DIN w takt sygnału zegarowego
+SCLK, gdy na linii wyboru układu CS jest stan aktywny (najczęściej stan niski) adresujący układ
+do transmisji.
+
+« - układ kontrolny sterujący kanałem przetwarzania kod-napięcie. Układ ten ma możliwość
+wprowadzenie przetwornika w tryb obniżonego poboru mocy lub zmiany parametrów bufora
+wyjściowego (np. wzmocnienia, impedancji wyjściowej).
+
+« analogowej, w której skład może wchodzić wiele kanałów przetwarzania kod-napięcie (np. 1, 2, 4,
+8, 16 kanałów). Pojedynczy kanał przetwarzania kod-napięcie składa się z:
+
+« Rejestru DAC, który zawiera N-bitową (gdzie: N — rozdzielczość przetwornika C/A) daną
+przetwarzaną na wartość napięcia. Kod ten bezpośrednio steruje kluczami drabinki R-2R.
+
+„ « Drabinki R-2R będącej siecią rezystorów o wartości R i 2R. Drabinka konwertuje kod cyfrowy na
+wartość prądu.
+
++ - Bufora wyjściowego konwertującego prąd wypływający z drabinki R-2R na odpowiadającą mu
+wartość napięcia oraz zapewniającego odpowiednią wydajność i impedancję wyjściową.

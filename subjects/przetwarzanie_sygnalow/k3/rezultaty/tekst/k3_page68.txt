@@ -1,0 +1,44 @@
+80 4. Oprogramowanie DSP
+
+ 
+
+Na rys. 4.4 przedstawiono, jak wartość zmiennej X dryfuje w tym programie podanym jako przy-
+kład. Jest oczywiste, że błąd addytywny jest znacznie gorszy niż błąd losowy. Błędy losowe mają
+bowiem tendencję do redukowania się wzajemnie, podczas gdy błędy addytywne po prostu się
+akumulują. Błąd addytywny jest w przybliżeniu równy błędowi zaokrąglenia pojedynczej operacji
+pomnożonemu przez całkowitą liczbę operacji. Błąd losowy zaś wzrasta tylko proporcjonalnie do
+pierwiastka kwadratowego liczby operacji. Jak pokazano w przykładzie, błąd addytywny może
+być setki razy większy niż błąd losowy w powszechnie stosowanych algorytmach DSP.
+Niestety prawie niemożliwe jest przewidzieć, które z tych dwóch możliwych zachowań wy-
+stąpi w danym konkretnym algorytmie lub sterować trybem akumulacji błędów. Na przy-
+kład program podany w tablicy 4.1 generuje błąd addytywny. Można go zmienić na losowy
+przez wprowadzenie niewielkiej modyfikacji liczb dodawanych i odejmowanych. W taki
+właśnie sposób uzyskano krzywą błędu losowego (rys. 4.4), definiując: A = EXP(RND)
+i B = EXP(RND) zamiast A = RND i B = RND. Liczby losowe A i B między 0 i 1 zastąpiono
+wartościami o rozkładzie wykładniczym leżącymi między 1 i 2,718. Nawet ta mała zmiana
+wystarcza, aby zmienić tryb akumulacji błędów.
+
+Ponieważ nie możemy sterować sposobem akumulacji błędów zaokrąglania, więc uwzględ-
+niajmy najgorszy scenariusz. Oczekujmy, że każda liczba o pojedynczej dokładności będzie
+charakteryzowała się błędem równym około jednej czterdziestomilionowej pomnożonym
+przez liczbę operacji, które na tej liczbie przeprowadzono. To stwierdzenie opiera się na
+założeniu, że błąd jest addytywny i że średni błąd pojedynczej operacji jest równy jednej
+czwartej poziomu kwantyzacji. Przeprowadzając takie samo rozumowanie, dochodzimy do
+wniosku, że każda liczba o podwójnej dokładności charakteryzuje się błędem równym około
+jednej czterdziestobiliardowej pomnożonym przez liczbę operacji.
+
+Tablica 4.2 jest ilustracją szczególnie irytującego problemu związanego z błędem zaokrąglania.
+Każdy z dwóch programów w tej tablicy realizuje takie samo zadanie: drukowanie 1001 liczb
+
+równomiernie rozmieszczonych między 0 i 10, W programie umieszczonym z lewej strony
+tablicy zastosowano zmiennoprzecinkową zmienną X jako indeks pętli. Komputer, otrzymu-
+jąc polecenie realizacji pętli, rozpoczyna od ustawienia indeksu na wartość początkową pętli
+
+Tab. 4.2. Porównanie zastosowania zmiennych zmienno- i statoprzecinkowych do sterowania pętlą. Program
+umieszczony z lewej strony tablicy steruje pętlą FOR-NEXT przy użyciu zmiennej zmiennoprzecinkowej X. Powoduje
+to, po zakończeniu programu, powstanie zakumułowanego błędu zaokrąglenia równego 0,000133, w wyniku
+
+którego zostaje pominięta ostatnia wartość pętli X = 10,0. na WŁ ORO waka PRA
+AE EH pewność, że będzie ukończona wiaściwa liczba cykli
+
+<image/tabele/k3_page68_table1.png>

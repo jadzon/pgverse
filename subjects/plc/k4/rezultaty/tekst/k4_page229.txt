@@ -1,0 +1,29 @@
+//k4_page229_formula1.png NAM]
+
+Algorytm PID (proporcjonalno-całkująco-różniczkujący) należy do najczęściej
+stosowanych algorytmów w układach regulacji. Ze względu na to, że sterowniki
+realizują sterowanie w sposób cyfrowy, algorytm ten jest realizowany w nich
+w wersji dyskretnej a nie ciągłej.
+
+W sterownikach GE Fanuc regulację PID wykonuje się przy użyciu bloku funk-
+cyjnego PID, który został zaliczony do grupy funkcji sterujących (Control
+Functions). Blok funkcyjny PID zaprojektowano w ten sposób, aby w każdym
+cyklu wykonywana była tylko jedna iteracja algorytmu. Blok ten wykorzystuje
+do swoich potrzeb 40 rejestrów w pamięci sterownika. Jeżeli więc w programie
+występuje więcej bloków PID, to dla każdego z nich trzeba zarezerwować po 40
+rejestrów.
+
+W punkcie tym przedstawiono jedynie w jaki sposób blok PID może być użyty
+w programie, bez wnikania w samą istotę regulacji PID. W Dodatku B omówione
+zostały sposoby strojenia układów regulacji PID, tzn. doboru parametrów regu-
+latora takich jak współczynnik wzmocnienia, stała różniczkowania i całkowania.
+Natomiast przykłady konkretnych zastosowań bloku funkcyjnego PID w ukła-
+dach regulacji takich jak np. regulacja temperatury, regulacja trójpołożeniowa
+PID, regulacja z korekcją statyczną przedstawiono w rozdziale 8, zawierającym
+programy przykładowe.
+
+<image/wzory/k4_page229_formula2.png>
+
+<image/tabele/k4_page229_table1.png>
+
+4.12 Blok funkcyjny PID 229

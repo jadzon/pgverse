@@ -1,0 +1,19 @@
+OWDrY? ERA KAKPŁ/AT"TY 1
+
+<image/figury/k4_page458_figure1.png>
+
+ 
+
+Wyd. 8.126 Podprogram FAZA_4 (opróżnianie) — otwarcie zaworu odpływu pro-
+duktu reakcji z jednoczesną kontrolą poziomu w zbiorniku
+
+<image/tabele/k4_page458_table2.png>
+
+Wyd. 8.127 Podprogram FAZA_4 (opróżn ianie) — koniec opróżniania reaktora i za-
+mknięcie zaworu odpływu produktu
+
+<image/tabele/k4_page458_table1.png>
+
+ 
+
+458 Rozdział : 8.Programy przykładowe

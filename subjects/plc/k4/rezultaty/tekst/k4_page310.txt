@@ -1,0 +1,33 @@
+Instrukcja SKP nie może zostać użyta do pomijania całego segmentu programu;
+bez względu na to jaka liczba zostania zapisana w parametrach bloku, po dojściu
+do końca segmentu wykonywanie instrukcji zostaje zakończone.
+
+Instrukcja SKP może być użyta tylko wtedy, gdy uprzednio zaznaczymy w edy-
+torze konfiguracji, że takie pominięcia są dopuszczalne.
+
+_6.10.1 Bloki programowe i podprogramy
+
+ 
+
+Sterowniki Modicon umożliwiają korzystanie z podprogramów. Służą do tego
+trzy standardowe bloki: funkcja JSR powoduje przeskok w trakcie wykonywania
+programu zasadniczego do podprogramu; początek podprogramu rozpoczyna się
+od funkcji LAB, zaś w momencie dojścia do funkcji RET następuje powrót
+z podprogramu do programu zasadniczego.
+
+<image/figury/k4_page310_figure1.png>
+
+Wyd. 6.32 Korzystanie z podprogramów za pomocą funkcji JSR, LAB i RET.
+
+Wyd. 6.32 prezentuje przykład wykorzystania skoków do podprogramów. Uak-
+tywnienie wejścia 10010 spowoduje załączenie wyjścia 00271. Zbocze narastają-
+ce na tym wyjściu spowoduje przeskok do miejsca, gdzie znajduje się blok LAB
+oznaczony etykietą 0001 (czyli do segmentu 40 i podsieci 00001). Drugim, dol-
+nym parametrem bloku JSR jest stała liczba 0001. Na wyjście 00272 zostanie
+przepisany stan wejścia 00271, zaś na wyjściu 00273 wystąpi zero logiczne (gdy
+instrukcja wykonuje się prawidłowo) lub jedynka (gdyby wystąpił błąd związany
+np. z brakiem poszukiwanej instrukcji LAB).
+
+   
+
+3 1 0 Rozdział : 6 Programowanie sterowników AEG SCHNEIDER Modicon.

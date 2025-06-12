@@ -1,0 +1,60 @@
+Architektura cyfrowego procesora sygnałowego 487
+
+ 
+
+Celem jest szybkie wykonanie kolejnych kroków. Szczególną uwagę trzeba zwrócić na kroki
+od 6 do 12, gdyż są one wykonywane wielokrotnie — tyle razy, ile jest współczynników fil-
+tru. W mikroprocesorach tradycyjnych tych 14 kroków musi być realizowanych szeregowo,
+procesor DSP zaś jest tak zaprojektowany, aby wykonywać je równoległe. W niektórych
+przypadkach wszystkie operacje objęte pętlą (kroki 6-12) mogą być całkowicie zrealizowane
+w ciągu jednego okresu zegarowego. Przyjrzyjmy się architekturze wewnętrznej, która umoż-
+liwia takie wspaniałe działanie.
+
+Architektura cyfrowego procesora sygnałowego
+
+Jednym z ważniejszych „wąskich gardeł” w realizacji algorytnów DSP jest przesyłanie in-
+formacji do i z pamięci. To dotyczy danych, takich jak próbki sygnału wejściowego i współ-
+czynniki filtru, a także instrukcji programu, czyli słów binarnych kodów binarnych wchodzą-
+cych do sekwensera programowego. Powiedzmy, że chcemy przemnożyć przez siebie dwie
+liczby umieszczone gdzieś w pamięci. Aby to wykonać, musimy pobrać z pamięci trzy war-
+tości binarne, a więc dwie liczby przemnażane oraz instrukcję programową określającą, co
+ma być zrobione.
+
+Na rys. 28.4 a) przedstawiono, w jaki sposób to proste zadanie jest wykonywane w tradycyjnym
+mikroprocesorze. Te mikroprocesory mają tzw. architekturę von Neumanna, biorącą swo-
+ją nazwę od błyskotliwego amerykańskiego matematyka Johna von Neumanna (1903-1957).
+
+Von Neumann kierował opracowaniami matematycznymi wielu ważnych odkryć pierwszej
+połowy XX wieku. Do jego licznych osiągnięć należą: opracowanie koncepcji komputera ste-
+rowanego programem umieszczonym w pamięci, matematyczne sformalizowanie mechaniki
+kwantowej i prace nad bombą atomową. Jeśli pojawiało się coś nowego i ekscytującego, to
+von Neumann tam był.
+
+System wg architektury von Neumanna (rys. 28.4 a) zawiera pojedynczą pamięć i pojedyn-
+czą magistralę do przesyłania danych do i z jednostki centralnej (CPU). Mnożenie dwóch
+liczb wymaga co najmniej trzech okresów zegarowych, po jednym na przesłanie magistralą
+każdej z trzech liczb z pamięci, do CPU. Nie wliczamy tu czasu na przesłanie wyniku z po-
+wrotem do pamięci zakładając, że pozostaje on w CPU do dodatkowych operacji, takich jak
+sumowanie iloczynów w filtrze SOI. System von Neumanna jest całkiem zadowalający, gdy
+wystarcza wam realizacja wszystkich wymaganych zadań w sposób szeregowy. W istocie
+większość obecnie stosowanych komputerów ma architekturę von Neumanna. Inna architek-
+tura jest potrzebna tylko wówczas, gdy przetwarzanie ma być bardzo szybkie i gdy jesteśmy
+skłonni uzyskać to kosztem większej złożoności systemu.
+
+Ta myśl prowadzi nas do architektury harwardzkiej (rys. 28.4 b). Jej nazwa pochodzi od
+prac wykonywanych na Uniwersytecie Harvarda, w latach 40., pod kierunkiem Howarda
+Aikena (1900-1973). Jak pokazano na rysunku, Aiken wprowadził oddzielne pamięci dla
+danych i dla instrukcji programu wraz z oddzielnymi magistralami. Ponieważ magistrale
+działają oddzielnie, więc instrukcje programu i dane mogą być pobierane w tym samym cza-
+sie, co poprawia szybkość w stosunku do pracy z pojedynczą magistralą. Taką architekturę
+z podwójną magistralą stosuje się teraz w większości procesorów DSP.
+
+Na rys. 28.4 c) zilustrowano jeszcze wyższy poziom zaawansowania technicznego —
+architekturę superharwardzką. Tę nazwę wymyślono w firmie Analog Devices, aby opisać
+wewnętrzne działanie rodzin cyfrowych procesorów sygnałowych ADSP-2106x i ADSP-211xx
+tej firmy. Są to tzw. SHARC?DSP, jako skrót od Super Harvard ARChitecture. Udoskonalono
+działanie architektury harwardzkiej, wprowadzając kilka nowych rozwiązań. Chociaż archi-
+tektura superharwardzka jest zoptymalizowana bardzo wieloma sposobami, to dwa rozwiąza-
+
+nia są tak ważne, że zostały uwzględnione na rys. 28.4 c). Są to podręczna pamięć instrukcji
+(instruction cache) oraz sterownik wejście-wyjście.

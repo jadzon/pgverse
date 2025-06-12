@@ -1,0 +1,37 @@
+246 13. Przetwarzanie sygnałów ciąg
+
+<image/figury/k3_page225_figure1.png>
+
+Odpowiedź częstotliwościową znajduje się, wstawiając odpowiedź impulsową do równań
+analizy. Najpierw obliczamy część rzeczywistą:
+
+<image/wzory/k3_page225_formula1.png>
+<image/wzory/k3_page225_formula2.png>
+
+eż
+
+<image/wzory/k3_page225_formula3.png>
+<image/wzory/k3_page225_formula4.png>
+
+W taki sam sposób obliczamy część urojoną odpowiedzi częstotliwościowej:
+
+<image/wzory/k3_page225_formula5.png>
+Zapis we współrzędnych prostokątnych jest, podobnie jak dla sygnałów dyskretnych, bat:
+dzo korzystny do operacji matematycznych, lecz trudny do zrozumienia. Można więć
+przejść na zapis we współrzędnych biegunowych, korzystając ze standardowych zależności
+Mag H(0) = [Re H(©)? + Im H(o)?]"? oraz Phase H(©) = arctg (Re H(o) / Im H(0)].
+Korzystając z przekształceń algebraicznych, uzyskujemy odpowiedź częstotliwościową dol:
+noprzepustowego filtru RC zapisaną we współrzędnych biegunowych w postaci mo
+i fazy:
+a
+
+WETA”
+
+Phase HI (o =arig| -2
+
+Na rys. 13.9 pokazano wykresy modułu i fazy dla częstotliwości odcięcia równej 1000 Hz
+(ij. a = 2x1000).
+
+Dochodzimy teraz do ostatniego przekształcenia z rodziny transformat fourierowskich -
+szeregu Fouriera. Sygnał w dziedzinie czasu stosowany w przekształceniu Fouriera jest o
+sowy i ciągły. Na rys. 13.10 podano kilka przykładów przebiegów ciągłych powtarzającyć

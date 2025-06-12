@@ -1,0 +1,10 @@
+<image/figury/k2_page152_figure2.png>
+
+<image/figury/k2_page152_figure3.png>
+
+Rys. 6.54: Metoda SVM. Klasv nie separowalne liniowo. Zbiór uczący (a) i wyznaczona
+płaszczyzna decyzyjna po przetransponowaniu do pierwotnej przestrzeni (b). Zastosowana
+transformacja nie doprowadziła do kompletnej separacji liniowej, co doprowadziło do błęd-
+nej klasyfikacji kilku punktów
+
+<image/figury/k2_page152_figure1.png>

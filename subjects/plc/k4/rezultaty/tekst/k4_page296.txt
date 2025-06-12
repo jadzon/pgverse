@@ -1,0 +1,43 @@
+W przykładzie z Wyd. 6.75 wyzwolenie wejścia 10005 spowoduje uaktywnienie
+funkcji konwersji liczby całkowitej 32-bitowej na zmiennoprzecinkową CNVIF
+(funkcja EMTH 9). Liczba ta zapisana jest na rejestrach 40327 i 40328. Wynik
+operacji zostanie umieszczony w rejestrach 40330 i 40331, a potwierdzony przez
+stan wysoki na wyjściu z funkcji. Jednocześnie zarezerwowane są rejestry 40329
+1 40330. Ponieważ rejestry te nie są wykorzystywane, można do nich zapisać
+liczbę źródłową. Wtedy w obu węzłach bloku wpisany będzie ten sam numer —
+np. 40327.
+
+<image/tabele/k4_page296_table1.png>
+
+Wyd. 6.15 Przykład zastosowania funkcj i matematycznych zmiennoprzecinkowych:
+konwersja liczby całkowitej na zmiennoprzecinkową, dodawanie, odejmowanie
+i mnożenie liczb całkowitych i zmiennoprzecinkowych.
+
+Jeżeli do któregoś z rejestrów źródłowych zostałaby wpisana liczba większa niż
+9999, to nastąpi przekroczenie zakresu, a informację o błędzie uzyskamy
+w funkcji EMTH 38 o nazwie "Error Report Log". Tym samym wynik konwersji
+może nie być poprawny.
+
+W kolejnej funkcji, ADDIF, wykonana zostanie operacja dodania liczby całko-
+witej zapisanej na rejestrach 40333 i 40334 do liczby zmiennoprzecinkowej
+z rejestrów 40335 1 40336. Wynik sumowania umieszczony zostanie w rejestrach
+40337 1 40338. Po zakończeniu tej operacji wywołana zostanie funkcja SUBIF
+powodując odjęcie od liczby całkowitej z rejestrów 40339 i 40340, liczby zmien-
+noprzecinkowej z rejestrów 40341 i 40342. Wynik znajdzie się w rejestrach
+40343 i 40344.
+
+Ta sama konwencji pobierania liczb źródłowych i zapisywania wyników obo-
+wiązuje w funkcjach EMTH 12 (MULIF — mnożenie liczby całkowitej przez
+zmiennoprzecinkową), EMTH 13 (DIVIF — dzielenie liczby całkowitej przez
+zmiennoprzecinkową), EMTH 14 (SUBFI — odejmowanie liczby zmiennoprze-
+cinkową od całkowitej) oraz EMTH 15 (DIVFI - dzielenie liczby zmiennoprze-
+cinkową przez całkowitą).
+
+Wyd. 6.16, oprócz omówionych funkcji SUBFI i DIVFI, przedstawia również
+przykład wykorzystania funkcji porównania liczby całkowitej ze zmiennoprze-
+
+   
+
+zz"
+
+296 Rozdział : 6 Programowanie sterowników AEG SCHNEIDER Modicon

@@ -1,0 +1,37 @@
+Rozwiązanie
+Wykorzystując drugie prawo Kirchhoffa, można zapisać
+
+u; (t) =u,(t) + u>(t),
+
+stąd
+
+<image/wzory/k1_page65_formula1.png>
+
+Prąd płynący przez kondensator jest proporcjonalny do pochodnej napięcia na
+kondensatorze
+
+<image/wzory/k1_page65_formula2.png>
+
+Ten sam prąd płynie również przez rezystor R
+
+Nzory/k1_page65_formula3.png
+
+czcpowyszewzoryotrzymujemyrwnanierniczkowebdcemodelem
+obwodu CR
+
+<image/wzory/k1_page65_formula4.png>
+
+Po przekształceniach
+
+<image/wzory/k1_page65_formula5.png>
+
+Podstawiając T = RC oraz dokonując transformaty Laplace'a powyższego równa-
+nia, otrzymujemy:
+
+<image/wzory/k1_page65_formula6.png>
+
+Tak więc transmitancja operatorowa obwodu CR wynosi
+
+<image/wzory/k1_page65_formula7.png>
+
+67

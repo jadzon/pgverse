@@ -1,0 +1,22 @@
+<image/figury/k4_page451_figure2.png>
+
+ 
+
+Wyd. 8.104 Program główny — sterowanie wywoływaniem podprogramów
+
+<image/tabele/k4_page451_table1.png>
+
+Wyd. 8.105 Podprogram INI_1 - ustawienie parametrów domyślnych w pierwszym
+cyklu
+
+<image/figury/k4_page451_figure1.png>
+
+ 
+
+ZE 1 Z M A M M 1
+
+ 
+
+a M m NA ———1:>m>—2>—>>>—
+
+8.8 Sterowanie sekwencyjne procesem wsadowym 451

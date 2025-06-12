@@ -1,0 +1,57 @@
+372
+
+23. Tworzenie i wyświetlanie obraz
+
+czarno-białej. Osiągnięto ten cel, zachowując taki sam sygnał dla informacji o jaskrawe
+i dodając oddzielny sygnał z informacją o kolorze. Informacje o jaskrawości znajdują
+w sygnale łuminancji, a o kolorze — chrominancji. Sygnał chrominancji jest zawarty w f
+o częstotliwości nośnej 3,58 MHz dodawanej do czarno-białego sygnału wizyjnego. W
+sam sposób wprowadzany jest dźwięk na fali nośnej 4,5 MHz. Odbiornik telewizyjny ra
+dziela te trzy sygnały, przetwarza je oddzielnie i łączy ze sobą w końcowej prezentacji.
+
+Akwizycja i wyświetlanie innych obrazów
+
+Nie wszystkie obrazy są odbierane w taki sposób, że za jednym razem jest odbierana jedi
+ramka. Inny często spotykany sposób nosi nazwę skanowania liniowego. Stosuje się wte
+detektor zawierający jednowymiarową matrycę pikseli, np. o długości 2048 pikseli i 82
+rokości 1 piksela. Obraz jest zbierany linia po linii w miarę przesuwania się obiektu pr
+detektorem. Skanowanie liniowe jest stosowane w urządzeniach faksowych i rentgenowski
+skanerach bagażu na lotniskach. Odmianą metody jest przesuwanie detektora wzdłuż ni
+chomego obiektu. Jest to bardzo dogodne w sytuacjach, gdy detektor jest wmontowany
+jakimś ruchomym obiekcie, takim jak samolot pobierający obrazy z ziemi pod nim.
+skanowania liniowego polega na tym, że prostotę detektora uzyskano tu kosztem szybkoś
+Na przykład faksowanie całej strony tekstu może zająć kilka sekund, lecz uzyskany oł
+zawiera tysiące wierszy i kolumn.
+
+Jeszcze prostszą metodą jest zbieranie obrazu punkt po punkcie. Na przykład mikro
+lowy obraz Wenus pobierano piksel po pikselu. Innym przykładem jest sondujący
+skop skaningowy, który może dawać obrazy pojedynczych atomów. Mała sonda, czę
+zawierająca tylko jeden atom na swym ostrzu, jest doprowadzana bardzo blisko prół
+która ma być zobrazowana. W ten sposób wykrywa się zjawiska mechaniki kwantov
+zachodzące między sondą i próbką. To umożliwia zatrzymanie sondy w dokładnie okreś
+nej odległości od powierzchni próbki. Sonda następnie przesuwa się ponad powierzcł
+próbki, utrzymując stałą odległość i śledząc uwypuklenie i wgłębienia. W końcowym obi
+zie wartość każdego piksela wyraża wartość wzniesienia odpowiadającego temu piksek
+miejsca na powierzchni próbki.
+
+Obrazy drukowane dzieli się na dwie kategorie — prezentowane w skali szarości (graysca
+lub prezentowane rastrowo (halfione). W obrazowaniu w skali szarości każdy piksel ma f
+wien odcień szarości między czernią a bielą, jak np. na fotografii. W obrazowaniu rastrow
+obraz jest tworzony z wielu pojedynczych kropek, z których każda jest albo całkiem cza
+albo całkiem biała. Odcienie szarości uzyskuje się, zmieniając liczby kropek białych i c
+nych. Wyobraźmy sobie drukarkę laserową o rozdzielczości 600 kropek na cal. Aby mc
+było odtworzyć 256 poziomów jasności między bielą i czernią, każdy piksel powinien
+równoważny matrycy drukowanych kropek, mającej wymiar 16 x 16. Czarne piksele po
+gdy wszystkie 256 kropek w matrycy jest czarnych, a białe piksele — gdy jest 256 białych
+pek. Średni odcień szarości uzyskuje się, gdy połowa kropek jest czarnych i połowa biały
+Pojedyncze kropki są tak małe, że patrząc z normalnej odległości, nie można ich widzieć.
+dzielnie. Oko jest więc oszukiwane i odbiera obraz tak, jakby miał różne odcienie szarości.
+Obrazy rastrowe są łatwiejsze do realizacji w drukarkach i kopiarkach. Ich wadą jest j.
+obrazu, często gorsza niż przy obrazowaniu w skali szarości.
+
+Regulacja jaskrawości i kontrastu
+
+Obraz, aby mógł być dobrze oglądany, powinien mieć odpowiednią jaskrawość i kontr
+Jaskrawość określa, czy obraz jest jaśniejszy, czy ciemniejszy. Kontrast jest różni
+skrawości między obiektami lub obszarami na obrazie. Na przykład biały królik bie
+cy po zaśnieżonym polu ma słaby kontrast, a czarny pies na tym samym tle - da

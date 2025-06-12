@@ -1,0 +1,36 @@
+56
+
+<image/tabele/k2_page51_table1.png>
+
+Twierdzenie 4.1 Jeżeli S jest zbiorem wpz, zaś W jest wpz to: $ |= W wtedy i
+tylko wtedy, gdy SŁ W
+
+4.1.5. Dowodzenie przy pomocy rezolucji
+
+Dany jest zbiór wpz 5. Należy wykazać, że wpz W jest wnioskiem ze zbioru S$. Sys-
+temy oparte o rezolucję tworzą dowód przez wykazanie sprzeczności. W systemach
+tych neguje się W i dołącza W do zbioru S$. Jeżeli W wynika logicznie z S, to zbiór
+ŚS, —W nie jest spełniony przy żadnej interpretacji.
+
+Aby wykazać, że zbiór wpz nie jest spełniony przy żadnej interpretacji wystarczy
+pokazać, że jest sprzeczny, to znaczy że można z niego wyprowadzić zarówno pewne
+wpz P jak i wpz nP. Wyrażenia P i —P generują klauzulę pusta NIL oznaczającą
+sprzeczność.
+
+Aby wykazać sprzeczność zbioru wpz przy pomocy rezolucji, należy przekształ-
+cić go do postaci klauzul, a następnie stosować wielokrotnie regułe rezolucji aż do
+uzyskania klauzuli pustej NIL.
+
+PRZYKŁAD 4.5
+
+Korzystając z rezolucji przedstawimy tu dowód w dziedzinie rachunku zdań.
+Dany jest zbiór formuł rachunku zdań
+
+<image/wzory/k2_page51_formula1.png>
+
+Należy udo
+
+<image/wzory/k2_page51_formula2.png>
+
+Wyrażenia 1, 2 oraz zanegowaną tezę 3 przekształcamy do postaci klauzul. Mamy
+np.: 2. qVpAmr=(qV r)(qV p) czemu odpowiadają dwie klauzule: qvpA-ri

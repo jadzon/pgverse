@@ -1,0 +1,36 @@
+czyli
+15
+Y(s)= o m,
+s*' +4s+29
+Wyliczamy pierwiastki mianownika:
+
+A=16-116=—100,
+
+JA =105,
+
+Z =-2+5),
+
+ 
+
+5, =
+
+<image/wzory/k1_page36_formula1.png>
+Wtedy:
+
+<image/wzory/k1_page36_formula2.png>
+<image/wzory/k1_page36_formula3.png>
+
+Następnie rozkładamy Y(s) na ułamki proste, wyliczając współczynniki A i B
+
+<image/wzory/k1_page36_formula4.png>
+stąd:
+
+wzorv/k1 naaea3A formuila5 nna
+wzoarv/k1 naae36 formula6.bpna
+<image/wzory/k1_page36_formula7.png>
+
+czyl!
+
+<image/wzory/k1_page36_formula8.png>
+
+38

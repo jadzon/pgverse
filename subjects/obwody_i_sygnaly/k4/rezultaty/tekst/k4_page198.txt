@@ -1,0 +1,54 @@
+198... 0, 2. Pojęcia podstawowe — układy |
+
+ 
+
+  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+  
+    
+ 
+  
+ 
+ 
+ 
+ 
+  
+   
+
+Rozpatrzmy równania układów dualnych U i U”. W układach tych istniej
+wzajemnie jednoznaczna odpowiedniość między ich elementami. Z definici
+elementów dualnych wynika, że jeśli w równaniu elementu D w układzi
+U zamienimy prąd na napięcie oraz napięcie na prąd, dostaniemy równ
+elementu dualnego D' w układzie U”. Jeśli elementy w układzie U są połączone
+szeregowo (równolegle), to odpowienie elementy dualne w układzie U'
+połączone równolegle (szeregowo). A zatem równania wynikające z pra
+Kirchhoffa dla połączeń elementów w układzie U przejdą, przy zamianie prądó
+na napięcia i napięć na prądy, w równania wynikające z praw Kirchhoffa d
+połączeń elementów w układzie U'. Dokładniej, równania wynikające z NP
+(PPK), dla układu U przejdą w równania wynikające z PPK (NPK) dla układ
+U' (wymaga to jednak zachowania zgodności zwrotów wielkości dualnych, por.
+przykład 2.1-24). Otrzymujemy zatem następującą właściwość układów dual
+nych.
+
+Równania sieciowe układu dualnego U' można otrzymać z równań sieciowyc
+układu U przez zamianę wszystkich prądów na odpowiadające im napięci
+i zamianę wszystkich napięć na odpowiadające im prądy.
+
+Przyklad 2.1-23. Rozpatrzmy układy z rys. 2.1-18. Układy te są opisane — odpowied-
+nio — równaniami:
+
+<image/wzory/k4_page198_formula1.png>
+lub krócej:
+Nzory/k4_page198_formula2.png
+<image/wzory/k4_page198_formula3.png>
+
+Przy zachowaniu odpowiednich zależności liczbowych, tzn. R[Q] = G [S], L[H] = C[F],
+e[V] = j[A], układy te są dualne. Równanie (względem prądu i) układu z rys. 2.1-18a jest wówczas
+
+<image/figury/k4_page198_figure1.png>

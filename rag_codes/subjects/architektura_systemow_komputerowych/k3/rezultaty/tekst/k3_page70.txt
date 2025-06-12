@@ -1,0 +1,47 @@
+PROCESORY
+
+ 
+
+4.1. ORGANIZACJA PROCESORA
+
+Procesor stanowi najistotniejszy blok komputera i jego parametry decydują o parametrach
+komputera. Różne komputery często mają podobne pamięci i: podobne urządzenia ze-
+wnętrzne, ale zwykle różnią się procesorami. Szybkość działania komputera najsilniej
+zależy od szybkości działania procesora, moc obliczeniowa komputera najsilniej zależy od
+mocy obliczeniowej procesora itd. Każdy program przechowywany w pamięci jest od-
+czytywany przez procesor, on dekoduje kod rozkazu, pobiera odpowiednie argumenty dla
+danej operacji, wykonuje tę operację i przesyła wynik operacji w odpowiednie miejsce.
+Niezależnie od wykonywanego programu zadanego przez operatora procesor wykonuje
+także równolegle pewne stałe programy. służące koordynacji pracy procesora z innymi
+blokami, czyli steruje pracą całego komputera. Przykładowo procesor jest odpowiedzialny
+za wyznaczenie kolejności działania urządzeń zewnętrznych, za postać informacji zapisy-
+wanej do pamięci dyskowej czy do monitora, za poprawne reakcje na różne błędy itp.
+Wszystkie te czynności realizuje procesor wykonując program stale rezydujący w pamięci,
+zwany systemem operacyjnym (por. rozdz. 7).
+
+Architektura klasycznego komputera zaproponowana przez von Neumana opierała się
+
+na trzech kluczowych założeniach:
+
+|) program wykonywany przez procesor, wraz z danymi dla programu
+(argumentami), jest umieszczony w pamięci;
+
+2) kolejność wykonywanych rozkazów zależy od ich umieszczenia w programie
+(kolejne rozkazy są umieszczane w kolejnych komórkach pamięci), a zmiana tej
+zasady może być dokonana tylko przez sam program (rozkaz skoku);
+
+3) procesor odczytuje kolejne rozkazy z pamięci wysyłając odpowiednie adresy.
+
+Program umieszcza się w pamięci wczytując go, z odpowiednich nośników (np. dyskietki),
+za pomocą odpowiednich urządzeń wejściowych. Takimi typowymi urządzeniami
+przeznaczonymi do tego celu są:
+l) klawiatura w przypadku pracy interakcyjnej, tzn. gdy operator na bieżąco
+współpracuje z komputerem;
+2) napęd dysku elastycznego, gdy operator wcześniej przygotował program i dane na
+dyskietce, a w odpowiednim momencie przepisuje je do pamięci komputera.
+
+Po zapisaniu programu do pamięci może on zostać wywołany do wykonania w dowolnym
+momencie. Wywołanie programu następuje w momencie, gdy procesor wyśle do pamięci
+adres komórki, w której zapisano pierwszy rozkaz programu. Wówczas kod tego rozkazu
+zostaje umieszczony w rejestrze rozkazów procesora. Ponieważ kolejne rozkazy są w kolej-
+nych komórkach pamięci, to zaraz po odczytaniu jednego rozkazu procesor przygotowuje

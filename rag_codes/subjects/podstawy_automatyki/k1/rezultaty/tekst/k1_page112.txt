@@ -1,0 +1,19 @@
+W wyniku otrzymano wykres jak na rysunku 3.1.
+
+<image/figury/k1_page112_figure2.png>
+
+Wspomniane równanie różniczkowe można również rozwiązać, wykorzystując
+przybornik Simulink.
+Na podstawie układu równań:
+
+<image/wzory/k1_page112_formula1.png>
+
+tworzymy model równania różniczkowego w postaci schematu blokowego pokazanego
+na rysunku 3.2.
+
+<image/figury/k1_page112_figure1.png>
+
+Rys. 3.2. Model równania różniczkowego zbudowany w Simulinku
+W wyniku przeprowadzonej symulacji otrzymujemy takie samo rozwiązanie.
+
+114

@@ -1,0 +1,33 @@
+155
+
+<image/figury/k2_page150_figure1.png>
+
+Rys. 6.51: Klasyfikator z maksymalnym marginesem
+
+<image/wzory/k2_page150_formula1.png>
+
+Odległość między tymi hiperpłaszczyznami (są równoległe), czyli margines, wynosi:
+
+<image/wzory/k2_page150_formula2.png>
+
+Maksymalizacja marginesu m może być sprowadzona do minimalizacji wyrażenia
+1/m, (max m = min 1/m). Tak więc teraz poszukujemy minimum
+
+[wi
+2
+lub co jest równoważne, minimum
+<image/wzory/k2_page150_formula3.png>
+Biorąc pod uwagę zbiór uczący (??) problem poszukiwania hiperpłaszczyzny
+
+decyzyjnej sprowadza sie do minimalizacja wyrażenia (??) przy natępujących ogra-
+niczeniach
+
+<image/wzory/k2_page150_formula4.png>
+
+Zapisując inaczej ograniczenia, można problem poszukiwania hiperpłaszczyzny
+decyzyjnej sformułować następująco:
+
+Dany jest zbiór uczący zawierający obrazy należące do dwóch liniowo separowal-
+nych klas:
+
+<image/wzory/k2_page150_formula5.png>

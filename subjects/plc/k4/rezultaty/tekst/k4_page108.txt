@@ -1,0 +1,23 @@
+zory/k4_page108_formula1.png ?2:PN9
+
+Język strukturalny należy do grupy języków tekstowych. Podstawowymi ele-
+mentami tego języka są wyrażenia i polecenia.
+
+Wyrażenie (expression) stanowi element języka, który z chwilą wykonania do-
+starcza wartość odpowiadającą jednemu z typów danych zdefiniowanych
+w 2.2.2. Wyrażenie składa się z operatorów i operandów. Operandem może być
+zmienna, stała, wywoływana funkcja lub inne wyrażenie. Operatory języka ST
+zostały zebrane w Tab. 2.58.
+
+Obliczanie wartości wyrażenia polega na stosowaniu operatorów do operandów
+według kolejności odpowiadającej miejscu w tej tabeli (pozycja | — najwyższy
+priorytet, pozycja 17 — najniższy). Operatory o wyższym priorytecie są wykony-
+wane przed operatorami o priorytetach niższych. Operatory posiadające ten sam
+priorytet (operatory umieszczone w jednym wierszu tablicy, np. operatory o nu-
+merach 6, 7, 8) wykonywane są w kolejności występowania w wyrażeniu
+(poczynając od lewej do prawej).
+
+<image/tabele/k4_page108_table1.png>
+
+W R ROPRCORAYPYOORO POC R CPOWROO AAA AOAAY OAA  A
+108 Rozdział : 2.Programowanie sterowników PLC

@@ -1,0 +1,35 @@
+a po zastosowaniu przekształcenia Lapla
+
+<image/wzory/k1_page148_formula1.png>
+
+Na podstawie równania przepływu
+draulicznym można napisać
+
+Nzory/k1_page148_formula2.png age148_figu
+
+a po zastosowaniu przekształcenia Lapla
+
+<image/wzory/k1_page148_formula3.png>
+Równanie sił działających na układ
+sprężynę i tłumik) ma postać
+
+<image/wzory/k1_page148_formula4.png>
+
+Stosując przekształcenie Laplace'a do powyższego równania, otrzymujemy
+
+<image/wzory/k1_page148_formula5.png>
+
+czyli
+<image/wzory/k1_page148_formula6.png>
+Dla dźwigni jednostronnej możemy zapisać równanie
+rzory/k1_page148_formula7.png
+
+które po przekształceniu Laplace'a przyjmie postać
+
+<image/wzory/k1_page148_formula8.png>
+
+Równanie (5.12) podstawiamy do równania (5.11), otrzymując
+
+<image/wzory/k1_page148_formula9.png>
+
+150

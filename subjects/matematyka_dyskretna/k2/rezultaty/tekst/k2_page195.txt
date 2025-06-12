@@ -1,0 +1,36 @@
+1.9. Cykle i drogi Eulera 17
+
+<image/figury/k2_page195_figure1.png>
+
+Pokażemy teraz, że T jest minimalnym drzewem spinającym. Przypuśćmy, że 7 nie
+jest minimalne. Niech S = (V, Es) będzie takim minimalnym drzewem, które ma z 7
+największą liczbę wspólnych krawędzi. Niech e będzie krawędzią z minimalną wagą,
+która należy do 7, ale nie należy do S. Jeżeli dodamy e do S to otrzymamy cykl. Niech
+f będzie krawędzią w tym cyklu, która należy do S, ale nie należy do 7.
+
+Niech S' będzie drzewem, które powstaje z S po zamianie f nae. $' powstaje przez
+usunięcie f z grafu (V, EsU fe)). Jest to graf spójny z n — 1 krawędziami, czyli drzewo.
+
+Jeżeli w(e) < w(f), to drzewo S” byłoby drzewem z mniejszą od S wagą, wbrew mi-
+nimalności S. Jeżeli w(e) = w(f), to drzewo S' byłoby minimalnym drzewem z większą
+od S liczbą wspólnych z 7 krawędzi, znowu sprzeczność. Mamy więc w(e) > w(f).
+
+Jeżeli dodamy teraz krawędź f do T, to otrzymamy cykl (to może być inny cykl
+niż ten w (V, Es U (e)). W tym cyklu istnieje krawędź e”, która należy do 7, ale nie
+do S. Przypuśćmy, że w(f) < w(e'). W takim przypadku algorytm powinien wstawić
+krawędź f do drzewa T, bo w momencie rozpatrywania / w drzewie nie ma jeszcze e”
+i wstawienie f nie zamyka cyklu. Wynika, to z faktu, że graf (V, Er U 4f) — (e')) jest
+drzewem, więc krawędź f nie tworzy cyklu z krawędziami z Eq — fe'). Mamy więc
+w(e') < w(f) < w(e) co jest sprzeczne z faktem, że e była najlżejszą krawędzią z 7' i
+nienależącą do S.
+
+19 Cykle i drogi Eulera
+
+Droga Eulera to droga, która przechodzi przez każdą krawędź grafu dokładnie jeden raz.
+Cykl Eulera to taka droga zamknięta, w której każda krawędź grafu występuje dokładnie
+raz.
+Euler w 18. wieku pokazał, że istnieje dość prosta charakteryzacja grafów z drogą
+lub cyklem Eulera. Mianowicie spójny graf posiada cykl Eulera, wtedy i tylko wtedy gdy
+każdy jego wierzchołek jest parzystego stopnia, a posiada drogę Eulera jeżeli co najwyżej
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,34 @@
+B.1. Motorola 68000 187
+
+dzeniami. Mikroprocesor wykonuje programy w dwóch trybach pracy: jeden tryb jest
+przeznaczony dla programów użytkownika (ang. user mode) a drugi dla programów
+systemu operacyjnego (ang. superviser mode). Stan procesora wskazujący na aktualny
+tryb jest sygnalizowany trzema liniami wyjściowymi, które mogą służyć do rozróżnienia
+obszarów pamięci (pamięć programów i pamięć danych użytkownika oraz pamięć
+programów i pamięć danych systemu operacyjnego).
+
+Procesor zawiera dwa bloki rejestrów 32-bitowych po 8 rejestrów każdy (rys. D.14).
+Pierwszy blok jest przeznaczony dla danych, a drugi dla adresów. Dostęp do bloku danych
+(odczyt i zapis) może odbywać się bajtami, słowami 16-bitowymi i całym pełnym słowem
+32-bitowym. Dostęp do bloku adresów jest możliwy słowami 16- i 32- bitowymi. Rejestry
+adresowe mogą być używane jako rejestry bazowe i indeksowe. Niezależnie od rejestrów
+danych i adresowych procesor zawiera 32-bitowy licznik rozkazów, dwa 32-bitowe rejestry
+wskaźnika stosu (po jednym dla każdego trybu pracy) i 16-bitowy rejestr stanu.
+
+Połączenia procesora z innymi układami dokonuje się poprzez wyprowadzone jego
+końcówki. Na rysunku D.15 pokazano sygnały wejściowe i wyjściowe tego procesora
+wyprowadzone na zewnątrz. Sygnały adresowe są wyprowadzone 23 liniami szyny
+adresowej, co pozwala adresować 16 MB przestrzeń adresową. Transmisje danych do
+iz procesora przebiegają 16 liniami szyny danych. Sterowanie transmisjami zapewniają
+sygnały strobów: adresu (AS), zapisu i odczytu (R/W) oraz zakończenia transmisji (DATC).
+Odpowiednie kombinacje strobów danych (UDS i LDS) wskazują na dostęp do mniej lub
+bardziej znaczącego bajtu na szynie danych. Słowo stanu (FC0-FC2) wskazuje na rodzaj
+cyklu maszynowego (rozkaz lub dana użytkownika, rozkaz lub dana systemu operacyjnego,
+cykl przerwania). Trzy linie wejściowe IPL0--IPL2 służą do przesłania sygnałów przerwań
+od urządzeń zewnętrznych. Jest 8 priorytetów, które są przyznawane urządzeniom i one
+zgłaszając przerwanie wysyłają numer swojego priorytetu. Przerwania te mogą być masko-
+wane bitami w rejestrze stanu (oprócz przerwania o najwyższym priorytecie). Przerwania
+
+<image/figury/k3_page197/_figure1.png>
+
+Rysunek D.15. Wyprowadzenia sygnałów mikroprocesora M68000

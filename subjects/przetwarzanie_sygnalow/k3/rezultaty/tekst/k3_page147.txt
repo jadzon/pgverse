@@ -1,0 +1,32 @@
+Niedogodności współrzędnych biegunowych
+
+ 
+
+<image/tabele/k3_page147_table1.png>
+
+Niedogodność 2 - błąd dzielenia przez zero
+
+Przechodząc z zapisu we współrzędnych prostokątnych na współrzędne biegunowe, często moż-
+na znaleźć częstotliwości, przy których część rzeczywista ma wartość zerową, część urojona
+zaś jakąś wartość niezerową. To znaczy po prostu, że faza jest równa dokładnie 907 lub -907.
+Spróbujcie to waszemu komputerowi! Gdy wasz program próbuje obliczyć fazę ze
+wzoru: Phase X[k] = arcig(/m X[kVRe X[K]), to pojawia się błąd dzielenia przez zero. Nawet jeśli
+
+będzie
+
+nia sprawdzić, czy część rzeczywista nie jest zerowa. Jeśli jest ona równa zeru, to należy spraw-
+dzić, czy część urojona jest dodatnia, czy ujemna w celu ustalenia wartości fazy, odpowiednio na
+a/2 lub -x/2. Wreszcie dzielenie powinno być ominięte. W realizacji wymienionych czynności
+nie ma niczego trudnego, poza potencjalnym zdenerwowaniem. Alternatywny sposób rozwią-
+zania tego problemu pokazano w wierszu 250 programu w tablicy 8.3. Jeśli część rzeczywista
+jest równa zeru, to trzeba ją zamienić na liczbę pomijalnie małą, aby procesor matematyczny nie
+miał kłopotów z wykonaniem dzielenia.
+
+Niedogodność 3 — nieprawidłowy arcus tangens
+
+Rozważmy próbkę w dziedzinie częstotliwości, w której Re X[K] = 1 i Im X[k] = 1. Z wzoru
+8.6 wynikają równoważne współrzędne biegunowe: Mag X[k] = 1,414 i Phase X[k] = 457.
+Rozpatrzmy teraz inną próbkę, w której Re X[k] = —1 i Im X[k] = -1. Wzór 8.6 znowu daje
+Mag X[k] = 1,414 i Phase X[k] = 45. Problem polega na tym, że wartość fazy jest błędna!
+Powinna być —135?. Ten błąd powstaje zawsze, gdy część rzeczywista jest ujemna. Można go
+skorygować, sprawdzając części rzeczywistą i urojoną po obliczeniu fazy. Jeśli obie części

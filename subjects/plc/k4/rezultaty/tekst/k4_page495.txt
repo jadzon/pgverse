@@ -1,0 +1,15 @@
+RAZA CURE CAUCA CA CLA
+
+Tekst programu z wykorzystaniem grafu sekwencji SFC realizującego zadanie
+sterowania procesem wsadowym przedstawiono na Wyd. 8.185 - Wyd. 8.194.
+
+'495_formula1.png 398495_table1.png
+
+<image/wzory/k4_page495_formula2.png>
+
+Preprocessing (O$IC LWya. 0./0/) - zawicla CZĘŚĆ PIiOBIalMuU, RLUIA JE>SL WYRONY-
+wana w każdym cyklu pracy sterownika przed rozpoczęciem wykonania grafu
+sekwencji (Wyd. 8.186). Steruje on wyborem odpowiedniej fazy procesu i usta-
+wia parametry programu.
+
+8.8 Sterowanie sekwencyjne procesem wsadowym 495

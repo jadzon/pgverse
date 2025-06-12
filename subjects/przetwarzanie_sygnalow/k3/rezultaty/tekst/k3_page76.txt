@@ -1,0 +1,33 @@
+4. Oprogramowanie DSP
+
+ 
+
+i DSP56800 firmy Motorola. Takie układy scalone są nazywane mikroprocesorami DSP,
+cyfrowymi procesorami sygnałowymi i RISC (Reduced Instruction Set Computer, kom-
+puterami o zredukowanej liczbie rozkazów). Ta ostatnia nazwa wyraża fakt, że zwiększona
+szybkość wynika z mniejszej liczby instrukcji na poziomie asemblera, udostępnionych pro-
+gramiście. Dla porównania, bardziej tradycyjne mikroprocesory, jak Pentium, są nazywane
+CISC (Complex Instruction Set Computer, komputery z rozbudowaną listą rozkazów).
+
+Mikroprocesory DSP mają zastosowania dwojakiego rodzaju. Mogą pracować jako modu-
+ły podporządkowane (słave) pod kontrolą komputera bardziej konwencjonalnego albo jako
+procesory wbudowane w jakimś wydzielonym zastosowaniu, takim jak telefon komórko-
+wy. W niektóre modelach mikroprocesorów DSP możliwe jest wykonywanie działań tylko
+na liczbach stałoprzecinkowych, a inne mogą operować liczbami zmiennoprzecinkowymi.
+Architektura wewnętrzna zastosowana w celu zwiększenia szybkości obejmuje: 1) wiele
+pamięci podręcznej zawartej wewnątrz układu scalonego, 2) oddzielne magistrale dla pro-
+gramu i dla danych, umożliwiające dostęp do obu z nich równocześnie (tzw. architektura
+harwardzka), 3) szybkie rozwiązania układowe do operacji matematycznych, zawarte
+bezpośrednio w mikroprocesorze oraz 4) potokowy tryb pracy (pipeline). |
+W architekturze potokowej rozdziela się układy wymagane do wykonania określonego
+zadania na kilka następujących po sobie stopni. Na przykład dodawanie dwóch liczb
+może być wykonywane w trzech stopniach połączonych potokowo. Pierwszy stopień
+pobiera tylko z pamięci liczby, które mają zostać zsumowane. Jedynym zadaniem stop-
+nia drugiego jest zsumowanie obu liczb, a trzeciego — zapisanie wyniku w pamięci.
+Jeśli każdy stopień może zakończyć swoje zadanie podczas jednego okresu zegarowego,
+to wykonanie całej procedury zajmie trzy okresy zegarowe. Podstawową właściwością
+struktury potokowej jest możliwość rozpoczęcia następnego zadania, zanim poprzednie
+zostało zakończone. W tym przykładzie możemy rozpocząć sumowanie innych dwóch
+liczb, gdy tylko pierwszy stopień jest wolny, a więc przy końcu pierwszego okresu ze-
+
+<image/tabele/k3_page76_table1.png>

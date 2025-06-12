@@ -1,0 +1,37 @@
+332 3. Obwody prądu stałego
+
+skierowanego do zacisku A. Drugi zacisk tego źródła dołącz do masy (do punktu w nieskończono-
+ści). Powtórz tę samą czynność, dołączając do zacisku B to samo źródło skierowane do tego
+zacisku, o drugim zacisku dołączonym do masy. Zastosuj następnie zasadę superpozycji.
+
+1
+Odp.: Rs = z
+
+Zadanie 3.15. Obliczyć parametry zastępczego źródła Thevenina dla dwójnika pokazanych na rys.
+Z-3.15a i b. Dane:a)E = 6V, J = 2mA, R, = 3kQ, R, = 15kQ; b)E=2V, R, = 2 kQ,
+R, = 1kQ, R, = 1 kQ, R, = 5 kQ.
+
+a) h)
+
+<image/figury/k3_page332_figure1.png>
+
+ 
+
+Rys. Z-3.15
+Odp.: a) E, = 10V, Rr = 25kQ; b) Er m 1V, Rr = 1L5kQ
+
+Zadanie 3.16. Wyznaczyć parametry zastępczego źródła Thevenina dla dwójników pokazanych na
+rys. Z-3.16 a i b.
+
+<image/figury/k3_page332_figure2.png>
+
+<image/wzory/k3_page332_formula1.png>
+
+Zadanie 3.17. Wyznaczyć parametry zastępcze źródła Nortona dla dwójników z rys. Z-3.17a i b.
+
+R—r
+
+2 ! 1 2
+Odp.: a) Jy = J, Gy = ——; b) Jy =-J, Gy = —
+
+R* 3 3R

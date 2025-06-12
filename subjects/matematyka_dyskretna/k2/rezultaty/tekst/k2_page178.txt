@@ -1,0 +1,14 @@
+16 Rozdział 1. Struktury danych
+
+4. Narysuj drzewo dla wyrażenie 2, 34 5/7+*3, 1— +. Przedstaw to wyrażenie w postaci
+infixowej i prefixowej. Oblicz wartość tego wyrażenia. Przedstaw to wyrażenie w
+postaci infixowej i prefixowej.
+
+5. Wypisz w postaci infixowej, prefixowej i postfixowej wyrażenie przedstawione na
+rysunku 7.
+
+<image/figury/k2_page17/8_figure2.png>
+
+""yJury/ R—_|PUJYU z U _IYJUIL .|"! 'Y
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

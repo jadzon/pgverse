@@ -1,0 +1,20 @@
+<image/figury/k4_page32_figure3.png>
+
+<image/figury/k4_page32_figure2.png>
+
+Konfiguracja zawiera jeden lub więcej zasobów, z których każdy zawiera jeden
+lub więcej programów (programs) wykonywanych pod kontrolą zero lub więcej
+zadań (tasks). Program może zawierać zero albo więcej bloków funkcyjnych lub
+innych elementów języka zdefiniowanych w /EC 1/31-3.
+
+Konfiguracje i zasoby mogą być uruchamiane i zatrzymywane za pomocą urzą-
+dzeń operatorskich, funkcji systemu operacyjnego lub funkcji umożliwiających
+programowanie, testowanie i kontrolowanie. Uruchomienie (wystartowanie)
+konfiguracji powinno spowodować zainicjowanie zmiennych globalnych we-
+dług zasad ustalonych dla fazy inicjacji, a następnie urucliomienie
+(wystartowanie) wszystkich należących do niej zasobów. Uruchomienie zasobu
+powinno zkolei spowodować inicjację wszystkich zmiennych, a następnie
+wszystkich zadań w zasobie.
+
+nn
+32 Rozdział : 2.Programowanie sterowników PLC

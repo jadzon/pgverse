@@ -1,0 +1,26 @@
+10 Dmadmeotłsi 11
+
+<image/wzory/k2_page11_formula1.png>
+
+W przypadku bardzo dużych lub bardzo małych wartości używa się czasami jednostek
+miar będących wielokrotnościami lub podwielokrotnościami podstawowych jednostek.
+Takie jednostki wyraża się przez dodanie do nazwy jednostki odpowiedniego przedrostka,
+a do oznaczenia tej jednostki dodaje się oznaczenie przedrostka. W następującej tabeli
+zebrano te przedrostki.
+
+<image/tabele/k2_page11_table1.png>
+
+Przykładami tak utworzonych jednostek są: centymetr (cm), milimetr (mm), hehtopa-
+skal, hektolitr, kilogram (kg), kilowat (kW). Do mierzenia prędkości (zegara) procesora
+używa się megahertzów. Jeden megahertz (MHz) to jednostka częstości równa miliono-
+wi impulsów na sekundę. Kilobajtów, megabajtów i gigabajtów używa się do mierzenia
+liczby komórek pamięci. Często przyjmuje się, że kilobajt ma 1024 bajtów, megabajt
+1024 x 1024 bajtów, a gigabajt 1024 x 1024 x 1024 bajtów.
+
+1.10 Notacja asymptotyczna
+W analizie jakiegoś algorytmu (programu) ważne jest oszacowanie jego czasu działania.
+
+Jako przykład weźmy algorytm sortowania bąbelkowego, który ustawia elementy ciągu
+wejściowego w porządku niemalejącym.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

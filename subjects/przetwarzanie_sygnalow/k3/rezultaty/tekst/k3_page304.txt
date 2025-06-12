@@ -1,0 +1,24 @@
+Pojedynek 1: Filtry analogowe przeciw cyfrowym 333
+
+   
+
+   
+ 
+
+ 
+
+     
+
+<image/eepfigury/k3_page304_figure1.png>
+użaząwe =
+|
+rz |
+wp RR
+<image/aseakegzpdfigury/k3_page304_figure2.png>
+
+- Rys. 21.1. Porównanie filtrów analogowych z cyfrowymi. Filtry cyfrowe dziatają lepiej pod względem wielu wtaściwo-
+
+ści, takich jak zafalowania w paśmie przepustowym (porównajcie rysunki a) i b), szybkość opadania i tłumienia w pa-
+
+śmie zaporowym (porównajcie ryzunki c) 16) oraz symetria odpowiedzi skokowej (poriwnajee rysiaa o" W tym
+cyfrowy ma częstotliwość odcięcia 0,1 To zapewnia rzetelne

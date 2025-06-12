@@ -1,0 +1,34 @@
+Sygnał a proces przezeń reprezentowany 27
+
+jących sygnały. EEEE
+to jednak rozróżnienie między nimi jest kluczem do wielu metod DS
+
+Wyobraźmy sobie na przykład utworzenie sygnału złożonego z 1000 punktów przez 1000-
+-krotne rzucanie monety. Jeśli moneta upadnie orłem do góry, to próbka ma wartość |;
+jeśli zaś reszką — wartość 0. Proces ten ma wartość średnią równą dokładnie 0,5; określo-
+ną przez wartości procentowych prawdopodobieństw każdego z rzutów: 50% orzeł i 50%
+reszka. Jest jednak nieprawdopodobne, żeby sygnał 1000-punktowy miał wartość średnią
+równą dokładnie 0,5. Losowy charakter procesu powoduje, że w każdym z tworzonych
+sygnałów liczby zer i jedynek będą się od siebie nieco różnić. Prawdopodobieństwa
+procesów są stałe, lecz statystyka pobieranego sygnału przy każdym powtórzeniu eks-
+perymentu się zmienia. Ta losowa nieregularność występująca w danych rzeczywistych
+jest określana takimi nazwami jak: odchylenie statystyczne, fluktuacja statystyczna
+i szum statystyczny.
+
+Powstaje tu pewien dylemat. Gdy spotykamy określenia: odchyłenie standardowe i wartość
+średnia, to skąd mamy wiedzieć, czy autor ma na myśli statystykę rzeczywistego sygna-
+łu, czy prawdopodobieństwo w procesie, który jest reprezentowany przez sygnał? Niestety,
+można to stwierdzić tylko na podstawie kontekstu. Nie dotyczy to wszystkich pojęć stoso-
+wanych w statystyce i rachunku prawdopodobieństwa. Na przykład histogram i funkcja masy
+prawdopodobieństwa (omawiane w następnym podrozdziale) są dobrze pasującymi do siebie
+koncepcjami, którym nadano oddzielne nazwy.
+
+Wróćmy teraz do wzoru 2.2 służącego do obliczania odchylenia standardowego. Jak już wspo-
+mniano, obliczając według tego wzoru średnią kwadratów odchyleń, wykonuje się dzielenie
+przez N- 1, a nie po prostu przez N. Aby to zrozumieć, wyobraźmy sobie, że chcemy ob-
+liczyć wartość średnią i odchylenie standardowe jakiegoś procesu wytwarzającego sygnały.
+Pobieramy sygnał złożony z N próbek pochodzących z tego procesu i ze wzoru 2.1 obliczamy
+wartość średnią tego sygnału. Można ją później wykorzystać jako estymatę średniej warto-
+ści tego procesu. Zdajemy sobie jednak sprawę, że pojawia się tu pewien szum statystyczny.
+
+<image/tabele/k3_page17_table1.png>

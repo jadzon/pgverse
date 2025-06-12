@@ -1,0 +1,56 @@
+6.3. Systemy przerwań 119
+
+Rozróżnienie źródła przerwania może być dokonane w układzie kodera, który na podstawie
+kodu „I z n” (w przypadku zgłoszenia sygnału tylko od jednego sterownika) tworzy słowo
+w kodzie NKB. Słowo to odpowiada numerowi urządzenia i nazywane jest wektorem
+przerwań. Wektor ten jest wykorzystywany przy tworzeniu adresu początku podprogramu
+obsługi tego urządzenia. Wyznaczenie kolejności obsługi następuje w przypadku wielu
+zgłoszeń równoczesnych i polega na ustaleniu numeru urządzenia o najwyższym priory-
+tecie spośród żądających przerwania. Zadanie to wypełnia koder priorytetowy, który na
+podstawie słowa wejściowego wybiera wejście o najwyższym priorytecie (np. najbardziej
+znaczące) i na wyjściu generuje słowo w kodzie NKB odpowiadające temu wejściu.
+W obu opisanych wyżej przypadkach systemy przerwań mogą realizować pewne dodatko-
+we funkcje, jak np.:
+
+1) możliwość blokowania systemu przerwań przez procesor,
+
+2) dezaktywowanie wybranych sterowników przez procesor,
+
+3) możliwość przerywania programu obsługi dowolnego przerwania przez przerwanie
+
+o wyższym priorytecie.
+
+MOŻLIWOŚĆ BLOKOWANIA SYSTEMU PRZERWAŃ PRZEZ PROCESOR
+
+W wielu systemach procesor ma możliwość dokonania blokowania systemu przerwań
+przez wykonanie odpowiedniego rozkazu, który dezaktywuje wejście INT procesora.
+System przerwań jest wówczas wyłączony i żadne przerwanie nie może zostać obsłużone.
+Procesor dezaktywuje system przerwań w czasie, gdy wykonania jego programu nie
+można przerwać. Może to mieć miejsce wówczas, gdy procesor pracuje w czasie rzeczy-
+wistym, wykonuje programy testujące lub inne programy systemowe.
+
+DEZAKTYWOWANIE WYBRANYCH STEROWNIKÓW PRZEZ PROCESOR
+
+W celu dezaktywacji poszczególnych urządzeń procesor wysyła do systemu przerwań
+tzw. słowo maski. Każdej pozycji tego słowa odpowiada jeden sterownik. Jeśli na pozycji
+odpowiadającej danemu sterownikowi jest 1, to mimo zgłoszenia przerwania przez dane
+urządzenie, nie będzie ono zarejestrowane przez układ przerwań.
+
+MOŻLIWOŚĆ PRZERYWANIA PROGRAMU OBSŁUGI DOWOLNEGO PRZERWANIA
+PRZEZ PRZERWANIE O WYŻSZYM PRIORYTECIE
+
+Możliwość przerwania programu obsługi danego urządzenia przez przerwanie o wyższym
+priorytecie jest realizowane w tzw. wielopoziomowym układzie przerwań (ang. mulli-
+-level interrupt system). Przerywanie programu obsługi urządzenia o niższym priorytecie
+przez program obsługi urządzenia o wyższym priorytecie jest nazywany trybem pracy
+z zagnieżdżaniem przerwań (ang. nested mode).
+
+Można wyróżnić dwa typy sprzętowych systemów przerwań: łańcuchowy układ
+przerwań (ang. daisy-chain) i układ przerwań z koderem priorytetowym. Układy te są
+pokazane na rysunku 6.1. W układzie łańcuchowym z rysunku 6.la zadaniem układu
+zgłoszenia przerwań jest tylko rejestracja zgłoszeń przerwań, czyli odebranie sygnałów
+przerwań ze sterowników i przesłanie procesorowi sygnału INT. Sterownik o najniższym
+numerze, który zgłosił przerwanie, tj. sterownik urządzenia o najwyższym priorytecie
+wysyła swój numer na magistralę danych po potwierdzeniu przyjęcia przerwania przez
+procesor sygnałem INTA. Procesor odczytując ten numer może wywołać program obsługi
+tego urządzenia.

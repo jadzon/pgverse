@@ -1,0 +1,37 @@
+Rozdział 8
+
+Modelowanie indywiduowe, sztuczne
+życie, systemy wieloagentowe
+
+W rozdziale naszkicowane zostaną podstawowe zagadnienia nowych kierunków sztucz
+nej inteligencji zwiazanych, najogólniej mówiąc, z działąniami zespołowymi wielu
+autonomocznych agentów.
+
+8.1. Koncepcje modelowania systemów
+Model układu fizycznego — układ fizyczny lub opis, podobny (izomorficzny, analo-
+giczny) do układu badanego, ale prostszy i łatwiej dostępny badaniom
+
+Na rysunku ?? przedstawiono taksonomię modeli. Poszczególne rodzaje modeli
+omówiono w dalszej części rozdziału.
+
+8.1.1. Modele fizyczne
+
+Modele fizyczne oprócz opisów w języku naturalnym były najdawniejszymi typami
+modeli. Przykłady modeli fizycznych — patrz rys. ??
+
+8.1.2. Modele abstrakcyjne
+
+Modele abstrakcyjne są opisami modelowanego systemu w pewnym języku. Nie są
+modelami materialnymi jak modele fizyczne. Opis może być nieformalny, np. opis
+w języku naturalnym lub rysunek odręczny lub może być formalny, np. formuła
+matematyczna lub program komputerowy.
+
+Modele matematyczne
+
+PRZYKŁAD 8.1
+
+Układ masa-sprężyna bez tarcia. Równanie ruchu ma następującą postać.
+<image/wzory/k2_page194_formula1.png>
+Na rys. ?? przedstawiono rozwiązanie powyższych równań ruchu. mu
+
+199

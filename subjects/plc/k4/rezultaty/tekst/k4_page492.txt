@@ -1,0 +1,18 @@
+<image/tabele/k4_page492_table4.png>
+
+Wyd. 8.178 Blok FB2 - Faza Grzanie i stabilizacja — Realizacja liniowego narastania
+wartości zadanej regulatora
+
+<image/tabele/k4_page492_table2.png>
+
+Wyd. 8.179 Blok FB2 - Faza Grzanie i stabilizacja — Odczytanie wartości zadanej
+temperatury
+
+<image/tabele/k4_page492_table1.png>
+
+Wyd. 8.180 Blok FB2 - Faza Grzanie i stabilizacja — Wartość słowa markerów FWI8
+i aktualna temperatura przekroczyły temperaturę zadaną
+
+<image/tabele/k4_page492_table3.png>
+
+zory/k4_paqe492_formula1.pnq

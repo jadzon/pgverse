@@ -1,0 +1,31 @@
+na na więcej niż czterech znakach (czyli od 10,000...999,999,99), to zajmuje ona
+dwa rejestry 40313 i 40314. Jeśli zaś jest mniejsza (z zakresu 0...9,999) lub po-
+chodzi z obszaru wejść analogowych 3x, to zapisana jest na jednym rejestrze
+40314 (lub 3x). Wynik obliczeń zostaje zapisany w rejestrach 40315 (część cał-
+kowita) i 40316 (część ułamkowa).
+
+Jeżeli przetwarzana liczba jest spoza zakresu, załączone zostanie wyjście 00299.
+Gdy przetwarzanie przebiegnie prawidłowo, to uaktywniona zostanie kolejna
+funkcja EMTH o numerze 6, czyli SQRTP obliczająca pierwiastek kwadratowy
+z liczby umieszczonej w rejestrach 40317 i przemnażająca wynik przez 63.9922
+(pierwiastek z 4095). Wartość źródłowa nie może być zatem większa niż 4095.
+W przypadku przekroczenia tego progu, na wyjściu 00300 pojawi się stan wyso-
+ki. Wynik, który po takim przetworzeniu mieści się w zakresie 0..4095, umiesz-
+czony zostaje w rejestrach 40319 i 40320 (część całkowita i ułamkowa). Gdy
+pierwiastkowanie przebiegnie prawidłowo, uaktywniona zostanie kolejna funk-
+cja - EMTH 7 - logarytmowanie. Zasada wprowadzania wartości źródłowej do
+przetwarzania jest taka sama, jak w funkcji SQRT. Wynik obliczeń zapisany
+zostaje w rejestrze 40323 jako liczba zmiennoprzecinkowa zaokrąglona do trzech
+miejsc po przecinku. Maksymalna liczba, jaką w tym rejestrze otrzymamy wyno-
+si zatem log(99999999)=7.999, a w rejestrze znajdzie się - 7999.
+
+<image/tabele/k4_page295_table1.png>
+
+Wszystkie omawiane operacje realizowane są za pomocą funkcji EMTH o ko-
+dach od 9 do 38. Liczby zmiennoprzecinkowe zapisywane są na 32 bitach, z któ-
+rych 8 bardziej znaczących to eksponenta, 23 następne - mantysa i jeden bit zna-
+ku.
+
+ 
+
+6.5 Funkcje arytmetyczne 295

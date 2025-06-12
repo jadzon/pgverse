@@ -1,0 +1,46 @@
+10 Rozdział 1. Teoria liczb
+
+Łatwo zauważyć, że jeżeli liczba m jest złożona, m = pą dla l < pg < m, tO W
+pierścieniu Z „„ mamy pq = 0 i ani p, ani q nie mają elementów odwrotnych. Przypuśćmy
+bowiem, że istnieje p”*. Mamy wtedy:
+
+<image/wzory/k2_page125_formula1.png>
+
+czyli q = 0, sprzeczność. Tak więc £,, nie jest ciałem, jeżeli m jest liczbą złożoną.
+W dalszej części tego rozdziału zobaczymy, że jeżeli m jest liczbą pierwszą, to Z „„ jest
+ciałem.
+
+1.6 Największy wspólny dzielnik
+Dla dwóch liczb całkowitych a i b, ich największy wspólny dzielnik to po prostu największa
+
+liczba całkowita n, która dzieli a i b. Największy wspólny dzielnik liczb a i b będziemy
+oznaczać przez NW D(a, b). Na przykład: NW D(4,6) = 2, NW D(4,0) = 4.
+
+1.7 Algorytm Euklidesa
+
+Największy wspólny dzielnik dwóch liczb dodatnich można obliczyć za pomocą algoryt-
+mu Euklidesa.
+
+Algorytm Euklidesa. A by obliczyć największy wspólny dzielnik dwóch dodatnich liczb
+naturalnych a, b, powtarzamy aż do skutku:
+
+e jeżeli a = b, to koniec, NW D(a,b) = a,
+
+e jeżeli a > b, to a := a —b,
+
+» jeżeli a < b, tob:= b — a.
+Powyższy algorytm odejmuje od większej liczby mniejszą tak długo, aż liczby będą rów-
+
+ne. Wtedy wynikiem działania algorytmu jest wspólna wartość tych liczb. W uproszczo-
+nej wersji języka Pascal algorytm Euklidesa można zapisać w następujący sposób:
+
+p:=a;q:=b;
+while p<>q do
+if p>q then p:=p-q
+else q:=q-p;
+NwWD (a ,b) :=p
+
+W poniższej tabeli pokazano kolejne kroki działania algorytmu Euklidesa na parze
+liczb 36 i 15:
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

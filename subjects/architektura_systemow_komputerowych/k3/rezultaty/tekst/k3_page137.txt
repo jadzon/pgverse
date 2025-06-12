@@ -1,0 +1,51 @@
+6.4. Sterowniki urządzeń zewnętrznych 127
+
+Na rysunku 6.7 pokazano przebieg naprzemiennych zer i jedynek synchronizowany
+przebiegiem zegarowym nadajnika. Załóżmy, że zegar odbiornika różni się o ok. 10%.
+Przy takim założeniu (oraz przy założeniu, że pierwszy bit jest zsynchronizowany dokład-
+nie) odczyt dziesiątego bitu może być już nieprawidłowy, gdyż dodatnie, synchronizujące
+zbocze zegara odbiornika wychodzi poza przedział czasowy dziesiątego bitu. Dla takiej
+różnicy częstotliwości zegarowych nieprawidłowo zostanie odczytany na pewno bit szósty
+i dalsze. Dla transmisji 10 bitów różnica częstotliwości nie może być zatem większa niż
+10%. W przypadku, gdy warunek taki nie może być spełniony lub transmitowany ciąg ma
+być dłuższy, to stosuje się transmisję synchroniczną.
+
+<image/wzory/k3_page137_formula1.png>
+
+Rysunek 6.8. Przebicg czasowy transmisji asynchronicznej
+
+Przebieg transmisji asynchronicznej jednego znaku pokazano na rysunku 6.8. Trans-
+misja zaczyna się od momentu zmiany poziomu przebiegu z wysokiego na niski. Zmiana
+ta wyzwala generator odbiornika tak, aby pierwszy bit był prawidłowo zsynchronizowany.
+Ponieważ początek transmisji zaczyna się zawsze od stanu (0 (załóżmy, że niski poziom
+odpowiada 0), to bit ten nie może należeć do transmitowanego znaku i jest traktowany
+jako bit startu. Dopiero następne bity są odczytywane przez odbiornik. Liczba transmito-
+wanych bitów zależy od systemu i waha się od 6 do 9 (na rys. 6.8 jest ich 9). Każdy znak
+(5 do 8 bitów) może być uzupełniony bitem parzystości (lub nieparzystości). Po ostatnim
+bicie następuje zawsze bit stopu, któremu odpowiada poziom wysoki. Po zakończeniu
+czasu trwania tego bitu wysoki poziom napięcia pozostaje aż do momentu rozpoczęcia
+następnej transmisji. Generator odbiornika oczekuje na nowy znak, tj. obserwuje zmianę
+poziomu z 1 na 0. Jeżeli w momencie zakończenia czasu trwania bitu stopu generator
+odbiornika nie jest gotowy do przyjęcia ewentualnej zmiany stanu z wysokiego na niski, to
+można zwiększyć długość bitu stopu. Są trzy typowe długości tego bitu: pierwsza równa
+pojedynczej długości bitu danych, druga równa półtora jego długości i trzecia równa
+dwóm długościom bitu danych.
+
+Celem podwyższenia dokładności synchronizacji generatora odbiornika jest on często
+projektowany na częstotliwości większe niż częstotliwość transmisji. Stosuje się dzielniki
+8, 16, 32 i 64. W takim sterowniku częstotliwość generatora jest dzielona przez odpowiedni
+dzielnik w układzie licznika. Moment próbkowania, czyli impuls strobujący, łatwo otrzy-
+mać z odpowiedniego wyjścia dekodera stanów tego licznika.
+
+TRANSMISJA SYNCHRONICZNA
+
+Transmisja synchroniczna polega na tym, że wraz z przesyłaniem danych nadajnik wysyła
+do odbiornika przebieg zegarowy celem synchronizacji pracy generatora odbiornika.
+Istnieją dwa podstawowe sposoby synchronizacji:
+
+— przebieg zegarowy jest wysyłany dodatkową linią,
+
+— przebieg zegarowy jest zakodowany w samym przebiegu danych.
+
+Wadą pierwszego rozwiązania jest konieczność użycia dodatkowego przewodu, a zaletą
+łatwość synchronizacji. Wadą drugiego rozwiązania jest komplikacja układu sterownika,

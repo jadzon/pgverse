@@ -1,0 +1,40 @@
+36 2. Statystyka, rachunek prawdopodobieństwa i szumy
+—n nii ca ĆĆĆĆĆĆ ĆĆĆ
+
+Na rys. 2.8 przedstawiono kilka przykładów rozkładów Gaussa o różnych wartościach śred-
+nich i odchyleniach standardowych. Wartość średnia wyznacza punkt środkowy krzywe-
+j. odchylenie standardowe zaś — szerokość krzywej dzwonowej.
+
+Interesującą właściwością krzywej gaussowskiej jest bardzo gwałtowne opadanie jej zboczy do
+zera, znacznie szybsze niż w przypadku innych znanych funkcji, jak opadająca funkcja wykład-
+nicza lub 1/x. Na przykład przy odchyleniach od średniej równych dwóm, czterem i sześciu
+odchyleniom standardowym, wartość krzywej Gaussa spada, odpowiednio, do ok. 1/19, 1/7563
+i 1/166 666 666. Dlatego odnosi się wrażenie, że takie sygnały o rozkładzie normalnym, jak
+przedstawiony na rys. 2.6 c), mają tylko przybliżoną wartość międzyszczytową. W sygnałach
+tego rodzaju mogą, z zasady, pojawiać się wyskoki o nieograniczonej amplitudzie. W praktyce
+ostre opadanie gaussowskiej krzywej gęstości prawdopodobieństwa (pdf) powoduje, że takie
+skrajności prawie nigdy nie występują. W rezultacie przebieg jest dość ograniczony i ma war-
+tość międzyszczytową ok. 6-80.
+
+Jak poprzednio wykazano, całkę gęstości prawdopodobieństwa stosuje się do wyznaczania
+prawdopodobieństwa, że sygnał znajduje się w pewnym zakresie wartości. Dlatego całka gę-
+stości prawdopodobieństwa jest na tyle ważna, że nadano jej specjalną nazwę — zbiorowa
+funkcja rozkładu (cdf — cumulative distribution function). Szczególnie przykrą trudnością
+z funkcją Gaussa jest niemożność jej całkowania metodami podstawowymi. Aby ominąć tę
+trudność, można całkę gaussowską obliczać przez całkowanie numeryczne. To wymaga bardzo
+dokładnego próbkowania ciągłej krzywej Gaussa, np. kilka milionów punktów próbkowanych
+między -106 i +106. Próbki sygnału dyskretnego są następnie sumowane, aby symulować
+
+<image/figury/k3_page26_figure1.ifigury/k3_page26_figure2.png>
+
+je. Wartość średnia = 20, G = 3
+
+-4a -3o -20 -1a u 1o 2a 3% 406
+
+Onua | SSeż PEN Sa | AE
+
+   
+ 
+
+Rys. 2.8. Przykłady rozkładów Gaussa: a) krzywa podstawowa — nieznormalizowana i bez wprowadzenia parametrów do-
+bieranych, b), c) pełny rozkład Gaussa dla różnych wartości średnich i odchyleń standardowych

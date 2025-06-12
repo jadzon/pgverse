@@ -1,0 +1,57 @@
+30. Liczby zespołone
+
+ 
+
+Wyrażenie z lewej strony równania jest właściwym opisem liczby zespolonej we współrzęd-
+nych prostokątnych, a po prawej — we współrzędnych biegunowych.
+Zanim przejdziemy do dalszych rozważań, zastanówmy się, jak doszliśmy do obecnego ich
+punktu. Po pierwsze, nadaliśmy formę graficzną liczbom zespolonym we współrzędnych bie-
+gunowych, a więc określiliśmy ich położenie na płaszczyźnie zespolonej. Po drugie, zdefi-
+niowaliśmy pojęcia M i 6 tak, aby były zgodne z naszymi poprzednimi wiadomościami 0 z4-
+lenociachmidzywsprzdnymibiegunowymiiprostoktnymiwzory30.8i30.9.po
+trzecie, konsekwentnie wyciągnęliśmy dalsze wnioski z poprzednich działań i przez operacje
+matematyczne doszliśmy do wyrażenia będącego prawidłową postacią liczby zespolonej we
+współrzędnych biegunowych, czyli do wyrażenia M(cos 8 + j sin 8). Chociaż całe to rozumo-
+wanie jest proste i logiczne, to wynik trudno byłoby przewidzieć intuicyjnie. Niestety, dalej
+jest jeszcze gorzej z takim przewidywaniem.
+Jednym z najważniejszych równań w matematyce liczb zespolonych jest załeżność Eulera,
+biorąca swoją nazwę od zdolnego i bardzo twórczego matematyka szwajcarskiego Leonharda
+Eulera (1707-1783):
+
+e” =cosx+ jsinx
+Wzór 30.11. Załeżność Eulera. To równanie ma podstawowe znaczenie w zastosowaniach liczb
+zespołonych w nauce i technice
+Jeśli jesteście ciekawi szczegółów, to wiedzcie, że powyższą zależność można wyprowadzić,
+rozwijając składnik wykładniczy w szereg Taylora:
+
+<image/wzory/k3_page494_formula1.png>
+
+Dwa składniki w nawiasach po prawej stronie tego wyrażenia są rozwinięciami w szereg
+Taylora funkcji cos x i sin x. Nie traćcie zbyt wiele czasu na analizowanie tego wyprowadze-
+nia; nie mamy zamiaru go stosować do czegokolwiek.
+Przekształcając równanie 30.10 z wykorzystaniem zależności Eulera, uzyskujemy najczęściej
+stosowaną postać zapisu liczb zespolonych we współrzędnych biegunowych. Jest to liczba
+zespołona w postaci wykładniczej:
+
+a+ jb=Me”"
+Wzór 30.12. Wyktadnicza postać zapisu liczb zespołonych. Liczba zespolona we współrzędnych
+prostokątnych (lewa strona równania) jest równa liczbie w zapisie wyktadniczym (prawa strona)
+Liczby zespolone zapisywane w postaci wykładniczej są trzonem rozważań matematycznych
+w DSP. Opanowanie tych problemów zacznijcie od zapamiętania równań od 30.8 do 30.12.
+Wielką zaletą zapisu wykładniczego liczb zespolonych jest łatwość mnożenia i dzielenia
+liczb w tym zanicia'
+
+<image/wzory/k3_page494_formula2.png>
+
+Wzór 30.15. mnozemie riczo zesporonycn
+
+<image/wzory/k3_page494_formula3.png>
+Wzór 30.14. Dzielenie liczb zespolonych
+
+Jak wynika z powyższych wzorów, mnożenie liczb zespolonych we współrzędnych bieguno-
+wych wykonuje się, mnożąc ich moduły i sumując kąty fazowe. Najłatwiejszym sposobem”
+wykonania dodawania lub odejmowania liczb zespolonych zapisanych we współrzędnych
+biegunowych jest przekształcenie tych liczb na współrzędne prostokątne, wykonanie żąda:
+nej operacji i powrotna konwersja do zapisu biegunowego. W procedurach komputerowych
+liczby zespolone są zazwyczaj wyrażane we współrzędnych prostokątnych, lecz przy opero-
+waniu równaniami stosuje się współrzędne biegunowe. Tak jak Re( ) i Im( ) są stosow

@@ -1,0 +1,45 @@
+e przesunięcie wszystkich bitów słowa bitowego o zadaną liczbę pozycji w
+lewo lub w prawo w obiegu zamkniętym (rotacja). Bity, które zostają "wy-
+pchnięte" ze słowa są wpisywane w puste miejsca.
+
+Do dyspozycji są następujące operatory przesunięcia:
+
+e SLW - przesuwa w lewo zawartość niższego słowa akumulatora | o zadaną
+liczbę pozycji (0-15). Wypchnięte bity są tracone, a puste miejsca są wypeł-
+niane przez O.
+
+e SLD - przesuwa w lewo zawartość całego akumulatora I (32 bity) o zadaną
+liczbę pozycji (0-32). Wypchnięte bity są tracone, a puste miejsca są wypeł-
+niane przez O.
+
+e SRW - przesuwa w prawo zawartość niższego słowa akumulatora | o zadaną
+liczbę pozycji (0-15). Wypchnięte bity są tracone, a puste miejsca są wypeł-
+niane przez O.
+
+e SSW -przesuwa w prawo zawartość niższego słowa akumulatora | wraz
+z bitem znaku o zadaną liczbę pozycji (0-15). Wypchnięte bity są tracone,
+a puste miejsca są wypełniane przez bit znaku.
+
+e SSD -przesuwa w prawo zawartość całego akumulatora I (32 bity) wraz
+z bitem znaku o zadaną liczbę pozycji (0-32). Wypchnięte bity są tracone,
+a puste miejsca są wypełniane przez bit znaku.
+
+e RLD -przesuwa w lewo zawartość całego akumulatora I (32 bity) wraz
+z bitem znaku o zadaną liczbę pozycji (0-32) w obiegu zamkniętym (rotacja).
+Bity, które zostają "wypchnięte" ze słowa są wpisywane w puste miejsca.
+
+e RRD -przesuwa w prawo zawartość całego akumulatora 1 (32 bity) wraz
+zbitem znaku o zadaną liczbę pozycji (0-32) w obiegu zamkniętym.
+Bity, które zostają "wypchnięte" ze słowa są wpisywane w puste miejsca.
+
+Argumentem każdego z omówionych operatorów jest liczba pozycji, o które ma
+zostać przesunięty ciąg bitów znajdujący się w akumulatorze 1.
+
+1 L IW10 ; wprowadzenie zawartości /W70 do akumulatora I
+
+2. SLW 4 ; zawartość akumulatora |! zostaje przesunięta o 4
+pozycje w lewo
+
+3 T FWS ; przekazanie wyniku do słowa markerów FW5S
+
+wewzory/k4_page353_formula1.pn

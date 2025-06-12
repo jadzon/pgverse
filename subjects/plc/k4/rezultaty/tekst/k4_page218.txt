@@ -1,0 +1,43 @@
+to zmienne od %A/8 do %A/13 zostaną skopiowane do rejestrów od %R207 do
+%R212, a zmienna %M/ przyjmie wartość /. Jeżeli zawartość rejestru %R/00
+będzie większa lub równa /2, to zmienna %M/ przyjmie wartość O i przesuwanie
+danych nie będzie wykonane (bo 6+/2-7 > 76).
+
+<image/tabele/k4_page218_table1.png>
+
+Wyd. 4.33 Przykład przesuwania danych w pamięci z wykorzystaniem funkcji
+ARRAY _ MOVE
+
+Przeszukiwanie tablic w celu znalezienia danych spełniających określone wa-
+runki realizują następujące funkcje:
+
+SRCH_EQ (SeaRCH EQual) - szukaj danych równych zadanej wartości;
+SRCH_NE (SeaRCH Not Equal) - szukaj danych różnych od zadanej warto-
+ŚCi;
+
+«  SRCH_GT (SeaKCH Greater Than) - szukaj danych większych niż zadana
+wartość;
+
+e SRCH_GE (SeaRCH Greater than or Equał) - szukaj danych nie mniej-
+szych niż zadana wartość;
+
+e SRCH_LT (SeaRCH Less Than) - szukaj danych mniejszych niż zadana
+wartość;
+
+« SRCH_LE (SeaRCH Less than Equal) - szukaj danych nie większych niż
+zadana wartość.
+
+Funkcje te mogą operować na danych typu /NT, DINT, BYTE lub WORD.
+
+Argumentami wejściowymi są:
+
+e AR (starting AdrRess) - adres początkowy przeszukiwanej tablicy;
+
+e NX (input iNdeX) - numer elementu tablicy od którego należy rozpocząć
+przeszukiwanie;
+
+e  [N- wartość zadana, z którą porównywane są elementy tablicy.
+
+ 
+
+218 Rozdział: 4. Język LD dla sterowników GE Fanuc 90-30

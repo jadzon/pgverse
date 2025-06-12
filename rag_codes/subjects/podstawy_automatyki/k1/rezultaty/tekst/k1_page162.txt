@@ -1,0 +1,19 @@
+oraz przyjmując oznaczenia:
+
+<image/wzory/k1_page162_formula1.png>
+
+na podstawie równań (6.7) otrzymujemy:
+
+<image/wzory/k1_page162_formula2.png>
+
+<image/tabele/k1_page162_table1.png>
+
+Rys. 6.8. Przebiegi uzyskane podczas symulacji: a) napięcie zasilające wirnik (U,); b) prąd płynący
+przez wirnik (i„); c) moment obciążenia silnika (M,,,); d) prędkość kątowa wimika (©,)
+
+Schemat blokowy układu pokazano na rysunku 6.9. Blok „Model silnika w postaci
+
+równań stanu i wyjścia”, w którym zapisano parametry modelu układu, przedstawiono
+na rysunku 6.10.
+
+164

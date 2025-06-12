@@ -1,0 +1,22 @@
+W najbliższej przyszłości coraz częściej będzie się projektować systemy stero-
+wania jako systemy o wejściach i wyjściach rozproszonych - przykładem takiego
+systemu jest system Field Control. Systemy takie pozwalają na projektowanie
+rozproszonych elementów systemu sterowania różnych producentów połączo-
+nych w sieci przemysłowej typu Fieldbus w różnych standardach komu-
+nikacyjnych, w tym m.in.: Genius , Profibus DP, Modbus RTU, Interbus S.
+
+<image/figury/k4_page17/3_figure1.png>
+
+Istnieje przy tym możliwość bezpośredniego podłączania sygnałów obiektowych
+do listew montażowych zainstalowanych w modułach systemu Field Control.
+W systemie możliwy jest wybór listew montażowych spośród następujących ty-
+pów:
+
+e  zzaciskami śrubowymi (barrier style),
+
+e z zaciskami listwowymi (box styłe),
+
+e z gniazdami do podłączania złącz 20 stykowych (connector style).
+
+| RZE ZR ZRZEC TJ EE ZOE TO PĘDY PRZ  TLJ TEE 7" I "ZOP W PRO TWOJAROZA ORAOAACI ACZ 2" V TI JTEEZEOEEĘTZESZENI
+3.9 Moduł komunikacyjny 173

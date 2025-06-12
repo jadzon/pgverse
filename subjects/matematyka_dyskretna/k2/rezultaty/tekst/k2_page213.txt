@@ -1,0 +1,52 @@
+3 Rozdział 1. Grafy skierowane
+
+Definicja 1.2 Graf skierowany jest (silnie) spójny, jeżeli dla każdych dwóch jego wierz-
+chołków u i v istnieje droga z u do v.
+
+Przykład 1.3 Graf z rysunku 1.1 nie jest spójny, bo nie ma w nim drogi z c do b.
+
+1.2 Najkrótsze drogi w grafi e
+
+Przypuśćmy teraz, że każdej krawędzi e przypisano długość (wagę) w(e). Dopuszczamy
+przy tym ujemne długości. Dla każdej drogi w grafie
+
+<image/wzory/k2_page213_formula1.png>
+
+zdefiniujmy jej długość jako sumę długości krawędzi, czyli
+
+<image/wzory/k2_page213_formula2.png>
+
+Jeżeli p = 0, droga składa się z pojedynczego punktu, to przyjmujemy, że jej długość wy-
+nosi 0. W tym rozdziale interesują nas algorytmy wyznaczania najkrótszej drogi łączącej
+dwa wierzchołki s i ż w grafie.
+
+Przykład 1.4 Jako przykład zastosowania algorytmu wyszukiwania najkrótszej drogi w
+grafie rozpatrzmy sieć połączeń, czyli graf, w którym krawędzie reprezentują łącza pomiędzy
+węzłami. Z każdą krawędzią e związane jest prawdopodobieństwo p(e), że krawędź za-
+działa bez awarii. Zakładamy, że awarie poszczególnych krawędzi są od siebie niezależne.
+Przyjmijmy teraz długość krawędzi e jako w(e) = — log ple). Najkrótsza droga jest wtedy
+drogą z najmniejszym prawdopodobieństwem awarii.
+
+Łatwo zauważyć, że jeżeli w grafie są cykle o ujemnej długości, to dla pewnych par
+wierzchołków nie istnieje najkrótsza droga między nimi. Powtarzając przejście wzdłuż
+cyklu można wtedy otrzymywać drogi o długości dowolnie małej. Dlatego w dalszej
+części będziemy zakładać, że w grafie wszystkie cykle są dodatniej długości.
+
+Problem znajdowania najkrótszej drogi w grafie nieskierowanym, jeżeli wszystkie
+krawędzie mają dodatnie długości, można sprowadzić do przypadku grafu skierowane-
+go. Wystarczy każdą krawędź fu, v) zastąpić przez dwie krawędzie (u, v) i (v, u). Jeżeli
+w grafie są krawędzie o ujemnych długościach, to sposób ten prowadzi do powstania cykli
+ujemnej długości.
+
+Opisane tu algorytmy składają się z dwóch etapów. W pierwszym etapie wyznaczamy
+długości najkrótszych dróg z s do wszystkich wierzchołków w grafie. A dopiero w drugim
+etapie wyznaczymy najkrótszą drogę z s do t.
+
+Najpierw opiszemy drugi etap, czyli jak znaleźć najkrótszą drogę z s do t, jeżeli znane
+są odległości z s do wszystkich wierzchołków grafu. Algorytm ten będziemy opisywać
+przy pomocy przykładu grafu z rysunku 1.2.
+
+Dla prostoty algorytmu przyjmujemy w(u, v) = wo, jeżeli (u,v) £ E. Załóżmy, że
+macierz D zawiera odległości od s do wszystkich pozostałych wierzchołków grafu.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

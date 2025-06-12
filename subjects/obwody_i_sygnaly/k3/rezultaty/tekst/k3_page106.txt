@@ -1,0 +1,49 @@
+106 1. Pojęcia podstawowe — eleme:
+
+ccc
+
+lub:
+
+<image/wzory/k3_page106_formula2.png>
+
+gdzie f7 jest funkcją odwrotną względem funkcji q
+Połączenie szeregowe pojemności jest pojemno.
+(1.5-51) lub (1.5-53).
+
+W przypadku szczególnym, gdy wszystkie łącze
+otrzymujemy, zgodnie z równaniem (1.5-50):
+
+<image/wzory/k3_page106_formula3.png>
+
+a więc:
+
+<image/wzory/k3_page106_formula4.png>
+
+Wzór (1.5-55) określa odwrotność pojemności!
+stałego w wyniku połączenia szeregowego n E
+p m I, Żory
+
+H. Charakterystyki łączne. Na rys. 1.5-7 i |
+strukcję charakterystyki łącznej połączenia szeregowi:
+łego dwóch oporów. Sposób tworzenia charakteryst
+niach indukcyjności i pojemności jest w pełni analogi
+Podane wyżej reguły łączenia oporów, indukc;
+tworzenia odpowiednich charakterystyk łącznych mozna vez trudu uogolnic na
+przypadek elementów rezystancyjnych, indukcyjnych i pojemnościowych
+(por. p. 1.3.4-G).
+
+Przykład 1.5-3. Na rys. 1.5-15 a, b i c wykreślone zostały charakterystyki łączne połączeń
+
+przedstawionych odpowiednio na rys. 1.5-14a, bic. Charakterystyka diody D występującej w tych
+Up + lu„|
+
+połączeniach ma postać i, = a! gdzie Ry = 1 kQ. Wartość oporu liniowego wynosi
+
+D
+R = 1 kQ. Jak widać, element powstały w wyniku połączenia elementów, wśród których występuje
+element rezystancyjny, może być elementem rezystancyjnym (przypadek a), oporem nieliniowym
+(przypadek b), a w szczególności oporem liniowym (przypadek c).
+
+ 
+
+») Odwrotność pojemności bywa nazywana elastancją.

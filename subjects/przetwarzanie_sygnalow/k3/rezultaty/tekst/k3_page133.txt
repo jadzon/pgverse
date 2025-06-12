@@ -1,0 +1,31 @@
+Zmienna niezależna w dziedzinie częstotliwości
+
+ 
+
+<image/wzory/k3_page133_formula1.png>
+
+<image/figury/k3_page133_figure1.png>
+
+poziomej przez N, a więc f = K/N. W tej książce w większości wykresów zastosowano tę
+drugą metodę, pamiętając, że sygnały dyskretne zawierają tylko częstotliwości z zakresu od
+0 do 0,5 częstotliwości próbkowania.
+
+Trzeci sposób jest podobny do drugiego, z tą wszakże różnicą, że wyskałowanie osi pozio-
+mej jest przemnożone przez 2a. Indeksem stosowanym przy tym skalowaniu jest ©. W tym
+przypadku części rzeczywistą i urojoną zapisuje się jako Re X[o] i Im X[©], gdzie o przyj-
+muje N/2 + | wartości rozmieszczonych w równych odstępach między 0 i z. Wielkość o» jest
+nazywana pulsacją, a jej jednostką jest radian. W okręgu jest 2x radianów. Tę metodę lu-
+bią matematycy, gdyż daje ona skrócenie wzorów. Rozważmy na przykład, jak jest zapi-
+sywana fala kosinusoidalna przy trzech wymienionych metodach skalowania. Przy użyciu
+k: c|n] = cos(2xkn/N), przy użyciu f. cjn] = cos(24/n), a stosując ©: c[n] = cos(on).
+
+W czwartej metodzie skaluje się oś poziomą według częstotliwości analogowej używanej
+w tym szczególnym zastosowaniu. Na przykład, jeśli badany system ma częstotliwość prób-
+kowania 10 kHz (tzn. 10 000 próbek/s), to wykresy w dziedzinie częstotliwości będą wy-
+skalowane od 0 do 5 kHz. Metoda ma tę zaletę, że częstotliwość jest prezentowana w kate-
+goriach świata rzeczywistego. Wadą zaś jest powiązanie skalowania z pewną określoną czę-
+stotliwością próbkowania, co uniemożliwia stosowanie tej metody do opracowań ogólnych
+algorytmów DSP, takich jak np. projektowanie filtrów cyfrowych.
+
+Wszystkie cztery wymienione sposoby zapisu są stosowane do skalowania w DSP i powin-
+nosimieatwokonwersjipomidzynimi.toobejmujezarwnowykresyjakiwzory

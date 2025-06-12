@@ -1,0 +1,24 @@
+<image/wzory/k4_page143_formula1.png>
+
+ 
+
+Dla omówienia modułu wejść prądowych wybrany został moduł ALG223 (Ana-
+log Input - 16 Channel). Jest to moduł, który udostępnia 16 kanałów
+wejściowych dla sygnałów prądowych w następujących zakresach:
+
+a od4do20mA,
+
+a od0do 20 mA,
+
+« od 4do 20 mA z rozszerzeniem (Enhanced).
+
+<image/figury/k4_page143_figure1.png>
+
+14 RZ MZ MÓJ 13 ._|f" "YJ . ||| mw” 214 s:'e|RzE "7
+
+Tab. 3.11 Zestawienie parametrów technicznych
+przykładowego modułu ALG223
+
+ 
+
+3.5 Moduły wejść analogowych Al 143

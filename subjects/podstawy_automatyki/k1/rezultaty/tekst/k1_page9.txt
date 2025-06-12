@@ -1,0 +1,34 @@
+Pierwsze twierdzenie o przesunięciu
+
+<image/wzory/k1_page9_formula1.png>
+
+dla a > O.
+
+Należy zwrócić uwagę na przyjętą wcześniej regułę, że dla £ ujemnych przyjmuje-
+my f/(/) równe zeru. W tym przypadku jest to bardzo ważna reguła. Dla £ < a mamy £- a
+ujemne, stąd f(t — a) = 0. Na rysunku 1.3 przedstawiono przykłady wymienionych funkcji.
+
+<image/figury/k1_page9_figure1.png>
+
+Twierdzenie to ma duże znaczenie przy rozpatrywaniu procesu z opóźnieniem (re-
+gulacja z opóźnieniem).
+
+Drugie twierdzenie o przesunięciu
+
+<image/wzory/k1_page9_formula2.png>
+dla a > 0.
+
+Jest to reguła odwrotna do twierdzenia pierwszego, obraz funkcji /(£) jest przesu-
+nięty w lewo. Twierdzenie to ma duże znaczenie przy rozwiązywaniu równań różnico-
+wych, w których obok /(t) występują także /(t+a), f(t+2a), ...
+
+Twierdzenie o tłumieniu
+
+<image/wzory/k1_page9_formula3.png>
+
+gdzie ©« — dowolna liczba zespolona.
+
+Tłumienie funkcji /(/) zachodzi oczywiście tylko wtedy, gdy a jest dodatnią liczbą
+rzeczywistą.
+
+12

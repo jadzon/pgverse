@@ -1,0 +1,25 @@
+Stopnie kaskadowe i równolegie A 585
+
+<image/figufigury/k8_page544_figure3.png>
+
+W tej metodzie oczywistą trudnością jest duża liczba operacji algebraicznych koniecznych
+do wymnożenia wielomianów i pogrupowania wyrazów. Cały algorytm można, na szczę-
+ście, wyrazić prostym programem komputerowym podanym w tablicy 33.1. Chociaż połą-
+czenia kaskadowe i równolegle wymagają innych operacji matematycznych, to zastosowane
+programy są prawie identyczne. Oba algorytmy różnią się tylko jednym wierszem progra-
+mu, dlatego można je łatwo połączyć w jeden program.
+
+Program działa, zamieniając współczynniki rekursywne każdego ze stopni w funkcje
+przenoszenia w postaci zgodnej z wzorem 33.3 (wiersze 220-270). Po połączeniu ze sobą
+— w odpowiedni sposób — tych funkcji przenoszenia (wiersze 290-380), informacja wraca
+w formie współczynników rekursywnych (wiersze od 400 do 430).
+
+Istotą tego programu jest sposób wyrażania wielomianów funkcji przenoszenia i ich łączenia
+ze sobą. Na przykład licznik wokch przenoszenia pierwszego z łączonych ze sobą stopni
+jest: ag + a, 27! + a 7? + aą z %... Ten wielomian jest w programie wyrażony przez zapi-
+sanie współczynników ag a; ay Źó:: w matrycy: A1[0], A1[1], A1[2], A1[3] ... Podobnie
+licznik funkcji przenoszenia drugiego z łączonych stopni jest wyrażony przez wartości zapi-
+
+<image/wzory/k3_page544_formula1.png>
+
+<image/figury/k3_page544_figure1.png>

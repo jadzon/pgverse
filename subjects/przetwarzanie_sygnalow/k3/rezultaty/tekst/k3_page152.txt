@@ -1,0 +1,9 @@
+<image/figury/k3_page152_figure1.png>
+
+) stawiono przykład uśredniania 100 spośród widm częstotliwościowych zgodnych z rys. 9.1 d).
+OO zaa umożliwiającego dostrzeżenie
+-_ interesujących właściwości 3 aata cie: Wie edh © ALI randipości
+jest uśredniany tylko moduł. Faza jest zwykle pomijana, gdyż nie zawiera użytecznych infor-
+macji. Szum losowy jest redukowany proporcjonalnie do pierwiastka kwadratowego z liczby
+segmentów. Chociaż 100 segmentów jest liczbą typową, to w niektórych zastosowaniach moż-
+na uśredniać miliony segmentów, aby uwypuklić bardzo słabe cechy widma.

@@ -1,0 +1,41 @@
+211
+
+pleksy cząsteczek, lub kompleksy cząsteczek rozpadać. Na wyższym poziomie od-
+działywań, co otwiera zupełnie nowe możliwości, kompleksy cząsteczek mogą selek-
+tywnie oddziaływać na inne cząsteczki, łącząc je lub rozrywając wiązania. Rodzaj
+oddziaływania zapisany jest w strukturach kompleksów w specjalnie zdefiniowanym
+języku.
+
+Opisywane środowisko wykorzystuje niektóre założenia, wcześniejszego środowi-
+ska rozwijanego od końca lat osiemdziesiątych [?, ?, ?].
+
+8.4.1. Podstawowe definicje
+
+Środowisko zdefiniowane jest w przestrzeni dwuwymiarowej o periodycznych wa-
+runkach brzegowych. Podstawowymi obiektami środowiska są cząsteczki i fotony.
+Cząsteczki są obiektami trwałymi (nie są tworzone ani niszczone w trakcie sy-
+mulacji) reprezentowanymi przez sześciokąty o ustalonych wymiarach. Cząsteczki
+występują w 256 różnych typach. Każdy typ charakteryzowany jest następującymi
+właściwościami: masa, energia wiązań (energia potrzebna do rozerwania wiązania)
+oraz energia aktywacji (minimalna energia potrzebna do zainicjalizowania reakcji).
+Poza wymienionymi cechami stałymi każda cząsteczka jest charakteryzowana przez
+aktualne wartości prędkości, położenia i energii wewnętrznej.
+
+Podczas symulacji pomiędzy cząsteczkami mogą powstawać wiązania — dwie lub
+więcej powiązanych cząsteczek tworzy kompleks cząsteczek. Cząsteczki mogą łączyć
+się na kierunkach: góra (U) i dół (D), tworząc stos. Cząsteczki znajdujące się na spo-
+dzie stosu mogą łączyć się na kierunkach poziomych: północ (N), północny zachód
+(NW). południowy zachód (SW), południe (S$), południowy wschód (SE) i północny
+wschód (NE). Przykładowe wyglądy kompleksów przedstawia rysunek ??.
+
+<image/figury/k2_page206_figure1.png>
+
+Wszystkie procesy w systemie są synchronizowane dyskretnym zegarem. Na po-
+czątku każdego cyklu czasowego, położenie każdej cząsteczki jest zmieniane odpo-
+wiednio do jej prędkości. Jeżeli w trakcie ruchu dwie cząsteczki, nie należące do tego
+samego kompleksu, znajdą się w odległości mniejszej niż pewna ustalona wartość, to
+przyjmowane jest, że doszło do zderzenia. Zderzenia cząsteczek mogą być zarówno
+sprężyste, jak i niesprężyste.
+
+Zderzenie sprężyste modelowane jest zgodnie z zasadami mechaniki klasycznej,
+przy czym cząsteczki traktowane są tu jako koła o ustalonym promieniu. Podczas

@@ -1,0 +1,34 @@
+Pozycjonowanie biegunów w oparciu o sprzężenie od stanu
+
+Niech dany będzie obiekt opisany równaniami:
+
+<image/wzory/k/_page72_formula1.png>
+
+utwórzmy sygnał wejściowy obiektu zgodnie z przepisem:
+
+u(t) =-Kx(ż) +r(t)
+
+gdzie r(t) to sygnał sterujący natomiast K jest macierzą wzmocnień.
+W rezultacie uzyskamy równanie opisujące działanie układu ze
+sprzężeniem:
+
+SMOUBJS 8|8poJN
+
+<image/wzory/k/_page72_formula2.png>
+oraz jego wielomian charakterystyczny:
+
+<image/wzory/k/_page72_formula3.png>
+
+Uwaga: dla obiektu n-tego rzędu o m wejściach macierz K będzie miała m
+wierszy i n kolumn. Dla układu o jednym wejściu macierz K będzie wektorem
+
+wierszowym lementach.
+
+ 
+
+ 
+
+Al
+
+POLITECHNIKA
+GDANSKA

@@ -1,0 +1,27 @@
+Z drugiego warunku Hurwitza wyznacznik zapisujemy jako
+
+<image/wzory/k1_page83_formula1.png>
+oraz sprawdzamy podwyznaczniki:
+/zory/k1_page83_formula2.png
+<image/wzory/k1_page83_formula3.png>
+
+Oba warunki są spełnione, zatem układ otwarty jest stabilny.
+
+Aby po zamknięciu pętli sprzężenia zwrotnego układ też był stabilny, to zgodnie
+z kryterium Nyquista charakterystyka amplitudowo-fazowa układu owatrtego nie może
+obejmować punktu (1, 0).
+
+Transmitancja widmowa układu otwartego ma postać
+
+<image/wzory/k1_page83_formula4.png>
+
+Mnożąc licznik i mianownik tej transmitancji przez liczbę sprzężoną do mianow-
+nika, otrzymujemy
+
+<image/wzory/k1_page83_formula5.png>
+
+Po przekształceniach wydzielamy część rzeczywistą i urojoną H(jw)G( jw)
+
+<image/wzory/k1_page83_formula6.png>
+
+85

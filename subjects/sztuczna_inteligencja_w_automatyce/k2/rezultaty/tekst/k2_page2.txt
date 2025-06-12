@@ -1,0 +1,43 @@
+Inteligencja zespołowa Metody indywiduowe modelowania: automaty komórkowe
+i dynamika molekularna. Sztuczne życie. Inteligencja zespołowa.
+
+Języki programowania Języki stosowane w sztucznej inteligencji i do tworzenia
+systemów ekspertowych: Prolog, Lisp, Clips
+
+1.2. Definicje, metody, zastosowania, historia
+
+1.2.1. Definicje sztucznej inteligencji
+
+Trudno jest precyzyjnie zdefiniować dziedzinę sztucznej inteligencji. Częściowo wy-
+nika to z trudności zdrfiniowania inteligencji ludzkiej, czy zwierzęcej. Poniżej przed-
+stawiono kilka definicji podanych przez znanych badaczy.
+
+Interesujące wysiłki uczynienia komputery myślącymi .. . „maszynami posiadającymi
+umysł* w pełnym i dosłownym sensie (Haugeland).
+
+Sztuczna inteligencja jest częścią informatyki dotyczącą projektowania inteligent-
+nych systemów komputerowych, to jest systemów, które przejawiają własności, które
+wiążemy z inteligencją w zachowaniu ludzkim — zrozumienie języka, uczenie się, roz-
+wiązywanie zadań, itp. (Barr, Feigenbaum).
+
+(Automatyzacja) aktywności, które wiążemy z myśleniem ludzkim, takich jak po-
+dejmowanie decyzji, rozwiązywanie zadań, uczenie się (Bellman).
+
+Sztuka budowy maszyn, które wykonują zadania wymagające inteligencji gdyby wy-
+konywane były przez ludzi (Kurzweil i podobnie Minsky).
+
+Studia nad budową komputerów, które wykonywałyby rzeczy, które obecnie ludzie
+wykonują lepiej (Rich, Knight).
+
+Studia nad możliwościami umysłu poprzez stosowanie modeli komputerowych (Char-
+
+niak, McDermott).
+
+Studia nad metodami obliczeń, które mogłyby postrzegać, wnioskować i działać
+(Winston).
+
+Dziedzina badań dążąca do wyjaśnienia i naśladowania inteligentnego zachowania
+przy pomocy procesów obliczeniowych (Schalkoff ).
+
+Dziedzina informatyki dotycząca automatyzacji inteligentnego zachowania się (Lu-
+ger, Stubblefield).

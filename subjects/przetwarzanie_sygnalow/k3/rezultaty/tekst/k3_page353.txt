@@ -1,0 +1,10 @@
+<image/figury/k3_page353_figure1.png>
+
+NJ TA WAYS OWULYNENU PUNNYJE FUŁNNIYLIE PULA (6 UT j. 1 PEGUDAWIUNIE NA LYO. QJ, WJ, LJ IUNNUJG. typu „umqyra
+
+czapka”, gaussowska oraz prostopadłościenna są stosowane jako liltry wygładzające (dolnoprzepustowe). Filtry za-
+ostrzające krawędzie (górnoprzepustowe) są tworzone przez odejmowanie dolnoprzepustowej
+
+filtru od impulsu (rys. d). Funkcja sinc (rys. e) jest rzadko stosowana w przetwarzaniu obrazu, ponieważ informacja
+
+obrazowa jest zakodowana w dziedzinie przestrzeni, a nie częstotliwości

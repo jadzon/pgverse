@@ -1,0 +1,57 @@
+Bliższe spojrzenie na splot obrazowy
+
+Szczegóły splotu FFT przedstawiono na rys. 24.13. W tym przykładzie wykonujemy spłot
+obrazu a) z obrazem b), aby uzyskać obraz c). Fakt, że te obrazy zostały wybrane i wstępnie
+przygotowane do przeprowadzenia korelacji, nie jest tu istotny; jest to ogólna sieć działań
+splotu. Pierwszym krokiem jest dopełnienie obu splatanych sygnałów odpowiednią liczbą
+zer, żeby ich rozmiary były potęgami dwóch i żeby były dostatecznie duże do zmieszcze-
+nia obrazu końcowego. Gdy na przykład spłotowi są poddawane obrazy 100 x 100 pikseli
+i 29 x 29 pikseli, wynikowy obraz będzie miał rozmiar 128 x 128 pikseli. Trzeba zatem do-
+dać wystarczająco dużo zer do obrazów na rysunkach 24.13 a), b), aby osiągnęły one rozmia-
+ry 128 x 128 pikseli. Jeśli tego nie uczynimy, to nastąpi splot kołowy i obraz końcowy będzie
+zniekształcony. Jeśli macie kłopoty ze zrozumieniem tych problemów, wróćcie do rozdziału
+18, gdzie są one szczegółowo przeanalizowane dla sygnału jednowymiarowego.
+
+Do przekształcenia obrazów z rysunków 24.13 a), b) w dziedzinę częstotliwości stosujemy
+algorytm FFT. W rezultacie uzyskujemy cztery matryce 128 x 128 — części rzeczywiste i uro-
+jone dwóch obrazów poddawanych spłotowi. Wymnażanie części rzeczywistych i urojonych
+obu tych obrazów daje część rzeczywistą i urojoną obrazu pokazanego na rys. 24.13 c). Jeśli
+musicie sobie przypomnieć, jak to się robi, spójrzcie na wzór 9.1. Wykonanie odwrotnego
+przekształcenia FFT zakańcza ten algorytm, dając końcowy, spłeciony obraz.
+
+Wartość każdego piksela w obrazie korelacyjnym jest miarą zgodności — w tym punkcie — ob-
+razu docelowego z szukanym. W omawianym przykładzie obraz korelacyjny zawiera szum
+oraz pojedynczy jasny pik wskazujący dobre dopasowanie do sygnału docelowego. Przez
+proste zlokalizowanie najjaśniejszego piksela w tym obrazie określamy wykryte współrzędne
+twarzy. Gdybyśmy nie zastosowali modyfikacji polegającej na wykrywaniu krawędzi, to też
+uzyskalibyśmy pik, lecz znacznie mniej wyraźny.
+
+Korelacja jest wprawdzie silnym narzędziem w przetwarzaniu obrazów, lecz ma jedno istotne
+ograniczenie: obraz docelowy musi mieć dokładnie takie same rozmiary i ustawienie kąto-
+we, jak odpowiedni obszar w obrazie poszukiwanym. Szum i inne zmiany wartości każde-
+go piksela są stosunkowo mało ważne, a krytyczne znaczenie ma dokładne dopasowanie
+przestrzenne. To powoduje, że metoda jest prawie bezużyteczna na przykład do wykrywania
+nieprzyjacielskich czołgów na zdjęciach z rozpoznania wojskowego, guzów nowotworowych
+na obrazach medycznych i broni ręcznej przy skanowaniu bagażu na lotniskach. Jednym ze
+sposobów jest wiełokrotne korelowanie obrazu z różnymi kształtami i ustawieniami kątowy-
+mi obrazu docelowego. W zasadzie ta metoda działa, lecz czas wykonania spowoduje, że
+będziecie musieli zrezygnować z jakiegokolwiek pośpiechu.
+
+Bliższe spojrzenie na splot obrazowy
+
+Ten właśnie omówiony przykład wykorzystajmy jeszcze do bardziej szczegółowego przyj-
+rzenia się splotowi obrazowemu. Podobnie, jak w przypadku sygnałów jednowymiarowych,
+splot obrazowy może być widziany albo od strony wejścia, albo wyjścia. Jak pamiętacie
+z rozdziału 6, punkt widzenia od strony wejścia jest najlepszym opisem działania splotu.
+Natomiast przy analizach matematycznych i opracowaniach algorytmów stosuje się zwykle
+opis od strony wyjścia. Powinniście znać oba sposoby spojrzenia na tę operację.
+
+Na rys. 24.14 zilustrowano opis splotu obrazowego od strony wejścia. Każdy piksel w obra-
+zie wejściowym powoduje dodawanie do obrazu wyjściowego przeskalowanej i przesuniętej
+funkcji PSF. Następnie obraz wyjściowy jest obliczany jako suma wszystkich PSF mających
+swój udział w tym obrazie. Na rysunku pokazano, jaki udział w obrazie wyjściowym ma
+punkt o lokalizacji [r, c] w obrazie wejściowym. Funkcja PSF jest przesunięta w taki sposób,
+że piksel [0, 0] w PSF jest ustawiony zgodnie z pikselem [r, c] w obrazie wyjściowym. Jeśli
+PSF jest zdefiniowana tylko dla indeksów dodatnich, jak w tym przykładzie, to przesunięta
+PSF będzie się znajdowała tylko w dół i na prawo od [r, c]. Nie dziwcie się, że twarz na
+tym rysunku pojawia się odwrócona. Właśnie ta odwrócona twarz jest funkcją PSF, którą

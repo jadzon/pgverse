@@ -1,0 +1,30 @@
+173
+
+3. Przesunięcie wektora wag według reguły Kohonena
+
+wzorv/k2 paae168 formula1.o0na
+<image/wzory/k2_page168_formula2.png>
+
+4. Przejście do p. 1
+
+Na rys. ?? przedstawiono kolejne kroki przykładowego poszukiwania centrów kla-
+strów przez algorytm „zwycięzca bierze wszystko”.
+
+<image/figury/k2_page168_figure2.png>
+figury/k2_p.
+
+Czasami może się zdarzyć, że pewien punkt w nigdy nie wygra. Aby temu za-
+pobiec zazwyczaj stosuje się modyfikacje algorytmu polegającą na tym, że za każdą
+przegraną punktowi dopisuję się pewną ujemną liczbę reprezentującą odległość.
+Sumy tych liczb uwzględnia się przy wyznaczaniu odległości w kolejnych iteracjach.
+Punktowi zwycięskiemu te liczby się kasuje.
+
+Inne metody
+
+Dla poszukiwania centrów klastrów można także stosować metodę symulowanego
+wyżarzania lub metody ewolucyjne.
+
+6.9.2. Samoorganizujące się mapy cech
+
+Samoorganizująca się mapa jest zbiorem punktów reprezentujących środki klastrów.
+Punkty połączone są krawędziami tworząc pewną strukturę geometryczną.

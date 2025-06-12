@@ -1,0 +1,52 @@
+37
+
+C: własność spełnienia kryterium celu (wygrana),
+K: własność nie spełnienia kryterium celu (przegrana));
+begin
+ROZSZERZENIE_LISTY(O,p);
+ROZSZERZENIE_ GRAFU(G,p);
+E[p]:=P;
+while E[p]=P do
+begin
+a:=WYBÓR_Z_LISTY(O,G);
+if TEST_KRAWĘDZI(a) then
+USUNIĘCIE_Z_LISTY(a,O)
+
+else
+
+begin
+b:=GENERACJA_WĘZŁA(a);
+E(b]:=P;
+
+ROZSZERZENIE _LISTY(O,b);
+ROZSZERZENIE_ GRAFU(G,b);
+OZNACZENIE(a,b);
+if TEST(b,C) then E[b]:=R;
+if TEST(b,K) then E[b]:=N;
+if E[bj<>P then
+begin
+ZMIANA _ETYKIET(G,b);
+USUWANIE_WĘZŁÓW _GRAFU(G);
+end;
+end;
+end;
+if E[pj=R then SUKCES;
+if E[pj=N then NIEPOWODZENIE
+end;
+
+3.10. Metody minimax
+
+Dla złożonych gier dwuosobowych liczba węzłów grafu gry jest bardzo duża. Na
+przykład ocenia się, że w szachach średni współczynnik rozgałęzienia wynosi 35, co
+przy grach trwających 50 posunięć wykonanych przez każdego gracza daje około
+351% x 10/79 węzłów. Liczba możliwych ustawień 32 figur na szachownicy o 64 po-
+lach (liczba wariacji bez powtórzeń 32 elementów z 64) wynosi 4,82 - 10%, a po
+uwzględnieniu ilości ustawień mniejszych liczb figur wynosi 4,97 - 10%. Skądinąd
+liczba dopuszczalnych stanów gry wynosi około 10%. Z powodu tak dużej liczby sta-
+nów niemożliwe jest stwierdzenie istnienia strategii wygrywającej i jej wyznaczenie.
+
+Zamiast poszukiwania strategii wygrywającej trzeba się ograniczyć do znalezienia
+„dobrego* ruchu w danej sytuacji. Ruch ten jest wykonywany, czeka się na odpowiedź
+przeciwnika i ponownie wyznaczany jest dobry ruch. Proces szukania może odbywać
+się jedną z omawianych wcześniej metod, natomiast zmienić należy kryterium za-
+kończenia szukania (nie jest to teraz znalezienie strategii wygrywającej lub wykrycie

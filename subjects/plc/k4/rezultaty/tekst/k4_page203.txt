@@ -1,0 +1,11 @@
+"4 AGR
+
+<image/_figury/k4_page203_figure2.png>
+
+Rys. 4.5 Sterowanie napełnianiem zbiornika z histerezą czasową
+
+<image/figury/k4_page203_figure1.png>
+
+Wyd. 4.19 Przykład realizacji elementu dwupołożeniowego z histerezą czasową
+
+4.7 Funkcje relacji 203

@@ -1,0 +1,56 @@
+2.1. Wielowrotniki i sieci 183
+
+ji, yi, aś wAĄQQoQDODQooQ)DOQJ W REWA
+
+Uwaga. Warunek 3 wynika z faktu, iż opis zaciskowy wielowrotnika nie zawiera związków
+między wszystkimi napięciami międzyzaciskowymi. Na przykład równania czwórnika (rys. 2.1-4a)
+nie zawierają napięć między górnymi lub dolnymi zaciskami tworzącymi pary (wrota). Problem ten
+nie występuje w przypadku dwójnika, dla którego warunek 3 jest zbędny.
+
+Jak już wspominaliśmy, nieuwzględnienie warunku 3 nie musi prowadzić do błędnych rezultatów.
+Z tego względu warunek ten jest często pomijany w wielu rozważaniach praktycznych. Pominęliśmy
+go np. w przykładzie 1.8-3.
+
+2.1.4. Układy bezźródłowe
+
+W rozważaniach tego punktu przez słowo układ będziemy, podobnie jak
+poprzednio, rozumieć wielowrotnik lub wielobiegunnik.
+
+A. Definicja. Układ nazywamy bezźródłowym (B), jeśli stan zaciskowy
+spoczynku, tj. stan:
+
+<image/wzory/k4_page181_formula1.png>
+
+jest stanem dopuszczalnym tego układu, a więc jeśli jego równania zaciskowe są
+spełnione przy założeniu, że wszystkie jego prądy zaciskowe i;, i,,..., i, oraz
+wszystkie napięcia zaciskowe u;, u»,..., u, są równe zeru. W przeciwnym
+przypadku układ nazywamy źródłowym.
+
+Jeśli nie precyzujemy wyraźnie dziedziny prądów i napięć zaciskowych
+układu, to zakładamy milcząco, iż stan spoczynku (2.1-26) jest określony
+w przedziale czasu (— 0, + 0) — por. p. 1.1-C.
+
+Z definicji oporu, indukcyjności i pojemności (p. 1.3.1, 1.3.2 i 1.3.3) wynika
+wprost, że są to dwójniki bezźródłowe. Dwójnikiem bezźródłowym jest także
+opór ujemny (p. 1.3.6) oraz dwójniki przedstawione na rys. 2.1-3. Przykładami
+dwójników źródłowych są źródła niezależne, idealne i rzeczywiste (p. 1.7.1).
+
+Warto podkreślić, że w sensie podanej definicji źródła sterowane
+(p. 1.7.2) są czwórnikami bezźródłowymi. Czwórnikami bezźródłowymi
+są także: indukcyjności sprzężone (p. 1.8.1), transformator idealny (p. 1.8.2),
+żyrator (rys. 1.7-25a) oraz czwórniki z rys. 2.1-5a,b. Nie jest natomiast czwór-
+nikiem bezźródłowym (tzn. jest czwórnikiem źródłowym) czwórnik z rys. 2.1-5c.
+
+Można zatem łatwo zauważyć, że cecha bezźródłowości wiąże się z faktem, iż
+w strukturze układu nie występują źródła niezależne. Kwestia ta wymaga jednak
+dokładniejszego wyjaśnienia (por. p. O).
+
+B. Cecha bezźródłowości. Cechę bezźródłowości układu, podobnie jak
+inne cechy, które będą omówione w następnym punkcie, można rozpatrywać
+w dwojaki sposób:
+
+— znając równania układu (ale niekoniecznie wiedząc, jak i z jakich
+elementów jest on zbudowany);
+
+— wiedząc z jakich elementów (podukładów) układ jest zbudowany (ale
+niekoniecznie znając jego równania).

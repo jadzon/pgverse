@@ -1,0 +1,12 @@
+Właściwości dziedziny s 555
+
+<image/wzory/k3_page515_formula1.png>
+
+<image/figury/k3_page515_figure1.png>
+
+Rys. 32.1. Przeksztatcenie Laplace'a. To przekształcenie daje konwersję sygnału x(t) w dziedzinie czasu na sygnał
+X(s) lub X(G,w) w dziedzinie s. Wartości wzdłuż każdej linii pionowej na płaszczyźnie zmiennej zespołonej s mogą być
+wyznaczone przez sygnału w dziedzinie czasu przez krzywą wyktadniczą o tłumienia o
+
+i wykonanie zespolonego przeksztatcenia Fouriera. Jeśli sygnał w dziedzinie czasu jest catkowicie rzeczywisty, to gór-
+na połowa płaszczyzny zmiennej zespołonej s jest lustrzanym odbiciem dolnej

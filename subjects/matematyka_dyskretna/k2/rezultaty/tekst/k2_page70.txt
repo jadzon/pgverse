@@ -1,0 +1,44 @@
+1.5. Zmienna losowa 11
+
+<image/wzory/k2_page70_formula1.png>
+Zastanówmy się teraz jak powinna wyglądać przestrzeń probabilistyczna w tym przykła-
+dzie. Niech 0? zawiera wszvstkie możliwe wvniki eksoervmentu.
+
+<image/wzory/k2_page7/0_formula2.png>
+Aby być w zgodzie z intuicją i naszymi poprzednimi wyliczeniami rozkład prawdopodo-
+bieństwa powinien być następujący:
+
+<image/wzory/k2_page/0_formula3.png>
+
+Rozkład jednostajny nie jest w tym przykładzie dobry, bo mielibyśmy prawdopodobień-
+stwo, wypadnięcia orła równe 2/5.
+
+15 Zmienna losowa
+
+Definicja 1.21 Zmienna losowa „Y jest to dowolna funkcja z przestrzeni zdarzeń elemen-
+tarnych (2 w zbiór liczb rzeczywistych R.
+
+Trzeba tutaj przypomnieć, że w tej książce rozważamy tylko skończone przestrzenie zda-
+rzeń elementamych. W przypadku, gdy £? jest zbiorem nieskończonym definicja zmiennej
+losowej jest inna.
+
+Przykład 1.22 a) Rozważmy rzut monetą, (2 = 4O,R) (przykład 1.1a). Zmienna lo-
+sowa „X jest określona tabelą
+
+ 
+
+Inny przykład to zmienna Z określona tabelą
+
+| w LO [R]
+LŻ(w) J-t]1]
+
+b) Rozważmy rzut dwoma monetami, (przykład 1.1b) Q = (OO,OR, RO, RR). Niech
+X, i Xą będą dwoma zmiennymi losowymi określonymi w tabeli
+
+<image/tabele/k2_page70_table1.png>
+
+Zmienna X; określa wynik rzutu na pierwszszej monecie, X; (w) = 0, jeżeli wypadł
+orzeł, i X;(w) = 1, jeżeli wypadła reszka. W podobny sposób zmienna losowa X>
+określa wynik rzutu na drugiej monecie.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,24 @@
+Rozwiązanie
+Z definicji przekształcenia Laplace'a możemy napisać
+
+<image/wzory/k1_page51_formula1.png>
+dzie:
+* KG) — transformata wyjścia,
+H,(s) — transformata wejścia.
+
+Przekształcamy równanie
+
+<image/wzory/k1_page51_formula2.png>
+
+Stosując odwrotną transformatę Laplace'a, otrzymujemy
+
+<image/wzory/k1_page51_formula3.png>
+
+Dokonujemy zamiany zmiennych:
+
+vzory/k1_page51_formula4.png
+iry/k1_page51_figure2.png
+
+Zapisujemy je w postaci macierzowej:
+
+<image/fiwzory/k1_page51_formula5.png>

@@ -1,0 +1,14 @@
+<image/tabele/k4_page122_table1.png>
+
+Dla programisty istotne jest przede wszystkim to, że jego program będzie reali-
+zowany w bezwarunkowej, zewnętrznej pętli typu WHIŁE. W pętli takiej zaleca
+się ograniczenie (do minimum) programowania zatrzymań typu PAUSE, gdyż
+w konsekwencji powodują one zaprzestanie czytania stanu obwodów wejścio-
+wych oraz przekazywania danych do obwodów wyjściowych, a tym samym
+wydłużenie czasu reakcji systemu sterownikowego. Przykładowe czasy trwania
+faz cyklu programowego sterownika PŁC podano w Tab. 3.4, natomiast czasy
+odczytu i zapisu przez CPU danych dla wybranych modułów podaje Tab. 3.5.
+
+   
+
+122 Rozdział : 3. Sprzęt sterowników PLC

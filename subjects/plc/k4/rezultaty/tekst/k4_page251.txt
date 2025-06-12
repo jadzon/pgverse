@@ -1,0 +1,26 @@
+<image/tabele/k4_page251_table2.png>
+
+Wyd. 4.3 Kombinacja wielokrotnych AND/OR z jednym wyjściem.
+
+<image/tabele/k4_page251_table1.png>
+
+Wyd. 4.4 Przykład przypisania wartości funkcji obwodu logicznego
+do plików danych różnych typów.
+
+<image/figury/k4_page251_figure1.png>
+
+ 
+
+Wyd. 4.5 Kombinacja AND wielu elementów stykowych w szczeblu.
+
+Przykład Wyd. 4.5 pokazuje przekroczenie w danym wierszu liczby elementów.
+Liczba elementów w obwodzie logicznym może być duża (do 256). jak pokazują
+Wyd. 4.6 i Wyd. 4.7.
+
+ 
+
+ 
+
++-—- mz
+
+5.3 Funkcje przekaźnikowe 251

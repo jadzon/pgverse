@@ -1,0 +1,10 @@
+1.4. Warunek quasi-stacjonarności i jego konsekwencje 91
+
+<image/tabele/k3_page89_table1.png>
+
+J. Elementy skupione. Powróćmy jeszcze raz do pojęcia elementu skupio-
+nego. Z porównania definicji i rozważań podanych w p. 1.2.4 CE oraz
+przedstawionych w tym punkcie wynika bezpośrednio następująca konkluzja.
+
+Elementy skupione to takie elementy, dla których można przyjąć, iż jest
+spełniony warunek quasi-stacjonarności.

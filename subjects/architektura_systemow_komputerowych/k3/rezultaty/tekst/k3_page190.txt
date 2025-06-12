@@ -1,0 +1,48 @@
+180 Dodatek A
+
+ 
+
+przypadku, że za pomocą wymienionych operacji da się zrealizować operację sumy i ne-
+gacji. Te dwie operacje algebry Boole'a przedstawia się według zależności:
+
+<image/wzory/k3_page190_formula1.png>
+
+Jak z tych zależności widać najbardziej skomplikowana jest zależność sumy logicznej
+w algebrze Reada-Mullera. W niektórych zastosowaniach (testowanie układów logicznych)
+algebra ta jest szeroko wykorzystywana.
+
+Przekształćmy dla przykładu funkcie snumatora (nar razdz 3Y
+
+<image/wzory/k3_page190_formula2.png>
+
+na funkcję w aigcvize Ncaua-iviulicia. w tym celu zamienmy negację zmiennej a na
+operacie | © a. Otrzymamy. że
+
+<image/wzory/k3_page190_formula3.png>
+
+a 1IGDKyjJiliw, Liw
+
+<image/wzory/k3_page190_formula4.png>
+
+Numuaując vpriatcję Suity IUBILZUCJ ATU lad vpciację IWAWOWwWaD olrzymamy
+wvnik przekształcenia iako
+
+/k3_page190_formula5.png
+
+i AŁyniau (Gl UDUUJE Jak IicKicUy dlycora NEada-Mullera jest pomocna przy minimalizacji
+funkcji boolowskiej.
+
+<image/wzory/k3_page190_formula6.png>
+
+Rysunek D.8. Realizacja funkcji za pomocą dekodera
+
+Na zakończenie tego punktu przedstawiono problem wykorzystywania niektórych
+standardowych bloków kombinacyjnych, jak np. dekoderów i multiplekserów. Na
+rysunku D.8 pokazano jak przykładową tabelę prawdy funkcji 3 zmiennych (rys. D.8a)
+można zrealizować za pomocą dekodera o 3 wejściach. Zastosowanie bramki sumy
+logicznej na wyjściu układu nie jest konieczne, gdy wyjścia dekodera są typu otwartego
+kolektora lub trzystanowe. W takim przypadku zwarcie wyjść układu realizuje operację
+logiczną zwaną sumą (iloczynem) montażową lub sumą na drucie (ang. wire-or).
+
+Na rysunku D.9a pokazano mapę Karnaugha funkcji trzech zmiennych. Biorąc
+multiplekser o trzech wejściach sterujących, a więc o 8 wejściach informacyjnych, podaje

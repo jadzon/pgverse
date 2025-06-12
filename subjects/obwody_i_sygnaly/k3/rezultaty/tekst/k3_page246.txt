@@ -1,0 +1,33 @@
+246 - 3. Obwody prądu stałego
+
+3.2.2. Przekształcenie trójkąt — gwiazda
+
+Wyznaczenie oporu R,5 dwójnika mostkowego z rys. 3.2-2b na podstawie
+opisujących go równań wymaga bardzo żmudnych przekształceń. Wyraźne
+ułatwienie obliczania oporu zastępczego dwójników o strukturze mostkowej
+uzyskuje się stosując transformację struktury mostkowej za pomocą tzw.
+przekształcenia trójkąt — gwiazda.
+
+Przekształcenie trójkąt — gwiazda polega na zastąpieniu trójnika oporowe-
+go o zaciskach A BC, mającego strukturę trójkąta (rys. 3.2-7a), równoważnym
+
+<image/figury/k3_page246_figure1.png>
+
+trójnikiem oporowym o strukturze gwiazdy (rys. 3.2-7b). Trójniki te są równo-
+ważne (por. p. 2.1.3-D), jeśli mają ten sam opis zaciskowy. Nietrudno wykazać
+(zachęcamy do tego Czytelnika), że warunek ten jest spełniony wtedy i tylko
+wtedy, kiedy opory dwójników o zaciskach AB, AC i BC będą dla obu struktur
+równe. Muszą zatem zachodzić równości:
+
+<image/wzory/k3_page246_formula1.png>
+<image/wzory/k3_page246_formula2.png>
+
+<image/wzory/k3_page246_formula3.png>
+
+Sumując stronami te równości i dzieląc obustronnie przez 2, otrzymamy
+równanie:
+
+<image/wzory/k3_page246_formula4.png>
+
+Odejmując następnie stronami od tego równania kolejno równania: (3.2-5),
+3.24i3.23otrzymujemyodpowiedniowzory

@@ -1,0 +1,51 @@
+1.14. Zbieranie informacji 29
+
+wszystkim wierzchołkom o numerach mniejszych od 2*7*. Są to dokładnie wierzchołki
+postaci z = 0*"*t!a, gdzie a € f0,1)'"! (jeżeli i = 1 to a jest pustym ciągiem). W
+i-tym takcie każdy taki wierzchołek przekaże wiadomość do z + 2*"! = 0*"'1o, czyli po
+i-tym takcie wiadomość będą znały wszystkie wierzchołki, które mają na k — i pierwszych
+bitach zera, czyli wszystkie wierzchołki o numerach mniejszych od 2*.
+
+Protokół ten (po małych przeróbkach) można także stosować do grafu pełnego lub do
+innego grafu, który zawiera hiperkostkę.
+
+1.14 Zbieranie informacji
+
+Hiperkostka jest także wygodną strukturą do zbierania informacji, gdy chcemy do jed-
+nego wierzchołka zebrać informacje od wszystkich wierzchołków. Informacje te należy
+przesyłąć w odwrotnym kierunku niż w protkóle rozsyłania. Zakładamy, że przesyłane
+informacje są łączone w pakiety i wierzchołek może przesłać w jednym takcie cały pakiet
+zawierający kilka informacji.
+
+Protokół zbierania wiadomości w hiperkostce H;
+
+Powtarzaj dla: = 1,...,k
+
+e w i -tym takcie każdy wierzchołek postaci x = 0*''lo, gdzie o € 40,1)**
+przesyła swój pakiet do wierzchołka0*-'0a,
+
+Przykład 1.43 Prześledźmy działanie tego protokułu na hiperkostce H; (rysunek 1.14).
+W pierwszym takcie wierzchołek 100 przekazuje swoją wiadomość do 000, wierzchołek
+101 do 001, wierzchołek 110 do 010, a wierzchołek 111 do 011.
+
+W drugim takcie wierzchołek 010 przekazuje zebrane wiadomości (swoją i te, kt.ore
+otrzymał w poprzednim takcie) do 000, a wierzchołek 011 do 001.
+
+W trzecim takcie wierzchołek 001 przekazuje zebrane wiadomości do 000. a wierz-
+chołek 011 do 001.
+
+1.15 Plotkowanie
+
+Plotkowanie polega na tym, że na początku każdy wierzchołek ma jakąś wiadomość i
+chce ją rozesłać do wszystkich innych wierzchołków w grafie.
+
+Znając protokoły do zbierania i rozsyłania wiadomości możemy zaprojektować proto-
+kół plotkowania, który najpierw zbiera wszystkie informacje do jednego węzła, a następnie
+rozsyła je do wszystkich wierzchołków.
+
+116 Zadania
+
+1. Ile krawędzi ma graf pełny K„?
+2. Ile maksymalnie krawędzi może mieć graf z n wierzchołkami?
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

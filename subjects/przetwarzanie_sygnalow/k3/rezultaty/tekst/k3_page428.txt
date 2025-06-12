@@ -1,0 +1,54 @@
+towany jako znak liczby (plus lub minus). A zatem każdy znak odczytywany z pliku wej-
+ściowego znajduje się między 0 a 255, a każdy znak wpisany do pliku zakodowanego jest
+między —255 i 255. Aby zrozumieć działanie tej metody, rozważmy plik wejściowy: 1, 2,
+3, 4, 2, 2, 2, 2, 4 oraz skomprymowany plik wygenerowany przez algorytm PackBits: 1, 2,
+3, 4, 2, -3, 4. Program kompresji po prostu przenosi z pliku wejściowego do pliku skom-
+prymowanego każdą liczbę, oprócz grupy 2, 2, 2, 2. Ta grupa jest reprezentowana w pliku
+skomprymowanym przez dwie liczby: 2, —3. Pierwsza liczba (2) wskazuje, z jakich znaków
+składa się grupa, druga (-3) zaś — liczbę znaków w grupie, wyznaczaną przez wzięcie war-
+tości bezwzględnej i dodanie do niej jedynki. Na przykład 4, —2 oznacza 4, 4, 4; a 21, -4
+oznacza 21, 21, 21, 21, 21 itd.
+
+Niedogodnością techniki PackBits jest konieczność reformatowania dziewięciu bitów na
+standardowe bajty ośmiobitowe stosowane w komputerach do przesyłania i przechowywania
+danych. Można zrobić pożyteczną modyfikację tej techniki, ograniczając wejście do tekstu
+ASCII. Jak podano w tablicy 27.2, każdy znak AŚCII jest zwykle przechowywany jako pełny
+bajt (osiem bitów), lecz naprawdę do zidentyfikowania znaku wykorzystuje się tylko siedem
+bitów. Innymi słowy, wartości od 127 do 255 nie są definiowane żadnym znormalizowanym
+określeniem i nie muszą być przesyłane lub przechowywane. To umożliwia wykorzystanie
+ósmego bitu do wskazywania, czy kodowanie ciągów jest w toku.
+
+Kodowanie Huffmana
+
+Nazwa metody pochodzi od D.A. Huffmana, który opracował ją w łatach 50. XX wieku.
+Na rys. 27.2 przedstawiono histogram wartości bajtów w dużym pliku ASCII. Ponad 96%
+tego pliku zawiera tylko 31 rodzajów znaków: małe litery, spacje, przecinki, kropki i po-
+wroty karetki. To spostrzeżenie można wykorzystać do przygotowania schematu kompresji
+właściwego dla tego pliku. Najpierw przypiszemy każdemu z tych 31 popularnych znaków
+5-bitowe binarne słowo kodowe: 00000 = „a”, 00001 = „b”, 00010 = „c” itd. To umożliwia
+zredukowanie 96% pliku pod względem rozmiaru o 5/8. Ostatnie ze słów kodowych 5-bito-
+wych 11111 będzie flagą wskazującą, że przesyłany znak nie jest jednym z 31 popularnych
+znaków. Wtedy następne osiem bitów wskazuje, jaki to jest znak, według standardowego
+przyporządkowania ASCII. To w rezultacie daje tylko 4% znaków w pliku wejściowym
+wymagających 5 +8 = 13 bitów. Zasada tego kodowania polega na przyznawaniu mniej-
+szej liczby bitów znakom często stosowanym, a większej — znakom stosowanym rzadko.
+W tym przykładzie średnia liczba bitów wymaganych na jeden znak w pliku oryginalnym
+jest: 0,96 x 5 + 0,04 x 13 = 5,32. Inaczej mówiąc, całkowity współczynnik kompresji jest:
+8 bitów/5,32 bitów, czyli ok. 1,5:1.
+
+W kodowaniu Huffmana doprowadzono tę zasadę do skrajności. Znakom występującym
+najczęściej, takim jak spacja i kropka, można przyporządkować nawet tylko jeden lub dwa
+bity. Znaki rzadko spotykane, takie jak !, ©, 4, $ i % mogą wymagać kilkunastu lub wię-
+cej bitów. Optymalną, pod względem matematycznym, sytuację osiąga się, gdy liczba bitów
+zastosowanych do każdego znaku jest proporcjonalna do logarytmu z prawdopodobieństwa
+występowania danego znaku.
+
+Pomysłowym rozwiązaniem w kodowaniu Huffmana jest sposób pakowania razem ze sobą
+słów kodowych o różnej długości. Wyobraźmy sobie odbieranie szeregowego strumienia
+danych złożonego z zer i jedynek. Jeśli każdy znak jest reprezentowany przez osiem bi-
+tów, to można łatwo oddzielić każdy znak od następnego przez robienie przerw między
+8-bitowymi porcjami. Rozważmy teraz strumień danych zakodowany metodą Huffmana,
+gdzie każdy znak może być reprezentowany przez zmienną liczbę bitów. Jak w tym przy-
+padku oddzielić dany znak od następnego? Odpowiedź leży w prawidłowej selekcji słów
+kodowych Huffmana, umożliwiającej prawidłowe rozdzielanie. Działanie tej metody zi-
+lustrujemy przykładem.

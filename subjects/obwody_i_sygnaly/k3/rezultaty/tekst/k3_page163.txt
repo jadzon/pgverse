@@ -1,0 +1,28 @@
+Zadania do rozdziału 1 165
+
+<image/figury/k3_page163_figure2.png>
+
+Zadanie 1.36. W układzie z rys. Z-1.36 występuje ŹPSN, którego wydajność prądowa jest
+proporcjonalna do pochodnej napięcia sterującego u, . Wyznaczyć przebieg napięcia u, na oporze R,
+jeśli u, = 5cos(2* 10*t — 309) [V], R = 2 kQ,a = 107” AsV.
+
+<image/wzory/k3_page163_formula1.png>
+
+Odp.: u, = 2 cos(2* 10$t + 607) [V]
+Zadanie 1.37. a) W układzie indukcyjności sprzężonych z rys. 1.8-3 przy danych wartościach Z, i L,
+
+dobrać tak niezerowe wartości M, i;,i;, aby energia w, gromadzona w układzie (por. wzór (1.8-30))
+była równa zeru. b) Wykazać, że jeśli:
+
+izory/k3_page 163_formula2.png
+l to zachodzi równość:
+
+<3_page163_formula3.png
+
+tzn., że warunek w, = 0 może być spełniony tylko przy sprzężeniu idealnym (M? = L, L,).
+
+L,
+
+i
+Odp.: a) Przy założeniu i,i; 740,w,=0<+M = św 5 E_ L., h =+ R
+2 1

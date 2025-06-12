@@ -1,0 +1,39 @@
+Znaczenie zer i biegunów 567
+
+ 
+
+<image/wzory/k3_page527_formula1.png>
+<image/figury/k3_page527_figure2.png>
+
+<image/figury/k3_page527_figure1.png>
+
+Znaczenie zer i biegunów
+
+Chcąc uczynić nasze rozważania mniej abstrakcyjnymi, użyjemy rzeczywistych wartości ele-
+mentów w filtrze pasmowozaporowym, który właśnie analizowaliśmy: R = 220 Q, Ł = 54 uH,
+C = 470 pF. Wstawiając te wartości do wzorów z poprzedniego podrozdziału, uzyskujemy
+położenia zer i biegunów:
+
+<image/wzory/k3_page527_formula2.png>
+
+Takie rozmieszczenie zer i biegunów przedstawiono na rys. 32.7. Każde zero jest zaznaczo-
+ne kółkiem, a każdy biegun krzyżykiem. Jest to wykres zer i biegunów będący najczęstszą
+formą prezentacji płaszczyzny zmiennej zespolonej s. Na rys. 32.7 pokazano również obraz
+topograficzny płaszczyzny zmiennej zespolonej s. Dla uproszczenia przedstawiono tylko mo-
+duł, ale nie zapominajcie, że jest też odpowiadająca mu faza. Tak jak góry i doliny określają
+kształt powierzchni ziemi, bieguny i zera określają kształt przebiegu na płaszczyźnie zmien-
+nej zespolonej s. W odróżnieniu od gór i dolin, każdy biegun i zero mają dokładnie taki
+sam kształt i rozmiar, jak wszystkie inne bieguny i zera. Jedyną cechą charakterystyczną dla
+każdego bieguna lub zera jest jego położenie. Bieguny i zera są ważne, gdyż dają zwięzłą
+reprezentację wartości każdego punktu na płaszczyźnie zmiennej zespolonej s. To znaczy,
+że możemy w pełni opisać właściwości systemu przy użyciu tylko niewielu parametrów.
+W przypadku pasmowozaporowego filtru RLC wystarczy określić tylko cztery parametry ze-
+spolone charakteryzujące system: z;, Z, P;, P2 (każdy z nich składa się z części rzeczywistej
+i urojonej).
+
+Dla lepszego zrozumienia biegunów i zer wyobraźmy sobie mrówkę poruszającą się po
+płaszczyźnie zmiennej zespolonej s. W każdym położeniu na płaszczyźnie, w którym znaj-
+dzie się mrówka (tj. dla jakiejś wartości s), istnieje odpowiadająca mu wartość funkcji prze-
+noszenia H(s). Ta wartość jest pewną liczbą zespoloną, którą można wyrazić jako moduł
+i fazę lub jako część rzeczywistą i urojoną. Teraz pozwólmy mrówce, żeby zaprowadziła
+nas do jednego z zer na płaszczyźnie zmiennej zespolonej s. W tym położeniu zmierzone

@@ -1,0 +1,26 @@
+14 Rozdział 1. Funkcje boolowskie
+
+Rysunek 1.4: Sieć funkcji progowej Tę*!
+
+<image/figury/k2_page105_figure1.png>
+
+Na wejściu sumatora mamy n bitów pierwszej liczby, zn_1, ... , zo, oraz n bitów drugiej
+liczby, yn-1, --- , yo, a Nawyjściun+1 bitów sumy arytmetycznej s, ... „so. Nasz sumator
+naśladuje szkolne dodawanie opisane w rozdziale o arytmetyce. Najpierw dodaje bity zg i
+yo i oblicza ostatni bit sumy so oraz przeniesienie co, które ma być dodane do następnego
+bitu. Potem dla kolejnych pozycji ż od 1 do n — 1 dodaje bity z;, y, oraz przeniesienie
+c:_1 Z poprzedniej pozycji i oblicza i-ty bit sumy s, oraz przeniesienie c, do następnej
+pozycji.
+
+Na rysunku 1.6 przedstawiono sieć HA (ang. half adder — półsumator), która ma na
+wejściu dwa bity, zo i yo, a na wyjściu — bit sumy so = zo © yo Oraz bit przeniesienia
+Co = To A w.
+
+Na rysunku 1.7 przedstawiono sieć FA (ang. full adder), która ma na wejściu trzy
+bity, 14, y Oraz c;_,, a na wyjściu bit sumy s, = z, © y © ci_1 Oraz bit przeniesienia
+cc=z;Ay V(x; By) ACi-1.
+
+Na rysunku 1.8 przedstawiono schemat konstrukcji sumatora dla n = 4. Podobnie
+można skonstruować sumator dla dowolnego n. Taki sumator będzie zawierał 5n — 3
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

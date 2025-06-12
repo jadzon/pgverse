@@ -1,0 +1,47 @@
+1.7. Słowa 9
+
+Będzier*" też syrenach zmowa
+
+<image/wzory/k2_page9_formula1.png>
+
+na oznaczenie przekroju wszystich zbiorów A;, których indeksy należą do zbioru 7. Za-
+chodzi **"*o**
+
+<image/wzory/k2_page9_formula2.png>
+
+Zbiór indeksów przekroju może być określony za pomocą warunku.
+
+<image/wzory/k2_page9_formula3.png>
+
+Przykład 1.8 Weźmy rodzinę złożoną z trzech zbiorów A; = f4,6,8), A2 = f4,5,6),
+Ag = (4,5,8,9).
+
+<image/wzory/k2_page9_formula4.png>
+
+Przykład 1.9 Niech 7 = f1,2,3,4,5,6,7,8,9,10) będzie zbiorem indeksów. Dla każ-
+dego i € I określamy zbór A, =frE€N|1< zr <i). Mamy:
+
+<image/wzory/k2_page9_formula5.png>
+
+1.7 Słowa
+Słowa są to ciągi liter lub symboli z jakiegoś skończonego zbioru £. Zbiór £ nazywamy
+
+wtedy alfahotom 7hińr wezuctlich słów nad alfahotom V aznaczam nr767
+
+<image/wzory/k2_page9_formula6.png>
+Wśród słów wyróżniamy słowo puste A, które nie zawiera żadnych liter.
+Przykład 1.10 Na przykład, jeżeli Z = fa,b), to £* zawiera słowo puste A, dwa słowa
+
+jednoliterowe a i b, cztery słowa dwuliterowe aa, ab, ba i bb, osiem słów trzyliterowych
+aaa, aab, aba i abb, baa, bab, bba i bbb, i tak dalej.
+
+Długość słowa w € © jest to liczba jego liter, będziemy ją oznaczać przez |w|. Dłu-
+gość słowa pustego |A| = 0. Zbiór wszystkich słów długości n nad alfabetem © oznacza-
+
+<image/mwzory/k2_page9_formula7.png>
+
+la słów IIUŁEIIY UALCDIC UPCIALJĘ AULINGWELIALJI, LUV JalGUGILG MUW. NULAGLCHACJA lub
+złożenie dwóch słów u, v € Z, oznaczana przez uv, jest to sklejenie słów u i v. Do słowa
+u dopisujemy na końcu słowo v. Dla dowolnego słowa v € £* zachodzi Av = vA =v.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

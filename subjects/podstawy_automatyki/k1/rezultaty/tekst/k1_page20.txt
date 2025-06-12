@@ -1,0 +1,39 @@
+Przykład 1.14
+
+Wyznaczyć oryginał następującej transformaty F(s)=
+
+(s-1)7(s-2)*
+Funkcja F(s) ma w punkcie s = 1 biegun podwójny, a w punkcie s = 2 biegun potrój-
+ny. Zatem na podstawie wzoru (1.27) funkcja F(s) jest transformatą oryginału
+
+<image/wzory/k1_page20_formula1.png>
+
+Metoda rozkładu na ułamki proste
+Jeżeli transformata F(s) = L(s)/M(s) jest funkcją wymierną, gdzie:
+
+<image/wzory/k1_page20_formula2.png>
+<image/wzory/k1_page20_formula3.png>
+
+przy czym I < n oraz wszystkie współczynniki ag, ..., „_y, ..., by, ..., b, są liczbami rze-
+czywistymi, to jedną z metod wyznaczania funkcji /(1) jest metoda oparta na znanym
+z algebry rozkładzie funkcji wymiernej (1.23) na ułamki proste i wykonaniu .£"" prze-
+kształcenia każdego z tych ułamków z osobna.
+
+Po rozłożeniu mianownika M(s) na czynniki stopnia pierwszego otrzymujemy
+
+<image/wzory/k1_page20_formula4.png>
+
+gdzie S;, 57, ..., Sk Są pierwiastkami, ogólnie biorąc, zespolonymi o krotnościach rów-
+nych odpowiednio Qt, O, ..., Oty (jest ich K różnych), przy czym
+
+<image/wzory/k1_page20_formula5.png>
+
+Rozkład (1.30) będziemy nazywać rozkładem zespolonym. Jeśli M4 oznacza liczbę
+różnych pierwiastków rzeczywistych wielomianu M(s), to
+
+<image/wzory/k1_page20_formula6.png>
+
+gdzie K, jest liczbą różnych par pierwiastków zespolonych sprzężonych. Zatem otrzy-
+mamy rozkład funkcji wymiernej na ułamki proste o postaci
+
+22

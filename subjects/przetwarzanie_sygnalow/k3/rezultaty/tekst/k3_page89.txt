@@ -1,0 +1,18 @@
+5. Systemy liniowe
+
+ 
+
+I teraz ważna rzecz. Uzyskany w ten sposób sygnał wyjściowy jest identyczny z sygnałem
+powstającym przy przejściu bezpośrednio sygnału wejściowego przez system. Ta zasada daje
+wielkie możliwości. Zamiast prób zrozumienia, jak system zmienia sygnały skomplikowa-
+ne, wystarczy zrozumieć, jakim zmianom ulegają sygnały proste. W terminologii stosowanej
+w dziedzinie przetwarzania sygnałów sygnały wejściowy i wyjściowy traktuje się jako super.
+
+żenie w pamięci liczby 2041 przez 4. Jak to zrobić? Można sobie wyobrazić 2041 zapałek
+fruwających w naszym umyśle, zwiększyć (myślowo) ich liczbę czterokrotnie i rozpocząć
+liczenie. Z pewnością jednak, dla uproszczenia sobie zadania, skorzystamy z zasady superpo-
+zycji. Przeprowadzimy rozkład liczby 2041 na 2000 + 40 + 1, każdą składową
+
+przez 4 i w wyniku syntezy uzyskamy końcowy rezultat, tj. 8000 + 160 + 4 = 8164.
+
+<image/figury/k3_page89_figure1.png>

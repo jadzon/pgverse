@@ -1,0 +1,32 @@
+<image/figury/k4_page64_figure1.png>
+
+Rys. 2.9 Wykresy czasowe sygnałów dla czasomierza wyłączającego TOF
+e Liczniki (Counters)
+
+Tab. 2.33 zawiera zestawienie standardowych bloków funkcyjnych realizujących
+zliczanie impulsów.
+
+Licznik dodający CTU umożliwia zliczanie zboczy narastających sygnału
+pojawiających się na wejściu CU. Jeżeli liczba impulsów CV (Current Value)
+osiągnie lub przekroczy zadaną na wejściu wartość PV (Preset Value), to na
+wyjściu Q pojawi się logiczna /. Pojawienie się logicznej / na wejściu R (Reset)
+powoduje zerowanie licznika.
+
+Licznik odejmujący CTD umożliwia z kolei zliczanie impulsów pojawiających
+się na wejściu CD przez odejmowanie / od wartości CV określającej stan
+licznika dla każdego występującego na tym wejściu zbocza narastającego
+sygnału. Jeżeli liczba CV osiągnie wartość O lub spadnie poniżej, to na wyjściu O
+pojawi się logiczna /. Pojawienie się logicznej / na wejściu LD powoduje
+ustawienie wartości początkowej licznika przez przepisanie wartości zadanej
+z wejścia PV do wartości bieżącej CV.
+
+Licznik dodająco-odejmujący spełnia jednocześnie funkcję obu liczników, przy
+czym odpowiednio, osiągnięcie lub przekroczenie przez CV wartości PY jest
+sygnalizowane na wyjściu QU, a osiągnięcie lub opadnięcie poniżej O przez CV
+sygnalizuje wyjście QD.
+
+Wartości liczbowe zmiennych ograniczających PVmin i PVmax są zależne
+sprzętowo.
+
+REY KTK TEE TEKA A A) ZĘ JOD OA"EĄI Z WC ZALORD © PPTP EIO EE IE IE OOOO ORLA
+64 Rozdział ; 2,Programowanie sierowników PLC

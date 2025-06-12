@@ -1,0 +1,57 @@
+123
+
+wadzone w zadany stan początkowy, dzięki sprzężeniom zwrotnym zmieniają swój
+stan, aż do osiągnięcia stanu równowagi.
+
+Potencjalny zakres zastosowań sieci warstwowych jest nadzwyczaj szeroki. Mogą
+one być stosowane we wszelkich zadaniach klasyfikacji, rozpoznawania, diagnostyki,
+monitorowania i sterowania. Podobnie, zakres zastosowania sieci ze sprzężeniem
+zwrotnym obejmuje zadania, gdzie potrzebny jest określony złożony, dynamiczny
+układ nieliniowy. Specyficznymi zastosowaniami sieci ze sprzężeniami zwrotnymi są
+asocjacyjne pamięci rekurencyjne, które po pobudzeniu zmierzają do jednego ze swo-
+ich stanów równowagi odpowiadającemu jednej z zapamiętanych w nich wartości.
+Inną grupą zastosowań sieci ze sprzężeniami zwrotnymi są rozwiązania zadań opty-
+malizacji (np. zadanie o komiwojażerze), gdzie sieć o odpowiednio dobranych wagach
+zmierza do stanu równowagi, którym jest poszukiwane rozwiązanie.
+
+Sieci neuronowe mogą być realizowane w postaci specjalizowanych układów elek-
+tronicznych lub symulowane przy pomocy uniwersalnych komputerów.
+
+Przygotowanie sieci do rozwiązywania określonych zadań odbywa się na drodze
+jej uczenia, w którym wyznaczone zostają wagi neuronów sieci powodujące jej ocze-
+kiwane działanie. W przypadku uczenia z nauczycielem stosować można dowolną
+z metod uczenia omówionych w tym rozdziale, przy czym najczęściej stosuje się
+metodę gradientową najszybszego spadku.
+
+Wagi sieci ze sprzężeniami zwrotnymi zwykle oblicza się na podstawie odpo-
+wiednich wzorów, a nie są one zmieniane w procesie iteracyjnym. Dzieje się tak w
+przypadku pamięci asocjacyjnych czy sieci rozwiązujących zadania optymalizacyjne.
+
+Nadanie sieci odpowiednich własności poprzez naukę, a także równoległy sposób
+jej działania stanowi nowy sposób podejścia do problemu programowania i działania
+urządzeń przetwarzających informację.
+
+Podsumowując, sztuczne sieci neuronowe:
+
+e zbudowane są z dużej liczby wzajemnie połączonych prostych jednostek — nen-
+ronów,
+
+e wykonują obliczenia równolegle, jednocześnie w całej swej strukturze,
+
+e przygotowanie ich do działania odbywa się poprzez uczenie, a nie poprzez
+programowanie,
+
+e mają zastosowania w zadaniach, które potrafią rozwiązywać ludzie, a bardzo
+trudno do ich rozwiązania zaprogramować komputery.
+
+Korzyści z zastosowania sieci neuronowych:
+
+e zastąpienie programowania przez uczenie,
+
+e duża szybkość działania (w przypadku realizacji sprzętowych),
+Wady zastosowania sieci neuronowych:
+
+e czasami bardzo długa nauka bez osiągnięcia dostatecznie małego błędu lub zła
+generalizacja,
+
+e nieznajomość algorytmu działania nauczonej sieci.

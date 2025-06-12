@@ -1,0 +1,47 @@
+5.1. Wprowadzenie 87
+a! mn Z Z NNNNNNNA, |
+
+Pamięć rejestrowa jest to zbiór wszystkich, dostępnych rejestrów znajdujących się w pro-
+cesorze. Dostęp do nich jest możliwy poprzez układ sterowania, którego zadaniem jest
+wybranie odpowiedniego rejestru na podstawie kodu rozkazowego. Jest to pamięć o naj-
+szybszym dostępie, ale o najmniejszej pojemności. Pamięć kieszeniowa ma pojemności
+rzędu 100 Ksłów, a czas dostępu jest rzędu nanosekund. Pamięci operacyjne mają czasy
+dostępu rzędu 100 ns, ale ich pojemności przekraczają dziesiątki megasłów. Pamięci
+masowe to zwykle pamięci dyskowe, których pojemności przekraczają setki megasłów dla
+niewielkich mikrokomputerów i setki gigasłów dla dużych komputerów. Dla pamięci
+dyskowych wyznacza się tzw. średni czas dostępu (czas dostępu zależy od momentu
+zażądania dostępu). Wielkość tego parametru zależy od szybkości obrotów dysków i wy-
+nosi kilka milisekund. Jeśli szybkość obrotowa wynosi 3000 obr/min (szybkość odpowia-
+dająca 50Hz), to średni czas dostępu wynosi 10 ms. W przypadku pamięci zewnętrznych
+(pamięć na taśmach magnetycznych lub na wymiennych dyskach) najważniejszą ich cechą
+jest możliwość wymiany nośnika. Duże zbiory informacji są pamiętane na wielu nośnikach,
+które są przechowywane poza komputerem. W razie potrzeby w danym momencie zakłada
+się do napędu tylko wybrane nośniki. Dla pamięci zewnętrznych najważniejszym para-
+metrem jest szybkość transmisji.
+
+Pamięci można podzielić także pod względem sposobu dostępu do informacji. Wyróż-
+nia się cztery klasy pamięci:
+
+1) pamięci z dostępem bezpośrednim (swobodnym),
+
+2) pamięci z dostępem cyklicznym,
+
+3) pamięci z dostępem sekwencyjnym,
+
+4) pamięci z dostępem asocjacyjnym.
+
+<image/figury/k3_page97/_figure1.png>
+
+Rysunek 5.1. Schemat pamięci RAM
+
+Pamięci z dostępem swobodnym, inaczej pamięci RAM (ang. random access memory) są
+pamięciami matrycowymi, gdzie nośnikiem informacji jest matryca elementów. Pamięci
+z dostępem swobodnym można podzielić na pamięci ROM (ang. read only memory), które
+są tylko jeden raz zapisywane, a następnie tylko odczytywane i pamięci RAM wielokrotnie
+zapisywane i wielokrotnie odczytywane. Poszczególne elementy matryc pamięciowych
+pamiętają jeden bit. Na rysunku 5.1 przedstawiono ogólny schemat pamięci z dostępem
+swobodnym o pojemności 2” x m. Współpraca procesora z przykładową pamięcią odbywa
+się w ten sposób, że procesor wysyła n-bitowy adres i dwa stroby: sygnał dostępu E
+isygnał rodzaju pracy R/W (odczyt-zapis, ang. read/write). Wejściowy dekoder adresu
+zostaje odblokowany sygnałem dostępu E i następuje cykl pracy pamięci. W zależności od
+wysterowania linii RW będzie to cykl odczytu lub cykl zapisu pamięci.

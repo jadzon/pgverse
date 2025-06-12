@@ -1,0 +1,78 @@
+zory/k4_page274_formula1.png KEK]
+
+Układy sterowania krzywkowego i bębnowego w sterowniku bardzo wygodnie
+można realizować przy pomocy generatorów sekwencji. Generator taki w kolej-
+nych krokach dostarcza zaprogramowaną kombinację wartości binarnych.
+Dostępne instrukcje sterowania sekwencyjnego to :
+
+e SQO przesyłanie 16 bitowego słowa do podanego pliku. Najczę-
+(SeQuencer  Ściej plikiem docelowym jest plik wyjściowy O (Wyd. 4.50)
+Output) Parametrami wywołania instrukcji SQO są :
+
+adres pliku danych zawierającego dane do przesłania na
+wyjście,
+
+« maska, przez którą dane będą przesyłane,
+
+« adres pliku przeznaczenia,
+
+« słowo kontrolne - element pliku danych R6, w którym
+zapisywane są aktualne stany generatora sekwencji,
+
+« ilość kroków którą wykona generator sekwencji startując
+od pozycji 1. Pozycja 0 jest pozycją startową,
+
+« pozycja w pliku danych, spod adresu której dane zostaną
+przesłane.
+
+W przypadku spełnienia warunków obwodu logicznego bit EN
+
+słowa kontrolnego jest ustawiany na 1. Po wykonaniu pełnej
+
+sekwencji bit DN przyjmuje wartość 1. Z kolei w przypadku
+
+wystąpienia błędu na wartość 1 jest ustawiany bit ER.
+
+. SQC porównywanie 16 bitowego słowa pochodzącego z jednego
+(SeQuencer pliku danych z innym słowem wchodzącym w skład innego
+Compare) pliku danych. Najczęściej stosuje się porównywanie elemen-
+
+tów pliku wejściowego / z elementami pliku bitowego B,
+
+w którym zapisana jest wzorcowa sekwencja. (Wyd. 4.57)
+
+Parametrami wywołania funkcji SQC są :
+
+« adres pliku danych, z którymi będzie porównywane wej-
+ście,
+
+* maska, przez którą dane będą przesyłane,
+
+* źródło, z którego będą pobierane dane do porównania,
+
+« słowo kontrolne - element pliku danych Ró, w którym
+zapisywane są aktualne stany generatora sekwencji,
+
+«  |iczba kroków, którą wykona generator sekwencji startu-
+jąc od pozycji 1. Pozycja 0 jest pozycją startową,
+
+* pozycja w pliku danych, spod adresu której będą pobrane
+dane do porównania.
+
+W przypadku spełnienia warunków obwodu logicznego bit
+
+EN słowa kontrolnego jest ustawiany na 1. Po wykonaniu
+
+pełnej sekwencji bit DN przyjmuje wartość 1. Z kolei w przy-
+
+y= mz
+
+ 
+
+| A e m
+
+ 
+
+—
+
+274 . Rozdział : 5. Język schematów drabinkowych dla SLC 500

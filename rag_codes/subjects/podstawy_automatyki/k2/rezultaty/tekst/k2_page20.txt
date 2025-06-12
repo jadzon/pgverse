@@ -1,0 +1,86 @@
+38
+
+Ominięcie procedury wyznaczania położenia biegunów transmitancji
+umożliwiają kryteria stabilności, które można podzielić w następujący
+sposób:
+
+e kryteria analityczne (algebraiczne)
+
+Stosowane w przypadku znajomości analitycznej postaci transmitancji
+(a dokładniej — postaci wielomianu charakterystycznego M (s)).
+Można tu zaliczyć między innymi kryteria:
+
+«w Routha,
+- Hurwitza;
+
+e kryteria graficzne
+— Stosowane w przypadku znajomości charakterystyk częstotliwo-
+ściowych układu. Można tu zaliczyć między innymi kryteria:
+* Nyquista
++ Bodego
++ Nicholsa
+
+—- Stosowane w przypadku znajomości analitycznej postaci transmi-
+tancji układu otwartego - metoda linii pierwiastkowych.
+
+4.2.2 Kryterium Routha
+
+Umożliwia ono na podstawie tak zwanej tablicy Routha określenie liczby
+biegunów transmitancji leżących w prawej półpłaszczyźnie zmiennej zespo-
+lonej (s). Układ jest stabilny, jeżeli wszystkie współczynniki wielomianu
+charakterystycznego są większe od zera oraz wszystkie współczynniki skraj-
+nej lewej kolumny tablicy Routha są dodatnie. W przeciwnym wypadku
+liczba zmian znaku w pierwszej kolumnie jest równa liczbie biegunów
+znajdujących się w prawej półpłaszczyźnie zmiennej zespolonej (s ).
+
+4.2.3 Kryterium Hurwitza
+
+W porównaniu z kryterium Routha kryterium Hurwitza nie daje
+informacji o liczbie biegunów znajdujących się w prawej półpłaszczyźnie
+zmiennej zespolonej (s |. Układ jest stabilny, jeżeli wszystkie współczynniki
+wielomianu charakterystycznego są większe od zera oraz wszystkie pod-
+wyznaczniki wyznacznika Hurwitza są większe od zera.
+
+39
+
+4.2.4 Kryterium Nyquista
+
+Kryterium Nyquista umożliwia zbadanie stabi i
+
+stabilności układ kni
+
+E O > zwrotnym, jak pokazano na anka 01) nak
+stawie charakterystyk częstotli iow ! i
+i rystyk częstotliwościowych układu otwartego, przy czym
+
+<image/wzory/k2_page20_formula1.png>
+
+<image/figury/k2_page20_figure2.png>
+
+Układ zamknięty jest stabiln ie, jeżeli
+A y asymptotycznie, jeżeli układ otwarty jest
+rów =. stabilny asymptotycznie, wtedy i tylko wtedy, gdy daalacnaa
+RB R owo-fazowa układu otwartego przy zmianie pulsacji wymuszenia
+, i ś do sA oo nie obejmuje punktu (-— 1, ;0).
+ad zamknięty znajduje się na granicy stabilności wtedy i tylk:
+t
+gdy A amplitudowo-fazowa stabilnego akc okna aż
+ie pu i m k
+BTW sacji wymuszenia od w = 0 do w — oo przechodzi przez punkt
+Układ zamknięty jest niestabilny,
+y. gdy charakterystyka amplitud
+fazowa układu otwartego przy zmianie pulsacji wywi ET a Ó
+do w — oo obejmuje punkt (—1, ;0). -
+
+4.2.5 Kryterium Bodego
+
+Jest to reprezentacja kryterium Nyqui
+yquista na wykresach I i
+adj częstotliwościowych: modułu i Koy REMS
+terium to można także wyrazić w następuj posób
+
+e jacy s - układ -
+zł jest stabilny asymptotycznie, jeżeli układ otwarty jest enie
+: ż OE się i tylko wtedy, gdy dla pulsacji wymuszenia
+, w ,90), przy tórych Lm(w) > 0, logarytmiczna ch c
+styka fazowa przecina parzystą liczbę razy prostą dóę ED ez e

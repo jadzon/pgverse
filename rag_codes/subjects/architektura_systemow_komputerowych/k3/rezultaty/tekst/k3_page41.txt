@@ -1,0 +1,37 @@
+3.1. Układy cyfrowe 31
+
+ 
+
+figury/k3_page4figury/k3_page41_figure
+
+W takim rejestrze zapis nowej zawartości jest dokonywany poprzez wejścia D, synchro-
+nicznie z zegarem. Wynika to z działania zastosowanych przerzutników. Po podaniu na
+wejścia D, jakiegoś słowa i po przyjściu impulsu zegarowego słowo to zostanie zapamię-
+tane w tym rejestrze i pojawi się na jego wyjściach Q;. Natomiast pozostałe wejścia
+sterujące mogą zmieniać stan przerzutników w sposób synchroniczny z zegarem lub też
+asynchronicznie. Pokazany rejestr jest nazywany rejestrem równoległo-równoległym, gdyż
+zarówno odczyt, jak i zapis do niego odbywają się w sposób równoległy.
+
+Innym rodzajem rejestru może być rejestr, w których wejścia i wyjścia przerzutników
+są w pewien sposób połączone. Na rysunku 3.27a pokazano kaskadowy sposób połączenia,
+który tworzy układ nazywany rejestrem przesuwającym (ang. shift register). W pokaza-
+nym układzie jest jedno wejście informacyjne WE, jedno wejście z generatora zegara ZEG
+i cztery wyjścia Q,. Taki rejestr nazywa się rejestrem szeregowo-równoległym, gdyż wpro-
+wadzanie informacji do niego odbywa się w sposób szeregowy, a wyprowadzanie infor-
+macji z rejestru ma charakter równoległy. Istnieją także rejestry równoległo-szeregowe
+i szeregowo-szeregowe.
+
+Rozpatrzmy teraz jak działa rejestr przesuwający z rysunku 3.27a. Na rysunku 3.27b
+przedstawiono w tablicy 6 kolejnych stanów rejestru, dla 6 kolejnych impulsów zegaro-
+wych, przy założeniu, że pierwszy stan był 0000 i przy założeniu wejściowej sekwencji
+bitów równej 01000. Z rysunku wynika, że po czwartym impulsie zegarowym, od momentu
+gdy na wejściu rejestru pojawiła się 1, pojawi się ona na wyjściu ostatniego przerzutni-
+ka Q,.
+
+Przedstawimy teraz działanie kilku układów sekwencyjnych zbudowanych z użyciem
+rejestrów przesuwających. Na rysunku 3.28a pokazano jeden z możliwych sposobów po-
+łączenia wejścia WE i wyjścia Q, rejestru przesuwającego z rysunku 3.27. Przy założeniu,
+że pierwszym stanem przerzutników będzie stan 1000, układ będzie zmieniał swoje stany
+zgodnie z sekwencją pokazaną na rysunku 3.28b. Podczas ciągłego podawania sygnału
+
+<image/y/k3_page41_fiwzory/k3_page41_formula1.png>

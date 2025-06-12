@@ -1,0 +1,42 @@
+Inwersja widmowa 587
+
+ 
+
+<image/tabele/k3_page546_table1.png>
+
+a,=l-a,
+
+a, =-q -H
+
+a, *- a, —b,
+
+a, =— a, —b,
+Wzór 33.6. Inwersja widmowa. Odpowiedź częstotliwościowa filtru może zostać
+odwrócona (góra — dół) przez modyfikację współczynników „a” zgodnie z tymi wzorami. Współczynniki
+oryginalne drukiem pochytym, a zmodyfikowane - Współczynniki „b” pozostają
+niezmienione. Ta metoda daje na ogół kiepskie wyniki
+
+Na rys. 33.6 przedstawiono inwersję widmową dla dwóch często spotykanych odpowiedzi
+częstotliwościowych: filtru dolnoprzepustowego (rys. 33.6 a) i filtru pasmowozaporowego
+(wycinającego — rys. 33.6 c). W wyniku inwersji uzyskuje się, odpowiednio, filtr górno-
+przepustowy (rys. 33.6 b) i pasmowoprzepustowy (rys. 33.6 d). Jak wyglądają te uzyskane
+odpowiedzi częstotliwościowe”? Filtr górnoprzepustowy jest naprawdę okropny! Wprawdzie
+filtr pasmowoprzepustowy jest lepszy, lecz pik nie jest tak ostry, jak w filtrze pasmowozapo-
+rowym, z którego ten filtr został utworzony. Takie mierne wyniki szczególnie rozczarowują
+w porównaniu z doskonałymi parametrami przedstawionymi w rozdziale 14. Skąd taka różni-
+ca? Odpowiedź kryje się w charakterystyce, o której często zapomina się przy projektowaniu
+filtrów. Chodzi o odpowiedź fazową.
+
+Aby wykazać, że faza jest winowajcą, rozważmy system zwany transformatorem Hilberta.
+Nie jest to jakieś specjalne urządzenie, lecz każdy system mający charakterystykę częstotli-
+wościową: moduł = 1 i faza = %0 stopni w całym zakresie częstotliwości. Z tego wynika, że
+każda sinusoida po przejściu przez transformator Hilberta ma amplitudę niezmienioną, lecz
+fazę przesuniętą o ćwierć okresu. Transformatory Hilberta mogą być analogowe lub dyskret-
+ne (tzn. sprzętowe lub programowe) i są zwykle stosowane w telekomunikacji w różnych
+metodach modulacji i demodulacji.
+
+Przyjmujmy teraz, że dokonujemy inwersji widmowej transformatora Hilberta przez odjęcie
+jego sygnału wyjściowego od sygnału oryginalnego. Patrząc tylko na moduły odpowiedzi czę-
+stotliwościowych, doszlibyśmy do wniosku, że cały system ma na wyjściu zero. Moduł sygnału
+na wyjściu transformatora Hilberta jest bowiem identyczny z modułem sygnału oryginalnego
+i oba te sygnały będą się kasować. Jest to oczywiście stwierdzenie całkowicie niepoprawne.

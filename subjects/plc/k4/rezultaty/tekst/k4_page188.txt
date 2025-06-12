@@ -1,0 +1,42 @@
+załączone ze względu na obecność styków %Q]1 oraz %Q2 połączonych równo-
+legle ze stykiem START. Wyłączenie cewek może nastąpić tylko przez rozwarcie
+styku STOP (zmienna STOP musi przyjąć wartość 7).
+
+Różnica w działaniu obu obwodów występuje tylko w przypadku, gdy oba styki
+START i STOP są jednocześnie zwarte. W obwodzie górnym przekaźnik %Q]1
+przejdzie w stan wyłączenia, natomiast w obwodzie dolnym cewka przekaźnika
+%Q2 pozostanie wzbudzona. Zaleca się stosowanie rozwiązania reprezentowa-
+nego przez obwód górny, ponieważ w przypadku jednoczesnego spełnienia
+zarówno warunków załączenia jak i wyłączenia przekaźnika, warunki wyłączenia
+są dominujące, co może mieć istotne znaczenie ze względów bezpieczeństwa.
+
+Szczególnym typem przekaźników są przekaźniki impulsowe, zwane też przelo-
+towymi (one-shot, positive/negative transition coil), reagujące tylko na zmianę
+stanu obwodu wejściowego. Mogą one reagować na narastające zbocze (rising
+edge), czyli na zmianę stanu z OFF na ON, albo na opadające zbocze (falling
+edge), czyli na zmianę stanu z ON na OFF.
+
+Na Wyd. 4.4 cewka %M] reagująca na narastające zbocze zostanie wzbudzona
+tylko w przypadku zmiany stanu styku %// z OFF (rozwarcia) na ON (zwarcia)
+ipozostanie w stanie wzbudzenia do następnego sprawdzania jej obwodu. W
+efekcie przekaźnik %Q1 zostanie załączony tylko wtedy, gdy zmienna %//
+zmieni wartość z O na /, a wyłączony gdy zmienna %/2 przyjmie wartość /.
+
+Z kolei w przykładzie na Wyd. 4.5 zmienna %M2 przyporządkowana cewce re-
+agującej na opadające zbocze przyjmie wartość / tylko w przypadku zmiany
+wartości zmiennej %// z ] na 0 i pozostanie w tym stanie do następnego wyko-
+nania tego obwodu.
+
+<image/tabele/k4_page188_table1.png>
+
+Wyd. 4.4 Przykład wykorzystania przekaźnika impulsowego reagującego na zbocze
+" _ narastające
+
+<image/figury/k4_page188_figure1.png>
+
+Wyd. 4.5 Przykład użycia przekaźnika impulsowego reagującego
+na zbocze opadające
+
+ 
+
+188 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

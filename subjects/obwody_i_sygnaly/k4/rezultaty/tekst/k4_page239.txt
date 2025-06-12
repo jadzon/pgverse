@@ -1,0 +1,49 @@
+3.1. Wprowadzenie 241
+
+pobudzenia określone w przedziale 40, +00) — por. p. 2.2.2. Typ sygnałów
+pobudzających determinuje ponadto formalizm matematyczny analizy. Narzę-
+dzia matematyczne dobieramy zazwyczaj tak, aby analizę można było przepro-
+wadzić dla danej klasy pobudzeń w sposób możliwie najprostszy i aby za ich
+pomocą można było zbadać charakterystyczne właściwości układu.
+
+Na wybór odpowiednich metod analizy wpływa również rodzaj rozważanego
+zagadnienia. Na przykład, jeśli zagadnienie polega na wyznaczeniu rozpływu
+prądów lub rozkładu napięć w układzie, wówczas będziemy stosować odmienne
+metody analizy niż w przypadku, gdy przedmiotem badań jest pojedynczy prąd
+lub napięcie w wyróżnionym elemencie układu. W pierwszym przypadku
+zagadnienie jest charakterystyczne dla ujęcia sieciowego i do jego rozwiązania
+stosujemy metody sieciowe, w drugim zaś — dla ujęcia zaciskowego i jego
+rozwiązanie uzyskujemy odpowiednimi metodami zaciskowymi (por. p. 2.1.1-A,
+B).
+
+B. Metody analizy obwodów SLS. W wielu typowych zagadnieniach
+analizy formułowanych w teorii obwodów stoimy nie tylko wobec konieczności
+zastosowania metod odpowiednich dla danej klasy układów i danego typu
+pobudzeń, lecz również wobec konieczności wyboru spośród tych metod metody
+optymalnej, umożliwiającej uzyskanie pożądanych rezultatów najprostszymi
+środkami. Kolejne rozdziały książki mają na celu stopniowe zapoznawanie
+Czytelnika z podstawowymi metodami i narzędziami analizy obwodów tak, aby
+osiągnął on w rezultacie zarówno niezbędną sprawność i biegłość techniczną
+w posługiwaniu się nimi, ale także, aby mógł w sposób świadomy i krytyczny
+podejmować decyzję o wyborze metody.
+
+Niektóre metody analizy mają ograniczony zasięg i można je stosować do
+bardzo wąskiej klasy układów (np. w przypadku układów nieliniowych o okre-
+ślonym typie nieliniowości). Istnieje jednakże grupa metod, które można
+wykorzystywać w analizie szerokich klas układów. Przykładem są tu układy SLS
+(por. p. 2.1.5), analizie których będzie poświęcona (choć nie wyłącznie) pozostała
+część I tomu oraz II tom książki.
+
+W badaniu układów SLS znajdują m.in. zastosowanie takie klasyczne
+narzędzia teorii obwodów jak metoda zamiany źródeł, metoda superpozycji lub
+metody źródeł zastępczych. Przyjmując odpowiedni formalizm matematyczny,
+metody te można stosować do analizy układów SLS, w których występują
+dowolne rodzaje pobudzeń. Dyskusję metod analizy układów SLS moglibyśmy
+zatem rozpocząć formułując je od razu w kategoriach ogólnych, tzn. dla
+dowolnych układów SLS i dowolnych pobudzeń. Wydaje się jednak, że z punktu
+widzenia Czytelnika korzystniejsze będzie przedstawienie podstawowych metod
+analizy układów SLS najpierw na najprostszym przykładzie, tj. na przykładzie
+rezystancyjnych układów SLS prądu stałego. W miarę rozszerzania klasy
+pobudzeń i po wprowadzeniu odpowiedniego aparatu matematycznego metody
+te uogólnimy w dalszych rozdziałach na układy SLS, które będą zawierać
+również inne elementy i w których będą występować pobudzenia zmienne.

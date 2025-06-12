@@ -1,0 +1,56 @@
+Przykład dużej funkcji PSF — spłaszczanie oświetlenia 391
+
+współczynnika odbicia w oglądanym widoku; w tym przypadku jest to szereg pasm jasnych
+i ciemnych. Przykład sygnału oświetlenia pokazano na rys. 24.8 b). Jest to rozkład światła
+padającego na obiekt z rys. 24.8 a). Jak w świecie rzeczywistym, oświetlenie w całym ob-
+szarze widoku nie jest jednakowe. Na rys. 24.8 c) widzimy obraz widziany przez oko, rów-
+ny rozkładowi współczynnika odbicia (rys. 24.8 a) pomnożonemu przez rozkład oświetlenia
+(rys. 24.8 b). Obszary słabo oświetlone w widoku na rys. 24.8 c) są trudne do zobaczenia,
+gdyż są zbyt ciemne i mają zbyt słaby kontrast (różnicę między maksimami i minimami).
+
+W celu zrozumienia, jakie ma to odniesienie do zagadnienia codziennego widzenia, wyobraźcie
+sobie, że patrzycie na dwóch identycznie ubranych mężczyzn. Jeden z nich stoi w jasnym świe-
+tle słonecznym, a drugi w cieniu pobliskiego drzewa. Procent światła padającego odbity od obu
+tych ludzi jest taki sam. Ich twarze mogą odbijać np. 80% padającego światła, ich szare koszule
+40%, a ciemne spodnie 5%. Jednak ich oświetlenie może różnić się, powiedzmy, dziesięcio-
+krotnie. To powoduje, że obraz mężczyzny w cieniu jest dziesięć razy ciemniejszy niż tego
+w słońcu, a i kontrast (między twarzą, koszulą i spodniami) jest dziesięciokrotnie mniejszy.
+Celem przetwarzania obrazu jest w tym przypadku spłaszczenie oświetlenia poszczególnych
+elementów pobieranego obrazu. Inaczej mówiąc, chcielibyśmy, aby obraz końcowy był repre-
+zentacją współczynników odbicia, a nie warunków oświetlenia. Można powiedzieć, że mając
+obraz z rys. 24.8 c), chcemy uzyskać obraz. z rys. 24.8 a). Jest to zagadnienie filtracji nieliniowej,
+gdyż składowe obrazu są uzyskiwane przez mnożenie, a nie przez dodawanie. Rozdzielenia nie
+da się przeprowadzić idealnie, można jednak uzyskać bardzo znaczną poprawę jakości obrazu.
+Rozpoczniemy od wykonania splotu obrazu z rys. 24.8 c) z dużą funkcją PSF, o rozmia-
+rze równym jednej piątej całego obrazu. Celem jest wyeliminowanie ostrych zmian na rys.
+24.8 c) i uzyskanie przybliżenia oryginalnego sygnału oświetlenia z rys. 24.8 b). Tu właśnie
+stosuje się splot przez rozłączność. Dokładny kształt PSF nie jest ważny, funkcja powinna
+tylko być znacznie większa niż szczegóły w obrazie odbiciowym. W wyniku, stosując gaus-
+sowską odpowiedź filtru, uzyskuje się obraz pokazany na rys. 24.8 d).
+
+Ponieważ filtr wygładzający daje przybliżenie obrazu wynikającego z oświetlenia, więc uży-
+jemy filtru zaostrzającego krawędzie w celu uzyskania obrazu odbiciowego. A zatem obraz
+z rys. 24.8 c) trzeba poddać spłotowi z odpowiedzią impulsową filtru będącą różnicą funkcji
+delta i gaussowskiej. Aby zmniejszyć czas wykonania, robi się to przez odejmowanie wygła-
+dzonego obrazu z rys. 24.8 d) od obrazu oryginalnego z rys. 24.8 c). Wynik przedstawiono
+na rys. 24.8 e). To nie działa dobrze! Wprawdzie ciemne obszary zostały prawidłowo oświe-
+tlone, ałe kontrast w tych obszarach jest nadal bardzo zły.
+
+Filtracja liniowa w tym zastosowaniu działa słabo, gdyż sygnały odbicia i oświetlenia były
+pierwotnie połączone przez mnożenie, a nie przez dodawanie. Przez filtrację liniową nie
+można rozdzielić sygnałów, które zostały ze sobą połączone w wyniku operacji nieliniowej.
+W celu rozdzielenia takich sygnałów musi być wykonana operacja odwrotna do mnożenia.
+Trzeba więc obraz oryginalny podzielić przez obraz wygładzony, jak to pokazano na rys.
+24.8 f). W ten sposób koryguje się jaskrawość i odtwarza odpowiedni poziom kontrastu.
+Taka procedura dzielenie obrazów przez siebie jest ściśle związana z przetwarzaniem ho-
+momorficznym, opisanym już w rozdziale 22. Przetwarzanie homomorficzne jest sposobem
+operowania sygnałami, które zostały ze sobą połączone przez operację nieliniową. Podejściem
+do tej kwestii jest zamiana problemu nieliniowego w liniowy, przez odpowiednią operację
+matematyczną. Gdy dwa sygnały są ze sobą połączone przez mnożenie, to przetwarzanie
+homomorficzne trzeba rozpocząć od złogarytmowania pobranego sygnału. Przez tożsamość
+log(a x b) = log a + log b, problem rozdzielenia sygnałów powstałych przez mnożenie zamie-
+nia się w problem rozdzielenia sygnałów powstałych przez dodawanie. Na przykład, logaryt-
+mując obraz z rys. 24.8 c), można zastosować liniowy filtr górnoprzepustowy do rozdzielenia
+logarytmu od obrazu odbiciowego. Podobnie jak poprzednio, najszybszym sposobem realizacji
+filtru górnoprzepustowego jest odjęcie wygładzonej wersji obrazu. Następnie stosuje się anty-
+logarytm (a więc funkcję wykładniczą), uzyskując żądane przybliżenie obrazu odbiciowego.

@@ -1,0 +1,32 @@
+cinkową CMPIF (EMTH 16) oraz konwersji liczb zmiennoprzecinkowych na
+całkowite CNVFI (EMTH 17).
+
+Jeżeli liczba całkowita 32-bitowa, zapisana na rejestrach 40369 i 40370 jest
+większa od liczby zmiennoprzecinkowej, wówczas wyjście 00305 znajduje się
+w stanie wysokim, a wyjście 00306 w stanie niskim. W przeciwnym razie stan
+wyjść jest odwrotny. Gdy zaś obie liczby są sobie równe, oba wyjścia są w stanie
+wysokim. Zakończenie porównania sygnalizowane jest przez wysoki stan wyj-
+ścia w górnym węźle, co jednocześnie powoduje przejście do funkcji CNVFI.
+Wtedy liczba zmiennoprzecinkowa z rejestrów 40375 1 40376 zostaje zapisana
+do rejestrów 40377 i 40378 w formie całkowitej, a o znaku liczby informuje stan
+wyjścia 00308 (0 — liczba dodatnie, | — liczba ujemna). Liczba rzeczywista za-
+okrąglona zostaje do największej całkowitej, mniejszej niż zadana, czyli np. 3.5
+do 3, a -3.5 do —4.
+
+Jeżeli wynikowa liczba całkowita przekracza zakres liczb 32-bitowych
+(999,999,99) to mimo, że konwersja będzie wykonana, w funkcji EMTH 38 zo-
+stanie zasygnalizowany błąd.
+
+<image/tabele/k4_page297_table1.png>
+
+Wyd. 6.16 Przykład zastosowania funkcj i matematycznych zmiennoprzecinkowych:
+odejmowanie, dzielenie i porównywanie liczb zmiennoprzecinkowych i całkowi-
+tych oraz konwersja liczb zmiennoprzecinkowych na całkowite.
+
+Przykłady z Wyd. 6.17..Wyd. 6.20 przedstawiają wykorzystanie pozostałych
+funkcji EMTH o numerach od 18 do 37. Zestaw dostępnych funkcji dwuargu-
+mentowych przedstawia Tab. 2.1, a funkcji jednoargumentowych Tab. 2.2.
+
+wzory/k4_page297_formula1.
+
+m M M

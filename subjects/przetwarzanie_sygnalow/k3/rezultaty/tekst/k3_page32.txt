@@ -1,0 +1,55 @@
+42 2. Statystyka, rachunek prawdopodobieństwa i szumy
+
+ 
+
+sta procedura polegająca na mnożeniu
+przez stałą szybkość lub tak skompli-
+kowana, jak liczne korekcje drugiego
+rzędu. Uśrednianie kolejnych pomiarów
+nie poprawia dokładności. Krótko mó-
+wiąc, dokładność jest miarą kalibracji.
+W praktyce jest wiele sposobów roz-
+różnienia dokładności od precyzji.
+Wyobraźmy sobie, na przykład, że skon-
+struowano wzmacniacz elektroniczny
+. . z rezystorami o tolerancji 1%. Taka tole-
+figury/k3_page32_figure1.dnqgrancjawskazujeewartokadegore
+zystora mieści się w granicach odchyłki
+1% od wartości nominalnej, w szerokim
+zakresie zmian warunków, takich jak
+temperatura, wilgotność, efekt starzenia
+itp. Ten błąd rezystancji wytwarza we
+wzmacniaczu równoważny błąd wzmoc-
+nienia. Czy ten błąd jest związany z do-
+kładnością, czy z precyzją?
+Odpowiedź na to pytanie zależy od
+sposobu, w jaki jest przeprowadza-
+ny pomiar. Przypuśćmy na przykład,
+że zbudowaliśmy jeden wzmacniacz i testujemy go kilkakrotnie w ciągu kilku minut. Błąd
+wzmocnienia pozostaje stały podczas każdego pomiaru i stąd wnioskujemy, że problemem
+jest dokładność. Dla porównania przypuśćmy, że zbudowaliśmy tysiąc wzmacniaczy. Wartości
+wzmocnienia w poszczególnych egzemplarzach fluktuują w sposób losowy i okazuje się,
+że problemem jest wtedy precyzja. Podobnie każdy z tych wzmacniaczy będzie wykazywał
+fluktuacje wzmocnienia w wyniku zmian temperatury i innych czynników środowiskowych.
+Tu znowu mamy do czynienia z precyzją.
+Decydując, jaką nazwą określić problem występujący w pomiarach, trzeba sobie zadać dwa
+pytania. Pierwsze, czy uśrednianie kolejnych odczytów da lepszy pomiar? Jeśli tak, to błąd -
+można nazwać błędem precyzji, a jeśli nie — to występuje tu błąd dokładności. Drugie py-
+tanie: czy kalibracja skoryguje błąd? Jeśli tak, to mamy błąd dokładności, a jeśli nie — błąd
+precyzji. Ta metoda może wymagać pewnych przemyśleń, zwłaszcza dotyczących sposobu
+i częstości kalibracji urządzenia pomiarowego.
+Przypis tłumacza
+W polskiej terminologii technicznej nie stosuje się proponowanego przez autora rozróżnienia
+dokładności i precyzji. Według wiedzy tłumacza nie spotyka się też takiego rozróżnienia
+w podręcznikach metrologii. Wyróżnia się natomiast błędy systematyczne i błędy przypad-
+kowe (losowe). Do błędów systematycznych zalicza się te, które można w konkretnym przy-
+padku przewidzieć na podstawie znajomości (a posteriori) danego procesu pomiarowego.
+Błędy przypadkowe zaś to błędy, których nie można przewidzieć w kategoriach poszczegól-
+nego zdarzenia jednostkowego (pomiaru), lecz o których informacje mogą dać metody staty-
+styczne (definicje według: P. H. Sydenham: Podręcznik metrologii, WKŁ Warszawa, 1988).
+
+W tej książce autor wiąże dokładność z błędem systematycznym, a precyzję — z błędem loso-
+wym. Według polskiej terminologii można by rozróżnić dokładność wynikającą z błędu sta-
+tystycznego i dokładność wynikającą z błędu losowego. Warto przypomnieć, że w przypadku
+pomiaru wielkości przetworzonych na cyfrowe jednym z parametrów wpływających na dokład-
+ność pomiaru jest rozdzielczość uwarunkowana ograniczoną liczbą bitów przetwornika a/c.

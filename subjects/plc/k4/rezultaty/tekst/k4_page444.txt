@@ -1,0 +1,8 @@
+<image/figury/k4_page444_figure4.png>
+<image/wzory/k4_page444_formula1.png>
+<image/figury/k4_page444_figure2.png>
+
+Wyd. 8.106 Obliczanie współczynnika korekcji od przepływu soku i podanie go
+jako bias do regulatora PID
+
+444 Rozdział : 8.Programy przykładowe

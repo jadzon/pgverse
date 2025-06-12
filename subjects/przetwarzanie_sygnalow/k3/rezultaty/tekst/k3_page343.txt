@@ -1,0 +1,45 @@
+23. Tworzenie i wyświetlanie obraz
+
+<image/figury/k3_page343_figure1.png>
+
+Na rys. 23.12 przedstawiono, jak ustawienie kontrastu i jaskrawości może uwidaczniać róż
+cechy obrazu. Na rys. 23.12 a) jaskrawość i kontrast są ustawione na normalnym pozior
+jak to wskazują nastawniki suwakowe J i K (jaskrawość i kontrast) z lewej strony rysunś
+Zwróćmy teraz uwagę na wykresy pokazane przy każdym obrazie, zwane c!
+
+wyjście/wejście, wyjściową tablicą przeglądową lub krzywą gamma. Według ya
+ności są sterowane układy ustawiające jaskrawość i kontrast. Wartość każdego piksela w?
+
+rejestrowanym obrazie, a więc pewna liczba z zakresu od O do 255, jest wprowadzana
+takiej tablicy przeglądowej, która w odpowiedzi daje inną liczbę też z zakresu od 0 do 2
+Ta nowa wartość cyfrowa steruje układem jaskrawości, w którym liczby od O do 255 s4, «
+powiednio, przetwarzane na różne odcienie od czerni do bieli. Tak więc tablica przegląć
+odwzorowuje zarejestrowane liczby w postaci jaskrawości obrazu.
+
+Na rys. 23.12 a) pokazano, jak wygląda obraz, gdy tablica przeglądowa niczego nic v
+dza, to znaczy daje na wyjściu to samo, co ma na wejściu. Wszystkie piksele w zaszumie
+tle mają losowo rozmieszczone różne odcienie szarości od bieli do czerni. Trzy kwadr
+wyświetlane jako jasny, średnio ciemny i ciemny, wyraźnie różnią się od siebie. Problem k
+w tym, że trójkąty wewnątrz każdego kwadratu nie są dobrze widoczne. Kontrast jest :
+mały, aby oko mogło odróżnić te obszary od ich otoczenia.
+Rysunki 23.12 b), c) obrazują wpływ zmian jaskrawości. Wzrost jaskrawości powoduje f
+suwanie charakterystyki wyjście/wejście w lewo, a jej zmniejszanie — przesuwanie w p
+Zwiększanie jaskrawości powoduje, że każdy piksel na obrazie staje się jaśniejszy, a p
+zmniejszaniu każdy piksel staje się ciemniejszy. Te zmiany mogą poprawić widoczność obszaż
+skrajnie jasnych bądź skrajnie ciemnych, lecz — jeśli doprowadzone są zbyt daleko — powc
+nasycenie obrazu. Na przykład wszystkie piksele w kwadracie z prawej strony na rys. 23.1:
+są wyświetlane z pełną jaskrawością, tj. 255. Przeciwny efekt pokazano na rys. 23.12 c), gi
+wszystkie piksele w kwadracie z lewej strony są wyświetlane w najczamniejszej czerni, a *
+mają wartość cyfrową 0. Ponieważ wszystkie piksele w tych obszarach mają jednakowe
+ści, więc trójkąty są całkowicie wymazane. Zauważcie też, że żaden z trójkątów na rysur
+23.12 b), c) nie jest widoczny lepiej niż trójkąty na rys. 23.12 a). Zmiana jaskrawości niew
+pomaga (lub wcale nie pomaga) w wyróżnianiu obiektów o małym kontraście z ich otoczem
+Na rys. 23.12 d) przedstawiono wyświetlanie obrazu zoptymalizowane w celu uwidoczr
+wartości pikseli wokół cyfrowej wartości 75. Optymalizację osiągnięto przez zmianę kont
+powodującą zmianę nachylenia charakterystyki wyjście/wejście. Na przykład zarejestrow
+wartości pikseli 71 i 75 stają się na wyświetlanym obrazie wartościami 100 i 116, dające
+rokrotnie większy kontrast. Wartości pikseli między 46 i 109 obejmują zakres wyświetlanii
+najczarniejszej czerni do najbielszej bieli. Ceną, jaką się płaci za poprawę kontrastu, jest
+piksele o wartościach wejściowych od 0 do 45 są nasycone w czerni, a od 110 do 255
+sycone w bieli. Jak pokazano na rys. 23.12 d), zwiększony kontrast umożliwia widoc:
+trójkątów w lewym kwadracie kosztem nasycenia kwadratu środkowego i prawego.

@@ -1,0 +1,9 @@
+166 8. Dyskretne przekształcenie Fouriera
+
+<image/figury/k3_page150_figure1.png>
+
+Rys. 8.13. Przykład sygnałów we musi być
+stawiono jedną — szum losowy może
+fazy między nt lub -nt
+
+<image/figury/k3_page150_figure2.png>

@@ -1,0 +1,20 @@
+ma znaczenie jedynie przy pracy w trybie ręcznym. Po przejściu na tryb pracy
+ręcznej (STEU Bit Q0=1) wielkość wyjściowa regulatora YA jest doprowadzana
+do wartości YH lub dYH w zależności od tego, czy realizowany jest algorytm
+pozycyjny czy prędkościowy.
+
+Wszystkie dane potrzebne do poprawnej pracy regulatora należy umieścić w
+bloku danych regulatora (Tab. 7.14).
+
+Wszystkie wyszczególnione parametry (z wyjątkiem słowa sterującego STEU)
+należy zadać w formie 16-bitowych liczb stałoprzecinkowych. Słowa danych,
+które nie zostały wyszczególnione w Tab. 7.14 wykorzystywane są przez algo-
+rytm PID do przechowywania wyników pośrednich. Część proporcjonalna, cał-
+kująca i różniczkująca regulatora może być wyłączona przez ustawienie wartości
+zero w odpowiednim słowie danych (R, TI, TD).
+
+<image/tabele/k4_page372_table1.png>
+
+-/mm uma
+
+37wzory/k4_pagqe372_formula1.pnq

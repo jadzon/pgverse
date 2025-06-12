@@ -1,0 +1,54 @@
+28. Cyfrowe procesory sygnałowe
+
+<image/figury/k3_page466_figure1.png>
+
+ 
+    
+ 
+   
+  
+  
+
+Jak szybkie są cyfrowe procesory sygnałowe?
+
+Najważniejszą przyczyną stosowania procesorów DSP zamiast tradycyjnych mikroproces
+rów jest szybkość, zdolność pobrania próbek do procesora, przeprowadzenia niezbędn
+operacji matematycznych i wyprowadzenia przetworzonych danych. I tu powstaje pytani
+jak szybkie są procesory DSP. Normalnym sposobem odpowiedzi na takie pytanie są
+cowe testy porównawcze (benchmarks) umożliwiające wyrażenie szybkości mikroprocex
+w formie liczbowej. Na przykład szybkość działania systemów stałoprzecinkowych jest c:
+sto podawana w MIPS — milionach operacji na liczbach całkowitych na sekundę. Szybkoś
+systemów zmiennoprzecinkowych jest wyrażana w MFLOPS — milionach operacji na lic
+bach zmiennoprzecinkowych na sekundę.
+
+Sto pięćdziesiąt lat temu premier brytyjski Beniamin Disraeli stwierdził, że są trzy rodza
+kłamstwa: £garstwo, wierutne łgarstwo i statystyka. Gdyby Israeli żył teraz i pracował z m
+kroprocesorami, dodałby jeszcze wzorcowe testy porównawcze jako czwartą kategorię.
+testy mają, dzięki bezpośredniemu porównaniu, wykazywać, który procesor jest najleps:
+Niestety, w praktyce ta metoda często zawodzi, gdyż różne mikroprocesory przodują w ró
+nych obszarach zastosowań. Wyobraźcie sobie pytanie: Który samochód jest lepszy — cadi
+czy ferrari? Odpowiedź zależy od tego, do czego jest wam ten samochód potrzebny.
+Nieporozumienia wokół wzorcowych testów porównawczych pogłębiają się z powodu kć
+kurencyjności w przemyśle elektronicznym. Wytwórcy chcą przedstawiać swoje prod
+w jak najlepszym świetle i wszelkie niejednoznaczności powstające przy testowaniu ot
+na swoją korzyść. Jest stare powiedzenie w elektronice: Piszący dane katalogowe uzysk
+z układu działanie dwa razy lepsze niż inżynier. Ci ludzi nie są kłamcami, lecz po pros
+opłacani za to, żeby mieli bujną wyobraźnię. Testy porównawcze trzeba traktować jako je
+z narzędzi w realizacji skomplikowanego zadania. Jeśli nie macie doświadczenia w kom
+staniu z tego narzędzia, to możecie dojść do błędnych wniosków. Lepszym sposobem
+przyjrzenie się informacjom o szybkości wykonania algorytmów, z których macie za!
+skorzystać, Gdy wasze zastosowanie wymaga np. filtru SOI, to zwróćcie uwagę na dokła
+liczbę okresów zegara potrzebnych do realizacji tego konkretnego zadania w procesorze
+Korzystając z takiego podejścia, zobaczcie, jakie czasy są potrzebne na wykonanie różą
+algorytmów przez prezentowane tu procesory sygnałowe rodziny SHARC firmy Aną
+Devices. Nie zapominajcie też, że szybkość działania mikroprocesorów podwaja się co
+lata. Wynika stąd, powinniście zwrócić szczególną uwagę na metodę zastosowaną w
+przykładzie. Aktualne dane liczbowe ciągle się zmieniają i powinniście powtarzać w
+obliczenia za każdym razem, gdy zaczynacie nowy projekt. W świecie techniki XXI
+wszystko w okamgnieniu staje się przestarzałe.
+
+Jeśli chodzi o możliwość zrozumienia czasu wykonania, to najłatwiejszymi pod tym
+dem są procesory rodziny SHARC. Mogą one bowiem wykonywać operację mnożenia
+mulacją podczas jednego okresu zegarowego. Ponieważ większość filtrów SOI zawi
+
+25 do 400 współczynników, więc na każdą przetwarzaną próbkę jest koniecznych od

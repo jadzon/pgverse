@@ -1,0 +1,51 @@
+6.3. Systemy przerwań 117
+
+6.3.2. PROGRAMOWA OBSŁUGA URZĄDZEŃ ZEWNĘTRZNYCH
+
+Programowa obsługa urządzeń polega na tym, że oprogramowanie systemowe (system
+operacyjny) co pewien czas powoduje przerwanie wykonywania właściwego programu
+(programu użytkowego) i dokonuje sprawdzenia stanu wszystkich sterowników urządzeń.
+Problem rozpoznania źródła przerwania tu nie występuje, gdyż wysyłając adres urządzenia
+do sterownika procesor wie jakie urządzenie teraz sprawdza. Problem zapewnienia od-
+powiedniej kolejności obsługi różnych urządzeń żądających przerwania jest rozwiązany
+w taki sposób, że kolejność ta jest zgodna z kolejnością przeglądania. Załóżmy, że kom-
+puter pracuje w konfiguracji z klawiaturą, monitorem i drukarką. W czasie pracy kompu-
+tera każde z tych urządzeń inaczej współpracuje z procesorem. Drukarka pracuje tylko na
+w programie. Klawiatura jest urządzeniem operatorskim i służy do wprowadzania rozka-
+zów i danych. Nawet gdy nie jest wykonywany żaden program, to procesor oczekuje na
+znak od niej. Monitor wyświetla obraz w standardzie telewizyjnym, co powoduje, że obraz
+musi być regenerowany co pewien czas. Załóżmy, że monitor żąda regeneracji dokładnie
+co 10 ms (tyle trwa jeden obraz) i wówczas co ten czas procesor musi wykonać program
+obsługi monitora polegający na przesłaniu do monitora (a raczej jego pamięci buforowej)
+zawartości nowego obrazu.
+
+Rozpatrzmy jak przebiega współpraca procesora z trzema omówionymi urządzeniami.
+Klawiatura jest gotowa do obsługi nie częściej niż co 100 ms (10 zn/s), natomiast drukarka
+czeka na wykonanie przez procesor rozkazu OUT. Co 10 ms przerywana jest praca
+procesora i wykonywany jest program obsługi monitora. Ponieważ proces ten zachodzi
+periodycznie, to można tak zorganizować pracę systemu, aby po każdej obsłudze monitora
+procesor sprawdzał stan klawiatury. Jeśli nie żąda ona obsługi (klawisz nie został na-
+ciśnięty), to procesor powraca do wykonywania właściwego programu. Jeżeli natomiast
+klawiatura żąda obsługi, to procesor przejdzie do wykonania podprogramu wczytania
+znaku z klawiatury i dopiero potem powróci do programu właściwego. Jeśli procesor
+aktualnie nie wykonuje programu użytkowego, to mimo tego musi być gotowy do odebra-
+nia znaku z klawiatury. Realizuje to zadanie ciąg rozkazów stanowiący pętlę oczekiwania
+na znak z klawiatury. Jest to pętla, w której procesor odczytuje stan sterownika klawiatury,
+aż napotka zgłoszenie żądania obsługi. Jeżeli żądanie to nie nastąpi w ciągu 10 ms, to
+procesor ponownie przejdzie do obsługi monitora. Jeżeli równocześnie pojawią się oba
+żądania, to procesor wykona te, które już wcześniej w czasie projektowania systemu,
+otrzymało pierwszeństwo. Problem pierwszeństwa jest nazywany przyznawaniem
+priorytetów (ang. priority). Priorytetowy system przerwań określa kolejność obsługi wielu
+zgłoszeń przerwań. W naszym przykładzie pierwszeństwo musi otrzymać monitor i mówi-
+my, że ma on wyższy priorytet niż klawiatura.
+
+Niech w systemie komputerowym, w którym procesor wykonuje jeden rozkaz w czasie
+lis, pracuje operator piszący na klawiaturze z szybkością 10 zn/s, tj. z szybkością
+100 ms/znak. Niech wykonywany program składa się z 100 000 rozkazów. Jeżeli program
+nie odwołuje się do urządzeń zewnętrznych, to czas jego wykonania będzie wynosił
+100 ms. Jeśli jednak założyć, że w programie co 1000 rozkazów pojawia się rozkaz
+odwołania do urządzenia zewnętrznego (wobec tego jest 100 takich rozkazów) np. do
+
+drukarv' btórai nhchina trura 10 me ta nalkawitn: azac urikanonia nrarromi wwmiację
+
+<image/wzory/k3_page127_formula1.png>

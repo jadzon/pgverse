@@ -1,0 +1,44 @@
+238
+
+Zauważmy, że Program 20 zapytany zatrudnia("Moda" ,zenon). odpowiada
+yes, co jest konsekwencją niespełnienia predykatów s_c(zenon,z) i plec(zenon m).
+Niespełnienie tych predykatów wynika z przyjętego w Prologu założenia, że wszyst-
+kie predykaty, których spełnienia nie daje się wykazać, są niespełnione. Założenie
+to nazywa się założeniem o zamkniętości świata (ang. closed world assumption).
+Alternatywą dla założenia o zamkniętości jest założenie o otwartości świata, które
+także łatwo można zrealizować w Prologu. W świecie otwartym istnieją dane mó-
+wiące o prawdziwości pewnych faktów i dane mówiące o nieprawdziwości. Program
+bada prawdziwość lub fałszywość zadanych faktów, a nie znajdując potwierdzenia
+ich prawdziwości lub fałszywości sygnalizuje brak danych.
+
+PRZYKŁAD 9.21
+
+Program 21 realizuje założenie o świecie otwartym. Przeprowadza on ocenę pracow-
+ników biorąc pod uwagę predykaty d_p (dobry pracownik) iz_p (zły pracownik),
+a po spełnieniu jednego z nich wyświetla uzyskaną ocenę pracownika. Gdy żaden z
+predykatów nie jest spełniony, program wyświetla tekst: „brak danych”. Zauważmy,
+że klauzula ocena(_) :- write("brak danych"). jest równoważna klauzuli
+
+ocena(X) :- not(d_p(X)), not(z_p(X)),
+write("brak danych").
+
+Wykonajmy program podając zapytania: ocena(jan)., ocena(monika).,
+ocena(henryk)., ocena(zenon).
+
+/* Program 19 */
+
+ocena(X) :- d_p(X),
+
+write("dobry pracownik "), !.
+ocena(X) :- z_p(X),
+
+write("zly pracownik "), !.
+ocena(_) :- write("brak danych ").
+
+d_p(X) :- punktualny(X), staz(X,L), L>2.
+d_p(jan). d_p(marek). d_p(ewa).
+
+punktualny (monika). punktualny (maria).
+
+staz(monika,3). staz(mariusz,5).
+z_p(henryk). z_p(mieczyslaw).

@@ -1,0 +1,42 @@
+1.4. Prawdopodobieństwo całkowite 9
+Przykład 1.17 W przypadku rzutu n monetami, niech A; oznacza, że na ;-tej monecie
+wypadł orzeł. Wtedy zdarzenia A;,... „A, są niezależne. Łatwo sprawdzić, że
+e dla każdego i, P(A,) = 1/2,
+e dla każdej pary i < j, P(A; M. .A;) = 1/4
+e dla każdej trójki i < j < k, P(AG NA; NA) = 1/8, itd.
+
+e prawdopodobieństwo, że wypadną same orły, wynosi
+
+<image/wzory/k2_page68_formula1.png>
+
+1.4  Prawdopodobieństwo cał kowite
+
+Twierdzenie 1.18 (wzór na prawdopodobieństwo całkowite.) Niech A; ,... , A„ € 0,
+będą zdarzeniami takimi, że:
+
+e P(A,) > 0, dla każdego l <i<n,
+e A; A, = MWdla 1 < i < j < n (zdarzenia są parami rozłączne),
+e Ui<i<, 4: = O (zdarzenia dają w sumie całą przestrzeń).
+
+Wtedy prawdopodobieństo dowolnego zdarzenia B € Q wynosi
+
+<image/wzory/k2_page68_formula2.png>
+
+Dowód Mamv
+
+<image/wzory/k2_page68_formula3.png>
+
+Ponad
+
+<image/wzory/k2_page68_formula4.png>
+
+więc na mocy twieruzenia 1.3 mamy
+
+<image/wzory/k2_page68_formula5.png>
+Z wniosku 1.12 mamy P(B  A;) = P(B|A;) - P(A;); co daje tezę twierdzenia. o
+W przypadku dwóch zdarzeń uzupełniających się A i A” wzór z twierdzenia 1.18
+wygląda następująco:
+
+<image/wzory/k2_page68_formula6.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

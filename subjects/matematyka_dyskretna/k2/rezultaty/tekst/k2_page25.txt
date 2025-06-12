@@ -1,0 +1,41 @@
+10 Rozdział 1. Arytmetyka
+
+Reszty zapisane w odwrotnej kolejności:
+10110010,
+tworzą binamy zapis liczby (178);9. Poprawność działania tego algorytmu wynika z fak-
+tu, że jeżeli podzielimy liczbe
+<image/wzory/k2_page25_formula1.png>
+
+przez 2, to reszta z dzielenia wyniesie do, a iloraz całkowitoliczbowy wyniesie:
+
+<image/wzory/k2_page25_formula2.png>
+
+następne dzielenie przez 2 da resztę d; oraz iloraz:
+
+<image/wzory/k2_page25_formula3.png>
+
+i tak dalej.
+
+Ostatni sposób można łatwo uogólnić na algorytm zamiany liczb z systemu dziesięt-
+nego na system z inną bazą b. Należy tylko dzielić przez b. Jeżeli chcemy, na przykład,
+przedstawić liczbę 60 w systemie trójkowym, to dzielimy ją kolejno przez 3 i spisujemy
+reszty z dzielenia:
+
+<image/tabele/k2_page25_table1.png>
+
+W wy
+
+1.7 Długóć liczby
+
+Zastanówmy się ile cyfr zawiera zapis dziesiętny liczby naturalnej x. Cztery cyfry w
+systemie dziesiętnym posiadają liczby od 1000 = 105% do 9999 = 10” — 1, ak cyfr
+posiadają liczby od 10*-! do 10* — 1. Tak więc liczba x ma k cyfr wtedy i tylko wtedy
+gdy k — 1 < logi z < k, czyli gdy (logig r| = k — 1. Mamy więc
+
+Lemat 1.10 Liczba naturalna x ma w systemie dziesiętnym [log;g| + 1 (w przybliżeniu
+logo z) cyfr.
+
+Podobnie w systemie z podstawą b, liczba x ma k cyfrwtedy i tylko wtedy gdy k-1 <
+log, z < k, czyli:
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

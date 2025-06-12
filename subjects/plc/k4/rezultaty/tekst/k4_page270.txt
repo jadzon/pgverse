@@ -1,0 +1,35 @@
+5.10 Funkcje konwersji
+
+ 
+
+Do zmiany formatu zapisu danych służą następujące funkcje konwersji:
+
+e TOD konwersja słowa 16 bitowego typu całkowitego na
+
+(TO bcD) kod BCD. (Wyd. 4.44)
+e FRD konwersja wartości w kodzie BCD na wartość
+
+(FRom bcD) dziesiętną (Wyd. 4.45)
+e DCD konwersja czterobitowej wartości zapisanej w ko-
+
+(DeCoDe 4 _ dzie binarnym na kod " I z 16". Operacja DCD nie
+
+to lof16) « ma wpływu na bity słowa statusowego S2:0. (Wyd. 4.46)
+
+<image/tabele/k4_page270_table1.png>
+
+Wyd. 4.44 Instrukcja liczby całkowitej na kod BCD TOD
+
+<image/figury/k4_page270_figure1.png>
+
+Wyd. 4.45 Instrukcja konwersji kodu BC D na liczbę dziesięmą FRD
+
+<image/tabele/k4_page270_table2.png>
+
+Wyd. 4.46 Instrukcja konwersji wartości 4 bitowej na kod „1 z 16" DCD
+
+       
+
+Rozdział : 5. Język schematów drabinkowych dla SLC 500
+
+270

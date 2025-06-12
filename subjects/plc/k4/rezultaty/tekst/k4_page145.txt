@@ -1,0 +1,23 @@
+Kryterium oceny iakości kanału pomiarowego stanowi współczynnik tłumienia
+napięcia wspólnego CMRR.
+
+<image/figury/k4_page145_figure1.png>
+
+Rys. 3.26 Schemat połączeń przetworników potencjałowych
+z modułem analogowych wejść napięciowych.
+
+Dla omówienia modułu wejść napięciowych wybrany został moduł ALG222
+(Analog Voltage Input - 16 Channel). Jest to moduł, który udostępnia 16 jedno-
+końcówkowych lub 8 różnicowych kanałów wejściowych w następujących
+zakresach:
+
+a od 0do10 V
+a od-10 do +10 V
+
+Domyślnie © V odpowiada liczba 0, a 10 V odpowiada liczba 32000. Przetwa-
+rzanie analogowo-cyfrowe ustawia zawartość w rejestrze %A/ z rozdzielczością
+12-bitową. Dane katalogowe tego modułu zawiera Tab. 3.12.
+
+JYEOWOZIROZZODR OOO TYS "EPA A O EEC PTA OCE CY ODA KO OK O
+
+3.5 Moduły wejść analogowych AI 145

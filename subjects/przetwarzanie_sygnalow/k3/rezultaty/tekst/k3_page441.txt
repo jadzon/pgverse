@@ -1,0 +1,23 @@
+Małe częstotliwości są usytuowane w górnym, lewym rogu widma, a duże — w dolnym,
+IO EZ Ez 3 i
+ny, u góry. Funkcja bazowa dla [0,1] jest połową okresu fali
+i wartością stałą — w drugim. Poskcja tazowi dla] 4 JOD ca UROK 0 90.
+W przekształceniu DCT widmo jest obliczane przez korelowanie grupy pikseli 8 x 8 z
+z funkcji bazowych. To znaczy, że każda wartość w widmie jest znajdowana przez
+mnożenie odpowiedniej funkcji bazowej przez grupę pikseli 8 x 8 i następnie
+aw. Do zakończenia obliczania DCT są jeszcze konieczne dwie korekty (tak
+w przekształceniu Fouriera). Po pierwsze, trzeba podzielić 15 wartości widma w z
+iw RÓ
+Odwrotne przekształcenie DCT jest wykonywane przez przyporządkowanie każdej
+widma właściwej funkcji bazowej i zsumowanie w celu odtworzenia dziedziny
+
+  
+   
+  
+
+<image/figury/k3_page441_figure2.png>
+
+<image/wzory/k3_page441_formula1.png>
+
+4Tyd. £1.1. WAR PURALOWU NG TYJUWNAU, UU ULYDAGNIA UUUICGU PILYUNECIA UUIOLU pIAWIUTUWEGU JOM
+niecznych mniej niż 1/4 z 64 wartości

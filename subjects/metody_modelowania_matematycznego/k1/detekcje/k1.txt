@@ -1,0 +1,323 @@
+Metody badania:
+- "in vivo” - w prawdziwym życiu
+- modelowanie fizyczne
+- modelowanie analogowe - wykorzystujemy modele matematyczne
+- modelowanie cyfrowe - wykorzystujemy modele matematyczne
+
+Zalety modelowania cyfrowego:
+- uniwersalność
+- moc obliczeniowa
+- możliwość modelowania i symulacji procesów hybrydowych (DDC)
+- _ elastyczność:
+- operowanie, użycie i zastosowanie modeli
+- zarządzanie, obsługa i kompilacja wyników
+
+Języki modelowania
+Typy procesów:
+- ciągłe
+- dyskretne, impulsowe
+- cyfrowe
+- hybrydowe
+
+Podstawy dyskretnego modelowania matematycznego:
+Modelowanie i symulacja (MAS) - konstruowanie modeli układów rzeczywistych i
+symulacja | i |
+
+Elementy
+<image/tafigury/k1_page1_figure1.png>
+- Śro
+
+Układ rzeczywisty
+- _ hipotetyczny fragment świata rzeczywistego, bierze się z obserwacji, intuicji, wiedzy,
+doświadczeń i praw fizyki.
+- źródło danych o zachowaniu się (sposobie reakcji) modelowanego procesu
+- postulat: modele powinny wyjaśniać dane eksperymentalne, a nie być bliskie
+„rzeczywistości”
+- Przykłady:
+— układy fizyczne/chemiczne, biologiczne, ekonomiczne, polityczne
+— układy techniczne
+- automatyzacja
+— mutacje obiektów/systemów
+— implementacja regulatorów
+
+Model matematyczny
+
+- _ zbiór elementamych operacji opisujących zachowanie modelowanego procesu, który
+jest obliczeniowy i zdolny do wygenerowania pożądanej reakcji
+
+- _ możliwości generacji identycznych z rzeczywistymi reakcji na określone pobudzenie
+
+- operacje zrozumiałe dla środowiska komputerowego (maszyna analogowa, maszyna
+cyfrowa, asembler<język programowania niższego rzędu>, języki programowania
+wyższego rzędu, języki modelowania)
+
+- reakcja modelu (co robi)
+
+- _ struktura modelu (jak to robi)
+- złożoność
+- sekwencyjność
+
+Relacja modelowania (układ rzeczywisty * model matematyczny)
+- _ wiemość i zasadność modelu i reprezentacji układu rzeczywistego
+- _ poziomy zasadności (wierności):
+- replikatywny - odtwarzanie danych
+- predykcyjny - powtarzalna zgodność dla różnych warunków
+- strukturalny - odtwarzanie reakcji i sposobu działania układu rzeczywistego
+
+Relacja symulacji (model matematyczny ** komputer)
+- _ wierność i poprawność komputerowej realizacji operacji wymaganych przez model
+-  nazasadność składają się:
+- metody symulacji
+- dobór języka modelowania
+- charakterystyki środowiska komputerowego
+- dokładność reprezentacji maszynowej liczb i działań
+- prędkość obliczeń
+
+Praktyczne zalety MAS:
+- sprawdzanie hipotez (nieznanych struktur świata rzeczywistego)
+- badania parametryczne modeli
+- optymalizacja działań modeli
+Zalety komputerowego modelowania:
+- powtarzalność
+- _niedestrukcyjność
+Zalety języków M8S:
+- upraszczanie procesów MaS
+- _ szybka interpretacja danych
+- statystyczne i graficzne opracowanie danych
+
+Konstrukcja modelu
+konstrukcja — opis w języku formalnym — zasadny model
+
+model pierwotny > model uproszczony
+
+weryfikacja - porównanie reakcji modelu i układu rzeczywistego
+błędy:
+- w modelu matematycznym
+- _ wrealizacji komputerowej
+- w mechanizmie (w interpretacji czasu, realizacji zmiennych losowych, całkowaniu)
+- w strategii (uporządkowanie działań i zdarzeń)
+
+model nieformalny - względem opisu:
+
+- elementów
+
+- zmiennych opisujących parametry i stany elementów
+
+- interakcji elementów (reguł wzajemnego oddziaływania)
+
+- _ przyjętych założeń
+zasadnicze cechy układu rzeczywistego w modelu nieformalnym
+
+- niekompletny (nie uwzględnia wszystkich możliwych sytuacji)
+
+- _ nielogiczny (zawiera sprzeczne ze sobą reguły interakcji)
+
+- niejednoznaczny (więcej niż jedna możliwość zachowania w danej sytuacji)
+model formalny — po wykryciu braków i usterek
+
+Etapy procesu MAaS:
+1) nieformalny opis modelu i założeń w naturalnym języku
+2) formalny opis - matematyczny i jednoznaczny
+3) program symulacyjny
+4) prezentacja wyników eksperymentu i ich analizy
+5) ocena - zakresu zastosowania modelu, jego zasadności/wierności i kosztów
+przebiegu symulacji
+
+6) odniesienie do innych modeli (przeszłych i przewidywalnych)
+
+—
+
+Rzeczywiste obiekty/procesy/układy
+— kategorie modeli matematycznych:
+- _ ciągłe/dyskretne w czasie
+- _ ciągłe/dyskretne w wartościach chwilowych zmiennych
+- _ deterministyczne/stochastyczne
+-  autonomiczne/nieautonomiczne (czy są wpływy "świata zewnętrznego”)
+- _ stacjonarne/niestacjonarne (czy zmienne w czasie)
+- _ dynamiczne/niedynamiczne (nieinercyjne, bezpamięciowe)
+- _ liniowe/nieliniowe (liniowy - parametry nie zmieniają się podczas zmian stanu układu)
+
+Sformalizowany model - sposoby krótkiego i precyzyjnego opisu
+-  materia/zespół wielkości - zbiory pobudzeń, zakłóceń, stanów wewn. i reakcji wyjść
+-  materia/zespół odwzorowań, transformacji - funkcje określające reakcję na
+pobudzenie
+- podstawa czasu T (ciągła <rzeczywiste>/dyskretna <naturalne - całkowite dodatnie>)
+Formalizmy i konwencje opisu odpowiednie do klas modeli, np:
+- dyskretnych w czasie
+-  odyskretnych zdarzeniach
+- równań różniczkowych
+Równania różnicowe - sieć elementów nieinercyjnych i opóźnień
+Równania różniczkowe - sieć elementów nieinercyjnych i integratorów
+
+Modelowanie (układ rzeczywisty — model formalny)
+
+Pojęcia/etapy modelowania:
+
+układ rzeczywisty — układ eksperymentalny — model podstawowy — model scalony
+(najbardzie
+
+<image/figury/k1_page4_figure1.png>
+
+Układ rzec
+- nat
+-  sztl 2 . , .
+- _ hybrydowy (transportowy, cyfrowe sterowanie)
+
+Z całości systemu rzeczywistego na podstawie dostępnych pomiarów i obserwacji
+wyodrębniamy segment, który uważamy za jego dostateczną reprezentację, czyli układ
+rzeczywisty.
+
+Reakcja wejścia-wyjścia (przejścia) - zbiór wszystkich trajektorii możliwych do uzyskania
+eksperymentalnie
+— para trajektorii wejście-wyjście:
+
+- _ trajektoria wektorowa wejściowa - przebiegi wszystkich zmiennych wejściowych
+
+- _ trajektoria wektorowa wyjściowa - przebiegi wszystkich zmiennych wyjściowych
+
+Układ eksperymentu opisuje ograniczony zestaw warunków, w których układ rzeczywisty
+będzie obserwowany (eksperyment jest wykonywany)
+e Z każdym układem eksperymentu związany jest podzbiór reakcji wejście-wyjście.
+e Model jest wierny dla danego eksperymentu, jeśli jego pary wejście-wyjście są
+zgodne (przy pewnym kryterium porównawczym ze wszystkimi parami we-wy układu
+w danym układzie eksperymentalnym)
+e Zasadność(wierność) modelu jest ściśle związana z układem eksperymentu i
+kryterium pomiaru zgodności par wejście-wyjście.
+
+Model podstawowy- pozwala uzyskać wszystkie trajektorie wejście-wyjście (całą reakcję)
+układu rzeczywistego, czyli jest zasadny dla wszystkich dopuszczalnych układów
+eksperymentu.
+— Ogólna informacja o mechanizmie reakcji układu rzeczywistego ma (zbyt) wiele
+elementów i/lub (zbyt) wiele interakcji, co oznacza wysoki stopień złożoności, więc
+potrzebna jest redukcja modelu poprzez:
+
+- _ integrację (scalenie) komponentów
+
+- _ uproszczenie interakcji
+
+Model scalony - uproszczony model podstawowy zasadny dla układu eksperymentu
+
+model podstawowy: — operacje uproszczenia:
+- elementy (e) pomijanie - e,v,r,(S)
+- _ zmienne opisowe (v) upraszczanie -r,S
+- _ reguły interakcji (r) zastępowanie - deterministyczna v ** losowa v
+
+- schemat oddziaływań (s) uogólnienie (zakresów v)
+grupowanie - e, v
+
+*pomijanie czynników, które mają znikomy wpływ na reakcję modelu podstawowego biorąc
+pod uwagę określone kryterium porównawcze par wej-wyj modelu i układu rzeczywistego
+
+*zastępowanie reguł interakcji mechanizmem probabilistycznym
+- _ eliminacja zmiennych opisowych lub złożonych podukładów modelu podstawowego o
+pseudostochastycznym charakterze
+- _ zmiana formy modelu i interpretacja jego reakcji - mechanizm probabilistyczny jest
+realizowany przez deterministycznie opisane generatory liczb pseudolosowych
+
+*uogólnianie zakresów - każda wartość z zakresu zmiennej modelu scalonego może
+reprezentować wiele wartości zakresu tej zmiennej w modelu podstawowym
+
+*agregacja (grupowanie):
+- elementów modelu podstawowego w bloki(elementy) modelu scalonego
+- _ zmiennych opisowych elementów modelu podstawowego w jedną zmienną opisującą
+element modelu scalonego poprzez:
+- uwektorowienie
+- równoważność deterministyczną (przyczynowo-skutkową) wraz z pomiarami
+- równoważność probabilistyczna/stochastyczna(wynikająca z domysłu)
+- szeregowanie
+Przejście z układu rzeczywistego na model scalony (zintegrowany):
+
+relacje zasadności
+
+<image/figury/k1_page5_figure1.png>
+
+Symulacja - wyznaczenie trajektorii wej-wyj krok po kroku (operacje iteracyjno-rekursywne)
+na podstawie modelu scalonego za pomocą systemu komputerowego
+
+Ograniczenia zasobów komputera
+- _ czas symulacji i krok czasowy symulacji
+- pamięć operacyjna - opis modelu — struktura i zmienne opisowe
+- oprogramowanie systemowe
+— nadbudowa (kompilatory, biblioteki, translatory)
+—zarządzanie symulacją (obsługa komend i gospodarowanie pamięcią)
+Ograniczenia czynnika ludzkiego
+- _ czas i wysiłek
+- wynikające z charakterystyki oprogramowania, np łatwość w obsłudze, usuwaniu
+błędów, modyfikacji czy weryfikacji
+
+Poziom złożoności - rozmiar zasobów niezbędnych do prowadzenia prac
+przygotowawczych i symulacji, pozostaje w prostej relacji do strukturalnych własności
+modelu. Model, którego poziom złożoności wykracza poza ograniczenia kosztowe jest
+bezużyteczny, nawet jeśli zasadny dla układu eksperymentu
+
+Program vs model
+- _ program nie powinien być identyfikowany z realizowanym przez niego modelem
+- _ potrzebny jest język modelowania, będący niezależnym od programu sposobem
+opisu modelu, oraz wygodny w obsłudze system modelowania wiarygodnie
+generujący reakcję systemu
+- _ formalny opis modelu - reguły opisu, program symulacyjny
+
+Symulacja dyskretna w czasie -procedura symulacji generuje reakcję modelu metodą
+stałego kroku, gdzie krok opisuje wpływ stałej wielkości modelowanego czasu.
+
+pojęcie zmiennych stanu
+
+pożądane cechy programu symulacyjnego
+formalny opis (teoria systemu) modelu (reakcji)
+
+Pojęcie stanu
+
+- elementy - zbiór zmiennych opisowych
+
+- _ reguły interakcji - sposób zmiany zmiennych opisowych w czasie
+— przeszłe wartości zmiennych w określonym horyzoncie
+
+- zbiór zmiennych stanu - najmniejszy X (podzbiór Z) wystarczający do określenia
+przyszłych wartości wszystkich z —> X=(x/) € Z=fzj)
+
+- model dobrze opisany:
+dla każdego t+>t oraz z(t), z = [Z,, ... „zj: z,€ Z, reguły interakcji wyznaczają
+
+jednoznacznie z(t+) (cały zbiór zmiennych opisowych Z) Z(t) — Z(t+)
+- _ zbiór zmiennych stanu X=fXCZ, |X|=min: X(t) — Z(t+)) (|X| to moc zbioru)
+- model dobrze zdefiniowany (Z):
+
+IXI=n I7l=m
+
+<image/wzory/k1_page6_formula1.png>
+
+[x v ] „t+>t x(t) — fx(t+), v(t+))
+
+inicjalizacja ) 4t:= to
+
+wznowienie ) (x(t) := x(to) = xo=[]
+dla t > t+
+
+reguły interakcji > model formalny
+
+Om msskh: imómomiemii
+
+<image/wzory/k1_page7_formula1.png>
+
+symulacja modelu ti — ti+1
+
+zbiór T - momenty obliczeniowe - czasy modelowe dla których można wytworzyć zbiór
+wartości zmiennych opisowych modelu Z
+
+stały krok: ti+1 - ti = h — symulacja dyskretna w czasie
+
+Model stacjonarny (niezmienny)
+
+Prototypowa procedura symulacji
+- _ model dyskretny, niezmienny w czasie
+- _ wartości początkowe: t=to, x(to)=xo
+- momenty obliczeniowe tT = (ty, ty m „t.j
+- dokładność, głębokość wglądu: h - parametr symulacji
+krok 1) inicjalizacja zegara/czasu: t := to
+krok 2) inicjalizacja zmiennych stanu: x(t) := xo <= stan początkowy
+
+krok 3) zastosowanie reguł interakcji:
+krok 4) przesunięcie zegara: t := t+h
+
+krok 5) sprawdzenie warunków końcowych: KONIEC := (t > to + s * h)
+krok 6) jeśli NIE KONIEC — krok 3)

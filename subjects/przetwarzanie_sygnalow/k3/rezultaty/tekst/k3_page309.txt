@@ -1,0 +1,28 @@
+338 21 Porównanie filtrów
+
+ 
+
+norazowego zastosowania. Ponieważ wykonanie całego programu trwa tylko kilka sekund,
+więc nie ma sensu poświęcać wiele czasu na optymalizację algorytmu. Z całą pewnością
+zostaną tu użyte obliczenia zmiennoprzecinkowe. Do wyboru macie filtr o średniej kroczą-
+cej realizowany przez splot lub jednobiegunowy filtr rekursywny. Zwycięzcą jest tutaj filtr
+rekursywny. Będzie on nieco łatwiejszy do zaprojektowania, a także do modyfikacji i będzie
+działać znacznie szybciej.
+
+Drugi przypadek jest przeciwieństwem pierwszego; filtr musi działać możliwie jak naj-
+szybciej i aby to osiągnąć, chcecie poświęcić trochę dodatkowego czasu na projekto-
+wanie. Ten filtr może na przykład być częścią produktu komercyjnego, z potencjalną
+możliwością powtarzania miliony razy. Przypuszczalnie zastosujecie liczby całkowite,
+aby osiągnąć możliwie największą szybkość. W tym przypadku wasz wybór padnie na
+filtr o średniej kroczącej, realizowany przez rekursję lub jednobiegunowy filtr rekursyw-
+ny realizowany z wykorzystaniem tablic przeglądowych albo obliczeń na liczbach cał-
+kowitych. Zwycięzcą jest filtr o średniej kroczącej. Będzie on działał szybciej i podczas
+projektowania i wykonywania nie będzie podatny na problemy związane z arytmetyką
+liczb całkowitych.
+
+<image/figury/k3_page309_figure2.png>
+
+Rys. 21.6. Odpowiedzi częstotliwościowe filtru o średniej kroczącej i jednobiegunowego. Oba filtry mają marną odpo-
+wiedź częstotliwościową, czego można byto się spodziewać po filtrach przeznaczonych do pracy w dziedzinie czasu
+
+<image/figury/k3_page309_figure1.png>

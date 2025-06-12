@@ -1,0 +1,26 @@
+<image/tabele/k4_page99_table1.png>
+
+Cewka (coil) przekazuje stan połączeń z lewej strony na prawą bez zmian, po-
+wodując jednocześnie zapamiętanie stanu połączenia po swej lewej stronie przez
+przypisaną jej zmienną logiczną. Symbole cewek umieszczono w Tab. 2.52.
+Oprócz cewek standardowych, występują tu również cewki z zapamiętaniem
+stanu (retentive coils). Działanie tych cewek jest podobne jak ich standardowych
+odpowiedników, ale z taką cewką kojarzona jest zmienna zachowywana (reten-
+tive variable) bez konieczności użycia deklaracji VAR RETAIN (por. 2.2.4).
+Oznacza to, że wartość zmiennej przypisanej do takiej cewki jest zapamiętywana
+po zatrzymaniu zasobu w którym jest zdefiniowana i odtwarzana po jego ponow-
+nym uruchomieniu.
+
+W języku LD mogą także występować standardowe funkcje i bloki funkcyjne
+
+opisane w punkcie 2.1 tego rozdziału, z następującymi wyjątkami:
+
+* parametry aktualne funkcji mogą być opcjonalnie pokazane przez wypisanie
+odpowiednich danych lub zmiennych na zewnątrz bloku, w sąsiedztwie nazw
+parametrów formalnych umieszczonych wewnątrz bloku,
+
+e każdy blok powinien zawierać przynajmniej jedno wejście i wyjście logiczne
+by umożliwić przepływ prądu przez blok.
+
+ER ZEE ZZKE PREZ ZE AT PRZY PRZ TPRZORĄ ZZ TZ ZZ ZZO ROZZÓRY PY ZDP ZZZOO ZY ZZL ZZOOROO TZ, R 9. | Tt) TODDPODZ
+2.6 Język schematów drabinkowych LD 99

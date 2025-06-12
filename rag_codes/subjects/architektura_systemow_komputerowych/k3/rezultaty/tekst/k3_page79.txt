@@ -1,0 +1,42 @@
+4.4. Blok arytmetyczno-logiczny 69
+
+słowa do rejestru rozkazów RR. Jeśli jest to odczyt argumentów operacji, to następuje
+przesłanie zawartości odczytanej komórki pamięci do rejestru wyspecyfikowanego w roz-
+kazie. W czasie cyklu zapisu do pamięci, procesor wysyła strob zapisu pamięci MW
+i jednocześnie słowo, które ma zostać zapisane pod adres wysłany w pierwszym takcie.
+Słowo to jest wysyłane z rejestru na szynę danych.
+
+Jeśli rozkaz jest jednocyklowy, to takt czwarty jest przeznaczony na dekodowanie
+i wykonanie rozkazu. W innym przypadku po zdekodowaniu rozkazu procesor decyduje
+o dalszej akcji. Na przykład, jeśli rozkaz wymaga odczytania argumentów z pamięci, to
+procesor przechodzi do wykonania odpowiednich cyklów maszynowych odczytu pamięci.
+Ponieważ procesor wykonuje także rozkazy przesłania danych pomiędzy swoimi rejestrami
+a urządzeniami zewnętrznymi, a transmisje te zachodzą poprzez magistralę, to musi on
+także generować sygnały strobów odczytu i zapisu dla urządzeń zewnętrznych. Są to strob
+odczytu urządzenia wejścia-wyjścia IOR (ang. input/output read) i strob zapisu urządzenia
+wejścia-wyjścia IOW (ang. input/output write). Tak więc w przykładowym procesorze
+lista sygnałów magistrali sterującej składa się z 10 następujących sygnałów:
+
+— wejściowe dla procesora: RESET, STEP, INT, HOLD
+
+— wyjściowe dla procesora: INTA, HLDA, MEMR, MEMW, IOR, IOW.
+
+4.4. BLOK ARYTMETYCZNO-LOGICZNY
+
+Blok arytmetyczno-logiczny ALU (ang. arithmetic-logical unit) jest często nazywany
+układem wykonawczym procesora, ponieważ wykonuje on większość rozkazów zlecanych
+procesorowi. Dalej omówiono jego najważniejsze funkcje oraz przykładową realizację.
+Blok ALU jest układem kombinacyjnym, który realizuje różne funkcje w zależności od
+zaprogramowanej operacji, tj. rozkazu umieszczonego w programie. Argumentami tych
+rozkazów są zwykle dwa słowa binarne. Rozkazy te mogą dotyczyć operacji arytme-
+tycznych (dodawanie i odejmowanie) lub logicznych (sumowanie, mnożenie, sumowanie
+mod 2 itp.). Blok ALU wykonuje także operacje jednoargumentowe, jak np. negowanie
+bitów lub operacje przesuwania zawartości rejestrów. Pośród sygnałów wejściowych ALU
+można wyróżnić dwie ich grupy: grupę wejść informacyjnych i grupę wejść sterujących.
+Na wejścia informacyjne podawane są dwa słowa, które są argumentami wykonywanej
+operacji. W zależności od długości słowa stosowanego w danym procesorze mówi się
+także o liczbie bitów ALU. Na przykład mikroprocesory, w których długość słowa wynosi
+
+<image/figury/k3_page7/9_figure1.png>
+
+Rysunek 4.6. Oznaczenia końcówek czterobitowego ALU

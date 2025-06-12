@@ -1,0 +1,41 @@
+Analiza obwodów elektrycznych 565
+
+ 
+
+Aby zakończyć ten przykład, podzielimy napięcie w dziedzinie s przez prąd w dziedzinie s,
+korzystając z prawa Ohma (R = U/D):
+©0,ŁS
+U(s)_ o +s*
+I(s) _w_
+0, +57
+W ten sposób stwierdziliśmy, że w dziedzinie s stosunek reprezentacji napięcia do repre-
+zentacji prądu w cewce indukcyjnej jest równy sŁ. To jest zawsze prawda, niezależnie od
+przebiegu prądowego, od którego zaczynamy. W dziedzinie s ten stosunek dla rezystorów
+jest równy R, dla kondensatorów zaś 1/sC.
+Na rys. 32.6 podano przykładowy obwód, który przeanalizujemy, stosując przekształcenie
+Laplace'a. Jest to filtr RŁC€C pasmowozaporowy (tzw. wycinający lub typu norch) omawiany
+już w rozdziale 30. Ponieważ metodyka analizy jest jednakowa dla wszystkich obwodów
+elektrycznych, przedstawimy ją w formie kolejnych kroków:
+Krok 1: Przekształćcie każdy z elementów obwodu w jego reprezentację w dziedzinie s.
+Trzeba więc zastąpić wartość każdego rezystora przez R, każdej cewki indukcyjnej przez sŁ,
+a każdego kondensatora przez 1/sC. Przedstawiono to na rys. 32.6.
+Krok 2: Wyznaczcie H(s), czyli stosunek sygnału wyjściowego do wejściowego. Jak podano
+w rozdziale 30, tę operację wykonuje się przez potraktowanie każdego elementu zgodnie
+z prawem Ohma, z „rezystancjami” określonymi przez R, sŁ, 1/sC. To umożliwia skorzysta-
+nie ze standardowych równań na połączenia szeregowe i równoległe rezystorów, na dziel-
+nik napięciowy itd. Traktując obwód RLC w tym przykładzie jako dzielnik napięciowy (jak
+w rozdziale 30), uzyskujemy H(s):
+
+=sL
+
+<image/wzory/k3_page525_formula1.png>
+
+Jak pamiętacie z analizy Foxriera, stosunek widm częstotliwościowych sygnału wyjściowe-
+go i wyjściowego jest równy odpowiedzi częstotliwościowej, oznaczonej symbolem H(©).
+Wyżej podany wzór jest rozszerzeniem tego stwierdzenia na dziedzinę s. Wielkość H(s)
+jest nazywana funkcją przenoszenia systemu i jest równa stosunkowi reprezentacji sygna-
+łów wyjściowego do wejściowego w dziedzinie s. Ponadto H(s) jest równa transformacie
+Laplace'a odpowiedzi impulsowej, podobnie jak H(w) jest równe rransformacie Fouriera
+odpowiedzi impulsowej.
+
+<image/figury/k3_page525_figure1.png>

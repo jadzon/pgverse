@@ -1,0 +1,60 @@
+Projektowanie filtru rekursywnego
+
+Ostatnią kwestią jest sposób obliczania nachyleń współczynników rekursywnych. W przykładzie
+sieci neuronowej był wyprowadzony wzór na nachylenie. Tu nie można zastosować takiej pro-
+cedury, gdyż wymagałoby to obliczania pochodnej przez DFT. Zamiast tego stosuje się prostszą
+metodę — zmienia się współczynnik rekursywny o niewielki przyrost i potem bezpośrednio ob-
+licza nową wartość ER. Nachylenie wyznacza się wtedy jako zmianę ER podzieloną przez war-
+tość przyrostu. Bieżąca wartość ER jest znajdowana w wierszach 2040-2050 i przechowywana
+w zmiennej EOLD. Pętla w wierszach 2080-2130 przebiega przez każdy ze współczynników
+„a”. Pierwszym działaniem wewnątrz tej pętli jest dodanie małego przyrostu DELTA do współ-
+czynnika właśnie zmienianego (wiersz 2090). Podprogram 3000 jest przywoływany w wierszu
+2100 w celu znalezienia wartości ER dla zmodyfikowanego współczynnika. Następnie w wier-
+szu 2110 jest obliczane nachylenie tego współczynnika jako: (ER — EOLDYDELTA. W wierszu
+2120 wartość współczynnika jest odtwarzana przez odjęcie wartości DELTA.
+
+Na rys. 26.13 przedstawiono kilka przykładów filtrów zaprojektowanych przy użyciu tego pro-
+gramu. Linia przerywana jest żądaną odpowiedzią częstotliwościową, a linia ciągła odpowiedzią
+częstotliwościową filtru. Każdy z tych filtrów wymaga około minuty na osią-
+gnięcie zbieżności, na komputerze Pentium 1 GHz. Na rys. 26.13 a) przedstawiono 8-biegunowy
+filtr dolnoprzepustowy, w którym błąd jest równo ważony w całym widmie częstotliwości (taki
+program, jaki mamy napisany). Na rys. 26.13 b) pokazano taki sam filtr, z tą różnicą, że błąd w pa-
+śmie zaporowym jest pomnożony przez osiem przy obliczaniu ER. To wymusza w filtrze mniejsze
+pofałowania w paśmie zaporowym, kosztem większych pofalowań w paśmie przepustowym.
+
+  
+   
+
+   
+
+a
+:
+'
+J
+i
+1
+1
+1
+i
+1
+1
+i
+i
+1
+1
+
+odjiiwincziiinazcckijowach
+
+  
+   
+
+Płaci
+8
+
+<image/_figury/k3_page423_figure1.png>
+
+projektowanie filtrów rekursywnych. Na rys. a) pokazano 8-biegunowy filtr dolnoprzepustowy
+z błędem równomiernie rozłożonym między 0 i 0,5. Na rys. sławie GOA graw mean zadac
+nie w paśmie zaporowym kosztem błędu w paśmie przepustowym. Na rys. c) pokazano filtr 2-biegunowy stosowany
+korekcji 1/sinc(x) w przetwarzaniu cyfrowo-analogowym. Odpowiedź częstotliwościowa na rys. a ażewacew,
+całkowicie według szczególnych wymagań. Na każdym rysunku żądana odpowiedź częstotliwościowa jest wykreślona

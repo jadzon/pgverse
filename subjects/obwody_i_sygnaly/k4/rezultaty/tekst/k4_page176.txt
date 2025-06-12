@@ -1,0 +1,47 @@
+176 2. Pojęcia podstawowe — układy
+
+Przykład 2.1-11. Wielowrotnikiem jest układ n indukcyjności
+o równaniach (1.8-18), w których wektory u, f oraz macierz L są zde
+i (1.8-43).
+
+F. Komentarz. Podane w p. A, C, E delinicje
+i — ogólniej — wielowrotnika wymagają dodatkowego :
+Jak powiedzieliśmy w p. A, dwójnik jest opisany równ
+i z napięciem u. Jeśli znane jest napięcie u (np. do dwójn
+idealne źróło napięciowe o sile elektromotorycznej e, t
+rys. 2.1-1), to równanie dwójnika staje się równaniem wzę
+prądu i. Wyznaczenie prądu i sprowadza się wówczas
+równania. Analogicznie, przy zadanym prądzie i równat
+równaniem względem niewiadomego napięcia u, natomiast
+u wymaga rozwiązania tego równania (por. przykłady 2..
+zpodobnchoniecobardziejskomplikowansytuacwzory/k4_page176_
+w przypadku n-wrotnika dla n > 2. Stan zaciskowy określ:
+wielkości: n napięć zaciskowych i n prądów zaciskowych
+oraz rys. 2.1-6a. Załóżmy, że znamy n spośród tych wie
+miejsce np. wówczas, gdy do wszystkich wrót wielowi
+dołączymy kolejno idealne źródła napięciowe (zadajen
+odpowiednich wrót) lub idealne źródła prądowe (zadaje!
+Równania n-wrotnika stają się wówczas układem równań |
+mych: prądów wrót zasilanych napięciowo i napięć wrót
+Wynika stąd postulat, aby liczba niezależnych równań
+n i była równa wymiarowi wektorów (2.1-14) *.
+
+G. Moc i energia pobierana z otoczenia. Moc ct
+z otoczenia przez dwójnik (rys. 2.1-2a) jest określona zak
+
+zory/k4_page176_formula2.png
+
+Zależnością (2.1-16) posługiwaliśmy się już wielokrotnie w odniesieniu do
+elementów dwuzaciskowych, a więc przypadków szczególnych dwójnika.
+
+Mocchwilowa p pobierana z otoczenia przez wielowrotnik (rys. 2.1-6a) jest
+sumą mocy chwilowych pobieranych przez poszczególne wrota, tzn:
+
+<image/wzory/k4_page176_formula3.png>
+
+Wzór (2.1-16) jest zatem przypadkiem szczególnym wzoru (2.1-17) dla n = 1.
+Przypominamy, że analogicznie jak w przypadku elementu, jeśli w danej
+chwili moc pobierana (2.1-17) jest dodatnia, to układ w tej chwili faktycz-
+
+1) Postulat ten staje się oczywisty w najważniejszym w praktyce przypadku, gdy równania
+n-wrotnika są liniowe.

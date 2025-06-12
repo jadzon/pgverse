@@ -1,0 +1,34 @@
+7.1. Wywoływanie podprogramów 14]
+
+POLE  MOVA,B przepisanie B do A
+MUL A,B /pomnóż A i B, zapisz do A
+RET
+
+W programie umieszczono dwie wartości stałe: wartość początkową i wartość końcową.
+Można było umieścić inne, jak np.: wartość początkową i krok. Wprowadzenie wartości
+stałych do programu wykonuje się rozkazami w trybie natychmiastowym. Pierwszy rozkaz
+wprowadza do rejestru C€ wartość końcową 100, a drugi do akumulatora A wartość po-
+czątkową 1. Założono dalej, że wyniki wszystkich operacji bloku ALU są przesyłane do
+rejestru akumulatora. Dlatego trzeci rozkaz, który jest przepisaniem zawartości rejestru A
+do B, umieszczono celem zwolnienia rejestru A. Rozkaz ten stanowi sekwencję startową
+wywołania podprogramu. Jest on jednobajtowym rozkazem w trybie rejestrowym, przy
+założeniu, że numery (adresy) źródła i przeznaczenia zmieszczą się w bajcie kodu operacji.
+
+<image/tabele/k3_page151_table1.png>
+
+Rysunek 7.1. Mapa pamięci przykładowego programu i podprogramu
+
+Na rysunku 7.1 pokazano mapę pamięci z umieszczonym programem. Z mapy tej
+wynika, że pierwsze 3 rozkazy zajmują 5 komórek pamięci. Należy zwrócić uwagę na
+numerację komórek rozpoczynającą się od 0. Wywołanie podprogramu, czyli rozkaz
+CALL jest umieszczony pod adresem 5, natomiast w komórkach 6 i 7 znajduje się adres
+podprogramu. Przy pisaniu programu posłużono się adresem symbolicznym podprogramu
+POLE (w następnym podrozdziale opisano jak translatory zamieniają adresy symboliczne
+na adresy rzeczywiste), któremu odpowiada adres rzeczywisty 18. Dlatego, jak to wynika
+
+z mapy pamięci pokazanej na rysunku 7.1, translator powinien umieścić wartość 18 w ko-
+mórkach 6 i 7.
+
+Następny rozkaz STR jest wykonywany po powrocie z podprogramu i jest to rozkaz
+zapamiętania wyniku. Użyto rozkazu STR w bezpośrednim trybie adresowania. Adres ten
+programista umieszcza w kodzie programu (2 bajty za kodem operacyjnym rozkazu STR)

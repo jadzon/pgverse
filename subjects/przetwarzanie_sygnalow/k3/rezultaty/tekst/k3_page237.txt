@@ -1,0 +1,14 @@
+Parametry w dziedzinie częstotliwości 259
+
+uru? Na początku spróbujcie N = 1024, lecz nie obawiajcie się zmienić tę wartość w razie po-
+ trzeby (np. w przypadku niewystarczającej rozdzielczości lub zbyt długiego czasu obliczeń).
+
+Z lub „złe” to tylko
+
+wszelkie operacje związane z przeprowadzać w dziedzinie częstotliwości
+OI zac : WadGRN WAĆ WG Mda: Roo które
+często mogą być sprzeczne z kon wiedzą zawartą w tym rozdziale. Pamiętajcie
+o ogólnej regule zdobywania wiedzy: rozdział tej książki nie daje wam licencji na za-
+przestanie myślenia. |
+
+<image/figury/k3_page237_figure1.png>

@@ -1,0 +1,30 @@
+171
+
+<image/figury/k2_page166_figure1.png>
+
+Rys. 6.68: Zależność błędu generalizacji i błędu uczenia od: (a) liczby obrazów uczących
+przy ustalonej złożoności systemu uczącego się; (b) złożoności systemu uczącego się przy
+ustalonej liczbie obrazów uczących
+
+<image/figury/k2_page166_figure2.png>
+
+Rys. 6.69: Dwa różne problemy klasyfikacji, których nauczenie się stanowią dla sieci iden-
+tyczną trudność pomimo, że dla człowieka problem przedstawiony na rysunku (a) jest
+znacznie prostszy niż na (b)
+
+6.9.1. Problemy klasteryzacji
+
+W wielu zastosowaniach potrzebne jest znalezienie środków skupisk punktów (kla-
+strów). Niektóre algorytmy znajdywania takich punktów można zaliczyć do metod
+sztucznej inteligencji.
+
+Mamy zbiór N punktów x,, j = L....,N i chcemy je podzielić na M klastrów
+G,t=l,..., M i znaleźć środki klastrów c;,, i = 1,..., M tak aby zminimalizować
+
+następującą funkcje odległości między punktami
+
+<image/wzory/k2_page166_formula1.png>
+
+Wprowadźmy macierz U określająca przynależność punktu do klastra
+
+<image/wzory/k2_page166_formula2.png>

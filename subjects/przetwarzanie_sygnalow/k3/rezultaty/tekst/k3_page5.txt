@@ -1,0 +1,42 @@
+14
+
+1. Rozległość zastosowań i głębia problematyki DSP
+
+Telekomunikacja
+
+Telekomunikacja to przesyłanie informacji na odległość. Przesyłana informacja może mieć
+wiele różnych form: rozmowy telefoniczne, sygnały telewizyjne, pliki komputerowe i inne
+typy danych. Do przesłania informacji jest konieczny kanał między dwiema lokalizacjami.
+Kanałem może być para przewodów, łącze radiowe, światłowód itd. Firmy telekomunika-
+cyjne pobierają od swoich klientów opłaty za przesyłanie informacji, a w zamian muszą
+ponosić koszty utrzymania i konserwacji kanału. Rachunek ekonomiczny jest prosty: im
+więcej informacji firmy telekomunikacyjne są w stanie przesłać jednym kanałem, tym wię-
+cej pieniędzy mogą zarobić. Technika DSP zrewolucjonizowała telekomunikację w wielu
+obszarach: w generacji i wykrywaniu tonu sygnalizacji, przesuwania pasm częstotliwości
+(frequency band shifting), filtracji w celu usunięcia tętnień sieciowych itd. Omówimy teraz
+trzy charakterystyczne przykłady z dziedziny sieci telefonicznych — multipleksowanie, kom-
+presję, a także tłumienie echa.
+
+Multipleksowanie
+
+Na świecie jest ok. / miliarda telefonów. Systemy telefoniczne umożliwiają, za naciśnię-
+ciem kilku przycisków, połączenie każdego z tych telefonów z dowolnym innym. Ogrom
+tego zadania jest zdumiewający! Do lat 60. do uzyskania połączenia między dwoma te-
+lefonami było konieczne przesłanie analogowego sygnału głosowego przez przełącz-
+niki mechaniczne i wzmacniacze. Jedno połączenie wymagało jednej pary przewodów.
+Stosując zaś DSP, przetwarza się sygnały głosowe w strumień szeregowych danych cy-
+frowych. Ponieważ bity można łatwo przeplatać ze sobą i potem rozdzielać, więc jednym
+kanałem można przesłać wiele rozmów telefonicznych. Na przykład standard telefonicz-
+ny zwany T-carrier (USA) umożliwia jednoczesne przesyłanie 24 sygnałów głosowych.
+Każdy z nich jest próbkowany 8000 razy na sekundę przy użyciu kompanderowego,
+8-bitowego przetwarzania analogowo-cyfrowego (z kompresją logarytmiczną). W re-
+zultacie każdy sygnał głosowy jest reprezentowany przez strumień o przepływności bi-
+towej 64 000 bit/s i wszystkie 24 kanały można zawrzeć w strumieniu o przepływności
+1.544 Mbiys. Taki sygnał można przesłać na odległość ok. 1800 m zwykłą linią telefo-
+niczną z drutu miedzianego o średnicy ok. 0,64 mm. Jest to typowa odległość połączenia.
+Znaczne są korzyści ekonomiczne wynikające z przesyłania cyfrowego. Przełączniki ana-
+logowe są drogie, cyfrowe bramki logiczne zaś -— tanie.
+
+<image/wzory/k3_page5_formula1.png>
+
+<image/figury/k3_page5_figure1.png>

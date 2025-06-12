@@ -1,0 +1,37 @@
+|
+64 3. Przetwarzanie analogowo-cyfrowe i cyfrowo-anałogowe
+
+ 
+
+Utworzony w ten sposób sygnał wygłąda na oscyloskopie zupełnie inaczej, lecz brzmi iden-
+tycznie jak poprzedni. Istotna informacja pozostała nietknięta, chociaż kształt przebiegu zo-
+stał znacznie zmieniony. Ponieważ aliasing przemieszcza i nakłada na siebie składowe czę- |
+stotliwości, więc bezpośrednio niszczy informację zakodowaną w dziedzinie częstotliwości.
+W rezultacie system digitalizacji tych sygnałów wymaga zastosowania filtru antyaliasin-
+gowego o charakterystyce z ostrym odcięciem, takich jak filtr Czebyszewa, eliptyczny lub
+Butterwortha. A co z marną odpowiedzią skokową tych filtrów? Ona nie ma tu znaczenia.
+Zakodowana informacja nie jest wrażliwa na ten rodzaj zniekształceń.
+
+W kodowaniu w dziedzinie czasu do zapamiętania informacji wykorzystuje się kszzałt prze-
+biegu. Na przykład lekarze mogą monitorować przebiegi elektryczne w sercu pacjenta, do-
+łączając elektrody do jego klatki piersiowej i rąk (EKG, czyli elektrokardiogram). Kształt
+przebiegu EKG dostarcza szukanej informacji dotyczącej np. czasu skurczów komór serca.
+Innym przykładem tego rodzaju sygnału są obrazy. W obrazach informacja jest zawarta nie
+w przebiegu zmieniającym się w funkcji czasu, lecz raczej w kształcie przebiegu zmieniają-
+
+<image/figury/k3_page53_figure1.png>
+
+   
+  
+
+   
+
+  
+     
+
+  
+
+EEK)
+
+filtru
+paczka szumu w.cz. ulega aliasingowi, dając kilka nic nieznaczących próbek

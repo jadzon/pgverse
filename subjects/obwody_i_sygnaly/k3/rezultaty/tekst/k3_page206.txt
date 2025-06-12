@@ -1,0 +1,51 @@
+EEEE
+
+2. Pojęcia podstawowe — układy
+
+Z
+
+a!
+
+<image/figury/k3_page206_figure1.png>
+
+Prądy i napięcia są również jednoznacznie określone
+4, €2,..., Em Jm + 11---,j, Oraz J
+
+Przy przyjętych założeniach co do jednoznaczn
+pierwotnej (rys. 2.1-20) i w sieciach zmodyfikowanych
+sformułować zasadę kompensacji w następujący sposó
+
+W sieci skupionej, w której na wyróżnionym dwójnik
+u oraz prąd i, dowolne napięcia i prądy nie ulegną z
+zastąpimy idealnym źródłem napięciowym o sile elektron
+idealnym źródłem prądowym o wydajności prądowej j =
+
+Źródła występujące w sieciach zmodyfikowanych z
+często źródłami kompensując ymi.
+
+Uwaga. Zasada kompensacji wynika z następującego rozumo
+pierwotnej przy danych pobudzeniach €1, €2
+są równe i, KK = 1,2,...,K. Wśród nich jest prąd i oraz napięci
+D (np. ix = i, Ux = u). Wielkości i,, u, są rozwiązaniami równań się
+znacznymi przy danych pobudzeniach.
+
+Rozpatrzmy sieć zmodyfikowaną (np. z rys. 2.1
+Przy czym z założenia u,”
+sieciowych sieci
+
+-262) i jej rozwiąz:
+= uz. Równania sieciowe sieci zmodyfiko
+pierwotnej tylko brakiem równania dwójnika D. Wszy:
+
+wielkości u,, i, k = bózo
+Znaczności rozwiązań (istotne!
+mogą mieć innych rozwiązań,
+
+K, będące rozwiązaniami sieci pierwotni
+— por. przykład 2.1-28), równania sieciov
+a więc: uz” = [pd == ly k m 1, dys
+
+Przy danych pobudzeniach
+to są one identyczne jak w Sieci nierwatna:
+
+.wzory/k3_page206_

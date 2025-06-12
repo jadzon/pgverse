@@ -1,0 +1,9 @@
+50 3. Podstawy techniki cyfrowej
+
+<image/figury/k3_page60_figure2.png>
+
+Rysunek 3.46. Mnożenie liczb w kodzie U2 według algorytmu Bootha
+
+<image/figury/k3_page60_figure1.png>
+
+Rysunek 3.47. Sieć działań algorytmu Bootha

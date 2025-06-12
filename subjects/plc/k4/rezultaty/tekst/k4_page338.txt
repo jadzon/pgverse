@@ -1,0 +1,49 @@
+7.7.1 Czasomierz impulsowy
+
+ 
+
+Czasomierz zostanie uruchomiony, gdy wynik warunku uruchomienia czasomie-
+rza zmieni wartość z 0 na | (zbocze narastające). Zaprogramowany czas jest od-
+mierzany, gdy warunek uruchomienia czasomierza jest spełniony i warunek ze-
+rowania nie jest spełniony. Sprawdzanie czasomierza na wartość 1 daje wynik I,
+gdy:
+
+e warunek uruchomienia czasomierza jest spełniony i
+
+e warunek zerowania czasomierza nie jest spełniony i
+zaprogramowany czas nie upłynął.
+
+LA I 70 , warunek uruchomienia czasomierza
+
+2.L KT 300.1 ; wprowadzenie wartości czasu
+
+3.SP TIL ; instrukcja uruchomienia czasomierza impulsowego
+4A I 7.1 ; warunek zerowania czasomierza
+
+5 R T1 , Instrukcja zerowania czasomierza
+
+6.A T1 , sprawdzenie czasu
+
+A= Q 40
+
+8.L T1 ; wprowadzenie bieżącej wartości czasu
+
+9. T FW 10 ; przekazanie bieżącej wartości czasu do FW/0
+
+W chwili, gdy wejście 7 7.0 zmieni wartość z O na 1 i wejście / 7.7 ma wartość 0,
+czasomierz zostanie uruchomiony i zacznie odliczać czas t=300x0.1s=30s. Wyj-
+ście Q 4.0 będzie miało wartość 1 przez 30s. Po upływie tego czasu, zarówno
+wartość czasu jak i wartość wyjścia Q 4.0 będzie równa zero. Jeżeli wejście 7 7.0
+przyjmie wartość 0 przed upływem czasu 30s, to wyjście Q 4.0 przyjmie również
+wartość 0. Gdy wartość wejścia 7 7./ zmieni się z O na 1, to wartość czasu zosta-
+nie wyzerowana niezależnie od stanu wejścia 7 7.0, natomiast wyjście Q 4.0
+przyjmie wartość 0. W przypadku, gdy wejście 7 7.7 ma wartość 1, to zmiana
+wartości wejścia / 7.0 zO na I nie spowoduje uruchomienia czasomierza.
+
+<image/figury/k4_page338_figure1.png>
+
+Rys. 7.10 Diagram pracy czasomierza impulsowego
+
+ 
+
+338 Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5

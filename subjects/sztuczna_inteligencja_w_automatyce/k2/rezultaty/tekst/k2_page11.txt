@@ -1,0 +1,41 @@
+Rozdział 3
+
+Metody szukania
+
+Omawiane będą następujące metody szukania: metoda szukania wszerz (ang. bre-
+adth first search), metoda szukania w głąb (ang. depth first search), metoda rów-
+nomiernych kosztów (metoda Dijkstry)(ang. uniform cost search), metody heury-
+styczne, metody szukania na grafach AND/OR, metoda minimax oraz metoda a —5.
+
+3.1. Przykłady zastosowań
+
+Przykłady szkolne (ang. toy problems)
+
+Układanka 3 x 3.
+2. Kryptogramy. Np.:
+
+MONEY
+3. Zadanie o 8 hetmanach na szachownicy.
+
+Zadanie o znalezieniu trasy konika szachowego przechodzącego wszystkie pola
+szachownicy.
+
+5. Zadanie o misjonarzach i kanibalach.
+
+Zadania o znaczeniu praktycznym
+
+1. Znajdywanie drogi (najkrótszej lub optymalizującej inne kryteria).
+
+2. Zadanie o komiwojażerze — np. droga ramienia wiertarki.
+
+3. Planowanie akcji — konstrukcja układów VLSI, asemblacja podzespołów maszyn,
+układanie rozkładów zajęć lub rozkładów jazdy, rozgrywanie gier — np. szachów.
+
+4. Nawigacja robotów.
+
+3.2. Metoda szukania wszerz
+
+Metoda szukania wszerz polega na pobieraniu i rozmanażaniu węzłów warstwa po
+warstwie aż do znalezienia węzła stanowiącego rozwiązanie. Na rys. ?? przedstawiona
+
+16

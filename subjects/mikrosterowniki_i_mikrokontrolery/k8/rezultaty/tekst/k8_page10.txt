@@ -1,0 +1,22 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z ? 12
+
+16. Przebiegi czasowe interfejsu SPI.
+(uwaga na właściwą fazę sygnału zegarowego zgodną z zadanym pytaniem na kolokwium, aby nie
+popełnić błędu kardynalnego)
+
+<image/figury/k8_page10_figure1.png>
+
+<image/figury/k8_page10_figure2.png>
+
+17. Pojęcie rodziny mk. Modyfikacje członków rodziny mk.
+Rodzina mk — zbiór mk oparty na tym samym procesorze rdzeniowym, czyli układów o różnych
+parametrach, ale zachowujących między sobą kompatybilność programową, tzn. posiadają tą samą jc,
+czyli tą samą listę instrukcji.
+Modyfikacje członków danej rodziny mikrokontrolerów:
+« na poziomie jc, dotyczy ona zmiany:
+
+— rozmiaru pamięci programu,
+
+— rozmiaru pamięci danych RAM,
+
+- maksymalnej szybkości pracy.

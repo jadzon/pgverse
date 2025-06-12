@@ -1,0 +1,39 @@
+<image/wzory/k4_page3_formula1.png>
+
+Sterowniki programowalne PLC (Programmable Logic Controllers) są kompu-
+terami przemysłowymi, które pod kontrolą systemu operacyjnego czasu rzeczywi-
+stego:
+
+* zbierają pomiary za pośrednictwem modułów wejściowych z analogowych
+i dyskretnych czujników oraz urządzeń pomiarowych,
+transmitują dane za pomocą modułów i łącz komunikacyjnych,
+wykonują programy aplikacyjne na podstawie przyjętych parametrów i uzy-
+skanych danych o sterowanym procesie lub maszynie,
+
+* generują sygnały sterujące zgodnie z wynikami obliczeń tych programów
+i przekazują je poprzez moduły wyjściowe do elementów i urządzeń wyko-
+nawczych,
+
+* realizują funkcje diagnostyki programowej i sprzętowej.
+
+Wartości pomiarów zmiennych procesowych są wejściami sterownika, zaś obli-
+czone zmienne sterujące stanowią wyjścia sterownika.
+
+Głównym zadaniem sterownika jest więc reagowanie na zmiany wejść przez obli-
+czanie wyjść według zaprogramowanych reguł sterowania lub regulacji. Reakcja
+ta może być zależna od wyników operacji arytmetyczno-logicznych wykonanych
+dla aktualnych wartości wejść sterownika, jego zmiennych wewnętrznych oraz od
+zaprogramowanych warunków czasowych. Może ona także zależeć od operacji
+wykonanych na danych transmitowanych w sieciach łączących wiele elementów
+pomiarowych, sterowników, regulatorów czy też komputerów.
+
+W pierwszym rozdziale, po krótkim przedstawieniu historii rozwoju sterowników
+programowalnych, objaśnia się pojęcia z zakresu sterowania logicznego, takie
+jak sterowanie przekaźnikowo-stykowe oraz przerzutniki RS i SR. Pojęcia te wy-
+korzystane zostaną przy omawianiu kilku prostych przykładów układów sterowa-
+nia silnikiem, na bazie których pokazana zostanie realizacja takich układów
+sterowania z użyciem sterownika programowalnego.
+
+ 
+
+Rozdział : 1. Wprowadzenie i podstawy 3

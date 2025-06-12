@@ -1,0 +1,57 @@
+| ©
+
+| 5.3.5 Sprawozdanie
+| Sprawozdanie powinno zawierać:
+
+- odpowiedzi skokowe układu regulacji dla rozważanych regulatorów
+wraz z opisem wpływu ich poszczególnych parametrów na wskaźniki
+jakości (polecenie 5.3.1);
+
+- odpowiedź skokową obiektu regulacji o zadanych parametrach
+
+| ! z naniesionymi wartościami £4 oraz togę wraz z odpowiedzią skokową
+układu zamkniętego z regulatorami: P, PI, PID z idealnym różniczko-
+waniem (polecenie 5.3.2);
+
+- odpowiedź skokową obiektu regulacji o zadanych parametrach, w przy-
+
+padku gdy regulator jest typu P, a k, = kp, z naniesioną wartością
+
+| T, wraz z odpowiedzią skokową układu zamkniętego z regulatorami:
+
+| P, PI, PID z idealnym różniczkowaniem (polecenie 5.3.3);
+
+- analityczne wyznaczenie wartości kp oraz k, = T' dla obiektu z po-
+miniętym opóźnieniem Ty wraz z odpowiedzią skokową układu
+zamkniętego z regulatorami: P, PI, PID z idealnym różniczkowaniem
+(polecenie 5.3.4);
+
+| ! - analizę porównawczą uzyskanych wartości wskaźników jakości.
+
+ 
+
+6 Serwomechanizm
+
+6.1 Cel ćwiczenia
+
+Ćwiczenie ma na celu zapoznanie się z właściwościami układu sterowa-
+nia serwomechanizmem liniowym z regulatorem typu P oraz tachometry-
+cznym sprzężeniem zwrotnym. Istnieje również możliwość symulacji
+układu uwzględniającego nieliniowości występujące w rzeczywistych
+układach serwomechanizmów, jak tarcie czy luz.
+
+6.2 Podstawowe wiadomości
+
+6.2.1 Pojęcie serwomechanizmu
+
+Serwomechanizmem (uproszczony schemat blokowy na rysunku 6.1)
+nazywa się układ regulacji automatycznej, w którym wielkością wyjściową
+jest przesunięcie mechaniczne lub obrót. Występuje tu najczęściej astatyzm
+(element całkujący), związany z zastosowaniem serwomotoru (silnika wyko-
+nawczego), którego stała czasowa dominuje w układzie.
+
+Zadaniem serwomechanizmu jest sprowadzanie uchybu regulacji e(t) =
+= w(t) — y(t) do zera (czyli na przykład zapewnienie dokładnego ustawienia
+czy przesunięcia pewnych obiektów).
+
+<image/figury/k2_page31_figure1.png>

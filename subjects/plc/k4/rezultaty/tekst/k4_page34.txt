@@ -1,0 +1,27 @@
+Rys. 2.3 z kolei ilustruje wymianę wartości zmiennych między różnymi progra-
+mami w ramach tej samej konfiguracji za pośrednictwem zmiennych globalnych,
+takich jak przykładowa zmienna „x” na rysunku.
+
+Zmienne te powinny być zdefiniowane w konfiguracji jako zmienne globalne
+VAR_GLOBAL, a w programach jako zmienne zewnętrzne VAR_EXTERNAL.
+
+<image/figury/k4_page34_figure2.png>
+
+Wartości zmiennych mogą być także przekazywane za pomocą komunikacyjnych
+bloków funkcyjnych, jak pokazano na Rys. 2.4. Przekazywanie to może być re-
+alizowane między różnymi częściami programu, między programami w tej samej
+lub innej konfiguracji lub między programem w sterowniku programowalnym
+a systemem sterowników nieprogramowalnych. Komunikacja przedstawiona na
+tym rysunku jest realizowana przez bloki komunikacyjne SEND i RCV (ReCe-
+iVe).
+
+<image/figury/k4_page34_figure1.png>
+
+Rys. 2.4 Wymiana danych z wykorzystaniem funkcji komunikacyjnych
+
+Ponadto systemy sterowników programowalnych lub sterowników nieprogra-
+mowalnych mogą wymieniać dane z wykorzystaniem usług komunikacyjnych,
+
+ 
+
+34 Rozdział : 2.Programowanie sterowników PLC

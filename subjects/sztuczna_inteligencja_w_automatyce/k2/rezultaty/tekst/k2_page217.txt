@@ -1,0 +1,57 @@
+222
+
+obiektami. Postać druga — reguła — zawiera informacje o zależnościach pomiędzy
+faktami. Klauzule kończą się kropką.
+
+Prolog nie dopuszcza występowania predykatów zanegowanych, ale istnieje pre-
+dykat standardowy not, którego argumentem są predykaty i który spełnia podobną
+rolę jak operacja negacji.
+
+Argumentami predykatów w faktach i regułach, a także w pytaniach stawianych
+programowi są stałe oznaczające konkretne obiekty (np. w Programie 1 stałymi są
+monika, auto, wideo), zmienne, oznaczające nieznane obiekty, które w trakcie wyko-
+nania programu wiążą sie z konkretnymi obiektami (np. w Programie 1 zmiennymi
+są X,Y) oraz zmienne anonimowe, oznaczające dowolny obiekt (np. w Programie 1
+w predykacie lubi(_,auto)).
+
+Zapisany zbiór klauzul nabiera znaczenia po nadaniu mu interpretacji. Na przy-
+kład występujące w Programie 1 klauzule można by następująco interpretować w
+języku polskim:
+
+jan posiada auto,
+ewa posiada radio, ...
+
+monika ma dostęp do wideo, ...
+każdy lubi auta,
+
+X korzysta z obiektu Y jeżeli X posiada ten obiekt i go lubi,
+X korzysta z obiektu Y jeżeli X ma dostęp do tego obiektu i go lubi.
+
+9.1.3. Zapytania
+
+Wykonanie programu w Prologu polega na odpowiedzi, czy z zawartych w programie
+faktów i reguł wynika pozytywna odpowiedź na postawione przez użytkownika zapy-
+tanie, oraz na podstawieniu za zmienne zawarte w zapytaniu konkretnych obiektów,
+dla których ta odpowiedź jest prawdziwa. Zapytanie (kwerenda) ma postać
+
+<image/wzory/k2_page217_formula1.png>
+
+gdzie p;. pa. . - . pa Są formułami atomowymi.
+
+Całe zapytanie jest poprzedzone kwantyfikatorem szczegółowym, który jednak
+nie jest zapisywany jawnie.
+
+Z punktu widzenia rachunku predykatów zapytanie ma postać kwantyfikowanego
+egzystencjalnie wyrażenia, będącego iloczynem logicznym predykatów, zaś wykona-
+nie programu polega na odpowiedzi czy zapytanie wynika logicznie ze zbioru faktów i
+reguł programu, oraz na związaniu zmiennych zawartych w zapytaniu z konkretnymi
+obiektami, dla których to wynikanie zachodzi.
+
+Po podaniu zapytania program się wykonuje, i po zakończeniu wykonania ocze-
+kuje na nowe pytanie.
+
+PRZYKŁAD 9.1
+Wykonajmy program 1 podając następujące zapytania:
+
+1. lubi(ewa,wideo).
+na co program odpowiada yes (tak).

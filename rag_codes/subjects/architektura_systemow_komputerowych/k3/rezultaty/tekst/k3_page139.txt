@@ -1,0 +1,58 @@
+6.4. Sterowniki urządzeń zewnętrznych 129
+
+ten standard pod nazwą Styk S2. Standard określa połączenie dwóch urządzeń: urządzenia
+komunikacyjnego DCE (ang. data communication equipment) i urządzenia końcowego
+DTE (ang. data terminal equipment). W komputerach urządzeniem DCE jest zwykle
+sterownik dołączony do magistrali komputera, a urządzeniem DTE jest urządzenie ze-
+wnętrzne, np. modem. Sygnały łącza RS-232C są przesyłane łączówką 25-krotną, gdzie
+wyróżnia się cztery podstawowe grupy linii:
+
+1) linie danych,
+
+2) linie sterujące,
+
+3) linie zegarowe,
+
+4) linie zasilania.
+
+Linie danych to dwie linie: linia nadawania T,D i linia odbiorcza R, D.
+
+Linie sterujące można podzielić na dwie grupy: cztery linie sterowania transmisją
+i trzy linie dla sygnałów pomocniczych. Linie sterowania transmisją to dwie linie wyjścio-
+we sterownika:
+
+RTS — żądanie nadawania (ang. request to send),
+
+DTR — potwierdzenie gotowości odbioru (ang. data terminal ready) i dwie linie
+
+wejściowe sterownika:
+DSR — żądanie gotowości do odbioru (ang. data set ready),
+CTS — potwierdzenie gotowości odbiornika (ang. clear to send).
+
+Pomocniczymi sygnałami sterującymi są:
+CD — sygnał kontroli transmisji wysyłany przez modem (ang. carrier detector)
+i sygnalizujący właściwy poziom napięcia sygnału odebranego,
+SQD — sygnał wskazujący na wysokie prawdopodobieństwo błędu (ang. signal
+quality detector),
+RI — sygnał wskazujący na odebranie przez modem sygnału zewowego
+w łączu telefonicznym (ang. ring indicator).
+
+Linie zegarowe stanowią trzy sygnały. Dwa sygnały zegarowe TSET (ang. transmiter
+signal element timing) wskazujące środek przedziału czasowego przeznaczonego dla
+jednego bitu. Jeden z nich jest wysyłany przez modem i drugi przez sterownik. Trzeci
+sygnał RSET (ang. receiver signal element timing) wskazuje środek przedziału czasowego
+każdego odebranego bitu.
+
+Linie zasilania to dwie linie masy: jedna to tzw. masa ochronna dla ewentualnego
+połączenia jej z masami innych urządzeń i druga linia to tzw. masa wspólna będąca
+potencjałem odniesienia dla wszystkich sygnałów.
+
+Pozostałe linie łącza są częściowo przeznaczone na zdublowanie niektórych syg-
+nałów, a częściowo pozostają niezdefiniowane. Na rysunku 6.10 przedstawiono dwie
+konfiguracje łącza szeregowego RS-232. Na rysunku 6.10a sterownik jest nadajnikiem
+a modem odbiornikiem, a na rysunku 6.10b sterownik jest odbiornikiem a modem nadajni-
+kiem. Należy zwrócić uwagę na połączenia linii sterujących. Transmisja zaczyna się od
+nadajnika sygnałem żądania RTS. Odbiornik odbiera ten sygnał na wejściu DSR i gdy jest
+gotowy, to wysyła sygnał DTR. Nadajnik odbiera go na wejściu CTS i wówczas może
+rozpocząć się transmisja. Całe łącze RS-232 jest złożeniem obu pokazanych na ry-
+sunku 6.10 połączeń.

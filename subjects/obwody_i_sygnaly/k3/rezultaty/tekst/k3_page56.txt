@@ -1,0 +1,40 @@
+| 56 1. Pojęcia podstawowe — elementy
+
+fiouinu/L 2 nage56_figure2.png
+<image/wzory/k3_page56_formula1.png>
+
+Wykres funkcji (1.3-17) nazywamy charakterystyką pojemności. Z przyjętych
+założeń wynika, że charakterystyka pojemności jest krzywą ciągłą, gładką lub
+przedziałami gładką, rosnącą, leżącą tylko w pierwszej i trzeciej ćwiartce oraz
+mającą z osiami u, q jedyny punkt wspólny w początku układu współrzędnych
+(rys. 1.3-13b). Z założeń tych wynika ponadto, że równanie pojemności (1.3-17)
+może być zapisane także w równoważnej postaci:
+
+<image/wzory/k3_page56_formula2.png>
+
+gdzie p — funkcja odwrotna względem funkcji fr.
+
+Na pojemności może wystąpić dowolne napięcie ue4ł, przy czym każdej
+wartości napięcia u odpowiada dokładnie jedna wartość ładunku q. Zgodnie
+z zależnością (1.3-20), każdej dopuszczalnej”? wartości ładunku q odpowiada
+dokładnie jedna wartość napięcia u. Przyjęliśmy zatem, że charakterystyka
+pojemności jest wzajemnie jednoznaczna.
+
+Zauważmy, że założenia przyjęte dla pojemności, a więc w konsekwencji
+również właściwości jej charakterystyki, są w pełni analogiczne do tych, które
+przyjęliśmy w p. 1.3.2 dla indukcyjności.
+
+B. Pojemności liniowe i nieliniowe. Pojemność jest liniowa, jeśli jej charak-
+terystyka jest linią prostą i jest nieliniowa w pozostałych przypadkach. Pojem-
+ność liniowa (rys. 1.3-14a) jest opisywana równaniami (1.2-35), a jej charakterys-
+tyka we współrzędnych u, q jest linią prostą o współczynniku kierunkowym
+równym C (rys. 1.3-14b).
+
+<image/figury/k3_page56_figure1.png>
+
+ 
+
+C. Moc i energia gromadzona. Rozpatrzymy teraz zależności dotyczące
+mocy i energii pobieranych przez pojemność określoną równaniami (1.3-17)
+
+1) Dziedziną funkcji odwrotnej (1.3-20) nie musi być cała oś liczbowa.

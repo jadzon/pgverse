@@ -1,0 +1,43 @@
+<image/wzory/k2_page23_formula1.png>
+
+<image/wzory/k2_page23_formula2.png>
+Jeżeli f (n') < f(s), to łatwo widać, że algorytm nie zatrzyma się wybierając drogę
+nieoptymalną. Bowiem nawet jeżeli na O jest węzeł końcowy k uzyskany z drogi
+nieoptymalnej, to nie będzie zabrany z O przed węzłem n'* ponieważ f(k) > f(n').
+Ponieważ sprawdzenie, czy węzeł jest końcowym odbywa się po zabraniu go z O,
+wobec tego z O zabrany będzie węzeł k dopiero wtedy, gdy będzie on znaleziony na
+drodze optymalnej.
+
+3.8.3. Dobór funkcji h(n)
+
+W przypadku posiadania wielu funkcji h(n) spełniających warunek (??) i braku
+globalnej dominacji jednej z nich nad pozostałymi, najlepszą funkcją h(n) dla węzła
+n jest ta, która przyjmuje dla tego węzła wartość największą.
+
+3.8.4. Złożoność obliczeniowa algorytmów heurystycznyh
+
+Pomimo znacznego zmniejszania liczby rozmnażanych węzłów algorytmy heury-
+styczne nadal mają złożoność wykładniczą — taką samą jak algorytmy nie wyko-
+rzystujące informacji o rozwiązywanym zadaniu.
+
+Jednym ze sposobów oceny jakości algorytmu heurystycznego jest określenie
+efektywnego współczynnika rozgałęzientia b* obliczanego na podstawie zadanej liczby
+przeglądanych węzłów N i liczby przebytych warstw d według poniższego wzoru
+
+<image/wzory/k2_page23_formula3.png>
+
+Zastosowanie zwykłego algorytmu szukania (nie korzystającego z informacji heury-
+stycznej) dla współczynnika rozgałęzienia b* spowodowałoby przejrzenie tej samej
+liczby węzłów N. Np. gdyby algorytm heurystyczny znjadował rozwiązanie na głę-
+bokości d = 7 rozmnażając N = 24 węzły, wtedy jego efektywny współczynnik
+rozgałęzienia wynosiłby b = 1.3.
+
+Przykładowe efektywne współczynniki rozgałęzienia przy rozwiązywaniu ukła-
+danki 3 x 3 uzyskane dla metody iteracyjnego pogłębiania i metody A* dla dwóch
+różnych funkcji oceniających hy i hą przedstawione zostało w tablicy ??.
+
+3.8.5. Algorytmy mrówkowe
+
+Algorytmy mrówkowe są jeszcze innymi oprócz algorytmów Dijkstry i A* algoryt-
+mami znajdujacymi najtańszą drogę w grafach. Autorami tej metody są Bonebeau
+i współpracownicy (patrz rys. ??).

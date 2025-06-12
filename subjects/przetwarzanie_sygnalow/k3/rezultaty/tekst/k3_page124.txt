@@ -1,0 +1,61 @@
+Szybkość 139
+
+do prawej nieodłącznie związanego ze splotem. Na przykład, gdy a[n] i bfn] są splatane,
+dając w rezultacie c[n], to piszemy równanie a[n] * b|n] = c[n]. Korelacja wzajemna a[n]
+i bin] może więc być zapisana równaniem aln] * b[-n] =c[n]. A zatem lewo-prawostronne
+odwracanie bfn] jest realizowane przez odwrócenie znaku w indeksie, tj. b|-n].
+
+Niech was nie zmyli matematyczne podobieństwo między splotem i korelacją — to są dwie
+bardzo różne procedury DSP. Splot jest wzajemną załeżnością między impulsem wejścio-
+wym systemu, sygnałem wyjściowym i odpowiedzią impulsową. Korelacja jest sposobem
+wykrywania znanego przebiegu w tle szumu. Podobieństwo operacji matematycznych jest
+tylko dogodną koincydencją.
+
+Szybkość
+
+Napisanie programu realizującego operację splotu między dwoma sygnałami jest prostym
+zadaniem; wymaga tylko kilku wierszy programu. Wykonywanie tego programu może być
+bardziej kłopotliwe. Trudnością jest duża liczba sumowań i mnożeń wymaganych w algo-
+rytmie, czego skutkiem jest długi czas wykonywania programu. Jak to już przedstawio-
+no w programach w poprzednim rozdziale, operacja pochłaniająca czas zawiera mnożenie
+dwóch liczb i dodawanie wyniku do akumulatora. Inne części algorytmu, takie jak indek-
+sacja matryc, są bardzo szybkie. Mnożenie — akumulacja jest podstawowym składowym
+blokiem DSP, który — jak zobaczymy — powtarza się w kilku innych ważnych algorytmach.
+Szybkość komputerów DSP jest często określana właśnie przez czas wykonywania operacji
+mnożenie-akumulacja.
+
+Jeśli sygnał złożony z N próbek jest poddawany operacji splotu z sygnałem złożonym
+z M próbek, to trzeba wykonać NxM operacji mnożenia-akumulacji. Można to stwier-
+dzić na podstawie programu w poprzednim rozdziale. Komputery osobiste połowy lat
+90. wymagały ok. 1 mikrosekundy do wykonania operacji mnożenia-akumulacji (100
+MHz Pentium z arytmetyką zmiennoprzecinkową o pojedynczej dokładności, patrz ta-
+blica 4.6)''.
+
+Tak więc wykonanie operacji spłotu sygnału złożonego z 10 000 próbek z sygnałem
+100-próbkowym wymagało ok. 1 sekundy. Przetworzenie sygnału o milionie próbek
+przy użyciu 3000-próbkowej odpowiedzi impulsowej wymagało prawie godziny. Dekadę
+wcześniej (80286, 12 MHz) na to obliczenie trzeba było trzech dni!
+
+Problem zbyt długich czasów wykonania programów jest zwykle rozwiązywany jednym
+z trzech sposobów. Po pierwsze, trzeba się starać, aby długość sygnałów była jak naj-
+mniejsza i należy stosować liczby całkowite zamiast arytmetyki zmiennoprzecinkowej.
+Jeśli splot ma być obliczany tylko kilka razy, to ten sposób będzie przypuszczalnie naj-
+lepszym kompromisem między czasem wykonania i wysiłkiem włożonym w programo-
+wanie. Po drugie, można użyć komputera przeznaczonego specjalnie do DSP. Są dostęp-
+ne mikroprocesory DSP o czasach operacji mnożenie-akumulacja równych kilkadziesiąt
+nanosekund!?. Jest to dobra droga, jeśli przewiduje się wykonywanie operacji splotu
+wiele razy, tak jak przy projektowaniu wyrobów komercyjnych.
+
+Trzecim rozwiązaniem jest zastosowanie lepszego algorytmu do realizacji splotu. W rozdzia-
+le 17 opisano bardzo wysublimowany algorytm zwany spłotem FFT. Ten algorytm daje do-
+kładnie takie same wyniki, jak algorytmy splotu zaprezentowane w poprzednim rozdziale;
+
+A
+
+u Współczesne (2006 rok) komputery biurowe wykonują takie obliczenia (w załeżności od zastosowanego
+oprogramowania) od 8 do 20 razy szybciej (dane za: http:/Avww.intel.com) (przyp. tłum.).
+
+12 Jęden z najszybszych obecnie (początek 2006 roku) procesorów DSP. produkowany przez Texas
+Instruments TMS320C6455-1000, wykonuje do 8 milionów operacji mnożenie-akumulacja (ope-
+racji MAC) w ciągu sekundy, czyli jedna taka operacja trwa 0,125 ns (dane za: htrp://www.fi.com)
+(przyp. tłum.).

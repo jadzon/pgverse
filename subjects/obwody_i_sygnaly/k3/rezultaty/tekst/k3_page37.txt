@@ -1,0 +1,38 @@
+1.2. Podstawowe modele zjawisk w obwodzie 37
+
+-- am wawa
+
+Zmiany w czasie ładunku q gromadzonego w kondensatorze powodują
+pojawienie się prądu w doprowadzeniach (rys. 1.2-7b). Jeśli ładunek okładziny
+jest równy q, to prąd i dochodzący do tej okładziny zmienia się zgodnie
+z zależnością:
+
+<image/wzory/k3_page37_formula1.png>
+
+Prąd dochodzący do okładziny o ładunku —q jest równy — i, a więc prąd
+dopływający do kondensatora jest taki sam, jak prąd odpływający (rys. 1.2-7b).
+
+Równania (1.2-32) i (1.2-34) określają pojemność jako element obwodu (rys.
+1.2-8).
+
+<image/figury/k3_page37_figure1.png>
+
+C. Równania pojemności. Pojemność (rys. 1.2-8) jest zatem elementem
+opisanym przez równania:
+
+<image/wzory/k3_page37_formula2.png>
+
+, Z równań tych dostajemy związek między napięciem i prądem w postaci:
+
+ory/k3_page37_formula3.png (1.2-36)
+5 lub:
+zory/k3_page37_formula4.png (1.2-37)
+
+Uwaga. Wnioski jakie sformułowaliśmy w p. 1.2.2-C w stosunku do związku (1.2-25), odnoszą
+się także do zależności (1.2-37). Znajomość prądu i w pojemności pozwala, w ogólnym przypadku, na
+określenie napięcia u jedynie z dokładnością do stałej wartości. Wzór (1.2-37) moż-
+na zapisać także w postaci:
+
+<image/wzory/k3_page37_formula5.png>
+
+w której u(t,) jest wartością napięcia u w dowolnie wybranej chwili ty.

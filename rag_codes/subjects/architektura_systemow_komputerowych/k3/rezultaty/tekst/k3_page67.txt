@@ -1,0 +1,59 @@
+3.2. Kody binarne i arytmetyka 57
+c O ai p o
+
+Bit znaku jest zerem, ponieważ liczba jest dodatnia. Mantysa jest 23-bitowa, lecz
+należy pamiętać, że normalizując pominięto pierwsze bity (0.1). Cechę przedstawiono
+w zapisie polaryzowanym i jej wartość dziesiętna wynosi 10.
+
+Na koniec warto zwrócić uwagę na algorytm zamiany części ułamkowej liczby na
+postać dwójkową. Wcześniej dokonano tego zauważając, że liczba 0.625 daje się przed-
+stawić jako 0.101. W ogólnym przypadku zadanie może być trudniejsze i wówczas należy
+znormalizować liczbę dziesiętną do odpowiedniego zakresu. W naszym przypadku mamy,
+że 512 < 625 < 1024. Dzieląc zadaną liczbę przez 1024 otrzyma się 0.610961914...-2'9.
+Przekształcenia mantysy M na postać dwójkową można dokonać w sposób następujący:
+
+1) ii; | .
+
+2) CzyM22*?Jeżeli tak, to M = M-2'; jeżeli nie, to M = M;
+3) i=i+];
+
+4) Czyi=23? Jeżeli nie, to punkt 2; jeżeli tak, to KONIEC.
+
+3.2.5. ARYTMETYKA ZMIENNOPOZYCYJNA
+
+W niniejszym podrozdziale przedstawiono cztery działania arytmetyczne na liczbach
+zmiennopozycyjnych. Pokazano je na przykładach, w których posłużono się prostymi
+liczbami, tj. liczbami o niewielkiej długości zarówno cechy jak i mantysy, po to aby
+Czytelnik łatwiej mógł prześledzić tok działań.
+
+Operacje dodawania i odejmowania w tym zapisie wymagają procedury wyrównania
+wykładników. Procedura ta jest wykonywana w taki sposób, że mantysa liczby mniejszej
+(o mniejszym wykładniku) jest zmniejszana. Zmniejszania mantysy dokonuje się poprzez
+przesuwanie w prawo. Pomniejszanie mantysy powoduje, że należy zwiększać jej wy-
+kładnik. Podczas jednokrotnego przesunięcia mantysy należy zwiększyć wykładnik o 1,
+jeżeli baza wykładnika wynosi 2. Procedura kończy się w momencie wyrównania wykład-
+ników. Pokazano to na przykładzie.
+
+Niech będą dane dwie liczby A = S,-27* i B = S„-27?. Załóżmy, że EA < EB.
+Wyrównanie poleza na przesuniecin mantvsv S (FR- FAVrazv Wówoezac
+
+<image/wzory/k3_page67_formula1.png>
+
+Dopiero po wyrownaniu mozna dokonac operacji dodania lub odjęcia liczb biorąc:
+
+<image/wzory/k3_page67_formula2.png>
+
+Należy zauważyć, że w ogólnym przypadku tak otrzymana mantysa nie jest znormalizo-
+wana. Dlatego po operacji dodawania lub odejmowania należy znormalizować mantysę
+wyniku i odpowiednio do tego zmienić wartość wykładnika. Sama operacja dodawania
+może spowodować zwiększenie wykładnika o 1, gdyż przeniesienie może być tylko na
+następną pozycję.
+
+Dodawanie i odejmowanie dwóch liczb z 8-bitową mantysą i 4-bitową cechą pokazano
+na przykładzie:
+
+A — 0 00101001 1101
+
+B — 0 00011010 1010
+
+$ — Podstawy budowy i działania komputerów

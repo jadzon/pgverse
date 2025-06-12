@@ -1,0 +1,42 @@
+33. Metody analizy obwodów liniowych prądu stalego 267
+
+B. Gałąź, węzeł, obwód, oczko. Charakterystycznymi pojęciami występu-
+jącymi w opisie sieciowym i metodach sieciowych są pojęcia: gałęzi, węzła
+i obwodu zamkniętego (krócej obwodu). Pojęciami tymi posługiwaliśmy się już
+wcześniej, poprzestając na ich intuicyjnym rozumieniu. Nadal nie będziemy ich
+formalnie definiować, uważając je w pewnym sensie za pierwotne. Postaramy się
+jednak przybliżyć je nieco Czytelnikowi.
+
+Gałąź (rys. 3.3-16) jest takim fragmentem struktury sieci, w którym wyróż-
+niamy prąd I oraz napięcie U, zwane prądem gałęziowym i napięciem gałę-
+ziowym. Gałąź w ujęciu sieciowym jest zatem odpowiednikiem dwójnika (por. p.
+2.1.2-A). W gałęzi może występować pojedynczy element lub połączenia elemen-
+tów — istotne jest jednak, aby w gałęzi został wyróżniony prąd I, wspólny dla
+całej gałęzi.
+
+<image/figury/k3_page265_figure1.png>
+
+Przy formułowaniu w p. 1.5.1-A prądowego prawa Kirchhoffa węzeł okre-
+ślaliśmy jako punkt połączenia elementów. W ujęciu sieciowym o węźle mówimy
+jako o punkcie połączenia gałęzi Punkt połączenia gałęzi jest za-
+wsze punktem połączenia elementów, natomiast punkt połączenia elementów nie
+zawsze uważamy za punkt połączenia gałęzi, tzn, nie zawsze przyjmujemy go za
+węzeł sieci. Na przykład punkt połączenia trzech oporów (punkt A na rys.
+3.3-17a) jest zawsze węzłem. Punkt połączenia szeregowego dwóch oporów
+(punkt A na rys. 3.3-17b) można uważać za połączenie dwóch gałęzi (zawierają-
+cych odpowiednio opory R; i R,), ale połączenie szeregowe oporów R;
+i R; można także uważać za jedną gałąź”.
+
+W każdym węźle sieci musi być oczywiście spełnione prądowe prawo
+Kirchhoffa (PPK).
+
+Każda gałąź w sieci łączy dwa węzły. Gałęzi przypisujemy zwrot zgodny ze
+strzałką prądu gałęziowego. Węzeł, od którego gałąź „odchodzi” (węzeł A na rys.
+3.3-16) jest węzłem początkowym gałęzi, zaś węzeł, do którego gałąź „dochodzi”
+(węzeł B na rys. 3.3-16) jest węzłem końcowym gałęzi. O gałęzi łączącej węzły
+A i B mówimy, iż jest ona incydentna z tymi węzłami oraz, że węzły A i B są
+incydentne z łączącą je gałęzią”.
+
+1) Bardziej szczegółowe omówienie poruszonego tu zagadnienia znajdzie czytelnik w tomie III.
+2 Milcząco a R że sy A, B są różne. Założenie to eliminuje występowanie tzw. pętli
+własnych węzłów, tj. takich gałęzi, których węzeł początkowy jest tożsamy z węzłem końcowym.

@@ -1,0 +1,18 @@
+PRZYKŁAD 6.6
+
+Pokazano tu klasyfikacje obrazów nie separowalnych liniowo (trójwymiarowe zadanie
+XOR) przez dwuwarstwową sieć neuronową o dwóch neuronach w warstwie wejścio-
+wej (rys. ??). Wyznaczone w procesie uczenia wagi neuronów w pierwszej i drugiej
+warstwie są następujące:
+
+<image/wzory/k2_page122_formula1.png>
+
+<image/figury/k2_page122_figure1.png>
+
+Rys. 6.26: Klasyfikacja trójwymiarowej funkcji XOR: (a) sieć neuronowa, (b) obrazy w
+przestrzeni trójwymiarowej, (c) płaszczyzny reprezentujące neurony pierwszej warstwy,
+(d) obrazy po przekształceniu przez warstwę pierwszą i linia prosta reprezentująca neuron
+warstwy drugiej
+
+Zwróćmy uwagę, że dwa neurony wejściowe nie są w stanie podzielić przestrzeni w
+taki sposób aby w powstałych podobszarach występowały obrazy należące wyłącznie

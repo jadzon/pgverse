@@ -1,0 +1,21 @@
+1 1 ósmego bitu licznika 3
+» etykiety FULŁ
+iec bloku
+
+/k4_page355_table 1 png wienie na © ósmego bitu
+
+ku
+
+Jeżeli wejście / 4.7 ma stan | wartość początkowa licznika C3 zostaje ustawiona
+na zero. Aktualna wartość licznika C3 jest zwiększana o 1 przy każdorazowym
+pojawieniu się zbocza narastającego na wejściu / 4.0. W chwili, gdy aktualny
+stan licznika osiągnie wartość 256 (ósmy bit słowa licznika C3 jest równy 1) na-
+stępuje skok warunkowy do etykiety FULŁ i ósmy bit licznika C3 zostaje usta-
+wiony na 0 co powoduje, że aktualna wartość licznika wynosi 0. Tak więc w
+powyższym przykładzie licznik C3 zlicza od 0 do 256. Każdorazowo po osią-
+gnięciu wartości 256 licznik zostaje wyzerowany i zaczyna zliczanie ponownie
+od zera.
+
+   
+
+7.41 Funkcje na ciągach bitów 355

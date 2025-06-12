@@ -1,0 +1,47 @@
+/* Program 17 +/
+
+perm( [] „(]).
+perm(L2,[GI0]) :- usun(G,L2,L),
+perm(L,0).
+
+usun (E, (E|0] ,0).
+usun(E, (GI0] ,[GI01]) :- usun(E,0,01).
+
+permutacja(L,LL) :- findall(P,perm(L,P) ,LL).
+
+Po zapytaniu perm([a,b,c,d],P). program znajduje wszystkie permutacje li-
+sty [a,b,c,d], zaś po zapytaniu permutacja([a,b,c,d] ,L). program podaje listę
+(listę list) wszystkich permutacji. |
+
+9.2.4. Predykat not i zamkniętość świata
+
+Standardowy predykat not, którego argumentem jest predykat, jest spełniony, jeżeli
+niespełniony jest predykat będący jego argumentem. W Prologu wymagane jest,
+aby w chwili wywołania predykatu not nie zawierał on jako argumentów zmiennych
+niezwiązanych
+
+PRZYKŁAD 9.20
+
+Program 20 umożliwia sprawdzenie, czy dana osoba może być zatrudniona w firmie
+Moda, zatrudniającej wyłącznie kobiety niezamężne.
+
+/* Program 18 */
+zatrudnia(”Moda”,X) :- not(s_c(X,z)), not(plec(X,m)).
+
+s_c(jan,w).
+s_c(barbara,z).
+s_c(ewa,w).
+
+plec(jan,m).
+plec(barbara,k).
+plec(ewa,k).
+
+Zadając programowi zapytania: zatrudnia(”Moda” ,jan).,
+zatrudnia( Moda” ,barbara)., zatrudnia( Moda? ,ewa). otrzymamy odpowied-
+nio odpowiedzi no, no, yes. Po zapytaniu zatrudnia(”Moda”,X). zostanie zasy-
+gnalizowany błąd spowodowany swobodną zmienną w not).
+
+Odpowiednikiem użycia predykatu standardowego not (s_c(X,z)) może być uży-
+cie predykatu not_z zdefiniowanego następująco:
+
+<image/wzory/k2_page232_formula1.png>

@@ -1,0 +1,33 @@
+16. Filtry okienkowane funkcją si
+
+  
+     
+ 
+   
+   
+ 
+   
+
+Czas konieczny do wykonania splotu jest proporcjonalny do długości sygnałów, dlatego
+16.3 wyraża kompromisowy wybór między czasem obliczeń (zależnym od wartości M) i
+
+| skompensować, stosując o 20% dłuższą iedź impulsową filtru. Innymi słowy, moż:
+i na powiedzieć, że realizacja okna Blackmana jest o 20% wolniejsza niż okna Hamminga
+| o równoważnej szybkości ia charakterystyki. Jest to ważne, gdyż już realizacja filtrów
+| okienkowanych funkcją sinc jest bardzo wolna.
+
+Jak pokazano na rys. 16.3 b), częstotliwość odcięcia filtru okienkowanego funkcją sinc jest
+mierzona na wysokości amplitudy. Dlaczego zastosowano tu wartość 0,5 zamiast
+standardowej 0,707 (-3 dB) używanej w elektronice analogowej i w innych filtrach cyfro-
+wych? Przyczyną jest fakt, że odpowiedź częstotliwościowa filtru okienkowanego funk-
+cją sine charakteryzuje się symetrią pasm przepustowego i zaporowego. Na przykład okno
+Hamminga daje zafałowania w paśmie przepustowym równe 0,2% i identyczne tłumienie
+w paśmie zaporowym (czyli zafalowania w paśmie zaporowym) równe 0,2%. Inne filtry
+nie wykazują takiej symetrii i nie mają zalety polegającej na stosowaniu punktu połowy
+amplitudy do wyznaczania częstotliwości odcięcia. Jak będzie o tym mowa w dalszej części
+tego rozdziału, symetria filtrów okienkowanych funkcją sinc powoduje, że są idealne
+inwersji widmowej.
+
+zaFa mz mary 0 mk 1
+
+<image/tabele/k3_page254_table1.png>

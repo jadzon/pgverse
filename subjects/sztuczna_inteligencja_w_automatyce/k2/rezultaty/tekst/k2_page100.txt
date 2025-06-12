@@ -1,0 +1,45 @@
+105
+
+gdzie h jest arbitralnie wybraną niewielką liczbą, a e;, i = 1,2,... ,n oznacza wektor
+jednostkowy w kierunku ż. Metody gradientowe mogą zatrzymywać się w ekstremach
+
+lokalnych.
+
+Aproksymacja stochastyczna
+
+Aproksymacja stochastyczna jest odmianą metody gradientowej pozwalającą znaj-
+dować ekstremum w przypadku, gdy pomiary wartości funkcji lub obliczony gradient
+obarczone są przypadkowymi błędami. Aproksymacja stochastyczna jest metodą
+gradientową ze współczynnikiem korekcji zmienianym według wzoru
+
+<image/wzory/k2_page100_formula1.png>
+
+gdzie k jest namerem kroku. Malejący w ten sposób współczynnik korekcji zapewnia
+wytłumienie błędów, a jednocześnie umożliwia przesunięcie się punktu w od dowol-
+nej wartości początkowej do ekstremum. Przyjęcie np. współczynnika ry = no/k*
+tłumiło by błędy ale zbyt szybkie jego malenie spowodowałoby zatrzymywanie się
+punktu w poza ekstremum.
+
+Przyspieszanie zbieżności
+
+e Zmienianie parametru 7:
+jeżeli błąd uczenia monotonicznie maleje zwiększ współczynnik 7 o
+małą wartość
+jeżeli błąd uczenia wzrósł pomnóż 47 przez liczbę mniejszą od 1.
+
+e Metoda 1
+
+<image/wzory/k2_page100_formula2.png>
+
+gdzie 0 < a < 1, patrz rys. ??
+
+e Metoda Levenberga-Marquarda
+
+<image/figury/k2_page100_figure1.png>
+
+Rys. 6.6: Przykład zastosowania metody najszybszego spadku i metody momentu
+
+6.4.2. Szukanie przypadkowe
+Minimalizacja funkcji E(w) przebiega w następujących etapach:
+
+1. Losowy wybór punktu startowego w, przyjęcie licznika iteracji k = 1.

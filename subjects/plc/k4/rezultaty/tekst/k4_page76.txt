@@ -1,0 +1,44 @@
+<image/wzory/k4_page7/6_formula1.png>
+<image/tabele/k4_page76_table1.png>
+
+W czasach gdy systemy sterownikowe były stosunkowo małe, opis działania
+takich systemów w postaci typowej dla automatów sekwencyjnych był całkowi-
+cie wystarczający dla spełnienia wymagań dotyczących projektowania systemów
+sterowania logicznego. Stosowano głównie dwie metody opisu automatów se-
+kwencyjnych:
+
+e Pierwsza z nich polegała na przedstawieniu sekwencyjnych układów asyn-
+chronicznych w postaci grafu przejść lub tablicy stanów. Opisy takie
+reprezentują automat w sposób niezależny od jego realizacji sprzętowej.
+
+e Druga metoda modelowania układu sekwencyjnego wiązała się ściśle z jego
+fizyczną realizacją. Tutaj powszechnie stosuje się. aż do chwili obecnej,
+przedstawienie automatu w formie schematów drabinkowych bazujących na
+graficznej analogii do schematów układów przekaźnikowych.
+
+Jednak już na początku lat siedemdziesiątych pojawiła się potrzeba modelowania
+niezwykle złożonych systemów sterowania sekwencyjnego dla celów projekto-
+wania programów sterownikowych. Stawianym wymaganiom sprostał opis, który
+. otrzymał nazwę Grafcet. Został on zdefiniowany w 1977 roku przez grupę 24
+francuskich naukowców i praktyków, w tym m.in. przez Rene Davida, autora
+publikacji [7], z której zaczerpnięto prezentowane niżej przykłady celem przed-
+stawienia podstawowych własności tego sposobu opisu automatu
+sekwencyjnego.
+
+Sam pomysł został zaczerpnięty z sieci Petri (PN — Petri Nets), które zostały
+opracowane we wczesnych latach sześćdziesiątych. Sieci Petri są graficznym
+narzędziem umożliwiającym modelowanie współbieżnych działań sekwencyj-
+nych. Miejsce (Płace) w sieci Petri odpowiada jednej składowej stanu. Zmiana
+wartości jednej składowej stanu powoduje, że zmienia się cały stan, co prowadzi
+do tego, że liczba stanów wzrasta wykładniczo z liczbą składowych stanu (liczbą
+miejsc w sieci Petri).
+
+Na Rys. 2.7// pokazano schemat ideowy dla przykładowez » zadania sterowania
+napełnianiem dwóch zbiorników. Zadanie to zostanie przedstawione za pomocą
+czterech różnych sposobów opisu automatu sekwencyjnego. Przyjęto następujący
+sposób oznaczania: symbol prosty odpowiada urządzeniu 'czujnikowi lub ele-
+mentowi wykonawczemu), natomiast symbol pisany kursywą oznacza
+odpowiadającą mu zmienną logiczną.
+
+PEDRO ZZ ZPZZZZYZZY ZO WZECTDZOTZY WO DZK ZO DZY TDZRZZCZDZZ OZI ZOO POZZ W DO OSD ZZ ZOE TEZIE ZY ZE ZZOZ ZZ Z ZZOZ OWY ZZT PTA ZZ ZZO OZ ZZOO,
+76 Rozcaział * 2 Programowanie sterowników PLC

@@ -1,0 +1,41 @@
+2.1. Wielowrotniki i sieci 217
+
+dla każdego ty, każdego t > ty, oraz każdego dopuszczalnego stanu zaciskowego u, i, co świad-
+czy o pasywności wielowrotnika.
+Podobnie, jeśli wszystkie dwójniki są bezstratne, to:
+
+zory/k4_page215_formula1.png
+
+i, w konsekwencji, otrzymujemy również:
+
+:'ory/k4_page215_formula2.png POERĘ
+
+Jeśli wielowrotnik jest zbudowany z podukładów, wśród których są również wielowrotniki, to
+rozumowanie przebiega w pełni analogicznie. W równaniach (2.1-72) i (21-74), jeśli odnoszą się one
+do wielowrotnika, trzeba jedynie zmienić notację skalarną na wektorową (nieistotne szczegóły
+formalne pomijamy).
+
+G. Przykłady.
+Przykład 2.1-39. Dwójniki przedstawione na rys. 2.1-3a,cd oraz czwórniki pokazane na
+rys. 2.1-Sa,b i 2.1-10 są zbudowane tylko z dwójników pasywnych, są zatem układami pasywnymi.
+
+Przykład 2.1-40. Czwórnik z rys. 2.1-5c jest czwórnikiem aktywnym. Jest to bowiem czwór-
+nik źródłowy, zawierający niezależne źródło prądowe (por. p. E).
+
+Przykład 2.1-41. Rozpatrzmy dwójnik przedstawiony na rys. 2.1-33a, zawierający źródło
+sterowane, a więcelement aktywny. Dla dwójnika tego możemy napisać równania sieciowe w postaci:
+
+<image/wzory/k4_page215_formula3.png>
+
+skąd po prostych przekształceniach otrzymujemy równanie zaciskowe:
+
+zory/k4_page215_formula4.png (2.1-81)
+
+<image/figury/k4_page215_figure1.png>
+
+Rys. 2.1-33
+Z równania (2.1-81) wynika, że dwójnik z rys. 2.1-33a jest równoważny oporowi R (rys. 2.1-33b)
+o wartości:
+ory/k4_page215_formula5.png (2.1-82)
+
+Opór R jest dodatni, jeśli:

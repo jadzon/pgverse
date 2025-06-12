@@ -1,0 +1,7 @@
+<image/tabele/k4_page233_table2.png>
+
+<image/tabele/k4_page233_table1.png>
+
+PID
+
+4.12 Blok funkcyjny PID 233

@@ -1,0 +1,96 @@
+192
+
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+   
+ 
+ 
+ 
+   
+   
+   
+  
+   
+  
+  
+ 
+ 
+  
+ 
+ 
+ 
+  
+  
+ 
+  
+  
+  
+  
+ 
+ 
+ 
+
+10. Właściwości przekształcenia Fouriera
+
+Oto kilka przykładów zastosowania wartości zespolonych sprzężonych w DSP. Jeśli x[n] ma
+transformatę Fouriera X(f], to wtedy x[-n] ma transformatę Fouriera X*[/]. To znaczy, że
+lewo-prawostronne odwrócenie sygnału w dziedzinie czasu odpowiada zmianie znaku fazy.
+Przy omówieniu następnego przykładu przypomnijmy sobie z rozdziału 7, że korelację moż-
+na realizować jako splot. Wykonuje się to, odwracając lewo-prawostronnie jeden z sygnałów.
+Matematycznie a[n] * bn] jest splotem, a a[n] * bn] jest korelacją. W dziedzinie często-
+tliwości te operacje są równoważne — odpowiednio — operacjom A[/]xBf/] oraz A[/] x B*[f].
+Jako ostatni przykład rozpatrzmy dowolny sygnał x[n] i jego widmo częstotliwościowe X[/].
+Widmo częstotliwościowe można zamienić na zerofazowe, mnożąc je przez jego wartość
+zespoloną sprzężoną, czyli X[/] x X*[f]. Zatem faza X[J), jakakolwiek by nie była, będzie za-
+wsze redukowana przez dodanie jej odwrotności (pamiętajmy, że gdy widma częstotliwościo-
+we są mnożone, to ich fazy się sumują). W dziedzinie czasu oznacza to, że x[n] * x|-n], czyli
+sygnał spleciony z lewo-prawostronną wersją jego samego, będzie miał lewo-prawostronną
+symetrię wokół próbki zero, niezależnie od tego, czym jest x[n].
+Wielu inżynierów i matematyków uważa, że ten rodzaj operacji to jest DSP. Jeśli chcecie
+móc porozumiewać się z tą grupą, to musicie przyzwyczaić się do stosowania ich języka.
+
+Okresowy charakter DFT
+
+W odróżnieniu od pozostałych trzech przekształceń fourierowskich, w DFT traktuje się prze-
+biegi zarówno w dziedzinie czasu, jak i częstotliwości jako okresowe. Może to być niedo-
+godne i kłopotliwe, ponieważ sygnały stosowane w DSP w większości nie są okresowe.
+Niemniej jednak, jeśli chcemy stosować DFT, to musimy dostosować się do sposobu widze-
+nia przebiegów przez DFT.
+
+Na rys. 10.8 przedstawiono dwie różne interpretacje sygnału w dziedzinie czasu. S
+najpierw na rysunek górny, na którym sygnał w dziedzinie czasu jest widziany jako przebie
+o długości N punktów. Reprezentuje to typowy sposób pobierania sygnałów cyfrowych w ek
+perymentach naukowych i zastosowaniach inżynierskich. Te 128 próbek mogło na przyki
+być pobranych przez próbkowanie jakiegoś parametru w regulamych odstępach czasu. Próbki
+0 różni się od próbki 127 i jest w stosunku do niej odrębna, gdyż te próbki były
+w różnym czasie. Nie ma żadnego powodu, aby na podstawie ukształtowania sygnału sądzić, że
+próbki z lewej strony sygnału są w sposób parzysty związane z próbkami po stronie prawej. -
+Niestety, w DFT problem nie jest widziany w ten sposób. Jak pokazano na dolnym rysunki
+DFT traktuje te 128 punktów jako pojedynczy okres nieskończenie długiego sygnału okreso
+wego. Wynika stąd, że lewa strona zebranego sygnału jest powiązana z prawą stroną sygn
+powtórzonego. W podobny sposób prawa strona zebranego sygnału jest powiązana z |
+stroną identycznego okresu. Można to sobie też wyobrazić jako zawijanie prawej strony 26
+branego sygnału i dołączenie do jego lewej strony. Przy takim podejściu próbka 127 znajduj
+się obok próbki 0, w podobny sposób jak próbka 43 jest obok próbki 44. Jest to potraktowa
+nie dziedziny czasu jako kołowej, co jest identyczne z sygnałem okresowym.
+Najpoważniejszą konsekwencją okresowości w dziedzinie czasu jest tzw. aliasing w dzie
+dzinie czasu. Aby zilustrować to zjawisko, załóżmy, że mamy sygnał w dziedzinie cz
+i jemy go przekształceniu DFT w celu znalezienia jego widma częstotliwościoweg
+Możemy następnie natychmiast poddać to widmo odwrotnemu przekształceniu DFT, aby 0
+tworzyć sygnał oryginalny w dziedzinie czasu. Cała taka procedura nie byłaby jednak dla
+interesująca. Zamiast tego, w pewien sposób zmodyfikujemy widmo częstotliwościowe pri
+zastosowaniem odwrotnego przekształcenia DFT. Można na przykład usunąć wybrane czę:
+
+tliwości, zmienić amplitudy lub fazy, przesunąć itd. Są to operacje wykonywane w DSP
+nowo. Niestety, takie zmiany w dziedzinie częstotliwości mogą w dziedzinie czasu utw
+sygnał zbyt długi, aby zmieścił się w pojedynczym okresie. To powoduje, że część sygm
+zachodzi z jednego okresu na okresy sąsiednie. Jeśli przebieg w dziedzinie czasu jest widzia
+
+późrznej

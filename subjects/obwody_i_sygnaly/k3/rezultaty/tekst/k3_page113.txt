@@ -1,0 +1,41 @@
+1.6. Elementy niestacjonarne. Elementy SLS 115
+
+Wówczas:
+
+<image/wzory/k3_page113_formula1.png>
+
+<image/wzory/k3_page113_formula2.png>
+
+Zauważmy, że przy przyjętych założeniach ładunek q oraz prąd i zawierają — obok składowej
+sinusoidalnej o pulsacji © — również składowe sinusoidalne o pulsacjach © + wg oraz w — ©. Jest
+to spostrzeżenie ogólne dotyczące wszystkich niestacjonarnych elementów liniowych o równaniach
+(1.6-4) — (1.6-6) przy założeniach typu (1.6-28) i (1.6-29).
+
+Wybierzmy ©, > » i przyjmijmy dla uproszczenia, że ©y = 20. Wówczas prąd:
+
+<image/wzory/k3_page113_formula3.png>
+
+jest przebiegiem okresowym o okresie T = 2x/o, zaś energia gromadzona w pojemności:
+
+<image/wzory/k3_page113_formula4.png>
+
+zmienia się okresowo z okresem T/2.
+Moc pompowania p, obliczamy ze wzoru (1.6-27):
+
+<image/wzory/k3_page113_formula5.png>
+Energia pompowania w przedziale czasu o długości okresu T wyraża się zatem wzorem:
+
+<image/wzory/k3_page113_formula6.png>
+
+ijest dodatnia.
+Moc chwilowa p pobierana przez pojemność z otoczenia ma postać:
+
+<image/wzory/k3_page113_formula7.png>
+
+Wynika stąd, że energia pobierana z otoczenia przez pojemność w przedziale czasu o długości
+okresu T:
+
+<image/wzory/k3_page113_formula8.png>
+jest ujemna i równa co do wartości bezwzględnej energii pompowania (1.6-32). A zatem:
+
+<image/wzory/k3_page113_formula9.png>

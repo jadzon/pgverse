@@ -1,0 +1,26 @@
+Pozycjonowanie biegunów w oparciu o sprzężenie od stanu
+
+Przykład
+Dla danego obiektu inercyjnego wyznaczyć wzmocnienie zapewniające
+dziesięciokrotne zmniejszenie stałej czasowej
+
+<image/wzory/k/_page90_formula1.png>
+
+SMOUBJS 8|8poJN
+
+Rozwiązanie:
+Transmitancja obiektu wynosi:
+
+<image/wzory/k/_page90_formula2.png>
+
+czyli obiekt ma biegun w punkcie s=-0,5, któremu odpowiada stała czasowa
+2sek. Żądamy, aby układ był dziesięciokrotnie szybszy więc stała czasowa
+układu po objęciu sprzężeniem powinna wynieść 0,2sek co odpowiada
+wielomianowi charakterystycznemu: A, =s+5
+
+<image/wzory/k/_page90_formula3.png>
+
+ 
+
+POLITECHNIKA
+GDANSKA

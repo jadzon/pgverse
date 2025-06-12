@@ -1,0 +1,27 @@
+figury/k1_pagefigury/k1_page88_figure.
+
+Rozwiązanie
+Ad a) Wyznaczamy uchyb nadążania przy założeniu, że Z(s) = 0:
+
+<image/wzory/k1_page88_formula1.png>
+<image/wzory/k1_page88_formula2.png>
+Stąd otrzymujemy
+<image/wzory/k1_page88_formula3.png>
+
+Transformata sygnału w(f) wynosi W(s)= 1%. Aby obliczyć wartość uchybu,
+S
+korzystamy z twierdzenia granicznego o wartości końcowej funkcji
+
+<image/wzory/k1_page88_formula4.png>
+
+Podstawiając odpowiednie wyrażenia (rys. 2.29), otrzymujemy
+
+<image/wzory/k1_page88_formula5.png>
+
+Po przekształceniach:
+<image/wzory/k1_page88_formula6.png>
+<image/wzory/k1_page88_formula7.png>
+
+Badany układ jest zatem układem astatycznym względem wymuszenia wf).
+
+90

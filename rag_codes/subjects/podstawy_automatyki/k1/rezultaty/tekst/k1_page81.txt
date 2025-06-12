@@ -1,0 +1,29 @@
+Sprawdzamy podwyznaczniki:
+
+<image/figiwzory/k1_page81_formula1.png>
+
+Ponieważ oba warunki Hurwitza są spełnione, zatem układ jest stabilny.
+
+Przykład 2.27
+Na podstawie kryterium stabilności Hurwitza podać warunki stabilności asympto-
+tycznej układu liniowego IV rzędu opisanego równaniem charakterystycznym
+
+as" + ays* + as” + aS + aq= 0.
+
+Rozwiązanie
+Dla układu liniowego IV rzędu wyznacznik Hurwitza ma postać
+
+<image/wzory/k1_page81_formula2.png>
+
+Podwyznaczniki:
+
+<image/wzory/k1_page81_formula3.png>
+
+<image/wzory/k1_page81_formula4.png>
+
+W związku z tym warunki stabilności asymptotycznej układu liniowego IV rzędu
+można określić w postaci:
+
+<image/wzory/k1_page81_formula5.png>
+
+83

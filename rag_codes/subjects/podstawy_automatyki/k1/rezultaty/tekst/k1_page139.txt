@@ -1,0 +1,14 @@
+Przy badaniach dynamiki układów sterowania uwzględnić można odpowiedzi sys-
+temu na cały szereg wymuszeń, przykładowo na wymuszenia impulsowe, skokowe
+i jednostajne, przedstawione na rysunku 4.6.
+
+<image/figury/k1_page139_figure1.png>
+
+Gdy wymuszenie x;(£) działające na układ zmieni się skokowo, tak że x,(/) = x,,, to
+zgodnie z twierdzeniem o wartości końcowej (dla £ — ©):
+
+<image/wzory/k1_page139_formula1.png>
+
+<image/wzory/k1_page139_formula2.png>
+
+141

@@ -1,0 +1,41 @@
+Typowe odpowiedzi impulsowe 125
+
+komórkach nerwowych są względem siebie przesunięte o czas wynikający z przejścia poten-
+cjału czynnościowego przez złącze nerwowe między komórkami.
+
+Na rys. 7.1 d) przedstawiono odpowiedź impulsową złożoną z funkcji delta oraz z prze-
+skalowanej i przesuniętej funkcji delta. Zgodnie z zasadą superpozycji na wyjściu systemu
+uzyskuje się sygnał identyczny z wejściowym oraz jego opóźnioną wersję, czyli tzw. echo.
+Echo ma istotne znaczenie w wielu zastosowaniach DSP. Wprowadzanie echa jest ważnym
+
+<image/figury/k3_page110_figure1.png>
+
+ 
+
+ 
+
+ 
+  
+  
+ 
+
+impułsową, która - odpowiednio - lub
+tłumi. Przedstawiona odpowiedź impulsowa spowoduje
+1,6-«rotne wzmacnianie sygnału.
+2-
+BE m0 z SEA CIE" c. Przesunięcie
+kasjera czesne Przesunięcie tunkcji dełta powoduje odpowiednie
+opi owtwGi Zniężnie od kióroniau maoże to być opóźnienie kdo
+om mama m ...... . wyprzedzenie.
+| OWO 0 : Przedstawiona odpowiedź impulsowa opóźnia sygnał
+
+ 
+
+d.
+Odpowiedź impulsowa złożona z funkcji delta oraz
+OmM- MME. M o ma
+i PRZEW ESEE sygnału oryginalnego.
+
+ 
+
+7.1. Proste odpowiedzi impulsowe będące przeskałowanymi i przesuniętymi funkcjami delta

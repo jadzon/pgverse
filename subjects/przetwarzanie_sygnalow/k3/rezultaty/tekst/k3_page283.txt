@@ -1,0 +1,59 @@
+310 19. Filtry rekursywne
+
+ 
+
+Są trzy sposoby określania współczynników rekursywnych bez potrzeby zrozumienia prze-
+ksztaceniaz.pierwszysposbpodanewtymrozdzialewzoryprojektowedlakilkutypw
+prostych filtrów rekursywnych. Drugi sposób to zamieszczony w rozdziale 20, praktyczny pro-
+gram komputerowy typu cookbook do projektowania bardziej skomplikowanych dolno- i gór:
+noprzepustowych filtrów Czebyszewa. Trzeci sposób opisano w rozdziale 26, jest to iteracyjna
+metoda projektowania filtrów rekursywnych o dowolnej odpowiedzi częstotliwościowej.
+
+Jednobiegunowe filtry rekursywne
+
+Na rys. 19.2 przedstawiono przykład tego, co nazywamy dolnoprzepustowym filtrem jedno-
+biegunowym. W tym filtrze rekursywnym zastosowano tylko dwa współczynniki ag = 0,15
+i b, =0,85. W tym przykładzie sygnałem wejściowym jest funkcja skokowa. Jak można się
+tego spodziewać po filtrze dolnoprzepustowym, sygnał wyjściowy jest przebiegiem łagodnie
+narastającym do pewnego ustalonego poziomu. Na rysunku przedstawiono też układ znany
+z podstaw elektroniki. Ten dolnoprzepustowy filtr rekursywny jest bowiem w pełni równo-
+ważny z elektronicznym filtrem dolnoprzepustowym złożonym z rezystora i kondensatora.
+Piękno metody rekursywnej połega na zdolności tworzenia wielkiej różnorodności odpowiedzi
+przez zmianę tylko kilku parametrów. Na przykład na rys. 19.3 pokazano filtr o trzech współ
+czynnikach: aq = 0,93, a; = -0,93 oraz b, = 0,86. Jak wynika z podobieństwa odpowiedzi skoko-
+wych, ten filtr cyfrowy jest naśladownictwem elektronicznego górnoprzepustowego filtru RC.
+Te jednobiegunowe filtry rekursywne z pewnością należą do podstawowego zestawu rozwiązań
+DSP. Można je stosować do przetwarzania sygnałów cyfrowych, podobnie jak obwody RC
+służą do przetwarzania elektronicznych sygnałów analogowych. To obejmuje wszystko, czego
+można by oczekiwać: usuwanie składowej stałej, tłumienie szumu w.cz., kształtowanie i wygła-
+dzanie przebiegów itd. Takie filtry są łatwe do programowania, szybkie w działaniu i dostarcza-
+ją raczej niewielu przykrych niespodzianek. Współczynniki oblicza się z prostych wzorów:
+
+a,=|-x
+
+4=x
+Wzór 19.2. Dolnoprzepustowy filtr jednobiegunowy. Odpowiedź filtru jest określana parametrem x,
+o wartości między 0 i 1
+
+<image/wzory/k3_page283_formula1.png>
+
+h=x
+Wzór 19.3. Górnoprzepustowy filtr jednobiegunowy
+
+Właściwości tych filtrów są ustalane przez parametr x, którego wartość mieści się między
+0 i 1. Fizycznie x jest współczynnikiem wskazującym, jakie jest opadanie przebiegu mie-
+rzone między kolejnymi próbkami. Na przykład na rys. 19.3 parametr x jest równy 0,86, co
+znaczy, że wartość każdej następnej próbki w sygnale wyjściowym jest równa 0,86 wartości
+próbki poprzedniej. Czym większa jest wartość x, tym wolniejsze jest opadanie. Zauważcie,
+że filtr staje się niestabilny, jeśli x jest większe od jedności. Wtedy każda niezerowa wartość
+na wejściu powoduje wzrost sygnału wyjściowego aż do przekroczenia pełnego zakresu.
+Wartość x może być bezpośrednio obliczona na podstawie wymaganej stałej czasowej filtru.
+Uwzględniając, że R x C jest wyrażonym w sekundach czasem opadania przebiegu na wyj-
+ściu obwodu RC do 36,8% wartości maksymalnej, a d jest liczbą próbek, podczas których
+sygnał z filtru rekursywnego opada do tego samego poziomu, mamy:
+
+xze'*
+
+Wzór 19.4. Stała czasowa filtrów jednobiegunowych. Ten wzór określa zależność między -
+współczynnikiem x opadania przebiegu między kolejnymi próbkami a stałą czasową d będącą liczbą
+próbek, podczas których przebieg opada do 36,8% wartości maksymalnej

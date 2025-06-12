@@ -1,0 +1,38 @@
+Korzystamy z twierdzenia Eulera
+
+<image/wzory/k1_page38_formula1.png>
+czyli
+o e?) -e%8=2jsinq.
+
+W zadaniu
+
+ran
+
+<image/wzory/k1_page38_formula3.png>
+<image/wzory/k1_page38_formula4.png>
+
+Zadanie to można również rozwiązać inaczej.
+Metoda II
+Stosując transformatę Laplace'a do obu stron równania różniczkowego, otrzymamy
+
+<image/_wzory/k1_page38_formula5.png>
+<image/wzory/k1_page38_formula6.png>
+
+Wykorzystując wzór
+
+<image/wzory/k1_page38_formula7.png>
+
+i przekształcając Y(s), otrzymujemy
+
+<image/wzory/k1_page38_formula8.png>
+
+Ponieważ y(t) = .£-'[Y(s)], otrzymujemy rozwiązanie równania różniczkowego
+
+w mnctarci
+
+<image/wzory/k1_page38_formula9.png>
+
+Stosując obydwa sposoby rozwiązania, otrzymujemy ten sam wynik, przy czym
+drugi sposób jest szybszy.
+
+40

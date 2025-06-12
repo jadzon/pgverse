@@ -1,0 +1,44 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z? 26
+
+16. Przyczyny stosowania zewnętrznych kontrolerów interfejsów szeregowych np.
+USB, CAN, Ethernet, czy radiowych układów nadawczo-odbiorczych na 2,4 GHz.
+
+Zewnętrzne kontrolery interfejsów szeregowych stosuje się wówczas gdy:
+. Wybrany przez nas mk ich nie posiada.
+
+« Nie chcemy używać mk w nie wyposażonych, ponieważ mk te są zazwyczaj bardzo rozbudowane,
+co za tym idzie i droższe (mają większą moc obliczeniową aby obsługiwać wbudowane interfejsy i
+przy okazji są wyposażone w wiele urządzeń peryferyjnych często zbędnych dla naszej aplikacji).
+
++ Zastosowanie zewnętrznych kontrolerów interfejsów szeregowych pozwala na „rozproszenie mocy
+obliczeniowej” w systemie, tzn. mk wykonuje swoje zadania przewidziane programem, a wymiana
+danych z kontrolerem interfejsu szeregowego odbywa się poprzez interfejs SPI. Kontroler ten często
+realizuje prawie cały stos obsługi danego protokołu (np. stosy protokołów CAN, USB czy warstwę
+fizyczną Ethernet protokołów TCP/IP) odciążając w ten sposób jednostkę centralną mk.
+
++. Często producenci kontrolerów szeregowych dostarczają gotowe sterowniki dla systemów
+
+operacyjnych (np. sterowniki urządzeń USB dla Windows XP, Windows 7, Linux) współpracujące z
+ich kontrolerami.
+
+17. Schemat blokowy kontrolerów interfejsów szeregowych sterowanych interfejsem
+SPI, funkcje poszczególnych ich bloków, znaczenie linii układów.
+
+<image/figury/k8_page24_figure1.png>
+
+Składa się on z następujących bloków:
+
+„ Blok interfejsu SPI — obsługuje on interfejs SPI służący do komunikacji między mk a kontrolerem.
+Za jego pomocą transmitowane są dane do buforów wejściowo-wyjściowych. Ponadto zawiera on
+rejestry kontrolne i statusowe służące do konfiguracji i sterowania układem kontrolera.
+
++ Bufory danych wejściowych i wyjściowych — są niezbędne, gdy interfejs odbiera i wysyła dane
+blokami (np. ramka ethemetowa, ramka CAN).
+
+„ Kontroler interfejsu szeregowego — właściwy blok sterujący danym interfejsem szeregowym.
+Kontroluje on dwukierunkowym przepływem danych, dokonuje ich analizy zgodnie ze
+zdefiniowanym stosem protokołów (np. oblicza i sprawdza sumę kontrolną pakietu danych), steruje
+układem nadawczo odbiorczym.
+
+« Układ nadawczo-odbiorczy — odbiera i wysyła dane, konwertuje je na odpowiednie sygnały
+elektryczne zgodnie ze specyfikacją danego protokołu.

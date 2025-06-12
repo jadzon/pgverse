@@ -1,0 +1,62 @@
+550 3ł. Zespolone przekształcenie Fouriera
+
+Tab. 31.1. Przeksztatcenia Fouriera
+
+ 
+
+"TAE ma ;
+<image/xn5xejewzory/ka_page511_formula1.png>
+
+wzory/k3_page511_formula2.pn
+
+xle-qZalnje * że ReX[k]=— Ż Z elnjos( 7) |
+<image/wzory/k3_page511_formula3.png>
+
+Dziedzina czasu: Dziedzina czasu:
+x(n] jest zespolony, dyskretny i okresowy x(n] jest rzeczywisty, dyskretny i okresowy
+n zmienia się w ciągu jednego okresu, od 0 do N- 1 n zmienia się od w ciągu jednego okresu, od 0 do N- 1
+Dziedzina częstotliwości:
+X[k] jest zespołony, dyskretny i okresowy a OE Sw
+k zmienia się w ciągu jednego okresu, od 0 do N — 1 , dyskretny i okresowy
+dla k od 0 do N/2 częstotliwości są dodatnie koda ORW CR AG EG, OLO O KŻ
+
+dła k od N/2 do N — 1 częstotliwości są ujemne
+Przed zastosowaniem równania syntezy wartości
+Ra 00] Ra XPN2] należy podnieść przaż ÓW.
+
+ 
+
+ZACK PAŁ ZI > ; ii 46 400732 15029071
+I rmy UUH Mniw AEO RO 2 LU LI2] aż o
+
+x[n]= je X (©)cos(on)
+
+ 
+
+<image/wzory/k3_page511_formula4.png>
+|
+<image/wzory/k3_page511_formula5.png>
+
+- Im X (o)sin(on)do
+
+<image/wzory/k3_page511_formula6.png>
+
+| jest zespolony dyskretny i nieokresowy | o) Jest rzeczywisty, djskastny I nieokresowy
+
+, xin
+
+W ża AW dadza | n zmienia się od minus do plus nieskończoności
+|
+|
+|
+
+i: Dziedzina częstotliwości:
+X(«) jest zespolony, ciągły i Re X(o) jest rzeczywisty, ciągły i okresowy
+
+Im X(c) jest rzeczywisty, ciągły i okresowy
+
+« zmienia się w ciągu połowy okresu, od 0 do x
+
+       
+
+Maoizii oz ck sa Gówi

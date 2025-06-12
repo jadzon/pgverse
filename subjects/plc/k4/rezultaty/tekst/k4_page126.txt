@@ -1,0 +1,24 @@
+<image/figury/k4_page126_figure1.png>
+
+Rys. 3.8 Schemat pojedynczego obwodu modułu wejść.
+
+3.3.1 Moduł wejść prądu przemiennego
+
+ 
+
+(AC Input Module)
+
+Prezentowany dla przykładu moduł MDL 231 (240 Volt AC Isolated Input, 8
+Point) jest modułem wejściowym dla 8 izolowanych obwodów prądu przemien-
+nego, zasilanych z zewnętrznego źródła napięciowego 240VAC. Nie dopuszcza
+się by obwody te były zasilane ze źródła prądu stałego, bowiem zastosowane
+w nich łączniki tyrystorowe mogłyby zostać uszkodzone. Tab. 3.6 podaje głów-
+ne parametry tego modułu, natomiast Rys. 3.9 przedstawia schemat połączeń
+obwodów zewnętrznych oraz schemat jednego obwodu wewnętrznego modułu.
+
+<image/tabele/k4_page126_table1.png>
+
+Tab. 3.6 Zestawienie parametrów technicznych
+przykładowego modułu MDL 231
+
+126 Rozdział : 3. Sprzęt sterowników PLC

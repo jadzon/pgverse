@@ -1,0 +1,25 @@
+33. Metody analizy obwodów liniowych prądu stalego 217
+
+3.3-20, po uprzednim przekształceniu jej gałęzi do postaci prądowej. Otrzymane
+wyniki uogólnimy następnie na dowolną sieć spełniającą przyjęte założenia.
+
+<image/figury/k4_page275_figure1.png>
+
+Po odpowiednim przekształceniu sieci z rvs. 3.3-20 otrzymuiemv sieć
+pok
+(3.3
+
+<image/figury/k4_page275_figure2.png>
+
+'ory/k4_page275_formula1.png
+
+W sieci występują cztery węzły A, B, C, D. Za węzeł odniesienia przyjmiemy
+węzeł D. Węzły 4, B, C tworzą zatem zbiór węzłów niezależnych. Oznaczmy
+napięcia tych węzłów względem węzła D przez U, U5, U, (patrz rys. 3.3-21).
+Napięcia U,, Uz, Uc nazywamy napięciami węzłowymi”) i uważamy za nowe
+zmienne wprowadzone do opisu sieci.
+
+1) Często przyjmuje się, że węzeł odniesienia jest uziemiony. Wówczas, zamiast o na ięciach
+węzłowych można mówić o potencjałach węzłowych, a metodę napięć węzłowych — nazywać metodą
+potencjałów węzłowych. W obu przypadkach, zarówno napięcie węzłowe węzła odniesienia (wzglę-
+dem samego siebie), jak i jego potencjał węzłowy są równe zeru.

@@ -1,0 +1,20 @@
+<image/tabele/k4_page432_table2.png>
+
+Wyd. 8.84 Przerzutniki RS dla zmiennych otwierania i zamykania zaworu ustawia-
+nych zmiennymi 00020 i 00021 (realizującymi histerezę) oraz zmienna 00025
+ustawianą w strefie nieczułości
+
+<image/tabele/k4_page432_table1.png>
+
+resu 40/00
+
+<image/tabele/k4_page432_table4.png>
+<image/wzory/k4_page432_formula1.png>
+
+<image/tabele/k4_page432_table3.png>
+
+<image/figury/k4_page432_figure1.png>
+
+ 
+
+432 Rozdział : 8.Programy przykładowe

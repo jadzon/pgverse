@@ -1,0 +1,57 @@
+Zespolona reprezentacja sinusoid 535
+
+ 
+
+Zespolona reprezentacja sinusoid
+
+Liczby zespolone znalazły swoją niszę w elektronice i przetwarzaniu sygnałów, gdyż są
+zręcznym sposobem reprezentowania i operowania najbardziej użytecznymi ze wszystkich
+przebiegów — falami sinusoidalną i kosinusoidalną. Konwencjonalny sposób wyrażania sinu-
+soidy to: M cos(© + $) lub A cos(o/) + B sin(w/), odpowiednio — w zapisie we współrzęd-
+nych biegunowych i prostokątnych. Zauważcie, że częstotliwość wyrażamy przez pulsację
+© w radianach na sekundę. Jeśli wolicie, to możecie w zastąpić przez wielkość 2m/ w Hz.
+Jednak większość wzorów w DSP jest formułowanych z użyciem krótszego zapisu i trzeba
+się do niego przyzwyczaić. Ponieważ reprezentacja pojedynczej sinusoidy wymaga dwóch
+parametrów (tj. A i B lub M i $), więc zastosowanie liczb zespolonych do reprezentowania
+tych ważnych przebiegów jest rzeczą naturalną. Przy użyciu metody zastępowania zamiana
+konwencjonalnego wyrażania sinusoidy na reprezentację w liczbach zespolonych jest bezpo-
+średnia. We współrzędnych prostokątnych:
+
+Acos(ot)+Bsin(ot) z* a+jb
+
+(reprezentacja konwencjonalna) (liczby zespolone)
+gdzie A 7* a oraz B ©* —b. Wyrażając to słownie — amplituda fali kosinusoidalnej staje się
+częścią rzeczywistą liczby zespolonej, a amplituda ujemnej fali sinusoidalnej — częścią uro-
+joną. Ważne jest, aby zrozumieć, że nie jest to równanie, lecz po prostu wskazanie sposobu,
+w jaki liczby zespolone reprezentują sinusoidę. Zastępowanie możne być też stosowane do
+zapisu biegunowego:
+
+Mcos(ort+©)  * Me”
+(reprezentacja konwencjonalna) (bczby zespołone)
+
+gdzie M = M oraz 6 7* -$. Wyrażając to słownie — zastępowanie pozostawia moduł bez
+zmiany, lecz zmienia znak kąta fazowego.
+Dlaczego trzeba zmieniać znak części urojonej i kąta fazowego? Chodzi o to, aby zastę-
+powanie miało taką samą formę, jak w zespolonym przekształceniu Fouriera omawianym
+w następnym rozdziale. Rozpatrywana w tym rozdziale metoda zastępowania nie zyskuje
+niczego na tej zmianie znaku, lecz prawie zawsze się ją wprowadza, aby zachować zgod-
+ność z metodami matematycznie bardziej zaawansowanymi.
+Zastosowanie liczb zespolonych do reprezentowania fal sinusoidalnych i kosinusoidalnych
+jest metodą powszechnie stosowaną w analizie obwodów elektrycznych i w DSP. Wynika
+to z faktu, że wiele (choć nie wszystkie) reguł i praw rządzących liczbami zespolonymi jest
+takich samych, jak te, które rządzą przebiegami sinusoidalnymi. Możemy więc fale sinuso-
+idalne i kosinusoidalne wyrażać w liczbach zespolonych, operować tymi liczbami na różne
+sposoby i uzyskiwać wyniki pasujące do zachowań przebiegów sinusoidalnych.
+Musimy jednak być ostrożni i stosować tylko te operacje matematyczne, które są naśladow-
+nictwem reprezentowanych zagadnień fizycznych (w tym przypadku sinusoid). Przypuśćmy
+na przykład, że stosujemy zmienne zespolone A i B do reprezentowania dwóch sinusoid o ta-
+kiej samej częstotliwości, lecz o różnych amplitudach i przesunięciach fazy. Przy dodawa-
+niu dwóch liczb zespolonych powstaje trzecia liczba zespolona. Podobnie, trzecia sinusoida
+powstaje przy dodawaniu dwóch sinusoid. Zgodnie z naszym oczekiwaniem ta trzecia licz-
+ba zespolona będzie reprezentowała trzecią sinusoidę. Dodawanie zespolone wykazuje więc
+zgodność z systemem fizycznym.
+A teraz wyobraźmy sobie mnożenie liczb zespolonych A i B dające w wyniku inną liczbę
+zespoloną. Czy to będzie zgodne z tym, co się dzieje przy mnożeniu dwóch sinusoid? Nie!
+Wymnożenie przez siebie dwóch sinusoid nie wytwarza innej sinusoidy. Mnożenie zespolone
+nie spełnia więc oczekiwań zgodności z systemem fizycznym i wobec tego nie może być
+stosowane.

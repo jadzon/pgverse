@@ -1,0 +1,57 @@
+DSP stałoprzecinkowe a DSP zmiennoprzecinkowe 493
+
+— od 10 do 300 USD. Różnica w cenie jest związana z różnym stopniem złożoności obu rodza-
+jów procesorów. Jeśli chcecie znać obecne ceny, to musicie zajrzeć do aktualnych cenników.
+Zajmijmy się teraz działaniem procesorów; tym, co może wykonać zmiennoprzecinkowy
+system 32-bitowy, a czego nie może stałoprzecinkowy 16-bitowy. Ta kwestia wiąże się ze
+stosunkiem sygnału do szumu. Załóżmy, że zapisujemy liczbę w 32-bitowym formacie
+zmiennoprzecinkowym. Jak poprzednio wspomniano, odstęp między tą liczbą a najbliższą
+sąsiednią wynosi ok. jedną dziesięciomilionową wartości tej liczby. Aby można było zapisać
+tę liczbę, musi ona zostać zaokrąglona w górę lub w dół o maksimum połowę tego odstępu.
+Inaczej mówiąc, za każdym razem gdy zapisujemy liczbę w formacie zmiennoprzecinko-
+wym, dodajemy do sygnału pewien szum.
+
+To samo się dzieje, gdy liczba jest zapisywana w 16-bitowym formacie stałoprzecinkowym,
+z tą wszakże różnicą, że dodany szum jest znacznie gorszy. Przyczyną są znacznie większe
+odstępy między sąsiednimi liczbami. Załóżmy na przykład, że zapisujemy liczbę 10 000 jako
+liczbę całkowitą ze znakiem (w zakresie od -32 768 do 32 767). Odstęp między liczbami
+wynosi jedną dziesięciotysięczną część zapisywanej liczby. Jeśli chcemy zapisać liczbę 1000,
+to odstęp między liczbami jest równy tylko jednej tysięcznej wartości liczby.
+
+Szum w sygnale jest zazwyczaj wyrażany przez odchylenie standardowe, © czym szczegóło-
+wo była mowa w rozdziale 2. W tych rozważaniach ważny jest fakt, że odchylenie standar-
+dowe tego szumu kwantyzacji jest równe ok. jednej trzeciej rozmiaru odstępu między są-
+siednimi liczbami. Z tego wynika, że stosunek sygnału do szumu w przypadku zapisu liczby
+zmiennoprzecinkowej wynosi ok. 30 milionów do 1, a dla liczby stałoprzecinkowej tylko ok.
+10 000 do 1. A zatem przy zapisie zmiennoprzecinkowym szum kwantyzacji jest w przybli-
+żeniu 3000 razy mniejszy niż przy zapisie stałoprzecinkowym.
+
+I tu dochodzimy do ważnej różnicy między procesorami DSP i mikroprocesorami tradycyj-
+nymi. Przyjmijmy, że realizujemy filtr SOI przy użyciu zapisu stałoprzecinkowego. Aby to
+wykonać, prowadzimy pętlę przez każdy ze współczynników, przemnażamy współczynnik
+przez odpowiednią próbkę sygnału wejściowego i uzyskany iloczyn dodajemy do akumula-
+tora. I tu jest problem. W tradycyjnym mikroprocesorze ten akumulator jest po prostu jeszcze
+jedną 16-bitową zmienną stałoprzecinkową. Aby uniknąć przepełnienia, trzeba zmieniać ska-
+lę dodawanych wartości i w każdym kroku następuje wtedy dodawanie szumu kwantyzacji.
+W najgorszym przypadku ten szum kwantyzacji po prostu się sumuje, znacznie obniżając
+stosunek sygnału do szumu w systemie. Na przykład w filtrze SOI o 500 współczynnikach
+szum w każdej próbce wyjściowej może być 500 razy większy od szumu w każdej próbce
+wejściowej. Wtedy stosunek sygnału do szumu zmniejszy się z wartości dziesięć tysięcy do
+jednego do koszmarnej wartości dwadzieścia do jednego. Chociaż jest to skrajny przypadek,
+ilustruje on najważniejszą kwestię — jest bardzo, rzeczywiście bardzo niedobrze, gdy na każ-
+dej próbce przeprowadza się wiele operacji. Więcej szczegółów znajdziecie w rozdziale 3.
+W procesorach DSP przezwyciężono tę trudność, stosując akumulator 0 rozszerzonej do-
+kładności. Jest to specjalny rejestr mający 2-3 razy więcej bitów niż w innych lokalizacjach
+pamięci. Na przykład w 16-bitowym DSP taki akumulator może mieć od 32 do 40 bitów,
+a w procesorach sygnałowych SHARC zawiera on 80 bitów dla operacji stałoprzecinkowych.
+Ten rozszerzony zakres eliminuje szum zaokrąglania, gdy akumulacja jest w toku. Jedyny
+odczuwalny błąd zaokrąglenia powstaje przy przeskalowaniu zawartości akumulatora i zapi-
+saniu jej w pamięci 16-bitowej. Ta metoda działa bardzo dobrze, choć ogranicza sposób re-
+alizacji niektórych algorytmów. Natomiast przy stosowaniu formatu zmiennoprzecinkowego
+błąd kwantyzacji jest tak mały, że ta technika zwykle nie jest konieczna.
+
+Inną zaletą systemów zmiennoprzecinkowych, prócz mniejszego szumu kwantyzacji, jest ła-
+twiejsze opracowywanie algorytmów dla tych systemów. Podstawą większości metod DSP są
+powtarzane mnożenia i dodawania. W systemach stałoprzecinkowych po każdej operacji trze-
+ba uwzględniać możliwość powstania przepełnienia lub wyjścia poza dolną granicę zakresu.
+Programista musi stałe śledzić wartości liczb, akumulację błędów kwantyzacji, a także wie-

@@ -1,0 +1,43 @@
+1.3. Funkcje boolowskie 9
+
+Jak widać, każdą z tych funkcji można przedstawić za pomocą koniunkcji, altematywy i
+
+negacji.
+Funkcji boolowskich trzech zmiennych jest:
+
+<image/wzory/k2_page100_formula1.png>
+
+nie będziemy ich wszystkich wypisywać.
+
+Nasuwa się pytanie, czy każdą funkcję n zmiennych można przedstawić za pomocą
+koniunkcji, altematywy i negacji. Odpowiedź jest pozytywna. Najpierw przykład. Roz-
+patrzmy funkcję boolowską trzech zmiennych:
+
+<image/wzory/k2_page100_formula2.png>
+
+Rozważmy wyrażenie:
+
+zfjż.
+Przyjmuje ono wartość 1 tylko dla jednego wektora (0,0, 1), czyli dla podstawienia 1 =
+0,y = 0, z = 1. Podobnie, wyrażenie ryz przyjmuje wartość 1 tylko dla wektora (0, 1, 1),
+wyrażenie rgź — tylko dla (1,0,0), a wyrażenie rg2 — tylko dla (1,0, 1). Suma tych
+
+wyre
+<image/wzory/k2_page100_formula3.png>
+przyjinuje wadiwy 1 LyiAU Ula WEALIUW (U,U,1J, (U, 1, L),(1,U,UJ, (1,U, 1), czyn jest
+równoważna naszej funkcji f. Wyrażenie (1.1) jest w tak zwanej dysjunkcyjnej postaci
+normalnej (DNF).
+Funkcję f można też opisać w innej formie. Rozważmy wyrażenie:
+
+<image/wzory/k2_page100_formula4.png>
+Przyjmuje ono wartość 0 tylko dla jednego wektora (0, 0,0), czyli dla podstawienia x =
+0,y = 0, z = 0. Podobnie, wyrażenie (r + y + z) przyjmuje wartość 0 tylko dla wektora
+(0, 1,0), wyrażenie (£ + g + z) — tylko dla (1, 1,0), a wyrażenie (£ + g + ż) — tylko
+dla (1, 1, 1). Iloczyn tych wyrażeń:
+
+<image/wzory/k2_page100_formula5.png>
+przyjmuje wartość zero tylko dla wektorów (0,0,0), (0, 1,0), (1, 1,0), i (1,1,1), czy-
+li jest równoważny funkcji f. Jest to tak zwana koniunkcyjna postać normalna (CNF)
+funkcji f.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

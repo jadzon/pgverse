@@ -1,0 +1,47 @@
+286 3. Obwody prądu stalego
+
+4 Z W W
+
+Jak widzimy, otrzymana wartość niewiele różni się od podanego wcześniej
+rozwiązania numerycznego wyznaczonego z większą dokładnością.
+
+W analogiczny sposób przebiega analiza graficzna w przypadku, gdy obwód
+liniowy z rys. 3.4-3b przedstawimy w postaci zastępczego źródła prądowego
+(źródła Nortona) — rys. 3.4-5. Należy wówczas skonstruować charakterystykę
+łączną o(u) = 9, (u) + (u) połączenia równoległego oporów Ry i R; (por.
+p. 1.5.2-C). Także i w tym przypadku powinny być spełnione odpowiednie
+warunki zapewniające jednoznaczność analizy (por. p. 3.4.2-E). Zachęcamy
+Czytelnika do samodzielnego wykonania konstrukcji charakterystyki łącznej
+i przeprowadzenia na jej podstawie analizy obwodu z rys. 3.4-5 dla rozważanego
+wyżej przykładu liczbowego.
+
+<image/figury/k4_page286_figure1.png>
+
+Rys. 3.4-5
+
+C. Metoda prostej oporu. Inną metodą graficzną analizy obwodu z rys.
+3.4-3c, różniącą się od metody wyznaczania charakterystyki łącznej jedynie pod
+względem technicznym, jest tzw. metoda prostej oporu. Metoda ta polega na
+rozwiązaniu graficznym opisującego ten obwód równania, przedstawionego
+w postaci:
+
+<image/wzory/k4_page286_formula1.png>
+
+Wykreślając na jednym układzie współrzędnych krzywą u = /, (1) oraz prostą
+u = Eq — Rri (prostą oporu) i wyznaczając punkt ich przecięcia otrzymujemy
+poszukiwane rozwiązanie równania (3.4-1), tzn. wartość prądu I płynącego
+w obwodzie.
+
+Metoda prostej oporu zastosowana do przykładu liczbowego omawianego
+w p. B została zilustrowana na rys. 3.4-6a (we współrzędnych i, u) i na rys. 3.4-6b
+(we współrzędnych u, i).
+
+Zwracamy uwagę, że przy przyjętym strzałkowaniu prądu i napięcia prosta
+o równaniu u = Ez — Ri jest jednocześnie charakterystyką dwójnika źród-
+łowego Er, Rq. Punkt P przecięcia się charakterystyk u = f,(i) oraz
+u = Er — Rqi jest punktem pracy elementu nieliniowego R„. Podobną in-
+terpretację ma konstrukcja z rys. 3.4-6b.
+
+Przedstawioną metodę można bez trudu przystosować do analizy obwodu
+z rys. 3.4-5. W tym przypadku metoda ta (zwana czasami metodą prostej
+przewodności) sprowadza się do graficznego rozwiązania równania:

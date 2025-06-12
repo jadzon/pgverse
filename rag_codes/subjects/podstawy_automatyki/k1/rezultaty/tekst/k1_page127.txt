@@ -1,0 +1,37 @@
+Charakterystykę czasową skokową dla układu ciągłego można wyznaczyć, wykorzy-
+stując jedno z poniższych wywołań funkcji step (w zależności od sposobu opisu układu):
+— step (A, B, C, D, iu)
+— step (L, M)
+— [Y, X, t] = step (L, M)
+
+Charakterystykę częstotliwościową amplitudowo-fazową dla układu ciągłego moż-
+na wyznaczyć, wykorzystując jedno z poniższych wywołań funkcji nyquist (w zależno-
+ści od sposobu opisu układu):
+
+— nyquist (A, B, C, D, iu)
+— nyquist (L, M)
+—  [re, im, w] = nyquist (L, M)
+
+Logarytmiczne charakterystyki częstotliwościowe: amplitudową i fazową dla
+układów ciągłych można wyznaczyć, wykorzystując jedno z poniższych wywołań
+funkcji bode (w zależności od sposobu opisu układu):
+
+— bode (A, B, C, D, iu)
+— bode (L, M)
+—  [ampl, faza, w] = bode (L, M)
+
+Przykład 3.11
+
+Dany jest układ o schemacie przedstawionym na rysunku 3.12. Wykorzystując
+program MATLAB, wyznaczyć odpowiedź skokową tego układu dla następujących
+wielkości:
+
+<image/wzory/k1_page127/_formula1.png>
+
+Założono: x(0) = 0,1 m, (0) = 0,05 =
+
+<image/figury/k1_page127_figure1.png>
+
+Rys. 3.12. Układ tłumik-masa-sprężyna
+
+129

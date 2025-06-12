@@ -1,0 +1,15 @@
+Dla funkcji MUŁ, DIV i DDV bit statusowy C przyjmuje zawsze wartość 0.
+
+<image/figury/k4_page259_figure2.png>
+
+Wyd. 4.18 Instrukcja zerowania CLR
+
+<image/tabele/k4_page259_table1.png>
+
+Wyd. 4.19 Instrukcja dodawania ADD
+
+<image/figury/k4_page259_figure1.png>
+
+Wyd. 4.20 Instrukcja odejmowania SUB
+
+5.6 Funkcje arytmetyczne 259

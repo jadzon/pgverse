@@ -1,0 +1,47 @@
+<image/tabele/k4_page336_table3.png>
+
+Czasomierze umożliwiają realizację zależności czasowych. Elementy czasowe
+można programować za pomocą następujących operatorów:
+e PS - czasomierz impulsowy (Pulse Timer),
+e SE - czasomierz impulsowy z przedłużeniem (Extended Pulse Timer),
+e SR- czasomierz załączający z opóźnieniem (On-Delay Timer),
+e SS- czasomierz załączający z opóźnieniem z zapamiętaniem (Stored On-
+Delay Timer),
+e SF - czasomierz wyłączający z opóźnieniem (0/ff-Delay Timer),
+e R- zerowanie czasomierza.
+Argument powyższych operatorów ma następującą postać:
+T nr - T oznacza, że operujemy na typie zmiennych odnoszących się do czaso-
+mierzy, nr jest liczbą określającą numer programowanego czasomierza.
+W chwili, gdy czasomierz jest uruchamiany, zawartość akumulatora I jest
+przyjmowana jako wartość odmierzanego czasu. W związku z powyższym, przed
+uruchomieniem czasomierza należy wprowadzić do akumulatora wartość czasu,
+którą ma on odmierzyć. Można to zrealizować następująco:
+
+L KT wartość.podstawa_czasu,
+
+gdzie wartość (value) czasu jest liczbą z przedziału [0; 999] określającą wartość
+odmierzanego czasu w jednostkach określonych przez podstawę. Podstawa czasu
+(trime_base) jest liczbą z przedziału [0; 3], która określa jednostkę mierzonego
+czasu kodowaną następująco:
+
+<image/tabele/k4_page336_table1.png>
+
+Przykład
+
+Wprowadzić do akumulatora wartość czasu 205.
+
+<image/tabele/k4_page336_table2.png>
+
+Zadany czas można również wprowadzać z następujących obszarów pamięci:
+DW słowo danych,
+IW słowo wejść cyfrowych,
+QW słowo wyjść cyfrowych,
+FW słowo markerów.
+
+Należy wówczas pamiętać, że wartość czasu musi być zapisana w kodzie BCD.
+
+     
+
+336 R
+
+ozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5

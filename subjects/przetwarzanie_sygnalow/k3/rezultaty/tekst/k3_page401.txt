@@ -1,0 +1,5 @@
+Wykrywanie celu
+
+ 
+
+ps. 26.2. Załeżność między krzywymi ROC i pdf

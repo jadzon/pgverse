@@ -1,0 +1,28 @@
+<image/tabele/k4_page429_table1.png>
+
+Tab. 8.9 Zestawienie połączeń wejść i wyjść sterownika z obiektem i pane-
+lem operatorskim
+
+<image/tabele/k4_page429_table2.png>
+
+Wyd. 8.76 Dekłaracja wyjść binarnych sterownika i sygnałów pomocniczych
+
+<image/figury/k4_page429_figure1.png>
+
+Wyd. 8.77 Deklaracja wejść binarnych sterownika
+
+Numeric Cross Reference List 3X
+REF: SYMBOL: DESCRIPTICN:
+30001 PV
+
+ 
+
+Zmienna procesowa - bołożenie zaw
+
+<image/wzory/k4_page429_icemulat.png>
+
+<image/tabele/k4_page429_table3.png>
+
+Wyd. 8.79 Deklaracja wyjść analogowych i rejestrów pomocniczych
+
+<image/wzory/k4_page429_formula2.png>

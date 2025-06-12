@@ -1,0 +1,53 @@
+1.12. Krańce rozkładu dwumianowego 27
+Jeżeli teraz podstawimy t£ = 1 to otrzymamy
+
+<image/wzory/k2_page86_formula1.png>
+
+o
+Rozważmy ciąg niezależnych zmiennych losowych X;....,- X„„, każda o rozkładzie
+ZETO ji
+
+<image/wzory/k2_page86_formula2.png>
+
+Suma twa ZAKŁADOKIEEW KKK
+
+<image/wzory/k2_page86_formula3.png>
+
+ma rozkład dwumianowy o parametrach n i p. Wartość oczekiwana, każdej ze zmiennych
+X; wynosi E(.X;) = p, więc wartość oczekiwana zmiennej X wynosi np.
+
+Wariancja zmiennej 2X; wynosi Var(.X;) = pq. Ponieważ zmienne X;,,...,.X, Są
+niezależne to wariancja ich sumy wynosi npq, mamy więc.
+
+Twierdzenie 1.59 Wariancja zmiennej losowej .X z rozkładem dwumianowym o parame-
+trach ;
+
+<image/wzory/k2_page86_formula4.png>
+
+1.12 Krańce rozkł adu dwumianowego
+
+Twierdzenie 1.60 (Nierówności C hernoff'a) Niech zmienna losowa „X posiada rozkład
+dwumianowy o parametrach n i p. Oznaczmy wartość oczekiwaną tego rozkładu przez
+m=nn Wtadv dla dawalnai liczhv rzeczywista i O<e<1 mamv
+
+<image/wzory/k2_page86_formula5.png>
+
+<image/wzory/k2_page86_formula6.png>
+1.13 Problem dnia urodzin
+
+Zastanówmy się ile osób musi znajdować się w pokoju, aby była duża szansa, że dwie
+osoby mają urodziny tego samego dnia.
+
+Dla prostoty przyjmujemy, że problem dnia urodzin jest równoważnu problemowi
+wylosowania ciągu k liczb u;,...,ua, każda spośród n = 365 możliwości, tak aby
+wystąpiło w nim jakieś powtórzenie.
+
+Oznaczmy przez B, zdarzenie przeciwne, że wszystkie wylosowane liczby są różne.
+Jeżeli założymy, że wszystkie ciągi są równo prawdopodobne, to prawdopodobieństwo,
+że otrzymamy ciąg różnowartościowy wynosi
+
+<image/wzory/k2_page86_formula7.png>
+
+oraz
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

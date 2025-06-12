@@ -1,0 +1,39 @@
+<image/wzory/k4_pagepage236_formula1.png>
+
+ 
+
+Poniżej, w kolejnych tablicach zebrano dostępne w programowaniu sterowników
+serii 90-30 firmy GE Fanuc instrukcje oraz funkcje i bloki funkcyjne. Zostały
+one pogrupowane tak, jak jest to zrobione w pakiecie Logicmaster 90. Ponadto,
+obok nazw polskich podano ich odpowiedniki angielskie, aby ułatwić ich ewen-
+tualne znalezienie w odpowiedniej opcji pakietu. Nie wszystkie
+z przedstawionych funkcji są dostępne w każdej wersji pakietu Logicmaster 90
+oraz w każdym sterowniku tej rodziny, np. z funkcji arytmetycznych liczb rze-
+czywistych można korzystać tylko w sterownikach wyposażonych w CPU 352,
+który realizuje operacje zmiennoprzecinkowe. W przypadkach wątpliwych trzeba
+sięgnąć do dokumentacji sterownika i opisu programatora.
+
+Oprócz nazwy i opisu funkcji lub bloku funkcyjnego podano także w drugiej
+kolumnie skrót mnemoniczny zaczynający się zawsze znakiem 4, za pomocą
+którego mogą być one wprowadzane bezpośrednio do programu w trakcie korzy-
+stania z pakietu Logicmaster 90.
+
+W celu wyraźnego określenia typu argumentów, niektóre nazwy funkcji uzupeł-
+nia się o przyrostek składający się ze znaku podkreślenia ”_” i nazwy używanego
+typu danych, np. ADD_INT, ROL_WORD, itp. W podobny sposób uzupełnia się
+skrót mnemoniczny nazwy funkcji, np. £AD_/, 4ROL_W itd. Dotyczy to przede
+wszystkim funkcji matematycznych (Tab. 4.10), funkcji relacji (Tab. 4.11)
+i funkcji przesyłania danych (Tab. 4.13).W nawiasach podano typy danych, dła
+których funkcja może być stosowana. Jeżeli funkcja jest zdefiniowana tylko dla
+jednego typu danych, to przyrostek może być pominięty, np. S/N. Wszystkie
+funkcje na ciągach bitów (Tab. 4.12) operują na danych typu WORD, przy czym
+argumentami funkcji przesuwania, ustawiania lub zerowania oraz testowania
+bitów mogą być ciągi do 256 słów. Argumenty funkcji kopiowania tablicy
+ARRAY_MOVE mogą być dowolnego typu, natomiast pozostałe funkcje tablico-
+we (Tab. 4.14) mogą operować na danych dowolnego typu z wyjątkiem B/T
+i dlatego pominięto w tej tablicy wyszczególnienie typów danych. Obowiązują tu
+jednak te same zasady określania typu argumentów.
+
+ 
+
+236 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

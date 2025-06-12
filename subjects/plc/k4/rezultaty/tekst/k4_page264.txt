@@ -1,0 +1,9 @@
+<image/figury/k4_page264_figure1.png>
+
+Wyd. 4.33 Liczniki CTU (C5:2 i C5:3) oraz CTD (C5:4) wykorzystywane w instruk-
+
+cjach porównania.
+
+ 
+
+264 Rozdział : 5. Język schematów drabinkowych dla SLC 500

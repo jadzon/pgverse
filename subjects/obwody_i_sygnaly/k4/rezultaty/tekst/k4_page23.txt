@@ -1,0 +1,36 @@
+1.1. Wprowadzenie 23
+
+jury/k4_page23_figure2.png
+
+ielkości zaciskowe związane z elementem przedstawionym na rys. 1.1-1 są
+zasu (0, +00) i opisane funkcjami:
+
+<image/wzory/k4_page23_formula2.png>
+
+'bieraną przez ten element dla t>0 oraz energię w(0, co) pobraną
+
+..1-4) moc pobierana przez element ma postać:
+
+<image/je23_wzory/k4_page23_formula3.png>
+| - lego t> 0, zatem w każdej chwili t > 0 moc jest faktycznie pobierana
+
+:z element w przedziale (0, +00) wynosi:
+
+<image/wzory/k4_page23_formula4.png>
+
+j przez element jest przedstawiony na rys. 1.1-5. Energia w(0, co) jest
+: pod tym wykresem.
+
+<image/wzory/k4_page23_formula5.png>
+
+Przykład 1.1-2. Prąd i napięcie na elemencie (rys. 1.1-1) są sygnałami sinusoidalnie zmiennymi:
+
+<image/wzory/k4_page23_formula6.png>
+
+określonymi w przedziale (— co, + 0). Wyznaczymy moc p pobieraną przez element oraz energię
+2x
+w(0, T) pobraną w przedziale (0, T), gdzie T' == — jest okresem sygnałów zaciskowych.
+©
+Otrzymujemy:
+
+<image/wzory/k4_page23_formula7.png>

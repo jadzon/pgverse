@@ -1,0 +1,42 @@
+pokazano przykład wykorzystania polecenia /F do obliczenia liczby pierwiast-
+ków równania kwadratowego (tu: NROOTS) i ewentualnie ich wartości
+w zależności od wyróżnika równania (tu: D).
+
+Polecenie CASE zawiera wyrażenie typu /NT stanowiące wybierak (selector)
+oraz listę grup poleceń, z których każda posiada swoją etykietę (jedna lub więcej
+liczb całkowitych, albo określony zakres liczb całkowitych). Wykonana będzie ta
+grupa poleceń, która posiada etykietę odpowiadającą obliczonej wartości wybie-
+raka. Jeżeli wartość wybieraka nie odpowiada żadnemu z podanych zakresów, to
+wykonana będzie sekwencja poleceń występujących po słowie ELSE, jeśli wy-
+stępuje ono w poleceniu CASE, a w przypadku jego braku nie będzie wykonane
+żadne polecenie. W przykładzie z Tab. 2.59 wybierakiem jest zmienna 7W.
+Jeżeli, przykładowo, zmienna ta przyjmie wartość / lub 5, to wykonane zostanie
+polecenie podstawienia wartości zmiennej OVEN_TEMP do zmiennej D/ISPŁAY.
+Jeżeli zmienna TW będzie spoza zakresu /,...,70, to DISPŁAY przyjmie wartość
+0, a TW_ERROR będzie równe /.
+
+Język ST zawiera także polecenia umożliwiające powtarzanie pewnych sekwen-
+cji poleceń w pętli. Jeżeli liczba iteracji (powtórzeń) jest znana, to wykorzystuje
+się polecenie FOR. W przeciwnym przypadku należy użyć poleceń WHILE lub
+REPEAT.
+
+Polecenie EX/T umożliwia wcześniejsze opuszczenie pętli, zanim zostanie speł-
+niony warunek końca pętli. Jeśli polecenie EX/7T jest umieszczone w pętlach
+zagnieżdżonych, to wyjście następuje tylko z tej pętli, w której ono się znajduje,
+tzn. sterowanie jest przekazywane do polecenia znajdującego się za pierwszym
+ogranicznikiem pętli (£ND_FOR, END_WHILE, END_REPEAT) występującym
+po poleceniu EX/7. W przykładzie na Wyd. 2.1, jeżeli wartość zmiennej logicznej
+FLAG wynosi O, to po wykonaniu pokazanego fragmentu programu zmienna
+SUM przyjmie wartość /5, natomiast gdy FŁAG=/ to SUM=6.
+
+<image/tabele/k4_page111_table1.png>
+
+Wyd. 2.1 Przykład użycia polecenia EXIT
+
+Polecenie FOR oznacza, że sekwencja poleceń do słowa kluczowego END_FOR
+będzie powtarzana wraz z odpowiednią modyfikacją zmiennej kontrolnej pętli.
+Zmienna kontrolna (w przykładzie z Tab. 2.59 zmienna 7), jej wartość począt-
+kowa (tu: 7), końcowa(tu: 700) oraz wartość przyrostu (tu: 2) powinny być
+
+PEZET OE RE OO FT Z Z DOZÓR ZN Z ZZ LZ ODDO O ZODO Z DOOODRZNONY DOTY ODZEW ZOZ
+2.9 Język strukturalny ST 111

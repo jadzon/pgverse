@@ -1,0 +1,41 @@
+31. Zespolone przekształcenie Fouriera
+
+H
+i
+|
+3
+
+  
+  
+   
+  
+   
+  
+
+mację, jak od —0,5 do 0,5. Przy wykreślaniu wykresów, takich jak na rys. 31.1, przyjmuje się
+zwykle konwencję od -0,5 do 0,5. Jednak w wielu równaniach i programach stosuje się formę
+od 0 do 1,0. Na przykład we wzorach 31.5 i 31.6 indeks częstotliwości k zmienia się od 0 do
+n1cojestrwnowanezakresowiod0do10.moglibymyjednaktakzapisatewzory
+żeby indeks zmieniał się od —N/2 do (N/2) — 1 (co jest równoważne zakresowi od —0,5 do 0,5),
+gdybyśmy tak chcieli.
+
+Stosując jako punkt wyjścia widmo z rys. 31.1, możemy sprawdzić, jak odwrotne zespolone
+przekształcenie DFT odtwarza sygnał w dziedzinie czasu. Odwrotne zespolone DFT, zapisa-
+ne we współrzędnych biegunowych, jest opisane wzorem:
+
+<image/wzory/k3_page507_formula1.png>
+Wzór 31.7. Odwrotne, zespołone przekształcenie DFT. Jest to odpowiednik wzoru 31.5 na proste,
+zespolone przeksztatcenie DFT
+
+stosujczalenoeuleramonatewzoryzapisawewsprzdnychbiegunowychjako
+<image/wzory/k3_page507_formula2.png>
+
+<image/wzory/k3_page507_formula3.png>
+Wzór 31.8. Odwrotne, zespolone przeksztatcenie DFT. Jest to wzór 31.7 zapisany w taki sposób, żeby
+pokazać, jak każda wartość w widmie częstotliwościowym wpływa na sygnał w dziedzinie czasu
+Odwrotne przekształcenie DFT jest zwykle zapisywane w zwartej formie (wzór 31.7), cho-
+ciaż wersja rozszerzona (wzór 31.8) jest łatwiejsza do zrozumienia. Opisując wzór słowami,
+można stwierdzić, że każda wartość w rzeczywistej części sygnału w dziedzinie częstotli-
+wości wnosi do dziedziny czasu rzeczywistą falę kosinusoidalną oraz urojoną sinusoidalną.
+
+<image/figury/k3_page507_figure1.png>

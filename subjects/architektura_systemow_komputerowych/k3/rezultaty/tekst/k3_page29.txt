@@ -1,0 +1,36 @@
+3.1. Układy cyfrowe 19
+
+Niech 4-bitowy sumator ma wejścia ag, by, a,, b,, 4,, b,, a, b, oraz przeniesienie
+wejściowe cq. Niech g, oznacza iloczyn zmiennych a, i b,, a p, sumę mod 2 tych samych
+zmiennych. Z poprzednich rozważań można zauważyć, że funkcje przeniesień z posz-
+czególnych stopni sumatora można przedstawić w następujących postaciach:
+
+<image/wzory/k3_page29_formula1.png>
+
+<image/wzory/k3_page29_formula2.png>
+
+Rysunek 3.7. Sumator 16-bitowy
+
+Biorąc za podstawę te równania można zrealizować sumator 4-bitowy tak jak pokazano
+na rysunku 3.6. Układ ten nie jest układem iteracyjnym. Wyznaczono tylko jedno prze-
+niesienie wyjściowe c, dla wszystkich 4 bitów. Przyspiesza to pracę takiego sumatora
+w stosunku do układu iteracyjnego, gdyż przeniesienie generowane jest krótszą drogą.
+Łącząc ze sobą cztery takie 4-bitowe sumatory (rys. 3.7) można zbudować sumator 16-bito-
+wy, w którym przeniesienie propagowane jest przez cztery stopnie iteracji, a nie przez
+szesnaście jak byłoby w przypadku klasycznego układu iteracyjnego.
+
+KOMPARATORY
+
+Komparatorem nazywa się układ logiczny wskazujący fakt równości lub nierówności
+dwóch binarnych słów wejściowych tego układu. W przypadku nierówności słów kompa-
+rator może też wskazywać, które ze słów wejściowych jest większe. Jednobitowym kom-
+paratorem wskazującym jedynie fakt równości bitów jest po prostu dwuwejściowa bramka
+sumy modulo 2. Jeśli na jej wejściach są takie same wartości bitów, to na wyjściu jest 0.
+Jeśli natomiast bity wejściowe mają przeciwne wartości, to na wyjściu jest 1.
+
+Na rysunku 3.8 pokazano schemat jednobitowego komparatora wskazującego zarówno
+fakt równości bitów, jak i określającego który z nich ma większą wartość.
+
+<image/figury/k3_page29_figure1.png>
+
+Rysunek 3.8. Komparator jednobitowy

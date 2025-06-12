@@ -1,0 +1,41 @@
+Rozdział 9
+
+Języki programowania sztucznej
+inteligencji
+
+9.1. Prolog
+
+Powstały w 1972 roku język PROLOG (PROgramming in LOGic) (A.Colmerauer
+i P.Roussel — Uniwersytet Marsylski), będący rozwinięciem idei teoretycznych R.
+Kowalskiego z Uniwersytetu w Edynburgu dotyczących programowania logicznego,
+jest uniwersalnym językiem programowania bardzo wysokiego poziomu opartym o
+rachunek predykatow i metody dowodzenia twierdzeń logicznych. Język ten znaj-
+duje zastosowanie w rożnorodnych dziedzinach sztucznej inteligencji i robotyki, a w
+szczegolności w problemach przetwarzania językow naturalnych, w planowaniu akcji,
+w systemach ekspertowych i w relacyjnych bazach danych, w systemach reprezen-
+tacji wiedzy oraz we wszelkich zadaniach przetwarzania symbolicznego. Stosowany
+w tych dziedzinach umożliwia, w porównaniu z innymi językami programowania,
+bardzo łatwe, szybkie i wygodne przygotowanie programów. Język PROLOG obok
+Lispu jest podstawowym
+
+językiem stosowanym w sztucznej inteligencji (Ligęza i inni 1991, Jędruch 1989,
+LPA 1990).
+
+9.1.1. Struktura danych i programów
+
+Podstawowymi obiektami języka są termy. Istnieje siedem typów termów: liczby cał-
+kowite. liczby rzeczywiste, atomy, nazwy zmiennych, termy złożone, listy i łańcuchy.
+
+Atomy. Są używane do nazywania danych, predykatów, programów, plików, itp.
+Wyróżnia się następujące rodzaje atomów:
+
+e Atomy alfanumeryczne. Ciągi liter, cyfr i podkreśleń zaczynającym się
+od małej litery. Przykłady symboli alfanumerycznych: monika, pi je_kakao.
+
+e Cytaty. Ciągi dowolnych znaków otoczone pojedynczymi znakami apo-
+strofów. Przykłady cytatów: *Cyprian Norwid, Sen”, *300 000 mil?.
+
+Liczby całkowite. Np. 123, -1200.
+Liczby rzeczywiste. Np. 1.0, -128.3, 1.7e-12.
+
+219

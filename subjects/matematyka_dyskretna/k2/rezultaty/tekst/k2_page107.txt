@@ -1,0 +1,32 @@
+16 Rozdział 1. Funkcje boolowskie
+
+<image/figury/k2_page107_figure1.png>
+
+ponieważ jeżeli n > 1, to B” z działaniami © i A nie jest ciałem (nie ma elementu prze-
+ciwnego do (1,0, ...„0)). Zbiór B” jest przestrzenią liniową nad ciałem £0, 1), z 6 jako
+dodawaniem oraz mnożeniem przez skalar zdefiniowanym przez:
+
+e 0-r =0(tutaj zero po lewej stronie jest zerem z ciała, a zero po prawej stronie jest
+wektorem zerowym),
+
+el-r=r.
+
+1.5.1 Operacje na wektorach w języku Pascal
+
+W języku Pascal (i w wielu innych językach) operacje boolowskie: and, or, xor,
+neg, można stosować do liczb typu integer lub innych typów całkowitych (byte, shor-
+tint, word lub longint). Liczba traktowana jest wtedy jako ciąg bitów jej przedstawienia
+binamego. Na przykład:
+
+13 and 6=4
+ponieważ 13 jest reprezentowane przez:
+
+<image/wzory/k2_page107_formula1.png>
+6 przez:
+(0000000000000110)
+OTAZ:
+(0000 0000 0000 1101) and (0000 0000 0000 0110) =(0000 0000 0000 0100),
+a ten ostatni ciąg reprezentuje 4 w typie integer. Podobnie zachodzi:
+13 or 6=15; 13 xor 6=11; not 0=-1.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

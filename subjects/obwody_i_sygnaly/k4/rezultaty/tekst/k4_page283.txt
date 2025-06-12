@@ -1,0 +1,33 @@
+34. Nieliniowe obwody rezystancyjne prądu stalego 285
+
+Pierwsza z tych metod, nazywana niekiedy metodą charakterystyki łącznej,
+polega na konstrukcji charakterystyki łącznej elementu równoważnego połącze-
+niu szeregowemu oporu nieliniowego Ry i oporu liniowego R. Zasady
+konstrukji charakterystyki łącznej szeregowego połączenia dwóch oporów
+zostały przedstawione w p. 1.5.2-B i zilustrowane na rys. 1.5-7. Przypominamy,
+że przy omawianiu tej konstrukcji przyjmowaliśmy założenie, iż oba opory są
+nieuzależnione lub uzależnione prądowo. Dodatkowo będziemy zakładać, że
+opór powstały w wyniku połączenia jest oporem nieuzależnionym (por. p.
+3.4.2-E). Spełnienie tego warunku zapewnia bowiem jednoznaczne wyznaczenie
+prądu oraz napięć w obwodzie dla dowolnej wartości siły elektromotorycz-
+nej E7.
+
+W rozważanym przypadku charakterystyki obu łączonych elementów mają
+postacie: u, = f,(i) = 2(e'* — 1) oraz u, = f,(i) = 2i, gdzie prąd jest
+wyrażony w amperach, napięcia zaś w woltach. Oba opory są nieuzależnione,
+a więc (por. p. 1.5.2-B) i ich połączenie jest oporem nieuzależnionym.
+
+Konstrukcja charakterystyki łącznej:
+
+<image/wzory/k4_page283_formula1.png>
+
+sporządzona zarówno w układzie współrzędnych i, u, jak i w układzie odwrot-
+nym u,i jest przedstawiona na rys. 3.4-4a i b. Jeśli teraz na osi napięć obierzemy
+
+<image/figury/k4_page283_figure1.png>
+
+punkt Er = 4V, odpowiadający napięciu przyłożonemu na opór zastępczy Ry.
+(rys. 3.4-4c), to na osi prądów znajdziemy — po przerzutowaniu tego punktu
+przez charakterystykę łączną f(i) lub g(u) — wartość prądu I m 1,2 A. Do-
+kładność, z jaką wartość tę możemy wyznaczyć, jest uwarunkowana przyjętymi
+skalami prądów i napięć oraz dokładnością wykonania konstrukcji graficznej.

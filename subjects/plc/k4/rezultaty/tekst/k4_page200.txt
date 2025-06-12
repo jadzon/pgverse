@@ -1,0 +1,47 @@
+4.7 Funkcje relacji
+
+CU CLO NAM
+
+ 
+
+Porównywanie wartości danych realizowane jest w sterownikach serii 90-30
+przez nastepujące funkcje:
+
+e EQ (EQual) - testowanie równości dwóch liczb;
+
+e NE (Not Equal) - testowanie nierówności dwóch liczb;
+
+e GT (Greater Than) - testowanie czy pierwszy argument relacji jest większy
+niż drugi;
+
+* GE (Greater than or Equal) - czy pierwszy argument relacji jest większy lub
+równy drugiemu;
+
+e LT (Less Than) - czy pierwszy argument relacji jest mniejszy od drugiego;
+
+e LE (Less than or Equal) - czy pierwszy argument relacji jest mniejszy lub
+równy drugiemu;
+
+*  RANGE_- testowanie czy argument funkcji pochodzi z podanego zakresu
+liczb.
+
+Funkcje relacji wykonywane są, jeżeli do wejścia zezwolenie dopływa prąd.
+Jeżeli argumenty funkcji spełniają relację, to wyjście Q przechodzi w stan ON.
+Argumentami mogą być liczby całkowite typu /N7 lub D/NT, z wyjątkiem funk-
+cji RANGE, dla której argument wejściowy może być także typu WORD lub
+DWORD (dwa słowa). Nazwa wybranego typu argumentów określa typ funkcji
+1 dodawana jest do nazwy funkcji.
+
+Dla przykładu przedstawionego na Wyd. 4.76, jeżeli wartość zmiennej %A// jest
+większa lub równa /000 oraz mniejsza od 2000, to zmienna %Q/ przyjmie war-
+tość /. Ten szczebel schematu drabinkowego będzie realizowany w każdym
+cyklu sterownika dzięki użyciu zmiennej systemowej ALW_ON.
+
+<image/figury/k4_page200_figure1.png>
+
+Wyd. 4.16 Przykład wykorzystania funkcji relacji do sprawdzenia, czy zmienna znaj-
+duje się w zadanym zakresie.
+
+ 
+
+200 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

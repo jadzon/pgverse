@@ -1,0 +1,15 @@
+JPEG (kompresja transformatowa) 475
+
+Wykonując dyskretne przekształcenie kosinusowe grupy 8 x 8, uzyskuje się w wyniku widmo
+8 x 8. Inaczej mówiąc, 64 liczby zostają zamienione na inne 64 liczby. Wszystkie te wartości
+są rzeczywiste, nie ma tu matematyki liczb zespolonych. Tak jak w analizie Fouriera, każda
+wartość w widmie jest amplitudą funkcji bazowej. Na rys. 27.10 przedstawiono 6 z 64
+funkcji bazowych stosowanych w DCT 8 x 8, zgodnie z położeniami amplitud tych funkcji
+w widmie. Funkcje bazowe przekształcenia DCT 8 x 8 są określone wzorem:
+
+ófs]-oe| SDE Jej RD
+
+Wzór 27.1. Funkcje bazowe przekształcenia DCT. Zmienne x i y są indeksami w dziedzinie przestrzeni,
+a u iv indeksami w widmie częstotliwościowym. Dla DCT 8 x 8 wszystkie indeksy zmieniają się od 0 do 7
+
+<image/tabele/k3_page440_table1.png>

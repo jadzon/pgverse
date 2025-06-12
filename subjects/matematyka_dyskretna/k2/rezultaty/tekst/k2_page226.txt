@@ -1,0 +1,50 @@
+1.3. Niezmienniki 5
+
+Definicja 1.1 Program jest częściowo poprawny względem warunków * i W, gdy dla każ-
+dych danych wejściowych z spełniających *(z) zachodzi następująca implikacja: jeżeli
+program zatrzymuje się na danych z i daje wynik y, to zachodzi warunek w(z, y).
+
+Program jest całkowicie poprawny, jeżeli jest częściowo poprawny i ponadto zatrzy:
+muje się dla każdych danych wejściowych z spełniających warunek €(z).
+
+Jedną z metod dowodzenia częściowej poprawności programu jest metoda niezmien-
+ników lub asercji indukcyjnych.
+
+1.3 Niezmienniki
+
+Metoda niezmienników polega na wyznaczeniu w programie kilku punktów kontrolnych
+i związaniu z tymi punktami asercji, czyli pewnych warunków. Wśród punktów kontrol-
+nych dwa są szczególne: jeden punkt zaraz na początku programu z asercją początkową
+i jeden punkt na końcu programu z asercją końcową. A sercja początkowa zwykle zawie-
+ra sformułowania obejmujące warunki na dane początkowe %. Asercja końcowa opisuje
+relację w wiążącą dane wejściowe z wyjściowymi. Po wyznaczeniu punktów i asercji
+dowodzimy, że każda asercja jest spełniona zawsze wtedy, gdy wykonanie programu doj-
+dzie do odpowiadającego jej punktu kontrolnego. W ten sposób dowodzimy, że jeżeli na
+początku był spełniony warunek początkowy % i potem program dojdzie do punktu koń-
+cowego, to będzie spełniony warunek w. Dowód poprawności może przebiegać w ten
+sposób, że dla poszczególnych par punktów kontrolnych A i B (niekoniecznie różnych)
+dowodzimy następującą implikację: jeżeli w punkcie A spełniona jest asercja W 4, a na-
+stępnie wykonanie programu przejdzie z punktu A do B, to w punkcie B będzie spełniona
+asercja Wg.
+
+Niektóre punkty kontrolne mogą być w trakcie wykonywania programu osiągane wie-
+lokrotnie (na przykład punkty znajdujące się wewnątrz pętli). Tak więc asercja powinna
+być spełniona za każdym odwiedzeniem punktu kontrolnego. Z tego powodu asercje te
+nazywamy niezmiennikami.
+
+Sposób rozmieszczenia punktów kontrolnych i przypisania tym punktom asercji nie
+jest prosty i nie ma uniwersalnych reguł w tym względzie. Podobnie jak z dowodzeniem
+twierdzeń, sposób dowodu poprawności programu jest oryginalnym pomysłem autora do-
+wodu. Istnieją w tym względzie pewne reguły heurystyczne, niektóre nawet bardzo zło-
+żone, ale nie ma uniwersalnych reguł, które pozwolą udowodnić poprawność lub niepo-
+prawność każdego programu.
+
+1.4 Liczniki
+
+Aby udowodnić, że algorytm zawsze się zatrzyma, możemy użyć liczników. Najpierw,
+podobnie jak poprzednio, wyznaczamy punkty kontrolne i pewną zmienną, zwaną licz-
+nikiem lub zbieżnikiem, która może przyjmować tylko wartości całkowite nieujemne.
+Następnie dowodzimy, że po każdym odwiedzeniu jakiegoś punktu kontrolnego wartość
+licznika maleje.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

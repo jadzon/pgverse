@@ -1,0 +1,32 @@
+110 1. Pojęcia podstawowe — elementy
+
+figury/k4_page110_figu
+
+mocchwilowapobieranaprzezoprorwnaniuwzory/k4_page110_forl
+
+<image/wzory/k4_page110_formula2.png>
+jest oczywiście zawsze nieujemna.
+
+C. Pojemności i indukcyjności niestacjonarne. i
+układach elektronicznych odgrywają pojemności i indu
+Omówienie szczegółowe zachowania się takich elemen
+niniejszej książki. Postaramy się jednak naświetlić
+indukcyjności i pojemności niestacjonarnych, ogranicz
+elementów liniowych.
+
+Rozpatrzmy niestacjonarną indukcyjność liniow
+Napięcie u wyraża się teraz wzorem:
+
+<image/wzory/k4_page110_formula3.png>
+
+i zależy w danej chwili t nie tylko od wartości pochodnej i, (jak w przypadku
+
+stacjonarnym), ale również od wartości prądu i. Drugi składnik prawej strony
+wzoru (1.6-9) ma taką samą postać, jak napięcie na oporze liniowym niestac-
+jonarnym o wartości L/(t) — por. wzór (1.6-4). Wskazuje to na zasadniczą
+różnicę, jaka występuje między indukcyjnością stacjonarną i niestacjonarną.
+W zależności bowiem od tego, czy pochodna L(t) przybiera w danym przedziale
+czasu wartości dodatnie, czy ujemne, drugi składnik prawej strony wzoru (1.6-9)
+reprezentuje zjawisko dodatkowego pobierania mocy (jak na oporze re-
+prezentującym straty) lub oddawania mocy (jak w przypadku oporu ujem-
+nego).

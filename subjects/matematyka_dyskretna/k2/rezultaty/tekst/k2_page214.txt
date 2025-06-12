@@ -1,0 +1,32 @@
+1.3. Algorytm Forda-Bellmana 5
+
+<image/figury/k2_page214_figure2.png>
+
+<image/wzory/k2_page214_formula1.png>
+
+<image/wzory/k2_page214_formula2.png>
+W naszym przykładzie tylko wierzchołek v = a spełnia tą równość. Zauważmy, że isnieje
+droga długości D[v] z s do v. Jeżeli przedłużymy tę drogę o krawędź (v, t), to otrzymamy
+drogę z s do t długości Dfv) + w(v,t) = Dft), czyli najkrótszą drogę z s do t. Jest też
+jasne, że taki wierzchołek v istnieje. Jest to przedostatni wierzchołek dowolnej najkrótszej
+drogi z s do t. Trzeci od końca wierzchołek u spełnia równość
+
+<image/wzory/k2_page214_formula3.png>
+
+W naszym przykładzie jest to u = b i tak dalej, aż odtworzymy całą drogę s, d,c,b,a,t.
+Algorytm ten musi zakończyć pracę, ponieważ kolejne wierzchołki odsłanianej drogi są
+różne. Inaczej mielibyśmy cykl, co nie jest możliwe, jeżeli w grafie wszystkie cykle są
+dodatniej długości.
+
+1.3 Algorytm Forda-Bellmana
+
+W tym podrozdziale opiszemy pierwszy z algorytmów obliczania wartości macierzy D.
+Mówiąc z grubsza polega on na przyjęciu najpierw pewnych gómych oszacowań na war-
+tości D[v) i poprawianiu ich potem. Jeżeli na jakimś etapie pracy algorytmu mamy war-
+tość D(v], to znaczy, że znaleziono już drogę od s do v długości D(v]. Jeżeli później algo-
+rytm znajdzie krótszą drogę, to wartość D|[v) zostanie poprawiona. Znajdowanie krotszej
+drogi polega na szukaniu wierzchołka u spełniającego warunek
+
+<image/wzory/k2_page214_formula4.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

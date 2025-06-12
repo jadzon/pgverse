@@ -1,0 +1,56 @@
+Stosowanie liczb całkowitych 319
+
+<image/wzory/k3_page292_formula1.png>
+
+Wzór 19.9. Odwrotny wzór rekursywny. Jest on identyczny ze wzorem 19.1, z tym że sygnał jest
+liltrowany od lewej do prawej strony, zamiast od prawej do lewej
+
+Na rys. 19.8 c) pokazano wynik takiej odwrotnej filtracji. Jest to analogiczne do przejścia
+sygnału analogowego przez układ RC założeniem, że czas biegnie wstecz. — !taiwśhcezsw
+ćąniwz eżom usazc einecórwdo agawU
+
+Filtracja w odwrotnym kierunku, sama w sobie, nie daje żadnych korzyści; przefiltrowany
+sygnał nadal ma zbocza lewe i prawe różniące się od siebie. Cudowny rezultat uzyskuje
+się dopiero, stosując połączoną filtrację prostą i odwrotną. Na rys. 19.8 d) pokazano wynik
+kolejno wykonanych filtracji sygnału — prostej i odwrotnej. I oto mamy filtr rekursywny
+o fazie zerowej. W istocie, każdy filtr rekursywny może być przekształcony w zerofazowy
+przy użyciu tej techniki dwukierunkowej filtracji. Jedyną ceną, jaką płaci się za takie
+udoskonalenie działania, jest zwiększenie czasu wykonania i złożoności oprogramowania
+o czynnik 2.
+
+Jak znaleźć odpowiedzi impulsową i częstotliwościową takiego złożonego filtru? Moduł od-
+powiedzi częstotliwościowej jest taki sam przy każdym kierunku filtracji, a fazy mają od-
+wrotne znaki. Gdy połączymy ze sobą filtracje w obu kierunkach, to moduł trzeba podnieść
+do kwadratu, a fazy się znoszą, dając w wyniku zero. W dziedzinie czasu odpowiada to
+splotowi oryginalnej odpowiedzi impulsowej z jej wersją odwróconą lewo-prawostronnie.
+Na przykład odpowiedź impulsowa dolnoprzepustowego filtru jednobiegunowego jest jedno-
+stronną funkcją wykładniczą. Odpowiedź impulsowa równoważnego filtru dwukierunkowe-
+go jest splotem jednostronnej funkcji wykładniczej malejącej ku prawej stronie z taką samą
+funkcją malejącą w lewo. W wyniku operacji matematycznych uzyskuje się wynik tego splo-
+tu, którym jest dwustronna funkcja wykładnicza malejąca z obu stron według stałej czasowej
+takiej, jak filtru pierwotnego.
+
+W niektórych zastosowaniach tylko część sygnału znajduje się w komputerze w danej chwili.
+Jest tak np. w systemach, które przemiennie pobierają i przekazują dane na zasadzie konty-
+nuacji. W takich przypadkach można realizować filtrację dwukierunkową przez łączenie jej
+z metodą nakładania z dodawaniem opisaną w poprzednim rozdziale. Gdy dochodzicie do
+kwestii długości odpowiedzi impulsowej, nie mówcie, że jest ona „nieskończona”. Gdybyście
+założyli długość nieskończenie dużą, musielibyście dopełniać każdy segment sygnału o nie-
+skończoną liczbę zer. Pamiętajcie, że można obciąć odpowiedź impulsową, gdy zmniejszy się
+ona poniżej poziomu szumu zaokrąglania, tj. po 15 do 20 stałych czasowych. Każdy segment
+wymaga dopełnienia zerami zarówno z lewej, jak i z prawej strony, aby umożliwić rozwinię-
+cie podczas filtracji dwukierunkowej.
+
+Stosowanie liczb catkowitych
+
+Zapis zmiennoprzecinkowy o pojedynczej dokładności doskonale nadaje się do implemen-
+tacji tych prostych filtrów rekursywnych. Zastosowanie liczb całkowitych jest możliwe,
+lecz znacznie trudniejsze. Pojawiają się wtedy dwie główne trudności. Po pierwsze, błąd
+zaokrąglenia przy ograniczonej liczbie bitów może pogorszyć odpowiedź filtru lub nawet
+wywołać jej niestabilność. Po drugie, trzeba przy użyciu liczb całkowitych operować ułam-
+kowymi wartościami współczynników rekursywnych. Jednym ze sposobów przezwycięże-
+nia tych trudności jest wyrażanie każdego współczynnika w postaci stosunku dwóch liczb.
+Na przykład 0,15 zamienia się na 19/128. Zamiast mnożyć przez 0,15, najpierw mnożymy
+przez 19, a potem dzielimy przez 128. Innym sposobem jest zastąpienie mnożenia tablicami
+przeglądowymi. Na przykład 12-bitowy przetwornik a/c daje próbki o wartościach między O
+a 4095. Zamiast wymnażania wszystkich próbek przez 0,15, przepuszczamy je przez tablicę

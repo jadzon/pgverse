@@ -1,0 +1,37 @@
+128 6. Urządzenia zewnętrzne
+
+<image/figury/k3_page138_figure3.png>
+
+Rysunek 6.9. Kodowanie informacji w kodzie Manchester
+
+gdyż kodowanie (i dekodowanie) przebiegu danych wymaga dodatkowego sprzętu. Istnieje
+wiele sposobów zakodowania danych wraz z przebiegiem zegarowym, ale tutaj zaprezento-
+wano tylko jeden z nich.
+
+Na rysunku 6.9 pokazano przykładowy sposób wspólnego zakodowania przebiegu
+danych i zegara, zwany kodem Manchester. Kod ten ma taką cechę, że w środku czasu
+trwania bitu następuje zmiana poziomu napięcia bez względu na wartość tego bitu. Re-
+prezentacją | jest zmiana poziomu z niskiego na wysoki, a 0 z wysokiego na niski. Jeżeli
+sąsiednie bity mają tą samą wartość, to aby ta reprezentaja była spełniona, zmiana poziomu
+musi nastąpić także na początku czasu trwania bitu. Jeżeli natomiast sąsiednie bity mają
+przeciwne wartości, to na początku czasu trwania bitu zmiana nie następuje. Dlatego
+przebieg taki ma dwie podstawowe składowe częstotliwości: jedną równą częstotliwości
+generatora nadajnika (dla ciągu samych 0 lub samych 1) i drugą dwa razy mniejszą (dla
+naprzemiennego ciągu 0 i 1). Taki zapis ma własność samosynchronizacji, tj. z dowolnego
+przebiegu zerojedynkowego można w odbiorniku uzyskać przebieg zegarowy, który będzie
+zgodny z zegarem nadajnika. Przebieg zegarowy w odbiorniku można otrzymać dekodując
+odpowiednio przebieg danych za pomocą specjalnych układów (Czytelnikowi zaleca się
+próbę samodzielnego zaprojektowania takiego układu). Do synchronizacji generatora
+odbiornika przebiegiem zegarowym stosuje się układy zwane układami PLL (ang. phase
+locked loop). Są to generatory, które podstrajają swoją częstotliwość wyjściową do często-
+tliwości wejściowej. Ponieważ proces ten zachodzi przez cały czas transmisji, więc długość
+jej nie jest ograniczona niestabilnością generatora zegara.
+
+Łącze szeregowe pomiędzy sterownikiem a urządzeniem zewnętrznym wykorzystuje
+różne sygnały w zależności od tego czy urządzenie jest nadajnikiem, czy odbiornikiem.
+
+<image/figury/k3_page138_figure2.png>
+
+Na rysunku 6.10 pokazano współpracę sterownika z odbiornikiem i nadajnikiem za pomocą
+prostego łącza szeregowego. Łączem powszechnie stosowanym jest standard RS-232C
+opracowany przez Electronic Industries Association. Polska Norma PN-75 T-05052 przyjęła

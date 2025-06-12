@@ -1,0 +1,25 @@
+OTAa7
+
+<image/wzory/k1_page43_formula1.png>
+
+Otrzymujemy układ równań:
+
+<image/wzory/k1_page43_formula2.png>
+
+Ostatecznie rozwiązanie zapisujemy macierzowo i otrzymujemy:
+
+<image/wzory/k1_page43_formula3.png>
+
+Przykład 2.11
+Wyznaczyć równania stanu i wyjścia dla układu pokazanego na rysunku 2.3.
+
+<image/figury/k1_page43_figure1.png>
+
+Rozwiązanie
+
+Układ składa się z jednego elementu całkującego i dwóch inercyjnych pierwszego
+rzędu. Wyjście z każdego z tych elementów można zapisać w postaci zmiennych stanu.
+Zdefiniujmy wyjście z obiektu jako sygnał x,, wyjście z regulatora jako x» oraz wyjście
+z czujnika jako x;.
+
+45

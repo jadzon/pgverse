@@ -1,0 +1,61 @@
+410
+
+25. Specjalne techniki obraz
+
+Trzecią zaletą jest podobieństwo kształtów wszystkich odpowiedzi kra
+jeśli mogą one pochodzić od drastycznie różnych funkcji PSF. Przedstawiono to mf
+25.4 a), gdzie wykreślono odpowiedzi krawędziowe dla funkcji PSF typu „okrągła cz
+ka”, gaussowskiej i wykładniczej. Ze względu na podobieństwo kształtu, odległość m
+rzona od 10 do 90% amplitudy jest doskonałym pojedynczym parametrem określający
+rozdzielczość. Czwartą zaletą jest możliwość bezpośredniego wyznaczania funkcji A
+przez wykonanie jednowymiarowego przekształcenia FFT funkcji LSF (inaczej niż p
+obliczaniu MTF na podstawie PSF, gdzie konieczne jest zastosowanie dwuwymiarc
+przekształcenia Fouriera). Na rys. 25.4 b) pokazano przebiegi funkcji MTF odpowiad
+cych odpowiedziom krawędziowym z rys. 25.4 a). Tak więc krzywe z rys. 25.4 a) p
+rzono na krzywe z rys. 25.4 b) przez wyznaczanie pierwszej różnicy (w celu znalezie
+LSF) i następnie obliczenie FFT.
+Piąta zaleta wynika z faktu, że podobne odpowiedzi krawędziowe mają podobne krzy
+MTĘ, co jest widoczne na rysunkach 25.4 a), b). To ułatwia przechodzenie od jednego
+miaru do drugiego. W szczególności system, który ma odpowiedź krawędziową od 10:
+90% równą odległości x, ma rozdzielczość ograniczającą (kontrast 10%) równy ok. 1 p
+linii na odległości x. Jednostki „odległości” są zależne od typu rozpatrywanego syste!
+Jako przykład rozważmy trzy różne systemy obrazowe mające odpowiedzi krawędziowe
+10 do 90% równe 0,05 mm, 0,2 miliradiana i 3,3 piksela. Poziom kontrastu 2». odj
+wiednich krzywych MTF będzie występował, odpowiednio, przy ok. 20 parach li
+5 parach linii/miliradian oraz 0,33 par linii/piksel.
+
+Na rys. 25.5 przedstawiono zależność matematyczną między funkcjami PSF i LSF.
+rys. 25.5 a) pokazano funkcje PSF typu „okrągła czapka” będącą kołowym obszar
+o wartości 1, pokazanym na biało, otoczonym przez obszar samych zer, pokazany ja
+szary. Profil tej funkcji PSF (tj. wykres wartości pikseli leżących wzdłuż linii poprowad:
+nej przez środek obrazu) będzie impulsem prostokątnym. Na rys. 25.5 b) pokazano od
+wiadający temu profilowi przebieg funkcji LSF. Matematycznie, LSF jest równa profik
+zintegrowanemu PSF. Jest on określany przez przecięcia obrazu w kierunkach pokazany
+na rysunku strzałkami. Każda wartość zintegrowanego profilu jest sumą wartości pik
+wzdłuż odpowiedniego przekroju.
+
+ 
+ 
+  
+   
+ 
+  
+ 
+  
+   
+ 
+ 
+ 
+  
+ 
+ 
+  
+  
+   
+  
+ 
+  
+ 
+  
+
+<image/figury/k3_page377_figure1.png>

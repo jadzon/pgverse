@@ -1,0 +1,25 @@
+Uchyb w ruchu poślizgowym
+
+ 
+
+Analiza uchybu w ruchu poślizgowym
+
+vzory/k7_page218_formula1.png
+
+Z równania linii przełączeń mamy:
+
+<image/wzory/k/_page218_formula2.png>
+
+[am0ZEJ] AuzAZOZSEŁd Epo]SIN
+
+vzory/k7_page218_formula3.png
+
+Jak widzimy uchyb aperiodycznie maleje do 0 w ruchu poślizgowym.
+Zauważmy że w ruchu poślizgowym na wejściu członu nieliniowego mamy 0
+a na wyjściu mamy drgania o amplitudzie „B”. Z tego wynika że układ
+nieliniowy działa jak wzmacniacz o nieskończonym wzmocnieniu.
+
+ 
+
+POLITECHNIKA
+GDANSKA

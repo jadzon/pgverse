@@ -1,0 +1,24 @@
+Dla argumentów typu łańcuch bitów porównywanie wykonuje się bit po bicie
+poczynając od pozycji najbardziej znaczącej, przy czym jeżeli jeden z łańcuchów
+jest krótszy to traktuje się go tak jakby był wypełniony zerami z lewej strony do
+długości równej łańcuchowi dłuższemu.
+
+Wszystkie symbole porównań mogą być wykorzystywane jako operatory w języ-
+kach tekstowych.
+
+<image/figury/k4_page56_figure1.png>
+
+<image/figury/k4_page56_figure2.png>
+
+e Funkcje na łańcuchach znaków (Character string functions)
+
+Standardowe funkcje porównania i wyboru mogą być również stosowane dla
+łańcuchów znaków, przy czym przyjmuje się, że w przypadku łańcuchów o róż-
+nej długości łańcuch krótszy jest traktowany tak, jakby był uzupełniony z prawej
+strony znakami o wartości zero do długości łańcucha dłuższego. Natomiast do-
+datkowe funkcje standardowe operujące na łańcuchach znaków przedstawiono
+w Tab. 2.27.
+
+ZY r ĘEEEE
+
+56 Rozdział : 2.Programowanie sterowników PLC

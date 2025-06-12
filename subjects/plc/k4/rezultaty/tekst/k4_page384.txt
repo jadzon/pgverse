@@ -1,0 +1,27 @@
+8.1 Przykłady sterowania silnikiem
+
+i
+
+aa RANE
+
+8.1.1 Rozruch dwukierunkowego silnika z przełączeniem
+gwiazda - trójkąt
+
+ 
+
+Uzwojenia stojana silnika pokazanego na Rys. 8.7 [26] powinny być w chwili
+rozruchu podłączone do napięcia w układzie zasilania typu gwiazda (przekaźnik
+K3), a następnie w układzie typu trójkąt (przekaźnik K4). Należy zaprojektować
+schemat stykowy obwodu sterowania i napisać program dla sterownika, który
+będzie realizował jego funkcje.
+
+W rozwiązaniu przedstawionym na Rys. 8.2 założono, że silnik zarówno przy
+starcie jak i przy zmianie kierunków jest zasilany w układzie napięcia gwiazda -
+trójkąt. Czas trwania połączenia w gwiazdę określa przekaźnik czasowy KŚC.
+Wyd. 8.1 pokazuje program w języku schematów drabinkowych realizujący to
+samo zadanie dla zmiennych zadeklarowanych w Tab. 8.1.
+
+<image/figury/k4_page384_figure1.png>
+
+EE CZ COCA IC W ay EK ERROR AA RZRROR "PRDĘ JĘZ
+384 Rozdział : 8.Programy przykładowe

@@ -1,0 +1,29 @@
+W Simulinku możliwe jest też przeprowadzenie symulacji i zachowanie wybra-
+nych zmiennych w przestrzeni roboczej Matlaba oraz zapisanie ich na dysku, celem
+dalszej obróbki. Modyfikując schemat z rysunku 3.5, otrzymujemy schemat przedsta-
+wiony na rysunku 3.6.
+
+<image/figury/k1_page116_figure1.png>
+
+Po uruchomieniu symulacji w przestrzeni roboczej Matlaba utworzona zostanie
+macierz o nazwie wynik, zawierająca trzy wektory zmiennych:
+1) czas symulacji,
+2) wymuszenie,
+3) odpowiedź skokową układu.
+
+Aby zapisać tę macierz na dysku, należy wykonać instrukcję:
+
+Aby sprawdzić poprawność zapisanych danych poleceniem clear, czyścimy prze-
+strzeń roboczą, a następnie wprowadzamy macierz ponownie do przestrzeni roboczej
+z dysku, wpisując:
+
+Wykreślenie uzyskanych w wyniku symulacji charakterystyk można uzyskać po
+wpisaniu w Matlabie:
+
+ 
+
+<image/figury/k1_page116_figure2.png>
+
+ 
+
+118

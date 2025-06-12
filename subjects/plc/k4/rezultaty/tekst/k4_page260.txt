@@ -1,0 +1,19 @@
+<image/tabele/k4_page260_table2.png>
+
+Wyd. 4.21 Instrukcja mnożenia MUL
+
+<image/tabele/k4_page260_table1.png>
+
+Wyd. 4.22 Instrukcja dzielenia DIV
+
+<image/figury/k4_page260_figure2.png>
+
+Wyd. 4.23 Instrukcja negacji NEG
+
+<image/figury/k4_page260_figure1.png>
+
+Wyd. 4.24 Instrukcja dzielenia 32 bitowych liczb DDV
+
+   
+
+260 Rozdział : 5. Język schematów drabinkowych dla SLC 500

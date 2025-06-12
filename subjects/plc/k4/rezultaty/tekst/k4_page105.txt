@@ -1,0 +1,33 @@
+<image/wzory/k4_page105_formula1.png>
+<image/figury/k4_page105_figure1.png>
+
+Obwód (network) stanowi zbiór wzajemnie połączonych za pomocą linii ele-
+mentów języka graficznego. Z obwodem lub grupą obwodów może być
+skojarzona etykieta (label) posiadająca postać nazwy lub liczby dziesiętnej bez
+znaku zakończonych dwukropkiem. Zakres stosowania nazwy etykiety jest lo-
+kalny w ramach elementu organizacyjnego oprogramowania, w którym
+
+występuje.
+
+Przy wykonywaniu programu obowiązują następujące zasady:
+
+e wartość żadnego elementu obwodu nie jest wyznaczana, dopóki nie wyzna-
+czono wartości wszystkich jego wejść,
+
+e wyznaczanie wartości elementu obwodu nie jest zakończone, dopóki nie wy-
+znaczono wartości dla wszystkich jego wyjść,
+
+e wykonywanie programu dla całego obwodu nie jest zakończone, dopóki nie
+wyznaczono wartości wyjść dla wszystkich elementów tego obwodu,
+
+e w ramach elementu organizacyjnego oprogramowania napisanego w języku
+FBD wykonywanie programu dla obwodu powinno być zakończone, zanim
+rozpocznie się wykonywanie następnego obwodu, w którym wykorzystywa-
+ne są wyjścia obwodu poprzedniego.
+
+W obwodzie mogą występować sprzężenia zwrotne, gdy wyjście funkcji lub blo-
+ku funkcyjnego jest wprowadzone na wejście funkcji lub bloku funkcyjnego
+poprzedzającego je w obwodzie (por. Rys. 2.17).
+
+REZ TZT ZZ ZRZZZZOG PZW DZT ZZO TOT ŻOR OR ODCLR ZZWOTOÓOOO ZZ ZZ Z Z OZ,
+2.8 Język schematów bloków funkcyjnych FBD 105

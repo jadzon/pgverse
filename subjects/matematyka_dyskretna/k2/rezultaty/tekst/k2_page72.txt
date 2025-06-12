@@ -1,0 +1,43 @@
+1.5. Zmienna losowa 13
+
+Przykład 1.24 (Kontynuacja przykładu 1.22d) Dla zmiennej X'3 mamy trzy niepuste zda-
+rzenia
+
+<image/wzory/k2_page72_formula1.png>
+
+Zmienna losowa .X3 posiada więc rozkład
+
+<image/wzory/k2_page72_formula2.png>
+
+Podobnie zmienna Xą ma rozkład
+
+<image/wzory/k2_page72_formula3.png>
+
+Ponieważ, jak założyliśmy 4? jest zbiorem skończonym, to zbiór wartości X (11) zmien-
+nej X też jest skończony. Dla z ć X (02) mamy f(zr) = P(X = z) = 0. Tak więc funkcja
+gęstości przyjmuje wartości niezerowe tylko dla skończenie wielu argumentów. Zauważ-
+my, że jeżeli z, 4 12, to zdarzenia X = z, i X = zą wykluczają się. Mamy przy
+tym
+
+Lemat 1.25 Jeżeli / jest funkcją gęstości zmiennej losowej X, to
+e f(x) > 0 dla każdego r € R.
+
+e )„/(x)=1.
+Dowód. Sumę 5", f(x) = 1 rozumiemy jako skończoną sumę po zbiorze wartości
+zmiennej X.
+
+<image/wzory/k2_page72_formula4.png>
+Zauważmy, że ostatnia podwójna suma jest sumą po wszystkich elementach w € (2 po-
+grupowanych według wartości zmiennej X. Mamy więc
+
+<image/wzory/k2_page7/2_formula5.png>
+
+o
+W dalszej części przedstawiając funkcję gęstości zmiennej losowej „X będziemy roz-
+ważać tylko te z, dla których f(x) > 0.
+
+Przykład 1.26 a) Zmienna losowa Z z przykładu 1.22a posiada rozkład
+
+<image/wzory/k2_page72_formula6.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

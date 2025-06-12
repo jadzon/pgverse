@@ -1,0 +1,23 @@
+—]
+—I
+
+Funkcja typu z jest lustrzanym odbiciem funkcji typu s. Funkcja typy m jest złóże-
+niem funkcji s i z. Uogólniona funkcja dzwonowa dana jest wzorem
+
+<image/wzory/k2_page72_formula1.png>
+
+<image/figury/k2_page72_figure1.png>
+
+Funkcje przynależności mogą być wieloargumentowe. Np. przynależność do pod-
+zbioru rozmytego wysoki na swój wiek jest zależna od dwóch argumentów: wzrostu
+i wieku. Funkcja przynależności takiego zbioru może mieć kształt jak na rys. ??.
+Innym przykładem może być funkcja przynależności do zbioru zdefiniowanego jako
+„liczba r dużo większa od liczby y”.
+
+5.1.2. Operacje na zbiorach rozmytych
+Operacje logiczne w dziedzinie zbiorów rozmytych zdefiniowane są następująco:
+Definicja 5.1 Zawieranie zbiorów
+
+Zbiór rozmyty A zawiera się w zbiorze rozmytym B wtedy i tylko wtedy, gdy
+
+<image/wzory/k2_page72_formula2.png>

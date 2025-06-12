@@ -1,0 +1,36 @@
+33. Metody analizy obwodów liniowych prądu stałego 265
+
+H. Porównanie metod. W praktycznych zastosowaniach metod źródeł
+zastępczych pojawia się problem wyboru między metodą Thevenina i metodą
+Nortona. Nie istnieją ogólne reguły przesądzające o przewadze jednej metody
+nad drugą. W dotychczas rozpatrywanych przykładach (przykłady 3.3-4 i 3.3-7
+oraz przykłady 3.3-6 i 3.3-8) złożoność obliczeniowa obu metod była porów-
+nywalna. W ogólnym jednak przypadku złożoność metody zależy od struktury
+analizowanego układu. Można podać przykłady układów, dla których jedna
+z tych metod jest wyraźnie prostsza.
+
+Przykład 3.3-9. W układzie pokazanym na rys. 3.3-14a należy znaleźć prąd I płynący przez
+opór R,, jeżeli J = 10 mA, R, =2kQ R; =4kQ R; =6kQ, g = 0,25mS, R, = 2kQ.
+
+<image/figury/k3_page263_figure1.png>
+
+ 
+
+U'
+Wyznaczymy najpierw opór zastępczy R,, = r dwójnika bezźródłowego (rys. 3.3-14b).
+Wyznaczenie oporu R,5 (lub przewodności G,g = 1/R,,) jest konieczne zarówno w metodzie
+Thćvenina, jak i w metodzie Nortona. Dla układu z rys. 3.3-14b można zapisać równania:
+
+y/k3_page263_formula1.png
+y/k3_page263_formula2.png
+
+k3_page263_formula3.png
+
+Z równań tych wynika, że:
+
+<image/wzory/k3_page263_formula4.png>
+
+Rozważmy z kolei układy pokazane na rys. 3.3-15a i b. Aby obliczyć napięcie rozwarcia, należy
+rozpatrzyć układ z rys. 3.3-15a, natomiast w celu obliczenia prądu zwarcia należy przeanalizować
+układ z rys. 3.3-15b. Jak widać obliczenie prądu zwarcia jest dużo prostsze. Ponieważ napięcie U, w
+układzie z rys. 3.3-15b jest równe zeru, więc I, = J, a stąd wynika, że:

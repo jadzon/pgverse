@@ -1,0 +1,16 @@
+Po drugie, wyobraźmy sobie lewo-prawostronne odwracanie przebiegu na rys. 10.7 b) tak,
+aby stawał się przebiegiem z rys. 10.7 c). Takie odwracanie w dziedzinie czasu nie ma
+wpływu na moduł, lecz zmienia znak każdego punktu charakterystyki fazowej. Podobnie,
+zmiana znaku fazy powoduje lewo-prawostronne odwrócenie sygnału w dziedzinie czasu.
+Jeśli sygnały są ciągłe, to odwrócenie następuje wokół zera, jeśli zaś dyskretne — to wokół
+próbki zero oraz jednocześnie wokół próbki N/2.
+
+Zmiana znaku fazy jest operacją na tyle częstą, że nadano jej nazwę. Jest to tworze-
+nie wartości zespolonej sprzężonej, oznaczanej przez postawienie gwiazdki u góry z prawej
+strony zmiennej. Na przykład jeśli X[/] składa się z Mag X[/] i Phase XV], to X*[f] nazywa
+się wartością zespoloną sprzężoną i składa się z: Mag X[f] i -Phase X[f]. We współrzęd-
+AEO R zara
+i zmieniając znak części urojonej. Wyrażając to w kategoriach matematycznych: jeśli X[f]
+składa się z Re X(f] i Im X[f], to X*[/] tworzy się z Re X(f] i —Im X[f].
+
+<image/figury/k3_page173_figure1.png>

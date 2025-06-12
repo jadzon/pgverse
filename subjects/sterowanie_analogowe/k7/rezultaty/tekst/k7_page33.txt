@@ -1,0 +1,11 @@
+Transformacja stanu - diagonalizacja
+
+Klatka Jordana, w przypadku gdyby wartość własna wynosiła —a i była
+trzykrotna wyglądałaby następująco:
+
+<image/wzory/k/_page33_formula1.png>
+
+gdzie k,, k, i k,; są współczynnikami z rozbicia transmitancji na ułamki proste
+
+POLITECHNIKA
+GDANSKA

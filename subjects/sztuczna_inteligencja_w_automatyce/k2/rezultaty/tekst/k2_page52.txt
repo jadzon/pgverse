@@ -1,0 +1,34 @@
+vt
+—I
+
+(q V 7r)(q V p).
+
+<image/wzory/k2_page52_formula1.png>
+
+Teraz stosując rezolucję do wybranych par klauzul staramy się otrzymać dwa wyra-
+żenia przeciwne. Ich wyprowadzenie kończy dowód. Przebieg dowodu przedstawiono
+na rys. ?7. |
+
+<image/figury/k2_page52_figure1.png>
+
+Aby dowód przeprowadzać dla wyrażeń zawierających kwantyfikatory należy za-
+stosować algorytm przekształcenia wyrażeń predykatowych do postaci klauzul a na-
+stępnie uogólnioną regułę rezolucji w zastosowaniu do klauzul, co omówione jest
+poniżej.
+
+Sprowadzenie wpz do postaci klauzul
+
+Każde wpz można przekształcić do postaci klauzul. Kolejne kroki takiego przekształ-
+cania pokazane są na poniższym przykładzie (Nilsson 1980, str. 146).
+
+PRZYKŁAD 4.6
+
+Przestawić w postaci klauzu] wyrażenie:
+
+<image/wzory/k2_page52_formula2.png>
+
+1. Eliminacja symboli implikacji (korzystamy z wzoru A B= Av B):
+
+<image/wzory/k2_page52_formula3.png>
+
+2. Redukcja zakresu działania symbolu negacji:

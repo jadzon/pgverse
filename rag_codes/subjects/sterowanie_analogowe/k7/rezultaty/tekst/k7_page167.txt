@@ -1,0 +1,31 @@
+Zadania — rysowanie wykresu funkcji opisującej
+
+ 
+
+Skrypt matlabowy — rozwiązanie „symhaliczne”
+
+   
+  
+
+eoblnsido eloy4un4
+
+<image/figury/k7_page167_figure1.pnfigury/k7_page167_figure2.png>
+
+ 
+   
+
+ans =
+
+         
+
+        
+
+Xfrac(44, BI, a”2)(M*44, Xpiv, Msqrt(l - Nfrac(a*2])[M*2))) -
+Xfrac(f44, BV, Nsqrt(l - Nfracfa*2)(M*2)))1M*24, Xpi]
+
+ 
+
+     
+
+POLITECHNIKA
+GDAŃSKA

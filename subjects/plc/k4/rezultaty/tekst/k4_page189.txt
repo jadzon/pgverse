@@ -1,0 +1,16 @@
+Do przekaźników specjalnych należą elementy umożliwiające połączenie w je-
+den szczebel dwóch kolejnych linii programu (connectors), którymi są:
+
+e cewka kontynuacji (continuation coil) oznaczana symbolem —<+>;
+
+e styk kontynuacji (continuation contact) oznaczany jako <+>—.
+
+W każdym szczeblu można użyć co najwyżej jednej pary cewka — styk kontynu-
+acji.
+
+<image/tabele/k4_page189_table1.png>
+
+Wyd. 4.6 Przykład użycia cewki i styku kontynuacji
+
+O EE O O OC WO COO O CY ECCE CEC OC CEC X WC CZY KIENOW RE. TY ZYWKZEENEKOOK.
+4.3 Funkcje przekaźnikowe 189

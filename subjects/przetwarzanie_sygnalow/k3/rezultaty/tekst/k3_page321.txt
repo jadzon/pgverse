@@ -1,0 +1,52 @@
+Synteza i rozpoznawanie mowy 351
+
+ 
+
+To jest intuicyjnie zrozumiałe. Jeśli sygnał jest mały, poziomy powinny być umieszczone
+blisko siebie. Gdy zaś sygnał jest duży, stosuje się większe odstępy.
+
+Kompansja może być wykonywana trzema sposobami, 1) przepuszczenie sygnału ana-
+logowego przez układ nieliniowy umieszczony przed 8-bitowym przetwornikiem a/c,
+2) zastosowanie 8-bitowego przetwornika a/c o nierównomiernej charakterystyce prze-
+twarzania, 3) zastosowanie liniowego, 12-bitowego przetwornika a/c i umieszczenie za
+nim cyfrowej tablicy przeglądowej (12 bitów na wejściu, 8 na wyjściu). W każdej z tych
+trzech opcji jest wymagana taka sama nieliniowość, tylko że realizowana w innym miej-
+scu: w układzie analogowym, w przetworniku a/c lub w układzie cyfrowym.
+
+Stosuje się dwa prawie identyczne standardy opisujące krzywą kompansji: zasadę u255 (na-
+zywaną też zasadą u) stosowaną w Ameryce Północnej oraz zasadę A stosowaną w Europie.
+W obu tych standardach korzysta się z nieliniowości o charakterze logarytmicznym, gdyż układ
+o takiej właściwości przetwarza charakterystykę rozmieszczenia przedziałów słyszalności ucha
+na charakterystykę liniową. Krzywe, według zasad u255, jak i A, są opisane wzorami:
+
+<image/tabele/k3_page321_table1.png>
+
+Wzór 22.2. Kompansja według zasady A. Stała A ma wartość 87,6
+
+Na rys. 22.7 wykreślono krzywe według wzorów 22.1 i 22.2 dla zmiennej wejściowej x
+o wartościach między —1 i +1, dających zmienną wyjściową także o wartościach od —1 do +1.
+wzoryoperujtylkododatnimiwartociamiwejciowymiczcikrzywychdlaujemnych
+wartości wejściowych wyznaczono na zasadzie symetrii. Jak wynika z rys. 22.7 a), krzywe
+według zasad H255 i A są prawie identyczne. Jedyna wyraźna różnica występuje w okolicy
+początku układu współrzędnych, co przedstawiono w powiększeniu na rys. 22.7 b). W tym
+obszarze zasada u255 daje gładką krzywą, a zasada A — linię prawie prostą.
+
+Wytworzenie stabilnej nieliniowości jest w elektronice analogowej trudnym zadaniem. Jedna
+z metod polega na wykorzystaniu zależności logarytmicznej między prądem i napięciem
+w diodzie złączowej pn, z zastosowaniem dodatkowego układu do korekcji dużych zmian
+cieplnych. W większości układów kompansji przyjęto inną strategię — aproksymowania nie-
+liniowości przez wiele linii prostych. Typowym rozwiązaniem jest aproksymacja krzywej
+logarytmicznej przez 16 segmentów linii prostych, zwanych krzywą odcinkowo-liniową
+(cords). Pierwszy bit 8-bitowego słowa wyjściowego wskazuje, czy sygnał wejściowy jest
+dodatni, czy ujemny. Następne 3 bity określają, który z 8 segmentów dodatnich lub 8 ujem-
+nych jest zastosowany. Cztery ostatnie bity dają podział każdego segmentu na 16 równo-
+miernie rozmieszczonych przyrostów. Tak jak większość układów scalonych, układy służące
+do kompansji mają bardzo złożoną i zastrzeżoną patentami budowę wewnętrzną. Zamiast
+analizowania, co się dzieje wewnątrz takiego układu, skoncentrujcie uwagę raczej na roz-
+mieszczeniu końcówek i parametrach podanych w kartach katalogowych układu.
+
+Synteza i rozpoznawanie mowy
+
+Komputerowa generacja i rozpoznawanie mowy to trudne problemy. Próbowano wielu rozwią-
+zań, lecz tylko z umiarkowanym powodzeniem. Ta dziedzina jest obecnie przedmiotem wielu
+prac prowadzonych w ramach badań z użyciem DSP, które będą z pewnością kontynuowane

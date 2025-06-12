@@ -1,0 +1,62 @@
+„7.1. Wprowadzenie
+
+ 
+
+Do programowania sterowników Simatic S5 stworzony został język STEP 5.
+Umożliwia on pisanie programów w postaci:
+
+« schematów bloków funkcyjnych FBD,
+
+« schematów drabinkowych ŁD,
+
+« listy instrukcji /2.
+Każdy z wymienionych sposobów programowania ma swoją specyfikę (por. roz-
+dział 2). W przypadku języka STEP 5 nie są one w pełni zgodne. Program pisany
+w formie /Ł lub ŁD nie zawsze da się przedstawić w postaci FBD. Jednak pro-
+gram napisany w formie LD lub FBD zawsze można przedstawić w postaci /Ł.
+
+<image/figury/k4_page318_figure1.png>
+
+Rys. 7.2 Zgodność różnych sposobów programowania języka STEP 5
+
+Jak widać na Rys. 7.2 istnieją programy, które mogą być przedstawione równo-
+
+ważnie przy pomocy wszystkich trzech sposobów programowania. Z drugiej jed-
+
+nak strony istnieją programy, które mogą być napisane tylko przy pomocy wy-
+
+branych sposobów programowania. Niemniej jednak każdy program dla sterow-
+
+nika Simatic S5 może być napisany w postaci /Ł. Z tego względu w dalszej czę-
+
+ści tego rozdziału zostanie przedstawione programowanie sterowników Simatic
+
+w postaci listy instrukcji. Podstawowym elementem programu napisanego w po-
+
+staci /Ł jest instrukcja. Pojedyncza instrukcja realizuje pewne podstawowe ope-
+
+racje na wyspecyfikowanych przez programistę argumentach. Ciąg instrukcji
+
+realizujących bardziej złożone operacje tworzy segment. Zestaw segmentów re-
+
+alizujących złożone funkcje sterujące tworzy blok.
+
+Realizacja programu przebiega w następujący sposób:
+
+e system operacyjny cyklicznie wykonuje tzw. blok organizacyjny OB 1,
+
+e wszystkie pozostałe bloki są wykonywane w kolejności, w której zostały
+wywołane,
+
+e w obrębie bloku wykonywane są segmenty kolejno jeden po drugim lub
+w kolejności wynikającej z instrukcji skoku; wykonanie bloku kończy się
+z chwilą wykonania segmentu zawierającego instrukcję końca bloku,
+
+-
+* "yz =7 = TWYZTTTT TTW CFYRTZAWEWYCAWOTZ
+
+ 
+
+318.
+
+Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5

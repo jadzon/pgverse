@@ -1,0 +1,36 @@
+1.8. Sprzężenie magnetyczne " | _139
+
+Równania (1.8-16) i (1.8-17) można również zapisać w postaci macierzowej:
+
+<image/wzory/k4_page137_formula1.png>
+<image/wzory/k4_page137_formula2.png>
+i/k4_page137_formula3.png (1.8-20)
+
+Indukcyjności sprzężone (rys. 1.8-3) bywają niekiedy nazywane transforma-
+'orem powietrznym. Nazwa ta podkreśla, iż uzwojenia nie są nawinięte na rdzeń
+=rromagnetyczny. W przypadku występowania rdzenia ferromagnetycznego
+model obwodowy indukcyjności sprzężonych byłby nieliniowy (por. p. 1.8.2-G).
+
+Uwaga. W równaniach (1.8-16) przyjęliśmy, zgodnie z definicją (1.8-12), że indukcyjność
+«zajemna M może być zarówno dodatnia, jak i ujemna. Umożliwia to likwidację niewygodnego
+"pisu podwójnego znaku + występującego w równaniach (1.8-9) i (1.8-10). Przyjęta konwencja
+«st jednak kwestią umowną. Indukcyjność wzajemną M można by alternatywnie zdefiniować jako
+<zbę nieujemną:
+
+y/k4_page137_formula4.png
+
+| zle wówczas równania (1.8-16) musiałyby mieć postać:
+
+y/k4_page137_formula5.png
+Przyjęta przez nas konwencja jest jednak dogodniejsza i obecnie powszechnie stosowana.
+
+C. Dwuwrotowy element indukcyjny. Indukcyjności sprzężone (rys. 1.8-3)
+> równaniach (1.8-18) są przykładem czterozaciskowego (dwuwrotowego) elemen-
+tu indukcyjnego. Elementy takie są uogólnieniem omówionych w p. 1.3.4-G
+dwuzaciskowych elementów indukcyjnych, zdefiniowanych równaniami (1.3-27)
+i (1.3-28).
+
+Podobnie jak w przypadku dwuwrotowego elementu rezystancyjnego (p.
+1.7.2-E), skupiony i stacjonarny dwuwrotowy element indukcyjny © dwóch
+parach zacisków jest określony równaniami (zapisujemy je od razu w postaci
+macierzowej):

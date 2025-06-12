@@ -1,0 +1,52 @@
+212 2. Pojęcia podstawowe — układy
+
+<image/wzory/k4_page212_formula1.png>
+
+przy czym W = y(t). W konsekwencji:
+
+ 
+
+<image/wzory/k4_page212_formula3.png>
+
+d
+dla każdego dopuszczalnego stanu zaciskowego i, u = „
+
+Nierówność (2.1-62) świadczy o tym, iż indukcyjność stacjonarna je
+Ponieważ, zgodnie ze wzorem (2.1-60):
+
+<image/wzory/k4_page212_formula2.png>
+
+więc zależność (2.1-62) świadczy również o tym, że indukcyjność sta
+bezstratnym”).
+
+Rozumowanie prowadzące do wniosku, że pojemność stacjonarna je
+bezstratnym jest analogiczne i nie będziemy go powtarzać.
+
+Przykład 2.1-32. Indukcyjność niestacjonarna i pojemność niestacjo
+
+dwójnikami pasywnymi, jak i aktywnymi, w zależności od rodzaju nic:
+
+zależności od czasu równania charakterystyki (1.6-2) lub (1.6-3) — por. :
+
+adarelwzory/k4_page212_1
+Warunki pasywności indukcyjności i pojemności niestacjonarnej rozj
+
+Przykład 2.1-33. Indukcyjności sprzężone — rys. 1.8-3 i równani
+wobec spełnienia warunku (1.8-13), czwórnikiem pasywnym bezstratn;
+nikowi przeprowadzenie odpowiedniego rozumowania uzasadniającego t
+takie, oparte na wywodach przedstawionych w p. 1.8.1-D, jest analogi
+w przykładzie 2.1-31 dla pojedynczej indukcyjności.
+
+Przykład 2.1-34. Transformator idealny — rys. 1.8-16 i równania
+
+rys. 1.7-25a i równania (1.7-33) — są czwórnikami pasywnymi bez
+z przykładów 2.1-12 i 2.1-13, dla obu tych czwórników moc pobierana
+
+<image/wzory/k4_page212_formula5.png>
+a więc także:
+
+'ory/k4_page212_formula6.png
+
+1) Łatwo zauważyć, że pasywność indukcyjności stacjonarnej wynika z przyjętych założeń, jakie
+z definicji spełnia charakterystyka indukcyjności (por. p. 1.3.2-A). W zsaętkoki konsekwencją
+tych założeń są nierówności (2.1-60) i (2.1-62).

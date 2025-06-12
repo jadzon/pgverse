@@ -1,0 +1,27 @@
+a po zastosowaniu przekształcenia Laplace'a
+
+<image/wzory/k1_page145_formula1.png>
+
+Porównując równania (5.4) i (5.5) po przekształceniach, otrzymujemy
+
+<image/wzory/k1_page145_formula2.png>
+
+Na podstawie równania (5.6) można narysować model układu w postaci schematu
+blokowego, jak przedstawiono na rysunku 5.6.
+
+<image/figury/k1_page145_figure1.png>
+
+Przekształcając dalej równanie (5.6), możemy wyznaczyć transmitancję operato-
+rową serwomechanizmu G(s)
+
+<image/wzory/k1_page145_formula3.png>
+<image/figury/k1_page145_figure2.png>
+
+<image/wzory/k1_page145_formula4.png>
+
+<image/wzory/k1_page145_formula5.png>
+Stałą 7 nazywamy stałą czasową układu, a stałą k — wzmocnieniem układu.
+Należy zauważyć, że przy rozpatrywaniu idealnych układów sterowania hydrau-
+licznego pomija się wiele czynników, takich jak tarcie, luzy w połączeniach, nielinio-
+
+147

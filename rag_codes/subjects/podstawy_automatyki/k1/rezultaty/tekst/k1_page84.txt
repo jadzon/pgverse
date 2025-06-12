@@ -1,0 +1,18 @@
+<image/wzory/k1_page84_formula1.png>
+
+<image/wzory/k1_page84_formula2.png>
+
+Wyznaczamy pulasacje, dla których charakterystyka przecina osie rzędnych i od-
+ciętych, przyrównując P(w) i O(w) do zera:
+
+<image/wzory/k1_page84_formula3.png>
+
+<image/wzory/k1_page84_formula4.png>
+w=0 lub w?*=1l,
+
+W=l.
+
+Charakterystykę amplitudowo-fazową układu otwartego, pokazaną na rysun-
+ku 2.26, wyznaczamy na podstawie danych z tabeli 2.3.
+
+<image/tabele/k1_page84_table1.png>

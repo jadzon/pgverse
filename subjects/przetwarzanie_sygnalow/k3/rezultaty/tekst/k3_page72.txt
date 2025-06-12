@@ -1,0 +1,58 @@
+4. Oprogramowanie DSP
+
+ 
+
+Rozróżnienie między trzema poziomami oprogramowania bywa bardzo niewyraźne. Na przy-
+kład języki o najwyższym stopniu kompilacji umożliwiają bezpośrednie operowanie układa-
+mi elektronicznymi. Podobnie język wysokiego poziomu z dobrze zaopatrzoną biblioteką
+funkcji DSP jest bardzo bliski stania się pakietem aplikacyjnym. Główną zasadą podziału
+między trzema kategoriami oprogramowania jest zrozumienie, czym się operuje: 1) układami
+elektronicznymi, 2) zmiennymi abstrakcyjnymi czy 3) całymi procedurami i algorytmami.
+Jest jeszcze jeden ważny aspekt tej klasyfikacji. Gdy stosujemy język wysokiego poziomu,
+polegamy na umiejętnościach programisty, który napisał kompilator w celu zrozumienia najlep-
+szych sposobów operowania układami elektronicznymi. Także gdy korzystamy z pakietu apli-
+kacyjnego, polegamy na wiedzy programisty, który opracował ten pakiet w celu zrozumienia
+najlepszych metod DSP. I tu jest kłopot, ci programiści nigdy nie zetknęli się z problemem, nad
+którym wy właśnie pracujecie. Dlatego nie zawsze mogą wam dostarczyć optymalne rozwią-
+zanie, Gdy działacie na wyższym poziomie, bierzcie pod uwagę, że końcowy kod maszynowy
+będzie mniej efektywny pod względem wykorzystania pamięci, szybkości i dokładności.
+Który język programowania powinniście stosować? To zależy od tego, kim jesteście i co
+zamierzacie zrobić. Większość specjalistów komputerowych i programistów stosuje język
+C (lub bardziej zaawansowany C++). Wydajność, elastyczność, modularność — te wszystkie
+zalety ma język C. C jest tak popularny, że można zapytać, po co miałby ktokolwiek progra-
+mować systemy DSP w języku innym niż C. Przychodzą na myśl trzy odpowiedzi na takie
+pytanie. Po pierwsze, technika DSP rozwinęła się tak gwałtownie, że zaskoczyła niektóre
+osoby i organizacje przyzwyczajone do stosowania innych języków, takich jak FORTRAN
+i PASCAL. Dotyczy to zwłaszcza agend rządowych i instytucji wojskowych, jak wiadomo
+trudno podatnych na szybkie zmiany. Po drugie, niektóre zastosowania wymagają skrajnie
+wysokiej efektywności, osiągalnej tylko w programach asemblerowych. Należą one do ka-
+tegorii „trochę więcej szybkości za o wiele więcej pracy”. Po trzecie, C nie jest językiem
+łatwym do opanowania, zwłaszcza przez specjalistów, dla których programowanie nie jest
+głównym zajęciem. Dotyczy to wielu inżynierów i naukowców, którzy od czasu do czasu
+potrzebują metod DSP w swych badaniach i pracach projektowych. Ta grupa specjalistów
+często zwraca się ku BASIC-owi ze względu na jego prostotę.
+
+Dlaczego w tej książce wybrano BASIC? Tutaj piszemy o algorytmach, a nie o stylu pro-
+gramowania. Czytelnicy mają koncentrować uwagę na technice DSP, a nie rozpraszać jej
+na triki poszczególnych języków. Na przykład wszystkie programy w tej książce zawierają
+numery wierszy. To ułatwia opisy działania programu: „w wierszu 100 wykonuje się to a to,
+a w wierszu 110 - to i tamto” itd. Oczywiście, przypuszczalnie nigdy nie będziecie używać
+numeracji wierszy w waszych użytkowych programach. Inne bowiem są wymagania doty-
+czące uczenia DSP, a inne — jego stosowania. Jest wiele książek, w których zamieszczono
+znakomite kody źródłowe do algorytmów DSP. Jeśli tylko szukacie już napisanych kodów,
+aby skopiować je w waszych programach, to w tej książce ich nie znajdziecie.
+
+Wszelkie porównywanie szybkości działania układów elektronicznych z szybkością wykonywa-
+nia programów jest niewdzięcznym zadaniem. Niezależnie od wyniku, przegrywający zawsze
+powie, że wyścig był nieuczciwy! Programiści, którzy lubią języki wysokiego poziomu (np. tra-
+dycyjni specjaliści komputerowi), będą argumentować, że asemblery są tylko o 50% szybsze od
+kodów skompilowanych, lecz pięciokrotnie bardziej kłopotliwe. Ci, którzy lubią asemblery (są
+to na ogół naukowcy i inżynierowie elektronicy), będą się upierać przy opinii przeciwnej: asem-
+bler jest pięciokrotnie szybszy, lecz tylko o 50% trudniejszy w stosowaniu. Jak przy większości
+takich kontrowersji, obie strony sporu mogą dostarczyć wybiórcze dane wspierające ich opinie.
+Jako zasadę praktyczną można przyjąć, że podprogram napisany w asemblerze będzie od
+1,5 do 3 razy szybszy niż porównywalny program w języku wysokiego poziomu. Jedynym
+sposobem poznania dokładnej wartości tego stosunku szybkości jest napisanie programów
+i przeprowadzenia testów praktycznych. Ponieważ szybkość działania komputerów osobistych
+wzrasta corocznie o ok. 40%, więc napisanie podprogramu w asemblerze jest równoważne
+skokowi do przodu o ok. 2 lata w rozwoju sprzętu.

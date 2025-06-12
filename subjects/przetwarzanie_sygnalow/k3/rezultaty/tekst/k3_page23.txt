@@ -1,0 +1,31 @@
+112 127
+
+64
+Czas (lub inna zmienna)
+
+ 
+
+Histogram, pmf, pdf
+
+_page23_figure1.png
+
+figury/k3
+
+L-4-—
+
+j
+
+1onnaałkonanakn=n=
+
+ 
+
+|
+
+112 127
+
+Czas (lub inna zmienna)
+
+jako funkcja gaussowska
+
+Rys. 2.6. Trzy często spotykane przebiegi i ich funkcje gęstości prawdopodobieństwa. Wykres gęstości
+bieństwa szumu losowego (c) będący funkcją o kształcie dzwonowym, znaną

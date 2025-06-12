@@ -1,0 +1,33 @@
+JPEG (kompresja transformatowa) 477
+
+<image/tabele/k3_page442_table1.png>
+
+oka z rys. 27.10. Na rys. 27.12 d) pokazano odtworzenie prawidłowe przy użyciu wszystkich
+64 wartości widma. Pozostałe rysunki obrazują odtworzenie przy użyciu wskazanych liczb
+współczynników dotyczących najmniejszych częstotliwości Usunięcie nawet 3/4 składowych
+o największych częstotliwościach daje niewielki błąd w odtworzonym obrazie (rys. 27.12 c).
+I to jest korzystne, że powstający błąd wygląda bardzo podobnie, jak szum losowy.
+
+JPEG jest dobrym przykładem tego, jak w celu uzyskania lepszej skuteczności można po-
+łączyć ze sobą kilka sposobów kompresji danych. Cała procedura JPEG składa się z nastę-
+pujących kroków. Po pierwsze, obraz jest dzielony na grupy 8 x 8. Po drugie, dla każdej
+grupy wykonuje się przekształcenie DCT. Po trzecie, każde widmo 8 x 8 jest poddawane
+kompresji opisanymi powyżej metodami — przez redukowanie liczby bitów i eliminowanie
+niektórych składowych. To odbywa się w jednym kroku sterowanym tablicą kwantyza-
+cji. Dwa przykłady tablic kwantyzacji podano na rys. 27.13 Każda wartość widma jest
+dzielona przez odpowiadającą jej wartość w tablicy kwantyzacji, a wynik jest zaokrąglany
+do najbliższej liczby całkowitej. Na przykład skrajna górna lewa wartość w tablicy kwan-
+tyzacji wynosi jeden, co powoduje, że wartość składowej stałej pozostanie niezmieniona.
+Natomiast skrajna dolna prawa wartość na rys. 27.13 a) jest 16, co oznacza, że oryginalny
+zakres od —127 do 127 zostaje zredukowany do tylko od —7 do 7. Inaczej mówiąc, wartość,
+pod względem jej dokładności, zredukowano z 8 do 4 bitów. W bardziej krańcowym przy-
+
+padku skrajny dolny prawy zapis na rys. 27.13 b) jest równy 256, co całkowicie eliminuje
+wartość widmową.
+
+<image/figury/k3_page442_figure1.png>
+
+Rys. 27.14, Przetwarzanie szeregowe JPEG. Uporządkowanie zygzakowate jest używane przy konwersji
+widma DCT 8 x 8 na sekwencję liniową ztożoną z 64 wartości. W ten sposób wszystkie składowe o du-
+żych częstotliwościach są grupowane razem tam, gdzie duża liczba zer może z dobrą skutecznością być
+poddana kompresji metodą kodowania ciągów

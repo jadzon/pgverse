@@ -1,0 +1,25 @@
+318 3. Obwody prądu stalego
+
+C. Układy liniowe z WO. Omówimy teraz kilka prostych, ale ważnych,
+liniowych układów rezystancyjnych ze wzmacniaczem operacyjnym. Dla opisu
+WO będziemy przyjmować równania (3.6-8), pozostawiając Czytelnikowi okre-
+ślenie zakresu poprawności przeprowadzonej analizy wynikającego z nierów-
+ności (3.6-9).
+
+Przykład 3.6-1. Podstawową operacją, którą można zrealizować w liniowych układach
+rezystancyjnych z wykorzystaniem WO, jest operacja wzmocnienia.
+Na rys. 3.6-5a jest pokazany wzmacniacz nieodwracający, tj. nie zmieniający znaku (fazy) sygnału.
+Wobec warunku: u, = 0 napięcie wejściowe u,, jest napięciem na oporze Ry, a więc:
+
+<image/figury/k3_page318_figure1.png>
+
+<image/wzory/k3_page318_formula1.png>
+
+Stąd współczynnik wzmocnienia:
+
+<image/wzory/k3_page318_formula2.png>
+
+jest większy od jedności i może być regulowany przez dobór stosunku R»/R,”.
+
+1 Nierówność (3.6-9) wprowadza ograniczenie stosunku R./R, — przy ustalonym poziomie
+napięcia u,, — lub ogranicza napięcie u,, przy ustalonej wartości R»/R;.

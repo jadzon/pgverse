@@ -1,0 +1,5 @@
+<image/tabele/k4_page86_table1.png>
+
+<image/figury/k4_page86_figure1.png>
+
+Rozdzia! * 2.Programowanie sterowników PLC

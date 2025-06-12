@@ -1,0 +1,14 @@
+_8.6.1 Program dla sterownika GE Fanuc 90-30
+
+Procedura regulacji temperatury, z wykorzystaniem bloku PID ISA, zamieszczo-
+na jest na Wyd. 8.99 - Wyd. 8./02.
+
+<image/tabele/k4_page439_table1.png>
+
+<image/figury/k4_page439_figure1.png>
+
+Wyd. 8.100 Procedura PID
+
+REEEEOROEPEPEPAPI OTOP KĘ WIE ORDY JORIEE LAIK X! LE PYCIEEĘSEOJA CZ STY OT EEEE OWY PA CT O AO OAZA OZNA
+
+8.6 Regulacja temperatury z wykorzystaniem bloku PID 439

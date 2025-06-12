@@ -1,0 +1,18 @@
+<image/figury/k3_page38_figure1.png>
+
+0 i 1000 Hz, dołączając się do informacji, która w sposób uprawniony jest zawarta w tym
+obszarze częstotliwości.
+
+W związku z twierdzeniem o próbkowaniu szeroko używa się dwóch pojęć: częstotliwość
+Nyquista (Nyquist frequency) i szybkość Nyquista (Nyquist rate)”. Niestety ich znaczenia
+nie są znormalizowane. W celu zrozumienia tej kwestii rozważmy sygnał analogowy za-
+wierający częstotliwości między DC (0) i 3 kHz. Prawidłowa digitalizacja takiego sygnału
+wymaga próbkowania z częstotliwością 6000 próbek/s (6 kHz) lub większą. Przyjmijmy, że
+wybieramy próbkowanie 8000 próbek/s (8 kHz), dające prawidłową reprezentację sygnału
+o częstotliwościach od O do 4 kHz. Mamy tu do czynienia z czterema ważnymi częstotli-
+wościami: 1) największa częstotliwość w sygnale 3 kHz, 2) podwojenie tej częstotliwości
+6 kHz, 3) szybkość próbkowania 8 kHz, 4) połowa szybkości próbkowania 4 kHz. Która
+z tych wielkości jest częstotliwością Nyquista, a która szybkością Nyquista? Zależy, kogo
+spytamy! Stosowane są wszystkie możliwe kombinacje. Na szczęście większość autorów
+
+7 W polskiej terminologii używa się raczej pojęcia „częstotliwość próbkowania”(przyp. tłum.).

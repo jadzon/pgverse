@@ -1,0 +1,51 @@
+24 Rozdział 1. Rachunek prawdopodobieństwa
+
+Dowód: Rozważmy zmienną losową Y = X — mx. Ponieważ
+
+<image/wzory/k2_page83_formula1.png>
+
+to
+
+<image/wzory/k2_page83_formula2.png>
+
+Stosując nierownosc markowa aa zmiennej r - mamy
+<image/wzory/k2_page83_formula3.png>
+
+ale
+
+<image/wzory/k2_page83_formula4.png>
+
+19 Rozkład jednopunktowy
+
+Z rozkładem jednopunktowym mamy do czynienia, wtedy gdy całe prawdopodobieństwo
+jest skupione w jednym punkcie
+
+Definicja 1.53 Zmienna losowa 2X ma rozkład jednopunktowy, jeżeli dla jekiegoś m
+
+<image/wzory/k2_page83_formula5.png>
+
+Ponieważ )", P(X = z) = 1, to P(X = z) = 0 dla każdego x ź m.
+
+Wartość oczekiwana zmiennej X wynosi
+
+<image/wzory/k2_page83_formula6.png>
+
+Lemat 1.54 Jeżeli jakaś zmienna X przyjmuje wartości nieujemnei E(.X) = 0, to zmien-
+
+na losowa .X ma rozkład jednopunktowy, to znaczy
+<image/wzory/k2_page83_formula7.png>
+
+czyli dla każdego w € Q, jeżeli X (w) ź 0, to P(w) =0.
+
+Dowód: Pokażemy, że dla każdego w € (, jeżeli X (w) ź 0, to P(w) = 0. Przypuśćmy
+
+bowiem, że istnieje w € 0, takie, że X (w) = d > 0. Wtedy z nierówności Markowa,
+twierdzenie 1.46, mamy
+
+<image/wzory/k2_page83_formula8.png>
+
+O
+Założenie, że zmienna X przyjmuje tylko wartości nieujemne jest istotne we wnio-
+sku 1.54. Pokazuje to następujący przykład.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

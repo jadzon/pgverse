@@ -1,0 +1,5 @@
+<image/tabele/k4_page391_table2.png>
+
+<image/tabele/k4_page391_table1.png>
+
+<image/wzory/k4_page391_formula1.png>

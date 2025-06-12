@@ -1,0 +1,60 @@
+33. Przekształcenie Z
+
+ 
+
+Projektowanie filtru Czebyszewa-Butterwortha
+
+Powszechnie stosowaną metodę projektowania rekursywnych filtrów cyfrowych przed-
+stawiono w rozdziale 20, podając program komputerowy dla filtrów Czebyszewa-
+Butterwortha. Program zaczyna się od rozmieszczenia biegunów i zer filtru analogo-
+wego na płaszczyźnie s. Program przetwarza następnie to rozmieszczenie w żądany filtr
+cyfrowy przez kilka przekształceń matematycznych. W celu uproszczenia operacji alge-
+braicznych, filtr projektuje się jako kaskadowe połączenie kilku stopni, z których każdy
+implementuje jedną parę biegunów. Współczynniki rekursywne poszczególnych stopni
+są następnie łączone ze sobą, dając współczynniki rekursywne całego filtru. Jest to bar-
+dzo wysublimowany i skomplikowany algorytm, akurat świetny jako zakończenie tej
+książki. A oto, jak on działa.
+
+Pętla
+
+Na rys. 33.7 przedstawiono program i sieć działań tej metody, powtórzone z rozdziału 20. Po
+inicjalizacji i wprowadzeniu parametrów następuje główna część programu, którą jest pętla
+obejmująca wszystkie pary biegunów w filtrze, Ta pętla jest sterowana blokiem 11 w sie-
+ci działań oraz pętlą FOR-NEXT w wierszach 320 i 460 programu. Na przykład w filtrze
+6-biegunowym pętla będzie obiegana trzy razy, z indeksem pętli P% przyjmującym wartości
+1, 2, 3 Tak więc filtr 6-biegunowy będzie implementowany w trzech stopniach, z dwoma
+biegunami na stopień.
+
+Łączenie współczynników
+
+Podczas każdej pętli, w podprogramie 1000 (listing podano na rys. 33.8) są obliczane współ-
+czynniki rekursywne danego stopnia. Jako wynik podprogramu pojawiają się one w pięciu
+zmiennych: AO, Al, A2, Bl, B2. W bloku 10 sieci działań (wiersze 360-440) te współ-
+czynniki są łączone ze współczynnikami wszystkich poprzednich stopni, przechowywanymi
+w matrycach A[ ] i B[ ]. Na końcu pierwszej pętli w A[ ] i B( ] znajdują się współczynniki
+pierwszego stopnia filtru. Na końcu drugiej pętli są tam współczynniki kaskady złożonej
+ze stopni pierwszego i drugiego. Po wykonaniu wszystkich pętli w A[ ] i B[ ] są zapisane
+współczynniki konieczne do zaimplementowania całego filtru.
+
+Współczynniki są łączone ze sobą tak, jak to poprzednio wskazano w tablicy 33.1, z kilkoma
+modyfikacjami dającymi większą zwartość programu. Po pierwsze, indeks matryc A[ ] i Bf ]
+zostaje przesunięty o dwa podczas pętli. Na przykład ag jest zapisywane w A[2], a, i b, są za-
+pisywane w A[3] i B[3] itd. Robi się to dlatego, aby program nie próbował uzyskiwać dostępu
+do wartości poza ustalonymi matrycami. To przesunięcie jest usuwane w bloku 12 (wiersze
+480-520), dzięki czemu uzyskane końcowe wartości współczynników rekursywnych znajdują
+się w A[ ] iB[ ] z indeksami bez przesunięcia.
+
+Po drugie, A[ ] i B[ ] muszą być inicjalizowane współczynnikami odpowiadającymi sys-
+temowi tożsamościowemu, a nie samymi zerami. To jest wykonywane w wierszach od
+180 do 240. Podczas pierwszej pętli współczynniki dla pierwszego stopnia filtru są łą-
+czone z informacją istniejącą początkowo w tych matrycach. Jeśli na początku były same
+zera, to w tych matrycach zawsze pozostaną zera. Po trzecie, stosuje się dwie matryce
+tymczasowe TA[ |] i TB[ ]. Są w nich przechowywane stare wartości A[ ] i B[ ] podczas
+operacji splotu, dzięki czemu matryce A[ ] i B[ ] są wolne i można w nich przechowywać
+nowe wartości.
+
+Na zakończenie programu w bloku 13 (wiersze 540-670) filtr jest tak ustawiany, żeby miał w pa-
+śmie przepustowym wzmocnienie równe jedności. To odbywa się w sposób opisany poprzednio
+— ze wzorów 33.7 lub 33.8 jest obliczane istniejące wzmocnienie i przez tę wartość są dzielone
+wszystkie współczynniki „a” w celu ich znormalizowania. Zmienne pośrednie SA i SB są, odpo-
+wiednio, sumami współczynników „a” i „b”.

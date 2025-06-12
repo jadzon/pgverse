@@ -1,0 +1,26 @@
+równocześnie zawory dwupołożeniowe V3 na dopływie (sygnał sterujący Q3)
+i V4 na odpływie (sygnał sterujący 04).
+
+Wartości zadane dla poziomu i temperatury ustawia się za pomocą dwóch poten-
+cjometrów, które dają sygnały oznaczone odpowiednio jako A/3 (wartość zadana
+poziomu) i A/4 (wartość zadana temperatury).
+
+<image/figury/k4_page446_figure1.png>
+
+Program sterujący powinien umożliwiać realizację kolejnych faz procesu w na-
+stępującej kolejności:
+
+1. Napełnianie reaktora
+Zbiornik należy napełnić dwoma czynnikami (A i B). W tym celu należy
+otworzyć zawory V/ i V2 oraz zamknąć zawór AV]. Po osiągnięciu przez
+poziom wartości zadanej ustawionej na potencjometrze A/3 oba zawory
+napełniające należy zamknąć.
+
+2. Podgrzewanie i stabilizacja temperatury produktu w reaktorze
+Należy otworzyć zawór VS, natomiast regulacja temperatury odbywa się
+przy pomocy zaworu analogowego AV2, który umożliwia płynną zmianę
+przepływu medium ogrzewającego. Temperatura produktu powinna
+
+ 
+
+446 Rozdział : 8. Programy przykładowe

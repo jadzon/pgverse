@@ -1,0 +1,43 @@
+70 1. Pojęcia podstawowe — elementy
+
+i = J „sin ay
+
+gdzie I, jest stałą związaną z konstrukcją złącza oraz:
+
+zory/k4_page70_formula1.png
+
+gdzie e — ładunek elektronu, h — stała Plancka.
+
+Złącze Josephsona jest więc elementem indukcyjnym. Element ten znalazł liczne i interesujące
+zastosowania praktyczne”.
+
+1.3.5. Parametry statyczne i dynamiczne
+A. Opór statyczny i dynamiczny. Rozważmy opór nieliniowy o równaniu:
+
+<image/wzory/k4_page70_formula3.png>
+W przeciwieństwie do elementu liniowego, który był całkowicie określony przez
+wartość oporu R (lub wartość przewodności G) — por. rów-
+nania (1.3-5) — element nieliniowy jest określony przez charakterystykę
+(1.3-33). W wielu przypadkach dogodnie jest jednak charakteryzować element
+nieliniowy również przez pewne parametry liczbowe, mówiąc niejako o „wartości
+oporu nieliniowego” w danym punkcie pracy.
+
+Opór statyczny R. elementu nieliniowego o równaniu (1.3-33) określamy
+w danym punkcie A charakterystyki (rys. 1.3-28a) jako:
+
+<image/wzory/k4_page70_formula4.png>
+
+Wyrażenie (1.3-34) ma prostą interpretację geometryczną. Oznacza ono
+bowiem, że wartość R. jest współczynnikiem kierunkowym siecznej przecho-
+dzącej przez punkty OA (rys. 1.3-28a), a więc:
+
+<image/wzory/k4_page70_formula5.png>
+gdzie k jest współczynnikiem skali.
+
+Opór statyczny zależy od położenia punktu A na charakterystyce, można
+go więc uważać za wielkość zależną od prądu i (lub napięcia u):
+
+<image/wzory/k4_page70_formula2.png>
+
+1 Za wynalezienie i opracowanie teorii tego elementu (1961) Josephson otrzymał nagrodę Nobla
+w dziedzinie fizyki (1969).

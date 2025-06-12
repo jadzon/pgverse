@@ -1,0 +1,25 @@
+<image/figury/k2_page65_figure1.png>
+
+Pojęcia ogólne takie jak „pracownik” lub „księgowy”.
+
+Atrybuty. Mogą one być dwóch typów: wymagające podania wartości i nie po-
+trzebujące wartości. „Wiek” wymaga podania wartości, a „kwalifikacje księgo-
+wego” są atrybutem „księgowego” i nie wymaga podania wartości.
+
+Krawędzie są jednokierunkowymi połączeniami pomiędzy węzłami. Można je podzie-
+lić na następujące klasy:
+
+1.
+
+Połączenie „posiada” przyporządkowuje węzły z atrybutem do węzłów z poję-
+ciami ogólnymi lub z obiektami. Połączenia te stwierdzają, że pojęcie ogólne
+posiada atrybut, np. że pracownik posiada biuro lub księgowy posiada kwali-
+fikacje księgowego lub że obiekt ma atrybut, np. Anna Rzepecka posiada wiek
+40.
+
+Połączenie ,.jest” reprezentuje relację pomiędzy węzłami reprezentującymi obiekty
+i węzłami reprezentującymi pojęcia ogólne lub pomiędzy różnymi węzłami repre-
+zentującymi pojęcia ogólne.
+
+Inne połączenia. W przykładzie, połączenie pomiędzy Anną Rzepecką i działem
+księgowości reprezentuje związek pomiędzy dwoma obiektami. Tym związkiem

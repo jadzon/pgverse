@@ -1,0 +1,65 @@
+24.
+
+25.
+
+26.
+
+27.
+
+28.
+
+29.
+
+31.
+32.
+
+<image/figury/k2_page90_figure1.png>
+
+Oblicz rozkłady brzegowe zmiennych X, Y i Z. Oblicz P(X < 0),P(Z=X-+
+Y)P(Y>X+Z).
+
+Czy zmienne X, Y i Z są niezależne? Jeżeli nie, to zmień prawdopodobieństwa w
+pierwszej tabeli tak, żeby były niezależne.
+
+.. Na przestrzeni £1,... „30) z jednostajnym rozkładem określamy trzy zmienne X;(1r) =
+
+z mod 5, X;(x) = z mod 3, X2(x) = z mod 2. Czy zmienne te są niezależne?
+Mamy trzy niezależne zmienne losowe X, Y i Z (określone na jakiejś przestrzeni
+probabilistycznej). Udowodnij, że każde dwie też są niezależne.
+
+Mamy n niezależnych zmiennych losowych .X;,... ,X„. Pokazać, że dla każdego
+1 < k < n zmienne X;,...,.X„ też są niezależne.
+
+Podobnie każdy podzbiór tych zmiennych jest niezależny.
+
+Pokazać, że dla każdego 0 < e < 1 istnieje zmienna losowa „Y taka, że E(XY) = 1
+oraz P(X <0.5) = 1 —e.
+
+Pokazać, że jeżeli X ma rozkład symetryczny, tzn dla pewnego m, P(X = m —
+z) = P(X = m + z) dla każdego z, to EX = m.
+
+Pokazać, że jezeli mamy zmienna losową X z rozkładem jednopunktowym ii dowolną
+inną zmienną Y, to X i Y są niezależne
+
+Pokaż, że jeżeli zmienne losowe X i Y są niezależne, to dla dowolnych liczb z i y,
+zdarzenia X < r orazY < ysąniezależne.
+
+Pokaż, że jeżeli zmienne losowe X i Y są niezależne, to dla dowolnych funkcji g i
+h, zmienne g o X ih oY też są niezależne.
+
+Pokazać, że VarX = Var(X + c)
+
+Podać przykład dwóch zmiennych X i Y' o różnych rozkładach takich, że EX =
+EyiVarX =VarY.
+
+.. Przypuśćmy, że zmienna losowa przyjmuje n > 2 wartości r; < 7» <... < In
+
+każde z dodatnim prawdopodobieństwem.
+
+a) Czy jest możliwe EX = z; lub EX = z,?
+
+b) Czy jest możliwe EX < r» lub EX > zn_1?
+
+c) Czy b) jest możliwe jeżeli X ma rozkład jednostajny?
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,53 @@
+7.3. Systemy operacyjne 149
+
+3) szeregowanie zleceń wejścia-wyjścia (ang. //O scheduling), tj. podejmowanie de-
+cyzji o kolejności programów żądających dostępu do urządzeń wejścia-wyjścia.
+
+Celem wyjaśnienia opisanych przypadków wprowadźmy trzy pojęcia, które będą pomocne
+w trakcie dalszego opisu: zadanie (ang. job), proces (ang. process) i stan (ang. state).
+Zadaniem nazywa się skompilowany program, połączony już z programami biblio-
+tecznymi oraz plikami, które są przez ten program wywoływane, a więc jest to program
+całkowicie przygotowany do wykonania. Proces jest to zadanie, którym aktualnie zajmuje
+się komputer i które w każdej chwili przyjmuje jakiś stan. Procesy mogą znajdować się
+w jednym z pięciu stanów:
+
+— stan nowy (ang. new),
+
+— stan gotowości (ang. ready),
+
+— stan wykonywania (ang. running),
+
+— stan oczekiwania (ang. waiting),
+
+— stan zatrzymania (ang. halted).
+
+Proces jest wprowadzany w stan nowy poprzez szeregowanie wysokiego poziomu. Liczba
+procesów ustawianych w stan nowy zależy od tzw. stopnia wieloprogramowości, tj. liczby
+programów, które jednocześnie mogą znajdować się w pamięci operacyjnej. Stan gotowości
+procesu powstaje w wyniku działania szeregowania krótkoterminowego i jest to stan,
+w którym zadanie czeka na wolny czas procesora. Szeregowanie krótkoterminowe dokony-
+wane jest przez program zwany egzekutorem (ang. dispatcher). Ze stanu gotowości
+procesy przechodzą w stan wykonywania w takiej kolejności, w jakiej uszeregowano je
+w stanie gotowości. Stan wykonywania jest to stan, w którym procesor wykonuje dane
+zadanie. Ze stanu wykonywania procesy mogą zostać wprowadzone w stan oczekiwania
+w przypadku, gdy pojawiają się operacje wejścia-wyjścia i następuje szeregowanie zleceń
+wejścia-wyjścia. W stan zatrzymania proces wchodzi po wykonaniu programu przez pro-
+cesor i gdy system operacyjny likwiduje dany proces. Na rysunku 7.2 pokazano diagram
+przejść procesów ze stanu do stanu.
+
+<image/figury/k3_page159_figure1.png>
+
+Rysunek 7.2. Diagram przejść procesów ze stanu do stanu
+
+Aby ułatwić proces szeregowania zadań system operacyjny tworzy dla każdego procesu
+tzw. blok sterujący (ang. process control block), który zawiera następujące informacje:
+
+— identyfikator procesu (ang. identifier),
+
+— znacznik stanu (ang. state flag),
+
+— wskaźnik priorytetu (ang. priority level),
+
+— licznik rozkazów (ang. program counter),
+
+— wskaźnik pamięci (ang. memory pointers),

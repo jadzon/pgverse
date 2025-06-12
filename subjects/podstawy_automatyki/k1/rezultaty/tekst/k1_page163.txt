@@ -1,0 +1,14 @@
+<image/figury/k1_page163_figure1.png>
+
+Rys. 6.9. Schemat blokowy silnika zbudowany w Simulinku
+
+<image/tabele/k1_page163_table1.png>
+
+Rys. 6.10. Parametry modelu silnika
+
+Aby móc przeprowadzić numeryczną symulację działania silnika, należy zdefinio-
+wać jego parametry (współczynniki i stałe). Załóżmy jak poprzednio, że:
+
+Nzory/k1_page163_formula1.png
+
+165

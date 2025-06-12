@@ -1,0 +1,13 @@
+Trajektoria fazowa — przykład 3 (liniowy, stałe pobudzenie)
+
+ 
+
+ 
+
+Na rysunku przedstawiono przebieg trajektorii fazowych dla różnych
+warunków początkowych i pobudzenia dodatniego (u(t)=/, krzywe niebieskie)
+oraz ujemnego (u(t)=-/, krzywe czerwone)
+
+ 
+
+<image/figury/k/_page207_figure1.png>

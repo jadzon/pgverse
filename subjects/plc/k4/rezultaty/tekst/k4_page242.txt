@@ -1,0 +1,47 @@
+<image/wzory/k4_page242_formula1.png>
+
+Charakterystyczną cechą sterowników firmy Allen - Bradley jest plikowa organi-
+zacja programów i danych. Zanim zostanie ona omówiona trzeba przytoczyć
+używane przy deklaracji zmiennych następujące pojęcia :
+
+e szczebel - (rung) pojedynczy obwód schematu drabinkowego, w skład któ-
+rego wchodzą podstawowe instrukcje stykowe, arytmetyczne, logiczne, cza-
+sowe, licznikowe itp.,
+
+e płyta łączeniowa - (rack) płyta z określoną ilością złączy, w których
+umieszczone są : zasilacz, moduł procesora, moduły wejść i wyjść, moduły
+inteligentne i komunikacyjne.
+
+e złącze - (słot) pojedyncze złącze umiejscowione na płycie łączeniowej, słu-
+żące do umieszczenia pojedynczego modułu procesora albo innego modułu.
+
+Program główny oraz poszczególne podprogramy schematu drabinkowego na-
+zywane są plikami. Podobnie pliki danych zawierają dane o określonych struktu-
+rach związanych z instrukcjami w schemacie drabinkowym.
+
+W plikowej organizacji oprogramowania wyróżnia się następujące rodzaje pli-
+ków:
+
+Plik procesora (Processor File)
+Zbiór plików programowych i plików danych utworzonych pod wspólną,
+wyszczególnioną nazwą stanowi plik procesora. Zawiera on wszystkie in-
+strukcje, dane i informacje konfiguracyjne, które mają związek z programem
+użytkownika.
+
+Plik programowy (Program File)
+
+Pliki programowe są numerowane i można nadać im 11 znakową nazwę.
+Pliki programowe o numerach 0 i 1 są zarezerwowane i są niezbędne w każ-
+dym programie. Plik 0 (System Program) zawiera informacje o typie użyte-
+go procesora, konfiguracji sterownika, nazwie pliku procesora oraz o ewen-
+tualnym zabezpieczeniu hasłowym programu. Program główny jest umiesz-
+czony w pliku programowym o numerze 2 ( Main Ladder Program). Pliki
+programowe o numerach wyższych od 3 do 255 (Subroutine Ladder Pro-
+gram) można się uruchomić za pomocą instrukcji JSR (Jump to Subrouti-
+ne).
+
+       
+
+Rozdział : 5. Język schematów drabinkowych dla SLC 500
+
+242.

@@ -1,0 +1,30 @@
+JPEG (kompresja transformatowa)
+
+składowe małoczęstotliwościowe sygnału są ważniejsze niż składowe o dużych częstotliwo-
+ściach. Usuwając 50% bitów ze składowych o dużych częstotliwościach, możemy usunąć
+— powiedzmy — tylko 5% zakodowanej informacji.
+
+Kompresja JPEG (rys. 27.9) rozpoczyna się od rozdzielenia obrazu na grupy po 8 x 8 pik-
+seli. W pełnym algorytmie JPEG może być akceptowany szeroki zakres liczby bitów na
+piksel, włącznie z informacją o kołorze. W tym przykładzie każdy piksel jest pojedynczym
+bajtem o wartości w skali szarości między O a 255. Te grupy 8 x 8 bitów są podczas kom-
+presji traktowane niezależnie. Każda grupa jest więc na początku reprezentowana przez
+64 bajty. Po wykonaniu przekształcenia i usunięciu danych dotyczących dużych częstotli-
+wości każda grupa jest reprezentowana przez, przypuśćmy, od 2 do 20 bajtów. Podczas
+dekompresji wykonuje się przekształcenie odwrotne 2 do 20 bajtów, aby utworzyć aprok-
+symację oryginalnej grupy 8 x 8. Te aproksymowane grupy są następnie łączone ze sobą,
+dając zdekomprymowany obraz. Dlaczego mamy stosować grupy 8 x 8 pikseli, a nie np.
+16 x 16? Grupowanie 8 x 8 wyniknęło z maksymalnego rozmiaru grupy, jaką mogły prze-
+twarzać układy scalone produkowane w czasie, gdy powstawał standard JPEG. W każdym
+razie kompresja JPEG z takim rozmiarem grupy działa dobrze i rozmiar może być ałbo nie
+być zmieniony w przyszłości.
+
+Sab
+
+_page438_table2.png
+
+<image/tabele/k3_page438_table3.png>
+
+Rys. 27.9. Podział obrazu do kompresji JPEG. Kompresja przez przeksztatcenie JPEG rozpoczyna się od rozdzielenia
+obrazu na grupy 8 x 8 zawierające po 64 piksele. Na rysunku powiększono trzy z tych grup 8 x 8, z podaniem wartości
+poszczególnych pikseli, mieszczących się w pojedynczym bajcie - od 0 do 255

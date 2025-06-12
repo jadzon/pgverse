@@ -1,0 +1,26 @@
+kn
+Zadania do rozdziału 1 k
+Zadanie 1.1. Sygnały prądu i napięcia w elemencie z rys. 1.1-1 są określone w p
+te (0, +00) i opisane funkcjami:
+<image/wzory/k3_page158_formula1.png>
+Wyznaczyć i określić moc chwilową pobieraną przez element oraz obliczyć pobraną przez a
+energię w przedziale t e (0, +0). Ody
+<image/wzory/k3_page158_formula2.png>
+Zadanie 1.2. Na oporze R występuje sygnał napięcia: E
+<image/wzory/k3_page158_formula3.png>
+Wyznaczyć moc chwilową pobieraną przez ten opór oraz pobraną przez niego energię w Odj
+Zać
+<image/figury/k3_page158_figure1.png>
+<image/wzory/k3_page158_formula4.png>
+Zat
+Zadanie 1.3. Wykazać, żeelement rozważany w zad. 1.1 jest indukcyjnością liniową. Jaka jest
+tej indukcyjności?
+ję ył
+a=" Ja a
+Zadanie 1.4. Wykazać, że wielomian: Za
+
+<image/wzory/k3_page158_formula5.png>
+
+spełniający warunki da-,., >0,a,_., 2 0 dla k = 1,2,...,n—1, określa w p
+
+(-0, +w) charakterystykę oporu nieliniowego nasz 0. Ob

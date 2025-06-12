@@ -1,0 +1,82 @@
+62
+
+Można wyróżnić dwa sposoby klasyfikacji serwomechanizmów:
+e ze względu na sposób działania:
+
+- serwomechanizmy ciągłe
+Dzięki ciągłości wszystkich sygnałów występujących w układzie
+zapewniają one dużą dokładność oraz wolne zużywanie się części
+mechanicznych.
+
+- serwomechanizmy przekaźnikowe
+W układach takich pewne sygnały podlegają skokowym zmianom
+w czasie, najczęściej stałym co do wartości, na przykład przez
+zmianę wartości uchybu.
+
+- serwomechanizmy impulsowe
+Podobnie jak powyżej, występują tu skokowe zmiany pewnych
+sygnałów, ale jedynie w określonych chwilach - istnieje więc takt
+pracy.
+
+e ze względu na rodzaj:
+
+- serwomechanizmy pneumatyczne,
+— serwomechanizmy hydrauliczne,
+- serwomechanizmy elektryczne.
+
+6.2.2 Zadanie serwomechanizmu
+
+Serwomechanizmy są urządzeniami specjalistycznymi projektowanymi
+indywidualnie, co wiąże się z wykonywanymi przez nie zadaniami, czyli:
+
+e zadaniem nadążania
+
+W zadaniu nadążania ważna jest chwilowa wartość uchybu, która po-
+winna być taka, aby w każdym momencie sygnał wyjściowy y(t)
+(na przykład położenie frezu) nadążał za zmianami sygnału wejścio-
+wego w(t) = r(t), nazywanego sygnałem odniesienia (referencyjnym).
+Charakterystyczne jest występowanie założenia co do ograniczenia
+wartości modułu dynamicznego uchybu regulacji c(t) w celu umożli-
+wienia analizy układu jako liniowego.
+
+zadaniem przestawiania
+
+W zadaniu przestawiania na pierwszym miejscu należy umieścić
+wartość uchybu w stanie ustalonym (na przykład po osiągnięciu
+
+ 
+
+63
+
+odpowiedniego położenia przez wiertło wiertarki) oraz czas przesta-
+wiania. Ze względu na występowanie najczęściej skokowych wartości
+zmian sygnału zadanego (wejściowego) układ staje się nieliniowy.
+
+6.2.3 Uproszczony model serwomechanizmu
+
+W najprostszym wydaniu z pominięciem stałych czasowych wzmacnia-
+czy (elementów przyjętych jako bezinercyjne w stosunku do stałej czasowej
+silnika) regulator jest typu P o transmitancji Gp(s) = kp, silnik jest elemen-
+tem całkującym z inercją, o transmitancji G;4(s) = RUTH: natomiast trans-
+mitancja sprzężenia tachometrycznego określona jest wzorem Gr(s) = skę,
+jak pokazano na rysunku 6.2.
+
+<image/figury/k2_page32_figure1.png>
+
+Rys. 6.2: Schemat modelu serwomechanizmu ze sprzężeniem tachometrycznym
+
+Układ otwarty serwomechanizmu składa się ze wzmacniacza (regulatora
+typu P o wzmocnieniu kp (2), |), serwomotoru zamodelowanego jako układ
+całkujący z inercją (o wzmocnieniu prędkościowym k, [2] i stałej czasowej
+T [5|) oraz tachometru zamodelowanego jako idealny układ różniczkujący
+o wzmocnieniu 4; [s].
+
+Wartością zadaną i wyjściową jest położenie kątowe (stąd obecność całko-
+wania w transmitancji serwomotoru). Stała czasowa T uwzględnia bezwład-
+ność silnika, układu przekładni i inne stałe czasowe występujące w układzie
+elektromechanicznym.
+
+Przy założeniu znajomości wszystkich parametrów transmitancja układu
+zamkniętego (bez wewnętrznego sprzężenia tachometrycznego) ma postać
+
+<image/wzory/k2_page32_formula1.png>

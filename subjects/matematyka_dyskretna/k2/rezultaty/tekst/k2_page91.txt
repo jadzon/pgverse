@@ -1,0 +1,27 @@
+32 Rozdział 1. Rachunek prawdopodobieństwa
+
+34. Kowariancja zmiennych losowych X i Y równasię cov(X,Y) = E((X-EX)(Y-
+EY)). Pokazać, że
+
+a) jeżeli X i Y są niezależne to cov(.X, Y ) = 0;
+b) Var(X + Y) = Var(z) + Var(Y ) + 2cov(X,Y)
+C) Var(X;_, X;) = X, Var(X;) + 27 <iej<n COV(X, X;).
+
+35. Rzucano monetą 10 razy. Jakie jest prawdopodobieństwo, że orzeł wypadł co naj-
+mniej raz?
+
+36. Jakie jest prawdopodobieństwo otrzymania parzystej liczby sukcesów w ciągu n
+prób Bemoulliego, jeżeli prawdopodobieństwo sukcesu w jednej próbie wynosi: a)
+1/2, b) p.
+
+37. Jakie jest prawdopodobieństwo, że w serii sześciu rzutów kostką suma oczek będzie
+parzysta.
+
+38. Pokazać, że jeżeli i < j < np, to B(n,p,i) < B(n,p.j); ajeżeli np < i < j, to
+B(n,p.i) > B(n,p.j), gdzie B(n,p,t) to rozkład dwumianowy.
+
+39. Niech zmienna losowa X ma rozkład dwumianowy z parametrami n = 1000,
+p = 1/2. Oszacuj prawdopodobieństwo P(X > 600) (za pomocą nierówności
+Markowa, Czebyszewa i Chemoff'a).
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

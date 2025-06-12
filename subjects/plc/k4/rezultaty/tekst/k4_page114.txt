@@ -1,0 +1,57 @@
+a
+
+n
+ry/k4_pa 8
+
+  
+
+ge114_formula2.png
+
+Do zmontowania sterownika niezbędna jest płyta łączeniowa (CPU basepłate),
+zwana także kasetą (rack), która posiada gniazda (slots) do podłączenia wybra-
+nych modułów, w tym dwóch niezbędnych: zasilacza PWR (PoWeR Supply)
+oraz modułu jednostki centralnej CPU (Central Proccessing Unit). Zasilacz
+należy podłączyć do źródła napięcia 120/240 VAC, ale często też stosuje się za-
+silacze podłączone do źródła 12/24/48 VDC. Pozostałe gniazda można
+wykorzystać do włączenia innych modułów sterownika. Najnowsze konstrukcje
+zakładają instalowanie modułów bezpośrednio na szynie montażowej D/N i łą-
+czenie ich ze sobą łączami zatrzaskowymi.
+
+Poniżej przedstawiono najczęściej wykorzystywane, podstawowe moduły, z któ-
+rych większość opisano w tym rozdziale.
+
+e Moduły wejść i wyjść dwustanowych D/, DO (Discrete Input, Output Mo-
+dules),
+
+e Moduły wejść i wyjść analogowych A/, AO(Anałlog Input, Output Modules),
+
+e Moduł szybkiego licznika HSC (High-Speed Counter Module) do obsługi
+wejść dwustanowych zmieniających się z częstotliwością zazwyczaj nie
+większą niż 100 kHz, a pochodzących najczęściej z przetworników obroto-
+wo-impulsowych (tzw. enkoderów), które generują impulsy o liczbie
+proporcjonalnej do kąta obrotu osi, z którymi są sprzężone,
+
+e Moduł pozycjonowania osi APM (Power Mate APM - Axis Positioning Mo-
+dule), który podobnie jak moduł szybkiego licznika, zapewnia obsługę
+sygnałów generowanych przez enkodery z wieloma dodatkowymi możliwo-
+ściami programowymi, takimi jak dobór profili prędkości oraz ograniczenia
+przyśpieszeń dla łagodnego rozruchu i zatrzymania poszczególnych napędów
+maszyn i urządzeń zasilanych przez przetwornice częstotliwości,
+
+e Moduł komunikacyjny CCM (Communications Coprocessor Module)
+z dwoma łączami szeregowymi RS-232 i RS-422/485 z określonymi proto-
+kołami komunikacyjnymi,
+
+e Moduł komunikacyjny sieci sterownikowych Genius GCM (Genius Com-
+munications Module) do połączenia sterowników w sieci lokalnej,
+
+e Moduł kontrolera tej sieci Genius GBC (Genius Bus Controller Module) do
+zapewnienia dodatkowych funkcji kontrolnych sieci,
+
+e Moduł komunikacyjny sieci Ethernet (Ethernet Interface Module), który sta-
+nowi łącze między sterownikami i siecią Ethernet TCP/IP LAN. Umożliwia
+on komunikację w sieci Frhernet poprzez media transmisyjne wyspecyfiko-
+wane przez normę /EEE 802.3, tj. przez kable koncentryczne: /OBase$Coax
+
+EEEE CYT" TYT CET PATTY TY EEE YYYY TE CE EZ TE EYE CE TY PYTHCIE PYT SE TORECO TYT CYEOTCW TOPY TEPIPOZYTETEY
+114 Rozdział : 3. Sprzęt sterowników PLC

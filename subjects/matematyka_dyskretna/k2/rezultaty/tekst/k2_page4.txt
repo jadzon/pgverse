@@ -1,0 +1,38 @@
+4 Rozdział 1. Oznaczenia
+
+W tym przypadku zbiór indeksów określony jest za pomocą warunku pod znakiem sumy.
+Warunek określający indeksy, po których należy sumować może być bardziej skompliko-
+wany, na przvkład
+
+<image/wzory/k2_page4_formula1.png>
+
+Stosow?* hadaiame tata zanie
+
+<image/wzory/k2_page4_formula2.png>
+
+oznaczający sumę tych elementów a;, których indeksy należą do skończonego zbioru
+indeksów 7. Na przykład, jeżeli 7 = (1,3,5,7), to
+
+<image/wzory/k2_page4_formula3.png>
+
+Możemy też sumować ciągi, których elementy zależą od dwóch indeksów,
+<image/wzory/k2_page4_formula4.png>
+
+Za pomocą podwójnej sumy możemy na przykład przedstawić uogólnione prawo roz-
+dzielności mnożenia względem dodawania:
+
+<image/wzory/k2_page4_formula5.png>
+a także wzór na podnoszenie sumy do kwadratu:
+<image/wzory/k2_page4_formula6.png>
+
+1.2 Iloczyny
+
+Aby zapisać iloczyn elementów ciągu a; , aa... ay, stosujemy zapis
+
+<image/wzory/k2_page4_formula7.png>
+
+Znów niezbyt formalnie możemy to zapisać jako
+
+<image/wzory/k2_page4_formula8.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

@@ -1,0 +1,51 @@
+_3.9.3 Moduły sterownikowych sieci LAN ZIE UCEZL GULI
+
+Do połączenia sterowników w sieć oraz dla zapewnienia funkcji komunikacyj-
+nych i funkcji kontrolnych w takiej sieci potrzebne są odpowiednie moduły
+sieciowe.
+
+Moduły komunikacyjne są używane do tworzenia sieci z wykorzystaniem asyn-
+chronicznej transmisji szeregowej pomiędzy sterownikami, panelami
+operatorskimi lub komputerowymi systemami sterowania nadrzędnego. Najbar-
+dziej popularny protokół Modbus RTU stwarza możliwości komunikacji
+z urządzeniami innych producentów.
+
+Moduł komunikacji szeregowej CCM (Communications Coprocessor Module)
+udostępnia dwa łącza szeregowe RS-232C i RS-422/485 z protokołami komuni-
+kacyjnymi firmy GE Fanuc SNP i CCM oraz z powszechnie znanym standardem
+Modbus RTU.
+
+Moduł GCM (Genius Communications Module) wykorzystywany jest do łącze-
+nia sterowników serii 90-30 za pomocą skrętki dwuprzewodowej do lokalnej
+sieci przesyłu danych o topologii magistralowej Genius I/O Communication Bus.
+Sieć Genius charakteryzuje się równoprawnym dostępem do sieci, w której
+„każdy z każdym” wymienia dane (peer-to-peer). Możliwa jest również wymiana
+paczek danych w sieci, tzw. datagramów, według reguły „nadrzędny-podrzędny”
+(master-slave).
+
+W sieci Genius wg. reguły peer-to-peer informacje są przesyłane ze stałym cy-
+klem, wynoszącym od 20 do 200 ms, zależnym od szybkości transmisji i liczby
+transmitowanych bajtów, a także od liczby i typu elementów włączonych
+do sieci.
+
+W sieci Genius możliwe jest włączenie do jednej magistrali sieciowej nie więcej
+niż 32 elementy, a maksymalna szybkość transmisji danych wynosi 153 Kb/s.
+Długość magistrali może wynosić od 600 m do 2200 m, odpowiednio dla pręd-
+kości transmisji danych od 153 Kb/s do 38 Kb/s
+
+Moduł GCM musi używać specyficznych adresów, tzw. SBA (Serial Bus Ad-
+dresses). Są to adresy z zakresu od 0 do 31.
+
+Każdy GCM może być skonfigurowany do wysyłania danych w blokach o długo-
+ści do 128 bajtów. Dane mogą pochodzić z jednego z obszarów %/ (wejścia
+binarne), %Q, (wyjścia binarne), %G (zmienne globalne), %A/ (wejścia analo-
+gowe), %AQ,(wyjścia analogowe) lub %R (zmienne rejestrowe) w pamięci
+sterownika, por. rozdział 4.
+
+Transmitowane dane dostępne są dla wszystkich innych urządzeń w sieci,
+np. w przypadku układu czterech sterowników z modułami GCM wysyłającymi
+po 24 bajty każdy, wszystkie GCM mogą odbierać po 72 bajty.
+
+ 
+
+wzory/k4_page171_formula1.pi

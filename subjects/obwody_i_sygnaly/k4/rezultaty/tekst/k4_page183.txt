@@ -1,0 +1,52 @@
+2.1. Wielowrotniki i sieci 185
+
+charakterystyka (rys. 2.1-11C) przechodzi przez początek układu współrzędnych.
+Stan spoczynku: i= 0 A u =0, jest zatem stanem dopuszczalnym, a więc
+dwójnik z rys. 2.1-11b jest dwójnikiem bezźródłowym, mimo iż zawiera element
+źródłowy.
+
+Inny przykład jest przedstawiony na rys. 2.1-11d. Proponujemy Czytelnikowi
+sprawdzenie, iż przy założeniu, że mostek jest zrównoważony (a tak jest, jeśli
+wszystkie opory są jednakowe, por. przykład 2.1-18), siła elektromotoryczna
+e nie wpływa na stan zaciskowy dwójnika (por. zad. 2.9d). W rezultacie równanie
+zaciskowe dwójnika z rys. 2.1-1ld ma postać u = Ri, a więc stan zacis-
+kowy i = 0, u = O jest stanem dopuszczalnym.
+
+We wszystkich podanych przykładach występowanie elementu źródłowego
+w strukturze układu nie jest istotne dla opisu zaciskowego układu, a w szczegól-
+ności nie narusza jego bezźródłowości rozumianej w sensie definicji podanej w
+p. A. W przeciwieństwie zatem np. do czwórnika z rys. 2.1-5c, o którym po-
+wiemy, że zawiera w sposób „istotny” element źródłowy (por. równania zacis-
+kowe (2.1-13)), o przedstawionych na rys. 2.1-11 dwójnikach można powie-
+dzieć, że nie zawierają elementu źródłowego w sposób „istotny”.1)
+
+2.1.5. Układy SLS
+
+W punkcie 1.6.2 podsumowaliśmy rozważania dotyczące podziału dwuzacis-
+kowych elementów skupionych (S$) na liniowe (L) i nieliniowe
+oraz stacjonarne (S) i niestacjonarne, wyodrębniając klasę ele-
+mentów SLS (skupionych, liniowych i stacjonarnych). Obecnie rozszerzymy tę
+klasyfikację na układy.”
+
+A. Układy skupione. Załóżmy, że przez pojęcie układu będziemy ro-
+zumieli sieć (por. p. 2.1.1), mówiąc zaś o równaniach układu, będziemy mieli
+na myśli jego równania sieciowe. Takie rozumienie pojęcia układu nie
+eliminuje z rozważań wielowrotników lub wielobiegunników, zakłada jednak, że
+znany jest ich opis sieciowy, a nie tylko równania zaciskowe (por. przy-
+kłady 2.1-1i 2.1-3).
+
+Klasyfikacji układów można dokonać na podstawie rozmaicie formułowa-
+nych informacji o układzie. Przedstawimy teraz dwa odrębne, choć ściśle ze sobą
+związane sposoby przeprowadzenia tej klasyfikacji (oznaczymy je symbolami
+RiE). Będą one odznaczać się znacznym stopniem poglądowości (por. p. 2.1.4-B).
+Bardziej sformalizowany sposób klasyfikacji omówimy dodatkowo w p. H.
+
+1) Zwracamy uwagę, że „nieistotność” występowania elementu źródłowego w układach z rys.
+2.1-11 wiąże się z daleko posuniętą ich idealizacją. Gdyby np. siły elektromotoryczne w dwójniku
+z rys. 2.1-1la nie były dokładnie jednakowe, gdyby prostownik z dwójnika z rys. 2.1-11b nie był
+I (ego charakterystyka nie pokrywała się dla i = 0 zosią u) lub gdyby mostek z rys. 2.1-11d
+nie był dokładnie zrównoważony, wówczas każdy z podanych układów byłby układem źródłowym.
+
+2) Elementy cztero — lub wielozaciskowe, o których w niewielkim zakresie była mowa
+NE 1.7.2-E, p. 1.8.1-C i H oraz w p. 1.8.2-C, możemy uważać za przypadki szczególne ukła-
+dów.

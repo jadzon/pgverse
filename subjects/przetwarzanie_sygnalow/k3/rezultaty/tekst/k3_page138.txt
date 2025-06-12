@@ -1,0 +1,75 @@
+154 8. Dyskretne przekształcenie Fouriera
+
+ 
+
+Załóżmy, że mamy daną reprezentację sygnału w dziedzinie częstotliwości i chcemy doko-
+nać syntezy, aby uzyskać odpowiadający tej reprezentacji sygnał w dziedzinie czasu. Najpierw
+musimy znaleźć amplitudy fal sinusoidalnych i kosinusoidalnych. A więc mając /m X[k] oraz
+Re X|k], powinniśmy wyznaczyć Im X [k] oraz ReX [k]. W równaniach 8.3 przedstawiono
+tę operację w postaci matematycznej. Aby wykonać to w formie programu komputerowego,
+trzeba podjąć trzy czynności. Po pierwsze, podzielić przez N/2 wszystkie wartości w dziedzinie
+częstotliwości. Po drugie, zmienić znak wszystkich wartości urojonych. Po trzecie, podzielić
+pierwszą i ostatnią próbkę w części rzeczywistej, Re X[0] i Re X[N/2], przez dwa. W ten sposób
+otrzymuje się amplitudy potrzebne do przeprowadzenia syntezy opisanej wzorem 8.2. Łącznie
+obawzory8.2i8.3definiujodwrotnedyskretneprzeksztaceniefourieradft.
+
+Całkowite odwrotne DFT przedstawiono w programie komputerowym w tablicy 8.1. Są
+dwa sposoby zaprogramowania syntezy (zgodnie z wzorem 8.2) i oba są zaprezentowane.
+W pierwszej metodzie wyskalowane sinusoidy są generowane jedna po drugiej i sumowane
+w matrycy akumulacyjnej, dając w rezultacie sygnał w dziedzinie czasu, W drugiej metodzie
+próbki w dziedzinie czasu są obliczane jedna po drugiej, jako sumy odpowiednich próbek
+w falach kosinuosidalnych i sinusoidalnych. Obie metody dają taki sam wynik. Różnica mię-
+dzy tymi dwoma programami jest niewielka; pętle wewnętrzna i zewnętrzna są zamienione
+miejscami podczas syntezy.
+
+<image/figury/k3_page138_figure1.png>
+
+3,07
+
+ 
+
+   
+
+5
+
+ł
+
+.
+
+:
+8
+ę
+———
+*
+
+„
+
+=
++
+.
+
+.
+
+=
+
+-nnzw
+
+Wartość
+5
+i
+|
+SA UOCA.
+
+|
+
+© 7777----—
+-— -
+
+|
+
+i "Rys. 8.6. Przykład odwrotnego, dyskretnego przeksztatcenia Fouriera. Na rys. a) przedstawiono przyktad sygnału
+_ w dziedzinie czasu, jest to impuls w próbce zerowej o amplitudzie równej 32. Na rys. b) pokazano część rzeczywisią
+* reprezentacji tego sygnału w dziedzinie częstotliwości, która ma stałą wartość 32. Część urojona (niepokazana)
+„ w dziedzinie częstotliwości zawiera same zera. Na rys. c) pokazano amplitudy fal kosinusoidalnych koniecznych do
+| ROR MA: Wartości na rys. c) są wyznaczone na podstawie rys. b) przy
+wzoru

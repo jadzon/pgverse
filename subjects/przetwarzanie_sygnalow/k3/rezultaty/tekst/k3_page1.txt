@@ -1,0 +1,64 @@
+Przedmowa 9
+
+ 
+
+ 
+
+Przedmowa
+Cele książki i sposoby ich realizacji
+
+Świat techniki ulega bardzo gwałtownym zmianom. W ciągu zaledwie 15 lat efektywność
+pracy komputerów osobistych wzrosła prawie tysiąckrotnie i wszystko wskazuje na to, że
+w ciągu następnych 15 lat wzrośnie znowu o czynnik równy tysiąc. Ta wielka efektywność
+komputerów zmienia sposób podejścia do rozwiązywania problemów badawczych i inżynier-
+skich, a najlepszym tego przykładem jest cyfrowe przetwarzanie sygnałów.
+
+We wczesnych latach 80. nauczano techniki DSP na poziomie studiów magisterskich na wy-
+działach elektrycznych i elektroniki. Dziesięć lat później DSP stało się standardową częścią
+programu studiów inżynierskich. Teraz znajomość DSP jest podstawową umiejętnością wy-
+maganą od naukowców i inżynierów w wielu dziedzinach. Niestety, postęp w nauczaniu DSP
+nie nadąża za rozwojem tej techniki. Prawie wszystkie książki o DSP są napisane w trady-
+cyjnym stylu podręczników podstaw elektrotechniki, z dużą ilością trudnych, szczegółowych
+rozważań matematycznych. Technika DSP jest niewiarygodnie silnym narzędziem, lecz bez
+zrozumienia tej techniki nie można jej zastosować.
+
+Tę książkę napisano dla naukowców i inżynierów pracujących w wielu różnych dziedzinach.
+Wymieńmy kilka z nich: fizyka, bioinżynieria, geologia, oceanografia, mechanika, elektro-
+technika i elektronika. Celem książki jest takie przedstawienie praktycznych aspektów DSP,
+aby uniknąć barier, jakie tworzą szczegółowe wywody matematyczne i abstrakcyjne teorie.
+Dlatego trzymano się przy pisaniu tej książki trzech podstawowych zasad.
+
+Po pierwsze, metody DSP są wyjaśnione, a nie tylko udowodnione na podstawie rozważań
+matematycznych. Wprawdzie podano wiele wzorów, ale nie one są głównym sposobem do-
+starczenia Czytelnikom informacji. Nie ma niczego lepszego niż dobrze napisany tekst wyja-
+śniający, poparty dobrymi rysunkami.
+
+Po drugie, liczby zespolone potraktowano jako temat trudniejszy, a więc zagadnienie, które
+można opanować dopiero po zrozumieniu podstawowych zasad. W rozdziałach 1-29 pod-
+stawy techniki DSP są objaśnione przy użyciu algebry, w rzadkich tylko przypadkach z wy-
+korzystaniem rachunku różniczkowego i całkowego. Z materiału zawartego w rozdziałach
+30-33 wynika, jak bardzo zastosowanie liczb zespolonych zwiększa efektywność techniki
+DSP, umożliwiając tworzenie metod nierealizowalnych przy użyciu tylko liczb rzeczywi-
+stych. Wielu Czytelników potraktuje takie podejście do tematu jak herezję! Tradycyjne pod-
+
+ręczniki DSP są pełne teorii liczb zespolonych, często już od pierwszego rozdziału.
+
+Po trzecie, użyto bardzo prostych programów komputerowych. W praktyce większość pro-
+gramów związanych z DSP pisze się w C, Fortranie lub podobnych językach. Jednak uczenie
+się DSP stawia inne wymagania niż stosowanie DSP. Student powinien skoncentrować się
+na algorytmach i metodach, bez rozpraszania uwagi na różne chwyty poszczególnych języ-
+ków. Efektywność i elastyczność nie są ważne; najważniejsza jest prostota. Programy w tej
+książce napisano po to, aby nauczyć DSP w sposób najprostszy, traktując inne problemy jako
+wtórne. Nie przywiązywano wagi do dobrego stylu programowania tam, gdzie można było
+w ten sposób uczynić program bardziej logicznym i klarownym. Na przykład:
+
+* korzystano z uproszczonej wersji języka BASIC
+
+* zamieszczano numery wierszy
+
+* jako strukturę sterującą używano tylko pętli FOR-NEXT
+
+* nie stosowano instrukcji wejścia-wyjścia.
+
+! DSP (Digitał Signal Processing) jest wprawdzie skrótem angielskim, lecz powszechnie stosowanym
+w światowej literaturze technicznej. Dlatego będziemy go używać w tej książce. (przyp. tłum.).

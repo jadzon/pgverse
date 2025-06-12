@@ -1,0 +1,36 @@
+36 3. Podstawy techniki cyfrowej
+
+zmienia się od stanu 0000 do detekowanego stanu (w przykładzie będzie to stan 1101 —
+dziesiętnie 13). Bramka NAND dekoduje stan 13, a jej wyjście steruje wejściem zerującym.
+Powoduje to, że po osiągnięciu stanu 13 następnym stanem będzie stan 0, a nie stan 14.
+Zatem licznik taki jest licznikiem 14-stanowym.
+
+3.2. KODY BINARNE I ARYTMETYKA
+3.2.1. KODY BINARNE
+
+W poprzednim podrozdziale były wymienione niektóre kody dwójkowe, które ułatwiały
+reprezentację sygnałów wejściowych i wyjściowych układów logicznych. W tablicy 3.3
+zestawiono słowa kodowe naturalnego kodu binarnego NKB, kodu Graya, kodu „I zn”
+kodu dwójkowo-dziesiętnego BCD oraz kodu Johnsona odpowiadające cyfrom od 0 do 9.
+
+,
+
+<image/tabele/k3_page46_table1.png>
+
+W ogólnym przypadku minimalna długość k słowa binarnego reprezentującego liczbę
+
+ziesitnwzory/k3_page46_formula1png
+
+Przedstawione w tablicy słowa kodów NKB i Graya mają długość minimalną, tj.
+4 pozycje binarne. Długość słowa kodu „1 z n” jest równa n, tj. liczbie kodowanych słów.
+W tablicy 3.3 wynosi ona 10. Kod Johnsona stosowany do kodowania cyfr dziesiętnych
+jest 5-bitowy. Kod BCD jest powszechnie stosowany w takich systemach, gdzie wygodnie
+jest operować w systemie liczbami dziesiętnymi. Liczba tetrad (czwórek bitów) kodu
+BCD jest równa liczbie pozycji dziesiętnych reprezentowanej liczby. Na przykład dzie-
+siętna liczba 6-pozycyjna (000000—999999) jest kodowana na 24 bitach. Przedstawione
+kody „I zn” i Johnsona są tzw. kodami nadmiarowymi (redundancyjnymi), które charak-
+teryzują się tym, że liczba pozycji binarnych jest większa niż wynika to z wyżej podanej
+zależności. Redundancję można wykorzystać do zwiększania niezawodności operacji
+wykonywanych na tych liczbach. Na przykład stosując kod „I zn” można, w czasie wy-
+konywania operacji, kontrolować liczbę jedynek w każdym słowie. Wykrycie braku jedynki
+albo wykrycie dwóch lub więcej jedynek wskazuje na powstały błąd. Taki sposób kontroli

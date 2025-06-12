@@ -1,0 +1,39 @@
+2.1. Wielowrotniki i sieci 213
+
+ 
+
+Czwórniki te są czwórnikami bezinercyjnymi, które nie są zdolne do gromadzenia energii, a więc:
+
+/k3_page211_formula1.png i
+Oznacza to, że
+<image/wzory/k3_page211_formula2.png>
+skąd wynika, że oba czwórniki są pasywne. Ponieważ także:
+<image/wzory/k3_page211_formula3.png>
+
+zatem czwórniki te są również bezstratne.
+
+Przykład 2.1-35. Źródła niezależne są przykładami dwójników aktywnych. Dla formalnego
+wykazania tego intuicyjnie oczywistego wniosku wystarczy rozważyć np. układ przedstawiony na
+rys. 2.1-30, w którym do zacisków źródła napięciowego został dołączony dowolny opór R.
+
+<image/figury/k3_page211_figure1.png>
+
+Wówczas:
+
+y/k3_page211_formula4.png
+
+jest mocą oddawaną przez źródło, zaś moc pobierana przez źródło:
+
+y/k3_page211_formula5.png (2.1-67)
+
+jest wielkością ujemną. Źródło nie gromadzi energii, a więc zachodzi tożsamość (2.1-64). Dla stanu
+pracy źródła przedstawionego na rys. 2.1-30 otrzymujemy zatem, wobec nierówności (2.1-67):
+
+/k3_page211_formula6.png (2.1-68)
+
+Zgodnie z definicją (2.1-52) wystarcza to do stwierdzenia aktywności źródła napięciowego.
+Analogiczne rozumowanie można przeprowadzić także dla źródła prądowego (dowód pomija-
+
+my). Powyższe wnioski są słuszne zarówno dla źródeł rzeczywistych, jak i dla źródeł idealnych.
+
+Ogólniejszą prawidłowość dotyczącą dowolnego wielowrotnika źródłowego sformułujemy w p. E.

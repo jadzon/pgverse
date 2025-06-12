@@ -1,0 +1,50 @@
+22 Rozdział 1. Funkcje boolowskie
+Z tego wynika, że:
+
+<image/wzory/k2_page113_formula1.png>
+
+a stąd — że dla każdej pary, r, h(r), dokładnie jedna z dwóch liczb Par,(z), Parx(,y(z)
+jest jedynką. o
+
+Wykorzystując funkcje Par,, można zbudować lepszy system zabezpieczania da-
+nych. Na początku Małgosia i Jaś zaopatrują się w ciąq wylosowanych kluczy:
+
+<image/wzory/k2_page113_formula2.png>
+
+Klucze te powinny być trzymane w sekrecie. Jeżeli teraz Małgosia chce przesłać Jasio-
+wi wiadomość z, to bierze kolejny klucz r z ciągu ry, r,... „r, i wysyła z razem z
+podpisem Par,(x). Jaś po odebraniu wiadomości y razem z podpisem Par,(z) (tak
+jak poprzednio zakładamy, że Par,(z) nie jest przekłamywane) porównuje Par,(z) i
+Par,(y).
+
+Jeżeli r = y, to dla każdego r:
+
+<image/wzory/k2_page113_formula3.png>
+
+Jeżeli zaś x 5 y, to z © y £ 0 i dla połowy wektorów r mamy:
+
+<image/wzory/k2_page113_formula4.png>
+
+a więc dla połowy wektorów r mamy:
+
+<image/wzory/k2_page113_formula5.png>
+Tak więc z prawdopodobieństwem jedna druga Jaś wykryje, że r ź y.
+Aby zwiększyć to prawdopodobieństwo można brać kilka kolejnych kluczy r; .....rx.
+
+Wtedy prawdopodobieństwo, że w przypadku, gdy r 4 y, mamy Par,, (z) = Pary, (y),
+dla każdego i = 0,...,k, jest równe2”*.
+
+1.8 Zadania
+
+1. Udowodnij lematy 1.1i 1.2.
+
+2. Udowodnij, że tożsamości lematu 1.1 są tożsamościami w algebrze podzbiorów
+zbioru X.
+
+3. Które z poniższych równości są tożsamościami w algebrze B = 40, 1):
+a) p+qr=q+pr,_ b) (p+q)r=p+qr ©) (r+q)r=r+qr  d) (p+q)r=p(q+r)+qr.
+
+4. Udowodnij, że wszystkie funkcje boolowskie dwóch zmiennych można przedsta-
+wić za pomocą dwóch operatorów, koniunkcji i negacji (lub altematywy i negacji).
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

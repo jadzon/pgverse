@@ -1,0 +1,28 @@
+89
+
+<image/figury/k2_page84_figure1.png>
+
+Rys. 5.14: Inny przykład wnioskowania rozmytego — ustalanie wielkości napiwku (Matlab
+
+Fuzzy Logic Toolbox)
+
+e Wiedza zapisana w systemie ekspertowym będąca modelem wiedzy posiada-
+nej przez człowieka ma najczęściej charakter probabilistyczny, a nie determi-
+nistyczny.
+
+W początkowym okresie rozwoju systemów ekspertowych stosowanie podejścia pro-
+babilistycznego napotykało na poważne trudności wynikające z wielkiej liczby wy-
+maganych obliczeń i stąd opracowano metody przybliżone obliczające na każdym
+etapie wnioskowania liczby mówiące o wiarygodności wyprowadzonych wniosków
+jako pewne funkcje wiarygodności przesłanek. Systemy rozmyte oferowały całkowite
+odejście od metod probabilistycznych. Przełom w stosowaniu metod probabilistycz-
+nych stanowiło wprowadzenie graficznego języka modelowania dla reprezentacji za-
+leżności niepewnych. Reprezentacje takie były znane od lat dwudziestych ale zostały
+niedawno ponownie odkryte i zastosowane.
+
+Sieć bayesowska jest grafem reprezentującym zbiór zależnych od siebie zmiennych
+losowych i wskazujacym strukturę ich zależności.
+
+Definicja 5.12 Sieć baycsowska jest acyklicznym grafem skierowanym, w którym:
+
+e Węzły reprezentują zmienne losowe (wnioski w systemie). Zmienne losowe mogą

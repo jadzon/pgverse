@@ -1,0 +1,37 @@
+Rozdział 1
+
+Struktury danych
+
+1.1 Listy, stosy i kolejki
+
+Lista to uporządkowany ciąg elementów. Przykładami list są wektory lub tablice jednowy-
+miarowe. W wektorach mamy dostęp do dowolnego elementu, poprzez podanie indeksu
+tego elementu.
+
+Przykład 1.1 W języku Pascal przykładem typu tablicy jednowymiarowej jest
+array[1..N)] of integer.
+Jeżeli mamy zmienną tego typu
+a:array[1..N] of integer,
+to tablica a zawiera N elementów
+a[1], a[2], ... „alN].
+W programie możemy odwoływać się do całej tablicy, na przykład w instrukcji przypisania
+a:=b,
+lub”
+
+<image/wzory/k2_page165_formula1.png>
+
+OŻuu ady MADMAŁ 2 M, PFU WAŁY MPM SMM IEyWUJ 90 7 GŁAAKAŁY PY PAK, A 667 GMAMAMWGKE MAMSŁYY M9
+
+mia?
+<image/wzory/k2_page165_formula2.png>
+MiLussu
+c:array[1..N,1..M)] of real
+
+zawiera N - M elementów. Dla każdej pary liczb «, ; spełniającej warunki 1 <+<N,
+1<j <M,elementc[i,j] zawiera liczbę typu real.
+
+Czasami wygodniej posługiwać się listami bez używania indeksów. Przykładami list,
+których można używać bez konieczności odwoływania się do indeksów poszczególnych
+elementów, są kolejki i stosy. ą
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

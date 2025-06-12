@@ -1,0 +1,57 @@
+12
+
+1. Rozległość zastosowań i głębia problematyki DSP
+
+Cyfrowe przetwarzanie sygnałów (DSP) jest jedną z najważniejszych technik, które będą kształ-
+tować naukę i technikę w XXI wieku. Rewolucyjne przemiany zaszły już w rozłegłym obszarze
+zastosowań: w telekomunikacji, obrazowaniu w medycynie, radarach i sonarach, odtwarzaniu
+muzyki z bardzo dobrą wiernością, a także w wykrywaniu ropy naftowej, jeśli wymienić tyl-
+ko kilka. W każdej z tych dziedzin nastąpił głęboki rozwój problematyki DSP, z własnymi
+algorytmami, matematyką i wyspecjalizowanymi metodami. To połączenie rozległości zastoso-
+wań z głębią problematyki powoduje, że nikt nie jest w stanie zapanować nad całą dotychczas
+opracowaną techniką DSP. Edukacja DSP obejmuje dwa zadania: poznanie koncepcji ogólnych
+dotyczących tej dziedziny jako całości i nauczenie się metod specjalistycznych związanych
+z konkretnym obszarem naszego zainteresowania. W tym rozdziale rozpoczynamy naszą po-
+dróż w świat cyfrowego przetwarzania sygnałów od omówienia silnego wpływu, jaki wywarło
+DSP na kilka bardzo różnorodnych dziedzin. Rewolucja się zaczęła.
+
+Korzenie DSP
+
+Cyfrowe przetwarzanie sygnałów wyróżnia się spośród innych dziedzin techniki kompu-
+terowej unikatowym rodzajem używanych danych: sygnałami. W większości przypadków
+te sygnały, jako dane z czujników, pochodzą ze Świata rzeczywistego: z wibracji sejsmicz-
+nych, obrazów wizyjnych, fal dźwiękowych itd. DSP to matematyka, algorytmy i rozwią-
+zania techniczne stosowane do operowania tymi sygnałami po ich przetworzeniu w postać
+cyfrową. DSP służy do realizacji wielu różnych celów, takich jak udoskonalanie obrazów,
+rozpoznawanie i generacja mowy, kompresja danych w celu ich magazynowania i przesyła-
+nia itd. Załóżmy, że do komputera dołączyliśmy przetwornik analogowo-cyfrowy i zebrali-
+śmy pewną porcję danych ze świata rzeczywistego. Wtedy system DSP zapyta: / co dalej?
+Korzenie DSP sięgają lat 60. i 70. ubiegłego wieku, gdy pojawiły się komputery cyfrowe.
+Komputery były wówczas bardzo drogie, a systemy DSP ograniczały się tylko do niewielu
+szczególnie ważnych zastosowań. Pionierskie prace zrealizowano w czterech dziedzinach
+o dużym znaczeniu. Były to: radary i sonary, od których zależało bezpieczeństwo naro-
+dowe; poszukiwania ropy, na których można było zarobić wielkie pieniądze, badania ko-
+smiczne, w których dane są niepowtarzalne i obrazowanie medyczne, mogące ratować życie.
+Rewolucja w dziedzinie komputerów osobistych w latach 80. i 90. spowodowała eksplozję
+zastosowań DSP w nowych dziedzinach. Motywacją rozwoju DSP były już nie tylko potrze-
+by wojskowe i państwowe, ale nagle stały się nią także wymagania rynku. Każdy, kto sądził,
+że może zarobić na tej szybko rozwijającej się dziedzinie, od razu stawał się dostawcą syste-
+mów DSP. Technika DSP dotarła do szerokich kręgów społeczeństwa w takich urządzeniach,
+jak telefony komórkowe, odtwarzacze płyt kompaktowych i elektroniczna poczta głosowa.
+Niektóre z tych różnorodnych zastosowań zestawiono na rys. 1.1.
+
+Rewolucja techniczna postępowała z góry do dołu. We wczesnych latach 80. DSP nauczano
+na poziomie studiów magisterskich na wydziałach elektrycznych i elektroniki. Dziesięć lat
+później DSP stało się standardową częścią programu studiów inżynierskich. Teraz znajomość
+techniki DSP jest podstawową umiejętnością wymaganą od inżynierów i naukowców w wie-
+lu dziedzinach. Szybki postęp DSP można porównać z poprzednią rewolucją techniczną —
+w elektronice. W dziedzinie elektroniki niemal wszyscy specjaliści mają podstawową wiedzę
+z zakresu projektowania układów. Bez tych wiadomości byliby zagubieni w świecie techniki.
+Taka sama przyszłość czeka DSP.
+
+Dzieje rozwoju DSP to nie tyłko ciekawostka, mają one znaczny wpływ na wasze możliwości
+nauczenia się i stosowania DSP. Załóżmy, że napotykacie problemy z zakresu DSP i szukacie
+potrzebnych rozwiązań w książkach i innych publikacjach. Na ogół znajdziecie tam całe stronice
+pełne wzorów, nieznanych symboli matematycznych i niejasnej terminologii. Prawdziwy kosz-
+mar! Większość literatury dotyczącej DSP wprawia w zakłopotanie nawet czytelników mających
+już pewne doświadczenie w tej dziedzinie. Nie są to, oczywiście, publikacje złe, lecz po prostu

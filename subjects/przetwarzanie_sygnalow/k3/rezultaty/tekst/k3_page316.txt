@@ -1,0 +1,55 @@
+22. Przetwarzanie sygnałów fonicznych
+
+Zależność jakości dźwięku od przepływności bitowej
+
+Przy projektowaniu cyfrowego systemu audio nasuwają się dwa pytania: 1) Jak do-
+bra powinna być jakość dźwięku? oraz 2) jaka jest dopuszczalna bitowa przepływność
+danych? Odpowiedź na te pytania mieści się zazwyczaj w jednej z trzech kategorii.
+Pierwsza, muzyka o wysokiej wierności odtwarzania, gdzie jakość dźwięku ma pierw-
+szorzędne znaczenie i prawie każda przepływność danych jest akceptowalna. Druga ka-
+tegoria to łączność telefoniczna, wymagająca naturalnego brzmienia mowy oraz małej
+przepływności w celu ograniczenia kosztów sytemu. Do trzeciej kategorii należy mowa
+poddana kompresji, gdzie zredukowanie bitowej przepływności danych jest bardzo
+ważne, może zaś być dopuszczalna pewna nienaturalność brzmienia mowy, ale przy za-
+chowaniu jej zrozumiałości. Obejmuje to łączność wojskową, telefonię komórkową oraz
+sygnał mowy przechowywany w formie cyfrowej do wykorzystania w poczcie głosowej
+i multimediach.
+
+W tablicy 22.2 pokazano, jak w trzech wymienionych kategoriach uzyskuje się kompromis
+doboru parametrów — jakości dźwięku i bitowej przepływności danych. W systemach mu-
+zycznych o wysokiej wierności odtwarzania próbkowanie musi być odpowiednio szybkie
+(z częstotliwością 44,1 kHz) i kwantowanie próbek dokładne (rozdzielczość 16-bitowa), aby
+można było wychwycić wszystkie dźwięki słyszalne dla człowieka. Taką wspaniałą jakość
+dźwięku uzyskuje się za cenę dużej przepływności bitowej 44,1 kHz x 16 bitów = 706 kbit/s
+(dla 2 kanałów 1411,2 kbit/s — przyp. tłum.).
+
+Sygnał muzyczny wymaga pasma 20 kHz, podczas gdy sygnał mowy tylko 3,2 kHz. Chociaż
+pasmo częstotliwości ograniczono do zaledwie 16% (3,2 kHz w stosunku do 20 kHz), to sy-
+gnał nadal zawiera 80% informacji zawartej w sygnale oryginalnym (8 z 10 oktaw). Typowa
+częstotliwość próbkowania w systemach telekomunikacyjnych wynosi 8 kHz, co wystarcza
+do naturalnego brzmienia mowy, lecz znacznie pogarsza jakość muzyki. Na pewno te róż-
+nice w jakości muzyki nie są wam obce: stacje radiowe FM (z modulacją częstotliwości)
+nadają z pasmem sygnału fonicznego prawie 20 kHz, a stacje AM (z modulacją amplitudy)
+mają to pasmo ograniczone do ok. 3,2 kHz. Na stacjach AM głos brzmi dobrze, lecz jakość
+muzyki nie jest zadowalająca.
+
+W systemach przekazujących tylko sygnał mowy ogranicza się też dokładność z 16 do
+12 bitów na próbkę, co powoduje mało zauważalną zmianę w jakości dźwięku. Przy za-
+stosowaniu kwantyzacji nierównomiernej można liczbę bitów zredukować nawet do 8 na
+próbkę. Jest to szeroko rozpowszechniona technika zwana kompansją (companding),
+czyli technika kompresji połączonej z ekspansją. Omówimy ją w dalszej części tego roz-
+działu. Częstotliwość próbkowania 8 kHz i rozdzielczość przetwornika a/c 8 bitów/prób-
+kę dają w rezultacie bitową przepływność danych 64 kbis. Naturalne brzmienie mowy
+można jednak uzyskać przy znacząco mniejszej przepływności. Warto zwrócić uwagę,
+że mowa wymaga mniej niż 10% bitowej przepływności danych koniecznej dla muzyki
+o wysokiej wierności.
+
+Bitowa przepływność danych 64 kbit/s jest wynikiem bezpośredniego zastosowania teorii
+próbkowania i kwantyzacji do sygnałów fonicznych. W metodach dalszego zmniejszania
+przepływności korzysta się z kompresji strumienia danych przez usuwanie redundancji z sy-
+gnału mowy. Kompresja danych będzie przedmiotem rozważań w rozdziale 27. Jednym
+z najbardziej skutecznych sposobów kompresji sygnału fonicznego jest liniowe kodowa-
+nie predykcyjne (LPC — Linear Predictive Code). Ta metoda ma kilka odmian i podgrup.
+Zależnie od wymaganej jakości mowy można metodą LPC zredukować przepływność da-
+nych do zaledwie 2-6 kbit/s. Do kompresji LPC powrócimy jeszcze w tym rozdziale przy
+omawianiu syntezy mowy.

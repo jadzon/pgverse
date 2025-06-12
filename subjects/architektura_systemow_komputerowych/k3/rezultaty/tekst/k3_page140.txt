@@ -1,0 +1,44 @@
+130 6. Urządzenia zewnętrzne
+
+6.5. PROTOKOŁY TRANSMISJI
+6.5.1. RODZAJE PROTOKOŁÓW
+
+Transmisje danych pomiędzy dwoma stacjami składają się zwykle z długiego ciągu znaków
+(bajtów). W ogólnym przypadku przesyłane ciągi informacji mogą mieć różną długość.
+Celem umożliwienia kontroli poprawności transmisji wprowadza się pewne mechanizmy
+ułatwiające opis takiego ciągu. Zasady transmisji (sterowanie, synchronizacja, sprawdzanie
+poprawności itp.) nazywane są protokołem, a sam ciąg informacji wraz z opisem komu-
+nikatem (ang. message). Na początku i na końcu transmisji przesyłana jest specjalna
+informacja zwana znakami sterującymi (ang. control characters). Ich znaczenie zależy od
+rodzaju transmisji. Wyróżnia się dwa rodzaje transmisji: transmisję bitową (ang. bit-
+-oriented protocols) oraz transmisję znakową (ang. character oriented protocols). Kolejno
+przedstawiono oba rodzaje transmisji.
+
+6.5.2. TRANSMISJA BITOWA
+
+Transmisja bitowa polega na tym, że w komunikacie nie wyróżnia się poszczególnych
+znaków (bajtów), a tylko w całym ciągu informacji, zwanym ramką (ang. frame) wydziela
+się odpowiednie pola. Na rysunku 6.11 pokazano ramkę protokołu HDLC (ang. high-
+
+<image/tabele/k3_page140_table1.png>
+
+-level data link control) i przyjętego jako standard przez organizację normalizacyjną ISO
+(ang. /nternational Standard Organization). Firma IBM wprowadziła podobny standard
+zwany SDLC (ang. synchronous data link control). Ramka protokołu HDLC jest podzielona
+na 6 pól. Pierwsze trzy pola są 8-bitowe, a znaczenie ich jest następujące:
+— pole znacznika synchronizacji (ang. flag) zawierające bajt 01111110 służący syn-
+chronizacji generatora odbiornika,
+— pole adresowe wskazujące adres odbiornika, dla którego jest przeznaczony dany
+komunikat,
+— pole słowa sterującego, które określa funkcję i przeznaczenie ramki.
+
+Czwartym polem jest pole informacyjne, którego długość nie jest niczym ograniczona.
+Zawartość tego pola jest odczytywana przez odbiornik. Następnym, piątym polem jest
+dwubajtowe pole zawierające znak CRC, które służy odbiornikowi dla wykrycia i ewen-
+tualnego poprawienia błędów transmisji. Całą ramkę zamyka szóste pole, w którym
+znajduje się ponownie bajt znacznika synchronizacji (identyczny jak pierwszy bajt ramki).
+Jeśli dwie ramki są transmitowane bezpośrednio jedna za drugą, to końcowy znacznik
+synchronizacji może pełnić jednocześnie rolę pierwszego znacznika synchronizacji
+następnej ramki. W czasie przerwy pomiędzy ramkami mogą być przesyłane znaczniki
+synchronizacji lub ciąg jedynek. Jeśli liczba jedynek przekroczy 15, to stan magistrali
+może zostać potraktowany jako nieaktywny.

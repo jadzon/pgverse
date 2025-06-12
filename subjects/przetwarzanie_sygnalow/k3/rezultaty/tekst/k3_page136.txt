@@ -1,0 +1,59 @@
+152
+
+8. Dyskretne przekształcenie Fouriera
+
+Największe częstotliwości w funkcjach bazowych przedstawiono na rysunkach 8.5g, h. Są to
+cypl ] i Sypl ], czyli w tym przykładzie cygl ] i sycl |. Dyskretna fala kosinusoidalna zmienia
+swoją wartość między 1 i —1, co można interpretować jako próbkowanie ciągłej sinusoidy
+w jej wartościach szczytowych. Sytuacja odwrotna jest z falą sinusoidalną, która zawiera
+same zera, co wynika z próbkowania przy przejściach przez zero. To powoduje, że wartość
+Im X[N/2] jest taka sama jak Im X[0], więc zawsze równa zeru i nie ma wpływu na syntezę
+sygnału w dziedzinie czasu.
+
+A oto zagadka: jeśli mamy N próbek wchodzących do DFT i N + 2 wychodzących, to skąd
+się bierze ta dodatkowa informacja? Odpowiedź: dwie z próbek wyjściowych nie zawierają
+żadnej informacji, dzięki czemu pozostałe N próbek jest całkowicie niezależnych. Jak można
+było odgadnąć, punktami, które nie niosą żadnej informacji, są Im X[0] i Im X[N/2), a więc
+próbki mające zawsze wartość zero.
+
+Synteza, obliczanie odwrotnej transformaty DFT
+
+Zbierając razem wszystko, co dotychczas powiedziano, można napisać równanie syntezy:
+
+<image/wzory/k3_page136_formula1.png>
+
+Wzór 8.2. Równanie syntezy. W tej zależności x[i] jest poddawanym syntezie sygnałem, którego indeks
+
+i zmienia się od 0 do N- 1. Amplitudy fal kosinusoidalnej i sinusoidalnej są przechowywane w Re X [kj
+
+i lm X [k], przy czym k zmienia się od 0 do N/2. We wzorze 8.3 jest dokonywana normalizacja w cełu
+zamiany tego wzoru w odwrotne DFT
+
+Wyraźmy to samo słownie: każdy sygnał N-punktowy x|i] może być utworzony przez zsumo-
+wanie N/2 + 1 fal kosinusoidalnych i N/2 + 1 fal sinusoidalnych. Amplitudy fal sinusoidal-
+nych i kosinusoidlanych są przechowywane w matrycach, odpowiednio, /m X [x] i ReX[k].
+W równaniu syntezy te amplitudy są mnożone przez funkcje bazowe, aby utworzyć zestaw
+wyskalowanych fal sinusoidalnych i kosinusoidałnych. Zsumowanie wyskalowanych fal si-
+nusoidalnych i kosinusoidlanych tworzy sygnał w dziedzinie czasu xli].
+
+We wzorze 8.2 matryce są nazwane Im X [k] i ReX [k], a nie Im X[k] i Re X[K]. Przyczyną jest
+fakt, że amplitudy wymagane do syntezy (oznaczone w tych rozważaniach Im X[k]i ReX [k])
+są nieco inne niż w dziedzinie częstotliwości sygnału (oznaczane jako Im X[k] i Re X[k]). Chodzi
+tu o czynnik skalujący, o którym wcześniej mówiliśmy. Chociaż ta konwersja jest tylko prostą
+normalizacją, jest jednak przyczyną częstych pomyłek w programach komputerowych. Trzeba
+na to zwracać uwagę! W formie równań ta konwersja ma postać:
+
+Re [ej - EE!
+NI12
+m X[kj=- PL]
+Ni2
+oprócz dwóch przypadków szczególnych
+
+<image/wzory/k3_page136_formula2.png>
+<image/wzory/k3_page136_formula3.png>
+
+Wzór 8.3. Konwersja amplitudami sinusold i wartościami w dziedzinie częstotliwości. W tych
+równaniach Re X [k] i lm [k] przechowują amplitudy tal kosinusoidalnych i sinusoidalnych
+
+do syntezy, podczas gdy Im X[k] i Re X[K] — części rzeczywistą i urojoną w dziedzinie częstotliwości. Jak
+zwykle, N jest liczbą punktów w sygnale w dziedzinie czasu, k jest indeksem zmieniającym się od 0 do N/2

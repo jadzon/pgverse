@@ -1,0 +1,25 @@
+A.3. Układy sekwencyjne 185
+
+<image/tabele/k3_page195_table1.png>
+
+Automaty synchroniczne są budowane z dwóch rodzajów elementów: z bramek
+i z przerzutników. Stosowane są 4 typy przerzutników:
+
+1) przerzutnik RS,
+
+2) przerzutniki JK,
+
+3) przerzutniki D,
+
+4) przerzutniki T.
+
+Przerzutnik typu JK działa podobnie jak przerzutnik RS, z tą różnicą, że gdy J=K = 1, to
+sygnał zegarowy zmienia stan przerzutnika. W innych przypadkach wejście J działa jak
+wejście S, a wejście K jak wejście R. Przerzutnik typu D zapamiętuje stan wejścia D
+(ang. data), tj. na jego wyjściu pojawia się taki stan, jaki był na wejściu D w chwili
+impulsu zegarowego. Przerzutnik typu T (ang. trigger) zmienia swój stan w czasie impulsu
+zegarowego, jeżeli T=| i pozostaje w stanie pierwotnym, gdy T=0.
+
+Na rysunku D.13 przedstawiono oznaczenia wszystkich 4 przerzutników, ich tablice
+przejść i wyjść oraz tablice wzbudzeń wymuszających odpowiednie przejścia ze stanu do
+stanu.

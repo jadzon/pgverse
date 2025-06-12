@@ -1,0 +1,52 @@
+18
+
+1. Pojęcia podstawowe — elementy
+
+gdy jest on stały w czasie, jak i wówczas, gdy jest on zmienny w czasie, tzn. gdy
+D = ©P(t), (litera p jest zwyczajowo używana w teorii obwodów na oznaczenie
+kąta). Podobnie, dużymi literami będą zawsze oznaczane wielkości charaktery-
+zujące pole elektromagnetyczne: natężenie pola elektrycznego E, natężenie pola
+magnetycznego H, indukcja elektryczna D, indukcja magnetyczna B.
+
+Uwaga. Zamiast mówić i pisać: „natężenie prądu i” mówimy i piszemy często: „prąd o
+natężeniu i”, a także — w skrócie — „prąd i”. Wyrażenie skrótowe: „prąd i”, mimo iż nie w pełni
+precyzyjne, będzie w dalszym tekście powszechnie używane z uwagi na jego prostotę.
+
+B. Sygnały. Funkcje opisujące zmienność w czasie wielkości fizycznych
+będziemy nazywać przebiegami czasowymi tych wielkości lub sygnałami. Może-
+my zatem powiedzieć, że napięcie określone wzorem (1.1-1) ma przebieg
+sinusoidalny lub że wzór (1.1-1) określa sygnał sinusoidalny”). Nazwy „sygnał”
+używamy zwłaszcza wtedy, kiedy chodzi o podkreślenie rodzaju zmienności
+w czasie, a nie rodzaju wielkości fizycznej. Mówimy np: sygnały stałe, sygnały
+okresowo zmienne, sygnały o skończonej energii itp., nie precyzując najczęściej
+czy chodzi tu o sygnały napięć, prądów, sił elektromotorycznych itp.?
+
+C. Dziedzina sygnałów. Sygnały związane z obwodem elektrycznym są
+funkcjami czasu t określonymi w pewnej dziedzinie. Dziedziną sygnałów
+rozpatrywanych w teorii obwodów jest albo:
+
+— przedział 0 £ t < + oo lub 0 < £ < + w (półoś liczbowa), co odpowiada
+przypadkowi, gdy opisywane zjawiska rozpoczynają się w chwili początkowej
+t = 0, albo:
+
+— przedział —0o <t < + w (cała oś liczbowa) co zwykle odpowiada
+przypadkowi, gdy opisywane zjawiska trwają dostatecznie długo od chwili
+początkowej tak, że można je uważać za nie mające swojego początku w czasie.
+
+W niektórych zagadnieniach sprecyzowanie dziedziny rozpatrywanych sy-
+gnałów jest rzeczą konieczną. W innych problemach nie jest to istotne i wówczas
+nie będziemy wyraźnie podawać dziedziny”).
+
+D. Wymiar i jednostki. Każda wielkość fizyczna ma swój wymiar i jest
+wyrażana (mierzona) w odpowiednich jednostkach. Zgodnie z obowiązującymi
+normami, układem jednostek stosowanych w niniejszej książce jest układ SI.
+Podawanie jednostek jest konieczne przy równościach liczbowych oraz przy
+wymienianiu konkretnych wartości danej wielkości fizycznej (tzw. równania
+
+1 Nazwy „sinusoidalny” używamy w odniesieniu do sygnału (1.1-1), niezależnie od tego czy
+w zapisie wzoru (1.1-1) posługujemy się funkcją sinus, czy cosinus, tzn. niezależnie od wartości fazy
+początkowej o.
+
+2) Zwracamy uwagę, iż w teorii sygnałów pojęcie sygnału jest rozumiane w szerszym znaczeniu.
+h e Najczęściej zakładamy wtedy milcząco, że dziedziną rozpatrywanych sygnałów jest cała oś
+iczbowa.

@@ -1,0 +1,46 @@
+c4_page180_formula1.png
+
+Programowanie sterowników serii 90-30 obejmuje dwa etapy — konfigurowanie
+sterownika oraz jego programowanie. Oba etapy mogą być wykonane przy po-
+mocy pakietu oprogramowania narzędziowego LOGICMASTER 90, który
+uruchamia się na komputerze typu PC pracującym jako programator, połączonym
+ze sterownikiem łączem szeregowym poprzez konwerter RS232 / RS422.
+
+Konfigurowanie ma na celu, między innymi, poinformowanie sterownika o mo-
+dułach jakie zostały zainstalowane w kolejnych gniazdach (słots) płyty
+łączeniowej (rack) i jakie adresy logiczne zostały przypisane fizycznym wej-
+ściom i wyjściom. Ponieważ etap ten jest Ściśle związany z konkretnym
+zastosowaniem, jego omówienie zostanie tu pominięte. W rozdziale 2, w którym
+omówiono sprzęt sterowników PLC na przykładzie sterowników serii 90-30 fir-
+my GE Fanuc, można znaleźć więcej informacji na temat konfiguracji jednostki
+centralnej CPU.
+
+Kolejnym etapem jest napisanie programu sterowania, wprowadzenie go do
+pamięci sterownika, uruchomienie i testowanie. W trakcie tworzenia programu w
+języku schematów drabinkowych dla sterowników serii 90-30 należy pamiętać
+o następujących zasadach:
+
+1. Program użytkownika wykonywany jest zawsze według kolejności szczebli
+pojawiających się w schemacie drabinkowym, poczynając od pierwszego
+szczebla (Start of Program Logic) aż do szczebla zawierającego instrukcję
+END kończącą program. Zakłada się przy tym, że prąd przepływa od lewej
+do prawej strony szczebla. Szczebel musi posiadać odpowiedni format
+iskładnię, a jeżeli występują w nim połączenia równoległe, to najpierw
+sprawdzana jest linia położona najniżej.
+
+2. Każdy szczebel może posiadać maksymalnie osiem linii równoległych, na-
+tomiast w każdej linii może znajdować się do dziesięciu elementów
+połączonych szeregowo. Jeżeli występuje konieczność użycia większej licz-
+by elementów, to można przedłużyć szczebel do następnej linii za pomocą
+specjalnych przekaźników kontynuacji.
+
+3. Jeżeli szczebel zawiera cewkę załączaną zboczem sygnału sterującego, to
+powinna być to jedyna cewka w tym szczeblu.
+
+4. Szczebel musi zawierać przynajmniej jeden styk przed cewką, instrukcją
+skoku lub inną instrukcją sterującą, funkcją, blokiem funkcyjnym lub linią
+pionową.
+
+   
+
+180 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

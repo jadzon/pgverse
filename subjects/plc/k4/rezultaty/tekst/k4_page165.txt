@@ -1,0 +1,48 @@
+e Typ B- jako dwa identyczne dwukierunkowe liczniki 32-bitowe, które mogą
+
+zostać skonfigurowane jako:
+
+«  |icznik sumujący lub odejmujący,
+
+«  |icznik sumujący albo odejmujący w zależności od impulsu Kierunek,
+
+s |icznik sumujący albo odejmujący w zależności od kierunku obrotu
+A Quad B.
+
+Każdy licznik w tej konfiguracji ma dwa niezależne wejścia strobujące oraz reje-
+
+stry strobu, dwa wejścia zliczające (Count Pulse: A input , B input), wejście
+
+ustawiające (Preload) oraz wejście wstrzymujące (Disable). Każdy licznik po-
+siada także dwa wyjścia z ustawianym programowo warunkiem zadziałania
+
+(ON/OFF Preset).
+
+e Typ C - jako jeden 32-bitowy licznik z czterema wyjściami posiadającymi
+programowane warunki zadziałania (ON/OFF Preset), trzema wejściami
+strobu (Szrobe) i dwoma wejściami ustawiającymi (Preload) oraz wejściem
+wstrzymującym (Disable). Cztery wejścia zliczające mogą być skonfiguro-
+wane tak samo jak dla konfiguracji typu B. Poza tym moduł tak
+skonfigurowany posiada rejestr pozycji bazowej (Home Position). Typ C jest
+dedykowany dla zastosowań wymagających sterowania pracą napędów ma-
+szyn, które muszą korzystać z dokładnie wyznaczanego punktu bazowego.
+Zbliżanie się do tego punktu zgłasza z wyprzedzeniem impuls z wyłącznika
+bazowego (Home Limit), ale ostatecznie ustala go impuls referencyjny
+enkodera (Marker), który generowany jest tylko raz na jego pełny obrót.
+Impuls ten umieszcza w rejestrze licznika HSC wartość z rejestru startowego
+(Home Position), po czym ustawia się flaga (Home). Dzięki temu możliwe
+jest ustawienie współrzędnych punktu referencyjnego z rozdzielczością rów-
+ną rozdzielczości enkodera.
+
+<image/figury/k4_page165_figure1.png>
+
+Rys. 3.42 Wykres ustawiania wyjść z wykorzystaniem rejestrów PRESET ONOFF
+
+Wyjścia z modułu mogą pełnić funkcję sterującą lub sygnalizacyjną. Są one pro-
+gramowo załączane i wyłączane, gdy zliczona wartość w rejestrze licznika
+znajdują się między wartościami granicznymi ustawianymi w rejestrach PRESET
+ON/OFFĘ Rys. 3.42).
+
+   
+
+3.8 Moduł szybkiego licznika HSC 165

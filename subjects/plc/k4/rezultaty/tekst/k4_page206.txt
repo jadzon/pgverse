@@ -1,0 +1,32 @@
+niętymi bitami (adres wyjścia może być taki sam jak argumentu funkcji) oraz
+wartość ostatniego wysuwanego bitu (wyjście B2).
+
+Na Wyd. 4.22 pokazano przykład użycia funkcji SHR do podzielenia przez 2
+(przesunięcia o / bit w prawo) wartości wejścia analogowego %A// i wpisania
+wyniku do zmiennej o nazwie WYNIK. Reszta z dzielenia znajduje się w zmien-
+nej wewnętrznej %M/. Wykorzystana została zmienna systemowa ALW_OFF do
+wprowadzenia bitu zerowego na pozycję najbardziej znaczącą. Działanie to wy-
+konane będzie w każdym cyklu sterownika, w którym wejście %// będzie
+w stanie ON.
+
+<image/figury/k4_page206_figure1.png>
+
+Wyd. 4.22 Przykład zastosowania funkcji SHR
+
+Funkcje rotacji (przesuwania cyklicznego) różnią się od funkcji przesuwania
+tym, że przy rotacji w lewo kolejne bity z pozycji najbardziej znaczącej w łańcu-
+chu przesuwanych bitów przechodzą na pozycję najmniej znaczącą, a przy rotacji
+w prawo bity najmniej znaczące przechodzą na pozycje najbardziej znaczące.
+Na wyjściu ok funkcji pojawia się prąd, jeżeli liczba przesuwanych bitów jest nie
+większa niż długość ciągu bitów (tzn. wartość na wejściu N jest nie większa niż
+wartość LEN*]6).
+
+<image/figury/k4_page206_figure2.png>
+
+ 
+
+Wyd. 4.23 Przykład zastosowania funkcji ROL
+
+ 
+
+206 _ Rozdziat: 4. Język LD dla sterowników GE Fanuc 90-30

@@ -1,0 +1,15 @@
+<image/tabele/k4_page255_table1.png>
+
+Wyd. 4.12 Przykład użycia czasomierza TOF
+
+Przekaźnikiem czasowym z pamięcią jest RTO. Jest to czasomierz załączający
+z opóźnieniem po załączeniu. Odcinek czasu jest zliczany od momentu, gdy zo-
+stają spełnione warunki obwodu logicznego.
+
+<image/figury/k4_page255_figure1.png>
+
+Wyd. 4.13 Przykład użycia i zerowanie czasomierza RTO
+
+ 
+
+5.5 Czasomierze i liczniki 255

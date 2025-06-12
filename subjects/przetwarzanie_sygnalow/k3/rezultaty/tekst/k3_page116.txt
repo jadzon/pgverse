@@ -1,0 +1,44 @@
+Typowe odpowiedzi impulsowe
+
+ 
+
+Jak wynika z przykładów podanych na rys. 7.6, odpowiedź impulsowa systemu przyczyno-
+wego musi mieć wartości zerowe we wszystkich próbkach o numerach ujemnych. Pomyślmy
+o tym w aspekcie splotu rozważanego od strony wejścia. Impuls w sygnale wejściowym,
+w próbce numer n musi, aby sygnał był przyczynowy, wpływać w sygnale wyjściowym,
+tylko na próbki o numerach n lub większych. Na ogół określenia przyczynowy używa się
+do każdego sygnału, w którym wszystkie próbki o numerach ujemnych mają wartość zero,
+niezależnie pod tego, czy jest on odpowiedzią impulsową, czy nie.
+
+Faza zerowa liniowa, liniowa i nieliniowa
+
+Mówimy o sygnale, że jest zerofazowy, jeśli charakteryzuje się symetrią lewo-prawostronną
+wokół próbki o numerze zero. Przykład takiego sygnału przedstawiono na rys. 7.7 a). Sygnał
+jest liniowofazowy, jeśli ma symetrię lewo-prawostronną, lecz wokół jakiegoś punktu różne-
+go od zera (rys. 7.7 b). Z tego wynika, że każdy sygnał liniowofazowy można zamienić na
+zerofazowy, po prostu przesuwając go w lewo lub w prawo. Wreszcie, mówimy o sygnale, że
+jest nieliniowofazowy, jeśli nie ma symetrii lewo-prawostronnej (rys. 7.7 c).
+
+Może się wydawać, że wymienione nazwy nie mają nic wspólnego z ich definicjami. Bo cóż
+może mieć wspólnego faza z symetrią” Odpowiedzi na to pytanie należy szukać w widmie
+częstotliwościowym; w dalszych rozdziałach ta kwestia będzie omówiona bardziej szczegó-
+łowo. Mówiąc w skrócie, widmo częstotliwościowe każdego sygnału składa się z dwóch czę-
+ści - widm modułu i fazy. Widmo częstotliwościowe sygnału, które jest symetryczne wokół
+
+<image/figury/k3_page116_figure1figury/k3_page116_figure2.png>
+
+   
+
+  
+
+08. poem
+odb =
+j UZ i |
+
+am ama
+
+     
+
+po prostu
+lewo-prawostronnej są Pa p aaa ydy PO CI PE
+To są dwa zupełnie różne pojęcia

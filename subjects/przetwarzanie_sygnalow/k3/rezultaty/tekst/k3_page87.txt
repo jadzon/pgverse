@@ -1,0 +1,39 @@
+100
+
+5. Systemy liniowe
+
+ 
+
+<image/figury/k3_page87_figure2.png>
+
+<image/wzory/k3_page87_formula1.png>
+
+O ZO LL Pi zał
+
+Rys. 5.8. Każdy system o wielokrotnych wejściach i/lub wyjściach jest liniowy, jeśli składa się z linio-
+wych podsystemów i sumowań sygnałów
+
+gnał wejściowy da w rezultacie inną kombinację sygnałów na wielokrotnych wyjściach.
+Kończąc nasz eksperyment, umieśćmy jednocześnie oba sygnały odpowiednio na dwóch
+wejściach. Sygnały pojawiające się na wyjściach będą superpozycją (sumą) sygnałów wyj-
+ściowych wytwarzanych w sytuacjach, gdy sygnały wejściowe były dołączane oddzielnie.
+Często błędnie rozumiane jest stosowanie mnożenia w systemach liniowych. Przyczyną
+jest fakt, że mnożenie może być zarówno liniowe, jak i nieliniowe, zależnie od właści-
+wości mnożonych sygnałów. Na rys. 5.9 przedstawiono dwa przypadki. System mnożący
+sygnał wejściowy przez pewną stałą jest liniowy. Taki system jest wzmacniaczem albo
+tłumikiem (dzielnikiem), zależnie od tego, czy stała jest większa, czy mniejsza od jed-
+ności. Natomiast mnożenie sygnału przez drugi sygnał jest nieliniowe. Wyobraźmy so-
+bie mnożenie sinusoidy przez drugą sinusoidę o innej częstotliwości, wynikowy przebieg
+z pewnością nie jest sinusoidą.
+
+Inna często błędnie rozumiana kwestia dotyczy sygnałów pasożytniczych występujących
+w układach elektronicznych, np. napięć niezrównoważenia, szumów cieplnych itd. Czy do-
+dawanie się takich obcych sygnałów do sygnału użytecznego jest procesem liniowym, czy
+nieliniowym? Odpowiedź zależy od miejsca pochodzenia tych sygnałów. Jeśli traktuje się
+je jako pochodzące z wnętrza systemu, to proces jest nieliniowy, gdyż sinusoidalny sygnał
+wejściowy nie wytwarza idealnie sinusoidalnego sygnału wyjściowego. Można jednak po-
+traktować obcy sygnał jako wchodzący z zewnątrz systemu do oddzielnego wejścia systemu
+wielowejściowego. Wtedy proces staje się liniowy, ponieważ w systemie jest wymagane
+tylko dodawanie.
+
+<image/figury/k3_page87_figure1.png>

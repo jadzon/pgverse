@@ -1,0 +1,37 @@
+Jak dotąd nie widać większych różnic między obu porównywanymi filtrami; oba pracują
+zadowałająco, gdy stawiane wymagania nie są wysokie. Prawdziwa walka się zaczyna, gdy
+przechodzimy do dwóch krytycznych cech: maksymalne możliwe parametry i szybkość. Fikr
+okienkowany funkcją sinc jest potężny, podczas gdy filtr Czebyszewa jest szybki i zwinny.
+Przypuśćmy, że mamy rzeczywiście trudny problem rozdzielania częstotliwości, np. chcemy
+wydzielić 100 miliwoltowy sygnał o częstotliwości 61 Hz przenoszony po linii energetycznej
+120 V, 60 Hz””. Na rys. 21.4 porównano oba filtry w sytuacji, gdy jest wymagane maksymal-
+„ne wykorzystanie ich właściwości. Filtr rekursywny jest 6-biegunowym filtrem Czebyszewa
+o zafałowaniach 0,5%. Jest to maksymalna liczba biegunów, jaką można zastosować przy
+częstotliwości odcięcia 0,05 i przy pojedynczej dokładności. W filtrze okienkowanym funk-
+cją sinc zastosowano 1001-punktową odpowiedź impulsową, utworzoną przez splecenie
+501-punktowej odpowiedzi impulsowej z samą sobą. Jak wykazano w rozdziale 16, taka
+operacja daje zwiększenie tłumienia w paśmie zaporowym.
+
+Jak więc wypada porównanie tych dwóch filtrów w sytuacji, gdy jest wymagane maksy-
+malne działanie? Filtr okienkowany sinc pod tym względem wręcz miażdży Czebyszewa!
+Nawet gdyby udoskonalić filtry rekursywne (więcej biegunów, implementacja wielostopnio-
+wa, podwójna dokładność itd.), to i tak nie dorównają one w działaniu filtrom SOI. To robi
+wrażenie, zwłaszcza jeśli uwzględnić, że filtry okienkowane funkcją sinc bardzo niedawno
+wkroczyły do walki. Filtry rekursywne mają bardzo ostre ograniczenia pod względem dzia-
+łania przy maksymalnych możliwych parametrach. Natomiast działanie filtrów okienkowa-
+nych funkcją sinc można „wyśrubować” do niewiarygodnego poziomu. Jest to oczywiście
+możliwe tylko pod warunkiem, że zechce się odpowiednio długo czekać na wynik. I tak
+dochodzimy do następnej krytycznej cechy — szybkości działania.
+
+Porównywanie tych dwóch filtrów pod względem szybkości to jak porównanie wyścigowego
+Ferrari z gokartem. Na rys. 21.5 pokazano, o ile dłuższy jest czas wykonania w filtrze okien-
+kowanym funkcją sine niż w 6-biegunowym filtrze rekursywnym. Ponieważ filtr rekursywny
+
+0 lub 0,5. Na koniec ważny wniosek. Należy się spodziewać, że filtry SOI są o rząd wielkości
+wolniejsze niż porównywalne filtry NOI (gokart: 25 km/godz., ferrari: 250 km/godz).
+
+<image/figury/k3_page307_figure1.png>
+
+=
+
+17.120 V, 60 Hz — napięcie skuteczne i częstotliwość w sieci energetycznej w USA (przyp. tłum.).

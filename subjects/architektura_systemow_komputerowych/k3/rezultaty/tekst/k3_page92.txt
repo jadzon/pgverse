@@ -1,0 +1,50 @@
+82 4. Procesory
+
+— COC Q))NNNNNN a
+
+(ang. indirect mode), który polega na tym, że w rozkazie musi być adres komórki pamięci,
+w której przechowywany jest właściwy adres argumentu (rys. 4.12e). Ten tryb adresowania
+jest stosowany wówczas, gdy programista odwołuje się do argumentów umieszczonych
+w stałym miejscu pamięci.
+
+Przedstawione tryby adresowania nazywane są jednoskładnikowymi, gdyż adres ope-
+randu był wyznaczany na podstawie jednego składnika. W nowoczesnych komputerach do
+adresowania argumentów przeznacza się więcej niż jeden składnik. Pozwala to na zwięk-
+szenie efektywności programowania, gdyż umożliwia wprowadzenie dodatkowych trybów
+adresowania, które ułatwiają posługiwanie się bardziej złożonymi strukturami danych jak
+np. wektorami lub tablicami.
+
+Często stosowaną techniką jest technika posługiwania się dwoma składnikami, z któ-
+rych jeden jest nazywany bazą (ang. base) a drugi przemieszczeniem (ang. displacement).
+Adres argumentu jest określany jako suma tych dwóch składników, choć w niektórych
+komputerach stosuje się inne operacje. Jeśli jest to suma, to przemieszczenie wskazuje na
+odległość pomiędzy adresem bazowym a adresem operandu. Dwuskładnikowy sposób
+adresowania umożliwia kilka kombinacji posługiwania się tymi adresami. Jeżeli progra-
+mista zna wartość składnika w czasie pisania programu (przed kompilacją), to mówi się,
+że składnik jest stały. Stały składnik jest umieszczany przez programistę w kodzie
+programu (w rozkazie). Mówi się, że składnik jest zmienny, gdy jest on wyliczany przez
+program, a więc jego wartość jest znana dopiero w czasie wykonywania programu (po
+kompilacji). W takim przypadku programista wskazuje w programie rejestr procesora, do
+którego składnik taki jest zapisywany po wyliczaniu go przez program. Jeżeli są dwa
+składniki, tj. baza i przemieszczenie, to należy rozpatrzyć 4 przypadki pokazane
+w tablicy 4.4.
+
+Jeden z tych przypadków jest trywialny i nie jest wykorzystywany. Drugi przypadek,
+gdy tylko baza jest stała, jest nazywany trybem adresowania indeksowym. Przemiesz-
+
+<image/tabele/k3_page92_table1.png>
+
+czenie jest wówczas zwane przesunięciem lub indeksem (ang. offset) i jest wyliczane
+w czasie wykonywania programu, a następnie ładowane do rejestru, zwanego zwykle
+rejestrem indeksowym. Baza, która jako czynnik stały znajduje się w kodzie programu,
+może być wykorzystana na dwa sposoby. Każdy z nich inaczej oblicza tzw. adres efek-
+tywny (ang. effective address):
+
+l. EA =M [baza + indeks],
+
+2. EA =M [baza] + indeks.
+
+Pierwszy sposób jest nazywany preindeksowym. Suma bazy i przemieszczenia wskazuje
+na adres pośredni, tj. adres komórki pamięci, gdzie znajduje się adres operandu. Drugi
+sposób zwany postindeksowym polega na tym, że adres pośredni jest wskazywany przez
+samą bazę, a zawartość komórki spod adresu pośredniego jest dodawana do przemiesz-

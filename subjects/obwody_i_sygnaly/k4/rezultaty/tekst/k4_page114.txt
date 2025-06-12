@@ -1,0 +1,37 @@
+114 1. Pojęcia podstawowe — elementy
+
+<image/wzory/k4_page114_formula1.png>
+
+jest mocą pobieraną przez element z obwodu, zaś:
+
+<image/wzory/k4_page114_formula2.png>
+
+jest mocą pompowania.
+
+F. Bilans energetyczny niestacjonarnej pojemności liniowej. Analogiczne
+zależności i interpretacje można sformułować dla niestacjonarnej pojemności
+liniowej o równaniach (1.6-6) i energii gromadzonej w polu elektrycznym,
+wyrażonej wzorem (1.6-12). Otrzymujemy:
+
+<image/wzory/k4_page114_formula3.png>
+gdzie:
+<image/wzory/k4_page114_formula4.png>
+
+jest energią pompowania oraz:
+
+<image/wzory/k4_page114_formula5.png>
+gdzie:
+<image/wzory/k4_page114_formula6.png>
+
+jest mocą pompowania.
+
+Przykład 1.6-1. Rozpatrzmy niestacjonarną pojemność liniową o równaniach (1.6-6) i przyj-
+mijmy, że:
+
+<image/wzory/k4_page114_formula7.png>
+przy czym:
+/zory/k4_page114_formula8.png
+
+Załóżmy, że napięcie u na pojemności jest sinusoidalnie zmienne:
+
+vzory/k4_page114_formula9.png (16-29)

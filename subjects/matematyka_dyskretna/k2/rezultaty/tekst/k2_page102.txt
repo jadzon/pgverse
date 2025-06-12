@@ -1,0 +1,35 @@
+1.4. Sieci boolowskie 11
+
+<image/figury/k2_page102_figure1.png>
+
+krawędzie, są to bramki wejściowe. Bramki oznaczone przez — mają po jednej krawędzi
+wejściowej, a bramki z pozostałymi operatorami mają po dwie krawędzie wchodzące. W
+sieci boolowskiej nie może być cyklu, czyli ciągu krawędzi
+
+<image/wzory/k2_page102_formula1.png>
+takiego że vy = v,, i dla każdego : spełniającego warunek 0 < 4 < n — 1 wsieci istnieje
+krawędź od wierzchołka v, do wierzchołka v,,,. Wierzchołek, z którego nie wychodzą
+żadne krawędzie, nazywamy wyjściowym. W sieci może być kilka bramek wyjściowych.
+Z każdą bramką u w sieci możemy związać wyrażenie boolowskie W (u). Robimy to
+przez indukcję ze względu na strukturę sieci:
+
+e Najpierw przypisujemy wyrażenia bramkom wejściowym. W tym wypadku wyra-
+żeniem tym jest etykieta bramki u: stała lub zmienna.
+
+e Jeżeli bramka u jest etykietowana negacją — i dochodzi do niej krawędź od bramki
+v oraz bramka v ma już przypisane wyrażenie W (v), to bramce u przypisujemy
+wyrażenie W (u) = —W (v).
+
+e Jeżeli etykietą bramki u jest operator dwuargumentowy op, to do u prowadzą krawędzie
+od dwóch bramek, v i w. Jeżeli przypisano już wyrażenia W (v) i W (w) bramkom
+v i w, to bramce u przypisujemy wyrażenie W (u) = W (v)opW (w).
+
+Liczbę wszystkich bramek w sieci nazywamy kosztem sieci, a długość najdłuższej ścieżki
+w sieci nazywamy głębokością sieci. Jeżeli w sieci istnieje bramka wyjściowa u, to mo-
+żemy powiedzieć, że sieć oblicza wyrażenie W (u). Z faktu, że każdą funkcję boolowską
+można przedstawić w postaci normalnej, wynika, że każdą funkcję boolowską można
+przedstawić za pomocą sieci. Jednak konstrukcja sieci dla funkcji boolowskiej f poprzez
+wyznaczanie postaci normalnej zazwyczaj prowadzi do sieci o dużym koszcie (liczbie
+bramek). Poniżej omówiono przykłady sieci o stosunkowo małym koszcie.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

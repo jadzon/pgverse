@@ -1,0 +1,24 @@
+Wywołanie funkcji odbywa się przez umieszczenie jej nazwy w połu operatora.
+Wynik bieżący jest jednocześnie pierwszym argumentem funkcji, natomiast jeśli
+wymaganych jest więcej argumentów, to umieszcza się je w polu operandu.
+Wartość zwracana przez funkcję po pomyślnym wykonaniu instrukcji RET lub
+po osiągnięciu fizycznego końca funkcji staje się wartością bieżącą.
+
+Bloki funkcyjne mogą być wywoływane warunkowo lub bezwarunkowo za po-
+mocą operatora CAŁ. Wywołanie takie może przyjąć jedną z trzech form
+przedstawionych w Tab. 2.55. W przykładach przyjęto, że C70 jest ukonkretnie-
+niem bloku licznika CTU (por. Tab. 2.33), tzn. użyta została deklaracja VAR
+
+C10: CTU; END_YVAR. Listę operatorów wejściowych dla standardowych blo-
+ków funkcyjnych (por. 2.3.4) przedstawiono w Tab. 2.56.
+
+<image/tabele/k4_page103_table2.png>
+
+'Tab. 2.55 Wywoływanie bloków funkcyjnych w języku IL
+
+<image/tabele/k4_page103_table1.png>
+
+funkcyjnych
+
+LIEBE ZPA JEPRCW REPO YCZZCZ RE Z RY TZ TTRZZZZZ OO OŚ TOY ZZZZTZZPAŻZISZTY CORE JIMNY TOZZIO SRO O ZAŚ PEEK Z WY TD 4 TL TERAPĘITR
+2.7 Język instrukcji IL 103

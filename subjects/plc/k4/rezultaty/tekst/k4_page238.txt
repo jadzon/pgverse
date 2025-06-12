@@ -1,0 +1,9 @@
+<image/tabele/k4_page238_table1.png>
+
+Tab. 4.10 Funkcje matematyczne (Math Functions)
+
+<image/tabele/k4_page238_table2.png>
+
+ 
+
+238 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

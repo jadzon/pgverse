@@ -1,0 +1,13 @@
+figury/k4_pagfigury/k4_page136_figu
+Rys. 3.18 Zakresy napięciowe dla dwu i trójstanowych modułów wejść typu ujście
+
+<image/figury/k4_page136_figure3.png>
+
+<image/figury/k4_page136_figure1.png>
+
+Rys. 3.19 Połączenie modułów wejść w sieci sterownikowej
+przy zastosowaniu pojedynczego czujnika obiektowego.
+
+CHTFT TYT TYT ET EO PY YTY YEAR "ZEW YTY WYZYWA TWYM "TOP EAC TYT CYT PTE PYT T PY VPORT OSE PT EZZTTCZEYY"REZTZTYCZĘ.
+
+136 Rozdział : 3. Sprzęt sterowników PLC

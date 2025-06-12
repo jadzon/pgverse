@@ -1,0 +1,28 @@
+4_page66_formula1.png KKEKENNEE.
+
+Norma /EC113] definiuje program jako „zbiór logicznie powiązanych elemen-
+tów języka programowania koniecznych do zamierzonego przetwarzania
+sygnałów w celu sterowania urządzeniem lub procesem za pomocą systemu ste-
+rowników programowalnych”.
+
+Miejsce programu w ogólnym modelu oprogramowania przedstawiono w punk-
+cie 2.1.1. Sposoby komunikacji między programami a także wewnątrz programu
+zostały omówione w punkcie 2.1.2, natomiast punkt 2.1.3 opisuje elementy jakie
+składają się na program.
+
+Deklaracja i użycie programu odbywa się podobnie jak bloku funkcyjnego
+
+z następującymi różnicami:
+
+« Słowami kluczowymi  ograniczającymi deklarację programu są
+PROGRAM...END_PROGRAM.
+
+e Program może zawierać konstrukcję VAR_ACCESS...END_VAR umożliwia-
+Jącą określenie nazw zmiennych do których dostęp uzyskuje się za pomocą
+wykonania pewnych usług komunikacyjnych.
+
+e Programy mogą być realizowane (ukonkretniane) tylko w ramach zasobów,
+podczas gdy bloki funkcyjne tylko w ramach programów.
+
+z ZZS ZKZ ZZOZ ZZOZ LLOOOOODOOZOOOOOO ZOO ZZOOOZOOOOOZODZO ZOO ST SEZ DLZZ TZLO
+66 Rozdział : 2.Programowanie sterowników PLC

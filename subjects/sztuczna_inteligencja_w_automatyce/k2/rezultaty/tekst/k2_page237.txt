@@ -1,0 +1,54 @@
+242
+
+[50] Mulawka J.J., (1996) Systemy ekspertowe, WNT, Warszawa.
+
+[51] NEP (1995), Nowa Encyklopedia Powszechna PWN, Wydawnictwo Naukowe
+PWN, Warszawa.
+
+[52] Newell A., Simon H. (1976), Computer science as empirical inquiry: symbols
+and search, Communication of the ACM, march 1976, v. 19, n. 3, p. 113-126.
+
+[53] Neumann J., von, Theory of Self-reproducing Automata. Burks A. (wyd.),
+Champaign-Urbana, 1966, University of Illinois Press.
+
+[54] Nilsson N.J., (1980), Principles of Artificial Intelligence, Tioga, Palo Alto, Cal.
+
+[55] Nilsson N.J., Problem-Solving Methods in Artificial Intelligence, McGraw-Hill,
+New York 1971.
+
+[56] Pearl J., (1988), Probabilistic reasoning in intelligent systems, Morgan Kauff-
+mann, San Mateo, Cal.
+
+[57] Penrose R., (1995), Nowy umysł cesarza, PWN, Warszawa.
+
+|58] Penrose R., (2000), Cienie umysłu, Poszukiwanie naukowej teorii świadomości,
+Zysk S-ka. Poznań.
+
+[59] Preston J., Bishop M., (ed.), (2002), Views into the chinese room, New essays
+on Searle and artificial intelligence, Oxford University Press, Oxford.
+
+[60] Russel S., Norvig P., (2003), Artificial Intelligence, Prentice-Hall, London.
+
+[61] Rutkowska D., Piliński M., Rutkowski L., (1997), Sieci neuronowe, algorytmy
+genetyczne i systemy rozmyte, PWN, Warszawa-Łódź.
+
+[62] Rutkowski L.: Metody i techniki sztucznej inteligencji, Wydawnictwo Naukowe
+PWN, Warszawa 2006.
+
+[63] Searle J., (1992), The rediscovery of the mind, MIT Press, Cambridge, [wyd.
+pol.: Umysł na nowo odkryty, PIW, Warszawa, 1999].
+
+[64] Searle J., The mystery of consciousness, A New York Review Book, New York
+1997.
+
+[65] Shannon C.E., (1950), A Chess-Playing Machine, Scientific American, February,
+1950.
+
+[66] Sienkiewicz R., Jedruch W.: Artificial Environment for Simulation of Emergent
+Behaviour. — Beliczynski B., Dzielinski A., Iwanowski M., Ribeiro B. (red.):
+Adaptive and natura] computing algorithms. Proc. of the ICANNGA, Warsaw
+2007. LNCS, no. 4431, part 1, s. 386-393. Springer. Berlin. 2007.
+
+[67] Sienkiewicz R., Jędruch W., 2009, The universal constructor in the DigiHive
+environment, Proc. of 10th European Conference on Artificial Life (ECAL
+2009), (LNCS, in press)

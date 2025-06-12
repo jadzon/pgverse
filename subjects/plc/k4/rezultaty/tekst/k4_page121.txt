@@ -1,0 +1,34 @@
+3.2.1 Cykl programowy
+(Program Sweep)
+
+CPU zapewnia cykliczną realizację programu aplikacyjnego. Typowy cykl pro-
+gramowy sterownika składa się z następujących faz:
+
+Inicjacja cyklu,
+
+Czytanie sygnałów wejściowych,
+
+Wykonanie programu użytkownika,
+
+Aktualizacja sygnałów wyjściowych,
+
+Transmisja danych,
+
+Komunikacja systemowa,
+
+Wykonanie funkcji diagnostycznych.
+
+ 
+
+JD A RZ M
+
+Niektóre z powyższych faz mogą być w pewnych trybach pracy sterownika po-
+mijane, co zostało pokazane na Rys. 3.4.
+
+<image/figury/k4_page121_figure1.png>
+
+Rys. 3.4 Fazy cyklu programowego sterownika PLC
+
+ 
+
+3.2 Jednostka centralna CPU 1 2 1

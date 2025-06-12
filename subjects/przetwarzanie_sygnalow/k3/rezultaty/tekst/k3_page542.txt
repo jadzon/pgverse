@@ -1,0 +1,48 @@
+Analiza systemów rekursywnych 583
+
+ 
+
+Następnie gromadzimy wyrazy podobne i przeprowadzamy ich redukcję. Jeśli górna połów-
+ka płaszczyzny z jest lustrzanym odbiciem dolnej (co ma zawsze miejsce, gdy mamy do
+czynienia z rzeczywistą odpowiedzią impulsową), to wszystkie wyrazy zawierające j ulegną
+redukcji:
+
+<image/wzory/k3_page542_formula1.png>
+
+Chociaż jest to stosunek dwóch wielomianów, to nie ma w nim ujemnych wykładników po-
+tęg z, czego wymaga wzór 3.33. Można zmienić tę sytuację dzieląc licznik i mianownik
+przez z w najwyższej potędze w tym wyrażeniu, a więc przez z”:
+
+<image/wzory/k3_page542_formula2.png>
+Funkcja przenoszenia ma teraz postać zgodną ze wzorem 33.3, więc można z tej zależności
+wypisać współczynniki rekursywne:
+
+<image/wzory/k3_page542_formula3.png>
+
+<image/tabele/k3_page542_table1.png>
+
+<image/figury/k3_page542_figure1.png>
+
+wzr33.5.wzorydoprojektowaniafiltrubikwadratowego.wzoryokrelajzalenociwspczynnikw
+rekursywnych a5 85, 8», b;, b od położeń biegunów r, i w, i zer rgi wy
+
+Jak określimy odpowiedź częstotliwościową, mając już wyznaczoną funkcję przenoszenia?
+Są trzy metody: jedna matematyczna i dwie komputerowe (programowe). Metoda matema-
+tyczna polega na znajdowaniu na płaszczyźnie z wartości leżących na okręgu jednostkowym.
+Wykonuje się to przez określanie wartości funkcji przenoszenia H(z) dla r = 1. Zaczynamy
+od zapisania funkcji przenoszenia w postaci takiej, jak we wzorze 33.4 lub 33.4, Następnie
+każde z zastępujemy przez e %* (czyli re 7* dla r = 1). W ten sposób uzyskujemy wyrażenie
+matematyczne na odpowiedź częstotliwościową H(w). Trudność leży w tym. że uzyskane
+wyrażenie ma bardzo niedogodną postać. Trzeba wielu operacji algebraicznych, aby uzyskać
+jakieś rozpoznawalne wielkości, takie jak np. moduł i fazę. Ta metoda daje wprawdzie ścisły
+wzór na odpowiedź częstotliwościową, lecz jest trudna do zautomatyzowania programami
+komputerowymi, takimi jakie są wymagane w pakietach do programowania filtrów.
+
+W drugiej metodzie określania odpowiedzi częstotliwościowej też wyznacza się wartości na
+kole jednostkowym na płaszczyźnie z. Różnica polega na tym, że w tej metodzie obliczamy
+tylko próbki odpowiedzi częstotliwościowej, a nie matematyczne wyrażenie opisujące całą
+krzywą. Program komputerowy przebiega w pętli przez, powiedzmy, 1000 częstotliwości
+rozmieszczonych równomiemie między © = 0 a © = x. Wyobraźcie sobie mrówkę porusza-
+jącą się między 1000 dyskretnymi punktami w górnej połówce okręgu jednostkowego na
+płaszczyźnie z. W każdym z tych punktów określa się moduł i fazę odpowiedzi częstotliwo-
+ściowej przez wyznaczanie wartości funkcji przenoszenia.

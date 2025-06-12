@@ -1,0 +1,57 @@
+A Rozdział 1. Kombinatoryka
+
+Twierdzenie 1.1 Liczba ciągów długości k o elementach ze zbioru fa, b) wynosi 2*.
+
+Dowód przez indukcję. Jak już pokazano, są dwa ciągi długości jeden.
+
+Załóżmy teraz, że liczba ciągów długości ; wynosi 2* i zauważmy, że wszystkich
+ciągów długości k + 1 jest dwa razy więcej. Jest 2* ciągów z pierwszym elementem a i
+2* ciągów z pierwszym elementem b. Razem mamy 2-2* = 2**! ciągów długości k + 1.
+o
+
+Jeżeli zbiór symboli zawiera n elementów, to powtarzając powyższe rozumowanie,
+możemy się przekonać, że istnieje n ciągów długości jeden, n? ciągów długości dwa i
+ogólnie ciągów długości k + 1 jest n razy więcej niż ciągów długości k. Zachodzi zatem
+twierdzenie.
+
+Twierdzenie 1.2 Liczba ciągów długości k o elementach ze zbioru n-elementowego wy:
+nosi n*.
+
+1.2 Funkcje
+
+Policzmy teraz, ile jest funkcji ze zbioru A w zbiór B. Przypuśćmy, że zbiór A zawiera k
+eleme
+
+<image/wzory/k2_page39_formula1.png>
+
+Każ
+
+<image/wzory/k2_page39_formula2.png>
+
+Ciąg ten jest długosci k, a jego elementy są wzięte ze zbioru H. Łauwazmy, ze każdej
+funkcji adnowiada ieden ciaa i na adwmt każdv ciaa
+
+<image/wzory/k2_page39_formula3.png>
+
+opisuje Jeaną runkcję. Mianowicie runkcję, Ktora ala Kazaego « przypisuje wartosc
+10) = b.
+
+Przykład 1.3 Tażnli A składa sie 7 cztarech elementów:
+
+<image/wzory/k2_page39_formula4.png>
+
+a B sktana Sie 7 rrzecn piemenrnw'
+
+<image/_wzory/k2_page39_formula5.png>
+to ciąg
+<image/wzory/k2_page39_formula6.png>
+
+OpISUJe +++++nv.+*
+
+<image/wzory/k2_page39_formula7.png>
+
+opisuje ninkcia r ktora nrzvmiie nasfanmiaca wAarrnsri"
+
+<image/wzory/k2_page39_formula8.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

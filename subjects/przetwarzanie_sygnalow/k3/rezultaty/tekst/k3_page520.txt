@@ -1,0 +1,65 @@
+32, Przekształcenie Lapłace'a
+
+ 
+
+Metodyka przekształcenia Laplace'a
+
+Analogia dopomoże w wyjaśnieniu, jak przekształcenie Laplace'a jest wykorzystywane
+w przetwarzaniu sygnałów. Wyobraźcie sobie, że podróżujecie nocą pociągiem jadącym
+z jednego miasta do drugiego. Mapa wskazuje, że droga jest bardzo prosta, lecz noc jest tak
+ciemna, że nie widzicie otaczającego was krajobrazu. Nie mając niczego innego do robo-
+ty, zauważacie wysokościomierz na ścianie wagonu pasażerskiego i decydujecie się śledzić
+wzdłuż trasy zmiany wzniesienia nad poziom morza.
+
+Po paru godzinach, znudziwszy się, zaczynacie rozmowę z konduktorem. „Ciekawy teren”,
+mówicie. „Wydaje się, że na ogół się wznosimy, lecz zaobserwowałem kilka interesują-
+cych nieregularności”. Nie zwracając uwagi na oczywisty brak zainteresowania ze strony
+konduktora, kontynuujecie: „Niedaleko początku naszej podróży minęliśmy coś w rodza-
+ju gwałtownego wzrostu wysokości, po którym nastąpił równie gwałtowny spadek. Potem
+napotkaliśmy płytkie obniżenie”. W obawie, że możecie być niespełna rozumu lub nie-
+bezpieczni, konduktor decyduje się na odpowiedź: „Tak, myślę, że to prawda. Cel naszej
+podróży znajduje się u podnóża pasma górskiego, sądząc na podstawie ciągłego wzrostu
+wzniesienia nad poziom morza. Jednak na naszej drodze przejeżdżamy przez obrzeża dużej
+góry i przez środek doliny”.
+
+Pomyślcie teraz, jak wy zrozumieliście zależność między wzniesieniem a odległością
+wzdłuż trasy, w porównaniu z tym, jak rozumie tę zależność konduktor. Ponieważ bez-
+pośrednio mierzyliście wzniesienie nad poziom morza wzdłuż trasy, możecie twierdzić,
+że wiecie wszystko o tej zależności. Konduktor zaś ma tę samą pełną informację, lecz
+w prostszej i bardziej intuicyjnej formie — wie, gdzie są wzgórza i doliny, które powodu-
+ją te garby i wgłębienia na drodze pociągu. Chociaż wasz opis sygnału może się składać
+z wyników tysięcy pojedynczych pomiarów, to opis konduktora może zawierać tylko
+kilka parametrów.
+
+Aby zauważyć analogię tego opisu z przetwarzaniem sygnałów, wyobraźcie sobie, że pró-
+bujecie zrozumieć parametry jakiegoś układu elektrycznego. Pomagając sobie w badaniach,
+starannie mierzycie odpowiedź impulsową i/lub odpowiedź częstotliwościową. Jak wykaza-
+no w poprzednich rozdziałach, odpowiedzi impulsowa i częstotliwościowa zawierają pełną
+informację o danym systemie liniowym. Nie znaczy to jednak, że macie w ten sposób infor-
+mację w jej najprostszej postaci. W szczególności, rozumiecie odpowiedź częstotliwościową
+jako zestaw wartości zmieniających się z częstotliwością. Tak jak w naszej analogii z pocią-
+giem, odpowiedź częstotliwościową można łatwiej zrozumieć w kategoriach terenu otaczają-
+cego tę odpowiedź — a więc przez właściwości płaszczyzny zmiennej zespolonej s.
+Mając w pamięci analogię z pociągiem, wróćcie do rys. 32.3 i zadajcie pytanie: jak kształt
+przebiegu na płaszczyźnie zmiennej zespolonej s dopomaga w zrozumieniu odpowiedzi
+częstotliwościowej? Odpowiedź jest: nie pomaga. W tym przykładzie przebieg sygnału
+na płaszczyźnie zmiennej zespolonej s tworzy ładny wykres, lecz nie daje żadnego wglą-
+du w przyczyny takiego, a nie innego zachowania się sygnału w dziedzinie częstotliwości.
+Przyczyną jest to, że przekształcenie Laplace'a jest przeznaczone do analizy specyficznej
+klasy sygnałów w dziedzinie czasu: odpowiedzi impulsowych, które składają się z sinusoid
+i funkcji wykładniczych. Jeśli zostaje wyznaczona transformata Laplace'a jakiegoś innego
+przebiegu (takiego jak impuls prostokątny z rys. 32.3), to wynik uzyskany na płaszczyźnie
+zmiennej zespolonej s nie ma żadnego sensu.
+Jak wspomniano we wprowadzeniu do tego rozdziału, systemy należące do wymienionej
+klasy niezwykle często występują w nauce i technice, Sinuosoidy i funkcje wykładnicze są
+bowiem rozwiązaniami równań różniczkowych, a więc zależności opisujących większość zja-
+wisk naszego świata fizycznego. Oto przykłady systemów rządzonych przez równania róż-
+niczkowe: obwody elektryczne, propagacja fal, ruch liniowy i obrotowy, pola elektryczne
+i magnetyczne oraz przepływ ciepła.
+
+j
+j
+j
+i
+j
+3

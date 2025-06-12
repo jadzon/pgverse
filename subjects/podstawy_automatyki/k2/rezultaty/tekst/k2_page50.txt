@@ -1,0 +1,52 @@
+<image/figury/k2_page50_figure2.png>
+
+Rys. 10.7: Trajektoria fazowa układu bez sprzężenia tachometrycznego
+
+W przypadku braku strefy nieczułości w przekaźniku nie występuje na
+portrecie fazowym stan dla v(t) = 0, natomiast szerokość strefy histerczy
+definiuje rozsunięcie zaznaczonych na rysunku linii przełączeń (przy zbyt
+szerokiej histerezie powodując destabilizację układu).
+
+W celu poprawienia, analogicznie do przypadku serwomechanizmu
+liniowego, jakości regulacji, stosuje się sprzężenie tachometryczne.
+Postępując podobnie jak w przypadku bez korekcji, można zapisać
+
+<image/wzory/k2_page50_formula2.png>
+
+Po wykorzystaniu zależności e(t) = w(t)-v(t) powyższe wyrażenie przyj-
+
+* a anka
+
+<image/wzory/k2_page50_formula3.png>
+
+Po wprowadzeniu zmiennych fazowych
+
+<image/wzory/k2_page50_formula4.png>
+
+można narysować trajektorię fazową r2(£) = -€ zr(t) + Ę e(t) układu,
+przedstawioną na rysunku 10.8, na którym ponownie występują trzy różne
+rodzaje trajektorii, a linie przełączeń (zakładając, że przełączenie następuje,
+
+gdy e(t) +3 TH :ube(t) = +8) dane są wyrażeniami:
+
+<image/wzory/k2_page50_formula1.png>
+
+<image/figury/k2_page50_figure1.png>
+
+Rys. 10.8: Trajektoria fazowa układu ze sprzężeniem tachometrycznym
+
+Wprowadzenie sprzężenia tachometrycznego powoduje zwiększenie
+tłumienia oscylacji występujących w układzie, a dla dużych wartości £, -
+zmniejszenie wpływu nieliniowości. Dodatkowo sprzężenie powoduje
+zmniejszenie prawdopodobieństwa wystąpienia cyklu granicznego oraz re-
+dukuje prędkość sygnałów przejściowych
+
+Jak pokazano na rysunku 10.9a, dla dużej wartości wzmocnienia w pętli
+sprzężenia tachometrycznego może pojawić się dodatkowa, sztuczna linia
+przełączeń (przez istnienie histerezy), powodując wystąpienie ruchu śŚliz-
+gowego w postaci przełączeń o skończonym czasie trwania.
+
+Podobnie niekorzystny przypadek ruchu ślizgowego pokazano na rysunku
+10.9b. Występuje tu wymuszenie ruchu po linii przełączeń, co matematy-
+cznie odpowiada wydłużeniu do nieskończoności czasu regulacji - również
+tutaj wartość wzmocnienia k, jest zbyt duża.

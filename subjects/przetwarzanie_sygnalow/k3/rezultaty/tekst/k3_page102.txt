@@ -1,0 +1,37 @@
+116
+
+6. Splot
+
+<image/tabele/k3_page102_table1.png>
+
+W tablicy 6.1 podano program do obliczania splotu z wykorzystaniem algorytmu od strony
+wejścia. Proszę pamiętać, że programy zamieszczone w tej książce mają na celu przedsta-
+wienie algorytmów w najprostszej postaci, nawet kosztem dobrego stylu programowania.
+Na przykład wszystkie wejścia i wyjścia są obsługiwane przez pewne podprogramy, które
+nazywamy „mitycznymi” (wiersze 160 i 280), co oznacza że nie określamy, jak te operacje
+są przeprowadzane. Nie pomijajcie tych programów. Są one istotną częścią prezentowanego
+aaa ooh je stoiać ócoeoóliwy.
+Program realizuje splot 81-punktowego sygnału wejściowego przechowywanego w matrycy
+X[ ] z 31-punktową odpowiedzią impulsową przechowywaną w matrycy H[ ], dając w re-
+zultacie 111-punktowy sygnał wyjściowy, przechowywany w matrycy Y[ ]. Są to takie same
+długości sygnałów, jak na rys. 6.3 i 6.4. Proszę zwrócić uwagę, że oznaczenia matryc Są
+pisane dużymi literami. Jest to złamanie poprzednio podanej konwencji, zgodnie z którą duże
+litery są zarezerwowane dla sygnałów w dziedzinie częstotliwości. Niestety, prosty BASIC
+używany w tej książce nie dopuszcza oznaczania zmiennych małymi literami. Zauważmy
+też, że w wierszu 240 zastosowano gwiazdkę jako oznaczenie mnożenia. Pamiętajmy, że
+gwiazdka w programie oznacza mnożenie, a we wzorach — spłot. Gwiazdka użyta w tekście
+SB s 2 dei GE
+KF Pooga 4. wiata 10) Boska ny NADOCY ADA
+poah GEJ W wicanik 1002000 pawejajc aden ago ÓCI wok
+w Yf[ |. Jest to konieczne, gdyż Y[ ] jest wykorzystywane jako akumulator do sumowania
+wyników w miarę ich obliczania. Wiersze od 220 do 260 to serce programu. Instrukcja FOR
+w wierszu 220 steruje pętlą przechodzącą przez wszystkie punkty sygnału wejściowego X[ ].
+Dla każdej próbki sygnału wejściowego w pętli wewnętrznej (wiersze 230-250) następuje
+obliczenie przeskałowanej i przesuniętej wersji odpowiedzi impulsowej oraz dodawanie jej
+Peek pppoe zycze 3 Zagnieżdżona struktura pętli (jedna pętla
+w drugiej) jest charakterystyczną cechą programów splotowych; warto się z nią zaznajomić.
+Zawiłości pojawiają się po dojściu z indeksowaniem do wiersza 240. Powiedzmy, że jesteśmy
+w połowie wykonywania programu, a więc zaczęliśmy właśnie działania na próbce X[40].
+tj. 19 = 40. Pętla wewnętrzna przechodzi przez każdy punkt odpowiedzi impulsowej, wy-
+konując trzy operacje. Po pierwsze, odpowiedź impulsowa zostaje przeskalowana w wyniku
+przemnożenia jej przez wartość próbki wejściowej. Gdyby to była jedyna czynność realizo-

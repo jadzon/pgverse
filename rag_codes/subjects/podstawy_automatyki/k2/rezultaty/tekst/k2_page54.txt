@@ -1,0 +1,69 @@
+106
+
+<image/wzory/k2_page54_formula1.png>
+<image/wzory/k2_page54_formula3.png>
+
+<image/wzory/k2_page54_formula2.png>
+
+otrzymuje się wymierną funkcję zmiennej zespolonej |: |, nazywaną transmi-
+
+om i. Adaralomakaa a
+
+<image/wzory/k2_page54_formula5.png>
+
+W powyższym zapisie zastosowano powszechne uproszczenie notacji,
+polegające na domyślnym zastąpieniu przykładowo w wyrażeniu v(n)
+aktualnej wartości czasu dyskretnego nTp numerem n próbki, przy założe-
+niu stałości okresu próbkowania Tp.
+
+<image/figury/k2_page54_figure1.png>
+
+11.2.3 Impulsator i ekstrapolator
+
+Impulsatorem nazywa się element przetwarzający sygnał ciągły na impul-
+sowy, czyli dokonujący dyskretyzacji w czasie. Istnieje kilka metod modu-
+lacji funkcji impulsowej: modulacja amplitudy (przy stałej szerokości impul-
+sów i stałym okresie próbkowania), modulacja szerokości impulsów (przy
+stałej amplitudzie impulsów i stałym okresie próbkowania) oraz modulacja
+położenia impulsów (przy stałej szerokości i amplitudzie impulsów).
+Jedynie pierwszy z wymienionych przypadków jest przypadkiem liniowym,
+z uwagi na co w ćwiczeniu przyjęto, że dyskretyzacja przebiega w sposób
+idealny (czas trwania impulsu jest pomijalnie mały w stosunku do okresu
+próbkowania /p).
+
+107
+
+W układach impulsowych istnieją również elementy służące do rekon-
+strukcji (na podstawie przeszłych próbek) sygnału dyskretnego do postaci
+ciągłej nazywane ekstrapolatorami. Ekstrapolatory są klasyfikowane pod
+względem liczby próbek historycznych, na podstawie których przewidywana
+jest wartość sygnału dyskretnego w następnej chwili próbkowania.
+
+Element formujący, który przedłuża wartość sygnału z bieżącej chwili
+próbkowania o czas r nazywa się ekstrapolatorem zerowego rzędu,
+a dany jest transmitancją
+
+<image/wzory/k2_page54_formula4.png>
+
+Na rysunku 11.4 przedstawiono odpowiedź impulsową ekstrapolatora
+zerowego rzędu wraz z zaznaczeniem czasu r trwania impulsu. Aby anali-
+zować układ jako liniowy, przyjmuje się r = 7p.
+
+<image/figury/k2_page54_figure2.png>
+
+Rys. 11.4: Odpowiedź impulsowa ekstrapolatora zerowego rzędu
+
+11.2.4 Warunek stabilności układu impulsowego
+
+W celu umożliwienia analizy stabilności układu impulsowego należy naj-
+pierw uzyskać reprezentację części ciągłej w dziedzinie |: |, a następnie roz-
+patrywać tak uzyskany układ jako całość. Istnieje wiele metod otrzymania
+transmitancji (;(z) na podstawie transmitancji G(s), są to:
+
+e przekształcenie za pomocą różnicy wstecznej
+
+<image/wzory/k2_page54_formula6.png>
+
+e przekształcenie 6 (za pomocą różnicy „w przód”)
+
+<image/wzory/k2_page54_formula7.png>

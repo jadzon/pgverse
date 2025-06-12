@@ -1,0 +1,66 @@
+332
+
+ 
+ 
+    
+  
+  
+   
+  
+
+21 Porównanie filirów
+
+Decyzje, decyzje, decyzje! Przy tak dużym wyborze filtrów, jak zdecydować, który wybrać?
+W tym rozdziale różne filtry będą bezpośrednio rywalizować ze sobą. Wytypujemy najlepsze
+filtry w poszczególnych grupach i pozwolimy im zmierzyć się ze sobą. W pierwszym poje”
+dynku filtry cyfrowe wystąpią przeciw analogowym, aby rozstrzygnąć, która z tych technik
+jest lepsza. W drugim — filtr okienkowany funkcją sinc będzie walczył z filtrem Czebyszewa
+o pozycję króla filtrów w dziedzinie częstotliwości. W końcowym boju, o mistrzostwo w dzie
+dzinie czasu, filtr o średniej kroczącej spotka się z filtrem jednobiegunowym. Dość gadania.
+Niech rozpocznie się rywalizacja.
+
+<image/wzory/k3_page303_formula1.png>
+
+Większość sygnałów cyfrowych ma swoje źródło w elektronice analogowej. Jeśli sygnał wy-
+maga filtracji, to czy lepiej jest zastosować filtr analogowy przed przetworzeniem sygnału
+na cyfrowy, czy filtr cyfrowy po takim przetworzeniu? Odpowiemy na to pytanie, gdy obaj
+pretendenci wymienią pierwsze ciosy.
+
+Celem rywalizacji jest uzyskanie filtru dolnoprzepustowego o częstotliwości odcięcia 1 kHz.
+Ze strony filtrów analogowych do pojedynku staje 6-biegunowy filtr Czebyszewa o zafało-
+waniach 0,5 dB (6%). Według opisu w rozdziale 3, można taki filtr skonstruować przy użyciu
+3 wzmacniaczy operacyjnych, 12 rezystorów i 6 kondensatorów. W narożniku filtrów cyfro-
+wych rozgrzewa się gotowy do walki filtr okienkowany funkcją sinc. Sygnał analogowy jest
+zamieniany na cyfrowy z częstotliwością próbkowania 10 kHz, więc częstotliwość odcięcia
+jest równa 0,1 na cyfrowej skali częstotliwości. Wybieramy długość odpowiedzi filtru okien-
+kowanego funkcją sinc równą 129 punktów, co daje opadanie od 90% do 10%, takie samo
+jak w filtrze analogowym. Walka musi być czysta. Na rys. 21.1 przedstawiono odpowiedzi
+częstotliwościowe i skokowe obu tych filtrów.
+
+Porównajmy oba filtry parametr po parametrze. Jak wynika z rysunków 21.1 a), b), filtr analo-
+gowy ma zafalowania 6% w paśmie przepustowym, podczas gdy filtr cyfrowy ma odpowiedź
+idealnie płaską (w granicach 0,02%). Projektant filtrów analogowych będzie argumentował, że
+wartość zafalowań może być wybierana podczas projektowania, ten argument jednak nie wy-
+trzymuje krytyki. Płaskość odpowiedzi uzyskiwana w filtrach analogowych jest bowiem ogra-
+niczona dokładnością użytych w nich rezystorów i kondensatorów. Nawet jeśli zaprojektuje się
+filtr o odpowiedzi Butterwortha (tj. o zafalowaniach 0%), to filtry o takiej złożoności będą mia-
+ły jakieś resztkowe zafalowania, powiedzmy 1%. Z drugiej strony, płaskość odpowiedzi filtrów
+cyfrowych jest ograniczona głównie błędem zaokrąglania, co czyni tę odpowiedź setki razy
+bardziej płaską niż w ich analogowych odpowiednikach. Wynik: ezóp cr
+Następnie przyjrzyjmy się odpowiedzi częstotliwościowej w skali logarytmicznej (rysun-
+ki 20.1c), d). Tu znowu filtr cyfrowy jest wyraźnym zwycięzcą, zarówno gdy chodzi o szybkość
+opadania, jak i tłumienie w paśmie zaporowym. Nawet jeśli działanie filtru analogowego można
+udoskonalić przez dodanie dodatkowych stopni, to i tak nie stanie się on porównywalny z fil-
+trem cyfrowym. Załóżmy na przykład, że chcemy polepszyć te dwa parametry o czynnik 100.
+Można tego dokonać przez prostą modyfikację filtru okienkowanego funkcją sinc, lecz jest to
+faktycznie niemożliwe w układzie analogowym. A więc kolejny punkt dla filtrów cyfrowych.
+Odpowiedzi skokowe tych dwóch filtrów pokazano na rysunkach 20.1 e), f). Odpowiedź sko-
+kowa filtru cyfrowego ma symetrię górnej i dolnej części skoku, tzn. że ma fazę liniową.
+Odpowiedź skokowa filtru analogowego nie jest symetryczna, tj. ma fazę nieliniową. Jeszcze
+jeden punkt dla filtru cyfrowego. Na koniec, filtr cyfrowy ma przerzut ok. 20% z jednej strony
+skoku, a cyfrowy ok. 10%, lecz po stronach skoku. Oba filtry są więc pod tym względem złe
+i żaden nie otrzymuje punktu.
+
+Mimo wyniku tego pojedynku, ciągle jest wiele zastosowań, w których filtry analogowe powinny
+lub muszą być używane. Nie wiąże się to z rzeczywistym działaniem filtru (tj. z tym, co wchodzi
+do filtru i co z niego wychodzi), lecz z ogólnymi zaletami układów analogowych w stosunku

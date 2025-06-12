@@ -1,0 +1,36 @@
+1.4. Przeszukiwanie drzew binamych 9
+
+<image/tabele/k2_page171_table1.png>
+
+1.4 Przeszukiwanie drzew binarnych
+
+Zajmiemy się teraz dwoma algorytmami przeszukiwania drzew (binamych): przeszuki-
+wanie w głąb i wszerz. Różnią się one rodzajem użytych struktur danych. W algorytmie
+przeszukiwania w głąb użyjemy stosu, a w algorytmie przeszukiwania wszerz użyjemy
+kolejki.
+
+14.1 Przeszukiwanie drzewa w gł ąb
+
+Algorytm przeszukiwania drzewa w głąb.
+Dane wejściowe: drzewo 7'.
+
+e odwiedzamy korzeń A i wkładamy go na STOS; zaznaczamy A jako wierzchołek
+odwiedzony,
+
+e dopóki STOS nie jest pusty, powtarzamy:
+
+ojeżeli v jest wierzchołkiem na wierzchu STOSU, to sprawdzamy, czy istnieje
+Syn u wierzchołka v, który nie był jeszcze odwiedzony, najpierw sprawdzamy +0,
+a potem v1.
+
+o jeżeli takie u się znajdzie, to odwiedzamy u, wkładamy go na wierzch STO-
+SU i zaznaczamy jako wierzchołek odwiedzony,
+
+o jeżeli takiego u nie ma, to zdejmujemy v ze STOSU i cofamy się do wierz-
+chołka będącego na stosie pod spodem.
+
+Przykład 1.7 Poniższa tabela pokazuje jaki wierzchołek jest odwiedzany i jaka jest za-
+wartość stosu po każdej kolejnej iteracji pętli algorytmu, gdy przeszukiwane jest drzewo
+z rysunku 1.1.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

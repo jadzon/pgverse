@@ -1,0 +1,49 @@
+106 5. Pomięci
+
+l) zawartość pamięci kieszeniowej może zostać zmieniona w wyniku działania pro-
+gramu, podczas gdy odpowiadająca jej zawartość pamięci operacyjnej pozostanie
+nie zmieniona,
+
+2) zawartość pamięci operacyjnej może zostać zmieniona bądź w wyniku działania
+układu DMA, tj. może zostać zapisana przez urządzenie zewnętrzne
+(por. rozdz. 6), bądź, jak w systemach wieloprocesorowych, przez inny procesor,
+podczas gdy zawartość pamięci kieszeniowej pozostanie nie zmieniona.
+
+Aby utrzymać koherentność pamięci trzeba aktualizować zawartości obu pamięci. Aktuali-
+zacji w obu pamięciach można dokonywać natychmiast po każdej zmianie. Taki sposób
+aktualizacji zawartości jest nazywany zapisem natychmiastowym (ang. write through).
+Wadą tej metody jest znaczne spowolnienie pracy pamięci. Jeśli w danym systemie jest to
+krytyczne, to można zastosować jedną z dwóch innych metod, a mianowicie: metodę
+powtórnego zapisu (ang. write back lub copy back) lub metodę natychmiastowej sygna-
+lizacji (ang. write once). Metoda powtórnego zapisu polega na tym, że do każdego bloku
+dołącza się jednobitowy wskaźnik aktualizacji (ang. update). Wskaźnik ten jest ustawiany
+w stan I wtedy, gdy do danego bloku nastąpił zapis. Podczas usuwania bloku z pamięci
+kieszeniowej sprawdza się wartość wskaźnika i jeśli jest on równy 0, to może zostać
+usunięty bez konieczności wymiany odpowiadającej mu zawartości pamięci operacyjnej.
+Jeśli natomiast wskaźnik jest równy 1, to przy wymianie bloku dokonuje się zapisu tego
+bloku do pamięci operacyjnej.
+
+Metoda natychmiastowej sygnalizacji jest stosowana w systemach wieloprocesoro-
+wych, gdzie do wspólnej magistrali i wspólnej pamięci (por. rozdz. 8) są dołączone pro-
+cesory z własnymi pamięciami kieszeniowymi. Metoda ta polega na tym, że każdy
+pierwszy zapis do danego bloku w pamięci kieszeniowej powoduje ustawienie
+odpowiedniego wskaźnika w stan 1 wraz z jednoczesnym aktualizowaniem pamięci
+operacyjnej. Następne zapisy nie powodują już takiej akcji, gdyż innym procesorom został
+zasygnalizowany fakt zmiany zawartości danego bloku. Natomiast podczas usuwania
+bloku z pamięci kieszeniowej jego zawartość jest zapisywana do pamięci operacyjnej,
+tylko gdy wskaźnik jest ustawiony w stan 1, natomiast w przeciwnym przypadku jest on
+tylko usuwany.
+
+5.3. PAMIĘCI Z DOSTĘPEM CYKLICZNYM
+5.3.1. WPROWADZENIE
+
+Pamięci z dostępem cyklicznym (ang. direc! access memory) są wykorzystywane w kom-
+puterach jako pamięci masowe (lub niekiedy jako pamięci buforowe, tj. pośredniczące
+w wymianie danych pomiędzy dwoma urządzeniami). Pamięci masowe to najczęściej
+kinetyczne pamięci magnetyczne wykonywane jako pamięci dyskowe. Stosowane są
+najczęściej pamięci dwóch rodzajów: pamięci na twardym podłożu metalowym (ang. hard
+disk) i pamięci na podłożu elastycznym wykonanym z tworzywa sztucznego (ang. floppy
+disk). Pamięci buforowe budowane są czasem jako pamięci na rejestrach przesuwających.
+
+Zasada działania pamięci z dostępem cyklicznym polega na tym, że każda komórka
+pamięci jest dostępna dla otoczenia tylko w pewnym, określonym przez zegar, momencie.

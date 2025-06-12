@@ -1,0 +1,46 @@
+1.6. Podzbiory k-elementowe 9
+
+cztery nadobiary trzvalomantńwie-
+
+<image/wzory/k2_page44_formula1.png>
+
+i jeden --—-—— -
+
+<image/wzory/k2_page44_formula2.png>
+
+Liczbę puUaZDIOTUW K-=ŁIEMIEDWWYCH ZDIOLU n=ŁIEENWWEYO OZNACZA SIĘ PIZEŁ
+
+<image/wzory/k2_page44_formula3.png>
+
+Jest to tak zwany symbol Newtona. Inaczej, (7) jest równe liczbie sposobów na jakie
+można wybrać k elementów ze zbioru n elementowego. Właśnie pokazaliśmy, że:
+
+<image/wzory/k2_page44_formula4.png>
+
+zdefinicjiwynikaejeeliknto0.zachodzdwawzory
+<image/wzory/k2_page44_formula5.png>
+<image/wzory/k2_page44_formula6.png>
+
+Wzór (??) bierze się z prostej obserwacji, że wybranie x elementów, które należą do
+podzbioru A, jest równoważne wybraniu n — k elementów, które do A nie należą.
+
+Ahw nzacadnić mńwnaćć 1703). mzważmir łŁ.alamantawa nadshian: zhian:
+
+<image/wzory/k2_page44_formula7.png>
+Policziny usowiw uż puuziioty, Kwit Zawittają ŁIEIELL TE t 4, 1 USUDLU tt, KWIE GO nie
+zawierają. Podzbiorów nie zawierających n + 1 jest (4), bo wszystkie k elementów trze-
+ba wybrać ze zbioru f1,...,n). Podzbiorów zawierających n + 1 jest (,”,), bo k — 1
+
+elementów trzeba wybrać ze zbioru £1,. . . „n). Razem wszystkich k-elementowych pod-
+zbiorów zbioru £1,...,n,n + 1) jest (z) + (,”,)-
+
+Korzystając z równości (??), możemy obliczać symbole Newtona rekurencyjnie. Naj-
+pierw mamy (5) = 1, ponieważ jest jeden zeroelementowy (pusty) podzbiór zbioru zero-
+elementowego (pustego). Jeżeli mamy już policzone symbole Newtona dla n, to możemy
+liczyć, ile jest podzbiorów zbioru (n + 1)-elementowego. Zaczynamy od (7, 14) = | orz
+(74!) = 1, anastępnie korzystamy z równania (??). Metodę tę ilustruje tak zwany trójkąt
+Pascala:
+
+<image/wzory/k2_page44_formula8.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

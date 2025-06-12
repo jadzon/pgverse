@@ -1,0 +1,39 @@
+1.5. Pierścień Z „, 9
+
+Dowód: Udowodnimy tylko rozdzielność:
+
+<image/wzory/k2_page124_formula1.png>
+
+Skorzystaliśmy w tym dowodzie z rozdzielności mnożenia względem dodawania dla liczb
+całkowitych. o
+
+Przykład 1.16 Rozważmy zbiór reszt modulo 5. Składa się on z pięciu klas:
+(0), [1), [2], B], (4),
+dla prostoty będziemy dalej opuszczać nawiasy. Mamy więc zbiór:
+
+<image/wzory/k2_page124_formula2.png>
+
+z dodawaniem i mnożeniem określonym następującymi tabelami:
+
+<image/figury/k2_page124_figure1.png>
+
+<image/wzory/k2_page124_formula3.png>
+
+Dlatego Z, jest ciałem, czyli pierścieniem przemiennym z jedynką i z odwrotnością względem
+mnożenia.
+
+Przykład 1.17 Rozważmy teraz pierścień reszt modulo 4:
+
+<image/wzory/k2_page124_formula4.png>
+
+gdzie dodawanie i mnożenie jest określone następującymi tabelami:
+
+<image/wzory/k2_pagewzory/k2_page124_formula6.png>
+
+Z, nie jest ciałem, ponieważ nie ma w nim elementu odwrotnego do 2. Ponadto w Z4
+
+<image/iwzory/k2_page124_formula7.png>
+
+czyli zet moża przeustawić jaku OCZYLU UWUCII LUŻU LUZNYUI UU ZELA.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

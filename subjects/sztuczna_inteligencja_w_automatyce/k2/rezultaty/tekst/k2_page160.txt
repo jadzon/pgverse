@@ -1,0 +1,42 @@
+165
+
+Ocena zdolności do generalizacji systemu uczącego się jest jednym z podstawo-
+wych problemów teorii uczenia.
+
+W praktycznych zastosowaniach uczenia powstają pytania: jaką zdolność do ge-
+neralizacji będzie miał nauczony system, jaką da się uzyskać jakość generalizacji
+przy dostępnych danych uczących, dane są różne zestawy parametrów nauczonych
+systemów, który będzie generalizował lepiej?
+
+Błąd generalizacji jest tożsamy z ryzykiem średnim danym wzorem (??)
+
+<image/wzory/k2_page160_formula1.png>
+
+który nie może być wykorzystany do obliczeń, ponieważ nie jest znana gęstość praw-
+dopodobieństwa p(x.d). Natomiast znane jest ryzyko empiryczne dane wzorem (??)
+
+<image/wzory/k2_page160_formula2.png>
+
+Powstaje pytanie: znamy ryzyko empiryczne, jakiego możemy się spodziewać błędu
+generalizacji (ryzyka średniego)? W dalszej części tego punktu odpowiemy na to
+pytanie.
+
+6.8.1. Przykłady
+Przedstawimy tu kilka przykładów przybliżających problemy generalizacji.
+
+PRZYKŁAD 6.15
+
+Przeprowadzono aproksymację funkcji Gaussa przy pomocy dwuwarstwowej sieci
+neuronowej przedstawionej na rys, ??. Na rysunku ?? przedstawiono wyniki aprok-
+symacji realizowane przez sieci neuronowe o różnych liczbach neuronów. Zbiorem
+uczącym w każdym przypadku było 21 par argumentów i wartości funkcji. Na ry-
+sunkach kółka oznaczają pary uczące, krzyżyki odpowiedzi generowane przez sieci
+neuronowe dla sygnałów wejściowych ze zbioru uczącego, linie ciągłe przedstawiają
+funkcję Gaussa i funkcje realizowane przez sieci neuronowe.
+
+<image/figury/k2_page160_figure1.png>
+
+Rys. 6.60: Sieć neuronowa wykorzystana do aproksymacji funkcji Gaussa
+
+W omawianym przykładzie błędem empirycznym jest średnia z sumy kwadra-
+tów różnic pomiędzy rzędnymi kółek i krzyżyków, zaś błędem generalizacji średni

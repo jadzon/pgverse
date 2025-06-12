@@ -1,0 +1,17 @@
+x=<IW1> *<FWIl>+<QWl> zapamiętać w wybranym obszarze pamięci,
+wprowadzić zawartość FW2 do akumulatora ] i następnie wprowadzić uprzednio
+zapamiętany wynik pośredni (x).
+
+<image/tabele/k4_page348_table2.png>
+
+Rys. 7.17 Realizacja złożonej funkcji arytmetycznej
+
+Niezależnie od rodzaju wykonywanej operacji arytmetycznej ustawiane są trzy
+bity (CC0,CC1,OV) słowa statusowego procesora. Stan tych bitów może być
+sprawdzany przy pomocy instrukcji skoku (por. 7.14).
+
+<image/tabele/k4_page348_table1.png>
+
+ 
+
+348 Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5

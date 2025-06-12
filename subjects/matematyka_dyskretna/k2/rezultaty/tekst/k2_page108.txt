@@ -1,0 +1,31 @@
+1.5. Operacje boolowskie na wektorach 17
+
+<image/figury/k2_page108_figure1.png>
+
+1.5.2 Reprezentacja zbioru
+Ciągi bitów z B” = 40,1)” mogą służyć do reprezentacji podzbiorów zbioru
+
+<image/wzory/k2_page108_formula1.png>
+
+Ciąg z € f0,1)” należy traktować jako funkcję charakterystyczną pewnego podzbioru.
+Wtedy operacje boolowskie na ciągach odpowiadają operacjom na zbiorach. A ltematy-
+wa odpowiada sumie zbiorów, koniunkcja części wspólnej, a negacja uzupełnieniu zbio-
+ru. Operacja xor odpowiada różnicy symetrycznej. Taka reprezentacja ma dwie zalety.
+Zajmuje mało pamięci i operacje na zbiorach są wykonywane bardzo szybko, ponieważ
+operacje boolowskie są operacjami niskiego poziomu.
+
+Na przykład jeżeli chcemy reprezentować w pamięci komputera ułożenie kamieni w
+grze w warcaby na 64-polowej szachownicy, to wystarczą dwie liczby typu longint (po 32
+bity). W jednej liczbie reprezentujemy położenie czamych, a w drugiej położenie białych
+kamieni (w grze w warcaby kamienie mogą leżeć tylko na 32 czamych polach).
+
+15.3 Szyfrowanie w systemie one-pad
+
+Operacje boolowskie na wektorach można wykorzystać do szyfrowania. W systemie szy-
+frowania „one-pad” wiadomość z i klucz k są ciągami bitów z, k e f0,1)” (Jeżeli wia-
+domość jest ciągiem znaków, to kodujemy każdy znak jako 8 bitów i cały ciąg może być
+traktowany jako ciąg bitów). Zaszyfrowana wiadomość ma postać:
+
+<image/wzory/k2_page108_formula2.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

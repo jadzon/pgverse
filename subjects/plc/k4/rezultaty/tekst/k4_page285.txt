@@ -1,0 +1,23 @@
+»ry/k4_page285_formula1.png KME |
+
+W sterownikach Modicon występuje sześć standardowych elementów schema-
+tów drabinkowych. Należą do nich styki zwierne i rozwierne, a ponadto styki
+działające jako zwierne wyzwałane narastającym zboczem sygnału (positive
+transitional contact) lub opadającym zboczem sygnału (negative transitional
+contact). Przy tym styki te są zwarte tylko do zakończenia cyklu sterownika.
+Wyd. 6.2 przedstawia sposoby oznaczania w schemacie drabinkowym, a Rys. 6.5
+wyjaśnia różnice działania poszczególnych styków.
+
+<image/tabele/k4_page285_table1.png>
+
+Wyd. 6.2 Sposób oznaczania i rodzaje styków.
+
+<image/figury/k4_page285_figure1.png>
+
+T - okres skanowania (max.250m$)
+
+Rys. 6.5 Przebiegi czasowe działania styków.
+
+   
+
+6.2 Funkcje przekaźnikowe 285

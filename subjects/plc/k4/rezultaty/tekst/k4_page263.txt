@@ -1,0 +1,23 @@
+<image/tabele/k4_page263_table3.png>
+
+Wyd. 4.30 Instrukcji testowania relacji mniejszości lub równości LEQ
+
+<image/tabele/k4_page263_table1.png>
+
+Wyd. 4.31 Instrukcja testowania relacji większości lub równości GEQ
+
+Instrukcje relacji można ze sobą łączyć co pokazuje Wyd. 4.32. W przykładach
+wykorzystano 2 liczniki CTU (C5:2 i C5:3) i licznik CTD (C5:4). Są one przed-
+stawione na Wyd. 4.33, wraz z ich zerowaniem, względnie ustawieniem.
+
+<image/tabele/k4_page263_table2.png>
+
+Wyd. 4.32 Połączenie instrukcji GRT, LES oraz EQU.
+
+<image/figury/k4_page263_figure1.png>
+
+ 
+
+    
+
+5.7 Funkcje relacji 263

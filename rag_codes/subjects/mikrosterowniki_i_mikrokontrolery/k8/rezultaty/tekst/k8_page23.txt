@@ -1,0 +1,30 @@
+Mikrosterowniki i mikrosystemy rozproszone — Z ? 25
+
+15. Schemat blokowy układu potencjometru cyfrowego sterowanego interfejsem SPI
+(np. AD5260), znaczenie linii układu, przebiegi czasowe interfejsu SPI.
+
+<image/figury/k8_page23_figure2.png>
+
+Schemat blokowy układu AD5260 firmy Analog Devices przedstawiciela potencjometrów cyfrowych
+sterowanych interfejsem SPI
+
+<image/figury/k8_page23_figure1.png>
+
+A - Końcówka A potencjometru.
+
+W —- Suwak.
+
+B — Końcówka B potencjometru.
+
+SHDN - Aktywny stanem niskim. Rozwarcie końcówki A.
+CLK - Wejście zegarowe aktywne zboczem narastającym.
+SDI - Wejście szeregowe interfejsu SPI.
+
+CS — Wybór układu, aktywny stanem niskim. Kiedy stan na linii CS jest wysoki, dane mogą być
+ładowane do rejestru RDAC.
+
+PR — Aktywny stanem niskim. Ustawia rezystor na połowę jego wartości, poprzez wpisanie do rej.
+RDAC wartości 80H.
+
+VL — Zasilanie „logiki” układu.
+SDO - Wyjście szeregowe typu otwarty dren, Wymaga zewnętrznego rezystora pull-up.

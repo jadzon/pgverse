@@ -1,0 +1,29 @@
+151
+
+gdzie r i y są wejściami, A;,, B;, i = 1, 2 są zbiorami rozmytymi, ży, 22 są położeniami
+funkcji przynależności wyjść, p;, q;, rs, Ł = 1,2 są parametrami.
+
+Oznaczając przez jt4, (1), Hp,(y), i = 1,2 funkcje przynależności zbiorów A;, By,
+na rysunku ?? przedstawiono operację wymagane do obliczenia wartości wyjścia sys-
+temu, z. Operacje te mogą być wykonywane przez warstwową strukturę obliczeniową
+przedstawioną na rys. ??. Warstwy te realizują następujące obliczenia:
+
+<image/figury/k2_page146_figure2.png>
+
+<image/wzory/k2_page146_formula1.png>
+
+Rys. 6.47: Ilustracja obliczeń realizowanych przez przykładowy system Sugeno
+
+<image/figury/k2_page146_figure1.png>
+
+Warstwa 1 (adaptacyjna*) Warstwa oblicza wartości funkcji przynależności je dla
+wejść r lub y
+<image/wzory/k2_page146_formula2.png>
+
+Typową funkcją przynależności jest uogólniona funkcja dzwonowa wyrażona
+wzorem
+
+<image/wzory/k2_page146_formula3.png>
+
+*Określenie adaptacyjna oznacza tutaj, że wartości parametrów występujących w tej warstwie
+będą podlegały zmianom w czasie uczenia.

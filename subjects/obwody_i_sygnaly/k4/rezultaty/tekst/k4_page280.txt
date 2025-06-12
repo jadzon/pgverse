@@ -1,0 +1,33 @@
+3. Obwody prądu stalego
+
+„ nie ma gałęzi incydentnej z węzłami i oraz j, to G, = 0.
+napięć węzłowych do wyznaczenia rozkładu napięć w do-
+złach zawierającej tylko gałęzie o postaci prądowej należy:
+ałki napięć gałęziowych: w gałęziach źródłowych przeciwnie
+ści prądowych i w gałęziach bezźródłowych — dowolnie;
+en z węzłów za węzeł odniesienia i ustalić numerację
+łów;
+
+dnie z podanymi regułami, wektor wydajności prądowych
+macierz przewodności węzłowych G,;
+
+id równań węzłowych (3.3-24) i wyznaczyć jego rozwiązanie
+złowych:
+
+<image/wzory/k4_page280_formula3.png>
+
+3ięcia gałęziowe ze związków analogicznych do (3.3-21).
+'m analizy jest rozpływ prądów w sieci, należy dodatkowo
+iowe z równań gałęziowych (por. równania (3.3-20)).
+
+osując metodę napięć węzłowych obliczymy rozkład napięć i rozpływ
+3
+„3-21 dla następujących danych (por. przykład 3.3-12): J, = 3 mA,
+
+<image/wzory/k4_page280_formula2.png>
+iiesienia przyjmiemy węzeł D.
+'adowych węzłowych i macierz przewodności węzłowych są równe (por.
+
+„y—.;....__„Age280_figure1.png
+
+<image/figury/k4_page280_figure2.png>

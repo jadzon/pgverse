@@ -1,0 +1,23 @@
+Trajektoria fazowa — przykład 2 (liniowy)
+
+ 
+
+Wykreślić przebieg trajektorii fazowej dla masy zawieszonej na sprężynie.
+Założyć m=l1kg, k=1N/m oraz siłę oporu ruchu proporcjonalną do prędkości
+b=0,4N/(m/s) | zerowe pobudzenie /(1)=0N. Jako zmienne stanu przyjąć
+odchylenie od punktu równowagi (x,) i prędkość (x,). Warunki początkowe: x,
+=2m, x,=0m/S.
+
+<image/wzory/k/_page203_formula1.png>
+[A ) b /k
+
+[am0ZEJ] AuzAZOZSEŁd Epo]SIN
+
+X 14)
+
+<image/wzory/k/_page203_formula2.png>
+
+ 
+
+POLITECHNIKA
+GDANSKA

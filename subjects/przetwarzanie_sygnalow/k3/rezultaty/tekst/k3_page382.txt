@@ -1,0 +1,28 @@
+Stosunek sygnału do szumu
+
+ 
+
+<image/figury/k3_page382_figure1.png>
+
+Dokładna wartość minimalnego wykrywalnego stosunku sygnału do szumu zależy od roz-
+miaru obiektu — im większy jest obiekt, tym łatwiej go wykryć. Aby to zrozumieć, wyobraź-
+cie sobie wygładzanie obrazu z rys. 25.8 przy użyciu filtru o prostokątnej odpowiedzi impul-
+sowej 3 x 3. Wygładzanie pozostawia kontrast niezmieniony, lecz tłumi szum o czynnik trzy
+(j. o pierwiastek kwadratowy liczby pikseli w odpowiedzi impulsowej). Ponieważ stosunek
+sygnału do szumu jest zwiększony trzykrotnie, więc stają się widoczne obiekty o mniejszych
+odpowiedź impulsową filtru. Na przykład filtr o odpowiedzi impulsowej 5 x 5 poprawia
+stosunek sygnału do szumu o czynnik ,/25 =5. Taką procedurę można kontynuować tak dłu-
+go, aż odpowiedź impulsowa filtru zrówna się swym rozmiarem z wykrywanym obiektem.
+Z tego wynika, że zdolność wykrywania obiektu jest proporcjonalna do pierwiastka kwadra-
+towego jego powierzchni. Przy podwojeniu średnicy obiektu, może on być wykrywany na tle
+dwa razy większego szumu.
+
+Podobne procesy następują w mózgu podczas przetwarzania obrazu. Wygładzanie oglądane-
+go obrazu przez filtry o odpowiedziach impulsowych o różnych rozmiarach jest próbą rozpo-
+znawania obiektów o małym kontraście. Trzy profile na rys. 25.8 mają wykazać, jak dobry
+jest ludzki wzrok w wykrywaniu obiektów znajdujących się w otoczeniu szumu. Chociaż
+obiekty są na profilach trudne do zidentyfikowania, to są w sposób oczywisty widoczne na
+obrazie. Jeśli chcecie w pełni docenić możliwości ludzkiego systemu widzenia, spróbujcie
+napisać algorytmy przeznaczone do przetwarzania obrazów przy małym stosunku sygnału do
+szumu. Wtedy z pokorą przyznacie, że nasz mózg potrafi zrobić wiele rzeczy, których nie jest
+w stanie wykonać napisany przez was program!

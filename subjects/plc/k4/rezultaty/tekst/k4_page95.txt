@@ -1,0 +1,14 @@
+J
+<image/figury/k4_page95_figure3.png>
+
+Rys. 2.15 Przykład grafu SFC o nieokreślonym działaniu
+A
+
+J
+<image/figury/k4_page95_figure4.png>
+
+Rys. 2.16 Przykład grafu „nierozwiązyw alnego ".
+
+ 
+
+2.5 Programowanie w oparciu o graf sekwencji SFC 95

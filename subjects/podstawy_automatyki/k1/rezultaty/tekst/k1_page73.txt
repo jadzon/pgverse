@@ -1,0 +1,28 @@
+Charakterystyka logarytmiczna fazy (fazowo-częstotliwościowa)
+Korzystając z równań:
+
+wzorv/k1 bade/3 formula1.ona
+<image/wzory/k1_page7/3_formula2.png>
+
+gdzie 000) =arctg Pó),
+
+transmitancję widmową możemy zapisać w następującej postaci
+
+<image/wzory/k1_page/3_formula3.png>
+figi
+
+Dla K=2i7T=4 charakterystykę logarytmiczną fazy można narysować na podsta-
+wie danych z tabeli 2.2.
+
+<image/tabele/k1_page/3_table1.png>
+
+Charakterystyka przybliżona to aproksymacja 3-odcinkowa wykresu, np. metodą
+siecznych, dokonana w trzech punktach charakterystycznych:
+
+<image/wzory/k1_page/3_formula4.png>
+
+0» =, =0,25 rad/s,
+
+03 =100, = 2,5 rad/s.
+
+75

@@ -1,0 +1,48 @@
+Nieliniowe przetwarzanie sygnałów fonicznych 357
+
+<image/figury/k3_page327_figure1.png>
+
+Weźmy na przykład sygnał audio przesyłany jako fala radiowa z modulacją AM. Przy zmia-
+nie warunków atmosferycznych poziom odbieranego sygnału wzrasta lub maleje, co powo-
+duje powolne zmiany głośności w funkcji czasu. To zjawisko można modelować jako sygnał
+audio af ] pomnożony przez jakiś sygnał wolnozmienny g( ]. który reprezentuje zmienia-
+jące się wzmocnienie. Ten problem jest na ogół rozwiązywany przez zastosowanie ukła-
+du automatycznej regulacji wzmocnienia ARW ( AGC - Automatic Gain Control), lecz ko-
+rektę można też przeprowadzić nieliniowym układem DSP.
+
+Jak pokazano na rys. 22.11, sygnał wejściowy a| ] x gl ] jest poddawany logarytmowaniu. Z za-
+leżności log (xy) = log x + log y wynika, że dwa sygnały można połączyć ze sobą przez sumowa-
+nie logarytmów, tj. log af ] + log gl |. Można więc powiedzieć, że logarytm jest homomorficznym
+przekształceniem, zamieniającym nieliniową operację mnożenia w liniową operację dodawania.
+Zsumowane sygnały są następnie rozdzielane konwencjonalnym filtrem liniowym, a więc nie-
+które częstotliwości są przepuszczane, a inne tłumione. W układzie ARW sygnał wzmocnie-
+nia gf ] składa się z bardzo małych częstotliwości, leżących daleko poniżej pasma głosowego
+obejmującego zakres od 200 Hz do 3,2 kHz. Logarytm tych sygnałów będzie miał bardziej
+skomplikowane widmo, lecz idea jest ta sama — stosuje się filtr górnoprzepustowy, aby wyeli-
+minować z sygnału wolnozmienną składową wzmocnienia. W rezultacie z log a[ ] + log gl ]
+pozostaje tylko log a[ ]. W ostatnim kroku następuje delogarytmowanie przy użyciu funkcji
+wykładniczej e”. W ten sposób uzyskuje się żądany sygnał wyjściowy al |].
+
+Na rys. 22.12 przedstawiono system homomorficzny do rozdzielania sygnałów, które zostały
+ze sobą splecione. Pożytecznym zastosowaniem tego systemu okazało się usuwania echa
+z sygnałów fonicznych. Sygnał foniczny jest poddawany splotowi z odpowiedzią impulsową
+zawierającą funkcję delta oraz przesuniętą i przeskalowaną funkcję delta. Przekształcenie
+homomorficzne splotu jest wykonywane w dwóch etapach. Najpierw wykonuje się
+przekształcenie Fouriera zamieniające splot w mnożenie, a następnie łogarytmowanie prze-
+kształcające mnożenie w dodawanie. Tak jak poprzednio, po rozdzieleniu sygnałów filtrem
+liniowym wykonuje się odwrotne przekształcenie homomorficzne.
+
+Interesującą cechą systemu przedstawionego na rys. 22.12 jest to, że w filtracji liniowej ope-
+ruje się sygnałami w dziedzinie częstotliwości w taki sam sposób, w jaki zwykle są przetwa-
+rzane sygnały w dziedzinie czasu. Innymi słowy, nastąpiła konwersja zastosowań dziedzin
+czasu i częstotliwości. Na przykład, gdyby splot FFT zastosować do przeprowadzenia filtra-
+cji liniowej, to mnożone „widma” byłyby w dziedzinie czasu. Takie odwrócenie ról narodziło
+specyficzny żargon. Na przykład cepstrum (przestawienie liter słowa spectrum — widmo)
+oznacza transformatę Fouriera logarytmu transformaty Fouriera. Podobnie, mówi się o fil-
+trach długo- i krótkoprzepustowych, zamiast o dolno- i górnoprzepustowych. Niektórzy auto-
+rzy używają nawet określenia Quefrency Alanysis and lifiering (przestawienie liter w nazwie
+Frequency Analysis and Filtering — analiza częstotliwościowa i filtracja — przyp. tłum.).
+Miejcie na uwadze, że podane tu opisy skomplikowanych algorytmów DSP mają charakter
+bardzo uproszczony; rzeczywiste przetwarzanie homomorficzne zawiera wiele subtelnych
+szczegółów. Na przykład logarytmowanie musi operować zarówno dodatnimi, jak i ujem-
+nymi wartościami sygnału wejściowego, gdyż taki jest charakter sygnałów fonicznych. To

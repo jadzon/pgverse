@@ -1,0 +1,10 @@
+<image/figury/k4_page17/4_figure1.png>
+
+Moduły wejść i wyjść montowane są na szynach montażowych typu DIN 35.
+Jeden element sieci może zawierać do 8 modułów wejść/wyjść zestawianych w
+
+zależności od potrzeb instalacji.
+
+ 
+
+174 Rozdział : 3. Sprzęt sterowników PLC

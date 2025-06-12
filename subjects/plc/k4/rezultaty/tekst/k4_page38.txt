@@ -1,0 +1,38 @@
+Tab. 2.5 pokazuje jakie przedrostki mogą być użyte do przedstawienia danej
+w postaci godziny dnia lub daty, natomiast przykłady ich użycia przedstawiono
+w Tab. 2.6.
+
+<image/tabele/k4_page38_table2.png>
+
+ny dnia i daty
+
+<image/tabele/k4_page38_table1.png>
+
+Tab. 2.6 Przykłady przedstawiania danych
+w postaci daty i godziny dnia
+
+ZZA | KŻ) CORE
+
+ 
+
+Norma IEC 1131-3 definiuje elementarne typy danych, jakie mogą być używane
+w systemach sterownikowych. Typ określa zbiór wartości jakie mogą przyjmo-
+wać dane, a zarazem zbiór operacji, które mogą być na nich wykonane. Tab. 2.7
+zawiera pełny zestaw elementarnych typów danych dopuszczonych w normie.
+Dana typu BOOL może przyjmować wartości O lub /, odpowiadające słowom
+kluczowym FALSE i TRUE. Dane z wierszy od 2 do 5 mogą przyjmować warto-
+ści od —2**(N-]) do 2**(N-7)-/, gdzie N oznacza liczbę bitów potrzebnych do
+przechowania danej. Zmienne bez znaku (wiersze od 6 do 9) przyjmują wartości
+od O do 2**N-/, gdzie N oznacza, jak poprzednio, liczbę bitów. Zakres wartości
+dla danych typu REAL i LREAL jest zgodny z normą IEC 559.
+
+Z elementarnych typów danych można z kolei tworzyć rodzaje danych (generic
+data types), np. dane liczbowe mogą tworzyć rodzaj ANY_NUM, na który skła-
+dają się dane typu: LREAL, REAL, LINT, DINT, SINT, ULINT, UDINT, UINT
+iUS/INT. Podobnie w normie określono rodzaj ANY_REAŁ obejmujący typy
+REAL i LREAL, rodzaj ANY_INT obejmujący wszystkie typy liczb całkowitych
+oraz rodzaj ANY_BIT zawierający typy LWORD, DWORD, WORD, BYTE
+i BOOL. Specyfikacja określonego rodzaju danych rozpoczyna się przedrostkiem
+ANY (z ang. jakikolwiek). Tworzenie rodzajów danych może być wykorzystywa-
+EO O WEAR
+38 Rozdział : 2.Programowanie sterowników PLC

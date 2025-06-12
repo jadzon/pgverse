@@ -1,0 +1,25 @@
+Odpowiedź skokowa aproksymacji Pade dla tau = 10s
+
+<image/figury/k1_page123_figure1.png>
+
+Rys. 3.8. Aproksymacja opóźnienia metodą Padego
+
+3.5. Konfiguracje połączeń elementów automatyki
+
+Poniżej przedstawiono funkcje umożliwiające uzyskanie wypadkowych modeli
+dla układów ze sprzężeniem zwrotnym oraz połączonych szeregowo lub równolegle:
+—  cloop — układ z jednostkowym sprzężeniem zwrotnym
+[L, M] = cłoop (LI, M1, znak)
+— feedback — układ ze sprzężeniem zwrotnym z kompensatorem w obwodzie sprzę-
+żenia
+[L, M] = feedback (Ll, MI, L2, M2, znak)
+— series — szeregowe połączenie dwóch układów
+[L, M] = series (Ll, MI, L2, M2)
+
+— parallel — równoległe połączenie dwóch układów
+[L, M] = parallel (Ll, Ml, L2, M2)
+
+Znak sprzężenia — parametr znak powinien mieć wartość 1 dla sprzężenia dodat-
+niego i wartość —1 dla ujemnego.
+
+125

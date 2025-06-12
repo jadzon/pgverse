@@ -1,0 +1,17 @@
+Operator jest skrótową nazwą operacji, która ma zostać wykonana.
+
+Argument określa stałe lub zmienne poddane operacji i składa się z symbolu
+i parametru. Symbol określa typ zmiennej. Parametr podaje adres zmiennej.
+Typy danych używane w języku listy instrukcji dla sterowników Simatic S5
+przedstawiono w Tab. 7.1.
+
+Dla większości instrukcji należy podać adres, który wskazuje stałą lub miejsce
+w pamięci sterownika, gdzie znajduje się wartość, na której ma zostać wykonana
+określona operacja. W Tab. 7.2 przedstawiono obszary pamięci, ich przeznacze-
+nie oraz jednostki w jakich można się do nich odwoływać w programie.
+
+<image/tabele/k4_page323_table1.png>
+
+m2 m 0 m m M W MM
+
+wzory/k4_page323_formula1.pnq

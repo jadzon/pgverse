@@ -1,0 +1,33 @@
+22 3. Podstawy techniki cyfrowej
+
+DEKODERY
+
+Dekoderami nazywane są układy o n wejściach i 2” wyjściach. Przekształcają one słowo
+wejściowe w kodzie NKB na słowo w kodzie „1 z 2”” (por. podrozdz. 3.2). Oznacza to, że
+każdej kombinacji bitów wejściowych jest przypisana jedna pozycja słowa wyjściowego.
+Jeżeli dana kombinacja bitów pojawi się na wejściu, to na odpowiedniej pozycji słowa
+wyjściowego (na danym wyjściu) pojawi się 1, a wszystkie inne pozycje przyjmą wartość
+0. Istnieją dekodery, które wyróżniają daną kombinację przyjmując na odpowiednim
+wyjściu wartość 0, podczas gdy na pozostałych wyjściach są 1.
+
+.page32_table1.pn
+<image/figury/k3_page32_figure1.png>
+
+4
+
+Na rysunku 3.13a pokazano układ trzywejściowego, a zatem 8-wyjściowego, dekodera.
+Na rysunku 3.13b przedstawiono tabelę prawdy dla tego układu, a na rysunku 3.13c jego
+oznaczenie. Jak widać z tego rysunku układ jest wyposażony w dodatkowe wejście E
+(ang. enable) nazywane wejściem dostępu, albo wejściem zezwalającym, albo wejściem
+uaktywniającym. Jeśli E = 0, to działanie układu zostaje zablokowane. Mówimy, że układ
+jest dezaktywowany. W takim przypadku na wyjściu dekodera pojawiają się same 0,
+a więc słowo wyjściowe nie jest z kodu „l z2””. Dekodery wykorzystywane są często
+jako układy wybierające. Stosowane są na przykład jako układy wybierania komórek
+z pamięci na podstawie podanego adresu. Podobnie jak dla sumatorów i komparatorów,
+tak i w tym przypadku istnieje konieczność łączenia dekoderów ze sobą ze względu na
+potrzeby zwiększenia liczby wejść.
+
+Rysunek 3.13. Dekoder trzywejściowy
+
+Na rysunku 3.14 pokazano jak z dwóch dekoderów 3-wejściowych można zbudować
+jeden dekoder 4-wejściowy (16-wyjściowy). Należy zwrócić uwagę na wykorzystanie do

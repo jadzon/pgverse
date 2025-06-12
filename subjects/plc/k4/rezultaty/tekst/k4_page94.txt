@@ -1,0 +1,10 @@
+<image/tabele/k4_page94_table1.png>
+
+Przy korzystaniu z reguł przedstawionych w Tab. 2.48 należy pamiętać, by do
+sekwencji współbieżnych nie wprowadzać wyboru sekwencji o ścieżkach koń-
+czących się poza wspólną linią kończącą sekwencję współbieżną. Rys. 2./5
+pokazuje przykład takiego błędu, który może prowadzić do niekontrolowanej
+realizacji sekwencji w grafie. Rys. 2./6 przedstawia z kolei przykład błędu pro-
+wadzącego do tego, że realizacja grafu może nigdy nie zostać zakończona.
+
+wzory/k4_padqe94_formula1.opnq

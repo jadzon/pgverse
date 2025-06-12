@@ -1,0 +1,35 @@
+66
+
+<image/figury/k2_page61_figure1.png>
+
+Świat smoka — wnioskowanie w rachunku predykatów
+
+Opis formalny świata smoka można utworzyć na podstawie zdania w języku natu-
+ralnym:
+
+„Zapach występuje w kwadracie wtedy i tylko wtedy, gdy przynajmniej w jednym
+sąsiednim kwadracie znajduje się smok* Na podstawie tego zdania mamy
+
+<image/wzory/k2_page61_formula1.png>
+
+gdzie predykaty ws, z, ks i s określają odpowiednio znajdowanie sie w systemie,
+zapach, kwadrat sąsiedni i obecność smoka.
+
+Nie sprawdzając znajdowania sie współrzędnych wewnątrz systemu, oraz zapi-
+sując sąsiedztwo w jawny sposób i nie piszac jawnie kwantyfikatorów można na
+podstawie powyższego wyrażenia napisać dwie równoważne reguły:
+
+wzoryv/konanaaai1formiuilanna
+
+<image/wzory/k2_page61_formula3.png>
+
+Bezpośrednie zapisanie powyższych wyrażeń w PROLOGau nie jest możliwe po-
+nieważ nie są one klauzulami Horna (nie dają się do nich sprowadzić). Aby uzy-
+skać program w PROLOGu należy obok predykatów z i s oznaczających zapach i
+smoka wprowadzić predykaty nz i ns oznaczające niewystępowanie zapachu i smoka.
+Ponadto należy pamiętać o występującym w PROLOGu założeniu o żamkniętości
+świata czyli generowaniem przez PROLOG odpowiedzi FALSE w przypadku nie-
+możności wykazania czegoś. Np. przy zapytaniu s(4,4) odpowiedź FALSE może
+oznaczać brak smoka w kwadracie (4,4) ale także brak danych do wykazania wystę-
+powania smoka w tym kwadracie. Czyli aby uzyskać wiarygodną odpowiedź należy
+zapytać dwukrotnie: o istnienie smoka i o jego nieistnienie.

@@ -1,0 +1,32 @@
+2.1. Wielowrotniki i sieci 201
+
+Weźmy pod uwagę dowolny dwójnik D występujący w strukturze wielo-
+wrotnika i rozważmy jego prąd i lub napięcie u (na rys. 2.1-20 dwójnik ten
+zaznaczono linią przerywaną) *. Zakładamy przy tym, że dowolnie wybrany
+przez nas prąd i lub napięcie u są jednoznacznie określone przy dowol-
+nych pobudzeniach, tj. przy dowolnie zadanych siłach elektromotorycznych
+i wydajnościach prądowych ey, €,..., ©, jn 1:---; Jn-
+
+<image/figury/k4_page199_figure1.png>
+
+Przy tych założeniach zasadę superpozycji możemy sformułować w sposób
+następujący:
+
+W układzie liniowym (i tylko w układzie liniowym), w którym działa n
+pobudzeń, prąd i (napięcie u) dowolnego dwójnika jest sumą prądów i*) (napięć
+u*) wywołanych w tym dwójniku działaniem każdego z pobudzeń z osobna, tzn.:
+
+<image/wzory/k4_page199_formula1.png>
+
+Na przykład, u'*»,i) oznaczają składowe sum (2.1-44) wywołane działaniem
+tylko źródła e,, tzn. przy pozostałych siłach elektromotorycznych i wydaj-
+nościach prądowych równych zeru (przy zwartych wrotach zasilanych napięcio-
+wo i rozwartych wrotach zasilanych prądowo — rys. 2.1-21a). Analogiczną
+interpretację mają pozostałe składniki wzorów (2.1-44).
+
+Zasada superpozycji wynika wprost z właściwości addytywności rozwiązań
+równań różniczkowych (lub równań algebraicznych) liniowych względem
+wymuszeń, przy założeniu istnienia i jednoznaczności tych rozwiązań.
+
+V Wybraną wielkością i lub u może być również prąd dowolnych wrót zasilanych napięciowo
+lub napięcie dowolnych wrót zasilanych prądowo.

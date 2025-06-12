@@ -1,0 +1,53 @@
+12
+
+chemii. Z drugiej strony jednak twierdził, że zjawiska psychiczne są innej natury
+i nie dają się wyprowadzić ze zjawisk cielesnych. Kartezjusz dzięki tym poglądom
+uważany jest za twórce nowoczesnej doktryny dualizmu czyli istnienia dwóch nie-
+sprowadzalnych do siebie czynników: ciała i ducha. W okresie Oświecenia w XVIII
+wieku pojawiły się idee materialistyczne głoszące, że także działanie umysłowe po-
+winny dać się wyjaśnić mechanistycznie (wydana w 1747 roku słynna książka La
+Mettriego (1984)).
+
+Obecnie, wśród części badaczy SI panuje przekonanie, że zachodzi prosta analo-
+gia pomiędzy zachowaniem człowieka, a wykonywaniem programu komputerowego.
+Uważają oni, że myślenie ludzkie opiera się na takich samych mechanizmach jakie
+występują w maszynach cyfrowych, albo ostrożniej — że wszelkie ludzkie działanie
+da się opisać i sformalizować przy pomocy reguł mechanistycznych (Gurba 1997).
+
+Operacyjny pogląd na myślenie i świadomość polega na przyjęciu, że coś my-
+śli, jeżeli działa w sposób nieodróżnialny od działania myślącej osoby. Pogląd taki
+wyrażał Alan Turing (1950) proponując kryterium zwane obecnie testem Turinga
+rozstrzygające czy można twierdzić, że dana maszyna (komputer) myśli. Kryterium
+to mówi, że jeżeli człowiek prowadząc dialog w języku naturalnym z komputerem
+nie będzie w stanie odróżnić czy ma do czynienia z człowiekiem czy komputerem,
+to należy przyjąć, że komputer ten myśli.
+
+Newell i Simon, znani badacze z Carnegie Mellon University w Pittsburghu opu-
+blikowali głośny artykuł (1976), w którym stwierdzają, że wszystko co wykonuje
+człowiek fizycznie i umysłowo jest wynikiem przetwarzania informacji analogicznego
+do przetwarzania realizowanego w maszynie cyfrowej przez nadzwyczaj złożony pro-
+gram — ale tylko program. Stanowisko takie nazywa się hipoteza stlnej SI. Jego
+zwolennicy uważają ponadto, że tworząc i realizując w komputerze program przeja-
+wiający działanie analogiczne do działania mózgu ludzkiego, komputer ten będzie
+posiadał cechy umysłu człowieka łącznie z myśleniem, czuciem, inteligencją, rozu-
+mieniem i świadomością. Atrybuty te są tylko cechami algorytmu wykonywanego
+przez mózg.
+
+Polemikę z hipotezą silnej SI podjął Searle (Searle 1991, Churchland, Churchland
+1991, Penrose 1995, Lem 1996). Przedstawił hipotetyczne przykłady działania kom-
+puterów prowadzących dialog z użytkownikiem w uproszczonym języku naturalnym,
+o których można powiedzieć, że przechodzą uproszczony test Turinga, czyli prze-
+jawiają dla zewnętrznego obserwatora pewne cechy inteligencji. Następnie Searle
+przedstawia rozumowanie, w którym wyobraża siebie w roli procesora znajdującego
+się w zamkniętym pokoju. Komunikacja ze światem zewnętrznym odbywa się przez
+wąską szczelinę, przez którą wprowadzane i wyprowadzane są zapytania i odpo-
+wiedzi w języku naturalnym. Po otrzymaniu zapytania procesor wykonuje program
+pobierając instrukcje znajdujące się w regałach wewnątrz pokoju i wytwarza odpo-
+wiedź. Jeżeli językiem naturalnym jest np. język chiński, którego Searle nie zna, to
+w dalszym ciągu wykonując instrukcje będzie prowadził poprawny dialog w języku
+chińskim kompletnie go nie rozumiejąc. Argumentacja Searlego sprowadza się do
+wykazania, że wykonanie algorytmu nie implikuje, że mamy do czynienia z prawdzi-
+wym zrozumieniem.
+
+W dyskusjach dotyczących silnej SI często przytaczany jest hipotetyczny przy-
+kład podróży poprzez przesyłanie informacji o strukturze człowieka, a następnie w

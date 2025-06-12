@@ -1,0 +1,41 @@
+<image/wzory/k3_page123_formula1.png>
+
+6.1. WPROWADZENIE
+
+Podstawowym zadaniem urządzeń wejścia-wyjścia jest umożliwienie użytkownikowi
+komputera wprowadzanie programów i danych oraz wyprowadzanie wyników programów.
+Program i dane są czytelne dla komputera jedynie w postaci binarnej. Natomiast dla
+użytkownika czytelną postacią programu, danych i wyników są teksty albo obrazy. Po-
+wszechnie stosowane urządzenia we-wy można podzielić na dwie grupy: urządzenia pra-
+cujące w trybie znakowym i urządzenia pracujące w trybie graficznym. Urządzenia we-wy
+są łączone z komputerem poprzez sterownik, którego zadaniem jest zamiana postaci
+informacji z czytelnej przez użytkownika na czytelną przez komputer lub odwrotnie.
+Najpopularniejszym urządzeniem wejściowym znakowym jest klawiatura, natomiast
+urządzeniami wyjściowymi są monitor ekranowy i drukarka. Zwykle użytkownik komuni-
+kuje się z komputerem poprzez terminal czyli klawiaturę z monitorem. Natomiast drukarka
+jest używana wówczas, gdy operatorowi jest potrzebny dokument. Wymienione urządzenia
+należą do grupy operatorskich urządzeń zewnętrznych (ang. human-readable). Do tej
+samej grupy zaliczyć można także takie urządzenia wejściowe jak mysz lub pióro świetlne,
+wskazujące wybrane przez operatora miejsce na ekranie, lub tzw. digitizer zamieniający
+narysowane punkty na powierzchni na cyfrowe wartości ich współrzędnych. Graficznymi
+urządzeniami wyjściowymi są monitory ekranowe i plotery. Jeszcze innymi urządzeniami
+są akustyczne urządzenia we-wy wykorzystujące analizatory i syntetyzatory głosu.
+
+Drugą grupę urządzeń we-wy stanowią urządzenia wprowadzające i wyprowadzające
+informację, której postać jest nieczytelna dla operatora. Informacja jest zakodowana dwój-
+kowo, zapisana na specjalnym nośniku i czytelna jedynie przez specjalne urządzenia.
+Mówimy, że są to urządzenia maszynowe (ang. machine-readable). Przykładem takich
+urządzeń są pamięci z nośnikiem na dyskach elastycznych. Trzecią grupę stanowią urzą-
+dzenia łączące komputer ze źródłami lub z odbiornikami informacji, tj. urządzenia komuni-
+kacyjne lub urządzenia sterujące i pomiarowe połączone z komputerem przez konwertery
+analogowo-cyfrowe (A/D) lub cyfrowo-analogowe (D/A).
+
+Urządzenia zewnętrzne są dołączane do magistrali systemowej za pośrednictwem
+odpowiednich sterowników (ang. controller). Zadaniem ich jest dopasowanie tzw. łącza
+(ang. interface), tj. zbioru sygnałów urządzenia zewnętrznego do magistrali systemowej
+danego komputera. Sterownik przyjmuje polecenia obsługi zgłaszane zarówno przez
+urządzenie (np. drukarkę, która zgłasza brak papieru), jak i przez procesor, który wykonując
+rozkaz wejścia-wyjścia żąda dostępu. W obu przypadkach obsługa polega na wykonaniu
+przez procesor specjalnego programu. Żądanie dostępu do sterownika procesor zgłasza
+wysyłając adres przypisany temu sterownikowi na magistralę adresową. Dane i rozkazy są
+przesyłane przez magistralę danych. Sterownik odbiera także sygnały strobów odczytu

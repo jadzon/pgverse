@@ -1,0 +1,46 @@
+Rozdział trzeci obejmuje przedstawienie w ogólnych zarysach sprzętu systemów
+sterownikowych. Poszczególne moduły omówiono na przykładzie popularnej
+rodziny sterowników serii 90-30 amerykańsko-japońskiej firmy GE Fanuc, gdyż
+wydaje się, że przedstawienie tego tematu metodą szczegółowego omówienia
+jednego przypadku (case study) jest najbardziej odpowiednie. Wiele miejsca
+poświęcono tu praktycznym uwagom dotyczącym łączenia modułów z przetwor-
+nikami obiektowymi i układom zasilania sterowników zgodnie z zaleceniami
+polskich norm dotyczącymi układów zasilania aparatury sterowniczej, ze szcze-
+gólnym uwzględnieniem aspektów ochrony zapewniającej bezpieczeństwo.
+Następne rozdziały poświęcone są językom programowania dla wybranych
+popularnych rodzin sterowników. I tak w kolejności prezentowane są:
+e język schematów drabinkowych dla sterowników
+firmy GE Fanuc z serii 90-30,
+e język schematów drabinkowych dla sterowników
+serii SLC 500 firmy Allen — Bradley,
+e język schematów drabinkowych dla sterowników
+Modicon serii 984 firmy AEG Schneider,
+e język listy instrukcji dla sterowników
+SIMATIC S$ firmy Siemens.
+Jak łatwo zauważyć, przeważa tu język schematów drabinkowych, co wynika
+z jego popularności w kręgach inżynierów zajmujących się sterownikami pro-
+gramowalnymi. Wiąże się to przede wszystkim z podobieństwem programowa-
+nia w tym języku do projektowania klasycznych układów sterowania przekaźni-
+kowo-stykowego. Każdy z tych rozdziałów poświęconych poszczególnym języ-
+kom jest autonomiczny i czytelnik może tu swobodnie wybierać tylko te, które
+z jego punktu widzenia są interesujące.
+
+Szczególnie przydatny, ze względu na możliwości praktycznego wykorzystania
+w programowaniu sterowników, wydaje się być rozdział ósmy, w którym przed-
+stawione zostały przykłady programów w omówionych wcześniej językach pro-
+gramowania. Prezentację programów poprzedzono krótkimi opisami paneli dy-
+
+daktycznych łub procesów, dla których programy te przygotowano.
+
+Dodatek A zawiera definicje wybranych pojęć z zakresu programowania sterow-
+ników PLC według normy IEC 1131-3. W dodatku B przedstawiono metody
+doboru optymalnych nastaw dla regulatora PID. Ze względu na wykorzystywanie
+w przykładach znormalizowanych oznaczeń punktów automatyki zostały one
+zebrane w Dodatku C.
+
+Książka przeznaczona jest dla inżynierów, techników i studentów zainteresowa-
+nych praktycznymi zastosowaniami sterowników PLC.
+
+ 
+
+2 Przedmowa

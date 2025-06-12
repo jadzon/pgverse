@@ -1,0 +1,23 @@
+<image/figury/k4_page153_figure2.png>
+
+Rys. 3.29 Ochrona przed dotykiem pośrednim w sieci TN-S
+za pomocą wyłącznika WOZCE NI
+bezpiecznikówśćć i wyłącznika famdznegośiki|
+
+<image/figury/k4_page153_figure1.png>
+
+Rys. 3.30 Ochrona przed dotykiem pośrednim w sieci TN-C
+dla prądu przemiennego i stałego.
+
+ 
+
+ABB - oznacza urządzenie 1I klasy ochronności.
+
+W sieciach typu 7T skuteczną ochronę przeciwporażeniową zapewniają wyłącz-
+niki różnicowoprądowe. Układy te mogą być stosowane w urządzeniach o
+niewielkich mocach i wymagają, by suma rezystancji uziemienia i przewodu
+ochronnego była bardzo mała.
+
+W c
+
+3.7 Zasilanie sterowników 153

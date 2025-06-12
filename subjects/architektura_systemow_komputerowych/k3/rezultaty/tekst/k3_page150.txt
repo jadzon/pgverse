@@ -1,0 +1,51 @@
+140 7. Elementy oprogramowania komputerów
+
+podprogram). Dlatego adresem powrotu musi być zawsze adres instrukcji następnej po
+instrukcji wywołującej podprogram. Procesor musi zatem zapewniać możliwość
+zapamiętywania adresu powrotu. Adres ten może być zapamiętywany w pamięci lub w
+rejestrze procesora. W każdym programie wywołanie podprogramu jest pewną sekwencją
+rozkazów zwaną sekwencją startową. Zadaniem tej sekwencji jest:
+— przygotowanie danych dla podprogramu (są to np. rozkazy zapisujące do rejestrów
+procesora lub do pamięci argumenty dla wywoływanego podprogramu),
+— przygotowanie miejsca na wynik podprogramu (są to np. rozkazy ustawiające
+adresy komórek pamięci, gdzie przesłano wyniki podprogramu),
+— skok do podprogramu wraz zapamiętaniem adresu powrotu, czyli np. rozkaz
+CALL.
+
+Po wykonaniu podprogramu zostaje wywołana w programie inna sekwencja rozkazów,
+zwana sekwencją czyszczącą. Zadaniem jej jest:
+— przyjąć wyniki z podprogramu, czyli np. zapisać je do pamięci, a w szczególności
+zwolnić rejestry procesora,
+— zwolnić miejsca w pamięci lub w rejestrach zarezerwowane na argumenty dla
+podprogramu.
+
+W samym podprogramie natomiast można wyodrębnić trzy części: początek podprogramu
+(zwany niekiedy prologiem), część zasadniczą (zwaną ciałem podprogramu) i zakończe-
+nie (zwane epilogiem). Początek podprogramu to zwykle ciąg rozkazów służący za-
+pamiętaniu w pamięci stanu procesora, czyli adresu powrotu, a jeśli zachodzi taka koniecz-
+ność, to i zawartości jego wszystkich rejestrów. Zakończenie podprogramu przywraca
+adres powrotu i odtwarza stan procesora, tak aby dalsza część programu głównego mogła
+być wykonywana bez zakłóceń.
+
+Sterowanie wywoływaniem podprogramu i powrotem do programu głównego nazywa
+się przyłączaniem podprogramu (ang. subrouline linkage). Kolejność wykonywania ciągu
+rozkazów jest następująca: sekwencja startowa, początek podprogramu, ciało podprogramu,
+zakończenie podprogramu i sekwencja czyszcząca.
+
+PRZYKŁAD
+
+Napisać program obliczania pola kwadratu dla długości boków od 1 do 100 (co 1) odwołu-
+jący się do podprogramu POLE podnoszącego do kwadratu liczbę umieszczoną w rejestrze
+B. Załóżono, że 8-bitowy procesor oprócz licznika rozkazów ma jeszcze 3 rejestry A, B,
+i C. Będziemy posługiwać się mnemonikami rozkazów przedstawionymi w rozdziale 4.
+
+MOV C,100 _ /ładuj 100 do rejestru C
+MOV A,1 fładuj 1 do rejestru A
+MOV BA ładuj zawartość A do B
+KROK  CALLPOLE  /wywołanie adresu POLE
+STRADR,A - /zapis A pod adres ADR
+INC ADR /zwiększenie ADR o 1
+INC B /zwiększenie B o |
+SUB C,B /odjęcie C — B
+JNZ KROK  /skok warunkowy wykonywany gdy znacznik Z różny od 0
+HALT /zatrzymanie

@@ -1,0 +1,20 @@
+Blok PID2 reprezentujący omawiany schemat przedstawia Wyd. 6.34.
+
+<image/tabele/k4_page314_table1.png>
+
+Wyd. 6.34 Schematyczne oznaczenie bloku PID2 i opis sygnałów.
+
+Zaimplementowany w sterowniku Modicon blok PID zajmuje 30 rejestrów,
+w tym 2] zawiera parametry niezbędne do realizacji zadania regulacji. Są nimi
+nastawy regulatora, wartości graniczne dla sygnałów pomiarowych (wejścio-
+wych) i sterujących (wyjściowych), itp.
+
+Rejestr numer 40100 wskazuje na pierwszy z 21 rejestrów parametrów oznaczo-
+nych na schemacie blokowym numerami 4x0..4x20. Ich znaczenie przedstawia
+Tab. 2.5.
+
+<image/tabele/k4_page314_table2.png>
+
+PETYSTWNESZTWYPNTPOT ET TYTY RATY OZYZ PSY I , "ZEE Poza =" =. 7
+
+314 Rozdział : 6 Programowanie sterowników AEG SCHNEIDER Modicon

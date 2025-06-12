@@ -1,0 +1,21 @@
+<image/wzory/k4_page245_formula1.png>
+
+Qznaczenie zmiennych - określane w oprogramowaniu APS adresowaniem pli-
+ków danych - ma na celu przypisanie używanych w schematach drabinkowych
+zmiennych do odpowiednich plików i typów danych. Adresowanie danych
+wrnychplikachprzedstawiajponiszetabele.
+
+<image/tabele/k4_page245_table2.png>
+
+<image/figury/k4_page245_figure1.png>
+
+Tab. 4.2 Adresowanie danych w plikach bitowych.
+
+ 
+
+ 
+
+2 m z A m a an -
+
+21 245
+5.2 Typy danych : deklarowanie zmiennych 5

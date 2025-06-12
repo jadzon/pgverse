@@ -1,0 +1,37 @@
+y/k4_page253_formula1.png |
+
+Wykorzystanie własnego styku przekaźnika (tzw. samopodtrzymanie) daje moż-
+liwość uzyskania funkcji przerzutnika RS. Przedstawia to Wyd. 4.8., aby prze-
+kaźnik O:3/3 załączył się i pozostał aktywny, wystarczy krótkie załączenie 7: 1/3,
+zaś jego wyłączenie następuje dopiero przy załączeniu styku zwiernego 7: 1/4.
+
+ 
+
+<image/tabele/k4_page253_table3.png>
+
+Wyd. 4.8 Wykorzystanie instrukcji XIC, XIO
+
+do realizacji funkcji przerzutnika RS.
+Funkcję przerzutnika RS na Wyd. 4.8 możemy też zrealizować za pomocą prze-
+kaźników OTL (OuTput Latch)i OTU (OuTput Unlatch), jak to pokazano na
+Wyd. 4.9. Po zmianie kolejności tych dwóch szczebli na OTU i OTL otrzymuje
+się funkcje przerzutnika ŚR. Jeżeli dopłynie sygnał do cewka OTL przerzutnika
+RS to ustawi wartość przyporządkowanej mu zmiennej na l. Wartość ta jest
+utrzyma się tak długo, aż dopłynie sygnał do cewki OTU związanej z tą samą
+zmienną binarną.
+
+<image/tabele/k4_page253_table2.png>
+
+Wyd. 4.9 Instrukcje OTL i OTU.
+
+Funkcję przekaźnika impulsowego (przelotowego) OSR (One Shot Rising)
+uaktywnia, tylko przez jeden cykl programowy sterownika, dany obwód logiczny
+(szczebel), pod warunkiem, że nastąpiła w nim zmiana wartości z 0 na 1.
+
+Przekaźnik OSR przedstawiono na Wyd. 4.10.
+
+<image/tabele/k4_page253_table1.png>
+
+Wyd. 4.10 Instrukcja OSR.
+
+5.4 Przerzutniki SR i RS 253

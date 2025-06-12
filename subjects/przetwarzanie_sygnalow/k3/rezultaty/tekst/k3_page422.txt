@@ -1,0 +1,57 @@
+26. Sieci neuronowe (i więcej
+
+W wierszach 270-310 ustawia się współczynniki rekursywne na ich wartości początka
+typowo wybrane w taki sposób, aby tworzyły system żożsamościowy. Nie używajcie tu licz
+losowych, gdyż początkowy filtr będzie wtedy niestabilny. Współczynniki rekursywne £
+przechowywane w matrycach A[ ] i B[ ]. Zmienna NP% ustala liczbę biegunów w proje
+towanym filtrze. Na przykład, jeśli NP% jest 5, to współczynnik „a” zmienia się od A[0]
+A[5], a współczynnik „b” — od Bf1] do B[5].
+
+Jak wspomniano poprzednio, procedura iteracyjna wymaga pojedynczej wartości opisującej, ja
+dobrze działa aktualny system. Uzyskuje się to przez zmienną ER (błąd) obliczaną w podp
+gramie 3000. W wierszach od 3040 do 3080 następuje ładowanie impulsu do matrycy IMXf
+„ W następnych wierszach 3100-3150 ten impuls jest wykorzystywany jako sygnał wejści
+wy filtru rekursywnego określonego bieżącymi wartościami z A[ ] i B[ ]. Wyjście tego fili
+jest więc odpowiedzią impulsową aktualnego systemu, która jest przechowywana w matryc
+REXT[ ]. Następnie jest znajdowana odpowiedź częstotliwościowa systemu przez wyznaczen
+przekształcenia FFT, jak to pokazano w wierszu 3170. Podprogram 1000 jest programem F
+podanym w tablicy 12.4 w rozdziale 12. Ten podprogram FFT powraca do odpowiedzi czę
+tliwościowej we współrzędnych prostokątnych, nadpisując dane do matryc REX[ |] i IMX[ |.
+Następnie w wierszach 3200-3250 jest obliczana wartość ER, średni błąd kwadrat
+— błąd między modułami bieżącej i żądanej odpowiedzi częstotliwościowej. Szczegół
+uwagę zwróćcie na sposób obliczania błędu. Działanie iteracyjne programu optymalizu
+ten błąd, w wyniku czego bardzo ważny staje się sposób jego zdefiniowania. Pętla FQ
+NEXT przebiega przez każdą częstotliwość w odpowiedzi częstotliwościowej. Dla
+częstotliwości, w wierszu 3220 następuje obliczenie modułu bieżącej odpowiedzi czę
+tliwościowej na podstawie danych we współrzędnych prostokątnych. W wierszu 3230
+wyznaczany błąd dla tej częstotliwości, przez odejmowanie żądanego modułu T[ ] od je
+wartości bieżącej MAG. Ten błąd jest następnie podnoszony do kwadratu i dodawany
+zmiennej akumulatora ER. Po przebiegnięciu pętli przez wszystkie częstotliwości, w wi
+szu 3250 obliczanie zostaje zakończone, dając w wyniku ER — średni błąd kwadratowy €
+odpowiedzi częstotliwościowej.
+
+Wiersze od 340 do 380 sterują pętlą iteracyjną programu. Zmiany współczynników re
+sywnych są wykonywane w podprogramie 2000. Pierwszym działaniem w tym podpre
+mie jest określenie bieżącej wartości ER i zapisanie jej w innej zmiennej EOLD (wi
+2040 i 2050). Gdy podprogram już uaktualni współczynniki, to wartość ER jest określar
+nowo i przypisywana do zmiennej ENEW (wiersze 2270 i 2280).
+
+Zmienna MU decyduje o rozmiarze kroku iteracji, tak jak w poprzednio omówionym pr
+mie sieci neuronowej. W tym programie zastosowano pewne udoskonalenie: automatyć
+dopasowanie do wartości MU. Właśnie dlatego mamy tu dwie zmienne, EOLD i ENE
+Na początku programu zmienna MU jest ustawiana na dość dużą wartość 0,2 (wiersz |
+Umożliwia to wprawdzie szybką zbieżność, lecz ogranicza bliskość dojścia filtru do ra
+zania optymalnego. W miarę kolejnych iteracji dochodzi się do punktów, gdzie nie ma
+żadnej poprawy, co jest identyfikowane faktem, że ENEW jest większe niż EOLD. Zak
+dym razem, gdy to nastąpi, wiersz 370 powoduje zmniejszenie wartości MU.
+Podprogram 2000 uaktualnia współczynniki rekursywne według metody najszybszego ś
+ku — dla każdego współczynnika jest obliczane nachylenie i następnie ten współczynnik
+zmieniany o wartość proporcjonalną do jego nachylenia. W wierszach 2080-2130 są oblie
+ne nachylenia dla współczynników „a”, rejestrowane w matrycy SA[ ]. Podobnie, w
+szach 2150-2200 są obliczane nachylenia współczynników „b”, rejestrowane w matq
+SB[ ]. Potem w wierszach 2220-2250 następuje modyfikacja wszystkich współczynnik
+rekursywnych o wartości proporcjonalnej do ich nachyleń. W tym programie półcz
+nikiem proporcjonalności jest po prostu wartość kroku MU. W stałej proporcjonalnoś
+
+jest potrzebna żadna składowa błędu, gdyż jest tu tylko jeden przykład, do którego trze
+dopasować — żądana odpowiedź częstotliwościowa.

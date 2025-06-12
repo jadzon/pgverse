@@ -1,0 +1,35 @@
+16. Filtry okienkowane funkcją
+
+ 
+
+Jest możliwość wykorzystania kilku różnych okien, z których większość nosi nazwy ;
+ce od nazwisk naukowców, którzy je opracowali w latach 50. Tylko dwa są warte stosowani
+— okno Hamminea i okno Blackmana. Są one wyrażone wzorami:
+
+<image/wzory/k3_page252_formula1.png>
+
+Wzór 16.1. Okno Hamminga. Te okna obejmują zakres od i = 0 do M, catkowita liczba punktów jest M + 1
+w[i]=0,42 -0,5cos(2xi/ M)+0,08cos(4xi/ M)
+Wzór 16.2. Okno Blackmana
+
+Na rys. 16.2 a) pokazano kształty obu tych okien dla M = 50, tj. dla całkowitej liczby . Ś
+punktów w krzywej. Które z tych okien powinniśmy stosować? Konieczny jest tu pewiea
+kompromis w wyborze parametrów. Jak wynika z rys. 16.2 b), okno Hamminga ma opada:
+nie charakterystyki © ok. 20% szybsze niż okno Blackmana. Jednak przebieg na rys. 16.2 c)
+wskazuje, że okno Blackmana daje lepsze tłumienie w paśmie zaporowym. Ściśle mówiąc,
+tłumienie w filtrze z oknem Blackmana wynosi —74 dB (-0,02%), a z oknem Hamminga |-
+ko -53dB (-0,2%). Chociaż nie widać tego na zamieszczonych wykresach, warto wiedzieć,
+że filtr z oknem Blackmana ma zafalowania w paśmie przepustowym równe tylko 0,02%,
+podczas gdy Hamminga typowo 0,2%. Ogólnie biorąc, pierwszym wyborem przy proje
+towaniu powinien być filtr Blackmana, gdyż łatwiej sobie poradzić z wolnym opadanie
+charakterystyki niż ze słabym tłumieniem w paśmie zaporowym.
+
+figL igure2.pn
+<image/wzory/k3_page252_formula2.png>
+
+    
+
+Rys. 16.2. Właściwości okien Blackmana i Hamminga. Ksztatty obu okien przedstawiono na rys. a), zgodnie z
+16.1 i 16.2. Jak pokazano na rys. b), okno Hamminga daje opadanie charakterystyki o ok. 20% szybsze niż okno
+mana. Jednak okno Blackmana ma lepsze tłumienie w paśmie zaporowym (Blackman 0,02%, Hamming 0,2%) i
+sze zafalowania w paśmie przepustowym (Blackman 0,02%, Hamming 0,2%)

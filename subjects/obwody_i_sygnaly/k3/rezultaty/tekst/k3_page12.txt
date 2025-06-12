@@ -1,0 +1,59 @@
+Wykaz oznaczeń
+
+v — suma logiczna
+
+A — iloczyn logiczny (koniunkcja)
+
+e — symbol przynależenia
+
+=> — implikacja
+
+<> — równoważność
+
+V, A — kwantyfikatory
+
+Sł — zbiór liczb rzeczywistych
+
+R*' — zbiór liczb rzeczywistych dodatnich
+
+€ — zbiór liczb całkowitych
+
+M — zbiór liczb naturalnych
+
+Z — zbiór liczb zespolonych
+
+< — przekształcenie Laplace'a
+
+rr — dwustronne przekształcenie Laplace'a
+£"' — odwrotne przekształcenie Laplace'a
+sgn — symbol znaku
+
+1(t) — funkcja jednostkowa (skok jednostkowy)
+ó(t) — dystrybucja Diraca
+
+(t—t,) — przesunięta dystrybucja Diraca
+5%(1) — k-ta pochodna dystrybucji Diraca
+
+O(t, e) — funkcje aproksymujące dystrybucję Diraca
+J(),f — transformata Laplace'a funkcji ft)
+
+Y* — liczba sprzężona do liczby zespolonej Y
+Re[:] — część rzeczywista
+
+Im[:] — część urojona
+
+[Y| — moduł liczby zespolonej Y
+
+argY — argument (główny) liczby zespolonej Y
+j — jednostka urojona
+
+ag, a,, b, — współczynniki szeregu Fouriera
+A — współczynnik wzmocnienia
+
+A„ — amplituda
+
+B — susceptancja
+
+B — indukcja magnetyczna
+
+B|,;, — szerokość 3-4B pasma przepustowego

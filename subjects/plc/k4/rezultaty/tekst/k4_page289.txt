@@ -1,0 +1,34 @@
+duje się w stanie wysokim w trakcie odliczania czasu (wyjścia 00004, 00005,
+00006), a drugie po osiągnięciu wartości zadanej (wyjścia 00001, 00002, 00003).
+
+Do elementów zliczających, w sterowniku Modicon zalicza się: licznik dodający
+(UCTR) i licznik odejmujący (DCTR). Wyd. 6.8 przedstawia przykłady zasto-
+sowania tych liczników. Oba typy liczników zawierają dwa wejścia: liczące
+i zezwalające. Dopóki wejście zezwalające (w przykładzie 10002) jest w stanie
+wysokim ON, to kolejne przejścia ze stanu niskiego w wysoki (OFF + ON) na
+wejściu liczącym (w przykładzie 10001) powoduje powiększenie o jeden warto-
+Ści w rejestrze stanu bieżącego (akumulatorze) licznika dodającego (na który
+trzeba zarezerwować wcześniej jeden z rejestrów 4x), lub zmniejszenie stanu
+rejestru akumulatora licznika odejmującego. W omawianym przykładzie rejestr
+40001 pełni rolę akumulatora licznika UCTR Counterl, zaś rejestr 40002 jest
+akumulatorem licznika DCTR Counter2.
+
+<image/tabele/k4_page289_table1.png>
+
+Wyd. 6.8 Przykład zastosowania liczników.
+
+Gdy na wejściu zezwalającym pojawi się stan niski, licznik zostaje wyzerowany,
+a wejście liczące jest nieaktywne do momentu ponownego przejścia wejścia ze-
+zwalającego w stan wysoki.
+
+Wartość zadana, do której (lub od której) odbywa się liczenie (w przy-kładzie są
+to stałe 40003 i 40005) może być wartością stałą z zakresu od | do 999 w ste-
+rownikach 16-bitowych, lub od I do 9999 w sterownikach 24-bitowych. Może
+też pochodzić ona z obszaru wejść analogowych (3x) lub z rejestrów (4x).
+
+O stanie licznika informują dwa wyjścia: na jednym z nich pojawia się stan wy-
+soki w chwili osiągnięcia przez licznik kresu liczenia (w przykładzie są to odpo-
+wiednio wyjścia 00002 i 00082), na drugim (00081 i 00083) stan wysoki wystę-
+puje w trakcie liczenia.
+
+6.4 Czasomierze i liczniki 289

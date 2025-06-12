@@ -1,0 +1,55 @@
+8.4. Systemy wieloprocesorowe 165
+
+poziom zagnieżdżania procedur nie przekroczy kilku (np. 6) warstw, sprzętową realizację
+stosu można wykonać mając ok. 100 rejestrów. Wynika to z faktu, że przy podanych
+założeniach trzeba 6 zestawów zawierających po 17 rejestrów. Liczba zestawów wynikła z
+poziomu zagnieżdżania, natomiast liczba rejestrów w zestawie wynika z tego, iż trzeba
+$ rejestrów dla parametrów wejściowych, 5 rejestrów dla parametrów wyjściowych, tj. dla
+parametrów dla kolejno wywoływanej procedury i 7 rejestrów dla zmiennych lokalnych.
+Tak dużą liczbę rejestrów można zbudować dzięki temu, że układ sterowania procesorów
+typu RISC jest znacznie prostszy od układu sterowania klasycznego komputera (na
+powierzchni układu scalonego zajmuje kilka razy mniej miejsca). Oszczędność uzyskana
+w układzie sterowania pozwala na przeznaczenie tego miejsca na zwiększenie liczby
+rejestrów, tak aby dało się zrealizować stos sprzętowy.
+
+8.4. SYSTEMY WIELOPROCESOROWE
+
+8.4.1. STRUKTURY SYSTEMÓW WIELOPROCESOROWYCH
+
+Jednym z efektywnych sposobów przyspieszenia pracy systemów komputerowych jest
+zastosowanie w nim wielu procesorów, które pracują równolegle. Systemy takie zwane
+systemami wieloprocesorowymi pozwalają na jednoczesne wykonywanie wielu progra-
+mów. Systemy wieloprocesorowe można podzielić na dwie kategorie:
+
+l) systemy słabo powiązane (ang. loosely coupled systems),
+
+2) systemy silnie powiązane (ang. tightly coupled systems).
+
+Systemy słabo powiązane są to systemy, w których poszczególne procesory komunikują
+się ze sobą poprzez urządzenia zewnętrzne, tj. przez specjalne układy transmisji między-
+procesorowej. Ponieważ każdy procesor jest wyposażony we własną pamięć i urządzenia
+zewnętrzne, to stanowi on samodzielny komputer i wykonuje własny program. Takie
+systemy nazywane są także systemami wielokomputerowymi i stosowane są zwykle do
+zadań, gdzie jest duża odległość pomiędzy poszczególnymi procesorami. Systemy takie
+rozpowszechniły się jako tzw. lokalne lub rozległe sieci komputerowe, w których każdy
+element sieci może pracować samodzielnie i nie wymaga zbyt częstej komunikacji z in-
+nymi komputerami.
+
+Systemy silnie powiązane są to systemy wieloprocesorowe, w których procesory
+komunikują się ze sobą poprzez wspólną magistralę, do której dołączona jest wspólna
+pamięć i wspólne urządzenia zewnętrzne. Systemem takim zarządza specjalny układ
+zwany arbitrem, którego zadaniem jest ustalanie kolejności dostępu do wspólnych zaso-
+bów. Takie systemy budowane są najczęściej w przypadku, gdy procesory pracują blisko
+siebie, np. w jednej kasecie.
+
+Współpraca procesorów (lub komputerów) w systemie wieloprocesorowym może
+odbywać się na różne sposoby, które charakteryzują się wieloma cechami. Tutaj zajmiemy
+się trzema z nich. Są to:
+
+— topologia sieci,
+
+— rodzaj sterowania przesłaniami,
+
+— strategia sterowania.
+
+13 — Podstawy budowy i działania komputerów

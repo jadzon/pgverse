@@ -1,0 +1,14 @@
+<image/tabele/k4_page184_table1.png>
+
+Oprócz symboli wymaganych do przedstawienia odpowiedniego typu zmiennej,
+istnieje także możliwość przypisania zmiennym nazw symbolicznych (nickna-
+me), które często przez programistów używane są do skrótowego określania
+technicznego znaczenia poszczególnych zmiennych, np. START dla %/1, STOP
+dla %/2, PRAWO dla %Q1. Nazwy takie umieszczane są na początku programu
+w bloku deklaracji zmiennych (Variable Declarations).
+
+   
+
+wYz= = ===
+
+184 Rozdział : 4. Język LD dla sterowników GE Fanuc 90-30

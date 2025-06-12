@@ -1,0 +1,24 @@
+Stabilność
+
+Układ jest stabilny w sensie BIBO (z ang. bounded input, bounded
+output), jeżeli każdy ograniczony sygnał wejściowy wywołuje ograniczony
+sygnał wyjściowy
+
+AŻ gi LŚ
+
+<image/wzory/k/_page39_formula1.png>
+
+<image/wzory/k/_page39_formula2.png>
+jeżeli sygnał wejściowy jest ograniczony: |u()|<M = to:
+<image/wzory/k/_page39_formula3.png>
+stąd sygnał wyjściowy będzie ograniczony, gdy odpowiedź impulsowa spełni
+
+warunek:
+<image/wzory/k/_page39_formula4.png>
+
+POLITECHNIKA
+GDANSKA
+
+ 
+
+SMOUBJS 8|8pOJN

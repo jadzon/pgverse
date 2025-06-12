@@ -1,0 +1,37 @@
+<image/tabele/k4_page266_table1.png>
+
+Wyd. 4.36 Instrukcja sumy logicznej modulo dwa XOR
+
+<image/figury/k4_page266_figure1.png>
+
+Wyd. 4.37 Instrukcja negacji logicznej NOT
+
+Ponadto dostępne są następujące operacje przesuwania bitów :
+
+e BSL instrukcja przesunięcia bitów w lewo
+
+(Bit Shift Left) we fragmencie pliku danych. (Wyd. 4.38)
+e BSR instrukcja przesunięcia bitów w prawo
+
+(Bit Shift Right) we fragmencie pliku danych. (Wyd. 4.39)
+
+Instrukcje te usuwają ostatni bit z tablicy przesuwanych bitów.
+Parametrami wywołania tych instrukcji są :
+
+« Numer pliku danych, na którym będzie wykonywana operacja przesu-
+wania bitów. Podaje się tutaj również numer elementu od którego roz-
+pocznie się ta operacja.
+
+« Słowo kontrolne - element pliku danych R, w którym gromadzone są
+bieżące informacje dotyczące wykonywania instrukcji BSL i BSR.
+
+« Adres bitu zawierającego wartość wstawianą na pierwsze miejsce ta-
+blicy bitów przesuwanych instrukcją BSL lub na ostatnie miejsce ta-
+blicy bitów przesuwanych przy użyciu BSR.
+
+« Długość tablicy bitów podlegających przesuwaniu (ilość przesuwanych
+bitów).
+
+ 
+
+266 Rozdział : 5. Język schematów drabinkowych dla SLC 500

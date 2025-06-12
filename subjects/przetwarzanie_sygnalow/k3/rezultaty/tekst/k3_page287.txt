@@ -1,0 +1,53 @@
+Filtry wąskopasmowe
+
+W elektronice i DSP często powstaje potrzeba wyodrębnienia wąskiego pasma częstotli
+
+ści z sygnału o paśmie szerszym. Na przykład możemy chcieć wyeliminować w s i
+pomiarowym zakłócenia 50 Hz lub odizolować ton sygnalizacji w sieci telefonicznej.
+możliwe dwa rodzaje odpowiedzi częstotliwościowej: pasmowoprzepustowa i pasmowo.
+rowa (zwana też filtrem wycinającym — notch filter). Na rys. 19.6 przedstawiono odpowi
+częstotliwościowe tych filtrów, ze współczynnikami rekursywnymi obliczonymi według
+
+miinmesrnke saswrahoss+
+
+<image/wzory/k3_page287_formula1.png>
+
+Wzór 19.7. Filtr pasmowoprzepustowy. Przyktad odpowiedzi częstotliwościowych podano na rys. 19.6 a).
+Aby skorzystać z tych wzorów, trzeba najpierw wybrać częstotliwość środkową f i szerokość pasma BW.
+Obie te wielkości są wyrażone jako utamki częstotliwości próbkowania, mieszczą się więc w zakresie od
+0 do 0,5. Następnie oblicza się R i K, a potem współczynniki rekursywne
+
+a=K
+
+<image/wzory/k8_page287_formula2.png>
+Ą =2Reos(237)
+by=-R*
+gdzie:
+
+<image/wzory/k3_page287_formula3.png>
+R=|-3BW
+
+Wzór 19.8. Filtr pasmowozaporowy, zwany też filtrem wycinającym. Przyklad odpowiedzi
+częstotliwościowych podano na rys. 19.6 b)
+
+Przed zastosowaniem tych wzorów trzeba wybrać wartości dwóch parametrów: f - częstotli-
+wość środkową oraz B — szerokość pasma mierzoną przy 0,707 amplitudy. Obie te wielkości
+są wyrażane jako ułamki częstotliwości próbkowania, a zatem ich wartości muszą się mieścić
+w przedziale od 0 do 0,5. Na podstawie tych dwóch wybranych wartości trzeba obliczyć
+zmienne pośrednie R i K i następnie współczynniki rekursywne.
+
+Jak pokazano na rys. 19.6 a), przebieg odpowiedzi filtru pasmowoprzepustowego ma dość
+duże „ogony” odchodzące od głównego piku. Można to poprawić, łącząc kilka stopni kaska-
+dowo.poniewawzoryobliczeniowesdodugiewicatwiejjestzrealizowakaskad
+raczej przez kilkakrotną filtracje sygnału niż przez próby obliczania współczynników po-
+trzebnych dla filtru pojedynczego.
+
+Na rys. 19.6 b) podano przykłady filtrów pasmowozaporowych. Najwęższe pasmo osiągalne
+w nich przy pojedynczej dokładności wynosi ok. 0,0003 częstotliwości próbkowania. Gdy
+wyjdzie się poza tę granicę, następuje pogorszenie tłumienia w paśmie zaporowym. Na rys.
+
+19.6 c) pokazano odpowiedź skokową filtru pasmowozaporowego. Widać wyraźny przerzut
+i oscylacje (tzw. dzwonienia), lecz ich amplituda jest niewielka. Dzięki temu filtr może usu-
+
+wać zakłócenia wąskopasmowe (50 Hz i podobne), powodując tylko niewielkie zniekształce-
+nia przebiegu w dziedzinie czasu.

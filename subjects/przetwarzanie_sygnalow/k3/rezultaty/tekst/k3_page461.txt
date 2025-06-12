@@ -1,0 +1,38 @@
+Język C a język asemblera 497
+
+wane na dużych komputerach i na komputerach osobistych, prawie zawsze wybiera się język
+C. Jeśli w ogóle stosuje się asembler, to jego wykorzystanie jest ograniczone do krótkich
+podprogramów, które muszą być wykonywane ze skrajnie dużą szybkością. Przedstawiono
+to graficznie na rys. 28.9 a). Na jednego programistę pracującego tradycyjnie w asemblerze
+przypada około dziesięciu stosujących język C.
+
+Programy DSP różnią się jednak pod dwoma ważnymi względami od tradycyjnych zadań
+programistycznych. Po pierwsze, programy DSP są zwykle znacznie krótsze, powiedzmy sto
+wierszy w stosunku do dziesięciu tysięcy. Po drugie, w wielu zastosowaniach DSP szybkość
+wykonywania ma znaczenie decydujące. Bo przecież wielu użytkowników stosuje DSP wła-
+śnie ze względu na bardzo dużą szybkość w tej technice. Dwa wymienione czynniki moty-
+wują wielu inżynierów-programistów do przechodzenia z języka C na asembler przy progra-
+mowaniu cyfrowych procesorów sygnałowych. Ten fakt zilustrowano na rys 28.9 b) — prawie
+tyle samo programistów DSP stosuje asembler, co DSP.
+
+Ta sytuacja potwierdza się na rys. 28.9 c), na którym przedstawiono dochód przynoszony
+przez produkty DSP. Na każdy dolar dochodu z produktów DSP programowanych w C
+przypada dwa dolary z produktów programowanych w asemblerze. Przyczyna tego jest pro-
+sta: pieniądze się robi, wygrywając w konkurencji. Jeśli uwzględnić takie właściwości, jak
+szybkość wykonywania i koszt wytwarzania, asembler prawie zawsze wykazuje przewagę
+nad językiem C. Na przykład program napisany w C zwykle wymaga pamięci większej niż
+asembler, co podraża część układową systemu. Jednak rynek DSP ciągle się zmienia. Na
+wzrost rynku producenci odpowiedzą opracowaniem procesorów DSP zoptymalizowanych do
+programowania w języku C. Język C jest, na przykład, znacznie bardziej skuteczny, gdy ist-
+nieje duży zestaw rejestrów ogólnego przeznaczenia i zunifikowana przestrzeń pamięciowa.
+
+(E-Programic 07
+
+<image/wzory/k3_page461_formula1.png>
+
+(e. Dochody z0SP|
+<image/wzory/k3_page461_formula2.png>
+
+Rys. 28.9. Porównanie stosowania języka C i języka asemblera. Jak pokazano na rys. a), tylko 10% tra-
+
+krótkie. Na rys. c) pokazano, że asembiery są jeszcze częściej używane w produktach dających

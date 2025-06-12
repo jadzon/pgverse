@@ -1,0 +1,47 @@
+221
+
+Fakty i reguły są poprzedzone kwantyfikatorami ogólnymi, czego jednak jawnie
+się nie zapisuje.
+
+Prolog dopuszcza stosowanie w regułach spójnika lub (or) (suma logiczna), za-
+pisywanego za pomocą średnika „;”. Użycie spójnika or pozwala zastąpić kilka reguł
+o identycznych nagłówkach jedną regułą, czyli reguły
+
+<image/wzory/k2_page216_formula1.png>
+można zastąpić regułą
+
+<image/wzory/k2_page216_formula2.png>
+
+Komentarze w Prologu zawiera się pomiędzy parami znaków ,„/*** i „*/” zaś
+znak „%” oznacza, że jakikolwiek tekst pomiedzy nim a końcem linii, w której znak
+„k” się znajduje, jest ignorowany.
+
+9.1.2. Przykład programu
+
+Rozpatrzmy następujący przykładowy program
+/* Program 1 */
+
+posiada(jan,auto).
+posiada(ewa,radio).
+posiada(tomasz ,wideo).
+posiada(monika,auto).
+posiada(jan,radio).
+
+ma_dostep(monika,wideo).
+ma_dostep(monika,radio).
+ma_dostep(monika,ksiazki).
+
+lubi (ewa,radio).
+
+lubi (monika,ksiazki).
+lubi(tomasz ,wideo).
+lubi (ewa,wideo).
+lubi(_,auto).
+
+korzysta(ewa,plyty).
+korzysta(X,Y) :- posiada(X,Y), lubi(X,Y).
+korzysta(X,Y) :- ma_dostep(X,Y), lubi(X,Y).
+
+Wyrażenia występujące w programie są klauzulami Horna. Występują one w
+dwóch postaciach przedstawionych wzorami (??) i (?7). Postać pierwsza — fakt
+zawiera bezpośrednią informację o własności jakiegoś obiektu lub o relacji między

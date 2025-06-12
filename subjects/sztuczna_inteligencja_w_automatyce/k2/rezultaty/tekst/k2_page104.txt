@@ -1,0 +1,56 @@
+tt
+
+109
+
+w przypadku sterowania (patrz omówiony dalej przykład sterowania odwróco-
+nym wahadłem). Aby się od wpływu parametru uwolnić należy przeprowadzić
+obliczenia jakości dla wielu wartości parametrów, a otrzymane wyniki uśrednić.
+
+Selekcja polega na wyborze z populacji łańcuchów najlepszych i pozostawienie ich
+w populacji. Łańcuchy nie wybrane zostają usunięte z systemu. W ten sposób w
+nowo utworzonej populacji niektóre łańcuchy występują wielokrotnie. Najczęściej
+wyboru łańcuchów dokonuje się w sposób losowy.
+
+W metodzie tzw. selekcji ruletkowej przeprowadza się n losowań łańcuchów po-
+pulacji, gdzie n jest liczebnością populacji, przy czym prawdopodobieństwo wy-
+boru łańcucha w jednym losowaniu jest proporcjonalne do jego jakości. Np. jeżeli
+jakość czterech łańcuchów wynosiła 2, 3, 5, 10, to prawdopodobieństwa ich wy-
+losowania w jednym kroku wynoszą odpowiednio 2/20, 3/20, 5/20 i 10/20.
+
+W metodzie tzw. selekcji turniejowej losuje się n par łańcuchów i z każdej pary
+wybiera się łańcuch lepszy. Metoda ta ma duże znaczenie, gdy ocena jakości łań-
+cucha jest kosztownym procesem wieloetapowym (np. jak w omawianym w p.
+2 przypadku zależności jakości od wartości parametru), a ostateczna ocena jest
+sumą ocen w poszczególnych etapach. W takim przypadku możemy obliczać na
+bieżąco jakości pary łańcuchów i gdy różnica jakości przekroczy pewien ustalony
+próg przerywać proces obliczeń i wybierać łańcuch do tej pory lepszy. Może to
+znacznie zmniejszyć ilość obliczeń, przy dopuszczalnie małym prawdopodobień-
+stwie wybrania łańcucha gorszego.
+
+Krzyżowanie łańcuchów realizowane jest w następujących etapach: (a) losowy
+wybór ny, £ n łańcuchów, (b) połączenie wybranych łańcuchów w losowo dobrane
+pary, (c) dla każdej pary losowanie numeru bitu w łańcuchu, by, (d) wytworzenie z
+każdej pary dwóch łańcuchów potomnych, przy czym pierwszy łańcuch potomny
+otrzymuje pierwsze by bitów od pierwszego łańcucha rodzicielskiego, a pozostałe
+bity od drugiego, zaś drugi łańcuch potomny otrzymuje pierwsze by, bitów od
+drugiego łańcucha rodzicielskiego, a pozostałe bity od pierwszego. Np. z pary
+łańcuchów rodzicielskich 101101011111 i 010101111101 dla by = 5 otrzymuje się
+łańcuchy potomne 101101111101 i O10101011111.
+
+Mutacja polega na losowych zmianach bitów w łańcuchach. W czasie mutacji
+losowana jest zamiana poszczególnych bitów wszystkich łańcuchów z prawdopo-
+dobieństwem py.
+
+Stosowane w praktyce algorytmy genetyczne często znacznie różnią się od przed-
+
+stawionego powyżej klasycznego algorytmu genetycznego. Podstawową modyfikacją
+
+jest przyjęcie reprezentacji punktów innych niż łańcuchy binarne — np. reprezenta-
+
+cja za pomocą liczb rzeczywistych. Pociąga to za sobą zmianę sposobu krzyżowania
+punktów. Inną modyfikacją jest kumulacja oceny jakości punktu. Ma to miejsce
+wtedy, gdy nie potrafimy dokładnie ocenić jakości punktu. Np. nie możemy ocenić
+dokładnie jakości predyktora przebiegu czasowego na podstawie jednego lub kilku
+predykcji. Przy kumulacji oceny jakości możemy posługiwać się np. wzorem
+
+<image/wzory/k2_page104_formula1.png>

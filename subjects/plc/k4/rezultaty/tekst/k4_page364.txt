@@ -1,0 +1,43 @@
+<image/wzory/k4_page364_formula1.png>
+Bloki funkcyjne stosuje się do programowania złożonych i często powtarzają-
+cych się funkcji sterujących. Umożliwiają one dostęp do instrukcji, których sto-
+sowanie nie jest dozwolone we wszystkich pozostałych typach bloków. Możność
+
+stosowania instrukcji uzupełniających i systemowych umożliwia tworzenie za-
+awansowanych funkcji sterujących przy pomocy bloków funkcyjnych.
+
+Drugą istotną cechą bloków funkcyjnych jest możliwość ich parametryzacji.
+Zamiast wstawiania w każdej instrukcji konkretnego argumentu można w blo-
+kach funkcyjnych w ich miejsce wstawiać nazwy reprezentujące te argumenty
+(argumenty formalne). Nazwy te występują jako parametry wywołania bloku
+funkcyjnego. W chwili, gdy blok funkcyjny jest wywoływany, w miejsce nazw
+użytych wewnątrz bloku podstawiane są parametry aktualne, z którymi został on
+wywołany.
+
+Blok funkcyjny składa się z dwóch części : nagłówka i ciała bloku. Ciało bloku
+
+funkcyjnego zawiera zbiór instrukcji określających funkcję, która ma zostać wy-
+
+konana w trakcie jego przetwarzania. Nagłówek bloku funkcyjnego składa się z:
+
+e nazwy bloku - oprócz numeru, każdemu blokowi funkcyjnemu należy nadać
+nazwę,
+
+e _ deklaracji parametrów bloku - deklaracje parametrów zawierają listę zmien-
+nych wykorzystywanych w bloku funkcyjnym. Deklaracja każdego parame-
+tru ma następującą postać:
+
+DECL : Nazwa parametru Rodzaj parametru, lub
+DECL : Nazwa parametru Rodzaj parametru Typ parametru
+
+Jeden blok funkcyjny może mieć do 40 parametrów. W Tab. 7.11 przedstawiono
+zestawienie dopuszczalnych rodzajów i typów parametrów oraz argumenty aktu-
+alne jakie mogą wystąpić przy wywołaniu bloku funkcyjnego.
+
+ 
+
+ 
+
+p DORA A "W W M — M 0 112 0
+
+364 Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5

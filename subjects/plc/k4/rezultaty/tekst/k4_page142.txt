@@ -1,0 +1,20 @@
+Dostępne są także moduły do bezpośredniego podłączania termoelementów typu
+J, K, N, T, E, R, S lub innych i mostków tensometrycznych w zakresach od
+1O00mV do 1000mY oraz zadajników potencjometrycznych.
+
+<image/figury/k4_page142_figure2.png>
+
+U, : TD
+
+Rys. 3.24 Schemat połączenia rezystancyjnego czujnika temperatury
+z wejściem modułu RTD w układzie trójprzewodowym
+zapewniającym kompensację wpływu rezystancji przewodów Rp.
+
+<image/figury/k4_page142_figure1.png>
+
+Rys. 3.25 Schemat połączeń przetworników dwuprzewodowych do 16 kanałowego
+analogowego modułu wejść prądowych ALG223
+
+ 
+
+142 Rozdział : 3. Sprzęt sterowników PLC

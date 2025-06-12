@@ -1,0 +1,26 @@
+Rysunek 3.19 przedstawia rozwiązanie.
+
+<image/figury/k1_page134_figure1.png>
+
+Składnia funkcji margin:
+
+[Gm Pm Wcg Wcp] = margin (A, B, C, D)
+[Gm Pm Weg Wcp] = margin (L, M)
+margin (L, M)
+
+Funkcja oblicza margines wzmocnienia (Gm) i fazy (Pm) dla układu opisanego
+równaniami stanu lub transmitancją oraz odpowiadające im częstotliwości graniczne.
+
+Poprawnie zaprojektowany układ regulacji powinien posiadać określony zapas
+modułu (6+12 dB) i fazy (30++60 deg), co gwarantuje jego stabilną pracę.
+
+Innym sposobem badania stabilności jest sprawdzenie położenia części rzeczy-
+wistych biegunów transmitancji elementu, którego stabilność badamy. Jeżeli leżą one
+w lewej półpłaszczyźnie układu współrzędnych, to układ jest stabilny.
+
+Do tego celu służy funkcja pzmap — wyznaczająca i rysująca zera i bieguny układu
+ciągłego:
+
+- pzmap (A, B, C, D)
+- pzmap (L, M)
+- [P, Z ] = pzmap (L, M)

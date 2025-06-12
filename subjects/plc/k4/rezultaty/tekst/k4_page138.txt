@@ -1,0 +1,48 @@
+"A Aa MRLR r
+
+zoryką_ page138_ jomulaż. png
+
+Moduły analogowe przetwarzają sygnały wejściowe lub wyjściowe o warto-
+ściach ciągłych, w przeciwieństwie do modułów dwustanowych (lub ogólniej
+dyskretnych), których wejścia i wyjścia przyjmują dwie wartości: 0 (ON) lub 1
+(OFF).
+
+Przetworzone na postać cyfrową wartości z wejść analogowych umieszczane są
+w obszarze danych CPU oznaczonym jako %AI. Wartości te są proporcjonalne
+do wielkości napięć lub natężeń prądów w poszczególnych obwodach wejścio-
+wych modułu i zależą od zadeklarowanej konfiguracji modułów sterownika.
+
+Wejścia analogowe są wejściami różnicowymi (differentiał) albo jednokońców-
+kowymi (single-ended). W przypadku wejścia różnicowego konwertowana jest
+różnica napięć między wejściami /N+ i IN—, Wejście takie jest mniej czułe na
+zakłócenia, a zwłaszcza na zmiany prądów uziemień. Oba wejścia są odniesione
+do napięcia wspólnego (Common Voltage) oznaczonego jako COM. Średnie na-
+pięcie na łączu IN w odniesieniu do COM jest nazywane napięciem wspólnym
+(Common Mode Voltage). Asymetria układów wejść analogowych sprawia, że
+napięcie wspólne powoduje pojawienie się napięcia na wyjściu układu dając
+efekt identyczny do podania na wejście niewielkiego napięcia różnicowego.
+Dla kanałów jednokońcówkowych konieczna jest wspólna masa dla grupy ob-
+wodów wejść analogowych.
+
+Parametrami metrologicznymi kanałów analogowych są:
+
+e Rozdzielczość (Resolution).
+
+Wyjściowy sygnał cyfrowy kanału może przyjmować tylko pewne warto-
+ści dyskretne. Istnieje więc błąd kwantyzacji, który jest jednakowy
+w całym przedziale napięcia wejściowego. Maksymalną wartość błędu
+kwantyzacji określa najmniej znaczący bit ZSB (Least Significant Bir) reje-
+stru przetwornika analogowo-cyfrowego ADC (Analog to Digital
+Converter). Rozdzielczość jest określona przez ten błąd kwantowania
+przetwornika i wyraża się jako waga najmniej znaczącego bitu - przykła-
+dowo 4 LA/bit LSB.
+
+e Dokładność (Accuracy).
+Zależy od tolerancji elementów użytych jako komponenty obwodów mo-
+dułu. Dokładność wyznacza się przez określenie maksymalnej różnicy
+między wartością oczekiwaną i mierzoną — przykładowo +0.25% całej
+skali dla 25 ?C 1 £0.5% całej skali powyżej 25 ?C.
+
+ 
+
+138 Rozdział: 3. Sprzęt sterowników PLC

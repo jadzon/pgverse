@@ -1,0 +1,36 @@
+5.2. Pamięci operacyjne 93
+
+a h
+
+/k3_page103_figure2.png
+>age 103_figure1.png
+
+Rysunek 5.7. Pamięć statyczna HM61 16
+
+Przykładem takiego zastosowania jest pamięć kieszeniowa. Pamięci dynamiczne zaś skła-
+dają się z elementów, które nie są przerzutnikami, a specjalnymi układami elektronicznymi
+zawierającymi mniejszą liczbę elementów. Podstawowym elementem tych układów jest
+kondensator, którego stan naładowania wskazuje na wartość bitu. Pamięci dynamiczne
+charakteryzują się małym poborem mocy i stosunkowo dużą pojemnością. Wadą tych
+pamięci jest to, że informacja pamiętana jest jedynie przez krótki czas — typowo kilka
+milisekund (2,4, 8 ms). Po tym czasie zawartość pamięci musi zostać odświeżona
+(ang. refresh).
+
+Dalej przedstawiono budowę i sposoby współpracy z procesorem obu w/w typów
+pamięci. Na rysunku 5.7a pokazano strukturę przykładowego układu scalonego pamięci
+statycznej typu 2/.D (jest to pamięć firmy Hitachi HM6116) o pojemności 2 KB. Sygnał
+dostępu do pamięci CS uaktywnia cały układ, sygnał WE otwiera bufor wejściowy (dla
+zapisu) i dezaktywizuje bufor wyjściowy, natomiast sygnał OE otwiera bufor wyjściowy.
+Jeśli CS = 1, to układ jest wyłączony (standby power) i pobierany prąd spada z 80 mA do
+15 mA. Dalszą redukcję pobieranej mocy można osiągnąć, zwiększając poziom sygnału
+CS odpowiednio blisko napięcia zasilania i wejściowe sygnały danych sprowadzając bądź
+do napięcia zasilania, bądź do masy. Pobierany prąd może spaść do ok. 2 mA. Cykl pracy
+pamięci przedstawiono na rysunku 5.7b. Zaczyna się on od podania adresu na linie adre-
+sowe. W cyklu odczytu po t,, = 120 ns odczytywane słowo może ukazać się na wyjściu,
+jeśli sygnały CS i OE staną się aktywne w odpowiednim czasie. Jak widać na rysun-
+ku 5.7b, dopiero po czasie ty; od momentu pojawienia się sygnału OE i po czasie t, „
+od momentu pojawienia się sygnału CS, na wyjściu buforów danych pojawia się odczytane
+słowo. Wynika to z czasu jaki musi upłynąć, aby układy buforów przeszły ze stanu
+wysokiej impedancji w stan aktywny. Podobne zjawisko występuje na końcu cyklu, gdzie
+bufory zostają wprowadzane w stan wysokiej impedancji. Tam powstaje tzw. zjawisko
+przeciągania, tj. podtrzymywania danych na wyjściu bufora o czas typy PO ZMIANIE adresu.

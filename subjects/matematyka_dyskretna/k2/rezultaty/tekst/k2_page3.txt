@@ -1,0 +1,32 @@
+Rozdział 1
+
+Oznaczenia
+
+W tym rozdziale przedstawimy podstawowe oznacznia.
+
+Vv oznacza kwantyfikator ogólny "dla każdego”. 3 oznacza kwantyfikator szczegółowy
+"istnieje".
+1.1 Sumy
+
+Mając dany skończony ciąg a; , a2,... ax, Sumę jego elementów zapisujemy jako
+
+<image/wzory/k2_page3_formula1.png>
+
+Niezbyt formalnie możemy to zapisać
+
+<image/wzory/k2_page3_formula2.png>
+
+Jako przykład zastosujmy symbol sumy do zapisu wzoru na sumę ciągu arytmetycznego).
+
+<image/wzory/k2_page3_formula3.png>
+
+oraz wzoru na sumę ciągu geometrycznego).
+
+<image/wzory/k2_page3_formula4.png>
+
+(wzór (1.2) jest słuszny dla każdego x ź 1)
+Będziemy też używać zapisu typu
+
+<image/wzory/k2_page3_formula5.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

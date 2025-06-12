@@ -1,0 +1,53 @@
+Na przykład próbki od 200 do 299 są obliczane prze sumowanie odpowiednich próbek
+rysunkach 18.1 g), h). Metoda nakładania z dodawaniem daje dokładnie taki sam sygnał wyj
+ściowy, jak bezpośredni splot. Wadą jest znacznie większa złożoność programu ze wzg
+na konieczność nadążania za nakładającymi się próbkami.
+
+Splot FFT
+
+W splocie FFT korzysta się z reguły, zgodnie z którą mnożenie w dziedzinie częstotliw
+odpowiada splotowi w dziedzinie czasu. Sygnał wejściowy jest przenoszony w dziedzinę
+częstotliwości przez przekształcenie DFT, potem jest wymnażany przez odpowiedź częstotli-
+wościową filtru i z powrotem przenoszony w dziedzinę czasu przez odwrotne przekształcenie
+DFT. Ta podstawowa metoda jest znana od czasów Fouriera. Wtedy jednak nikt się nią nie
+zajmował, bo czas obliczenia DFT był wówczas dłuższy niż czas potrzebny do bezpośred-
+niego obliczania splotu. To się zmieniło w roku 1965 z chwilą opracowania szybkiej trans-
+formaty Fouriera (FFT). Przy zastosowaniu algorytmu FFT do przeprowadzania DFT splot
+realizowany przez dziedzinę częstotliwości może być szybszy niż bezpośrednie spłatanie sy-
+gnałów w dziedzinie czasu. Końcowy wynik jest taki sam; zmieniła się tylko liczba obliczeń
+dzięki bardziej efektywnemu algorytmowi. Z tego powodu splot FFT jest nazywany szybkim
+splotem.
+
+Przy wyznaczaniu splotu przez FFT stosuje się metodę nakładania z dodawaniem, przedstawioną
+na rys. 18.1. Zmieniono tylko sposób, w jaki segmenty wejściowe są przetwarzane na wyjścio-
+we. Na rys. 18.2 pokazano przykład przetwarzania segmentu wejściowego na wyjściowy przez
+splot FFT. Najpierw określa się odpowiedź częstotliwościową filtru przez wyznaczenie transfor-
+maty DFT jego odpowiedzi impulsowej przy użyciu FFT. Na rys. 18.2 a) przedstawiono przykład
+odpowiedzi impulsowej pasmowoprzepustowego filtru okienkowanego funkcją sinc. Przez FFT
+następuje przekształcenie tej odpowiedzi na części rzeczywistą i urojoną odpowiedzi częstotliwo-
+ściowej (rys. 18.2 b, c). Te sygnały w dziedzinie częstotliwości być może nie wygłądają jak filtr
+pasmowoprzepustowy, gdyż są wyrażone we współrzędnych prostokątnych. Przypomnijcie sobie,
+że najłatwiej zrozumieć problem, stosując współrzędne biegunowe, a do obliczeń matematycz-
+nych najkorzystniejsze są współrzędne prostokątne, Części rzeczywista i urojona zostają zapisane
+w komputerze do wykorzystania przy obliczeniach poszczególnych segmentów.
+
+Na rys. 18.2 d) pokazano segment wejściowy, który ma być przetwarzany. Stosuje się FFT do
+znalezienia widma częstotliwościowego (rys. 18.2 e, f). Następnie wyznacza się widmo często-
+tliwościowe segmentu wyjściowego (rys. 18.2 h, i) przez wymnożenie odpowiedzi częstotliwo-
+ściowych (rys. 18.2 b, c) przez widmo segmentu wejściowego (rys. 18.2 e, f). Te widma składają
+się z części rzeczywistych i urojonych, dlatego są wymnażane według wzoru 9.1 w rozdziale 9.
+Potem stosuje się odwrotne przekształcenie FFT w celu wyznaczenia segmentu wyjściowego
+(rys. 18.2 g) na podstawie jego widma częstotliwościowego (rys. 18.2 h, i). Trzeba przy tym
+pamiętać, że ten segment wyjściowy jest dokładnie taki sam, jaki by uzyskano przez bezpośredni
+splot segmentu wejściowego (rys. 18.2 d) i odpowiedzi częstotliwościowej filtru (rys. 18.2 a).
+Przekształcenie FFT musi być wystarczająco długie, aby nie nastąpił splot kołowy (też opi-
+sany w rozdziale 9). To znaczy, że FFT powinno mieć długość taką samą, jak segment wyj-
+ściowy (rys. 18.2 g). W przykładzie z rys. 18.2 odpowiedź impulsowa filtru zawiera 129
+punktów i każdy segment zawiera 128 punktów, co powoduje, że segment wyjściowy ma
+długość 256 punktów. To stawia wymaganie użycia 256-punktowego FFT. Odpowiedź im-
+pulsowa filtru (rys. 18.2 a) musi więc być dopełniona 127 zerami, aby osiągnęła całkowitą
+długość 256 punktów. Podobnie każdy z segmentów wejściowych (rys. 18.2 d) powinien być
+dopełniony 128 zerami. Jako inny przykład wyobraźmy sobie, że mamy zrealizować splot
+bardzo długiego sygnału z odpowiedzią impulsową filtru mającą 600 próbek. Jedną alter-
+natywą byłoby zastosowanie segmentów po 425 punktów i 1024-punktowych FFT. Drugą
+— użycie segmentów po 1449 punktów i 2048-punktowyh FFT.

@@ -1,0 +1,29 @@
+320 __3. Obwody prądu stalego
+
+Wtórnik nie pobiera prądu z układu dołączonego do jego zacisków wejściowych (nie obciąża tego
+układu) i powtarza napięcie wejściowe na zaciskach wyjściowych, bez względu na obciążenie
+dołączone do tych zacisków. Wtórnik spełnia zatem rolę bufora (separatora), oddzielającego układy
+dołączone do jego zacisków wejściowych i wyjściowych.
+
+Przykład 3.6-4. Na rys. 3.6-7 przedstawiono dalsze przykłady zastosowań wzmacniaczy
+operacyjnych w liniowych układach rezystancyjnych. Dla każdego z tych układów podamy — już bez
+uzasadnienia — zależności opisujące operacje realizowane przez układ. Czytelnika zachęcamy do
+samodzielnego wyprowadzenia tych zależności, a także do określenia zakresu ich obowiązywania,
+wynikającego z nierówności (3.6-9).
+
+<image/figury/k3_page320_figure1.png>
+
+a) Na rys. 3.6-7a jest pokazany układ przetwornika prąd — napięcie o równaniu:
+
+jm — Z
+
+R
+
+Układ może być wykorzystywany do pomiaru prądu i, wobec zerowego oporu wejściowego R„, = 0.
+Pomiaru można dokonywać za pomocą woltomierza dołączonego do zacisków wyjściowych po
+przeskalowaniu napięć na prądy (współczynnikiem skali jest opór R). Układ ten może być także
+wykorzystywany jako ŹNSP.
+
+b) Rolę przetwornika napięcie — prąd spełnia układ z rys. 3.6-7b o równaniu:
+
+u = Ryi

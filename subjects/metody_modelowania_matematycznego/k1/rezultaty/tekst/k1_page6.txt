@@ -1,0 +1,56 @@
+Symulacja - wyznaczenie trajektorii wej-wyj krok po kroku (operacje iteracyjno-rekursywne)
+na podstawie modelu scalonego za pomocą systemu komputerowego
+
+Ograniczenia zasobów komputera
+- _ czas symulacji i krok czasowy symulacji
+- pamięć operacyjna - opis modelu — struktura i zmienne opisowe
+- oprogramowanie systemowe
+— nadbudowa (kompilatory, biblioteki, translatory)
+—zarządzanie symulacją (obsługa komend i gospodarowanie pamięcią)
+Ograniczenia czynnika ludzkiego
+- _ czas i wysiłek
+- wynikające z charakterystyki oprogramowania, np łatwość w obsłudze, usuwaniu
+błędów, modyfikacji czy weryfikacji
+
+Poziom złożoności - rozmiar zasobów niezbędnych do prowadzenia prac
+przygotowawczych i symulacji, pozostaje w prostej relacji do strukturalnych własności
+modelu. Model, którego poziom złożoności wykracza poza ograniczenia kosztowe jest
+bezużyteczny, nawet jeśli zasadny dla układu eksperymentu
+
+Program vs model
+- _ program nie powinien być identyfikowany z realizowanym przez niego modelem
+- _ potrzebny jest język modelowania, będący niezależnym od programu sposobem
+opisu modelu, oraz wygodny w obsłudze system modelowania wiarygodnie
+generujący reakcję systemu
+- _ formalny opis modelu - reguły opisu, program symulacyjny
+
+Symulacja dyskretna w czasie -procedura symulacji generuje reakcję modelu metodą
+stałego kroku, gdzie krok opisuje wpływ stałej wielkości modelowanego czasu.
+
+pojęcie zmiennych stanu
+
+pożądane cechy programu symulacyjnego
+formalny opis (teoria systemu) modelu (reakcji)
+
+Pojęcie stanu
+
+- elementy - zbiór zmiennych opisowych
+
+- _ reguły interakcji - sposób zmiany zmiennych opisowych w czasie
+— przeszłe wartości zmiennych w określonym horyzoncie
+
+- zbiór zmiennych stanu - najmniejszy X (podzbiór Z) wystarczający do określenia
+przyszłych wartości wszystkich z —> X=(x/) € Z=fzj)
+
+- model dobrze opisany:
+dla każdego t+>t oraz z(t), z = [Z,, ... „zj: z,€ Z, reguły interakcji wyznaczają
+
+jednoznacznie z(t+) (cały zbiór zmiennych opisowych Z) Z(t) — Z(t+)
+- _ zbiór zmiennych stanu X=fXCZ, |X|=min: X(t) — Z(t+)) (|X| to moc zbioru)
+- model dobrze zdefiniowany (Z):
+
+IXI=n I7l=m
+
+<image/wzory/k1_page6_formula1.png>
+
+[x v ] „t+>t x(t) — fx(t+), v(t+))

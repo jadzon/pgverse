@@ -1,0 +1,35 @@
+a
+
+PENN
+
+62 3. Przetwarzanie analogowo-cyfrowe i cyfrowo-analogowe
+
+Filtr Butterwortha zaś jest zoptymalizowany pod względem najlepszej stromości spadku
+charakterystyki w obszarze częstotliwości odcięcia, lecz bez zafalowań w paśmie prze-
+pustowym. Jest zwykle nazywany filtrem o maksymalnie płaskiej charakterystyce i jest
+identyczny z filtrem Czebyszewa zaprojektowanym dla zerowych zafalowań w paśmie
+przepustowym. W filtrze Bessela nie ma tych zafalowań, ale charakterystyka opadania jest
+znacznie gorsza niż w filtrze Butterwortha.
+
+Ostatnim parametrem, który poddamy ocenie, jest odpowiedź skokowa, czyli odpowiedź
+filtru na szybką zmianę sygnału wejściowego od jednej wartości do drugiej. Na rys. 3.13
+przedstawiono odpowiedzi skokowe trzech podstawowych rodzajów filtrów. OŚ pozioma
+jest pokazana dla filtrów o częstotliwości odcięcia | Hz, lecz może być przeskalowana dla
+większych częstotliwości odcięcia. Na przykład częstotliwość odcięcia 1000 Hz da odpo-
+wiedź na skok jednostkowy wyrażoną w milisekundach, a nie w sekundach. Odpowiedzi
+filtrów Butterwortha i Czebyszewa mają przerzuty i tzw. dzwonienia (oscylacje o wolno
+zmniejszającej się amplitudzie). W filtrze Bessela zaś nie ma tych nieprzyjemnych zjawisk.
+Te bardzo korzystne właściwości filtru Bessela są też widoczne na rys. 3.14. Na rys. 3.14 a)
+przedstawiono przebieg impulsowy, który można traktować jako zbocze narastające i nastę-
+pujące po pewnym czasie zbocze opadające. Na rys. 3.14 b), c) przedstawiono, jaka jest od-
+powiedź na taki przebieg na wyjściach filtrów, odpowiednio, Bessela i Czebyszewa. Gdyby
+był to sygnał wizyjny, to zniekształcenie wprowadzane przez filtr Czebyszewa byłoby nie-
+
+<image/figury/k3_page51_figure1.png>
+
+Rys. 3.14. Odpowiedź filtrów Bessela i Czebyszewa na przebieg impulsowy. Podstawową wtaściwością filtru Bessela
+jest to, że zbocza narastające i opadające odpowiedzi wyglądają podobnie. Ta właściwość jest w żargonie technicz-
+nym nazywana liniową fazą. Na rys. b) jest pokazany wynik przepuszczenia przebiegu z rys. a) przez 4-biegunowy filtr
+Bessela. Oba zbocza są wygładzone w podobny sposób. Na rys. c) pokazano wynik przepuszczenia przebiegu z rys. a)
+przez 4-biegunowy filtr Czebyszewa. Lewe zbocze ma przerzut na wierzchołku, a prawe — u dołu. Takie znieksztatcenia
+są w wielu zastosowaniach niedopuszczałne

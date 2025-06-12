@@ -1,0 +1,53 @@
+26 Rozdział 1. Grafy (nieskierowane)
+
+Kolorowanie otrzymywane w tym algorytmie jest prawidłowe. Niech W; oznacza
+wierzchołki kolorowane w i-tej iteracji, Wą = f(v). Wierzchołki z W; są kolorowane na
+pierwszy kolor, jeżeli i jest parzyste, i na drugi kolor, jeżeli jest nieparzyste. Zauważmy,
+że dowolny wierzchołek u € W, może być połączony krawędzią tylko z wierzchołka
+mi ze zbiorów W,_; i W;4.;. W,+1 Zawiera wszystkie wierzchołki, które są połączone z
+wierzchołkami z W, i nie miały koloru po pokolorowaniu W;,, tak więc żaden ze zbiorów
+W, z j > i + 1 nie zawiera wierzchołków połączonych z W;.
+
+Zauważmy, że jeżeli dwa wierzchołki u i w należa do W;, to istnieją drogi v
+ug,Uq,...,Uj © U OMRZY = wg,wy,...,w; = w takie, Że u;,w; € W;. Niech u,
+wę, będzie ostatnim wspólnym wierzchołkiem na obu drogach. Ponieważ zbiory W;
+są rozłączne, to wspólne wierzchołki muszą mieć te same indeksy. Droga u,...,uz =
+wę... . „w jest drogą z parzystą liczbą krawędzi. Dlatego, jeżeli u i v są połączone krawędzią,
+to w grafie mamy cykl nieparzystej długości i pokolorowanie dwoma kolorami nie jest
+możliwe.
+
+Z powyższych rozważań wynika
+
+Lemat 1.40 Graf jest dwudzielny (może być pokolorowany dwoma kolorami) wtedy i tyl-
+ko wtedy, gdy nie zawiera cykli nieparzystej długości.
+
+Wniosek 1.41 Każde drzewo można pokolorować dwoma kolorami.
+
+Nie jest znany algorytm kolorujący grafy trzema kolorami (lub dowolną większą
+liczbą kolorów) działający w czasie wielomianowym.
+
+Ponieważ nie są znane szybkie algorytmy kolorowania grafów stosuje się heurystyki,
+czyli algorytmy niedokładne. Na przykład następująca heurystyka
+Heurystyka kolorowania grafu
+
+e Posortuj wierzchołki grafu według ich stopni.
+
+e Dla każdego wierzchołka po kolei przypisz mu najniższy możliwy kolor.
+
+W wielu przypadkach heurystyka ta da optymalne rozwiązanie, na przykład dla grafu
+z rysunku 1.12.
+
+1.12 Hiperkostka
+
+Hiperkostka H, wymiaru 1 jest przedstawiona na rysunku 1.13a. Składa się ona z dwóch
+wierzchołków 0 i 1 połączonych krawędzią. Hiperkostkę Hą wymiaru 2 (rysunek 1.13b)
+budujemy z dwóch kostek H;. W pierwszej kostce numerujemy wierzchołki przez 00 i 01
+(dopisujemy 0 na początek nazwy każdego wierzchołka). W drugiej kostce numerujemy
+wierzchołki przez 10 i 11 (dopisujemy 1 na początek). Następnie łączymy krawędziami
+odpowiadające sobie wierzchołki z obu kopii 00 z 10101 z 11.
+
+Podobnie budujemy hiperkostkę H, wymiaru k z dwóch kostek H;,_,. W pierwszej
+kostce numerujemy wierzchołki dopisując 0 na początku nazwy każdego wierzchołka.
+W drugiej kostce numerujemy wierzchołki dopisując 1 na początek. Następnie łączymy
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

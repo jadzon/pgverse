@@ -1,0 +1,21 @@
+To samo zadanie można zrealizować przy użyciu jednej funkcji RANGE, jak
+pokazano to na Wyd. 4.17.
+
+<image/tabele/k4_page201_table1.png>
+
+Wyd. 4.17 Przykład użycia funkcji RANGE do sprawdzenia, czy zmienna znajduje się
+w zadanym zakresie
+
+Na Wyd. 4.18 pokazano natomiast sposób wykorzystania funkcji relacji do reali-
+zacji elementu dwupołożeniowego z histerezą, który steruje napełnianiem
+zbiornika. Charakterystykę tego elementu wraz z przebiegiem czasowym pozio-
+mu cieczy w zbiorniku prezentuje Rys. 4.4.
+
+<image/figury/k4_page201_figure1.png>
+
+Rys. 4.4 Sterowanie napełlnianiem zbiornika za pomocą elementu dwupołożeniowego
+z histerezą
+
+ 
+
+4.7 Funkcje relacji 201

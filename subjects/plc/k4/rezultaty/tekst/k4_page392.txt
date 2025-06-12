@@ -1,0 +1,20 @@
+<image/figury/k4_page392_figure3.png>
+
+Wyd. 8.4 Ustawienie wartości początkowych w pierwszym cyklu
+w zależności od trybu pracy
+
+<image/tabele/k4_page392_table1.png>
+
+Wyd. 8.5 Określenie długości kłody
+
+<image/figury/k4_page392_figure1.png>
+
+Wyd. 8.6 Sterowanie wypychaczami
+
+<image/figury/k4_page392_figure2.png>
+
+Wyd. 8.7 Zezwolenie na wprowadzenie następnej kłody w pracy automatycznej
+
+ 
+
+392 Rozdział : 8.Programy przykładowe

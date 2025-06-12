@@ -1,0 +1,56 @@
+Technika audio o wysokiej wierności 349
+
+odczytywane z płyty przechodzą przez odwrotną tablicę przeglądową EFM, w wyniku czego
+każda grupa 14 bitów jest z powrotem przekształcana na prawidłowe 8 bitów.
+
+Oprócz zastosowania modulacji EFM, korzysta się z kodowania danych w formacie nazywa-
+nym dwupoziomowym kodowaniem Reeda-Solomona?*. Obejmuje ono połączenie danych
+lewego i prawego kanału stereo z danymi do wykrywania i korekcji błędów. Błędy cyfrowe
+wykryte podczas odtwarzania są — dzięki wprowadzeniu danych redundancyjnych podczas
+kodowania — albo poprawiane, albo ukrywane przez interpolację między sąsiednimi prób-
+kami lub też wyciszane przez ustawianie wartości próbki na zero. Taki sposób kodowania
+powoduje potrojenie bitowej przepływności danych, tj. do 4,3 Mbivs dla danych zapisanych
+na płycie w stosunku do 1,4 Mbit/s dla stereofonicznego sygnału fonicznego.
+
+Po zdekodowaniu i korekcji błędów sygnały foniczne są reprezentowane przez 16-bitowe
+próbki (słowa) o częstotliwości powtarzania 44,1 kHz. W najprostszym systemie te sygnały
+mogłyby być przetwarzane w 16-bitowym przetworniku c/a i następnie filtrowane w analo-
+gowym filtrze dolnoprzepustowym. Wymagałoby to jednak użycia filtru wysokiego rzędu
+mogącego przepuścić częstotliwości poniżej 20 kHz i stłumić wszystkie częstotliwości po-
+wyżej 22,05 kHz, a więc powyżej połowy częstotliwości próbkowania. Częściej spotykana
+metoda polega na zwiełokrotnianiu częstotliwości (nadpróbkowaniu), czyli konwersji czę-
+stotliwości próbkowania na większą przed przetwarzaniem c/a. Stosuje się zwykle współ-
+czynnik nadpróbkowania równy 4, przechodząc z częstotliwości 44,1 kHz do 176,4 kHz.
+Jest to tzw. interpolacja, którą można objaśnić jako proces dwuetapowy (chociaż wcale
+nie musi być realizowana w ten sposób). Najpierw po trzy próbki o wartościach zerowych
+umieszcza się między próbkami oryginalnymi, zwiększając w ten sposób częstotliwość prób-
+kowania. W dziedzinie częstotliwości daje to efekt trzykrotnego powielenia widma od 0 do
+22,05 kHz, co daje częstotliwości od 22,05 do 44,1 kHz, od 44,1 do 66,15 kHz oraz od 66,15
+do 88,2 kHz. W drugim etapie te nowo wprowadzone częstotliwości są usuwane skutecznym
+dolnoprzepustowym filtrem cyfrowym.
+
+Większa częstotliwość próbkowania powoduje skrócenie okresu próbkowania, dzięki czemu
+przebieg z przetwornika c/a staje się gładszy. Sygnał nadal zawiera częstotliwości między 20 Hz
+i 20 kHz, jednak częstotliwość Nyquista została zwiększona o czynnik 4. Z tego wynika, że
+filtr analogowy musi teraz tylko przepuszczać częstotliwości poniżej 20 kHz a tłumić powyżej
+88,2 kHz. Realizuje się to zwykle za pomocą trzybiegunowego filtru Bessela. Po co stosować
+filtr Bessela, skoro ucho jest nieczułe na fazę? To właśnie ta przesada, o której już mówiliśmy.
+Ponieważ próbek jest cztery razy więcej, więc liczbę bitów w próbce można zmniejszyć z 16 do
+15 bez pogorszenia jakości dźwięku. Korekcja sin(x)/x, konieczna do skompensowania pamięta-
+nia rzędu zerowego w przetworniku c/a, może być częścią filtru analogowego lub cyfrowego.
+Systemy audio mające więcej niż jeden kanał są nazywane stereofonicznymi (od greckiego
+słowa stereos oznaczającego mocny, trwały lub trójwymiarowy). Dźwięk z wielu kanałów
+dochodzi do słuchacza z różnych kierunków, zapewniając dokładniejsze odtwarzanie orygi-
+nalnej muzyki. Muzyka odtwarzana w systemie jednokanałowym (monofonicznym) często
+brzmi nienaturalnie i płasko. Natomiast przy dobrym odtwarzaniu stereofonicznym słuchacz
+ma wrażenie, jakby muzycy byli kilka metrów od niego. Od lat 60. w muzyce o dużej wier-
+ności stosuje się dwa kanały (lewy i prawy), a w udźwiękowieniu filmów cztery kanały
+(lewy, prawy, środkowy i otaczający tzw. surround). We wczesnych nagraniach stereofo-
+nicznych (np. Beatlesów lub Mamas and Papas) poszczególni wokaliści są często słyszalni
+tylko w jednym z kanałów. To spowodowało szybki rozwój bardziej zaawansowanego mik-
+sowania w dół, w którym dźwięk z wielu mikrofonów w studiu nagraniowym jest łączony
+w dwa kanały. Takie miksowanie to pewnego rodzaju sztuka, której celem jest wytworzenie
+u słuchacza wrażenia, że jest ram, gdzie grają muzycy.
+
+24 Ściślej mówiąc, kodowanie to jest nazywane kodowaniem protekcyjnym z użyciem kodu CIRC
+(Cross-lnterleaved Reed-Solomon Code) (przyp. tłum.).

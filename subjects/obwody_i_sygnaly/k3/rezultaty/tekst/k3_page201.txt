@@ -1,0 +1,42 @@
+_21. Wieowrotmikiisied | | | || ||____203
+
+ry/k3_page201_formula1.png (2.1-45)
+
+gdzie i!” jest składową prądu i wywołaną działaniem tylko źródła e,
+(rys. 2.1-21a), zaś:
+
+ry/k3_page201_formula2.png (2.1-46)
+
+oznacza składową prądu i wywołaną działaniem wszystkich pozostałych źródeł
+(rys. 2.1-21b).
+
+W przypadku, gdy siłę elektromotoryczną e, można przedstawić, na przy-
+kład, w postaci sumy:
+
+zory/k3_page201_formula3.png (2.1-47)
+wówczas:
+zory/k3_page201_formula4.png (2.1-48)
+
+gdzie i("1), i 42) są składowymi prądu i!” wywołanymi działaniem na wro-
+tach 1 odpowiednio tylko siły elektromotorycznej e, "? lub tylko siły elektro-
+motorycznej e, (?) — przy pozostałych pobudzeniach równych zeru (rys.
+2.1-21a).
+
+5. W każdej rzeczywistej sieci, będącej z założenia układem skończonym
+(por. przypis na str. 168), działa skończona liczba źródeł. W konsekwencji, sumy
+we wzorach (2.1-44) wyrażających zasadę superpozycji dla sieci liniowej są
+sumami skończonymi. Niekiedy jednak daną siłę elektromotoryczną lub wydaj-
+ność prądową dogodnie jest przedstawić w postaci szeregu odpowiednio
+dobranych składowych *), na przykład:
+
+ory/k3_page201_formula5.png (2.1-49)
+
+Sumowanie we wzorach (2.1-44) rozciąga się wówczas na przeliczalną
+liczbę składowych.
+
+Innymi słowy, zasada superpozycji dla sieci skupionej liniowej pozostaje
+słuszna również dla przeliczalnej (a nie tylko skończonej) liczby składowych we
+wzorach (2.1-44).
+
+V Ma to miejsce np. gdy okresową siłę elektromotoryczną (wydajność prądową) przedstawiamy
+w postaci szeregu Fouriera — por. p. 5.1.

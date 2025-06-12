@@ -1,0 +1,60 @@
+472 27. Kompresja danych
+
+ 
+
+Większość podstawowych programów L.ZW ma długość kilkudziesięciu wierszy. ata
+trudność leży w efektywnym wykorzystywaniu tablicy kodowej. Zbyt uproszczone podejś
+do tej kwestii powoduje, że wymagana jest bardzo duża pamięć, a wykonanie sh
+powolne. W komercyjnych programach LZW wprowadzono kilka trików, aby ulepszyć ich
+działanie. Na przykład problem pojemności pamięci powstaje, gdyż nie wiadomo z góry. j:
+długi będzie ciąg znaków dla każdego ze słów kodowych. W większości programów LZWę ,
+kwestię rozwiązuje się, korzystając z redundancyjnego charakteru tablicy kodowej. Spójrzcie,
+na przykład, na wiersz 29 w tablicy 27.3, gdzie słowo kodowe 278 jest definiowane jako
+ainl. Zamiast zapisywania tych czterech bajtów, słowo 278 można zapisać jako: słowo koda
+we 269 + I, gdzie słowo kodowe 269 było poprzednio zdefiniowane jako ain w wierszu 17.
+Podobnie słowo kodowe 269 może być zapisywane jako: słowo kodowe 261 + n, gdzie słow
+kodowe 261 było poprzednio zdefiniowane jako ai w wierszu 7. Taki schemat działania jest
+zawsze możliwy — każde słowo kodowe może być wyrażone jako słowo poprzednie plus
+jeden nowy znak.
+
+Czas wykonania algorytmu kompresji jest ograniczony przeszukiwaniem tablicy kodov s
+w celu określenia, czy jest w niej poszukiwany odpowiednik. Przez analogię wyobraźcł
+sobie, że chcecie stwierdzić, czy nazwisko waszego przyjaciela jest w książce telefonicznej.
+Kłopot w tym, że jedyna książka, jaką macie, nie jest ułożona alfabetycznie, lecz według me
+merów telefonów. To wymaga przeszukiwania strona po stronie w celu znalezienia nazwisk
+które jest wam potrzebne. To mało efektywne działanie jest dokładnie takie samo, jak prze
+szukiwanie wszystkich 4096 słów kodowych w celu znalezienia odpowiednika dla danej
+ciągu znaków. Rozwiązaniem jest taka organizacja tablicy kodowej, żeby to, czego szukam
+samo powiedziało wam, gdzie szukać (jak w ułożonej częściowo alfabetycznie książce
+lefonicznej). Innymi słowy, nie przyporządkowujcie 4096 słów kodowych kolejnym mi
+scom pamięci. Podzielcie raczej pamięć na sekcje, według umieszczonych w nich sekwencji
+Przypuśćmy, na przykład, że chcemy stwierdzić, czy sekwencja słowo kodowe 329 + x je
+w tablicy kodowej. Tablica powinna być tak zorganizowana, żeby x wskazywało, od które
+miejsca należy rozpocząć poszukiwanie. Jest wiele sposobów tego typu organizacji pami
+
+i stają się one dość skomplikowane.
+
+To przywodzi nas do komentarza na temat LZW i podobnych metod kompresji: to jest dzie
+dzina, w której istnieje silna konkurencja. O ile podstawy kompresji danych są stosunkc
+proste, o tyle różnego typu programy, sprzedawane jako produkty komercyjne, są skraj
+wysublimowane. Firmy zarabiają, sprzedając programy wykonujące kompresję i zazdroś
+strzegą swych tajemnic przez zastrzeżenia patentowe. Nie spodziewajcie się, że w ciągu k
+kugodzinnej pracy osiągniecie taki sam poziom działania, jak te programy firmowe.
+
+JPEG (kompresja transformatowa)
+
+Opracowano wiele metod kompresji stratnej, jednak najbardziej wartościowa okazała
+rodzina metod zwana kompresją transformatową. Najlepszym przykładem kompresji tra
+formatowej jest popularny standard kodowania obrazów JPEG. Nazwa standardu poche
+od grupy roboczej, która go opracowała: Joint Photographic Expert Group. Na przykła
+opisu działania JPEG objaśnimy zasady pracy kompresji stratnej.
+
+Omówiliśmy już prostą metodę kompresji stratnej — próbkowanie zgrubne illub kwant
+(CS£Q, tablica 27.1). Polega ona na zredukowaniu liczby bitów w próbce lub zupełny
+pominięciu niektórych próbek. Obie te procedury dają żądany skutek — plik danych
+się mniejszy kosztem jakości sygnału. Jak można się tego spodziewać, te proste metody
+działają zbyt dobrze,
+
+Kompresja transformatowa jest oparta na prostej przesłance: gdy sygnał oryginalny
+poddawany przekształceniu Fouriera (lub innemu), to uzyskiwane wartości danych n
+już równorzędne pod względem ich wartości jako nośnika informacji. A w szczególne

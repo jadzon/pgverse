@@ -1,0 +1,31 @@
+12 Rozdział 1. Teoria liczb
+
+Algorytm Euklidesa można tak zmodyfikować, aby oprócz największego wspólnego
+dzielnika NW D(a. b). wvliczał także liczbv r i w. takie że:
+
+<image/wzory/k2_page127_formula1.png>
+
+Oto ten algorytm w języku Pascal:
+
+<image/figury/k2_page127_figure2.png>
+
+x:=xp,y:=yp
+
+W poniższej tabeli pokazano kolejne kroki działania rozszerzonego algorytmu Eukli-
+desa na parze liczb 36 i 15:
+
+<image/wzory/k2_page127_formula2.png>
+
+Tak wiec liczhe 3 można nrzedstawić iako komhinacie liczb 151 36 w nastenniacv snosób:
+
+<image/wzory/k2_page127_formula3.png>
+Zauwazmy, ze jezeli jakaś liczba r dzieli liczby a 1 b, to dzieli takze kazdą ich kombinację
+całki
+
+<image/_wzory/k2_page127_formula4.png>
+
+a WIG uŁiGii WAŁE OJYFIGAOŁY WOJAJIŁŁY UŁAGIAUA 1% PY 4/4407. UUUWUUUNUMDNIY |UiuZSZY
+
+lemat.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

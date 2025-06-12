@@ -1,0 +1,51 @@
+'a a PJ
+
+rzory/k4_page191_formula2.png
+
+W celu realizacji uwarunkowań czasowych w programie sterującym wykorzy-
+stywane są czasomierze (timers), czyli bloki funkcyjne realizujące zliczanie
+czasu w sposób ciągły lub z przerwami. Zliczanie czasu odbywa się w zadekla-
+rowanych jednostkach czasu (0./s, O.0/s lub O0.00/s) z dokładnością do
+jednostki. Aby więc uzyskać większą dokładność mierzenia czasu należy wybrać
+mniejszą jednostkę (time base), pod warunkiem oczywiście, że liczba określająca
+czas mierzony w tych jednostkach nie przekroczy wartości 32767. Liczniki (co-
+unters) z kolei umożliwiają zliczanie liczby zmian stanu w ich obwodach
+wejściowych, przy czym zliczanie to może odbywać się „w górę” (Up Counter)
+albo „w dół” (Down Counter).
+
+ 
+
+Każdy czasomierz lub licznik wykorzystuje trzy kolejne słowa pamięci (reje-
+stry) do przechowywania następujących danych:
+
+e wartość bieżąca CV (Current Value);
+
+e wartość zadana PV (Preset Value);
+
+e słowo kontrolne (Control! Word).
+
+W przypadku zaniku napięcia zasilającego dane te są przechowywane w pamięci
+podtrzymywanej bateryjnie, co umożliwia ich odtworzenie po ponownym załą-
+czeniu sterownika. Wprowadzając czasomierz lub licznik do programu należy
+przyporządkować mu adres pierwszego z tych trzech rejestrów.
+
+Poniżej przedstawiono elementy czasowe i zliczające dostępne w sterownikach
+serii 90-30:
+
+e TMR (7iMeR) — czasomierz załączający;
+
+W każdym cyklu pracy sterownika, w którym czasomierz jest aktywny, wartość
+bieżąca CY jest uaktualniana tak, aby odzwierciedlała ona czas nieprzerwanego
+dopływu prądu do wejścia zezwolenie (enable), który jest mierzony w wybra-
+nych jednostkach czasu (time base). Aktualizacja wartości bieżącej w
+jednostkach czasu (0./s, 0.0/s lub 0.001s) trwa dopóki do wejścia zezwolenie
+dopływa prąd, a wartość bieżąca CV nie osiągnęła wartości maksymalnej, tj.
+32767 jednostek czasu. Osiągnięcie lub przekroczenie przez CV wartości zadanej
+PV powoduje pojawienie się prądu na wyjściu czasomierza, co umożliwia kon-
+tynuację wykonywania obwodu na prawo od bloku czasomierza. Zanik dopływu
+prądu do wejścia zezwolenie przerywa odmierzanie czasu i zeruje wartość bieżą-
+cą CV.
+
+ 
+
+4.5 Czasomierze i licznik 191

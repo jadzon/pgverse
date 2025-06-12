@@ -1,0 +1,26 @@
+18 3. Podstawy techniki cyfrowej
+
+przeniesienia. Zaletą takiego układu jest to, że może być w razie potrzeby rozbudowywany
+oraz, że jego przejrzysta struktura ułatwia testowanie. Wadą takiego układu jest to, że
+przeniesienie propaguje się przez wszystkie bloki, co powoduje zmniejszenie szybkości
+działania układu. Układy iteracyjne stosowane są wtedy, gdy efektywnie da się wykorzy-
+stać ich zalety. Ma to miejsce na przykład w przypadku, gdy pożądana jest rozbudowy-
+walność układu. Ale w przypadku sumatorów szybkość działania jest bardzo istotnym
+czynnikiem i dlatego poszukuje się takich struktur sumatorów, które pozwolą na zwięk-
+szenie szybkości działania. Często są to sumatory iteracyjne wraz z układami przy-
+spieszającymi, które zostaną przedstawione dalej.
+
+SUMATORY
+
+We współczesnych komputerach sumatory są projektowane jako część wielkoscalonego
+układu zawierającego np. cały procesor. Natomiast tutaj, dla zrozumienia zasady ich
+działania, przedstawiono je jako układy scalone średniej skali integracji MSI. Sumatory
+MSI bywały produkowane jako układy 4-bitowe. Projektanci układów scalonych zapewnia-
+li możliwość łączenia ze sobą układów MSI tak, aby można było złożyć z nich sumatory
+o większej długości słowa, np. 16-bitowe. Celem przyspieszenia pracy takich sumatorów
+projektanci wyznaczali przeniesienie wyjściowe z najbardziej znaczącej pozycji każdego
+sumatora 4-bitowego. Przeniesienie to można wyznaczyć na podstawie znajomości wartoś-
+ci wszystkich 8 bitów obu słów wejściowych oraz bitu przeniesienia wejściowego. W tym
+celu, dla sumatora 4-bitowego, należy wyznaczyć funkcję boolowską 9 zmiennych.
+
+<image/figury/k3_page28_figure1.png>

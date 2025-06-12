@@ -1,0 +1,57 @@
+24, Liniowe przetwarzanie obrazóa
+
+Każda para punktów w dziedzinie częstotliwości odpowiada jednej sinusoidzie w dziedzii
+przestrzeni. Wartość dla [0, 0] odpowiada sinusoidzie o częstotliwości zerowej w dziedzimk
+przestrzeni (rys. 24.10 a), tzn. składowej stałej w obrazie. Na rysunku pokazano tylko jede
+punkt, gdyż jest to jeden z tych punktów, które są odpowiednikami same dla siebie. Na
+sunkach 24.10 b), c), d) inne pary punktów są odpowiednikami sinusoid dwuwymi owych
+które wyglądają jak fale na oceanie. Sinusoidy jednowymiarowe charakteryzują się częstot
+wością, fazą i amplitudą. Sinusoidy dwuwymiarowe charakteryzują się jeszcze kie '
+Częstotliwość i kierunek każdej sinusoidy jest wyznaczony lokalizacją pary punktów w dz
+dzinie częstotliwości. Jak pokazano, trzeba przeprowadzić linię od każdego punktu do cz
+stotliwości zerowej umiejscowionej w zewnętrznym rogu tej ćwiartki, w której znajduje <
+punkt. Są to więc lokalizacje [0, 0], [0, N/2], [V/2, 0] lub [N/2, N/2], zaznaczone kółkami
+rysunku. Kierunek tej linii określa kierunek przestrzenny sinusoidy, a jej długość jest p
+porcjonalna do częstotliwości fali. W rezultacie małe częstotliwości są lokalizowane bli
+rogów, a duże — w pobliżu środka.
+
+Gdy widmo jest prezentowane z częstotliwością zerową w środku (rys. 24.9 d), wówcz
+linia od każdej pary punktów jest prowadzona do wartości odpowiadającej przebiegowi st:
+mu (częstotliwości zerowej) w środku obrazu, tj. w punkcie [N/2, N/2]. Obraz prezento
+
+w ten sposób jest łatwiejszy do zrozumienia i obróbki, ponieważ wszystkie linie są przept
+wadzane do tego samego punktu, Inną zaletą umieszczenia zera w środku jest dopasov
+takiej prezentacji do widm częstotliwościowych obrazów ciągłych. Gdy sygnał w dziedzi
+przestrzeni jest ciągły, to w dziedzinie częstotliwości jest nieokresowy. To lokalizuje częsta
+tliwość zerową w środku, przy czym częstotliwość wzrasta we wszystkich kierunkach aż d
+nieskończoności. Ogólnie biorąc, widma częstotliwościowe obrazów dyskretnych są preze
+towane z częstotliwością zerową w środku, ilekroć ogląda się te dane w podręcznikach, a
+tykułach i dokumentacjach algorytmów. Jednak większość obliczeń prowadzi się, rejestruj
+dane w komputerze, w matrycach w innym formacie (małe częstotliwości w narożnikach
+Jest to bowiem format stosowany w przekształceniu FFT.
+
+Nawet przy zastosowaniu FFT, czas wymagany do obliczenia przekształcenia Fouriera je
+bardzo kłopotliwym wąskim gardłem w przetwarzaniu obrazów. Na przykład przekszia
+nie Fouriera obrazu 512 x 512 wymaga kilku minut pracy komputera osobistego. Jest
+szybkość ok. 10 000 razy mniejsza niż wymagana do przetwarzania obrazów w czasie rz
+czywistym, 30 obrazów/s. Ten długi czas wykonywania jest spowodowany ogromną ilośd
+informacji zawartą w obrazach. Dla porównania, w typowym obrazie jest mniej więcej ty
+samo pikseli, ile słów w tej książce. Przetwarzanie obrazów przez dziedzinę SP
+stanie się bardziej popularne, gdy komputery staną się szybsze. To jest technika XXI wie
+na pewno wkrótce się rozwinie.
+
+Splot FFT
+
+Chociaż przekształcenie Fouriera jest wolne, to jest jednak najszybszym sposobem przepr
+wadzenia splotu obrazu z dużą odpowiedzią impulsową filtru. Na przykład wykonanie spło
+obrazu 512 x 512 z funkcją PSF 50 x 50 jest przy użyciu FFT ok. 20 razy szybsze niż re
+zacja splotu konwencjonalnego. W rozdziale 18 rozważano splot FFT dla sygnałów jednow
+miarowych. Wersja dwuwymiarowa jest tylko prostym rozszerzeniem.
+
+Splot FFT zademonstrujemy na przykładzie algorytmu, który na obrazie ma odszukiw.
+wcześniej ustalony wzorzec. Przyjmijmy, że tworzymy system do sprawdzania banknotó
+jednodolarowych, który mógłby być stosowany np. do kontroli jakości druku, wykry
+fałszerstw lub weryfikacji płatności w sprzedaży z automatu. Z banknotu pobiera się obr
+100 x 100 pikseli wypośrodkowany na portrecie Jerzego Waszyngtona (rys. 24.11). Celeg
+jest odszukanie na obrazie znanego wzorca, którym w tym przykładzie jest obraz twarz
+o rozmiarach 29 x 29 pikseli. Mając pobrany obraz i znany wzorzec, trzeba się zastanow

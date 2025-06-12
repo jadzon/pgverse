@@ -1,0 +1,48 @@
+12 Rozdział 1. Kombinatoryka
+
+Pierwszy dowód. Jeżeli podstawimy t£ = —1 do wzoru Newtona, to otrzymamy:
+
+<image/wzory/k2_page47_formula1.png>
+
+Zauważmy, że w sumie po prawej stronie z plusem występują symbole Newtona (4)
+dla parzystych k, a z minusem — dla nieparzystych k. Tak więc z plusem mamy liczbę
+podzbiorów parzystej mocy, a z minusem liczbę podzbiorów nieparzystej mocy. Z powyż-
+szego wzoru wynika, że podzbiorów parzystej mocy jest tyle samo co podzbiorów mocy
+nieparzystej.
+
+Drugi dowód. Rozważmy funkcję f, która każdemu podzbiorowi
+
+<image/wzory/k2_page47_formula2.png>
+
+przyporządkuje podzbiór
+
+<image/wzory/k2_page47_formula3.png>
+czyli różnicę symetryczną zbioru A i zbioru jednoelementowego fn). Zauważmy, że
+funkcja f łączy podzbiory w pary, ponieważ jeżeli f(A) = B, to f(B) = A. Rzeczywi-
+ście, jeżeli A zawiera n, to B = A — f(n) i B 6 f(n) = A.Jeżeli natomiast A nie zawiera
+n, to B = AUfn) irównież B e f(n) = A
+Pozostaje zauważyć, że z pary zbiorów A i f(A) jeden jest mocy parzystej i jeden
+nieparzystej. 0
+
+1.8 Zasada szufladkowa Dirichleta
+
+Zasada szyfladkowa Dirichleta w najprostszej postaci mówi, że jeżeli mamy k kul i chce-
+my je rozmieścić w m < k szufladach, to w przynajmniej jednej szufladzie musi znaleźć
+się więcej niż jedna kula.
+
+Zasada ta jest intuicyjnie bardzo prosta, ale jest często używana. W nieco ogólniejszej
+postaci brzmi ona następująco:
+
+Twierdzenie 1.12 (Zasada szufladkowa Dirichleta) |eżeli zbiór A podzielimy na k pod-
+zbiorów, to przynajmniej jeden z tych podzbiorów ma |A|/k lub więcej elementów.
+
+Dowód Nie wprost. Przypuśćmy, że każdy 2 k podzbiorów ma mniej niż A|/k elemen-
+tów. Wtedy cały zbiór A ma mniej niż k|A|/k = |A| elementów; sprzeczność. o
+
+19 Zasada sumy
+
+W najprostszej postaci zasada sumy, mówi że moc sumy dwóch zbiorów A i B jest równa
+
+<image/wzory/k2_page47_formula4.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

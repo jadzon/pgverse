@@ -1,0 +1,35 @@
+20 a: 1. Pojęcia podstawowe — elementy
+
+Wielkości zaciskowe elementu uważamy za wielkości skierowane. Ich zwrot
+jest na rysunkach oznaczony strzałkami, Zastosowany na rysunkach 1.1- 1
+
+01 Janoanniis ao AGGAIA GO GA MOW BG MASA. SAL. 8
+
+ 
+
+<image/wzory/k4_page20_formula1.png>
+<image/figury/k4_page20_figure3.png>
+
+NAA WAŁA MI MAAAANANAA NAN PYWEN O JOŁWAIKAŁ DLA 44GŁAALN/ VY (ŁALAGŁ JWOŁ LIIWŁUWULIU UG UJUULIU"
+
+znacznienia równań elementów. W dalszych rozważaniach równania elementów
+będziemy odnosić do standardowego sposobu strzałkowania przyjętego na rys.
+1.1-1.
+
+Uwaga. Przyjętemu sposobowi strzałkowania można nadać interpretację fizyczną. Napięcie
+u na elemencie jest różnicą potencjałów występujących na jego zaciskach, tzn. u = v, — vy. Przy
+założeniu, że w chwili tę : u(t,) > 0, strzałka napięcia u wskazuje zacisk o w yżs z ym potencjale
+(wy (ty) > vg(ty)). Przy założeniu i(t,)> 0 strzałka prądu i wskazuje kierunek przepływu do-
+datnich ładunków elektrycznych (od zacisku o wyższym potencjale do zacisku o potencjale niższym.)
+
+F. Obwody, układy, sieci. Bardziej złożone struktury, tj. obwody, układy,
+sieci powstają przez łączenie elementów. Podobnie jak w przypadku elementu,
+nie będziemy tych pojęć formalnie definiować, poprzestając na ich intuicyjnym
+rozumieniu oraz wymienieniu niektórych ich cech.
+
+<image/figury/k4_page20_figure1.png>
+
+Rys. 1.1-3
+
+Przepływ prądu (ruch ładunków elektrycznych) odbywa się w obwodzie
+zamkniętym. Obwód jest zatem (najprostszą) strukturą zamkniętą, w której

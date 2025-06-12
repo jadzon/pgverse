@@ -1,0 +1,42 @@
+Architektura sieci neuronowych 441
+
+Wyjścia warstwy ukrytej są oznaczone na sieci przepływu (rys. 26.5) jako zmienne X2,, X2y,
+X2, i X24. Podobnie jak poprzednio, każda z tych wartości jest powielana i wprowadzana do
+następnej warstwy. Węzły aktywne warstwy wyjściowej łączą dane i modyfikują je, wytwa-
+rzając dwie wartości wyjściowe tej sieci X3, i X3y.
+Sieci neuronowe mogą mieć dowolną liczbę warstw i dowolną liczbę węzłów w każdej sie-
+ci. Najczęściej stosuje się sieci trójwarstwowe o liczbie węzłów nie większej niż kilkaset.
+Warstwa ukryta ma zwykle rozmiar ok. 10% warstwy wejściowej. W przypadku wykrywania
+celu w warstwie wyjściowej wystarczy tylko pojedynczy węzeł. Sygnał wyjściowy z tego
+węzła jest poddawany progowi, dając pozytywną lub negatywną wskazówkę o obecności lub
+nieobecności celu w danych wejściowych.
+W tablicy 26.1 zamieszczono program realizujący sieć przepływu z rys. 26.5. Co najważniej-
+sze, ta architektura jest bardzo prosta i bardzo uogólniona. Ta sama sieć przepływu może być
+wykorzystywana do wielu zadań, niezależnie od ich specyfiki. Zdolność sieci neuronowej do
+pożytecznego operowania danymi polega na właściwym doborze wag. Jest to spektakularne
+odejście od konwencjonalnego przetwarzania informacji, gdzie rozwiązania są opisywane
+procedurami realizowanymi krok po kroku.
+Weźmy jako przykład sieć neuronową służącą do rozpoznawania obiektów w jakimś sy-
+gnale. Przypuśćmy, że w komputerze zgromadzono 1000 próbek z sygnału, Jak komputer
+określi, czy te dane reprezentują łódź podwodną, wieloryba, górę podmorską czy zgoła
+nic? W konwencjonalnym DSP rozwiązywałoby się ten problem, korzystając z matematyki
+i algorytmów, takich jak analiza widma częstotliwościowego i korelacja. W przypadku
+sieci neuronowej te 1000 próbek wprowadza się po prostu do warstwy wejściowej, w wy-
+niku czego jakieś wartości „wyskakują” z warstwy wyjściowej. Przez dobór właściwych
+wag można skonfigurować wyjście tak, aby dostarczało szeroki zakres informacji. Mogą
+to być na przykład wyjścia typu: łódź podwodna (tak/nie), wieloryb (tak/nie), podmorska
+góra (tak/nie) itd.
+Przy innych wagach, wyjścia mogą klasyfikować obiekty jako: metal czy niemetal, obiekt
+biologiczny czy niebiołogiczny. wróg czy sojusznik itd. Nie ma tu algorytmów, nie ma re-
+guł, nie ma procedur, a tylko zależność między wejściem i wyjściem podyktowana przez
+wybrane wartości wag.
+Na rys. 26.7 dokładniej pokazano przebieg sigmoidy, matematycznie opisanej wzorem:
+
+2) 1+e'
+
+Wzór 26.1. Funkcja sigmoidalna. Jest ona stosowana w sieciach neuronowych jako tagodny próg.
+Przebieg tej funkcji pokazano na rys. 26.7 a)
+
+ 
+
+<image/figury/k3_page407_figure1.png>

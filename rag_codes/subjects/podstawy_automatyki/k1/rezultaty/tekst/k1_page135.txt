@@ -1,0 +1,26 @@
+4. Przykład analizy układu mechanicznego
+
+4.1. Wstęp
+
+Liniowe układy dynamiczne są systemami, w których zależności wejście-wyjście
+spełniają warunek superpozycji. Układy te są opisywane za pomocą liniowych równań
+różniczkowych. Różnorodne sposoby analizy tych układów wykorzystują techniki cza-
+sowe (przestrzeń stanów) oraz częstotliwościowe. Podejścia te charakteryzują się dual-
+nością, tzn. można znaleźć transmitancje na podstawie równań różniczkowych i od-
+wrotnie.
+
+Układ taki powinien być w pełni stabilny, to znaczy, że po wzbudzeniu winien
+osiągać wartość ustaloną i być dokładnie w stanie ustalonym.
+
+Zasadę tę zilustrować można na przykładzie prostego układu dynamicznego
+przedstawionego na rysunku 4.1.
+
+<image/figury/k1_page135_figure1.png>
+
+Rys. 4.1. Układ dynamiczny
+Układ składa się z ciała o masie m podłączonego za pomocą sprężyny i wiskotycz-
+
+nego tłumika do platformy sterowanej sygnałem wejściowym. Na platformę, jako wej-
+ście, oddziałuje określone wymuszenie x; (/).
+
+137

@@ -1,0 +1,22 @@
+Modyfikacja krawędzi 3 x 3 387
+
+ 
+
+<image/wzory/k3_page355_formula1.png>
+
+ 
+
+pozostawiając h
+pd rj odc r cui iarzszzż c) w różnym ich stosunku,
+zależnym od stałej k. Przy tworzeniu tego obrazu zastosowano k =
+
+Na rys. 244 c) pokazano funkcję PSF detekcji krawędzi i wynikający z niej obraz. Każda
+krawędź obrazu oryginalnego jest przekształcana na wąskie ciemne i jasne pasma, biegnące rów-
+nolegle do oryginalnych krawędzi. Stosując w obrazie odpowiednie progi, można wyizolować
+albo ciemne, albo jasne pasma, uzyskując prosty algorytm do detekcji krawędzi w obrazie.
+
+Stosowaną na ogół technikę przetwarzania — wyostrzanie krawędzi, przedstawiono na rys.
+24.4 d). Obiekty na rys. 24.4 a) mają dobry kontrast (odpowiednie poziomy obszarów jasnych
+i ciemnych), lecz bardzo rozmyte krawędzie. Obiekty na rys. 24.4 c) wcałe nie mają kontrastu,
+lecz mają bardzo ostre krawędzie. Metoda polega na pomnożeniu obrazu z dobrymi krawę-
+dziami przez pewną stałą k i dodanie go do obrazu z dobrym kontrastem. Jest to równoważne

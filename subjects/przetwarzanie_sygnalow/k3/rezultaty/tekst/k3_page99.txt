@@ -1,0 +1,58 @@
+Algorytm od strony wejścia
+
+ 
+
+Na rys. 6.2 przedstawiono zapis używany przy stosowaniu splotu w systemach liniowych.
+Impuls wejściowy x(n] jest wprowadzany do systemu liniowego o odpowiedzi impul-
+sowej hfn]. Na wyjściu uzyskuje się sygnał wyjściowy yfn]. Można to wyrazić wzorem
+x|n] * h[n] = y[n]. Wyraźmy to słownie: impuls wejściowy spłeciony z odpowiedzią impul-
+sową jest równy sygnałowi wyjściowemu. Podobnie jak dodawanie jest oznaczane przez +,
+mnożenie przez x, spłot jest oznaczany gwiazdką *. Bardzo niefortunne jest stosowanie ta-
+kiej gwiazdki, w większości języków programowania, do oznaczania mnożenia. Gwiazdka
+w programie komputerowym oznacza mnożenie, we wzorach zaś — operację splotu.
+
+Na rys. 6.3 przedstawiono zastosowanie splotu w filtracji dolno- i górnoprzepustowej.
+Przykładowym sygnałem wejściowym jest suma dwóch składowych — trzech okresów fali si-
+nusoidalnej (reprezentujących duże częstotliwości) i wolno narastającego przebiegu piłowego
+(zawierającego małe częstotliwości). Odpowiedź impulsowa filtru dolnoprzepustowego (rys.
+6.3 a) jest gładką krzywą o kształcie łuku i daje w wyniku tylko wolno narastający przebieg
+piłowy, przepuszczany do wyjścia filtru. Filtr górnoprzepustowy (rys. 6.3 b) zaś przepuszcza
+tylko szybkozmienne sinusoidy.
+
+Dwa dalsze przykłady zastosowania splotu w przetwarzaniu sygnałów przedstawiono na rys. 6.4.
+Tłumik odwracający (rys. 6.4 a) odwraca sygnał i zmniejsza jego amplitudę. Operacja pochodnej
+dyskretnej (rys. 6.4 b) daje sygnał wyjściowy zależny od nachyłenia sygnału wejściowego.
+Zwróćmy uwagę na długość sygnałów na rys. 6.3 i 6.4. Sygnały wejściowe mają długość
+81 próbek, a każda z odpowiedzi impulsowych — 31 próbek. W większości zastosowań DSP
+impulsy wejściowe mają długość setek, tysięcy lub nawet milionów próbek. Odpowiedź
+impulsowa jest zwykle znacznie krótsza — od kilku do kilkuset punktów. Matematyczne
+podstawy operacji splotu nie ograniczają długości tych sygnałów, wyznaczają jednak dłu-
+gość sygnału wyjściowego. Długość sygnału wyjściowego jest równa sumie długości sy-
+gnału wejściowego i odpowiedzi impulsowej, pomniejszonej o 1. Na rys, 6.3 i 6.4 sygnały
+wyjściowe mają długość 81 + 31 — 1 = 111 próbek. Sygnały wejściowe zawierają próbki od
+0 do 80, odpowiedzi impulsowe — od 0 do 30, a sygnały wyjściowe — od 0 do 110.
+
+Dochodzimy teraz do szczegółów matematycznych operacji splotu. Spłot, jako operację stoso-
+waną w cyfrowym przetwarzaniu sygnałów, można rozważać dwoma sposobami. Po pierwsze,
+możemy rozpatrywać splot z punktu widzenia sygnału wejściowego. To prowadzi do przeana-
+lizowania, co wnosi każda próbka sygnału wejściowego do wielu punktów sygnału wyjściowego.
+Drugi sposób to rozpatrywanie splotu z punktu widzenia sygnału wyjściowego. Wtedy bada
+się, co otrzymuje każda próbka sygnału wyjściowego z wielu punktów sygnału wejściowego.
+Pamiętajmy, że te dwa spojrzenia na splot z różnych perspektyw są różnymi sposobami my-
+ślenia o tej samej operacji matematycznej. Pierwszy punkt widzenia jest istotny, gdyż daje
+pojęciowe zrozumienie związku splotu z DSP. Drugi punkt widzenia daje zaś matematyczny
+opis splotu. Jest to przykładem jednego z najtrudniejszych zadań, jakie napotykamy w DSP
+— powiązania zrozumienia pojęciowego z gmatwaniną zależności matematycznych opisują-
+cych zachodzące procesy.
+
+Algorytm od strony wejścia
+
+Na rys. 6.5 przedstawiono prosty problem związany ze splotem. Sygnał 9-punktowy xfn],
+przechodzący przez system o 4-punktowej odpowiedzi impulsowej h[n] daje sygnał wyj-
+ściowy y[n] 12-puntowy (9+4- 1 = 12 punktów). W kategoriach matematycznych można
+powiedzieć, że x[n] jest splatana z h[n], dając y(n]. Taki sposób spojrzenia na splot wy-
+nika z podstawowej koncepcji DSP: rozłożenie sygnału, przepuszczenie jego składowych
+przez system i uzyskanie sygnału wyjściowego przez syntezę. W podanym przykładzie każda
+z 9 próbek sygnału wejściowego będzie wnosiła do sygnału wyjściowego przeskałowaną
+i przesuniętą wersję odpowiedzi impulsowej. Te dziewięć sygnałów pokazano na rys. 6.6.
+Dodając te 9 sygnałów, uzyskuje się sygnał wyjściowy yfn].

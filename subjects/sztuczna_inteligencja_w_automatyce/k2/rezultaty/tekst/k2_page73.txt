@@ -1,0 +1,43 @@
+<image/figury/k2_page73_figure1.png>
+
+Rys. 5.5: Funkcja przynależności zbioru rozmytego: wysoki na swój wiek
+
+Definicja 5.2 Równość zbiorów
+
+Zbiór rozmyty A jest równy zbiorowi rozmytemu B wtedy i tylko wtedy, gdy
+
+<image/wzory/k2_page7/3_formula1.png>
+
+Definicja 5.3 Iloczyn zbiorów
+
+Iloczynem zbiorów rozmytych A i B jest zbiór rozmyty AMB o funkcji przynależności
+
+<image/wzory/k2_page7/3_formula2.png>
+
+Definicja 5.4 Suma zbiorów
+
+Sumą zbiorów rozmytych A i B jest zbiór rozmyty AU B o funkcji przynależności
+
+<image/wzory/k2_page7/3_formula3.png>
+
+Definicja 5.5 Negacja (dopełnienie) zbioru
+
+Negacją lub dopełnieniem zbioru rozmytego A jest zbiór rozmyty A o funkcji przy-
+należności
+
+<image/wzory/k2_page7/3_formula4.png>
+
+Na rysunku 77 zilustrowano powyższe definicje.
+
+Czasami tworzone są inne definicje operacji AND i OR ale definicja operacji
+NOT pozostaje bez zmian. Zauważmy, że gdy funkcje przynależności przyjmują
+tylko wartości 0 i 1 powyższe operacje pokrywają się ze znanymi operacjami na
+zbiorach nierozmytych. Jest to potwierdzeniem, że zbiory i logika rozmyta stanowią
+uogólnienie teorii zbiorów i logiki bulowskiej.
+
+Operacje iloczynu i sumy mogą być zastosowane także do dwóch zbiorów rozmy-
+tych zdefiniowanych w róznych przestrzeniach. Wtedy z dwóch zbiorów rozmytych
+otrzymujemy jeden zbiór dwuargumentowy. Jeżeli przestrzeniami są X i Y wtedy
+zbiór dwuargumentowy jest określony na iloczynie kartezjańskim X xY.
+
+Definicja 5.6 Iloczyn (produkt) kartezjański zbiorów

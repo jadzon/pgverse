@@ -1,0 +1,41 @@
+Pomiary analogowe w systemie DSP 517
+
+<image/figury/k3_page480_figure1.png>
+
+Nasz inżynier będzie bardzo poruszony, widząc tę liniowość fazy. Sygnały pojawiają się nie
+w taki sposób, jak się spodziewał, i inżynier zacznie gorączkowo kręcić gałkami. Będzie
+narzekał, że wyzwalanie nie działa dobrze i mamrotał pod nosem, że „to nie ma sensu”, „co
+tu się dzieje?” i „kto się bawił moim oscyloskopem?”. Działanie sytemu DSP jest tak dobre,
+że inżynier dopiero po paru minutach zrozumie, co naprawdę ogląda.
+
+Aby zrobić jeszcze większe wrażenie, poprośmy naszego inżyniera, żeby w sposób ręcz-
+ny zmierzył charakterystykę systemu. W tym celu będzie ustawiał na generatorze kolejno
+wszystkie częstotliwości między 125 Hz a 10 kHz w skokach po 125 Hz. Przy każdej często-
+tliwości zmierzy wartość sygnału wyjściowego i podzieli ją przez wartość sygnału wejścio-
+wego. (Oczywiście najłatwiejszym sposobem będzie utrzymywanie stałej wartości sygnału
+wejściowego). Do tego testu ustawimy częstotliwość próbkowania w EZ-KIT Lite na wartość
+22 kHz. Innymi słowy, zakres cyfrowy częstotliwości od ( do 0,5 z rys. 29.2 a) jest odwzoro-
+wywany jako zakres od 0 do 11 kHz w pomiarach w świecie rzeczywistym.
+
+Na rys. 29.4 pokazano wynik pomiaru wykonanego przy użyciu zestawu EZ-KIT Lite.
+Trudno sobie wyobrazić lepszy wynik! Punkty pomiarowe zgadzają się z krzywą teoretyczną
+w granicach błędu pomiaru. Z czymś takim inżynier analogowy, o którym mówimy, nigdy się
+nie spotkał w filtrach wykonanych z rezystorów, kondensatorów i cewek indukcyjnych.
+Jednak nawet to nie daje systemom DSP tak dobrej opinii, na jaką zasługują. Pomiary ana-
+logowe przy użyciu oscyloskopów i woltomierzy cyfrowych charakteryzują się typową roz-
+dzielczością i dokładnością w przybliżeniu od 0,1 do 1%. Dokładność systemu DSP zaś jest
+ograniczona tylko błędem zaokrąglania —0,001% w 16-bitowym koderze-dekoderze, gdyż
+operacje wewnętrzne są wykonywane na liczbach zmiennoprzecinkowych. Tak więc ocenia-
+ne przez nas urządzenie jest sto razy dokładniejsze niż narzędzia pomiarowe użyte do jego
+testowania. Właściwa ocena charakterystyki częstotiwościowej wymagałaby specjalizowanej
+aparatury, takiej jak komputerowy system zbierania danych z 20-bitowym przetwornikiem
+a/c. Znając te fakty, nie dziwimy się, że cyfrowe procesory sygnałowe są często stosowane
+w aparaturze pomiarowej po to, aby uzyskać dużą dokładność pomiarów.
+
+Teraz możemy już odpowiedzieć na pytanie: Dlaczego Analog Devices sprzedaje cyfrowe proceso-
+
+ry sygnałowe” Zaledwie kilkanaście lat temu ówczesne przetwarzanie było realizowane
+przy zastosowaniu wzmacniaczy i podobnych do nich układów tranzy-
+
+wą. Analog Devices może być przykładem dla innych i dla indywidualnych specjalistów — trzy-
+majcie się swojej wizji i celów i nie obawiajcie się przystosowania do zmieniającej się techniki!

@@ -1,0 +1,47 @@
+Rys. 1.3 przedstawia schemat stykowy układu sterowania takim silnikiem dla
+oznaczeń podanych w Tab. 1.1. W układzie tym załączenie silnika następuje
+przyciskami sterowniczymi załączającymi kierunek wirowania w prawo przez
+$1, podobnie w lewo przez S2. Po zwolnieniu przycisku S7 napięcie w obwodzie
+cewki KI przekaźnika załączającego silnik jest podtrzymywanie przez styk tego
+przekaźnika (oznaczony również przez KI). Ponowne naciśnięcie $S7 w tym
+układzie sterowania nic nie zmienia. Podobnie działają przycisk S$2 i przekaźnik
+K2. Zanik napięcia w obwodach cewek następuje po naciśnięciu przycisku wyłą-
+czającego stop (styk rozwierny S0). Styk rozwierny F2 zabezpieczenia termicz-
+nego silnika może przerwać obwód sterowania, podobnie jak styk przycisku S0.
+Natomiast styki rozwierne K/ i K2 umieszczone w obwodach obu cewek unie-
+możliwiają jednoczesne ich pobudzenie.
+
+W układzie tym zapewniono sygnalizację pracy i postoju silnika za pomocą lam-
+pek, a ponadto wprowadzono zabezpieczenia przed napięciami, które indukują
+się w cewkach w chwili rozwierania styków wyłączających. Zabezpieczenie to
+stanowią odpowiednio włączone diody, które dla prądów indukcyjnych zamykają
+obwód cewki.
+
+Po opisie najprostszego przekaźnikowego układu sterowania silnikiem przejdź-
+my do realizacji takiego układu z zastosowaniem sterownika. Zakładamy, że
+również w tym przypadku sterowanie jest realizowane przy pomocy takich sa-
+mych przycisków i wyłącznika termicznego.
+
+Położenie przycisków sterownik rozpoznaje za pośrednictwem dwustanowych
+modułów wejściowych, dla których schemat połączeń pokazano na Rys. 1.4.
+Styki tych przycisków włączone są w obwody modułu. Moduły wejściowe za-
+mieniają sygnały prądu stałego na sygnały logiczne akceptowane przez sterow-
+nik, określając wartości zmiennych wejściowych %/1 .. %14. Symbolicznie jest
+to zobrazowane na rysunku przez odpowiadające im elementy optoelektroniczne
+(fotodiody), które ustawiają wartości bitowe w pamięci sterownika. Istotne jest
+przede wszystkim to, że wartości zmiennych logicznych określają jednoznacznie
+stan styków w obwodach wejściowych.
+
+Najczęściej wszystkie obwody wejściowe zasilane są ze wspólnego źródła prądu
+stałego o napięciu 24V. Polaryzacja źródła zasilania obwodów wejściowych za-
+leży od typu zastosowanego modułu wejść. Powszechnie stosuje się moduły
+wejść typu ujście (SZWK IN) z polaryzacją dodatnią (positive input module),
+a znacznie rzadziej typu źródło (SOURCE IN) z polaryzacją ujemną (negative
+input module). W przypadku modułu typu ujście, prąd płynie od urządzenia wej-
+ściowego do punktu wspólnego lub do ujemnego bieguna zasilania, zaś w przy-
+padku modułu typu źródło, prąd płynie przez urządzenie wejściowe do punktu
+wspólnego lub do ujemnego bieguna zasilania. W pierwszym przypadku biegun
+
+   
+
+12 Rozdział : 1. Wprowadzenie i podstawy

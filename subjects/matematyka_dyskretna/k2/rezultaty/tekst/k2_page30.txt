@@ -1,0 +1,46 @@
+1.11. Reprezentacja liczb w komputerze 15
+
+czyli jedynka i piętnaście zer, która koduje liczbę:
+
+<image/wzory/k2_page30_formula1.png>
+Często nie ma żadnego zabezpieczenia przed przekroczeniem maksymalnego lub mini-
+malnego zakresu liczb typu integer. Jeżeli, na przykład, do liczby 32767, która jest prze-
+chowy i
+
+<image/wzory/k2_page30_formula2.png>
+
+dodamy jedynkę, w owzymamy:
+
+<image/wzory/k2_page30_formula3.png>
+
+która koduje liczbę — 32768, i komputer nie zakomunikuje tego przekroczenia.
+
+1.11.2 Real
+
+Liczby typu real są zapisywane w dwóch notacjach:
+e stałopozycyjnej,
+e zmiennopozycyjnej.
+
+Liczby w notacji stałopozycyjnej to, na przykład:
+
+<image/wzory/k2_page30_formula4.png>
+
+czyli notacja dziesiętna. Zwróćmy uwagę, że kropka oddziela część całkowitą liczby od
+części ułamkowej.
+W notacji zmiennopozycyjnej liczba przedstawiona jest w postaci:
+
+<image/wzory/k2_page30_formula5.png>
+
+gdzie m jest mantysą, liczbą w postaci dziesiętnej z przedziału 1 < m < 10 lub — 10 <
+m < —1,ac, zwana cechą, jest liczbą całkowitą. Zapis m Ec oznacza liczbę:
+
+<image/wzory/k2_page30_formula6.png>
+
+W poniższej tabeli mamy kilka liczb w postaci stało- i zmiennopozycyjnej.
+
+<image/wzory/k2_page30_formula7.png>
+
+Sposób przechowywania wartości zmiennych typu real jest skomplikowany i nie będzie
+przedstawiony szczegółowo.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

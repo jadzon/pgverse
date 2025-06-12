@@ -1,0 +1,21 @@
+181
+
+Na etapie mutacji wybranych zostaje losowo CzestMut x LiczbaWag wag, które
+następnie zostają zmienione według identycznej zasady jak przy tworzeniu sieci po-
+tomnych do wybranych bez losowania, gdzie LiczbaWag = (liczba zmiennych stanux
+LiczbaNeuronUkr + 2 x LiczbaNeuronUkr + 1) x LiczbaSieci jest łączną liczbą
+wag we wszystkich sieciach, a CzestMut jest arbitralnie wybraną stałą.
+
+Model matematyczny odwróconego wahadła*
+
+W czasie działania algorytmu genetycznego wymagane jest przeprowadzenie wie|-
+kiej liczby cykli sterowań wahadła (np. około 10%). Sterowania takie praktycznie
+można zrealizować jedynie poprzez symulację. Aby przeprowadzać symulację ste-
+rowania potrzebna jest znajomość modelu matematycznego odwróconego wahadła
+czyli znajomość reakcji odwróconego wahadła na przyłożoną siłę.
+
+<image/figury/k2_page176_figure1.png>
+
+Układ wózek-wahadło przedstawiono schematycznie na rys. ??. Opisujący go
+
+SDla dociekliwych

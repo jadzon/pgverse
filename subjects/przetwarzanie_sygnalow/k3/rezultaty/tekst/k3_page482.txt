@@ -1,0 +1,44 @@
+Inne spojrzenie na systemy stało- i zmiennoprzecinkowe 519
+
+  
+
+|
+
+  
+
+<image/figury/k3_page482_figure2.png>
+
+uuznzazjuzazzszjkawnocojczsnoo
+nazzzzgzzzzzzajczzzzzepazozem
+
+  
+
+e zj
+
+   
+
+<image/figury/k3_page482_figure1.png>
+
+Rys. 29.6. Szum zaokrąglania w dziedzinie czasu. Na rys. a) przedstawiono przykład sygnału o amplitudzie zmniejsza-
+w Z W AE rozciągnięcie skali pionowej.
+
+Gdy sygnał jest wyrażony w w W ziem
+go zobaczyć na wykresie. Na rys. c), d) dotyczących sygnału w formacie statoprzecinkowym poziom tego szumu jest
+
+tracja SOI zawiera tam tylko dwa wiersze (41 i 42). Natomiast programista stosujący liczby
+stałoprzecinkowe musi dodać instrukcje zarządzające danymi podczas każdej operacji mate-
+matycznej. Aby uniknąć przepełnienia lub niedomiaru, wartości muszą być sprawdzane pod
+względem rozmiaru i — w razie potrzeby — odpowiednio przeskałowane. Wyniki pośrednie
+powinny być przechowywane w akumulatorze o rozszerzonej dokładności w celu uniknięcia
+fatalnych skutków wywołanych powtarzającymi się błędami zaokrąglenia.
+
+Sprawa jakości działania jest znacznie bardziej delikatna. Na rys. 29.5 a) jako przykład przed-
+stawiono filtr dolnoprzepustowy SOI o umiarkowanie stromym odcięciu, taki jak opisany
+w rozdziale 16. Ta krzywa wykreślona „w dużej skali” wygląda tak samo niezależnie od tego,
+czy w obliczeniach stosowano format stało- czy zmiennoprzecinkowy. Aby zauważyć różni-
+cę między dwoma sposobami obliczeń, trzeba rozciągnąć wykres w skali pionowej o czyn-
+nik kilkaset, jak pokazano na rys. 29.5 b), c), d). Tu widzimy wyraźną różnicę. Realizacja
+zmiennoprzecinkowa (rys. 29.5 b) ma tak mały szum wynikający z błędów zaokrągleń, że
+działanie tej metody jest ograniczone tylko przez sposób, w jaki zaprojektowaliśmy odpo-
+wiedź impulsową filtru. Przerzut 0,02% obok odcięcia jest właściwością okna Blackmana
+zastosowanego w filtrze. Istota problemu jest taka, że jeśli chcemy ulepszyć działanie, to

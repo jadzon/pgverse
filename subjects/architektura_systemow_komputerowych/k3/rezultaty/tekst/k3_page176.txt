@@ -1,0 +1,36 @@
+166 8. Mechanizmy przyspieszające pracę komputerów
+
+<image/figury/k3_page17/6_figure3.png>
+
+konfiguracja sześcienna
+
+<image/figury/k3_page176_figure2.png>
+
+ 
+
+Rysunek 8.8. Topologie połączeń w systemach wielokomputerowych
+
+Topologia może mieć charakter statyczny lub dynamiczny. Dynamiczny charakter połączeń
+pozwala na możliwość zmiany konfiguracji systemu przez wykonywany program. Ste-
+rowanie przesłaniami może być synchroniczne, ze wspólnym dla całego systemu zegarem,
+lub też przesłania mogą być asynchroniczne. Sterowanie siecią komputerów lub proceso-
+rów może być scentralizowane lub rozproszone. Sterowanie scentralizowane ma miejsce
+wówczas, gdy jeden centralny układ sterujący zarządza wymianą informacji pomiędzy
+elementami sieci. Sterowanie nazywane jest rozproszonym, gdy każdy element sieci jest
+wyposażony w układ będący fragmentem całego układu sterowania i jest odpowiedzialny
+za uaktywnianie połączenia tego elementu z innymi.
+
+Systemy słabo powiązane (wielokomputerowe) mają zwykle topologię statyczną, prze-
+słania pomiędzy komputerami asynchroniczne, a sterowanie ma charakter rozproszony.
+Ważną cechą takich systemów jest liczba możliwych połączeń (wejść/wyjść) elementów
+sieci. Na rysunku 8.8 pokazano różne struktury połączeń. Najprostsze struktury to kon-
+figuracja liniowa (ang. linear array) oraz konfiguracja pierścieniowa (ang. ring). Obie te
+konfiguracje wymagają tylko dwóch połączeń dla każdego elementu. Konfiguracja typu
+drzewo (ang. tree) oraz sześcian (ang. 3-cube) wymaga trzech połączeń, a konfiguracja
+typu macierzowego (ang. mesh) wymaga czterech połączeń. Najkosztowniejsza jest kon-
+figuracja pełnych połączeń (ang. fully connected), gdzie wymagana liczba połączeń jest
+równa liczbie elementów minus 1. Na rysunku 8.8 pokazano konfigurację pełną dla 5
+elementów, a więc wymagającą czterech połączeń.
+
+Systemy silnie powiązane (wieloprocesorowe) mają zwykle konfigurację dynamiczną,
+przesłania są synchroniczne, a sterowanie ma charakter scentralizowany. Dynamiczna

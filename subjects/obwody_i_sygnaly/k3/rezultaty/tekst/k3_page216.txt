@@ -1,0 +1,47 @@
+216 2. Pojęcia podstawowe — układy
+
+    
+    
+
+Właściwości te wynikają wprost z zasady Tellegena. Załóżmy najpierw dla uproszczenia,
+rozpatrywany wielowrotnik jest zbudowany tylko z dwójników pasywnych. Ich liczbę o:
+przez K. Załóżmy ponadto, że napięcia i prądy każdego dwójnika są zastrzałkowane standardowo,
+a więc:
+
+<image/wzory/k3_page216_formula1.png>
+
+jest mocą pobieraną przez k-ty dwójnik. Wówczas, wobec pasywności wszystkich dwójników,
+możemy napisać dla k-tego dwójnika:
+
+<image/wzory/k3_page216_formula2.png>
+gdzie:
+
+<image/wzory/k3_page216_formula3.png>
+jest energią pobraną w przedziale czasu (ty, t), zaś:
+
+zory/k38_page216_formula4.png
+
+jest energią zgromadzoną w elementach k-tego dwójnika zdolnych do gromadzenia energii.
+Wówczas:
+
+<image/wzory/k3_page216_formula5.png>
+
+jest całkowitą energią zgromadzoną w chwili £, w układzie, zaś:
+
+<image/wzory/k3_page216_formula6.png>
+
+jest całkowitą energią pobraną przez układ z otoczenia w przedziale czasu (tę, t). Z zasady
+Tellegena wynika, że moc pobierana z otoczenia przez wielowrotnik poprzez jego wrota, określona
+wzorem (2.1-17), jest równa sumie mocy (2.1-72) pobieranych przez dwójniki, z których jest
+zbudowany wielowrotnik, tzn.:
+
+rzory/k3_page216_formula7.png (2.1-77)
+Po scałkowaniu tej równości w przedziale (ty, t) i po uwzględnieniu zależności (2.1-74) i (2.1-76)
+otrzymujemy:
+
+<image/wzory/k3_page216_formula8.png>
+
+gdzie u, i są wektorami napięć i prądów zaciskowych wielowrotnika. W konsekwencji, wobec
+zależności (2.1-73) — (2.1-78) otrzymujemy:
+
+<image/wzory/k3_page216_formula9.png>

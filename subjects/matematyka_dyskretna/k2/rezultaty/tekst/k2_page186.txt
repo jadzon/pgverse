@@ -1,0 +1,29 @@
+<image/figury/k2_page186_figure2.png>
+
+Dowód:
+
+(a) = (b) Ponieważ G jest drzewem, więc jest acykliczny, przypuśćmy, że dodanie
+krawędzi (u, v) nie dodaje cyklu w grafie, ale to oznacza, że w grafie G nie ma drogi
+łączącej u i v. W przeciwnym przypadku mielibyśmy dwie drogi proste z u do v: jedną,
+która była w drzewie G i drugą złożoną tylko z dodanej krawędzi, a więc na podstawie
+lematu 1.11 dodanie krawędzi zamykałoby cykl. Mamy sprzeczność, bo G jako drzewo
+jest spójny
+
+(b) > (a) "Trzeba pokazać, że G jest spójny. Przypuśćmy, że nie jest, i że nie ma drogi
+łączącej wierzchołki u i v. Ale wtedy dodanie krawędzi fu,v) nie dodaje cyklu (gdy-
+by taki cykl powstał, to po usunięciu krawędzi fu,v) z cyklu mielibyśmy drogę prostą
+łaczącą u i v).
+
+(a) > (c) G jako drzewo jest spójny. Przypuśćmy, że odjęcie krawędzi nie psuje spój-
+ności. To znaczy, że w grafie istniały dwie drogi proste łączące u i v, czyli na podstawie
+Lematu 1.11 w grafie G jest cykl; sprzeczność.
+
+(c) > (a) Trzeba pokazać, że w G nie ma cyklu. Gdyby w G istniał cykl, to pania
+dowolnej krawędzi tego cyklu nie psuje spójności; sprzeczność.
+
+Lemat 1.15 W drzewie z n wierzchołkami mamy n — 1 krawędzi.
+
+Dowód: Przez indukcję ze względu na liczbę wierzchołków. Jeżeli drzewo ma jeden
+wierzchołek, to nie ma żadnych krawędzi.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

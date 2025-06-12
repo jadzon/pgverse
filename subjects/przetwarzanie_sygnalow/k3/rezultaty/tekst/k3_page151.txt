@@ -1,0 +1,58 @@
+168 9, Zastosowania DFT
+
+o
+
+Dyskretne przekształcenie Fouriera (DFT) jest jednym z najważniejszych narzędzi w cyfro-
+wym przetwarzaniu sygnałów. W tym rozdziale będą omówione trzy typowe sposoby stoso-
+wania tego przekształcenia. Po pierwsze, stosując DFT, można obliczać częstotliwościowe
+widmo sygnału. Uzyskuje się je przez bezpośrednie wykorzystanie informacji zakodowanej
+w częstotliwości, fazie i amplitudzie sinusoid składowych. Na przykład w ludzkiej mowie
+i słyszeniu występują sygnały o tym typie zakodowania. Po drugie, za pomocą DFT moż-
+na znaleźć odpowiedź częstotliwościową sygnału na podstawie jego odpowiedzi impulsowej
+i vice versa. Dzięki temu systemy mogą być analizowane w dziedzinie częstotliwości, podob-
+nie jak splot daje możliwość analizy w dziedzinie czasu. Po trzecie, DFT można stosować
+jako krok pośredni w bardziej rozwiniętych metodach przetwarzania sygnałów. Klasycznym
+przykładem jest tu splot FFT, algorytm do realizacji splotu sygnałów, który jest setki razy
+szybszy od metod konwencjonalnych.
+
+Analiza widmowa sygnałów
+
+Bardzo często informacja bywa zakodowana w sinusoidach tworzących sygnał. Dotyczy to
+zarówno sygnałów powstających w sposób naturalny, jak i tworzonych przez ludzi. W naszym
+Wszechświecie wiele rzeczy oscyluje. Mowa, na przykład, jest wynikiem wibracji strun głoso-
+wych człowieka; gwiazdy i planety zmieniają swoją jasność, gdy obracają się wokół własnych
+osi lub jedna wokół drugiej; śruby okrętowe wytwarzają okresowe przemieszczenia wody i tak
+dalej. W tych sygnałach kształt przebiegu w dziedzinie czasu nie jest ważny. Główna infor-
+macja jest zawarta w częstotliwości, fazie i amplitudzie sinusoid składowych. Przekształcenie
+DFT jest stosowane do wydobycia tej informacji.
+
+Rozważymy to na przykładzie. Załóżmy, że chcemy zbadać dźwięki rozchodzące się w oce
+anie. Najpierw umieszcza się w wodzie mikrofon i uzyskany sygnał elektroniczny acni
+do odpowiedniego poziomu, np. kilku woltów. Następnie analogowym filtrem dolnoprzepu
+stowym usuwa się wszystkie częstotliwości powyżej 80 Hz, a więc sygnał można próbkować
+z częstotliwością 160 próbek/s. Zbieramy i rejestrujemy kilka tysięcy próbek, i co dalej?
+W pierwszej kolejności trzeba po prostu przyjrzeć się uzyskanym danym. Na rys. 9.1 przed:
+stawiono 256 próbek z naszego wymyślonego eksperymentu. Wszystko, co możemy zobe
+czyć, to zaszumiony przebieg, który ludzkiemu oku przekazuje niewiele informacji. Z powć
+dów, które wkrótce przedstawimy, następnym krokiem jest pomnożenie tego sygnału prze
+gadkkrzywzwanoknemhammingarys.9.1b.wzoryopisujceoknohamminga
+iinneoknabdpodanewrozdziale16wzory16.1i16.2orazrys.16.2a.wy
+mnożenia uzyskujemy 256-punktowy sygnał, w którym próbki bliskie końca sygnału
+zmniejszoną amplitudę, jak to przedstawiono na rys. 9.1 c).
+
+Przeprowadzając przekształcenie DFT i przechodząc do współrzędnych biegunowych, otrzy:
+mujemy 129-punktowe widmo częstotliwościowe (rys. 9.1 d). Niestety i to widmo wygląd
+jak zaszumiona gmatwanina. Jest tak, gdyż w 256-punktowym sygnale oryginalnym nie man
+dość informacji koniecznej do uzyskania wyraźnej krzywej. Nic na to nie pomoże zastosc
+przekształcenia DFT o większej liczbie punktów. Na przykład jeśli zastosujemy 2048-punk
+we DFT, to widmo częstotliwościowe będzie miało 1025 punktów. Chociaż oryginalne 20
+punktów zawiera więcej informacji, to większa liczba próbek w widmie rozmywa info
+o taki sam czynnik. Przekształcenie DFT o większej liczbie punktów daje lepszą rozdzielcza
+częstotliwości, lecz taki sam poziom szumu.
+
+Odpowiedzią na te trudności jest zastosowanie większej ilości informacji o sygnale orygin
+nym w sposób, który nie zwiększa liczby punktów w widmie częstotliwościowym. Można te
+dokonać, dzieląc sygnał wejściowy na wiele segmentów 256-punktowych. Każdy z tych s
+mentów jest mnożony przez okno Hamminga i poddawany 256-punktowemu przekształceń
+DFT i konwersji na współrzędne biegunowe. Uzyskane w ten sposób widma częstotliwośck
+są następnie uśredniane i tworzą 129-punktowe widmo częstotliwościowe. Na rys. 9.1 e) prze

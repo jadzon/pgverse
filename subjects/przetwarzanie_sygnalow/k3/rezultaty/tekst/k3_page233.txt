@@ -1,0 +1,58 @@
+Parametry w dziedzinie czasu 255
+
+ 
+
+„Jak informacja jest reprezentowana w sygnałach
+
+Najważniejszą sprawą przy rozwiązywaniu każdego problemu DSP jest zrozumienie, w jaki
+sposób informacja jest zawartą.w sygnale, którym się posługujemy. Jest tu wiele różnych
+możliwości, zwłaszcza jeśli chodzi o sygnały wytwarzane sztucznie w urządzeniach tech-
+nicznych. Rozważmy na przykład wszystkie możliwe sposoby modulacji: AM, FM, jednowstę-
+gowa, kodowo-impulsowa, szerokości impulsu itd. Listę można by jeszcze znacznie wydłużyć.
+Na szczęście w sygnałach powstających drogą naturalną informacja jest najczęściej zawarta na
+jeden z dwóch sposobów. Będziemy je nazywać: informacja reprezentowana w dziedzinie
+czasu lub reprezentowana w dziedzinie częstotliwości.
+
+Informacja w dziedzinie czasu opisuje, kiedy zaszło dane zdarzenie i jaka jest jego wartość.
+Wyobraźmy sobie na przykład doświadczenie polegające na badaniu natężenia światła słoneczne-
+go. Natężenie jest mierzone i rejestrowane co sekundę. Każda próbka sygnału wskazuje, co nastą-
+piło w danej chwili i jaka była wartość tego zdarzenia. Jeśli następuje rozbłysk słoneczny, to sy-
+gnał bezpośrednio dostarcza informację o czasie, w jakim rozbłysk nastąpił, o jego czasie trwania,
+jego zmianach w funkcji czasu itd. Każda próbka zawiera informację, którą można interpretować
+bez odniesienia do żadnej innej próbki. Nawet jeśli mamy tylko jedną próbkę sygnału, to już coś
+wiemy o mierzonym zjawisku. Jest to najprostszy sposób reprezentacji informacji w sygnale.
+Informacja reprezentowana w dziedzinie częstotliwości nie ma tak bezpośredniego charakte-
+ru. W naszym Wszechświecie wiele rzeczy charakteryzuje się ruchem okresowym. Na przy-
+kład kieliszek do wina wibruje po stuknięciu go paznokciem, wydając dzwoniący dźwięk;
+wahadło starego zegara kołysze się w lewo i w prawo; gwiazdy i planety obracają się wo-
+kół swych osi, a także wokół siebie itd, Mierząc częstotliwość, fazę i amplitudę takiego
+ruchu okresowego, można często uzyskać informację o systemie wytwarzającym ten ruch.
+Powiedzmy, że próbkujemy dźwięk pochodzący z wibrującego kieliszka, Podstawowa czę-
+stotliwość i harmoniczne okresowej wibracji są związane z masą kieliszka i sprężystością
+materiału. Pojedyncza próbka, sama w sobie, nie zawiera żadnej informacji o ruchu okre-
+sowym, a więc też żadnej informacji o kieliszku. Informacja jest zawarta we wzajemnych
+załeżnościach między wieloma punktami w sygnale.
+
+W ten sposób doszliśmy do kwestii ważności odpowiedzi skokowej i częstotliwościowej.
+Odpowiedź skokowa opisuje, w jaki sposób informacja reprezentowana w dziedzinie czasu
+jest modyfikowana przez system. Odpowiedź częstotliwościowa pokazuje zaś, jak zmienia
+się informacja reprezentowana w dziedzinie częstotliwości. To rozróżnienie ma zasadnicze
+znaczenie w projektowaniu filtrów, gdyż nie jest możliwe zoptymalizowanie filtru dla obu
+tych odpowiedzi. Dobre działanie w dziedzinie czasu powoduje słabe działanie w dziedzi-
+nie częstotliwości i vice versa. Jeśli projektujecie filtr do usuwania szumu z sygnału EKG
+(a więc z informacji reprezentowanej w dziedzinie czasu), to istotnym parametrem jest odpo-
+wiedź skokowa, a odpowiedź częstotliwościowa ma niewielkie znaczenie. Jeśli zaś waszym
+zadaniem będzie zaprojektowanie filtru do aparatu słuchowego (informacja w dziedzinie czę-
+stotliwości), to najważniejsza będzie odpowiedź częstotliwościowa, a odpowiedź skokowa
+zupełnie bez znaczenia. Teraz zastanowimy się, co czyni filtr optymalnym do zastosowań
+w dziedzinie czasu, a co w dziedzinie częstotliwości.
+
+Parametry w dziedzinie czasu
+
+Może nie być całkiem oczywiste, dlaczego odpowiedź skokowa jest tak ważna w filtrach
+w dziedzinie czasu. Można by się zastanawiać, dlaczego odpowiedź impulsowa nie jest istot-
+nym parametrem. Zależy to od sposobu rozumienia i przetwarzania informacji w ludzkim
+umyśle. Pamiętajmy, że wszystkie trzy odpowiedzi, skokowa, impulsowa i częstotliwościo-
+wa, zawierają identyczną informację, tylko podaną w inny sposób. Odpowiedź skokowa jest
+użyteczna w analizie w dziedzinie czasu, gdyż jest zgodna ze sposobem widzenia przez czło-
+wieka informacji zawartych w sygnałach.

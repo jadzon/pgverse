@@ -1,0 +1,46 @@
+8 Rozdział 1. Teoria liczb
+
+klas i wykonujemy działania na tych przedstawiciełach. Dokładniej, dodawanie klas abs-
+trakcji definiujemy następująco:
+
+<image/wzory/k2_page123_formula1.png>
+
+Podobnie definiujemy odejmowanie i mnożenie:
+
+<image/wzory/k2_page123_formula2.png>
+Poniższy lemat pokazuje, że działania te są dobrze zdefiniowane; że wynik działania na
+dwóch klasach nie zależy od wyboru reprezentantów.
+
+Lemat 1.13 Jeżeli [x|=[y| oraz ful=l[w], to:
+
+<image/wzory/k2_page123_formula3.png>
+
+Dowód. Z założenia mamy:
+
+<image/wzory/k2_page12wzory/k2_page123_formula5.png>
+
+a z twierdzenia 1.7:
+<image/wzory/k2_page123_formula6.png>
+
+Przykład 1.14 Niech m = 3. Dla dowolnych dwóch liczb x € [0]iy € [1] ich suma
+1 + y należy do [0 + 1] = [1] a iloczyn do [0- 1] = [0].
+
+Lemat 1.15 Działania na klasach abstrakcji
+
+<image/wzory/k2_page123_formula7.png>
+
+spełniają następujące warunki:
+e dodawanie oraz mnożenie są przemienne i łączne,
+
+e klasa [0] jest elementem neutralnym dodawania, to znaczy dla każdego a mamy
+[a) + [0] = [a],
+
+e dla każdej klasy [a] istnieje klasa do niej przeciwna [—a], taka że [a] + [—a] = [0],
+e klasa [1] jest elementem neutralnym mnożenia, to znaczy dla dowolnego [z] mamy
+[e] - [1] = [e]
+e mnożenie jest rozdzielne względem dodawania, czyli dla każdych trzech klas [z],
+lv]. [z] mamy [z]([y] + [z]) = [r]lv] + [2][2].
+Zbiór z dwoma działaniami spełniającymi powyższe warunki nazywa się pierścieniem
+przemiennym z jedynką.
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

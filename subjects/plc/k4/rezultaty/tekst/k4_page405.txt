@@ -1,0 +1,56 @@
+Po upływie 85, gdy silnik osiągnie odpowiednie wirowanie. następuje przełącze-
+nie uzwojeń stojana z gwiazdy w trójkąt: przekaźnik K3 zostaje wyłączony, a po
+0.2s zostaje włączony przekaźnik K4. Opóźnienie między wyłączeniem przekaź-
+nika K3 a załączeniem K4 zapobiega zwarciu w instalacji w przypadku opóźnie-
+nia w rozwarciu styków przekaźnika K3 w obwodzie mocy.
+
+2. Wyłączanie silnika
+Napęd wyłącza się po naciśnięciu przycisku $7 (stop). Program sterujący wyłą-
+cza w tym przypadku wszystkie przekaźniki.
+
+3. Przeciążenie
+
+Naciśnięcie przycisku UB symuluje powstanie przeciążenie silnika.
+
+W przypadku pracy siłnika przy połączeniu w gwiazdę pojawienie się przeciąże-
+nia powinno spowodować natychmiastowe wyłączenie silnika.
+
+Podczas pracy silnika przy połączeniu w trójkąt silnik wytrzymuje krótkotrwałe
+przeciążenie (do 3s). W przypadku, gdy przeciążenie trwa dłużej niż 3s następuje
+wyłączenie silnika.
+
+Ponowne włączenie silnika jest możliwe dopiero po uprzednim przyciśnięciu
+przycisku $7 (stop).
+
+4. Zabezpieczenia
+
+Naciśnięcie przycisków SR lub SŁ w trakcie pracy silnika nie ma wpływu na jego
+pracę.
+
+Wyjścia dwustanowe sterownika służące do sterowania przekaźnikami K/ - K4
+odpowiednio nawzajem się blokują, tzn. Q7 blokuje Q2, Q3 blokuje 04 i na od-
+wrót.
+
+Wejścia /5 - 18 połączone ze stykami SK/ - SK4 odpowiednich przekaźników
+wykorzystywane są do nadzorowana stanu pracy silnika.
+
+5. Wyłączniki krańcowe
+Podczas wirowania silnika w prawo naciśnięcie przycisku R oznacza, że zadzia-
+łał wyłącznik krańcowy wirowania w prawo. W takim przypadku:
+« silnik powinien zostać natychmiast wyłączony:
+* zapala się lampka LR sygnalizując osiągnięcie położenia krańcowego;
+s uruchomienie silnika w prawo powinno być w tym przypadku nie-
+możliwe, natomiast można uruchomić silnik w przeciwnym kierunku -
+po przyciśnięciu przycisku SŁ silnik zaczyna się obracać w przeciw-
+nym kierunku i jednocześnie gaśnie lampka.
+
+Gdy przy wirowaniu silnika w lewo naciśnięty zostanie przycisk Ł to znaczy. że
+zadziałał wyłącznik krańcowy wirowania w lewo. W tym przypadku:
+
+« silnik zostaje natychmiast wyłączony:
+
+« zapala się lampka Z/ sygnalizując osiągnięcie położenia krańcowego:
+
+ 
+
+8.3. Sterowanie napędem dwukierunkowym 405

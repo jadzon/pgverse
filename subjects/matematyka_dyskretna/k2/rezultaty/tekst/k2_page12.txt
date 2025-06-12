@@ -1,0 +1,44 @@
+12 Rozdział 1. Oznaczenia
+
+Algorytm sortowania bąbelkowego.
+Aby posortować ciąg długości n:
+
+(1) wykonujemy co następuje n — 1 razy:
+(1a) wskazujemy na pierwszy element,
+
+(1b) wykonujemy co następuje n — 1 razy:
+porównujemy wskazany element z elementem następnym,
+jeżeli porównane elementy są w niewłaściwej kolejności, to zamieniamy je
+miejscami,
+wskazujemy na następny element.
+
+<image/wzory/k2_page12_formula1.png>
+
+zany jest zaznaczony daszkiem.
+
+Poprawność powyższego algorytmu wynika z faktu, że po pierwszym wykonaniu ze-
+wnętrznej pętli (1) największy element ciągu znajdzie się na końcu, po drugim wykonaniu
+pętli drugi największy element ciągu znajdzie się na przedostatniej pozycji, i tak dalej. Po
+każdym kolejnym wykonaniu pętli (1) kolejny największy element znajdzie swoją wła-
+ściwą pozycję.
+
+Czas działania algorytmu zależy od n — liczby elementów w ciągu. Pętla zewnętrzna
+(1) jest wykowywana n —1 razy. W każdej iteracji pętli zewnętrznej pętla wewnętrzna (1b)
+również jest wykonywana n — 1 razy. W każdym kolejnym wykonaniu pętli wewnętrznej
+algorytm wykonuje kilka kroków. Tak więc, aby posortować ciąg długości n algorytm w
+sumie wykonuje c(n — 1)? kroków, gdzie c jest pewną stałą.
+
+Czas pracy powyższego algorytmu został oszacowany z dokładnością do stałej. Jest
+to powszechna praktyka i będziemy tak postępować w tej książce.
+
+Do szacowania czasu pracy algorytmu (jego złożoności czasowej) i do porównywania
+algorytmów pod względem czasu działania będziemy używać notacji asymptotycznej.
+
+Niech f i g będą dwiema funkcjami określonymi na zbiorze liczb naturalnych o war:
+tościach w zbiorze dodatnich liczb rzeczvwistvch
+
+„ zory/k2_page1 2_formula2.png
+
+w
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

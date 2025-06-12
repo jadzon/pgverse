@@ -1,0 +1,61 @@
+26. Sieci neuronowe (i więcej
+
+D
+4
+
+wykazającą pewne nałożenie się grup przypadków będących i niebędących coo Można by
+przesuwać linię progu między grupami, aby zmniejszać liczbę przypadków fałszywie pozy:
+tywnych kosztem fałszywie negatywnych lub na odwrót. Trzeba wtedy linię ukośną przesuwać
+w kierunku prawego górnego lub lewego dolnego narożnika. Nie należy jednak wykonywać
+obrotu tą linią, gdyż wtedy zwiększy się liczba błędnych przypadków obu rodzajów.
+
+Jak wynika z omówionych przykładów, konwencjonalne podejście do detekcji celu (
+czasem rozpoznawaniem wzorca lub obrazu) jest procesem dwuetapowym. Pierwszy ct
+nosi nazwę wyodrębniania cech. Do tego celu stosuje się algorytmy redukujące dane pief-
+wotne do kilku parametrów, takich jak średnica, jaskrawość, ostrość krawędzi itd. Te parame-
+try są często nazywane cechami albo kłasyfikatorami. Wyodrębnianie cech jest koniecz
+do zredukowania ilości danych. Medyczny obraz rentgenowski może, na przykład, zawi
+więcej niż milion pikseli. Zadaniem wyodrębniania cech jest przedestylowanie „emc
+postaci bardziej skoncentrowanej i łatwiejszej do dalszego przetwarzania. Opracowanie -
+rytmu tego rodzaju jest zadaniem bardziej z dziedziny sztuki niż nauki. Wymaga wie eg
+doświadczenia i umiejętności spojrzenia na problem i powiedzenia: Oto klasyfikatory, które
+umożliwią najlepsze wychwycenie informacji. Ważną rolę gra tu metoda prób i błędów.
+
+W drugim etapie dokonuje się oceny klasyfikatorów w celu stwierdzenia, czy cel jest obecny,
+czy nie. Inaczej mówiąc, trzeba zastosować jakąś metodę służącą do podziału przestrze
+parametrycznej na obszary odpowiadające celom i obiektom niebędącym celami. Jest to cał:
+kiem proste zadanie w przypadku przestrzeni jedno- lub dwuparametrycznej; punkty o zna
+nych danych są nanoszone na układ współrzędnych (jak na rys. 26.3) i obszary można wów:
+czas rozdzielić nawet wzrokowo. Ten podział zostaje następnie wpisany do komputera w pe
+staci wzoru lub w jakiś inny sposób definiujący te obszary. W zasadzie taką samą proceduf
+można zastosować do trójwymiarowej przestrzeni parametrycznej. Pojawia się jednak wieć
+trudność wynikająca z faktu, że wykresy trójwymiarowe są dla człowieka bardzo trudne 6
+zrozumienia i wizualizacji (jak na rys. 26.4). Ostrzeżenie: Nie próbujcie tego z hiperp
+strzenią, bo wasze mózgi eksplodują!
+
+Krótko mówiąc, potrzebna jest maszyna mogąca dokonywać podziału przestrzeni wieloparar
+
+trycznej, zgodnie z przykładami sygnałów będących i niebędących celem. Taki system
+wania celu jest szczególnie bliski głównemu tematowi tego rozdziału — sieciom neuronc
+
+Architektura sieci neuronowych
+
+Ludzie i zwierzęta przetwarzają informacje sieciami neuronowymi. Tworzą je biliony neu
+(komórek nerwowych) wymieniających między sobą impulsy elektryczne zwane pote
+czynnościowymi. Algorytmy komputerowe naśladujące struktury biologiczne są fo
+nazywane sztucznymi sieciami neuronowymi dla odróżnienie od sieci w organizmach |
+i zwierząt. Jednak większość naukowców i inżynierów nie podchodzi do tej kwestii tak fom
+nie i stosuje nazwę sieci neuronowe tak do systemów biologicznych, jak i niebiologicznycł
+Motywacją do prowadzenia badań w dziedzinie sieci neuronowych były dwa pragnie
+osiągnięcie lepszego zrozumienia ludzkiego mózgu i opracowanie komputerów zdolnych
+rozwiązywania zadań abstrakcyjnych i słabo zdefiniowanych. Komputery konwencjonał
+mają na przykład kłopoty z rozumieniem mowy i rozpoznawaniem ludzkich twarzy. A luć
+te zadania wykonują z łatwością.
+
+Wypróbowano wiele różnych struktur sieci neuronowych. Niektóre były naśladownictwem te
+co biolodzy widzą pod mikroskopem, w innych korzystano z matematycznej analizy probłe
+Strukturę najczęściej stosowaną przedstawiono na rys. 26.5. Ta sieć składa się z trzech
+zwanych warstwą wejściową, ukrytą i wyjściową. Każda warstwa zawiera jeden lub «
+węzłów, które na rysunku zaznaczono kółeczkami. Linie między węzłami pokazują przep
+informacji od jednego węzła do następnego (a więc z lewa na prawo). Sieci neuronowe i
+rodzajów mają bardziej zawiłe połączenia, takie jak pętle sprzężenia zwrotnego.

@@ -1,0 +1,30 @@
+idlatego są pominięte przy łukach wychodzących z tego stanu dla grafu na
+Rys. 2.12.
+
+Jednak w modelu grafów stanu nie można przedstawić współbieżności kilku sta-
+nów co stanowi jego główną wadę. W omawianym przykładzie to co dzieje się
+w Zbiorniku I jest niezależne od tego co dzieje się w Zbiorniku 2, o ile oba nie są
+puste.
+
+Model reprezentowany w postaci grafu stanów całego sytemu może stać się
+ogromny i trudny do zrozumienia gdy system składa się z wielu części, całkowi-
+cie lub częściowo od siebie niezależnych.
+
+<image/figury/k4_page79_figure1.png>
+
+3) Schemat drabinkowy
+
+Rys. 2.13 przedstawia model omawianego układu sterowania napełnianiem
+dwóch zbiorników w postaci schematu drabinkowego. Przy takim sposobie opisu
+działania automatu szczebel drabinki stykowej odpowiada wyrażeniu logiczne-
+mu, w którym mogą występować zmienne wejściowe, wewnętrzne i wyjściowe.
+
+Na przyvład niorwezy czczahal 7 Rvc 2? 73 odnowiada równanin
+
+<image/wzory/k4_page/9_formula1.png>
+
+Zmienna wewnętrzna q,=/ gay ODA ZDIOTNIKI Są puste.
+
+ 
+
+2.5 Programowanie w oparciu o graf sekwencji SFC 79

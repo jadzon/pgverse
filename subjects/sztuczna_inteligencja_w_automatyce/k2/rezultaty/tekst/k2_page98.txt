@@ -1,0 +1,41 @@
+103
+
+Metody iteracyjne szukania ekstremum funkcji polegają na wybraniu wartości
+początkowej (w niektórych algorytmach wielu wartości początkowych) argumentu
+funkcji, a następnie na modyfikacjach argumentu prowadzących do wyznaczenia eks-
+tremum funkcji.
+
+Porównując metody iteracyjne z metodami szukania omówionymi w rozdziale
+2 można zauważyć, że metody szukania dokładają w każdym kroku fragment roz-
+wiązania (np. w zadaniu poszukiwania najkrótszej drogi), podczas gdy w metodach
+iteracyjnych szukania ekstremum, na początku tworzone jest kompletne rozwiązanie,
+które następnie jest iteracyjnie poprawiane.
+
+Problem poszukiwania minimum funkcji dwóch zmiennych ilustruje rys. ??. Efek-
+tem poszukiwania minimum funkcji E(w) jest punkt (wektor) w. Zwróćmy uwagę,
+że punkt może reprezentować (specyfikować) dowolne obiekty. Może np. reprezento-
+wać obrazy graficzne, sygnały czasowe (np. akustyczne), czy algorytmy lub programy
+komputerowe.
+
+<image/figury/k2_page98_ficfigury/k2_page98_figure2.png>
+
+Rys. 6.4: Przykładowa funkcja dwóch zmiennych: wykres powierzchni i wykres warstwi-
+cowy. Należy wyznaczyć wartości argumentów dla których funkcja przyjmuje wartość mi-
+nimalną (globalnie)
+
+Poniżej omówione zostaną najczęściej stosowane, podstawowe, metody nume-
+rycznego poszukiwania ekstremum funkcji: gradientowe, szukania przypadkowego,
+symulowanego wyżarzania, ewolucyjne i roju. Algorytmy omawiane będą dla przy-
+padku poszukiwania minimum funkcji.
+
+6.4.1. Metody gradientowe
+Omówiona tu będzie podstawowa metoda gradientowa nazywająca się metodą naj-
+szybszego spadku?. Działa ona w następujących krokach:
+
+Poszukiwanie minimum funkcji E(w) przebiega w następujących etapach:
+
+1. Losowy wybór punktu startowego w.
+
+zMetody gradientowe poszukiwania ckstremum omówione są w tym opracowaniu pobieżnie.
+Wyczerpujące omówienie tych metod znaleźć można w monografiach i podręcznikach dotyczących
+algorytmów optymalizacyjnych i badań operacyjnych

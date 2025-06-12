@@ -1,0 +1,33 @@
+Technika audio o wysokiej wierności 347
+
+<image/tabele/k3_page317_table1.png>
+
+Technika audio o wysokiej wierności
+
+Audiofile wymagają skrajnie wysokiej jakości dźwięku i wszystkie inne czynniki są trakto-
+wane jako drugorzędne. Gdybyśmy mieli jednym słowem opisać ich podejście do tej kwestii,
+powiedzielibyśmy — przesada. Zamiast dopasowywać takie systemy audio do możliwości
+ludzkiego ucha, projektuje się je tak, aby przekraczały granice słyszenia. Jest to jedyny spo-
+sób dający pewność, że odtwarzana muzyka jest całkowicie zgodna z oryginałem??. Cyfrowa
+technika audio weszła do masowego zastosowania dzięki kompaktowej płycie laserowej.
+czyli CD. Była to rewolucja w muzyce, gdyż jakość dźwięku z płyty kompaktowej znacznie
+przekracza jakość osiąganą ze starszych nośników, takich jak płyty gramofonowe i taśmy
+magnetofonowe. DSP stanowi przednią linię frontu tej rewolucji cyfrowej.
+
+Na rys. 22.5 pokazano powierzchnię kompaktowej płyty laserowej widzianą przez mi-
+kroskop o dużym powiększeniu. Główna powierzchnia płyty jest błyszcząca (odbijająca
+światło), a informacja cyfrowa jest zapisana w postaci szeregu ciemnych zagłębień (pirs)
+wytłoczonych w warstwie informacyjnej. Informacja jest rejestrowana na pojedynczej, spi-
+ralnej ścieżce — od środka ku brzegowi, a więc odwrotnie niż na płycie gramofonowej.
+Prędkość kątowa płyty zmienia się w miarę odczytu informacji od ok. 480 obr/min do ok.
+240 obr/min. Dzięki temu jest utrzymywana stała prędkość liniowa wynosząca 1,2 m/s. Dla
+porównania warto przypomnieć, że dla płyt gramofonowych prędkość kątowa była stała,
+równa 33 1/3, 45 lub 78 obr/min. Podczas odtwarzania czujnik optyczny sprawdza, czy
+powierzchnia w danym miejscu odbija światło, czy nie i na tej podstawie jest odczytywana
+odpowiednia informacja binarna.
+
+Jak wynika z geometrii pokazanej na rys. 22.5, na płycie CD gęstość zapisu informacji wy-
+nosi ok. 1 bit na um?, co odpowiada 1 milionowi bitów na ł mm? i ok. 15 miliardom bitów
+na całej płycie. Są to podobne wymiary, jak używane przy produkcji układów scalonych,
+
+22 Nie można się zgodzić z tym stwierdzeniem autora (przyp. tłum.).

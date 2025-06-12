@@ -1,0 +1,9 @@
+<image/tabele/k4_page324_table1.png>
+
+Tab. 7.2 Typy zmiennych
+
+     
+
+Rozdział : 7. Język listy instrukcji dla sterowników SIMATIC S5
+
+324

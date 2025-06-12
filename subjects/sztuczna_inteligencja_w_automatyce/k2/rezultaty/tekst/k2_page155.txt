@@ -1,0 +1,31 @@
+160
+
+<image/figury/k2_page155_figure4.png>
+
+X3
+TAK NIE TAK
+1:d44 1:dy, dy, dy3 | 1:dg, d43
+0:dą 0:d5 0:d5
+
+ 
+
+Rys. 6.57: Wyznaczanie argumentu o największym wpływie
+
+X4
+
+NIE
+
+1 :dg, d;4
+0:d
+
+okazuje się nim zmienna z;
+
+<image/figury/k2_page155_figure2.png>
+
+Entropia rozkładu prawdopodobieństwa p;, i = 1.2,.
+
+..,TŁ wynosi
+
+<image/wzory/k2_page155_formula1.png>
+
+W przypadku nieznajomości prawdopodobieństw p, można je zastępować liczebno-

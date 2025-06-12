@@ -1,0 +1,41 @@
+ze + da A | oraz K = a. otrzymujemy
+kk R,, k,
+
+ 
+
+Podstawiając: 7, =
+
+e
+
+<image/wzory/k1_page158_formula1.png>
+
+Przyjmując zatem prędkość kątową (w,) jako wielkość wyjściową, uzyskano trans-
+mitancję silnika w postaci członu drugiego rzędu. Mechaniczna stała czasowa jw
+jest zazwyczaj co najmniej o rząd wielkości większa od elektrycznej stałej czasowej Pa
+W takim przypadku stałą 7, można pominąć, a silnik staje się członem inercyjnym
+pierwszego rzędu.
+
+<image/wzory/k1_page158_formula2.png>
+Jeżeli wielkością wyjściową jest przemieszczenie kątowe wału wirnika (Q.,), któ-
+
+ry możemy wyznaczyć po scałkowaniu prędkości kątowej wirnika (a(s) = Q(s)/s),
+transmitancja G(s) przyjmie postać
+
+<image/wzory/k1_page158_formula3.png>
+
+W tym przypadku silnik jest członem całkującym rzeczywistym (tzn. szerego-
+wym połączeniem członu całkującego i inercyjnego pierwszego rzędu).
+
+6.6. Wyznaczenie odpowiedzi skokowej silnika
+w MATLAB-ie/Simulinku
+
+Odpowiedź skokową silnika wyznaczono na podstawie dwóch metod. W pierw-
+szej metodzie posłużono się transmitancją operatorową silnika (6.8)
+
+<image/wzory/k1_page158_formula4.png>
+
+Dalej przedstawiono źródło programu napisanego w MATLAB -ie, w którym za-
+modelowano transmitancję G(s) i wyznaczono odpowiedź skokową silnika za pomocą
+funkcji step.
+
+160

@@ -1,0 +1,52 @@
+1.6. Niezależność zmiennych losowych 17
+
+Definicja 1.35 Zmienne losowe X,,...,. X,„ są niezależne jeżeli dla każdej n-tki liczb
+Ty... . rw zachodzi
+
+<image/wzory/k2_page7/6_formula1.png>
+
+Przykład 1.36 Wróćmy do przykładu z rzutem n monetami, przykład 1.22c. Dla każdego
+i zmienna losowa „X; jest równa 0 jeżeli na :-tej monecie wypadł orzeł, i 1 jeżeli na i-tej
+monecie wypadła reszka. Zmienne X;,...,- X „ są niezależne.
+
+Pokażemy teraz, że jeżeli zmienne losowe X i Y są niezależne, to niezależne są też
+zdarzenia opisywane przez te zmienne. Dokładniej
+
+Twierdzenie 1.37 Niech X i Y będą niezależnymi zmiennymi losowymi, a A i B dowol-
+nymi podzbiorami zbioru liczb rzeczywistych. Wtedy zdarzenia
+
+<image/wzory/k2_page76_formula2.png>
+
+oraz
+
+<image/wzory/k2_page7/6_formula3.png>
+
+są niezaiezne.
+
+Dowód Ponieważ zbiór wartości zmiennej .X jest skończony, możemy wypisać wszystkie
+elementy zbioru X (2) n A. Niech
+
+<image/wzory/k2_page7/6_formula4.png>
+
+Podot
+
+<image/wzory/k2_page76_formula5.png>
+
+sarzzzwai I) wnzmanTA finrmi:lnQ£ mmm
+
+<image/wzory/k2_page7/6_formula7.png>
+
+M
+
+oraz
+Ax N By = w | istnieją i,j takie,że X(w)=xz, omz Y(w) = yy),
+
+czyli
+
+<image/wzory/k2_page76_formula8.png>
+
+Ponieważ sumowane zdarzenia wykluczają się wzajemnie mamy
+
+<image/wzory/k2_page7/6_formula9.png>
+
+Please purchase PDF Split-Merge on www.verypdf.com to remove this watermark.

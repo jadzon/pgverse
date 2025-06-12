@@ -1,0 +1,55 @@
+Zespolone DFT 545
+
+ 
+
+Po trzecie, w rzeczywistym przekształceniu Fouriera z metodą zastępowania dodaje się j do
+wyrazów sinusoidałnych, dzięki czemu widmo częstotliwościowe jest reprezentowane przez
+liczby zespolone. Aby przeprowadzić konwersję odwrotną, z powrotem do zwykłych fal si-
+nusoidalnych i kosinusoidalnych, możemy po prostu odrzucić j. Jest to pewna niedbałość,
+która może zaistnieć wówczas, gdy jedna rzecz tylko reprezentuje drugą. Zespolone DFT
+(wzór 31.5) jest natomiast formalnym równaniem matematycznym, którego integralną czę-
+ścią jest j. W tej sytuacji nie możemy arbitralnie dodawać lub usuwać j, podobnie jak nie
+możemy w równaniach ani dodawać, ani usuwać innych zmiennych.
+Po czwarte, w przekształceniu rzeczywistym występuje współczynnik skalowania dwa na począt-
+ku wyrażenia, a w zespolonym przekształceniu Fouriera go nie ma. Przypuśćmy, że wykonujemy
+rzeczywiste przekształcenie DFT fali kosinusoidalnej o amplitudzie jeden. Wartość prążka wid-
+mowego odpowiadająca fali kosinusoidalnej jest również jeden. Powtórzmy teraz ten proces, sto-
+sując zespolone DFT. W tym przypadku fala kosinusoidalna odpowiada dwóm wartościom prążka
+widmowego, częstotliwości ujemnej i dodatniej. Obie te częstotliwości charakteryzują się warto-
+ścią 1/2. Innymi słowy, sygnał o częstotliwości dodatniej i o amplitudzie 1/2 łączy się z sygnałem
+o częstotliwości ujemnej o amplitudzie 1/2, wytwarzając kosinusoidę o amplitudzie jeden.
+Po piąte, rzeczywiste przekształcenie Fouriera wymaga specjalnego operowania dwiema prób-
+kami z dziedziny częstotliwości Re X[0] i Re X[N/2], a w przekształceniu zespolonym nie ma
+takiego wymogu. Przyjmijmy, że rozpoczynamy od sygnału w dziedzinie czasu i wyznaczamy
+jego DFT, aby uzyskać sygnał w dziedzinie częstotliwości. Odwracając ten proces, wyzna-
+czamy odwrotne DFT sygnału w dziedzinie częstotliwości w celu odtworzenia oryginalnego
+sygnału w dziedzinie czasu. Jednak, aby sygnał odtworzony był identyczny z oryginalnym,
+konieczne jest skalowanie. W zespolonym przekształceniu Fouriera trzeba gdzieś „po drodze”
+wprowadzić czynnik 1/N. Może on być doczepiony do przekształcenia prostego lub odwrot-
+nego albo potraktowany jako oddzielny krok między oboma przekształceniami. W rzeczywi-
+stym przekształceniu Fouriera jest wymagany dodatkowy czynnik równy dwa (2/N), jak to
+wd powioikiOś: Jednak rzeczywiste przekształcenie Fouriera wymaga teź dodatko-
+wego kroku dla skalowania: Re X[0] i Re X[N/2] muszą gdzieś w trakcie obliczeń zostać po-
+dzielone przez dwa. Tak więc współczynnik skalowania 1/N stosuje się do tych dwóch próbek,
+a 2/N — do reszty widma. Jak stwierdzono poprzednio, to kłopotliwe skalowanie jest jednym
+z mankamentów rzeczywistego przekształcenia Fouriera.
+Dlaczego rzeczywiste i zespolone DFT różnią się od siebie pod względem obsługi tych
+dwóch szczególnych punktów? Aby odpowiedzieć na to pytanie, przypomnijcie sobie, że
+fala kosinusoidalna (lub sinusoidalna) w dziedzinie czasu zostaje w zespolonym widmie DFT
+rozdzielona między częstotliwość dodatnią i ujemną. Są jednak dwa wyjątki — wartości wid-
+ma dla 0 i N/2. Odpowiadają one częstotliwościom 0 (DC) i Nyquista (połowa częstotliwości
+próbkowania). Ponieważ te punkty rozgraniczają części widma o częstotliwościach dodatnich
+i ujemnych, więc nie mają swojego odpowiednika. Jako że nie są powiązane z inną warto-
+ścią, w sposób inherentny wnoszą do dziedziny czasu tylko udział połówkowy w stosunku
+do innych częstotliwości.
+Zespolone widmo częstotliwościowe DFT przedstawiono na rys. 31.1. Na tym rysunku za-
+łożono, że sygnał w dziedzinie czasu jest całkowicie rzeczywisty, to znaczy, że jego część
+urojona jest równa zero. Krótko rozważymy kwestię sygnałów urojonych w dziedzinie czasu.
+Są dwa powszechnie stosowane sposoby prezentacji widma zespolonego widma częstotli-
+wościowego. Jak pokazano na rysunku, częstotliwość zero może być umieszczona pośrodku
+wykresu, częstotliwości dodatnie — na prawo od niej, a ujemne — na lewo. Jest to najlepszy
+sposób myślenia o widmie zespołonym i jedyny sposób, w jaki można przedstawić widmo
+nieokresowe.
+Problem polega na tym, że widmo sygnału dyskretnego jest okresowe (jak w DFT i DTFT). To
+znaczy, że widmo mieszczące się między -0,5 i 0,5 powtarza się nieskończoną ilość razy ku
+prawej i ku lewej stronie. W tym przypadku widmo między 0 i 1,0 zawiera taką samą infor-

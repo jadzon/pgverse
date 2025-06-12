@@ -1,0 +1,63 @@
+Zmiany wzmocnienia 589
+
+ 
+
+Zmiany wzmocnienia
+
+Przypuśćmy, że mamy filtr rekursywny i chcemy zmodyfikować współczynniki rekursywne
+w taki sposób, żeby zmienić amplitudę sygnału wyjściowego. Może to być potrzebne na
+przykład po to, aby filtr miał wzmocnienie równe jedności w paśmie przepustowym. Metoda
+osiągnięcia tego celu jest prosta — trzeba pomnożyć współczynniki „a” przez taki czynnik,
+o jaki chcemy zmienić wzmocnienie, a współczynniki „b” pozostawić niezmienione.
+
+Przed ustawieniem wzmocnienia chcielibyśmy zapewne znać jego aktualną wartość. Procedura
+określenia tej wartości zależy od rodzaju filtru, gdyż wzmocnienie musi być wyznaczone dla ja-
+kiejś częstotliwości w paśmie przepustowym. W filtrach dolnoprzepustowych mierzy się wzmoc-
+nienie przy częstotliwości zero, a w górnoprzepustowych stosuje się częstotliwość równą 0,5,
+czylipoowiedopuszczalnejczstotliwocimaksymalnej.atwojestwyprowadziwzoryna
+wzmocnienie dla obu tych szczególnych częstotliwości. A oto, jak się dochodzi do tych wzorów.
+Najpierw wyprowadzimy wzór na wzmocnienie przy częstotliwości zero. Metoda polega
+na wymuszeniu we wszystkich próbkach wejściowych wartości jeden, co spowoduje, że
+wszystkie próbki wyjściowe będą miały wartość wzmocnienia systemu G, które właśnie
+próbujemy określić. Zaczniemy od zapisania równania rekursywnego, a więc zależności
+matematycznej między sygnałami wyjściowym a wejściowym:
+
+yln] = agdn] + adn — 1] + azxfn — 2] + ... + byyln — 1] + bzy(n - 2] + bzyln — 3] + ...
+Następnie podstawiamy jeden w miejsce każdej próbki wejściowej i G — każdej wyjściowej.
+Inaczej mówiac zmnszamy svstem do pracv przy czestotliwości zero. Uzyskujemy wyrażenie:
+
+<image/wzory/k3_page548_formula1.png>
+
+Przez rozwiązane powyzszego rowiasia uŁysanUjHiy wWasiow waka Anna „ dla częstoui-
+wości zero wyrażoną przez współczynniki rekursywne:
+
+<image/wzory/k3_page548_formula2.png>
+
+Wzór 33.7. Wzmocnienie filtrów rekursywnych przy częstotliwości zero. Jest to zależność tego
+wzmocnienia od współczynników rekursywnych
+
+Aby uzyskać filtr o wzmocnieniu jeden dla częstotliwości zero, należy obliczyć na podstawie tej
+zależności wzmocnienie istniejące i następnie podzielić wszystkie współczynniki „a” przez G.
+W podobny sposób wyznacza się wzmocnienie dla częstotliwości 0,5. Wymuszamy pracę sy-
+gnałów wejściowych i wyjściowych przy tej częstotliwości i patrzymy, jaka jest odpowiedź
+systemu. Przy częstotliwości (0,5 wartości próbek sygnału wejściowego są przemiennie —I
+i 1, a więc kolejne próbki są: 1, 1, I, -1, I, -1, 1 itd. Wynikający z nich sygnał wyjściowy
+też zmienia znak, lecz ma wartość równą wzmocnieniu systemu: G, —G, G, —G, G, -G itd.
+Podstawiając te wartości do równania rekursywnego, mamy:
+
+G = 9-4; + 2 — Ay +..— DyG + byG — b4G + b4G....
+
+Wyznaczając z powyższego równania G, uzyskujemy wzmocnienie systemu dla częstotliwo-
+ści 0,5 wyrażone przez współczynniki rekursywne:
+
+<image/wzory/k3_page548_formula3.png>
+
+Wzór 33.8. Wzmocnienie przy częstotliwości maksymalnej. Ten wzór określa zależność wzmocnienia przy
+częstotliwości 0,5 od współczynników rekursywnych systemu
+
+Podobnie jak poprzednio, filtr można znormalizować dla wzmocnienia jednostkowego, dzieląc
+wszystkie współczynniki „a” przez obliczoną wartość G. Obliczanie wzoru 33.8 programem
+komputerowym wymaga metody generowania znaku minusa dla współczynników nieparzy-
+stych i plusa dla parzystych. Sposobem najczęściej stosowanym jest mnożenie każdego współ-
+czynnika przez (-1)*, gdzie k jest indeksem kolejnego współczynnika. A zatem dla wartości k:
+0, 1, 2, 3, 4, 5, 6 itd., wyrażenie (-1)* przyjmuje wartości: I, —1, 1, -1, 1, -1, 1 itd.

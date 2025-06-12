@@ -1,0 +1,50 @@
+zory/k4_page306_formula1.png [__Ą
+
+W grupie standardowych instrukcji sterowników Modicon występują trzy służące
+do przenoszenia zawartości rejestrów i tablic:
+
+e przenoszenie zawartości rejestru do tablicy (RT),
+
+e przenoszenie zawartości tablicy do rejestru (T->R),
+
+e przenoszenie zawartości między tablicami (T>T).
+
+Wszystkie te instrukcje posiadają trzy parametry, a transfer wykonywany jest
+z prędkością jednego rejestru na cykl sterownika.
+
+<image/tabele/k4_page306_table1.png>
+
+Wyd. 6.27 Zapis tablicy zawartością reje stru.
+
+Wyd. 6.27 ilustruje przykład wykorzystania instrukcji R+T. Pierwsze wyzwole-
+nie wejścia 10001 powoduje skopiowanie zawartości rejestru wejściowego 30001
+do tablicy zaczynającej się od rejestru wewnętrznego 40341. W tym czasie war-
+tość w rejestrze 40340, odpowiadająca wskaźnikowi do tablicy docelowej, zo-
+staje zmieniona na 1. Kolejne wyzwołenie wejścia 10001 powoduje przepisanie
+zawartości rejestru 30001 pod adres 40342 i zwiększenie wskaźnika do 2. Kolej-
+ne elementy tablicy będą więc wypełniane zawartością rejestru 30001 dopóki
+wskaźnik nie osiągnie wartości 00005, tzn. nie zrówna się z podaną długością
+tablicy. Wtedy na wyjściu 00135 pojawi się stan wysoki.
+
+Każde załączenie wejścia 10001 spowoduje załączenie wyjścia 00001.
+
+Jeśli, w trakcie przepisywania elementów zostanie wyzwolone wejście 10002,
+wskaźnik nie będzie mógł być zmieniany co spowoduje wielokrotne wypełnianie
+tej samej pozycji tablicy zawartością rejestru 30001.
+
+Gdy na wejściu 10003 pojawi się jedynka, wskaźnik zostanie ustawiony na zero.
+
+Wyd. 6.28 przedstawia sposób wykorzystania instrukcji T>R. Pierwsze wyzwo-
+lenie wejścia 10001 spowoduje skopiowanie zawartości rejestru 4037] do reje-
+stru 40377 i ustawienie zawartości rejestru 40376 stanowiącego licznik operacji
+na wartość 1. Kolejne wyzwolenie wejścia 10001 spowoduje skopiowanie za-
+wartości rejestru 40372 do rejestru 40377 oraz zwiększenie o jeden zawartości
+rejestru 40376. Dzieje się tak aż do piątego wyzwolenia wejścia 10001 kiedy to
+
+ 
+
+ 
+
+m NY YE OEB
+
+306 Rozdział : 6 Programowanie sterowników AEG SCHNEIDER Modicon
