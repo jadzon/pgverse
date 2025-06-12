@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import filedialog
+from tkinter import filedialog,messagebox
 from bielik_app import ChatApplication
 from integrated_rag_app import IntegratedRagApplication
 import os
@@ -171,9 +171,10 @@ class MainWindow(tk.Tk):
         )
         tk.Button(frame, text="RAG", command=self.rag_action, **btn_config).pack(pady=5)
         tk.Button(frame, text="Bielik", command=self.open_bielik, **btn_config).pack(pady=5)
-        tk.Button(frame, text="Wczytaj plik", command=self.load_file, **btn_config).pack(pady=5)
+        tk.Button(frame, text="Wczytaj plik", command=self.ocr_ksiazki, **btn_config).pack(pady=5)
         tk.Button(frame, text="Schematy", command=self.schemas, **btn_config).pack(pady=5)
         tk.Button(frame, text="Metryki Rag", command=self.check_rag_metrics, **btn_config).pack(pady=5)
+        tk.Button(frame, text="Metryki Ocr", command=self.ocr_metryki, **btn_config).pack(pady=5)
 
     def check_rag_metrics(self):
         script = "rag_metrics/bertscore_graph.py"
@@ -194,8 +195,200 @@ class MainWindow(tk.Tk):
         # Po zamknięciu okna Bielik, pokaż menu
         chat_window.protocol("WM_DELETE_WINDOW", lambda: self.on_bielik_close(chat_window))
 
-    def load_file(self):
-        # TODO: wczytywanie pliku
+    def ocr_ksiazki(self):
+        """PDF file selection and OCR processing"""
+        # Step 1: Select PDF file
+        pdf_path = filedialog.askopenfilename(
+            title="Wybierz plik PDF",
+            filetypes=[("PDF files", "*.pdf"), ("All files", "*.*")],
+            initialdir=os.path.join(os.path.dirname(__file__), "ocr", "baza")
+        )
+        
+        if not pdf_path:
+            return  # User cancelled
+            
+        self.selected_pdf_path = pdf_path
+        
+        # Step 2: Select subject
+        self.select_subject()
+    
+    def select_subject(self):
+        """Open subject selection window"""
+        if not self.selected_pdf_path:
+            messagebox.showerror("Błąd", "Najpierw wybierz plik PDF")
+            return
+            
+        # Create subject selection window
+        subject_window = tk.Toplevel(self)
+        subject_window.title("Wybierz przedmiot")
+        subject_window.geometry("600x800")
+        subject_window.configure(bg='#001F3F')
+        subject_window.transient(self)
+        subject_window.grab_set()
+        
+        # Get available subjects
+        subjects = self.get_available_subjects()
+        
+        # Create scrollable frame
+        canvas = tk.Canvas(subject_window, bg='#001F3F')
+        scrollbar = tk.Scrollbar(subject_window, orient="vertical", command=canvas.yview)
+        scrollable_frame = tk.Frame(canvas, bg='#001F3F')
+        
+        scrollable_frame.bind(
+            "<Configure>",
+            lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
+        )
+        
+        canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
+        canvas.configure(yscrollcommand=scrollbar.set)
+        
+        # Title
+        title_label = tk.Label(
+            scrollable_frame, 
+            text="Wybierz przedmiot dla OCR:",
+            font=("Arial", 14, "bold"),
+            fg='white',
+            bg='#001F3F'
+        )
+        title_label.pack(pady=20)
+        
+        # Subject buttons
+        btn_config = dict(
+            fg='white', bg='#003366', font=("Arial", 10), 
+            width=50, height=2, wraplength=400
+        )
+        
+        for subject in subjects:
+            # Create a readable name from folder name
+            display_name = subject.replace('_', ' ').title()
+            
+            btn = tk.Button(
+                scrollable_frame,
+                text=display_name,
+                command=lambda s=subject: self.on_subject_selected(s, subject_window),
+                **btn_config
+            )
+            btn.pack(pady=5, padx=20)
+        
+        # Cancel button
+        cancel_btn = tk.Button(
+            scrollable_frame,
+            text="Anuluj",
+            command=subject_window.destroy,
+            fg='white', bg='#660000', font=("Arial", 12), width=20, height=2
+        )
+        cancel_btn.pack(pady=20)
+        
+        # Pack canvas and scrollbar
+        canvas.pack(side="left", fill="both", expand=True)
+        scrollbar.pack(side="right", fill="y")
+    
+    def get_available_subjects(self):
+        """Get list of available subjects from RAG/rag_codes/subjects/"""
+        subjects_dir = os.path.join(os.path.dirname(__file__), "RAG", "rag_codes", "subjects")
+        
+        if not os.path.exists(subjects_dir):
+            messagebox.showerror("Błąd", f"Katalog przedmiotów nie istnieje: {subjects_dir}")
+            return []
+        
+        subjects = []
+        for item in os.listdir(subjects_dir):
+            item_path = os.path.join(subjects_dir, item)
+            if os.path.isdir(item_path):
+                subjects.append(item)
+        
+        return sorted(subjects)
+    
+    def on_subject_selected(self, subject, subject_window):
+        """Handle subject selection and start OCR processing"""
+        self.selected_subject = subject
+        subject_window.destroy()
+        
+        # Show confirmation
+        pdf_name = os.path.basename(self.selected_pdf_path)
+        subject_display = subject.replace('_', ' ').title()
+        
+        confirm = messagebox.askyesno(
+            "Potwierdzenie",
+            f"Rozpocząć OCR dla:\n\nPlik: {pdf_name}\nPrzedmiot: {subject_display}\n\nTo może potrwać kilka minut."
+        )
+        if confirm:
+            self.start_ocr_processing()
+    
+    def start_ocr_processing(self):
+        """Start the OCR processing with selected PDF and subject"""
+        if not self.selected_pdf_path or not self.selected_subject:
+            messagebox.showerror("Błąd", "Brak wybranego pliku lub przedmiotu")
+            return
+        
+        try:
+            # Get paths
+            pdf_name = os.path.splitext(os.path.basename(self.selected_pdf_path))[0]
+            ocr_dir = os.path.join(os.path.dirname(__file__), "ocr", "scalanie_ocr")
+              # Output directory should be the selected subject folder
+            subject_dir = os.path.join(os.path.dirname(__file__), "RAG", "rag_codes", "subjects", self.selected_subject)
+            
+            # Create a subdirectory for this PDF in the subject folder (just PDF name, no prefix)
+            output_dir = os.path.join(subject_dir, pdf_name)
+            os.makedirs(output_dir, exist_ok=True)
+            
+            # Show processing message
+            messagebox.showinfo(
+                "Przetwarzanie", 
+                f"OCR rozpoczęty. Wyniki będą zapisane w:\n{output_dir}\n\nSprawdź konsolę dla postępu."
+            )
+            
+            # Change to OCR directory and run processing
+            original_cwd = os.getcwd()
+            os.chdir(ocr_dir)
+            
+            try:
+                # Run updated mozg_ocr.py with arguments
+                cmd = [
+                    sys.executable, 
+                    "mozg_ocr_updated.py",
+                    "--input_pdf", self.selected_pdf_path,
+                    "--subject", self.selected_subject,
+                    "--output_dir", output_dir
+                ]
+                
+                print(f"Executing: {' '.join(cmd)}")
+                
+                result = subprocess.run(
+                    cmd, 
+                    capture_output=True, 
+                    text=True, 
+                    timeout=3600  # 1 hour timeout
+                )
+                
+                if result.returncode == 0:
+                    messagebox.showinfo(
+                        "Sukces", 
+                        f"OCR zakończony pomyślnie!\n\nWyniki zapisane w folderze przedmiotu:\n{output_dir}"
+                    )
+                    print("OCR stdout:", result.stdout)
+                else:
+                    messagebox.showerror(
+                        "Błąd OCR", 
+                        f"OCR zakończony błędem:\n{result.stderr}"
+                    )
+                    print("OCR stderr:", result.stderr)
+                    print("OCR stdout:", result.stdout)
+                    
+            finally:
+                os.chdir(original_cwd)
+                    
+        except subprocess.TimeoutExpired:
+            messagebox.showerror("Błąd", "OCR przekroczył limit czasu (1 godzina)")
+        except Exception as e:
+            messagebox.showerror("Błąd", f"Wystąpił błąd podczas OCR:\n{str(e)}")
+            print(f"Exception details: {e}")
+        
+        # Reset selections
+        self.selected_pdf_path = None
+        self.selected_subject = None
+
+    def ocr_metryki(self):
         pass
 
     def schemas(self):
