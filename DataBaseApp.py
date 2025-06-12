@@ -3056,7 +3056,7 @@ class SubjectSelectorApp:
                     context_dict = {}
                     
                     # Użyj pliku folderOCR_filtered_context.json (ma identyczną strukturę jak context.json)
-                    json_files = list(detekcje_path.glob(f"{subfolder_name}_filtered_context.json"))
+                    json_files = list(detekcje_path.glob(f"{subfolder_name}_context.json"))
                     log_function(f"🔍 Znaleziono {len(json_files)} plików JSON z kontekstem")
                     
                     for json_file in json_files:
@@ -3140,11 +3140,12 @@ class SubjectSelectorApp:
                                                 
                                                 log_function(f"    💾 Zapisywanie węzła do bazy...")
                                                 # Dodaj węzeł z embeddingiem tekstowym + base64
+                                                context_embedding = context_embedding.tolist() if hasattr(context_embedding, 'tolist') else context_embedding
                                                 graph_builder.insert_node(
                                                     node_id=unique_image_node_id,
                                                     data_type=data_type,
                                                     text=context_text,  # Tekst kontekstu
-                                                    embedding=context_embedding.tolist(),  # Embedding tekstu
+                                                    embedding=context_embedding,  # Embedding tekstu
                                                     path=relative_image_path,
                                                     source=source_type,
                                                     base64_data=base64_data  # base64
