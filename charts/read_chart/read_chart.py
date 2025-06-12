@@ -18,7 +18,7 @@ class ChartReader:
         self.cut_out_image = self.chart_img.copy()
         # Define the region of interest (ROI) using the axis coordinates
         self.offset_x1, self.offset_x2 = int(self.bbox_x["x_min"]), int(self.bbox_x["x_max"])
-        self.offset_y1, self.offset_y2 =  int(self.bbox_y["y_min"]),int(self.bbox_x["y_min"] - MARGIN)
+        self.offset_y1, self.offset_y2 =  int(self.axis_y["positions"][-1]),int(self.bbox_x["y_min"] - MARGIN)
         # Ensure the coordinates are within the image bounds   
         # Cut out the chart from the image
         self.cut_out_image = self.cut_out_image[self.offset_y1:self.offset_y2, self.offset_x1:self.offset_x2]
@@ -68,9 +68,9 @@ class ChartReader:
         
         # Convert pixel coordinates to actual data values
         data_points = []
-        x_min_value = self.axis_x["values"][0]
+        x_min_value = self.axis_x["range"]["min"]
 
-        y_min_value = self.axis_y["values"][-1]
+        y_min_value = self.axis_y["range"]["min"]
         print(f"Y_min:{y_min_value}")
         # Process points, applying the step size
         current_x_pixel = -float('inf')
@@ -86,8 +86,8 @@ class ChartReader:
                 x_data = x_min_value*((self.axis_x["logarithm_base"])*(1+x_pixel_adjusted / self.axis_x["pixel_step"]))* self.axis_x["scale_factor"]
             else:
                 x_data = (x_min_value+(x_pixel_adjusted / self.axis_x["pixels_per_unit"]))/self.axis_x["scale_factor"] 
-            y_max_pixel = self.cut_out_image.shape[0]
-            y_pixel_adjusted = self.offset_y1 + y_max_pixel - self.axis_y["positions"][0] - y_pixel 
+            y_max_pixel = self.chart_img.shape[0]
+            y_pixel_adjusted = y_max_pixel -self.offset_y1 - self.axis_y["positions"][-1] - y_pixel 
             if self.axis_y["is_logarithmic"]:
                 # For logarithmic axis, map pixel to value using logarithmic scale
                 y_data = y_min_value*((self.axis_y["logarithm_base"])*(1+y_pixel_adjusted / self.axis_y["pixel_step"]))* self.axis_y["scale_factor"]

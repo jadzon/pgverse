@@ -92,8 +92,8 @@ class ChartAnalyzer:
         print(f"LaTeX file exported to {output_path}")
 
 def main():
-    chart_path = "charts_examples/1.JPG"  # Replace with your chart image path
-    csv_path = "dane/1.csv"  # Replace with your CSV file path
+    chart_path = "charts_examples/test9.JPG"  # Replace with your chart image path
+    csv_path = "dane/2.csv"  # Replace with your CSV file path
     analyzer = ChartAnalyzer(chart_path)
     result = analyzer.analyze()
     comparison_metrics = analyzer.compare_with_csv(csv_path)
