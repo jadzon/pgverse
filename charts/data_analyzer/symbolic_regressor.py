@@ -10,6 +10,10 @@ def round_constants(expr, n_digits=4):
             for x in expr.atoms(Float)
         })
 class SymbolicRegressor:
+"""
+Klasa używająca model PySR do aproksymacji funkcji
+
+"""
     def __init__(self, niterations=50, maxsize=20):
         self.model = PySRRegressor(
             niterations=niterations,
@@ -35,10 +39,19 @@ class SymbolicRegressor:
         self.latex_formula = ""
 
     def set_data(self, X, y):
+        """
+        Ustawia dane wejściowe X i Y
+        Args:
+        X - lista wartości x
+        Y - lista wartości y
+        """
         self.X = X
         self.y = y
     
     def fit(self):
+        """
+        Dopasowywuje model do podanych danych wejściowych
+        """
         if self.X is None or self.y is None:
             raise ValueError("Dane wejściowe X i y nie zostały ustawione.")
         self.model.fit(self.X, self.y)
@@ -48,11 +61,22 @@ class SymbolicRegressor:
         self.latex_formula = latex(formula)
 
     def predict(self, X):
+        """
+        Przewiduje następną wartość X z wytrenowanego modelu
+        Args:
+        X - dane wejściowe X
+        """
         if not self.fitted:
             raise ValueError("Model nie został dopasowany. Wywołaj najpierw metodę `fit()`.")
         return self.model.predict(X)
 
     def get_formula(self, simplify_result=True, n_digits=4):
+        """
+        Wyciąga wzór funkcji z danych
+        Args:
+        simplify_result - upraszcza wyniki, zaokrąglając dane do n_digits
+        n_digits - liczba wartości po przecinku, do ktorej powinno być uproszczenie
+        """
         if not self.fitted:
             raise ValueError("Model nie został dopasowany.")
         formula = self.model.sympy()
@@ -62,6 +86,12 @@ class SymbolicRegressor:
         return formula, latex(formula)
     
     def score(self, X=None, y=None):
+        """
+        Przewiduje Y na podstawie X i oblicza Mean Square Error(MSE), Mean Average Error(MAE) i R2
+        Args:
+        X - dane wejściowe X
+        Y - dane wejściowe Y
+        """
         if not self.fitted:
             raise ValueError("Model nie został dopasowany.")
 
@@ -80,6 +110,11 @@ class SymbolicRegressor:
             "R2": r2_score(y, y_pred)
         }
     def compare_with_csv(self, csv_path):
+        """
+        Porównuje plik zebrane z plikiem csv.
+        Args:
+        csv_path - ścieżka do pliku csv z danymi do porównania
+        """
         if not self.fitted:
             raise ValueError("Model must be trained before comparison.")
 
@@ -106,6 +141,13 @@ class SymbolicRegressor:
         
 
     def plot(self, save_path=None, x_base=None, y_base=None):
+        """
+        Rysuje wykres z przewidzianych X i Y
+        Args:
+        save_path - ścieżka do zapisu, opcjonalne
+        x_base - baza osi x przy wykresach logarytmicznych, opcjonalne
+        y_base - baza osi y przy wykresach logarytmicznych, opcjonalne
+        """
         if not self.fitted:
             raise ValueError("Model nie został dopasowany.")
             
