@@ -30,6 +30,8 @@ plugins:
   - mkdocstrings:
       handlers:
         python:
+          paths:
+            - .
           options:
             docstring_style: google
             show_source: true
@@ -44,49 +46,31 @@ plugins:
 nav:
   - Home: index.md
   - Quickstart: quickstart.md
-  - API Reference:
-      - Main Modules:
-          - bielik_app: reference/bielik_app.md
-          - DataBaseApp: reference/DataBaseApp.md
-          - enviromental_variables: reference/enviromental_variables.md
-          - integrated_rag_app: reference/integrated_rag_app.md
-          - main_window: reference/main_window.md
-          - rag_utils: reference/rag_utils.md
-      - bin/schematy_code:
-          - model: reference/bin/schematy_code/model.md
-      - charts:
-          - charts: reference/charts/charts.md
-          - axis_intersection_detector: reference/charts/axis_intersection_detector/main.md
-          - charts_axes_detect:
-              - axes_detection: reference/charts/charts_axes_detect/axes_detection.md
-              - axes_interpretation: reference/charts/charts_axes_detect/axes_interpretation.md
-              - chart_preprocessing: reference/charts/charts_axes_detect/chart_preprocessing.md
-              - chart_run: reference/charts/charts_axes_detect/chart_run.md
-              - generate_axes_report: reference/charts/charts_axes_detect/generate_axes_report.md
-              - run_text_extraction: reference/charts/charts_axes_detect/run_text_extraction.md
-              - small_text_ocr: reference/charts/charts_axes_detect/small_text_ocr.md
-          - data_analyzer:
-              - example_charts: reference/charts/data_analyzer/example_charts.md
-              - symbolic_regressor: reference/charts/data_analyzer/symbolic_regressor.md
-              - test_data_analyzer: reference/charts/data_analyzer/test_data_analyzer.md
-          - read_chart:
-              - read_chart: reference/charts/read_chart/read_chart.md
-      - ocr/scalanie_ocr:
-          - detekcja_elementow: reference/ocr/scalanie_ocr/detekcja_elementow.md
-          - model_wykrywanie_pismo_odreczne: reference/ocr/scalanie_ocr/model_wykrywanie_pismo_odreczne.md
-          - mozg_ocr_updated: reference/ocr/scalanie_ocr/mozg_ocr_updated.md
-          - mozg_ocr: reference/ocr/scalanie_ocr/mozg_ocr.md
-          - ocr_ekstrakcja_z_tabel_img2_paddle: reference/ocr/scalanie_ocr/ocr_ekstrakcja_z_tabel_img2_paddle.md
-          - ocr_tabele_obrazki: reference/ocr/scalanie_ocr/ocr_tabele_obrazki.md
-          - ocr_tabele_wzory_obrazki: reference/ocr/scalanie_ocr/ocr_tabele_wzory_obrazki.md
-          - ocr_wzory_latex: reference/ocr/scalanie_ocr/ocr_wzory_latex.md
-          - wyodrebniony_tekst: reference/ocr/scalanie_ocr/wyodrebniony_tekst.md
-      - rag_codes/rag_metrics:
-          - bertscore_graph: reference/rag_codes/rag_metrics/bertscore_graph.md
-          - BERTscore: reference/rag_codes/rag_metrics/BERTscore.md
-      - schematics:
-          - metrics: reference/schematics/metrics.md
-          - schematics: reference/schematics/schematics.md
+  - OCR:
+    - detekcja_elementow: reference/ocr/scalanie_ocr/detekcja_elementow.md
+    - model_wykrywanie_pismo_odreczne: reference/ocr/scalanie_ocr/model_wykrywanie_pismo_odreczne.md
+    - mozg_ocr_updated: reference/ocr/scalanie_ocr/mozg_ocr_updated.md
+    - mozg_ocr: reference/ocr/scalanie_ocr/mozg_ocr.md
+    - ocr_ekstrakcja_z_tabel_img2_paddle: reference/ocr/scalanie_ocr/ocr_ekstrakcja_z_tabel_img2_paddle.md
+    - ocr_tabele_obrazki: reference/ocr/scalanie_ocr/ocr_tabele_obrazki.md
+    - ocr_tabele_wzory_obrazki: reference/ocr/scalanie_ocr/ocr_tabele_wzory_obrazki.md
+    - ocr_wzory_latex: reference/ocr/scalanie_ocr/ocr_wzory_latex.md
+    - wyodrebniony_tekst: reference/ocr/scalanie_ocr/wyodrebniony_tekst.md
+  - Schematy:
+    - metrics: reference/schematics/metrics.md
+    - schematics: reference/schematics/schematics.md
+    - bin/schematy_code:
+      - model: reference/bin/schematy_code/model.md
+  - LLM+Rag:
+    - bielik_app: reference/bielik_app.md
+    - DataBaseApp: reference/DataBaseApp.md
+    - enviromental_variables: reference/enviromental_variables.md
+    - integrated_rag_app: reference/integrated_rag_app.md
+    - main_window: reference/main_window.md
+    - rag_utils: reference/rag_utils.md
+    - rag_metrics:
+      - bertscore_graph: reference/rag_codes/rag_metrics/bertscore_graph.md
+      - BERTscore: reference/rag_codes/rag_metrics/BERTscore.md
   - About: about.md
 
 markdown_extensions:
