@@ -18,6 +18,16 @@ from rag_codes.rag_functions.graph import (
 
 class SubjectSelectorApp:
     def __init__(self):
+        """
+        Inicjalizuje aplikację, ustawia główne okno Tkinter, ścieżki,
+        zmienne kontrolne oraz tworzy widżety i wczytuje przedmioty.
+
+        Args:
+            self: Instancja klasy SubjectSelectorApp.
+
+        Returns:
+            None
+        """
         self.root = tk.Tk()
         self.root.title("Wybór przedmiotów")
         self.root.geometry("800x600")
@@ -53,7 +63,17 @@ class SubjectSelectorApp:
         self.load_subjects()
         
     def create_widgets(self):
-        """Tworzy interfejs głównego okna"""
+        """
+        Tworzy wszystkie elementy interfejsu użytkownika (UI) w głównym oknie,
+        w tym sekcję Vision, listę przedmiotów, przyciski kontrolne oraz akcje
+        do przejścia dalej lub zamknięcia aplikacji.
+
+        Args:
+            self: Instancja klasy SubjectSelectorApp.
+
+        Returns:
+            None
+        """
         # Tytuł
         title_label = tk.Label(self.root, text="Wybierz przedmioty do wczytania", 
                               font=("Arial", 14, "bold"))
@@ -123,6 +143,17 @@ class SubjectSelectorApp:
         
         # Aktualizacja scroll region - POPRAWIONE
         def configure_scroll_region(event):
+            """
+            Aktualizuje obszar przewijania (scrollregion) canvasu na podstawie
+            rozmiaru wewnętrznego frame'a (używane do dynamicznego dostosowania
+            scrollbar'a po zmianie zawartości).
+
+            Args:
+                event (tk.Event): Obiekt zdarzenia wywołujący aktualizację (np. <Configure>).
+
+            Returns:
+                None
+            """
             try:
                 canvas.configure(scrollregion=canvas.bbox("all"))
             except tk.TclError:
@@ -186,14 +217,32 @@ class SubjectSelectorApp:
         
 
     def on_vision_toggle(self):
-        """Obsługuje zmianę stanu Vision"""
+        """
+        Obsługuje zmianę stanu opcji Vision (checkbox).
+        Aktualizuje etykietę statusu Vision w UI.
+
+        Args:
+            self: Instancja klasy SubjectSelectorApp.
+
+        Returns:
+            None
+        """
         if self.use_vision.get():
             self.vision_status_label.config(text="✅ Vision włączone - pełna analiza obrazów", fg="green")
         else:
             self.vision_status_label.config(text="❌ Vision wyłączone - tylko metadane obrazów", fg="red")
     
     def load_subjects(self):
-        """Wczytuje listę przedmiotów i tworzy checkboxy + przyciski Źródła"""
+        """
+        Wczytuje listę przedmiotów z folderu `subjects` i tworzy dla nich checkboxy
+        oraz przyciski do konfiguracji źródeł.
+
+        Args:
+            self: Instancja klasy SubjectSelectorApp.
+
+        Returns:
+            None
+        """
         if not self.subjects_path.exists():
             messagebox.showerror("Błąd", f"Nie znaleziono folderu {self.subjects_path}")
             return
@@ -222,17 +271,42 @@ class SubjectSelectorApp:
             self.subject_checkboxes[name] = cb
 
     def select_all(self):
-        """Zaznacza wszystkie checkboxy"""
+        """
+        Zaznacza wszystkie checkboxy w liście przedmiotów.
+
+        Args:
+            self: Instancja klasy SubjectSelectorApp.
+
+        Returns:
+            None
+        """
         for var in self.subject_vars.values():
             var.set(True)
 
     def deselect_all(self):
-        """Odznacza wszystkie checkboxy"""
+        """
+        Odznacza wszystkie checkboxy w liście przedmiotów.
+
+        Args:
+            self: Instancja klasy SubjectSelectorApp.
+
+        Returns:
+            None
+        """
         for var in self.subject_vars.values():
             var.set(False)
 
     def close_application(self):
-        """Zamyka aplikację z potwierdzeniem"""
+        """
+        Zamyka aplikację po potwierdzeniu użytkownika.
+        Ostrzega o niezapisanych zmianach w konfiguracji źródeł.
+
+        Args:
+            self: Instancja klasy SubjectSelectorApp.
+
+        Returns:
+            None
+        """
         message = "Czy na pewno chcesz zamknąć aplikację?"
         if self.temp_sources_configs:
             message += "\nMasz niezapisane zmiany w źródłach, które zostaną utracone!"
@@ -241,7 +315,16 @@ class SubjectSelectorApp:
             self.root.destroy()
 
     def save_and_proceed(self):
-        """Zapisuje konfiguracje i przechodzi dalej"""
+        """
+        Zapisuje konfiguracje źródeł dla zaznaczonych przedmiotów,
+        a następnie przechodzi do okna przetwarzania danych.
+
+        Args:
+            self: Instancja klasy SubjectSelectorApp.
+
+        Returns:
+            None
+        """
         selected_subjects = [subject for subject, var in self.subject_vars.items() if var.get()]
         
         if not selected_subjects:
@@ -287,7 +370,16 @@ class SubjectSelectorApp:
         self.open_processing_window(selected_subjects)
     
     def save_sources_config(self, subject_path, config):
-        """Zapisuje konfigurację źródeł do pliku JSON"""
+        """
+        Zapisuje konfigurację źródeł dla wybranego przedmiotu do pliku JSON.
+
+        Args:
+            subject_path (Path): Ścieżka do folderu przedmiotu.
+            config (dict): Mapowanie folderów na typy źródeł.
+
+        Returns:
+            bool: True, jeśli zapis zakończył się sukcesem, False w przypadku błędu.
+        """
         try:
             config_file = subject_path / "sources_config.json"
             with open(config_file, 'w', encoding='utf-8') as f:
@@ -299,7 +391,16 @@ class SubjectSelectorApp:
             return False
 
     def open_source_config(self, subject_name):
-        """Okno konfiguracji źródeł dla podfolderów wybranego przedmiotu"""
+        """
+        Otwiera okno konfiguracji źródeł dla podfolderów danego przedmiotu.
+        Pozwala ustawić typ źródła dla każdego podfolderu i zapisać zmiany.
+
+        Args:
+            subject_name (str): Nazwa przedmiotu.
+
+        Returns:
+            None
+        """
         subject_path = self.subjects_path / subject_name
         
         # Wczytaj istniejącą konfigurację
@@ -361,7 +462,16 @@ class SubjectSelectorApp:
                 vars_map[sub.name] = var
         # DODANA FUNKCJA ZAPISYWANIA I ZAMYKANIA
         def save_and_close():
-            """Zapisuje konfigurację i zamyka okno"""
+            """
+            Zapisuje konfigurację źródeł dla podfolderów danego przedmiotu
+            do pliku `sources_config.json` oraz zamyka okno konfiguracji.
+
+            Args:
+                None
+
+            Returns:
+                None
+            """
             try:
                 # Pobierz wartości z wszystkich pól
                 new_config = {sub_name: var.get() for sub_name, var in vars_map.items()}
@@ -391,7 +501,16 @@ class SubjectSelectorApp:
                 messagebox.showerror("Błąd", f"Błąd zapisywania konfiguracji: {e}")
 
         def cancel():
-            """Anuluje zmiany i zamyka okno"""
+            """
+            Anuluje wprowadzane zmiany w konfiguracji źródeł
+            i zamyka okno konfiguracji bez zapisywania.
+
+            Args:
+                None
+
+            Returns:
+                None
+            """
             win.destroy()
 
         # DODANE PRZYCISKI
@@ -425,7 +544,16 @@ class SubjectSelectorApp:
                                 font=("Arial", 8), fg="gray")
             info_folders.pack(pady=2, side=tk.BOTTOM)
     def open_processing_window(self, selected_subjects):
-        """Otwiera okno przetwarzania"""
+        """
+        Tworzy i otwiera nowe okno do przetwarzania wybranych przedmiotów,
+        z logiem, paskiem postępu i przyciskiem do uruchomienia przetwarzania.
+
+        Args:
+            selected_subjects (list[str]): Lista wybranych przedmiotów.
+
+        Returns:
+            None
+        """
         processing_window = tk.Toplevel(self.root)
         processing_window.title("Przetwarzanie podfolderów")
         processing_window.geometry("900x700")
@@ -492,7 +620,16 @@ class SubjectSelectorApp:
 
 
     def create_txt_files_only(self):
-        """Tworzy tylko pliki TXT (chunks + base64) bez JSON"""
+        """
+        Tworzy jedynie pliki TXT (chunks i base64) dla wybranych przedmiotów,
+        bez generowania plików JSON.
+
+        Args:
+            self: Instancja klasy SubjectSelectorApp.
+
+        Returns:
+            None
+        """
         selected_subjects = [subject for subject, var in self.subject_vars.items() if var.get()]
         
         if not selected_subjects:
@@ -525,7 +662,16 @@ class SubjectSelectorApp:
         self.open_txt_processing_window(selected_subjects)
 
     def open_txt_processing_window(self, selected_subjects):
-        """Otwiera okno przetwarzania TYLKO plików TXT"""
+        """
+        Otwiera okno do przetwarzania tylko plików TXT (chunks + base64)
+        dla wybranych przedmiotów.
+
+        Args:
+            selected_subjects (list[str]): Lista wybranych przedmiotów.
+
+        Returns:
+            None
+        """
         processing_window = tk.Toplevel(self.root)
         processing_window.title("Tworzenie plików TXT (chunks + base64)")
         processing_window.geometry("900x700")
@@ -596,10 +742,35 @@ class SubjectSelectorApp:
         close_btn.pack(side=tk.LEFT, padx=10)
 
     def start_txt_processing(self, selected_subjects, log_text, progress_bar, progress_label, start_btn, close_btn):
-        """Rozpoczyna tworzenie plików TXT w osobnym wątku"""
+        """
+        Uruchamia proces tworzenia plików TXT w osobnym wątku, aby nie blokować UI.
+
+        Args:
+            selected_subjects (list[str]): Lista wybranych przedmiotów.
+            log_text (tk.Text): Widget logu do wyświetlania komunikatów.
+            progress_bar (ttk.Progressbar): Pasek postępu.
+            progress_label (tk.Label): Etykieta statusu postępu.
+            start_btn (tk.Button): Przycisk startowy, który zostanie zablokowany.
+            close_btn (tk.Button): Przycisk do zamknięcia okna.
+
+        Returns:
+            None
+        """
         start_btn.config(state=tk.DISABLED)
         
         def process_in_thread():
+            """
+            Cel wątku pomocniczego uruchamianego przez start_txt_processing.
+            Wywołuje metodę przetwarzającą pliki TXT (process_txt_files_only) korzystając
+            ze zmiennych zewnętrznych (selected_subjects, log_text, progress_bar, progress_label)
+            i po zakończeniu odblokowuje przycisk startu.
+
+            Args:
+                None
+
+            Returns:
+                None
+            """
             self.process_txt_files_only(selected_subjects, log_text, progress_bar, progress_label)
             start_btn.config(state=tk.NORMAL, text="ZAKOŃCZONO", bg="gray")
         
@@ -608,7 +779,19 @@ class SubjectSelectorApp:
         processing_thread.start()
 
     def process_txt_files_only(self, selected_subjects, log_text, progress_bar, progress_label):
-        """Przetwarza pliki tworząc TYLKO chunks.txt i base64.txt (bez JSON)"""
+        """
+        Przetwarza wybrane przedmioty tworząc tylko pliki TXT: 
+        *_chunks.txt oraz *_base64.txt (bez JSON).
+
+        Args:
+            selected_subjects (list[str]): Lista wybranych przedmiotów.
+            log_text (tk.Text): Widget logu.
+            progress_bar (ttk.Progressbar): Pasek postępu.
+            progress_label (tk.Label): Etykieta statusu.
+
+        Returns:
+            None
+        """
         self.log_message(log_text, "=== ROZPOCZĘCIE TWORZENIA PLIKÓW TXT ===")
         
         # Inicjalizacja procesorów
@@ -737,10 +920,34 @@ class SubjectSelectorApp:
         self.update_progress(progress_bar, progress_label, total_ocr_folders, total_ocr_folders, "Zakończono")
 
     def start_processing(self, selected_subjects, log_text, progress_bar, progress_label, start_btn, close_btn):
-        """Rozpoczyna przetwarzanie w osobnym wątku"""
+        """
+        Uruchamia pełne przetwarzanie (z JSON) w osobnym wątku.
+
+        Args:
+            selected_subjects (list[str]): Lista wybranych przedmiotów.
+            log_text (tk.Text): Widget logu do wyświetlania komunikatów.
+            progress_bar (ttk.Progressbar): Pasek postępu.
+            progress_label (tk.Label): Etykieta statusu postępu.
+            start_btn (tk.Button): Przycisk startowy, który zostanie zablokowany.
+            close_btn (tk.Button): Przycisk do zamknięcia okna.
+
+        Returns:
+            None
+        """
         start_btn.config(state=tk.DISABLED)
         
         def process_in_thread():
+            """
+            Cel wątku pomocniczego uruchamianego przez start_processing.
+            Wywołuje metodę pełnego przetwarzania (process_all_subjects) przekazując
+            bieżące ustawienie use_vision, a po zakończeniu aktualizuje stan przycisku startu.
+
+            Args:
+                None
+
+            Returns:
+                None
+            """
             # ZMIANA: Przekaż aktualną wartość use_vision
             self.process_all_subjects(selected_subjects, log_text, progress_bar, progress_label, self.use_vision.get())
             start_btn.config(state=tk.NORMAL, text="ZAKOŃCZONO", bg="gray")
@@ -750,7 +957,16 @@ class SubjectSelectorApp:
         processing_thread.start()
 
     def log_message(self, log_text, message):
-        """Dodaje wiadomość do log widget"""
+        """
+        Dodaje wiadomość do widgetu logu w oknie.
+
+        Args:
+            log_text (tk.Text): Widget logu.
+            message (str): Wiadomość do zapisania.
+
+        Returns:
+            None
+        """
         try:
             log_text.insert(tk.END, f"{message}\n")
             log_text.see(tk.END)
@@ -759,7 +975,19 @@ class SubjectSelectorApp:
             pass
 
     def update_progress(self, progress_bar, progress_label, current, total, current_task=""):
-        """Aktualizuje progress bar"""
+        """
+        Aktualizuje pasek postępu i etykietę statusu.
+
+        Args:
+            progress_bar (ttk.Progressbar): Pasek postępu.
+            progress_label (tk.Label): Etykieta statusu.
+            current (int): Liczba ukończonych kroków.
+            total (int): Łączna liczba kroków.
+            current_task (str, optional): Aktualnie wykonywane zadanie.
+
+        Returns:
+            None
+        """
         try:
             percentage = (current / total) * 100 if total > 0 else 0
             progress_bar['value'] = percentage
@@ -771,7 +999,13 @@ class SubjectSelectorApp:
 
     def normalize_path_separators(self, path):
         """
-        Normalizuje separatory ścieżek do pojedynczych slashów
+        Normalizuje separatory ścieżek zamieniając backslashes na slashe.
+
+        Args:
+            path (str | Path): Ścieżka wejściowa.
+
+        Returns:
+            str: Znormalizowana ścieżka.
         """
         # Zamień podwójne backslashe na pojedyncze slashe
         normalized = str(path).replace('\\\\', '/').replace('\\', '/')
@@ -779,7 +1013,13 @@ class SubjectSelectorApp:
 
     def convert_to_relative_path(self, absolute_path):
         """
-        Konwertuje ścieżkę absolutną na względną od folderu pgverse
+        Konwertuje ścieżkę absolutną na ścieżkę względną zaczynającą się od `pgverse`.
+
+        Args:
+            absolute_path (str | Path): Ścieżka absolutna.
+
+        Returns:
+            str: Ścieżka względna lub oryginalna, jeśli `pgverse` nie występuje.
         """
         try:
             path_obj = Path(absolute_path)
@@ -809,9 +1049,17 @@ class SubjectSelectorApp:
 
     def copy_required_files_to_detekcje(self, ocr_folder, log_text=None):
         """
-        Checks for required files in rezultaty folder and copies them to detekcje if needed.
-        Returns True if files are ready in detekcje folder.
+        Sprawdza i kopiuje wymagane pliki z folderu 'rezultaty' do folderu 'detekcje'.
+        Tworzy folder 'detekcje' jeśli nie istnieje.
+
+        Args:
+            ocr_folder (Path): Ścieżka do folderu OCR.
+            log_text (tk.Text, optional): Widget logu do zapisu komunikatów.
+
+        Returns:
+            bool: True, jeśli pliki są gotowe w folderze 'detekcje'.
         """
+
         try:
             # Define paths
             rezultaty_path = ocr_folder / "rezultaty"
@@ -871,7 +1119,20 @@ class SubjectSelectorApp:
             return False
 
     def process_all_subjects(self, selected_subjects, log_text, progress_bar, progress_label, use_vision):
-        """Przetwarza wszystkie wybrane przedmioty"""
+        """
+        Przetwarza wszystkie wybrane przedmioty (OCR + Vision opcjonalnie).
+        Tworzy pliki JSON, *_chunks.txt i *_base64.txt.
+
+        Args:
+            selected_subjects (list[str]): Lista wybranych przedmiotów.
+            log_text (tk.Text): Widget logu.
+            progress_bar (ttk.Progressbar): Pasek postępu.
+            progress_label (tk.Label): Etykieta statusu.
+            use_vision (bool): Czy włączyć tryb Vision dla analizy obrazów.
+
+        Returns:
+            None
+        """
         self.log_message(log_text, "=== ROZPOCZĘCIE PRZETWARZANIA PRZEDMIOTÓW ===")
         self.log_message(log_text, f"🔍 Tryb Vision: {'WŁĄCZONY' if use_vision else 'WYŁĄCZONY'}")
         
@@ -1055,8 +1316,16 @@ class SubjectSelectorApp:
 
     def convert_vision_json_format(self, selected_subjects, log_function=None):
         """
-        Converts improperly formatted JSON files from vision processing into the correct combined format.
-        Creates a single folderOCR_context.json file for each OCR folder.
+        Konwertuje niepoprawnie sformatowane pliki JSON z trybu Vision 
+        na poprawny format łączony.
+        Tworzy plik *_context.json w folderze detekcje.
+
+        Args:
+            selected_subjects (list[str]): Lista wybranych przedmiotów.
+            log_function (Callable, optional): Funkcja logująca komunikaty.
+
+        Returns:
+            tuple[int, int]: Liczba przetworzonych folderów i liczba skonwertowanych wpisów JSON.
         """
         if log_function is None:
             log_function = print
@@ -1148,7 +1417,16 @@ class SubjectSelectorApp:
         return total_folders_processed, total_files_converted
 
     def open_graph_management_window(self, selected_subjects):
-        """Otwiera okno zarządzania grafem Neo4j"""
+        """
+        Otwiera okno do zarządzania grafem Neo4j.
+        Umożliwia konfigurację połączenia, testowanie, tworzenie relacji i wyświetlanie statystyk.
+
+        Args:
+            selected_subjects (list[str]): Lista wybranych przedmiotów.
+
+        Returns:
+            None
+        """
         graph_window = tk.Toplevel(self.root)
         graph_window.title("Zarządzanie grafem Neo4j")
         graph_window.geometry("1000x900")  # ZWIĘKSZONE z 800 na 900
@@ -1195,10 +1473,30 @@ class SubjectSelectorApp:
         selection_buttons_frame.pack(fill=tk.X, pady=2)  # ZMIENIONE pady z 5 na 2
         
         def select_all_subjects():
+            """
+            Zaznacza wszystkie checkboxy przedmiotów w panelu wyboru przedmiotów
+            w oknie zarządzania grafem (ustawia odpowiadające tk.BooleanVar na True).
+
+            Args:
+                None
+
+            Returns:
+                None
+            """
             for var in subject_vars.values():
                 var.set(True)
         
         def deselect_all_subjects():
+            """
+            Odznacza wszystkie checkboxy przedmiotów w panelu wyboru przedmiotów
+            w oknie zarządzania grafem (ustawia odpowiadające tk.BooleanVar na False).
+
+            Args:
+                None
+
+            Returns:
+                None
+            """
             for var in subject_vars.values():
                 var.set(False)
         
@@ -1250,7 +1548,15 @@ class SubjectSelectorApp:
         graph_builder = None
         
         def log_graph_message(message):
-            """Dodaje wiadomość do log widget grafu"""
+            """
+            Dodaje wiadomość do widgetu logu w oknie zarządzania grafem.
+
+            Args:
+                message (str): Tekst wiadomości do wyświetlenia w logu.
+
+            Returns:
+                None
+            """
             try:
                 graph_log_text.insert(tk.END, f"{message}\n")
                 graph_log_text.see(tk.END)
@@ -1259,7 +1565,16 @@ class SubjectSelectorApp:
                 pass
         
         def test_connection():
-            """Testuje połączenie z Neo4j"""
+            """
+            Testuje połączenie z bazą Neo4j przy użyciu aktualnych
+            danych logowania (URI, użytkownik, hasło).
+
+            Args:
+                None
+
+            Returns:
+                None
+            """
             try:
                 connector = Neo4jConnector(uri_var.get(), user_var.get(), password_var.get())
                 with connector.get_driver().session() as session:
@@ -1274,7 +1589,16 @@ class SubjectSelectorApp:
                 connect_btn.config(state=tk.DISABLED)
         
         def connect_to_neo4j():
-            """Łączy się z Neo4j"""
+            """
+            Nawiązuje połączenie z bazą Neo4j i inicjalizuje obiekt GraphBuilder
+            do operacji na grafie. Ustawia przyciski operacyjne jako aktywne.
+
+            Args:
+                None
+
+            Returns:
+                None
+            """
             nonlocal neo4j_connector, graph_builder
             
             try:
@@ -1298,7 +1622,16 @@ class SubjectSelectorApp:
                 log_graph_message(f"✗ Błąd połączenia: {e}")
         
         def disconnect_from_neo4j():
-            """Rozłącza z Neo4j"""
+            """
+            Rozłącza bieżące połączenie z Neo4j oraz zwalnia zasoby GraphBuilder.
+            Przywraca możliwość ponownego połączenia.
+
+            Args:
+                None
+
+            Returns:
+                None
+            """
             nonlocal neo4j_connector, graph_builder
             
             try:
@@ -1323,11 +1656,34 @@ class SubjectSelectorApp:
         
         # Funkcje operacji na grafie (teraz w wątkach)
         def graph_relations():
+            """
+            Tworzy relacje podobieństwa między węzłami grafu w bazie Neo4j.
+            Operacja wykonywana jest w osobnym wątku, aby nie blokować UI.
+            W logu wyświetlane są informacje o liczbie węzłów i postępie.
+
+            Args:
+                None
+
+            Returns:
+                None
+            """
             if not graph_builder:
                 log_graph_message("✗ Brak połączenia z grafem")
                 return
 
             def worker():
+                """
+                Wątek roboczy odpowiedzialny za tworzenie relacji podobieństwa między węzłami
+                w grafie Neo4j. Wykonuje zapytania informacyjne (np. liczba węzłów),
+                estymuje czas pracy dla dużych zbiorów, uruchamia proces tworzenia relacji
+                poprzez GraphBuilder i raportuje postęp do logu (poprzez progress callback).
+
+                Args:
+                    None (korzysta z obiektów zewnętrznych: neo4j_connector, graph_builder, log_graph_message)
+
+                Returns:
+                    None
+                """
                 try:
                     log_graph_message("🔄 Rozpoczynam tworzenie relacji podobieństwa...")
                     
@@ -1346,6 +1702,16 @@ class SubjectSelectorApp:
                     
                     # Użyj wersji z callbackiem - BEZ LIMITÓW
                     def progress_callback(message):
+                        """
+                        Prosty callback używany podczas tworzenia relacji — przekazuje komunikat
+                        dalej do funkcji logującej (log_graph_message).
+
+                        Args:
+                            message (str): Tekst komunikatu postępu.
+
+                        Returns:
+                            None
+                        """
                         log_graph_message(message)
                     
                     graph_builder.create_relations_with_progress_callback(progress_callback)
@@ -1359,11 +1725,33 @@ class SubjectSelectorApp:
             threading.Thread(target=worker, daemon=True).start()
 
         def show_statistics():
+            """
+            Pobiera i wyświetla szczegółowe statystyki grafu z bazy Neo4j,
+            w tym liczbę węzłów, pokrycie embeddingami i rozkład typów węzłów.
+            Operacja wykonywana jest w osobnym wątku.
+
+            Args:
+                None
+
+            Returns:
+                None
+            """
             if not graph_builder:
                 log_graph_message("✗ Brak połączenia z grafem")
                 return
 
             def worker():
+                """
+                Wątek pomocniczy do pobierania i raportowania statystyk grafu.
+                Pobiera różne metryki (liczba węzłów, pokrycie embeddingami, rozkład typów itp.)
+                przy użyciu sesji Neo4j / metod GraphBuilder i zapisuje szczegółowy log.
+
+                Args:
+                    None (korzysta z obiektów zewnętrznych: neo4j_connector, graph_builder, log_graph_message)
+
+                Returns:
+                    None
+                """
                 try:
                     log_graph_message("🔄 Pobieranie statystyk grafu...")
                     
@@ -1602,6 +1990,16 @@ class SubjectSelectorApp:
             threading.Thread(target=worker, daemon=True).start()
         
         def clear_all_chunks():
+            """
+            Usuwa wszystkie węzły typu 'chunk' z grafu Neo4j.
+            Operacja wymaga potwierdzenia użytkownika i wykonuje się w wątku.
+
+            Args:
+                None
+
+            Returns:
+                None
+            """
             if not neo4j_connector:
                 log_graph_message("✗ Brak połączenia z grafem")
                 return
@@ -1622,7 +2020,17 @@ class SubjectSelectorApp:
                     log_graph_message(f"✗ Błąd usuwania chunków: {e}")
 
         def clear_entire_database():
-            """Czyści całą bazę danych Neo4j"""
+            """
+            Usuwa wszystkie węzły i relacje z grafu Neo4j.
+            Wymaga podwójnego potwierdzenia użytkownika, aby zapobiec przypadkowemu
+            skasowaniu całej bazy. Operacja wykonywana jest w osobnym wątku.
+
+            Args:
+                None
+
+            Returns:
+                None
+            """
             if not neo4j_connector:
                 log_graph_message("✗ Brak połączenia z grafem")
                 return
@@ -1691,11 +2099,32 @@ class SubjectSelectorApp:
                 log_graph_message("✅ Operacja czyszczenia bazy została anulowana")
 
         def run_maintenance():
+            """
+            Uruchamia procedury konserwacji w grafie Neo4j, takie jak czyszczenie
+            osieroconych węzłów, usuwanie duplikatów i optymalizacja struktury.
+
+            Args:
+                None
+
+            Returns:
+                None
+            """
             if not graph_builder:
                 log_graph_message("✗ Brak połączenia z grafem")
                 return
 
             def worker():
+                """
+                Wątek roboczy uruchamiający procedury konserwacji grafu (np. usuwanie duplikatów,
+                optymalizacje, czyszczenie osieroconych węzłów). Zawiera logikę retry (ponawianie prób)
+                przy problemach z połączeniem i raportuje postęp za pomocą callbacków.
+
+                Args:
+                    None (korzysta z obiektów zewnętrznych: neo4j_connector, graph_builder, log_graph_message)
+
+                Returns:
+                    None
+                """
                 # POPRAWKA: Przenieś nonlocal na początek funkcji
                 nonlocal neo4j_connector, graph_builder
                 
@@ -1729,6 +2158,18 @@ class SubjectSelectorApp:
                             
                             # Uruchom konserwację z callbackiem
                             def maintenance_callback(message):
+                                """
+                                Callback wykorzystywany przez procedury konserwacji do raportowania postępu.
+                                Przekazuje otrzymany komunikat do centralnej funkcji logującej.
+
+                                Args:
+                                    message (str): Tekst komunikatu postępu konserwacji.
+
+                                Returns:
+                                    None
+                                """
+
+                            
                                 log_graph_message(f"  {message}")
                             
                             # POPRAWIONE: Użyj metody z callbackiem jeśli istnieje
@@ -1813,7 +2254,17 @@ class SubjectSelectorApp:
             threading.Thread(target=worker, daemon=True).start()
 
         def clear_all_relations():
-            """Usuwa WSZYSTKIE relacje z grafu"""
+            """
+            Usuwa wszystkie relacje pomiędzy węzłami w bazie Neo4j.
+            Operacja wykonywana jest w osobnym wątku, aby nie blokować interfejsu użytkownika.
+            W logu wyświetlane są komunikaty o postępie i ewentualnych błędach.
+
+            Args:
+                None
+
+            Returns:
+                None
+            """
             if not neo4j_connector:
                 log_graph_message("✗ Brak połączenia z grafem")
                 return
@@ -1832,6 +2283,17 @@ class SubjectSelectorApp:
             
             if confirm:
                 def worker():
+                    """
+                    Wątek usuwający wszystkie relacje z bazy Neo4j w partiach (batch deletion).
+                    Funkcja wykonuje potwierdzenie od użytkownika, usuwa relacje w pętlach,
+                    raportuje liczbę usuniętych relacji i weryfikuje rezultat.
+
+                    Args:
+                        None (korzysta z obiektów zewnętrznych: neo4j_connector, log_graph_message, graph_window)
+
+                    Returns:
+                        None
+                    """
                     try:
                         log_graph_message("🔄 Rozpoczynam usuwanie WSZYSTKICH relacji...")
                         
@@ -1895,12 +2357,34 @@ class SubjectSelectorApp:
                 log_graph_message("✅ Operacja usuwania relacji została anulowana")
 
         def check_graph_status():
-            """Sprawdza status grafu - węzły i relacje - W OSOBNYM WĄTKU"""
+            """
+            Sprawdza bieżący stan grafu w Neo4j i wyświetla informacje
+            o liczbie węzłów, relacji oraz ewentualnych ostrzeżeniach.
+            Operacja wykonywana w osobnym wątku.
+
+            Args:
+                None
+
+            Returns:
+                None
+            """
             if not neo4j_connector:
                 log_graph_message("✗ Brak połączenia z grafem")
                 return
 
             def worker():
+                """
+                Wątek sprawdzający szczegółowy status grafu: wykonuje szereg zapytań
+                do Neo4j (liczenie węzłów, relacji, pokrycie embeddingami, gęstość grafu itp.)
+                i raportuje wyniki w logu. Obsługuje wyjątki oraz wyświetla wskazówki
+                co do ewentualnej potrzeby zmian konfiguracji (np. threshold).
+
+                Args:
+                    None (korzysta z obiektów zewnętrznych: neo4j_connector, log_graph_message)
+
+                Returns:
+                    None
+                """
                 try:
                     log_graph_message("🔄 Sprawdzanie statusu grafu...")
                     
@@ -2144,7 +2628,16 @@ class SubjectSelectorApp:
 
     def normalize_image_path(self, image_path):
         """
-        Normalizuje ścieżkę obrazu do formatu absolutnego
+        Normalizuje podaną ścieżkę obrazu do formatu absolutnego względem katalogu bazowego aplikacji.
+
+        Algorytm usuwa prefiks "pgverse", próbuje odbudować ścieżkę w strukturze `rag_codes/subjects/...`,
+        a w przypadku niepowodzenia przeszukuje rekursywnie katalogi "rezultaty".
+
+        Args:
+            image_path (str | Path): Ścieżka do obrazu (absolutna lub względna, czasem z prefiksem "pgverse").
+
+        Returns:
+            str | None: Znormalizowana ścieżka absolutna do istniejącego pliku albo None, jeśli nie udało się znaleźć pliku.
         """
         try:
             path_obj = Path(image_path)
@@ -2219,7 +2712,20 @@ class SubjectSelectorApp:
             return None
 
     def load_data_to_neo4j(self, selected_subjects, log_function, neo4j_connector, use_vision = False):
-        """Ładuje dane do Neo4j z embeddingami obrazowymi i base64 - BEZ TWORZENIA RELACJI"""
+        """
+        Ładuje multimodalne dane do bazy Neo4j (obrazy, wzory, tabele, chunki tekstowe, base64).
+        Funkcja dodaje węzły (bez tworzenia relacji), generuje embeddingi (obrazy lub tekst zależnie od trybu)
+        i raportuje postęp poprzez przekazaną funkcję logującą.
+
+        Args:
+            selected_subjects (list[str]): Lista nazw przedmiotów do przetworzenia.
+            log_function (Callable[[str], None]): Funkcja do zapisu komunikatów/logów (przyjmuje str).
+            neo4j_connector (Neo4jConnector): Obiekt odpowiedzialny za połączenie z Neo4j.
+            use_vision (bool, optional): Jeśli True — preferuj embeddingi obrazowe; jeśli False — embeddingi tekstowe. Default False.
+
+        Returns:
+            None: Wyniki są zapisywane bezpośrednio w bazie i przez log_function; funkcja nie zwraca wartości.
+        """
         if not neo4j_connector:
             log_function("✗ Brak połączenia z Neo4j")
             return
@@ -2582,9 +3088,16 @@ class SubjectSelectorApp:
 
     def load_base64_data_from_file(self, ocr_folder_name, detekcje_path):
         """
-        Ładuje dane base64 z pliku {OCRfolder}_base64.txt
-        Format: <image/path/base64_data> przeplatane z chunkami tekstu
-        Zwraca słownik: {ścieżka_obrazu: base64_string}
+        Wczytuje pary ścieżka->base64 z pliku `{ocr_folder_name}_base64.txt`.
+        Parsuje wzorce w formacie `<image/<ścieżka>/<base64>>`, normalizuje separatory i dopasowuje padding base64.
+
+        Args:
+            ocr_folder_name (str): Nazwa folderu OCR (prefix pliku base64).
+            detekcje_path (Path): Ścieżka do katalogu "detekcje" dla danego folderu OCR.
+
+        Returns:
+            dict[str, str]: Słownik mapujący znormalizowaną ścieżkę obrazu (forward-slash) na string base64.
+                            Jeśli plik nie istnieje lub parsowanie się nie powiedzie, zwracany jest pusty słownik.
         """
         base64_file = detekcje_path / f"{ocr_folder_name}_base64.txt"
         base64_dict = {}
@@ -2656,8 +3169,17 @@ class SubjectSelectorApp:
 
     def find_matching_base64(self, actual_image_path, base64_dict):
         """
-        Znajduje odpowiednie dane base64 dla ścieżki obrazu
-        Porównuje końcowe części ścieżek (np. wzory\filename.png)
+        Znajduje dopasowane dane base64 dla obrazu na podstawie fragmentów ścieżki.
+
+        Najpierw porównuje końcówki ścieżki (folder + nazwa pliku), a jeśli to zawiedzie,
+        stosuje fallback do porównania wyłącznie po nazwie pliku lub separatorach.
+
+        Args:
+            actual_image_path (str | Path): Rzeczywista ścieżka obrazu na dysku.
+            base64_dict (dict[str, str]): Słownik mapujący ścieżki obrazów (string) na dane base64.
+
+        Returns:
+            str | None: Ciąg base64 odpowiadający danemu obrazowi albo None, jeśli nie znaleziono dopasowania.
         """
         try:
             filename = Path(actual_image_path).name
@@ -2717,10 +3239,16 @@ class SubjectSelectorApp:
 
     def extract_path_from_pgverse(self, path):
         """
-        Wyciąga część ścieżki zaczynającą się od folderu po 'pgverse'
-        Np. pgverse/rag_codes/subjects/... -> rag_codes/subjects/...
+        Wyciąga część ścieżki zaczynającą się po katalogu "pgverse".
 
-        POPRAWIONE: Obsługuje różne separatory i poprawia błędy w ścieżkach
+        Obsługuje zarówno backslash (`\\`), jak i forward slash (`/`).
+        Jeśli w ścieżce nie ma "pgverse", zwraca ją w oryginalnej postaci.
+
+        Args:
+            path (str): Ścieżka wejściowa (np. "C:/projekty/pgverse/rag_codes/...").
+
+        Returns:
+            str: Podścieżka od folderu po "pgverse" lub oryginalna ścieżka, jeśli "pgverse" nie występuje.
         """
         try:
             if 'pgverse' in path:
@@ -2744,7 +3272,18 @@ class SubjectSelectorApp:
 
     # Dodaj brakujące funkcje pomocnicze
     def determine_data_type_from_path(self, image_path):
-        """Określa typ danych na podstawie ścieżki"""
+        """
+        Określa typ danych na podstawie fragmentu ścieżki obrazu.
+
+        Wyszukuje słowa kluczowe z mapowania folderów (np. "wzory", "tabele").
+        Jeśli nie pasuje żaden wzorzec, zwraca "image".
+
+        Args:
+            image_path (str): Ścieżka do pliku obrazu.
+
+        Returns:
+            str: Typ danych - np. "image", "formula", "table".
+        """
         path_lower = image_path.lower()
         
         for folder_name, data_type in self.folder_type_mapping.items():
@@ -2755,7 +3294,15 @@ class SubjectSelectorApp:
         return "image"
     
     def get_node_prefix(self, data_type):
-        """Zwraca prefix dla ID węzła na podstawie typu danych"""
+        """
+        Zwraca prefiks dla ID węzła w grafie na podstawie typu danych.
+
+        Args:
+            data_type (str): Typ danych ("image", "formula", "table" lub inny).
+
+        Returns:
+            str: Prefiks np. "img", "frm", "tbl", "unk".
+        """
         if data_type == "image":
             return "img"
         elif data_type == "formula":
@@ -2766,7 +3313,20 @@ class SubjectSelectorApp:
             return "unk"
     
     def find_actual_image_path(self, image_path, detekcje_path):
-        """Znajduje rzeczywistą ścieżkę do obrazu"""
+        """
+        Znajduje rzeczywistą ścieżkę pliku obrazu w strukturze folderów.
+
+        Najpierw próbuje dopasować ścieżkę względem katalogu bazowego (usuwając "pgverse"),
+        następnie sprawdza w podfolderach `detekcje` (np. figury, wzory, tabele),
+        a na końcu szuka pliku bezpośrednio w `detekcje`.
+
+        Args:
+            image_path (str): Ścieżka oryginalna do obrazu (np. z JSON).
+            detekcje_path (Path): Ścieżka do katalogu "detekcje" dla danego OCR.
+
+        Returns:
+            str | None: Absolutna ścieżka do istniejącego pliku obrazu albo None, jeśli nie znaleziono.
+        """
         try:
             # Usuń prefix "pgverse" jeśli istnieje
             normalized_path = self.normalize_path_separators(image_path)
@@ -2802,7 +3362,18 @@ class SubjectSelectorApp:
             return None
 
     def load_selected_subjects_to_neo4j(self, selected_subjects_for_loading, log_function, neo4j_connector):
-        """Ładuje wybrane przedmioty do Neo4j z walidacją - uruchamia w osobnym wątku"""
+        """
+        Uruchamia proces ładowania wybranych przedmiotów do Neo4j w osobnym wątku.
+        Weryfikuje wybór, loguje komunikaty i startuje wątek roboczy korzystający z load_data_to_neo4j.
+
+        Args:
+            selected_subjects_for_loading (list[str]): Lista nazw przedmiotów do załadowania.
+            log_function (Callable[[str], None]): Funkcja logująca komunikaty.
+            neo4j_connector (Neo4jConnector): Obiekt połączenia z Neo4j.
+
+        Returns:
+            None: Operacja asynchroniczna — efekty są widoczne w logach i w bazie.
+        """
         if not selected_subjects_for_loading:
             log_function("⚠️ Nie wybrano żadnego przedmiotu do załadowania!")
             log_function("📋 Zaznacz przynajmniej jeden przedmiot w sekcji 'Wybór przedmiotów do załadowania'")
@@ -2818,6 +3389,16 @@ class SubjectSelectorApp:
         
         # Uruchom ładowanie w osobnym wątku, żeby nie zawiesić GUI
         def load_in_thread():
+            """
+            (funkcja zagnieżdżona) Wątek pomocniczy wywoływany przez load_selected_subjects_to_neo4j.
+            Wywołuje load_data_to_neo4j i obsługuje logowanie sukcesu lub błędów wraz z tracebackiem.
+
+            Args:
+                None (korzysta z zmiennych zamknięcia: selected_subjects_for_loading, log_function, neo4j_connector)
+
+            Returns:
+                None
+            """
             try:
                 self.load_data_to_neo4j(selected_subjects_for_loading, log_function, neo4j_connector)
                 log_function("🎉 ŁADOWANIE ZAKOŃCZONE - operacja wykonana w tle")
@@ -2833,7 +3414,18 @@ class SubjectSelectorApp:
         log_function("✅ Wątek ładowania uruchomiony - sprawdzaj logi poniżej...")
 
     def load_chunks_from_context_json(self, selected_subjects_for_loading, log_function, neo4j_connector):
-        """Ładuje chunki z plików context.json - uruchamia w osobnym wątku"""
+        """
+        Uruchamia asynchroniczne ładowanie chunków kontekstowych (context.json) do Neo4j.
+        Sprawdza wybór, startuje wątek pomocniczy i loguje status uruchomienia.
+
+        Args:
+            selected_subjects_for_loading (list[str]): Lista nazw przedmiotów do przetworzenia.
+            log_function (Callable[[str], None]): Funkcja do zapisu komunikatów/logów.
+            neo4j_connector (Neo4jConnector): Obiekt połączenia z Neo4j.
+
+        Returns:
+            None
+        """
         if not selected_subjects_for_loading:
             log_function("⚠️ Nie wybrano żadnego przedmiotu do załadowania!")
             log_function("📋 Zaznacz przynajmniej jeden przedmiot w sekcji 'Wybór przedmiotów do załadowania'")
@@ -2849,6 +3441,16 @@ class SubjectSelectorApp:
         
         # Uruchom ładowanie w osobnym wątku
         def load_context_in_thread():
+            """
+            (funkcja zagnieżdżona) Wątek pomocniczy wywoływany przez load_chunks_from_context_json.
+            Wywołuje load_context_data_to_neo4j i loguje zakończenie lub błędy (wraz z tracebackiem).
+
+            Args:
+                None (korzysta z zmiennych zamknięcia: selected_subjects_for_loading, log_function, neo4j_connector)
+
+            Returns:
+                None
+            """
             try:
                 self.load_context_data_to_neo4j(selected_subjects_for_loading, log_function, neo4j_connector)
                 log_function("🎉 ŁADOWANIE CHUNKÓW Z KONTEKSTU ZAKOŃCZONE")
@@ -2864,7 +3466,19 @@ class SubjectSelectorApp:
         log_function("✅ Wątek ładowania chunków uruchomiony...")
 
     def load_context_data_to_neo4j(self, selected_subjects, log_function, neo4j_connector):
-        """Ładuje dane z plików context.json z embeddingami TYLKO TEKSTOWYMI + base64"""
+        """
+        Ładuje chunki kontekstowe z plików context.json do Neo4j.
+        Tworzy embeddingi tekstowe (kontekst) i wstawia węzły z base64 (jeżeli dostępne).
+        Funkcja wykonuje intensywne operacje IO i korzysta z GraphBuilder.
+
+        Args:
+            selected_subjects (list[str]): Lista nazw przedmiotów do przetworzenia.
+            log_function (Callable[[str], None]): Funkcja do zapisu logów/komunikatów.
+            neo4j_connector (Neo4jConnector): Obiekt połączenia z Neo4j.
+
+        Returns:
+            None: Wyniki są zapisywane bezpośrednio w bazie i raportowane log_function.
+        """
         if not neo4j_connector:
             log_function("✗ Brak połączenia z Neo4j")
             return
@@ -3213,7 +3827,15 @@ class SubjectSelectorApp:
             log_function(f"Traceback: {traceback.format_exc()}")
 
     def run(self):
-        """Uruchamia aplikację"""
+        """
+        Uruchamia pętlę głównego GUI aplikacji (Tkinter).
+
+        Args:
+            None
+
+        Returns:
+            None
+        """
         self.root.mainloop()
 
 if __name__ == "__main__":
