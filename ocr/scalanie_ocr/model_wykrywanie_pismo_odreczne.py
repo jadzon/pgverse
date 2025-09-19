@@ -8,6 +8,16 @@ from tqdm import tqdm
 from transformers import AutoProcessor, AutoModelForCausalLM
 
 def setup_logger():
+    """
+    Funkcjonalność:
+        Konfiguruje logger do wyświetlania komunikatów programu.
+
+    Args:
+        Brak
+
+    Returns:
+        None
+    """
     logging.basicConfig(
         format="%(asctime)s %(levelname)s %(message)s",
         datefmt="%H:%M:%S",
@@ -15,6 +25,21 @@ def setup_logger():
     )
 
 def parse_args():
+    """
+    Funkcjonalność:
+        Parsuje argumenty wiersza poleceń i zwraca je jako obiekt Namespace.
+
+    Args:
+        Brak (argumenty pobierane z sys.argv)
+
+    Returns:
+        argparse.Namespace - obiekt z parametrami:
+            pdf_folder : Path - katalog z plikami PDF
+            txt_folder : Path - katalog wyjściowy na pliki TXT
+            dpi : int - rozdzielczość konwersji PDF→obraz
+            model : str - nazwa modelu HuggingFace
+            max_tokens : int - limit tokenów dla generacji
+    """
     p = argparse.ArgumentParser(
         description="Szybki OCR ręcznego pisma PDF → TXT (czyste Florence)"
     )
@@ -57,6 +82,20 @@ def extract_ocr(
     model_name: str,
     max_tokens: int
 ):
+    """
+    Funkcjonalność:
+        Wykonuje OCR dla wszystkich plików PDF w katalogu i zapisuje teksty do plików TXT.
+
+    Args:
+        pdf_folder : Path - katalog z plikami PDF
+        txt_folder : Path - katalog docelowy na pliki TXT
+        dpi : int - rozdzielczość konwersji PDF→obraz
+        model_name : str - nazwa modelu na HuggingFace
+        max_tokens : int - maksymalna liczba tokenów generowanych przez model
+
+    Returns:
+        None
+    """
     device = "cuda" if torch.cuda.is_available() else "cpu"
     dtype  = torch.float16 if device == "cuda" else torch.float32
     logging.info(f"Urządzenie={device}, dtype={dtype}, model={model_name}")

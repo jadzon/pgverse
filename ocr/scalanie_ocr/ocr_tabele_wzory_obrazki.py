@@ -20,6 +20,17 @@ import json
 import numpy as np
 # Funkcja obejścia problemu importu flash_attn w modelach Hugging
 def fixed_get_imports(filename: str | os.PathLike) -> list[str]:
+    """
+    Funkcjonalność:
+        Poprawia listę importów w Transformers, usuwając wpis "flash_attn",
+        aby uniknąć błędów przy ładowaniu modeli.
+
+    Args:
+        filename - ścieżka do pliku źródłowego (str lub Path)
+
+    Returns:
+        list[str] - lista importów bez "flash_attn"
+    """
     imports = original_get_imports(filename)
     if "flash_attn" in imports:
         imports.remove("flash_attn")
@@ -43,8 +54,15 @@ detectron_model = lp.Detectron2LayoutModel(
 )
 def get_bounding_box(item):
     """
-    Zwraca [x1, y1, x2, y2] na podstawie pola 'position' w zwróconym obiekcie Pix2Text,
-    albo None jeśli nie ma pozycji.
+    Funkcjonalność:
+        Wyznacza prostokąt [x1, y1, x2, y2] na podstawie pola 'position'
+        w obiekcie zwróconym przez Pix2Text.
+
+    Args:
+        item - obiekt ze słownikiem zawierającym klucz 'position'
+
+    Returns:
+        list[int] | None - współrzędne bounding boxa lub None
     """
     if 'position' in item:
         pts = item['position']            # lista punktów [[x,y],…]
@@ -54,8 +72,15 @@ def get_bounding_box(item):
     return None
 def detect_with_hugging(image: Image.Image) -> list:
     """
-    Detekcja obiektów przy użyciu modelu Hugging.
-    Wykrywa zarówno tabele, jak i figury.
+    Funkcjonalność:
+        Wykrywa tabele i figury na obrazie przy pomocy modelu Hugging Face.
+
+    Args:
+        image - obraz wejściowy (PIL.Image)
+
+    Returns:
+        list - lista wykryć w formacie (bbox, label),
+               gdzie label to "table" lub "figure"
     """
     inputs = hugging_processor(text=prompt, images=image, return_tensors="pt")
     with torch.no_grad():
@@ -81,8 +106,14 @@ def detect_with_hugging(image: Image.Image) -> list:
 
 def detect_with_detectron(image: Image.Image) -> list:
     """
-    Wykrywanie figur przy użyciu Detectrona (LayoutParser).
+    Funkcjonalność:
+        Wykrywa figury na obrazie przy użyciu Detectron2 (LayoutParser).
 
+    Args:
+        image - obraz wejściowy (PIL.Image)
+
+    Returns:
+        list - lista wykryć w formacie (bbox, "figure")
     """
     image_cv = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
     layout = detectron_model.detect(image_cv)
@@ -95,13 +126,33 @@ def detect_with_detectron(image: Image.Image) -> list:
 
 def merge_detections(hugging_dets: list, detectron_dets: list) -> list:
     """
-    • Wszystkie boksy z Hugging Face przepuszczamy bez zmian.
-    • Boks z Detectrona dodajemy tylko wtedy, gdy
-      (pole przecięcia / pole boksa Detectrona) ≤ 0.5.
+    Funkcjonalność:
+        Łączy wykrycia z Hugging i Detectron:
+        - wszystkie boksy z Hugging przepuszczane bez zmian,
+        - boks z Detectrona dodawany tylko wtedy, gdy
+          pokrycie z boksem Hugging ≤ 70%.
+
+    Args:
+        hugging_dets - lista wykryć (bbox, label) z Hugging
+        detectron_dets - lista wykryć (bbox, label) z Detectron2
+
+    Returns:
+        list - lista połączonych wykryć (bbox, label)
     """
 
     def overlap_ratio(big, small):
-        """zwraca (intersect_area / area_small)"""
+        """
+        Funkcjonalność:
+            Oblicza stosunek pola części wspólnej dwóch prostokątnych bboxów
+            do pola mniejszego z nich.
+
+        Args:
+            big - współrzędne bboxa [x1, y1, x2, y2]
+            small - współrzędne bboxa [x1, y1, x2, y2]
+
+        Returns:
+            float - proporcja pokrycia (0–1)
+        """
         x1 = max(big[0], small[0]); y1 = max(big[1], small[1])
         x2 = min(big[2], small[2]); y2 = min(big[3], small[3])
         inter = max(0, x2 - x1) * max(0, y2 - y1)
@@ -123,12 +174,22 @@ def process_image(image: Image.Image,
                   results_dir: str,
                   page_idx: int = None):
     """
-    1) Autokontrast
-    2) Detekcja tabel/figur (Hugging + Detectron)
-    3) Rozpoznanie wzorów (Pix2Text)
-    4) Nałożenie wszystkich BB na jeden obraz
-    5) Zapis wycinków: izolowanych wzorów, tabel i figur
-    6) Zapis finalnego obrazka z naniesionymi BB
+    Funkcjonalność:
+        Przetwarza obraz w celu detekcji i ekstrakcji:
+        1. Autokontrast obrazu.
+        2. Detekcja tabel i figur (Hugging + Detectron).
+        3. Rozpoznawanie wzorów (Pix2Text).
+        4. Rysowanie bounding boxów i zapisywanie wycinków.
+        5. Zapis finalnego obrazu z naniesionymi wynikami.
+
+    Args:
+        image - obraz wejściowy (PIL.Image)
+        output_prefix - prefiks nazw plików wynikowych
+        results_dir - katalog na wyniki
+        page_idx - (opcjonalne) numer strony w PDF
+
+    Returns:
+        None
     """
     # 1) Autokontrast
     image = ImageOps.autocontrast(image)

@@ -30,6 +30,17 @@ ocr_tess = TesseractOCR(lang="pol")
 
 
 def paddle_score_above_threshold(result, threshold=SCORE_THRESHOLD) -> float:
+    """
+    Funkcjonalność:
+        Oblicza, jaka część wykrytych boxów OCR ma score powyżej podanego progu.
+
+    Args:
+        result - lista boxów zwrócona przez PaddleOCR
+        threshold - próg jakości (float)
+
+    Returns:
+        float - udział boxów z wynikiem >= threshold (0–1)
+    """
     good = sum(1 for box in result if box[1][1] >= threshold)
     total = len(result)
     print(f" {good}/{total} boxów ≥ {threshold}")
@@ -38,8 +49,16 @@ def paddle_score_above_threshold(result, threshold=SCORE_THRESHOLD) -> float:
 
 def preprocess_for_paddle_upscaled(path: Path, scale: int = 2) -> np.ndarray:
     """
-    Wczytuje obraz z path jako grayscale, powiększa go (scale x),
-    a następnie aplikuje blur + threshold i zwraca RGB ready for PaddleOCR.
+    Funkcjonalność:
+        Wczytuje obraz tabeli, powiększa go i przygotowuje w formacie RGB
+        do dalszego OCR Paddle.
+
+    Args:
+        path - ścieżka do pliku obrazu
+        scale - współczynnik powiększenia (np. 2 oznacza 2×)
+
+    Returns:
+        np.ndarray - obraz w formacie RGB gotowy do OCR
     """
     # 1) Wczytaj w skali szarości
     img = cv2.imread(str(path), cv2.IMREAD_GRAYSCALE)
@@ -57,6 +76,18 @@ def preprocess_for_paddle_upscaled(path: Path, scale: int = 2) -> np.ndarray:
 
 
 def paddle_grid_group(result, y_thresh=20, x_thresh=30) -> list:
+    """
+    Funkcjonalność:
+        Grupuje wyniki OCR w siatkę (wiersze/kolumny), tworząc tabelę.
+
+    Args:
+        result - lista wyników OCR (boxy + tekst)
+        y_thresh - próg różnicy Y do łączenia w ten sam wiersz
+        x_thresh - próg różnicy X do łączenia w tę samą kolumnę
+
+    Returns:
+        list - dwuwymiarowa lista (wiersze z tekstami w komórkach)
+    """
     # Jeśli nie ma wykrytych boxów, zwracamy pusty grid
     if not result:
         return []

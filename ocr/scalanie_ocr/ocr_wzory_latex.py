@@ -26,6 +26,17 @@ p2t = Pix2Text(model=MODEL, device=DEVICE)
 # Wzorki do rozpoznania jako formuły
 MATH_CHARS = re.compile(r"[A-Za-z0-9\\+\-*/=^_]")
 def looks_like_formula(txt: str) -> bool:
+    """
+    Funkcjonalność:
+        Sprawdza, czy dany tekst wygląda jak formuła matematyczna.
+
+    Args:
+        txt - tekst wejściowy (string)
+
+    Returns:
+        bool - True jeśli tekst przypomina formułę (zawiera znaki matematyczne i ma długość ≥ 3),
+               False w przeciwnym razie
+    """
     txt = txt.strip("$").strip()
     return bool(MATH_CHARS.search(txt)) and len(txt) >= 3
 

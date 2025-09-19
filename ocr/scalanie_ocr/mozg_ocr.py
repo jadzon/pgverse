@@ -9,8 +9,15 @@ import subprocess
 
 def run_script(script_path):
     """
-    Uruchamia podany skrypt Pythona w tym samym interpreterze.
-    Jeśli skrypt zakończy się błędem, przerywa działanie.
+    Funkcjonalność:
+        Uruchamia wskazany skrypt Pythona w tym samym interpreterze.
+        Jeśli skrypt zwróci błąd, zatrzymuje działanie programu.
+
+    Args:
+        script_path - ścieżka do pliku skryptu .py
+
+    Returns:
+        None
     """
     print(f"Uruchamiam: {script_path}...")
     result = subprocess.run([sys.executable, script_path])

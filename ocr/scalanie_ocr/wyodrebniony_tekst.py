@@ -13,6 +13,18 @@ pytesseract.pytesseract.tesseract_cmd = TESS_CMD
 
 
 def ocr_page(img_path: Path, prefix: str) -> str:
+    """
+    Funkcjonalność:
+        Wykonuje OCR pojedynczej strony (obrazu), czyści rozpoznany tekst
+        i zamienia na znaczniki <image/...> wskazujące pliki z figurami, tabelami lub wzorami.
+
+    Args:
+        img_path - ścieżka do pliku obrazu strony
+        prefix - prefiks nazwy książki (np. k1, k2)
+
+    Returns:
+        str - tekst OCR z poprawionymi ścieżkami do obiektów
+    """
     pil_img = Image.open(img_path)
     big_img = pil_img.resize((pil_img.width * 4, pil_img.height * 4), Image.LANCZOS)
     txt = pytesseract.image_to_string(big_img, config=TESS_CFG) 
@@ -79,6 +91,17 @@ def ocr_page(img_path: Path, prefix: str) -> str:
 
 
 def ocr_book(book_dir: Path):
+    """
+    Funkcjonalność:
+        Wykonuje OCR dla całej książki (katalogu), iterując po wszystkich stronach,
+        i zapisuje wynik jako jeden plik TXT w katalogu książki.
+
+    Args:
+        book_dir - katalog z plikami obrazu stron książki
+
+    Returns:
+        None
+    """
     pngs = sorted(
         book_dir.glob("*_result.png"),
         key=lambda p: int(SUFFIX_RE.search(p.name).group(1))
@@ -102,6 +125,17 @@ def ocr_book(book_dir: Path):
 
 
 def ocr_all(root: Path):
+    """
+    Funkcjonalność:
+        Przechodzi przez wszystkie książki w katalogu root,
+        uruchamia OCR dla każdej i zapisuje wyniki w strukturze 'rezultaty'.
+
+    Args:
+        root - katalog główny zawierający książki
+
+    Returns:
+        None
+    """
     if not root.is_dir():
         print(f"Folder nie istnieje: {root}")
         sys.exit(1)

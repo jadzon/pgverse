@@ -13,8 +13,16 @@ from pathlib import Path
 
 def run_script(script_path, check_result=True):
     """
-    Uruchamia podany skrypt Pythona w tym samym interpreterze.
-    Jeśli skrypt zakończy się błędem, przerywa działanie.
+    Funkcjonalność:
+        Uruchamia wskazany skrypt Pythona w tym samym interpreterze.
+        Zatrzymuje działanie programu, jeśli skrypt zwróci błąd.
+
+    Args:
+        script_path - ścieżka do pliku skryptu .py
+        check_result - czy sprawdzać kod powrotu (True/False)
+
+    Returns:
+        None
     """
     print(f"Uruchamiam: {script_path}...")
     result = subprocess.run([sys.executable, script_path])
@@ -26,7 +34,17 @@ def run_script(script_path, check_result=True):
 
 def prepare_input_files(input_pdf, subject, output_dir):
     """
-    Prepare input files and directory structure
+    Funkcjonalność:
+        Tworzy strukturę katalogów wyjściowych i przygotowuje plik wejściowy PDF.
+        Ustawia zmienne środowiskowe dla dalszych skryptów.
+
+    Args:
+        input_pdf - ścieżka do pliku PDF
+        subject - nazwa przedmiotu (klasyfikacja)
+        output_dir - katalog, w którym zostaną zapisane wyniki
+
+    Returns:
+        str - nazwa tymczasowego pliku PDF (np. 'k1.pdf')
     """
     # Create output directory structure
     os.makedirs(output_dir, exist_ok=True)
@@ -46,7 +64,16 @@ def prepare_input_files(input_pdf, subject, output_dir):
 
 
 def cleanup_temp_files(temp_files):
-    """Clean up temporary files"""
+    """
+    Funkcjonalność:
+        Usuwa tymczasowe pliki stworzone w trakcie działania programu.
+
+    Args:
+        temp_files - lista ścieżek do plików tymczasowych
+
+    Returns:
+        None
+    """
     for file_path in temp_files:
         try:
             if os.path.exists(file_path):

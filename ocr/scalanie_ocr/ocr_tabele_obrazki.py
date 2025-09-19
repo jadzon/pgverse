@@ -17,6 +17,17 @@ from pdf2image import convert_from_path
 
 # Funkcja obejścia problemu importu flash_attn w modelach Hugging
 def fixed_get_imports(filename: str | os.PathLike) -> list[str]:
+    """
+    Funkcjonalność:
+        Poprawia listę importów modułu Transformers, usuwając "flash_attn",
+        aby uniknąć problemów z niedostępną biblioteką.
+
+    Args:
+        filename - ścieżka do pliku źródłowego (str lub Path)
+
+    Returns:
+        list[str] - lista importów bez "flash_attn"
+    """
     imports = original_get_imports(filename)
     if "flash_attn" in imports:
         imports.remove("flash_attn")
@@ -41,8 +52,14 @@ detectron_model = lp.Detectron2LayoutModel(
 
 def detect_with_hugging(image: Image.Image) -> list:
     """
-    Detekcja obiektów przy użyciu modelu Hugging.
-    Wykrywa zarówno tabele, jak i figury.
+    Funkcjonalność:
+        Wykrywa tabele i figury na obrazie przy użyciu modelu Hugging Face.
+
+    Args:
+        image - obraz wejściowy (PIL.Image)
+
+    Returns:
+        list - lista wykryć w postaci (bbox, label), gdzie label to "table" lub "figure"
     """
     inputs = hugging_processor(text=prompt, images=image, return_tensors="pt")
     with torch.no_grad():
@@ -68,8 +85,14 @@ def detect_with_hugging(image: Image.Image) -> list:
 
 def detect_with_detectron(image: Image.Image) -> list:
     """
-    Wykrywanie figur przy użyciu Detectrona (LayoutParser).
+    Funkcjonalność:
+        Wykrywa figury na obrazie przy użyciu modelu Detectron2 (LayoutParser).
 
+    Args:
+        image - obraz wejściowy (PIL.Image)
+
+    Returns:
+        list - lista wykryć w postaci (bbox, "figure")
     """
     image_cv = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
     layout = detectron_model.detect(image_cv)
@@ -82,11 +105,19 @@ def detect_with_detectron(image: Image.Image) -> list:
 
 def merge_detections(hugging_dets: list, detectron_dets: list) -> list:
     """
-    Łączy wyniki:
-      - Wykrycia tabel (label "table") pochodzą wyłącznie z Hugging.
-      - Wykrycia figur łączymy z obu źródeł, przy czym jeśli dowolny bbox z Hugging
-        (niezależnie czy table czy figure) pokrywa centralny punkt wykrycia z Detectrona,
-        to wykrycie z Detectrona jest pomijane.
+    Funkcjonalność:
+        Łączy wykrycia z modeli Hugging i Detectron:
+        - tabele zawsze pochodzą z Hugging,
+        - figury łączone są z obu źródeł,
+        - jeśli figura z Detectrona pokrywa się z obszarem wykrytym przez Hugging,
+          jest pomijana.
+
+    Args:
+        hugging_dets - lista wykryć (bbox, label) z Hugging
+        detectron_dets - lista wykryć (bbox, label) z Detectron2
+
+    Returns:
+        list - lista połączonych wykryć (bbox, label)
     """
     final_detections = []
     for bbox, label in hugging_dets:
@@ -106,12 +137,22 @@ def merge_detections(hugging_dets: list, detectron_dets: list) -> list:
 
 def process_image(image: Image.Image, output_prefix: str, results_dir: str, page_idx: int = None):
     """
-    Przetwarzanie obrazu:
-      1. Detekcja przy użyciu modelu Hugging (tabele i figury).
-      2. Detekcja figur przy użyciu Detectrona.
-      3. Łączenie wyników – tabele mają priorytet z Hugging; figury uzupełniane z Detectrona.
-      4. Zapis wykrytych fragmentów do osobnych folderów: tabele i figury.
-      5. Jeżeli figura zajmuje prawie całą stronę, pomijamy ją.
+    Funkcjonalność:
+        Przetwarza obraz w celu wykrycia tabel i figur:
+        1. Detekcja Hugging (tabele i figury).
+        2. Detekcja Detectron (figury).
+        3. Połączenie wyników.
+        4. Zapis wykrytych fragmentów (tabele/figury) do plików PNG.
+        5. Zapis obrazu z naniesionymi wykryciami.
+
+    Args:
+        image - obraz wejściowy (PIL.Image)
+        output_prefix - prefiks nazw plików wynikowych
+        results_dir - katalog, w którym zapisywane są wyniki
+        page_idx - (opcjonalne) numer strony w pliku PDF
+
+    Returns:
+        None
     """
     hugging_detections = detect_with_hugging(image)
     print("Detekcje z Hugging:", hugging_detections)

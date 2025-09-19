@@ -26,6 +26,17 @@ import numpy as np
 from tempfile import TemporaryDirectory
 # Funkcja obejścia problemu importu flash_attn w modelach Hugging
 def fixed_get_imports(filename: str | os.PathLike) -> list[str]:
+    """
+    Funkcjonalność:
+        Poprawia listę importów w Transformers, usuwając "flash_attn",
+        aby uniknąć błędów przy ładowaniu modeli.
+
+    Args:
+        filename - ścieżka do pliku źródłowego (str lub Path)
+
+    Returns:
+        list[str] - lista importów bez "flash_attn"
+    """
     imports = original_get_imports(filename)
     if "flash_attn" in imports:
         imports.remove("flash_attn")
@@ -59,12 +70,29 @@ detectron_model = lp.Detectron2LayoutModel(
     device="cuda"  # lub "cpu", jeśli GPU nie jest dostępne
 )
 def detect_with_pix2text(image: Image.Image) -> list:
+    """
+    Funkcjonalność:
+        Wykrywa wzory matematyczne na obrazie przy użyciu modelu Pix2Text.
+
+    Args:
+        image - obraz wejściowy (PIL.Image)
+
+    Returns:
+        list - lista wykryć zwrócona przez Pix2Text
+    """
     return p2t.recognize(image, file_type="text_formula", return_text=False)
 
 def get_bounding_box(item):
     """
-    Zwraca [x1, y1, x2, y2] na podstawie pola 'position' w zwróconym obiekcie Pix2Text,
-    albo None jeśli nie ma pozycji.
+    Funkcjonalność:
+        Wyznacza prostokąt [x1, y1, x2, y2] na podstawie pola 'position'
+        w obiekcie zwróconym przez Pix2Text.
+
+    Args:
+        item - obiekt zawierający klucz 'position'
+
+    Returns:
+        list[int] | None - współrzędne bounding boxa albo None
     """
     if 'position' in item:
         pts = item['position']            # lista punktów [[x,y],…]
@@ -74,8 +102,15 @@ def get_bounding_box(item):
     return None
 def detect_with_hugging(image: Image.Image) -> list:
     """
-    Detekcja obiektów przy użyciu modelu Hugging.
-    Wykrywa zarówno tabele, jak i figury.
+    Funkcjonalność:
+        Wykrywa tabele i figury na obrazie przy pomocy modelu Hugging Face.
+
+    Args:
+        image - obraz wejściowy (PIL.Image)
+
+    Returns:
+        list - lista wykryć w formacie (bbox, label),
+               gdzie label to "table" lub "figure"
     """
     inputs = hugging_processor(text=prompt, images=image, return_tensors="pt")
     with torch.no_grad():
@@ -101,8 +136,14 @@ def detect_with_hugging(image: Image.Image) -> list:
 
 def detect_with_detectron(image: Image.Image) -> list:
     """
-    Wykrywanie figur przy użyciu Detectrona (LayoutParser).
+    Funkcjonalność:
+        Wykrywa figury na obrazie przy użyciu Detectron2 (LayoutParser).
 
+    Args:
+        image - obraz wejściowy (PIL.Image)
+
+    Returns:
+        list - lista wykryć w formacie (bbox, "figure")
     """
     image_cv = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
     layout = detectron_model.detect(image_cv)
@@ -120,8 +161,18 @@ def _process_image_from_path(
     page_idx: int
 ):
     """
-    Wczytaj JPEG ze ścieżki, przekonwertuj na RGB, przekaż do process_image,
-    a potem sprzątnij GPU i RAM.
+    Funkcjonalność:
+        Wczytuje obraz ze ścieżki, przekazuje go do process_image,
+        a następnie czyści pamięć GPU i RAM.
+
+    Args:
+        img_path - ścieżka do pliku obrazu (JPEG)
+        output_prefix - prefiks nazw plików wynikowych
+        detekcje_dir - katalog na wyniki detekcji
+        page_idx - numer strony
+
+    Returns:
+        None
     """
     # 1) Wczytaj plik JPEG jako PIL Image w trybie RGB
     image = Image.open(img_path).convert("RGB")
@@ -138,13 +189,31 @@ def _process_image_from_path(
 
 def merge_detections(hugging_dets: list, detectron_dets: list) -> list:
     """
-    • Wszystkie boksy z Hugging Face przepuszczamy bez zmian.
-    • Boks z Detectrona dodajemy tylko wtedy, gdy
-      (pole przecięcia / pole boksa Detectrona) ≤ 0.5.
+    Funkcjonalność:
+        Łączy wykrycia z Hugging i Detectron:
+        - wszystkie boksy z Hugging przepuszczane bez zmian,
+        - boks z Detectrona dodawany tylko wtedy, gdy pokrycie z boksem Hugging ≤ 60%.
+
+    Args:
+        hugging_dets - lista wykryć (bbox, label) z Hugging
+        detectron_dets - lista wykryć (bbox, label) z Detectron2
+
+    Returns:
+        list - lista połączonych wykryć (bbox, label)
     """
 
     def overlap_ratio(big, small):
-        """zwraca (intersect_area / area_small)"""
+        """
+        Funkcjonalność:
+            Oblicza stosunek pola części wspólnej dwóch bboxów do pola mniejszego.
+
+        Args:
+            big - współrzędne bboxa [x1, y1, x2, y2]
+            small - współrzędne bboxa [x1, y1, x2, y2]
+
+        Returns:
+            float - wartość w zakresie 0–1 (proporcja pokrycia)
+        """
         x1 = max(big[0], small[0]); y1 = max(big[1], small[1])
         x2 = min(big[2], small[2]); y2 = min(big[3], small[3])
         inter = max(0, x2 - x1) * max(0, y2 - y1)
@@ -165,6 +234,25 @@ def process_image(image: Image.Image,
                   output_prefix: str,
                   results_dir: str,
                   page_idx: int = None):
+    """
+    Funkcjonalność:
+        Przetwarza pojedynczy obraz:
+        1. Autokontrast.
+        2. Detekcja tabel i figur (Hugging + Detectron).
+        3. Detekcja wzorów (Pix2Text).
+        4. Filtrowanie i czyszczenie wykryć.
+        5. Wycinanie i zapisywanie tabel, figur i wzorów.
+        6. Zapis obrazu wynikowego z naniesionymi etykietami.
+
+    Args:
+        image - obraz wejściowy (PIL.Image)
+        output_prefix - prefiks nazw plików wynikowych
+        results_dir - katalog, w którym zapisywane są wyniki
+        page_idx - (opcjonalne) numer strony w PDF
+
+    Returns:
+        None
+    """
     # 0. Zachowaj oryginał do cropów
     orig = image.copy()
     # 1. Przygotowanie obrazu
@@ -178,6 +266,17 @@ def process_image(image: Image.Image,
 
     # 3. Usuń duże figury zawierające >= 2 mniejszych figure
     def contains(inner, outer):
+        """
+        Funkcjonalność:
+            Sprawdza, czy bbox `inner` w całości mieści się wewnątrz bboxa `outer`.
+
+        Args:
+            inner - współrzędne bboxa [x1, y1, x2, y2]
+            outer - współrzędne bboxa [x1, y1, x2, y2]
+
+        Returns:
+            bool - True jeśli inner ⊆ outer, inaczej False
+        """
         return (inner[0] >= outer[0] and inner[1] >= outer[1]
                 and inner[2] <= outer[2] and inner[3] <= outer[3])
 
@@ -215,8 +314,30 @@ def process_image(image: Image.Image,
 
     # 6. Dalsze filtrowanie wg udziału powierzchni formuł
     def area(box):
+        """
+        Funkcjonalność:
+            Oblicza pole powierzchni prostokątnego bboxa.
+
+        Args:
+            box - współrzędne prostokąta [x1, y1, x2, y2]
+
+        Returns:
+            int - pole prostokąta (w pikselach)
+        """
         return max(0, box[2] - box[0]) * max(0, box[3] - box[1])
     def intersect(b1, b2):
+        """
+        Funkcjonalność:
+            Oblicza część wspólną (przecięcie) dwóch bboxów.
+
+        Args:
+            b1 - współrzędne bboxa [x1, y1, x2, y2]
+            b2 - współrzędne bboxa [x1, y1, x2, y2]
+
+        Returns:
+            tuple | None - współrzędne wspólnego prostokąta (x1, y1, x2, y2),
+                           albo None jeśli brak przecięcia
+        """
         x1 = max(b1[0], b2[0]); y1 = max(b1[1], b2[1])
         x2 = min(b1[2], b2[2]); y2 = min(b1[3], b2[3])
         return (x1, y1, x2, y2) if x2> x1 and y2> y1 else None

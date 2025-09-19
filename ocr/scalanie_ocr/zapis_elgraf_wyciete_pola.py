@@ -22,6 +22,17 @@ import time
 import numpy as np
 # Funkcja obejścia problemu importu flash_attn w modelach Hugging
 def fixed_get_imports(filename: str | os.PathLike) -> list[str]:
+    """
+    Funkcjonalność:
+        Poprawia listę importów w Transformers, usuwając "flash_attn",
+        aby uniknąć błędów podczas ładowania modelu.
+
+    Args:
+        filename - ścieżka do pliku źródłowego (str lub Path)
+
+    Returns:
+        list[str] - lista importów bez "flash_attn"
+    """
     imports = original_get_imports(filename)
     if "flash_attn" in imports:
         imports.remove("flash_attn")
@@ -55,12 +66,29 @@ detectron_model = lp.Detectron2LayoutModel(
     device="cuda"  # lub "cpu", jeśli GPU nie jest dostępne
 )
 def detect_with_pix2text(image: Image.Image) -> list:
+    """
+    Funkcjonalność:
+        Wykrywa wzory matematyczne na obrazie przy użyciu modelu Pix2Text.
+
+    Args:
+        image - obraz wejściowy (PIL.Image)
+
+    Returns:
+        list - lista wykryć zwrócona przez Pix2Text
+    """
     return p2t.recognize(image, file_type="text_formula", return_text=False)
 
 def get_bounding_box(item):
     """
-    Zwraca [x1, y1, x2, y2] na podstawie pola 'position' w zwróconym obiekcie Pix2Text,
-    albo None jeśli nie ma pozycji.
+    Funkcjonalność:
+        Wyznacza prostokąt [x1, y1, x2, y2] na podstawie pola 'position'
+        w obiekcie zwróconym przez Pix2Text.
+
+    Args:
+        item - obiekt zawierający klucz 'position'
+
+    Returns:
+        list[int] | None - współrzędne bounding boxa albo None
     """
     if 'position' in item:
         pts = item['position']            # lista punktów [[x,y],…]
@@ -70,8 +98,15 @@ def get_bounding_box(item):
     return None
 def detect_with_hugging(image: Image.Image) -> list:
     """
-    Detekcja obiektów przy użyciu modelu Hugging.
-    Wykrywa zarówno tabele, jak i figury.
+    Funkcjonalność:
+        Wykrywa tabele i figury na obrazie przy pomocy modelu Hugging Face.
+
+    Args:
+        image - obraz wejściowy (PIL.Image)
+
+    Returns:
+        list - lista wykryć w formacie (bbox, label),
+               gdzie label to "table" lub "figure"
     """
     inputs = hugging_processor(text=prompt, images=image, return_tensors="pt")
     with torch.no_grad():
@@ -97,8 +132,14 @@ def detect_with_hugging(image: Image.Image) -> list:
 
 def detect_with_detectron(image: Image.Image) -> list:
     """
-    Wykrywanie figur przy użyciu Detectrona (LayoutParser).
+    Funkcjonalność:
+        Wykrywa figury na obrazie przy użyciu Detectron2 (LayoutParser).
 
+    Args:
+        image - obraz wejściowy (PIL.Image)
+
+    Returns:
+        list - lista wykryć w formacie (bbox, "figure")
     """
     image_cv = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
     layout = detectron_model.detect(image_cv)
@@ -111,13 +152,32 @@ def detect_with_detectron(image: Image.Image) -> list:
 
 def merge_detections(hugging_dets: list, detectron_dets: list) -> list:
     """
-    • Wszystkie boksy z Hugging Face przepuszczamy bez zmian.
-    • Boks z Detectrona dodajemy tylko wtedy, gdy
-      (pole przecięcia / pole boksa Detectrona) ≤ 0.5.
+    Funkcjonalność:
+        Łączy wykrycia z Hugging i Detectron:
+        - wszystkie boksy z Hugging przepuszczane bez zmian,
+        - boks z Detectrona dodawany tylko wtedy, gdy pokrycie z boksem Hugging ≤ 60%.
+
+    Args:
+        hugging_dets - lista wykryć (bbox, label) z Hugging
+        detectron_dets - lista wykryć (bbox, label) z Detectron2
+
+    Returns:
+        list - lista połączonych wykryć (bbox, label)
     """
 
     def overlap_ratio(big, small):
-        """zwraca (intersect_area / area_small)"""
+        """
+        Funkcjonalność:
+            Oblicza stosunek pola części wspólnej dwóch prostokątów
+            do pola mniejszego z nich.
+
+        Args:
+            big - współrzędne bboxa [x1, y1, x2, y2]
+            small - współrzędne bboxa [x1, y1, x2, y2]
+
+        Returns:
+            float - wartość od 0 do 1 określająca proporcję pokrycia
+        """
         x1 = max(big[0], small[0]); y1 = max(big[1], small[1])
         x2 = min(big[2], small[2]); y2 = min(big[3], small[3])
         inter = max(0, x2 - x1) * max(0, y2 - y1)
@@ -138,6 +198,25 @@ def process_image(image: Image.Image,
                   output_prefix: str,
                   results_dir: str,
                   page_idx: int = None):
+    """
+    Funkcjonalność:
+        Przetwarza pojedynczy obraz PDF lub JPG/PNG:
+        1. Autokontrast.
+        2. Detekcja tabel i figur (Hugging + Detectron).
+        3. Detekcja wzorów (Pix2Text).
+        4. Filtrowanie i czyszczenie wykryć.
+        5. Wycinanie i zapisywanie tabel, figur i wzorów.
+        6. Zapis końcowego obrazu z naniesionymi wynikami.
+
+    Args:
+        image - obraz wejściowy (PIL.Image)
+        output_prefix - prefiks nazw plików wynikowych
+        results_dir - katalog, w którym zapisywane są wyniki
+        page_idx - (opcjonalne) numer strony w PDF
+
+    Returns:
+        None
+    """
     # 1. Przygotowanie obrazu
     image = ImageOps.autocontrast(image)
 
@@ -149,6 +228,18 @@ def process_image(image: Image.Image,
 
     # 3. Usuń duże figury zawierające >= 2 mniejszych figure
     def contains(inner, outer):
+        """
+        Funkcjonalność:
+            Sprawdza, czy bbox `inner` w całości mieści się
+            wewnątrz bboxa `outer`.
+
+        Args:
+            inner - współrzędne bboxa [x1, y1, x2, y2]
+            outer - współrzędne bboxa [x1, y1, x2, y2]
+
+        Returns:
+            bool - True jeśli inner ⊆ outer, False w przeciwnym razie
+        """
         return (inner[0] >= outer[0] and inner[1] >= outer[1]
                 and inner[2] <= outer[2] and inner[3] <= outer[3])
 
@@ -184,8 +275,30 @@ def process_image(image: Image.Image,
 
     # 6. Dalsze filtrowanie boxów wg udziału powierzchni formuł
     def area(box):
+        """
+        Funkcjonalność:
+            Oblicza pole powierzchni prostokątnego bboxa.
+
+        Args:
+            box - współrzędne bboxa [x1, y1, x2, y2]
+
+        Returns:
+            int - pole powierzchni (w pikselach)
+        """
         return max(0, box[2] - box[0]) * max(0, box[3] - box[1])
     def intersect(box1, box2):
+        """
+        Funkcjonalność:
+            Oblicza część wspólną (przecięcie) dwóch prostokątnych bboxów.
+
+        Args:
+            box1 - współrzędne bboxa [x1, y1, x2, y2]
+            box2 - współrzędne bboxa [x1, y1, x2, y2]
+
+        Returns:
+            tuple | None - współrzędne wspólnego prostokąta (x1, y1, x2, y2),
+                           albo None, jeśli brak przecięcia
+        """
         x1 = max(box1[0], box2[0]); y1 = max(box1[1], box2[1])
         x2 = min(box1[2], box2[2]); y2 = min(box1[3], box2[3])
         return (x1, y1, x2, y2) if x2> x1 and y2> y1 else None
