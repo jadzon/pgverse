@@ -3,27 +3,33 @@ from neo4j import GraphDatabase
 import pandas as pd
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, TextStreamer
 from rag_metrics.BERTscore import compute_and_save_bertscore
+from rag_codes.rag_functions.embeddings import CohereEmbedder
 
 
 
 def generate_embeddings(chunks, api_key):
-    co = cohere.Client(api_key)
+    co = CohereEmbedder.get_instance()
     embeddings = []
     for chunk in chunks:
-        response = co.embed(texts=[chunk], model='embed-multilingual-v3.0', input_type="search_document")
-        embeddings.append(response.embeddings[0])
+        response = co.embed(
+                    texts=[chunk],
+                    model="embed-v4.0",
+                    input_type="search_documents",
+                    embedding_types=["float"]
+                )
+        embeddings.append(response.embeddings.float[0])
     return embeddings
 
 
 def similarity_search(query_text, api_key, neo4j_uri, neo4j_username, neo4j_password, top_k=5):
-    co = cohere.Client(api_key)
-    query_embedding = co.embed(texts=[query_text], model='embed-multilingual-v3.0', input_type="search_query").embeddings[0]
+    co = cohere.ClientV2()
+    query_embedding = co.embed(texts=[query_text], model="embed-v4.0", input_type="search_query",output_dimension=1536 ,embedding_types=["float"]).embeddings.float[0]
     
     driver = GraphDatabase.driver(neo4j_uri, auth=(neo4j_username, neo4j_password))
     with driver.session() as session:
         result = session.run(
             """
-            MATCH (t:TextChunk)
+            MATCH (t:TextNode)
             WITH t, vector.similarity.cosine(t.embedding, $query_embedding) AS score
             WHERE score > 0.7
             RETURN t.id AS id, t.text AS text, score
@@ -73,9 +79,8 @@ def process_query(query,
     documents_list = [{"snippet": chunk["text"]} for chunk in top_chunks]
     # system prompt w języku polskim, z przekazaniem kontekstu
     system_prompt = (
-        "Jesteś asystentem, który odpowiada na pytania dotyczące przedmiotu Podstawy automatyki w języku polskim. "
-        f"Odpowiedz na pytanie używając tylko informacji z podanego kontekstu.\n\n"
-        f"Pytanie: {query}\n\n"
+        f"Odpowiedz krótko na pytanie:{query}\n\n "
+        f"używając tylko informacji z podanego kontekstu.\n\n"
         f"Kontekst:\n{documents_list}\n\n"
     )
 

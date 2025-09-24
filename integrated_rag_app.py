@@ -15,6 +15,7 @@ from typing import List, Dict, Any, Optional
 import cohere
 from neo4j import GraphDatabase
 from dotenv import load_dotenv
+from rag_codes.rag_functions.embeddings import CohereEmbedder
 
 # Import your existing modules
 import enviromental_variables as ev
@@ -52,30 +53,36 @@ class SemanticSearchEngine:
 
     def generate_query_embedding(self, query_text: str) -> List[float]:
         """Generuje embedding dla zapytania użytkownika"""
-        try:
-            response = self.cohere_client.embed(
-                texts=[query_text],
-                model='embed-multilingual-v3.0',
-                input_type='search_query',
-                embedding_types=['float']
-            )
-            return response.embeddings.float[0]
-        except Exception as e:
-            logger.error(f"Błąd podczas generowania embeddingu zapytania: {e}")
-            raise
+        co = cohere.ClientV2()
+        query_embedding = co.embed(texts=[query_text], model="embed-v4.0", input_type="search_query",output_dimension=1536 ,embedding_types=["float"]).embeddings.float[0]
+        return query_embedding
+
 
     def find_similar_embeddings(self, query_embedding: List[float], threshold: float = 0.7, limit: int = 5) -> List[Dict[str, Any]]:
         """Znajduje podobne embeddingi w bazie Neo4j"""
         with self.neo4j_driver.session() as session:
-            query = """
-            CALL db.index.vector.queryNodes('embedding_vector', $limit, $query_embedding)
+            # Sprawdź najpierw, czy indeks istnieje
+            check_index_query = "SHOW INDEXES YIELD name WHERE name CONTAINS 'embedding'"
+            index_result = session.run(check_index_query)
+            index_names = [record["name"] for record in index_result]
+            
+            if not index_names:
+                logger.error("Brak indeksu wektorowego dla embeddingów")
+                return []
+            
+            # Użyj pierwszego znalezionego indeksu
+            index_name = index_names[0]
+            
+            query = f"""
+            CALL db.index.vector.queryNodes('{index_name}', $limit, $query_embedding)
             YIELD node, score
             WHERE score >= $threshold
-            RETURN node.relative_path AS sciezka,
-                   node.description AS opis,
-                   node.content_type AS typ,
-                   labels(node) AS etykiety,
-                   score
+            RETURN 
+                node.path AS sciezka,
+                node.text AS opis,
+                node.type AS typ,
+                labels(node) AS etykiety,
+                score
             ORDER BY score DESC
             """
             
@@ -102,7 +109,7 @@ class SemanticSearchEngine:
                 logger.error(f"Błąd podczas wyszukiwania w bazie: {e}")
                 raise
 
-    def search_best_image(self, query_text: str, threshold: float = 0.6) -> Optional[str]:
+    def search_best_image(self, query_text: str, threshold: float = 0.8 ) -> Optional[str]:
         """
         Znajduje najlepiej pasujący obraz do zapytania
         
@@ -117,19 +124,26 @@ class SemanticSearchEngine:
         
         try:
             # Generuj embedding dla zapytania
-            query_embedding = self.generate_query_embedding(query_text)
+            co = cohere.ClientV2()
+            query_embedding = co.embed(
+                texts=[query_text], 
+                model="embed-v4.0", 
+                input_type="search_query",
+                output_dimension=1536,
+                embedding_types=["float"]
+            ).embeddings.float[0]
             
-            # Znajdź podobne embeddingi - preferuj obrazy (Figure)
+            # Znajdź podobne embeddingi - preferuj obrazy
             wyniki = self.find_similar_embeddings(query_embedding, threshold, limit=10)
             
             if not wyniki:
                 logger.info("Nie znaleziono obrazów spełniających kryteria")
                 return None
             
-            # Preferuj wyniki typu Figure (obrazy)
-            obrazy = [w for w in wyniki if w['typ'] == 'Figure']
+            # Preferuj wyniki typu 'image'
+            obrazy = [w for w in wyniki if w['typ'] == 'image']
             if obrazy:
-                najlepszy = obrazy[0]  # Pierwszy (najlepiej pasujący)
+                najlepszy = obrazy[0]
                 logger.info(f"Znaleziono obraz: {najlepszy['sciezka']} (podobieństwo: {najlepszy['podobienstwo']:.3f})")
                 return najlepszy['sciezka']
             
@@ -141,6 +155,8 @@ class SemanticSearchEngine:
         except Exception as e:
             logger.error(f"Błąd podczas wyszukiwania obrazu: {e}")
             return None
+
+
 
     def close(self):
         """Zamyka połączenia"""
@@ -321,6 +337,18 @@ class IntegratedRagApplication(tk.Tk):
             if image_path:
                 logger.info(f"Znaleziono obraz: {image_path}")
                 
+                # Usuń prefiks /pgverse ze ścieżki jeśli istnieje
+                if image_path.startswith('/pgverse/'):
+                    image_path = image_path[9:]  # Usuń '/pgverse/'
+                elif image_path.startswith('pgverse/'):
+                    image_path = image_path[8:]  # Usuń 'pgverse/'
+                elif image_path.startswith('/pgverse\\'):
+                    image_path = image_path[9:]  # Usuń '/pgverse\' (Windows)
+                elif image_path.startswith('pgverse\\'):
+                    image_path = image_path[8:]  # Usuń 'pgverse\' (Windows)
+                
+                logger.info(f"Ścieżka po usunięciu prefiksu: {image_path}")
+                
                 # Sprawdź czy to względna czy bezwzględna ścieżka
                 if not os.path.isabs(image_path):
                     # Jeśli względna, spróbuj różnych lokalizacji
@@ -360,6 +388,7 @@ class IntegratedRagApplication(tk.Tk):
             logger.error(f"Błąd podczas wyszukiwania obrazu: {e}")
             self._add_message(f"⚠️ Błąd podczas wyszukiwania obrazu: {e}")
 
+
     def _add_message(self, content, references=None):
         """Dodaje wiadomość do czatu"""
         lbl = tk.Label(
@@ -396,8 +425,8 @@ class IntegratedRagApplication(tk.Tk):
             image = Image.open(full_image_path)
             
             # Przeskaluj obraz do odpowiedniego rozmiaru
-            max_width = 500
-            max_height = 400
+            max_width = 800  # Zwiększone z 500
+            max_height = 600  # Zwiększone z 400
             image.thumbnail((max_width, max_height), Image.Resampling.LANCZOS)
             
             # Konwertuj do formatu Tkinter
@@ -410,6 +439,9 @@ class IntegratedRagApplication(tk.Tk):
                 bg='#001F3F'
             )
             img_label.image = photo  # Zachowaj referencję
+            # Dodaj obsługę kliknięcia dla pełnowymiarowego obrazu
+            img_label.bind('<Button-1>', lambda e: self._show_full_image(full_image_path))
+
             img_label.pack(pady=5, padx=5)
             
             self._scroll_to_bottom()
@@ -449,6 +481,41 @@ class IntegratedRagApplication(tk.Tk):
         """Przewija czat na dół"""
         self.chat_container.update_idletasks()
         self.chat_container.yview_moveto(1.0)
+
+
+    def _show_full_image(self, image_path):
+        """Wyświetla obraz w pełnym rozmiarze w nowym oknie"""
+        try:
+            img_window = tk.Toplevel(self)
+            img_window.title("Pełny rozmiar obrazu")
+            img_window.geometry("1000x800")
+            img_window.configure(bg='#001F3F')
+
+            image = Image.open(image_path)
+            # Dopasuj do rozmiaru okna (z marginesem)
+            image.thumbnail((980, 780), Image.Resampling.LANCZOS)
+
+            photo = ImageTk.PhotoImage(image)
+
+            # Dodaj scrollbar jeśli obraz jest bardzo duży
+            canvas = tk.Canvas(img_window, bg='#001F3F')
+            scrollbar_v = tk.Scrollbar(img_window, orient="vertical", command=canvas.yview)
+            scrollbar_h = tk.Scrollbar(img_window, orient="horizontal", command=canvas.xview)
+
+            canvas.configure(yscrollcommand=scrollbar_v.set, xscrollcommand=scrollbar_h.set)
+
+            label = tk.Label(canvas, image=photo, bg='#001F3F')
+            label.image = photo  # Zachowaj referencję
+
+            canvas.create_window((0, 0), window=label, anchor="nw")
+            canvas.configure(scrollregion=canvas.bbox("all"))
+
+            canvas.pack(side="left", fill="both", expand=True)
+            scrollbar_v.pack(side="right", fill="y")
+            scrollbar_h.pack(side="bottom", fill="x")
+
+        except Exception as e:
+            logger.error(f"Nie można wyświetlić pełnego obrazu: {e}")
 
     def destroy(self):
         """Zamyka aplikację i czyści zasoby"""
